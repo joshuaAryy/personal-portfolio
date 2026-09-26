@@ -45,7 +45,7 @@ The staging project is separate from the existing primary portfolio deployment. 
 ## Source-review corrections in the working tree
 
 - Lobby cards reflow to three columns at tablet widths; the 651–900 px five-column squeeze is removed.
-- Lobby and rail no longer lead into generic story placeholders. Known detail URLs return to their matching lobby, and lobby labels state that the full story is in development.
+- Lobby and rail no longer lead into generic story placeholders. Unfinished detail URLs return to their matching lobby, while Food Tracker opens its implemented case study.
 - Food Tracker’s mark is removed from `public/media`; only cleared Crest and Cho’Veigo media remain bundled.
 - The skip-link target is focusable, route changes focus the main content, and rail project order matches the Figma rail.
 - The Profile Overview remains a structural stand-in pending a rights-safe composition and visual fidelity review.
