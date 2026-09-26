@@ -12,7 +12,7 @@ Source Figma file: [Portfolio design](https://www.figma.com/design/9zvk9iSRPKSsJ
 | Demos · Cho’Veigo | 1298:2 | `/profile/demos` | Selectable; cleared static Recommendations still | Compare bundled crop and selector treatment to the Figma still |
 | Demos · Food Tracker | 1316:35 | — | Withheld from public showcase | Owner confirmation of logo embedding rights and authentic product UI capture |
 | Food Tracker case study | 1813:2 | `/projects/food-tracker` | Implemented as a responsive editorial story; chapter links follow scroll position; benchmark uses development and holdout tables | Browser visual/keyboard review; compare responsive page against approved source |
-| Crest | 1817:4 | `/projects/crest` | Responsive editorial story implemented with a grounded-policy decision figure, sample-data cue, and supported third-place result | Browser visual/keyboard review against the approved source; keep the Crest logo out of public code until its embedding rights are confirmed |
+| Crest | 1817:4 | `/projects/crest` | Responsive editorial story implemented and deployed; grounded-policy decision figure, sample-data cue, and supported third-place result | Browser visual/keyboard review against the approved source; keep the Crest logo out of public code until its embedding rights are confirmed |
 | Cho’Veigo, Fraymakers | 1813:379, 1831:2 | Reserved paths redirect to `/projects` | No public placeholder story screens | Complete their design gates, then implement the full editorial stories with distinct evidence figures |
 | Experience story roots | 1438:2, 1438:276 | Reserved paths redirect to `/experience` | No public placeholder story screen | Design and implement the Living in Silico and Stush Patties editorial stories |
 | Journey | 1287:7 | — | Figma source has full story content and viewport work; full scenic implementation remains deferred | Finish environmental treatment and port the full vertical story |
@@ -39,9 +39,9 @@ The Food Tracker mark is not bundled while public embedding rights are confirmed
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
 | Branch | `feat/initial-client-shell` |
 | Staging site | https://joshuaik2.pages.dev/ |
-| Current immutable deployment | https://da4f4bb8.joshuaik2.pages.dev/ |
+| Current immutable deployment | https://dd7e6a7a.joshuaik2.pages.dev/ |
 
-The staging project is separate from the existing primary portfolio deployment. HTTP HEAD requests returned 200 for the lobby root, the Food Tracker route, a reserved Crest route, and the immutable Food Tracker deployment URL. The browser-control runtime was unavailable, so browser screenshots and live keyboard behavior could not be independently reviewed here.
+The staging project is separate from the existing primary portfolio deployment. HTTP HEAD requests returned 200 for the lobby root, the Food Tracker route, the Crest route, and the immutable Crest deployment URL. The browser-control runtime was unavailable, so browser screenshots and live keyboard behavior could not be independently reviewed here.
 
 ## Source-review corrections in the working tree
 
@@ -51,6 +51,6 @@ The staging project is separate from the existing primary portfolio deployment. 
 - The skip-link target is focusable, route changes focus the main content, and rail project order matches the Figma rail.
 - The Profile Overview remains a structural stand-in pending a rights-safe composition and visual fidelity review.
 
-`npm run lint`, `npm run typecheck`, and `npm run build` pass for the current Food Tracker and Crest implementations. Food Tracker is deployed to the separate staging project; Crest deployment is pending. Browser-based visual and live keyboard review remains outstanding because the browser-control runtime was unavailable.
+`npm run lint`, `npm run typecheck`, and `npm run build` pass for the Food Tracker and Crest implementations. Both feature routes are deployed to the separate staging project. Browser-based visual and live keyboard review remains outstanding because the browser-control runtime was unavailable.
 
 No local source handoff docs or old portfolio files are copied into this repository.
