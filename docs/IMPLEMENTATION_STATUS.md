@@ -1,33 +1,55 @@
 # Implementation status
 
-Source Figma file: [Portfolio design](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA). Node IDs and geometry are from the local 2026-09-25 handoff. This table describes the code at this commit, not the status of the Figma design.
+Source Figma file: [Portfolio design](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA). Node IDs and geometry are from the local 2026-09-25 handoff, with the identity candidate added on 2026-09-26. This table distinguishes code implementation from visual approval.
 
-| Surface | Figma root | Route | Code state | Remaining visual or content work |
+| Surface | Figma root | Route | Current state | Remaining work |
 |---|---:|---|---|---|
-| Shared shell and rail | 524:4, 524:145 | All | Initial responsive implementation | Canonical J; original rail identity; finer ornament and art replacement |
-| Projects lobby | 511:2 | `/projects` | Initial implementation; project selection and links work | Original scenic artwork; precise card contours, marks and lower tray polish |
-| Experience lobby | 704:2 | `/experience` | Initial implementation; selection and links work | Review-candidate details; original scenic artwork and identity marks |
-| Profile Overview | 960:2 | `/profile` | Initial structure and factual content | Owner portrait, original identity banner, material polish and precise Figma matching |
-| Demos · Food | 1316:35 | `/profile/demos` | Selectable; owner-approved mark still | Final player and selector visual polish; authentic Food app UI still pending owner |
-| Demos · Crest | 1316:4534 | `/profile/demos` | Selectable; owner-cleared sample capture and YouTube link | Compare bundled capture crop to exact Figma still |
-| Demos · Cho’Veigo | 1298:2 | `/profile/demos` | Selectable; owner-cleared static Recommendations still | Compare bundled crop to exact Figma still |
-| Project detail roots | 1813:2, 1817:4, 1813:379, 1831:2 | `/projects/food-tracker`, `/projects/crest`, `/projects/choveigo`, `/projects/fraymakers` | Stable routes with explicit deferred stories | Port approved editorial stories and source media as each clears public assets |
-| Experience details | 1438:2, 1438:276 | `/experience/living-in-silico`, `/experience/stush-patties` | Stable routes with explicit deferred stories | Port long form stories; verify public marks and media |
-| Journey | 1287:7 | — | Deferred | Complete full length environmental treatment in Figma, then port |
+| Shared shell and rail | 524:4, 524:145 | All | Initial responsive implementation; rail follows the documented project order; route changes focus main content | Review shell against source at desktop/mobile; canonical J and original rail identity |
+| Projects lobby | 511:2 | `/projects` | Selectable lobby; case study status is explicit; public repository links appear only when available | Original scenic art; compare card geometry and lower tray against source |
+| Experience lobby | 704:2 | `/experience` | Selectable lobby; unfinished stories do not open placeholder pages | Original scenic art; compare card geometry and lower tray against source |
+| Profile Overview | 960:2 | `/profile` | Structural stand-in; not visually reviewed as a Figma translation | Replace the generic banner, portrait, and grid with an original rights-safe composition; compare against the approved frame |
+| Demos · Crest | 1316:4534 | `/profile/demos` | Selectable; cleared sample capture and public demo link | Compare bundled crop and player treatment to the Figma still |
+| Demos · Cho’Veigo | 1298:2 | `/profile/demos` | Selectable; cleared static Recommendations still | Compare bundled crop and selector treatment to the Figma still |
+| Demos · Food Tracker | 1316:35 | — | Withheld from public showcase | Owner confirmation of logo embedding rights and authentic product UI capture |
+| Food Tracker case study | 1813:2 | `/projects/food-tracker` | Implemented as a responsive editorial story; chapter links follow scroll position; benchmark uses development and holdout tables | Browser visual/keyboard review; compare responsive page against approved source |
+| Crest, Cho’Veigo, Fraymakers | 1817:4, 1813:379, 1831:2 | Reserved paths redirect to `/projects` | No public placeholder story screens | Implement the full editorial stories with distinct evidence figures |
+| Experience story roots | 1438:2, 1438:276 | Reserved paths redirect to `/experience` | No public placeholder story screen | Design and implement the Living in Silico and Stush Patties editorial stories |
+| Journey | 1287:7 | — | Figma source has full story content and viewport work; full scenic implementation remains deferred | Finish environmental treatment and port the full vertical story |
 | Personal Highlights | — | — | Deferred | Owner photo set and final composition |
-| Canonical J / opening | — | — | Deferred | Identity vector and motion design pending |
-| Resume Found / viewer | — | — | Deferred | Current approved design and resume file pending |
+| J identity study | 1950:2 | — | Review candidate only; first-party editable vector geometry, not canonical | Iterate silhouette and small-size clarity; do not ship as the final mark yet |
+| Opening sequence | — | — | Deferred | Final identity asset, timing, skip treatment, and reduced-motion review |
+| Resume Found and PDF viewer | Archived roots 69:304, 69:439 | — | Archived exploratory work only | Approved current design and resume file; replace placeholder page with real authorized PDF |
 
-## Public asset record
+The Figma body fills for all six existing long-form project and experience chapters already span their full documented story heights. Further visual work should focus on the distinct case-study figures and page treatments rather than extending those fills again.
+
+## Public assets
 
 | Bundled file | Local source handoff | Use |
 |---|---|---|
-| `public/media/food-tracker-mark.png` | `exploration-assets/food-demo-logo-raw.png` | Static Food Demos still and thumbnail |
-| `public/media/crest-sample.png` | `exploration-assets/crest-capture-qa-20260925.png` | Owner-cleared sample capture; sample cue and public YouTube link |
-| `public/media/choveigo-recommendations.png` | `exploration-assets/choveigo-recommendations-poster.png` | Owner-cleared static Recommendations still |
+| `public/media/crest-sample.png` | `exploration-assets/crest-capture-qa-20260925.png` | Cleared sample capture with sample-data cue and public YouTube link |
+| `public/media/choveigo-recommendations.png` | `exploration-assets/choveigo-recommendations-poster.png` | Cleared static Recommendations still |
 
-No local source handoff docs or old portfolio files are copied into this repository.
+The Food Tracker mark is not bundled while public embedding rights are confirmed. No Riot or CommunityDragon artwork, marks, or owner-only video are in this repository.
 
 ## Staging
 
-The initial shell was deployed to the separate Cloudflare Pages project at https://joshuaik2.pages.dev/ on 2026-09-26. The deployment also returned the immutable preview URL https://c8918e26.joshuaik2.pages.dev/. Root and `/profile/demos` returned HTTP 200 after upload. This project is separate from the existing primary portfolio deployment.
+| Destination | Link |
+|---|---|
+| Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
+| Branch | `feat/initial-client-shell` |
+| Staging site | https://joshuaik2.pages.dev/ |
+| Previous immutable preview | https://c8918e26.joshuaik2.pages.dev/ |
+
+The staging project is separate from the existing primary portfolio deployment. The browser-control runtime was unavailable during this handoff, so browser screenshots and live keyboard behavior could not be independently reviewed here. Static lint, TypeScript, and production-build checks should be rerun after the current review corrections are complete.
+
+## Source-review corrections in the working tree
+
+- Lobby cards reflow to three columns at tablet widths; the 651–900 px five-column squeeze is removed.
+- Lobby and rail no longer lead into generic story placeholders. Known detail URLs return to their matching lobby, and lobby labels state that the full story is in development.
+- Food Tracker’s mark is removed from `public/media`; only cleared Crest and Cho’Veigo media remain bundled.
+- The skip-link target is focusable, route changes focus the main content, and rail project order matches the Figma rail.
+- The Profile Overview remains a structural stand-in pending a rights-safe composition and visual fidelity review.
+
+`npm run lint`, `npm run typecheck`, and `npm run build` pass for the current Food Tracker implementation. Browser-based visual and live keyboard review remains outstanding because the browser-control runtime was unavailable; the implementation is pending deployment.
+
+No local source handoff docs or old portfolio files are copied into this repository.

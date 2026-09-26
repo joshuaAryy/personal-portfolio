@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Link,
   NavLink,
@@ -10,6 +10,11 @@ import {
   useParams,
 } from "react-router-dom";
 import { experience, projects } from "./data";
+
+const railProjectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"] as const;
+const railProjects = railProjectOrder.map(
+  (slug) => projects.find((project) => project.slug === slug)!,
+);
 
 function Mark({ small = false }: { small?: boolean }) {
   return (
@@ -76,35 +81,49 @@ function Rail() {
         <p className="rail-context">GENERAL · PORTFOLIO</p>
         <div className="rail-group">
           <h3>CURRENT FOCUS</h3>
-          <Link to="/projects/food-tracker">
+          <a
+            href="https://github.com/joshuaAryy/food-tracker"
+            target="_blank"
+            rel="noreferrer"
+          >
             <Mark small />
             <span>
-              Food Tracker<small>IN DEVELOPMENT</small>
+              Food Tracker<small>VIEW SOURCE REPOSITORY</small>
             </span>
-          </Link>
+          </a>
         </div>
         <div className="rail-group">
           <h3>PROJECTS (4)</h3>
-          {[...projects].reverse().map((item) => (
-            <Link key={item.slug} to={"/projects/" + item.slug}>
-              <Mark small />
-              <span>
-                {item.name}
-                <small>{item.role}</small>
-              </span>
-            </Link>
-          ))}
+          {railProjects.map((item) =>
+            item.slug === "food-tracker" ? (
+              <Link key={item.slug} to="/projects/food-tracker">
+                <Mark small />
+                <span>
+                  {item.name}
+                  <small>CASE STUDY</small>
+                </span>
+              </Link>
+            ) : (
+              <div className="rail-item" key={item.slug}>
+                <Mark small />
+                <span>
+                  {item.name}
+                  <small>CASE STUDY IN DEVELOPMENT</small>
+                </span>
+              </div>
+            ),
+          )}
         </div>
         <div className="rail-group">
           <h3>EXPERIENCE (2)</h3>
           {experience.map((item) => (
-            <Link key={item.slug} to={"/experience/" + item.slug}>
+            <div className="rail-item" key={item.slug}>
               <Mark small />
               <span>
                 {item.name}
-                <small>{item.title.toUpperCase()}</small>
+                <small>STORY IN DEVELOPMENT</small>
               </span>
-            </Link>
+            </div>
           ))}
         </div>
       </div>
@@ -119,6 +138,13 @@ function Client({
   children: React.ReactNode;
   pageClass?: string;
 }) {
+  const { pathname } = useLocation();
+  const mainRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    mainRef.current?.focus();
+  }, [pathname]);
+
   return (
     <div className="client">
       <a className="skip-link" href="#main">
@@ -126,7 +152,12 @@ function Client({
       </a>
       <Header />
       <div className="client-body">
-        <main id="main" className={"main " + pageClass}>
+        <main
+          id="main"
+          ref={mainRef}
+          tabIndex={-1}
+          className={"main " + pageClass}
+        >
           {children}
         </main>
         <Rail />
@@ -187,9 +218,6 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
         const item = experience.find((e) => e.slug === selectedExperience)!;
         return `${item.title} · ${item.dates}`;
       })();
-  const detailPath = isProjects
-    ? "/projects/" + selectedProject
-    : "/experience/" + selectedExperience;
   const source = isProjects
     ? projects.find((p) => p.slug === selectedProject)?.source
     : undefined;
@@ -202,7 +230,7 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
             <h1>{isProjects ? "PROJECTS · FEATURED" : "EXPERIENCE"}</h1>
             <p>
               {isProjects
-                ? "SELECT A PROJECT TO OPEN ITS CASE STUDY"
+                ? "SELECT A PROJECT TO EXPLORE WHAT'S AVAILABLE"
                 : "PROFESSIONAL WORK · RESEARCH · DATA SYSTEMS"}
             </p>
           </div>
@@ -295,10 +323,17 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
           <div className="selected-tray">
             <h2>{selected.name.toUpperCase()}</h2>
             <p>{selectedDescription}</p>
-            <Link to={detailPath}>
-              {isProjects ? "OPEN CASE STUDY" : "VIEW EXPERIENCE"}{" "}
-              <span aria-hidden="true">↗</span>
-            </Link>
+            {isProjects && selectedProject === "food-tracker" ? (
+              <Link className="selected-tray__action" to="/projects/food-tracker">
+                READ CASE STUDY <span aria-hidden="true">↗</span>
+              </Link>
+            ) : (
+              <p className="selected-tray__status">
+                {isProjects
+                  ? "CASE STUDY IN DEVELOPMENT"
+                  : "FULL EXPERIENCE STORY IN DEVELOPMENT"}
+              </p>
+            )}
             <div className="selected-tray__foot">
               SELECTED {isProjects ? "PROJECT" : "EXPERIENCE"}{" "}
               <strong>{selected.name.toUpperCase()}</strong>
@@ -316,6 +351,308 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
           )}
         </div>
       </div>
+    </Client>
+  );
+}
+
+const foodChapters = [
+  { id: "overview", label: "OVERVIEW" },
+  { id: "search", label: "SEARCH" },
+  { id: "iteration", label: "ITERATION" },
+  { id: "workflow", label: "WORKFLOW" },
+  { id: "reflection", label: "REFLECTION" },
+] as const;
+type FoodChapterId = (typeof foodChapters)[number]["id"];
+
+const foodBenchmarkSets = [
+  {
+    name: "DEVELOPMENT · 80 QUERIES",
+    legacy: ["40/80", "40/80", "40/80"],
+    hybrid: ["71/80", "72/80", "72/80"],
+  },
+  {
+    name: "HOLDOUT · 40 QUERIES",
+    legacy: ["25/40", "25/40", "25/40"],
+    hybrid: ["27/40", "28/40", "28/40"],
+  },
+] as const;
+
+function FoodBenchmarkPlate() {
+  return (
+    <figure className="food-benchmark" aria-labelledby="food-benchmark-title">
+      <figcaption id="food-benchmark-title" className="food-benchmark__title">
+        OFFLINE RETRIEVAL BENCHMARK
+      </figcaption>
+      <div className="food-benchmark__splits">
+        {foodBenchmarkSets.map((set) => (
+          <section className="food-benchmark__split" key={set.name}>
+            <h3>{set.name}</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">RETRIEVER</th>
+                  <th scope="col">TOP-1</th>
+                  <th scope="col">TOP-3</th>
+                  <th scope="col">TOP-5</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">LEGACY</th>
+                  {set.legacy.map((value, index) => (
+                    <td key={index}>{value}</td>
+                  ))}
+                </tr>
+                <tr className="food-benchmark__hybrid">
+                  <th scope="row">FULL HYBRID</th>
+                  {set.hybrid.map((value, index) => (
+                    <td key={index}>{value}</td>
+                  ))}
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        ))}
+      </div>
+      <p className="food-benchmark__scale">
+        REFERENCE CATALOG · 12,363 active foods · 277,341 nutrient rows · SCALE
+        ONLY, NOT PRODUCT IMPACT
+      </p>
+    </figure>
+  );
+}
+
+function FoodTrackerCaseStudy() {
+  const [activeChapter, setActiveChapter] = useState<FoodChapterId>("overview");
+
+  useEffect(() => {
+    const main = document.getElementById("main");
+    if (!main) return;
+
+    let frame = 0;
+    const updateChapter = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const overflowY = window.getComputedStyle(main).overflowY;
+        const mainIsScroller = overflowY === "auto" || overflowY === "scroll";
+        const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
+        const activationLine = rootTop + 78;
+        let nextChapter: FoodChapterId = "overview";
+
+        for (const chapter of foodChapters) {
+          const section = document.getElementById(`food-${chapter.id}`);
+          if (section && section.getBoundingClientRect().top <= activationLine) {
+            nextChapter = chapter.id;
+          }
+        }
+        setActiveChapter(nextChapter);
+      });
+    };
+
+    main.addEventListener("scroll", updateChapter, { passive: true });
+    window.addEventListener("scroll", updateChapter, { passive: true });
+    window.addEventListener("resize", updateChapter);
+    updateChapter();
+
+    return () => {
+      main.removeEventListener("scroll", updateChapter);
+      window.removeEventListener("scroll", updateChapter);
+      window.removeEventListener("resize", updateChapter);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  return (
+    <Client pageClass="main--detail main--food-case">
+      <nav className="food-case-nav" aria-label="Food Tracker case study">
+        <div className="food-case-nav__chapters">
+          {foodChapters.map((chapter) => (
+            <a
+              href={`#food-${chapter.id}`}
+              aria-current={activeChapter === chapter.id ? "location" : undefined}
+              key={chapter.id}
+              onClick={() => setActiveChapter(chapter.id)}
+            >
+              {chapter.label}
+            </a>
+          ))}
+        </div>
+        <Link className="food-case-nav__back" to="/projects">
+          ‹ PROJECTS
+        </Link>
+        <span className="food-case-nav__breadcrumb">CASE STUDY / FOOD TRACKER</span>
+      </nav>
+
+      <article className="food-story-content">
+        <section className="food-section food-hero" id="food-overview">
+          <div className="food-hero__opening">
+            <p className="food-project-label">
+              <strong>FOOD TRACKER</strong>
+              <span>FLAGSHIP PROJECT</span>
+            </p>
+            <h1>Simple tracking,<br />serious insight.</h1>
+            <p className="food-hero__intro">
+              I started with my own gym nutrition: logging needed to feel quick,
+              while search, serving, recommendations, and long-term insight had
+              to earn my trust.
+            </p>
+            <p className="food-hero__principle">
+              Simple and Complex are two presentation levels over the same
+              backend.
+            </p>
+          </div>
+
+          <div className="food-system-path">
+            <p className="food-eyebrow">A SHORT PATH TO A TRUSTWORTHY LOG</p>
+            <h2>Quick to enter. Careful underneath.</h2>
+            <ol className="food-system-path__steps">
+              {[
+                ["INTENT", "AI may interpret"],
+                ["SEARCH", "Rank candidates"],
+                ["FOOD DATA", "Trusted values"],
+                ["SERVING", "Backend resolves"],
+                ["LOG + INSIGHT", "History · trends"],
+              ].map(([title, detail]) => (
+                <li key={title}>
+                  <span>{title}</span>
+                  <small>{detail}</small>
+                </li>
+              ))}
+            </ol>
+            <p className="food-system-path__summary">
+              AI can help interpret intent; trusted food data and backend
+              serving conversion define nutrition values.
+            </p>
+            <p className="food-system-path__sources">
+              Canadian Nutrient File · Ciqual · CoFID · USDA FoodData Central ·
+              Open Food Facts
+            </p>
+          </div>
+        </section>
+
+        <section className="food-section food-search" id="food-search">
+          <p className="food-section-label">SEARCH / EVALUATION</p>
+          <div className="food-search__grid">
+            <div className="food-search__story">
+              <h2>Benchmarking changed the architecture.</h2>
+              <p>
+                I measured retrieval on development and holdout queries before
+                deciding where semantic search belonged. The benchmark made
+                evaluation the authority.
+              </p>
+            </div>
+            <FoodBenchmarkPlate />
+          </div>
+          <p className="food-search__decision">
+            The path became query → deterministic ranking → fuzzy retrieval →
+            semantic candidates → union → deterministic evaluator → final rank.
+            Pinecone supplied candidates only. The interview reports semantic
+            retrieval added latency for little extra recovery.
+          </p>
+        </section>
+
+        <section className="food-section food-iteration" id="food-iteration">
+          <p className="food-section-label">ITERATION</p>
+          <h2>A passing test suite wasn't the same as a useful search.</h2>
+          <div className="food-iteration__episodes">
+            <article>
+              <span className="food-iteration__number">01</span>
+              <div>
+                <h3>GREEN TESTS, POOR RELEVANCE</h3>
+                <p>
+                  Automated tests passed while real food search still felt
+                  wrong. I judged retrieval against development and holdout
+                  queries instead of treating a passing suite as proof of
+                  relevance.
+                </p>
+              </div>
+            </article>
+            <article>
+              <span className="food-iteration__number">02</span>
+              <div>
+                <h3>INDEX STATE IS PART OF CORRECTNESS</h3>
+                <p>
+                  A Pinecone pagination issue once left partial or stale index
+                  state. In a separate staging run, quota and rate-limit
+                  behavior interrupted indexing.
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="food-section food-boundaries" id="food-boundaries">
+          <p className="food-section-label">ENGINEERING BOUNDARIES</p>
+          <h2>Three rules keep the numbers honest.</h2>
+          <div className="food-boundaries__rules">
+            <article>
+              <h3>NUTRITION AUTHORITY</h3>
+              <p>
+                AI may interpret food intent. Trusted normalized data and
+                backend serving resolution determine nutrition values.
+              </p>
+            </article>
+            <article>
+              <h3>HISTORICAL INTEGRITY</h3>
+              <p>
+                A log is canonical. Historical nutrition stays immutable;
+                unknown nutrition stays unknown.
+              </p>
+            </article>
+            <article>
+              <h3>SEARCH RANKING</h3>
+              <p>
+                Pinecone is a candidate source, not the final ranker. A
+                deterministic evaluator sets the final order.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section className="food-section food-workflow" id="food-workflow">
+          <div className="food-workflow__story">
+            <p className="food-section-label">HOW MY WORKFLOW EVOLVED</p>
+            <h2>I made implementation more deliberate.</h2>
+            <p>
+              Later, I gave Codex and AI agents bounded tasks with written
+              specs, then set acceptance and regression checks and used
+              independent review before integration.
+            </p>
+            <p>
+              I retained product decisions, architecture direction, evaluation,
+              debugging direction, and acceptance.
+            </p>
+          </div>
+          <ol className="food-workflow__steps">
+            {[
+              "BOUND A TASK",
+              "WRITE THE SPEC",
+              "EVALUATE",
+              "REVIEW INDEPENDENTLY",
+            ].map((step, index) => (
+              <li key={step}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <strong>{step}</strong>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="food-section food-reflection" id="food-reflection">
+          <p className="food-section-label">WHAT I TOOK FORWARD</p>
+          <h2>Trust is what makes simple tracking possible.</h2>
+          <p>
+            I learned that the work behind a simple log is what lets me make the
+            experience feel simple: nutrition stays explicit, history stays
+            trustworthy, and the next step feels clear.
+          </p>
+          <small>
+            I’m continuing frontend refinement and closing remaining product
+            issues.
+          </small>
+        </section>
+      </article>
     </Client>
   );
 }
@@ -378,10 +715,18 @@ function ProfileOverview() {
             <h2 id="profile-projects-heading">PROJECTS</h2>
             <div className="profile-project-grid">
               {[projects[2], projects[3], projects[1], projects[0]].map((p) => (
-                <Link to={"/projects/" + p.slug} key={p.slug}>
+                <article key={p.slug}>
                   <strong>{p.name}</strong>
                   <span>{p.detail}</span>
-                </Link>
+                  {p.slug === "food-tracker" && (
+                    <Link to="/projects/food-tracker">READ CASE STUDY ↗</Link>
+                  )}
+                  {p.source && (
+                    <a href={p.source} target="_blank" rel="noreferrer">
+                      VIEW SOURCE REPOSITORY <span aria-hidden="true">↗</span>
+                    </a>
+                  )}
+                </article>
               ))}
             </div>
           </section>
@@ -410,7 +755,6 @@ function ProfileOverview() {
 }
 
 const demoOptions = [
-  { key: "food", label: "FOOD TRACKER", image: "/media/food-tracker-mark.png" },
   { key: "crest", label: "CREST", image: "/media/crest-sample.png" },
   {
     key: "choveigo",
@@ -420,7 +764,7 @@ const demoOptions = [
 ] as const;
 function Demos() {
   const [selected, setSelected] =
-    useState<(typeof demoOptions)[number]["key"]>("food");
+    useState<(typeof demoOptions)[number]["key"]>("crest");
   const current = demoOptions.find((item) => item.key === selected)!;
   return (
     <Client pageClass="main--demos">
@@ -451,11 +795,7 @@ function Demos() {
           <div className={"demo-player demo-player--" + selected}>
             <img
               src={current.image}
-              alt={
-                selected === "food"
-                  ? "Food Tracker project mark"
-                  : `${current.label} project demo still`
-              }
+              alt={`${current.label} project demo still`}
             />
             {selected === "crest" && (
               <>
@@ -480,7 +820,7 @@ function Demos() {
   );
 }
 
-function DeferredDetail({ kind }: { kind: "project" | "experience" }) {
+function ReservedDetailRoute({ kind }: { kind: "project" | "experience" }) {
   const { slug } = useParams();
   const item =
     kind === "project"
@@ -488,23 +828,10 @@ function DeferredDetail({ kind }: { kind: "project" | "experience" }) {
       : experience.find((e) => e.slug === slug);
   if (!item) return <NotFound />;
   return (
-    <Client pageClass="main--detail">
-      <div className="detail-back">
-        <Link to={kind === "project" ? "/projects" : "/experience"}>
-          ← BACK TO {kind === "project" ? "PROJECTS" : "EXPERIENCE"}
-        </Link>
-      </div>
-      <div className="detail-deferred">
-        <span className="eyebrow">
-          {kind === "project" ? "CASE STUDY" : "EXPERIENCE"}
-        </span>
-        <h1>{item.name}</h1>
-        <p>This story is being prepared for the portfolio.</p>
-        <Link to={kind === "project" ? "/projects" : "/experience"}>
-          RETURN TO {kind === "project" ? "PROJECTS" : "EXPERIENCE"} →
-        </Link>
-      </div>
-    </Client>
+    <Navigate
+      to={kind === "project" ? "/projects" : "/experience"}
+      replace
+    />
   );
 }
 function NotFound() {
@@ -528,12 +855,16 @@ export default function App() {
       <Route path="/profile" element={<ProfileOverview />} />
       <Route path="/profile/demos" element={<Demos />} />
       <Route
+        path="/projects/food-tracker"
+        element={<FoodTrackerCaseStudy />}
+      />
+      <Route
         path="/projects/:slug"
-        element={<DeferredDetail kind="project" />}
+        element={<ReservedDetailRoute kind="project" />}
       />
       <Route
         path="/experience/:slug"
-        element={<DeferredDetail kind="experience" />}
+        element={<ReservedDetailRoute kind="experience" />}
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
