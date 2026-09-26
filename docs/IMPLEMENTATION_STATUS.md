@@ -38,9 +38,9 @@ The Food Tracker mark is not bundled while public embedding rights are confirmed
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
 | Branch | `feat/initial-client-shell` |
 | Staging site | https://joshuaik2.pages.dev/ |
-| Previous immutable preview | https://c8918e26.joshuaik2.pages.dev/ |
+| Current immutable deployment | https://da4f4bb8.joshuaik2.pages.dev/ |
 
-The staging project is separate from the existing primary portfolio deployment. The browser-control runtime was unavailable during this handoff, so browser screenshots and live keyboard behavior could not be independently reviewed here. Static lint, TypeScript, and production-build checks should be rerun after the current review corrections are complete.
+The staging project is separate from the existing primary portfolio deployment. HTTP HEAD requests returned 200 for the lobby root, the Food Tracker route, a reserved Crest route, and the immutable Food Tracker deployment URL. The browser-control runtime was unavailable, so browser screenshots and live keyboard behavior could not be independently reviewed here.
 
 ## Source-review corrections in the working tree
 
