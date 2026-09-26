@@ -27,3 +27,7 @@ Source Figma file: [Portfolio design](https://www.figma.com/design/9zvk9iSRPKSsJ
 | `public/media/choveigo-recommendations.png` | `exploration-assets/choveigo-recommendations-poster.png` | Owner-cleared static Recommendations still |
 
 No local source handoff docs or old portfolio files are copied into this repository.
+
+## Staging
+
+The initial shell was deployed to the separate Cloudflare Pages project at https://joshuaik2.pages.dev/ on 2026-09-26. The deployment also returned the immutable preview URL https://c8918e26.joshuaik2.pages.dev/. Root and `/profile/demos` returned HTTP 200 after upload. This project is separate from the existing primary portfolio deployment.
