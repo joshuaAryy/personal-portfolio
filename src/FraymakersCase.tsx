@@ -109,84 +109,86 @@ export default function FraymakersCase() {
               Give each match a repeatable path to a frame.
             </h2>
           </div>
-          <ol className="fraymakers-flow__steps">
-            {flowSteps.map((step) => (
-              <li key={step.number}>
-                <span className="fraymakers-step-number">{step.number}</span>
-                <h3>{step.title}</h3>
-                <p>{step.detail}</p>
-              </li>
-            ))}
-          </ol>
-        </section>
-
-        <section
-          className="fraymakers-contribution"
-          id="fraymakers-part"
-          aria-labelledby="fraymakers-part-title"
-        >
-          <div className="fraymakers-section-heading">
-            <p className="fraymakers-eyebrow">MY PART</p>
-            <h2 id="fraymakers-part-title">
-              One subsystem, inside a larger shared project.
-            </h2>
-          </div>
-          <div className="fraymakers-contribution__grid">
-            <div className="fraymakers-owned">
-              <p className="fraymakers-eyebrow fraymakers-eyebrow--accent">
-                MY OWNERSHIP
-              </p>
-              <h3>thumbnail.js</h3>
-              <p>
-                I joined after my brother had started the tool. I wrote
-                <code> thumbnail.js</code> and contributed YAML configuration,
-                thumbnail generation and integration, plus some YouTube API
-                work.
-              </p>
-            </div>
-            <div className="fraymakers-shared">
-              <p className="fraymakers-eyebrow">SHARED FOUNDATION</p>
-              <p>
-                The broader foundation and much of the Challonge and API
-                groundwork belonged to my brother. My part extended that shared
-                tool with the thumbnail workflow.
-              </p>
-              <p className="fraymakers-api-note">
-                YouTube Data API v3 / OAuth was a prototype. Automatic upload
-                was not completed.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="fraymakers-composer" aria-labelledby="fraymakers-composer-title">
-          <div className="fraymakers-composer__heading">
-            <p className="fraymakers-eyebrow">COMPOSITION + EDGE CASES</p>
-            <h2 id="fraymakers-composer-title">The details live in the frame logic.</h2>
-          </div>
-          <div className="fraymakers-composition">
-            <div>
-              <p className="fraymakers-eyebrow">WHAT THE COMPOSER HANDLES</p>
-              <p className="fraymakers-composition__note">
-                The frame combines game-specific layers and match context. The
-                page explains those inputs in text; it does not reproduce game
-                artwork or a generated thumbnail.
-              </p>
-            </div>
-            <ul aria-label="Thumbnail composition inputs">
-              {compositionInputs.map((input) => (
-                <li key={input}>{input}</li>
+          <div className="fraymakers-editorial-plate">
+            <ol className="fraymakers-flow__steps">
+              {flowSteps.map((step) => (
+                <li key={step.number}>
+                  <span className="fraymakers-step-number">{step.number}</span>
+                  <h3>{step.title}</h3>
+                  <p>{step.detail}</p>
+                </li>
               ))}
-            </ul>
-          </div>
-          <dl className="fraymakers-edge-cases">
-            {edgeCases.map(([term, detail]) => (
-              <div key={term}>
-                <dt>{term}</dt>
-                <dd>{detail}</dd>
+            </ol>
+
+          <section
+            className="fraymakers-contribution"
+            id="fraymakers-part"
+            aria-labelledby="fraymakers-part-title"
+          >
+            <div className="fraymakers-section-heading">
+              <p className="fraymakers-eyebrow">MY PART</p>
+              <h2 id="fraymakers-part-title">
+                One subsystem, inside a larger shared project.
+              </h2>
+            </div>
+            <div className="fraymakers-contribution__grid">
+              <div className="fraymakers-owned">
+                <p className="fraymakers-eyebrow fraymakers-eyebrow--accent">
+                  MY OWNERSHIP
+                </p>
+                <h3>thumbnail.js</h3>
+                <p>
+                  I joined after my brother had started the tool. I wrote
+                  <code> thumbnail.js</code> and contributed YAML configuration,
+                  thumbnail generation and integration, plus some YouTube API
+                  work.
+                </p>
               </div>
-            ))}
-          </dl>
+              <div className="fraymakers-shared">
+                <p className="fraymakers-eyebrow">SHARED FOUNDATION</p>
+                <p>
+                  The broader foundation and much of the Challonge and API
+                  groundwork belonged to my brother. My part extended that shared
+                  tool with the thumbnail workflow.
+                </p>
+                <p className="fraymakers-api-note">
+                  YouTube Data API v3 / OAuth was a prototype. Automatic upload
+                  was not completed.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section className="fraymakers-composer" aria-labelledby="fraymakers-composer-title">
+            <div className="fraymakers-composer__heading">
+              <p className="fraymakers-eyebrow">COMPOSITION + EDGE CASES</p>
+              <h2 id="fraymakers-composer-title">The details live in the frame logic.</h2>
+            </div>
+            <div className="fraymakers-composition">
+              <div>
+                <p className="fraymakers-eyebrow">WHAT THE COMPOSER HANDLES</p>
+                <p className="fraymakers-composition__note">
+                  The frame combines game-specific layers and match context. The
+                  page explains those inputs in text; it does not reproduce game
+                  artwork or a generated thumbnail.
+                </p>
+              </div>
+              <ul aria-label="Thumbnail composition inputs">
+                {compositionInputs.map((input) => (
+                  <li key={input}>{input}</li>
+                ))}
+              </ul>
+            </div>
+            <dl className="fraymakers-edge-cases">
+              {edgeCases.map(([term, detail]) => (
+                <div key={term}>
+                  <dt>{term}</dt>
+                  <dd>{detail}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+          </div>
         </section>
 
         <section

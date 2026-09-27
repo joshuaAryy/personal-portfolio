@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./cho-evidence-worksheet.css";
 
 const chapters = [
   { id: "question", label: "THE QUESTION" },
@@ -213,6 +214,7 @@ export default function ChoViegoCase() {
               </li>
             ))}
           </ol>
+          <EvidenceWorksheet />
         </section>
 
         <section
@@ -322,5 +324,47 @@ export default function ChoViegoCase() {
         </section>
       </article>
     </>
+  );
+}
+
+const evidenceInputs = [
+  ["RESPONSIBILITY", "The work a role asks for"],
+  ["EVIDENCE", "Candidate’s experience supports its responsibilities"],
+  ["GAP", "Meaningful gaps remain"],
+] as const;
+
+function EvidenceWorksheet() {
+  return (
+    <figure
+      className="cho-evidence-worksheet"
+      aria-label="Evidence worksheet from responsibility to three separate judgments"
+    >
+      <figcaption className="cho-evidence-worksheet__caption">
+        EVIDENCE
+      </figcaption>
+      <ol className="cho-evidence-worksheet__inputs" aria-label="Evidence path">
+        {evidenceInputs.map(([label, detail]) => (
+          <li key={label}>
+            <span>{label}</span>
+            <p>{detail}</p>
+          </li>
+        ))}
+      </ol>
+      <div className="cho-evidence-worksheet__branch" aria-hidden="true">
+        <span className="cho-evidence-worksheet__stem" />
+        <span className="cho-evidence-worksheet__rail" />
+        <span className="cho-evidence-worksheet__connector" />
+        <span className="cho-evidence-worksheet__connector" />
+        <span className="cho-evidence-worksheet__connector" />
+      </div>
+      <dl className="cho-evidence-worksheet__judgments">
+        {fitDimensions.map(([term, definition]) => (
+          <div key={term}>
+            <dt>{term}</dt>
+            <dd>{definition}</dd>
+          </div>
+        ))}
+      </dl>
+    </figure>
   );
 }

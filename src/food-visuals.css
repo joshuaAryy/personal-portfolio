@@ -1,0 +1,145 @@
+.food-trust-summary {
+  max-width: 700px;
+}
+
+.food-trust-summary h2 {
+  margin: 0 0 15px;
+  color: #eee7d8;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.food-trust-summary__principle {
+  margin: 0 0 9px;
+  color: #eee7d8;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.food-trust-summary__sources {
+  margin: 0;
+  color: #647a86;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.food-product-anatomy {
+  width: 100%;
+  min-height: 134px;
+  margin: 26px 0 0;
+  padding: 13px 25px 18px;
+  background: #f2eee2;
+  color: #17272c;
+  border: 1px solid #c8c1ae;
+}
+
+.food-product-anatomy__title {
+  color: #98712e;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.food-product-anatomy__stages {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  padding: 0;
+  margin: 12px 0 0;
+  list-style: none;
+}
+
+.food-product-anatomy__stages li {
+  position: relative;
+  min-width: 0;
+  min-height: 78px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 12px 10px;
+  background: #fffcf4;
+  border: 1px solid #dbd4c2;
+  border-radius: 2px;
+}
+
+.food-product-anatomy__stages li::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: 12px;
+  width: 34px;
+  height: 2px;
+  background: #98712e;
+}
+
+.food-product-anatomy__stages li:not(:last-child)::after {
+  content: "→";
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: -11px;
+  color: #98712e;
+  font-size: 15px;
+  line-height: 1;
+  transform: translate(50%, -50%);
+}
+
+.food-product-anatomy__stages li span {
+  color: #17272c;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+}
+
+.food-product-anatomy__stages li .food-product-anatomy__number {
+  color: #98712e;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1;
+}
+
+.food-product-anatomy__stages li p {
+  margin: 0;
+  color: #4a595e;
+  font-size: 10px;
+  line-height: 1.25;
+}
+
+@media (max-width: 1100px) {
+  .food-product-anatomy__stages {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .food-product-anatomy__stages li:nth-child(3)::after {
+    content: none;
+  }
+}
+
+@media (max-width: 650px) {
+  .food-trust-summary h2 {
+    font-size: 19px;
+  }
+
+  .food-product-anatomy {
+    padding: 15px 16px 16px;
+  }
+
+  .food-product-anatomy__stages {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .food-product-anatomy__stages li {
+    min-height: 0;
+    gap: 5px;
+    border-left: 2px solid #98712e;
+    padding: 10px 12px;
+  }
+
+  .food-product-anatomy__stages li:not(:last-child)::after {
+    content: none;
+  }
+}

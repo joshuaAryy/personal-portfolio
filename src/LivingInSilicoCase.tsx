@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import "./lis-research-record.css";
 
 const learningTools = [
   "SMILES",
@@ -24,7 +25,7 @@ const fragmentSteps = [
   },
 ] as const;
 
-const handoffItems = ["Research code", "Generated outputs", "Written report"] as const;
+const handoffItems = ["Research code", "Written report"] as const;
 
 export default function LivingInSilicoCase() {
   return (
@@ -50,7 +51,7 @@ export default function LivingInSilicoCase() {
             </div>
             <div>
               <dt>DATES</dt>
-              <dd>Approx. March–June 2025</dd>
+              <dd>March–June 2025</dd>
             </div>
             <div>
               <dt>SUPERVISOR</dt>
@@ -131,25 +132,30 @@ export default function LivingInSilicoCase() {
         </div>
       </section>
 
-      <section className="living-deepmol" aria-labelledby="living-deepmol-title">
-        <div className="living-section-label">
-          <span>03</span>
-          <p className="living-eyebrow">DEEPMOL</p>
+      <section className="living-research-record" aria-labelledby="living-research-record-title">
+        <h2 className="living-research-record__sr-only" id="living-research-record-title">
+          DeepMol research record
+        </h2>
+        <div className="living-research-record__sample">
+          <span className="living-research-record__index" aria-hidden="true">03</span>
+          <p className="living-research-record__count">500</p>
+          <p className="living-research-record__caption">GENERATED SMILES SAMPLES</p>
         </div>
-        <div className="living-deepmol__result">
-          <p className="living-deepmol__count">500</p>
-          <h2 id="living-deepmol-title">generated SMILES samples</h2>
-        </div>
-        <div className="living-deepmol__method">
+        <div className="living-research-record__column living-research-record__method">
+          <h3>METHOD</h3>
           <p>
-            I worked with a DeepMol CSVLoader and an RNN MolecularGenerator,
-            using Morgan fingerprints with radius 2 and size 128.
+            I used DeepMol CSVLoader and Morgan fingerprints (radius 2, 128
+            bits), then ran an RNN MolecularGenerator for 10 epochs with batch
+            size 64.
           </p>
-          <ul aria-label="Reported model setup">
-            <li>10 epochs</li>
-            <li>Batch size 64</li>
-            <li>generate(n=500)</li>
-          </ul>
+        </div>
+        <div className="living-research-record__column living-research-record__attempt">
+          <h3>ATTEMPT</h3>
+          <h4>REINVENT4</h4>
+        </div>
+        <div className="living-research-record__column living-research-record__outcome">
+          <h3>OUTCOME</h3>
+          <p>Did not achieve successful generation before the internship ended.</p>
         </div>
       </section>
 

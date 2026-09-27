@@ -1,0 +1,313 @@
+.main--profile .profile-content {
+  gap: clamp(20px, 3.5vh, 42px);
+}
+.profile-overview {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+.profile-project-panel {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
+  padding: 24px 26px 18px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(145deg, #171321 0%, #0d111b 74%, #11191d 100%) padding-box,
+    linear-gradient(120deg, #d1ad65 0%, #665134 42%, #3a7180 100%) border-box;
+  box-shadow: inset 0 0 0 5px #090e14a8;
+}
+.profile-project-panel::before {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  border: 1px solid #c3a46432;
+  pointer-events: none;
+}
+.profile-project-panel__header {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin: 0 0 12px;
+  padding: 0 6px 14px;
+  border-bottom: 1px solid #8d744a8a;
+}
+.profile-project-panel__header p {
+  margin: 0 0 3px;
+  color: #a8a3a1;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+.profile-project-panel__header h2 {
+  margin: 0;
+  color: #efe4c5;
+  font: 400 26px Cinzel, Georgia, serif;
+  letter-spacing: 0.04em;
+}
+.profile-project-panel__header > span {
+  color: #c79b45;
+  font: 400 17px Cinzel, Georgia, serif;
+  letter-spacing: 0.16em;
+}
+.profile-project-grid {
+  position: relative;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: auto;
+  min-height: 250px;
+}
+.profile-project-card {
+  --project-accent: #d3b36e;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 23px 13px 12px;
+  text-align: center;
+  border-right: 1px solid #75604c8c;
+}
+.profile-project-card:last-child {
+  border-right: 0;
+}
+.profile-project-stamp {
+  width: 58px;
+  height: 58px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--project-accent) 75%, transparent);
+  border-radius: 50%;
+  color: var(--project-accent);
+  background:
+    radial-gradient(circle at 50% 40%, color-mix(in srgb, var(--project-accent) 18%, transparent), transparent 68%),
+    #0b1117;
+  box-shadow: 0 0 0 4px #091018, 0 0 0 5px #6b593b8c;
+}
+.profile-project-stamp svg {
+  width: 41px;
+  height: 41px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+}
+.profile-project-stamp--food-tracker {
+  --project-accent: #89c4b1;
+}
+.profile-project-stamp--choveigo {
+  --project-accent: #c1a5dd;
+}
+.profile-project-stamp--crest {
+  --project-accent: #d8b56d;
+}
+.profile-project-stamp--fraymakers {
+  --project-accent: #d49c75;
+}
+.profile-project-card > strong {
+  color: #efe4c5;
+  font: 400 clamp(16px, 1.35vw, 21px) Cinzel, Georgia, serif;
+  line-height: 1.2;
+}
+.profile-project-card__summary {
+  min-height: 2.5em;
+  color: #c4c1c5;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.profile-project-card__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 15px;
+  margin-top: auto;
+}
+.profile-project-card__links a {
+  color: #ddc681;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
+}
+.profile-project-card__links a:hover {
+  color: #fff0bd;
+}
+.profile-project-card__links a span {
+  color: #8ec2c5;
+}
+.profile-signal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+  padding: 0 0 6px;
+  border-top: 1px solid #80633f;
+}
+.profile-signal {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 12px 4px;
+  text-align: center;
+  border-right: 1px solid #65505e;
+}
+.profile-signal:last-child {
+  border-right: 0;
+}
+.profile-signal__medallion {
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  color: #d4b36a;
+  border: 1px solid #a98b50;
+  border-radius: 50%;
+  background: radial-gradient(circle, #47351b72, #10151d 72%);
+}
+.profile-signal__medallion svg {
+  width: 29px;
+  height: 29px;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.35;
+}
+.profile-signal__medallion--experience {
+  color: #8dc1c0;
+  border-color: #568487;
+}
+.profile-signal__medallion--hackathon {
+  color: #d6a47a;
+  border-color: #966f50;
+}
+.profile-signal__medallion--academics {
+  color: #c1a5dd;
+  border-color: #806a9a;
+}
+.profile-signal dt {
+  color: #e1cca0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+.profile-signal dd {
+  margin: 0;
+  color: #e8dfc8;
+  font: 400 27px Cinzel, Georgia, serif;
+}
+@media (max-width: 1200px) {
+  .profile-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    height: auto;
+  }
+  .profile-project-card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    align-content: center;
+    justify-items: start;
+    gap: 6px 15px;
+    min-height: 132px;
+    padding: 18px 13px;
+    text-align: left;
+  }
+  .profile-project-card:nth-child(odd) {
+    border-right: 1px solid #75604c8c;
+  }
+  .profile-project-card:nth-child(even) {
+    border-right: 0;
+  }
+  .profile-project-card:nth-child(-n + 2) {
+    border-bottom: 1px solid #75604c8c;
+  }
+  .profile-project-stamp {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 48px;
+    height: 48px;
+  }
+  .profile-project-stamp svg {
+    width: 34px;
+    height: 34px;
+  }
+  .profile-project-card > strong,
+  .profile-project-card__summary,
+  .profile-project-card__links {
+    grid-column: 2;
+  }
+  .profile-project-card > strong {
+    font-size: 17px;
+  }
+  .profile-project-card__summary {
+    min-height: 0;
+  }
+  .profile-project-card__links {
+    justify-content: flex-start;
+    margin-top: 4px;
+  }
+  .profile-signal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .profile-signal:nth-child(odd) {
+    border-right: 1px solid #65505e;
+  }
+  .profile-signal:nth-child(even) {
+    border-right: 0;
+  }
+  .profile-signal:nth-child(-n + 2) {
+    border-bottom: 1px solid #65505e;
+  }
+}
+@media (max-width: 900px) {
+  .profile-overview {
+    flex: none;
+    min-height: 0;
+    gap: 22px;
+  }
+  .profile-project-panel {
+    min-height: 0;
+    padding: 20px 17px 14px;
+  }
+  .profile-project-panel__header h2 {
+    font-size: 22px;
+  }
+  .profile-signal {
+    padding: 16px 8px;
+  }
+  .profile-signal__medallion {
+    width: 40px;
+    height: 40px;
+  }
+  .profile-signal dt {
+    font-size: 10px;
+  }
+  .profile-signal dd {
+    font-size: 23px;
+  }
+}
+@media (max-width: 560px) {
+  .profile-project-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .profile-project-card,
+  .profile-project-card:nth-child(odd),
+  .profile-project-card:nth-child(even) {
+    border-right: 0;
+    border-bottom: 1px solid #75604c8c;
+  }
+  .profile-project-card:last-child {
+    border-bottom: 0;
+  }
+  .profile-signal-grid {
+    gap: 0;
+  }
+}

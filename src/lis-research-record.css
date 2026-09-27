@@ -1,0 +1,128 @@
+.living-story .living-research-record {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.65fr) repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  margin: 0 0 0;
+  min-height: 260px;
+  padding: 27px 30px 30px;
+  background: #f0e8d6;
+  color: #0e1a21;
+}
+
+.living-story .living-research-record__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.living-story .living-research-record__sample {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding-right: 24px;
+}
+
+.living-story .living-research-record__index {
+  margin-bottom: 10px;
+  color: #0a5e5e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.living-story .living-research-record__count {
+  color: #0e1a21;
+  font-size: clamp(78px, 8vw, 102px);
+  font-weight: 700;
+  letter-spacing: -0.075em;
+  line-height: 0.95;
+}
+
+.living-story .living-research-record__caption,
+.living-story .living-research-record__column h3 {
+  color: #0a5e5e;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+  line-height: 1.25;
+}
+
+.living-story .living-research-record__caption {
+  margin-top: 10px !important;
+}
+
+.living-story .living-research-record__column {
+  min-width: 0;
+  padding: 4px 23px 0;
+  border-left: 1px solid #c2b89e;
+}
+
+.living-story .living-research-record__column h3 {
+  margin-bottom: 13px !important;
+}
+
+.living-story .living-research-record__column p {
+  color: #0e1a21;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.living-story .living-research-record__column h4 {
+  margin: 0;
+  color: #0e1a21;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+@media (max-width: 1000px) {
+  .living-story .living-research-record {
+    grid-template-columns: minmax(170px, 0.7fr) repeat(2, minmax(0, 1fr));
+    row-gap: 24px;
+  }
+
+  .living-story .living-research-record__sample {
+    grid-row: span 2;
+  }
+
+  .living-story .living-research-record__outcome {
+    grid-column: 2 / -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .living-story .living-research-record {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 21px;
+    padding: 22px;
+  }
+
+  .living-story .living-research-record__sample {
+    padding: 0 0 18px;
+    border-bottom: 1px solid #c2b89e;
+  }
+
+  .living-story .living-research-record__count {
+    font-size: clamp(82px, 25vw, 102px);
+  }
+
+  .living-story .living-research-record__column,
+  .living-story .living-research-record__outcome {
+    grid-column: auto;
+    padding: 18px 0 0;
+    border-top: 1px solid #c2b89e;
+    border-left: 0;
+  }
+
+  .living-story .living-research-record__method {
+    padding-top: 0;
+    border-top: 0;
+  }
+}

@@ -1,0 +1,226 @@
+.opening {
+  --opening-duration: 2s;
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  place-items: center;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 48%, rgb(19 23 27 / 72%), transparent 58%),
+    #070c13;
+  color: #e9e2d4;
+  opacity: 1;
+}
+
+.opening .opening__center {
+  display: grid;
+  width: min(76vw, 468px);
+  aspect-ratio: 1;
+  place-items: center;
+}
+
+.opening .opening__mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.opening .opening__ring {
+  stroke-dasharray: 1150;
+  stroke-dashoffset: 1150;
+}
+
+.opening .opening__ring--registration {
+  opacity: 0;
+  animation: opening-register 180ms ease-out both;
+}
+
+.opening .opening__ring--gold {
+  opacity: 0;
+  animation: opening-ring 280ms ease-out 180ms both;
+}
+
+.opening .opening__ring--highlight {
+  opacity: 0;
+  animation: opening-ring-highlight 280ms ease-out 180ms both;
+}
+
+.opening .opening__j-shadow,
+.opening .opening__j-body,
+.opening .opening__j-metal,
+.opening .opening__j-detail {
+  opacity: 0;
+}
+
+.opening .opening__j-shadow {
+  animation: opening-shadow 240ms ease-out 460ms both;
+}
+
+.opening .opening__j-body {
+  animation: opening-j 420ms cubic-bezier(0.2, 0.7, 0.2, 1) 700ms both;
+}
+
+.opening .opening__j-metal {
+  transform-box: fill-box;
+  transform-origin: 50% 50%;
+  animation: opening-metal 260ms ease-out 1120ms both;
+}
+
+.opening .opening__j-detail {
+  animation: opening-detail 260ms ease-out 1120ms both;
+}
+
+.opening .opening__light-pass {
+  opacity: 0;
+  transform-box: fill-box;
+  transform: translateX(0);
+  animation: opening-light 240ms linear 1380ms both;
+}
+
+.opening .opening__skip {
+  position: absolute;
+  z-index: 1;
+  top: clamp(16px, 3.2vw, 34px);
+  right: clamp(16px, 3.2vw, 34px);
+  display: inline-grid;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 0 16px;
+  place-items: center;
+  border: 1px solid rgb(203 171 105 / 46%);
+  border-radius: 2px;
+  background: rgb(7 12 19 / 68%);
+  color: #e9d4a3;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.17em;
+  cursor: pointer;
+  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+}
+
+.opening .opening__skip:hover {
+  border-color: #d0aa63;
+  background: rgb(191 145 72 / 14%);
+  color: #fff0ca;
+}
+
+.opening .opening__skip:focus-visible {
+  outline: 2px solid #f2d68e;
+  outline-offset: 4px;
+}
+
+.opening.opening--leaving {
+  transition: opacity 180ms ease-out;
+  opacity: 0;
+}
+
+.opening.opening--reduced .opening__ring,
+.opening.opening--reduced .opening__j-shadow,
+.opening.opening--reduced .opening__j-body,
+.opening.opening--reduced .opening__j-metal,
+.opening.opening--reduced .opening__j-detail,
+.opening.opening--reduced .opening__light-pass {
+  animation: none;
+}
+
+.opening.opening--reduced .opening__ring--registration {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  opacity: 0.52;
+}
+
+.opening.opening--reduced .opening__ring--gold {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  opacity: 1;
+}
+
+.opening.opening--reduced .opening__ring--highlight {
+  stroke-dasharray: none;
+  stroke-dashoffset: 0;
+  opacity: 0.55;
+}
+
+.opening.opening--reduced .opening__j-shadow {
+  opacity: 0.5;
+}
+
+.opening.opening--reduced .opening__j-body,
+.opening.opening--reduced .opening__j-metal {
+  opacity: 1;
+}
+
+.opening.opening--reduced .opening__j-detail {
+  opacity: 0.56;
+}
+
+.opening.opening--reduced .opening__light-pass {
+  opacity: 0;
+}
+
+.opening.opening--reduced.opening--leaving {
+  transition-duration: 120ms;
+}
+
+@keyframes opening-register {
+  from { opacity: 0; }
+  to { opacity: 0.52; }
+}
+
+@keyframes opening-ring {
+  from { opacity: 0; stroke-dashoffset: 1150; }
+  to { opacity: 1; stroke-dashoffset: 0; }
+}
+
+@keyframes opening-ring-highlight {
+  from { opacity: 0; stroke-dashoffset: 1150; }
+  to { opacity: 0.55; stroke-dashoffset: 0; }
+}
+
+@keyframes opening-shadow {
+  from { opacity: 0; }
+  to { opacity: 0.5; }
+}
+
+@keyframes opening-j {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes opening-metal {
+  from { opacity: 0; transform: translateY(2px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes opening-detail {
+  from { opacity: 0; }
+  to { opacity: 0.56; }
+}
+
+@keyframes opening-light {
+  0% { opacity: 0; transform: translateX(0); }
+  50% { opacity: 0.34; transform: translateX(100%); }
+  100% { opacity: 0; transform: translateX(200%); }
+}
+
+@media (max-width: 480px) {
+  .opening .opening__center {
+    width: min(82vw, 360px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .opening *,
+  .opening *::before,
+  .opening *::after {
+    scroll-behavior: auto !important;
+  }
+
+  .opening .opening__skip {
+    transition: none;
+  }
+}
