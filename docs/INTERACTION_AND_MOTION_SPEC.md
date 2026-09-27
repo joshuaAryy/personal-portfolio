@@ -52,7 +52,7 @@ Resume Found removes its entrance motion under reduced-motion preferences. Utili
 
 ## Validation status
 
-The current integration is deployed to the public staging project at `https://523d052d.joshuaik2.pages.dev/` (deployment `523d052d-15ca-4c90-b119-3aa28d73c2ca`, application source `d1431ee`). All 15 requested route URLs returned HTTP 200 with the same 635-byte SPA shell, verifying hosting fallback only. The v13 PDF returned HTTP 200 with `application/pdf`, 164,726 bytes, and the approved workspace source SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending because no browser was available. No screenshots or live browser checks are claimed here.
+The current integration is deployed to the public staging project at `https://84d0f7a9.joshuaik2.pages.dev/` (deployment `84d0f7a9-c594-4a92-b51c-237bc42256d9`, application source `9aac4d5`). Four selected route URLs returned HTTP 200 with the same 635-byte SPA shell, verifying hosting fallback only. The v13 PDF returned HTTP 200 with `application/pdf`, 164,726 bytes, and the approved workspace source SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending because no browser was available. No screenshots or live browser checks are claimed here.
 
 ## Journey waypoint fragments (2026-09-27)
 
