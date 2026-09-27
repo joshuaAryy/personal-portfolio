@@ -13,6 +13,7 @@ import { experience, projects } from "./data";
 import ChoViegoCase from "./ChoViegoCase";
 import StushPattiesCase from "./StushPattiesCase";
 import FraymakersCase from "./FraymakersCase";
+import LivingInSilicoCase from "./LivingInSilicoCase";
 
 const railProjectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"] as const;
 const railProjects = railProjectOrder.map(
@@ -25,6 +26,7 @@ const projectCasePaths: Record<string, string> = {
   crest: "/projects/crest",
 };
 const experienceStoryPaths: Record<string, string> = {
+  "living-in-silico": "/experience/living-in-silico",
   "stush-patties": "/experience/stush-patties",
 };
 
@@ -1243,6 +1245,14 @@ export default function App() {
       <Route
         path="/projects/:slug"
         element={<ReservedDetailRoute kind="project" />}
+      />
+      <Route
+        path="/experience/living-in-silico"
+        element={
+          <Client pageClass="main--detail main--living-case">
+            <LivingInSilicoCase />
+          </Client>
+        }
       />
       <Route
         path="/experience/stush-patties"
