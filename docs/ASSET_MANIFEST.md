@@ -8,6 +8,7 @@ This manifest records the media and visual assets currently used by the public p
 |---|---|---|
 | `public/media/crest-sample.png` | Crest case study and Demos | Selected sample interface capture, cleared for portfolio display. It is labeled `SAMPLE DATA`; its values are not presented as customer outcomes or production volume. |
 | `public/media/choveigo-recommendations.png` | Cho'Veigo case study and Demos | Selected Recommendations interface capture, cleared for portfolio display. Presented as a static image without a play control; the case-study caption states that strength labels are unvalidated because no role-specific evaluation record is available. |
+| `public/media/profile-owner-portrait.png` | Profile Overview identity rail | Exact 2× crop export of the owner portrait in approved Figma node `960:4515` (312 × 312 px; SHA-256 `E1DDDD6647B3BA7B20265BF01C46444310BE43FDBCF64B2902FD2A4D3DF52499`), displayed at 156 × 156 px. Used only on `/profile`, not as Personal Highlights imagery. |
 | `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf` | Resume viewer and download | The canonical general resume, version 13, supplied and authorized for public portfolio use. The viewer, download, and fullscreen link use this same PDF. |
 
 ## Portfolio-authored and licensed visuals
@@ -20,5 +21,6 @@ This manifest records the media and visual assets currently used by the public p
 
 - Food Tracker has no bundled project logo or product capture. Its page uses editorial copy, a portfolio-authored product-anatomy figure, and a search decision plate that describes candidate generation and deterministic ranking; it does not depict a fabricated app screen. Add genuine product media only when available and confirm the mark's public embedding rights before using it.
 - Crest's selected sample capture and Cho'Veigo's selected Recommendations capture are cleared for portfolio display. Those clearances apply to the selected images, not automatically to separate project marks or future media.
+- Profile Overview uses the owner portrait already present in the approved Profile composition. This does not supply the separate photo set required for Personal Highlights.
 - No Riot or CommunityDragon artwork or marks are bundled. Do not add third-party game art or marks without an applicable public-use basis; use original portfolio graphics where suitable.
 - Review the provenance and reuse terms of any additional project mark, photograph, recording, or externally sourced image before bundling it.

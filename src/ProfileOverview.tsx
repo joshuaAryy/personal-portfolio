@@ -103,9 +103,13 @@ export default function ProfileOverview({ projects, projectCasePaths }: ProfileO
   return (
     <div className="profile-layout">
       <aside className="identity-panel">
-        <div className="portrait-fallback" aria-label="Portrait deferred">
-          JA
-        </div>
+        <img
+          className="identity-portrait"
+          src="/media/profile-owner-portrait.png"
+          alt=""
+          width={156}
+          height={156}
+        />
         <h1>JOSHUA ARYEETEY</h1>
         <p>COMPUTER ENGINEERING</p>
         <p>SOFTWARE · AI / ML</p>

@@ -630,7 +630,7 @@ a:focus-visible {
     #1c0b21 55%,
     #100a17 90%
   );
-  padding: 17vh 22px 25px;
+  padding: clamp(150px, 21vh, 227px) 22px 25px;
   text-align: center;
   overflow: hidden;
 }
@@ -646,23 +646,12 @@ a:focus-visible {
   transform: translateX(-50%);
   pointer-events: none;
 }
-.portrait-fallback {
+.identity-portrait {
+  display: block;
   position: relative;
-  margin: 0 auto 32px;
-  width: 175px;
-  height: 175px;
-  border: 2px solid var(--gold);
-  box-shadow:
-    0 0 0 15px #250f2544,
-    0 0 0 17px #8b6b39;
-  border-radius: 50%;
-  background: #221324;
-  display: grid;
-  place-items: center;
-  font:
-    46px Cinzel,
-    serif;
-  color: #e8cf8c;
+  width: 156px;
+  height: 156px;
+  margin: 0 auto 44px;
 }
 .identity-panel h1 {
   position: relative;
@@ -2027,10 +2016,10 @@ a:focus-visible {
     min-height: 440px;
     padding: 65px 15px 40px;
   }
-  .portrait-fallback {
+  .identity-portrait {
     width: 120px;
     height: 120px;
-    font-size: 34px;
+    margin-bottom: 24px;
   }
   .identity-traits {
     margin-top: 30px;
