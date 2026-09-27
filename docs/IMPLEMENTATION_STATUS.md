@@ -1,58 +1,54 @@
 # Implementation status
 
-Source Figma file: [Portfolio design](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA). Node IDs and geometry are from the local 2026-09-25 handoff, with the identity candidate and Crest final story added on 2026-09-26. This table distinguishes code implementation from visual approval.
+Updated 2026-09-27. This file separates design readiness from website implementation and browser review.
 
 | Surface | Figma root | Route | Current state | Remaining work |
 |---|---:|---|---|---|
-| Shared shell and rail | 524:4, 524:145 | All | Initial responsive implementation; rail follows the documented project order; route changes focus main content | Review shell against source at desktop/mobile; canonical J and original rail identity |
-| Projects lobby | 511:2 | `/projects` | Selectable lobby; case study status is explicit; public repository links appear only when available | Original scenic art; compare card geometry and lower tray against source |
-| Experience lobby | 704:2 | `/experience` | Selectable lobby; unfinished stories do not open placeholder pages | Original scenic art; compare card geometry and lower tray against source |
-| Profile Overview | 960:2 | `/profile` | Structural stand-in; not visually reviewed as a Figma translation | Replace the generic banner, portrait, and grid with an original rights-safe composition; compare against the approved frame |
-| Demos · Crest | 1316:4534 | `/profile/demos` | Selectable; cleared sample capture and public demo link | Compare bundled crop and player treatment to the Figma still |
-| Demos · Cho’Veigo | 1298:2 | `/profile/demos` | Selectable; cleared static Recommendations still | Compare bundled crop and selector treatment to the Figma still |
-| Demos · Food Tracker | 1316:35 | — | Withheld from public showcase | Owner confirmation of logo embedding rights and authentic product UI capture |
-| Food Tracker case study | 1813:2 | `/projects/food-tracker` | Implemented as a responsive editorial story; chapter links follow scroll position; benchmark uses development and holdout tables | Browser visual/keyboard review; compare responsive page against approved source |
-| Crest | 1817:4 | `/projects/crest` | Responsive editorial story implemented and deployed; grounded-policy decision figure, sample-data cue, and supported third-place result | Browser visual/keyboard review against the approved source; keep the Crest logo out of public code until its embedding rights are confirmed |
-| Cho’Veigo | 1813:379 | `/projects/choveigo` | Responsive editorial story integrated and deployed from `feat/initial-client-shell`; five unique chapter targets, active scroll-end state, proportional cleared static Recommendations still, distinct Fit/Eligibility/Recommendation definitions, mismatch-to-regression sequence, and bounded system path | Browser visual/keyboard review when a browser session is available |
-| Fraymakers | 1831:2 | `/projects/fraymakers` | Figma editorial story is IMPLEMENT READY as an asset-free workflow narrative; compact responsive story, chapter navigation, rail link, and route are implemented on `feat/fraymakers-story`; not deployed | Browser visual/keyboard review remains outstanding; authentic thumbnails, VOD/YAML examples, and Riot-asset rights remain separate media/evidence follow-ups |
-| Living in Silico | 1438:2 | `/experience/living-in-silico` | Static responsive text/vector story and route are implemented on `feat/living-in-silico-story`; the authored Figma story remains REVIEW CANDIDATE; implementation follows the active 1560×2320 story, not the superseded 1560×2040 capture | Browser visual/keyboard review remains outstanding; logo rights, run artifacts, and dataset provenance remain separate evidence inputs |
-| Stush Patties | 1438:276 | `/experience/stush-patties` | Responsive semantic story, lobby action, rail link, and direct route are implemented on `feat/stush-patties-story`; source plate `1992:2` passed visual review; surrounding Figma frame remains REVIEW CANDIDATE | Browser visual and keyboard review remain outstanding; confirm public logo rights before any logo use |
-| Journey | 1287:7 | `/profile/journey` | Responsive full-length story implemented in `src/JourneyCase.tsx`; eight beats and five waypoint headings; locator follows the shared 35% reading line and selects Summer 2026 at the end; original CSS environment contains no uncleared Figma artwork | Browser visual and live keyboard review remain outstanding; compare responsive composition against the approved full-length reference |
-| Personal Highlights | — | — | Deferred | Owner photo set and final composition |
-| J identity study | 1950:2 | — | Review candidate only; first-party editable vector geometry, not canonical | Iterate silhouette and small-size clarity; do not ship as the final mark yet |
-| Opening sequence | — | — | Deferred | Final identity asset, timing, skip treatment, and reduced-motion review |
-| Resume Found and PDF viewer | Archived roots 69:304, 69:439 | — | Archived exploratory work only | Approved current design and resume file; replace placeholder page with real authorized PDF |
+| Shared shell and rail | 524:4, 524:145 | All | Responsive shell, route-change main focus, semantic navigation, and canonical inline J in the brand and owner cards | Browser review at desktop and narrow sizes; confirm selected/hover contrast and rail details |
+| Projects lobby | 511:2 | `/projects` | Selectable lobby with explicit case-study availability and source links only when present | Compare card geometry and lower tray against the reference; original scenic art remains open |
+| Experience lobby | 704:2 | `/experience` | Selectable lobby; unfinished stories do not open placeholder pages | Compare card geometry and lower tray against the reference |
+| Profile Overview | 960:2 | `/profile` | Overview content is extracted to `src/ProfileOverview.tsx`; project entries use an original beveled enclosure, route-local summaries, and original signal medallions. The identity rail still uses initials because no portrait is available. | Browser visual/keyboard review; compare against the approved frame; real portrait and any project-owned marks remain separate inputs |
+| Demos · Crest | 1316:4534 | `/profile/demos` | Selectable, owner-cleared sample capture with sample-data context | Browser review of the crop and player treatment |
+| Demos · Cho’Veigo | 1298:2 | `/profile/demos` | Selectable, owner-cleared static Recommendations capture | Browser review of the crop and selector treatment |
+| Demos · Food Tracker | 1316:35 | — | Withheld; no authentic current-build capture is available and public mark reuse is unconfirmed | Owner-provided product capture and publication confirmation |
+| Help guide | 2014:11 | `/help` | Responsive route in `src/Help.tsx`; reachable from the rail and narrow header; includes the live Journey route | Browser keyboard/responsive review and rail-footer contrast review |
+| 404 recovery | 2014:94 | `*` fallback | Branded recovery in `src/NotFoundContent.tsx`; links to current lobbies and Profile | Browser review; client-side fallback does not guarantee an HTTP 404 response |
+| Shared utility states | 2014:151; 2014:2 | Context-dependent | Typed empty/unavailable states in `src/UtilityState.tsx`; offline state is not asserted by default and no automatic retry is promised | Apply only when a real route state requires it; review in browser |
+| Food Tracker case study | 1813:2 | `/projects/food-tracker` | Extracted responsive route in `src/FoodTrackerCaseStudy.tsx`; trust-first story and five-stage product anatomy; benchmark values retain their source and scale-only context | Browser visual/keyboard review |
+| Crest | 1817:4 | `/projects/crest` | Extracted route in `src/CrestCaseStudy.tsx`; quieter separators match the reviewed Figma treatment; sample capture is owner-cleared | Browser visual/keyboard review; keep the Crest logo out of public code until publication rights are confirmed |
+| Cho’Veigo | 1813:379 | `/projects/choveigo` | Evidence worksheet distinguishes Fit, Eligibility, and Recommendation; static Recommendations capture remains owner-cleared; no playable video is implied | Browser visual/keyboard review; stage the current worksheet before treating the deployed route as current |
+| Fraymakers | 1831:2 | `/projects/fraymakers` | Responsive, asset-free editorial route with a warm pipeline figure and explicit project ownership boundaries | Browser visual/keyboard review; authentic thumbnails, VOD/config samples, and third-party asset rights remain deferred |
+| Living in Silico | 1438:2 | `/experience/living-in-silico` | Responsive text/vector story with a Method / Attempt / Outcome record; 500 generated SMILES samples are attributed to DeepMol; no successful REINVENT4 result is claimed | Browser visual/keyboard review; logo rights, run artifacts, and dataset provenance remain separate evidence inputs |
+| Stush Patties | 1438:276 | `/experience/stush-patties` | Responsive story and distributor-normalization schematic; no client rows or private filenames are included | Browser visual/keyboard review; confirm mark rights before any logo is used |
+| Journey | 1287:7 | `/profile/journey` | Full 1600 px story implemented in `src/JourneyCase.tsx`; eight beats and five waypoints; locator follows the shared 35% reading line, reflows below 900 px, and the Figma root now shows LiS selected consistently | Browser visual/live keyboard review. The color field continues through the full canvas; source texture fades near the first fold |
+| Personal Highlights | — | — | Disabled/deferred | Owner photo set and separate content instruction |
+| J identity study | 1950:2; vector 1950:6; monochrome 1950:40 | Shared shell / opening | Canonical vector accepted after Luna critique and one Sol convergence decision. Glyph ratio is 0.8315; the code in `src/identity/JMark.tsx` matches the narrower Figma silhouette. Ringed 54/32 px and ring-free 16 px variants passed source review. | Browser contrast and placement review in the website shell |
+| Opening sequence | 2025:2; notes 2025:84 | `/` then `/projects` | One-shot two-second intro, visible 48 px Skip action, canonical J, and reduced-motion handoff at 120 ms | Browser visual, keyboard, reduced-motion, and timing review |
+| Resume Found and PDF viewer | 69:304; 69:439 | `/resume`; `/resume/viewer` | Implemented in `src/ResumeFlow.tsx` with the exact owner-authorized General Resume v13 PDF. Found, viewer, download, and fullscreen/open actions target the same bundled asset. | Browser visual/keyboard/responsive review; verify native PDF behavior in target browsers |
 
-The Figma body fills for all six existing long-form project and experience chapters already span their full documented story heights. Further visual work should focus on the distinct case-study figures and page treatments rather than extending those fills again.
+The six long-form project and experience stories already use their documented full body heights. Further design work should improve distinct figures and page treatments rather than extend those story bodies again.
 
 ## Public assets
 
-| Bundled file | Local source handoff | Use |
-|---|---|---|
-| `public/media/crest-sample.png` | `exploration-assets/crest-capture-qa-20260925.png` | Cleared sample capture with sample-data cue and public YouTube link |
-| `public/media/choveigo-recommendations.png` | `exploration-assets/choveigo-recommendations-poster.png` | Cleared static Recommendations still |
+| Bundled file | Public use |
+|---|---|
+| `public/media/crest-sample.png` | Owner-cleared sample capture with sample-data context |
+| `public/media/choveigo-recommendations.png` | Owner-cleared static Recommendations still |
+| `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf` | Canonical general resume supplied and authorized for public use; SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299` |
 
-The Food Tracker mark is not bundled while public embedding rights are confirmed. No Riot or CommunityDragon artwork, marks, or owner-only video are in this repository.
+Food Tracker media and project marks without confirmed publication rights are not bundled. No uncleared Riot or CommunityDragon artwork is bundled.
 
 ## Staging
 
-| Destination | Link |
+| Destination | Current record |
 |---|---|
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
-| Branch | `feat/initial-client-shell` |
-| Staging site | https://joshuaik2.pages.dev/ |
-| Current immutable deployment | https://0e213800.joshuaik2.pages.dev/ (`a078fc2`) |
+| Last deployed branch | `feat/initial-client-shell` |
+| Staging site | `https://joshuaik2.pages.dev/` |
+| Last immutable deployment | `https://03a92ff7.joshuaik2.pages.dev/` (deployment `03a92ff7-2a94-4483-a704-a0496cc54dac`; source metadata `e627cd7`) |
 
-The staging project is separate from the existing primary portfolio deployment. HTTP GET requests returned 200 for `/projects/choveigo` on both staging URLs and for the immutable Recommendations PNG (256,928 bytes, `image/png`). The browser-control runtime was unavailable, so browser screenshots and live keyboard behavior could not be independently reviewed here.
+The current integration was uploaded from the uncommitted `feat/canonical-j-opening` worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `03a92ff7-2a94-4483-a704-a0496cc54dac` as Production on the staging project’s configured branch, `feat/initial-client-shell`; source metadata is `e627cd7`, while the uploaded build includes the worktree’s uncommitted edits. The staging root and six tested client routes returned HTTP 200. The v13 PDF served from the latest deployment has the same SHA-256 as the owner-supplied asset. The primary portfolio project was not targeted.
 
-## Source-review corrections in the working tree
+## Current validation
 
-- Lobby cards reflow to three columns at tablet widths; the 651–900 px five-column squeeze is removed.
-- Lobby and rail no longer lead into generic story placeholders. Unfinished detail URLs return to their matching lobby, while Food Tracker opens its implemented case study.
-- Food Tracker’s mark is removed from `public/media`; only cleared Crest and Cho’Veigo media remain bundled.
-- The skip-link target is focusable, route changes focus the main content, and rail project order matches the Figma rail.
-- The Profile Overview remains a structural stand-in pending a rights-safe composition and visual fidelity review.
-
-`npm test -- --run` passes (8 total tests, including 4 Cho’Veigo route/content and scroll-boundary checks); `npm run lint`, `npm run typecheck`, and `npm run build` pass on `feat/initial-client-shell`. Local and live production route/image requests returned HTTP 200. A read-only branch review identified and prompted fixes for the fixed-height Recommendations crop and final-chapter selection at scroll end. The browser-control runtime had no available browser, so visual and live keyboard review remain outstanding.
-
-No local source handoff docs or old portfolio files are copied into this repository.
+`npm run lint`, `npm run build` (including TypeScript compilation), and `git diff --check` pass on the current worktree. The in-app browser had no available browser surface, so screenshots, live keyboard behavior, responsive rendering, reduced-motion behavior, and native PDF browser behavior have not been independently reviewed. No unit tests were run after the current integration changes.

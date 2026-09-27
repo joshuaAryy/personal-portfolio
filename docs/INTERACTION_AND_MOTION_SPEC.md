@@ -1,0 +1,37 @@
+# Interaction and Motion
+
+This handoff summarizes current website behavior and separates it from motion authored in the design. Current implementation status and validation are tracked in [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
+
+## Routes and behavior
+
+| Surface | Route | Current behavior |
+|---|---|---|
+| Projects | `/projects` | Project lobby links to available stories. |
+| Project stories | `/projects/food-tracker`, `/projects/crest`, `/projects/choveigo`, `/projects/fraymakers` | Individual editorial stories with chapter navigation. |
+| Experience | `/experience` | Experience lobby links to available stories. |
+| Experience stories | `/experience/living-in-silico`, `/experience/stush-patties` | Long-form responsive stories. |
+| Profile | `/profile`, `/profile/journey`, `/profile/demos` | Overview, Journey, and Demos routes share profile navigation. Personal Highlights remains unavailable. |
+| Help and recovery | `/help`, unknown client routes | Help explains navigation and keyboard access. Unknown routes show recovery links; host-level HTTP 404 behavior is not guaranteed. |
+| Resume | `/resume`, `/resume/viewer` | Resume Found leads to a viewer for `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf`, the exact user-authorized General Resume v13. Download and fullscreen/open actions use that same PDF. Escape and Close on Resume Found return to the originating route when available, otherwise Projects. |
+
+## Shared interaction
+
+The responsive shell uses semantic links and buttons. The skip link targets a focusable main region, and client-side route changes move focus to that region. Interactive elements have visible focus styling. Keyboard, responsive, and screen-reader behavior still need live browser review.
+
+Case-study stories use a sticky chapter bar above an independently scrolling story on wide layouts. Chapter links are keyboard-operable and visibly focused; Food Tracker and Cho'Veigo synchronize the selected chapter with story scrolling. Fraymakers does not synchronize the selected chapter during manual scrolling. Smooth chapter movement is disabled for reduced-motion preferences. The authored design specifies a 0.35-second eased chapter scroll; website anchor behavior follows the browser and reduced-motion setting.
+
+The Journey story is 1600 px tall on desktop. Its content reflows at a 900 px container-width threshold, with document scrolling at narrower widths. A locator follows the active story waypoint at a 35% reading line; selecting a waypoint scrolls to it. Reduced motion uses immediate scrolling. No numeric progress or game-stat treatment is used.
+
+Demos selection changes the still, title, selected state, and decorative recording marker without an authored transition. Crest's sample still links to its public demo separately.
+
+## Opening and motion
+
+The opening is a two-second, one-shot J reveal followed by Projects. Skip immediately enters Projects. Under reduced motion, the complete mark appears without rotation or the light pass, followed by a short handoff. The design timeline loops; the website plays once.
+
+The design includes eased transitions for selected lobby and profile navigation. These design timings describe authored prototypes and should not be read as claims that every website route uses the same transition.
+
+Resume Found removes its entrance motion under reduced-motion preferences. Utility and recovery screens use the shared shell and main-region focus behavior. Offline status is shown only when appropriate; no automatic retry is promised.
+
+## Validation status
+
+The current integration is deployed to the public staging project at `https://03a92ff7.joshuaik2.pages.dev/`. Route-response checks succeeded, and the served v13 PDF hash matched the owner-supplied asset. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending browser/runtime QA because no browser surface was available. No screenshots or live browser checks are claimed here.
