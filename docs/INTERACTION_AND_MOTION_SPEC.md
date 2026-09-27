@@ -11,7 +11,7 @@ This handoff summarizes current website behavior and separates it from motion au
 | Experience | `/experience` | Experience lobby links to available stories. |
 | Experience stories | `/experience/living-in-silico`, `/experience/stush-patties` | Long-form responsive stories. |
 | Profile | `/profile`, `/profile/journey`, `/profile/demos` | Overview, Journey, and Demos routes share profile navigation. Personal Highlights remains unavailable. |
-| Help and recovery | `/help`, unknown client routes | Help explains navigation and keyboard access. Unknown routes show recovery links; host-level HTTP 404 behavior is not guaranteed. |
+| Help and recovery | `/help`, unknown client routes | Help links the live Overview, Journey, Demos, and current project/experience indexes; it demonstrates the shared empty state, explains keyboard access for links and buttons, and sends unfinished stories back to the Projects or Experience index. Unknown routes show recovery links; host-level HTTP 404 behavior is not guaranteed. |
 | Resume | `/resume`, `/resume/viewer` | Resume Found leads to a viewer for `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf`, the exact user-authorized General Resume v13. Download and fullscreen/open actions use that same PDF. Escape and Close on Resume Found return to the originating route when available, otherwise Projects. |
 
 ## Shared interaction
@@ -20,7 +20,7 @@ The responsive shell uses semantic links and buttons. The skip link targets a fo
 
 Case-study stories use a sticky chapter bar above an independently scrolling story on wide layouts. Chapter links are keyboard-operable and visibly focused; Food Tracker and Cho'Veigo synchronize the selected chapter with story scrolling. Fraymakers does not synchronize the selected chapter during manual scrolling. Smooth chapter movement is disabled for reduced-motion preferences. The authored design specifies a 0.35-second eased chapter scroll; website anchor behavior follows the browser and reduced-motion setting.
 
-The Journey story is 1600 px tall on desktop. Its content reflows at a 900 px container-width threshold, with document scrolling at narrower widths. A locator follows the active story waypoint at a 35% reading line; selecting a waypoint scrolls to it. Reduced motion uses immediate scrolling. No numeric progress or game-stat treatment is used.
+The Journey story has a 1600 px desktop body. The heading-to-track offset is explicit so the closing card and signoff align with Figma body positions y=1400 and y=1535. The desktop locator aligns to the 8 px right inset and 80 px top offset, then scales up to 760 px within the available scrollport height. Content reflows at a 900 px container-width threshold, with document scrolling at narrower widths. A locator follows the active story waypoint at a 35% reading line; selecting a waypoint scrolls to it. Reduced motion uses immediate scrolling. No numeric progress or game-stat treatment is used.
 
 Demos selection changes the still, title, selected state, and decorative recording marker without an authored transition. Crest's sample still links to its public demo separately.
 

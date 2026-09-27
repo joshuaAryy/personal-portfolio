@@ -4729,7 +4729,8 @@ a:focus-visible {
 }
 .journey-scrollport {
   position: relative;
-  height: calc(100vh - 202px);
+  --journey-scrollport-height: calc(100vh - 202px);
+  height: var(--journey-scrollport-height);
   min-height: 420px;
   overflow-x: hidden;
   overflow-y: auto;
@@ -4749,7 +4750,9 @@ a:focus-visible {
 }
 .journey-page {
   position: relative;
-  min-height: 1580px;
+  --journey-heading-line-height: clamp(33.04px, 3.068vw, 42.48px);
+  --journey-track-offset: calc(60px + var(--journey-heading-line-height));
+  min-height: 1600px;
   overflow: clip;
   isolation: isolate;
 }
@@ -4782,24 +4785,27 @@ a:focus-visible {
   font-weight: 700;
   letter-spacing: 1.2px;
 }
+.journey-heading .journey-eyebrow { line-height: 12px; }
 .journey-heading h1 {
   margin: 10px 0 3px;
   color: #f0e8da;
   font-family: Cinzel, Georgia, serif;
   font-size: clamp(28px, 2.6vw, 36px);
   font-weight: 400;
-  line-height: 1.18;
+  line-height: var(--journey-heading-line-height);
 }
 .journey-deck {
   margin: 0;
   color: #b5b8c1;
   font-size: 16px;
+  line-height: 18px;
 }
 .journey-sticky-locator {
   position: sticky;
-  top: 126px;
+  --journey-locator-top: 80px;
+  top: var(--journey-locator-top);
   z-index: 5;
-  width: min(1170px, calc(100% - 72px));
+  width: min(1170px, 100%);
   height: 0;
   margin: 0 auto;
   pointer-events: none;
@@ -4807,9 +4813,12 @@ a:focus-visible {
 .journey-locator {
   position: absolute;
   top: 0;
-  right: 2px;
+  right: 8px;
   width: 44px;
-  height: 650px;
+  height: min(
+    760px,
+    calc(var(--journey-scrollport-height) - var(--journey-locator-top) - 20px)
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4892,7 +4901,7 @@ a:focus-visible {
 .journey-track {
   position: relative;
   width: min(1170px, calc(100% - 72px));
-  height: 1450px;
+  height: calc(1600px - var(--journey-track-offset));
   margin: 0 auto;
 }
 .journey-path {
@@ -5012,10 +5021,10 @@ a:focus-visible {
   background: #282a29f2;
 }
 .journey-card--continuing {
-  top: 1112px;
+  top: calc(1400px - var(--journey-track-offset));
   left: 10.7%;
   width: 55%;
-  min-height: 76px;
+  min-height: 78px;
   background: #1d2424cc;
 }
 .journey-card--continuing h2 {
@@ -5072,7 +5081,7 @@ a:focus-visible {
 }
 .journey-signoff {
   position: absolute;
-  top: 1290px;
+  top: calc(1535px - var(--journey-track-offset));
   left: 12%;
   margin: 0;
   color: #aeb4ae;
