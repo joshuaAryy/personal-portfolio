@@ -1,6 +1,6 @@
 # Portfolio Surface Map
 
-This public handoff maps current portfolio surfaces to their website routes. It contains no design-file identifiers or source links. For implementation and release status, see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
+This public handoff maps current portfolio surfaces and selected Figma node references to their website routes. It omits source-repository and design-file URLs. For implementation and release status, see [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
 
 | Surface | Route | Current handoff |
 |---|---|---|
