@@ -416,6 +416,16 @@ a:focus-visible {
   color: #111b20;
   font-size: clamp(24px, 3vw, 46px);
 }
+.card-insignia .mark.project-index {
+  font-family: "League Spartan", sans-serif;
+  font-size: clamp(18px, 2.2vw, 32px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.card-insignia .mark.project-index--wide {
+  font-size: clamp(13px, 1.5vw, 22px);
+  letter-spacing: 0.04em;
+}
 .card-insignia--owner {
   background: #070c13;
 }

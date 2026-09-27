@@ -1,6 +1,7 @@
 export type Project = {
   slug: string;
   name: string;
+  indexGlyph: string;
   short: string;
   role: string;
   detail: string;
@@ -10,6 +11,7 @@ export const projects: Project[] = [
   {
     slug: "fraymakers",
     name: "Fraymakers",
+    indexGlyph: "F",
     short: "Tournament automation · 2025",
     role: "AUTOMATION · WEB",
     detail: "Tournament automation",
@@ -17,6 +19,7 @@ export const projects: Project[] = [
   {
     slug: "crest",
     name: "Crest",
+    indexGlyph: "C",
     short: "MPC Hacks · 2026",
     role: "AI · DATA",
     detail: "MPC Hacks 2026 · 3rd Place, Brim Financial Challenge",
@@ -25,6 +28,7 @@ export const projects: Project[] = [
   {
     slug: "food-tracker",
     name: "Food Tracker",
+    indexGlyph: "FT",
     short: "Nutrition intelligence platform",
     role: "MOBILE · BACKEND",
     detail: "Nutrition tracking · search · analytics",
@@ -33,6 +37,7 @@ export const projects: Project[] = [
   {
     slug: "choveigo",
     name: "Cho’Veigo",
+    indexGlyph: "CV",
     short: "Evidence-first job matching",
     role: "AI · SOFTWARE",
     detail: "Resume tailoring",

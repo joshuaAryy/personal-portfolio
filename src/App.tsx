@@ -227,6 +227,7 @@ function LobbyCard({
   name,
   subtitle,
   role,
+  indexGlyph,
   selected,
   onClick,
   owner = false,
@@ -234,6 +235,7 @@ function LobbyCard({
   name: string;
   subtitle: string;
   role: string;
+  indexGlyph?: string;
   selected: boolean;
   onClick: () => void;
   owner?: boolean;
@@ -248,6 +250,16 @@ function LobbyCard({
       <span className={"card-insignia" + (owner ? " card-insignia--owner" : "")}>
         {owner ? (
           <JMark variant="ringed" decorative className="owner-j-mark" />
+        ) : indexGlyph ? (
+          <span
+            className={
+              "mark project-index" +
+              (indexGlyph.length > 1 ? " project-index--wide" : "")
+            }
+            aria-hidden="true"
+          >
+            <span>{indexGlyph}</span>
+          </span>
         ) : (
           <Mark />
         )}
@@ -312,6 +324,7 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
                   name={p.name}
                   subtitle={p.short}
                   role={p.role}
+                  indexGlyph={p.indexGlyph}
                   selected={selectedProject === p.slug}
                   onClick={() => setSelectedProject(p.slug)}
                 />
@@ -330,6 +343,7 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
                   name={p.name}
                   subtitle={p.short}
                   role={p.role}
+                  indexGlyph={p.indexGlyph}
                   selected={selectedProject === p.slug}
                   onClick={() => setSelectedProject(p.slug)}
                 />

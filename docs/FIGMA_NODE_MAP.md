@@ -5,7 +5,7 @@ This public handoff maps current portfolio surfaces to their website routes. It 
 | Surface | Route | Current handoff |
 |---|---|---|
 | Opening and identity | `/` to `/projects` | One-shot J reveal with a visible Skip action; reduced motion shows the finished mark and skips its animated build. |
-| Projects lobby | `/projects` | Project selection with links to available stories. |
+| Projects lobby | `/projects` | Project selection with links to available stories. Public cards use portfolio-owned F, C, FT, and CV index glyphs where project marks are not cleared; they are not represented as official logos. |
 | Food Tracker | `/projects/food-tracker` | Responsive editorial story with product-search evidence and benchmark context. |
 | Crest | `/projects/crest` | Responsive story with an owner-cleared sample capture and sample-data context. |
 | Cho'Veigo | `/projects/choveigo` | Responsive story with distinct Fit, Eligibility, and Recommendation stages and a static Recommendations capture. |
