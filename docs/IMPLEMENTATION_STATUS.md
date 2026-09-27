@@ -51,4 +51,4 @@ The current integration is committed on public-repository branch `feat/portfolio
 
 ## Current validation
 
-`npm test -- --run` passed all 15 tests across five files; `npm run typecheck`, `npm run lint`, `npm run build` (including TypeScript compilation), and `git diff --check` also passed. Deployment HTTP checks confirmed the root and all 14 client routes, built JS/CSS, and exact v13 PDF hash. Browser runtime discovery returned no connected browser instance, so live visual/keyboard behavior, responsive rendering, reduced-motion timing, and native PDF behavior have not been independently reviewed.
+`npm test -- --run` passed all 21 tests across six files, including App-level route-mapping coverage for six stories; `npm run typecheck`, `npm run lint`, `npm run build` (including TypeScript compilation), and `git diff --check` also passed. Deployment HTTP checks confirmed the root and all 14 client routes, built JS/CSS, and exact v13 PDF hash. Browser runtime discovery returned no connected browser instance, so live visual/keyboard behavior, responsive rendering, reduced-motion timing, and native PDF behavior have not been independently reviewed.
