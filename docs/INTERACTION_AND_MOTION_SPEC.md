@@ -35,3 +35,7 @@ Resume Found removes its entrance motion under reduced-motion preferences. Utili
 ## Validation status
 
 The current integration is deployed to the public staging project at `https://ce8b0f14.joshuaik2.pages.dev/` (deployment `ce8b0f14-1431-48db-99fb-3213d19f41fa`, application source `2f8ae63`). All 15 requested route URLs returned HTTP 200 with the same 574-byte SPA shell, verifying hosting fallback only. The v13 PDF returned HTTP 200 with `application/pdf`, 164,726 bytes, and the approved workspace source SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending because no browser was available. No screenshots or live browser checks are claimed here.
+
+## Journey waypoint fragments (2026-09-27)
+
+On /profile/journey, primary and keyboard activation of a locator anchor adds its #journey-* target to browser history and scrolls to the existing 35% reading line. Valid fragments restore the active waypoint and scroll position on mount and browser back/forward. Modified and non-primary clicks keep native anchor behavior. Reduced-motion preferences retain immediate scrolling.

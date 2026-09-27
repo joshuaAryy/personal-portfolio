@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export const journeyWaypoints = [
   { id: "origin", label: "Origin", target: "journey-origin" },
@@ -13,6 +13,42 @@ export const journeyWaypoints = [
 ] as const;
 
 export type JourneyWaypointId = (typeof journeyWaypoints)[number]["id"];
+
+type JourneyAnchorClick = Pick<
+  React.MouseEvent<HTMLAnchorElement>,
+  "button" | "metaKey" | "ctrlKey" | "shiftKey" | "altKey" | "preventDefault"
+>;
+
+export function activateJourneyWaypoint(
+  event: JourneyAnchorClick,
+  id: JourneyWaypointId,
+  history: Pick<History, "pushState">,
+  select: (waypoint: JourneyWaypointId) => void,
+) {
+  if (
+    event.button !== 0 ||
+    event.metaKey ||
+    event.ctrlKey ||
+    event.shiftKey ||
+    event.altKey
+  ) {
+    return;
+  }
+
+  event.preventDefault();
+  const waypoint = journeyWaypoints.find((item) => item.id === id);
+  if (!waypoint) return;
+  history.pushState(null, "", `#${waypoint.target}`);
+  select(id);
+}
+
+export function restoreJourneyWaypoint(
+  hash: string,
+  select: (waypoint: JourneyWaypointId) => void,
+) {
+  const waypoint = journeyWaypoints.find((item) => `#${item.target}` === hash);
+  if (waypoint) select(waypoint.id);
+}
 
 export function resolveActiveWaypoint(
   sectionTops: Record<JourneyWaypointId, number>,
@@ -52,10 +88,7 @@ function JourneyLocator({
           href={`#${waypoint.target}`}
           aria-label={waypoint.label}
           aria-current={active === waypoint.id ? "location" : undefined}
-          onClick={(event) => {
-            event.preventDefault();
-            onSelect(waypoint.id);
-          }}
+          onClick={(event) => activateJourneyWaypoint(event, waypoint.id, window.history, onSelect)}
         >
           <span aria-hidden="true" />
         </a>
@@ -122,7 +155,7 @@ export default function JourneyCase() {
     };
   }, []);
 
-  const selectWaypoint = (id: JourneyWaypointId) => {
+  const selectWaypoint = useCallback((id: JourneyWaypointId) => {
     const waypoint = journeyWaypoints.find((item) => item.id === id);
     const scrollport = scrollportRef.current;
     const target = waypoint && document.getElementById(waypoint.target);
@@ -148,7 +181,15 @@ export default function JourneyCase() {
         behavior,
       });
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    const restoreFromLocation = () =>
+      restoreJourneyWaypoint(window.location.hash, selectWaypoint);
+    restoreFromLocation();
+    window.addEventListener("popstate", restoreFromLocation);
+    return () => window.removeEventListener("popstate", restoreFromLocation);
+  }, [selectWaypoint]);
 
   return (
     <div

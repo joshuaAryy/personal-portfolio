@@ -24,3 +24,7 @@ This manifest records the media and visual assets currently used by the public p
 - Profile Overview uses the owner portrait already present in the approved Profile composition. This does not supply the separate photo set required for Personal Highlights.
 - No Riot or CommunityDragon artwork or marks are bundled. Do not add third-party game art or marks without an applicable public-use basis; use original portfolio graphics where suitable.
 - Review the provenance and reuse terms of any additional project mark, photograph, recording, or externally sourced image before bundling it.
+
+## Small-size identity asset (2026-09-27)
+
+public/favicon.svg uses the exact ring-free 16 px monochrome J path from Figma node 1950:40, with its approved #E7E1D5 fill on a transparent background. index.html links the standalone SVG; the header and opening continue to use the canonical inline SVG component.

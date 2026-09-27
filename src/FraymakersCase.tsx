@@ -31,11 +31,13 @@ const flowSteps = [
 ] as const;
 
 const compositionInputs = [
-  "Logos",
-  "Stage art",
-  "Characters + costumes",
-  "Assists + foreground",
-  "Set labels",
+  "LOGOS",
+  "STAGE ART",
+  "CHARACTER / SPRITE ART",
+  "COSTUMES",
+  "ASSISTS",
+  "FOREGROUND ART",
+  "TEXT / SET LABELS",
 ] as const;
 
 const edgeCases = [
