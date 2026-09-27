@@ -4791,7 +4791,7 @@ a:focus-visible {
 }
 .journey-content > .profile-nav {
   width: min(1170px, calc(100% - 72px));
-  margin: 20px auto 0;
+  margin: 30px auto 0;
   padding: 0 4px;
 }
 .journey-page {
