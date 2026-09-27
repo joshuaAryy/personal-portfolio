@@ -45,9 +45,9 @@ Food Tracker media and project marks without confirmed publication rights are no
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
 | Last deployed branch | `feat/initial-client-shell` |
 | Staging site | `https://joshuaik2.pages.dev/` |
-| Last immutable deployment | `https://1b3c7a8d.joshuaik2.pages.dev/` (deployment `1b3c7a8d-46ee-4576-8a6c-a480ab3a5a3e`; source metadata `5c2d5cc`) |
+| Last immutable deployment | `https://9f96473e.joshuaik2.pages.dev/` (deployment `9f96473e-4d35-4904-958e-46ba6344c587`; source metadata `abe7d8f`) |
 
-The current integration was uploaded from the clean, committed `feat/canonical-j-opening` worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `1b3c7a8d-46ee-4576-8a6c-a480ab3a5a3e` as Production on the staging project’s configured branch, `feat/initial-client-shell`; source metadata is `5c2d5cc`, with app code at `45e0c60`. The staging root and six tested client routes returned HTTP 200, and the bundled JavaScript and CSS also returned HTTP 200. The v13 PDF served from the staging alias has the same SHA-256 as the owner-supplied asset. The primary portfolio project was not targeted.
+The current integration is committed on public-repository branch `feat/portfolio-integration` and was uploaded from its clean worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `9f96473e-4d35-4904-958e-46ba6344c587` as Production on the staging project's configured branch label, `feat/initial-client-shell`; its source metadata is `abe7d8f`, with application implementation in `a2858fe`. The Cloudflare branch label selects the staging project's production environment; the GitHub integration branch remains `feat/portfolio-integration`. The staging root and six tested client routes returned HTTP 200, and the bundled JavaScript and CSS also returned HTTP 200. The v13 PDF served from the staging alias has the same SHA-256 as the owner-supplied asset. The primary portfolio project was not targeted.
 
 ## Current validation
 
