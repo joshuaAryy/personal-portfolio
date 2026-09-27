@@ -21,6 +21,10 @@ The offline search benchmark compared legacy retrieval with the full hybrid appr
 
 The reference catalog contains 12,363 active foods and 277,341 nutrient rows. These are catalog-scale figures, not users, impact, or outcomes. The owner interview reports that semantic retrieval added substantial latency for little recovery in that benchmark. Keep this as a qualitative, interview-attributed observation; no committed timing snapshots or verified latency values are available. Do not add latency numbers or units, or a separate fuzzy-recovery count. Tests alone did not establish useful search quality; evaluation exposed gaps and informed the architecture. Do not claim broad production or live completion, adoption, or invented product results.
 
+Keep failure episodes distinct. Tests passed while search relevance remained poor, and an earlier Pinecone pagination issue left partial or stale index state. In a separate staging reindex, an integrated-inference token quota stopped indexing after a partial load; bounded 429 retries later completed the 12,363-document rebuild. Do not describe rate limits as the cause of that interruption.
+
+The development workflow evolved toward bounded agent tasks, written specifications, acceptance and regression checks, evaluation, debugging direction, and independent review. Tests did not replace relevance evaluation, and generated implementation still needed architectural judgment. Publicly describe this as Joshua's product and architecture direction with AI-assisted implementation, not “AI built the product.”
+
 ## Crest
 
 Crest is an expense-intelligence workspace built by a four-person team at MPC Hacks 2026 for the Brim Financial Challenge. The team placed third in the Brim Financial Challenge, not third overall.
@@ -43,7 +47,7 @@ The portfolio story uses a static Recommendations view. Do not claim full automa
 
 Fraymakers is a tournament VOD and media-preparation tool. Joshua’s brother started the broader project and owned its foundation and much of the early workflow and API groundwork. Joshua joined later; `thumbnail.js` was his, and he also contributed YAML/configuration, thumbnail generation and integration, and some YouTube API work.
 
-The workflow uses tournament and match information to identify videos and generate 1280 × 720 thumbnails. Composition categories include logos, stage art, character and sprite art, costumes, assists, foreground art, and text/set labels; represent these as categories only, without unprovided artwork or configuration examples. Generated thumbnails were used on real Fraymakers VODs. YouTube Data API/OAuth integration remained a prototype; automatic upload was not completed. Do not claim whole-project ownership or a finished uploader.
+The workflow uses tournament and match information to identify videos and generate 1280 × 720 thumbnails. The owner source confirms node-canvas and handling for aliases, P2 mirroring, long names, and missing assets, alongside composition inputs such as logos, stage art, character and sprite art, costumes, assists, foreground art, and text/set labels. Generated thumbnails were used on real Fraymakers VODs. YouTube Data API/OAuth integration remained a prototype; automatic upload was not completed. Do not claim whole-project ownership or a finished uploader, and do not fabricate missing assets or screenshots.
 
 ## Living in Silico
 
@@ -53,7 +57,7 @@ The April 12 dataset snapshot (15,696 rows; 14,487 unique SMILES) and experiment
 
 ## Stush Patties
 
-Stush Patties is an experience story about data pipelines and automation during a Software Engineering Intern role (September–November 2025), on a two-person technical team with Shiv. The owner brief identifies three distributor inputs: Koyo, UNFI, and Dovre. CSV, XLSX, and XLSB formats occurred across the inputs; do not map one format to a particular distributor without evidence. Koyo was the hardest input and required a pragmatic, temporary position-and-cell parser exception.
+Stush Patties is an experience story about data pipelines and automation during a Software Engineering Intern role (September–November 2025), on a two-person technical team with Shiv. It was an external client project through Riipen / IBM SkillsBuild. The owner brief identifies three distributor inputs: Koyo, UNFI, and Dovre. CSV, XLSX, and XLSB formats occurred across the inputs; do not map one format to a particular distributor without evidence. Koyo was the hardest input and required a pragmatic, temporary position-and-cell parser exception.
 
 Joshua contributed to Python parsing and normalization, practical data rules, and stakeholder conversations. The shared workflow aligned units and sales, case packs, and reporting months; it prepared a consistent schema, unified CSV, data dictionary, and quality report for Power BI. Describe the result as a more repeatable path from raw files to reporting. Do not claim sole ownership, reproduce client records or dashboard results, or use an unverified improvement percentage.
 

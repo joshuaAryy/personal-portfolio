@@ -299,7 +299,7 @@ export default function CrestCaseStudy() {
         <section className="crest-section crest-team" id="crest-team">
           <div className="crest-team__story">
             <p className="food-section-label">THE TEAM</p>
-            <h2>Four people. One short demo window.</h2>
+            <h2>Four people. One presentation ran long.</h2>
             <p>
               We built Crest at MPC Hacks 2026. My focus was backend and data
               workflows; the final presentation reminded us that a strong system

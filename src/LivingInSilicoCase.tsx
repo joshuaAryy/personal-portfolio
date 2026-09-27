@@ -32,7 +32,7 @@ export default function LivingInSilicoCase() {
     <article className="living-story" aria-labelledby="living-title">
       <div className="living-back">
         <Link to="/experience">‹ EXPERIENCE</Link>
-        <span>CASE STUDY / LIVING IN SILICO</span>
+        <span>EXPERIENCE / LIVING IN SILICO</span>
       </div>
 
       <header className="living-opening" id="living-opening">
@@ -51,7 +51,7 @@ export default function LivingInSilicoCase() {
             </div>
             <div>
               <dt>DATES</dt>
-              <dd>March–June 2025</dd>
+              <dd>Approx. March–June 2025</dd>
             </div>
             <div>
               <dt>SUPERVISOR</dt>
@@ -139,7 +139,7 @@ export default function LivingInSilicoCase() {
         <div className="living-research-record__sample">
           <span className="living-research-record__index" aria-hidden="true">03</span>
           <p className="living-research-record__count">500</p>
-          <p className="living-research-record__caption">GENERATED SMILES SAMPLES</p>
+          <p className="living-research-record__caption">DEEPMOL · GENERATED SMILES SAMPLES</p>
         </div>
         <div className="living-research-record__column living-research-record__method">
           <h3>METHOD CONTEXT</h3>

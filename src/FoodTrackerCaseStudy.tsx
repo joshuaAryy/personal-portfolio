@@ -210,9 +210,8 @@ export default function FoodTrackerCaseStudy() {
             <div className="food-search__story">
               <h2>Benchmarking changed the architecture.</h2>
               <p>
-                I measured retrieval on development and holdout queries before
-                deciding where semantic search belonged. The benchmark made
-                evaluation the authority.
+                Offline results showed where the hybrid helped and where it
+                still missed, guiding where semantic search belonged.
               </p>
             </div>
             <FoodBenchmarkPlate />
@@ -279,9 +278,9 @@ export default function FoodTrackerCaseStudy() {
               <div>
                 <h3>INDEX STATE IS PART OF CORRECTNESS</h3>
                 <p>
-                  A Pinecone pagination issue once left partial or stale index
-                  state. In a separate staging run, quota and rate-limit
-                  behavior interrupted indexing.
+                  Pagination once left Pinecone's index partial or stale. A
+                  separate staging rebuild hit an inference-token quota;
+                  bounded 429 retries later completed all 12,363 documents.
                 </p>
               </div>
             </article>
@@ -321,9 +320,10 @@ export default function FoodTrackerCaseStudy() {
             <p className="food-section-label">HOW MY WORKFLOW EVOLVED</p>
             <h2>I made implementation more deliberate.</h2>
             <p>
-              Later, I gave Codex and AI agents bounded tasks with written
-              specs, then set acceptance and regression checks and used
-              independent review before integration.
+              Later, I used bounded AI tasks, written specs, and independent
+              review. Search evaluation reminded me that tests alone did not
+              prove relevance, and generated changes still needed architectural
+              judgment.
             </p>
             <p>
               I retained product decisions, architecture direction, evaluation,
@@ -347,11 +347,11 @@ export default function FoodTrackerCaseStudy() {
 
         <section className="food-section food-reflection" id="food-reflection">
           <p className="food-section-label">WHAT I TOOK FORWARD</p>
-          <h2>Trust is what makes simple tracking possible.</h2>
+          <h2>A reliable log is where useful insight begins.</h2>
           <p>
-            I learned that the work behind a simple log is what lets me make the
-            experience feel simple: nutrition stays explicit, history stays
-            trustworthy, and the next step feels clear.
+            I learned that a simple log depends on explicit nutrition and intact
+            history. That dependable record is the foundation recommendations
+            and long-term insight would need.
           </p>
           <small>
             I’m continuing frontend refinement and closing remaining product
