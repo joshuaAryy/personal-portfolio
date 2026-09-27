@@ -1,59 +1,33 @@
-# Interaction and Motion
+# Interaction and Motion Specification
 
-This handoff summarizes current website behavior and separates it from motion authored in the design. Current implementation status and validation are tracked in [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md).
+This is the controlling interaction direction for design and implementation. Current production Figma pages plus selected authentic League references define appearance; archive page 11 (`510:2`) is active interaction history. Website implementation details in this document describe the current code only where explicitly marked; they do not establish visual completion.
 
-## Routes and behavior
+## Intended navigation and interactions
 
-| Surface | Route | Current behavior |
-|---|---|---|
-| Projects | `/projects` | Project lobby links to available stories. |
-| Project stories | `/projects/food-tracker`, `/projects/crest`, `/projects/choveigo`, `/projects/fraymakers` | Individual editorial stories with chapter navigation. |
-| Experience | `/experience` | Experience lobby links to available stories. |
-| Experience stories | `/experience/living-in-silico`, `/experience/stush-patties` | Long-form responsive stories. |
-| Profile | `/profile`, `/profile/journey`, `/profile/demos` | Overview, Journey, and Demos routes share profile navigation. Personal Highlights remains unavailable. |
-| Help and recovery | `/help`, unknown client routes | Help links the live Overview, Journey, Demos, and current project/experience indexes; it demonstrates the shared empty state, explains keyboard access for links and buttons, and sends unfinished stories back to the Projects or Experience index. Unknown routes show recovery links; host-level HTTP 404 behavior is not guaranteed. |
-| Resume | `/resume`, `/resume/viewer` | Resume Found leads to a viewer for `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf`, the exact user-authorized General Resume v13. Download and fullscreen/open actions use that same PDF. Escape and Close on Resume Found return to the originating route when available, otherwise Projects. |
+| Surface | Intended behavior |
+|---|---|
+| First run | Opening → Home / Explore → visitor chooses Projects, Experience, Hackathons, or Education. Use Archive `69:37` structure: four major modes arranged horizontally within the League-client shell, contextual detail/refinement below, centered Confirm, right activity rail, and top-right Profile account entry. Profile is not a main mode; opening and Skip must not dump the visitor directly into Projects. |
+| Profile entry | Top-right avatar/account composition opens Profile. The central Joshua lobby card may select/focus first; opening Profile from it requires an explicit second action. |
+| Project/experience lobby | One action may select/focus an item, with hover and selected feedback. A clear explicit action opens its story. Use authentic selected assets. |
+| Help | Following Archive `69:207`, opens a reusable dismissible overlay above the current screen. Keep that screen visible beneath the dim/blue guided treatment; use highlight boxes and short callouts for relevant shell/client controls. Dismissal returns to the same context. A `/help` URL may remain for access/deep linking, while the visible behavior remains overlay-oriented. The standalone `2014:11` guide is rejected. |
+| Errors and empty states | Attach unavailable, empty, offline, or not-found feedback to the affected client surface/item. Offer valid destinations/actions only. Do not invent an outage, automatic retry, or generic portfolio landing guide. |
+| Profile Overview | Project identity/media/name/card opens the case study. A small source icon may open a verified public repository. The top-right avatar remains the Profile entry; preserve Figma overlay/connective behavior and right rail. |
+| Demos | Selector switches among Food Tracker, Crest, and Cho’Veigo in the in-client media browser. Crest plays in-client if an actual accessible demo is available; external open may be secondary. Cho’Veigo capture is static and must not imply playback. Food Tracker remains present even if its current capture is unresolved. |
+| Resume | Resume Found provides `VIEW RESUME` plus close/home behavior. Viewer embeds the exact authorized General Resume v13 PDF and exposes Download and Open Fullscreen against that same file. |
+| Journey | Preserve the full-length track/locator and scroll-driven active beat. Rewrite copy around curiosity, motivation, confidence, and learning rather than a résumé chronology. Support keyboard activation and reduced motion. |
 
-## Shared interaction
+## Opening motion
 
-The responsive shell uses semantic links and buttons. The skip link targets a focusable main region, and client-side route changes move focus to that region. Interactive elements have visible focus styling. Keyboard, responsive, and screen-reader behavior still need live browser review.
+Target roughly two seconds. Retain Skip and a reduced-motion path. The existing `2025:2` / notes `2025:84` composition is directionally useful but remains open until compared with real League logo/loading formation behavior: concentric mechanism, segmentation, registration marks, proportions, line weights, rotation/settle, material, light pass, and emblem-to-ring scale. A circle with four ticks around a J is not sufficient evidence of a faithful sequence. The next implementation must follow the revised Figma behavior; do not treat previous Projects handoff timings as controlling where they conflict with Home/Explore first-run flow.
 
-Case-study stories use a sticky chapter bar above an independently scrolling story on wide layouts. Chapter links are keyboard-operable and visibly focused; Food Tracker and Cho'Veigo synchronize the selected chapter with story scrolling. Fraymakers does not synchronize the selected chapter during manual scrolling. Current Figma chapter reactions change selected state but do not scroll the story; the website supplies the actual anchor scrolling. Smooth chapter movement is disabled for reduced-motion preferences, and the browser determines the smooth-scroll duration.
+## Reduced motion, focus, and accessibility
 
-The Journey story has an 1840 px desktop body and nine ordered beats. The Living in Silico waypoint targets the research spark, followed by the separate Stanford lecture memory. The closing card and signoff align with Figma body positions y=1640 and y=1765. The desktop locator aligns to the 8 px right inset and 80 px top offset, then scales up to 760 px within the available scrollport height. Content reflows at a 900 px container-width threshold, with document scrolling at narrower widths. A locator follows the active story waypoint at a 35% reading line; selecting a waypoint scrolls to it. Reduced motion uses immediate scrolling. No numeric progress or game-stat treatment is used.
+Retain semantic controls, visible keyboard focus, a skip-to-main path, and focus movement appropriate to route or overlay changes. Reduced-motion preferences should remove nonessential movement and make scrolling immediate. Overlay dismissal, focus return, narrow-screen behavior, and keyboard paths require browser review after implementation; source inspection alone does not verify them.
 
-Demos selection changes the still, title, selected state, and decorative recording marker without an authored transition. Crest's sample still links to its public demo separately.
+## Existing code behavior and validation limits
 
-## Opening and motion
+The current implementation still has route-based Projects-first opening, page-shaped Help, route-shaped recovery, and other behaviors recorded in earlier code notes. Treat these as current implementation to be reconciled, not accepted design. Existing route timings, locator dimensions, transition values, and old utility semantics remain implementation facts only if still present in code; they do not supersede this owner direction.
 
-The opening is a two-second, one-shot J reveal followed by Projects. Its outer registration frame is 532 × 532 px with four cardinal ticks; the frame fades in over 180 ms and settles from +1.2° to 0° by 460 ms. At 1.82 s, the opening fades out as an inert Projects client fades in beneath it; route replacement completes at 2.00 s. Skip immediately enters Projects. Under reduced motion, the completed J and registration frame appear without rotation or the light pass, and the handoff crossfade lasts 120 ms. The design timeline loops; the website plays once.
+Recorded checks dated 2026-09-27: 47 tests across 11 files passed, along with typecheck, lint, production build, and `git diff --check`. Journey coverage dispatches a synthetic `popstate` with a restored hash; it does not verify native browser back/forward or real scrolling. Seven deployed route probes returned the SPA shell only. No browser-rendered comparison, live keyboard/responsive review, reduced-motion review, overlay focus test, or native PDF browser review is claimed complete.
 
-The Figma Profile navigation uses Smart Animate with Ease Out over 200 ms and resets scroll. Experience-story return links use a 200 ms Ease Out dissolve. Demos selection is immediate, and Page 01 has no global route reaction. These are prototype-specific timings; website routes outside the opening replace immediately.
-
-## Page 09 interaction ledger
-
-Figma Page 09 contains the opening timeline (`2025:84`) and the cross-surface interaction ledger (`2176:2`). The opening note at `2025:97` now records the +1.2° settle that matches the website source. The ledger separates authored prototype behavior from website runtime behavior rather than inventing timing where none is specified.
-
-| Surface | Figma prototype | Website implementation |
-|---|---|---|
-| Shell and routes | Page 01 has no global route reaction. Profile tabs use 200 ms Smart Animate; Experience-story return links use a 200 ms Ease Out dissolve. Cross-page project routes remain intentionally unwired. | The opening plays once for 2.00 s, with the client handoff beginning at 1.82 s. Other route changes are immediate and move focus to main. Reduced-motion opening handoff is 120 ms. |
-| Profile navigation | Overview, Journey, and Demos navigate with 200 ms Smart Animate, Ease Out, and scroll reset. Personal Highlights has no active destination. | The active state follows the current route. Personal Highlights remains unavailable pending owner photos and content direction. |
-| Case-study stories | Chapter clicks update the selected-state variable; the current Figma prototype does not scroll the story to the selected chapter. | Story content scrolls independently under a sticky chapter bar on wide layouts. Anchor movement follows browser smooth-scroll behavior and becomes immediate under reduced motion. Food Tracker and Cho'Veigo track the active chapter during scroll; Fraymakers does not. |
-| Sticky controls | The chapter control remains at the top of the story viewport; the Journey locator presents five waypoints without a numeric score. | Chapter bars stay sticky on wide layouts. The Journey locator sticks at 80 px from the top, moves to 15 px after narrow reflow, and follows the 35% reading line. |
-| Journey waypoints | Waypoint controls change the selected state. | Scroll and resize update the active waypoint. Click/keyboard activation adds a `#journey-*` history entry; valid fragments restore on mount and back/forward. Modified clicks retain native behavior; reduced-motion scroll is immediate. |
-| Demos | Selector reactions navigate instantly; no transition is assigned. | The still, title, selected row, and recording marker update immediately. Only cleared Crest and Cho'Veigo stills appear; selection does not imply playback. |
-| Resume Found and viewer | The Found and Viewer frames have no prototype reaction or assigned route duration. | Found arrival animates the ring for 700 ms, J for 620 ms, and copy for 380 ms after a 180 ms delay. Reduced motion removes the entrance. Escape/Close returns to the originating route or Projects. Viewer navigation is immediate; the exact authorized v13 PDF is embedded, downloaded, or opened in a new tab. Rendering is browser-native. |
-| Hover and focus | Profile route tabs use the 200 ms eased state change; no general hover timing is specified. | Hover/current styling stays local. Keyboard focus is visible, and pathname changes move focus to main. There is no site-wide route fade. |
-| Help and errors | No entrance motion is specified for Help, recovery, empty, unavailable, or offline states. | These use the shared shell without a dedicated entrance or automatic retry. Offline appears only when detected. Reduced-motion utility effects collapse to 0.01 ms. |
-
-Browser visual, keyboard, responsive, reduced-motion, and native PDF behavior remain unreviewed; the ledger is source-backed documentation, not runtime proof.
-
-Resume Found removes its entrance motion under reduced-motion preferences. Utility and recovery screens use the shared shell and main-region focus behavior. Offline status is shown only when appropriate; no automatic retry is promised.
-
-## Validation status
-
-The current integration is deployed to the public staging project at `https://a988bec6.joshuaik2.pages.dev/` (deployment `a988bec6-a939-4ba7-ac75-0d12d88a3622`, application source `e5306ed`). Seven selected route URLs returned HTTP 200 with the same 635-byte SPA shell, verifying hosting fallback only. The v13 PDF returned HTTP 200 with `application/pdf`, 164,726 bytes, and the approved workspace source SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending because no browser was available. No screenshots or live browser checks are claimed here.
-
-## Journey waypoint fragments (2026-09-27)
-
-On /profile/journey, primary and keyboard activation of a locator anchor adds its #journey-* target to browser history and scrolls to the existing 35% reading line. Valid fragments restore the active waypoint and scroll position on mount and browser back/forward. Modified and non-primary clicks keep native anchor behavior. Reduced-motion preferences retain immediate scrolling.
+Updated 2026-09-27. This document supersedes the previous Projects-first, standalone Help guide, and generic recovery interaction as design requirements.

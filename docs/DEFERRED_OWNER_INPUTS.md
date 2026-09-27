@@ -1,21 +1,24 @@
 # Deferred Portfolio Inputs
 
-Only genuine missing media, publication-rights, photo, or factual-claim inputs are listed here.
+This file tracks genuine missing facts or media. It does not impose a design/build gate for selected Riot, League, CommunityDragon, or owner-project identity assets. Those assets may be used during active development when they are the intended source; publication/licensing decisions belong to final release review.
 
 ## Supplied and cleared
 
-- The General Resume v13 PDF owner supplied at `Downloads/Joshua_Aryeetey_General_Resume_v13.pdf` is authorized for public portfolio use. It is not deferred; the Resume Found, Resume Viewer, and download/open flow uses this exact PDF without regeneration or substitution (SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`).
-- Crest’s selected sample capture is owner-cleared for portfolio display. It is not gated; keep sample data distinct from customer outcomes or impact.
-- Cho’Veigo’s selected Recommendations capture is owner-cleared for static portfolio display. It is not gated; keep it static unless a real, accessible playable source is separately selected.
+- The owner-authorized General Resume v13 PDF is approved for portfolio use and is not deferred. Use the exact file for embedded viewing, Download, and Open Fullscreen; SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`.
+- Crest's selected sample capture is owner-cleared for display. Keep sample-data claims bounded.
+- Cho’Veigo's selected Recommendations capture is owner-cleared for static display. This does not claim playable video.
+- Project marks found in owner/project sources are intended design materials. No additional owner permission is needed to use them for faithful development under the current direction.
 
-## Still missing or optional
+## Genuine gaps or optional evidence
 
-- **Food Tracker:** authentic current-build screenshots and a genuine demo poster or recording. Confirm public-use rights for the mark before embedding it on the site. The current story remains an editorial case study and does not imply a playable demo.
-- **Personal Highlights:** the intended personal-photo set and direction for the photo-led page.
-- **Crest:** public-use rights for the project mark, if it is to be embedded on the site. A successful Policy Compliance capture is needed only if that state is to be shown.
-- **Cho’Veigo:** an accessible, owner-selected playable source is optional if video playback is wanted. Confirm public-use rights for the project mark before embedding it.
-- **Fraymakers:** authentic generated thumbnails, a representative VOD, and a YAML/configuration example with suitable public-use rights are optional additions. Do not present an automatic uploader as completed.
-- **Living in Silico:** supporting experiment media and dataset provenance if the story is to show evidence beyond its current text and diagrams. Confirm public-use rights for the project mark before embedding it.
-- **Stush Patties:** confirm public-use rights for the project mark before embedding it. Any optional example must be public-safe and must not expose client records or dashboard results.
-- **Profile and other project marks:** use only original or rights-cleared portrait, banner, and project identity visuals.
-- **Education lobby (if promoted):** confirm the degree dates, course codes, Dean’s List, scholarship, and software-specialization claims before public release. The current Figma page remains REVIEW CANDIDATE and no Education route is required by the brief.
+- **Food Tracker:** No authentic current-build screenshot/demo is recorded in the collection. Keep its Demos entry and use the best authentic approved logo/mark/media available; a real product capture is a future evidence enhancement, not a blocker to designing the entry or technical story.
+- **Personal Highlights:** Separate owner photo set and content direction are not present. This surface may remain deferred unless needed for the current scope.
+- **Crest:** A successful Policy Compliance capture is optional if that specific state is to be shown. The selected sample capture is already cleared.
+- **Cho’Veigo:** A real accessible playable source is optional; the approved static capture remains usable in-client.
+- **Fraymakers:** Authentic thumbnails, representative VOD, and YAML/config example from the other device are unavailable here. Do not fabricate media; the technical workflow can be explained with truthful diagrams.
+- **Living in Silico:** Run artifacts are unavailable to verify how all method details relate to the 500 DeepMol samples. Keep the method/output distinction explicit. Extra experiment media is optional.
+- **Stush Patties:** The supplied facts do not include a field-level Koyo example. Do not invent a raw record; explain the temporary position-and-cell exception at the supported level.
+- **Education:** Verify degree dates, course codes, Dean's List, scholarship, and specialization claims against owner sources before public release.
+- **Verified utility links:** Email, GitHub, LinkedIn, and Resume destinations must come from existing project sources. Do not invent URLs.
+
+Updated 2026-09-27 to remove prior public-reuse confirmation requirements as active asset/build blockers.

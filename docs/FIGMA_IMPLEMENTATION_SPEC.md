@@ -1,60 +1,61 @@
-﻿# Figma implementation summary
+# Figma Implementation Specification
 
-This page summarizes the current design-to-code relationship for the portfolio. Figma readiness, website implementation, staging, and browser review are separate states; a design reference does not by itself confirm implementation or QA.
+Figma is the design backbone for website translation. Current production pages are authoritative unless the owner prompt explicitly reopens them; archive page 11 (`510:2`) is active design history and informs Home/Explore, Help overlay, Resume Found/viewer, shell, and identity work. Source/content handoffs remain authoritative for factual claims.
 
-## Shared reference shell
+## Required surface workflow
 
-The standard desktop reference is 1920 × 1080: an 82 px top shell, a 1560 × 998 central viewport, and a 360 × 998 activity rail. Detail stories scroll within the central viewport while the shell and rail remain outside that scroller. Responsive behavior is implemented on several routes; live browser review is still pending.
+For each surface, in order:
 
-## Identity
+1. Explicitly load the relevant Figma page with `setCurrentPageAsync`; pages are lazy-loaded, so an unloaded page is not evidence of emptiness.
+2. Inspect the active production root and its children, then inspect archive/reference material relevant to the interaction.
+3. Capture the Figma frame and identify selected assets and interaction semantics.
+4. Implement only from sufficiently mature Figma direction.
+5. Render the website at a matching viewport and capture it.
+6. Compare Figma and website directly. Record concrete differences in structure, proportion, materials, hierarchy, typography, spacing, assets, state, motion, and click behavior.
+7. Correct meaningful differences, render again, and compare again.
+8. Ask an adversarial visual critic what would look cheaper, flatter, generic, less intentional, or less authentic beside the approved reference. Leave the surface open if a material blocker remains.
 
-The canonical first-party J is implemented as an inline vector and shared by the opening and site shell. Its glyph ratio is 0.8315. Source review accepted the ringed mark at 32 px and above, and the ring-free monochrome mark at 16 px. The opening adds the Figma 532 px registration circle and ticks, a +1.2° to 0° settle by 460 ms, and a 1.82–2.00 s crossfade to the Projects client. Browser contrast and placement review remain open.
+A route, passing tests, TypeScript, deployment, HTTP 200, content, number of Figma nodes, or previous `IMPLEMENT READY` label is not visual-completion evidence. If browser/render tooling is unavailable, mark visual comparison pending and continue Figma/code work without claiming validation.
 
-## Motion and prototype notes
+## Reopened surfaces and controlling direction
 
-Figma Page 09 pairs the two-second opening timeline (`2025:84`) with the interaction ledger (`2176:2`). The opening settle at `2025:97` is +1.2° to 0°, matching the website source. The ledger documents only verified timing: Profile navigation uses 200 ms Smart Animate with Ease Out; Experience-story return links use a 200 ms Ease Out dissolve; Demos selector reactions are immediate; case-study chapter and Journey waypoint prototypes change selection state without scrolling the story; Resume frames have no wired route reaction. Website behavior and reduced-motion handling are detailed in [INTERACTION_AND_MOTION_SPEC.md](INTERACTION_AND_MOTION_SPEC.md). Live browser review remains pending.
-
-## Route mapping
-
-| Design surface | Website route | Current implementation |
+| Surface | Current Figma reference | Required next design direction |
 |---|---|---|
-| Projects and Experience lobbies | `/projects`, `/experience` | Selectable lobbies; unfinished stories do not open placeholder pages. |
-| Food Tracker and Crest | `/projects/food-tracker`, `/projects/crest` | Responsive, editorial case-study routes with project-specific story structure. |
-| Cho’Veigo and Fraymakers | `/projects/choveigo`, `/projects/fraymakers` | Responsive case studies; Cho’Veigo separates Fit, Eligibility, and Recommendation evidence. |
-| Living in Silico and Stush Patties | `/experience/living-in-silico`, `/experience/stush-patties` | Responsive stories with factual process diagrams and stated ownership boundaries. |
-| Profile Overview and demos | `/profile`, `/profile/demos` | Overview and selectable demo states; only cleared Crest and Cho’Veigo captures are shown. |
-| Journey | `/profile/journey` | Full-length 1840 px story with nine beats and five waypoints; Living in Silico has distinct research-spark and lecture-memory beats under one waypoint. Its locator follows the 35% reading line and reflows below 900 px. |
-| Resume Found and viewer | `/resume`, `/resume/viewer` | Found state, PDF viewer, download, and fullscreen/open actions all use the exact authorized v13 PDF. |
-| Help and recovery | `/help`, unmatched routes | Responsive help guide and branded client-side recovery page. |
-| Hackathons and Education lobby candidates | none in current scope | Figma roots `730:3316` and `738:3316` remain REVIEW CANDIDATE; the brief does not require standalone routes. Education claims need owner confirmation before promotion. |
+| Home / Explore | Archive page 11, `69:37` “Home · Mode Selection” | Use this archive composition as the structural backbone: real client shell, upper destinations, top-right Profile account, right activity rail, four horizontal modes, contextual detail/refinement underneath, centered Confirm. Profile is not a fifth mode. `2252:3445` is rejected history, not an active target. |
+| Help | Archive page 11, `69:207` “Home · First Visit Help”; current standalone `2014:11` rejected | Reusable dismissible overlay above the current client screen, dim/blue treatment, relevant highlight boxes and short control callouts. Keep the current screen visible beneath it; `/help` is not a standalone guide. |
+| Error/empty/offline | Archive page 11, then current production state family | Contextual client states attached to a failed/unavailable item; no generic guide or invented outage/retry. |
+| Profile entry and shell | Current shell; inspect archived shell | Top-right avatar/account composition is canonical Profile entry. Central Joshua card selects/focuses first; explicit second action may open Profile. |
+| Profile Overview | `960:2` | Restore approved banner, portrait/identity, CE medallion, traits, tabs, Projects, lower signals, connective logic, right rail, spacing and hierarchy. |
+| Demos | `1316:35`, `1316:4534`, `1298:2` | In-client browser with all three entries, selector/index, central media surface, decorative title. No primary YouTube eject. Match truthful media state per project. |
+| Canonical J | Archive page 11, `147:2` with left target `159:2`; compare right-side reconstruction history and prior production `1950:2` | Reconstruct/refine the archived target as an animatable first-party vector. Match crown, tapered stem, hook/counter, ring occlusion, and material hierarchy before micro-polish. Compare aligned 700 px silhouette/negative space, then 300/54/32/16 px and ring-free behavior. `2280:3474` is discarded greenfield exploration, not a candidate sheet. |
+| Opening | `2025:2`, motion notes `2025:84` | Compare with real League loading/logo formation references. Keep about two seconds, Skip and reduced motion; refine scale, concentric mechanism, marks, materials, and motion. |
+| Resume Found/viewer | Archive Resume Found/viewer and Match Found references | Keep exact v13 viewer infrastructure. Rework Found as Match Found-informed J mechanism; remove explanatory paragraph and preserve utility label/actions/close-home behavior. |
+| Six case studies | Current project roots listed below | DESIGNING / NEEDS REDESIGN. Lead with technical proof; no editorial interruption or light-figure quota. |
+| Journey | `1287:7` | Preserve the environmental track and locator; rewrite the emotional/learning arc as in [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md). |
 
-## Current Figma geometry and readiness notes
+## Case-study roots and factual source
 
-| Story | Current body and figures |
-|---|---|
-| Food Tracker | `1813:42`, 1560×2203; product-anatomy figure `2032:2`; search decision plate `2084:2`. |
-| Cho’Veigo | `1813:419`, 1560×2670; evidence worksheet `2043:2`. |
-| Fraymakers | `1831:32`, 1560×1340; workflow figure `2118:2`. |
-| Living in Silico | `1438:4`, 1560×2320. Parent `1438:2` is IMPLEMENT READY; the content node `1438:4` now matches its ready parent. |
-| Stush Patties | `1438:278`, 1560×2080; workflow diagram `1992:2`. |
-| Journey | 1840 px story inside 2004 px inspection canvas `1287:7`; the root label reads IMPLEMENT READY. The Living in Silico waypoint leads to the research spark and then the Stanford lecture memory. |
+| Story | Figma root/body currently recorded | Required focus |
+|---|---|---|
+| Food Tracker | `1813:2` / `1813:42`; figures `2032:2`, `2084:2` | Flagship technical proof: mobile/backend, catalog, retrieval candidate sources and union, deterministic ranking, Pinecone boundary, benchmark results, architecture decisions. |
+| Crest | `1817:4` / `1817:39`; policy reference `1962:2` | Expense workflow, policy PDF→chunks→embeddings→Atlas vector search→grounded prompt, deterministic signals, bounded Gemini, review/preapproval, ownership. |
+| Cho’Veigo | `1813:379` / `1813:419`; worksheet `2043:2` | Evidence-based discovery/tailoring, Fit vs Eligibility vs Recommendation, rules and structured Gemini boundary, human-reviewed regression, Jobs-side ownership. |
+| Fraymakers | `1831:2` / `1831:32`; workflow `2118:2` | Match metadata→config→video mapping→thumbnail generation, real composition inputs/edge cases, 1280×720 output and actual ownership. |
+| Living in Silico | `1438:2` / `1438:4` | Molecular modeling and experiment work immediately; preserve Apr 12 dataset vs separate curated subsets, methods/output uncertainty, DeepMol 500, Fragmenstein, unsuccessful REINVENT4. |
+| Stush Patties | `1438:276` / `1438:278`; workflow `1992:2` | Incompatible distributor inputs, parse/canonicalize/normalize/month alignment, Koyo temporary position-and-cell exception, repeatable artifacts and team/client handoff. |
 
-These body dimensions are current. Chapter-anchor coordinates and end/tail measurements in older design records remain prior references and have not been re-audited against updated body geometry.
+Use [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for supported figures, claims, and ownership. Do not invent impact, benchmark rationale, missing media, or automatic-submission/upload claims.
 
-Journey’s design reference presents the whole story for inspection; the website keeps the shared shell and scrolls the story inside its content area. The locator behavior is implemented, but live scroll, keyboard, and responsive review remains pending.
+The shared case-study acceptance criteria are technical proof in the first fold, legible role/period and ownership, an architecture/workflow explanation, verified methods/tools, important technical decisions, evaluation/results, and real project artifacts where available. Shared proof requirements do not imply a shared template: each project receives a visual grammar that serves its technical story. Do not preserve a white-plate composition by default, and do not add figures just to interrupt scrolling. Worker completion is a handoff request only; the coordinator must load and compare the relevant Figma root, verify facts against the source handoff, inspect the rendered implementation, and request adversarial critique before advancing status.
 
-## Media and factual limits
+## Assets and release
 
-Public media is limited to the owner-cleared Crest sample capture, the owner-cleared static Cho’Veigo Recommendations capture, and the authorized resume PDF. Food Tracker has no authentic current-build capture and its project mark is not cleared for public reuse. Fraymakers media and unconfirmed project marks are omitted. Do not embed third-party game art or marks without confirmed publication rights. Diagrams are explanatory portfolio-owned vectors, not screenshots of running products. Sample values are identified as sample data and are not presented as outcomes.
+Use collected authentic League/Riot/CommunityDragon assets selected for this project, approved Figma exports, and project media before inventing replacements. No public-reuse concern is an active design/build gate. Publication, licensing, and repository-visibility decisions belong to final release review and must not cause a lower-fidelity development design. Keep project/sample claims source-backed and retain owner-clearance boundaries for the Crest sample, Cho’Veigo static capture, and v13 resume.
 
-The Resume Found → Resume Viewer → Download/Open Fullscreen flow uses `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf` only. The PDF is the approved canonical general resume; its contents are not regenerated or substituted.
+## Current delivery evidence (2026-09-27)
 
-## Delivery and review state
+The recorded immutable staging deployment is `a988bec6.joshuaik2.pages.dev`, source `e5306ed`. Seven selected route probes returned the same 635-byte SPA shell and verify host fallback only, not client rendering. The exact v13 PDF returned `application/pdf`, 164,726 bytes, SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. This deployment evidence does not close any visual review. Browser-rendered website screenshots and direct Figma comparisons remain pending where no live browser evidence is recorded.
 
-The latest staged application source revision is `e5306ed` on public-repository branch `feat/portfolio-integration`. The immutable deployment at `https://a988bec6.joshuaik2.pages.dev/` is id `a988bec6-a939-4ba7-ac75-0d12d88a3622`, dated 2026-09-27, with application source `e5306ed`. Wrangler identifies it as Production on the staging project's configured Cloudflare branch label `feat/initial-client-shell`; that label is deployment metadata, not the Git integration branch. Seven selected route URLs returned the same 635-byte SPA shell, verifying hosting/fallback only, not client-side route rendering. The resume PDF returned HTTP 200 with `application/pdf`, 164,726 bytes and SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. Keep this staging project and Cloudflare branch label unchanged; the primary portfolio is separate.
+The 2026-09-27 source-validation record retains a 47-test / 11-file run, typecheck, lint, production build, and `git diff --check`. These are code evidence only. The Journey behavior test dispatches a synthetic `popstate` and restores a hash; it does not exercise native browser history or verify real scroll behavior.
 
-The last full 36-test run across eight files passed after route extraction; the suite now includes the nine-beat Journey order test and passes after the Journey layout update. Typecheck, lint, production build, and diff checks passed after the latest source changes. Seven selected route probes on the current immutable deployment returned only the shared SPA shell. Those responses confirm hosting fallback, not client-side rendering; the canonical v13 PDF bytes and hash match the authorized source. Browser visual, keyboard, responsive, reduced-motion, and native PDF behavior review remain pending because no browser instance was available. Figma source review and website code review are not substitutes for that live review.
-
-## Living in Silico method/output distinction
-
-The page labels the 500 generated SMILES samples as DeepMol output and presents modeling methods as a separate list without claiming that they generated those samples. The unresolved method/output relationship stays in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md).
+Updated 2026-09-27: this specification supersedes earlier claims that particular frames or routes were ready to implement/close without the required rendered comparison.

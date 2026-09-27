@@ -2,6 +2,21 @@
 
 Concise factual handoff for public portfolio stories. Use first person for Joshua's contributions where natural. Keep each claim within the project scope described here.
 
+## Current presentation direction (2026-09-27)
+
+All six current case studies are reopened for redesign. Lead with technical substance in the first screen: project/problem, role and period, architecture/system, tools or methods, ownership, evaluation, outcomes, and technical learning. Figures, media, and diagrams should explain the system and belong to the page composition; there is no light/cream figure quota or required editorial interruption. Do not turn the stories into sentimental chronology or vertically stretched resume bullets. Preserve the facts and claim limits below while restructuring presentation.
+
+Specific technical emphasis:
+
+- **Food Tracker:** flagship; mobile plus backend architecture; reference food catalog; deterministic, fuzzy, and semantic retrieval candidates joined before deterministic evaluation/ranking; Pinecone generates candidates only; benchmark dev/holdout denominators and results; explain how evaluation changed architecture. Simple and Complex are presentation modes over the same product/backend. AI-assisted implementation is context where useful, not a bug list.
+- **Crest:** expense-intelligence workspace, transaction flow, deterministic policy/compliance signals, preapproval, finance Q&A/reporting, policy retrieval, bounded Gemini, human review. Explain policy PDF → chunks → embeddings → Atlas vector search → grounded prompt and distinct deterministic/AI responsibilities. Third place in the Brim Financial Challenge appears once.
+- **Cho’Veigo:** evidence-based job matching/resume tailoring; distinguish Fit, Eligibility, and Recommendation; deterministic evidence/rules and structured Gemini boundary; human-reviewed evaluation and regression; company/career-site retrieval robustness; Joshua's primary Jobs-side contribution.
+- **Fraymakers:** match metadata → config → video mapping → thumbnail generation → 1280 × 720 output; show Challonge metadata, YAML overrides, `thumbnail.js`, `node-canvas`, composition inputs and edge cases; state that Joshua joined later, his brother owned foundation/CLI/Challonge, and OAuth/auto-upload remained incomplete.
+- **Living in Silico:** begin with generative molecular modeling, dataset/experiment scope, RDKit, DeepMol, Fragmenstein, REINVENT4, Morgan fingerprints, RNN generation concepts, experiment architecture, outputs and evaluation. Separate the April 12 dataset from curated subsets; DeepMol generated 500 samples; Fragmenstein worked in some workflows; REINVENT4 did not successfully generate. Do not use Journey's personal-memory framing here.
+- **Stush Patties:** begin with incompatible distributor CSV/XLSX/XLSB inputs; parse, canonicalize, normalize, align case packs/months, produce unified CSV/data dictionary/quality report/Power BI handoff. Explain Koyo's temporary position-and-cell parser exception, shared schema, repeatability, two-person team contribution, and client/business requirement translation. Do not make distributor brand names the narrative focus.
+
+Use only verified Email, GitHub, LinkedIn, and Resume links for a compact top-right utility area where the design calls for it.
+
 ## Food Tracker
 
 Food Tracker is a mobile-first nutrition tracker designed to make logging quick while keeping food search, serving conversion, recommendations, and long-term insight reliable. Simple and Complex are presentation levels over one product and backend.
@@ -57,7 +72,7 @@ Living in Silico is an experience story about technical learning during an AI/ML
 
 The April 12 dataset snapshot (15,696 rows; 14,487 unique SMILES) and experiments using roughly 400–600 entries are separate contexts, not a funnel. Owner-supplied method details describe DeepMol CSVLoader, Morgan fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator run for 10 epochs with batch size 64. DeepMol work produced 500 generated SMILES samples; do not call them valid, unique, or novel molecules. Run artifacts are not available to verify how these method details relate to the 500 samples. Fragmenstein work used fragment-based molecular design with RDKit. REINVENT4 was researched and attempted, but successful generation was not achieved. Do not claim research impact or a consumer product result.
 
-The Journey brief asks for two distinct Living in Silico moments: the ML spark during the research internship, followed by a late-night Stanford ML lecture before school. Keep them as two beats under one chapter waypoint. The new research note reads: "Generative molecular modeling brought machine learning into the work I was learning to do."
+Journey keeps two distinct Living in Silico moments: the ML spark during the research internship, followed by a Stanford ML lecture before school. The emotional point of the latter is deliberate curiosity and making time despite being busy, not the 3–4 AM timestamp. Keep both beats under one chapter waypoint. The case study itself begins with technical work, not this personal framing. Journey's Roblox beat should capture the excitement of making something friends could use/play; Apple hardware curiosity should retain long hours of questions; TMU is curiosity turning toward underlying systems; Naruto semantic search and Spotify recommendation ideas remain playful early curiosities, not failures because they were unbuilt; Stush shows growth through teammate/client problem understanding; Summer 2026 shows learning to finish. The final card should read “More to learn. More to build.”
 
 ## Stush Patties
 

@@ -84,6 +84,27 @@ describe("Journey waypoint behavior", () => {
     expect(waypointLink?.getAttribute("aria-current")).toBe("location");
   });
 
+  it("restores the current waypoint when history returns to a valid fragment", () => {
+    renderJourney();
+    const tmu = waypoint("TMU");
+    const livingInSilico = waypoint("Living in Silico");
+    expect(tmu).not.toBeNull();
+    expect(livingInSilico).not.toBeNull();
+
+    act(() => tmu!.click());
+    act(() => livingInSilico!.click());
+    expect(livingInSilico?.getAttribute("aria-current")).toBe("location");
+
+    act(() => {
+      window.history.replaceState(null, "", "/profile/journey#journey-tmu");
+      window.dispatchEvent(new PopStateEvent("popstate"));
+    });
+
+    expect(window.location.hash).toBe("#journey-tmu");
+    expect(tmu?.getAttribute("aria-current")).toBe("location");
+    expect(livingInSilico?.hasAttribute("aria-current")).toBe(false);
+  });
+
   it("does not cancel the browser default for a modified waypoint click", () => {
     renderJourney();
     const waypointLink = waypoint("TMU");
