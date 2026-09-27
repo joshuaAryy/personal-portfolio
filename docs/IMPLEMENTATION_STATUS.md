@@ -43,7 +43,7 @@ Food Tracker media and project marks without confirmed publication rights are no
 | Destination | Current record |
 |---|---|
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
-| Last deployed branch | `feat/initial-client-shell` |
+| Cloudflare staging branch label | `feat/initial-client-shell` |
 | Staging site | `https://joshuaik2.pages.dev/` |
 | Last immutable deployment | `https://bdf8c5e4.joshuaik2.pages.dev/` (deployment `bdf8c5e4-0fa8-4019-a81b-11e244d55d19`; source metadata `09d5d1b`) |
 
@@ -51,4 +51,4 @@ The current integration is committed on public-repository branch `feat/portfolio
 
 ## Current validation
 
-`npm test -- --run` passed all 21 tests across six files, including App-level route-mapping coverage for six stories; `npm run typecheck`, `npm run lint`, `npm run build` (including TypeScript compilation), and `git diff --check` also passed. Deployment HTTP checks confirmed the root and all 14 client routes, built JS/CSS, and exact v13 PDF hash. Browser runtime discovery returned no connected browser instance, so live visual/keyboard behavior, responsive rendering, reduced-motion timing, and native PDF behavior have not been independently reviewed.
+`npm test -- --run` passed all 30 tests across seven files, including focused and full-suite App-route mapping coverage for six stories; `npm run typecheck`, `npm run lint`, `npm run build` (including TypeScript compilation), and `git diff --check` also passed. Deployment HTTP checks confirmed the root and all 14 client routes, built JS/CSS, and exact v13 PDF hash. Browser runtime discovery returned no connected browser instance, so live visual/keyboard behavior, responsive rendering, reduced-motion timing, and native PDF behavior have not been independently reviewed.
