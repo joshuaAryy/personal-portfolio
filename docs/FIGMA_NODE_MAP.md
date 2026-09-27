@@ -27,6 +27,10 @@ The current integration is deployed to the public staging project at `https://bf
 
 The Food Tracker and Cho’Veigo body heights above supersede earlier measurements. Chapter-anchor coordinates and end/tail measurements in older design records are prior references and have not been re-audited against the updated body geometry.
 
-## LiS evidence note sync (2026-09-27)
+## LiS research copy sync (2026-09-27)
 
-In the IMPLEMENT READY body 1438:4 on 03 Experience, text node 2167:2 (DeepMol · method/sample qualification) states: “The available records do not link these methods to the 500 DeepMol samples.” This mirrors the website caveat and does not change the owner-sourced count or claim a sample-to-method relationship.
+The public LiS story labels the 500 generated SMILES samples as DeepMol output and lists modeling methods separately, without claiming they generated those samples. The unresolved method/output relationship is retained in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md).
+
+## Stush ending copy sync (2026-09-27)
+
+Website `src/StushPattiesCase.tsx` and Figma body `1438:278` now use the same outcome summary and reflection. The workflow plate `1992:2` retains the detailed CSV, data dictionary, quality report, and Power BI handoff; the ending summarizes the result without repeating the artifact list or publishing internal provenance disclaimers.

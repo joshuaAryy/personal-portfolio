@@ -55,6 +55,6 @@ The current integration is committed on public-repository branch `feat/portfolio
 
 The full 36-test suite across eight files, including focused shell and route-mapping coverage, passes along with typecheck, lint, production build, and diff checks. Latest deployment checks confirm hosting fallback and the served PDF bytes/hash; the route URLs returned only the shared SPA shell and do not confirm client-side rendering. Browser visual, keyboard, responsive, reduced-motion, and native PDF behavior review remain pending because no browser instance was available. Figma source review and website code review are not substitutes for that live review.
 
-## Living in Silico research qualifier
+## Living in Silico method/output distinction
 
-Figma node 2167:2 below the DeepMol method description states that available records do not link the listed methods to the 500 DeepMol samples. The website preserves the same evidence boundary.
+The page labels the 500 generated SMILES samples as DeepMol output and presents modeling methods as a separate list without claiming that they generated those samples. The unresolved method/output relationship stays in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md).

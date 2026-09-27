@@ -51,7 +51,7 @@ export default function LivingInSilicoCase() {
             </div>
             <div>
               <dt>DATES</dt>
-              <dd>Approx. March–June 2025</dd>
+              <dd>March–June 2025</dd>
             </div>
             <div>
               <dt>SUPERVISOR</dt>
@@ -114,18 +114,18 @@ export default function LivingInSilicoCase() {
           <h2 id="living-experiments-title">Different datasets served different experiments.</h2>
           <div className="living-dataset-pair">
             <div className="living-dataset living-dataset--snapshot">
-              <h3 className="living-eyebrow">APR 12 SNAPSHOT · OWNER-PROVIDED</h3>
+              <h3 className="living-eyebrow">APR 12 DATASET</h3>
               <div className="living-dataset__figures">
                 <p><strong>15,696</strong><span>rows</span></p>
                 <p><strong>14,487</strong><span>unique SMILES</span></p>
               </div>
             </div>
             <div className="living-dataset living-dataset--experiments">
-              <h3 className="living-eyebrow">SEPARATE CURATED EXPERIMENTS</h3>
+              <h3 className="living-eyebrow">OTHER EXPERIMENTS</h3>
               <p className="living-dataset__range">~400–600</p>
-              <p className="living-dataset__caption">entries in other experiments</p>
+              <p className="living-dataset__caption">entries</p>
               <p className="living-dataset__note">
-                A different experimental scale, kept separate from the Apr 12 snapshot.
+                Curated subsets used in separate experiments.
               </p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function LivingInSilicoCase() {
 
       <section className="living-research-record" aria-labelledby="living-research-record-title">
         <h2 className="living-research-record__sr-only" id="living-research-record-title">
-          DeepMol research record
+          Molecular modeling notes
         </h2>
         <div className="living-research-record__sample">
           <span className="living-research-record__index" aria-hidden="true">03</span>
@@ -142,14 +142,11 @@ export default function LivingInSilicoCase() {
           <p className="living-research-record__caption">DEEPMOL · GENERATED SMILES SAMPLES</p>
         </div>
         <div className="living-research-record__column living-research-record__method">
-          <h3>METHOD CONTEXT</h3>
+          <h3>METHODS I WORKED WITH</h3>
           <p>
-            I used DeepMol CSVLoader and Morgan fingerprints (radius 2, 128
-            bits), then ran an RNN MolecularGenerator for 10 epochs with batch
-            size 64.
-          </p>
-          <p>
-            Run artifacts are not available to verify how these method details relate to the 500 samples.
+            My modeling work also included DeepMol CSVLoader, Morgan
+            fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator
+            (10 epochs; batch size 64).
           </p>
         </div>
         <div className="living-research-record__column living-research-record__attempt">

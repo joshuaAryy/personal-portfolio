@@ -127,7 +127,7 @@ export default function StushPattiesCase() {
 
       <section className="stush-outcome" id="stush-outcome">
         <p className="stush-kicker">THE HANDOFF</p>
-        <h2>A more repeatable path from raw files to reporting.</h2>
+        <h2>A structured handoff for reporting.</h2>
         <div
           className="stush-outcome__artifacts"
           role="group"
@@ -139,17 +139,15 @@ export default function StushPattiesCase() {
           <strong>Power BI</strong>
         </div>
         <p className="stush-outcome__note">
-          The reported outcome is a reusable structured handoff. No client
-          records or dashboard results are reproduced here.
+          The work created a more repeatable path from raw distributor files to
+          structured data and Power BI reporting.
         </p>
       </section>
 
       <footer className="stush-reflection" id="stush-reflection">
         <span>LOOKING BACK</span>
         <p>
-          The hardest parts were in the exceptions: understanding what each
-          source meant, then choosing a practical rule that made the next
-          reporting step more repeatable.
+          In real client work, pragmatism is part of engineering.
         </p>
       </footer>
     </article>
