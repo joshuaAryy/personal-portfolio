@@ -124,7 +124,7 @@ export default function CrestCaseStudy() {
     ["01", "BRIM POLICY PDF", "Brim source material"],
     ["02", "EXTRACT + CHUNK", "Prepare searchable passages"],
     ["03", "EMBEDDING-001", "Gemini · 3,072 dimensions"],
-    ["04", "ATLAS VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
+    ["04", "ATLAS SEARCH", "MongoDB Atlas · policy_chunks"],
     ["05", "GROUNDED PROMPT", "Top retrieved passages"],
   ];
 
@@ -263,6 +263,11 @@ export default function CrestCaseStudy() {
                 </li>
               ))}
             </ol>
+            <p className="crest-policy-figure__trace">
+              OWNER-REPORTED RETRIEVAL FLOW · BRIM POLICY PDF → EXTRACTION +
+              CHUNKING → GEMINI EMBEDDING-001 (3,072 DIMENSIONS) → MONGODB
+              ATLAS VECTOR RETRIEVAL → GROUNDED PROMPT
+            </p>
             <div className="crest-decision-flow" role="group" aria-label="Decision roles">
               <section className="crest-decision-input">
                 <h3>RETRIEVED POLICY CONTEXT</h3>
@@ -294,6 +299,28 @@ export default function CrestCaseStudy() {
               </section>
             </div>
           </figure>
+          <div className="crest-signal-boundary">
+            <div className="crest-signal-boundary__intro">
+              <p className="crest-signal-boundary__eyebrow">ANOMALY SIGNALS / REVIEW SUPPORT</p>
+              <h3>Keep the signal legible.</h3>
+              <p>Rule-based heuristics surface patterns for human review.</p>
+            </div>
+            <ul className="crest-signal-boundary__signals" aria-label="Rule-based anomaly signals">
+              <li>Bursts</li>
+              <li>Vendor patterns</li>
+              <li>Duplicates</li>
+              <li>Unusual merchants</li>
+              <li>Threshold avoidance</li>
+            </ul>
+            <div className="crest-signal-boundary__ai">
+              <h4>AI boundary</h4>
+              <p>
+                Gemini interpreted retrieved policy passages. The signals are
+                heuristics, not an ML fraud classifier; deterministic finance
+                and policy rules remained authoritative.
+              </p>
+            </div>
+          </div>
         </section>
 
         <section className="crest-section crest-team" id="crest-team">

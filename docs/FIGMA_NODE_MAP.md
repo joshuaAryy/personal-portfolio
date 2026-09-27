@@ -7,8 +7,8 @@ This public handoff maps current portfolio surfaces and selected Figma node refe
 | Opening and identity | `/` to `/projects` | One-shot J reveal with a 532 px registration circle, cardinal ticks, +1.2° settle, and 180 ms Projects underlay crossfade; reduced motion skips rotation/light-pass and uses a 120 ms handoff. |
 | Projects lobby | `/projects` | Project selection with links to available stories. Public cards use portfolio-owned F, C, FT, and CV index glyphs where project marks are not cleared; they are not represented as official logos. |
 | Motion and prototype notes | cross-route | Page 09 has the opening timeline `2025:84` and interaction ledger `2176:2`; the ring settle at `2025:97` is +1.2° and matches the implementation record. |
-| Food Tracker | `/projects/food-tracker` | Story body `1813:42` is 1560×2203, with product-anatomy figure `2032:2`, search decision plate `2084:2`, and benchmark context. |
-| Crest | `/projects/crest` | Responsive story with an owner-cleared sample capture and sample-data context. |
+| Food Tracker | `/projects/food-tracker` | Story body `1813:42` is 1560×2203, with product-anatomy figure `2032:2`, search decision plate `2084:2`, and benchmark context; the site separates the three parallel candidate sources before their union. |
+| Crest | `/projects/crest` | Responsive story with an owner-cleared sample capture and sample-data context; policy flow, five rule-based signal labels, and AI boundary from body `1817:39` are represented on the site. |
 | Cho'Veigo | `/projects/choveigo` | Story body `1813:419` is 1560×2670 and includes worksheet `2043:2`; distinct Fit, Eligibility, and Recommendation stages; the static Recommendations capture is followed by an explicit unvalidated-strength disclosure. |
 | Fraymakers | `/projects/fraymakers` | Story body `1831:32` is 1560×1340, with workflow figure `2118:2`; responsive, asset-free editorial story. |
 | Experience lobby | `/experience` | Links to available experience stories. |
@@ -34,3 +34,7 @@ The public LiS story labels the 500 generated SMILES samples as DeepMol output a
 ## Stush ending copy sync (2026-09-27)
 
 Website `src/StushPattiesCase.tsx` and Figma body `1438:278` now use the same outcome summary and reflection. The workflow plate `1992:2` retains the detailed CSV, data dictionary, quality report, and Power BI handoff; the ending summarizes the result without repeating the artifact list or publishing internal provenance disclaimers.
+
+## Food Tracker and Crest figure sync (2026-09-27)
+
+The Food Tracker decision plate `2084:2` now gives deterministic, fuzzy, and semantic retrieval distinct peer boxes joined before candidate union. Crest's website policy pipeline uses the `ATLAS SEARCH` label from `1962:2`, retains vector retrieval in the owner-reported flow caption, and restores the signal and AI-boundary block from body nodes `1817:396–409`.

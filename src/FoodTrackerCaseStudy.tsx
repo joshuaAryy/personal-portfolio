@@ -231,13 +231,21 @@ export default function FoodTrackerCaseStudy() {
               aria-label="Search retrieval and ranking stages"
             >
               <li>USER QUERY</li>
-              <li className="food-search__decision-sources">
-                <span>CANDIDATE SOURCES</span>
-                <ul aria-label="Parallel candidate sources">
-                  <li>DETERMINISTIC</li>
-                  <li>FUZZY</li>
-                  <li>SEMANTIC</li>
-                </ul>
+              <li className="food-search__decision-source-group">
+                <span className="food-search__decision-source-label">
+                  CANDIDATE SOURCES
+                </span>
+                <div
+                  className="food-search__decision-sources"
+                  role="group"
+                  aria-label="Parallel candidate sources"
+                >
+                  <span>DETERMINISTIC</span>
+                  <span className="food-search__decision-source-join" aria-hidden="true">+</span>
+                  <span>FUZZY</span>
+                  <span className="food-search__decision-source-join" aria-hidden="true">+</span>
+                  <span>SEMANTIC</span>
+                </div>
               </li>
               <li>CANDIDATE UNION</li>
               <li>DETERMINISTIC EVALUATOR</li>

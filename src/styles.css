@@ -1600,6 +1600,16 @@ a:focus-visible {
   font-size: 12px;
   line-height: 1.45;
 }
+.crest-policy-figure__trace {
+  margin: -6px 0 20px;
+  padding-top: 10px;
+  border-top: 1px solid #d8d0bd;
+  color: #9a7132;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 1.45;
+}
 .crest-policy-pipeline {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1667,6 +1677,70 @@ a:focus-visible {
   font-size: 18px;
   font-weight: 700;
   text-align: center;
+}
+.crest-signal-boundary {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 18px 32px;
+  margin-top: 20px;
+  padding: 22px 26px;
+  border-left: 2px solid #c79b45;
+  background: #14292e;
+}
+.crest-signal-boundary__eyebrow {
+  margin: 0 0 8px;
+  color: #c79b45;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.045em;
+}
+.crest-signal-boundary__intro h3 {
+  margin: 0 0 8px;
+  color: #eee7d8;
+  font-size: 21px;
+  line-height: 1.15;
+}
+.crest-signal-boundary__intro > p:last-child,
+.crest-signal-boundary__ai p {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.crest-signal-boundary__signals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 14px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.crest-signal-boundary__signals li {
+  min-width: 0;
+  padding-top: 8px;
+  border-top: 1px solid rgba(199, 155, 69, 0.55);
+  color: #eee7d8;
+  font-size: 10px;
+  font-weight: 650;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+.crest-signal-boundary__ai {
+  display: grid;
+  grid-template-columns: minmax(110px, 0.35fr) minmax(0, 1fr);
+  gap: 16px;
+  grid-column: 1 / -1;
+  align-items: baseline;
+  padding-top: 14px;
+  border-top: 1px solid rgba(169, 181, 186, 0.24);
+}
+.crest-signal-boundary__ai h4 {
+  margin: 0;
+  color: #c79b45;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 .crest-team {
   display: grid;
@@ -2320,6 +2394,15 @@ a:focus-visible {
   .crest-policy-figure {
     padding: 24px 20px;
   }
+  .crest-signal-boundary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+    padding: 20px;
+  }
+  .crest-signal-boundary__ai {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
 }
 @media (max-width: 650px) {
   .crest-case-nav {
@@ -2388,6 +2471,15 @@ a:focus-visible {
   }
   .crest-policy-figure {
     padding: 18px 14px;
+  }
+  .crest-policy-figure__trace {
+    font-size: 8px;
+  }
+  .crest-signal-boundary {
+    padding: 18px 14px;
+  }
+  .crest-signal-boundary__intro h3 {
+    font-size: 19px;
   }
   .crest-policy-figure h2 {
     font-size: 22px;

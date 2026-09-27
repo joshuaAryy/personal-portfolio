@@ -4,7 +4,7 @@ Only genuine missing media, publication-rights, photo, or factual-claim inputs a
 
 ## Supplied and cleared
 
-- The General Resume v13 PDF has been supplied and authorized for public portfolio use. It is not deferred; the Resume Found, Resume Viewer, and download/open flow uses this exact PDF.
+- The General Resume v13 PDF at `Production Portfolio / Resume / Joshua_Aryeetey_General_Resume_v13.pdf` has been supplied and authorized for public portfolio use. It is not deferred; the Resume Found, Resume Viewer, and download/open flow uses this exact PDF.
 - Crest’s selected sample capture is owner-cleared for portfolio display. It is not gated; keep sample data distinct from customer outcomes or impact.
 - Cho’Veigo’s selected Recommendations capture is owner-cleared for static portfolio display. It is not gated; keep it static unless a real, accessible playable source is separately selected.
 

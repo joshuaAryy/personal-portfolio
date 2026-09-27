@@ -164,7 +164,7 @@
 
 .food-search__decision-flow {
   display: grid;
-  grid-template-columns: minmax(90px, 0.8fr) minmax(230px, 2fr) minmax(108px, 0.95fr) minmax(132px, 1.1fr) minmax(90px, 0.8fr);
+  grid-template-columns: minmax(90px, 0.8fr) minmax(245px, 2fr) minmax(108px, 0.95fr) minmax(132px, 1.1fr) minmax(90px, 0.8fr);
   gap: 14px;
   padding: 0;
   margin: 15px 0 14px;
@@ -202,15 +202,17 @@
   transform: translateY(-50%);
 }
 
-.food-search__decision-flow > .food-search__decision-sources {
+.food-search__decision-flow > .food-search__decision-source-group {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
   gap: 7px;
-  padding: 8px;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
 
-.food-search__decision-sources > span {
+.food-search__decision-source-label {
   color: #98712e;
   font-size: 8px;
   font-weight: 700;
@@ -218,34 +220,38 @@
   line-height: 1.1;
 }
 
-.food-search__decision-sources ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.food-search__decision-sources {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 14px minmax(0, 1fr) 14px minmax(0, 1fr);
+  align-items: stretch;
   gap: 4px;
   min-width: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
-.food-search__decision-sources ul li {
+.food-search__decision-sources > span:not(.food-search__decision-source-join) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
+  min-height: 52px;
+  padding: 7px 5px;
+  border: 1px solid #dbd4c2;
+  background: #fffcf4;
   color: #17272c;
-  font-size: 9px;
+  font-size: clamp(8px, 0.58vw, 9px);
   font-weight: 700;
   line-height: 1.2;
+  text-align: center;
   overflow-wrap: anywhere;
 }
 
-.food-search__decision-sources ul li:not(:last-child)::after {
-  margin-left: 4px;
+.food-search__decision-source-join {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #98712e;
-  content: "+";
-  font-size: 12px;
+  font-size: 13px;
+  font-weight: 700;
   line-height: 1;
 }
 
