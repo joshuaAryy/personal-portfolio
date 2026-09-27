@@ -31,6 +31,10 @@ Updated 2026-09-27. This file separates design readiness from website implementa
 
 The six long-form project and experience stories already use their documented full body heights. Further design work should improve distinct figures and page treatments rather than extend those story bodies again.
 
+## Visual differentiation review (2026-09-27)
+
+A title-blind, read-only Figma critique reviewed the six story bodies: Food Tracker `1813:42`, Crest `1817:39`, Cho’Veigo `1813:419`, Fraymakers `1831:32`, Living in Silico `1438:4`, and Stush Patties `1438:278`. Each reads as individually authored, with no material visual or truth-boundary correction identified. This is a Figma review only; it does not close the pending live website visual, keyboard, responsive, reduced-motion, or native PDF review.
+
 ## Public assets
 
 | Bundled file | Public use |
