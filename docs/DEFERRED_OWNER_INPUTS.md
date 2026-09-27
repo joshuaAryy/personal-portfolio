@@ -1,6 +1,6 @@
 # Deferred Portfolio Inputs
 
-Only genuine missing media, rights, or photo inputs are listed here.
+Only genuine missing media, publication-rights, photo, or factual-claim inputs are listed here.
 
 ## Supplied and cleared
 
@@ -18,3 +18,4 @@ Only genuine missing media, rights, or photo inputs are listed here.
 - **Living in Silico:** supporting experiment media and dataset provenance if the story is to show evidence beyond its current text and diagrams. Confirm public-use rights for the project mark before embedding it.
 - **Stush Patties:** confirm public-use rights for the project mark before embedding it. Any optional example must be public-safe and must not expose client records or dashboard results.
 - **Profile and other project marks:** use only original or rights-cleared portrait, banner, and project identity visuals.
+- **Education lobby (if promoted):** confirm the degree dates, course codes, Dean’s List, scholarship, and software-specialization claims before public release. The current Figma page remains REVIEW CANDIDATE and no Education route is required by the brief.

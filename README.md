@@ -33,7 +33,7 @@ npm run build
 - `/profile`, `/profile/journey`, `/profile/demos` — Profile sections
 - `/help` — help guide
 - `/resume` and `/resume/viewer` — resume flow and PDF viewer
-- Unmatched paths show branded recovery; unfinished project and experience slugs return to their respective indexes.
+- Unknown project and experience detail slugs, along with other unmatched paths, show branded recovery.
 
 ## Assets and staging
 

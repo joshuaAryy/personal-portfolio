@@ -10,6 +10,10 @@ The standard desktop reference is 1920 × 1080: an 82 px top shell, a 1560 × 99
 
 The canonical first-party J is implemented as an inline vector and shared by the opening and site shell. Its glyph ratio is 0.8315. Source review accepted the ringed mark at 32 px and above, and the ring-free monochrome mark at 16 px. The opening adds the Figma 532 px registration circle and ticks, a +1.2° to 0° settle by 460 ms, and a 1.82–2.00 s crossfade to the Projects client. Browser contrast and placement review remain open.
 
+## Motion and prototype notes
+
+Figma Page 09 pairs the two-second opening timeline (`2025:84`) with the interaction ledger (`2176:2`). The opening settle at `2025:97` is +1.2° to 0°, matching the website source. The ledger documents only verified timing: Profile navigation uses 200 ms Smart Animate with Ease Out; Experience-story return links use a 200 ms Ease Out dissolve; Demos selector reactions are immediate; case-study chapter and Journey waypoint prototypes change selection state without scrolling the story; Resume frames have no wired route reaction. Website behavior and reduced-motion handling are detailed in [INTERACTION_AND_MOTION_SPEC.md](INTERACTION_AND_MOTION_SPEC.md). Live browser review remains pending.
+
 ## Route mapping
 
 | Design surface | Website route | Current implementation |
@@ -22,6 +26,7 @@ The canonical first-party J is implemented as an inline vector and shared by the
 | Journey | `/profile/journey` | Full-length story with eight beats and five waypoints. Its locator follows the 35% reading line and reflows below 900 px. |
 | Resume Found and viewer | `/resume`, `/resume/viewer` | Found state, PDF viewer, download, and fullscreen/open actions all use the exact authorized v13 PDF. |
 | Help and recovery | `/help`, unmatched routes | Responsive help guide and branded client-side recovery page. |
+| Hackathons and Education lobby candidates | none in current scope | Figma roots `730:3316` and `738:3316` remain REVIEW CANDIDATE; the brief does not require standalone routes. Education claims need owner confirmation before promotion. |
 
 ## Current Figma geometry and readiness notes
 

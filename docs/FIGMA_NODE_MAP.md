@@ -6,11 +6,14 @@ This public handoff maps current portfolio surfaces and selected Figma node refe
 |---|---|---|
 | Opening and identity | `/` to `/projects` | One-shot J reveal with a 532 px registration circle, cardinal ticks, +1.2° settle, and 180 ms Projects underlay crossfade; reduced motion skips rotation/light-pass and uses a 120 ms handoff. |
 | Projects lobby | `/projects` | Project selection with links to available stories. Public cards use portfolio-owned F, C, FT, and CV index glyphs where project marks are not cleared; they are not represented as official logos. |
+| Motion and prototype notes | cross-route | Page 09 has the opening timeline `2025:84` and interaction ledger `2176:2`; the ring settle at `2025:97` is +1.2° and matches the implementation record. |
 | Food Tracker | `/projects/food-tracker` | Story body `1813:42` is 1560×2203, with product-anatomy figure `2032:2`, search decision plate `2084:2`, and benchmark context. |
 | Crest | `/projects/crest` | Responsive story with an owner-cleared sample capture and sample-data context. |
 | Cho'Veigo | `/projects/choveigo` | Story body `1813:419` is 1560×2670 and includes worksheet `2043:2`; distinct Fit, Eligibility, and Recommendation stages; the static Recommendations capture is followed by an explicit unvalidated-strength disclosure. |
 | Fraymakers | `/projects/fraymakers` | Story body `1831:32` is 1560×1340, with workflow figure `2118:2`; responsive, asset-free editorial story. |
 | Experience lobby | `/experience` | Links to available experience stories. |
+| Hackathons lobby | not in current route scope | Figma root `730:3316` remains REVIEW CANDIDATE. The required third-place Crest result is included on `/projects/crest`; the current brief does not require a standalone Hackathons route. |
+| Education lobby | not in current route scope | Figma root `738:3316` remains REVIEW CANDIDATE. The current brief does not require a standalone Education route; claims need owner confirmation before promotion. |
 | Living in Silico | `/experience/living-in-silico` | Parent `1438:2` and story body `1438:4` (1560×2320) are both marked IMPLEMENT READY. Responsive text-and-vector story with separate DeepMol output and REINVENT4 researched/attempted outcome records; no successful REINVENT4 generation is claimed. |
 | Stush Patties | `/experience/stush-patties` | Story body `1438:278` is 1560×2080, with distributor-normalization diagram `1992:2` showing a Koyo-only temporary position-and-cell parser exception; unconfirmed graphic mark removed from the story hero. |
 | Profile Overview | `/profile` | Overview content with route links to Journey and Demos. |
