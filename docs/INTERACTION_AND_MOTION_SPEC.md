@@ -34,4 +34,4 @@ Resume Found removes its entrance motion under reduced-motion preferences. Utili
 
 ## Validation status
 
-The current integration is deployed to the public staging project at `https://03a92ff7.joshuaik2.pages.dev/`. Route-response checks succeeded, and the served v13 PDF hash matched the owner-supplied asset. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending browser/runtime QA because no browser surface was available. No screenshots or live browser checks are claimed here.
+The current integration is deployed to the public staging project at `https://1b3c7a8d.joshuaik2.pages.dev/`. Route-response checks succeeded, and the served v13 PDF hash matched the owner-supplied asset. Visual rendering, live keyboard behavior, responsive browser behavior, reduced-motion behavior, and native PDF handling remain pending browser/runtime QA because no browser surface was available. No screenshots or live browser checks are claimed here.

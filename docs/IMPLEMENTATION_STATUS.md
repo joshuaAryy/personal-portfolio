@@ -45,9 +45,9 @@ Food Tracker media and project marks without confirmed publication rights are no
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
 | Last deployed branch | `feat/initial-client-shell` |
 | Staging site | `https://joshuaik2.pages.dev/` |
-| Last immutable deployment | `https://03a92ff7.joshuaik2.pages.dev/` (deployment `03a92ff7-2a94-4483-a704-a0496cc54dac`; source metadata `e627cd7`) |
+| Last immutable deployment | `https://1b3c7a8d.joshuaik2.pages.dev/` (deployment `1b3c7a8d-46ee-4576-8a6c-a480ab3a5a3e`; source metadata `5c2d5cc`) |
 
-The current integration was uploaded from the uncommitted `feat/canonical-j-opening` worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `03a92ff7-2a94-4483-a704-a0496cc54dac` as Production on the staging project’s configured branch, `feat/initial-client-shell`; source metadata is `e627cd7`, while the uploaded build includes the worktree’s uncommitted edits. The staging root and six tested client routes returned HTTP 200. The v13 PDF served from the latest deployment has the same SHA-256 as the owner-supplied asset. The primary portfolio project was not targeted.
+The current integration was uploaded from the clean, committed `feat/canonical-j-opening` worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `1b3c7a8d-46ee-4576-8a6c-a480ab3a5a3e` as Production on the staging project’s configured branch, `feat/initial-client-shell`; source metadata is `5c2d5cc`, with app code at `45e0c60`. The staging root and six tested client routes returned HTTP 200, and the bundled JavaScript and CSS also returned HTTP 200. The v13 PDF served from the staging alias has the same SHA-256 as the owner-supplied asset. The primary portfolio project was not targeted.
 
 ## Current validation
 

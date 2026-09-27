@@ -33,6 +33,6 @@ The Resume Found → Resume Viewer → Download/Open Fullscreen flow uses `publi
 
 ## Delivery and review state
 
-The current integration was uploaded from the uncommitted `feat/canonical-j-opening` worktree to the separate `joshuaik2` staging project at `https://03a92ff7.joshuaik2.pages.dev/`. Wrangler identifies deployment `03a92ff7-2a94-4483-a704-a0496cc54dac` as Production on the staging project’s configured branch `feat/initial-client-shell`; source metadata is `e627cd7`, while the uploaded build includes the worktree’s uncommitted edits. Keep this staging project and branch target unchanged; the primary portfolio is separate.
+The current integration was uploaded from the clean, committed `feat/canonical-j-opening` worktree to the separate `joshuaik2` staging project at `https://1b3c7a8d.joshuaik2.pages.dev/`. Wrangler identifies deployment `1b3c7a8d-46ee-4576-8a6c-a480ab3a5a3e` as Production on the staging project’s configured branch `feat/initial-client-shell`; source metadata is `5c2d5cc`, with app code at `45e0c60`. Keep this staging project and branch target unchanged; the primary portfolio is separate.
 
 The implementation status records lint, production build, diff checks, staging route responses, and the served PDF hash as passing. Browser visual, keyboard, responsive, reduced-motion, and native PDF behavior review remain pending because no in-app browser surface was available. Figma source review and website code review are not substitutes for that live review.
