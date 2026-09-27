@@ -13,7 +13,8 @@ Source Figma file: [Portfolio design](https://www.figma.com/design/9zvk9iSRPKSsJ
 | Demos · Food Tracker | 1316:35 | — | Withheld from public showcase | Owner confirmation of logo embedding rights and authentic product UI capture |
 | Food Tracker case study | 1813:2 | `/projects/food-tracker` | Implemented as a responsive editorial story; chapter links follow scroll position; benchmark uses development and holdout tables | Browser visual/keyboard review; compare responsive page against approved source |
 | Crest | 1817:4 | `/projects/crest` | Responsive editorial story implemented and deployed; grounded-policy decision figure, sample-data cue, and supported third-place result | Browser visual/keyboard review against the approved source; keep the Crest logo out of public code until its embedding rights are confirmed |
-| Cho’Veigo, Fraymakers | 1813:379, 1831:2 | Reserved paths redirect to `/projects` | No public placeholder story screens | Complete their design gates, then implement the full editorial stories with distinct evidence figures |
+| Cho’Veigo | 1813:379 | `/projects/choveigo` | Responsive editorial story implemented on `feat/choveigo-case-study`; five chapter anchors, cleared static Recommendations still, distinct Fit/Eligibility/Recommendation definitions, mismatch-to-regression sequence, and bounded system path | Integrate and stage the feature branch; browser visual/keyboard review when a browser session is available |
+| Fraymakers | 1831:2 | `/projects/fraymakers` | Reserved path redirects to `/projects`; Figma remains REVIEW CANDIDATE | Complete the evidence and visual readiness gates before implementing its compact media workflow story |
 | Experience story roots | 1438:2, 1438:276 | Reserved paths redirect to `/experience` | No public placeholder story screen | Design and implement the Living in Silico and Stush Patties editorial stories |
 | Journey | 1287:7 | — | Figma source has full story content and viewport work; full scenic implementation remains deferred | Finish environmental treatment and port the full vertical story |
 | Personal Highlights | — | — | Deferred | Owner photo set and final composition |
@@ -51,6 +52,6 @@ The staging project is separate from the existing primary portfolio deployment. 
 - The skip-link target is focusable, route changes focus the main content, and rail project order matches the Figma rail.
 - The Profile Overview remains a structural stand-in pending a rights-safe composition and visual fidelity review.
 
-`npm run lint`, `npm run typecheck`, and `npm run build` pass for the Food Tracker and Crest implementations. Both feature routes are deployed to the separate staging project. Browser-based visual and live keyboard review remains outstanding because the browser-control runtime was unavailable.
+`npm test -- --run` passes (3 Cho’Veigo route-content checks); `npm run lint`, `npm run typecheck`, and `npm run build` pass for the Food Tracker, Crest, and Cho’Veigo feature branch. Local production preview returned HTTP 200 for `/projects/choveigo` and the cleared Recommendations PNG. The browser-control runtime had no available browser, so visual and live keyboard review remain outstanding. The Cho’Veigo feature branch has not yet been integrated or deployed.
 
 No local source handoff docs or old portfolio files are copied into this repository.

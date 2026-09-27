@@ -1,6 +1,6 @@
 # Joshua Aryeetey · Portfolio client
 
-The public implementation of Joshua's portfolio includes the client shell, project and experience lobbies, a structural Profile Overview, the complete Food Tracker case study, and two Demos states with cleared stills. Profile Overview has not passed visual fidelity review. The other project and experience stories remain in development and their reserved URLs return to the matching lobby. The Food Tracker logo and demo remain unpublished while logo rights and an authentic product capture are unresolved.
+The public implementation of Joshua's portfolio includes the client shell, project and experience lobbies, a structural Profile Overview, and the Food Tracker, Crest, and Cho’Veigo editorial case studies. The Cho’Veigo route is implemented on its feature branch and awaits staging integration. Profile Overview has not passed visual fidelity review. Fraymakers and the Experience stories remain in development and their reserved URLs return to the matching lobby. Food Tracker Demos remain unpublished while logo rights and an authentic product capture are unresolved.
 
 ## Run locally
 
@@ -20,6 +20,7 @@ Run `npm run deploy` to build and deploy the staging branch to Cloudflare Pages.
 ```sh
 npm run lint
 npm run typecheck
+npm test -- --run
 npm run build
 ```
 
@@ -27,10 +28,11 @@ npm run build
 
 - `/projects` — project selection lobby
 - `/projects/food-tracker` — Food Tracker editorial case study
+- `/projects/choveigo` — Cho’Veigo editorial case study (feature branch; not yet staged)
 - `/experience` — experience selection lobby
 - `/profile` — Profile Overview
 - `/profile/demos` — Crest and Cho’Veigo stills; Food Tracker is withheld pending its authentic capture and mark clearance
-- Other `/projects/:slug` and `/experience/:slug` paths — reserved paths return to their lobby until the matching story is ready
+- `/projects/fraymakers` and other unfinished detail paths — reserved paths return to their lobby until the matching story is ready
 
 `docs/ARCHITECTURE.md` describes the small client structure. `docs/IMPLEMENTATION_STATUS.md` maps routes to Figma nodes and current readiness.
 

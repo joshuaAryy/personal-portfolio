@@ -10,6 +10,7 @@ import {
   useParams,
 } from "react-router-dom";
 import { experience, projects } from "./data";
+import ChoViegoCase from "./ChoViegoCase";
 
 const railProjectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"] as const;
 const railProjects = railProjectOrder.map(
@@ -17,6 +18,7 @@ const railProjects = railProjectOrder.map(
 );
 const projectCasePaths: Record<string, string> = {
   "food-tracker": "/projects/food-tracker",
+  choveigo: "/projects/choveigo",
   crest: "/projects/crest",
 };
 
@@ -1201,6 +1203,14 @@ export default function App() {
         element={<FoodTrackerCaseStudy />}
       />
       <Route path="/projects/crest" element={<CrestCaseStudy />} />
+      <Route
+        path="/projects/choveigo"
+        element={
+          <Client pageClass="main--detail main--choveigo-case">
+            <ChoViegoCase />
+          </Client>
+        }
+      />
       <Route
         path="/projects/:slug"
         element={<ReservedDetailRoute kind="project" />}
