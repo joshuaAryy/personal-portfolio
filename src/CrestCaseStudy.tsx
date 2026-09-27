@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import "./crest-case-study.css";
 
 const crestChapters = [
   { id: "overview", label: "THE IDEA" },
@@ -123,8 +124,8 @@ export default function CrestCaseStudy() {
   const policyStages = [
     ["01", "BRIM POLICY PDF", "Brim source material"],
     ["02", "EXTRACT + CHUNK", "Prepare searchable passages"],
-    ["03", "EMBEDDING-001", "Gemini · 3,072 dimensions"],
-    ["04", "ATLAS SEARCH", "MongoDB Atlas · policy_chunks"],
+    ["03", "GEMINI EMBEDDING-001", "3,072-dimensional vectors"],
+    ["04", "ATLAS VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
     ["05", "GROUNDED PROMPT", "Top retrieved passages"],
   ];
 
@@ -169,15 +170,35 @@ export default function CrestCaseStudy() {
             <p className="crest-project-label">MPC HACKS 2026 / BRIM FINANCIAL CHALLENGE</p>
             <h1>Crest</h1>
             <p className="crest-hero__intro">
-              An expense-intelligence workspace for the decisions behind every
-              transaction.
+              An expense-intelligence workspace for transaction review, policy
+              context, finance questions and preapproval.
             </p>
             <div className="crest-hero__rule" aria-hidden="true" />
             <p className="crest-hero__contribution">
-              I focused on backend workflows across transaction data, policy
-              compliance, anomaly signals, retrieval and part of the preapproval
-              flow.
+              My work focused on backend and data workflows: the Policy
+              Compliance Engine, rule-based anomaly signals, policy retrieval,
+              part of preapproval, and the presentation.
             </p>
+            <div className="crest-hero__workflow" aria-label="Transaction review decision path">
+              <div className="crest-hero__workflow-step">
+                <span>01 / INPUT</span>
+                <strong>TRANSACTION</strong>
+              </div>
+              <div className="crest-hero__workflow-branch">
+                <div>
+                  <span>02A / RULES</span>
+                  <strong>DETERMINISTIC SIGNALS</strong>
+                </div>
+                <div>
+                  <span>02B / RETRIEVAL</span>
+                  <strong>POLICY CONTEXT</strong>
+                </div>
+              </div>
+              <div className="crest-hero__workflow-step crest-hero__workflow-step--review">
+                <span>03 / HUMAN</span>
+                <strong>REVIEW + PREAPPROVAL</strong>
+              </div>
+            </div>
             <p className="crest-hero__award">
               <strong>3RD PLACE</strong>
               <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
@@ -198,6 +219,7 @@ export default function CrestCaseStudy() {
             <figcaption>
               <span className="crest-sample-cue">SAMPLE DATA</span>
               <span>Expense review · policy context · preapproval</span>
+              <span className="crest-sample-note">Sample values only; no customer or outcome data.</span>
               <a
                 href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
                 target="_blank"
@@ -211,43 +233,59 @@ export default function CrestCaseStudy() {
 
         <section className="crest-section crest-system" id="crest-system">
           <div className="crest-system__story">
-            <p className="food-section-label">THE SYSTEM</p>
-            <h2>From a transaction to a considered next step.</h2>
+            <p className="food-section-label">TRANSACTION WORKFLOW</p>
+            <h2>Rules stay authoritative. Gemini interprets. People review.</h2>
             <p>
-              The team brought transaction analysis, policy checks, anomaly
-              signals and finance questions into one workspace. I worked on the
-              backend flow that connected the data to review and preapproval.
+              Finance and policy logic remained authoritative. Gemini interpreted
+              retrieved policy passages within a bounded role; reviewers used
+              both inputs to consider preapproval.
             </p>
           </div>
-          <ol className="crest-system__steps">
-            <li>
-              <span className="crest-step-number">01</span>
-              <h3>TRANSACTION</h3>
-              <p>A record enters the workflow.</p>
-            </li>
-            <li>
-              <span className="crest-step-number">02</span>
-              <h3>POLICY + RULES</h3>
-              <p>Deterministic checks surface what needs attention.</p>
-            </li>
-            <li>
-              <span className="crest-step-number">03</span>
-              <h3>REVIEW</h3>
-              <p>A reviewer can move a request toward preapproval.</p>
-            </li>
-          </ol>
+          <figure className="crest-transaction-flow" aria-labelledby="crest-transaction-flow-title">
+            <figcaption id="crest-transaction-flow-title">
+              REVIEW FLOW / DECISION AUTHORITY STAYS WITH RULES AND PEOPLE
+            </figcaption>
+            <div className="crest-transaction-flow__stages">
+              <section className="crest-transaction-flow__transaction">
+                <span>INPUT</span>
+                <h3>TRANSACTION</h3>
+                <p>A record enters expense review.</p>
+              </section>
+              <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
+              <div className="crest-transaction-flow__context" role="group" aria-label="Parallel review context">
+                <section>
+                  <span>AUTHORITATIVE</span>
+                  <h3>DETERMINISTIC FINANCE + POLICY RULES</h3>
+                  <p>Rule-based signals surface patterns for review.</p>
+                </section>
+                <section>
+                  <span>BOUNDED INTERPRETATION</span>
+                  <h3>RETRIEVED POLICY + GEMINI</h3>
+                  <p>Gemini interprets relevant policy passages.</p>
+                </section>
+              </div>
+              <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
+              <section className="crest-transaction-flow__review">
+                <span>HUMAN REVIEW</span>
+                <h3>REVIEW + PREAPPROVAL</h3>
+                <p>A reviewer decides the next step.</p>
+              </section>
+            </div>
+            <p className="crest-transaction-flow__boundary">
+              Anomaly flags are heuristics for review, not an ML fraud classifier.
+            </p>
+          </figure>
         </section>
 
         <section className="crest-section crest-policy" id="crest-policy">
           <figure className="crest-policy-figure" aria-labelledby="crest-policy-title">
             <figcaption className="crest-policy-figure__eyebrow">
-              DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY
+              OWNER-REPORTED RETRIEVAL / POLICY SOURCE TO GROUNDED PROMPT
             </figcaption>
-            <h2 id="crest-policy-title">Policy context. Deterministic decisions.</h2>
+            <h2 id="crest-policy-title">A policy PDF becomes searchable context.</h2>
             <p className="crest-policy-figure__intro">
-              We indexed a Brim policy PDF and retrieved relevant passages for
-              Gemini to interpret. Finance and policy logic remained authoritative;
-              anomaly heuristics surfaced patterns for review.
+              The team extracted and chunked the Brim policy, embedded passages,
+              then retrieved relevant context for a grounded Gemini prompt.
             </p>
             <ol className="crest-policy-pipeline">
               {policyStages.map(([number, title, detail], index) => (
@@ -264,40 +302,9 @@ export default function CrestCaseStudy() {
               ))}
             </ol>
             <p className="crest-policy-figure__trace">
-              OWNER-REPORTED RETRIEVAL FLOW · BRIM POLICY PDF → EXTRACTION +
-              CHUNKING → GEMINI EMBEDDING-001 (3,072 DIMENSIONS) → MONGODB
-              ATLAS VECTOR RETRIEVAL → GROUNDED PROMPT
+              Gemini interpreted retrieved policy context; deterministic finance
+              and policy rules remained the source of decisions.
             </p>
-            <div className="crest-decision-flow" role="group" aria-label="Decision roles">
-              <section className="crest-decision-input">
-                <h3>RETRIEVED POLICY CONTEXT</h3>
-                <p>Gemini interpreted the top retrieved passages.</p>
-                <small>
-                  Grounded context supported review; it did not detect or decide.
-                </small>
-              </section>
-              <span className="crest-decision-flow__join" aria-hidden="true">
-                +
-              </span>
-              <section className="crest-decision-input">
-                <h3>DETERMINISTIC RULES + SIGNALS</h3>
-                <p>Finance and policy rules remained authoritative.</p>
-                <small>
-                  Heuristic flags: bursts, vendor patterns, duplicates, unusual
-                  merchants and threshold avoidance.
-                </small>
-              </section>
-              <span className="crest-decision-flow__to-review" aria-hidden="true">
-                →
-              </span>
-              <section className="crest-decision-input">
-                <h3>HUMAN REVIEW</h3>
-                <p>Reviewers could move requests toward preapproval.</p>
-                <small>
-                  Grounded context and rule-based checks informed the review.
-                </small>
-              </section>
-            </div>
           </figure>
           <div className="crest-signal-boundary">
             <div className="crest-signal-boundary__intro">
@@ -334,8 +341,8 @@ export default function CrestCaseStudy() {
             </p>
           </div>
           <div className="crest-team__result">
-            <strong>3RD PLACE</strong>
-            <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
+            <strong>PROJECT RECORD</strong>
+            <span>Team work at MPC Hacks 2026</span>
             <a
               href="https://devpost.com/software/crest-kglqay"
               target="_blank"

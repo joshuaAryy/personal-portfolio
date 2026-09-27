@@ -12,21 +12,11 @@ function renderRoute(path: string) {
 }
 
 describe("help and route recovery", () => {
-  it("documents the current section routes and shared empty state", () => {
+  it("does not render a standalone Help documentation page", () => {
     const markup = renderRoute("/help");
 
-    expect(markup).toContain("Find your way around.");
-    for (const route of [
-      "/projects",
-      "/experience",
-      "/profile",
-      "/profile/journey",
-      "/profile/demos",
-    ]) {
-      expect(markup).toContain(`href="${route}"`);
-    }
-    expect(markup).toContain('class="utility-state utility-state--empty"');
-    expect(markup.toLowerCase()).toContain("does not promise an automatic retry");
+    expect(markup).not.toContain('class="utility-page');
+    expect(markup).not.toContain("Find your way around.");
   });
 
   it("recovers unknown client routes with links to current indexes", () => {

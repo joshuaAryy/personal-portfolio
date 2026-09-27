@@ -1,0 +1,421 @@
+.crest-hero__team {
+  margin-top: 24px;
+}
+
+.crest-hero__contribution {
+  max-width: 54ch;
+  font-size: 13px;
+}
+
+.crest-system {
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.65fr);
+  align-items: center;
+  gap: 36px;
+  padding-bottom: 0;
+}
+
+.crest-system__story h2 {
+  margin: 12px 0 12px;
+  font-size: clamp(24px, 2vw, 30px);
+}
+
+.crest-system__story > p:last-child {
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.crest-transaction-flow {
+  min-width: 0;
+  margin: 0;
+  padding: 18px;
+  border: 1px solid #354950;
+  background: #12242a;
+  color: #eee7d8;
+}
+
+.crest-transaction-flow figcaption {
+  margin: 0 0 14px;
+  color: #d2ae63;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.crest-transaction-flow__stages {
+  display: grid;
+  grid-template-columns: minmax(100px, 0.72fr) 18px minmax(0, 2fr) 18px minmax(132px, 0.92fr);
+  align-items: stretch;
+  gap: 9px;
+}
+
+.crest-transaction-flow__transaction,
+.crest-transaction-flow__review {
+  align-self: center;
+  min-width: 0;
+  padding: 12px 11px;
+  border: 1px solid #52666b;
+  background: #1b3036;
+}
+
+.crest-transaction-flow__stages section > span {
+  display: block;
+  margin-bottom: 7px;
+  color: #d2ae63;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.crest-transaction-flow__stages h3 {
+  margin: 0 0 7px;
+  color: #eee7d8;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.crest-transaction-flow__stages p {
+  margin: 0;
+  color: #b6c3c5;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.crest-transaction-flow__context {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 8px;
+}
+
+.crest-transaction-flow__context section {
+  min-width: 0;
+  padding: 12px 11px;
+  border-top: 2px solid #d2ae63;
+  background: #20363d;
+}
+
+.crest-transaction-flow__context section + section {
+  border-top-color: #53b8bb;
+}
+
+.crest-transaction-flow__context section + section > span {
+  color: #74d4d2;
+}
+
+.crest-transaction-flow__arrow {
+  align-self: center;
+  color: #d2ae63;
+  font-size: 18px;
+  text-align: center;
+}
+
+.crest-transaction-flow__boundary {
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #354950;
+  color: #a9b5ba;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.crest-policy-figure {
+  padding: 26px 30px 22px;
+}
+
+.crest-policy-pipeline {
+  gap: 22px;
+  margin: 20px 0 14px;
+}
+
+.crest-policy-pipeline li {
+  padding: 12px 10px 10px;
+  border-top: 1px solid #d6ccb5;
+  background: rgba(255, 252, 244, 0.72);
+}
+
+.crest-policy-pipeline__arrow {
+  right: -19px;
+}
+
+.crest-policy-figure__trace {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid #d8d0bd;
+  color: #5f6c6d;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.crest-signal-boundary {
+  margin-top: 16px;
+}
+
+.crest-team__result {
+  padding: 14px 18px;
+  border-left: 2px solid #d2ae63;
+  background: #14292e;
+}
+
+@media (max-width: 1200px) {
+  .crest-system {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 18px;
+  }
+
+  .crest-system__story h2,
+  .crest-system__story > p:last-child {
+    max-width: 760px;
+  }
+
+  .crest-transaction-flow__stages {
+    grid-template-columns: minmax(90px, 0.7fr) 16px minmax(0, 2fr) 16px minmax(120px, 0.9fr);
+    gap: 7px;
+  }
+}
+
+@media (max-width: 900px) {
+  .crest-transaction-flow__stages {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .crest-transaction-flow__context {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .crest-transaction-flow__arrow {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 650px) {
+  .crest-transaction-flow {
+    padding: 14px;
+  }
+
+  .crest-transaction-flow__context {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .crest-policy-figure {
+    padding: 18px 14px;
+  }
+
+  .crest-policy-pipeline li {
+    padding: 10px;
+  }
+
+  .crest-team__result {
+    padding: 12px;
+  }
+}
+
+/* Decision trace: transaction inputs converge with separate rules and retrieval. */
+.crest-hero__workflow {
+  display: grid;
+  grid-template-columns: minmax(94px, 0.68fr) minmax(0, 1.32fr) minmax(118px, 0.9fr);
+  align-items: stretch;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.crest-hero__workflow-step,
+.crest-hero__workflow-branch > div {
+  min-width: 0;
+  padding: 9px 9px 10px;
+  border: 1px solid #344b51;
+  background: #102127;
+}
+
+.crest-hero__workflow-step {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  border-left: 2px solid #d2ae63;
+}
+
+.crest-hero__workflow-step--review {
+  border-left-color: #56c4c2;
+}
+
+.crest-hero__workflow-step > span,
+.crest-hero__workflow-branch span {
+  color: #d2ae63;
+  font-size: 7px;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+}
+
+.crest-hero__workflow-step--review > span {
+  color: #72d4d0;
+}
+
+.crest-hero__workflow-step strong,
+.crest-hero__workflow-branch strong {
+  display: block;
+  color: #eee7d8;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.crest-hero__workflow-branch {
+  display: grid;
+  gap: 6px;
+}
+
+.crest-hero__workflow-branch > div {
+  border-top: 2px solid #d2ae63;
+}
+
+.crest-hero__workflow-branch > div + div {
+  border-top-color: #56c4c2;
+}
+
+.crest-hero__workflow-branch > div + div span {
+  color: #72d4d0;
+}
+
+.crest-hero__workflow-branch,
+.crest-hero__workflow-step--review {
+  position: relative;
+}
+
+.crest-hero__workflow-branch::before,
+.crest-hero__workflow-step--review::before {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  left: -13px;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  display: grid;
+  width: 14px;
+  height: 18px;
+  place-items: center;
+  background: #071217;
+  color: #d2ae63;
+  font-size: 13px;
+}
+
+/* Keep the Brim retrieval sequence in Crest's dark operational palette. */
+.crest-policy-figure {
+  padding: 28px 30px 24px;
+  border-color: #344b51;
+  background:
+    radial-gradient(ellipse at 90% 4%, rgba(43, 106, 105, 0.18), transparent 34%),
+    #0e2026;
+  color: #eee7d8;
+}
+
+.crest-policy-figure__eyebrow,
+.crest-policy-figure__trace {
+  color: #d2ae63;
+}
+
+.crest-policy-figure h2,
+.crest-policy-pipeline strong {
+  color: #eee7d8;
+}
+
+.crest-policy-figure__intro,
+.crest-policy-pipeline small {
+  color: #a9b5ba;
+}
+
+.crest-policy-pipeline {
+  gap: 21px;
+  margin: 22px 0 18px;
+}
+
+.crest-policy-pipeline li {
+  min-height: 86px;
+  padding: 11px 10px 10px;
+  border: 1px solid #344b51;
+  border-top: 2px solid #d2ae63;
+  background: rgba(20, 41, 46, 0.78);
+}
+
+.crest-policy-pipeline li:nth-child(3),
+.crest-policy-pipeline li:nth-child(4) {
+  border-top-color: #56c4c2;
+}
+
+.crest-policy-pipeline .crest-step-number {
+  color: #d2ae63;
+}
+
+.crest-policy-pipeline li:nth-child(3) .crest-step-number,
+.crest-policy-pipeline li:nth-child(4) .crest-step-number {
+  color: #72d4d0;
+}
+
+.crest-policy-pipeline__arrow {
+  right: -19px;
+  color: #72d4d0;
+}
+
+.crest-policy-figure__trace {
+  border-top-color: #344b51;
+}
+
+.crest-demo-figure figcaption {
+  align-items: start;
+}
+
+.crest-sample-cue {
+  background: #12383d;
+  color: #72d4d0;
+}
+
+.crest-demo-figure .crest-sample-note {
+  grid-column: 1 / -1;
+  color: #8d9da2;
+  font-size: 9px;
+}
+
+.crest-hero__award {
+  margin-top: 22px;
+}
+
+.crest-team__result strong {
+  color: #eee7d8;
+  font-size: 12px;
+  letter-spacing: 0.045em;
+}
+
+.crest-team__result {
+  border: 1px solid #344b51;
+  border-left: 2px solid #d2ae63;
+  background: #14292e;
+}
+
+@media (max-width: 1200px) {
+  .crest-hero__workflow {
+    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr) minmax(0, 0.9fr);
+    gap: 10px;
+  }
+}
+
+@media (max-width: 900px) {
+  .crest-hero__workflow {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 650px) {
+  .crest-hero__workflow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .crest-hero__workflow-branch::before,
+  .crest-hero__workflow-step--review::before {
+    position: static;
+    height: 12px;
+    transform: rotate(90deg);
+    margin: 0 auto;
+  }
+}

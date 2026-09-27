@@ -85,7 +85,7 @@ afterEach(() => {
 });
 
 describe("opening route behavior", () => {
-  it("Skip enters Projects and moves focus to main", () => {
+  it("Skip enters Home / Explore and moves focus to main", () => {
     renderOpeningRoute();
     const skip = host.querySelector<HTMLButtonElement>(".opening__skip");
     expect(skip).not.toBeNull();
@@ -94,7 +94,7 @@ describe("opening route behavior", () => {
 
     const main = host.querySelector<HTMLElement>("#main");
     expect(host.querySelector(".opening-route")).toBeNull();
-    expect(main?.querySelector("h1")?.textContent).toBe("PROJECTS · FEATURED");
+    expect(main?.querySelector("h1")?.textContent).toBe("Select a portfolio mode");
     expect(document.activeElement).toBe(main);
   });
 
@@ -104,14 +104,14 @@ describe("opening route behavior", () => {
     expect(skip).not.toBeNull();
 
     act(() => skip!.click());
-    expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/projects");
+    expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/home");
 
     act(() => vi.advanceTimersByTime(2500));
     expect(host.querySelector(".opening--leaving")).toBeNull();
-    expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/projects");
+    expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/home");
   });
 
-  it("completes the normal handoff at two seconds and focuses Projects", () => {
+  it("completes the normal handoff at two seconds and focuses Home / Explore", () => {
     renderOpeningRoute();
 
     act(() => vi.advanceTimersByTime(1819));
@@ -130,7 +130,7 @@ describe("opening route behavior", () => {
     act(() => vi.advanceTimersByTime(1));
     expect(host.querySelector(".opening-route")).toBeNull();
     const main = host.querySelector<HTMLElement>("#main");
-    expect(main?.querySelector("h1")?.textContent).toBe("PROJECTS · FEATURED");
+    expect(main?.querySelector("h1")?.textContent).toBe("Select a portfolio mode");
     expect(document.activeElement).toBe(main);
   });
 
@@ -147,7 +147,7 @@ describe("opening route behavior", () => {
     act(() => vi.advanceTimersByTime(1));
     expect(host.querySelector(".opening-route")).toBeNull();
     const main = host.querySelector<HTMLElement>("#main");
-    expect(main?.querySelector("h1")?.textContent).toBe("PROJECTS · FEATURED");
+    expect(main?.querySelector("h1")?.textContent).toBe("Select a portfolio mode");
     expect(document.activeElement).toBe(main);
   });
 });

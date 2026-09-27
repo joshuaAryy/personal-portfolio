@@ -1,213 +1,210 @@
 import { Link } from "react-router-dom";
 import "./lis-research-record.css";
 
-const learningTools = [
-  "SMILES",
-  "DeepMol",
-  "Fragmenstein",
-  "REINVENT4",
-  "Research papers",
-  "Technical documentation",
+const workflows = [
+  {
+    id: "01",
+    label: "GENERATION",
+    title: "DeepMol",
+    tone: "amber",
+    methods: ["CSVLoader", "Morgan fingerprints · radius 2 · 128 bits"],
+    configuration: "RNN MolecularGenerator · 10 epochs · batch size 64",
+    outcome: "500 generated SMILES samples",
+    caveat:
+      "Available run artifacts do not establish whether this exact configuration produced those samples.",
+  },
+  {
+    id: "02",
+    label: "FRAGMENT-BASED DESIGN",
+    title: "RDKit + Fragmenstein",
+    tone: "teal",
+    methods: ["Fragment-based molecular design", "Explored in some workflows"],
+    configuration:
+      "Existing structures → fragment selection → recombination",
+    outcome: "Worked in some workflows",
+    caveat:
+      "This records workflow progress, not a claim of validated or novel molecules.",
+  },
+  {
+    id: "03",
+    label: "ATTEMPTED GENERATION",
+    title: "REINVENT4",
+    tone: "coral",
+    methods: ["Researched", "Generation workflow attempted"],
+    configuration: "The generation path did not complete successfully.",
+    outcome: "No successful generation",
+    caveat:
+      "An attempted workflow is kept distinct from a generated output.",
+  },
 ] as const;
-
-const fragmentSteps = [
-  {
-    title: "Decompose",
-    detail: "Break existing molecular structures into reusable fragments.",
-  },
-  {
-    title: "Select",
-    detail: "Choose fragments that are structurally compatible.",
-  },
-  {
-    title: "Recombine",
-    detail: "Explore candidate structures with RDKit and Fragmenstein.",
-  },
-] as const;
-
-const handoffItems = ["Research code", "Written report"] as const;
 
 export default function LivingInSilicoCase() {
   return (
-    <article className="living-story" aria-labelledby="living-title">
-      <div className="living-back">
+    <article className="living-story lis-record" aria-labelledby="lis-title">
+      <nav className="lis-record__crumbs" aria-label="Breadcrumb">
         <Link to="/experience">‹ EXPERIENCE</Link>
-        <span>EXPERIENCE / LIVING IN SILICO</span>
-      </div>
+        <span>RESEARCH RECORD / GENERATIVE MOLECULAR MODELING</span>
+      </nav>
 
-      <header className="living-opening" id="living-opening">
-        <div className="living-opening__copy">
-          <p className="living-eyebrow">EXPERIENCE / GENERATIVE MOLECULAR MODELING</p>
-          <h1 id="living-title">Learning a new science through machine learning.</h1>
-          <p className="living-opening__lead">
-            My first major technical internship took me into computational
-            chemistry and biomedical research—domains I was only beginning to
-            understand.
+      <header className="lis-hero">
+        <div className="lis-hero__main">
+          <p className="lis-kicker">GENERATIVE MOLECULAR MODELING / EXPERIENCE · 2025</p>
+          <h1 id="lis-title">Molecular generation, through experiments.</h1>
+          <p className="lis-hero__lead">
+            I explored machine-learning and fragment-based approaches to
+            molecular design, working across data representation, generation
+            workflows, and research code.
           </p>
-          <dl className="living-meta">
-            <div>
-              <dt>ROLE</dt>
-              <dd>AI/ML Research Intern</dd>
-            </div>
-            <div>
-              <dt>DATES</dt>
-              <dd>March–June 2025</dd>
-            </div>
-            <div>
-              <dt>SUPERVISOR</dt>
-              <dd>Sohail Mahmood</dd>
-            </div>
-          </dl>
         </div>
-
-        <aside className="living-cohort" aria-label="Intern cohort context">
-          <strong>4</strong>
-          <p className="living-eyebrow">FIRST-YEAR INTERNS</p>
-          <p>
-            We came from different schools. Much of the research domain was new
-            to the group.
+        <aside className="lis-dossier" aria-label="Research role">
+          <p className="lis-kicker">RESEARCH ROLE</p>
+          <h2>AI / ML Research Intern</h2>
+          <p className="lis-dossier__domain">Generative Molecular Modeling</p>
+          <div className="lis-dossier__rule" />
+          <p className="lis-kicker lis-kicker--teal">PERIOD</p>
+          <p className="lis-dossier__date">March – June 2025</p>
+          <p className="lis-dossier__context">
+            Computational chemistry <span>·</span> Biomedical research
           </p>
         </aside>
       </header>
 
-      <section className="living-learning" aria-labelledby="living-learning-title">
-        <div className="living-section-label">
-          <span>01</span>
-          <p className="living-eyebrow">A FAST START</p>
-        </div>
-        <div className="living-learning__copy">
-          <h2 id="living-learning-title">The first weeks were a rapid education.</h2>
+      <section className="lis-section lis-scope" aria-labelledby="lis-scope-title">
+        <div className="lis-section__intro">
+          <p className="lis-kicker">01 / DATA SCOPE</p>
+          <h2 id="lis-scope-title">
+            Different working sets. Separate experiment contexts.
+          </h2>
           <p>
-            In the first one to two weeks, I learned unfamiliar terminology,
-            followed papers and repositories, and worked through technical
-            documentation while getting oriented to the research.
+            The April snapshot was not reduced into the smaller experiment
+            subsets.
           </p>
         </div>
-        <ul className="living-tool-list" aria-label="Research topics and tools">
-          {learningTools.map((tool) => (
-            <li key={tool}>{tool}</li>
-          ))}
-        </ul>
-      </section>
 
-      <section className="living-memory" aria-labelledby="living-memory-title">
-        <p className="living-eyebrow">A MOMENT I REMEMBER</p>
-        <div className="living-memory__body">
-          <strong>3–4 AM</strong>
-          <div>
-            <h2 id="living-memory-title">Before school, still following the question.</h2>
-            <p>
-              I stayed up watching and taking notes on a Stanford machine-learning
-              lecture, thinking about how algorithms could apply to the research.
-              I was absorbed in finding the connection.
+        <div className="lis-scope__panels">
+          <article className="lis-data-panel">
+            <p className="lis-kicker lis-kicker--teal">APR 12 DATASET SNAPSHOT</p>
+            <p className="lis-data-panel__metric">15,696</p>
+            <p className="lis-data-panel__unit">rows</p>
+            <div className="lis-data-panel__rule" />
+            <p className="lis-data-panel__secondary">
+              <strong>14,487</strong> unique SMILES
             </p>
-          </div>
+          </article>
+          <article className="lis-data-panel lis-data-panel--subsets">
+            <p className="lis-kicker lis-kicker--teal">OTHER EXPERIMENTS</p>
+            <p className="lis-data-panel__metric">~400–600</p>
+            <p className="lis-data-panel__unit">curated entries</p>
+            <div className="lis-data-panel__rule" />
+            <p className="lis-data-panel__note">
+              Separate curated subsets used in different experiments.
+            </p>
+          </article>
         </div>
       </section>
 
-      <section className="living-experiments" aria-labelledby="living-experiments-title">
-        <div className="living-section-label">
-          <span>02</span>
-          <p className="living-eyebrow">EXPERIMENT CONTEXT</p>
+      <section className="lis-section lis-workflows" aria-labelledby="lis-workflows-title">
+        <div className="lis-section__heading">
+          <p className="lis-kicker">02 / EXPERIMENT PATHS</p>
+          <h2 id="lis-workflows-title">Three approaches, distinct outcomes.</h2>
+          <p>
+            Reported methods and outputs stay separate; the record does not
+            imply one shared data funnel.
+          </p>
         </div>
-        <div className="living-experiments__main">
-          <h2 id="living-experiments-title">Different datasets served different experiments.</h2>
-          <div className="living-dataset-pair">
-            <div className="living-dataset living-dataset--snapshot">
-              <h3 className="living-eyebrow">APR 12 DATASET</h3>
-              <div className="living-dataset__figures">
-                <p><strong>15,696</strong><span>rows</span></p>
-                <p><strong>14,487</strong><span>unique SMILES</span></p>
-              </div>
-            </div>
-            <div className="living-dataset living-dataset--experiments">
-              <h3 className="living-eyebrow">OTHER EXPERIMENTS</h3>
-              <p className="living-dataset__range">~400–600</p>
-              <p className="living-dataset__caption">entries</p>
-              <p className="living-dataset__note">
-                Curated subsets used in separate experiments.
+
+        <div className="lis-workflow-grid">
+          {workflows.map((workflow) => (
+            <article
+              className={`lis-workflow lis-workflow--${workflow.tone}`}
+              key={workflow.id}
+            >
+              <p className="lis-kicker lis-workflow__label">
+                {workflow.id} <span>/</span> {workflow.label}
               </p>
-            </div>
-          </div>
+              <h3>{workflow.title}</h3>
+              <div className="lis-workflow__rule" />
+              <ul className="lis-workflow__methods">
+                {workflow.methods.map((method) => (
+                  <li key={method}>{method}</li>
+                ))}
+              </ul>
+              <p className="lis-workflow__configuration">
+                {workflow.configuration}
+              </p>
+              <p className="lis-workflow__outcome">{workflow.outcome}</p>
+              <p className="lis-workflow__caveat">{workflow.caveat}</p>
+            </article>
+          ))}
         </div>
       </section>
 
-      <section className="living-research-record" aria-labelledby="living-research-record-title">
-        <h2 className="living-research-record__sr-only" id="living-research-record-title">
-          Molecular modeling notes
-        </h2>
-        <div className="living-research-record__sample">
-          <span className="living-research-record__index" aria-hidden="true">03</span>
-          <p className="living-research-record__count">500</p>
-          <p className="living-research-record__caption">DEEPMOL · GENERATED SMILES SAMPLES</p>
+      <section className="lis-section lis-evidence" aria-labelledby="lis-evidence-title">
+        <div className="lis-section__heading">
+          <p className="lis-kicker">03 / METHODS &amp; EVIDENCE</p>
+          <h2 id="lis-evidence-title">What the record can support.</h2>
         </div>
-        <div className="living-research-record__column living-research-record__method">
-          <h3>METHODS I WORKED WITH</h3>
+        <div className="lis-evidence__grid">
+          <article className="lis-evidence-panel">
+            <p className="lis-kicker lis-kicker--teal">REPRESENTATION</p>
+            <h3>SMILES → molecular features</h3>
+            <p>
+              DeepMol CSVLoader handled tabular input. Morgan fingerprints
+              represented structures with radius 2 and 128 bits.
+            </p>
+            <p className="lis-evidence-panel__note">
+              These are reported experiment methods, not a complete verified
+              run trace.
+            </p>
+          </article>
+          <article className="lis-evidence-panel lis-evidence-panel--limits">
+            <p className="lis-kicker">OUTPUT / LIMITS</p>
+            <h3>Sample count is not a quality claim.</h3>
+            <p>
+              DeepMol work produced 500 generated SMILES samples. Available
+              artifacts do not verify validity, uniqueness, novelty, or research
+              impact—and do not link that output to the exact configuration
+              above.
+            </p>
+            <p className="lis-evidence-panel__note">
+              EVIDENCE SHOWN / COUNTS + WORKFLOW STATUS
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="lis-section lis-contribution" aria-labelledby="lis-contribution-title">
+        <div className="lis-contribution__main">
+          <p className="lis-kicker">04 / TECHNICAL CONTRIBUTION</p>
+          <h2 id="lis-contribution-title">
+            Learning the system underneath the model.
+          </h2>
           <p>
-            My modeling work also included DeepMol CSVLoader, Morgan
-            fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator
-            (10 epochs; batch size 64).
+            My work crossed computational chemistry, molecular data
+            representation, and hands-on generation experiments. I worked
+            through ML and fragment-based workflows, read the outputs against
+            what the available evidence could show, and documented where a path
+            succeeded—or did not.
           </p>
         </div>
-        <div className="living-research-record__column living-research-record__attempt">
-          <h3>ATTEMPT</h3>
-          <h4>REINVENT4</h4>
-        </div>
-        <div className="living-research-record__column living-research-record__outcome">
-          <h3>OUTCOME</h3>
-          <p>Did not achieve successful generation before the internship ended.</p>
-        </div>
-      </section>
-
-      <section className="living-fragmenstein" aria-labelledby="living-fragmenstein-title">
-        <div className="living-section-label">
-          <span>04</span>
-          <p className="living-eyebrow">FRAGMENT-BASED DESIGN</p>
-        </div>
-        <div className="living-fragmenstein__content">
-          <h2 id="living-fragmenstein-title">Exploring structures through fragments.</h2>
-          <p className="living-fragmenstein__intro">
-            I also experimented with fragment-based molecular design using
-            RDKit and Fragmenstein.
-          </p>
-          <ol className="living-fragment-steps">
-            {fragmentSteps.map((step, index) => (
-              <li key={step.title}>
-                <span aria-hidden="true">0{index + 1}</span>
-                <h3>{step.title}</h3>
-                <p>{step.detail}</p>
-              </li>
-            ))}
-          </ol>
-        </div>
-      </section>
-
-      <section className="living-reinvent" aria-labelledby="living-reinvent-title">
-        <p className="living-eyebrow">AN UNFINISHED THREAD</p>
-        <div>
-          <h2 id="living-reinvent-title">REINVENT4</h2>
+        <aside className="lis-record-stamp" aria-label="Experiment scope distinction">
+          <p className="lis-kicker lis-kicker--teal">RESEARCH RECORD</p>
+          <h3>Keep scope visible.</h3>
           <p>
-            I researched and attempted the workflow, but successful generation
-            was not achieved before the internship ended.
+            Apr 12 snapshot <span>≠</span> curated subsets
           </p>
-        </div>
+          <p>
+            Attempted workflow <span>≠</span> successful generation
+          </p>
+        </aside>
       </section>
 
-      <footer className="living-close">
-        <div className="living-handoff">
-          <p className="living-eyebrow">FINAL HANDOFF</p>
-          <ul aria-label="Handoff items">
-            {handoffItems.map((item) => <li key={item}>{item}</li>)}
-          </ul>
-        </div>
-        <div className="living-reflection">
-          <p className="living-eyebrow">WHAT STAYED WITH ME</p>
-          <p>
-            This was the beginning of my interest in machine learning: learn the
-            domain, stay curious through the unfinished parts, and keep connecting
-            the technical work back to the research question.
-          </p>
-        </div>
+      <footer className="lis-close">
+        <p className="lis-kicker">TECHNICAL TAKEAWAY</p>
+        <p>
+          A research workflow is easier to assess when data scope, method,
+          output, and failure boundaries are recorded separately.
+        </p>
       </footer>
     </article>
   );

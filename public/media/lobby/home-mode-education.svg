@@ -1,0 +1,33 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="FINAL / Emblem EDUCATION">
+<path id="Vector" d="M31 7H119L143 31V119L119 143H31L7 119V31L31 7Z" fill="#02070C" stroke="#39270D" stroke-width="7"/>
+<path id="Vector_2" d="M33 10H117L137 33V117L117 137H33L13 117V33L33 10Z" fill="url(#paint0_radial_0_4)" stroke="url(#paint1_linear_0_4)" stroke-width="3"/>
+<path id="Vector_3" d="M40 18H110L129 38V110L110 129H40L21 110V38L40 18Z" stroke="#B78A39" stroke-width="1.6"/>
+<path id="Vector_4" d="M47 25H103L121 43V101L103 119H47L29 101V43L47 25Z" stroke="#48646E" stroke-opacity="0.32" stroke-width="2.5"/>
+<g id="Vector_5">
+<path d="M56 12H94Z" fill="black"/>
+<path d="M56 12H94" stroke="#F3DC96" stroke-width="2"/>
+</g>
+<g id="Vector_6">
+<path d="M12 57V93ZM138 57V93Z" fill="black"/>
+<path d="M12 57V93M138 57V93" stroke="#7D5A21" stroke-width="1.5"/>
+</g>
+<path id="Vector_7" d="M42 52C58 46 69 49 75 56C81 49 92 46 108 52V100C93 95 82 97 75 105C68 97 57 95 42 100V52Z" stroke="#D9B75F" stroke-width="4"/>
+<g id="Vector_8">
+<path d="M75 56V104Z" fill="black"/>
+<path d="M75 56V104" stroke="#27D3E5" stroke-width="2"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(75 73.5) scale(62 63.5)">
+<stop stop-color="#0B2740"/>
+<stop offset="1" stop-color="#030B13"/>
+</radialGradient>
+<linearGradient id="paint1_linear_0_4" x1="13" y1="10" x2="139.964" y2="133.965" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F0D890"/>
+<stop offset="0.28" stop-color="#B17D2F"/>
+<stop offset="0.68" stop-color="#604113"/>
+<stop offset="1" stop-color="#D4AE59"/>
+</linearGradient>
+</defs>
+</svg>

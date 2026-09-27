@@ -1,0 +1,17 @@
+<svg width="496" height="466" viewBox="0 0 496 466" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g opacity="0.6">
+  <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="496" height="466">
+  <rect width="496" height="466" fill="url(#paint0_linear)"/>
+  </mask>
+  <g mask="url(#mask0)">
+  <circle cx="248" cy="234" r="209" stroke="#CDBE91" stroke-width="16" stroke-dasharray="2 24"/>
+  </g>
+  </g>
+  <defs>
+  <linearGradient id="paint0_linear" x1="248" y1="0" x2="248" y2="466" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#C4C4C4"/>
+  <stop offset="0.536458" stop-color="#C4C4C4" stop-opacity="0"/>
+  <stop offset="1" stop-color="#C4C4C4" stop-opacity="0.24"/>
+  </linearGradient>
+  </defs>
+  </svg>

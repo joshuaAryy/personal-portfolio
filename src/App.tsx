@@ -9,7 +9,7 @@ import LivingInSilicoCase from "./LivingInSilicoCase";
 import JourneyCase from "./JourneyCase";
 import FoodTrackerPage from "./project-pages/FoodTrackerPage";
 import CrestPage from "./project-pages/CrestPage";
-import { Help } from "./Help";
+import { HelpExperienceProvider, HelpRouteEntry } from "./Help";
 import { NotFoundContent } from "./NotFoundContent";
 import { ResumeFound, ResumeViewer } from "./ResumeFlow";
 import Opening from "./Opening";
@@ -17,6 +17,7 @@ import ProfileNav from "./ProfileNav";
 import ProfileOverview from "./ProfileOverview";
 import Lobby from "./Lobby";
 import DemosPage from "./DemosPage";
+import HomeExplore from "./HomeExplore";
 
 function ReservedDetailRoute({ kind }: { kind: "project" | "experience" }) {
   const { slug } = useParams();
@@ -41,13 +42,17 @@ function NotFound() {
 }
 export default function App() {
   return (
+    <HelpExperienceProvider>
     <Routes>
       <Route
         path="/"
-        element={<Opening underlay={<Lobby mode="projects" />} />}
+        element={<Opening underlay={<HomeExplore />} />}
       />
+      <Route path="/home" element={<HomeExplore />} />
       <Route path="/projects" element={<Lobby mode="projects" />} />
       <Route path="/experience" element={<Lobby mode="experience" />} />
+      <Route path="/hackathons" element={<Lobby mode="hackathons" />} />
+      <Route path="/education" element={<Lobby mode="education" />} />
       <Route
         path="/profile"
         element={
@@ -72,14 +77,7 @@ export default function App() {
           </Client>
         }
       />
-      <Route
-        path="/help"
-        element={
-          <Client pageClass="main--detail main--utility">
-            <Help />
-          </Client>
-        }
-      />
+      <Route path="/help" element={<HelpRouteEntry />} />
       <Route
         path="/profile/journey"
         element={
@@ -159,5 +157,6 @@ export default function App() {
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </HelpExperienceProvider>
   );
 }

@@ -4,12 +4,12 @@ import { describe, expect, it } from "vitest";
 import App from "./App";
 
 const storyRoutes = [
-  ["Food Tracker", "/projects/food-tracker", "Simple tracking,"],
+  ["Food Tracker", "/projects/food-tracker", "Mobile food logging,"],
   ["Crest", "/projects/crest", "<h1>Crest</h1>"],
   ["Cho’Veigo", "/projects/choveigo", "What should job fit actually mean?"],
   ["Fraymakers", "/projects/fraymakers", "From match data"],
-  ["Living in Silico", "/experience/living-in-silico", "Learning a new science through machine learning."],
-  ["Stush Patties", "/experience/stush-patties", "Making distributor data easier to use."],
+  ["Living in Silico", "/experience/living-in-silico", "Molecular generation, through experiments."],
+  ["Stush Patties", "/experience/stush-patties", "A reporting pipeline for data that arrived in different shapes."],
 ] as const;
 
 function renderRoute(path: string) {

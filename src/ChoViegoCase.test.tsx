@@ -1,74 +1,59 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
-import App from "./App";
-import { resolveActiveChapter } from "./ChoViegoCase";
+import ChoViegoCase from "./ChoViegoCase";
 
-function renderChoveigoRoute() {
-  return renderToStaticMarkup(
-    <MemoryRouter initialEntries={["/projects/choveigo"]}>
-      <App />
-    </MemoryRouter>,
-  );
+function renderCase() {
+  return renderToStaticMarkup(<MemoryRouter><ChoViegoCase /></MemoryRouter>);
 }
 
-describe("Cho’Veigo case study route", () => {
-  it("renders the five-chapter story at its canonical route", () => {
-    const markup = renderChoveigoRoute();
-    const chapterIds = ["question", "fit", "review", "system", "change"];
-
+describe("Cho’Veigo evidence-based matching story", () => {
+  it("opens with technical role context and a matching path beside the approved static capture", () => {
+    const markup = renderCase();
+    const hero = markup.slice(markup.indexOf('id="choveigo-overview"'), markup.indexOf('id="choveigo-system"'));
+    expect(markup).toContain("Evidence-based job matching");
     expect(markup).toContain("What should job fit actually mean?");
-    for (const id of chapterIds) {
-      expect(markup).toContain(`href="#choveigo-${id}"`);
-      expect(markup.match(new RegExp(`id="choveigo-${id}"`, "g"))).toHaveLength(1);
-    }
-    const currentLinks = [...markup.matchAll(/<a\b[^>]*aria-current="location"[^>]*>/g)];
-    expect(currentLinks).toHaveLength(1);
-    expect(currentLinks[0][0]).toContain('href="#choveigo-question"');
-    expect(markup).toContain('href="/projects"');
+    expect(markup).toContain("JOBS-SIDE PRODUCT + EVALUATION");
+    expect(hero).toContain("/media/choveigo-recommendations.png");
+    expect(hero).toContain("ROLE SOURCES");
+    expect(hero).toContain("DETERMINISTIC");
+    expect(hero).toContain("BOUNDED GEMINI");
+    expect(hero).toContain("STRENGTH LABELS UNVALIDATED");
+    expect(hero).not.toContain("<video");
   });
 
-  it("uses only the cleared static Recommendations capture", () => {
-    const markup = renderChoveigoRoute();
-
-    expect(markup).toContain('src="/media/choveigo-recommendations.png"');
-    expect(markup).toContain('alt="Cho’Veigo Recommendations view');
-    expect(markup).not.toContain("<video");
-    expect(markup).not.toContain("WATCH DEMO");
+  it("distinguishes Fit, Eligibility, and Recommendation from evidence and gaps", () => {
+    const markup = renderCase();
+    const fit = markup.slice(markup.indexOf('id="choveigo-fit"'), markup.indexOf('id="choveigo-review"'));
+    const fitIndex = fit.indexOf("FIT");
+    const eligibilityIndex = fit.indexOf("ELIGIBILITY");
+    const recommendationIndex = fit.indexOf("RECOMMENDATION");
+    expect(fit).toContain("RESPONSIBILITY");
+    expect(fit).toContain("Candidate’s experience supports its responsibilities");
+    expect(fit).toContain("Meaningful gaps remain");
+    expect(fitIndex).toBeGreaterThan(-1);
+    expect(eligibilityIndex).toBeGreaterThan(fitIndex);
+    expect(recommendationIndex).toBeGreaterThan(eligibilityIndex);
   });
 
-  it("keeps decision concepts and role boundaries distinct", () => {
-    const markup = renderChoveigoRoute();
-
-    expect(markup).toContain("<dt>FIT</dt>");
-    expect(markup).toContain("<dt>ELIGIBILITY</dt>");
-    expect(markup).toContain("<dt>RECOMMENDATION</dt>");
-    expect(markup).toContain(
-      "<dt>FIT</dt><dd>How closely does the evidence line up with the work?</dd>",
-    );
-    expect(markup).toContain(
-      "<dt>ELIGIBILITY</dt><dd>Are essential conditions and core requirements met?</dd>",
-    );
-    expect(markup).toContain(
-      "<dt>RECOMMENDATION</dt><dd>Is this role worth bringing forward?</dd>",
-    );
-    expect(markup).toContain("Recommendations do not submit applications.");
-    expect(markup).toContain("A TWO-PERSON PROJECT WITH SHIV ARORA");
-    expect(markup).toContain("With Shiv, I focused on the Jobs side");
-    expect(markup).toContain("product and evaluation direction");
-    expect(markup).not.toContain("inter-rater");
+  it("records the human mismatch-to-regression loop without overstating evaluation", () => {
+    const markup = renderCase();
+    const review = markup.slice(markup.indexOf('id="choveigo-review"'), markup.indexOf('id="choveigo-change"'));
+    expect(review).toContain("MISMATCH");
+    expect(review).toContain("CORRECTION");
+    expect(review).toContain("DETERMINISTIC FIXTURE");
+    expect(review).toContain("REGRESSION");
+    expect(review).toContain("not multi-rater or research-grade validation");
   });
 
-  it("marks the final chapter current when scrolling reaches the story end", () => {
-    const sectionTops = {
-      question: -100,
-      fit: -80,
-      review: -60,
-      system: 20,
-      change: 500,
-    };
-
-    expect(resolveActiveChapter(sectionTops, 78, false)).toBe("system");
-    expect(resolveActiveChapter(sectionTops, 78, true)).toBe("change");
+  it("keeps retrieval and Gemini bounded, and does not claim automatic submission or benchmark results", () => {
+    const markup = renderCase();
+    expect(markup).toContain("company and career sites");
+    expect(markup).toContain("Deterministic rules");
+    expect(markup).toContain("Structured, bounded interpretation");
+    expect(markup).toContain("It does not invent candidate experience");
+    expect(markup).toContain("application submission is not automatic");
+    expect(markup).toContain("OWNER-REPORTED OBSERVATION");
+    expect(markup).not.toMatch(/\b(?:Top-1|precision|recall|\d+%|hours saved|Greenhouse|Lever|DOCX|PDF)\b/i);
   });
 });

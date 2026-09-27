@@ -1,0 +1,332 @@
+/* Demos is a client media browser, sized from Figma frames 1316:35, 1316:4534, 1298:2. */
+#root .main.main--demos {
+  padding: 30px 0 48px;
+  background: #040a13;
+}
+
+#root .main.main--demos > .profile-nav {
+  width: 100%;
+  height: 52px;
+  margin: 0 0 30px;
+  padding-left: 2.3%;
+  gap: 4.2%;
+}
+
+#root .main.main--demos .demo-layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 23.59%) 24px minmax(0, 1fr);
+  align-items: start;
+  gap: 0;
+  padding: 0;
+}
+
+#root .main.main--demos .demo-selector {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding-left: 4px;
+}
+
+#root .main.main--demos .demo-selector__button {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 78px;
+  flex: none;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 12px;
+  padding: 0 13px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background: #040a13;
+  color: #b6bdc6;
+  font: 600 16px/1.2 Inter, Arial, sans-serif;
+  text-align: left;
+  cursor: pointer;
+}
+
+#root .main.main--demos .demo-selector__button::after {
+  position: absolute;
+  right: 8px;
+  bottom: -7px;
+  left: 8px;
+  height: 1px;
+  background: rgba(39, 49, 61, 0.85);
+  content: "";
+  pointer-events: none;
+}
+
+#root .main.main--demos .demo-selector__button:last-child::after {
+  content: none;
+}
+
+#root .main.main--demos .demo-selector__button.is-selected {
+  border-color: #8c7a42;
+  background: #101e2b;
+  color: #f2e8c9;
+}
+
+#root .main.main--demos .demo-selector__button.is-selected::before {
+  position: absolute;
+  top: 13px;
+  bottom: 13px;
+  left: 3px;
+  width: 2px;
+  background: #c3a354;
+  content: "";
+}
+
+#root .main.main--demos .demo-selector__button:not(.is-selected):hover {
+  background: #0b1520;
+}
+
+#root .main.main--demos .demo-selector__button:focus-visible,
+#root .main.main--demos .demo-player__play:focus-visible {
+  outline: 2px solid #f4cb69;
+  outline-offset: 3px;
+}
+
+#root .main.main--demos .demo-selector__thumb {
+  display: block;
+  width: 56px;
+  height: 32px;
+  flex: none;
+  border: 1px solid #293b4f;
+  border-radius: 2px;
+  background: #071321;
+  object-fit: cover;
+  object-position: center;
+}
+
+#root .main.main--demos .demo-selector__button:first-child .demo-selector__thumb {
+  background: #f3f1ea;
+  object-fit: contain;
+}
+
+#root .main.main--demos .demo-recording-rail {
+  display: block;
+  width: 24px;
+  height: 200px;
+  margin-top: 29px;
+  pointer-events: none;
+}
+
+#root .main.main--demos .demo-stage {
+  min-width: 0;
+}
+
+#root .main.main--demos .demo-player {
+  position: relative;
+  display: grid;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #64532b;
+  border-top-color: #b89b56;
+  border-radius: 5px;
+  background: #071321;
+}
+
+#root .main.main--demos .demo-player__still {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+#root .main.main--demos .demo-player--food .demo-player__still {
+  width: min(45%, 480px);
+  height: auto;
+  aspect-ratio: 1;
+  border-radius: 3px;
+  background: #f3f1ea;
+  object-fit: contain;
+}
+
+#root .main.main--demos .demo-player__video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #000;
+}
+
+#root .main.main--demos .demo-player__play {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 70px;
+  height: 70px;
+  padding: 0;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  border: 1px solid #c8ae61;
+  border-radius: 50%;
+  background: rgba(7, 16, 25, 0.88);
+  color: #f0e4bb;
+  cursor: pointer;
+}
+
+#root .main.main--demos .demo-player__play:hover {
+  background: rgba(16, 35, 51, 0.96);
+}
+
+#root .main.main--demos .demo-player__play-icon {
+  width: 0;
+  height: 0;
+  margin-left: 5px;
+  border-top: 9px solid transparent;
+  border-bottom: 9px solid transparent;
+  border-left: 14px solid #f0e4bb;
+}
+
+#root .main.main--demos .demo-player__play:active {
+  transform: translate(-50%, -50%) scale(0.97);
+}
+
+#root .main.main--demos .demo-title {
+  display: flex;
+  height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 21px 32px 0;
+  overflow: hidden;
+  color: #f0e5c7;
+  font: 400 32px/1 Cinzel, Georgia, serif;
+  letter-spacing: 0.035em;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#root .main.main--demos .demo-title::before,
+#root .main.main--demos .demo-title::after {
+  min-width: 24px;
+  height: 1px;
+  flex: 1 1 auto;
+  background: rgba(200, 172, 101, 0.72);
+  content: "";
+}
+
+@media (max-width: 1000px) {
+  #root .main.main--demos .demo-layout {
+    grid-template-columns: minmax(180px, 25%) 18px minmax(0, 1fr);
+  }
+
+  #root .main.main--demos .demo-recording-rail {
+    width: 18px;
+    height: auto;
+    margin-top: 29px;
+  }
+
+  #root .main.main--demos .demo-selector__button {
+    gap: 9px;
+    padding-right: 6px;
+    padding-left: 9px;
+    font-size: 13px;
+  }
+
+  #root .main.main--demos .demo-selector__thumb {
+    width: 46px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 720px) {
+  #root .main.main--demos {
+    padding: 24px 0 36px;
+  }
+
+  #root .main.main--demos > .profile-nav {
+    margin-bottom: 20px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+
+  #root .main.main--demos .demo-layout {
+    grid-template-columns: 14px minmax(0, 1fr);
+    padding: 0 12px;
+  }
+
+  #root .main.main--demos .demo-selector {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 6px;
+    padding: 0;
+  }
+
+  #root .main.main--demos .demo-selector__button {
+    height: 72px;
+    min-width: 0;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    margin: 0;
+    padding: 5px 2px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  #root .main.main--demos .demo-selector__button::after {
+    content: none;
+  }
+
+  #root .main.main--demos .demo-selector__button.is-selected::before {
+    top: 18px;
+    bottom: 18px;
+    left: 2px;
+  }
+
+  #root .main.main--demos .demo-selector__thumb {
+    width: 48px;
+    height: 25px;
+  }
+
+  #root .main.main--demos .demo-recording-rail {
+    grid-column: 1;
+    grid-row: 2;
+    width: 14px;
+    height: 116px;
+    margin-top: 22px;
+  }
+
+  #root .main.main--demos .demo-stage {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 16px;
+  }
+
+  #root .main.main--demos .demo-title {
+    height: 42px;
+    gap: 12px;
+    margin: 14px 0 0;
+    font-size: clamp(17px, 5vw, 25px);
+  }
+
+  #root .main.main--demos .demo-player__play {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 380px) {
+  #root .main.main--demos .demo-selector__thumb {
+    width: 40px;
+    height: 22px;
+  }
+
+  #root .main.main--demos .demo-selector__button {
+    font-size: 9px;
+  }
+}

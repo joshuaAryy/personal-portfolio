@@ -1,28 +1,28 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
-import App from "./App";
+import JourneyCase from "./JourneyCase";
 import * as JourneyCaseModule from "./JourneyCase";
 import { resolveActiveWaypoint } from "./JourneyCase";
 
 function renderJourneyRoute() {
   return renderToStaticMarkup(
     <MemoryRouter initialEntries={["/profile/journey"]}>
-      <App />
+      <JourneyCase />
     </MemoryRouter>,
   );
 }
 
-describe("Journey story route", () => {
+describe("Journey story", () => {
   it("renders all nine story beats in their approved order", () => {
     const markup = renderJourneyRoute();
     const beats = [
       "Roblox Studio",
-      "Apple opened a rabbit hole",
+      "Curiosity about the hardware",
       "Computer Engineering",
       "Naruto semantic search",
       "Machine learning became tangible",
-      "The late-night lecture",
+      "Connecting algorithms to research",
       "Spotify recommender idea",
       "Software Engineering Intern",
       "Learning to finish things",
@@ -34,7 +34,18 @@ describe("Journey story route", () => {
       expect(nextIndex).toBeGreaterThan(previousIndex);
       previousIndex = nextIndex;
     }
-    expect(markup).toContain("A continuing story");
+    expect(markup).toContain("that was my first spark of building for someone else");
+    expect(markup).toContain("hours asking how chips and design choices inside MacBooks and iPhones");
+    expect(markup).toContain("the systems underneath");
+    expect(markup).toContain("personality, abilities, or relationships—not exact terms");
+    expect(markup).toContain("real research question");
+    expect(markup).toContain("I was busy, but made time before school");
+    expect(markup).toContain("audio features and neural networks could help a recommender");
+    expect(markup).toContain("a real client showed me that engineering starts by understanding");
+    expect(markup).toContain("carry ideas through the details, make decisions");
+    expect(markup).toContain("More to learn. More to build.");
+    expect(markup).not.toContain("NEVER BUILT");
+    expect(markup).not.toContain("3–4 a.m.");
   });
 
   it("provides five named locator links to their unique waypoints", () => {
@@ -48,8 +59,6 @@ describe("Journey story route", () => {
       expect(markup).toContain(`id="journey-${waypoint}"`);
       expect(markup.match(new RegExp(`id="journey-${waypoint}"`, "g"))).toHaveLength(1);
     }
-    expect(markup).toContain('href="/profile/journey"');
-    expect(markup).toContain('aria-current="page"');
   });
 });
 

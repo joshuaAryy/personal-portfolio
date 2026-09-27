@@ -1,154 +1,173 @@
+import "./stush-case-study.css";
+
+const inputs = ["Koyo", "UNFI", "Dovre"];
+const formats = ["CSV", "XLSX", "XLSB"];
+const stages = [
+  {
+    index: "01",
+    name: "Parse by source",
+    detail: "Read each distributor’s layout through parsing suited to its structure.",
+    code: "PYTHON / SOURCE ADAPTERS",
+  },
+  {
+    index: "02",
+    name: "Canonicalize",
+    detail: "Bring unlike records into a shared structure for downstream work.",
+    code: "SHARED FIELD CONTRACT",
+  },
+  {
+    index: "03",
+    name: "Normalize",
+    detail: "Align sales, units, case packs, and reporting months.",
+    code: "COMPARABLE REPORTING DATA",
+  },
+];
+
+function DataGrid() {
+  return (
+    <div className="stush-data-grid" aria-hidden="true">
+      <div className="stush-data-grid__head">
+        <i />
+        <i />
+        <i />
+        <i />
+      </div>
+      {Array.from({ length: 4 }, (_, row) => (
+        <div className="stush-data-grid__row" key={row}>
+          {Array.from({ length: 4 }, (_, col) => (
+            <i className={`stush-data-grid__cell stush-data-grid__cell--${(row + col) % 3}`} key={col} />
+          ))}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export default function StushPattiesCase() {
   return (
-    <article className="stush-story" aria-labelledby="stush-title">
-      <header className="stush-hero" id="stush-opening">
-        <p className="stush-kicker">EXPERIENCE / DATA PIPELINES &amp; AUTOMATION</p>
-        <div className="stush-hero__heading">
-          <h1 id="stush-title">Making distributor data easier to use.</h1>
-          <p className="stush-hero__date">SEPTEMBER — NOVEMBER 2025</p>
+    <article className="stush-data-story" aria-labelledby="stush-title">
+      <header className="stush-data-hero" id="stush-opening">
+        <div className="stush-data-hero__eyebrow">
+          <span>EXPERIENCE / DATA PIPELINES &amp; AUTOMATION</span>
+          <span>SEP — NOV 2025</span>
         </div>
-        <div className="stush-hero__summary">
+        <h1 id="stush-title">A reporting pipeline for data that arrived in different shapes.</h1>
+        <div className="stush-data-hero__bottom">
           <p>
-            Distributor sales files arrived in inconsistent formats and
-            structures. The work turned those inputs into a more repeatable
-            path to structured reporting.
+            I contributed to a Python workflow that parsed and normalized three distributors’ sales files,
+            preparing a more repeatable path into reporting.
           </p>
-          <p className="stush-hero__credit">
-            Software Engineering Intern · Two-person team with Shiv
-          </p>
+          <dl className="stush-facts" aria-label="Project scope">
+            <div><dt>INPUTS</dt><dd>03 distributors</dd></div>
+            <div><dt>FORMATS</dt><dd>CSV · XLSX · XLSB</dd></div>
+            <div><dt>TEAM</dt><dd>Two technical contributors</dd></div>
+          </dl>
+        </div>
+        <div className="stush-source-band" aria-label="Distributor inputs">
+          <span className="stush-source-band__label">DISTRIBUTOR INPUTS</span>
+          <ul>{inputs.map((input) => <li key={input}>{input}</li>)}</ul>
+          <span className="stush-source-band__divider" aria-hidden="true" />
+          <span className="stush-source-band__label">FORMATS ACROSS INPUTS</span>
+          <ul className="stush-format-list">{formats.map((format) => <li key={format}>{format}</li>)}</ul>
+          <span className="stush-source-band__note">Formats are not assigned to individual distributors.</span>
         </div>
       </header>
 
-      <section className="stush-section stush-problem" id="stush-inputs">
-        <div className="stush-section__label">
-          <span>01</span>
-          <p>THE INPUTS</p>
-        </div>
-        <div className="stush-problem__copy">
-          <h2>One reporting need. Three different starting points.</h2>
-          <p>
-            Koyo, UNFI, and Dovre supplied sales data with differing layouts.
-            CSV, XLSX, and XLSB files were present across the inputs; no single
-            file shape could be assumed.
-          </p>
-        </div>
-        <ul className="stush-source-list" aria-label="Distributor inputs">
-          <li>
-            <span aria-hidden="true">01</span>
-            <strong>Koyo</strong>
-            <small>DISTRIBUTOR INPUT</small>
-          </li>
-          <li>
-            <span aria-hidden="true">02</span>
-            <strong>UNFI</strong>
-            <small>DISTRIBUTOR INPUT</small>
-          </li>
-          <li>
-            <span aria-hidden="true">03</span>
-            <strong>Dovre</strong>
-            <small>DISTRIBUTOR INPUT</small>
-          </li>
-        </ul>
-        <div className="stush-format-note">
-          <span>FORMATS ACROSS INPUTS</span>
-          <p><b>CSV</b><b>XLSX</b><b>XLSB</b></p>
-        </div>
-      </section>
-
-      <figure className="stush-map" aria-labelledby="stush-map-title">
-        <div className="stush-map__heading">
+      <section className="stush-problem-map" id="stush-inputs" aria-labelledby="stush-problem-title">
+        <div className="stush-section-heading">
           <div>
-            <p className="stush-map__eyebrow">FROM SOURCE FILES TO REPORTING</p>
-            <h2 id="stush-map-title">A path toward a consistent handoff</h2>
+            <p className="stush-overline">THE ENGINEERING PROBLEM</p>
+            <h2 id="stush-problem-title">A shared report needed a shared data contract.</h2>
           </div>
-          <span className="stush-map__index" aria-hidden="true">01 — 04</span>
-        </div>
-        <div className="stush-map__source">
-          <span className="stush-map__source-label">DISTRIBUTOR FILES</span>
-          <ul className="stush-map__source-names" aria-label="Distributor sources">
-            <li>Koyo</li>
-            <li>UNFI</li>
-            <li>Dovre</li>
-          </ul>
-          <p>Different structures and file formats</p>
-        </div>
-        <ol className="stush-flow">
-          <li className="stush-flow__stage stush-flow__stage--parse">
-            <span className="stush-flow__number" aria-hidden="true">01</span>
-            <h3>Parse by source</h3>
-            <p>Read each distributor’s structure with source-specific parsing.</p>
-            <aside className="stush-koyo-note" aria-label="Koyo parsing exception">
-              <span>KOYO / EDGE CASE</span>
-              <p>A temporary position-and-cell parser was used pragmatically for its hardest input.</p>
-            </aside>
-          </li>
-          <li className="stush-flow__stage">
-            <span className="stush-flow__number" aria-hidden="true">02</span>
-            <h3>Shape a shared schema</h3>
-            <p>Bring parsed records into a consistent canonical structure.</p>
-          </li>
-          <li className="stush-flow__stage">
-            <span className="stush-flow__number" aria-hidden="true">03</span>
-            <h3>Normalize for comparison</h3>
-            <p>Align units, sales, case packs, and reporting months.</p>
-          </li>
-          <li className="stush-flow__stage stush-flow__stage--handoff">
-            <span className="stush-flow__number" aria-hidden="true">04</span>
-            <h3>Prepare the handoff</h3>
-            <p>Unified CSV, data dictionary, and quality report for Power BI.</p>
-          </li>
-        </ol>
-        <figcaption>
-          A source-safe reconstruction of the workflow; distributor formats are
-          shown across the inputs, not mapped to individual sources.
-        </figcaption>
-      </figure>
-
-      <section className="stush-section stush-role" id="stush-role">
-        <div className="stush-section__label">
-          <span>02</span>
-          <p>MY CONTRIBUTION</p>
-        </div>
-        <div className="stush-role__main">
-          <h2>Practical parsing, shaped around how reporting needed to work.</h2>
-          <p>
-            I contributed to Python parsing and normalization, helped translate
-            reporting needs into workable data rules, and took part in regular
-            stakeholder conversations. I worked alongside Shiv on the shared
-            pipeline effort.
+          <p className="stush-section-heading__aside">
+            Layouts varied across source files. Reporting required the important measures and time periods
+            to line up before records could be read together.
           </p>
         </div>
-        <aside className="stush-role__context">
-          <span>PROJECT CONTEXT</span>
-          <p>External client project through Riipen / IBM SkillsBuild</p>
-          <p>Software Engineering Intern<br />Data Pipelines &amp; Automation</p>
-        </aside>
+
+        <figure className="stush-pipeline" aria-labelledby="stush-pipeline-title">
+          <div className="stush-pipeline__topline">
+            <div>
+              <span className="stush-overline">TRANSFORMATION FLOW / 01—04</span>
+              <h3 id="stush-pipeline-title">From distributor files to a reporting handoff</h3>
+            </div>
+            <span className="stush-pipeline__language">PYTHON · DATA NORMALIZATION</span>
+          </div>
+
+          <div className="stush-pipeline__inputs">
+            <div className="stush-pipeline__stage-label"><span>01</span><b>SOURCE FILES</b></div>
+            <div className="stush-file-stack" aria-label="Three distributor inputs with differing structures">
+              {inputs.map((input, index) => (
+                <div className="stush-file" key={input}>
+                  <strong>{input}</strong>
+                  <span className="stush-file__fields" aria-hidden="true">
+                    {Array.from({ length: index === 1 ? 4 : 5 }, (_, i) => <i key={i} />)}
+                  </span>
+                  <span className="stush-file__index">INPUT 0{index + 1}</span>
+                </div>
+              ))}
+              <p>Different layouts<br />CSV · XLSX · XLSB across inputs</p>
+            </div>
+          </div>
+
+          <div className="stush-pipeline__connector" aria-hidden="true"><i /></div>
+
+          <ol className="stush-transform-stages" aria-label="Pipeline transformations">
+            {stages.map((stage) => (
+              <li className="stush-transform" key={stage.index}>
+                <div className="stush-pipeline__stage-label"><span>{stage.index}</span><b>{stage.code}</b></div>
+                <h4>{stage.name}</h4>
+                {stage.index === "02" ? <DataGrid /> : <div className="stush-transform__signal" aria-hidden="true"><i /><i /><i /></div>}
+                <p>{stage.detail}</p>
+              </li>
+            ))}
+          </ol>
+
+          <div className="stush-pipeline__connector stush-pipeline__connector--last" aria-hidden="true"><i /></div>
+
+          <div className="stush-handoff-stage">
+            <div className="stush-pipeline__stage-label"><span>04</span><b>REPORTING HANDOFF</b></div>
+            <ul>
+              <li><span>01</span> Unified CSV</li>
+              <li><span>02</span> Data dictionary</li>
+              <li><span>03</span> Quality report</li>
+            </ul>
+            <div className="stush-powerbi"><span>DESTINATION</span><strong>Power BI</strong><i aria-hidden="true" /></div>
+          </div>
+
+          <aside className="stush-exception" aria-label="Koyo parser exception">
+            <div className="stush-exception__route"><span>KOYO INPUT</span><i aria-hidden="true">→</i><strong>TEMPORARY POSITION-AND-CELL PARSER</strong><i aria-hidden="true">→</i><span>SHARED NORMALIZATION</span></div>
+            <p><b>Source-specific exception.</b> Explicit positions and cells were used where needed for the hardest input; this pragmatic parser path was temporary and did not define the other sources.</p>
+          </aside>
+          <figcaption>Formats are shown across the three inputs. No sample client records or dashboard outputs are reproduced.</figcaption>
+        </figure>
       </section>
 
-      <section className="stush-outcome" id="stush-outcome">
-        <p className="stush-kicker">THE HANDOFF</p>
-        <h2>A structured handoff for reporting.</h2>
-        <div
-          className="stush-outcome__artifacts"
-          role="group"
-          aria-label="Reporting handoff sequence"
-        >
-          <span>Unified CSV</span><i aria-hidden="true" />
-          <span>Data dictionary</span><i aria-hidden="true" />
-          <span>Quality report</span><i aria-hidden="true" />
-          <strong>Power BI</strong>
+      <section className="stush-ownership" id="stush-role">
+        <div className="stush-ownership__title">
+          <p className="stush-overline">TECHNICAL OWNERSHIP</p>
+          <h2>Engineering around the reporting question.</h2>
         </div>
-        <p className="stush-outcome__note">
-          The work created a more repeatable path from raw distributor files to
-          structured data and Power BI reporting.
-        </p>
+        <div className="stush-ownership__details">
+          <p>
+            I contributed to Python parsing and normalization, helped shape the shared schema, and worked
+            through practical data rules with the reporting needs in view.
+          </p>
+          <p>
+            This was a two-person technical team with Shiv. Regular stakeholder conversations helped turn
+            the client’s business requirement into a repeatable workflow and a useful handoff.
+          </p>
+          <div className="stush-project-context">
+            <span>PROJECT CONTEXT</span>
+            <strong>Software Engineering Intern</strong>
+            <small>External client project · Riipen / IBM SkillsBuild</small>
+          </div>
+        </div>
       </section>
 
-      <footer className="stush-reflection" id="stush-reflection">
-        <span>LOOKING BACK</span>
-        <p>
-          In real client work, pragmatism is part of engineering.
-        </p>
+      <footer className="stush-learning" id="stush-reflection">
+        <div><p className="stush-overline">WHAT THE WORK TAUGHT ME</p><h2>Good data work begins by understanding what the next person needs to compare.</h2></div>
+        <p className="stush-learning__close">REPEATABLE TRANSFORMATIONS<br /><span>→</span> REPORTING WITH CONTEXT</p>
       </footer>
     </article>
   );

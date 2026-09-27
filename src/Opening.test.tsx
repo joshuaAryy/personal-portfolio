@@ -19,12 +19,12 @@ function renderOpeningRoute(reducedMotion = false) {
 }
 
 describe("opening route handoff", () => {
-  it("keeps the Projects client beneath the inaccessible opening treatment", () => {
+  it("keeps Home / Explore beneath the inaccessible opening treatment", () => {
     const markup = renderOpeningRoute();
 
     expect(markup).toContain('class="opening__underlay"');
     expect(markup).toContain('aria-hidden="true" inert=""');
-    expect(markup).toContain("PROJECTS · FEATURED");
+    expect(markup).toContain("Select a portfolio mode");
     expect(markup).toContain('class="opening__skip"');
   });
 

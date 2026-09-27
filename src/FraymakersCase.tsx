@@ -1,32 +1,37 @@
 import { Link } from "react-router-dom";
+import "./fraymakers-case.css";
 
 const chapters = [
-  { id: "tool", label: "THE TOOL" },
-  { id: "flow", label: "THE FLOW" },
-  { id: "part", label: "MY PART" },
-  { id: "finish", label: "THE FINISH" },
+  { id: "pipeline", label: "PIPELINE" },
+  { id: "composition", label: "COMPOSITION" },
+  { id: "ownership", label: "OWNERSHIP" },
+  { id: "outcome", label: "OUTCOME" },
 ] as const;
 
-const flowSteps = [
+const stages = [
   {
     number: "01",
-    title: "Challonge",
-    detail: "Tournament results provide the match metadata.",
+    title: "Challonge metadata",
+    system: "TOURNAMENT INPUT",
+    detail: "Match context enters the media-preparation workflow.",
   },
   {
     number: "02",
-    title: "YAML overrides",
-    detail: "Configuration fills in match-specific details.",
+    title: "YAML configuration",
+    system: "MATCH OVERRIDES",
+    detail: "Configuration supplies match-specific values and adjustments.",
   },
   {
     number: "03",
-    title: "Find the match",
-    detail: "Match data is joined to the right video.",
+    title: "Match-to-video mapping",
+    system: "VOD RESOLUTION",
+    detail: "Match information is connected to its associated tournament video.",
   },
   {
     number: "04",
-    title: "Compose a frame",
-    detail: "node-canvas produces a 1280 × 720 PNG.",
+    title: "Thumbnail composition",
+    system: "thumbnail.js · node-canvas",
+    detail: "Layered game and set context is composed into a 1280 × 720 PNG.",
   },
 ] as const;
 
@@ -41,10 +46,10 @@ const compositionInputs = [
 ] as const;
 
 const edgeCases = [
-  ["ALT. NAMES", "Account for alternate names across sources."],
-  ["P2 MIRRORING", "Keep player-two composition oriented correctly."],
-  ["LONG NAMES", "Handle labels that need more room."],
-  ["MISSING ASSETS", "Account for missing art as an input edge case."],
+  ["ALIASES", "Alternate names across sources"],
+  ["P2 MIRRORING", "Player-two orientation"],
+  ["LONG NAMES", "Variable label length"],
+  ["MISSING ASSETS", "Incomplete art inputs"],
 ] as const;
 
 export default function FraymakersCase() {
@@ -61,158 +66,116 @@ export default function FraymakersCase() {
         <Link className="fraymakers-nav__back" to="/projects">
           ‹ PROJECTS
         </Link>
-        <span className="fraymakers-nav__breadcrumb">
-          CASE STUDY / FRAYMAKERS
-        </span>
+        <span className="fraymakers-nav__breadcrumb">CASE STUDY / FRAYMAKERS</span>
       </nav>
 
-      <article className="fraymakers-story">
-        <section
-          className="fraymakers-opening"
-          id="fraymakers-tool"
-          aria-labelledby="fraymakers-title"
-        >
-          <div className="fraymakers-opening__copy">
-            <p className="fraymakers-eyebrow">FRAYMAKERS / MEDIA TOOLING</p>
-            <h1 id="fraymakers-title">
-              From match data
-              <br />
-              to a finished thumbnail
-            </h1>
-            <p className="fraymakers-opening__summary">
-              I built the thumbnail-generation part of a shared Node.js tool
-              for preparing tournament VODs.
+      <article className="fray-case" aria-labelledby="fraymakers-title">
+        <header className="fray-case__intro" id="fraymakers-intro">
+          <div className="fray-case__intro-copy">
+            <p className="fray-case__eyebrow">FRAYMAKERS / UPLOADASSISTANT</p>
+            <h1 id="fraymakers-title">From match data to VOD thumbnails</h1>
+            <p className="fray-case__dek">
+              A tournament media workflow connected match context to the right
+              video, then composed a consistent thumbnail for the VOD.
             </p>
           </div>
-          <figure className="fraymakers-format">
-            <p className="fraymakers-eyebrow">OUTPUT FORMAT</p>
-            <div
-              className="fraymakers-format__frame"
-              role="img"
-              aria-label="A 16 by 9 format outline representing a 1280 by 720 PNG canvas"
-            >
-              <span>1280 × 720</span>
-              <small>PNG · NODE-CANVAS</small>
-            </div>
-            <figcaption>
-              A canvas size cue, not a thumbnail preview.
-            </figcaption>
-          </figure>
-        </section>
-
-        <section
-          className="fraymakers-flow"
-          id="fraymakers-flow"
-          aria-labelledby="fraymakers-flow-title"
-        >
-          <div className="fraymakers-section-heading">
-            <p className="fraymakers-eyebrow">THE FLOW</p>
-            <h2 id="fraymakers-flow-title">
-              Give each match a repeatable path to a frame.
-            </h2>
+          <div className="fray-case__spec" role="img" aria-label="Output specification, not a thumbnail preview">
+            <span className="fray-case__spec-label">OUTPUT SPECIFICATION</span>
+            <span className="fray-case__spec-ratio"><span>1280 × 720</span></span>
+            <span className="fray-case__spec-meta">PNG <i /> NODE-CANVAS</span>
+            <span className="fray-case__spec-caption">16:9 canvas · no VOD artwork shown</span>
           </div>
-          <div className="fraymakers-editorial-plate">
-            <ol className="fraymakers-flow__steps">
-              {flowSteps.map((step) => (
-                <li key={step.number}>
-                  <span className="fraymakers-step-number">{step.number}</span>
-                  <h3>{step.title}</h3>
-                  <p>{step.detail}</p>
-                </li>
-              ))}
-            </ol>
+        </header>
 
-          <section
-            className="fraymakers-contribution"
-            id="fraymakers-part"
-            aria-labelledby="fraymakers-part-title"
-          >
-            <div className="fraymakers-section-heading">
-              <p className="fraymakers-eyebrow">MY PART</p>
-              <h2 id="fraymakers-part-title">
-                One subsystem, inside a larger shared project.
-              </h2>
+        <section className="fray-case__pipeline" aria-labelledby="fraymakers-pipeline-title">
+          <div className="fray-case__section-head">
+            <div>
+              <p className="fray-case__eyebrow">SYSTEM / MEDIA PREPARATION</p>
+              <h2 id="fraymakers-pipeline-title">One match, a connected path to frame output.</h2>
             </div>
-            <div className="fraymakers-contribution__grid">
-              <div className="fraymakers-owned">
-                <p className="fraymakers-eyebrow fraymakers-eyebrow--accent">
-                  MY OWNERSHIP
-                </p>
-                <h3>thumbnail.js</h3>
-                <p>
-                  I joined after my brother had started the tool. I wrote
-                  <code> thumbnail.js</code> and contributed YAML configuration,
-                  thumbnail generation and integration, plus some YouTube API
-                  work.
-                </p>
-              </div>
-              <div className="fraymakers-shared">
-                <p className="fraymakers-eyebrow">SHARED FOUNDATION</p>
-                <p>
-                  The broader foundation and much of the Challonge and API
-                  groundwork belonged to my brother. My part extended that shared
-                  tool with the thumbnail workflow.
-                </p>
-                <p className="fraymakers-api-note">
-                  YouTube Data API v3 / OAuth was a prototype. Automatic upload
-                  was not completed.
-                </p>
-              </div>
-            </div>
-          </section>
+            <p className="fray-case__section-note">TOURNAMENT DATA → CONFIG → VIDEO → IMAGE</p>
+          </div>
 
-          <section className="fraymakers-composer" aria-labelledby="fraymakers-composer-title">
-            <div className="fraymakers-composer__heading">
-              <p className="fraymakers-eyebrow">COMPOSITION + EDGE CASES</p>
-              <h2 id="fraymakers-composer-title">The details live in the frame logic.</h2>
-            </div>
-            <div className="fraymakers-composition">
-              <div>
-                <p className="fraymakers-eyebrow">WHAT THE COMPOSER HANDLES</p>
-                <p className="fraymakers-composition__note">
-                  The frame combines game-specific layers and match context. The
-                  page explains those inputs in text; it does not reproduce game
-                  artwork or a generated thumbnail.
-                </p>
-              </div>
-              <ul aria-label="Thumbnail composition inputs">
-                {compositionInputs.map((input) => (
-                  <li key={input}>{input}</li>
-                ))}
-              </ul>
-            </div>
-            <dl className="fraymakers-edge-cases">
-              {edgeCases.map(([term, detail]) => (
-                <div key={term}>
-                  <dt>{term}</dt>
-                  <dd>{detail}</dd>
+          <ol className="fray-case__stages">
+            {stages.map((stage) => (
+              <li className="fray-case__stage" key={stage.number}>
+                <div className="fray-case__stage-top">
+                  <span className="fray-case__stage-number">{stage.number}</span>
+                  <span className="fray-case__stage-system">{stage.system}</span>
                 </div>
-              ))}
-            </dl>
-          </section>
-          </div>
-        </section>
+                <h3>{stage.title}</h3>
+                <p>{stage.detail}</p>
+              </li>
+            ))}
+          </ol>
 
-        <section
-          className="fraymakers-finish"
-          id="fraymakers-finish"
-          aria-labelledby="fraymakers-finish-title"
-        >
-          <div className="fraymakers-finish__lead">
-            <p className="fraymakers-eyebrow">THE FINISH</p>
-            <h2 id="fraymakers-finish-title">
-              Generated thumbnails made it onto real Fraymakers VODs.
-            </h2>
-            <p>
-              Building around aliases, mirroring, long names, and missing art
-              taught me to make the unusual cases part of the workflow—not an
-              afterthought.
-            </p>
+          <div className="fray-case__stage-rail" aria-hidden="true">
+            <span /><span /><span /><span />
           </div>
-          <p className="fraymakers-credit">
-            NODE.JS · NODE-CANVAS · CHALLONGE DATA · YAML CONFIGURATION
+          <p className="fray-case__pipeline-caption">
+            The workflow is described from the verified project handoff. The diagram does not claim to show the original code or generated media.
           </p>
         </section>
+
+        <section className="fray-case__composition" id="fraymakers-composition" aria-labelledby="fraymakers-composition-title">
+          <div className="fray-case__section-head fray-case__section-head--compact">
+            <div>
+              <p className="fray-case__eyebrow">COMPOSITOR INPUTS</p>
+              <h2 id="fraymakers-composition-title">A frame assembled from separate layers.</h2>
+            </div>
+            <p className="fray-case__composition-note">
+              Repeatability depended on how game art and match context met in the output.
+            </p>
+          </div>
+          <ul className="fray-case__layer-list" aria-label="Thumbnail composition inputs">
+            {compositionInputs.map((input, index) => (
+              <li key={input}>
+                <span className="fray-case__layer-index">L{String(index + 1).padStart(2, "0")}</span>
+                <span>{input}</span>
+              </li>
+            ))}
+          </ul>
+          <dl className="fray-case__edge-list">
+            {edgeCases.map(([term, detail]) => (
+              <div key={term}>
+                <dt>{term}</dt>
+                <dd>{detail}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+
+        <section className="fray-case__ownership" id="fraymakers-ownership" aria-labelledby="fraymakers-ownership-title">
+          <div className="fray-case__section-head fray-case__section-head--compact">
+            <div>
+              <p className="fray-case__eyebrow">CONTRIBUTION / OWNERSHIP</p>
+              <h2 id="fraymakers-ownership-title">A focused subsystem inside a shared build.</h2>
+            </div>
+            <p className="fray-case__ownership-lead">I joined later, after the foundation was underway.</p>
+          </div>
+          <div className="fray-case__ownership-grid">
+            <section className="fray-case__ownership-card fray-case__ownership-card--joshua" aria-labelledby="fraymakers-joshua-title">
+              <p className="fray-case__eyebrow">JOSHUA / JOINED LATER</p>
+              <h3 id="fraymakers-joshua-title"><code>thumbnail.js</code></h3>
+              <p>I wrote <code>thumbnail.js</code> and contributed YAML/configuration, thumbnail generation and integration, and some YouTube API work.</p>
+            </section>
+            <section className="fray-case__ownership-card" aria-labelledby="fraymakers-brother-title">
+              <p className="fray-case__eyebrow">BROTHER / PROJECT FOUNDATION</p>
+              <h3 id="fraymakers-brother-title">Foundation, CLI, Challonge</h3>
+              <p>My brother owned the foundation, CLI, and much of the early Challonge and API groundwork.</p>
+            </section>
+          </div>
+        </section>
+
+        <footer className="fray-case__outcome" id="fraymakers-outcome">
+          <div>
+            <p className="fray-case__eyebrow">IN PRACTICE</p>
+            <h2>Generated thumbnails were used on real Fraymakers VODs.</h2>
+          </div>
+          <p className="fray-case__boundary">
+            YouTube Data API / OAuth remained a prototype. Automatic upload was not completed.
+          </p>
+        </footer>
       </article>
     </>
   );

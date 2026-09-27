@@ -16,7 +16,7 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
     const goToPortfolio = () => {
       if (completed.current) return;
       completed.current = true;
-      navigate("/projects", { replace: true });
+      navigate("/home", { replace: true });
     };
 
     const beginHandoff = () => {
@@ -40,7 +40,7 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
     completed.current = true;
     timers.current.forEach(window.clearTimeout);
     timers.current = [];
-    navigate("/projects", { replace: true });
+    navigate("/home", { replace: true });
   };
 
   return (

@@ -1,218 +1,389 @@
-import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { experience, projects } from "./data";
-import { Client, Mark } from "./PortfolioLayout";
-import { experienceStoryPaths, projectCasePaths } from "./project-route-paths";
-import JMark from "./identity/JMark";
+import { Client } from "./PortfolioLayout";
+import { experienceStoryPaths, projectCasePaths, railProjects } from "./project-route-paths";
+import "./lobby.css";
 
-function LobbyCard({
-  name,
-  subtitle,
-  role,
-  indexGlyph,
-  selected,
-  onClick,
-  owner = false,
-}: {
+export type LobbyMode = "projects" | "experience" | "hackathons" | "education";
+
+type RoleId = "software" | "ai" | "data" | "mobile" | "research";
+
+type LobbyItem = {
+  id: string;
   name: string;
   subtitle: string;
   role: string;
-  indexGlyph?: string;
-  selected: boolean;
-  onClick: () => void;
+  mark?: string;
+  markAlt?: string;
+  path?: string;
+  source?: string;
+  detail?: string;
+  roles: RoleId[];
+  featured?: boolean;
   owner?: boolean;
+};
+
+const roleAssets: Record<RoleId, { label: string; src: string }> = {
+  software: { label: "SOFTWARE", src: "/media/lobby/role-software.svg" },
+  ai: { label: "AI", src: "/media/lobby/role-ai.svg" },
+  data: { label: "DATA", src: "/media/lobby/role-data.svg" },
+  mobile: { label: "MOBILE", src: "/media/lobby/role-mobile.svg" },
+  research: { label: "RESEARCH", src: "/media/lobby/role-research.svg" },
+};
+
+const ownerItem: LobbyItem = {
+  id: "joshua",
+  name: "Joshua Aryeetey",
+  subtitle: "Computer Engineering · Software",
+  role: "PORTFOLIO OWNER",
+  mark: "/media/lobby/profile-portrait-source.jpg",
+  markAlt: "Joshua Aryeetey portrait",
+  detail: "Computer Engineering · Software",
+  roles: ["software", "research"],
+  owner: true,
+};
+
+const projectItems: LobbyItem[] = [
+  {
+    ...projects.find((project) => project.slug === "fraymakers")!,
+    id: "fraymakers",
+    subtitle: "Tournament automation · 2025",
+    role: "SOFTWARE · DATA",
+    mark: "/media/lobby/project-fraymakers.svg",
+    markAlt: "Fraymakers project mark",
+    path: projectCasePaths.fraymakers,
+    source: projects.find((project) => project.slug === "fraymakers")?.source,
+    detail: "Match metadata · configuration · thumbnail generation",
+    roles: ["software", "data"],
+  },
+  {
+    ...projects.find((project) => project.slug === "crest")!,
+    id: "crest",
+    subtitle: "MPC Hacks · 2026",
+    role: "AI · DATA",
+    mark: "/media/profile/profile-crest-emblem.png",
+    markAlt: "Crest project mark",
+    path: projectCasePaths.crest,
+    source: projects.find((project) => project.slug === "crest")?.source,
+    detail: "Expense intelligence · policy retrieval · review workflow",
+    roles: ["ai", "data"],
+  },
+  ownerItem,
+  {
+    ...projects.find((project) => project.slug === "food-tracker")!,
+    id: "food-tracker",
+    subtitle: "Nutrition intelligence platform",
+    role: "MOBILE · BACKEND",
+    mark: "/media/profile/food-tracker-mark.svg",
+    markAlt: "Food Tracker approved project mark",
+    path: projectCasePaths["food-tracker"],
+    source: projects.find((project) => project.slug === "food-tracker")?.source,
+    detail: "Nutrition tracking · search · analytics",
+    roles: ["software", "mobile"],
+    featured: true,
+  },
+  {
+    ...projects.find((project) => project.slug === "choveigo")!,
+    id: "choveigo",
+    subtitle: "Evidence-first job matching",
+    role: "AI · SOFTWARE",
+    mark: "/media/lobby/project-choveigo.png",
+    markAlt: "Cho’Veigo Recommendations project capture",
+    path: projectCasePaths.choveigo,
+    source: projects.find((project) => project.slug === "choveigo")?.source,
+    detail: "Role evidence · matching · human-reviewed decisions",
+    roles: ["ai", "software"],
+  },
+];
+
+const experienceItems: LobbyItem[] = [
+  {
+    id: "living-in-silico",
+    name: experience[0].name,
+    subtitle: "AI / ML Research Intern · Mar–Jun 2025",
+    role: "AI · RESEARCH",
+    mark: "/media/profile/living-in-silico-logo.png",
+    markAlt: "Living in Silico logo",
+    path: experienceStoryPaths["living-in-silico"],
+    detail: "SMILES · RDKit · DeepMol · Fragmenstein",
+    roles: ["ai", "research"],
+  },
+  ownerItem,
+  {
+    id: "stush-patties",
+    name: experience[1].name,
+    subtitle: "Software Engineering Intern · Sep–Nov 2025",
+    role: "SOFTWARE · DATA",
+    mark: "/media/profile/stush-patties-logo.png",
+    markAlt: "Stush Patties logo",
+    path: experienceStoryPaths["stush-patties"],
+    detail: "Distributor inputs · normalized data · reporting handoff",
+    roles: ["software", "data"],
+  },
+];
+
+const hackathonItems: LobbyItem[] = [
+  {
+    id: "crest-hackathon",
+    name: "Crest",
+    subtitle: "MPC Hacks · 2026",
+    role: "3RD PLACE · BRIM FINANCIAL",
+    mark: "/media/lobby/hackathon-trophy.svg",
+    markAlt: "Hackathon award mark",
+    path: projectCasePaths.crest,
+    source: projects.find((project) => project.slug === "crest")?.source,
+    detail: "Expense intelligence · policy engine · anomaly rules",
+    roles: ["software", "ai", "data", "research"],
+  },
+];
+const educationItems: LobbyItem[] = [
+  {
+    id: "computer-engineering",
+    name: "Computer Engineering",
+    subtitle: "Toronto Metropolitan University",
+    role: "B.ENG. · 2024–2028",
+    mark: "/media/lobby/education-degree.svg",
+    markAlt: "Computer Engineering degree emblem",
+    detail: "Toronto Metropolitan University · B.Eng. · 2024–2028",
+    roles: ["research", "software"],
+  },
+  {
+    id: "coursework",
+    name: "Current Coursework",
+    subtitle: "2026–27 academic year",
+    role: "5 CORE COURSES",
+    mark: "/media/lobby/education-coursework.svg",
+    markAlt: "Current coursework emblem",
+    detail: "CPS 510 · COE 538 · ELE 532 · MEC 511 · MTH 514",
+    roles: ["software", "data"],
+    featured: true,
+  },
+];
+
+const itemsForMode: Record<LobbyMode, LobbyItem[]> = {
+  projects: projectItems,
+  experience: experienceItems,
+  hackathons: hackathonItems,
+  education: educationItems,
+};
+
+const selectedByMode: Record<LobbyMode, string> = {
+  projects: "food-tracker",
+  experience: "living-in-silico",
+  hackathons: "crest-hackathon",
+  education: "coursework",
+};
+
+const copyByMode: Record<LobbyMode, { title: string; subtitle: string; itemLabel: string }> = {
+  projects: {
+    title: "PROJECTS · FEATURED",
+    subtitle: "SELECT A PROJECT TO OPEN ITS CASE STUDY",
+    itemLabel: "project",
+  },
+  experience: {
+    title: "EXPERIENCE",
+    subtitle: "PROFESSIONAL WORK · RESEARCH · DATA SYSTEMS",
+    itemLabel: "experience",
+  },
+  hackathons: {
+    title: "HACKATHONS",
+    subtitle: "COMPETITION BUILDS · AWARDS · RAPID SHIPPING",
+    itemLabel: "hackathon",
+  },
+  education: {
+    title: "EDUCATION",
+    subtitle: "DEGREE · COURSEWORK · ACADEMIC RECOGNITION",
+    itemLabel: "academic focus",
+  },
+};
+
+const modeIcons: Record<LobbyMode, string> = {
+  projects: "/media/profile/project-signal.svg",
+  experience: "/media/profile/experience-signal.svg",
+  hackathons: "/media/lobby/hackathon-trophy.svg",
+  education: "/media/lobby/education-degree.svg",
+};
+
+function ModeHeading({ mode }: { mode: LobbyMode }) {
+  const copy = copyByMode[mode];
+  return (
+    <div className="league-lobby__heading">
+      <img src={modeIcons[mode]} width="28" height="28" alt="" aria-hidden="true" />
+      <div>
+        <h1>{copy.title}</h1>
+        <p>{copy.subtitle}</p>
+      </div>
+    </div>
+  );
+}
+
+function LobbyCard({
+  item,
+  mode,
+  selected,
+  onSelect,
+}: {
+  item: LobbyItem;
+  mode: LobbyMode;
+  selected: boolean;
+  onSelect: () => void;
 }) {
   return (
     <button
       type="button"
-      className={"lobby-card" + (selected ? " lobby-card--selected" : "")}
-      onClick={onClick}
+      className={[
+        "league-banner",
+        selected ? "league-banner--selected" : "",
+        item.owner ? "league-banner--owner" : "",
+      ].filter(Boolean).join(" ")}
+      aria-label={`Select ${item.name}`}
       aria-pressed={selected}
+      onClick={onSelect}
     >
-      <span className={"card-insignia" + (owner ? " card-insignia--owner" : "")}>
-        {owner ? (
-          <JMark variant="ringed" decorative className="owner-j-mark" />
-        ) : indexGlyph ? (
-          <span
-            className={
-              "mark project-index" +
-              (indexGlyph.length > 1 ? " project-index--wide" : "")
-            }
-            aria-hidden="true"
-          >
-            <span>{indexGlyph}</span>
-          </span>
-        ) : (
-          <Mark />
-        )}
+      <img className="league-banner__art" src="/media/lobby/banner-art.svg" alt="" aria-hidden="true" />
+      <span className="league-banner__medallion">
+        {item.mark && <img className="league-banner__mark" src={item.mark} alt={item.markAlt ?? ""} />}
       </span>
-      <strong>{name}</strong>
-      <span className="card-subtitle">{subtitle}</span>
-      <span className="card-role">{role}</span>
-      <span className="card-glyphs" aria-hidden="true">
-        <i>◇</i>
-        <i>✧</i>
-      </span>
-      {owner && <span className="owner-label">PORTFOLIO OWNER</span>}
+      <strong className="league-banner__name">{item.name}</strong>
+      <span className="league-banner__subtitle">{item.subtitle}</span>
+      <span className="league-banner__role">{item.role}</span>
+      {item.roles.length > 0 && (
+        <span className="league-banner__roles" aria-label={`${item.name} roles`}>
+          {item.roles.slice(0, 2).map((role) => (
+            <img key={role} src={roleAssets[role].src} alt={roleAssets[role].label} title={roleAssets[role].label} />
+          ))}
+        </span>
+      )}
+      {selected && <span className="league-banner__selection-cap" aria-hidden="true" />}
+      <span className="visually-hidden">Press Enter to select. Use the action below to open.</span>
+      <span className="league-banner__mode-visually-hidden">{mode}</span>
     </button>
   );
 }
 
-export default function Lobby({ mode }: { mode: "projects" | "experience" }) {
-  const navigate = useNavigate();
-  const [selectedProject, setSelectedProject] = useState("food-tracker");
-  const [selectedExperience, setSelectedExperience] =
-    useState<(typeof experience)[number]["slug"]>("living-in-silico");
+function SourceMark() {
+  return (
+    <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false">
+      <path
+        fill="currentColor"
+        d="M8 .7a7.3 7.3 0 0 0-2.31 14.23c.37.07.5-.16.5-.36v-1.4c-2.04.44-2.47-.86-2.47-.86-.33-.85-.81-1.08-.81-1.08-.67-.46.05-.45.05-.45.74.05 1.13.76 1.13.76.66 1.13 1.73.8 2.15.61.07-.48.26-.81.47-1-1.63-.19-3.34-.82-3.34-3.63 0-.8.29-1.46.76-1.97-.08-.19-.33-.93.07-1.95 0 0 .62-.2 2.01.75A7 7 0 0 1 8 4.1c.63 0 1.26.09 1.85.25 1.39-.95 2.01-.75 2.01-.75.4 1.02.15 1.76.08 1.95.47.51.75 1.17.75 1.97 0 2.82-1.71 3.44-3.35 3.62.27.23.5.67.5 1.35v2.05c0 .2.13.43.5.36A7.3 7.3 0 0 0 8 .7Z"
+      />
+    </svg>
+  );
+}
+
+function SourceLink({ item }: { item: LobbyItem }) {
+  if (!item.source) return null;
+  return (
+    <a
+      className="league-lobby__source"
+      href={item.source}
+      target="_blank"
+      rel="noreferrer"
+      aria-label={`${item.name} source repository`}
+      title={`${item.name} source repository`}
+      onClick={(event) => event.stopPropagation()}
+    >
+      <SourceMark />
+    </a>
+  );
+}
+
+function SelectedTray({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
+  const copy = copyByMode[mode];
+  const actionLabel = mode === "experience" ? "VIEW EXPERIENCE" : mode === "hackathons" ? "VIEW HACKATHON" : mode === "education" ? "VIEW EDUCATION" : "VIEW PROJECT";
+  const isProfile = item.owner;
+  const actionPath = isProfile ? "/profile" : item.path;
+
+  return (
+    <>
+      <section className="league-selected" aria-label={`Selected ${copy.itemLabel}`}>
+        <img className="league-selected__art" src="/media/lobby/collapsible-tray.png" alt="" aria-hidden="true" />
+        <div className="league-selected__main">
+          <h2>{item.name.toUpperCase()}</h2>
+          <p>{item.detail ?? item.subtitle}</p>
+          {actionPath ? (
+            <Link className="league-selected__story" to={actionPath}>
+              {isProfile ? "OPEN PROFILE" : mode === "projects" || mode === "hackathons" ? "OPEN CASE STUDY" : actionLabel}
+              <span aria-hidden="true">↗</span>
+            </Link>
+          ) : (
+            <span className="league-selected__story league-selected__story--quiet">{item.role}</span>
+          )}
+        </div>
+        <span className="league-selected__mark" aria-hidden="true">
+          {item.mark && <img src={item.mark} alt="" />}
+        </span>
+        <SourceLink item={item} />
+        <div className="league-selected__dock">
+          <span>SELECTED {copy.itemLabel.toUpperCase()}</span>
+          <strong>{item.name.toUpperCase()}</strong>
+          <span aria-hidden="true">▾</span>
+        </div>
+      </section>
+      {actionPath && (
+        <Link className="league-lobby__primary-action" to={actionPath}>
+          {isProfile ? "VIEW PROFILE" : actionLabel}
+        </Link>
+      )}
+    </>
+  );
+}
+
+function RoleLegend({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
+  const roles = item.roles;
+  if (!roles.length) return null;
+  const title = mode === "education" ? "ACADEMIC HIGHLIGHTS" : mode === "hackathons" ? "HACKATHON ROLES" : mode === "experience" ? "EXPERIENCE ROLES" : "PROJECT ROLES";
+  return (
+    <div className="league-role-legend">
+      <strong>{title}</strong>
+      {roles.map((role) => (
+        <span className="league-role-legend__item" key={role}>
+          <img src={roleAssets[role].src} alt="" aria-hidden="true" />
+          <small>{roleAssets[role].label}</small>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+export default function Lobby({ mode }: { mode: LobbyMode }) {
+  const items = itemsForMode[mode];
+  const [selectedId, setSelectedId] = useState(selectedByMode[mode]);
+  const selected = items.find((item) => item.id === selectedId) ?? items[0];
+
+  useEffect(() => {
+    setSelectedId(selectedByMode[mode]);
+  }, [mode]);
+
   const isProjects = mode === "projects";
-  const selected = isProjects
-    ? projects.find((project) => project.slug === selectedProject)!
-    : experience.find((item) => item.slug === selectedExperience)!;
-  const selectedDescription = isProjects
-    ? projects.find((project) => project.slug === selectedProject)!.detail
-    : (() => {
-        const item = experience.find((entry) => entry.slug === selectedExperience)!;
-        return `${item.title} · ${item.dates}`;
-      })();
-  const source = isProjects
-    ? projects.find((project) => project.slug === selectedProject)?.source
-    : undefined;
-  const selectedDetailPath = isProjects
-    ? projectCasePaths[selectedProject]
-    : experienceStoryPaths[selectedExperience];
+  const isEducation = mode === "education";
 
   return (
     <Client pageClass="main--lobby">
-      <div className="lobby-scene">
-        <div className="lobby-heading">
-          <span className="heading-ornament">✣</span>
-          <div>
-            <h1>{isProjects ? "PROJECTS · FEATURED" : "EXPERIENCE"}</h1>
-            <p>
-              {isProjects
-                ? "SELECT A PROJECT TO EXPLORE WHAT'S AVAILABLE"
-                : "PROFESSIONAL WORK · RESEARCH · DATA SYSTEMS"}
-            </p>
-          </div>
+      <section className={`league-lobby league-lobby--${mode}`} aria-label={`${mode} lobby`}>
+        <div className="league-lobby__environment" aria-hidden="true" />
+        <ModeHeading mode={mode} />
+        <div className={[
+          "league-lobby__banners",
+          isProjects ? "league-lobby__banners--projects" : "",
+          isEducation ? "league-lobby__banners--education" : "",
+        ].filter(Boolean).join(" ")}>
+          {items.map((item) => (
+            <LobbyCard
+              key={item.id}
+              item={item}
+              mode={mode}
+              selected={selected.id === item.id}
+              onSelect={() => setSelectedId(item.id)}
+            />
+          ))}
         </div>
-        <div
-          className={
-            "lobby-cards " + (isProjects ? "" : "lobby-cards--experience")
-          }
-        >
-          {isProjects ? (
-            <>
-              {projects.slice(0, 2).map((project) => (
-                <LobbyCard
-                  key={project.slug}
-                  name={project.name}
-                  subtitle={project.short}
-                  role={project.role}
-                  indexGlyph={project.indexGlyph}
-                  selected={selectedProject === project.slug}
-                  onClick={() => setSelectedProject(project.slug)}
-                />
-              ))}
-              <LobbyCard
-                name="Joshua Aryeetey"
-                subtitle="Computer Engineering · Software"
-                role="PORTFOLIO OWNER"
-                selected={false}
-                owner
-                onClick={() => navigate("/profile")}
-              />
-              {projects.slice(2).map((project) => (
-                <LobbyCard
-                  key={project.slug}
-                  name={project.name}
-                  subtitle={project.short}
-                  role={project.role}
-                  indexGlyph={project.indexGlyph}
-                  selected={selectedProject === project.slug}
-                  onClick={() => setSelectedProject(project.slug)}
-                />
-              ))}
-            </>
-          ) : (
-            <>
-              <span className="lobby-plus" aria-hidden="true">
-                +
-              </span>
-              <LobbyCard
-                name={experience[0].name}
-                subtitle={`${experience[0].title} · ${experience[0].dates}`}
-                role={experience[0].role}
-                selected={selectedExperience === experience[0].slug}
-                onClick={() => setSelectedExperience(experience[0].slug)}
-              />
-              <LobbyCard
-                name="Joshua Aryeetey"
-                subtitle="Computer Engineering · Software"
-                role="PORTFOLIO OWNER"
-                selected={false}
-                owner
-                onClick={() => navigate("/profile")}
-              />
-              <LobbyCard
-                name={experience[1].name}
-                subtitle={`${experience[1].title} · ${experience[1].dates}`}
-                role={experience[1].role}
-                selected={selectedExperience === experience[1].slug}
-                onClick={() => setSelectedExperience(experience[1].slug)}
-              />
-              <span className="lobby-plus" aria-hidden="true">
-                +
-              </span>
-            </>
-          )}
-        </div>
-        <div className="lobby-bottom">
-          <div className="role-legend">
-            <strong>{isProjects ? "PROJECT ROLES" : "EXPERIENCE ROLES"}</strong>
-            <span>
-              ◇<small>SOFTWARE</small>
-            </span>
-            <span>
-              ✧<small>AI</small>
-            </span>
-            <span>
-              ▤<small>DATA</small>
-            </span>
-            <span>
-              ⌕<small>RESEARCH</small>
-            </span>
-          </div>
-          <div className="selected-tray">
-            <h2>{selected.name.toUpperCase()}</h2>
-            <p>{selectedDescription}</p>
-            {selectedDetailPath ? (
-              <Link className="selected-tray__action" to={selectedDetailPath}>
-                {isProjects ? "READ CASE STUDY" : "READ EXPERIENCE STORY"}{" "}
-                <span aria-hidden="true">↗</span>
-              </Link>
-            ) : (
-              <p className="selected-tray__status">
-                {isProjects
-                  ? "CASE STUDY IN DEVELOPMENT"
-                  : "FULL EXPERIENCE STORY IN DEVELOPMENT"}
-              </p>
-            )}
-            <div className="selected-tray__foot">
-              SELECTED {isProjects ? "PROJECT" : "EXPERIENCE"}{" "}
-              <strong>{selected.name.toUpperCase()}</strong>
-            </div>
-          </div>
-          {source && (
-            <a
-              className="view-source"
-              href={source}
-              target="_blank"
-              rel="noreferrer"
-            >
-              VIEW PROJECT <span aria-hidden="true">↗</span>
-            </a>
-          )}
-        </div>
-      </div>
+        <RoleLegend item={selected} mode={mode} />
+        <SelectedTray item={selected} mode={mode} />
+        <p className="league-lobby__hint">Select an entry, then use the action in its tray to open the story.</p>
+      </section>
     </Client>
   );
 }

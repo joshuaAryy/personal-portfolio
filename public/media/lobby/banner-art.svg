@@ -1,0 +1,48 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="246" height="716" viewBox="0 0 246 716" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="BANNER ART &#194;&#183; cohesive League material v6" filter="url(#filter0_n_0_4)">
+<g clip-path="url(#clip0_0_4)">
+<path id="Vector" opacity="0.78" d="M14 7H232C233 111 234 212 233 327C232 462 233 555 228 589L211 601V621L177 648L123 711L69 648L35 621V601L18 589C13 555 14 462 13 327C12 212 13 111 14 7Z" fill="#00070C"/>
+<path id="Vector_2" d="M14 0H232C233 104 234 205 233 320C232 455 233 548 228 582L211 594V614L177 641L123 704L69 641L35 614V594L18 582C13 548 14 455 13 320C12 205 13 104 14 0Z" fill="url(#paint0_linear_0_4)" stroke="#123B55" stroke-width="5"/>
+<path id="Vector_3" d="M16 2H230C231 106 232 205 231 320C230 454 231 546 226 579L208 591V611L174 637L123 698L72 637L38 611V591L20 579C15 546 16 454 15 320C14 205 15 106 16 2Z" stroke="url(#paint1_linear_0_4)" stroke-width="1.7"/>
+<g id="Vector_4" opacity="0.6">
+<path d="M27 12H219Z" fill="black"/>
+<path d="M27 12H219" stroke="#1F5C72" stroke-width="1.1"/>
+</g>
+<path id="Vector_5" d="M31 596L67 619L94 648L123 684L152 648L179 619L215 596" stroke="#B88E3A" stroke-width="1.35"/>
+<path id="Vector_6" opacity="0.9" d="M42 608L73 628L98 655L123 681L148 655L173 628L204 608" stroke="#173A52" stroke-width="3.2"/>
+<path id="Vector_7" opacity="0.9" d="M105 679L123 699L141 679" stroke="#D1A84E" stroke-width="1.1"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_n_0_4" x="0" y="0" width="246" height="716" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feTurbulence type="fractalNoise" baseFrequency="1.8181817531585693 1.8181817531585693" stitchTiles="stitch" numOctaves="3" result="noise" seed="0" />
+<feColorMatrix in="noise" type="luminanceToAlpha" result="alphaNoise" />
+<feComponentTransfer in="alphaNoise" result="coloredNoise1">
+<feFuncA type="discrete" tableValues="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "/>
+</feComponentTransfer>
+<feComposite operator="in" in2="shape" in="coloredNoise1" result="noise1Clipped" />
+<feFlood flood-color="rgba(15, 36, 46, 0.18)" result="color1Flood" />
+<feComposite operator="in" in2="noise1Clipped" in="color1Flood" result="color1" />
+<feMerge result="effect1_noise_0_4">
+<feMergeNode in="shape" />
+<feMergeNode in="color1" />
+</feMerge>
+</filter>
+<linearGradient id="paint0_linear_0_4" x1="12.5858" y1="0" x2="12.5858" y2="704" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0D3448"/>
+<stop offset="0.22" stop-color="#0A2A3C"/>
+<stop offset="0.54" stop-color="#061B2A"/>
+<stop offset="1" stop-color="#020B12"/>
+</linearGradient>
+<linearGradient id="paint1_linear_0_4" x1="14.5858" y1="2" x2="14.5858" y2="698" gradientUnits="userSpaceOnUse">
+<stop stop-color="#D0AD61"/>
+<stop offset="0.4" stop-color="#8F6A2E"/>
+<stop offset="1" stop-color="#C89B3C"/>
+</linearGradient>
+<clipPath id="clip0_0_4">
+<rect width="246" height="716" fill="white"/>
+</clipPath>
+</defs>
+</svg>

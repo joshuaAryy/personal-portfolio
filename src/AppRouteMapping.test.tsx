@@ -20,14 +20,16 @@ function renderRoute(path: string) {
 
 const primaryRoutes = [
   ["opening", "/", ">SKIP</button>"],
+  ["Home / Explore", "/home", "Select a portfolio mode"],
   ["projects", "/projects", "PROJECTS \u00b7 FEATURED"],
   ["experience", "/experience", "PROFESSIONAL WORK \u00b7 RESEARCH \u00b7 DATA SYSTEMS"],
+  ["hackathons", "/hackathons", "HACKATHONS"],
+  ["education", "/education", "EDUCATION"],
   ["profile overview", "/profile", "<h1>JOSHUA ARYEETEY</h1>"],
   ["profile journey", "/profile/journey", "<h1>Curiosity became building.</h1>"],
-  ["profile demos", "/profile/demos", "<h1 class=\"demo-title\"><span>CREST</span></h1>"],
+  ["profile demos", "/profile/demos", "data-node-id=\"1316:131\">FOOD TRACKER</h1>"],
   ["resume found", "/resume", "<h1 id=\"resume-found-title\">Resume Found</h1>"],
   ["resume viewer", "/resume/viewer", "APPROVED GENERAL RESUME"],
-  ["help", "/help", "<h1 id=\"help-title\">Find your way around.</h1>"],
 ] as const;
 
 describe("primary App route mapping", () => {
