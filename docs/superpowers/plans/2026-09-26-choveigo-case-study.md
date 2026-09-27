@@ -51,3 +51,5 @@
 - [x] Run the focused test and confirm it passes; run `npm run lint`, `npm run typecheck`, and `npm run build`.
 - [x] Update the implementation status and handoff with code state, QA evidence, and the unresolved distinction between Figma readiness and public-route visual review.
 - [x] Commit the route, its tests, and the implementation-status update on the feature branch.
+- [x] Resolve code-review findings: let the Recommendations still scale proportionally; select the closing chapter at desktop or mobile scroll end; strengthen unique-target, initial-current, definition, and attribution assertions.
+- [x] Run focused and full route checks, lint, typecheck, and production build after the review corrections; retain browser QA as outstanding because no browser session is available.

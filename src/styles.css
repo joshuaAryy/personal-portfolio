@@ -2708,9 +2708,10 @@ a:focus-visible {
 .choveigo-recommendations img {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   margin-top: 18px;
-  object-fit: cover;
+  object-fit: contain;
   border: 1px solid #705d35;
   border-radius: 4px;
 }

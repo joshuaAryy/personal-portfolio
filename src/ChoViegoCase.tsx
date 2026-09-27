@@ -11,6 +11,23 @@ const chapters = [
 
 type ChapterId = (typeof chapters)[number]["id"];
 
+export function resolveActiveChapter(
+  sectionTops: Partial<Record<ChapterId, number>>,
+  activationLine: number,
+  atStoryEnd: boolean,
+): ChapterId {
+  if (atStoryEnd) return chapters[chapters.length - 1].id;
+
+  let nextChapter: ChapterId = chapters[0].id;
+  for (const chapter of chapters) {
+    const sectionTop = sectionTops[chapter.id];
+    if (sectionTop !== undefined && sectionTop <= activationLine) {
+      nextChapter = chapter.id;
+    }
+  }
+  return nextChapter;
+}
+
 const fitDimensions = [
   ["FIT", "How closely does the evidence line up with the work?"],
   ["ELIGIBILITY", "Are essential conditions and core requirements met?"],
@@ -65,15 +82,21 @@ export default function ChoViegoCase() {
         const mainIsScroller = overflowY === "auto" || overflowY === "scroll";
         const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
         const activationLine = rootTop + 78;
-        let nextChapter: ChapterId = "question";
+        const atStoryEnd = mainIsScroller
+          ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
+          : window.scrollY + window.innerHeight >=
+            document.documentElement.scrollHeight - 2;
+        const sectionTops: Partial<Record<ChapterId, number>> = {};
 
         for (const chapter of chapters) {
           const section = document.getElementById(`choveigo-${chapter.id}`);
-          if (section && section.getBoundingClientRect().top <= activationLine) {
-            nextChapter = chapter.id;
+          if (section) {
+            sectionTops[chapter.id] = section.getBoundingClientRect().top;
           }
         }
-        setActiveChapter(nextChapter);
+        setActiveChapter(
+          resolveActiveChapter(sectionTops, activationLine, atStoryEnd),
+        );
       });
     };
 
