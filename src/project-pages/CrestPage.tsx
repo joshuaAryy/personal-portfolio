@@ -1,9 +1,7 @@
-import type { ComponentType, ReactNode } from "react";
+import { Client } from "../PortfolioLayout";
 import CrestCaseStudy from "../CrestCaseStudy";
 
-type ClientLayout = ComponentType<{ children: ReactNode; pageClass: string }>;
-
-export default function CrestPage({ Client }: { Client: ClientLayout }) {
+export default function CrestPage() {
   return (
     <Client pageClass="main--detail main--crest-case">
       <CrestCaseStudy />

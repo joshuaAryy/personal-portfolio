@@ -23,6 +23,19 @@ The canonical first-party J is implemented as an inline vector and shared by the
 | Resume Found and viewer | `/resume`, `/resume/viewer` | Found state, PDF viewer, download, and fullscreen/open actions all use the exact authorized v13 PDF. |
 | Help and recovery | `/help`, unmatched routes | Responsive help guide and branded client-side recovery page. |
 
+## Current Figma geometry and readiness notes
+
+| Story | Current body and figures |
+|---|---|
+| Food Tracker | `1813:42`, 1560×2203; product-anatomy figure `2032:2`; search decision plate `2084:2`. |
+| Cho’Veigo | `1813:419`, 1560×2670; evidence worksheet `2043:2`. |
+| Fraymakers | `1831:32`, 1560×1340; workflow figure `2118:2`. |
+| Living in Silico | `1438:4`, 1560×2320. Parent `1438:2` is IMPLEMENT READY; the content node retains a stale REVIEW CANDIDATE label. |
+| Stush Patties | `1438:278`, 1560×2080; workflow diagram `1992:2`. |
+| Journey | 1600 px story inside inspection canvas `1287:7`; the root label is stale REVIEW CANDIDATE while documented design readiness is IMPLEMENT READY. |
+
+These body dimensions are current. Chapter-anchor coordinates and end/tail measurements in older design records remain prior references and have not been re-audited against updated body geometry.
+
 Journey’s design reference presents the whole story for inspection; the website keeps the shared shell and scrolls the story inside its content area. The locator behavior is implemented, but live scroll, keyboard, and responsive review remains pending.
 
 ## Media and factual limits

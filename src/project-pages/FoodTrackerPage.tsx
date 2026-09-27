@@ -1,13 +1,7 @@
-import type { ComponentType, ReactNode } from "react";
+import { Client } from "../PortfolioLayout";
 import FoodTrackerCaseStudy from "../FoodTrackerCaseStudy";
 
-type ClientLayout = ComponentType<{ children: ReactNode; pageClass: string }>;
-
-export default function FoodTrackerPage({
-  Client,
-}: {
-  Client: ClientLayout;
-}) {
+export default function FoodTrackerPage() {
   return (
     <Client pageClass="main--detail main--food-case">
       <FoodTrackerCaseStudy />

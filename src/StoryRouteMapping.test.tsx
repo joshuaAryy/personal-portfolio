@@ -25,3 +25,17 @@ describe("implemented story route mapping", () => {
     expect(renderRoute(path)).toContain(marker);
   });
 });
+
+describe("extracted case study pages", () => {
+  it.each([
+    ["/projects/food-tracker", "main--food-case"],
+    ["/projects/crest", "main--crest-case"],
+  ])("keeps the shared client shell at %s", (path, pageClass) => {
+    const markup = renderRoute(path);
+
+    expect(markup).toContain('class="skip-link" href="#main"');
+    expect(markup).toContain('class="header"');
+    expect(markup).toContain(`class="main main--detail ${pageClass}"`);
+    expect(markup).toContain('class="rail" aria-label="Portfolio index"');
+  });
+});
