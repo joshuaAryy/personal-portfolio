@@ -524,7 +524,10 @@ function NotFound() {
 export default function App() {
   return (
     <Routes>
-      <Route path="/" element={<Opening />} />
+      <Route
+        path="/"
+        element={<Opening underlay={<Lobby mode="projects" />} />}
+      />
       <Route path="/projects" element={<Lobby mode="projects" />} />
       <Route path="/experience" element={<Lobby mode="experience" />} />
       <Route

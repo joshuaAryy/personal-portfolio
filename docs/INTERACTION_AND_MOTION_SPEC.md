@@ -26,7 +26,7 @@ Demos selection changes the still, title, selected state, and decorative recordi
 
 ## Opening and motion
 
-The opening is a two-second, one-shot J reveal followed by Projects. Skip immediately enters Projects. Under reduced motion, the complete mark appears without rotation or the light pass, followed by a short handoff. The design timeline loops; the website plays once.
+The opening is a two-second, one-shot J reveal followed by Projects. Its outer registration frame is 532 × 532 px with four cardinal ticks; the frame fades in over 180 ms and settles from +1.2° to 0° by 460 ms. At 1.82 s, the opening fades out as an inert Projects client fades in beneath it; route replacement completes at 2.00 s. Skip immediately enters Projects. Under reduced motion, the completed J and registration frame appear without rotation or the light pass, and the handoff crossfade lasts 120 ms. The design timeline loops; the website plays once.
 
 The design includes eased transitions for selected lobby and profile navigation. These design timings describe authored prototypes and should not be read as claims that every website route uses the same transition.
 

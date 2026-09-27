@@ -1,6 +1,33 @@
+.opening-route {
+  --opening-handoff-duration: 180ms;
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  background: #070c13;
+}
+
+.opening-route--reduced {
+  --opening-handoff-duration: 120ms;
+}
+
+.opening__underlay {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--opening-handoff-duration) ease-out;
+}
+
+.opening-route--leaving .opening__underlay {
+  opacity: 1;
+}
+
 .opening {
   --opening-duration: 2s;
   position: relative;
+  z-index: 1;
   display: grid;
   min-height: 100vh;
   min-height: 100svh;
@@ -15,13 +42,32 @@
 }
 
 .opening .opening__center {
+  position: relative;
   display: grid;
   width: min(76vw, 468px);
   aspect-ratio: 1;
   place-items: center;
 }
 
+.opening .opening__registration {
+  position: absolute;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  width: 113.675%;
+  height: auto;
+  overflow: visible;
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(1.2deg);
+  animation:
+    opening-registration-fade 180ms ease-out both,
+    opening-registration-settle 280ms ease-out 180ms both;
+  pointer-events: none;
+}
+
 .opening .opening__mark {
+  position: relative;
+  z-index: 1;
   display: block;
   width: 100%;
   height: 100%;
@@ -114,17 +160,23 @@
 }
 
 .opening.opening--leaving {
-  transition: opacity 180ms ease-out;
+  transition: opacity var(--opening-handoff-duration) ease-out;
   opacity: 0;
 }
 
 .opening.opening--reduced .opening__ring,
+.opening.opening--reduced .opening__registration,
 .opening.opening--reduced .opening__j-shadow,
 .opening.opening--reduced .opening__j-body,
 .opening.opening--reduced .opening__j-metal,
 .opening.opening--reduced .opening__j-detail,
 .opening.opening--reduced .opening__light-pass {
   animation: none;
+}
+
+.opening.opening--reduced .opening__registration {
+  opacity: 0.28;
+  transform: translate(-50%, -50%);
 }
 
 .opening.opening--reduced .opening__ring--registration {
@@ -163,7 +215,17 @@
 }
 
 .opening.opening--reduced.opening--leaving {
-  transition-duration: 120ms;
+  transition-duration: var(--opening-handoff-duration);
+}
+
+@keyframes opening-registration-fade {
+  from { opacity: 0; }
+  to { opacity: 0.28; }
+}
+
+@keyframes opening-registration-settle {
+  from { transform: translate(-50%, -50%) rotate(1.2deg); }
+  to { transform: translate(-50%, -50%) rotate(0deg); }
 }
 
 @keyframes opening-register {

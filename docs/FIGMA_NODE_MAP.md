@@ -4,7 +4,7 @@ This public handoff maps current portfolio surfaces and selected Figma node refe
 
 | Surface | Route | Current handoff |
 |---|---|---|
-| Opening and identity | `/` to `/projects` | One-shot J reveal with a visible Skip action; reduced motion shows the finished mark and skips its animated build. |
+| Opening and identity | `/` to `/projects` | One-shot J reveal with a 532 px registration circle, cardinal ticks, +1.2° settle, and 180 ms Projects underlay crossfade; reduced motion skips rotation/light-pass and uses a 120 ms handoff. |
 | Projects lobby | `/projects` | Project selection with links to available stories. Public cards use portfolio-owned F, C, FT, and CV index glyphs where project marks are not cleared; they are not represented as official logos. |
 | Food Tracker | `/projects/food-tracker` | Responsive editorial story with product-search evidence, a candidate-union decision plate (`2084:2`), and benchmark context. |
 | Crest | `/projects/crest` | Responsive story with an owner-cleared sample capture and sample-data context. |

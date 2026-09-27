@@ -1,9 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import JMark from "./identity/JMark";
 import "./opening.css";
 
-export default function Opening() {
+export default function Opening({ underlay }: { underlay: ReactNode }) {
   const navigate = useNavigate();
   const [reducedMotion] = useState(
     () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
@@ -44,20 +44,80 @@ export default function Opening() {
   };
 
   return (
-    <main
+    <div
       className={
-        "opening" +
-        (reducedMotion ? " opening--reduced" : "") +
-        (leaving ? " opening--leaving" : "")
+        "opening-route" +
+        (reducedMotion ? " opening-route--reduced" : "") +
+        (leaving ? " opening-route--leaving" : "")
       }
-      aria-label="Portfolio introduction"
     >
-      <button className="opening__skip" type="button" onClick={skip}>
-        SKIP
-      </button>
-      <div className="opening__center">
-        <JMark className="opening__mark" />
+      <div className="opening__underlay" aria-hidden="true" inert>
+        {underlay}
       </div>
-    </main>
+      <main
+        className={
+          "opening" +
+          (reducedMotion ? " opening--reduced" : "") +
+          (leaving ? " opening--leaving" : "")
+        }
+        aria-label="Portfolio introduction"
+      >
+        <button className="opening__skip" type="button" onClick={skip}>
+          SKIP
+        </button>
+        <div className="opening__center">
+          <svg
+            className="opening__registration"
+            viewBox="0 0 532 532"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle
+              cx="266"
+              cy="266"
+              r="265.45"
+              stroke="#B38F52"
+              strokeWidth="1.1"
+              strokeOpacity="0.35"
+            />
+            <rect
+              className="opening__tick"
+              x="265"
+              y="0"
+              width="2"
+              height="10"
+              fill="rgba(201,163,94,0.42)"
+            />
+            <rect
+              className="opening__tick"
+              x="265"
+              y="522"
+              width="2"
+              height="10"
+              fill="rgba(201,163,94,0.42)"
+            />
+            <rect
+              className="opening__tick"
+              x="0"
+              y="265"
+              width="10"
+              height="2"
+              fill="rgba(201,163,94,0.42)"
+            />
+            <rect
+              className="opening__tick"
+              x="522"
+              y="265"
+              width="10"
+              height="2"
+              fill="rgba(201,163,94,0.42)"
+            />
+          </svg>
+          <JMark className="opening__mark" />
+        </div>
+      </main>
+    </div>
   );
 }
