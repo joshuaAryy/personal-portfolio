@@ -12,12 +12,14 @@ import {
 import { experience, projects } from "./data";
 import ChoViegoCase from "./ChoViegoCase";
 import StushPattiesCase from "./StushPattiesCase";
+import FraymakersCase from "./FraymakersCase";
 
 const railProjectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"] as const;
 const railProjects = railProjectOrder.map(
   (slug) => projects.find((project) => project.slug === slug)!,
 );
 const projectCasePaths: Record<string, string> = {
+  fraymakers: "/projects/fraymakers",
   "food-tracker": "/projects/food-tracker",
   choveigo: "/projects/choveigo",
   crest: "/projects/crest",
@@ -1222,6 +1224,14 @@ export default function App() {
         element={<FoodTrackerCaseStudy />}
       />
       <Route path="/projects/crest" element={<CrestCaseStudy />} />
+      <Route
+        path="/projects/fraymakers"
+        element={
+          <Client pageClass="main--detail main--fraymakers-case">
+            <FraymakersCase />
+          </Client>
+        }
+      />
       <Route
         path="/projects/choveigo"
         element={
