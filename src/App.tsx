@@ -14,6 +14,7 @@ import ChoViegoCase from "./ChoViegoCase";
 import StushPattiesCase from "./StushPattiesCase";
 import FraymakersCase from "./FraymakersCase";
 import LivingInSilicoCase from "./LivingInSilicoCase";
+import JourneyCase from "./JourneyCase";
 
 const railProjectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"] as const;
 const railProjects = railProjectOrder.map(
@@ -1024,7 +1025,7 @@ function CrestCaseStudy() {
   );
 }
 
-function ProfileNav({ active }: { active: "overview" | "demos" }) {
+function ProfileNav({ active }: { active: "overview" | "journey" | "demos" }) {
   return (
     <nav className="profile-nav" aria-label="Profile sections">
       <NavLink
@@ -1034,9 +1035,13 @@ function ProfileNav({ active }: { active: "overview" | "demos" }) {
       >
         Overview
       </NavLink>
-      <span aria-disabled="true" title="In design">
+      <NavLink
+        end
+        className={active === "journey" ? "active" : ""}
+        to="/profile/journey"
+      >
         Journey
-      </span>
+      </NavLink>
       <span aria-disabled="true" title="Awaiting owner photos">
         Personal Highlights
       </span>
@@ -1220,6 +1225,15 @@ export default function App() {
       <Route path="/projects" element={<Lobby mode="projects" />} />
       <Route path="/experience" element={<Lobby mode="experience" />} />
       <Route path="/profile" element={<ProfileOverview />} />
+      <Route
+        path="/profile/journey"
+        element={
+          <Client pageClass="main--detail main--journey">
+            <ProfileNav active="journey" />
+            <JourneyCase />
+          </Client>
+        }
+      />
       <Route path="/profile/demos" element={<Demos />} />
       <Route
         path="/projects/food-tracker"
