@@ -17,7 +17,7 @@ This public handoff maps current portfolio surfaces and selected Figma node refe
 | Living in Silico | `/experience/living-in-silico` | Parent `1438:2` and story body `1438:4` (1560×2320) are both marked IMPLEMENT READY. Responsive text-and-vector story with separate DeepMol output and REINVENT4 researched/attempted outcome records; no successful REINVENT4 generation is claimed. |
 | Stush Patties | `/experience/stush-patties` | Story body `1438:278` is 1560×2080, with distributor-normalization diagram `1992:2` showing a Koyo-only temporary position-and-cell parser exception; unconfirmed graphic mark removed from the story hero. |
 | Profile Overview | `/profile` | Overview content with route links to Journey and Demos. |
-| Journey | `/profile/journey` | 1600 px story inside the full-height inspection canvas; root `1287:7` is labeled IMPLEMENT READY; the locator follows the 35% reading line and content reflows below a 900 px container width. |
+| Journey | `/profile/journey` | 1840 px story inside the full-height inspection canvas; root `1287:7` is labeled IMPLEMENT READY; nine beats include distinct Living in Silico research and lecture moments under one locator stop; the locator follows the 35% reading line and content reflows below a 900 px container width. |
 | Demos | `/profile/demos` | Selectable Crest and Cho'Veigo stills; Food Tracker is not included in the website demo selector. |
 | Help and recovery | `/help`, unknown client routes | Help guide and branded recovery links. A client-side recovery screen does not guarantee an HTTP 404 status. |
 | Resume | `/resume`, `/resume/viewer` | Resume Found and PDF viewer use `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf` for display, download, and fullscreen/open. |

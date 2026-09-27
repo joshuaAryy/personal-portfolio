@@ -4833,7 +4833,7 @@ a:focus-visible {
   position: relative;
   --journey-heading-line-height: clamp(33.04px, 3.068vw, 42.48px);
   --journey-track-offset: calc(60px + var(--journey-heading-line-height));
-  min-height: 1600px;
+  min-height: 1840px;
   overflow: clip;
   isolation: isolate;
 }
@@ -4982,7 +4982,7 @@ a:focus-visible {
 .journey-track {
   position: relative;
   width: min(1170px, calc(100% - 72px));
-  height: calc(1600px - var(--journey-track-offset));
+  height: calc(1840px - var(--journey-track-offset));
   margin: 0 auto;
 }
 .journey-path {
@@ -5013,7 +5013,7 @@ a:focus-visible {
   background: #96804c;
 }
 .journey-path__segment--gold { top: 23%; }
-.journey-path__segment--cyan { top: 48%; background: #7db6b7; }
+.journey-path__segment--cyan { top: 50%; background: #7db6b7; }
 .journey-path__segment--future { top: 76%; background: #9a8d61; opacity: 0.55; }
 .journey-card {
   position: absolute;
@@ -5070,8 +5070,16 @@ a:focus-visible {
   border-color: #81919782;
   background: #1d292dee;
 }
-.journey-card--lis {
+.journey-card--lis-spark {
   top: 519px;
+  left: 18%;
+  width: 63.2%;
+  min-height: 124px;
+  border-color: #638a8a;
+  background: #1b2529f7;
+}
+.journey-card--lis {
+  top: 660px;
   left: 12.8%;
   width: 73%;
   min-height: 124px;
@@ -5079,7 +5087,7 @@ a:focus-visible {
   background: #202b31f2;
 }
 .journey-card--spotify {
-  top: 688px;
+  top: 838px;
   left: 45.7%;
   width: 30%;
   min-height: 105px;
@@ -5087,14 +5095,14 @@ a:focus-visible {
   background: #1d292dee;
 }
 .journey-card--stush {
-  top: 811px;
+  top: 991px;
   left: 12%;
   width: 70.1%;
   min-height: 108px;
   border-color: #9eaa9b92;
 }
 .journey-card--summer {
-  top: 940px;
+  top: 1140px;
   left: 13.5%;
   width: 79.5%;
   min-height: 132px;
@@ -5102,7 +5110,7 @@ a:focus-visible {
   background: #282a29f2;
 }
 .journey-card--continuing {
-  top: calc(1400px - var(--journey-track-offset));
+  top: calc(1640px - var(--journey-track-offset));
   left: 10.7%;
   width: 55%;
   min-height: 78px;
@@ -5162,7 +5170,7 @@ a:focus-visible {
 }
 .journey-signoff {
   position: absolute;
-  top: calc(1535px - var(--journey-track-offset));
+  top: calc(1765px - var(--journey-track-offset));
   left: 12%;
   margin: 0;
   color: #aeb4ae;
@@ -5198,6 +5206,7 @@ a:focus-visible {
   .journey-card--naruto,
   .journey-card--spotify { width: 86%; margin-left: auto; }
   .journey-card--tmu,
+  .journey-card--lis-spark,
   .journey-card--lis,
   .journey-card--summer { width: 96%; }
   .journey-card--continuing { width: 76%; }
@@ -5284,6 +5293,7 @@ a:focus-visible {
   .journey-card--spotify,
   .journey-card--continuing { width: 94%; }
   .journey-card--tmu,
+  .journey-card--lis-spark,
   .journey-card--lis,
   .journey-card--summer { width: 100%; }
   .journey-card h2 { font-size: 16px; }

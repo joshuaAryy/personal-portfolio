@@ -23,7 +23,7 @@ Figma Page 09 pairs the two-second opening timeline (`2025:84`) with the interac
 | Cho’Veigo and Fraymakers | `/projects/choveigo`, `/projects/fraymakers` | Responsive case studies; Cho’Veigo separates Fit, Eligibility, and Recommendation evidence. |
 | Living in Silico and Stush Patties | `/experience/living-in-silico`, `/experience/stush-patties` | Responsive stories with factual process diagrams and stated ownership boundaries. |
 | Profile Overview and demos | `/profile`, `/profile/demos` | Overview and selectable demo states; only cleared Crest and Cho’Veigo captures are shown. |
-| Journey | `/profile/journey` | Full-length story with eight beats and five waypoints. Its locator follows the 35% reading line and reflows below 900 px. |
+| Journey | `/profile/journey` | Full-length 1840 px story with nine beats and five waypoints; Living in Silico has distinct research-spark and lecture-memory beats under one waypoint. Its locator follows the 35% reading line and reflows below 900 px. |
 | Resume Found and viewer | `/resume`, `/resume/viewer` | Found state, PDF viewer, download, and fullscreen/open actions all use the exact authorized v13 PDF. |
 | Help and recovery | `/help`, unmatched routes | Responsive help guide and branded client-side recovery page. |
 | Hackathons and Education lobby candidates | none in current scope | Figma roots `730:3316` and `738:3316` remain REVIEW CANDIDATE; the brief does not require standalone routes. Education claims need owner confirmation before promotion. |
@@ -37,7 +37,7 @@ Figma Page 09 pairs the two-second opening timeline (`2025:84`) with the interac
 | Fraymakers | `1831:32`, 1560×1340; workflow figure `2118:2`. |
 | Living in Silico | `1438:4`, 1560×2320. Parent `1438:2` is IMPLEMENT READY; the content node `1438:4` now matches its ready parent. |
 | Stush Patties | `1438:278`, 1560×2080; workflow diagram `1992:2`. |
-| Journey | 1600 px story inside inspection canvas `1287:7`; the root label now reads IMPLEMENT READY. |
+| Journey | 1840 px story inside 2004 px inspection canvas `1287:7`; the root label reads IMPLEMENT READY. The Living in Silico waypoint leads to the research spark and then the Stanford lecture memory. |
 
 These body dimensions are current. Chapter-anchor coordinates and end/tail measurements in older design records remain prior references and have not been re-audited against updated body geometry.
 

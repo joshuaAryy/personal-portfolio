@@ -252,12 +252,21 @@ export default function JourneyCase() {
         </article>
 
         <article
-          className="journey-card journey-card--lis"
+          className="journey-card journey-card--lis-spark"
           aria-labelledby="journey-living-in-silico"
         >
+          <p className="journey-card__eyebrow">LIVING IN SILICO · SPRING 2025 · RESEARCH NOTE</p>
+          <h2 id="journey-living-in-silico">Machine learning became tangible</h2>
+          <p>Generative molecular modeling brought machine learning into the work I was learning to do.</p>
+        </article>
+
+        <article
+          className="journey-card journey-card--lis"
+          aria-labelledby="journey-late-night-lecture"
+        >
           <p className="journey-card__eyebrow">LIVING IN SILICO · SPRING 2025 · FEATURED MOMENT</p>
-          <h2 id="journey-living-in-silico">The late-night lecture</h2>
-          <p>During my first-year internship, I took notes through a 3–4 a.m. Stanford ML lecture and connected its algorithms back to the research.</p>
+          <h2 id="journey-late-night-lecture">The late-night lecture</h2>
+          <p>During my first-year internship, I took notes through a 3–4 a.m. Stanford ML lecture before school and connected its algorithms back to the research.</p>
         </article>
 
         <article className="journey-card journey-card--idea journey-card--spotify" aria-labelledby="journey-spotify-title">

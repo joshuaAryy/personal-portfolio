@@ -55,6 +55,8 @@ Living in Silico is an experience story about technical learning during an AI/ML
 
 The April 12 dataset snapshot (15,696 rows; 14,487 unique SMILES) and experiments using roughly 400–600 entries are separate contexts, not a funnel. Owner-supplied method details describe DeepMol CSVLoader, Morgan fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator run for 10 epochs with batch size 64. DeepMol work produced 500 generated SMILES samples; do not call them valid, unique, or novel molecules. Run artifacts are not available to verify how these method details relate to the 500 samples. Fragmenstein work used fragment-based molecular design with RDKit. REINVENT4 was researched and attempted, but successful generation was not achieved. Do not claim research impact or a consumer product result.
 
+The Journey brief asks for two distinct Living in Silico moments: the ML spark during the research internship, followed by a late-night Stanford ML lecture before school. Keep them as two beats under one chapter waypoint. The new research note reads: "Generative molecular modeling brought machine learning into the work I was learning to do."
+
 ## Stush Patties
 
 Stush Patties is an experience story about data pipelines and automation during a Software Engineering Intern role (September–November 2025), on a two-person technical team with Shiv. It was an external client project through Riipen / IBM SkillsBuild. The owner brief identifies three distributor inputs: Koyo, UNFI, and Dovre. CSV, XLSX, and XLSB formats occurred across the inputs; do not map one format to a particular distributor without evidence. Koyo was the hardest input and required a pragmatic, temporary position-and-cell parser exception.

@@ -14,13 +14,14 @@ function renderJourneyRoute() {
 }
 
 describe("Journey story route", () => {
-  it("renders all eight story beats in their approved order", () => {
+  it("renders all nine story beats in their approved order", () => {
     const markup = renderJourneyRoute();
     const beats = [
       "Roblox Studio",
       "Apple opened a rabbit hole",
       "Computer Engineering",
       "Naruto semantic search",
+      "Machine learning became tangible",
       "The late-night lecture",
       "Spotify recommender idea",
       "Software Engineering Intern",
