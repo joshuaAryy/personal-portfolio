@@ -142,11 +142,14 @@ export default function LivingInSilicoCase() {
           <p className="living-research-record__caption">GENERATED SMILES SAMPLES</p>
         </div>
         <div className="living-research-record__column living-research-record__method">
-          <h3>METHOD</h3>
+          <h3>METHOD CONTEXT</h3>
           <p>
             I used DeepMol CSVLoader and Morgan fingerprints (radius 2, 128
             bits), then ran an RNN MolecularGenerator for 10 epochs with batch
             size 64.
+          </p>
+          <p>
+            Run artifacts are not available to verify how these method details relate to the 500 samples.
           </p>
         </div>
         <div className="living-research-record__column living-research-record__attempt">

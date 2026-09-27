@@ -43,13 +43,13 @@ The portfolio story uses a static Recommendations view. Do not claim full automa
 
 Fraymakers is a tournament VOD and media-preparation tool. Joshua’s brother started the broader project and owned its foundation and much of the early workflow and API groundwork. Joshua joined later; `thumbnail.js` was his, and he also contributed YAML/configuration, thumbnail generation and integration, and some YouTube API work.
 
-The workflow uses tournament and match information to identify videos and generate 1280 × 720 thumbnails. Generated thumbnails were used on real Fraymakers VODs. YouTube Data API/OAuth integration remained a prototype; automatic upload was not completed. Do not claim whole-project ownership or a finished uploader.
+The workflow uses tournament and match information to identify videos and generate 1280 × 720 thumbnails. Composition categories include logos, stage art, character and sprite art, costumes, assists, foreground art, and text/set labels; represent these as categories only, without unprovided artwork or configuration examples. Generated thumbnails were used on real Fraymakers VODs. YouTube Data API/OAuth integration remained a prototype; automatic upload was not completed. Do not claim whole-project ownership or a finished uploader.
 
 ## Living in Silico
 
 Living in Silico is an experience story about technical learning during an AI/ML Research Intern role in Generative Molecular Modeling (March–June 2025). It covers learning computational chemistry and biomedical research and experimenting with machine-learning and fragment-based workflows.
 
-The April 12 dataset snapshot (15,696 rows; 14,487 unique SMILES) and experiments using roughly 400–600 entries are separate contexts, not a funnel. Owner-supplied method details describe DeepMol CSVLoader, Morgan fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator run for 10 epochs with batch size 64. DeepMol work produced 500 generated SMILES samples; do not call them valid, unique, or novel molecules. These method details are not a substitute for the deferred run artifacts. Fragmenstein work used fragment-based molecular design with RDKit. REINVENT4 was researched and attempted, but successful generation was not achieved. Do not claim research impact or a consumer product result.
+The April 12 dataset snapshot (15,696 rows; 14,487 unique SMILES) and experiments using roughly 400–600 entries are separate contexts, not a funnel. Owner-supplied method details describe DeepMol CSVLoader, Morgan fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator run for 10 epochs with batch size 64. DeepMol work produced 500 generated SMILES samples; do not call them valid, unique, or novel molecules. Run artifacts are not available to verify how these method details relate to the 500 samples. Fragmenstein work used fragment-based molecular design with RDKit. REINVENT4 was researched and attempted, but successful generation was not achieved. Do not claim research impact or a consumer product result.
 
 ## Stush Patties
 
