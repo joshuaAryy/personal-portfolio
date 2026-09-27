@@ -6,13 +6,13 @@ This public handoff maps current portfolio surfaces to their website routes. It 
 |---|---|---|
 | Opening and identity | `/` to `/projects` | One-shot J reveal with a visible Skip action; reduced motion shows the finished mark and skips its animated build. |
 | Projects lobby | `/projects` | Project selection with links to available stories. Public cards use portfolio-owned F, C, FT, and CV index glyphs where project marks are not cleared; they are not represented as official logos. |
-| Food Tracker | `/projects/food-tracker` | Responsive editorial story with product-search evidence and benchmark context. |
+| Food Tracker | `/projects/food-tracker` | Responsive editorial story with product-search evidence, a candidate-union decision plate (`2084:2`), and benchmark context. |
 | Crest | `/projects/crest` | Responsive story with an owner-cleared sample capture and sample-data context. |
-| Cho'Veigo | `/projects/choveigo` | Responsive story with distinct Fit, Eligibility, and Recommendation stages and a static Recommendations capture. |
+| Cho'Veigo | `/projects/choveigo` | Responsive story with distinct Fit, Eligibility, and Recommendation stages; the static Recommendations capture is followed by an explicit unvalidated-strength disclosure. |
 | Fraymakers | `/projects/fraymakers` | Responsive, asset-free editorial story with a pipeline figure. |
 | Experience lobby | `/experience` | Links to available experience stories. |
-| Living in Silico | `/experience/living-in-silico` | Responsive text-and-vector story with a Method / Attempt / Outcome structure. |
-| Stush Patties | `/experience/stush-patties` | Responsive story with a distributor-normalization diagram. |
+| Living in Silico | `/experience/living-in-silico` | Responsive text-and-vector story with separate DeepMol output and REINVENT4 researched/attempted outcome records; no successful REINVENT4 generation is claimed. |
+| Stush Patties | `/experience/stush-patties` | Responsive story with distributor-normalization diagram `1992:2`, showing a Koyo-only temporary position-and-cell parser exception between input and reporting handoff; unconfirmed graphic mark removed from the story hero. |
 | Profile Overview | `/profile` | Overview content with route links to Journey and Demos. |
 | Journey | `/profile/journey` | Full 1600 px desktop story, 35% reading-line locator, and content reflow below a 900 px container width. The design state is consistent with Living in Silico. |
 | Demos | `/profile/demos` | Selectable Crest and Cho'Veigo stills; Food Tracker is not included in the website demo selector. |

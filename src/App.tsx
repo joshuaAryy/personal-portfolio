@@ -15,8 +15,8 @@ import StushPattiesCase from "./StushPattiesCase";
 import FraymakersCase from "./FraymakersCase";
 import LivingInSilicoCase from "./LivingInSilicoCase";
 import JourneyCase from "./JourneyCase";
-import FoodTrackerCaseStudy from "./FoodTrackerCaseStudy";
-import CrestCaseStudy from "./CrestCaseStudy";
+import FoodTrackerPage from "./project-pages/FoodTrackerPage";
+import CrestPage from "./project-pages/CrestPage";
 import { Help } from "./Help";
 import { NotFoundContent } from "./NotFoundContent";
 import { ResumeFound, ResumeViewer } from "./ResumeFlow";
@@ -590,19 +590,11 @@ export default function App() {
       <Route path="/profile/demos" element={<Demos />} />
       <Route
         path="/projects/food-tracker"
-        element={
-          <Client pageClass="main--detail main--food-case">
-            <FoodTrackerCaseStudy />
-          </Client>
-        }
+        element={<FoodTrackerPage Client={Client} />}
       />
       <Route
         path="/projects/crest"
-        element={
-          <Client pageClass="main--detail main--crest-case">
-            <CrestCaseStudy />
-          </Client>
-        }
+        element={<CrestPage Client={Client} />}
       />
       <Route
         path="/projects/fraymakers"

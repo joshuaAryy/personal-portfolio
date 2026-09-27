@@ -217,13 +217,44 @@ export default function FoodTrackerCaseStudy() {
             </div>
             <FoodBenchmarkPlate />
           </div>
-          <p className="food-search__decision">
-            The path became query → deterministic ranking → fuzzy retrieval →
-            semantic candidates → union → deterministic evaluator → final rank.
-            Pinecone supplied candidates only. The owner interview reports
-            semantic retrieval added substantial latency for little recovery.
-            No timing values were available.
-          </p>
+          <figure
+            className="food-search__decision-figure"
+            aria-labelledby="food-search__decision-title"
+          >
+            <figcaption
+              className="food-search__decision-title"
+              id="food-search__decision-title"
+            >
+              Candidate breadth first; ranking stays deterministic.
+            </figcaption>
+            <ol
+              className="food-search__decision-flow"
+              aria-label="Search retrieval and ranking stages"
+            >
+              <li>USER QUERY</li>
+              <li className="food-search__decision-sources">
+                <span>CANDIDATE SOURCES</span>
+                <ul aria-label="Parallel candidate sources">
+                  <li>DETERMINISTIC</li>
+                  <li>FUZZY</li>
+                  <li>SEMANTIC</li>
+                </ul>
+              </li>
+              <li>CANDIDATE UNION</li>
+              <li>DETERMINISTIC EVALUATOR</li>
+              <li>FINAL RANK</li>
+            </ol>
+            <div className="food-search__decision-notes">
+              <p>
+                <span>SEMANTIC RETRIEVAL · OWNER INTERVIEW</span>
+                Added substantial latency for little recovery in that benchmark.
+              </p>
+              <p>
+                Pinecone supplies candidates only. Deterministic evaluation
+                assigns final rank; trusted food data sets nutrition values.
+              </p>
+            </div>
+          </figure>
           <FoodProductAnatomyPlate />
         </section>
 

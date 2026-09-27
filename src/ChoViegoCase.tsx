@@ -173,6 +173,13 @@ export default function ChoViegoCase() {
             />
             <figcaption>
               A recommendation view, with fit evidence in context.
+              <br />
+              <span className="choveigo-eyebrow">
+                STRENGTH LABELS UNVALIDATED
+              </span>
+              <br />
+              Available source materials contain no role-specific evaluation
+              record for these recommendations.
             </figcaption>
           </figure>
         </section>
