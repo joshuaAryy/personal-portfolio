@@ -1229,8 +1229,27 @@ export default function App() {
         path="/profile/journey"
         element={
           <Client pageClass="main--detail main--journey">
-            <ProfileNav active="journey" />
-            <JourneyCase />
+            <div className="journey-layout">
+              <aside className="journey-identity" aria-label="Profile identity">
+                <div className="journey-identity__portrait" aria-hidden="true">
+                  JA
+                </div>
+                <div className="journey-identity__copy">
+                  <p className="journey-identity__name">JOSHUA ARYEETEY</p>
+                  <p>COMPUTER ENGINEERING</p>
+                  <p>SOFTWARE · AI / ML</p>
+                  <div className="journey-identity__traits" aria-label="Creative, proactive, execution">
+                    <span aria-hidden="true">✧</span>
+                    <span aria-hidden="true">➤</span>
+                    <span aria-hidden="true">◇</span>
+                  </div>
+                </div>
+              </aside>
+              <div className="journey-content">
+                <ProfileNav active="journey" />
+                <JourneyCase />
+              </div>
+            </div>
           </Client>
         }
       />
