@@ -1,6 +1,6 @@
 # Joshua Aryeetey · Portfolio client
 
-The public implementation of Joshua's portfolio includes the client shell, project and experience lobbies, a structural Profile Overview, and the Food Tracker, Crest, and Cho’Veigo editorial case studies. The Cho’Veigo route is merged to the staging branch and awaits its staging deployment. Profile Overview has not passed visual fidelity review. Fraymakers and the Experience stories remain in development and their reserved URLs return to the matching lobby. Food Tracker Demos remain unpublished while logo rights and an authentic product capture are unresolved.
+The public implementation of Joshua's portfolio includes the client shell, project and experience lobbies, a structural Profile Overview, and the Food Tracker, Crest, and Cho’Veigo editorial case studies. Cho’Veigo is deployed to the separate staging site at https://joshuaik2.pages.dev/projects/choveigo. Profile Overview has not passed visual fidelity review. Fraymakers and the Experience stories remain in development and their reserved URLs return to the matching lobby. Food Tracker Demos remain unpublished while logo rights and an authentic product capture are unresolved.
 
 ## Run locally
 
@@ -28,7 +28,7 @@ npm run build
 
 - `/projects` — project selection lobby
 - `/projects/food-tracker` — Food Tracker editorial case study
-- `/projects/choveigo` — Cho’Veigo editorial case study (merged; staging deployment pending)
+- `/projects/choveigo` — Cho’Veigo editorial case study (deployed to staging)
 - `/experience` — experience selection lobby
 - `/profile` — Profile Overview
 - `/profile/demos` — Crest and Cho’Veigo stills; Food Tracker is withheld pending its authentic capture and mark clearance
