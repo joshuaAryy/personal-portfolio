@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { experience, projects } from "./data";
 import ChoViegoCase from "./ChoViegoCase";
+import StushPattiesCase from "./StushPattiesCase";
 
 const railProjectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"] as const;
 const railProjects = railProjectOrder.map(
@@ -20,6 +21,9 @@ const projectCasePaths: Record<string, string> = {
   "food-tracker": "/projects/food-tracker",
   choveigo: "/projects/choveigo",
   crest: "/projects/crest",
+};
+const experienceStoryPaths: Record<string, string> = {
+  "stush-patties": "/experience/stush-patties",
 };
 
 function Mark({ small = false }: { small?: boolean }) {
@@ -122,15 +126,27 @@ function Rail() {
         </div>
         <div className="rail-group">
           <h3>EXPERIENCE (2)</h3>
-          {experience.map((item) => (
-            <div className="rail-item" key={item.slug}>
-              <Mark small />
-              <span>
-                {item.name}
-                <small>STORY IN DEVELOPMENT</small>
-              </span>
-            </div>
-          ))}
+          {experience.map((item) => {
+            const storyPath = experienceStoryPaths[item.slug];
+            const content = (
+              <>
+                <Mark small />
+                <span>
+                  {item.name}
+                  <small>{storyPath ? "EXPERIENCE STORY" : "STORY IN DEVELOPMENT"}</small>
+                </span>
+              </>
+            );
+            return storyPath ? (
+              <Link key={item.slug} to={storyPath}>
+                {content}
+              </Link>
+            ) : (
+              <div className="rail-item" key={item.slug}>
+                {content}
+              </div>
+            );
+          })}
         </div>
       </div>
     </aside>
@@ -227,7 +243,9 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
   const source = isProjects
     ? projects.find((p) => p.slug === selectedProject)?.source
     : undefined;
-  const selectedCasePath = isProjects ? projectCasePaths[selectedProject] : undefined;
+  const selectedDetailPath = isProjects
+    ? projectCasePaths[selectedProject]
+    : experienceStoryPaths[selectedExperience];
   return (
     <Client pageClass="main--lobby">
       <div className="lobby-scene">
@@ -330,9 +348,10 @@ function Lobby({ mode }: { mode: "projects" | "experience" }) {
           <div className="selected-tray">
             <h2>{selected.name.toUpperCase()}</h2>
             <p>{selectedDescription}</p>
-            {selectedCasePath ? (
-              <Link className="selected-tray__action" to={selectedCasePath}>
-                READ CASE STUDY <span aria-hidden="true">↗</span>
+            {selectedDetailPath ? (
+              <Link className="selected-tray__action" to={selectedDetailPath}>
+                {isProjects ? "READ CASE STUDY" : "READ EXPERIENCE STORY"}{" "}
+                <span aria-hidden="true">↗</span>
               </Link>
             ) : (
               <p className="selected-tray__status">
@@ -1214,6 +1233,14 @@ export default function App() {
       <Route
         path="/projects/:slug"
         element={<ReservedDetailRoute kind="project" />}
+      />
+      <Route
+        path="/experience/stush-patties"
+        element={
+          <Client pageClass="main--detail main--stush-case">
+            <StushPattiesCase />
+          </Client>
+        }
       />
       <Route
         path="/experience/:slug"
