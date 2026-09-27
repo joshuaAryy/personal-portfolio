@@ -45,9 +45,9 @@ Food Tracker media and project marks without confirmed publication rights are no
 | Public repository | `https://github.com/joshuaAryy/personal-portfolio` |
 | Last deployed branch | `feat/initial-client-shell` |
 | Staging site | `https://joshuaik2.pages.dev/` |
-| Last immutable deployment | `https://9f96473e.joshuaik2.pages.dev/` (deployment `9f96473e-4d35-4904-958e-46ba6344c587`; source metadata `abe7d8f`) |
+| Last immutable deployment | `https://a6ae7fe0.joshuaik2.pages.dev/` (deployment `a6ae7fe0-d5ba-4d76-ac9d-fb3a3f70df47`; source metadata `14140e0`) |
 
-The current integration is committed on public-repository branch `feat/portfolio-integration` and was uploaded from its clean worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `9f96473e-4d35-4904-958e-46ba6344c587` as Production on the staging project's configured branch label, `feat/initial-client-shell`; its source metadata is `abe7d8f`, with application implementation in `a2858fe`. The Cloudflare branch label selects the staging project's production environment; the GitHub integration branch remains `feat/portfolio-integration`. The staging root and six tested client routes returned HTTP 200, and the bundled JavaScript and CSS also returned HTTP 200. The v13 PDF served from the staging alias has the same SHA-256 as the owner-supplied asset. The primary portfolio project was not targeted.
+The current integration is committed on public-repository branch `feat/portfolio-integration` and was uploaded from its clean worktree to the separate `joshuaik2` staging project. Wrangler identifies deployment `a6ae7fe0-d5ba-4d76-ac9d-fb3a3f70df47` as Production on the staging project's configured branch label, `feat/initial-client-shell`; its source metadata and application implementation commit are `14140e0`. The Cloudflare branch label selects the staging project's production environment; the GitHub integration branch remains `feat/portfolio-integration`. The root, eleven client routes, JavaScript, and CSS returned HTTP 200 on both the immutable deployment and staging alias. The v13 PDF served from both locations has SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`, matching the workspace source. The primary portfolio project was not targeted.
 
 ## Current validation
 
