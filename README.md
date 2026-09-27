@@ -1,6 +1,6 @@
 # Joshua Aryeetey · Portfolio client
 
-This Vite and React client contains project and experience indexes, six long-form stories, Profile, Journey, Demos, Help, resume, and recovery routes. The latest immutable staging deployment uses application source `d1431ee`; live browser review remains pending. Its HTTP 200 route checks confirmed hosting fallback only, not client-side rendering.
+This Vite and React client contains project and experience indexes, six long-form stories, Profile, Journey, Demos, Help, resume, and recovery routes. The latest immutable staging deployment uses application source `9aac4d5`; live browser review remains pending. Its HTTP 200 route checks confirmed hosting fallback only, not client-side rendering.
 
 ## Run locally
 
@@ -39,6 +39,6 @@ npm run build
 
 The canonical inline J and owner portrait are already in the source and bundle. The approved monochrome J is also linked as the favicon. The owner-cleared Crest sample capture and Cho’Veigo Recommendations still are bundled. The Food Tracker demo remains withheld; marks without confirmed public-use rights and original scenic art remain deferred.
 
-The separate staging site is [joshuaik2.pages.dev](https://joshuaik2.pages.dev/). Its latest immutable deployment is [523d052d.joshuaik2.pages.dev](https://523d052d.joshuaik2.pages.dev/) (deployment `523d052d-15ca-4c90-b119-3aa28d73c2ca`), dated 2026-09-27 and built from application source `d1431ee`. All 15 requested route URLs returned the shared 635-byte SPA shell, verifying hosting fallback only; client-side route rendering remains unverified. The favicon returns HTTP 200 as image/svg+xml (466 bytes). The authorized v13 PDF returns HTTP 200 as application/pdf, 164,726 bytes, with SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. The primary production project was not targeted.
+The separate staging site is [joshuaik2.pages.dev](https://joshuaik2.pages.dev/). Its latest immutable deployment is [84d0f7a9.joshuaik2.pages.dev](https://84d0f7a9.joshuaik2.pages.dev/) (deployment `84d0f7a9-c594-4a92-b51c-237bc42256d9`), dated 2026-09-27 and built from application source `9aac4d5`. Four selected routes (Journey, Food Tracker, Crest, and Resume Viewer) returned the shared 635-byte SPA shell, verifying hosting fallback only; client-side route rendering remains unverified. The favicon returns HTTP 200 as image/svg+xml (466 bytes). The authorized v13 PDF returns HTTP 200 as application/pdf, 164,726 bytes, with SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. The primary production project was not targeted.
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md), [docs/IMPLEMENTATION_STATUS.md](docs/IMPLEMENTATION_STATUS.md), and [docs/ASSET_MANIFEST.md](docs/ASSET_MANIFEST.md) for implementation, review, deployment, and asset details.
