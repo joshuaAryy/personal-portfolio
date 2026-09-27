@@ -53,3 +53,5 @@
 - [x] Commit the route, its tests, and the implementation-status update on the feature branch.
 - [x] Resolve code-review findings: let the Recommendations still scale proportionally; select the closing chapter at desktop or mobile scroll end; strengthen unique-target, initial-current, definition, and attribution assertions.
 - [x] Run focused and full route checks, lint, typecheck, and production build after the review corrections; retain browser QA as outstanding because no browser session is available.
+- [x] Fast-forward and push the reviewed route to `feat/initial-client-shell`, deploy the secondary Cloudflare Pages site, and verify the live route, JavaScript bundle, and cleared image.
+- [x] Record the deployed commit, immutable staging URL, verification results, and outstanding browser QA in the implementation handoff.
