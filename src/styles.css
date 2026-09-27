@@ -4704,8 +4704,8 @@ a:focus-visible {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 34px 66px 50px;
+  justify-content: flex-start;
+  padding: clamp(88px, 20vh, 216px) 34px 48px 50px;
   border-right: 1px solid #c79b4533;
   background:
     radial-gradient(ellipse at 36% 22%, #82639a38 0, transparent 33%),
