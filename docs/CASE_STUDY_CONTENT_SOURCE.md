@@ -41,6 +41,8 @@ Cho’Veigo is a two-person project with Shiv Arora for AI-assisted job discover
 
 The system combines job feeds and persisted role data with deterministic fit evaluation and bounded Gemini interpretation. It distinguishes Fit, Eligibility, and Recommendation, weighs responsibilities and core requirements, allows transferable evidence, and constrains the model from inventing candidate experience. Human review informed expected behavior and regression fixtures; this was not multi-rater or research-grade validation.
 
+An owner-reported anecdote says the system surfaced at least one role Joshua likely would not have discovered manually. The exact employer is uncertain and must not be named. Keep this as a qualitative personal account, not evidence of general discovery quality or measured impact. The current story copy is a faithful, narrowed rendering of the owner handoff and archived case node `1425:854`; do not add an employer or quantified time-saving claim.
+
 The portfolio story uses a static Recommendations view. Do not claim full automatic application submission, broad live deployment, quantified time savings, or research-grade validation.
 
 ## Fraymakers / UploadAssistant
