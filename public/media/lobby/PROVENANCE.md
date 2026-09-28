@@ -1,13 +1,13 @@
 ﻿# Lobby asset provenance
 
-Assets collected for League-client shell and lobby reuse. The original asset-acquisition handoff did not edit React/CSS/tests or Figma. Subsequent portfolio integration now uses these assets and includes exact vector emblem, client-shell utility, Activity toolbar, Confirm button, and Back disc exports from the active archive-based Home draft. Asset records and source frames below distinguish those stages.
+Assets collected for League-client shell and lobby reuse. The current production Home root is `2252:3445`, rebuilt from Archive `69:37`. The exact Home emblem/control SVGs below were originally exported from prior shell study `2297:3474` and are reused in the rebuilt four-mode composition; original export provenance remains recorded per file.
 
 ## Figma references
 
 - [Projects](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=511-2), page `510:16`, frame `511:2`.
 - [Experience](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=704-2), page `510:17`, frame `704:2`.
-- Active archive-based Home draft: [2297:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3474), page `510:15`.
-- Rejected sidebar Home history: [2252:3445](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3445), page `510:15`; not the active design direction.
+- Active rebuilt Home root: [2252:3445](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3445), page `510:15`.
+- Prior archive-derived shell study: [2297:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3474), page `510:15`; preserved as source history for reused vector assets.
 - Revised contextual Help overlay review: [2298:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2298-3474), page `510:22`; based on Archive `69:207`.
 - Education icon source frame nodes are `738:3316` / `741:*`; Hackathon trophy source frame is `730:3316` / `733:*`.
 - Archive Home reference: [node 69:37](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=69-37) on page `510:2`.
@@ -36,13 +36,13 @@ Dimensions are intrinsic raster pixels or SVG viewBox units. SHA-256 values are 
 | `hackathon-trophy.svg` | SVG | 0 0 31 31 | 642 | `fa990888a495f8b003e46b674fcf592d787214a13dc9134505ad575c5a73d1ca` | [733:12](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=733-12) |
 | `league-navigation-rule.png` | PNG | 1560×14 | 1235 | `be0b2e0eaa7d3e6733fba4e88f02e49494fc1b8af09f1d55a388278f178c43bc` | [524:5](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=524-5) |
 | `living-in-silico-logo.png` | PNG | 70×70 | 8727 | `dca8eddd753f8f9d5298c6afec9f3feafc52962e981ecb3e4a2f8ad00f5ac233` | [714:2](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=714-2) (selected Experience asset; source Drive ID 1UFasoOtP4uJY_baZXGpHvl9LgnpNVQuC) |
-| `home-mode-projects.svg` | SVG | 150×150 | 1922 | `2032dc7ce3b15a7378abe70f2e92f25f0084d2930dfe2178d88e9895604bd492` | Exact SVG export from active Home draft [2297:3617](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3617); Projects emblem, selected state |
-| `home-mode-experience.svg` | SVG | 150×150 | 1754 | `9bf676fab063ce8057696ff1713fb7fe200db4628977a3b25aef19b39da63f0e` | Exact SVG export from active Home draft [2297:3630](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3630) |
-| `home-mode-hackathons.svg` | SVG | 150×150 | 1851 | `38e1dc5c3764a3cadcf831361f90ef692282f25c64fd5e690dc384cebb9ba0c2` | Exact SVG export from active Home draft [2297:3642](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3642) |
-| `home-mode-education.svg` | SVG | 150×150 | 1792 | `6d9de43b33d70f0ab8d585fd13d9f58f895770c95b1e446d629b772aaaa154dd` | Exact SVG export from active Home draft [2297:3653](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3653) |
-| `home-confirm-button.svg` | SVG | 300×64 | 828 | `edfc5c46c5f7b501cf89c93d9e41813ce19915dcb1b8d1a2bfbecc883e28f803` | Exact vector export of active Home Confirm CTA [2297:3701](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3701); text stays live in HTML |
-| `home-confirm-disc.svg` | SVG | 58×58 | 238 | `aedb6c89b167be3ee67f629156145028fdd5347d2dc0f1e2e1beaff1759a4964` | Exact vector export of active Home Back disc [2297:3699](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3699) |
-| `home-confirm-chevron.svg` | SVG | 9×16 | 220 | `6455243db39022a7c4c13f73248774f0a1c971239be791c761c1719c4edfc484` | Exact vector export of active Home Back chevron [2297:3700](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3700) |
+| `home-mode-projects.svg` | SVG | 150×150 | 1922 | `2032dc7ce3b15a7378abe70f2e92f25f0084d2930dfe2178d88e9895604bd492` | Exact SVG export from prior Home study [2297:3617](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3617); matching rebuilt emblem is `2252:3445` / `2356:534` |
+| `home-mode-experience.svg` | SVG | 150×150 | 1754 | `9bf676fab063ce8057696ff1713fb7fe200db4628977a3b25aef19b39da63f0e` | Exact SVG export from prior Home study [2297:3630](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3630); matching rebuilt emblem is `2252:3445` / `2356:547` |
+| `home-mode-hackathons.svg` | SVG | 150×150 | 1851 | `38e1dc5c3764a3cadcf831361f90ef692282f25c64fd5e690dc384cebb9ba0c2` | Exact SVG export from prior Home study [2297:3642](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3642); matching rebuilt emblem is `2252:3445` / `2356:559` |
+| `home-mode-education.svg` | SVG | 150×150 | 1792 | `6d9de43b33d70f0ab8d585fd13d9f58f895770c95b1e446d629b772aaaa154dd` | Exact SVG export from prior Home study [2297:3653](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3653); matching rebuilt emblem is `2252:3445` / `2356:570` |
+| `home-confirm-button.svg` | SVG | 300×64 | 828 | `edfc5c46c5f7b501cf89c93d9e41813ce19915dcb1b8d1a2bfbecc883e28f803` | Exact vector export from prior Home Confirm CTA [2297:3701](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3701); current rebuilt control is `2252:3445` / `2356:605`; text stays live in HTML |
+| `home-confirm-disc.svg` | SVG | 58×58 | 238 | `aedb6c89b167be3ee67f629156145028fdd5347d2dc0f1e2e1beaff1759a4964` | Exact vector export from prior Home Back disc [2297:3699](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3699); current rebuilt Back group is in `2252:3445` |
+| `home-confirm-chevron.svg` | SVG | 9×16 | 220 | `6455243db39022a7c4c13f73248774f0a1c971239be791c761c1719c4edfc484` | Exact vector export from prior Home Back chevron [2297:3700](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3700); current rebuilt Back group is in `2252:3445` |
 | `shell-utility-flag.svg` | SVG | 38×38 | 400 | `667ec0b12dfb747a867976771ee1f027f887c7f1d04bdd019c2a93986ae8fc7e` | Exact vector export of “Utility 1” inside active Home shell [2297:3707](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3707) |
 | `shell-utility-trophy.svg` | SVG | 38×38 | 570 | `b088fd10675f963176cb90762f2e9cc579233918fe3a3d866229f4e18a777718` | Exact vector export of “Utility 2” inside active Home shell [2297:3707](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3707) |
 | `shell-utility-briefcase.svg` | SVG | 38×38 | 463 | `a854338637dac00be3b9a695f769382d083290ed55d7b6864d40de7e776eadc4` | Exact vector export of “Utility 3” inside active Home shell [2297:3707](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3707) |

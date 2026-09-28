@@ -5,21 +5,21 @@ Node IDs below are handoff references, not a claim that the page is loaded, curr
 | Surface | Known Figma reference | Website route / current direction | Status |
 |---|---|---|---|
 | Archive | Page 11, `510:2` | Home/Explore, Help, Resume Found/viewer, shell, identity and prior concepts | Active history; inspect first |
-| Home / Explore | Archive page 11, `69:37` “Home · Mode Selection”; active archive-based draft `2297:3474` on page `510:15`; overlay reference `69:207` and revised overlay draft `2298:3474` on page `510:22` | `/` → opening → Home/Explore → user chooses Projects, Experience, Hackathons, Education; top-right profile entry | DESIGNING / REVIEW; `2252:3445` explicitly rejected/history only |
+| Home / Explore | Archive page 11, `69:37` “Home · Mode Selection”; rebuilt production root `2252:3445` on page `510:15`; prior shell study `2297:3474`; Help interaction `69:207` and revised overlay `2298:3474` on page `510:22` | `/` → opening → Home/Explore → user chooses Projects, Experience, Hackathons, Education; Profile stays top-right | DESIGNING / NEEDS REDESIGN; `2252:3445` now follows the four-mode archive structure; rendered website comparison pending |
 | Shell / Projects / Experience | `524:4`, `524:145`, `511:2`, `704:2` | `/projects`, `/experience` | DESIGNING / REVIEW; authentic lobby and Figma Home emblem exports now used; visual comparison pending |
 | Hackathons / Education | `730:3316`, `738:3316` | Home destinations; standalone route need not be assumed | Inspect current Figma and source claims |
 | Profile Overview | `960:2`; portrait `960:4515` | `/profile` | NEEDS REDESIGN toward approved frame |
 | Demos | Food `1316:35`, Crest `1316:4534`, Cho’Veigo `1298:2` | `/profile/demos` | NEEDS REDESIGN; three entries, in-client media browser |
-| Help | Archive page 11, `69:207`; revised overlay draft `2298:3474`; rejected standalone `2014:11` | Reusable overlay over current client screen; `/help` remains a deep link | DESIGNING / REVIEW; React overlay implemented, interaction tests pass; browser visual comparison pending |
+| Help | Archive page 11, `69:207`; active contextual overlay frame `2298:3474` on page `510:22`; rejected standalone guide `2014:11` | Reusable overlay over the current screen; `/help` remains a deep link | DESIGNING / NEEDS REDESIGN; Figma overlay reworked, React still needs sync to four callouts and party/activity focus; browser comparison pending |
 | Error/empty/offline | Archive page 11; current `2014:94`, `2014:151` | Contextual client state family | NEEDS REDESIGN |
-| Food Tracker | `1813:2`, body `1813:42`; figures `2032:2`, `2084:2` | `/projects/food-tracker` | NEEDS REDESIGN; flagship technical case study |
-| Crest | `1817:4`, body `1817:39`; policy `1962:2` | `/projects/crest` | NEEDS REDESIGN; expense-intelligence workflow |
-| Cho’Veigo | `1813:379`, body `1813:419`; worksheet `2043:2` | `/projects/choveigo` | NEEDS REDESIGN; evidence-based job matching |
-| Fraymakers | `1831:2`, body `1831:32`; workflow `2118:2` | `/projects/fraymakers` | NEEDS REDESIGN; thumbnail-generation system |
-| Living in Silico | `1438:2`, body `1438:4` | `/experience/living-in-silico` | NEEDS REDESIGN; technical research-engineering lead |
-| Stush Patties | `1438:276`, body `1438:278`; workflow `1992:2` | `/experience/stush-patties` | NEEDS REDESIGN; robust data pipeline lead |
+| Food Tracker | `1813:2`, body `1813:42`; figures `2032:2`, `2084:2` | `/projects/food-tracker` | First technical-proof pass; REVIEW / NEEDS REDESIGN; browser comparison pending |
+| Crest | `1817:4`, body `1817:39`; policy `1962:2` | `/projects/crest` | First technical-proof pass; finance Q&A/reporting correction in progress; NEEDS REDESIGN |
+| Cho’Veigo | `1813:379`, body `1813:419`; worksheet `2043:2` | `/projects/choveigo` | First technical-proof pass; Fit/Eligibility/Recommendation boundary correction in progress; NEEDS REDESIGN |
+| Fraymakers | `1831:2`, body `1831:32`; workflow `2118:2` | `/projects/fraymakers` | First technical-proof pass; output canvas needs a truthful artifact or labeled schematic; NEEDS REDESIGN |
+| Living in Silico | `1438:2`, body `1438:4` | `/experience/living-in-silico` | Technical research-engineering pass; source and scope review pending; NEEDS REDESIGN |
+| Stush Patties | `1438:276`, body `1438:278`; workflow `1992:2` | `/experience/stush-patties` | Technical pipeline pass; Figma hero and diagram readability correction in progress; NEEDS REDESIGN |
 | Journey | `1287:7` | `/profile/journey` | Environment/track retained; copy rewritten around curiosity and learning; coordinator review pending |
-| Canonical J | Archive page 11, `147:2` (left approved target `159:2`, vector reconstruction history at right); prior pass `1950:2` | Shared shell/opening | RECONSTRUCTION / REFINEMENT against `159:2`; `2280:3474` greenfield exploration discarded; no candidate promoted |
+| Canonical J | Archive page 11, `147:2` (left reference target `159:2`, reconstruction history at right); production root `1950:2`; comparison study `2354:3919` | Shared shell/opening | RECONSTRUCTION / REFINEMENT against the archive target; first vector pass under coordinator review; `2280:3474` greenfield work discarded; no candidate promoted |
 | Opening / motion | `2025:2`, notes `2025:84` | `/` to Home/Explore | DESIGNING; compare with real League loading references |
 | Resume Found / viewer | Archive work; current `69:304`, `69:439` | `/resume`, `/resume/viewer` | Found NEEDS REDESIGN; exact v13 PDF viewer infrastructure retained |
 
