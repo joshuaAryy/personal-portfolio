@@ -31,8 +31,8 @@
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 22px;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 16px;
   list-style: none;
 }
 .choveigo-opening-path li {
@@ -92,6 +92,23 @@
   color: #d6b76b;
 }
 
+.choveigo-system__tailoring {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 13px 16px;
+  border-left: 2px solid #d6b76b;
+  background: rgba(16, 36, 49, .72);
+}
+.choveigo-system__tailoring > span { color: #d6b76b; }
+.choveigo-system__tailoring > p {
+  margin: 0;
+  color: #dce3df;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .choveigo-fit__definition { margin-top: 18px; }
 .choveigo-fit__story > p { margin-top: 24px; }
 .choveigo-fit__principles { margin-top: 25px; }
@@ -146,15 +163,7 @@
   background: #102431;
 }
 .cho-evidence-worksheet__inputs li:not(:last-child)::after {
-  position: absolute;
-  top: 50%;
-  right: -19px;
-  color: #d6b76b;
-  content: "›";
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 1;
-  transform: translateY(-50%);
+  content: none;
 }
 .cho-evidence-worksheet__inputs li > span {
   display: block;
@@ -184,12 +193,12 @@
   display: block;
   background: currentColor;
 }
-.cho-evidence-worksheet__stem { top: 0; left: 84.2%; width: 1px; height: 12px; }
-.cho-evidence-worksheet__rail { top: 11px; right: 15.8%; left: 15.8%; height: 1px; }
+.cho-evidence-worksheet__stem { top: 0; left: 50%; width: 1px; height: 12px; }
+.cho-evidence-worksheet__rail { top: 11px; right: 16.7%; left: 16.7%; height: 1px; }
 .cho-evidence-worksheet__connector { top: 11px; width: 1px; height: 14px; }
-.cho-evidence-worksheet__connector:nth-of-type(3) { left: 15.8%; }
+.cho-evidence-worksheet__connector:nth-of-type(3) { left: 16.7%; }
 .cho-evidence-worksheet__connector:nth-of-type(4) { left: calc(50% - .5px); }
-.cho-evidence-worksheet__connector:nth-of-type(5) { left: 84.2%; }
+.cho-evidence-worksheet__connector:nth-of-type(5) { left: 83.3%; }
 .cho-evidence-worksheet__judgments {
   margin: 0;
   padding: 0 22px;
@@ -219,6 +228,28 @@
   font-size: 11px;
   line-height: 1.35;
 }
+.cho-evidence-worksheet__boundary {
+  margin: 12px 22px 0;
+  padding-top: 9px;
+  display: flex;
+  align-items: baseline;
+  gap: 13px;
+  border-top: 1px solid #29414d;
+}
+.cho-evidence-worksheet__boundary span {
+  flex: 0 0 auto;
+  color: #57c6cb;
+  font-family: "League Spartan", sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+}
+.cho-evidence-worksheet__boundary p {
+  margin: 0;
+  color: #aab7bf;
+  font-size: 11px;
+  line-height: 1.35;
+}
 
 @media (max-width: 1200px) {
   .choveigo-story-content > .choveigo-hero { min-height: 0; gap: 28px; }
@@ -226,8 +257,8 @@
 }
 @media (max-width: 900px) {
   .choveigo-review__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .choveigo-opening-path ol { gap: 12px; }
-  .choveigo-opening-path li:not(:last-child)::after { right: -10px; }
+  .choveigo-opening-path ol { gap: 10px; }
+  .choveigo-opening-path li:not(:last-child)::after { right: -8px; }
   .cho-evidence-worksheet__inputs,
   .cho-evidence-worksheet__judgments { gap: 12px; }
 }
@@ -241,20 +272,15 @@
   .choveigo-opening-path ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
   .choveigo-opening-path li:not(:last-child)::after { display: none; }
   .choveigo-system__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .choveigo-system__tailoring { display: block; }
+  .choveigo-system__tailoring > p { margin-top: 6px; }
   .choveigo-review__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .cho-evidence-worksheet { padding: 13px 12px; }
   .cho-evidence-worksheet__inputs { padding: 0; grid-template-columns: minmax(0, 1fr); gap: 8px; }
   .cho-evidence-worksheet__inputs li { min-height: 0; }
-  .cho-evidence-worksheet__inputs li:not(:last-child)::after {
-    top: auto;
-    right: 15px;
-    bottom: -15px;
-    z-index: 1;
-    color: #d6b76b;
-    font-size: 17px;
-    transform: rotate(90deg);
-  }
   .cho-evidence-worksheet__branch { display: none; }
   .cho-evidence-worksheet__judgments { margin-top: 12px; padding: 0; grid-template-columns: minmax(0, 1fr); gap: 7px; }
   .cho-evidence-worksheet__judgments > div { min-height: 0; }
+  .cho-evidence-worksheet__boundary { margin: 10px 0 0; display: block; }
+  .cho-evidence-worksheet__boundary p { margin-top: 6px; }
 }

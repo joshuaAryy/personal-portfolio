@@ -30,9 +30,9 @@ export function resolveActiveChapter(
 }
 
 const fitDimensions = [
-  ["FIT", "How closely does candidate evidence line up with the work?"],
-  ["ELIGIBILITY", "Are essential conditions and core requirements met?"],
-  ["RECOMMENDATION", "Is this role worth bringing forward?"],
+  ["FIT", "Evidence against the responsibilities"],
+  ["ELIGIBILITY", "Essential conditions and core requirements"],
+  ["RECOMMENDATION", "Whether to bring the role forward"],
 ] as const;
 
 const fitPrinciples = [
@@ -51,12 +51,12 @@ const fitPrinciples = [
 ] as const;
 
 const systemSteps = [
-  ["ROLE SOURCES", "Job feeds · company and career sites"],
-  ["ROLE RECORDS", "Retrieved and persisted"],
-  ["REQUIREMENTS", "Responsibilities + core criteria"],
-  ["FIT EVALUATION", "Deterministic rules"],
-  ["GEMINI", "Structured, bounded interpretation"],
-  ["RECOMMENDATION", "Resume tailoring"],
+  ["ROLE SOURCES + RECORDS", "Job feeds and company or career sites; roles are retrieved and persisted"],
+  ["STRUCTURED REQUIREMENTS", "Responsibilities and core criteria"],
+  ["FIT", "Deterministic comparison against candidate evidence"],
+  ["ELIGIBILITY", "Deterministic essential requirements"],
+  ["GEMINI", "Structured interpretation within the evidence"],
+  ["RECOMMENDATION", "A distinct judgment: whether to bring the role forward"],
 ] as const;
 
 const reviewSteps = [
@@ -67,16 +67,18 @@ const reviewSteps = [
 ] as const;
 
 const evidenceInputs = [
-  ["RESPONSIBILITY", "The work a role asks for"],
-  ["EVIDENCE", "Candidate’s experience supports its responsibilities"],
-  ["GAP", "Meaningful gaps remain"],
+  ["ROLE REQUIREMENTS", "Responsibilities and essential criteria"],
+  ["CANDIDATE EVIDENCE", "Demonstrated and transferable experience"],
+  ["EVIDENCE GAPS", "Missing requirements stay visible"],
 ] as const;
 
 const openingPath = [
-  ["ROLE SOURCES", "Feeds + company sites"],
-  ["STRUCTURED ROLE", "Responsibilities + core criteria"],
-  ["DETERMINISTIC", "Fit + Eligibility"],
-  ["BOUNDED GEMINI", "Interpretation within evidence"],
+  ["ROLE EVIDENCE", "Responsibilities + candidate evidence"],
+  ["FIT", "Deterministic evidence assessment"],
+  ["ELIGIBILITY", "Deterministic essential criteria"],
+  ["GEMINI", "Structured interpretation within evidence"],
+  ["RECOMMENDATION", "Whether to bring the role forward"],
+  ["NEXT ACTION", "Resume tailoring"],
 ] as const;
 
 export default function ChoViegoCase() {
@@ -161,7 +163,7 @@ export default function ChoViegoCase() {
           </div>
 
           <figure className="choveigo-recommendations choveigo-hero__proof">
-            <p className="choveigo-eyebrow">STATIC RECOMMENDATIONS VIEW</p>
+            <p className="choveigo-eyebrow">RECOMMENDATION VIEW</p>
             <img
               src="/media/choveigo-recommendations.png"
               alt="Owner-cleared Cho’Veigo Recommendations capture showing roles and fit evidence in context"
@@ -191,23 +193,24 @@ export default function ChoViegoCase() {
           </ol>
           <div className="choveigo-system__boundaries">
             <div>
-              <p className="choveigo-eyebrow choveigo-eyebrow--cyan">WHAT STAYS FIXED</p>
+              <p className="choveigo-eyebrow choveigo-eyebrow--cyan">DETERMINISTIC RULE BOUNDARY</p>
               <p>
-                Job data, candidate evidence, requirements, and evaluation rules remain structured for deterministic assessment.
+                Fit and Eligibility are assessed against structured role requirements and candidate evidence with deterministic rules.
               </p>
             </div>
             <div>
-              <p className="choveigo-eyebrow">WHAT GEMINI DOES</p>
+              <p className="choveigo-eyebrow">STRUCTURED GEMINI INTERPRETATION</p>
               <p>
-                Gemini provides structured, bounded interpretation. It does not invent candidate experience or decide Fit and Eligibility.
+                Gemini provides structured interpretation within the evidence boundary and cannot invent candidate experience or decide Fit and Eligibility. Recommendation remains a separate judgment.
               </p>
             </div>
           </div>
+          <div className="choveigo-system__tailoring">
+            <span className="choveigo-eyebrow">AFTER RECOMMENDATION / SEPARATE NEXT ACTION</span>
+            <p>Resume tailoring follows as its own action.</p>
+          </div>
           <p className="choveigo-system__stack">
-            JOB FEEDS · COMPANY + CAREER SITES · DETERMINISTIC RULES · STRUCTURED GEMINI
-          </p>
-          <p className="choveigo-system__boundary-note">
-            Recommendations support discovery and resume tailoring; application submission is not automatic.
+            JOB FEEDS · COMPANY + CAREER SITES · DETERMINISTIC FIT + ELIGIBILITY · STRUCTURED GEMINI
           </p>
         </section>
 
@@ -304,7 +307,7 @@ function EvidenceWorksheet() {
   return (
     <figure className="cho-evidence-worksheet" aria-labelledby="cho-evidence-title">
       <figcaption id="cho-evidence-title" className="cho-evidence-worksheet__caption">
-        EVIDENCE / ROLE RESPONSIBILITY → CANDIDATE EVIDENCE → GAP
+        MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT
       </figcaption>
       <ol className="cho-evidence-worksheet__inputs" aria-label="Evidence path">
         {evidenceInputs.map(([label, detail]) => (
@@ -329,6 +332,10 @@ function EvidenceWorksheet() {
           </div>
         ))}
       </dl>
+      <div className="cho-evidence-worksheet__boundary">
+        <span>MODEL BOUNDARY</span>
+        <p>Structured Gemini interprets evidence and helps shape wording; deterministic rules retain Fit and Eligibility authority.</p>
+      </div>
     </figure>
   );
 }
