@@ -34,15 +34,16 @@ describe("Journey story", () => {
       expect(nextIndex).toBeGreaterThan(previousIndex);
       previousIndex = nextIndex;
     }
-    expect(markup).toContain("that was my first spark of building for someone else");
-    expect(markup).toContain("hours asking how chips and design choices inside MacBooks and iPhones");
-    expect(markup).toContain("the systems underneath");
-    expect(markup).toContain("personality, abilities, or relationships—not exact terms");
-    expect(markup).toContain("real research question");
-    expect(markup).toContain("I was busy, but made time before school");
-    expect(markup).toContain("audio features and neural networks could help a recommender");
-    expect(markup).toContain("a real client showed me that engineering starts by understanding");
-    expect(markup).toContain("carry ideas through the details, make decisions");
+    expect(markup).toContain("From play to deeper questions to building with care.");
+    expect(markup).toContain("I could make an idea real in Studio, then show it to friends. Watching them play was exciting; it was my first glimpse of building something for others.");
+    expect(markup).toContain("I could spend hours asking how chips and design choices inside MacBooks and iPhones shaped the way they worked.");
+    expect(markup).toContain("At TMU, curiosity shifted from what devices did to the systems underneath. Computer Engineering gave me a way to study what I wanted to build.");
+    expect(markup).toContain("Could embeddings find Naruto characters by personality, abilities, or relationships—not just exact terms? I liked imagining a playful way to explore a series I already loved.");
+    expect(markup).toContain("Generative molecular modeling made ML feel tangible: a tool I could work with to explore a research question.");
+    expect(markup).toContain("I was busy, but I made time before school for a Stanford ML lecture. I wanted to connect its algorithms to our research.");
+    expect(markup).toContain("I started noticing ML questions in everyday interests, too. Could audio features and neural networks help a recommender understand the music I listen to?");
+    expect(markup).toContain("Working with a teammate and a real client showed me where engineering starts: with a messy reporting need. Together, we shaped it into a repeatable workflow.");
+    expect(markup).toContain("Food Tracker, Crest, and Cho’Veigo are teaching me to carry ideas through details, make decisions, and keep working toward a finish.");
     expect(markup).toContain("More to learn. More to build.");
     expect(markup).not.toContain("NEVER BUILT");
     expect(markup).not.toContain("3–4 a.m.");
