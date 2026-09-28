@@ -9,7 +9,7 @@ const modes = [
     label: "Projects",
     subtitle: "Built systems",
     description:
-      "Software, data, and AI / ML systems built around real workflows.",
+      "Explore products and systems I build outside the classroom. Select a focus, then confirm to enter the project lobby.",
     path: "/projects",
     emblem: "/media/lobby/home-mode-projects.svg",
     focus: [
@@ -152,13 +152,11 @@ function HomeExploreContent() {
 
       <section className="home-explore__selection" aria-live="polite">
         <div className="home-explore__selection-copy">
-          <p className="home-explore__selection-label">SELECTED MODE</p>
           <h2>{selected.label}</h2>
           <p>{selected.description}</p>
         </div>
         <div className="home-explore__selection-focus">
-          <p className="home-explore__selection-label">MODE CONTENT</p>
-          <ul>
+          <ul aria-label={`${selected.label} focus options`}>
             {selected.focus.map((item) => (
               <li data-featured={"featured" in item && item.featured} key={item.label}>
                 <strong>{item.label}</strong>

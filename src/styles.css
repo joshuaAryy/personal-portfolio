@@ -416,7 +416,7 @@ a:focus-visible {
   display: flex;
   width: clamp(240px, 16.67vw, 320px);
   flex: 0 0 clamp(240px, 16.67vw, 320px);
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 16px;
   margin: 0 0 0 auto;
@@ -424,9 +424,10 @@ a:focus-visible {
 }
 .header-account {
   display: flex;
-  align-items: center;
-  gap: 8px;
+  align-items: flex-start;
+  gap: 14px;
   min-width: 212px;
+  padding-top: 14px;
   color: #eee2ca;
 }
 .header-account__portrait {
@@ -454,13 +455,38 @@ a:focus-visible {
   height: 68.4%;
   border-radius: 50%;
 }
+.header-account__details {
+  display: grid;
+  gap: 8px;
+  padding-top: 6px;
+}
 .header-account__name {
   overflow: hidden;
-  font-size: 10px;
-  font-weight: 700;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: clamp(12px, 0.83vw, 16px);
+  font-weight: 600;
   letter-spacing: 0.015em;
+  line-height: 22px;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.header-account__status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #11d394;
+  font-size: clamp(8px, 0.52vw, 10px);
+  letter-spacing: 0.02em;
+  line-height: 12px;
+  white-space: nowrap;
+}
+.header-account__status::before {
+  width: 8px;
+  height: 8px;
+  flex: none;
+  border-radius: 50%;
+  background: currentColor;
+  content: "";
 }
 .rail {
   overflow: hidden;
@@ -665,6 +691,7 @@ a:focus-visible {
     display: none;
   }
   .header-account-area {
+    align-items: center;
     width: auto;
     flex: 0 0 auto;
     gap: 8px;
@@ -673,8 +700,9 @@ a:focus-visible {
   }
   .header-account {
     min-width: auto;
+    padding-top: 0;
   }
-  .header-account__name {
+  .header-account__details {
     display: none;
   }
   .top-nav {
@@ -720,6 +748,7 @@ a:focus-visible {
     width: 44px;
   }
   .header-account-area {
+    align-items: center;
     gap: 0;
     margin: 0 8px 0 4px;
   }

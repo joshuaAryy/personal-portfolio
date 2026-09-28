@@ -24,7 +24,7 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/profile/topbar-avatar.png');
     expect(markup).toContain('/media/lobby/shell-utility-flag.svg');
     expect(markup).toContain('/media/lobby/shell-utility-clock.svg');
-    expect(markup).toContain("JOSHUA ARYEETEY");
+    expect(markup).toContain("Joshua Aryeetey");
   });
 
   it("keeps the rail compact, uses approved marks, and omits hidden draft labels", () => {
@@ -39,8 +39,7 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/lobby/activity-list.svg');
     expect(markup).toContain('/media/lobby/activity-collapse.svg');
     expect(markup).toContain("GENERAL · PORTFOLIO");
-    expect(markup).not.toContain("OPEN TO OPPORTUNITIES");
-    expect(markup).not.toContain("Summer 2027");
+    expect(markup).toContain("OPEN TO SUMMER 2027");
     expect(markup).not.toContain("CASE STUDY");
     expect(markup).not.toContain("VIEW SOURCE REPOSITORY");
   });

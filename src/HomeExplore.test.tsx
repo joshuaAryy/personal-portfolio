@@ -65,6 +65,21 @@ describe("HomeExplore", () => {
     ).toBe("/media/lobby/home-mode-projects.svg");
   });
 
+  it("shows the archive's selected-project context in the lower queue", () => {
+    const view = renderHomeExplore();
+    const queue = view.querySelector(".home-explore__selection");
+
+    expect(queue?.querySelector("h2")?.textContent).toBe("Projects");
+    expect(queue?.textContent).toContain(
+      "Explore products and systems I build outside the classroom.",
+    );
+    expect(queue?.textContent).toContain(
+      "Select a focus, then confirm to enter the project lobby.",
+    );
+    expect(queue?.textContent).not.toContain("SELECTED MODE");
+    expect(queue?.textContent).not.toContain("MODE CONTENT");
+  });
+
   it("keeps selection separate from confirming a destination", () => {
     const view = renderHomeExplore();
     const experience = view.querySelector('[aria-label="Experience"]');

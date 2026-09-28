@@ -103,7 +103,10 @@ function Header() {
               aria-hidden="true"
             />
           </span>
-          <span className="header-account__name">JOSHUA ARYEETEY</span>
+          <span className="header-account__details">
+            <span className="header-account__name">Joshua Aryeetey</span>
+            <span className="header-account__status">OPEN TO SUMMER 2027</span>
+          </span>
         </Link>
       </div>
     </header>
