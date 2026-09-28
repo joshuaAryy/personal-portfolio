@@ -75,6 +75,10 @@ describe("contextual Help overlay", () => {
     expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/home");
     expect(view.querySelector('[role="dialog"][aria-modal="true"]')).not.toBeNull();
     expect(view.querySelector("main.main--home-explore h1")?.textContent).toBe("Select a portfolio mode");
-    expect(view.querySelectorAll('[class*="spotlight--home-"]')).toHaveLength(3);
+    expect(view.querySelectorAll('[class*="spotlight--home-"]')).toHaveLength(4);
+    expect(
+      Array.from(view.querySelectorAll(".client-help-overlay__steps h3")).map((node) => node.textContent),
+    ).toEqual(["Navigation", "Party / Activity Rail", "Filter & Select", "Open the Selection"]);
+    expect(view.querySelector('[role="dialog"] h2')?.textContent).toBe("Home controls");
   });
 });

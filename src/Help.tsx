@@ -25,16 +25,20 @@ function stepsFor(pathname: string): HelpStep[] {
   if (pathname === "/home" || pathname === "/") {
     return [
       {
-        title: "Select a portfolio mode",
-        detail: "Projects, Experience, Hackathons, or Education open different lobbies.",
+        title: "Navigation",
+        detail: "Choose a mode to move between Projects, Experience, Hackathons, or Education.",
       },
       {
-        title: "Review the selection",
-        detail: "The lower panel describes what is inside the selected mode.",
+        title: "Party / Activity Rail",
+        detail: "Your current focus sits above the active and completed party list.",
       },
       {
-        title: "Confirm",
-        detail: "Select first, then confirm. Enter opens the selected lobby.",
+        title: "Filter & Select",
+        detail: "Choose a mode, then narrow the queue with Featured, AI / ML, or another filter.",
+      },
+      {
+        title: "Open the Selection",
+        detail: "Confirm or press Enter to open the selected item in its lobby. Close or press Esc to dismiss Help.",
       },
     ];
   }
@@ -99,7 +103,7 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
   const isLobby = ["/projects", "/experience", "/hackathons", "/education"].includes(
     location.pathname,
   );
-  const homeHighlights = isHome ? ["modes", "details", "confirm"] : [];
+  const homeHighlights = isHome ? ["navigation", "rail", "filter", "confirm"] : [];
 
   return (
     <div className="client-help-overlay">
@@ -120,7 +124,7 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
       )}
       <section
         ref={dialogRef}
-        className="client-help-overlay__dialog"
+        className={`client-help-overlay__dialog${isHome ? " client-help-overlay__dialog--home" : ""}`}
         role="dialog"
         aria-modal="true"
         aria-labelledby={titleId}
@@ -150,21 +154,35 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
           }
         }}
       >
-        <header className="client-help-overlay__header">
-          <div>
-            <p className="client-help-overlay__eyebrow">Portfolio client / Help</p>
-            <h2 id={titleId}>A quick orientation</h2>
-          </div>
-          <button
-            ref={closeRef}
-            className="client-help-overlay__close"
-            type="button"
-            onClick={onClose}
-          >
-            Close <kbd>Esc</kbd>
-          </button>
-        </header>
-        <ol className="client-help-overlay__steps">
+        {isHome ? (
+          <>
+            <h2 id={titleId} className="client-help-overlay__sr-only">Home controls</h2>
+            <button
+              ref={closeRef}
+              className="client-help-overlay__close client-help-overlay__close--floating"
+              type="button"
+              onClick={onClose}
+            >
+              Close <kbd>Esc</kbd>
+            </button>
+          </>
+        ) : (
+          <header className="client-help-overlay__header">
+            <div>
+              <p className="client-help-overlay__eyebrow">Portfolio client / Help</p>
+              <h2 id={titleId}>A quick orientation</h2>
+            </div>
+            <button
+              ref={closeRef}
+              className="client-help-overlay__close"
+              type="button"
+              onClick={onClose}
+            >
+              Close <kbd>Esc</kbd>
+            </button>
+          </header>
+        )}
+        <ol className={`client-help-overlay__steps${isHome ? " client-help-overlay__steps--home" : ""}`}>
           {steps.map((step, index) => (
             <li key={step.title}>
               <span className="client-help-overlay__step-number">0{index + 1}</span>
@@ -175,9 +193,11 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
             </li>
           ))}
         </ol>
-        <p className="client-help-overlay__footnote">
-          The current screen stays open underneath this guide.
-        </p>
+        {!isHome && (
+          <p className="client-help-overlay__footnote">
+            The current screen stays open underneath this guide.
+          </p>
+        )}
       </section>
     </div>
   );

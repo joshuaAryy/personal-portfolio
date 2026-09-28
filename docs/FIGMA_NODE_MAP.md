@@ -10,7 +10,7 @@ Node IDs below are handoff references, not a claim that the page is loaded, curr
 | Hackathons / Education | `730:3316`, `738:3316` | Home destinations; standalone route need not be assumed | Inspect current Figma and source claims |
 | Profile Overview | `960:2`; portrait `960:4515` | `/profile` | NEEDS REDESIGN toward approved frame |
 | Demos | Food `1316:35`, Crest `1316:4534`, Cho’Veigo `1298:2` | `/profile/demos` | NEEDS REDESIGN; three entries, in-client media browser |
-| Help | Archive page 11, `69:207`; active contextual overlay frame `2298:3474` on page `510:22`; rejected standalone guide `2014:11` | Reusable overlay over the current screen; `/help` remains a deep link | DESIGNING / NEEDS REDESIGN; Figma overlay reworked, React still needs sync to four callouts and party/activity focus; browser comparison pending |
+| Help | Archive page 11, `69:207`; active contextual overlay frame `2298:3474` on page `510:22`; rejected standalone guide `2014:11` | Reusable overlay over the current screen; `/help` remains a deep link | DESIGNING / NEEDS REDESIGN; React now has four callouts and matching navigation, party/activity, filter/selection, and open-selection focus boxes; browser comparison pending |
 | Error/empty/offline | Archive page 11; current `2014:94`, `2014:151` | Contextual client state family | NEEDS REDESIGN |
 | Food Tracker | `1813:2`, body `1813:42`; figures `2032:2`, `2084:2` | `/projects/food-tracker` | First technical-proof pass; REVIEW / NEEDS REDESIGN; browser comparison pending |
 | Crest | `1817:4`, body `1817:39`; policy `1962:2` | `/projects/crest` | First technical-proof pass; finance Q&A/reporting correction in progress; NEEDS REDESIGN |
