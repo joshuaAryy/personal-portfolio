@@ -27,7 +27,7 @@ describe("Crest technical case study", () => {
     const heroEnd = markup.indexOf("</section>", markup.indexOf('id="crest-overview"'));
 
     expect(markup).toContain("SAMPLE DATA");
-    expect(markup).toContain("Sample values only; no customer or outcome data.");
+    expect(markup).not.toContain("Sample values only; no customer or outcome data.");
     expect(markup).toContain("3RD PLACE");
     expect(markup.indexOf("3RD PLACE")).toBeLessThan(heroEnd);
     expect(markup.match(/3RD PLACE/g)).toHaveLength(1);

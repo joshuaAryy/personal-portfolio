@@ -30,12 +30,13 @@ describe("Living in Silico research record", () => {
 
     expect(markup).toContain("DeepMol");
     expect(markup).toContain("Morgan fingerprints · radius 2 · 128 bits");
-    expect(markup).toContain("RNN MolecularGenerator · 10 epochs · batch size 64");
+    expect(markup).toContain("RNN MolecularGenerator");
     expect(markup).toContain("500 generated SMILES samples");
-    expect(markup).toContain("Available run artifacts do not establish whether this exact configuration produced those samples.");
+    expect(markup).toContain("A reported RNN MolecularGenerator run used 10 epochs and batch size 64.");
     expect(markup).toContain("RDKit + Fragmenstein");
     expect(markup).toContain("REINVENT4");
     expect(markup).toContain("No successful generation");
-    expect(markup).toContain("do not verify validity, uniqueness, novelty, or research impact");
+    expect(markup).toContain("does not establish validity, uniqueness, or novelty");
+    expect(markup).not.toContain("exact configuration produced those samples");
   });
 });

@@ -169,11 +169,6 @@ export default function ChoViegoCase() {
               height="720"
               decoding="async"
             />
-            <figcaption>
-              <span className="choveigo-eyebrow">STRENGTH LABELS UNVALIDATED</span>
-              <br />
-              Available source materials contain no role-specific evaluation record for these recommendations.
-            </figcaption>
           </figure>
 
           <OpeningPath />
@@ -251,7 +246,7 @@ export default function ChoViegoCase() {
             <p className="choveigo-eyebrow">HUMAN-REVIEWED EVALUATION</p>
             <h2>A mismatch became a regression case.</h2>
             <p>
-              When a recommendation looked wrong, I inspected the mismatch with my teammate, agreed on the expected behavior, and kept it in a deterministic fixture. Human review informed expected behavior; this was not multi-rater or research-grade validation.
+              When a recommendation looked wrong, my teammate and I inspected the mismatch, agreed on expected behavior, and kept it in a deterministic fixture. Each correction could then be checked against that regression case.
             </p>
           </div>
           <ol className="choveigo-review__steps">
@@ -279,7 +274,6 @@ export default function ChoViegoCase() {
           <div className="choveigo-change__result">
             <p className="choveigo-eyebrow choveigo-eyebrow--cyan">OWNER-REPORTED OBSERVATION</p>
             <p>The system surfaced a role I likely would not have found manually.</p>
-            <small>No employer-specific or time-saving claim is made.</small>
           </div>
           <p className="choveigo-change__credit">A TWO-PERSON PROJECT WITH SHIV ARORA · JOB DISCOVERY + RESUME TAILORING</p>
         </section>

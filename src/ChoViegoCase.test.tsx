@@ -18,7 +18,8 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(hero).toContain("ROLE SOURCES");
     expect(hero).toContain("DETERMINISTIC");
     expect(hero).toContain("BOUNDED GEMINI");
-    expect(hero).toContain("STRENGTH LABELS UNVALIDATED");
+    expect(hero).not.toContain("STRENGTH LABELS UNVALIDATED");
+    expect(hero).not.toContain("no role-specific evaluation record");
     expect(hero).not.toContain("<video");
   });
 
@@ -43,7 +44,8 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(review).toContain("CORRECTION");
     expect(review).toContain("DETERMINISTIC FIXTURE");
     expect(review).toContain("REGRESSION");
-    expect(review).toContain("not multi-rater or research-grade validation");
+    expect(review).not.toContain("research-grade validation");
+    expect(review).toContain("Each correction could then be checked against that regression case.");
   });
 
   it("keeps retrieval and Gemini bounded, and does not claim automatic submission or benchmark results", () => {
@@ -54,6 +56,7 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(markup).toContain("It does not invent candidate experience");
     expect(markup).toContain("application submission is not automatic");
     expect(markup).toContain("OWNER-REPORTED OBSERVATION");
+    expect(markup).not.toContain("No employer-specific or time-saving claim is made.");
     expect(markup).not.toMatch(/\b(?:Top-1|precision|recall|\d+%|hours saved|Greenhouse|Lever|DOCX|PDF)\b/i);
   });
 });

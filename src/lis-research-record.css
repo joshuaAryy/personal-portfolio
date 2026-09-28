@@ -341,13 +341,6 @@
   line-height: 1.45;
 }
 
-.lis-workflow__caveat {
-  margin: 0;
-  color: var(--lis-dim);
-  font-size: 12px;
-  line-height: 1.45;
-}
-
 .lis-evidence {
   padding-top: 44px;
 }

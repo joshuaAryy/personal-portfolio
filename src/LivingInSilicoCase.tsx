@@ -1,17 +1,25 @@
 import { Link } from "react-router-dom";
 import "./lis-research-record.css";
 
-const workflows = [
+const workflows: Array<{
+  id: string;
+  label: string;
+  title: string;
+  tone: string;
+  methods: string[];
+  configuration?: string;
+  outcome?: string;
+}> = [
   {
     id: "01",
     label: "GENERATION",
     title: "DeepMol",
     tone: "amber",
-    methods: ["CSVLoader", "Morgan fingerprints · radius 2 · 128 bits"],
-    configuration: "RNN MolecularGenerator · 10 epochs · batch size 64",
-    outcome: "500 generated SMILES samples",
-    caveat:
-      "Available run artifacts do not establish whether this exact configuration produced those samples.",
+    methods: [
+      "CSVLoader",
+      "Morgan fingerprints · radius 2 · 128 bits",
+      "RNN MolecularGenerator",
+    ],
   },
   {
     id: "02",
@@ -22,8 +30,6 @@ const workflows = [
     configuration:
       "Existing structures → fragment selection → recombination",
     outcome: "Worked in some workflows",
-    caveat:
-      "This records workflow progress, not a claim of validated or novel molecules.",
   },
   {
     id: "03",
@@ -33,8 +39,6 @@ const workflows = [
     methods: ["Researched", "Generation workflow attempted"],
     configuration: "The generation path did not complete successfully.",
     outcome: "No successful generation",
-    caveat:
-      "An attempted workflow is kept distinct from a generated output.",
   },
 ] as const;
 
@@ -132,8 +136,9 @@ export default function LivingInSilicoCase() {
               <p className="lis-workflow__configuration">
                 {workflow.configuration}
               </p>
-              <p className="lis-workflow__outcome">{workflow.outcome}</p>
-              <p className="lis-workflow__caveat">{workflow.caveat}</p>
+              {workflow.outcome && (
+                <p className="lis-workflow__outcome">{workflow.outcome}</p>
+              )}
             </article>
           ))}
         </div>
@@ -153,18 +158,16 @@ export default function LivingInSilicoCase() {
               represented structures with radius 2 and 128 bits.
             </p>
             <p className="lis-evidence-panel__note">
-              These are reported experiment methods, not a complete verified
-              run trace.
+              A reported RNN MolecularGenerator run used 10 epochs and batch
+              size 64.
             </p>
           </article>
           <article className="lis-evidence-panel lis-evidence-panel--limits">
             <p className="lis-kicker">OUTPUT / LIMITS</p>
             <h3>Sample count is not a quality claim.</h3>
             <p>
-              DeepMol work produced 500 generated SMILES samples. Available
-              artifacts do not verify validity, uniqueness, novelty, or research
-              impact—and do not link that output to the exact configuration
-              above.
+              DeepMol work produced 500 generated SMILES samples. The count
+              does not establish validity, uniqueness, or novelty.
             </p>
             <p className="lis-evidence-panel__note">
               EVIDENCE SHOWN / COUNTS + WORKFLOW STATUS

@@ -370,12 +370,6 @@
   color: #72d4d0;
 }
 
-.crest-demo-figure .crest-sample-note {
-  grid-column: 1 / -1;
-  color: #8d9da2;
-  font-size: 9px;
-}
-
 .crest-hero__award {
   margin-top: 22px;
 }

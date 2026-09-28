@@ -219,7 +219,6 @@ export default function CrestCaseStudy() {
             <figcaption>
               <span className="crest-sample-cue">SAMPLE DATA</span>
               <span>Expense review · policy context · preapproval</span>
-              <span className="crest-sample-note">Sample values only; no customer or outcome data.</span>
               <a
                 href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
                 target="_blank"

@@ -13,9 +13,6 @@
 .choveigo-hero__proof { min-width: 0; }
 .choveigo-hero .choveigo-recommendations { padding-top: 24px; }
 .choveigo-hero .choveigo-recommendations img { margin-top: 18px; }
-.choveigo-hero .choveigo-recommendations figcaption { max-width: 690px; }
-.choveigo-hero .choveigo-recommendations figcaption .choveigo-eyebrow { color: #d6b76b; }
-
 .choveigo-opening-path {
   grid-column: 1 / -1;
   min-width: 0;
