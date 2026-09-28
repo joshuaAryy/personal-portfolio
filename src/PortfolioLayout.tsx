@@ -65,13 +65,15 @@ function Header() {
         >
           Education
         </NavLink>
-        <NavLink
-          className={section === "resume" ? "current header-resume" : "header-resume"}
-          to="/resume"
-          state={pathname.startsWith("/resume") ? undefined : { from: pathname }}
-        >
-          Resume
-        </NavLink>
+        {section !== "home" && (
+          <NavLink
+            className={section === "resume" ? "current header-resume" : "header-resume"}
+            to="/resume"
+            state={pathname.startsWith("/resume") ? undefined : { from: pathname }}
+          >
+            Resume
+          </NavLink>
+        )}
       </nav>
       <div className="header-client-tools" aria-hidden="true">
         {headerUtilityAssets.map(([src, name]) => (
