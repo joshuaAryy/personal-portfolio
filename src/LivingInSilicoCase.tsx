@@ -1,35 +1,32 @@
 import { Link } from "react-router-dom";
 import "./lis-research-record.css";
 
-const workflows: Array<{
-  id: string;
-  label: string;
-  title: string;
-  tone: string;
-  methods: string[];
-  configuration?: string;
-  outcome?: string;
-}> = [
+const experiments = [
   {
     id: "01",
-    label: "GENERATION",
+    label: "MOLECULAR GENERATION",
     title: "DeepMol",
     tone: "amber",
     methods: [
       "CSVLoader",
-      "Morgan fingerprints · radius 2 · 128 bits",
+      "Morgan fingerprints · r2 / 128 bits",
       "RNN MolecularGenerator",
     ],
+    setup: "Reported run: 10 epochs / batch size 64",
+    result: "500 generated SMILES samples",
+    evidence:
+      "The available run record does not connect these settings to that exact sample set.",
   },
   {
     id: "02",
     label: "FRAGMENT-BASED DESIGN",
     title: "RDKit + Fragmenstein",
     tone: "teal",
-    methods: ["Fragment-based molecular design", "Explored in some workflows"],
-    configuration:
-      "Existing structures → fragment selection → recombination",
-    outcome: "Worked in some workflows",
+    methods: ["Structure", "Fragment selection", "Recombination"],
+    setup: "Fragment-based molecular design",
+    result: "Worked in some workflows",
+    evidence:
+      "A workflow outcome, not a claim that a molecule was validated or novel.",
   },
   {
     id: "03",
@@ -37,8 +34,9 @@ const workflows: Array<{
     title: "REINVENT4",
     tone: "coral",
     methods: ["Researched", "Generation workflow attempted"],
-    configuration: "The generation path did not complete successfully.",
-    outcome: "No successful generation",
+    setup: "The generation path did not complete successfully.",
+    result: "No successful generation",
+    evidence: "Attempted does not mean the workflow produced an output.",
   },
 ] as const;
 
@@ -55,9 +53,9 @@ export default function LivingInSilicoCase() {
           <p className="lis-kicker">GENERATIVE MOLECULAR MODELING / EXPERIENCE · 2025</p>
           <h1 id="lis-title">Molecular generation, through experiments.</h1>
           <p className="lis-hero__lead">
-            I explored machine-learning and fragment-based approaches to
-            molecular design, working across data representation, generation
-            workflows, and research code.
+            I explored Morgan fingerprints and RNN generation with DeepMol,
+            alongside RDKit / Fragmenstein fragment workflows. The April
+            snapshot and curated experiment sets stayed separate.
           </p>
         </div>
         <aside className="lis-dossier" aria-label="Research role">
@@ -76,12 +74,10 @@ export default function LivingInSilicoCase() {
       <section className="lis-section lis-scope" aria-labelledby="lis-scope-title">
         <div className="lis-section__intro">
           <p className="lis-kicker">01 / DATA SCOPE</p>
-          <h2 id="lis-scope-title">
-            Different working sets. Separate experiment contexts.
-          </h2>
+          <h2 id="lis-scope-title">Two data contexts. Kept separate.</h2>
           <p>
-            The April snapshot was not reduced into the smaller experiment
-            subsets.
+            The larger April snapshot was not the source of the smaller
+            experiment subsets.
           </p>
         </div>
 
@@ -96,12 +92,12 @@ export default function LivingInSilicoCase() {
             </p>
           </article>
           <article className="lis-data-panel lis-data-panel--subsets">
-            <p className="lis-kicker lis-kicker--teal">OTHER EXPERIMENTS</p>
+            <p className="lis-kicker lis-kicker--teal">SEPARATE EXPERIMENTS</p>
             <p className="lis-data-panel__metric">~400–600</p>
             <p className="lis-data-panel__unit">curated entries</p>
             <div className="lis-data-panel__rule" />
             <p className="lis-data-panel__note">
-              Separate curated subsets used in different experiments.
+              Working sets used in other experiment contexts.
             </p>
           </article>
         </div>
@@ -109,36 +105,46 @@ export default function LivingInSilicoCase() {
 
       <section className="lis-section lis-workflows" aria-labelledby="lis-workflows-title">
         <div className="lis-section__heading">
-          <p className="lis-kicker">02 / EXPERIMENT PATHS</p>
-          <h2 id="lis-workflows-title">Three approaches, distinct outcomes.</h2>
+          <p className="lis-kicker">02 / EXPERIMENT REGISTER</p>
+          <h2 id="lis-workflows-title">Three paths. Distinct evidence.</h2>
           <p>
-            Reported methods and outputs stay separate; the record does not
-            imply one shared data funnel.
+            Read each method and outcome independently; the records do not
+            establish one end-to-end data funnel.
           </p>
         </div>
 
-        <div className="lis-workflow-grid">
-          {workflows.map((workflow) => (
+        <div className="lis-register" role="list" aria-label="Research experiment records">
+          {experiments.map((experiment) => (
             <article
-              className={`lis-workflow lis-workflow--${workflow.tone}`}
-              key={workflow.id}
+              className={`lis-register__row lis-register__row--${experiment.tone}`}
+              key={experiment.id}
+              role="listitem"
             >
-              <p className="lis-kicker lis-workflow__label">
-                {workflow.id} <span>/</span> {workflow.label}
-              </p>
-              <h3>{workflow.title}</h3>
-              <div className="lis-workflow__rule" />
-              <ul className="lis-workflow__methods">
-                {workflow.methods.map((method) => (
-                  <li key={method}>{method}</li>
-                ))}
-              </ul>
-              <p className="lis-workflow__configuration">
-                {workflow.configuration}
-              </p>
-              {workflow.outcome && (
-                <p className="lis-workflow__outcome">{workflow.outcome}</p>
-              )}
+              <div className="lis-register__approach">
+                <p className="lis-kicker lis-register__label">
+                  {experiment.id} / {experiment.label}
+                </p>
+                <h3>{experiment.title}</h3>
+              </div>
+              <div className="lis-register__method">
+                <p className="lis-register__column-label">METHOD PATH</p>
+                <div className="lis-method-path" role="list" aria-label={`${experiment.title} method path`}>
+                  {experiment.methods.map((method, index) => (
+                    <span className="lis-method-path__segment" key={method} role="listitem">
+                      <span className="lis-method-path__step">{method}</span>
+                      {index < experiment.methods.length - 1 && (
+                        <span className="lis-method-path__arrow" aria-hidden="true">→</span>
+                      )}
+                    </span>
+                  ))}
+                </div>
+                <p className="lis-register__setup">{experiment.setup}</p>
+              </div>
+              <div className="lis-register__result">
+                <p className="lis-register__column-label">RECORDED OUTCOME</p>
+                <p className="lis-register__result-value">{experiment.result}</p>
+                <p className="lis-register__evidence">{experiment.evidence}</p>
+              </div>
             </article>
           ))}
         </div>
@@ -146,13 +152,13 @@ export default function LivingInSilicoCase() {
 
       <section className="lis-section lis-evidence" aria-labelledby="lis-evidence-title">
         <div className="lis-section__heading">
-          <p className="lis-kicker">03 / METHODS &amp; EVIDENCE</p>
-          <h2 id="lis-evidence-title">What the record can support.</h2>
+          <p className="lis-kicker">03 / REPRESENTATION &amp; EVALUATION</p>
+          <h2 id="lis-evidence-title">What the experiment record can support.</h2>
         </div>
         <div className="lis-evidence__grid">
           <article className="lis-evidence-panel">
-            <p className="lis-kicker lis-kicker--teal">REPRESENTATION</p>
-            <h3>SMILES → molecular features</h3>
+            <p className="lis-kicker lis-kicker--teal">MOLECULAR REPRESENTATION</p>
+            <h3>SMILES to molecular features</h3>
             <p>
               DeepMol CSVLoader handled tabular input. Morgan fingerprints
               represented structures with radius 2 and 128 bits.
@@ -163,14 +169,15 @@ export default function LivingInSilicoCase() {
             </p>
           </article>
           <article className="lis-evidence-panel lis-evidence-panel--limits">
-            <p className="lis-kicker">OUTPUT / LIMITS</p>
-            <h3>Sample count is not a quality claim.</h3>
+            <p className="lis-kicker">OUTPUT / EVALUATION BOUNDARY</p>
+            <h3>500 samples is a count, not a quality result.</h3>
             <p>
-              DeepMol work produced 500 generated SMILES samples. The count
-              does not establish validity, uniqueness, or novelty.
+              The DeepMol work produced 500 generated SMILES samples. The
+              available record does not establish validity, uniqueness, or
+              novelty.
             </p>
             <p className="lis-evidence-panel__note">
-              EVIDENCE SHOWN / COUNTS + WORKFLOW STATUS
+              No quality metric is claimed without supporting evaluation data.
             </p>
           </article>
         </div>
@@ -179,34 +186,27 @@ export default function LivingInSilicoCase() {
       <section className="lis-section lis-contribution" aria-labelledby="lis-contribution-title">
         <div className="lis-contribution__main">
           <p className="lis-kicker">04 / TECHNICAL CONTRIBUTION</p>
-          <h2 id="lis-contribution-title">
-            Learning the system underneath the model.
-          </h2>
+          <h2 id="lis-contribution-title">Research engineering across methods and evidence.</h2>
           <p>
-            My work crossed computational chemistry, molecular data
-            representation, and hands-on generation experiments. I worked
-            through ML and fragment-based workflows, read the outputs against
-            what the available evidence could show, and documented where a path
-            succeeded—or did not.
+            I worked across data loading, molecular representation, sequence
+            generation, and fragment-based design. I kept experiment scope,
+            reported settings, and observed outcomes distinct when the run
+            record did not establish a single trace from input to result.
           </p>
         </div>
-        <aside className="lis-record-stamp" aria-label="Experiment scope distinction">
+        <aside className="lis-record-stamp" aria-label="Experiment record boundaries">
           <p className="lis-kicker lis-kicker--teal">RESEARCH RECORD</p>
-          <h3>Keep scope visible.</h3>
-          <p>
-            Apr 12 snapshot <span>≠</span> curated subsets
-          </p>
-          <p>
-            Attempted workflow <span>≠</span> successful generation
-          </p>
+          <h3>Read the boundaries with the results.</h3>
+          <p>April snapshot <span>≠</span> curated subsets</p>
+          <p>Attempted method <span>≠</span> successful generation</p>
         </aside>
       </section>
 
       <footer className="lis-close">
         <p className="lis-kicker">TECHNICAL TAKEAWAY</p>
         <p>
-          A research workflow is easier to assess when data scope, method,
-          output, and failure boundaries are recorded separately.
+          Data scope, representation, method, and outcome need separate
+          evidence before they can be read as one experiment.
         </p>
       </footer>
     </article>

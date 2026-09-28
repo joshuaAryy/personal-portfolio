@@ -75,7 +75,7 @@
   grid-template-columns: minmax(0, 1.3fr) minmax(330px, 0.7fr);
   align-items: start;
   gap: clamp(28px, 5vw, 72px);
-  padding: 26px 0 46px;
+  padding: 26px 0 34px;
   border-bottom: 1px solid var(--lis-line);
 }
 
@@ -134,8 +134,7 @@
 }
 
 .lis-dossier__rule,
-.lis-data-panel__rule,
-.lis-workflow__rule {
+.lis-data-panel__rule {
   height: 1px;
   background: var(--lis-line);
 }
@@ -172,6 +171,8 @@
   grid-template-columns: minmax(270px, 0.82fr) minmax(0, 1.55fr);
   align-items: center;
   gap: clamp(28px, 4vw, 60px);
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .lis-section__intro h2,
@@ -243,7 +244,7 @@
 }
 
 .lis-workflows {
-  padding-top: 44px;
+  padding-top: 30px;
 }
 
 .lis-section__heading {
@@ -253,92 +254,6 @@
 
 .lis-section__heading h2 {
   margin-bottom: 9px;
-}
-
-.lis-workflow-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.lis-workflow {
-  --workflow-accent: var(--lis-gold);
-  display: flex;
-  min-height: 362px;
-  flex-direction: column;
-  padding: 23px 23px 21px;
-  border: 1px solid color-mix(in srgb, var(--workflow-accent), transparent 22%);
-  background:
-    linear-gradient(145deg, color-mix(in srgb, var(--workflow-accent), transparent 95%), transparent 46%),
-    var(--lis-panel);
-}
-
-.lis-workflow--teal {
-  --workflow-accent: var(--lis-teal);
-}
-
-.lis-workflow--coral {
-  --workflow-accent: var(--lis-coral);
-}
-
-.lis-workflow__label {
-  color: var(--workflow-accent);
-}
-
-.lis-workflow__label span {
-  padding: 0 4px;
-  opacity: 0.6;
-}
-
-.lis-workflow h3 {
-  min-height: 34px;
-  margin: 12px 0 14px;
-  color: var(--lis-paper);
-  font-size: clamp(20px, 2vw, 25px);
-  letter-spacing: -0.02em;
-  line-height: 1.18;
-}
-
-.lis-workflow__rule {
-  margin-bottom: 15px;
-}
-
-.lis-workflow__methods {
-  display: grid;
-  gap: 5px;
-  margin: 0;
-  padding: 0;
-  color: var(--lis-muted);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 12px;
-  line-height: 1.45;
-  list-style: none;
-}
-
-.lis-workflow__methods li::before {
-  margin-right: 8px;
-  color: var(--workflow-accent);
-  content: "//";
-}
-
-.lis-workflow__configuration {
-  min-height: 46px;
-  margin: 16px 0 13px;
-  color: var(--lis-paper);
-  font-size: 14px;
-  line-height: 1.45;
-}
-
-.lis-workflow__outcome {
-  margin: auto 0 11px;
-  padding: 10px 11px;
-  border-left: 2px solid var(--workflow-accent);
-  background: rgba(16, 43, 52, 0.72);
-  color: var(--workflow-accent);
-  font-family: "IBM Plex Mono", ui-monospace, monospace;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.45;
 }
 
 .lis-evidence {
@@ -458,14 +373,6 @@
     gap: 25px;
   }
 
-  .lis-workflow-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .lis-workflow:last-child {
-    grid-column: 1 / -1;
-    min-height: 300px;
-  }
 }
 
 @media (max-width: 700px) {
@@ -540,26 +447,6 @@
     padding-top: 31px;
   }
 
-  .lis-workflow-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .lis-workflow,
-  .lis-workflow:last-child {
-    grid-column: auto;
-    min-height: 0;
-    padding: 21px;
-  }
-
-  .lis-workflow h3 {
-    min-height: 0;
-    font-size: 23px;
-  }
-
-  .lis-workflow__configuration {
-    min-height: 0;
-  }
-
   .lis-evidence-panel {
     min-height: 0;
     padding: 21px;
@@ -584,5 +471,313 @@
   .lis-record *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* The research record is organized as independent methods and outcomes, not a
+   uniform set of project cards. */
+.lis-scope__panels {
+  gap: 0;
+  border-top: 1px solid var(--lis-line);
+  border-bottom: 1px solid var(--lis-line);
+}
+
+.lis-data-panel,
+.lis-data-panel--subsets {
+  position: relative;
+  min-height: 196px;
+  padding: 22px 28px 20px;
+  border: 0;
+  background: transparent;
+}
+
+.lis-data-panel + .lis-data-panel {
+  border-left: 1px solid var(--lis-line);
+}
+
+.lis-data-panel::before {
+  position: absolute;
+  top: 0;
+  left: 28px;
+  width: 42px;
+  height: 2px;
+  background: var(--lis-gold);
+  content: "";
+}
+
+.lis-data-panel--subsets::before {
+  background: var(--lis-teal);
+}
+
+.lis-data-panel__metric {
+  margin-top: 16px;
+}
+
+.lis-data-panel__rule {
+  max-width: 380px;
+}
+
+.lis-register {
+  border-top: 1px solid var(--lis-line);
+}
+
+.lis-register__row {
+  --row-accent: var(--lis-gold);
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(205px, 0.72fr) minmax(0, 1.45fr) minmax(250px, 0.9fr);
+  gap: clamp(22px, 3vw, 46px);
+  min-height: 118px;
+  padding: 16px 20px 15px 24px;
+  border-bottom: 1px solid var(--lis-line);
+  background: var(--lis-panel);
+}
+
+.lis-register__row::before {
+  position: absolute;
+  top: 16px;
+  bottom: 15px;
+  left: 0;
+  width: 2px;
+  background: var(--row-accent);
+  content: "";
+}
+
+.lis-register__row--teal {
+  --row-accent: var(--lis-teal);
+}
+
+.lis-register__row--coral {
+  --row-accent: var(--lis-coral);
+}
+
+.lis-register__approach h3 {
+  margin: 9px 0 0;
+  color: var(--lis-paper);
+  font-size: clamp(20px, 1.8vw, 25px);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.lis-register__label {
+  color: var(--row-accent);
+  font-size: 10px;
+}
+
+.lis-register__column-label {
+  margin: 1px 0 7px;
+  color: var(--lis-dim);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.lis-method-path {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 8px;
+}
+
+.lis-method-path__segment {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+}
+
+.lis-method-path__step {
+  display: inline-block;
+  padding: 5px 7px;
+  border: 1px solid var(--lis-line);
+  background: rgba(7, 20, 29, 0.62);
+  color: var(--lis-paper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.lis-method-path__arrow {
+  color: var(--row-accent);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.lis-register__methods {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 17px;
+  margin: 0;
+  padding: 0;
+  color: var(--lis-paper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 12px;
+  line-height: 1.5;
+  list-style: none;
+}
+
+.lis-register__methods li + li::before {
+  margin-right: 15px;
+  color: var(--row-accent);
+  content: "→";
+}
+
+.lis-register__setup {
+  margin: 7px 0 0;
+  color: var(--lis-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.lis-fragment-steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0;
+  padding: 0;
+  color: var(--lis-paper);
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 11px;
+  line-height: 1.5;
+  list-style: none;
+  counter-reset: fragment-step;
+}
+
+.lis-fragment-steps li {
+  counter-increment: fragment-step;
+}
+
+.lis-fragment-steps li::before {
+  margin-right: 6px;
+  color: var(--row-accent);
+  content: "0" counter(fragment-step);
+}
+
+.lis-fragment-steps li:not(:last-child)::after {
+  margin-left: 17px;
+  color: var(--row-accent);
+  content: "→";
+}
+
+.lis-register__result-value {
+  margin: 0;
+  color: var(--row-accent);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.lis-register__evidence {
+  margin: 7px 0 0;
+  color: var(--lis-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.lis-evidence__grid {
+  gap: 0;
+  border-top: 1px solid var(--lis-line);
+  border-bottom: 1px solid var(--lis-line);
+}
+
+.lis-evidence-panel,
+.lis-evidence-panel--limits {
+  min-height: 222px;
+  padding: 25px 28px 23px;
+  border: 0;
+  background: transparent;
+}
+
+.lis-evidence-panel + .lis-evidence-panel {
+  border-left: 1px solid var(--lis-line);
+}
+
+.lis-evidence-panel h3 {
+  max-width: 560px;
+}
+
+.lis-evidence-panel .lis-evidence-panel__note {
+  color: var(--lis-teal);
+}
+
+.lis-contribution {
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .lis-register__row {
+    grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.35fr);
+  }
+
+  .lis-register__result {
+    grid-column: 2;
+    padding-top: 15px;
+    border-top: 1px solid var(--lis-line);
+  }
+}
+
+@media (max-width: 700px) {
+  .lis-scope__panels {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lis-data-panel,
+  .lis-data-panel--subsets {
+    min-height: 0;
+    padding: 22px 20px;
+  }
+
+  .lis-data-panel + .lis-data-panel {
+    border-top: 1px solid var(--lis-line);
+    border-left: 0;
+  }
+
+  .lis-data-panel::before {
+    left: 20px;
+  }
+
+  .lis-register__row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+    padding: 21px 14px 20px 20px;
+  }
+
+  .lis-register__result {
+    grid-column: auto;
+    padding-top: 14px;
+  }
+
+  .lis-register__methods {
+    display: grid;
+    gap: 3px;
+  }
+
+  .lis-register__methods li + li::before {
+    margin-right: 8px;
+  }
+
+  .lis-fragment-steps {
+    gap: 7px 11px;
+  }
+
+  .lis-fragment-steps li:not(:last-child)::after {
+    margin-left: 10px;
+  }
+
+  .lis-evidence__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .lis-evidence-panel,
+  .lis-evidence-panel--limits {
+    min-height: 0;
+    padding: 21px 20px;
+  }
+
+  .lis-evidence-panel + .lis-evidence-panel {
+    border-top: 1px solid var(--lis-line);
+    border-left: 0;
   }
 }
