@@ -12,26 +12,26 @@ const stages = [
   {
     number: "01",
     title: "Challonge metadata",
-    system: "TOURNAMENT INPUT",
-    detail: "Match context enters the media-preparation workflow.",
+    system: "CHALLONGE DATA",
+    detail: "Tournament and match metadata provide the workflow context.",
   },
   {
     number: "02",
     title: "YAML configuration",
     system: "MATCH OVERRIDES",
-    detail: "Configuration supplies match-specific values and adjustments.",
+    detail: "YAML config holds match-specific values and overrides.",
   },
   {
     number: "03",
     title: "Match-to-video mapping",
-    system: "VOD RESOLUTION",
-    detail: "Match information is connected to its associated tournament video.",
+    system: "VIDEO MAPPING",
+    detail: "Match context is connected to its associated tournament VOD.",
   },
   {
     number: "04",
-    title: "Thumbnail composition",
-    system: "thumbnail.js · node-canvas",
-    detail: "Layered game and set context is composed into a 1280 × 720 PNG.",
+    title: "thumbnail.js",
+    system: "RENDER / NODE-CANVAS",
+    detail: "thumbnail.js and node-canvas compose the layers into a 1280 × 720 PNG.",
   },
 ] as const;
 
@@ -46,10 +46,10 @@ const compositionInputs = [
 ] as const;
 
 const edgeCases = [
-  ["ALIASES", "Alternate names across sources"],
-  ["P2 MIRRORING", "Player-two orientation"],
-  ["LONG NAMES", "Variable label length"],
-  ["MISSING ASSETS", "Incomplete art inputs"],
+  ["ALIASES", "Alternate names across match and art inputs"],
+  ["P2 MIRRORING", "Player-two character orientation"],
+  ["LONG NAMES", "Text must fit variable name lengths"],
+  ["MISSING ASSETS", "Some art inputs may be absent"],
 ] as const;
 
 export default function FraymakersCase() {
@@ -73,17 +73,42 @@ export default function FraymakersCase() {
         <header className="fray-case__intro" id="fraymakers-intro">
           <div className="fray-case__intro-copy">
             <p className="fray-case__eyebrow">FRAYMAKERS / UPLOADASSISTANT</p>
-            <h1 id="fraymakers-title">From match data to VOD thumbnails</h1>
+            <h1 id="fraymakers-title">Match data to VOD thumbnails</h1>
             <p className="fray-case__dek">
               A tournament media workflow connected match context to the right
               video, then composed a consistent thumbnail for the VOD.
             </p>
           </div>
-          <div className="fray-case__spec" role="img" aria-label="Output specification, not a thumbnail preview">
-            <span className="fray-case__spec-label">OUTPUT SPECIFICATION</span>
-            <span className="fray-case__spec-ratio"><span>1280 × 720</span></span>
+          <div className="fray-case__scope">
+            <span className="fray-case__spec-label">MY SCOPE / JOINED LATER</span>
+            <strong><code>thumbnail.js</code> + YAML/configuration</strong>
+            <p>Thumbnail generation and integration, plus some YouTube API work.</p>
+            <span className="fray-case__scope-boundary">
+              My brother owned the project foundation, CLI, and early Challonge groundwork.
+              YouTube Data API / OAuth remained a prototype; automatic upload was not completed.
+            </span>
+          </div>
+          <div
+            className="fray-case__spec"
+            role="img"
+            aria-label="Schematic output preview, 1280 × 720; not original project artwork"
+          >
+            <span className="fray-case__spec-label">SCHEMATIC OUTPUT / LAYOUT ONLY</span>
+            <div className="fray-case__schematic-preview" aria-hidden="true">
+              <span className="fray-case__schematic-stamp">SCHEMATIC / LAYOUT ONLY</span>
+              <span className="fray-case__schematic-dimension">1280 × 720</span>
+              <span className="fray-case__schematic-label fray-case__schematic-label--players">
+                SET / PLAYER LABELS
+              </span>
+              <span className="fray-case__schematic-label fray-case__schematic-label--art">
+                CHARACTER + STAGE ART
+              </span>
+              <span className="fray-case__schematic-label fray-case__schematic-label--layers">
+                LOGO / FOREGROUND LAYERS
+              </span>
+            </div>
             <span className="fray-case__spec-meta">PNG <i /> NODE-CANVAS</span>
-            <span className="fray-case__spec-caption">16:9 canvas · no VOD artwork shown</span>
+            <span className="fray-case__spec-caption">Not original project artwork</span>
           </div>
         </header>
 
@@ -93,7 +118,7 @@ export default function FraymakersCase() {
               <p className="fray-case__eyebrow">SYSTEM / MEDIA PREPARATION</p>
               <h2 id="fraymakers-pipeline-title">One match, a connected path to frame output.</h2>
             </div>
-            <p className="fray-case__section-note">TOURNAMENT DATA → CONFIG → VIDEO → IMAGE</p>
+            <p className="fray-case__section-note">METADATA → CONFIG → VIDEO MAP → RENDER</p>
           </div>
 
           <ol className="fray-case__stages">
@@ -109,12 +134,7 @@ export default function FraymakersCase() {
             ))}
           </ol>
 
-          <div className="fray-case__stage-rail" aria-hidden="true">
-            <span /><span /><span /><span />
-          </div>
-          <p className="fray-case__pipeline-caption">
-            The workflow is described from the verified project handoff. The diagram does not claim to show the original code or generated media.
-          </p>
+          <p className="fray-case__pipeline-caption">A connected route from match context to a 1280 × 720 output canvas.</p>
         </section>
 
         <section className="fray-case__composition" id="fraymakers-composition" aria-labelledby="fraymakers-composition-title">

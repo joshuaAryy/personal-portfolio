@@ -40,7 +40,7 @@
 .fray-case__intro {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(190px, 250px);
+  grid-template-columns: minmax(0, 1fr) minmax(190px, 250px) minmax(190px, 250px);
   align-items: center;
   gap: clamp(26px, 4vw, 64px);
   min-height: 218px;
@@ -60,7 +60,7 @@
   max-width: 820px;
   margin-top: 18px;
   color: #f0ecdf;
-  font-size: clamp(38px, 4vw, 56px);
+  font-size: clamp(38px, 2.9vw, 42px);
   line-height: .99;
   letter-spacing: -.035em;
   text-wrap: balance;
@@ -91,34 +91,76 @@
   letter-spacing: .14em;
   text-transform: uppercase;
 }
-.fray-case__spec-ratio {
+.fray-case__schematic-preview {
   position: relative;
-  display: grid;
-  place-items: center;
-  width: min(100%, 204px);
+  width: min(100%, 240px);
   aspect-ratio: 16 / 9;
   border: 1px solid rgba(87, 198, 203, .8);
-  background: linear-gradient(135deg, rgba(25, 63, 76, .32), rgba(4, 17, 26, .1));
+  background-color: rgba(10, 28, 39, .9);
+  background-image:
+    linear-gradient(rgba(87, 198, 203, .07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(87, 198, 203, .07) 1px, transparent 1px);
+  background-size: 12px 12px;
   color: #eff0e5;
   box-shadow: inset 0 0 0 5px rgba(87, 198, 203, .055);
 }
-.fray-case__spec-ratio::before,
-.fray-case__spec-ratio::after {
+.fray-case__schematic-stamp,
+.fray-case__schematic-label {
   position: absolute;
-  content: "";
-  background: rgba(87, 198, 203, .14);
-}
-.fray-case__spec-ratio::before { top: 50%; left: 8%; width: 84%; height: 1px; }
-.fray-case__spec-ratio::after { top: 10%; left: 50%; width: 1px; height: 80%; }
-.fray-case__spec-ratio span {
-  position: relative;
   z-index: 1;
-  padding: 3px 6px;
-  background: var(--fray-ink);
+  padding: 2px 4px;
+  background: rgba(7, 17, 26, .92);
   font-family: "League Spartan", sans-serif;
-  font-size: 18px;
+  font-size: 6px;
   font-weight: 700;
-  letter-spacing: -.02em;
+  letter-spacing: .05em;
+}
+.fray-case__schematic-stamp {
+  top: 5px;
+  left: 6px;
+  color: var(--fray-gold);
+}
+.fray-case__schematic-dimension {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  z-index: 1;
+  padding: 2px 4px;
+  background: rgba(7, 17, 26, .92);
+  color: #cbd7d7;
+  font-family: "League Spartan", sans-serif;
+  font-size: 6px;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
+.fray-case__schematic-label {
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(87, 198, 203, .56);
+  color: #cbd7d7;
+  text-align: center;
+}
+.fray-case__schematic-label--players {
+  top: 22px;
+  left: 6px;
+  width: 25%;
+  height: 34%;
+}
+.fray-case__schematic-label--art {
+  top: 27px;
+  left: 34%;
+  width: 58%;
+  height: 48%;
+  color: var(--fray-cyan);
+}
+.fray-case__schematic-label--layers {
+  right: 6px;
+  bottom: 5px;
+  left: 6px;
+  height: 14px;
+  border-style: solid;
+  border-color: rgba(214, 183, 107, .44);
+  color: var(--fray-gold);
 }
 .fray-case__spec-meta { color: var(--fray-gold); }
 .fray-case__spec-meta i {
@@ -130,6 +172,29 @@
   background: var(--fray-cyan);
 }
 .fray-case__spec-caption { font-size: 8px; letter-spacing: .08em; text-transform: none; }
+.fray-case__scope {
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 11px;
+  min-width: 0;
+  min-height: 146px;
+  padding: 12px 0 12px 17px;
+  border-left: 1px solid rgba(87, 198, 203, .64);
+}
+.fray-case__scope strong {
+  color: #ede9dc;
+  font-family: "Roboto Mono", "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.fray-case__scope p,
+.fray-case__scope-boundary {
+  color: #aab8bd;
+  font-size: 11px;
+  line-height: 1.45;
+}
+.fray-case__scope-boundary { color: #7f969f; }
 
 .fray-case__pipeline {
   position: relative;
@@ -145,7 +210,7 @@
 .fray-case__section-head h2 {
   margin-top: 10px;
   color: #eeeade;
-  font-size: clamp(22px, 2.2vw, 30px);
+  font-size: clamp(22px, 1.3vw, 25px);
   line-height: 1.08;
   letter-spacing: -.018em;
 }
@@ -174,6 +239,23 @@
   border-top: 1px solid rgba(87, 198, 203, .62);
   border-right: 1px solid var(--fray-line);
   background: linear-gradient(180deg, rgba(16, 36, 49, .94), rgba(9, 25, 36, .76));
+}
+.fray-case__stage:not(:last-child)::after {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: -8px;
+  display: grid;
+  width: 16px;
+  height: 18px;
+  place-items: center;
+  transform: translateY(-50%);
+  background: var(--fray-ink);
+  color: var(--fray-cyan);
+  content: "›";
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1;
 }
 .fray-case__stage:first-child { border-left: 1px solid var(--fray-line); }
 .fray-case__stage:last-child { border-right: 1px solid var(--fray-line); }
@@ -212,30 +294,7 @@
   font-size: 12px;
   line-height: 1.42;
 }
-.fray-case__stage:nth-child(4) { background: linear-gradient(180deg, rgba(47, 54, 43, .62), rgba(12, 27, 35, .92)); }
-.fray-case__stage:nth-child(4) .fray-case__stage-number { color: var(--fray-gold); }
-.fray-case__stage-rail {
-  position: absolute;
-  top: 70px;
-  left: 12.5%;
-  right: 12.5%;
-  height: 1px;
-  background: linear-gradient(90deg, var(--fray-cyan), rgba(87, 198, 203, .8) 67%, var(--fray-gold));
-  opacity: .76;
-}
-.fray-case__stage-rail span {
-  position: absolute;
-  top: -3px;
-  width: 7px;
-  height: 7px;
-  border: 1px solid var(--fray-cyan);
-  border-radius: 50%;
-  background: var(--fray-ink);
-}
-.fray-case__stage-rail span:nth-child(1) { left: 0; }
-.fray-case__stage-rail span:nth-child(2) { left: 33.333%; }
-.fray-case__stage-rail span:nth-child(3) { left: 66.666%; }
-.fray-case__stage-rail span:nth-child(4) { right: 0; border-color: var(--fray-gold); }
+.fray-case__stage:nth-child(4) .fray-case__stage-number { color: var(--fray-cyan); }
 .fray-case__pipeline-caption {
   margin-top: 13px !important;
   color: #768b95;
@@ -364,7 +423,7 @@
 }
 
 @media (max-width: 1050px) {
-  .fray-case__intro { grid-template-columns: minmax(0, 1fr) minmax(160px, 205px); gap: 25px; }
+  .fray-case__intro { grid-template-columns: minmax(0, 1fr) minmax(160px, 190px) minmax(160px, 190px); gap: 20px; }
   .fray-case__stage { padding-right: 12px; padding-left: 12px; }
   .fray-case__stage h3 { font-size: 16px; }
   .fray-case__layer-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
@@ -374,11 +433,14 @@
   .fray-case__intro { grid-template-columns: minmax(0, 1fr); gap: 23px; padding-top: 6px; }
   .fray-case__intro h1 { max-width: 560px; font-size: clamp(37px, 10.5vw, 52px); }
   .fray-case__dek { font-size: 14px; }
-  .fray-case__spec { grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; padding: 12px 0 12px 14px; }
+  .fray-case__spec,
+  .fray-case__scope { grid-template-columns: 1fr auto; align-items: center; column-gap: 12px; padding: 12px 0 12px 14px; }
   .fray-case__spec-label { grid-column: 1 / -1; }
-  .fray-case__spec-ratio { grid-row: span 2; width: min(42vw, 180px); }
+  .fray-case__schematic-preview { grid-row: span 2; width: min(42vw, 180px); }
   .fray-case__spec-meta { align-self: end; }
   .fray-case__spec-caption { align-self: start; }
+  .fray-case__scope { grid-template-columns: 1fr; }
+  .fray-case__scope strong { font-size: 13px; }
   .fray-case__section-head,
   .fray-case__section-head--compact { display: block; }
   .fray-case__section-note { margin-top: 14px !important; }
@@ -395,20 +457,14 @@
     background: rgba(10, 25, 35, .8);
   }
   .fray-case__stage:first-child { border-top-color: rgba(87, 198, 203, .56); }
-  .fray-case__stage-rail {
-    top: 51px;
-    bottom: 20px;
-    left: 21px;
+  .fray-case__stage:not(:last-child)::after {
+    top: auto;
     right: auto;
-    width: 1px;
-    height: auto;
-    background: linear-gradient(var(--fray-cyan), rgba(87, 198, 203, .7) 68%, var(--fray-gold));
+    bottom: -8px;
+    left: 14px;
+    transform: none;
+    content: "↓";
   }
-  .fray-case__stage-rail span { left: -3px; }
-  .fray-case__stage-rail span:nth-child(1) { top: 0; }
-  .fray-case__stage-rail span:nth-child(2) { top: 33.333%; }
-  .fray-case__stage-rail span:nth-child(3) { top: 66.666%; }
-  .fray-case__stage-rail span:nth-child(4) { top: auto; right: auto; bottom: 0; }
   .fray-case__stage h3 { margin-top: 9px; font-size: 18px; }
   .fray-case__stage p { max-width: 420px; margin-top: 5px !important; }
   .fray-case__pipeline-caption { padding-left: 0; }
