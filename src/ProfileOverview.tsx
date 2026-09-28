@@ -355,9 +355,13 @@ export default function ProfileOverview({
                   <span className="profile-academics-feature__school">Toronto Metropolitan University</span>
                 </div>
                 <div className="profile-academics-feature__recognition">
-                  <span className="profile-academics-feature__eyebrow">ACADEMIC RECOGNITION</span>
-                  <span className="profile-academics-feature__award">Dean’s List</span>
-                  <span className="profile-academics-feature__award-detail">Merit-based Academic Scholarship</span>
+                  <span className="profile-academics-feature__eyebrow">SELECTED COURSEWORK</span>
+                  <ul className="profile-academics-feature__course-list">
+                    <li>Algorithms &amp; Data Structures</li>
+                    <li>Software Systems</li>
+                    <li>Database Systems I</li>
+                    <li>Microprocessor Systems</li>
+                  </ul>
                 </div>
               </div>
             )}

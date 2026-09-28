@@ -18,7 +18,7 @@ This file tracks genuine missing facts or media. It does not impose a design/bui
 - **Fraymakers:** Authentic thumbnails, representative VOD, and YAML/config example from the other device are unavailable here. Do not fabricate media; the technical workflow can be explained with truthful diagrams.
 - **Living in Silico:** Run artifacts are unavailable to verify how all method details relate to the 500 DeepMol samples. Keep the method/output distinction explicit. Extra experiment media is optional.
 - **Stush Patties:** The supplied facts do not include a field-level Koyo example. Do not invent a raw record; explain the temporary position-and-cell exception at the supported level.
-- **Education:** Verify degree dates, course codes, Dean's List, scholarship, and specialization claims against owner sources before public release.
+- **Education:** Owner-authorized General Resume v13 verifies Computer Engineering at Toronto Metropolitan University, B.Eng., Software Specialization, Sept. 2024–Apr. 2028, and the four selected course titles used in Profile / Education. Do not show course codes, Dean's List, or scholarship until an owner source verifies those specific claims.
 - **Verified utility links:** Email, GitHub, LinkedIn, and Resume destinations must come from existing project sources. Do not invent URLs.
 
 Updated 2026-09-27 to remove prior public-reuse confirmation requirements as active asset/build blockers.

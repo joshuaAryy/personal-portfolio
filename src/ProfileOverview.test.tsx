@@ -86,6 +86,8 @@ describe("Profile Overview", () => {
       host.querySelector<HTMLButtonElement>("#profile-tab-academics")?.click();
     });
     expect(host.querySelector(".profile-academics-feature__program")?.textContent).toBe("COMPUTER ENGINEERING");
+    expect(host.querySelector(".profile-academics-feature__course-list")?.textContent).toContain("Algorithms & Data Structures");
+    expect(host.querySelector(".profile-academics-feature__recognition")?.textContent).not.toContain("Dean’s List");
 
     await act(async () => root.unmount());
     host.remove();
