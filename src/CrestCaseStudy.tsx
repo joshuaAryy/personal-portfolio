@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import "./crest-case-study.css";
 
 const crestChapters = [
-  { id: "overview", label: "THE IDEA" },
-  { id: "system", label: "THE SYSTEM" },
-  { id: "policy", label: "POLICY + AI" },
-  { id: "team", label: "THE TEAM" },
-  { id: "takeaway", label: "TAKEAWAY" },
+  { id: "overview", label: "OVERVIEW" },
+  { id: "system", label: "TRANSACTION FLOW" },
+  { id: "policy", label: "POLICY RETRIEVAL" },
+  { id: "team", label: "OWNERSHIP" },
+  { id: "takeaway", label: "LESSON" },
 ] as const;
 type CrestChapterId = (typeof crestChapters)[number]["id"];
 
@@ -122,11 +122,11 @@ export default function CrestCaseStudy() {
   }, []);
 
   const policyStages = [
-    ["01", "BRIM POLICY PDF", "Brim source material"],
-    ["02", "EXTRACT + CHUNK", "Prepare searchable passages"],
-    ["03", "GEMINI EMBEDDING-001", "3,072-dimensional vectors"],
-    ["04", "ATLAS VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
-    ["05", "GROUNDED PROMPT", "Top retrieved passages"],
+    ["01", "POLICY PDF", "Brim source"],
+    ["02", "EXTRACT + CHUNK", "Searchable passages"],
+    ["03", "EMBED", "Gemini embedding-001 · 3,072-D"],
+    ["04", "VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
+    ["05", "GROUNDED PROMPT", "Retrieved passages"],
   ];
 
   return (
@@ -170,35 +170,15 @@ export default function CrestCaseStudy() {
             <p className="crest-project-label">MPC HACKS 2026 / BRIM FINANCIAL CHALLENGE</p>
             <h1>Crest</h1>
             <p className="crest-hero__intro">
-              An expense-intelligence workspace for transaction review, policy
-              context, finance questions and preapproval.
+              Expense intelligence for transaction review, policy context,
+              finance questions and preapproval.
             </p>
             <div className="crest-hero__rule" aria-hidden="true" />
             <p className="crest-hero__contribution">
-              My work focused on backend and data workflows: the Policy
-              Compliance Engine, rule-based anomaly signals, policy retrieval,
-              part of preapproval, and the presentation.
+              I built backend and data workflows across the Policy Compliance
+              Engine, rule-based signals, policy retrieval and part of
+              preapproval.
             </p>
-            <div className="crest-hero__workflow" aria-label="Transaction review decision path">
-              <div className="crest-hero__workflow-step">
-                <span>01 / INPUT</span>
-                <strong>TRANSACTION</strong>
-              </div>
-              <div className="crest-hero__workflow-branch">
-                <div>
-                  <span>02A / RULES</span>
-                  <strong>DETERMINISTIC SIGNALS</strong>
-                </div>
-                <div>
-                  <span>02B / RETRIEVAL</span>
-                  <strong>POLICY CONTEXT</strong>
-                </div>
-              </div>
-              <div className="crest-hero__workflow-step crest-hero__workflow-step--review">
-                <span>03 / HUMAN</span>
-                <strong>REVIEW + PREAPPROVAL</strong>
-              </div>
-            </div>
             <p className="crest-hero__award">
               <strong>3RD PLACE</strong>
               <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
@@ -218,7 +198,7 @@ export default function CrestCaseStudy() {
             />
             <figcaption>
               <span className="crest-sample-cue">SAMPLE DATA</span>
-              <span>Expense review · policy context · preapproval</span>
+              <span>Expense review / policy context / preapproval</span>
               <a
                 href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
                 target="_blank"
@@ -232,46 +212,71 @@ export default function CrestCaseStudy() {
 
         <section className="crest-section crest-system" id="crest-system">
           <div className="crest-system__story">
-            <p className="food-section-label">TRANSACTION WORKFLOW</p>
-            <h2>Rules stay authoritative. Gemini interprets. People review.</h2>
+            <p className="food-section-label">TRANSACTION WORKFLOW / DECISION AUTHORITY</p>
+            <h2>Signals organize review. People own the decision.</h2>
             <p>
-              Finance and policy logic remained authoritative. Gemini interpreted
-              retrieved policy passages within a bounded role; reviewers used
-              both inputs to consider preapproval.
+              A transaction moves through deterministic finance and policy
+              checks. Rule-based signals and retrieved policy context inform
+              the review; people retain decision authority.
             </p>
           </div>
           <figure className="crest-transaction-flow" aria-labelledby="crest-transaction-flow-title">
             <figcaption id="crest-transaction-flow-title">
-              REVIEW FLOW / DECISION AUTHORITY STAYS WITH RULES AND PEOPLE
+              TRANSACTION → RULES + RETRIEVED POLICY → HUMAN REVIEW
             </figcaption>
             <div className="crest-transaction-flow__stages">
               <section className="crest-transaction-flow__transaction">
                 <span>INPUT</span>
                 <h3>TRANSACTION</h3>
-                <p>A record enters expense review.</p>
+                <p>A request enters the expense workflow.</p>
               </section>
               <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
               <div className="crest-transaction-flow__context" role="group" aria-label="Parallel review context">
                 <section>
                   <span>AUTHORITATIVE</span>
                   <h3>DETERMINISTIC FINANCE + POLICY RULES</h3>
-                  <p>Rule-based signals surface patterns for review.</p>
+                  <p>Rules surface patterns that need attention.</p>
                 </section>
                 <section>
                   <span>BOUNDED INTERPRETATION</span>
                   <h3>RETRIEVED POLICY + GEMINI</h3>
-                  <p>Gemini interprets relevant policy passages.</p>
+                  <p>Gemini interprets the relevant retrieved passages.</p>
                 </section>
               </div>
               <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
               <section className="crest-transaction-flow__review">
                 <span>HUMAN REVIEW</span>
                 <h3>REVIEW + PREAPPROVAL</h3>
-                <p>A reviewer decides the next step.</p>
+                <p>A reviewer can move the request toward preapproval.</p>
               </section>
             </div>
             <p className="crest-transaction-flow__boundary">
-              Anomaly flags are heuristics for review, not an ML fraud classifier.
+              Anomaly signals are deterministic heuristics; they do not decide an outcome.
+            </p>
+          </figure>
+          <figure className="crest-finance-workflow" aria-labelledby="crest-finance-workflow-title">
+            <figcaption id="crest-finance-workflow-title">
+              <span>FINANCE Q&amp;A + REPORTING</span>
+              <strong>A separate finance workflow.</strong>
+            </figcaption>
+            <div className="crest-finance-workflow__paths">
+              <div>
+                <span>QUESTION</span>
+                <strong>Finance question</strong>
+                <i aria-hidden="true">{"\u2192"}</i>
+                <span>Q&amp;A</span>
+                <strong>Finance answer</strong>
+              </div>
+              <div>
+                <span>REPORTING NEED</span>
+                <strong>Reporting request</strong>
+                <i aria-hidden="true">{"\u2192"}</i>
+                <span>REPORT</span>
+                <strong>Reporting view</strong>
+              </div>
+            </div>
+            <p className="crest-finance-workflow__boundary">
+              Separate from the documented Brim policy PDF retrieval path.
             </p>
           </figure>
         </section>
@@ -279,12 +284,12 @@ export default function CrestCaseStudy() {
         <section className="crest-section crest-policy" id="crest-policy">
           <figure className="crest-policy-figure" aria-labelledby="crest-policy-title">
             <figcaption className="crest-policy-figure__eyebrow">
-              OWNER-REPORTED RETRIEVAL / POLICY SOURCE TO GROUNDED PROMPT
+              POLICY RETRIEVAL / SOURCE → CONTEXT
             </figcaption>
-            <h2 id="crest-policy-title">A policy PDF becomes searchable context.</h2>
+              <h2 id="crest-policy-title">A policy source becomes grounded context.</h2>
             <p className="crest-policy-figure__intro">
-              The team extracted and chunked the Brim policy, embedded passages,
-              then retrieved relevant context for a grounded Gemini prompt.
+              The team extracted and chunked the Brim policy, embedded the
+              passages, then retrieved relevant context for Gemini to interpret.
             </p>
             <ol className="crest-policy-pipeline">
               {policyStages.map(([number, title, detail], index) => (
@@ -301,15 +306,15 @@ export default function CrestCaseStudy() {
               ))}
             </ol>
             <p className="crest-policy-figure__trace">
-              Gemini interpreted retrieved policy context; deterministic finance
-              and policy rules remained the source of decisions.
+              PDF extraction + chunking → embedding-001 (3,072 dimensions) →
+              Atlas vector search → retrieved passages in a grounded prompt.
             </p>
           </figure>
           <div className="crest-signal-boundary">
             <div className="crest-signal-boundary__intro">
               <p className="crest-signal-boundary__eyebrow">ANOMALY SIGNALS / REVIEW SUPPORT</p>
-              <h3>Keep the signal legible.</h3>
-              <p>Rule-based heuristics surface patterns for human review.</p>
+              <h3>Signals are review cues.</h3>
+              <p>Rule-based heuristics surface patterns for a person to assess.</p>
             </div>
             <ul className="crest-signal-boundary__signals" aria-label="Rule-based anomaly signals">
               <li>Bursts</li>
@@ -321,9 +326,8 @@ export default function CrestCaseStudy() {
             <div className="crest-signal-boundary__ai">
               <h4>AI boundary</h4>
               <p>
-                Gemini interpreted retrieved policy passages. The signals are
-                heuristics, not an ML fraud classifier; deterministic finance
-                and policy rules remained authoritative.
+                Gemini interpreted retrieved policy passages. Finance and
+                policy rules stayed deterministic and authoritative.
               </p>
             </div>
           </div>
@@ -331,40 +335,36 @@ export default function CrestCaseStudy() {
 
         <section className="crest-section crest-team" id="crest-team">
           <div className="crest-team__story">
-            <p className="food-section-label">THE TEAM</p>
-            <h2>Four people. One presentation ran long.</h2>
+            <p className="food-section-label">TECHNICAL OWNERSHIP</p>
+            <h2>Backend workflows were my focus.</h2>
             <p>
-              We built Crest at MPC Hacks 2026. My focus was backend and data
-              workflows; the final presentation reminded us that a strong system
-              still needs a clear, well-paced walkthrough.
+              My contribution covered the Policy Compliance Engine,
+              deterministic anomaly signals, policy retrieval, and part of
+              preapproval. It was a four-person team project.
             </p>
           </div>
-          <div className="crest-team__result">
-            <strong>PROJECT RECORD</strong>
-            <span>Team work at MPC Hacks 2026</span>
+          <div className="crest-team__result crest-ownership-boundary">
+            <strong>OWNERSHIP BOUNDARY</strong>
+            <span>Backend + data workflows</span>
+            <p>The primary frontend, initial MongoDB setup, and main Gemini integration were outside my ownership.</p>
             <a
               href="https://devpost.com/software/crest-kglqay"
               target="_blank"
               rel="noreferrer"
             >
-              OFFICIAL RESULT ↗
+              PROJECT RECORD ↗
             </a>
           </div>
-          <blockquote className="crest-team__reflection">
-            Our final presentation ran past its allotted time. I took away a
-            simple lesson: the story needs editing too.
-          </blockquote>
         </section>
 
         <section className="crest-section crest-takeaway" id="crest-takeaway">
-          <p className="food-section-label">WHAT I TOOK FORWARD</p>
-          <h2>A finance system should be able to explain why a workflow moved.</h2>
+          <p className="food-section-label">ENGINEERING PRINCIPLE</p>
+          <h2>Keep interpretation separate from decision authority.</h2>
           <p>
-            Crest reinforced the value of clear boundaries: rules people can
-            inspect, AI that stays grounded, and a walkthrough that makes the
-            work easy to follow.
+            Deterministic checks surface what needs attention. Retrieved policy
+            gives the review context. A person owns the next step.
           </p>
-          <small>CREST · MPC HACKS 2026</small>
+          <small>CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</small>
         </section>
       </article>
     </>

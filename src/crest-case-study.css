@@ -1,106 +1,136 @@
-.crest-hero__team {
-  margin-top: 24px;
+/* Crest uses a transaction-trace grammar: restrained gold for deterministic
+   authority and cyan for retrieved context, on the shared client dark field. */
+.crest-hero {
+  min-height: 420px;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(28px, 4vw, 64px);
 }
 
 .crest-hero__contribution {
-  max-width: 54ch;
-  font-size: 13px;
+  max-width: 58ch;
+  font-size: 14px;
+}
+
+.crest-hero__award {
+  margin-top: 25px;
+}
+
+.crest-hero__team {
+  margin-top: 19px;
+}
+
+.crest-demo-figure img {
+  border-color: rgba(210, 174, 99, 0.75);
+  box-shadow: 0 0 0 5px rgba(16, 34, 39, 0.8);
+}
+
+.crest-demo-figure figcaption {
+  grid-template-columns: auto minmax(0, 1fr) auto;
 }
 
 .crest-system {
-  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.65fr);
+  grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.48fr);
   align-items: center;
-  gap: 36px;
-  padding-bottom: 0;
+  gap: clamp(24px, 4vw, 64px);
+  padding: 0 0 38px;
 }
 
 .crest-system__story h2 {
-  margin: 12px 0 12px;
-  font-size: clamp(24px, 2vw, 30px);
+  margin: 12px 0 16px;
+  font-size: clamp(25px, 2vw, 32px);
 }
 
 .crest-system__story > p:last-child {
   font-size: 13px;
-  line-height: 1.45;
+  line-height: 1.55;
 }
 
 .crest-transaction-flow {
   min-width: 0;
   margin: 0;
-  padding: 18px;
-  border: 1px solid #354950;
-  background: #12242a;
+  padding: 20px 22px 16px;
+  border: 1px solid #344b51;
+  border-top: 2px solid #c79b45;
+  background:
+    linear-gradient(115deg, rgba(19, 46, 51, 0.9), rgba(10, 25, 31, 0.92)),
+    #102127;
   color: #eee7d8;
 }
 
 .crest-transaction-flow figcaption {
-  margin: 0 0 14px;
-  color: #d2ae63;
+  margin: 0 0 17px;
+  color: #c79b45;
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
 }
 
 .crest-transaction-flow__stages {
-  display: grid;
-  grid-template-columns: minmax(100px, 0.72fr) 18px minmax(0, 2fr) 18px minmax(132px, 0.92fr);
-  align-items: stretch;
-  gap: 9px;
+  grid-template-columns: minmax(100px, 0.72fr) 20px minmax(0, 2fr) 20px minmax(130px, 0.92fr);
+  gap: 10px;
 }
 
 .crest-transaction-flow__transaction,
 .crest-transaction-flow__review {
-  align-self: center;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-width: 0;
-  padding: 12px 11px;
+  padding: 13px 12px;
   border: 1px solid #52666b;
-  background: #1b3036;
+  background: #172c32;
+}
+
+.crest-transaction-flow__review {
+  border-color: rgba(84, 190, 188, 0.65);
+  background: #132d31;
 }
 
 .crest-transaction-flow__stages section > span {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 8px;
   color: #d2ae63;
   font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
+  font-weight: 750;
+  letter-spacing: 0.07em;
+  line-height: 1.25;
+}
+
+.crest-transaction-flow__review > span,
+.crest-transaction-flow__context section + section > span {
+  color: #73d1cf;
 }
 
 .crest-transaction-flow__stages h3 {
-  margin: 0 0 7px;
+  margin: 0 0 8px;
   color: #eee7d8;
-  font-size: 10px;
-  line-height: 1.3;
+  font-size: 11px;
+  line-height: 1.32;
 }
 
 .crest-transaction-flow__stages p {
   margin: 0;
   color: #b6c3c5;
   font-size: 10px;
-  line-height: 1.4;
+  line-height: 1.45;
 }
 
 .crest-transaction-flow__context {
-  display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-items: stretch;
   gap: 8px;
 }
 
 .crest-transaction-flow__context section {
   min-width: 0;
-  padding: 12px 11px;
-  border-top: 2px solid #d2ae63;
-  background: #20363d;
+  padding: 13px 12px;
+  border: 1px solid #344b51;
+  border-top: 2px solid #c79b45;
+  background: rgba(25, 49, 55, 0.9);
 }
 
 .crest-transaction-flow__context section + section {
-  border-top-color: #53b8bb;
-}
-
-.crest-transaction-flow__context section + section > span {
-  color: #74d4d2;
+  border-top-color: #56bdbc;
 }
 
 .crest-transaction-flow__arrow {
@@ -111,56 +141,245 @@
 }
 
 .crest-transaction-flow__boundary {
-  margin: 12px 0 0;
+  margin: 13px 0 0;
   padding-top: 10px;
-  border-top: 1px solid #354950;
+  border-top: 1px solid #344b51;
   color: #a9b5ba;
   font-size: 10px;
+  line-height: 1.4;
+}
+
+.crest-finance-workflow {
+  grid-column: 2;
+  min-width: 0;
+  margin: -20px 0 0;
+  padding: 13px 16px 11px;
+  border: 1px solid #344b51;
+  border-left: 2px solid #56bdbc;
+  background: #0e2026;
+  color: #eee7d8;
+}
+
+.crest-finance-workflow figcaption {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.crest-finance-workflow figcaption span {
+  color: #73d1cf;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.crest-finance-workflow figcaption strong {
+  color: #eee7d8;
+  font-size: 12px;
+}
+
+.crest-finance-workflow__paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.crest-finance-workflow__paths > div {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 16px minmax(0, 1fr);
+  align-items: center;
+  gap: 3px 7px;
+  padding: 8px 10px;
+  border: 1px solid #344b51;
+  background: rgba(25, 49, 55, 0.72);
+}
+
+.crest-finance-workflow__paths > div > span,
+.crest-finance-workflow__paths > div > strong {
+  grid-row: 1;
+  min-width: 0;
+}
+
+.crest-finance-workflow__paths > div > span {
+  color: #a9b5ba;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+
+.crest-finance-workflow__paths > div > strong {
+  grid-row: 2;
+  color: #eee7d8;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.crest-finance-workflow__paths i {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  color: #d2ae63;
+  font-size: 14px;
+  font-style: normal;
+  text-align: center;
+}
+
+.crest-finance-workflow__boundary {
+  margin: 8px 0 0;
+  color: #8fa1a6;
+  font-size: 9px;
   line-height: 1.35;
 }
 
 .crest-policy-figure {
-  padding: 26px 30px 22px;
+  padding: 28px 30px 22px;
+  border: 1px solid #344b51;
+  border-left: 2px solid #56bdbc;
+  background:
+    radial-gradient(ellipse at 91% 2%, rgba(43, 106, 105, 0.17), transparent 35%),
+    #0e2026;
+  color: #eee7d8;
+}
+
+.crest-policy-figure__eyebrow {
+  color: #73d1cf;
+}
+
+.crest-policy-figure h2,
+.crest-policy-pipeline strong {
+  color: #eee7d8;
+}
+
+.crest-policy-figure__intro,
+.crest-policy-pipeline small {
+  color: #a9b5ba;
 }
 
 .crest-policy-pipeline {
   gap: 22px;
-  margin: 20px 0 14px;
+  margin: 22px 0 19px;
 }
 
 .crest-policy-pipeline li {
-  padding: 12px 10px 10px;
-  border-top: 1px solid #d6ccb5;
-  background: rgba(255, 252, 244, 0.72);
+  min-height: 83px;
+  padding: 11px 10px 10px;
+  border: 1px solid #344b51;
+  border-top: 2px solid #c79b45;
+  background: rgba(20, 41, 46, 0.8);
+}
+
+.crest-policy-pipeline li:nth-child(3),
+.crest-policy-pipeline li:nth-child(4) {
+  border-top-color: #56bdbc;
+}
+
+.crest-policy-pipeline .crest-step-number {
+  color: #c79b45;
+}
+
+.crest-policy-pipeline li:nth-child(3) .crest-step-number,
+.crest-policy-pipeline li:nth-child(4) .crest-step-number {
+  color: #73d1cf;
 }
 
 .crest-policy-pipeline__arrow {
   right: -19px;
+  color: #73d1cf;
 }
 
 .crest-policy-figure__trace {
   margin: 0;
   padding-top: 12px;
-  border-top: 1px solid #d8d0bd;
-  color: #5f6c6d;
+  border-top: 1px solid #344b51;
+  color: #c79b45;
   font-size: 10px;
-  font-weight: 500;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.crest-policy {
+  display: grid;
+  gap: 16px;
 }
 
 .crest-signal-boundary {
-  margin-top: 16px;
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+  margin-top: 0;
+  border-left-color: #c79b45;
 }
 
-.crest-team__result {
-  padding: 14px 18px;
-  border-left: 2px solid #d2ae63;
-  background: #14292e;
+.crest-signal-boundary__signals li {
+  border-top-color: rgba(199, 155, 69, 0.55);
+}
+
+.crest-signal-boundary__ai {
+  border-top-color: rgba(115, 209, 207, 0.35);
+}
+
+.crest-signal-boundary__ai h4 {
+  color: #73d1cf;
+}
+
+.crest-team {
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  gap: 30px clamp(30px, 5vw, 80px);
+  align-items: center;
+}
+
+.crest-team__story h2 {
+  margin: 12px 0 15px;
+  font-size: clamp(25px, 2.15vw, 34px);
+}
+
+.crest-team__story > p:last-child {
+  font-size: 13px;
+}
+
+.crest-team__result.crest-ownership-boundary {
+  gap: 11px;
+  padding: 19px 21px;
+  border: 1px solid #344b51;
+  border-left: 2px solid #c79b45;
+  background: #12262c;
+}
+
+.crest-ownership-boundary strong {
+  color: #c79b45;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+}
+
+.crest-ownership-boundary span {
+  color: #eee7d8;
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.crest-ownership-boundary p {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.crest-takeaway {
+  max-width: 980px;
+}
+
+.crest-takeaway h2 {
+  font-size: clamp(26px, 2.1vw, 34px);
 }
 
 @media (max-width: 1200px) {
   .crest-system {
     grid-template-columns: minmax(0, 1fr);
-    gap: 18px;
+    gap: 22px;
+  }
+
+  .crest-finance-workflow {
+    grid-column: auto;
+    margin: -8px 0 0;
   }
 
   .crest-system__story h2,
@@ -175,6 +394,15 @@
 }
 
 @media (max-width: 900px) {
+  .crest-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .crest-hero__opening {
+    max-width: 760px;
+  }
+
   .crest-transaction-flow__stages {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
@@ -187,229 +415,71 @@
   .crest-transaction-flow__arrow {
     transform: rotate(90deg);
   }
+
+  .crest-team {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 650px) {
   .crest-transaction-flow {
-    padding: 14px;
+    padding: 15px 14px 13px;
   }
 
   .crest-transaction-flow__context {
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .crest-policy-figure {
-    padding: 18px 14px;
-  }
-
-  .crest-policy-pipeline li {
-    padding: 10px;
-  }
-
-  .crest-team__result {
+  .crest-finance-workflow {
     padding: 12px;
   }
-}
 
-/* Decision trace: transaction inputs converge with separate rules and retrieval. */
-.crest-hero__workflow {
-  display: grid;
-  grid-template-columns: minmax(94px, 0.68fr) minmax(0, 1.32fr) minmax(118px, 0.9fr);
-  align-items: stretch;
-  gap: 14px;
-  margin-top: 20px;
-}
-
-.crest-hero__workflow-step,
-.crest-hero__workflow-branch > div {
-  min-width: 0;
-  padding: 9px 9px 10px;
-  border: 1px solid #344b51;
-  background: #102127;
-}
-
-.crest-hero__workflow-step {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 7px;
-  border-left: 2px solid #d2ae63;
-}
-
-.crest-hero__workflow-step--review {
-  border-left-color: #56c4c2;
-}
-
-.crest-hero__workflow-step > span,
-.crest-hero__workflow-branch span {
-  color: #d2ae63;
-  font-size: 7px;
-  font-weight: 750;
-  letter-spacing: 0.04em;
-  line-height: 1.2;
-}
-
-.crest-hero__workflow-step--review > span {
-  color: #72d4d0;
-}
-
-.crest-hero__workflow-step strong,
-.crest-hero__workflow-branch strong {
-  display: block;
-  color: #eee7d8;
-  font-size: 9px;
-  line-height: 1.3;
-}
-
-.crest-hero__workflow-branch {
-  display: grid;
-  gap: 6px;
-}
-
-.crest-hero__workflow-branch > div {
-  border-top: 2px solid #d2ae63;
-}
-
-.crest-hero__workflow-branch > div + div {
-  border-top-color: #56c4c2;
-}
-
-.crest-hero__workflow-branch > div + div span {
-  color: #72d4d0;
-}
-
-.crest-hero__workflow-branch,
-.crest-hero__workflow-step--review {
-  position: relative;
-}
-
-.crest-hero__workflow-branch::before,
-.crest-hero__workflow-step--review::before {
-  content: "→";
-  position: absolute;
-  top: 50%;
-  left: -13px;
-  transform: translate(-50%, -50%);
-  z-index: 1;
-  display: grid;
-  width: 14px;
-  height: 18px;
-  place-items: center;
-  background: #071217;
-  color: #d2ae63;
-  font-size: 13px;
-}
-
-/* Keep the Brim retrieval sequence in Crest's dark operational palette. */
-.crest-policy-figure {
-  padding: 28px 30px 24px;
-  border-color: #344b51;
-  background:
-    radial-gradient(ellipse at 90% 4%, rgba(43, 106, 105, 0.18), transparent 34%),
-    #0e2026;
-  color: #eee7d8;
-}
-
-.crest-policy-figure__eyebrow,
-.crest-policy-figure__trace {
-  color: #d2ae63;
-}
-
-.crest-policy-figure h2,
-.crest-policy-pipeline strong {
-  color: #eee7d8;
-}
-
-.crest-policy-figure__intro,
-.crest-policy-pipeline small {
-  color: #a9b5ba;
-}
-
-.crest-policy-pipeline {
-  gap: 21px;
-  margin: 22px 0 18px;
-}
-
-.crest-policy-pipeline li {
-  min-height: 86px;
-  padding: 11px 10px 10px;
-  border: 1px solid #344b51;
-  border-top: 2px solid #d2ae63;
-  background: rgba(20, 41, 46, 0.78);
-}
-
-.crest-policy-pipeline li:nth-child(3),
-.crest-policy-pipeline li:nth-child(4) {
-  border-top-color: #56c4c2;
-}
-
-.crest-policy-pipeline .crest-step-number {
-  color: #d2ae63;
-}
-
-.crest-policy-pipeline li:nth-child(3) .crest-step-number,
-.crest-policy-pipeline li:nth-child(4) .crest-step-number {
-  color: #72d4d0;
-}
-
-.crest-policy-pipeline__arrow {
-  right: -19px;
-  color: #72d4d0;
-}
-
-.crest-policy-figure__trace {
-  border-top-color: #344b51;
-}
-
-.crest-demo-figure figcaption {
-  align-items: start;
-}
-
-.crest-sample-cue {
-  background: #12383d;
-  color: #72d4d0;
-}
-
-.crest-hero__award {
-  margin-top: 22px;
-}
-
-.crest-team__result strong {
-  color: #eee7d8;
-  font-size: 12px;
-  letter-spacing: 0.045em;
-}
-
-.crest-team__result {
-  border: 1px solid #344b51;
-  border-left: 2px solid #d2ae63;
-  background: #14292e;
-}
-
-@media (max-width: 1200px) {
-  .crest-hero__workflow {
-    grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr) minmax(0, 0.9fr);
-    gap: 10px;
+  .crest-finance-workflow figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
   }
-}
 
-@media (max-width: 900px) {
-  .crest-hero__workflow {
-    max-width: 800px;
-  }
-}
-
-@media (max-width: 650px) {
-  .crest-hero__workflow {
+  .crest-finance-workflow__paths {
     grid-template-columns: minmax(0, 1fr);
     gap: 7px;
   }
 
-  .crest-hero__workflow-branch::before,
-  .crest-hero__workflow-step--review::before {
+  .crest-policy-figure {
+    padding: 19px 14px 17px;
+  }
+
+  .crest-policy-pipeline {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .crest-policy-pipeline li {
+    min-height: 0;
+    padding: 10px;
+  }
+
+  .crest-policy-pipeline__arrow {
     position: static;
-    height: 12px;
+    display: block;
+    height: 14px;
     transform: rotate(90deg);
-    margin: 0 auto;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .crest-signal-boundary {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 17px;
+    padding: 17px;
+  }
+
+  .crest-signal-boundary__ai {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .crest-team__result.crest-ownership-boundary {
+    padding: 15px;
   }
 }
