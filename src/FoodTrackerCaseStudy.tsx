@@ -16,7 +16,7 @@ const foodSystemStages = [
   {
     number: "01",
     title: "MOBILE EXPERIENCE",
-    detail: "Simple + Complex presentations share one food domain.",
+    detail: "Simple + Complex views over the same backend + food domain.",
   },
   {
     number: "02",
@@ -57,11 +57,11 @@ function FoodSystemMap() {
   return (
     <figure className="food-system-map" aria-labelledby="food-system-map-title">
       <figcaption id="food-system-map-title">
-        MOBILE PRODUCT SYSTEM <span>·</span> TWO PRESENTATION LEVELS
+        MOBILE PRODUCT SYSTEM <span>·</span> SHARED FOOD DOMAIN
       </figcaption>
       <ol className="food-system-map__stages">
         {foodSystemStages.map((stage) => (
-          <li key={stage.number}>
+          <li key={stage.title}>
             <span className="food-system-map__number">{stage.number}</span>
             <strong>{stage.title}</strong>
             <p>{stage.detail}</p>
@@ -130,31 +130,30 @@ function FoodRetrievalFlow() {
       <figcaption id="food-retrieval-flow-title">
         <span>SEARCH DECISION</span>
         <strong>
-          Union candidates before deterministic evaluation; Pinecone is one source.
+          Independent retrieval paths join before deterministic evaluation.
         </strong>
       </figcaption>
-      <ol aria-label="Candidate retrieval and final ranking stages">
-        <li>USER QUERY</li>
-        <li className="food-retrieval-flow__sources">
-          <span>DETERMINISTIC CANDIDATES</span>
-          <i className="food-retrieval-flow__join" aria-hidden="true">+</i>
-          <span>FUZZY CANDIDATES</span>
-          <i className="food-retrieval-flow__join" aria-hidden="true">+</i>
-          <span>SEMANTIC CANDIDATES · PINECONE</span>
-        </li>
-        <li>CANDIDATE UNION</li>
-        <li>DETERMINISTIC EVALUATOR</li>
-        <li>FINAL RANK</li>
-      </ol>
+      <div className="food-retrieval-flow__diagram" aria-label="Query to candidate union to deterministic evaluator to final rank">
+        <div className="food-retrieval-flow__query">USER QUERY</div>
+        <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
+        <div className="food-retrieval-flow__sources" aria-label="Candidate generation paths">
+          <span><strong>DETERMINISTIC</strong><small>Structured retrieval</small></span>
+          <span><strong>FUZZY</strong><small>Similarity recovery</small></span>
+          <span><strong>SEMANTIC · PINECONE</strong><small>Candidate generation only</small></span>
+        </div>
+        <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
+        <div className="food-retrieval-flow__union">CANDIDATE UNION</div>
+        <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
+        <div className="food-retrieval-flow__rank"><strong>DETERMINISTIC EVALUATOR</strong><small>FINAL RANK</small></div>
+      </div>
       <div className="food-retrieval-flow__notes">
         <p>
-          <span>SEMANTIC PATH · OWNER INTERVIEW</span>
-          Added substantial latency for little recovery in that benchmark.
+          <span>ARCHITECTURE DECISION · OWNER INTERVIEW</span>
+          Semantic retrieval added substantial latency for little recovery in that benchmark.
         </p>
         <p>
           <span>AUTHORITY BOUNDARY</span>
-          Pinecone supplies candidates only. Deterministic evaluation sets final
-          rank; trusted food data sets nutrition values.
+          Pinecone supplies candidates only. The evaluator sets final rank; trusted food data sets nutrition values.
         </p>
       </div>
     </figure>
@@ -251,8 +250,9 @@ export default function FoodTrackerCaseStudy() {
             <p className="food-eyebrow">MOBILE PRODUCT · DATA + RETRIEVAL SYSTEM</p>
             <h2>Search supports a trusted food log.</h2>
             <p className="food-hero__system-copy">
-              Search finds candidates; backend serving conversion and trusted
-              food data determine nutrition values.
+              Mobile client + backend. Search finds
+              candidates; backend serving conversion and trusted reference
+              foods determine nutrition values.
             </p>
             <p className="food-hero__catalog-scale">
               <strong>12,363</strong> active foods
@@ -302,9 +302,9 @@ export default function FoodTrackerCaseStudy() {
                 <h3>INDEX COMPLETENESS IS A SEPARATE CHECK</h3>
                 <p>
                   One Pinecone pagination issue left partial or stale index
-                  state. In a separate staging reindex, an inference-token quota
-                  stopped a partial load; bounded 429 retries later completed
-                  the 12,363-document rebuild.
+                  state. In a separate staging reindex, an integrated-inference
+                  token quota stopped indexing after a partial load; bounded
+                  429 retries later completed the 12,363-document rebuild.
                 </p>
               </div>
             </article>
@@ -346,18 +346,20 @@ export default function FoodTrackerCaseStudy() {
             </p>
             <h2>I kept product and architecture decisions owner-led.</h2>
             <p>
-              Codex and AI agents provided substantial implementation
-              assistance. I directed requirements, priorities, workflow,
-              evaluation, debugging, and acceptance; generated changes still
-              needed my architectural judgment.
+              I owned product requirements, prioritization, architecture
+              direction, decomposition, evaluation, testing expectations,
+              debugging direction, regression checks, acceptance, and product
+              decisions. Implementation received substantial assistance from
+              Codex and AI agents; I reviewed generated changes against the
+              architecture.
             </p>
           </div>
           <ol className="food-workflow__steps">
             {[
-              "BOUND THE TASK",
-              "WRITE ACCEPTANCE",
-              "EVALUATE BEHAVIOR",
-              "REVIEW + ACCEPT",
+              "DECOMPOSE THE WORK",
+              "SPECIFY ACCEPTANCE",
+              "EVALUATE + REGRESS",
+              "REVIEW + DECIDE",
             ].map((step, index) => (
               <li key={step}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
