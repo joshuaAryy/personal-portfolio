@@ -110,10 +110,11 @@
 .stush-source-band__label { color: var(--stush-faint); white-space: nowrap; font-size: 9px; }
 .stush-source-band ul { display: flex; gap: 7px; }
 .stush-source-band li { color: #d6dfdf; font-size: 12px; font-weight: 650; }
+.stush-source-band__clients li { color: #8ea0a5; font-size: 10px; font-weight: 600; }
 .stush-source-band__divider { width: 1px; height: 23px; margin: 0 3px; background: var(--stush-rule); }
 .stush-source-band .stush-format-list { gap: 6px; }
 .stush-format-list li { padding: 4px 7px; border: 1px solid rgba(114, 201, 188, .32); color: var(--stush-teal); font-size: 10px; letter-spacing: .04em; }
-.stush-source-band__note { margin-left: auto; color: var(--stush-faint); font-size: 10px; text-align: right; }
+.stush-source-band__note { max-width: 240px; margin-left: auto; color: var(--stush-faint); font-size: 10px; line-height: 1.4; text-align: right; }
 
 .stush-problem-map { padding: 45px 0 0; }
 .stush-section-heading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, .55fr); align-items: end; gap: 40px; }
@@ -153,8 +154,8 @@
 .stush-file__fields i { display: block; width: 23%; height: 4px; flex: 0 0 auto; background: #bf8d55; opacity: .9; }
 .stush-file__fields i:nth-child(even) { width: 14%; background: #5eaaa0; }
 .stush-file__fields i:nth-child(3) { width: 29%; }
-.stush-file__index { grid-column: 1 / -1; color: #60747b; font-size: 7px; letter-spacing: .08em; }
-.stush-file-stack > p { padding-top: 5px; color: #809399; font-size: 9px; line-height: 1.5; }
+.stush-file__index { grid-column: 1 / -1; color: #81969b; font-size: 8px; letter-spacing: .08em; }
+.stush-file-stack > p { padding-top: 5px; color: #9aabb1; font-size: 10px; line-height: 1.5; }
 
 .stush-pipeline__connector { grid-column: 2; grid-row: 2; position: relative; align-self: center; height: 1px; background: #bd8b52; }
 .stush-pipeline__connector::after { position: absolute; top: -3px; right: 0; width: 6px; height: 6px; border-top: 1px solid #d4a05e; border-right: 1px solid #d4a05e; content: ""; transform: rotate(45deg); }
@@ -162,7 +163,7 @@
 .stush-transform { min-width: 0; padding: 0 14px; border-left: 1px solid var(--stush-rule); }
 .stush-transform:first-child { border-left: 0; padding-left: 0; }
 .stush-transform h4 { margin-top: 12px; color: #e2e9e6; font-size: 16px; line-height: 1.2; }
-.stush-transform > p { margin-top: 10px; color: #96a8ad; font-size: 10px; line-height: 1.5; }
+.stush-transform > p { margin-top: 10px; color: #a9b8ba; font-size: 11px; line-height: 1.5; }
 .stush-transform__signal { display: flex; height: 43px; align-items: center; gap: 4px; margin-top: 7px; border-bottom: 1px solid rgba(114, 201, 188, .22); }
 .stush-transform__signal i { display: block; width: 25%; height: 5px; background: #387b75; }
 .stush-transform__signal i:nth-child(2) { width: 40%; background: #37626a; }
@@ -170,7 +171,7 @@
 .stush-data-grid { display: grid; gap: 4px; margin-top: 8px; padding: 5px 0; border-bottom: 1px solid rgba(114, 201, 188, .22); }
 .stush-data-grid__head,
 .stush-data-grid__row { display: grid; grid-template-columns: 1.2fr .8fr 1fr .75fr; gap: 3px; }
-.stush-data-grid__head i { height: 4px; background: #d2a25f; }
+.stush-data-grid__head span { overflow: hidden; color: #d0ad79; font-size: 8px; font-weight: 700; letter-spacing: .02em; text-overflow: clip; white-space: nowrap; }
 .stush-data-grid__row i { display: block; height: 5px; background: #285b5a; }
 .stush-data-grid__row:nth-child(odd) i { background: #294851; }
 .stush-data-grid__row i:nth-child(3) { opacity: .65; }
@@ -178,7 +179,7 @@
 .stush-pipeline__connector--last { grid-column: 4; grid-row: 2; }
 .stush-handoff-stage { grid-column: 5; grid-row: 2; min-width: 0; padding: 20px 0 8px; border-left: 1px solid var(--stush-rule); padding-left: 16px; }
 .stush-handoff-stage ul { display: grid; gap: 5px; margin-top: 15px; }
-.stush-handoff-stage li { display: flex; gap: 9px; align-items: center; min-height: 27px; padding: 0 7px; border: 1px solid #31515a; color: #d7e0de; background: #11232a; font-size: 10px; }
+.stush-handoff-stage li { display: flex; gap: 9px; align-items: center; min-height: 27px; padding: 0 7px; border: 1px solid #31515a; color: #d7e0de; background: #11232a; font-size: 11px; }
 .stush-handoff-stage li span { color: var(--stush-teal); font-size: 8px; }
 .stush-powerbi { display: flex; justify-content: space-between; align-items: end; gap: 6px; margin-top: 9px; padding: 8px; background: #173c38; border-left: 2px solid var(--stush-teal); }
 .stush-powerbi span { color: #99c7bd; font-size: 7px; letter-spacing: .12em; }
@@ -189,11 +190,30 @@
 .stush-exception__route { display: grid; grid-template-columns: auto 22px minmax(170px, .95fr) 22px minmax(0, 1fr); align-items: center; gap: 8px; color: #d9b17d; font-size: 9px; font-weight: 700; letter-spacing: .08em; }
 .stush-exception__route > span,
 .stush-exception__route > strong { padding: 7px 9px; border: 1px solid rgba(205, 151, 81, .3); background: rgba(91, 61, 32, .2); }
-.stush-exception__route strong { color: #e3af69; font-size: 8px; text-align: center; }
+.stush-exception__route strong { color: #e3af69; font-size: 9px; text-align: center; }
 .stush-exception__route > i { color: #c69050; font-style: normal; text-align: center; }
-.stush-exception > p { max-width: 1050px; margin-top: 7px; color: #98a8aa; font-size: 9px; line-height: 1.5; }
+.stush-exception > p { max-width: 1050px; margin-top: 7px; color: #a9b8ba; font-size: 10px; line-height: 1.5; }
 .stush-exception > p b { color: #d8b17b; }
-.stush-pipeline figcaption { grid-column: 1 / -1; padding-top: 11px; color: #697e84; font-size: 9px; }
+.stush-pipeline figcaption { grid-column: 1 / -1; padding-top: 11px; color: #87999d; font-size: 10px; }
+
+.stush-contract {
+  display: grid;
+  grid-template-columns: minmax(220px, .72fr) minmax(0, 1.8fr);
+  gap: 44px;
+  margin-top: 34px;
+  padding: 23px 0 25px;
+  border-top: 1px solid var(--stush-rule);
+  border-bottom: 1px solid var(--stush-rule);
+}
+
+.stush-contract__heading .stush-overline { margin-bottom: 10px; color: var(--stush-teal); }
+.stush-contract__heading h3 { max-width: 360px; color: #e1e9e6; font-size: 20px; line-height: 1.2; }
+.stush-contract__steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stush-contract__steps li { min-width: 0; padding: 2px 18px 0; border-left: 1px solid var(--stush-rule); }
+.stush-contract__steps li:first-child { padding-left: 0; border-left: 0; }
+.stush-contract__steps li > span { color: #87b9b0; font-size: 9px; font-weight: 700; letter-spacing: .1em; }
+.stush-contract__steps h4 { margin-top: 9px; color: #dce5e2; font-size: 12px; line-height: 1.35; }
+.stush-contract__steps p { margin-top: 7px; color: #a2b0b3; font-size: 11px; line-height: 1.55; }
 
 .stush-ownership { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 64px; padding: 52px 0; border-bottom: 1px solid var(--stush-rule); }
 .stush-ownership__title .stush-overline { margin-bottom: 11px; }
@@ -218,6 +238,7 @@
   .stush-handoff-stage ul { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stush-powerbi { max-width: 240px; }
   .stush-ownership { gap: 34px; }
+  .stush-contract { grid-template-columns: 1fr; gap: 19px; }
 }
 
 @media (max-width: 740px) {
@@ -237,7 +258,7 @@
   .stush-file-stack { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
   .stush-file { grid-template-columns: 1fr; gap: 5px; padding: 7px 6px; }
   .stush-file strong { font-size: 10px; }
-  .stush-file__index { font-size: 6px; }
+  .stush-file__index { font-size: 7px; }
   .stush-file-stack > p { grid-column: 1 / -1; }
   .stush-pipeline__connector,
   .stush-pipeline__connector--last { display: block; grid-column: 1; grid-row: auto; justify-self: center; width: 1px; height: 19px; background: #bd8b52; }
@@ -258,6 +279,14 @@
   .stush-exception__route > span,
   .stush-exception__route > strong { text-align: center; }
   .stush-pipeline figcaption { line-height: 1.5; }
+  .stush-contract { gap: 16px; margin-top: 25px; padding: 18px 0; }
+  .stush-contract__heading h3 { max-width: 430px; font-size: 18px; }
+  .stush-contract__steps { grid-template-columns: 1fr; }
+  .stush-contract__steps li,
+  .stush-contract__steps li:first-child { padding: 13px 0; border-top: 1px solid var(--stush-rule); border-left: 0; }
+  .stush-contract__steps li:first-child { border-top: 0; }
+  .stush-contract__steps h4 { margin-top: 5px; }
+  .stush-contract__steps p { max-width: 430px; }
   .stush-ownership { grid-template-columns: 1fr; gap: 19px; padding: 37px 0; }
   .stush-ownership__details { grid-template-columns: 1fr; gap: 14px; }
   .stush-project-context { grid-column: 1; }

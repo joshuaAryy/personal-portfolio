@@ -1,24 +1,25 @@
 import "./stush-case-study.css";
 
-const inputs = ["Koyo", "UNFI", "Dovre"];
+const inputs = ["FEED A", "FEED B", "FEED C"];
+const contributors = ["Koyo", "UNFI", "Dovre"];
 const formats = ["CSV", "XLSX", "XLSB"];
 const stages = [
   {
     index: "01",
-    name: "Parse by source",
-    detail: "Read each distributor’s layout through parsing suited to its structure.",
-    code: "PYTHON / SOURCE ADAPTERS",
+    name: "Read & parse",
+    detail: "CSV, XLSX, and XLSB occurred across the inputs. Parsing followed each file’s structure before records entered the shared model.",
+    code: "FORMAT + LAYOUT",
   },
   {
     index: "02",
-    name: "Canonicalize",
-    detail: "Bring unlike records into a shared structure for downstream work.",
+    name: "Canonicalize fields",
+    detail: "Translate differing columns and layouts into shared product, sales/unit, case-pack, and reporting-month fields.",
     code: "SHARED FIELD CONTRACT",
   },
   {
     index: "03",
-    name: "Normalize",
-    detail: "Align sales, units, case packs, and reporting months.",
+    name: "Normalize for reporting",
+    detail: "Align sales and units with case packs and reporting months before records move into the reporting handoff.",
     code: "COMPARABLE REPORTING DATA",
   },
 ];
@@ -26,11 +27,11 @@ const stages = [
 function DataGrid() {
   return (
     <div className="stush-data-grid" aria-hidden="true">
-      <div className="stush-data-grid__head">
-        <i />
-        <i />
-        <i />
-        <i />
+      <div className="stush-data-grid__head" aria-hidden="true">
+        <span>PRODUCT</span>
+        <span>SALES / UNIT</span>
+        <span>CASE PACK</span>
+        <span>REPORT MONTH</span>
       </div>
       {Array.from({ length: 4 }, (_, row) => (
         <div className="stush-data-grid__row" key={row}>
@@ -54,22 +55,23 @@ export default function StushPattiesCase() {
         <h1 id="stush-title">A reporting pipeline for data that arrived in different shapes.</h1>
         <div className="stush-data-hero__bottom">
           <p>
-            I contributed to a Python workflow that parsed and normalized three distributors’ sales files,
-            preparing a more repeatable path into reporting.
+            I contributed Python parsing and normalization to bring incompatible distributor files into a
+            shared schema, align sales, units, case packs, and reporting months, and prepare a repeatable
+            Power BI handoff.
           </p>
           <dl className="stush-facts" aria-label="Project scope">
-            <div><dt>INPUTS</dt><dd>03 distributors</dd></div>
-            <div><dt>FORMATS</dt><dd>CSV · XLSX · XLSB</dd></div>
+            <div><dt>SOURCE SET</dt><dd>Three distributor feeds</dd></div>
+            <div><dt>INPUT TYPES</dt><dd>CSV · XLSX · XLSB</dd></div>
             <div><dt>TEAM</dt><dd>Two technical contributors</dd></div>
           </dl>
         </div>
         <div className="stush-source-band" aria-label="Distributor inputs">
-          <span className="stush-source-band__label">DISTRIBUTOR INPUTS</span>
-          <ul>{inputs.map((input) => <li key={input}>{input}</li>)}</ul>
-          <span className="stush-source-band__divider" aria-hidden="true" />
           <span className="stush-source-band__label">FORMATS ACROSS INPUTS</span>
           <ul className="stush-format-list">{formats.map((format) => <li key={format}>{format}</li>)}</ul>
-          <span className="stush-source-band__note">Formats are not assigned to individual distributors.</span>
+          <span className="stush-source-band__divider" aria-hidden="true" />
+          <span className="stush-source-band__label">CLIENT FEEDS</span>
+          <ul className="stush-source-band__clients">{contributors.map((input) => <li key={input}>{input}</li>)}</ul>
+          <span className="stush-source-band__note">Formats describe the input set; none is assigned to one distributor.</span>
         </div>
       </header>
 
@@ -89,7 +91,7 @@ export default function StushPattiesCase() {
           <div className="stush-pipeline__topline">
             <div>
               <span className="stush-overline">TRANSFORMATION FLOW / 01—04</span>
-              <h3 id="stush-pipeline-title">From distributor files to a reporting handoff</h3>
+              <h3 id="stush-pipeline-title">Read each input, then reconcile it to one reporting contract</h3>
             </div>
             <span className="stush-pipeline__language">PYTHON · DATA NORMALIZATION</span>
           </div>
@@ -106,7 +108,7 @@ export default function StushPattiesCase() {
                   <span className="stush-file__index">INPUT 0{index + 1}</span>
                 </div>
               ))}
-              <p>Different layouts<br />CSV · XLSX · XLSB across inputs</p>
+              <p>Different containers and layouts<br />CSV · XLSX · XLSB across inputs</p>
             </div>
           </div>
 
@@ -137,10 +139,34 @@ export default function StushPattiesCase() {
 
           <aside className="stush-exception" aria-label="Koyo parser exception">
             <div className="stush-exception__route"><span>KOYO INPUT</span><i aria-hidden="true">→</i><strong>TEMPORARY POSITION-AND-CELL PARSER</strong><i aria-hidden="true">→</i><span>SHARED NORMALIZATION</span></div>
-            <p><b>Source-specific exception.</b> Explicit positions and cells were used where needed for the hardest input; this pragmatic parser path was temporary and did not define the other sources.</p>
+            <p><b>Source-specific exception.</b> Koyo was the hardest input. Explicit positions and cells handled the layout pragmatically; this temporary parser branch then fed the shared normalization path.</p>
           </aside>
-          <figcaption>Formats are shown across the three inputs. No sample client records or dashboard outputs are reproduced.</figcaption>
+          <figcaption>Format labels describe the input set; they are not mapped one-to-one to distributors.</figcaption>
         </figure>
+
+        <section className="stush-contract" aria-labelledby="stush-contract-title">
+          <div className="stush-contract__heading">
+            <p className="stush-overline">THE RECONCILIATION CONTRACT</p>
+            <h3 id="stush-contract-title">A file could be read correctly and still be hard to compare.</h3>
+          </div>
+          <ol className="stush-contract__steps">
+            <li>
+              <span>01 / INPUT</span>
+              <h4>Separate container from source</h4>
+              <p>CSV, XLSX, and XLSB describe how an input is packaged. They occurred across the distributors and are not mapped one-to-one.</p>
+            </li>
+            <li>
+              <span>02 / SHARED FIELDS</span>
+              <h4>Decouple reporting from layout</h4>
+              <p>Different column labels and layouts needed to resolve into one schema before sales and units could be considered together.</p>
+            </li>
+            <li>
+              <span>03 / REPORTING GRAIN</span>
+              <h4>Align the comparison basis</h4>
+              <p>Case packs and reporting months had to line up with sales and units so the handoff reflected the client’s reporting question.</p>
+            </li>
+          </ol>
+        </section>
       </section>
 
       <section className="stush-ownership" id="stush-role">
@@ -150,12 +176,14 @@ export default function StushPattiesCase() {
         </div>
         <div className="stush-ownership__details">
           <p>
-            I contributed to Python parsing and normalization, helped shape the shared schema, and worked
-            through practical data rules with the reporting needs in view.
+            I contributed to Python parsing and normalization and helped shape the shared schema and
+            practical data rules around the reporting need. That meant treating the files as inputs to a
+            repeatable transformation, rather than treating each workbook as the report itself.
           </p>
           <p>
             This was a two-person technical team with Shiv. Regular stakeholder conversations helped turn
-            the client’s business requirement into a repeatable workflow and a useful handoff.
+            the client’s business requirement into a repeatable workflow and a handoff that included the
+            unified CSV, data dictionary, and quality report for Power BI use.
           </p>
           <div className="stush-project-context">
             <span>PROJECT CONTEXT</span>
