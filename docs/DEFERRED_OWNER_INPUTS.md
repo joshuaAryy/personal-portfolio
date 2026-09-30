@@ -7,7 +7,7 @@ This file tracks genuinely missing facts/media. It does not gate design work or 
 - The owner-authorized General Resume v13 PDF is approved for embedded viewing, Download, and Open Fullscreen; SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`.
 - Crest’s selected sample capture is owner-cleared; keep its sample-data meaning bounded.
 - Cho’Veigo’s Recommendations image is owner-cleared for static display only.
-- Canonical J selection is closed: archive `159:2` is the selected large/primary launch mark; vector `3289:31` is unselected and retained for history. The ring-free optical glyph at `3289:157/162/167` is the small-size reference. Only rendered-size comparison remains; no owner input or further vector pass is pending.
+- Archive `159:2` is the current large/primary implementation fallback. The prior vector `3289:31` is unselected history. One final archive-faithful whole-mark reconstruction is authorized: one primary candidate and no more than two meaningful corrections, then ship archive if it remains stronger. This work does not require another owner decision to begin and does not block implementation. Ring-free optical glyphs `3289:157/162/167` remain the small-size reference.
 - Project marks and selected Riot/League/CommunityDragon assets are intended development material. The authentic Ready Check bundle is already collected and provenance-recorded at [PROVENANCE.md](../public/media/resume/communitydragon/PROVENANCE.md); use it as the Resume Found design foundation rather than rebuilding a generic mechanism.
 
 ## Genuine gaps or optional evidence

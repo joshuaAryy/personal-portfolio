@@ -10,7 +10,7 @@ The Profile base at `960:2` remains compositionally approved. Keep the Projects 
 
 Home direction (owner review supersedes Pass 04 icon clearance): keep the existing four-destination structure. All four icons need final client-quality review; Pass 04 exports remain historical implementation assets, not approved final iconography. The recorded mountain export `2356:514` and current shell assets must be checked against the intended live background/materials before they are treated as final. Preserve no-scroll behavior when the page has no overflow. Website comparison remains open.
 
-Identity code note: `src/identity/JMark.tsx` has no active consumers. Archive `159:2` is the selected large/primary launch mark. Whole-mark vector candidate `3289:31` lost after one asymmetric-orbit correction and is retained only as history; the reconstruction loop is CLOSED. Use the selected ring-free small glyph at `3289:157/162/167` for 54/32/16px. Rendered-size comparison is the only open J check. Historical study evidence remains in [J review](j-source-review/REVIEW.md) and is not an active pass queue.
+Identity code note: `src/identity/JMark.tsx` has no active consumers. Archive `159:2` is the current large/primary implementation fallback. Whole-mark vector candidate `3289:31` lost after an asymmetric-orbit correction and remains unselected history; one final archive-faithful whole-mark reconstruction is now authorized, limited to one primary and at most two meaningful corrections. If still weaker, ship the archive and close J design. Use ring-free small glyphs at `3289:157/162/167` for 54/32/16px. Rendered-size comparison remains open. Earlier studies are evidence, not an active pass queue; see [J review](j-source-review/REVIEW.md).
 
 | File | Use | Provenance and display status |
 |---|---|---|
@@ -115,7 +115,7 @@ The authentic CommunityDragon Ready Check source and collected frame/action art 
 ## Other visual sources
 
 - `public/media/profile/open-portfolio-j.svg` preserves the original Projects Lobby Pass 11 Figma `526:3` composite as provenance. Former shell/orbit/energy vectors and Pass16 face remain on disk but are inactive; active code uses selected archive art in large/medium contexts and needs rendered-size comparison.
-- The legacy inline component `src/identity/JMark.tsx` remains unused and does not define the selected mark. Opening and Resume Found use archive art `159:2`; the header uses the 54px or responsive 32px glyph, the rail uses the exact 48px Figma clone `3317:4`, and the favicon uses native-size glyph `3289:167`. Compare rendered size and clarity before closing J sync.
+- The legacy inline component `src/identity/JMark.tsx` remains unused and does not define the selected mark. Opening and Resume Found currently use archive art `159:2`; the header uses the 54px or responsive 32px glyph, the rail uses the exact 48px Figma clone `3317:4`, and the favicon uses native-size glyph `3289:167`. Keep archive placements until the bounded whole-mark comparison is complete; then compare rendered size and clarity before closing J sync.
 - Case-study diagrams and Journey graphics currently use authored markup/vector shapes. They are explanatory graphics, not product screenshots. Keep or replace them according to the revised Figma technical story.
 - League Spartan and Cinzel are served by Google Fonts. League Spartan is distributed under the [SIL Open Font License 1.1](https://github.com/google/fonts/blob/main/ofl/leaguespartan/OFL.txt); family source: [Google Fonts League Spartan](https://github.com/google/fonts/tree/main/ofl/leaguespartan).
 
@@ -128,9 +128,9 @@ The authentic CommunityDragon Ready Check source and collected frame/action art 
 
 The earlier 2026-09-29 manifest baseline recorded provisional Pass16 J assets. The current asset rows and the source-sync entry below supersede that state; rendered website visual acceptance remains pending.
 
-## J identity status - CLOSED; archive selected - 2026-09-30
+## J identity status - FINAL BOUNDED RECONSTRUCTION; ARCHIVE FALLBACK - 2026-09-30
 
-Owner review and the one permitted correction confirmed that archive `159:2` is the strongest complete identity. Select it as the large/primary mark for launch. The archive-faithful candidate on board `3289:2` / master `3289:31` remained badge-like after its asymmetric-orbit correction and is unselected history. Use the ring-free small glyph shown in `3289:157/162/167` at 54/32/16px. The J reconstruction loop is CLOSED; only rendered-size comparison remains. Detailed comparisons are evidence in [J review](j-source-review/REVIEW.md), not an active pass queue.
+Archive `159:2` remains the strongest complete identity and the current large/primary implementation fallback. Candidate `3289:31` remained badge-like after its asymmetric-orbit correction and is unselected history; that orbit-only change does not satisfy the newly authorized archive-faithful whole-mark brief. The identity lane may make one primary reconstruction and at most two meaningful corrections, comparing archive/current/upper-serif studies at large and 54/32/16px. If it remains weaker than archive, stop and ship archive `159:2`; no more J iteration follows. Use ring-free small glyphs `3289:157/162/167` at 54/32/16px. Historical comparisons remain evidence, not an open-ended pass queue.
 
 Pass16 source files remain locally as history and are no longer used by active J consumers. Opening and Resume Found use selected archive art; the header switches from the 54px glyph to the 32px glyph at 760px; the rail preserves the 48px Figma clone in its 48px wrapper; the favicon uses the native 16px form. Do not treat the legacy `open-portfolio-j-canonical.svg` filename as current. Website rendered comparison remains open.
 
