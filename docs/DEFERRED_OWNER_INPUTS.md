@@ -16,6 +16,7 @@ This file tracks genuinely missing facts/media. It does not gate design work or 
 - **Personal Highlights:** separate owner photos/content direction are unavailable; remain deferred unless brought into scope.
 - **Crest:** a successful Policy Compliance capture is optional if that specific state is shown. The selected sample capture is usable.
 - **Cho’Veigo:** a playable media source is optional; use the approved static view honestly. A sharper authentic Recommendations capture would improve framing if one exists. Review its crop and scale against the intro, architecture visibility, and complete long-form page before changing size; do not reduce it blindly.
+- **Cho’Veigo project mark:** the linked public repository contains no standalone logo asset. The Profile overlay keeps the project name as a typographic wordmark; do not use the generic “CV” index glyph as a substitute. Revisit only if an owner-approved logo becomes available.
 - **Fraymakers:** representative VOD and YAML/config example from the other device are unavailable. Do not fabricate media; explain the verified workflow with a truthful schematic.
 - **Living in Silico:** run artifacts do not resolve the exact relation between every method setting and the 500 generated samples. Preserve this uncertainty internally; do not publish the bookkeeping caveat as the lead story.
 - **Stush Patties:** no field-level Koyo example is supplied. Do not invent raw data; use a generic system figure and explain the exception later only if useful.

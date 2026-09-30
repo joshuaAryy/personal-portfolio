@@ -24,7 +24,7 @@ const projectDetails: Record<string, ReactNode> = {
   fraymakers: <>Tournament automation</>,
 };
 
-const projectMarks: Record<string, { src: string; alt: string } | undefined> = {
+const projectMarks: Record<string, { src: string; alt: string; wordmark?: boolean } | undefined> = {
   "food-tracker": {
     src: "/media/profile/food-tracker-mark.svg",
     alt: "Food Tracker project mark",
@@ -33,58 +33,45 @@ const projectMarks: Record<string, { src: string; alt: string } | undefined> = {
     src: "/media/profile/profile-crest-emblem.png",
     alt: "Crest project mark",
   },
+  fraymakers: {
+    src: "/media/profile/fraymakers-logo.png",
+    alt: "Fraymakers official wordmark",
+    wordmark: true,
+  },
 };
 
 const signals = [
-  {
-    label: "PROJECTS",
-    value: "4",
-    src: "/media/profile/project-signal.svg",
-  },
-  {
-    label: "EXPERIENCE",
-    value: "2",
-    src: "/media/profile/experience-signal.svg",
-  },
-  {
-    label: "HACKATHON",
-    value: "1",
-    src: "/media/profile/hackathon-signal.svg",
-  },
-  {
-    label: "ACADEMICS",
-    value: "2028",
-    src: "/media/profile/academics-signal.svg",
-  },
+  { id: "projects", label: "PROJECTS", value: "4", src: "/media/profile/project-signal.svg" },
+  { id: "experience", label: "EXPERIENCE", value: "2", src: "/media/profile/experience-signal.svg" },
+  { id: "hackathon", label: "HACKATHON", value: "1", src: "/media/profile/hackathon-signal.svg" },
+  { id: "academics", label: "ACADEMICS", value: "2028", src: "/media/profile/academics-signal.svg" },
 ] as const;
 
-const experienceStories = [
+type ProfileSignalId = (typeof signals)[number]["id"];
+
+const experienceSignals = [
   {
-    slug: "living-in-silico",
     name: "Living in Silico",
     role: "AI/ML Research Intern",
     focus: "Generative Molecular Modeling",
-    logo: "/media/profile/living-in-silico-logo.png",
+    mark: "/media/profile/living-in-silico-logo.png",
     path: "/experience/living-in-silico",
   },
   {
-    slug: "stush-patties",
     name: "Stush Patties",
     role: "Software Engineering Intern",
     focus: "Data Pipelines & Automation",
-    logo: "/media/profile/stush-patties-logo.png",
+    mark: "/media/profile/stush-patties-logo.png",
     path: "/experience/stush-patties",
   },
 ] as const;
 
-type ProfileSection = "projects" | "experience" | "hackathon" | "academics";
-
-const sectionTitles: Record<ProfileSection, string> = {
-  projects: "PROJECTS",
-  experience: "EXPERIENCE",
-  hackathon: "HACKATHON",
-  academics: "ACADEMICS",
-};
+const selectedCoursework = [
+  "Algorithms & Data Structures",
+  "Software Systems",
+  "Database Systems I",
+  "Microprocessor Systems",
+] as const;
 
 function SourceMark() {
   return (
@@ -190,15 +177,140 @@ const traitParts = {
   ],
 };
 
+function ProjectSignalPanel({
+  projects,
+  projectCasePaths,
+}: {
+  projects: Project[];
+  projectCasePaths: Record<string, string>;
+}) {
+  const featuredProjects = projectOrder
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter((project): project is Project => Boolean(project));
+
+  return (
+    <div className="profile-project-grid" role="list">
+      {featuredProjects.map((project) => {
+        const mark = projectMarks[project.slug];
+        const path = projectCasePaths[project.slug];
+        const content = (
+          <>
+            <span className="profile-project__identity">
+              {mark && <img className="profile-project__mark" src={mark.src} alt={mark.alt} />}
+              {!mark?.wordmark && <span>{project.name}</span>}
+            </span>
+            <span className="profile-project__detail">
+              {projectDetails[project.slug] ?? project.detail}
+            </span>
+          </>
+        );
+
+        return (
+          <article className={`profile-project profile-project--${project.slug}`} key={project.slug} role="listitem">
+            {path ? (
+              <Link className="profile-project__open" to={path} aria-label={`Open ${project.name} case study`}>
+                {content}
+              </Link>
+            ) : (
+              <div className="profile-project__open">{content}</div>
+            )}
+            {project.source && (
+              <a
+                className="profile-project__source"
+                href={project.source}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${project.name} source repository`}
+                title={`${project.name} source repository`}
+              >
+                <SourceMark />
+              </a>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
+function ProfileSignalPanel({
+  signal,
+  projects,
+  projectCasePaths,
+}: {
+  signal: ProfileSignalId;
+  projects: Project[];
+  projectCasePaths: Record<string, string>;
+}) {
+  const title = signal.toUpperCase();
+  return (
+    <section className={`profile-project-panel profile-project-panel--${signal}`} aria-labelledby="profile-panel-heading">
+      <img className="profile-project-panel__enclosure" src="/media/profile/profile-enclosure.svg" alt="" aria-hidden="true" />
+      <h2 id="profile-panel-heading">{title}</h2>
+      <img className="profile-project-panel__divider" src="/media/profile/profile-title-divider.png" alt="" aria-hidden="true" />
+
+      {signal === "projects" && (
+        <ProjectSignalPanel projects={projects} projectCasePaths={projectCasePaths} />
+      )}
+
+      {signal === "experience" && (
+        <div className="profile-experience-grid" aria-label="Two professional experiences">
+          {experienceSignals.map((item) => (
+            <Link className="profile-experience" to={item.path} key={item.name}>
+              <img className="profile-experience__mark" src={item.mark} alt="" />
+              <span className="profile-experience__copy">
+                <strong className="profile-experience__name">{item.name}</strong>
+                <span className="profile-experience__role">{item.role}</span>
+                <span className="profile-experience__focus">{item.focus}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {signal === "hackathon" && (
+        <div className="profile-hackathon-feature">
+          <div className="profile-hackathon-feature__result">
+            <strong className="profile-hackathon-feature__placement">3RD PLACE</strong>
+            <span className="profile-hackathon-feature__event">MPC HACKS 2026</span>
+            <span className="profile-hackathon-feature__challenge">BRIM FINANCIAL CHALLENGE</span>
+          </div>
+          <div className="profile-hackathon-feature__project">
+            <img src="/media/profile/profile-crest-emblem.png" alt="" />
+            <Link to={projectCasePaths.crest ?? "/projects/crest"}>Crest</Link>
+            <span className="profile-hackathon-feature__year">MPC HACKS 2026</span>
+          </div>
+        </div>
+      )}
+
+      {signal === "academics" && (
+        <div className="profile-academics-feature">
+          <div>
+            <span className="profile-academics-feature__eyebrow">EDUCATION</span>
+            <strong className="profile-academics-feature__program">Computer Engineering</strong>
+            <span className="profile-academics-feature__specialization">Software Specialization</span>
+            <span className="profile-academics-feature__school">Toronto Metropolitan University</span>
+            <span className="profile-academics-feature__school">Expected 2028</span>
+          </div>
+          <div>
+            <span className="profile-academics-feature__eyebrow">SELECTED COURSEWORK</span>
+            <ul className="profile-academics-feature__course-list">
+              {selectedCoursework.map((course) => <li key={course}>{course}</li>)}
+            </ul>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export default function ProfileOverview({
   projects,
   projectCasePaths,
 }: ProfileOverviewProps) {
-  const featuredProjects = projectOrder
-    .map((slug) => projects.find((project) => project.slug === slug))
-    .filter((project): project is Project => Boolean(project));
-  const [activeSection, setActiveSection] = useState<ProfileSection>("projects");
-
+  const [hoveredSignal, setHoveredSignal] = useState<ProfileSignalId | null>(null);
+  const [focusedSignal, setFocusedSignal] = useState<ProfileSignalId | null>(null);
+  const displayedSignal = hoveredSignal ?? focusedSignal ?? "projects";
   return (
     <div className="profile-layout">
       <aside className="identity-panel" aria-label="Joshua Aryeetey profile">
@@ -243,152 +355,41 @@ export default function ProfileOverview({
 
       <div className="profile-content">
         <ProfileNav />
-        <div className="profile-overview">
-          <section
-            className={`profile-project-panel profile-project-panel--${activeSection}`}
-            role="tabpanel"
-            aria-labelledby={`profile-tab-${activeSection}`}
-            id="profile-section-panel"
-          >
-            <img
-              className="profile-project-panel__enclosure"
-              src="/media/profile/profile-enclosure.svg"
-              alt=""
-              aria-hidden="true"
-            />
-            <h2 id="profile-panel-heading">{sectionTitles[activeSection]}</h2>
-            <img
-              className="profile-project-panel__divider"
-              src="/media/profile/profile-title-divider.png"
-              alt=""
-              aria-hidden="true"
-            />
-            {activeSection === "projects" && (
-              <div className="profile-project-grid" role="list">
-                {featuredProjects.map((project) => {
-                  const mark = projectMarks[project.slug];
-                  const path = projectCasePaths[project.slug];
+        <div
+          className="profile-overview"
+          onMouseLeave={() => setHoveredSignal(null)}
+          onBlurCapture={(event) => {
+            const next = event.relatedTarget;
+            if (!(next instanceof Node) || !event.currentTarget.contains(next)) setFocusedSignal(null);
+          }}
+        >
+          <ProfileSignalPanel
+            signal={displayedSignal}
+            projects={projects}
+            projectCasePaths={projectCasePaths}
+          />
 
-                  return (
-                    <article className={`profile-project profile-project--${project.slug}`} key={project.slug} role="listitem">
-                      {path ? (
-                        <Link
-                          className="profile-project__open"
-                          to={path}
-                          aria-label={`Open ${project.name} case study`}
-                        >
-                          <span className="profile-project__identity">
-                            {mark && <img className="profile-project__mark" src={mark.src} alt={mark.alt} />}
-                            <span>{project.name}</span>
-                          </span>
-                          <span className="profile-project__detail">
-                            {projectDetails[project.slug] ?? project.detail}
-                          </span>
-                        </Link>
-                      ) : (
-                        <div className="profile-project__open">
-                          <span className="profile-project__identity">
-                            {mark && <img className="profile-project__mark" src={mark.src} alt={mark.alt} />}
-                            <span>{project.name}</span>
-                          </span>
-                          <span className="profile-project__detail">
-                            {projectDetails[project.slug] ?? project.detail}
-                          </span>
-                        </div>
-                      )}
-                      {project.source && (
-                        <a
-                          className="profile-project__source"
-                          href={project.source}
-                          target="_blank"
-                          rel="noreferrer"
-                          aria-label={`Open ${project.name} source repository`}
-                          title={`${project.name} source repository`}
-                        >
-                          <SourceMark />
-                        </a>
-                      )}
-                    </article>
-                  );
-                })}
-              </div>
-            )}
-
-            {activeSection === "experience" && (
-              <div className="profile-experience-grid">
-                {experienceStories.map((story) => (
-                  <Link className="profile-experience" to={story.path} key={story.slug}>
-                    <img className="profile-experience__mark" src={story.logo} alt="" />
-                    <span className="profile-experience__copy">
-                      <span className="profile-experience__name">{story.name}</span>
-                      <span className="profile-experience__role">{story.role}</span>
-                      <span className="profile-experience__focus">{story.focus}</span>
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            )}
-
-            {activeSection === "hackathon" && (
-              <div className="profile-hackathon-feature">
-                <div className="profile-hackathon-feature__result">
-                  <span className="profile-hackathon-feature__placement">3RD PLACE</span>
-                  <span className="profile-hackathon-feature__event">BRIM FINANCIAL CHALLENGE</span>
-                </div>
-                <div className="profile-hackathon-feature__project">
-                  <img src="/media/profile/profile-crest-emblem.png" alt="" />
-                  {projectCasePaths.crest ? (
-                    <Link to={projectCasePaths.crest}>CREST</Link>
-                  ) : (
-                    <span>CREST</span>
-                  )}
-                  <span className="profile-hackathon-feature__year">MPC HACKS 2026</span>
-                </div>
-              </div>
-            )}
-
-            {activeSection === "academics" && (
-              <div className="profile-academics-feature">
-                <div>
-                  <span className="profile-academics-feature__program">COMPUTER ENGINEERING</span>
-                  <span className="profile-academics-feature__specialization">Software Specialization</span>
-                  <span className="profile-academics-feature__school">Toronto Metropolitan University</span>
-                </div>
-                <div className="profile-academics-feature__recognition">
-                  <span className="profile-academics-feature__eyebrow">SELECTED COURSEWORK</span>
-                  <ul className="profile-academics-feature__course-list">
-                    <li>Algorithms &amp; Data Structures</li>
-                    <li>Software Systems</li>
-                    <li>Database Systems I</li>
-                    <li>Microprocessor Systems</li>
-                  </ul>
-                </div>
-              </div>
-            )}
-          </section>
-
-          <div className="profile-signal-grid" role="tablist" aria-label="Profile overview sections">
-            {signals.map((signal) => {
-              const section = signal.label.toLowerCase() as ProfileSection;
-              const selected = activeSection === section;
-
-              return (
+          <div className="profile-signal-grid" role="group" aria-label="Profile summary details">
+            {signals.map((signal) => (
               <button
-                className={`profile-signal${selected ? " profile-signal--active" : ""}`}
-                key={signal.label}
+                className={`profile-signal${
+                  hoveredSignal === signal.id || focusedSignal === signal.id
+                    ? " profile-signal--preview"
+                    : !hoveredSignal && !focusedSignal && signal.id === "projects"
+                      ? " profile-signal--selected"
+                      : ""
+                }`}
                 type="button"
-                role="tab"
-                id={`profile-tab-${section}`}
-                aria-selected={selected}
-                aria-controls="profile-section-panel"
-                onClick={() => setActiveSection(section)}
+                key={signal.id}
+                aria-label={`${signal.label}, ${signal.value}. Focus to preview ${signal.label.toLowerCase()} details.`}
+                onMouseEnter={() => setHoveredSignal(signal.id)}
+                onFocus={() => setFocusedSignal(signal.id)}
               >
                 <img className="profile-signal__emblem" src={signal.src} alt="" />
                 <span className="profile-signal__label">{signal.label}</span>
                 <span className="profile-signal__value">{signal.value}</span>
               </button>
-              );
-            })}
+            ))}
           </div>
         </div>
       </div>
