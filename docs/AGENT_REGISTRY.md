@@ -4,13 +4,13 @@ Updated 2026-09-30. **Mingo is the project director.** Mingo may execute directl
 
 ## Current lanes
 
-| Lane | Owner / status | Durable assignment |
-|---|---|---|
-| Project direction and documentation | Mingo (`/root`) — active | Direct work is appropriate when it is the fastest path. Keep durable docs synchronized with meaningful direction changes; commit and push those docs without waiting for React work. |
-| Canonical J | `/root/identity_j_owner` and `/root/canonical_j_macro_review` - completed | **CLOSED.** Archive `159:2` is the selected large/primary launch mark. The one permitted correction to vector `3289:31` did not beat the archive and remains historical. Use the ring-free optical glyph proofs `3289:157/162/167` for 54/32/16px. Only rendered-size comparison remains; no further J pass is planned. |
-| Frontend implementation | React lane - active continuously | Implement mature surfaces once structure, story hierarchy, and interaction intent are stable. Opening and targeted Resume Found environment are implemented with selected archive J and authentic Ready Check material. Continue Home, Profile hover states, stable case studies, Help, shell/lobbies, and utilities. Render comparison remains open because the in-app Browser was unavailable; owner acceptance is the final gate, not a prerequisite for each pass. Preserve unrelated dirty work and stage only assigned files. |
-| Review-frame production | Mingo - delivered | Profile strip `3285:45` exposes the four existing hover states; exact authored-body clones for all six long-form stories are indexed in [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md). The artifacts do not alter production scrolling or interaction. Synchronize a clone after source edits; inspectability does not imply acceptance. |
-| Case-study critique | Reuse completed `/root/visual_fidelity_critic` for a scoped critique when useful | Preserve owner-positive Stush, Living in Silico, Fraymakers, and Food Tracker. Critique only a concrete gap; do not request another redesign for activity. A critique applies only to the reviewed surface and does not establish owner acceptance or whole-page balance. |
+| Role / lane | Reusable owner / status | Context maturity | Current assignment and reporting line |
+|---|---|---|---|
+| Main director | Mingo (`/root`) — active | Cross-project | Own priorities, source reconciliation, cross-lane decisions, critical-path execution, acceptance, and documentation sync. The director can execute directly; specialists report to Mingo. |
+| Canonical J | `/root/identity_j_owner` and `/root/canonical_j_macro_review` — completed/reusable | Mature; decision closed | Archive `159:2` is the selected large/primary launch mark. Vector `3289:31` lost after the one permitted correction; small optical proofs are `3289:157/162/167`. No further design pass; only rendered-size quality comparison. Reports to Mingo. |
+| Frontend implementation | Mingo direct execution — active; no separate frontend agent is currently live | Mature, cross-surface | Move stable work into React, preserve design fallbacks, and converge through rendered comparison. Current active code and unstaged shared changes stay with Mingo until reviewed; stage only the assigned change. Reports to project director. |
+| Review-frame production | Mingo — delivered | Mature | Profile strip `3285:45` exposes the four existing states; six exact body clones are indexed in [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md). Keep clones synchronized after source edits; inspectability does not imply acceptance. |
+| Case-study visual critique | `/root/visual_fidelity_critic` — reusable/available | Mature; remembers prior rejection patterns | Latest scoped review: Cho'Veigo full-page balance at `3286:603` was CLEAR on 2026-09-30; preserve demo scale/crop and make no Figma change. Reuse only for a concrete visual question. Reports to Mingo. |
 
 ## Convergence rules
 
