@@ -20,7 +20,7 @@ The visible Projects / Experience / Hackathon / Academics strip is a review-only
 
 ## First-run and Home
 
-Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The current icon set has passed live critique at 1920x1080; preserve it while syncing backgrounds, materials, spacing, shell, and implemented states. Remove only concrete overflow or rendered mismatches; do not reopen structure.
+Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The icon proposal in review frame `3339:310` has been synced into React as a review candidate; it has not received final owner/render acceptance. Keep `2252:3445` as the Figma fallback, preserve the structure, and use rendered comparison to resolve icon, background, material, spacing, shell, and overflow details. Remove only concrete overflow or rendered mismatches; do not reopen structure.
 
 ## Resume Found
 

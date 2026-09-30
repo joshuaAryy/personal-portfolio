@@ -158,4 +158,4 @@ The website uses selected archive base `159:2` in large identity placements. Sou
 
 Figma source groups are Opening `2983:310/313` and Resume Found `2984:484`. Historical header/rail archive groups `2985:2` and `2985:5` remain hidden inside their existing frames; active optical vectors are `3317:3` and `3317:4`. Previous Pass16 and shell/orbit vectors remain on disk as historical files. Source dimensions, hashes, and node placements are recorded above and in [J review](j-source-review/REVIEW.md).
 
-The in-app Browser runtime returned no available browser and its availability list was empty. Therefore no new website screenshot, live animation comparison, or render acceptance is recorded. No tests or build were run.
+The in-app Browser runtime returned no available browser and its availability list was empty. Therefore no new website screenshot, live animation comparison, or render acceptance is recorded. The current Home candidate deployment from code commit `2021f89` completed TypeScript compilation and Vite build through `npm run deploy`; no tests were run. Rendered comparison and owner acceptance remain open.
