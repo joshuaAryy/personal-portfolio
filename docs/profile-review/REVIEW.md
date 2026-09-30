@@ -2,7 +2,7 @@
 
 The owner-selected behavior is static with respect to main-page navigation: the signal counts do not navigate or pin another panel. Projects, Experience, Hackathon, and Academics each preview their own hover/focus overlay, returning to the default Projects state when pointer or focus leaves the Profile overview.
 
-The approved layout still has four equal Projects sectors. This capture set records an earlier typographic-only Cho'Veigo state and is superseded for that asset. Current direction uses the canonical match-path mark `public/media/profile/choveigo-mark.svg` in Profile/lobby contexts (`3297:45/54/63/72`); critique is clear and the asset is frozen. Do not treat the historical capture below as current identity proof.
+The approved layout still has four equal Projects sectors. This capture set records an earlier typographic-only Cho'Veigo state and is superseded for that asset. The current match-path candidate `public/media/profile/choveigo-mark.svg` appears in Profile/lobby contexts (`3297:45/54/63/72`). It is the only remaining project-logo decision: confirm it as canonical or make one decisive correction. Do not treat the historical capture below as current identity proof.
 
 ## Visual evidence
 

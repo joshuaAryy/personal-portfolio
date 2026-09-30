@@ -6,7 +6,7 @@ This is the active behavior contract. Use the file key and inspection date in [F
 
 - Opening retains the liked segmented Hextech direction: coordinated rings rotate in opposing directions, restrained mechanical motion, a strong central J, and an approximately two-second sequence.
 - Keep Skip visible. Reduced-motion behavior remains near-instant.
-- Implement with archive mark `159:2`, the selected launch identity. The bounded reconstruction is closed and rejected; rendered comparison may check only display softness and optical-size clarity. Do not reopen J design, and do not block any implementation on it.
+- Implement with archive mark `159:2` as the approved fallback while one final archive-faithful whole-mark reconstruction runs. Limit that reconstruction to one primary and at most two meaningful correction cycles; if it remains weaker than the archive, ship the archive and close J. Rendered comparison checks display softness and optical-size clarity; the J exercise does not block implementation.
 - Treat the primary and small mark as optical sizes. Check the small mark at 54/32/16px instead of forcing the full complex identity into every slot.
 - Avoid continuous extra spins, excessive flashes, or effects that compete with the J.
 

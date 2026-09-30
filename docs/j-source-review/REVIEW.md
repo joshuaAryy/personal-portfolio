@@ -1,14 +1,14 @@
 # Canonical J Review
 
-## Current decision - CLOSED; ARCHIVE SELECTED (2026-09-30)
+## Current decision - BOUNDED RECONSTRUCTION ACTIVE; ARCHIVE FALLBACK (2026-09-30)
 
-Archive `159:2` is selected for large/primary launch use because its J silhouette, orbit, internal energy, material, asymmetry, and overlap read as one object. The final archive-faithful candidate `3289:31` was compared against the archive, current J, and upper-serif studies at large and 54/32/16px. After one primary reconstruction and one correction, the candidate still read as a clean cap over a near-complete circular orb, with smoother gold and a broad cyan strap; the archive retained a more authored crown/hook, integrated irregular energy, and forged material. Candidate `3289:31` is rejected; stop J design and ship the archive. Use the separate ring-free small glyph shown in `3289:157/162/167` at 54/32/16px. The 220px JPEG is the maximum authentic source; the 700px export adds no detail, so actual site softness remains a render check.
+Archive `159:2` remains the approved large/primary launch fallback because its J silhouette, orbit, internal energy, material, asymmetry, and overlap read as one object. Prior candidate `3289:31` was compared against the archive, current J, and upper-serif studies at large and 54/32/16px. It still read as a clean cap over a near-complete circular orb, with smoother gold and a broad cyan strap; the archive retained a more authored crown/hook, integrated irregular energy, and forged material. Owner now authorizes one final reconstruction that starts from the archive and carries its J/orbit/energy/material relationship through as one mark. Allow at most two meaningful corrections; if the result remains weaker, ship the archive and close J. Use the separate ring-free small glyph `3289:157/162/167` at 54/32/16px. The 220px JPEG is the maximum authentic source; the 700px export adds no detail, so actual site softness remains a render check.
 
 Updated 2026-09-30. This file preserves detailed comparison evidence; the current decision above is authoritative. The live comparison is on Foundations page `510:14` in Figma file `9zvk9iSRPKSsJ6llDJrQmA`.
 
 ## Status
 
-**DESIGN CLOSED / ARCHIVE SELECTED; RENDER SYNC OPEN.** Board `3289:2` compares archive `159:2`, current J `1950:6`, upper-serif studies, and the final candidate. One primary reconstruction and one correction were used; `3289:31` remained weaker and is unselected. No more J design. Actual site rendering must check image softness and size-specific clarity.
+**BOUNDED RECONSTRUCTION ACTIVE / ARCHIVE FALLBACK; RENDER SYNC OPEN.** Board `3289:2` compares archive `159:2`, current J `1950:6`, upper-serif studies, and prior candidate `3289:31`. That candidate remains weaker and is unselected. One new whole-mark reconstruction from the archive is authorized with at most two meaningful corrections. Actual site rendering must check image softness and size-specific clarity.
 
 ## Historical comparison record
 
@@ -47,10 +47,10 @@ The `3089:2` board directly compares the archive, current reconstruction, Pass30
 
 ## Current selection and implementation check
 
-Archive `159:2` is selected for Opening, Resume Found, and other large identity contexts. The ring-free glyph in `3289:157/162/167` remains the optical-size reference at 54/32/16px. The archive source is a 220px uploaded image; its 700px Figma export adds no source detail. Compare actual 320/388px site slots for visible softness against crisp UI. This is a render-quality check only; the design loop is closed and no replacement source is known.
+Archive `159:2` remains selected in React for Opening, Resume Found, and other large identity contexts while the final whole-mark reconstruction runs. The ring-free glyph in `3289:157/162/167` remains the optical-size reference at 54/32/16px. The archive source is a 220px uploaded image; its 700px Figma export adds no source detail. Compare actual 320/388px site slots for visible softness against crisp UI. The J work does not block implementation.
 
 ## Historical recommendation - superseded by final selection, 2026-09-30
 
-The recommendation below predates the final archive-faithful exercise. The owner then authorized one archive-led whole-mark reconstruction; the identity lane completed one primary and one correction, found candidate `3289:31` weaker, and closed the J loop with archive `159:2` selected. The earlier recommendation is retained only as historical evidence, not as operating guidance.
+Earlier pass recommendations and candidates remain historical evidence only. The current operating instruction is one final reconstruction from the archive as a complete integrated mark, capped at two meaningful correction cycles; if archive `159:2` remains stronger, it ships and J design closes.
 
 The cited Pass54–80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37–58 changed Figma study boards; Pass59–80 are local evidence. The final archive selection supersedes the old NEEDS REDESIGN status and its proposed next steps. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.
