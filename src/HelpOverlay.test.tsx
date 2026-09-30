@@ -51,8 +51,9 @@ afterEach(() => {
 describe("contextual Help overlay", () => {
   it("keeps the current client screen underneath and closes back to it", () => {
     const view = renderApp("/projects");
-    const trigger = view.querySelector('[aria-label="Open contextual help"]');
+    const trigger = view.querySelector(".rail-social-footer__help");
     if (!trigger) throw new Error("Contextual help trigger is missing");
+    expect(trigger.textContent).toContain("Help");
 
     click(trigger);
 

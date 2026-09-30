@@ -1,30 +1,21 @@
-<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="FINAL / Emblem HACKATHONS">
-<path id="Vector" d="M31 7H119L143 31V119L119 143H31L7 119V31L31 7Z" fill="#02070C" stroke="#39270D" stroke-width="7"/>
-<path id="Vector_2" d="M33 10H117L137 33V117L117 137H33L13 117V33L33 10Z" fill="url(#paint0_radial_0_4)" stroke="url(#paint1_linear_0_4)" stroke-width="3"/>
-<path id="Vector_3" d="M40 18H110L129 38V110L110 129H40L21 110V38L40 18Z" stroke="#B78A39" stroke-width="1.6"/>
-<path id="Vector_4" d="M47 25H103L121 43V101L103 119H47L29 101V43L47 25Z" stroke="#48646E" stroke-opacity="0.32" stroke-width="2.5"/>
-<g id="Vector_5">
-<path d="M56 12H94Z" fill="black"/>
-<path d="M56 12H94" stroke="#F3DC96" stroke-width="2"/>
-</g>
-<g id="Vector_6">
-<path d="M12 57V93ZM138 57V93Z" fill="black"/>
-<path d="M12 57V93M138 57V93" stroke="#7D5A21" stroke-width="1.5"/>
-</g>
-<path id="Vector_7" d="M75 39L92 50L85 68L103 78L87 90L75 112L63 90L47 78L65 68L58 50L75 39Z" stroke="#D9B75F" stroke-width="4"/>
-<path id="Vector_8" d="M75 87C81.6274 87 87 81.6274 87 75C87 68.3726 81.6274 63 75 63C68.3726 63 63 68.3726 63 75C63 81.6274 68.3726 87 75 87Z" fill="#0F5F72" stroke="#27D3E5" stroke-width="3"/>
-</g>
-<defs>
-<radialGradient id="paint0_radial_0_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(75 73.5) scale(62 63.5)">
-<stop stop-color="#0B2740"/>
-<stop offset="1" stop-color="#030B13"/>
-</radialGradient>
-<linearGradient id="paint1_linear_0_4" x1="13" y1="10" x2="139.964" y2="133.965" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F0D890"/>
-<stop offset="0.28" stop-color="#B17D2F"/>
-<stop offset="0.68" stop-color="#604113"/>
-<stop offset="1" stop-color="#D4AE59"/>
-</linearGradient>
-</defs>
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="face" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(75 73.5) scale(62 63.5)">
+      <stop stop-color="#0B2740"/><stop offset="1" stop-color="#030B13"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="13" y1="10" x2="140" y2="134" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0D890"/><stop offset=".28" stop-color="#B17D2F"/><stop offset=".68" stop-color="#604113"/><stop offset="1" stop-color="#D4AE59"/>
+    </linearGradient>
+    <linearGradient id="medal" x1="57" y1="37" x2="93" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DAB963"/><stop offset=".45" stop-color="#8E6528"/><stop offset="1" stop-color="#3B2A13"/>
+    </linearGradient>
+  </defs>
+  <g id="Emblem / Hackathons / Tournament crest">
+    <path d="M31 7H119L143 31V119L119 143H31L7 119V31L31 7Z" fill="#02070C" stroke="#39270D" stroke-width="7"/>
+    <path d="M33 10H117L137 33V117L117 137H33L13 117V33L33 10Z" fill="url(#face)" stroke="url(#rim)" stroke-width="3"/>
+    <path d="M40 18H110L129 38V110L110 129H40L21 110V38L40 18Z" stroke="#B78A39" stroke-width="1.6"/>
+    <path d="M47 25H103L121 43V101L103 119H47L29 101V43L47 25Z" stroke="#48646E" stroke-opacity=".32" stroke-width="2.5"/>
+    <path d="M56 12H94" stroke="#F3DC96" stroke-width="2"/>
+    <path d="M12 57V93M138 57V93" stroke="#7D5A21" stroke-width="1.5"/>
+  </g>
 </svg>

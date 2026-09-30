@@ -1,4 +1,4 @@
-﻿# Lobby asset provenance
+# Lobby asset provenance
 
 Assets collected for League-client shell and lobby reuse. The current production Home root is `2252:3445`, rebuilt from Archive `69:37`. The exact Home emblem/control SVGs below were originally exported from prior shell study `2297:3474` and are reused in the rebuilt four-mode composition; original export provenance remains recorded per file.
 
@@ -6,11 +6,17 @@ Assets collected for League-client shell and lobby reuse. The current production
 
 - [Projects](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=511-2), page `510:16`, frame `511:2`.
 - [Experience](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=704-2), page `510:17`, frame `704:2`.
+- [Hackathons](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=730-3316), page `510:18`, frame `730:3316`.
+- [Education](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=738-3316), page `510:19`, frame `738:3316`.
 - Active rebuilt Home root: [2252:3445](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3445), page `510:15`.
 - Prior archive-derived shell study: [2297:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3474), page `510:15`; preserved as source history for reused vector assets.
 - Revised contextual Help overlay review: [2298:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2298-3474), page `510:22`; based on Archive `69:207`.
 - Education icon source frame nodes are `738:3316` / `741:*`; Hackathon trophy source frame is `730:3316` / `733:*`.
 - Archive Home reference: [node 69:37](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=69-37) on page `510:2`.
+
+## Current Education usage (2026-09-28)
+
+The active Education frame uses the Expected 2028 and Software Specialization icons, with four course titles backed by the authorized General Resume v13. Dean’s List and Scholarship icon assets remain in provenance for their source nodes, but their Figma layers are hidden and the website does not use them because those credentials are unverified.
 
 ## Asset records
 
@@ -26,6 +32,9 @@ Dimensions are intrinsic raster pixels or SVG viewBox units. SHA-256 values are 
 | `banner-art.svg` | SVG | 0 0 246 716 | 3266 | `2a29cfe3137388596e944f7735a6b9a610998ce8f5320aee6e2800a946f8b5a1` | [599:2](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=599-2) |
 | `circle-lines-gold.svg` | SVG | 0 0 496 466 | 757 | `8eb7c346ee6c4e732d0b68ab9616850aeb284cbae99e3d3a262cbaf382f062f3` | [CommunityDragon](https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/circle-lines-gold.svg) |
 | `client-j-mark.svg` | SVG | 0 0 54 54 | 2833 | `88cff156b8cbb74a9708dad57f594263f5035cf829de07cce3af15cc722860f1` | [2252:3450](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3450) |
+| `project-owner-j.svg` | SVG | 0 0 90 90 | 3111 | `8c3c49f71f01e3a5c081d8d91f9cad8018a5845b5778910648b410887688d022` | Projects owner mark [572:77](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=572-77) |
+| `home-mode-environment.png` | PNG | 1600 x 970 | 967425 | `3558A3410CC88BCC7B2FD516E32E9B8FE6C92AE2C422C5FF2A3D0BEC8084FC01` | [2356:514](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2356-514) |
+| `client-account-avatar.png` | PNG | 64x64 | 23212 | `8C38647C00EBC325FC6EF53AEEC6A2ADE843196E3EC1655EB635BCCC9E8953F9` | [Home root `2252:3445`, account image `I2356:611;68:49`](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3445) |
 | `collapsible-tray.png` | PNG | 412×190 | 19782 | `70b35d1aa1f3e2c061298f56d4fb3de4b8a228c7d99f860aae07a6d47339d5aa` | [541:27](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=541-27) |
 | `collapsible-tray-source.png` | PNG | 720×215 | 13457 | `6bad999190efdd7c9c9da3f0483f2e1e57678bfbae2c2483a4272b2ddd51be52` | [541:27](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=541-27) raw embedded image |
 | `coursework-open-book-selected.svg` | SVG | 0 0 31 31 | 492 | `3ce6c4fda3c8576b3f09d01a8d0a773a2d36bf432b0d53a0cc4a921f3c7138b5` | [741:16](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=741-16) |
@@ -36,10 +45,14 @@ Dimensions are intrinsic raster pixels or SVG viewBox units. SHA-256 values are 
 | `hackathon-trophy.svg` | SVG | 0 0 31 31 | 642 | `fa990888a495f8b003e46b674fcf592d787214a13dc9134505ad575c5a73d1ca` | [733:12](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=733-12) |
 | `league-navigation-rule.png` | PNG | 1560×14 | 1235 | `be0b2e0eaa7d3e6733fba4e88f02e49494fc1b8af09f1d55a388278f178c43bc` | [524:5](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=524-5) |
 | `living-in-silico-logo.png` | PNG | 70×70 | 8727 | `dca8eddd753f8f9d5298c6afec9f3feafc52962e981ecb3e4a2f8ad00f5ac233` | [714:2](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=714-2) (selected Experience asset; source Drive ID 1UFasoOtP4uJY_baZXGpHvl9LgnpNVQuC) |
-| `home-mode-projects.svg` | SVG | 150×150 | 1922 | `2032dc7ce3b15a7378abe70f2e92f25f0084d2930dfe2178d88e9895604bd492` | Exact SVG export from prior Home study [2297:3617](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3617); matching rebuilt emblem is `2252:3445` / `2356:534` |
-| `home-mode-experience.svg` | SVG | 150×150 | 1754 | `9bf676fab063ce8057696ff1713fb7fe200db4628977a3b25aef19b39da63f0e` | Exact SVG export from prior Home study [2297:3630](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3630); matching rebuilt emblem is `2252:3445` / `2356:547` |
-| `home-mode-hackathons.svg` | SVG | 150×150 | 1851 | `38e1dc5c3764a3cadcf831361f90ef692282f25c64fd5e690dc384cebb9ba0c2` | Exact SVG export from prior Home study [2297:3642](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3642); matching rebuilt emblem is `2252:3445` / `2356:559` |
-| `home-mode-education.svg` | SVG | 150×150 | 1792 | `6d9de43b33d70f0ab8d585fd13d9f58f895770c95b1e446d629b772aaaa154dd` | Exact SVG export from prior Home study [2297:3653](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3653); matching rebuilt emblem is `2252:3445` / `2356:570` |
+| `home-mode-projects.svg` | SVG | 150 x 150 | 1467 | `7D8794E5E0F73143AAA206E405170B8CE462B9B9B3F9A0E43DDA3C65F32A23` | Local enclosure shell for Home `2252:3445` / `2356:534`; Pass 04 systems-cube glyph is overlaid from the separate export below. |
+| `home-mode-experience.svg` | SVG | 150 x 150 | 1464 | `5A34D73357F8BDB1E58B30792C766855C0F7C8E0675043D610ED1587C53A7FA1` | Local enclosure shell for Home `2252:3445` / `2356:547`; Pass 04 field-folio glyph is overlaid from the separate export below. |
+| `home-mode-hackathons.svg` | SVG | 150 x 150 | 1510 | `F439782D86CE055C98FCF25FED7F6AE8A5ACF3A9700832D6AADD70F540272155` | Local enclosure shell for Home `2252:3445` / `2356:559`; Pass 04 tournament-medal glyph is overlaid from the separate export below. |
+| `home-mode-projects-glyph-pass-04.svg` | SVG | 46.7 x 50 | 2045 | `0BAB8E98FA4FB26D4FE7A262A103FFA56735BF863BE891C3D01DAA9CD4A42233` | Direct Figma SVG export `3014:310`; systems-cube glyph for Home Pass 04. |
+| `home-mode-experience-glyph-pass-04.svg` | SVG | 41.7 x 46.5 | 2830 | `7C9460F0D991D98FF28A59C1AEC816331876F550F51727C74BA4600D9C4DE495` | Direct Figma SVG export `3014:322`; field-folio glyph for Home Pass 04. |
+| `home-mode-hackathons-glyph-pass-04.svg` | SVG | 34.3 x 51.5 | 2508 | `05C44EE7AC1198E4CD0085AC1A1A1796952D566B512D06FBAE4437D0AF39B5E6` | Direct Figma SVG export `3014:337`; tournament-medal glyph for Home Pass 04. |
+| `home-mode-education.svg` | SVG | 150 x 150 | 2223 | `6BEA4A429F0A8BDB76D2AB67C027293BCF1625DA4E2C50D010620D71458EDE49` | Active production emblem `2252:3445` / `2356:570`; open codex with page detail and bookmark. Refreshed vector imported to Figma node `2920:350`; prior open book retained as hidden history. |
+| `home-mode-selected-ring.svg` | SVG | 150×150 | 208 | `e3cc922257ca6a9e0f2a112a7c946c70de13eac1c4fbe3b97c00b5c9ceb3393b` | Shared cyan selection outline from Figma `2252:3445`; React shows it on the selected destination. Active ring examples are `2883:2`, `2883:4`, `2883:6`, and `2883:8` under emblem frames `2356:534`, `2356:547`, `2356:559`, and `2356:570`. |
 | `home-confirm-button.svg` | SVG | 300×64 | 828 | `edfc5c46c5f7b501cf89c93d9e41813ce19915dcb1b8d1a2bfbecc883e28f803` | Exact vector export from prior Home Confirm CTA [2297:3701](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3701); current rebuilt control is `2252:3445` / `2356:605`; text stays live in HTML |
 | `home-confirm-disc.svg` | SVG | 58×58 | 238 | `aedb6c89b167be3ee67f629156145028fdd5347d2dc0f1e2e1beaff1759a4964` | Exact vector export from prior Home Back disc [2297:3699](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3699); current rebuilt Back group is in `2252:3445` |
 | `home-confirm-chevron.svg` | SVG | 9×16 | 220 | `6455243db39022a7c4c13f73248774f0a1c971239be791c761c1719c4edfc484` | Exact vector export from prior Home Back chevron [2297:3700](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3700); current rebuilt Back group is in `2252:3445` |
@@ -57,11 +70,13 @@ Dimensions are intrinsic raster pixels or SVG viewBox units. SHA-256 values are 
 | `profile-active-ring.svg` | SVG | 0 0 64 64 | 460 | `3e5377b7fb59565dd723f911f8a96f37c4baa11413c3840c8d490828e7716abe` | [2252:3461](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3461) |
 | `profile-portrait-source.jpg` | JPEG | 160×200 | 3633 | `17a0021dfb6d57161241f6711e97e4bff3555cf6cd52de5e90258d36d466c499` | [2252:3462](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3462) raw embedded JPEG |
 | `project-choveigo.svg` | SVG | 0 0 24 200 | 1267 | `d616d29df293c3efac5603107e94960f44e952e257bc13902c078331eb5e874e` | Local exact copy of `public/media/demos-rail-choveigo.svg`; origin URL not recorded in workspace asset manifest. |
-| `project-choveigo-index.png` | PNG | 82×82 | 2956 | `a0f0763b130c25c8c050ca54a6a1ea7759a8478f7a8b47d1a1fa83624be78a65` | [572:164](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=572-164) frame export; Figma SVG omitted letter glyph |
+| `project-choveigo-index.png` | PNG | 82 x 82 | 2956 | `a0f0763b130c25c8c050ca54a6a1ea7759a8478f7a8b47d1a1fa83624be78a65` | Historical CV glyph export from [572:164](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=572-164); superseded and no longer used. |
+| `../profile/choveigo-mark.svg` | SVG | 0 0 40 40 | 631 | `4aabeebf24dafafdcd4af738033d95a2a2449fdc110291b3abb3f3cf3d861334` | Canonical Cho'Veigo match-path mark placed at Profile `3297:45`, review strip `3297:54`, Projects card `3297:63`, and lobby rail `3297:72`. |
 | `project-crest.png` | PNG | 310×230 | 38435 | `44a510cfe8512dedbc4cffb8bd790ff93d6562efface5811d0d0b9c18288f425` | Local exact copy of `public/media/profile/profile-crest-emblem.png`; owner/project source; origin URL not recorded in workspace asset manifest. |
 | `project-crest-index.png` | PNG | 82×82 | 2748 | `adb9774d2a2c9432e2b4f261d00147d138c09965560df62f12fc91e64cac18b1` | [572:37](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=572-37) frame export; Figma SVG omitted letter glyph |
 | `project-food-tracker.svg` | SVG | 0 0 48.5476 31.8223 | 1676 | `e5fa3dbc1f9157da403a0e0416fa884c3c7aaacd1b08dfae6fff87ef83cd81bf` | [572:123](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=572-123) |
-| `project-fraymakers-index.png` | PNG | 82×82 | 2375 | `560922e98c7f26d39fa1055e20889a23199dca27fe98dd53e9269f748d03cdc7` | [565:11](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=565-11) frame export; Figma source labels this not an official mark |
+| `project-fraymakers-index.png` | PNG | 82×82 | 2375 | `560922e98c7f26d39fa1055e20889a23199dca27fe98dd53e9269f748d03cdc7` | [565:11](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=565-11) frame export; Figma source labels this not an official mark; used in the lobby and rail as portfolio index artwork |
+| `project-medallion-frame.png` | PNG | 140×140 | 3489 | `9069587B6265D428619AE22E998CB61BE43A8C40423FE72DDCFC84521CFB91D2` | [565:10](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=565-10) |
 | `role-ai.svg` | SVG | 0 0 34 34 | 874 | `bdd06a5d3576aad014682d4e3f66975a6ab32e57d80ed56146d1f67e9fbb0276` | [610:3783](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=610-3783) |
 | `role-data.svg` | SVG | 0 0 34 34 | 864 | `538f50004efada00879499c58d8ccacd44cc35a0d4a00e6fe3d98674ec5eb075` | [610:3793](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=610-3793) |
 | `role-mobile.svg` | SVG | 0 0 34 34 | 732 | `0cb9d2d71dc1fcdccb55d3f01fd0a412cfc739e05315ea44b40706d5c69c6dd0` | [610:3801](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=610-3801) |

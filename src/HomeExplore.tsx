@@ -12,6 +12,7 @@ const modes = [
       "Explore products and systems I build outside the classroom. Select a focus, then confirm to enter the project lobby.",
     path: "/projects",
     emblem: "/media/lobby/home-mode-projects.svg",
+    glyph: "/media/lobby/home-mode-projects-glyph-pass-04.svg",
     focus: [
       { label: "Featured", detail: "Strongest work", featured: true },
       { label: "AI / ML", detail: "Machine intelligence" },
@@ -28,6 +29,7 @@ const modes = [
       "Research engineering and client-facing software workflows.",
     path: "/experience",
     emblem: "/media/lobby/home-mode-experience.svg",
+    glyph: "/media/lobby/home-mode-experience-glyph-pass-04.svg",
     focus: [
       { label: "Research / ML", detail: "Living in Silico" },
       { label: "Data pipelines", detail: "Stush Patties" },
@@ -41,6 +43,7 @@ const modes = [
       "Competition work shaped around focused team builds and clear constraints.",
     path: "/hackathons",
     emblem: "/media/lobby/home-mode-hackathons.svg",
+    glyph: "/media/lobby/home-mode-hackathons-glyph-pass-04.svg",
     focus: [
       { label: "Crest", detail: "MPC Hacks 2026" },
       { label: "Brim Financial Challenge", detail: "Third place" },
@@ -54,6 +57,7 @@ const modes = [
       "Computer Engineering coursework and academic foundations.",
     path: "/education",
     emblem: "/media/lobby/home-mode-education.svg",
+    glyph: null,
     focus: [
       { label: "Degree", detail: "Computer Engineering" },
       { label: "Coursework", detail: "Toronto Metropolitan University" },
@@ -141,6 +145,17 @@ function HomeExploreContent() {
                   className="home-explore__mode-emblem"
                   src={mode.emblem}
                   alt=""
+                />
+                {mode.glyph && (
+                  <span className={`home-explore__mode-glyph home-explore__mode-glyph--${mode.id}`}>
+                    <img src={mode.glyph} alt="" />
+                  </span>
+                )}
+                <img
+                  className="home-explore__mode-selected-ring"
+                  src="/media/lobby/home-mode-selected-ring.svg"
+                  alt=""
+                  aria-hidden="true"
                 />
               </span>
               <span className="home-explore__mode-name">{mode.label}</span>

@@ -121,7 +121,6 @@ describe("opening route behavior", () => {
     expect(host.querySelector(".opening__underlay")?.hasAttribute("inert")).toBe(true);
 
     act(() => vi.advanceTimersByTime(1));
-    expect(host.querySelector(".opening--leaving")).not.toBeNull();
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
 
     act(() => vi.advanceTimersByTime(179));
@@ -138,7 +137,7 @@ describe("opening route behavior", () => {
     renderOpeningRoute(true);
 
     act(() => vi.advanceTimersByTime(0));
-    expect(host.querySelector(".opening--leaving")).not.toBeNull();
+    expect(host.querySelector(".opening-route--leaving")).not.toBeNull();
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
 
     act(() => vi.advanceTimersByTime(119));

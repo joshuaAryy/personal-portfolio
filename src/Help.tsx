@@ -21,17 +21,51 @@ export function useHelpOverlay() {
 
 type HelpStep = { title: string; detail: string };
 
-function stepsFor(pathname: string): HelpStep[] {
+const railHiddenQuery = "(max-width: 900px)";
+
+function useRailVisible() {
+  const [railVisible, setRailVisible] = useState(() => {
+    if (typeof window === "undefined") return true;
+    if (typeof window.matchMedia === "function") {
+      return !window.matchMedia(railHiddenQuery).matches;
+    }
+    return window.innerWidth > 900;
+  });
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const query = typeof window.matchMedia === "function"
+      ? window.matchMedia(railHiddenQuery)
+      : null;
+    const sync = () => setRailVisible(query ? !query.matches : window.innerWidth > 900);
+    sync();
+
+    if (query) query.addEventListener("change", sync);
+    else window.addEventListener("resize", sync);
+
+    return () => {
+      if (query) query.removeEventListener("change", sync);
+      else window.removeEventListener("resize", sync);
+    };
+  }, []);
+
+  return railVisible;
+}
+
+function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   if (pathname === "/home" || pathname === "/") {
     return [
       {
         title: "Navigation",
         detail: "Choose a mode to move between Projects, Experience, Hackathons, or Education.",
       },
-      {
-        title: "Party / Activity Rail",
-        detail: "Your current focus sits above the active and completed party list.",
-      },
+      ...(railVisible
+        ? [{
+            title: "Party / Activity Rail",
+            detail: "Your current focus sits above the active and completed party list.",
+          }]
+        : []),
       {
         title: "Filter & Select",
         detail: "Choose a mode, then narrow the queue with Featured, AI / ML, or another filter.",
@@ -55,7 +89,9 @@ function stepsFor(pathname: string): HelpStep[] {
       },
       {
         title: "Move around",
-        detail: "Use the upper navigation or activity rail to open another area. Your account portrait opens Profile.",
+        detail: railVisible
+          ? "Use the upper navigation or activity rail to open another area. Your account portrait opens Profile."
+          : "Use the upper navigation to open another area. Your account portrait opens Profile.",
       },
     ];
   }
@@ -72,7 +108,9 @@ function stepsFor(pathname: string): HelpStep[] {
       },
       {
         title: "Change sections",
-        detail: "Use the upper navigation, Profile tabs, or activity rail to continue.",
+        detail: railVisible
+          ? "Use the upper navigation, Profile tabs, or activity rail to continue."
+          : "Use the upper navigation or Profile tabs to continue.",
       },
     ];
   }
@@ -86,10 +124,12 @@ function stepsFor(pathname: string): HelpStep[] {
       title: "Open Profile",
       detail: "The account portrait at the top right is the canonical Profile entry.",
     },
-    {
-      title: "Use the activity rail",
-      detail: "The right rail links to current work and client utilities.",
-    },
+    ...(railVisible
+      ? [{
+          title: "Use the activity rail",
+          detail: "The right rail links to current work and client utilities.",
+        }]
+      : []),
   ];
 }
 
@@ -98,12 +138,15 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLElement>(null);
-  const steps = stepsFor(location.pathname);
+  const railVisible = useRailVisible();
+  const steps = stepsFor(location.pathname, railVisible);
   const isHome = location.pathname === "/home" || location.pathname === "/";
   const isLobby = ["/projects", "/experience", "/hackathons", "/education"].includes(
     location.pathname,
   );
-  const homeHighlights = isHome ? ["navigation", "rail", "filter", "confirm"] : [];
+  const homeHighlights = isHome
+    ? ["navigation", ...(railVisible ? ["rail"] : []), "filter", "confirm"]
+    : [];
 
   return (
     <div className="client-help-overlay">

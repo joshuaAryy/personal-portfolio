@@ -118,9 +118,9 @@
 
 .client-help-overlay__spotlight--home-filter {
   top: 47.22vh;
-  left: 1.04vw;
-  width: min(22.92vw, 440px);
-  height: 37.96vh;
+  left: 1.3vw;
+  width: min(22.92vw, 360px);
+  height: min(39.82vh, 430px);
 }
 
 .client-help-overlay__spotlight--home-confirm {
@@ -128,6 +128,15 @@
   left: 32.55vw;
   width: 18.23vw;
   height: 11.11vh;
+}
+
+/* Home rail focus, measured against Figma 2298:3474 at 1920×1080. */
+@media (min-width: 1920px) {
+  .client-help-overlay__spotlight--home-rail {
+    top: 21.94vh;
+    width: min(16.77vw, 322px);
+    height: min(35.37vh, 382px);
+  }
 }
 
 .client-help-overlay__spotlight--lobby {
@@ -556,15 +565,20 @@
 }
 
 .utility-not-found {
-  padding-top: 38px;
+  padding-top: 72px;
+}
+
+.utility-not-found > .utility-eyebrow {
+  margin-bottom: 8px;
+  color: #2ab9c5;
+  font-size: 12px;
+  letter-spacing: 0.8px;
 }
 
 .utility-not-found__hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.95fr);
-  align-items: center;
-  gap: clamp(28px, 5vw, 72px);
-  padding: 8px 0 44px;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 38px 0 44px;
 }
 
 .utility-not-found__message {
@@ -572,30 +586,32 @@
 }
 
 .utility-not-found__code {
-  margin: 0 0 42px;
-  color: #c99d45;
-  font-size: clamp(112px, 12vw, 176px);
+  margin: 0 0 9px;
+  color: #c79b45;
+  font-size: clamp(112px, 8vw, 152px);
   font-weight: 700;
-  letter-spacing: -7px;
-  line-height: 0.88;
+  letter-spacing: -1px;
+  line-height: 1.1;
 }
 
 .utility-not-found h1 {
-  font-size: clamp(29px, 2.6vw, 36px);
+  color: #efe7d8;
+  font-size: 32px;
 }
 
 .utility-not-found__message > p:last-of-type {
-  margin: 24px 0 0;
-  color: #b9c3c8;
-  font-size: 16px;
-  line-height: 1.5;
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #aab7bf;
+  font-size: 17px;
+  line-height: 23px;
 }
 
 .utility-recovery-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 56px;
+  margin-top: 66px;
 }
 
 .utility-recovery-actions .utility-button {
@@ -603,43 +619,22 @@
   margin: 0;
 }
 
+.utility-not-found .utility-recovery-actions .utility-button {
+  width: 202px;
+  min-width: 202px;
+  min-height: 48px;
+  font-size: 14px;
+}
+
 .utility-button--primary {
-  border-color: #c99d45;
-  background: #c99d45;
-  color: #111820 !important;
+  border-color: #c79b45;
+  background: #c79b45;
+  color: #06111a !important;
 }
 
 .utility-button--primary:hover {
   border-color: #edc76d;
   background: #edc76d;
-}
-
-.utility-not-found__hero .utility-state {
-  min-height: 226px;
-}
-
-.utility-indexes {
-  padding-top: 27px;
-  border-top: 1px solid #27404a;
-}
-
-.utility-indexes nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px clamp(24px, 4vw, 50px);
-}
-
-.utility-indexes nav a {
-  color: #e4e7e5;
-  font-size: 15px;
-  text-decoration: none;
-}
-
-.utility-indexes > p:last-child {
-  margin: 30px 0 0;
-  color: #aebbc1;
-  font-size: 12px;
-  line-height: 1.5;
 }
 
 .utility-sr-only {
@@ -664,8 +659,7 @@
   }
 
   .utility-not-found__hero {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 24px;
+    padding-top: 20px;
   }
 
   .utility-not-found__code {
@@ -861,10 +855,9 @@
     padding: 0 14px;
   }
 
-  .utility-indexes nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 13px;
+  .utility-not-found .utility-recovery-actions .utility-button {
+    justify-content: center;
+    padding: 0 18px;
   }
 }
 

@@ -14,14 +14,14 @@ function renderClient(path = "/profile") {
 }
 
 describe("League client shell", () => {
-  it("uses the Figma client emblem and makes the top-right account the Profile entry", () => {
+  it("uses the optical-size header J and makes the top-right account the Profile entry", () => {
     const markup = renderClient();
 
-    expect(markup).toContain('/media/profile/topbar-client-emblem.svg');
+    expect(markup).toContain('/media/profile/open-portfolio-j-small-54.svg');
     expect(markup).toContain('href="/profile"');
     expect(markup).toContain('aria-label="Open profile"');
     expect(markup).toContain('/media/profile/topbar-account-ring.png');
-    expect(markup).toContain('/media/profile/topbar-avatar.png');
+    expect(markup).toContain('/media/lobby/client-account-avatar.png');
     expect(markup).toContain('/media/lobby/shell-utility-flag.svg');
     expect(markup).toContain('/media/lobby/shell-utility-clock.svg');
     expect(markup).toContain("Joshua Aryeetey");
@@ -30,7 +30,8 @@ describe("League client shell", () => {
   it("keeps the rail compact, uses approved marks, and omits hidden draft labels", () => {
     const markup = renderClient();
 
-    expect(markup).toContain('/media/profile/open-portfolio-j.svg');
+    expect(markup).toContain('data-node-id="3317:4"');
+    expect(markup).toContain('/media/profile/open-portfolio-j-small-48.svg');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');

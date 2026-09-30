@@ -1,6 +1,6 @@
 /* Cho’Veigo evidence diagrams share the dark client surface and use color to trace the reasoning path. */
 .choveigo-story-content > .choveigo-hero {
-  min-height: 620px;
+  min-height: 570px;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: start;
   gap: 36px 64px;
@@ -17,13 +17,14 @@
   grid-column: 1 / -1;
   min-width: 0;
   margin: 0;
-  padding: 13px 0 0;
+  padding: 18px 0 0;
   border-top: 1px solid #263844;
 }
 .choveigo-opening-path figcaption {
-  margin: 0 0 9px;
+  margin: 0 0 14px;
   color: #57c6cb;
-  font-size: 9px;
+  font-size: 10px;
+  line-height: 14px;
   font-weight: 700;
   letter-spacing: .11em;
 }
@@ -32,14 +33,14 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 16px;
+  gap: 12px;
   list-style: none;
 }
 .choveigo-opening-path li {
   position: relative;
   min-width: 0;
-  min-height: 36px;
-  padding: 5px 9px 6px;
+  min-height: 82px;
+  padding: 12px 12px 11px;
   border: 1px solid #29414d;
   border-left: 2px solid #57c6cb;
   background: linear-gradient(100deg, rgba(16, 36, 49, .92), rgba(9, 25, 36, .86));
@@ -47,11 +48,11 @@
 .choveigo-opening-path li.is-accent { border-left-color: #d6b76b; }
 .choveigo-opening-path li:not(:last-child)::after {
   position: absolute;
-  top: 9px;
-  right: -16px;
+  top: 28px;
+  right: -11px;
   color: #57c6cb;
   content: "›";
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
 }
 .choveigo-opening-path li > span,
@@ -61,17 +62,17 @@
 }
 .choveigo-opening-path li > span {
   color: #57c6cb;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: .08em;
 }
 .choveigo-opening-path li.is-accent > span { color: #d6b76b; }
 .choveigo-opening-path li > strong {
-  margin-top: 3px;
+  margin-top: 8px;
   color: #dce3df;
-  font-size: 9px;
+  font-size: 13px;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.25;
 }
 
 .choveigo-story-content > .choveigo-system { padding-top: 42px; }
@@ -257,8 +258,8 @@
 }
 @media (max-width: 900px) {
   .choveigo-review__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .choveigo-opening-path ol { gap: 10px; }
-  .choveigo-opening-path li:not(:last-child)::after { right: -8px; }
+  .choveigo-opening-path ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .choveigo-opening-path li:not(:last-child)::after { display: none; }
   .cho-evidence-worksheet__inputs,
   .cho-evidence-worksheet__judgments { gap: 12px; }
 }
@@ -283,4 +284,296 @@
   .cho-evidence-worksheet__judgments > div { min-height: 0; }
   .cho-evidence-worksheet__boundary { margin: 10px 0 0; display: block; }
   .cho-evidence-worksheet__boundary p { margin-top: 6px; }
+}
+
+
+/* Product-first Cho?Veigo pass 03: translate the Figma story into a readable system. */
+.choveigo-story-content > .choveigo-hero {
+  min-height: 0;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 30px;
+  border-bottom: 0;
+}
+.choveigo-hero__opening { max-width: 790px; }
+.choveigo-hero__opening h1 {
+  max-width: 790px;
+  margin-top: 25px;
+  font-size: 54px;
+  line-height: 58px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.choveigo-hero__intro {
+  max-width: 790px;
+  margin-top: 26px;
+  font-size: 16px;
+  line-height: 24px;
+}
+.choveigo-hero .choveigo-recommendations { padding-top: 24px; }
+.choveigo-hero .choveigo-recommendations__figure img { margin-top: 18px; }
+.choveigo-hero .choveigo-recommendations__figure figcaption {
+  margin-top: 10px;
+  font-size: 12px;
+  line-height: 19px;
+}
+.choveigo-story-content > .choveigo-system {
+  margin-top: 30px;
+  padding-top: 26px;
+  padding-bottom: 19px;
+  border-top: 1px solid #263844;
+}
+.choveigo-system > h2 { margin-top: 24px; font-size: 28px; line-height: 34px; }
+.choveigo-system__intro {
+  max-width: 1100px;
+  margin-top: 18px;
+  font-size: 15px;
+  line-height: 22px;
+}
+.choveigo-system-map {
+  position: relative;
+  height: 320px;
+  margin: 40px 0 0;
+  color: #e1e7e3;
+  font-family: "League Spartan", Arial, sans-serif;
+}
+.choveigo-system-map__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+.choveigo-system-map__connectors { position: absolute; inset: 0; pointer-events: none; }
+.choveigo-system-map__connectors span { position: absolute; display: block; height: 2px; }
+.choveigo-system-map__role-line {
+  top: 78px; left: 20.39%; width: 2.66%; background: #57c6cb;
+}
+.choveigo-system-map__candidate-line {
+  top: 240px; left: 20.39%; width: 2.66%; background: #c79b45;
+}
+.choveigo-system-map__input-merge {
+  top: 78px; left: 22.97%; width: 2px; height: 162px !important; background: #52717b;
+}
+.choveigo-system-map__merge-line {
+  top: 159px; left: 23.04%; width: 4.33%; background: #57c6cb;
+}
+.choveigo-system-map__output-line {
+  top: 159px; left: 72.91%; width: 5.87%; background: #57c6cb;
+}
+.choveigo-system-map__inputs,
+.choveigo-system-map__decision,
+.choveigo-system-map__outcomes {
+  position: absolute;
+  top: 20px;
+  box-sizing: border-box;
+  border: 1px solid #29414d;
+  border-radius: 4px;
+  background: #0c202b;
+}
+.choveigo-system-map__inputs {
+  top: 0;
+  left: 0;
+  width: 20.39%;
+  height: 320px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}
+.choveigo-system-map__input {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  padding: 16px 16px;
+  border: 1px solid #29414d;
+  border-radius: 4px;
+  background: #102431;
+}
+.choveigo-system-map__input--roles { top: 24px; }
+.choveigo-system-map__input--candidate { top: 186px; border-color: #625639; }
+.choveigo-system-map__input h3,
+.choveigo-system-map__decision h3,
+.choveigo-system-map__outcomes h3 {
+  margin: 0;
+  color: #57c6cb;
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+.choveigo-system-map__input--candidate h3 { color: #d6b76b; }
+.choveigo-system-map__input p {
+  margin: 4px 0 0;
+  color: #e1e7e3;
+  font-size: 13px;
+  line-height: 19px;
+}
+.choveigo-system-map__input p + p { margin-top: 0; }
+.choveigo-system-map__decision {
+  left: 27.37%;
+  width: 45.53%;
+  top: 22px;
+  height: 276px;
+  padding: 16px 16px 20px;
+  border-color: #31505b;
+}
+.choveigo-system-map__decision h3,
+.choveigo-system-map__outcomes h3 { color: #d6b76b; }
+.choveigo-system-map__decision-note {
+  margin: 5px 0 0;
+  color: #9aabb0;
+  font-size: 13px;
+  line-height: 18px;
+}
+.choveigo-system-map__layers {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: minmax(0, .97fr) minmax(0, .97fr) minmax(0, 1.06fr);
+  gap: 10px;
+}
+.choveigo-system-map__layer {
+  min-width: 0;
+  min-height: 176px;
+  padding: 14px 13px;
+  border: 1px solid #427c80;
+  border-radius: 3px;
+  background: #102431;
+}
+.choveigo-system-map__layer--model { border-color: #735f38; }
+.choveigo-system-map__layer h4,
+.choveigo-system-map__outcome h4 {
+  margin: 0;
+  color: #57c6cb;
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 700;
+  letter-spacing: .015em;
+  text-transform: uppercase;
+}
+.choveigo-system-map__layer--model h4,
+.choveigo-system-map__outcome--recommendation h4 { color: #d6b76b; }
+.choveigo-system-map__layer p,
+.choveigo-system-map__outcome p {
+  margin: 12px 0 0;
+  color: #dce4df;
+  font-size: 13px;
+  line-height: 18px;
+}
+.choveigo-system-map__outcomes {
+  left: 78.77%;
+  width: 21.23%;
+  top: 22px;
+  height: 276px;
+  padding: 16px 16px 20px;
+  border-color: #31505b;
+}
+.choveigo-system-map__outcome {
+  margin-top: 8px;
+  min-height: 82px;
+  padding: 12px 12px;
+  border: 1px solid #29414d;
+  border-radius: 3px;
+  background: #102431;
+}
+.choveigo-system-map__outcome--recommendation {
+  margin-top: 10px;
+  min-height: 82px;
+  border-color: #735f38;
+}
+.choveigo-system-map__outcome + .choveigo-system-map__outcome { margin-top: 18px; }
+.choveigo-system-map__outcome h4 { font-size: 14px; line-height: 19px; }
+.choveigo-system-map__outcome p { margin-top: 7px; font-size: 13px; line-height: 17px; }
+.choveigo-system-content__diagram { margin-top: 40px; }
+.choveigo-system__boundaries {
+  margin-top: 13px;
+  padding-top: 17px;
+  grid-template-columns: 610px 640px;
+  gap: 116px;
+  border-top: 1px solid #263844;
+}
+.choveigo-system__boundaries > div > p:last-child {
+  margin-top: 8px;
+  font-size: 13px;
+  line-height: 20px;
+}
+.choveigo-system__tailoring {
+  margin-top: 7px;
+  padding: 8px 0 0;
+  align-items: baseline;
+  gap: 12px;
+  border-top: 1px solid #d6b76b;
+  border-left: 0;
+  background: transparent;
+}
+.choveigo-system__tailoring > span { font-size: 11px; }
+.choveigo-system__tailoring > p { font-size: 13px; }
+.choveigo-fit { padding-top: 34px; }
+.choveigo-review__story > p:last-child { max-width: 620px; }
+
+@media (max-width: 1200px) {
+  .choveigo-story-content > .choveigo-hero {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 38px;
+    padding-bottom: 38px;
+  }
+  .choveigo-hero__opening { max-width: 760px; }
+  .choveigo-hero__opening h1 { max-width: 650px; }
+  .choveigo-hero__focus { margin-top: 36px; }
+  .choveigo-hero .choveigo-recommendations { max-width: 920px; padding-top: 0; }
+  .choveigo-system__boundaries { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px; }
+  .choveigo-system-map {
+    height: auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .choveigo-system-map__connectors { display: none; }
+  .choveigo-system-map__inputs,
+  .choveigo-system-map__decision,
+  .choveigo-system-map__outcomes {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: auto;
+  }
+  .choveigo-system-map__inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+  .choveigo-system-map__input {
+    position: relative;
+    inset: auto;
+    min-height: 84px;
+    height: auto;
+  }
+  .choveigo-system-map__decision { padding: 14px; }
+  .choveigo-system-map__outcomes { padding: 14px; }
+  .choveigo-system-map__layers { margin-top: 12px; }
+  .choveigo-system__boundaries {
+    margin-top: 18px;
+    padding-top: 18px;
+  }
+  .choveigo-system__tailoring { margin-top: 12px; }
+}
+@media (max-width: 650px) {
+  .choveigo-hero__opening h1 {
+    max-width: 520px;
+    font-size: clamp(34px, 10vw, 42px);
+    line-height: 1.05;
+  }
+  .choveigo-hero__focus { margin-top: 34px; }
+  .choveigo-system > h2 { font-size: 24px; line-height: 1.2; }
+  .choveigo-system-map__inputs { grid-template-columns: minmax(0, 1fr); }
+  .choveigo-system-map__layers { grid-template-columns: minmax(0, 1fr); }
+  .choveigo-system-map__layer { min-height: 0; }
+  .choveigo-system__boundaries { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .choveigo-system__tailoring { display: block; }
+  .choveigo-system__tailoring > p { margin-top: 7px; }
 }

@@ -167,112 +167,108 @@ export default function CrestCaseStudy() {
       <article className="crest-story-content">
         <section className="crest-section crest-hero" id="crest-overview">
           <div className="crest-hero__opening">
-            <p className="crest-project-label">MPC HACKS 2026 / BRIM FINANCIAL CHALLENGE</p>
-            <h1>Crest</h1>
+            <div className="crest-hero__identity">
+              <div className="crest-hero__emblem" role="img" aria-label="Crest">
+                <img src="/media/profile/profile-crest-emblem.png" alt="" aria-hidden="true" />
+                <span>CREST</span>
+              </div>
+              <div>
+                <p className="crest-project-label">EXPENSE INTELLIGENCE / REVIEW WORKFLOW</p>
+                <h1>Crest</h1>
+              </div>
+            </div>
             <p className="crest-hero__intro">
-              Expense intelligence for transaction review, policy context,
-              finance questions and preapproval.
+              Crest is an expense intelligence workspace for reviewing requests
+              with budget, spend history and policy context.
             </p>
             <div className="crest-hero__rule" aria-hidden="true" />
-            <p className="crest-hero__contribution">
-              I built backend and data workflows across the Policy Compliance
-              Engine, rule-based signals, policy retrieval and part of
-              preapproval.
+            <p className="crest-hero__purpose">
+              It helps finance teams spot unusual patterns and prepare requests
+              for preapproval; a person reviews the context and decides what
+              happens next.
             </p>
-            <p className="crest-hero__award">
-              <strong>3RD PLACE</strong>
-              <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
-            </p>
-            <div className="crest-hero__team">
-              <span>FOUR-PERSON TEAM</span>
-              <p>Joshua Aryeetey · Shiv Arora · Ning Ye · Zachary Demnati</p>
-            </div>
           </div>
 
-          <figure className="crest-demo-figure">
-            <img
-              src="/media/crest-sample.png"
-              alt="Crest expense-review sample screen with policy context and preapproval controls"
-              width="684"
-              height="385"
-            />
-            <figcaption>
-              <span className="crest-sample-cue">SAMPLE DATA</span>
-              <span>Expense review / policy context / preapproval</span>
-              <a
-                href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
-                target="_blank"
-                rel="noreferrer"
-              >
-                WATCH DEMO ↗
-              </a>
-            </figcaption>
-          </figure>
+          <div className="crest-demo-media">
+            <figure className="crest-demo-figure">
+              <img
+                src="/media/crest-sample.png"
+                alt="Crest expense-review sample screen with policy context and preapproval controls"
+                width="684"
+                height="385"
+              />
+              <figcaption>
+                <span className="crest-sample-cue">SAMPLE DATA</span>
+                <span>Expense review / policy context / preapproval</span>
+                <a
+                  href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  WATCH DEMO ↗
+                </a>
+              </figcaption>
+            </figure>
+            <aside className="crest-demo-figure__decision-boundary" aria-label="Decision authority">
+              <p>
+                <strong>DETERMINISTIC RULES</strong>
+                <span>finance + policy authority</span>
+              </p>
+              <p>
+                <strong>GEMINI</strong>
+                <span>interprets retrieved policy</span>
+                <span aria-hidden="true">/</span>
+                <strong>HUMAN REVIEW</strong>
+                <span>decides the workflow action</span>
+              </p>
+            </aside>
+          </div>
         </section>
 
         <section className="crest-section crest-system" id="crest-system">
           <div className="crest-system__story">
-            <p className="food-section-label">TRANSACTION WORKFLOW / DECISION AUTHORITY</p>
-            <h2>Signals organize review. People own the decision.</h2>
+            <h2>One transaction. Two sources. Human review.</h2>
             <p>
-              A transaction moves through deterministic finance and policy
-              checks. Rule-based signals and retrieved policy context inform
-              the review; people retain decision authority.
+              Transactions move through deterministic finance and policy checks.
+              Rule-based signals and retrieved policy context support review;
+              people retain decision authority.
             </p>
           </div>
-          <figure className="crest-transaction-flow" aria-labelledby="crest-transaction-flow-title">
-            <figcaption id="crest-transaction-flow-title">
-              TRANSACTION → RULES + RETRIEVED POLICY → HUMAN REVIEW
-            </figcaption>
+          <figure className="crest-transaction-flow" aria-label="Transaction, policy and rules, and human review">
             <div className="crest-transaction-flow__stages">
               <section className="crest-transaction-flow__transaction">
-                <span>INPUT</span>
+                <span>01</span>
                 <h3>TRANSACTION</h3>
-                <p>A request enters the expense workflow.</p>
+                <p>A request enters expense review.</p>
               </section>
               <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
-              <div className="crest-transaction-flow__context" role="group" aria-label="Parallel review context">
-                <section>
-                  <span>AUTHORITATIVE</span>
-                  <h3>DETERMINISTIC FINANCE + POLICY RULES</h3>
-                  <p>Rules surface patterns that need attention.</p>
-                </section>
-                <section>
-                  <span>BOUNDED INTERPRETATION</span>
-                  <h3>RETRIEVED POLICY + GEMINI</h3>
-                  <p>Gemini interprets the relevant retrieved passages.</p>
-                </section>
-              </div>
+              <section className="crest-transaction-flow__context" aria-label="Policy and deterministic rules">
+                <span>02</span>
+                <h3>POLICY + RULES</h3>
+                <p>Rules surface patterns; retrieval supplies relevant policy passages.</p>
+              </section>
               <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
               <section className="crest-transaction-flow__review">
-                <span>HUMAN REVIEW</span>
-                <h3>REVIEW + PREAPPROVAL</h3>
-                <p>A reviewer can move the request toward preapproval.</p>
+                <span>03</span>
+                <h3>HUMAN REVIEW</h3>
+                <p>A reviewer weighs the context and can move a request toward preapproval.</p>
               </section>
             </div>
-            <p className="crest-transaction-flow__boundary">
-              Anomaly signals are deterministic heuristics; they do not decide an outcome.
-            </p>
           </figure>
           <figure className="crest-finance-workflow" aria-labelledby="crest-finance-workflow-title">
             <figcaption id="crest-finance-workflow-title">
               <span>FINANCE Q&amp;A + REPORTING</span>
-              <strong>A separate finance workflow.</strong>
             </figcaption>
             <div className="crest-finance-workflow__paths">
               <div>
-                <span>QUESTION</span>
-                <strong>Finance question</strong>
+                <span>FINANCE QUESTION</span>
                 <i aria-hidden="true">{"\u2192"}</i>
-                <span>Q&amp;A</span>
-                <strong>Finance answer</strong>
+                <span>FINANCE Q&amp;A ANSWER</span>
               </div>
               <div>
                 <span>REPORTING NEED</span>
-                <strong>Reporting request</strong>
                 <i aria-hidden="true">{"\u2192"}</i>
-                <span>REPORT</span>
-                <strong>Reporting view</strong>
+                <span>REPORT VIEW</span>
               </div>
             </div>
             <p className="crest-finance-workflow__boundary">
@@ -305,6 +301,9 @@ export default function CrestCaseStudy() {
                 </li>
               ))}
             </ol>
+            <p className="crest-policy-figure__attribution">
+              Deployment details are owner-reported.
+            </p>
             <p className="crest-policy-figure__trace">
               PDF extraction + chunking → embedding-001 (3,072 dimensions) →
               Atlas vector search → retrieved passages in a grounded prompt.
@@ -338,15 +337,14 @@ export default function CrestCaseStudy() {
             <p className="food-section-label">TECHNICAL OWNERSHIP</p>
             <h2>Backend workflows were my focus.</h2>
             <p>
-              My contribution covered the Policy Compliance Engine,
-              deterministic anomaly signals, policy retrieval, and part of
-              preapproval. It was a four-person team project.
+              On a four-person team, I built the Policy Compliance Engine
+              workflows, deterministic anomaly signals, policy retrieval, and
+              part of preapproval.
             </p>
           </div>
-          <div className="crest-team__result crest-ownership-boundary">
-            <strong>OWNERSHIP BOUNDARY</strong>
-            <span>Backend + data workflows</span>
-            <p>The primary frontend, initial MongoDB setup, and main Gemini integration were outside my ownership.</p>
+          <div className="crest-team__result">
+            <strong>3RD PLACE</strong>
+            <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
             <a
               href="https://devpost.com/software/crest-kglqay"
               target="_blank"
@@ -361,8 +359,9 @@ export default function CrestCaseStudy() {
           <p className="food-section-label">ENGINEERING PRINCIPLE</p>
           <h2>Keep interpretation separate from decision authority.</h2>
           <p>
-            Deterministic checks surface what needs attention. Retrieved policy
-            gives the review context. A person owns the next step.
+            Building this workflow sharpened my approach to human-in-the-loop
+            systems: make supporting evidence visible and keep approval
+            authority explicit.
           </p>
           <small>CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</small>
         </section>

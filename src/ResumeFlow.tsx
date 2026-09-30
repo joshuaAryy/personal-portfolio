@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import JMark from "./identity/JMark";
+import ResumeMechanism from "./ResumeMechanism";
 import "./resume.css";
 
 const resumePdfUrl = "/resume/Joshua_Aryeetey_General_Resume_v13.pdf";
@@ -46,31 +46,41 @@ export function ResumeFound() {
 
   return (
     <section className="resume-found" aria-labelledby="resume-found-title">
-      <div className="resume-found__emblem" aria-hidden="true">
-        <JMark variant="ringed" decorative />
-      </div>
-      <div className="resume-found__copy">
-        <p className="resume-found__eyebrow">PORTFOLIO UTILITY</p>
-        <h1 id="resume-found-title">Resume Found</h1>
-        <p className="resume-found__deck">
-          A concise view of experience, projects, education, and technical work.
-        </p>
+      <p className="resume-found__eyebrow">PORTFOLIO UTILITY</p>
+      <div className="resume-found__system">
+        <ResumeMechanism />
         <Link
-          className="resume-action resume-action--primary"
+          className="resume-action resume-action--primary resume-found__action"
           to="/resume/viewer"
           state={location.state}
         >
-          View Resume <span aria-hidden="true">→</span>
+          <img
+            className="resume-found__action-plate resume-found__action-plate--default"
+            src="/media/resume/communitydragon/9.22-ready-check/button-accept-default.png"
+            alt=""
+            aria-hidden="true"
+            width="212"
+            height="70"
+          />
+          <img
+            className="resume-found__action-plate resume-found__action-plate--hover"
+            src="/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png"
+            alt=""
+            aria-hidden="true"
+            width="212"
+            height="70"
+          />
+          <span>View Resume</span>
         </Link>
-        <button
-          className="resume-found__close"
-          type="button"
-          onClick={closeResume}
-          aria-keyshortcuts="Escape"
-        >
-          ESC <span aria-hidden="true">·</span> CLOSE
-        </button>
       </div>
+      <button
+        className="resume-found__close"
+        type="button"
+        onClick={closeResume}
+        aria-keyshortcuts="Escape"
+      >
+        ESC <span aria-hidden="true">·</span> CLOSE
+      </button>
     </section>
   );
 }

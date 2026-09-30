@@ -28,14 +28,14 @@ describe("opening route handoff", () => {
     expect(markup).toContain('class="opening__skip"');
   });
 
-  it("renders the 532-pixel registration circle and its four cardinal ticks", () => {
+  it("renders the segmented Hextech mechanism around the selected archive mark", () => {
     const markup = renderOpeningRoute();
 
-    expect(markup).toContain('class="opening__registration"');
-    expect(markup).toContain('viewBox="0 0 532 532"');
-    expect(markup).toContain('stroke="#B38F52"');
-    expect(markup).toContain('stroke-opacity="0.35"');
-    expect(markup.match(/class="opening__tick"/g)).toHaveLength(4);
+    expect(markup).toContain('data-node-id="2443:38"');
+    expect(markup).toContain('data-node-id="2443:71"');
+    expect(markup).toContain('src="/media/opening/segmented-outer-bezel.svg"');
+    expect(markup).toContain('src="/media/profile/open-portfolio-j-archive-source.jpg"');
+    expect(markup).toContain('aria-label="Skip to Home"');
   });
 
   it("selects the reduced-motion state before the opening is rendered", () => {

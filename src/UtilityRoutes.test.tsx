@@ -24,10 +24,11 @@ describe("help and route recovery", () => {
 
     expect(markup).toContain('aria-label="Error 404"');
     expect(markup).toContain('id="not-found-title"');
-    expect(markup).toContain('aria-label="Recovery links"');
-    expect(markup).toContain('class="utility-state utility-state--unavailable"');
-    for (const route of ["/projects", "/experience", "/profile"]) {
-      expect(markup).toContain(`href="${route}"`);
-    }
+    expect(markup).toContain('aria-label="Recovery link"');
+    const recovery = markup.slice(markup.indexOf('aria-label="Recovery link"'));
+    expect(recovery).toContain('href="/projects"');
+    expect(recovery).toContain("Go to Projects");
+    expect(recovery).not.toContain('href="/experience"');
+    expect(recovery).not.toContain('href="/profile"');
   });
 });

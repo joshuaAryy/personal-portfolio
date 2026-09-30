@@ -29,6 +29,10 @@ const projectMarks: Record<string, { src: string; alt: string; wordmark?: boolea
     src: "/media/profile/food-tracker-mark.svg",
     alt: "Food Tracker project mark",
   },
+  choveigo: {
+    src: "/media/profile/choveigo-mark.svg",
+    alt: "Cho’Veigo match-path project mark",
+  },
   crest: {
     src: "/media/profile/profile-crest-emblem.png",
     alt: "Crest project mark",

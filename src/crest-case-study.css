@@ -6,17 +6,82 @@
   gap: clamp(28px, 4vw, 64px);
 }
 
-.crest-hero__contribution {
+.crest-hero__identity {
+  position: relative;
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  align-items: center;
+  gap: 20px;
+  transform: translateY(-31px);
+}
+
+.crest-hero__identity > div:not(.crest-hero__emblem) {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.crest-hero__emblem {
+  position: absolute;
+  top: -26px;
+  left: 0;
+  display: flex;
+  width: 68px;
+  height: 68px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid #26434f;
+  background: #07141d;
+  color: #527fb7;
+}
+
+.crest-hero__emblem img {
+  display: block;
+  width: 38px;
+  height: 29px;
+  object-fit: contain;
+}
+
+.crest-hero__emblem span {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  line-height: 1;
+}
+
+.crest-hero__identity .crest-project-label {
+  margin-bottom: 9px;
+}
+
+.crest-hero__identity h1 {
+  margin: 0 0 14px;
+}
+
+@media (max-width: 650px) {
+  .crest-hero__identity {
+    grid-template-columns: 54px minmax(0, 1fr);
+    gap: 14px;
+  }
+
+  .crest-hero__emblem {
+    width: 54px;
+    height: 54px;
+  }
+
+  .crest-hero__emblem img {
+    width: 31px;
+    height: 24px;
+  }
+}
+
+.crest-hero__purpose {
   max-width: 58ch;
   font-size: 14px;
 }
 
-.crest-hero__award {
-  margin-top: 25px;
-}
-
-.crest-hero__team {
-  margin-top: 19px;
+.crest-demo-media {
+  min-width: 0;
 }
 
 .crest-demo-figure img {
@@ -28,6 +93,34 @@
   grid-template-columns: auto minmax(0, 1fr) auto;
 }
 
+.crest-demo-figure__decision-boundary {
+  display: grid;
+  gap: 5px;
+  margin-top: 31px;
+  padding: 7px 10px;
+  border: 1px solid rgba(84, 190, 188, 0.52);
+  border-left: 2px solid #2ab9c5;
+  background: rgba(16, 39, 43, 0.94);
+  color: #d4ddda;
+}
+
+.crest-demo-figure__decision-boundary p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 3px 7px;
+  margin: 0;
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.crest-demo-figure__decision-boundary strong {
+  color: #e3c57e;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.035em;
+}
+
 .crest-system {
   grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.48fr);
   align-items: center;
@@ -36,13 +129,18 @@
 }
 
 .crest-system__story h2 {
-  margin: 12px 0 16px;
-  font-size: clamp(25px, 2vw, 32px);
+  margin: 0 0 30px;
+  color: #f0ebde;
+  font-size: 34px;
+  line-height: 42px;
 }
 
 .crest-system__story > p:last-child {
-  font-size: 13px;
-  line-height: 1.55;
+  max-width: 430px;
+  margin: 0;
+  color: #a3b8ba;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .crest-transaction-flow {
@@ -66,7 +164,9 @@
 }
 
 .crest-transaction-flow__stages {
-  grid-template-columns: minmax(100px, 0.72fr) 20px minmax(0, 2fr) 20px minmax(130px, 0.92fr);
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) 20px minmax(0, 1.2fr) 20px minmax(0, 0.9fr);
+  align-items: stretch;
   gap: 10px;
 }
 
@@ -97,8 +197,7 @@
   line-height: 1.25;
 }
 
-.crest-transaction-flow__review > span,
-.crest-transaction-flow__context section + section > span {
+.crest-transaction-flow__review > span {
   color: #73d1cf;
 }
 
@@ -117,20 +216,38 @@
 }
 
 .crest-transaction-flow__context {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.crest-transaction-flow__context section {
+  display: flex;
   min-width: 0;
+  flex-direction: column;
+  justify-content: center;
   padding: 13px 12px;
   border: 1px solid #344b51;
-  border-top: 2px solid #c79b45;
+  border-top: 2px solid #56bdbc;
   background: rgba(25, 49, 55, 0.9);
 }
 
-.crest-transaction-flow__context section + section {
-  border-top-color: #56bdbc;
+.crest-transaction-flow__context > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #73d1cf;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: 0.07em;
+  line-height: 1.25;
+}
+
+.crest-transaction-flow__context h3 {
+  margin: 0 0 8px;
+  color: #eee7d8;
+  font-size: 11px;
+  line-height: 1.32;
+}
+
+.crest-transaction-flow__context p {
+  margin: 0;
+  color: #b6c3c5;
+  font-size: 10px;
+  line-height: 1.45;
 }
 
 .crest-transaction-flow__arrow {
@@ -288,6 +405,13 @@
   color: #73d1cf;
 }
 
+.crest-policy-figure__attribution {
+  margin: 0 0 12px;
+  color: #a9b5ba;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
 .crest-policy-figure__trace {
   margin: 0;
   padding-top: 12px;
@@ -336,33 +460,6 @@
   font-size: 13px;
 }
 
-.crest-team__result.crest-ownership-boundary {
-  gap: 11px;
-  padding: 19px 21px;
-  border: 1px solid #344b51;
-  border-left: 2px solid #c79b45;
-  background: #12262c;
-}
-
-.crest-ownership-boundary strong {
-  color: #c79b45;
-  font-size: 10px;
-  letter-spacing: 0.07em;
-}
-
-.crest-ownership-boundary span {
-  color: #eee7d8;
-  font-size: 16px;
-  line-height: 1.25;
-}
-
-.crest-ownership-boundary p {
-  margin: 0;
-  color: #a9b5ba;
-  font-size: 11px;
-  line-height: 1.45;
-}
-
 .crest-takeaway {
   max-width: 980px;
 }
@@ -388,7 +485,7 @@
   }
 
   .crest-transaction-flow__stages {
-    grid-template-columns: minmax(90px, 0.7fr) 16px minmax(0, 2fr) 16px minmax(120px, 0.9fr);
+    grid-template-columns: minmax(0, .9fr) 16px minmax(0, 1.2fr) 16px minmax(0, .9fr);
     gap: 7px;
   }
 }
@@ -479,7 +576,207 @@
     gap: 8px;
   }
 
-  .crest-team__result.crest-ownership-boundary {
-    padding: 15px;
+}
+
+@media (min-width: 1201px) {
+  .crest-section.crest-system {
+    margin-top: -28px;
+    row-gap: 42px;
+  }
+
+  .crest-section.crest-system .crest-transaction-flow {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .crest-section.crest-system .crest-transaction-flow figcaption {
+    margin-bottom: 33px;
+  }
+
+  .crest-section.crest-system .crest-transaction-flow__transaction,
+  .crest-section.crest-system .crest-transaction-flow__review,
+  .crest-section.crest-system .crest-transaction-flow__context {
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .crest-section.crest-system .crest-transaction-flow__boundary {
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  .crest-section.crest-system .crest-finance-workflow {
+    padding: 10px 16px 12px;
+  }
+
+  .crest-section.crest-system .crest-finance-workflow figcaption {
+    margin-bottom: 5px;
+  }
+
+  .crest-section.crest-system .crest-finance-workflow__paths > div {
+    gap: 1px 7px;
+    padding: 6px 10px;
+  }
+
+  .crest-section.crest-system .crest-finance-workflow__boundary {
+    margin-top: 4px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .crest-story-content > .crest-section.crest-hero::after {
+    bottom: -3px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-system__story h2 {
+    position: relative;
+    top: -11px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow {
+    position: relative;
+    left: -30px;
+    width: calc(100% + 30px);
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    justify-content: space-between;
+    width: calc(100% - 32px);
+    margin-top: 56px;
+    gap: 0;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages section {
+    position: relative;
+    align-self: start;
+    justify-content: flex-start;
+    width: 250px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__context {
+    left: 2px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages section > span {
+    width: 44px;
+    margin-bottom: 15px;
+    color: #c79c47;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 17px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages h3 {
+    width: 250px;
+    margin: 0 0 17px;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages p {
+    max-width: 235px;
+    margin: 0;
+    color: #a3b8ba;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow {
+    position: absolute;
+    top: 37px;
+    width: 38px;
+    height: 1px;
+    padding: 0;
+    background: #5c4729;
+    color: transparent;
+    font-size: 0;
+    line-height: 0;
+    transform: none;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow:nth-child(2) {
+    left: 252px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow:nth-child(4) {
+    left: 560px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow::after {
+    position: absolute;
+    top: -2px;
+    right: 0;
+    width: 5px;
+    height: 5px;
+    background: #c79c47;
+    content: "";
+    transform: rotate(45deg);
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow {
+    position: relative;
+    top: 1px;
+    left: -30px;
+    width: calc(100% + 30px);
+    padding: 10px 16px 16px 14px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow figcaption {
+    margin-bottom: 8px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow figcaption span {
+    color: #73d1d0;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow__paths {
+    grid-template-columns: 430px 1fr;
+    gap: 16px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow__paths > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #f0ebde;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    white-space: nowrap;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow__paths > div > span {
+    color: #f0ebde;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow__paths i {
+    color: #d2ae63;
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow__boundary {
+    margin-top: 15px;
+    color: #a3b8ba;
+    font-size: 10px;
+    line-height: 13px;
   }
 }

@@ -60,13 +60,8 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
     };
 
     if (reducedMotion) {
-      timers.current.push(
-        window.setTimeout(() => {
-          if (completed.current) return;
-          setLeaving(true);
-          timers.current.push(window.setTimeout(goToHome, REDUCED_HANDOFF_MS));
-        }, REDUCED_HANDOFF_MS),
-      );
+      setLeaving(true);
+      timers.current.push(window.setTimeout(goToHome, REDUCED_HANDOFF_MS));
     } else {
       timers.current.push(window.setTimeout(goToHome, OPENING_DURATION_MS));
     }

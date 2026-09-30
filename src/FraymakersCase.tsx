@@ -4,6 +4,7 @@ import "./fraymakers-case.css";
 const chapters = [
   { id: "pipeline", label: "PIPELINE" },
   { id: "composition", label: "COMPOSITION" },
+  { id: "configuration", label: "YAML CONFIG" },
   { id: "ownership", label: "OWNERSHIP" },
   { id: "outcome", label: "OUTCOME" },
 ] as const;
@@ -11,15 +12,15 @@ const chapters = [
 const stages = [
   {
     number: "01",
-    title: "Challonge metadata",
-    system: "CHALLONGE DATA",
-    detail: "Tournament and match metadata provide the workflow context.",
+    title: "Tournament match data",
+    system: "MATCH DATA",
+    detail: "Tournament results establish match context.",
   },
   {
     number: "02",
     title: "YAML configuration",
     system: "MATCH OVERRIDES",
-    detail: "YAML config holds match-specific values and overrides.",
+    detail: "Match-specific values and overrides configure the render.",
   },
   {
     number: "03",
@@ -37,12 +38,12 @@ const stages = [
 
 const compositionInputs = [
   "LOGOS",
-  "STAGE ART",
-  "CHARACTER / SPRITE ART",
-  "COSTUMES",
-  "ASSISTS",
-  "FOREGROUND ART",
-  "TEXT / SET LABELS",
+  "BACKGROUND / STAGE",
+  "PLAYER 1 CHARACTER",
+  "PLAYER 2 CHARACTER",
+  "SET / PLAYER TEXT",
+  "COSTUMES + ASSISTS",
+  "OTHER OVERLAYS",
 ] as const;
 
 const edgeCases = [
@@ -72,43 +73,56 @@ export default function FraymakersCase() {
       <article className="fray-case" aria-labelledby="fraymakers-title">
         <header className="fray-case__intro" id="fraymakers-intro">
           <div className="fray-case__intro-copy">
-            <p className="fray-case__eyebrow">FRAYMAKERS / UPLOADASSISTANT</p>
-            <h1 id="fraymakers-title">Match data to VOD thumbnails</h1>
+            <p className="fray-case__eyebrow">FRAYMAKERS / MATCH-TO-THUMBNAIL SYSTEM</p>
+            <h1 id="fraymakers-title">MATCH DATA TO VOD THUMBNAILS</h1>
             <p className="fray-case__dek">
               A tournament media workflow connected match context to the right
               video, then composed a consistent thumbnail for the VOD.
             </p>
           </div>
-          <div className="fray-case__scope">
-            <span className="fray-case__spec-label">MY SCOPE / JOINED LATER</span>
-            <strong><code>thumbnail.js</code> + YAML/configuration</strong>
-            <p>Thumbnail generation and integration, plus some YouTube API work.</p>
-            <span className="fray-case__scope-boundary">
-              My brother owned the project foundation, CLI, and early Challonge groundwork.
-              YouTube Data API / OAuth remained a prototype; automatic upload was not completed.
-            </span>
+          <div className="fray-case__product-path" role="group" aria-label="Match to rendered thumbnail">
+            <div className="fray-case__product-path-grid">
+              <section className="fray-case__product-path-point">
+                <span className="fray-case__spec-label">MATCH CONTEXT</span>
+                <strong>One match → one VOD</strong>
+                <p>Tournament results stay linked to the right recording.</p>
+              </section>
+              <section className="fray-case__product-path-point">
+                <span className="fray-case__spec-label">FRAME OUTPUT</span>
+                <strong>Layered 1280 × 720 PNG</strong>
+                <p>Node-canvas composes the thumbnail for the VOD.</p>
+              </section>
+            </div>
           </div>
           <div
             className="fray-case__spec"
             role="img"
-            aria-label="Schematic output preview, 1280 × 720; not original project artwork"
+            aria-label="Explanatory layout schematic: stage background, two characters, player and set text, logos, and overlays; not original project art"
           >
             <span className="fray-case__spec-label">SCHEMATIC OUTPUT / LAYOUT ONLY</span>
             <div className="fray-case__schematic-preview" aria-hidden="true">
               <span className="fray-case__schematic-stamp">SCHEMATIC / LAYOUT ONLY</span>
               <span className="fray-case__schematic-dimension">1280 × 720</span>
+              <span className="fray-case__schematic-stage" aria-hidden="true" />
+              <span className="fray-case__schematic-label fray-case__schematic-label--background">
+                BACKGROUND / STAGE ART
+              </span>
               <span className="fray-case__schematic-label fray-case__schematic-label--players">
-                SET / PLAYER LABELS
+                SET / PLAYER TEXT
               </span>
-              <span className="fray-case__schematic-label fray-case__schematic-label--art">
-                CHARACTER + STAGE ART
+              <span className="fray-case__schematic-label fray-case__schematic-label--player-one">
+                PLAYER 1 · CHARACTER
               </span>
+              <span className="fray-case__schematic-label fray-case__schematic-label--player-two">
+                PLAYER 2 · CHARACTER
+              </span>
+              <span className="fray-case__schematic-label fray-case__schematic-label--logos">LOGOS</span>
               <span className="fray-case__schematic-label fray-case__schematic-label--layers">
-                LOGO / FOREGROUND LAYERS
+                OTHER OVERLAY LAYERS
               </span>
             </div>
-            <span className="fray-case__spec-meta">PNG <i /> NODE-CANVAS</span>
-            <span className="fray-case__spec-caption">Not original project artwork</span>
+            <span className="fray-case__spec-meta">PNG <i /> NODE-CANVAS <i /> 16:9</span>
+            <span className="fray-case__spec-caption">Schematic layout, not project art</span>
           </div>
         </header>
 
@@ -165,24 +179,63 @@ export default function FraymakersCase() {
           </dl>
         </section>
 
+        <section className="fray-case__configuration" id="fraymakers-configuration" aria-labelledby="fraymakers-configuration-title">
+          <div className="fray-case__section-head fray-case__section-head--compact">
+            <div>
+              <p className="fray-case__eyebrow">YAML / MATCH-SPECIFIC OVERRIDES</p>
+              <h2 id="fraymakers-configuration-title">One render path; values change by match.</h2>
+            </div>
+            <p className="fray-case__configuration-intro">
+              YAML carried match-specific values and overrides. <code>thumbnail.js</code> and node-canvas
+              combined them with the selected game art and labels.
+            </p>
+          </div>
+          <figure className="fray-case__config-flow" aria-label="YAML values and composition layers feed thumbnail.js and node-canvas to produce a 1280 by 720 PNG">
+            <section className="fray-case__config-card fray-case__config-card--yaml">
+              <span className="fray-case__config-kicker">MATCH-SPECIFIC INPUT</span>
+              <h3>YAML</h3>
+              <p>Values + overrides</p>
+            </section>
+            <span className="fray-case__config-arrow" aria-hidden="true">→</span>
+            <section className="fray-case__config-card fray-case__config-card--render">
+              <span className="fray-case__config-kicker">COMPOSITION</span>
+              <h3><code>thumbnail.js</code> + node-canvas</h3>
+              <ul aria-label="Layer inputs">
+                <li>Stage / background</li>
+                <li>Character 1</li>
+                <li>Character 2</li>
+                <li>Set / player text</li>
+                <li>Logos</li>
+                <li>Other overlays</li>
+              </ul>
+            </section>
+            <span className="fray-case__config-arrow" aria-hidden="true">→</span>
+            <section className="fray-case__config-card fray-case__config-card--output">
+              <span className="fray-case__config-kicker">VOD THUMBNAIL</span>
+              <h3>1280 × 720</h3>
+              <p>One composed PNG</p>
+            </section>
+            <figcaption>Match-specific configuration meets a layered, repeatable render.</figcaption>
+          </figure>
+        </section>
+
         <section className="fray-case__ownership" id="fraymakers-ownership" aria-labelledby="fraymakers-ownership-title">
           <div className="fray-case__section-head fray-case__section-head--compact">
             <div>
-              <p className="fray-case__eyebrow">CONTRIBUTION / OWNERSHIP</p>
-              <h2 id="fraymakers-ownership-title">A focused subsystem inside a shared build.</h2>
+              <p className="fray-case__eyebrow">TECHNICAL OWNERSHIP</p>
+              <h2 id="fraymakers-ownership-title">I built the thumbnail-generation path.</h2>
             </div>
-            <p className="fray-case__ownership-lead">I joined later, after the foundation was underway.</p>
           </div>
           <div className="fray-case__ownership-grid">
             <section className="fray-case__ownership-card fray-case__ownership-card--joshua" aria-labelledby="fraymakers-joshua-title">
-              <p className="fray-case__eyebrow">JOSHUA / JOINED LATER</p>
+              <p className="fray-case__eyebrow">THUMBNAIL WORKFLOW</p>
               <h3 id="fraymakers-joshua-title"><code>thumbnail.js</code></h3>
-              <p>I wrote <code>thumbnail.js</code> and contributed YAML/configuration, thumbnail generation and integration, and some YouTube API work.</p>
+              <p>I wrote <code>thumbnail.js</code> and contributed YAML/configuration, thumbnail generation and integration. I also prototyped part of the YouTube API work.</p>
             </section>
             <section className="fray-case__ownership-card" aria-labelledby="fraymakers-brother-title">
-              <p className="fray-case__eyebrow">BROTHER / PROJECT FOUNDATION</p>
+              <p className="fray-case__eyebrow">SHARED PROJECT FOUNDATION</p>
               <h3 id="fraymakers-brother-title">Foundation, CLI, Challonge</h3>
-              <p>My brother owned the foundation, CLI, and much of the early Challonge and API groundwork.</p>
+              <p>My brother started the broader project and built its foundation, CLI, and much of the early Challonge and API groundwork.</p>
             </section>
           </div>
         </section>

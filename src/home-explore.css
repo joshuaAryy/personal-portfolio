@@ -1,11 +1,9 @@
-.main--home-explore {
+.main.main--home-explore {
   padding: 0;
   overflow: auto;
   color: #eee4cb;
   background-color: #071823;
-  background-image:
-    linear-gradient(180deg, rgba(4, 14, 21, 0.32), rgba(4, 13, 20, 0.42)),
-    url("/media/lobby/party-background.png");
+  background-image: url("/media/lobby/home-mode-environment.png");
   background-position: center;
   background-size: cover;
   isolation: isolate;
@@ -18,17 +16,6 @@
   min-height: 100%;
   grid-template-rows: 60px 35px 285px 20px minmax(410px, 1fr);
   padding: 0 20px;
-}
-
-.home-explore::before {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(3, 11, 17, 0.32), transparent 48%, rgba(4, 12, 17, 0.12)),
-    linear-gradient(180deg, rgba(2, 9, 15, 0.18) 0%, transparent 36%, rgba(3, 9, 14, 0.4) 100%);
-  content: "";
-  pointer-events: none;
 }
 
 .home-explore__subnav {
@@ -194,8 +181,58 @@
   object-fit: contain;
 }
 
-.home-explore__mode[aria-label="Projects"]:not([data-selected="true"]) .home-explore__mode-emblem {
-  filter: saturate(0.58) brightness(0.88);
+.home-explore__mode-selected-ring {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 140ms ease;
+}
+
+.home-explore__mode[data-selected="true"] .home-explore__mode-selected-ring {
+  opacity: 0.95;
+}
+
+.home-explore__mode-glyph {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 42.6667%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.home-explore__mode-glyph img {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.home-explore__mode-glyph--projects img {
+  top: 16.7969%;
+  left: 15.2344%;
+  width: 72.9688%;
+  height: 78.125%;
+}
+
+.home-explore__mode-glyph--experience img {
+  top: 14.455%;
+  left: 21.4844%;
+  width: 65.1563%;
+  height: 72.6563%;
+}
+
+.home-explore__mode-glyph--hackathons img {
+  top: 10.4666%;
+  left: 24.5305%;
+  width: 53.5938%;
+  height: 80.4688%;
 }
 
 .home-explore__mode-name {
@@ -274,7 +311,6 @@
   align-content: start;
   padding: 0 0 0 33px;
   border: 0;
-  border-bottom: 1px solid rgba(197, 177, 129, 0.13);
   color: #e6ddc8;
   font-size: 11px;
   text-transform: uppercase;
@@ -557,7 +593,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   .home-explore__mode-frame,
-  .home-explore__mode::after {
+  .home-explore__mode::after,
+  .home-explore__mode-selected-ring {
     transition: none;
   }
 }

@@ -1,39 +1,47 @@
 import { renderToStaticMarkup } from "react-dom/server";
+import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import StushPattiesCase from "./StushPattiesCase";
 
 describe("Stush Patties technical data-pipeline story", () => {
-  const markup = () => renderToStaticMarkup(<StushPattiesCase />);
+  const markup = () => renderToStaticMarkup(<MemoryRouter><StushPattiesCase /></MemoryRouter>);
 
-  it("shows the file-to-reporting architecture and the alignment contract", () => {
+  it("shows the file-to-report transformation and reporting destination", () => {
     const html = markup();
     for (const stage of [
-      "Read &amp; parse",
-      "Canonicalize fields",
-      "Normalize for reporting",
+      "Different file shapes. One reporting path.",
+      "Read each structure",
+      "Fields found in each layout",
+      "SHARED FIELD CONTRACT",
+      "Four stable meanings",
+      "NORMALIZE",
+      "STANDARDIZED OUTPUT",
       "Unified CSV",
       "Data dictionary",
       "Quality report",
       "Power BI",
     ]) expect(html).toContain(stage);
-    expect(html).toContain("case packs and reporting months");
-    expect(html).toContain("client’s reporting question");
+    for (const field of ["Sales", "Units", "Case pack", "Reporting month"]) {
+      expect(html).toContain(field);
+    }
+    expect(html).toContain("Conceptual pipeline");
   });
 
-  it("keeps file formats across inputs without assigning them to a distributor", () => {
+  it("keeps formats grouped across generic inputs", () => {
     const html = markup();
-    expect(html).toContain("CSV · XLSX · XLSB across inputs");
-    expect(html).toContain("not mapped one-to-one");
-    expect(html).not.toMatch(/Koyo[^<]{0,50}(CSV|XLSX|XLSB)/i);
+    expect(html).toContain("CSV · XLSX · XLSB");
+    expect(html).toContain("Formats across inputs");
+    expect(html).not.toMatch(/Koyo|Riipen|IBM SkillsBuild/i);
   });
 
-  it("describes the temporary Koyo exception and bounded two-person contribution", () => {
+  it("states Joshua's parsing ownership and places the generic edge case later", () => {
     const html = markup();
     const normalized = html.toLowerCase();
-    expect(normalized).toContain("temporary position-and-cell parser");
+    expect(normalized).toContain("i built python parsing and");
+    expect(normalized).toContain("one distributor file needed a separate parsing branch");
     expect(normalized).toContain("two-person technical team with shiv");
-    expect(normalized).toContain("i contributed to python parsing and normalization");
-    expect(html).not.toContain("40–50%");
-    expect(html).not.toContain("I owned the whole pipeline");
+    expect(normalized).not.toContain("i contributed to python parsing and normalization");
+    const opening = html.split("</header>")[0];
+    expect(opening).not.toMatch(/Koyo|two-person team|team size/i);
   });
 });

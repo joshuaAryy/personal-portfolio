@@ -9,94 +9,127 @@
 }
 
 .main--resume-found {
+  position: relative;
+  isolation: isolate;
   padding: 0;
   overflow-x: hidden;
   overflow-y: auto;
   background:
-    radial-gradient(ellipse at 50% 38%, #17222b 0, #0a1118 34%, transparent 67%),
-    linear-gradient(180deg, #050b11, #020508 78%);
+    radial-gradient(ellipse 610px 510px at 50% 43%, rgb(10 132 157 / 12%) 0%, rgb(5 62 91 / 9%) 36%, transparent 72%),
+    radial-gradient(ellipse 1080px 840px at 50% 46%, #071a27 0%, #030d17 72%);
+}
+
+.client--resume-shell > .header,
+.client--resume-shell .client-body > .rail {
+  filter: brightness(0.72) saturate(0.78);
 }
 
 .resume-found {
-  position: relative;
-  isolation: isolate;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  min-height: max(100%, calc(100vh - 82px));
-  padding: 46px 28px 38px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: max(100%, calc(100vh - var(--client-header-height)));
+  box-sizing: border-box;
+  padding: clamp(32px, 4.63vh, 50px) 24px 32px;
   text-align: center;
 }
 
-.resume-found::before {
-  content: "";
+.resume-found__eyebrow {
+  margin: 0 0 24px;
+  color: #f0d58a;
+  font-family: Cinzel, Georgia, serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+}
+
+.resume-found__system {
+  position: relative;
+  isolation: isolate;
+  flex: none;
+  width: min(530px, 49.07vh, calc(100vw - 32px));
+  container-type: inline-size;
+}
+
+.resume-found__system::before {
   position: absolute;
   z-index: -1;
-  top: 43%;
-  left: 50%;
-  width: min(52vw, 590px);
-  aspect-ratio: 1;
-  border: 1px solid #bc96504a;
+  inset: -25%;
   border-radius: 50%;
   background:
-    radial-gradient(circle, transparent 57%, #dfbe6c16 57.2%, transparent 57.6%),
-    repeating-conic-gradient(from 0deg, #b89b5b22 0deg 0.25deg, transparent 0.25deg 15deg);
-  box-shadow:
-    0 0 0 12px #c9a24a08,
-    0 0 75px #24354430,
-    inset 0 0 48px #18263336;
-  transform: translate(-50%, -50%);
-  animation: resume-ring-arrive 700ms ease-out both;
+    radial-gradient(circle at 50% 48%, rgb(12 210 195 / 15%) 0%, rgb(16 124 166 / 12%) 28%, rgb(6 38 66 / 8%) 48%, transparent 71%);
+  content: "";
+  filter: blur(18px);
+  pointer-events: none;
 }
 
-.resume-found__emblem {
-  width: clamp(244px, 29vw, 362px);
+.resume-mechanism {
+  position: relative;
+  width: 100%;
   aspect-ratio: 1;
-  animation: resume-mark-arrive 620ms cubic-bezier(.2,.7,.25,1) both;
+  overflow: visible;
 }
 
-.resume-found__emblem svg {
+.resume-mechanism__j,
+.resume-mechanism__frame {
+  position: absolute;
+  display: block;
+  height: 100%;
+  object-fit: fill;
+}
+
+.resume-mechanism__j {
+  z-index: 0;
+  top: 6.6038%;
+  left: 6.6038%;
+  width: 86.7925%;
+  height: 86.7925%;
+  clip-path: circle(42.1739% at 50% 50%);
+}
+
+.resume-mechanism__j-image {
   display: block;
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0 16px 26px #0009);
+  object-fit: fill;
+  user-select: none;
 }
 
-.resume-found__copy {
-  display: grid;
-  justify-items: center;
-  max-width: 720px;
-  margin-top: -9px;
-  animation: resume-copy-arrive 380ms 180ms ease-out both;
+.resume-mechanism__frame {
+  z-index: 1;
+  inset: 0;
+  width: 100%;
+  pointer-events: none;
 }
 
-.resume-found__eyebrow,
+.resume-mechanism__title {
+  position: absolute;
+  z-index: 2;
+  top: 83.96%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45.28%;
+  height: 4.53%;
+  margin: 0;
+  transform: translateX(-50%);
+  color: #f0e6d2;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(10px, 2.83cqw, 15px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
 .resume-viewer__eyebrow {
   margin: 0 0 9px;
   color: #b99b5f;
   font-size: 10px;
   font-weight: 700;
   letter-spacing: 1.5px;
-}
-
-.resume-found h1 {
-  margin: 0;
-  color: #f0e5c7;
-  font-family: Cinzel, Georgia, serif;
-  font-size: clamp(27px, 3vw, 39px);
-  font-weight: 600;
-  letter-spacing: .075em;
-  line-height: 1.15;
-  text-transform: uppercase;
-}
-
-.resume-found__deck {
-  max-width: 560px;
-  margin: 11px 0 0;
-  color: #aab2b4;
-  font-size: 14px;
-  line-height: 1.55;
 }
 
 .resume-action {
@@ -119,16 +152,22 @@
 }
 
 .resume-action--primary {
-  border-color: #c7a75e;
-  background: linear-gradient(110deg, #a9823c, #d2b96f 52%, #967238);
-  color: #111820;
-  box-shadow: 0 8px 26px #0006, inset 0 1px #fff2c766;
+  position: relative;
+  isolation: isolate;
+  border: 0;
+  background: linear-gradient(105deg, #35d5d5, #8af0e8 50%, #2eafb8);
+  color: #061417;
+  box-shadow: 0 8px 26px #0007, inset 0 1px #d8fffb99;
+  clip-path: polygon(0 0, calc(100% - 13px) 0, 100% 13px, 100% 100%, 13px 100%, 0 calc(100% - 13px));
+  font-family: Inter, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .15em;
 }
 
 .resume-action--primary:hover {
-  border-color: #f1d98c;
-  background: linear-gradient(110deg, #b8914d, #e2cb80 52%, #a17d40);
-  color: #080d12;
+  background: linear-gradient(105deg, #65eeee, #b2fff4 50%, #59d5db);
+  color: #041012;
 }
 
 .resume-action--secondary {
@@ -142,22 +181,96 @@
 }
 
 .resume-found .resume-action {
-  min-width: 224px;
-  margin-top: 25px;
+  min-width: 0;
+  min-height: 0;
+  margin-top: 0;
+}
+
+.resume-found__action {
+  z-index: 3;
+  width: 40%;
+  aspect-ratio: 212 / 70;
+  height: auto;
+  position: absolute;
+  top: 88.87%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  clip-path: none;
+  color: #f0e6d2;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(10px, 2.64cqw, 14px);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 160ms ease;
+}
+
+.resume-found__action:hover {
+  background: transparent;
+  color: #fff0c1;
+}
+
+.resume-found__action-plate {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  pointer-events: none;
+}
+
+.resume-found__action-plate--hover {
+  opacity: 0;
+  transition: opacity 160ms ease;
+}
+
+.resume-found__action:hover .resume-found__action-plate--hover,
+.resume-found__action:focus-visible .resume-found__action-plate--hover {
+  opacity: 1;
+}
+
+.resume-found__action:hover .resume-found__action-plate--default,
+.resume-found__action:focus-visible .resume-found__action-plate--default {
+  opacity: 0;
+}
+
+.resume-found__action span {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px #001b25;
+}
+
+.resume-found__action:focus-visible {
+  outline: 2px solid #9cf9f0;
+  outline-offset: 3px;
 }
 
 .resume-found__close {
-  margin-top: 18px;
-  padding: 8px 12px;
+  position: relative;
+  z-index: 4;
+  margin-top: clamp(32px, 5.2vh, 56px);
+  padding: 0 12px;
   border: 0;
   background: transparent;
-  color: #8b9190;
-  font-size: 10px;
+  color: #f0e6d2;
+  font-size: 11px;
+  line-height: 18px;
   letter-spacing: .13em;
 }
 
 .resume-found__close:hover {
-  color: #e7d8b1;
+  color: #d7e0dc;
 }
 
 .main--resume-viewer {
@@ -259,28 +372,9 @@
   clip-path: inset(50%);
 }
 
-@keyframes resume-ring-arrive {
-  from { opacity: 0; scale: .94; }
-  to { opacity: 1; scale: 1; }
-}
-
-@keyframes resume-mark-arrive {
-  from { opacity: 0; transform: translateY(12px) scale(.97); }
-  to { opacity: 1; transform: translateY(0) scale(1); }
-}
-
-@keyframes resume-copy-arrive {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
 @media (max-width: 900px) {
-  .main--resume-found {
-    overflow: hidden;
-  }
-
   .resume-found {
-    min-height: calc(100vh - 82px);
+    min-height: max(100%, calc(100vh - var(--client-header-height)));
   }
 
   .main--resume-viewer {
@@ -307,26 +401,8 @@
   }
 
   .resume-found {
-    min-height: calc(100vh - 70px);
-    padding: 32px 22px 28px;
-  }
-
-  .resume-found::before {
-    top: 39%;
-    width: min(84vw, 460px);
-  }
-
-  .resume-found__emblem {
-    width: clamp(218px, 62vw, 282px);
-  }
-
-  .resume-found__copy {
-    margin-top: -5px;
-  }
-
-  .resume-found__deck {
-    max-width: 350px;
-    font-size: 13px;
+    min-height: max(100%, calc(100vh - var(--client-header-height)));
+    padding-inline: 16px;
   }
 
   .main--resume-viewer {
@@ -360,13 +436,26 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .resume-found::before,
-  .resume-found__emblem,
-  .resume-found__copy {
-    animation: none;
-  }
-
   .resume-action {
     transition: none;
+  }
+
+  .resume-found__action-plate--hover {
+    transition: none;
+  }
+}
+
+@media (max-height: 700px) {
+  .resume-found {
+    padding-bottom: 16px;
+  }
+
+  .resume-found__eyebrow {
+    margin-bottom: 14px;
+    line-height: 16px;
+  }
+
+  .resume-found__close {
+    margin-top: 12px;
   }
 }

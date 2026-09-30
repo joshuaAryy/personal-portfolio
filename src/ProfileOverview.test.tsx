@@ -1,7 +1,5 @@
 // @vitest-environment happy-dom
 
-import { act } from "react";
-import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -46,50 +44,16 @@ describe("Profile Overview", () => {
     expect(markup).toContain("/media/profile/academics-signal.svg");
   });
 
-  it("uses the four lower Figma signals as section tabs for the connected detail panel", () => {
+  it("keeps the four lower Figma signals as static summaries with Projects selected", () => {
     const markup = renderProfile();
 
-    expect(markup).toContain('role="tablist" aria-label="Profile overview sections"');
-    expect(markup.match(/role="tab"/g)).toHaveLength(4);
-    expect(markup).toContain('aria-controls="profile-section-panel"');
-    expect(markup).toContain('role="tabpanel"');
-    expect(markup).toContain('aria-selected="true"');
-    expect(markup).toContain('aria-selected="false"');
-  });
-
-  it("switches the connected panel when a lower signal is selected", async () => {
-    const host = document.createElement("div");
-    document.body.append(host);
-    const root = createRoot(host);
-
-    await act(async () => {
-      root.render(
-        <MemoryRouter initialEntries={["/profile"]}>
-          <ProfileOverview projects={projects} projectCasePaths={projectCasePaths} />
-        </MemoryRouter>,
-      );
-    });
-
-    await act(async () => {
-      host.querySelector<HTMLButtonElement>("#profile-tab-experience")?.click();
-    });
-    expect(host.querySelector("#profile-panel-heading")?.textContent).toBe("EXPERIENCE");
-    expect(host.querySelectorAll(".profile-experience")).toHaveLength(2);
-    expect(host.querySelector<HTMLButtonElement>("#profile-tab-experience")?.getAttribute("aria-selected")).toBe("true");
-
-    await act(async () => {
-      host.querySelector<HTMLButtonElement>("#profile-tab-hackathon")?.click();
-    });
-    expect(host.querySelector(".profile-hackathon-feature__placement")?.textContent).toBe("3RD PLACE");
-
-    await act(async () => {
-      host.querySelector<HTMLButtonElement>("#profile-tab-academics")?.click();
-    });
-    expect(host.querySelector(".profile-academics-feature__program")?.textContent).toBe("COMPUTER ENGINEERING");
-    expect(host.querySelector(".profile-academics-feature__course-list")?.textContent).toContain("Algorithms & Data Structures");
-    expect(host.querySelector(".profile-academics-feature__recognition")?.textContent).not.toContain("Dean’s List");
-
-    await act(async () => root.unmount());
-    host.remove();
+    expect(markup).toContain('role="group" aria-label="Profile summary details"');
+    expect(markup.match(/class="profile-signal(?:\s[^"]*)?"/g)).toHaveLength(4);
+    expect(markup).toContain('<h2 id="profile-panel-heading">PROJECTS</h2>');
+    expect(markup).toContain('<span class="profile-signal__label">PROJECTS</span>');
+    expect(markup).toContain('<span class="profile-signal__value">2028</span>');
+    expect(markup).not.toContain("profile-tab-");
+    expect(markup).not.toContain('role="tablist"');
+    expect(markup).not.toContain('role="tabpanel"');
   });
 });

@@ -3,70 +3,81 @@ import { Link } from "react-router-dom";
 import "./food-visuals.css";
 
 const foodChapters = [
-  { id: "overview", label: "SYSTEM" },
-  { id: "search", label: "RETRIEVAL" },
-  { id: "iteration", label: "VALIDATION" },
-  { id: "workflow", label: "OWNERSHIP" },
-  { id: "reflection", label: "TAKEAWAY" },
+  { id: "overview", label: "PRODUCT" },
+  { id: "search", label: "SYSTEM" },
+  { id: "evaluation", label: "RESULTS" },
+  { id: "workflow", label: "LEARNING" },
+  { id: "reflection", label: "CLOSE" },
 ] as const;
 
 type FoodChapterId = (typeof foodChapters)[number]["id"];
 
-const foodSystemStages = [
-  {
-    number: "01",
-    title: "MOBILE EXPERIENCE",
-    detail: "Simple + Complex views over the same backend + food domain.",
-  },
-  {
-    number: "02",
-    title: "BACKEND SERVICES",
-    detail: "Search, serving conversion, and logging.",
-  },
-  {
-    number: "03",
-    title: "REFERENCE CATALOG",
-    detail: "12,363 active foods / 277,341 nutrient rows.",
-  },
-  {
-    number: "04",
-    title: "SERVING + NUTRIENTS",
-    detail: "Backend resolves servings; catalog supplies nutrients.",
-  },
-  {
-    number: "05",
-    title: "CANONICAL LOG",
-    detail: "The canonical food log stays immutable; unknown stays unknown.",
-  },
-] as const;
-
 const foodBenchmarkSets = [
   {
-    name: "DEVELOPMENT · 80 QUERIES",
-    legacy: ["40/80", "40/80", "40/80"],
-    hybrid: ["71/80", "72/80", "72/80"],
+    name: "DEVELOPMENT",
+    queries: 80,
+    legacy: { top1: 40, top3: 40, top5: 40 },
+    hybrid: { top1: 71, top3: 72, top5: 72 },
   },
   {
-    name: "HOLDOUT · 40 QUERIES",
-    legacy: ["25/40", "25/40", "25/40"],
-    hybrid: ["27/40", "28/40", "28/40"],
+    name: "HOLDOUT",
+    queries: 40,
+    legacy: { top1: 25, top3: 25, top5: 25 },
+    hybrid: { top1: 27, top3: 28, top5: 28 },
   },
 ] as const;
 
 function FoodSystemMap() {
   return (
-    <figure className="food-system-map" aria-labelledby="food-system-map-title">
-      <figcaption id="food-system-map-title">
-        MOBILE PRODUCT SYSTEM <span>·</span> SHARED FOOD DOMAIN
+    <figure className="food-system-map food-system-map--flagship" aria-labelledby="food-system-map-title">
+      <img
+      className="food-system-map__illustration"
+      src="/media/case-studies/food-system-pass-07.png"
+      width="1432"
+      height="380"
+      alt="In-app food search gathers exact, fuzzy, and semantic candidates into one deterministic ranking. Trusted food data and serving rules resolve nutrition before an append-only daily log records the result."
+      />
+      <ol className="food-system-map__mobile-steps" aria-label="Food Tracker system path">
+        <li>
+          <strong>Search in the app</strong>
+          <span>Start with a meal or ingredient.</span>
+        </li>
+        <li>
+          <strong>Find and rank candidates</strong>
+          <span>Exact, fuzzy, and semantic paths feed one deterministic ranking.</span>
+        </li>
+        <li>
+          <strong>Resolve nutrition</strong>
+          <span>Trusted food data and serving rules independently resolve nutrition.</span>
+        </li>
+        <li>
+          <strong>Record the result</strong>
+          <span>The append-only daily log preserves recorded history.</span>
+        </li>
+      </ol>
+      <figcaption id="food-system-map-title" className="food-system-map__sr-only">
+        Illustrative system flow, not a product screenshot: the app gathers food candidates, deterministic evaluation chooses their order, trusted catalog data and serving rules resolve nutrition, and the append-only canonical log records the result.
       </figcaption>
-      <ol className="food-system-map__stages">
-        {foodSystemStages.map((stage) => (
-          <li key={stage.title}>
-            <span className="food-system-map__number">{stage.number}</span>
-            <strong>{stage.title}</strong>
-            <p>{stage.detail}</p>
-          </li>
-        ))}
+    </figure>
+  );
+}
+
+function FoodProductFlow() {
+  return (
+    <figure className="food-product-flow" aria-label="Food Tracker product path schematic">
+      <div className="food-product-flow__art">
+        <img
+          src="/media/case-studies/food-product-flow-pass-09-inset.png"
+          width="884"
+          height="222"
+          alt="Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record."
+        />
+      </div>
+      <ol className="food-product-flow__mobile-steps" aria-label="Product path stages">
+        <li><strong>01 · Log a meal</strong><span>Quick entry.</span></li>
+        <li><strong>02 · Match the food</strong><span>Search proposes candidates.</span></li>
+        <li><strong>03 · Resolve a serving</strong><span>Trusted food data and serving rules set nutrition.</span></li>
+        <li><strong>04 · Keep history</strong><span>Record a canonical log entry.</span></li>
       </ol>
     </figure>
   );
@@ -74,48 +85,44 @@ function FoodSystemMap() {
 
 function FoodBenchmark() {
   return (
-    <figure className="food-benchmark" aria-labelledby="food-benchmark-title">
+    <figure className="food-benchmark food-benchmark--flagship" aria-labelledby="food-benchmark-title">
       <figcaption id="food-benchmark-title" className="food-benchmark__title">
-        OFFLINE RETRIEVAL BENCHMARK <span>·</span> RANKED RESULTS
+        OFFLINE RETRIEVAL · TOP-1 FIRST RESULT
       </figcaption>
       <div className="food-benchmark__splits">
         {foodBenchmarkSets.map((set) => (
           <section
             className="food-benchmark__split"
             key={set.name}
-            aria-label={set.name.toLowerCase().includes("development") ? "Development query set" : "Holdout query set"}
+            aria-label={`${set.name.toLowerCase()} query set`}
           >
-            <h3>{set.name}</h3>
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">RETRIEVER</th>
-                  <th scope="col">TOP-1</th>
-                  <th scope="col">TOP-3</th>
-                  <th scope="col">TOP-5</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">LEGACY</th>
-                  {set.legacy.map((value, index) => (
-                    <td key={index}>{value}</td>
-                  ))}
-                </tr>
-                <tr className="food-benchmark__hybrid">
-                  <th scope="row">FULL HYBRID</th>
-                  {set.hybrid.map((value, index) => (
-                    <td key={index}>{value}</td>
-                  ))}
-                </tr>
-              </tbody>
-            </table>
+            <h3>{set.name} · {set.queries} QUERIES</h3>
+            <p className="food-benchmark__definition">Top-1 means the correct food ranked first.</p>
+            <div className="food-benchmark__bar-row">
+              <span>LEGACY BASELINE</span>
+              <div role="img" aria-label={`Legacy baseline: ${set.legacy.top1} of ${set.queries}`}>
+                <i style={{ width: `${(set.legacy.top1 / set.queries) * 100}%` }} />
+              </div>
+              <strong>{set.legacy.top1}/{set.queries}</strong>
+            </div>
+            <div className="food-benchmark__bar-row food-benchmark__bar-row--hybrid">
+              <span>FULL HYBRID</span>
+              <div role="img" aria-label={`Full hybrid: ${set.hybrid.top1} of ${set.queries}`}>
+                <i style={{ width: `${(set.hybrid.top1 / set.queries) * 100}%` }} />
+              </div>
+              <strong>{set.hybrid.top1}/{set.queries}</strong>
+            </div>
+            <p className="food-benchmark__secondary">
+              Top-3&nbsp; {set.legacy.top3}/{set.queries} → {set.hybrid.top3}/{set.queries}
+              <span>·</span>
+              Top-5&nbsp; {set.legacy.top5}/{set.queries} → {set.hybrid.top5}/{set.queries}
+            </p>
           </section>
         ))}
       </div>
       <p className="food-benchmark__scale">
-        REFERENCE CATALOG · 12,363 ACTIVE FOODS · 277,341 NUTRIENT ROWS · SCALE,
-        NOT PRODUCT IMPACT
+        REFERENCE CATALOG · 12,363 ACTIVE FOODS · 277,341 NUTRIENT ROWS · CATALOG
+        SCALE, NOT PRODUCT IMPACT
       </p>
     </figure>
   );
@@ -128,32 +135,37 @@ function FoodRetrievalFlow() {
       aria-labelledby="food-retrieval-flow-title"
     >
       <figcaption id="food-retrieval-flow-title">
-        <span>SEARCH DECISION</span>
-        <strong>
-          Independent retrieval paths join before deterministic evaluation.
-        </strong>
+        <span>RETRIEVAL FLOW · CANDIDATE SOURCES ONLY</span>
+        <strong>Search broadly. Rank deterministically.</strong>
       </figcaption>
-      <div className="food-retrieval-flow__diagram" aria-label="Query to candidate union to deterministic evaluator to final rank">
+      <div className="food-retrieval-flow__diagram" aria-label="Food query flows into deterministic, fuzzy, and semantic candidate sources. Candidates are joined, deterministically evaluated, then ranked.">
         <div className="food-retrieval-flow__query">USER QUERY</div>
         <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
         <div className="food-retrieval-flow__sources" aria-label="Candidate generation paths">
-          <span><strong>DETERMINISTIC</strong><small>Structured retrieval</small></span>
-          <span><strong>FUZZY</strong><small>Similarity recovery</small></span>
-          <span><strong>SEMANTIC · PINECONE</strong><small>Candidate generation only</small></span>
+          <span><strong>DETERMINISTIC</strong><small>Direct matches</small></span>
+          <span><strong>FUZZY</strong><small>Near-text matches</small></span>
+          <span><strong>SEMANTIC · PINECONE</strong><small>Candidate supply only</small></span>
         </div>
         <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
         <div className="food-retrieval-flow__union">CANDIDATE UNION</div>
         <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
-        <div className="food-retrieval-flow__rank"><strong>DETERMINISTIC EVALUATOR</strong><small>FINAL RANK</small></div>
+        <div className="food-retrieval-flow__rank"><strong>DETERMINISTIC EVALUATION</strong><small>Rules decide rank</small></div>
+        <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
+        <div className="food-retrieval-flow__final">
+          <strong>FINAL RANK</strong>
+          <span><b>1</b><i /><i className="food-retrieval-flow__final-line--long" /></span>
+          <span><b>2</b><i /><i className="food-retrieval-flow__final-line--mid" /></span>
+          <span><b>3</b><i /><i className="food-retrieval-flow__final-line--short" /></span>
+        </div>
       </div>
       <div className="food-retrieval-flow__notes">
         <p>
-          <span>ARCHITECTURE DECISION · OWNER INTERVIEW</span>
-          Semantic retrieval added substantial latency for little recovery in that benchmark.
+          <span>SEARCH TRADE-OFF</span>
+          I found semantic retrieval added substantial latency for little benchmark recovery.
         </p>
         <p>
           <span>AUTHORITY BOUNDARY</span>
-          Pinecone supplies candidates only. The evaluator sets final rank; trusted food data sets nutrition values.
+          Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition.
         </p>
       </div>
     </figure>
@@ -229,82 +241,80 @@ export default function FoodTrackerCaseStudy() {
               <img src="/media/profile/food-tracker-mark.svg" alt="" />
               <span>
                 <strong>FOOD TRACKER</strong>
-                <span>FLAGSHIP · MOBILE PRODUCT</span>
+                <span>PRODUCT INITIATOR · SYSTEM DIRECTION · EVALUATION</span>
               </span>
             </p>
             <h1>
-              Mobile food logging,
+              Simple food logs.
               <br />
-              with search measured.
+              Trusted nutrition.
             </h1>
             <p className="food-hero__intro">
-              I initiated the product, then led requirements, priorities,
-              architecture direction, workflow, and evaluation.
+              A mobile-first nutrition tracker for quick logging, reliable food
+              search, serving conversion, recommendations, and long-term insight.
             </p>
             <p className="food-hero__principle">
-              Simple + Complex are presentations over one product and backend.
+              Quick logging stays simple; trusted food and serving details resolve underneath.
+            </p>
+            <p className="food-hero__motivation">
+              MOTIVATED BY MY OWN GYM + NUTRITION ROUTINE.
             </p>
           </div>
 
           <div className="food-hero__system">
-            <p className="food-eyebrow">MOBILE PRODUCT · DATA + RETRIEVAL SYSTEM</p>
-            <h2>Search supports a trusted food log.</h2>
+            <p className="food-eyebrow">THE PRODUCT CHALLENGE</p>
+            <h2>A quick log still needs the right food and serving.</h2>
             <p className="food-hero__system-copy">
-              Mobile client + backend. Search finds
-              candidates; backend serving conversion and trusted reference
-              foods determine nutrition values.
+              Search surfaces candidates; trusted food data and backend serving
+              conversion determine nutrition.
             </p>
-            <p className="food-hero__catalog-scale">
-              <strong>12,363</strong> active foods
-              <span>/</span>
-              <strong>277,341</strong> nutrient rows
-              <small>CATALOG SCALE</small>
-            </p>
+            <FoodProductFlow />
           </div>
         </section>
 
-        <FoodSystemMap />
-
         <section className="food-section food-search" id="food-search">
-          <p className="food-section-label">SEARCH / EVALUATION</p>
-          <div className="food-search__grid">
-            <div className="food-search__story">
-              <h2>Evaluation changed search architecture.</h2>
-              <p>
-                Development Top-1 rose from 40/80 to 71/80. Holdout moved from
-                25/40 to 27/40; Top-3 and Top-5 reached 28/40. The smaller
-                holdout gain kept the split visible.
-              </p>
-            </div>
-            <FoodBenchmark />
-          </div>
+          <p className="food-section-label">WHY FOOD SEARCH IS HARD</p>
           <FoodRetrievalFlow />
+        </section>
+
+        <section className="food-section food-system" id="food-system">
+          <FoodSystemMap />
+        </section>
+
+        <section className="food-section food-evaluation" id="food-evaluation">
+          <p className="food-section-label">OFFLINE EVALUATION · DEVELOPMENT + HOLDOUT</p>
+          <div className="food-evaluation-heading">
+            <h2>Full hybrid improved the correct first result in both offline sets.</h2>
+            <p>
+              Offline evaluation exposed misses in the legacy search, so I
+              broadened candidate retrieval while keeping deterministic ranking
+              in control.
+            </p>
+          </div>
+          <FoodBenchmark />
         </section>
 
         <section className="food-section food-iteration" id="food-iteration">
           <p className="food-section-label">VALIDATION PRACTICE</p>
-          <h2>Search quality and index state are separate correctness checks.</h2>
+          <h2>Search quality and index state are separate checks.</h2>
           <div className="food-iteration__episodes">
             <article>
               <span className="food-iteration__number">01</span>
               <div>
-                <h3>TESTS DID NOT MEASURE RELEVANCE</h3>
+                <h3>RELEVANCE</h3>
                 <p>
-                  Automated tests passed while food search still missed intended
-                  matches. Development and holdout queries made relevance visible
-                  and informed broader candidate retrieval.
+                  My tests passed while search still missed foods. Offline query
+                  evaluation made relevance visible beside code correctness.
                 </p>
               </div>
             </article>
             <article>
               <span className="food-iteration__number">02</span>
               <div>
-                <h3>INDEX COMPLETENESS IS A SEPARATE CHECK</h3>
+                <h3>INDEX COMPLETENESS</h3>
                 <p>
-                  One Pinecone pagination issue left partial or stale index
-                  state. In a separate staging reindex, an integrated-inference
-                  token quota stopped indexing after a partial load; bounded
-                  429 retries later completed the 12,363-document rebuild.
+                  An earlier Pinecone pagination issue left partial or stale index
+                  state. I kept index completeness separate from relevance.
                 </p>
               </div>
             </article>
@@ -342,24 +352,25 @@ export default function FoodTrackerCaseStudy() {
         <section className="food-section food-workflow" id="food-workflow">
           <div className="food-workflow__story">
             <p className="food-section-label">
-              PRODUCT OWNERSHIP + AI-ASSISTED IMPLEMENTATION
+              HOW MY WORKFLOW EVOLVED
             </p>
             <h2>I kept product and architecture decisions owner-led.</h2>
             <p>
-              I owned product requirements, prioritization, architecture
-              direction, decomposition, evaluation, testing expectations,
-              debugging direction, regression checks, acceptance, and product
-              decisions. Implementation received substantial assistance from
-              Codex and AI agents; I reviewed generated changes against the
-              architecture.
+              Over time, I moved toward bounded tasks, explicit acceptance
+              criteria, relevance evaluation, regression checks, and independent
+              review. Codex and AI agents supported much of the implementation; I
+              kept requirements, architecture, and acceptance owner-led.
+            </p>
+            <p className="food-workflow__role">
+              Product initiator · architecture direction · retrieval evaluation
             </p>
           </div>
           <ol className="food-workflow__steps">
             {[
-              "DECOMPOSE THE WORK",
-              "SPECIFY ACCEPTANCE",
-              "EVALUATE + REGRESS",
-              "REVIEW + DECIDE",
+              "BOUND THE TASK",
+              "WRITE ACCEPTANCE",
+              "EVALUATE BEHAVIOR",
+              "REVIEW + ACCEPT",
             ].map((step, index) => (
               <li key={step}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -370,17 +381,16 @@ export default function FoodTrackerCaseStudy() {
         </section>
 
         <section className="food-section food-reflection" id="food-reflection">
-          <p className="food-section-label">TECHNICAL TAKEAWAY</p>
-          <h2>Reliability came from separating evidence, authority, and history.</h2>
+          <p className="food-section-label">WHAT I TOOK FORWARD</p>
+          <h2>Good search is only one part of a trustworthy food log.</h2>
           <p>
-            Retrieval widened the candidate set. Deterministic evaluation
-            ranked it. Trusted food data and backend serving conversion
-            determined nutrition; the canonical log preserved what was
-            recorded.
+            I measured relevance separately from code correctness, then kept
+            nutrition authority in trusted food data and serving rules. Search
+            widened candidates; deterministic evaluation set final rank; the
+            canonical log preserved recorded history.
           </p>
           <small>
-            Offline retrieval was evaluated on 80 development and 40 holdout
-            queries.
+            MY PRODUCT RULE · SIMPLE TO LOG · TRUSTED UNDERNEATH
           </small>
         </section>
       </article>

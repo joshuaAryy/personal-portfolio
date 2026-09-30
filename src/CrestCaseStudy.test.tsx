@@ -15,20 +15,22 @@ describe("Crest technical case study", () => {
     const markup = renderCrest();
 
     expect(markup).toContain('id="crest-system"');
-    expect(markup).toContain("TRANSACTION → RULES + RETRIEVED POLICY → HUMAN REVIEW");
-    expect(markup).toContain("DETERMINISTIC FINANCE + POLICY RULES");
-    expect(markup).toContain("RETRIEVED POLICY + GEMINI");
-    expect(markup).toContain("A reviewer can move the request toward preapproval.");
-    expect(markup).toContain("Anomaly signals are deterministic heuristics");
+    expect(markup).toContain("One transaction. Two sources. Human review.");
+    expect(markup).toContain("DETERMINISTIC RULES");
+    expect(markup).toContain("retrieved policy context support review");
+    expect(markup).toContain("HUMAN REVIEW");
+    expect(markup).toContain("A reviewer weighs the context");
   });
 
   it("keeps the sample-data cue and challenge placement singular", () => {
     const markup = renderCrest();
-    const heroEnd = markup.indexOf("</section>", markup.indexOf('id="crest-overview"'));
+    const systemStart = markup.indexOf('id="crest-system"');
+    const teamStart = markup.indexOf('id="crest-team"');
 
     expect(markup).toContain("SAMPLE DATA");
     expect(markup).toContain("3RD PLACE");
-    expect(markup.indexOf("3RD PLACE")).toBeLessThan(heroEnd);
+    expect(markup.indexOf("3RD PLACE")).toBeGreaterThan(systemStart);
+    expect(markup.indexOf("3RD PLACE")).toBeGreaterThan(teamStart);
     expect(markup.match(/3RD PLACE/g)).toHaveLength(1);
   });
 
@@ -40,8 +42,8 @@ describe("Crest technical case study", () => {
     expect(markup).toContain("Gemini embedding-001 · 3,072-D");
     expect(markup).toContain("MongoDB Atlas · policy_chunks");
     expect(markup).toContain("GROUNDED PROMPT");
-    expect(markup).toContain("Policy Compliance Engine");
-    expect(markup).toContain("outside my ownership");
+    expect(markup).toContain("Gemini interpreted retrieved policy passages.");
+    expect(markup).toContain("Finance and policy rules stayed deterministic and authoritative.");
     expect(markup).not.toContain("automated financial outcome");
   });
 

@@ -37,7 +37,7 @@
   flex-direction: row;
   align-items: center;
   gap: 12px;
-  margin: 0 0 13px;
+  margin: 0 0 18px;
 }
 
 .food-story-content--technical .food-project-label > img {
@@ -68,10 +68,10 @@
 .food-story-content--technical .food-hero__opening h1 {
   margin: 0 0 14px;
   color: #eee7d8;
-  font-size: 48px;
+  font-size: 44px;
   font-weight: 700;
   letter-spacing: -0.02em;
-  line-height: 1.04;
+  line-height: 1;
 }
 
 .food-story-content--technical .food-hero__intro {
@@ -152,6 +152,7 @@
 
 .food-system-map {
   width: 100%;
+  height: 150px;
   min-height: 150px;
   margin: 0;
   padding: 13px 26px 14px;
@@ -393,7 +394,7 @@
 .food-retrieval-flow {
   width: 100%;
   height: 148px;
-  margin: 55px 0 0;
+  margin: 0;
   padding: 11px 43px 10px;
   overflow: visible;
   border: 1px solid #30454d;
@@ -530,7 +531,7 @@
 }
 
 .food-story-content--technical .food-iteration {
-  min-height: 159px;
+  min-height: 208px;
 }
 
 .food-story-content--technical .food-section > h2 {
@@ -542,8 +543,8 @@
 
 .food-story-content--technical .food-iteration__episodes {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 58px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
   margin-top: 24px;
 }
 
@@ -803,7 +804,6 @@
     content: none;
   }
 
-  .food-story-content--technical .food-iteration__episodes,
   .food-story-content--technical .food-boundaries__rules {
     grid-template-columns: minmax(0, 1fr);
     gap: 24px;
@@ -902,7 +902,7 @@
 .food-retrieval-flow {
   min-height: 148px;
   height: auto;
-  margin-top: 35px;
+  margin-top: 0;
   padding: 11px 28px 10px;
   background: #0b171d;
 }
@@ -989,4 +989,707 @@
   .food-system-map__stages li:nth-child(4)::after { content: none; }
   .food-retrieval-flow { padding: 13px 14px; }
   .food-retrieval-flow__sources { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Pass 07 product-first opening and section rhythm. */
+.food-story-content--technical .food-hero {
+  min-height: 0;
+  grid-template-columns: 492px minmax(0, 1fr);
+  align-items: center;
+  gap: 56px;
+}
+
+.food-story-content--technical .food-hero__opening h1 {
+  max-width: 492px;
+  margin: 0 0 18px;
+  font-size: 48px;
+  line-height: 44px;
+}
+
+.food-story-content--technical .food-hero__intro {
+  max-width: 492px;
+  margin: 0 0 18px;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.food-story-content--technical .food-hero__system {
+  align-self: center;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.food-story-content--technical .food-hero__system h2 {
+  max-width: none;
+  margin: 15px 0 0;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+.food-story-content--technical .food-hero__system-copy {
+  max-width: none;
+  margin: 15px 0 0;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.food-story-content--technical .food-hero__system-tags {
+  margin: 15px 0 0;
+  color: #e3c47d;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.food-story-content--technical .food-eyebrow {
+  font-size: 12px;
+  line-height: 1.2;
+}
+
+.food-story-content--technical .food-hero__principle {
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 18px;
+}
+
+.food-story-content--technical .food-hero__motivation {
+  margin: 0;
+  color: #a8b5ba;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.food-system-map--flagship {
+  height: auto;
+  min-height: 312px;
+  padding: 20px 24px 16px;
+  background: #13262d;
+}
+
+.food-system-map--flagship figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.food-system-map--flagship figcaption strong {
+  color: #eee7d8;
+  font-size: clamp(19px, 2vw, 25px);
+  letter-spacing: -0.02em;
+}
+
+.food-system-map__flow {
+  display: grid;
+  grid-template-columns: minmax(108px, 0.62fr) 28px minmax(270px, 1.65fr) 28px minmax(300px, 1.58fr) 28px minmax(128px, 0.72fr);
+  align-items: center;
+  gap: 0;
+  margin-top: 17px;
+}
+
+.food-system-map__stage {
+  min-width: 0;
+  min-height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.food-system-map__stage-label {
+  align-self: stretch;
+  margin: 0 0 10px;
+  color: #e3c57e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-align: left;
+}
+
+.food-system-map__stage > strong {
+  display: block;
+  margin-top: 8px;
+  color: #eee7d8;
+  font-size: 13px;
+  line-height: 1.25;
+}
+
+.food-system-map__stage > small {
+  display: block;
+  margin-top: 3px;
+  color: #9daeb4;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.food-system-map__arrow {
+  color: #e3c57e;
+  font-size: 21px;
+  text-align: center;
+}
+
+.food-system-map__phone {
+  position: relative;
+  width: 94px;
+  height: 144px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 9px;
+  padding: 26px 10px 10px;
+  border: 1px solid #617679;
+  border-radius: 18px;
+  background: #0a2022;
+}
+
+.food-system-map__phone::before {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 11px);
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background: #839399;
+  content: "";
+}
+
+.food-system-map__phone i { display: block; height: 6px; border-radius: 8px; background: #395158; }
+.food-system-map__phone-line--gold { width: 48%; background: #d0a646 !important; }
+.food-system-map__phone-search { height: 13px !important; border: 1px solid #30474d; background: #10272d !important; }
+.food-system-map__phone-line--short { width: 70%; }
+.food-system-map__phone-item { height: 20px !important; border: 1px solid #4ba087; background: #183a35 !important; }
+.food-system-map__phone-action { width: 76%; height: 10px !important; background: #d6b95f !important; }
+
+.food-system-map__stage-heading {
+  align-self: stretch;
+  margin: -3px 0 9px !important;
+  color: #eee7d8 !important;
+  font-size: 13px !important;
+  text-align: left;
+}
+
+.food-system-map__candidate-layout {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 94px;
+  align-items: center;
+  gap: 9px;
+}
+
+.food-system-map__candidate-sources {
+  display: grid;
+  gap: 7px;
+}
+
+.food-system-map__candidate-sources span {
+  min-height: 29px;
+  display: flex;
+  align-items: center;
+  padding: 5px 9px;
+  border: 1px solid #66562e;
+  border-left: 3px solid #c79b45;
+  border-radius: 8px;
+  background: #22251f;
+  text-align: left;
+}
+
+.food-system-map__candidate-sources span:nth-child(2) { border-color: #3d7768; border-left-color: #4aa58b; background: #102d2a; }
+.food-system-map__candidate-sources span:nth-child(3) { border-color: #496878; border-left-color: #7193a5; background: #142630; }
+.food-system-map__candidate-sources b { color: #e8e4d8; font-size: 9px; line-height: 1.2; }
+
+.food-system-map__candidate-union {
+  min-height: 76px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid #4c9380;
+  border-radius: 13px;
+  background: #173a35;
+}
+
+.food-system-map__candidate-union > i { display: flex; gap: 4px; }
+.food-system-map__candidate-union > i b { width: 9px; height: 9px; border-radius: 50%; background: #d5b454; }
+.food-system-map__candidate-union > i b:nth-child(2) { background: #58ad8e; }
+.food-system-map__candidate-union > i b:nth-child(3) { background: #748fa1; }
+.food-system-map__candidate-union strong { color: #eee7d8; font-size: 10px; }
+.food-system-map__candidate-union small { color: #a9b5ba; font-size: 9px; }
+
+.food-system-map__resolve-pair {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.15fr);
+  gap: 12px;
+}
+
+.food-system-map__catalog,
+.food-system-map__serving {
+  min-height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 13px;
+  border: 1px solid #284a52;
+  border-radius: 10px;
+  background: #10242b;
+  text-align: left;
+}
+
+.food-system-map__catalog > strong,
+.food-system-map__serving > strong {
+  align-self: stretch;
+  margin-bottom: 10px;
+  color: #58b392;
+  font-size: 9px;
+  text-align: center;
+}
+
+.food-system-map__catalog i {
+  width: 100%;
+  height: 4px;
+  margin: 3px 0;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #58b392 0 9px, #4b6267 9px 100%);
+}
+
+.food-system-map__catalog i:nth-of-type(even) { width: 82%; }
+.food-system-map__catalog small,
+.food-system-map__serving small { align-self: center; margin-top: 7px; color: #9daeb4; font-size: 9px; text-align: center; }
+
+.food-system-map__serving { border-color: #a6833e; background: #111f25; }
+.food-system-map__serving > strong { color: #d4ad5a; }
+.food-system-map__serving > div { display: grid; grid-template-columns: 40px 1fr; align-items: center; gap: 8px; width: 100%; }
+.food-system-map__serving > div b { width: 40px; height: 40px; display: grid; place-items: center; border: 2px solid #507d8d; border-radius: 50%; color: #eee7d8; font-size: 20px; }
+.food-system-map__serving > div i { height: 5px; border-radius: 5px; background: #58b392; }
+.food-system-map__serving > div i:last-child { width: 72%; background: #788f95; }
+
+.food-system-map__log-rows {
+  position: relative;
+  width: 100%;
+  display: grid;
+  gap: 7px;
+  padding: 10px;
+  border: 1px solid #29474b;
+  border-radius: 10px;
+  background: #0e2426;
+}
+
+.food-system-map__log-rows i { height: 19px; border: 1px solid #344e50; border-radius: 5px; background: linear-gradient(90deg, #c79b45 0 7px, transparent 7px 17px, #9caeb2 17px 62%, transparent 62%); }
+.food-system-map__log-rows i:nth-child(2) { background-image: linear-gradient(90deg, #58b392 0 7px, transparent 7px 17px, #9caeb2 17px 68%, transparent 68%); }
+.food-system-map__log-rows i:nth-child(3) { background-image: linear-gradient(90deg, #6c8b9b 0 7px, transparent 7px 17px, #9caeb2 17px 53%, transparent 53%); }
+.food-system-map__log-rows b { position: absolute; right: 9px; bottom: -13px; color: #58b392; font-size: 18px; }
+
+.food-system-map__principle {
+  margin: 9px 0 0;
+  padding-top: 11px;
+  border-top: 1px solid #30454d;
+  color: #a9b5ba;
+  font-size: 11px;
+  text-align: center;
+}
+
+.food-story-content--technical .food-search {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.food-story-content--technical .food-retrieval-flow {
+  min-height: 329px;
+  padding: 18px 22px 18px;
+  background: #0c1b21;
+}
+
+.food-retrieval-flow figcaption { display: flex; flex-direction: column; gap: 5px; }
+.food-retrieval-flow figcaption strong { color: #eee7d8; font-size: clamp(18px, 1.8vw, 24px); }
+
+.food-retrieval-flow__diagram {
+  grid-template-columns: minmax(92px, 0.55fr) 22px minmax(235px, 1.5fr) 22px minmax(100px, 0.6fr) 22px minmax(145px, 1fr) 22px minmax(150px, 1fr);
+  margin: 22px 0 20px;
+}
+
+.food-retrieval-flow__query,
+.food-retrieval-flow__union,
+.food-retrieval-flow__rank,
+.food-retrieval-flow__final {
+  min-height: 142px;
+  padding: 16px;
+  border-radius: 10px;
+  font-size: 10px;
+}
+
+.food-retrieval-flow__sources { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+.food-retrieval-flow__sources > span,
+.food-retrieval-flow__sources > span:not(.food-retrieval-flow__join) { min-height: 42px; padding: 7px 10px; }
+.food-retrieval-flow__sources strong { font-size: 9px; }
+.food-retrieval-flow__sources small { font-size: 8px; }
+.food-retrieval-flow__union { border-color: #4a9380; background: #173a35; }
+.food-retrieval-flow__rank { border-color: #a6833e; background: #25251e; }
+.food-retrieval-flow__rank strong { max-width: none; font-size: 10px; }
+.food-retrieval-flow__rank small { font-size: 9px; }
+
+.food-retrieval-flow__final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid #438471;
+  background: #102b28;
+  color: #58b392;
+  text-align: left;
+}
+
+.food-retrieval-flow__final > strong { margin-bottom: 1px; font-size: 10px; }
+.food-retrieval-flow__final > span { display: grid; grid-template-columns: 12px 1fr; align-items: center; gap: 6px; color: #eee7d8; font-size: 9px; }
+.food-retrieval-flow__final > span b { text-align: center; }
+.food-retrieval-flow__final > span i { height: 4px; border-radius: 4px; background: #c79b45; }
+.food-retrieval-flow__final > span i + i { display: none; }
+.food-retrieval-flow__final-line--long { width: 85%; }
+.food-retrieval-flow__final-line--mid { width: 66%; background: #789aaa !important; }
+.food-retrieval-flow__final-line--short { width: 46%; background: #8ca0a5 !important; }
+
+.food-retrieval-flow__notes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.food-retrieval-flow__notes p { margin: 0; color: #a9b5ba; font-size: 11px; line-height: 1.45; }
+.food-retrieval-flow__notes p + p { padding-left: 18px; border-left: 1px solid #30454d; }
+.food-retrieval-flow__notes span { display: block; margin-bottom: 4px; color: #e3c57e; font-size: 9px; font-weight: 700; }
+
+.food-evaluation-heading { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.65fr); align-items: end; gap: 24px; margin-top: 2px; }
+.food-evaluation-heading h2 { margin: 0; color: #eee7d8; font-size: clamp(21px, 2.2vw, 28px); line-height: 1.15; }
+.food-evaluation-heading p { margin: 0; color: #a9b5ba; font-size: 12px; line-height: 1.45; }
+
+.food-story-content--technical .food-benchmark--flagship { height: auto; min-height: 0; padding: 15px 18px 12px; background: #10232a; }
+.food-benchmark--flagship .food-benchmark__title { position: static; color: #e3c57e; }
+.food-benchmark--flagship .food-benchmark__splits { position: static; height: auto; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 12px 0 8px; }
+.food-benchmark--flagship .food-benchmark__splits::after { display: none; }
+.food-benchmark--flagship .food-benchmark__split { min-width: 0; min-height: 112px; padding: 13px 14px; border: 1px solid #344d54; border-radius: 9px; background: #11242a; }
+.food-benchmark--flagship .food-benchmark__split h3 { margin: 0 0 4px; color: #e3c57e; font-size: 11px; }
+.food-benchmark__definition { margin: 0 0 10px; color: #a9b5ba; font-size: 9px; }
+.food-benchmark__bar-row { display: grid; grid-template-columns: 108px minmax(0, 1fr) 44px; align-items: center; gap: 8px; margin-top: 7px; }
+.food-benchmark__bar-row > span { color: #b7c0c2; font-size: 9px; font-weight: 700; }
+.food-benchmark__bar-row > div { height: 5px; overflow: hidden; border-radius: 5px; background: #293c42; }
+.food-benchmark__bar-row > div i { display: block; height: 100%; border-radius: inherit; background: #6f96a6; }
+.food-benchmark__bar-row strong { color: #eee7d8; font-size: 10px; font-variant-numeric: tabular-nums; text-align: right; }
+.food-benchmark__bar-row--hybrid > div i { background: #58b392; }
+.food-benchmark__secondary { margin: 9px 0 0; color: #91a3aa; font-size: 9px; }
+.food-benchmark__secondary span { padding: 0 8px; color: #52656c; }
+.food-benchmark--flagship .food-benchmark__scale { position: static; height: auto; padding: 2px 0 0; color: #91a3aa; white-space: normal; font-size: 9px; }
+
+@media (max-width: 1250px) {
+  .food-system-map__flow { grid-template-columns: minmax(95px, 0.55fr) 20px minmax(230px, 1.5fr) 20px minmax(260px, 1.5fr) 20px minmax(115px, 0.7fr); }
+  .food-retrieval-flow__diagram { grid-template-columns: minmax(82px, 0.55fr) 18px minmax(185px, 1.4fr) 18px minmax(90px, 0.6fr) 18px minmax(130px, 1fr) 18px minmax(135px, 1fr); }
+}
+
+@media (max-width: 980px) {
+  .food-system-map--flagship { min-height: 0; }
+  .food-system-map__flow { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+  .food-system-map__flow > .food-system-map__arrow { transform: rotate(90deg); }
+  .food-retrieval-flow__diagram { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+  .food-retrieval-flow__arrow { transform: rotate(90deg); }
+  .food-retrieval-flow__sources { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .food-retrieval-flow__sources > span { min-height: 44px !important; }
+}
+
+@media (max-width: 680px) {
+  .food-story-content--technical .food-hero { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .food-story-content--technical .food-hero__system { padding-top: 0; }
+  .food-system-map__flow { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .food-system-map__stage { min-height: 0; padding: 10px 4px; }
+  .food-system-map__stage-label { margin-bottom: 8px; }
+  .food-system-map__candidate-layout { max-width: 510px; }
+  .food-system-map__resolve-pair { max-width: 520px; }
+  .food-system-map__stage--record { max-width: 260px; width: 100%; justify-self: center; }
+  .food-evaluation-heading { grid-template-columns: minmax(0, 1fr); gap: 7px; }
+  .food-benchmark--flagship .food-benchmark__splits { grid-template-columns: minmax(0, 1fr); }
+  .food-benchmark--flagship .food-benchmark__split { min-height: 0; }
+  .food-benchmark__bar-row { grid-template-columns: 92px minmax(0, 1fr) 42px; }
+  .food-retrieval-flow__sources { grid-template-columns: minmax(0, 1fr); }
+  .food-retrieval-flow__notes { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .food-retrieval-flow__notes p + p { padding: 10px 0 0; border-top: 1px solid #30454d; border-left: 0; }
+}
+
+
+/* Food Tracker flagship system figure ? Pass 06 */
+.food-system-map--flagship {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+}
+
+.food-system-map__illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.food-system-map__mobile-steps {
+  display: none;
+}
+
+.food-system-map__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 980px) {
+  .food-system-map__illustration { display: none; }
+
+  .food-system-map__mobile-steps {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: food-step;
+  }
+
+  .food-system-map__mobile-steps li {
+    position: relative;
+    display: grid;
+    gap: 4px;
+    min-height: 64px;
+    padding: 12px 15px 12px 48px;
+    border: 1px solid #30454d;
+    border-radius: 7px;
+    background: #10232a;
+    counter-increment: food-step;
+  }
+
+  .food-system-map__mobile-steps li::before {
+    position: absolute;
+    top: 14px;
+    left: 15px;
+    color: #d9b367;
+    font: 700 11px/1.2 "League Spartan", Arial, sans-serif;
+    content: "0" counter(food-step);
+  }
+
+  .food-system-map__mobile-steps li + li::after {
+    position: absolute;
+    top: -11px;
+    left: 20px;
+    height: 9px;
+    border-left: 1px solid #d9b367;
+    content: "";
+  }
+
+  .food-system-map__mobile-steps strong {
+    color: #eee7d8;
+    font-size: 13px;
+    line-height: 1.2;
+  }
+
+.food-system-map__mobile-steps span {
+  color: #a9b5ba;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+}
+
+/* Pass 07 workflow and close hierarchy. */
+.food-story-content--technical .food-workflow__story {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.food-story-content--technical .food-workflow__story h2 {
+  margin: 0;
+  font-size: 29px;
+}
+
+.food-story-content--technical .food-workflow__role {
+  color: #eee7d8 !important;
+  line-height: 1.1 !important;
+}
+
+.food-story-content--technical .food-workflow__steps span {
+  font-size: 12px;
+}
+
+.food-story-content--technical .food-workflow__steps strong {
+  font-size: 14px;
+}
+
+.food-story-content--technical .food-reflection {
+  min-height: 205px;
+}
+
+.food-story-content--technical .food-reflection h2 {
+  font-size: 31px;
+}
+
+.food-story-content--technical .food-reflection > p:not(.food-section-label) {
+  font-size: 21px;
+  line-height: 1.25;
+}
+
+.food-story-content--technical .food-reflection small {
+  font-size: 13px;
+}
+
+@media (max-width: 980px) {
+  .food-story-content--technical .food-hero {
+    min-height: 0;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
+    gap: 26px;
+  }
+
+  .food-story-content--technical .food-hero__opening h1 {
+    font-size: clamp(36px, 8vw, 46px);
+    line-height: 1;
+  }
+
+  .food-story-content--technical .food-hero__intro {
+    max-width: 60ch;
+    font-size: 15px;
+    line-height: 1.35;
+  }
+
+  .food-story-content--technical .food-hero__system {
+    align-self: start;
+  }
+
+  .food-story-content--technical .food-hero__system h2 {
+    font-size: 24px;
+  }
+
+  .food-story-content--technical .food-hero__system-copy {
+    font-size: 15px;
+  }
+
+  .food-story-content--technical .food-hero__system-tags {
+    font-size: 12px;
+  }
+
+  .food-story-content--technical .food-hero__motivation {
+    font-size: 11px;
+  }
+
+  .food-story-content--technical .food-workflow__story h2 {
+    font-size: 25px;
+  }
+
+  .food-story-content--technical .food-workflow__steps strong {
+    font-size: 12px;
+  }
+
+  .food-story-content--technical .food-reflection h2 {
+    font-size: 24px;
+  }
+
+  .food-story-content--technical .food-reflection > p:not(.food-section-label) {
+    font-size: 16px;
+  }
+}
+
+/* Food Tracker Pass 08: preserve the approved full-page section rhythm. */
+.food-product-flow {
+  width: 100%;
+  margin: 15px 0 0;
+}
+
+.food-product-flow__art {
+  overflow: hidden;
+}
+
+.food-product-flow__art img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.food-product-flow__mobile-steps {
+  display: none;
+}
+
+@media (max-width: 520px) {
+  .food-product-flow__art { display: none; }
+
+  .food-product-flow__mobile-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .food-product-flow__mobile-steps li {
+    display: grid;
+    align-content: center;
+    gap: 5px;
+    min-height: 62px;
+    padding: 10px 12px;
+    border: 1px solid #30454d;
+    border-radius: 4px;
+    background: #0d1920;
+  }
+
+  .food-product-flow__mobile-steps strong {
+    color: #ede8d9;
+    font-size: 12px;
+    line-height: 1.2;
+  }
+
+  .food-product-flow__mobile-steps span {
+    color: #a8b5ba;
+    font-size: 11px;
+    line-height: 1.3;
+  }
+}
+
+@media (min-width: 981px) {
+  .food-story-content.food-story-content--technical {
+    padding-bottom: 60px;
+  }
+
+  .food-story-content--technical .food-hero { min-height: 283px; }
+  .food-story-content--technical .food-search {
+    min-height: 354px;
+    gap: 12px;
+  }
+  .food-story-content--technical .food-search .food-retrieval-flow { min-height: 329px; }
+  .food-story-content--technical .food-system { min-height: 380px; }
+  .food-story-content--technical .food-evaluation {
+    min-height: 281px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .food-story-content--technical .food-evaluation-heading { margin-top: 0; }
+  .food-story-content--technical .food-iteration { min-height: 208px; }
+  .food-story-content--technical .food-boundaries { min-height: 146px; }
+  .food-story-content--technical .food-workflow { min-height: 175px; }
+  .food-story-content--technical .food-reflection { min-height: 205px; }
+}
+
+@media (max-width: 980px) {
+  .food-story-content--technical .food-hero,
+  .food-story-content--technical .food-search,
+  .food-story-content--technical .food-system,
+  .food-story-content--technical .food-evaluation,
+  .food-story-content--technical .food-iteration,
+  .food-story-content--technical .food-boundaries,
+  .food-story-content--technical .food-workflow,
+  .food-story-content--technical .food-reflection {
+    min-height: 0;
+  }
 }

@@ -51,7 +51,7 @@ describe("Projects lobby", () => {
     const view = renderProjectsLobby();
 
     expect(view.querySelectorAll(".league-banner")).toHaveLength(5);
-    expect(view.querySelector('img[src="/media/lobby/profile-portrait-source.jpg"]')).not.toBeNull();
+    expect(view.querySelector('img[src="/media/lobby/project-owner-j.svg"]')).not.toBeNull();
     expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/projects");
 
     const fraymakers = view.querySelector('[aria-label="Select Fraymakers"]');

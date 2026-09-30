@@ -50,15 +50,6 @@ const fitPrinciples = [
   ],
 ] as const;
 
-const systemSteps = [
-  ["ROLE SOURCES + RECORDS", "Job feeds and company or career sites; roles are retrieved and persisted"],
-  ["STRUCTURED REQUIREMENTS", "Responsibilities and core criteria"],
-  ["FIT", "Deterministic comparison against candidate evidence"],
-  ["ELIGIBILITY", "Deterministic essential requirements"],
-  ["GEMINI", "Structured interpretation within the evidence"],
-  ["RECOMMENDATION", "A distinct judgment: whether to bring the role forward"],
-] as const;
-
 const reviewSteps = [
   ["MISMATCH", "Inspect the result"],
   ["CORRECTION", "Agree on expected behavior"],
@@ -75,9 +66,9 @@ const evidenceInputs = [
 const openingPath = [
   ["ROLE EVIDENCE", "Responsibilities + candidate evidence"],
   ["FIT", "Deterministic evidence assessment"],
-  ["ELIGIBILITY", "Deterministic essential criteria"],
-  ["GEMINI", "Structured interpretation within evidence"],
-  ["RECOMMENDATION", "Whether to bring the role forward"],
+  ["ELIGIBILITY", "Essential criteria check"],
+  ["GEMINI", "Bounded text interpretation"],
+  ["RECOMMENDATION", "Bring the role forward"],
   ["NEXT ACTION", "Resume tailoring"],
 ] as const;
 
@@ -149,78 +140,67 @@ export default function ChoViegoCase() {
       <article className="choveigo-story-content">
         <section className="choveigo-section choveigo-hero" id="choveigo-overview">
           <div className="choveigo-hero__opening">
-            <p className="choveigo-project-label">CHO’VEIGO / EVIDENCE-BASED JOB DISCOVERY</p>
-            <h1>Evidence-based job matching</h1>
+            <p className="choveigo-project-label">PRODUCT</p>
+            <h1>Cho’Veigo</h1>
             <p className="choveigo-hero__intro">
-              What should job fit actually mean? With Shiv Arora, I shaped a Jobs-side workflow around evidence for the work a role asks for, not keyword overlap alone.
+              A job-search workspace that surfaces roles, shows where your experience fits, and helps you decide whether to tailor your resume.
             </p>
-            <div className="choveigo-hero__focus">
-              <p className="choveigo-eyebrow choveigo-eyebrow--cyan">JOBS-SIDE PRODUCT + EVALUATION</p>
-              <p>
-                I led product and evaluation direction, retrieval priorities, behavior review, and acceptance of matching behavior with Shiv.
-              </p>
-            </div>
           </div>
 
-          <figure className="choveigo-recommendations choveigo-hero__proof">
-            <p className="choveigo-eyebrow">RECOMMENDATION VIEW</p>
-            <img
-              src="/media/choveigo-recommendations.png"
-              alt="Owner-cleared Cho’Veigo Recommendations capture showing roles and fit evidence in context"
-              width="1280"
-              height="720"
-              decoding="async"
-            />
-          </figure>
+          <div className="choveigo-recommendations choveigo-hero__proof">
+            <p className="choveigo-eyebrow">AUTHENTIC PRODUCT VIEW / RECOMMENDATIONS</p>
+            <figure className="choveigo-recommendations__figure">
+              <img
+                src="/media/choveigo-recommendations.png"
+                alt="Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence"
+                width="1280"
+                height="720"
+                decoding="async"
+              />
+              <figcaption>Role recommendations with fit evidence visible in context.</figcaption>
+            </figure>
+            <aside className="choveigo-recommendations__gaps" aria-label="Representative evidence gap">
+              <div>
+                <strong>REPRESENTATIVE GAP</strong>
+                <strong>ILLUSTRATIVE · NOT A MODEL SCORE</strong>
+              </div>
+              <p>A listed skill may have no reviewed resume evidence, so its gap stays visible.</p>
+            </aside>
+          </div>
 
           <OpeningPath />
         </section>
 
         <section className="choveigo-section choveigo-system" id="choveigo-system">
           <p className="choveigo-eyebrow">SYSTEM / DISCOVERY TO TAILORING</p>
-          <h2>Retrieval finds roles; evidence and rules constrain each decision.</h2>
+          <h2>How a role becomes a recommendation.</h2>
           <p className="choveigo-system__intro">
-            Company and career-site discovery makes source robustness part of the workflow. Retrieved roles still need structured responsibilities and criteria before evaluation.
+            Role listings and candidate evidence move through separate checks. Cho’Veigo brings the results together in a recommendation, then offers resume tailoring as a follow-up.
           </p>
-          <ol className="choveigo-system__steps">
-            {systemSteps.map(([title, detail], index) => (
-              <li className={index === 4 ? "is-accent" : ""} key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{title}</strong>
-                <p>{detail}</p>
-              </li>
-            ))}
-          </ol>
+          <WholeProductArchitecture />
           <div className="choveigo-system__boundaries">
             <div>
               <p className="choveigo-eyebrow choveigo-eyebrow--cyan">DETERMINISTIC RULE BOUNDARY</p>
-              <p>
-                Fit and Eligibility are assessed against structured role requirements and candidate evidence with deterministic rules.
-              </p>
+              <p>Deterministic rules compare structured role requirements with candidate evidence to assess Fit and Eligibility.</p>
             </div>
             <div>
               <p className="choveigo-eyebrow">STRUCTURED GEMINI INTERPRETATION</p>
-              <p>
-                Gemini provides structured interpretation within the evidence boundary and cannot invent candidate experience or decide Fit and Eligibility. Recommendation remains a separate judgment.
-              </p>
+              <p>Gemini interprets supplied evidence in a structured form. It cannot invent experience or decide Fit and Eligibility; Recommendation stays separate.</p>
             </div>
           </div>
           <div className="choveigo-system__tailoring">
-            <span className="choveigo-eyebrow">AFTER RECOMMENDATION / SEPARATE NEXT ACTION</span>
-            <p>Resume tailoring follows as its own action.</p>
+            <span className="choveigo-eyebrow">NEXT ACTION / RESUME TAILORING FOLLOWS RECOMMENDATION</span>
+            <p>Tailor a resume for a selected role as a distinct step.</p>
           </div>
-          <p className="choveigo-system__stack">
-            JOB FEEDS · COMPANY + CAREER SITES · DETERMINISTIC FIT + ELIGIBILITY · STRUCTURED GEMINI
-          </p>
         </section>
 
         <section className="choveigo-section choveigo-fit" id="choveigo-fit">
-          <p className="choveigo-eyebrow">THE FIT MODEL</p>
+          <p className="choveigo-eyebrow">JOSHUA’S FOCUS / MATCHING MODEL</p>
           <div className="choveigo-fit__definition">
             <div className="choveigo-fit__story">
               <h2>A title or stack is only a clue.</h2>
               <p>
-                Fit weighs responsibilities and core requirements against candidate evidence, allows relevant transferable experience, and keeps meaningful gaps visible.
+                Working with Shiv, I helped shape matching around responsibilities, core requirements, transferable evidence, and visible gaps.
               </p>
             </div>
             <dl className="choveigo-fit__dimensions">
@@ -249,7 +229,7 @@ export default function ChoViegoCase() {
             <p className="choveigo-eyebrow">HUMAN-REVIEWED EVALUATION</p>
             <h2>A mismatch became a regression case.</h2>
             <p>
-              When a recommendation looked wrong, my teammate and I inspected the mismatch, agreed on expected behavior, and kept it in a deterministic fixture. Each correction could then be checked against that regression case.
+              With Shiv, I reviewed mismatches and agreed on expected behavior. Human review informed deterministic regression fixtures for later changes.
             </p>
           </div>
           <ol className="choveigo-review__steps">
@@ -269,32 +249,88 @@ export default function ChoViegoCase() {
         <section className="choveigo-section choveigo-change" id="choveigo-change">
           <div className="choveigo-change__story">
             <p className="choveigo-eyebrow">WHAT CHANGED</p>
-            <h2>I began judging a match by the evidence behind it—not the keywords around it.</h2>
-            <p>
-              That made disagreement useful: inspect the mismatch, agree on the behavior, and preserve it in a deterministic regression case.
-            </p>
+            <h2>I learned to evaluate recommendations through the evidence that supports them.</h2>
+            <p>Review made regression work more meaningful: each check represented agreed behavior instead of a test changed just to pass.</p>
           </div>
           <div className="choveigo-change__result">
-            <p className="choveigo-eyebrow choveigo-eyebrow--cyan">OWNER-REPORTED OBSERVATION</p>
-            <p>The system surfaced a role I likely would not have found manually.</p>
+            <p className="choveigo-eyebrow choveigo-eyebrow--cyan">OWNER-REPORTED EXAMPLE</p>
+            <p>Search surfaced a relevant role Joshua may not have found manually.</p>
           </div>
-          <p className="choveigo-change__credit">A TWO-PERSON PROJECT WITH SHIV ARORA · JOB DISCOVERY + RESUME TAILORING</p>
+          <p className="choveigo-change__credit">BUILT WITH SHIV ARORA · JOB DISCOVERY + RESUME TAILORING</p>
         </section>
       </article>
     </>
   );
 }
 
+function WholeProductArchitecture() {
+  return (
+    <figure className="choveigo-system-map" aria-labelledby="choveigo-system-map-title">
+      <figcaption id="choveigo-system-map-title" className="choveigo-system-map__sr-only">
+        Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.
+      </figcaption>
+      <div className="choveigo-system-map__connectors" aria-hidden="true">
+        <span className="choveigo-system-map__role-line" />
+        <span className="choveigo-system-map__candidate-line" />
+        <span className="choveigo-system-map__input-merge" />
+        <span className="choveigo-system-map__merge-line" />
+        <span className="choveigo-system-map__output-line" />
+      </div>
+      <div className="choveigo-system-map__inputs" aria-label="System inputs">
+        <section className="choveigo-system-map__input choveigo-system-map__input--roles">
+          <h3>Role discovery</h3>
+          <p>Feeds, company sites, and career pages</p>
+          <p>Structured responsibilities and criteria</p>
+        </section>
+        <section className="choveigo-system-map__input choveigo-system-map__input--candidate">
+          <h3>Candidate evidence</h3>
+          <p>Resume and profile evidence</p>
+          <p>Demonstrated and transferable experience</p>
+        </section>
+      </div>
+      <section className="choveigo-system-map__decision" aria-label="Decision layers">
+        <h3>Decision layers</h3>
+        <p className="choveigo-system-map__decision-note">Rules assess; Gemini interprets within the evidence boundary.</p>
+        <div className="choveigo-system-map__layers">
+          <article className="choveigo-system-map__layer">
+            <h4>Fit</h4>
+            <p>Deterministic<br />responsibilities vs. evidence</p>
+          </article>
+          <article className="choveigo-system-map__layer">
+            <h4>Eligibility</h4>
+            <p>Deterministic<br />essential requirements</p>
+          </article>
+          <article className="choveigo-system-map__layer choveigo-system-map__layer--model">
+            <h4>Gemini, structured</h4>
+            <p>Interprets supplied text; rules decide Fit and Eligibility.</p>
+          </article>
+        </div>
+      </section>
+      <section className="choveigo-system-map__outcomes" aria-label="Product actions">
+        <h3>Product actions</h3>
+        <article className="choveigo-system-map__outcome choveigo-system-map__outcome--recommendation">
+          <h4>Recommendation</h4>
+          <p>A distinct judgment: bring the role forward.</p>
+        </article>
+        <article className="choveigo-system-map__outcome">
+          <h4>Next: resume tailoring</h4>
+          <p>A separate action after recommendation.</p>
+        </article>
+      </section>
+    </figure>
+  );
+}
+
 function OpeningPath() {
   return (
     <figure className="choveigo-opening-path" aria-labelledby="choveigo-opening-path-title">
-      <figcaption id="choveigo-opening-path-title" className="choveigo-eyebrow">
-        MATCHING PATH / FIRST-PASS ARCHITECTURE
+      <figcaption id="choveigo-opening-path-title">
+        MATCHING PATH / ROLE EVIDENCE TO THE NEXT STEP
       </figcaption>
-      <ol>
-        {openingPath.map(([title, detail], index) => (
-          <li key={title} className={index === openingPath.length - 1 ? "is-accent" : ""}>
-            <span>{title}</span>
+      <ol aria-label="From role evidence to resume tailoring">
+        {openingPath.map(([label, detail], index) => (
+          <li className={index === 4 ? "is-accent" : undefined} key={label}>
+            <span>{String(index + 1).padStart(2, "0")} · {label}</span>
             <strong>{detail}</strong>
           </li>
         ))}

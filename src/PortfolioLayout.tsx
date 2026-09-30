@@ -12,8 +12,17 @@ const headerUtilityAssets = [
   ["/media/lobby/shell-utility-clock.svg", "Clock"],
 ] as const;
 
+const usesProjectDetailShell = (pathname: string) =>
+  pathname.startsWith("/projects") || pathname.startsWith("/experience/");
+
+const isExperienceDetail = (pathname: string) => pathname.startsWith("/experience/");
+const isProjectDetail = (pathname: string) => pathname.startsWith("/projects/");
+
 function Header() {
   const { pathname } = useLocation();
+  const isHome = pathname === "/" || pathname === "/home";
+  const isProjectShell = usesProjectDetailShell(pathname);
+  const isResumeShell = pathname.startsWith("/resume");
   const section = pathname === "/" || pathname === "/home"
     ? "home"
     : pathname.startsWith("/experience")
@@ -26,9 +35,9 @@ function Header() {
           ? "resume"
           : "projects";
   return (
-    <header className="header">
+    <header className={`header${isProjectShell ? " header--project-shell" : ""}${isResumeShell ? " header--resume-shell" : ""}`}>
       <Link
-        className={`brand${pathname === "/" || pathname === "/home" ? " brand--current" : ""}`}
+        className={`brand${isHome ? " brand--current" : ""}${isProjectShell ? " brand--project-shell" : ""}${isResumeShell ? " brand--resume-shell" : ""}`}
         to="/home"
         aria-label="Portfolio home"
       >
@@ -72,7 +81,7 @@ function Header() {
         >
           Education
         </NavLink>
-        {section !== "home" && (
+        {section !== "home" && !isResumeShell && (
           <NavLink
             className={section === "resume" ? "current header-resume" : "header-resume"}
             to="/resume"
@@ -82,15 +91,24 @@ function Header() {
           </NavLink>
         )}
       </nav>
-      <div className="header-client-tools" aria-hidden="true">
-        {headerUtilityAssets.map(([src, name]) => (
-          <img key={name} src={src} alt="" />
-        ))}
-      </div>
-      <div className="header-achievement" aria-label="Crest placed third in the Brim Financial Challenge">
-        <span>CREST · BRIM FINANCIAL CHALLENGE</span>
-        <strong>3RD PLACE</strong>
-      </div>
+      {!isProjectShell && (
+        <div className="header-client-tools" aria-hidden="true">
+          {headerUtilityAssets.map(([src, name]) => (
+            <span className="header-client-tool" key={name}>
+              <img src={src} alt="" />
+            </span>
+          ))}
+        </div>
+      )}
+      {!isProjectShell && (
+        <div
+          className="header-achievement"
+          aria-label="Expected graduation 2028; third place in the Brim Financial Challenge"
+        >
+          <span>2028</span>
+          <strong>3RD</strong>
+        </div>
+      )}
       <div className="header-account-area">
         <Link
           className="header-account"
@@ -107,7 +125,7 @@ function Header() {
             />
             <img
               className="header-account__avatar"
-              src="/media/profile/topbar-avatar.png"
+              src={isProjectShell ? "/media/lobby/client-j-mark.svg" : "/media/lobby/client-account-avatar.png"}
               alt=""
               aria-hidden="true"
             />
@@ -126,12 +144,12 @@ const projectRailMarks: Record<string, string | undefined> = {
   "food-tracker": "/media/profile/food-tracker-mark.svg",
   crest: "/media/profile/profile-crest-emblem.png",
   choveigo: "/media/choveigo-recommendations.png",
-  fraymakers: "/media/lobby/project-fraymakers.svg",
+  fraymakers: "/media/lobby/project-fraymakers-index.png",
 };
 
-function RailIdentity({ src }: { src?: string }) {
+function RailIdentity({ src, className = "" }: { src?: string; className?: string }) {
   return (
-    <span className="rail-avatar" aria-hidden="true">
+    <span className={["rail-avatar", className].filter(Boolean).join(" ")} aria-hidden="true">
       {src && <img src={src} alt="" />}
     </span>
   );
@@ -140,6 +158,10 @@ function RailIdentity({ src }: { src?: string }) {
 function Rail() {
   const { pathname } = useLocation();
   const helpOverlay = useHelpOverlay();
+  const isHome = pathname === "/" || pathname === "/home";
+  const isProjectShell = usesProjectDetailShell(pathname);
+  const isResumeShell = pathname.startsWith("/resume");
+  const isPortfolioSummary = isHome || isResumeShell;
   const focus = pathname.startsWith("/experience")
     ? {
         name: "Living in Silico",
@@ -157,7 +179,34 @@ function Rail() {
           };
   return (
     <aside className="rail" aria-label="Portfolio index">
-      <div className="rail-availability">
+      <div className={`rail-availability${isPortfolioSummary ? " rail-availability--focus" : ""}${isProjectShell ? " rail-availability--opportunities" : ""}`}>
+        {isPortfolioSummary ? (
+          <>
+            <strong className="rail-availability__eyebrow">CURRENT FOCUS</strong>
+            <Link className="rail-availability__focus-link" to={projectCasePaths["food-tracker"]}>
+              <RailIdentity src={projectRailMarks["food-tracker"]} className="rail-avatar--focus" />
+              <span>
+                <strong>Food Tracker</strong>
+                <small>IN DEVELOPMENT</small>
+              </span>
+            </Link>
+          </>
+        ) : isProjectShell ? (
+          <>
+            <img
+              className="rail-availability__mark"
+              src="/media/lobby/client-j-mark.svg"
+              alt=""
+              aria-hidden="true"
+              data-node-id="2252:3450"
+            />
+            <span className="rail-availability__copy">
+              <strong>OPEN TO OPPORTUNITIES</strong>
+              <small>{"Summer 2027 \u00b7 Toronto / Remote"}</small>
+            </span>
+          </>
+        ) : (
+          <>
         <span className="rail-availability__mark-frame" aria-hidden="true">
           <img
             className="rail-availability__mark-image"
@@ -174,6 +223,8 @@ function Rail() {
             </span>
           ))}
         </div>
+          </>
+        )}
       </div>
       <div className="rail-content">
         <h2 className="rail-heading">
@@ -185,84 +236,98 @@ function Rail() {
           </span>
         </h2>
         <p className="rail-context">GENERAL {"\u00b7"} PORTFOLIO</p>
-        <div className="rail-group">
-          <h3>CURRENT FOCUS</h3>
-          <Link className="rail-link rail-link--focus" to={focus.path}>
-            <RailIdentity src={focus.src} />
-            <span>{focus.name}</span>
-          </Link>
-        </div>
-        <div className="rail-group">
-          <h3>PROJECTS (4)</h3>
-          {railProjects.map((item) => (
-            <Link className="rail-link" key={item.slug} to={projectCasePaths[item.slug]}>
-              <RailIdentity src={projectRailMarks[item.slug]} />
-              <span>{item.name}</span>
-            </Link>
-          ))}
-        </div>
-        <div className="rail-group">
-          <h3>EXPERIENCE (2)</h3>
-          {experience.map((item) => {
-            const storyPath = experienceStoryPaths[item.slug];
-            const content = (
-              <>
-                <RailIdentity
-                  src={
-                    item.slug === "living-in-silico"
-                      ? "/media/profile/living-in-silico-logo.png"
-                      : "/media/profile/stush-patties-logo.png"
-                  }
-                />
-                <span>{item.name}</span>
-              </>
-            );
-            return storyPath ? (
-              <Link className="rail-link" key={item.slug} to={storyPath}>
-                {content}
+        {isPortfolioSummary ? (
+          <>
+            <div className="rail-group rail-group--activity-status rail-group--activity-status-development">
+              <h3>IN DEVELOPMENT (2)</h3>
+              <Link className="rail-link rail-link--status" to={projectCasePaths.choveigo}>
+                <RailIdentity src={projectRailMarks.choveigo} />
+                <span><span>{railProjects.find((item) => item.slug === "choveigo")?.name}</span><small>IN DEVELOPMENT</small></span>
               </Link>
-            ) : (
-              <div className="rail-item" key={item.slug}>
-                {content}
-              </div>
-            );
-          })}
-        </div>
+              <Link className="rail-link rail-link--status" to="/home">
+                <RailIdentity src="/media/lobby/client-j-mark.svg" />
+                <span><span>Portfolio</span><small>IN DEVELOPMENT</small></span>
+              </Link>
+            </div>
+            <div className="rail-group rail-group--activity-status rail-group--activity-status-completed">
+              <h3>COMPLETED (3)</h3>
+              <Link className="rail-link rail-link--status" to={experienceStoryPaths["living-in-silico"]}>
+                <RailIdentity src="/media/profile/living-in-silico-logo.png" />
+                <span><span>Living in Silico</span><small>COMPLETED</small></span>
+              </Link>
+              <Link className="rail-link rail-link--status" to={experienceStoryPaths["stush-patties"]}>
+                <RailIdentity src="/media/profile/stush-patties-logo.png" />
+                <span><span>Stush Patties</span><small>COMPLETED</small></span>
+              </Link>
+              <Link className="rail-link rail-link--status" to={projectCasePaths.crest}>
+                <RailIdentity src="/media/lobby/hackathon-trophy.svg" />
+                <span><span>Crest</span><small>{"3RD PLACE \u00b7 COMPLETED"}</small></span>
+              </Link>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="rail-group">
+              <h3>CURRENT FOCUS</h3>
+              <Link className="rail-link rail-link--focus" to={focus.path}>
+                <RailIdentity src={focus.src} />
+                <span>{focus.name}</span>
+              </Link>
+            </div>
+            <div className="rail-group">
+              <h3>PROJECTS (4)</h3>
+              {railProjects.map((item) => (
+                <Link className="rail-link" key={item.slug} to={projectCasePaths[item.slug]}>
+                  <RailIdentity src={projectRailMarks[item.slug]} />
+                  <span>{item.name}</span>
+                </Link>
+              ))}
+            </div>
+            <div className="rail-group">
+              <h3>EXPERIENCE (2)</h3>
+              {experience.map((item) => {
+                const storyPath = experienceStoryPaths[item.slug];
+                const content = (
+                  <>
+                    <RailIdentity
+                      src={
+                        item.slug === "living-in-silico"
+                          ? "/media/profile/living-in-silico-logo.png"
+                          : "/media/profile/stush-patties-logo.png"
+                      }
+                    />
+                    <span>{item.name}</span>
+                  </>
+                );
+                return storyPath ? (
+                  <Link className="rail-link" key={item.slug} to={storyPath}>
+                    {content}
+                  </Link>
+                ) : (
+                  <div className="rail-item" key={item.slug}>
+                    {content}
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
       </div>
-      <div className="rail-utilities" aria-label="Client utilities">
+      <footer className="rail-social-footer" aria-label="Social and support links">
+        <span>GitHub</span>
+        <span>LinkedIn</span>
+        <span>X</span>
+        <span className="rail-social-footer__email" aria-label="Email">✉</span>
         {helpOverlay ? (
-          <button className="rail-utility" type="button" aria-label="Open contextual help" onClick={helpOverlay.openHelp}>
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 5.5h16v11H10l-5 3v-3.1H4z" />
-            </svg>
+          <button className="rail-social-footer__help" type="button" onClick={helpOverlay.openHelp}>
+            Help
           </button>
         ) : (
-          <Link className="rail-utility" to="/help" state={{ returnTo: pathname }} aria-label="Open help">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 5.5h16v11H10l-5 3v-3.1H4z" />
-            </svg>
+          <Link className="rail-social-footer__help" to="/help" state={{ returnTo: pathname }}>
+            Help
           </Link>
         )}
-        <span className="rail-utility" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <circle cx="8" cy="9" r="3" />
-            <circle cx="16" cy="9.5" r="2.5" />
-            <path d="M3.5 18c.5-3 2-4.5 4.5-4.5s4 1.5 4.5 4.5M13 14c3.5-1 6.2.4 7 3.6" />
-          </svg>
-        </span>
-        <span className="rail-utility" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <rect x="9" y="3" width="6" height="12" rx="3" />
-            <path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21M8.5 21h7" />
-          </svg>
-        </span>
-        <span className="rail-utility rail-utility--settings" aria-hidden="true">
-          <svg viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="7" />
-            <circle cx="12" cy="12" r="2" />
-          </svg>
-        </span>
-      </div>
+      </footer>
     </aside>
   );
 }
@@ -276,13 +341,16 @@ export function Client({
 }) {
   const { pathname } = useLocation();
   const mainRef = useRef<HTMLElement>(null);
+  const projectShell = usesProjectDetailShell(pathname);
+  const homeShell = pathname === "/" || pathname === "/home";
+  const caseDetailShell = isProjectDetail(pathname) || isExperienceDetail(pathname);
 
   useEffect(() => {
     mainRef.current?.focus();
   }, [pathname]);
 
   return (
-    <div className="client">
+    <div className={`client${projectShell ? " client--project-shell" : ""}${caseDetailShell ? " client--case-detail-shell" : ""}${isExperienceDetail(pathname) ? " client--experience-detail-shell" : ""}${homeShell ? " client--home-shell" : ""}${pathname.startsWith("/resume") ? " client--resume-shell" : ""}`}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>

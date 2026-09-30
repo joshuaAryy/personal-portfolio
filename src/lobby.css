@@ -80,19 +80,6 @@
   gap: clamp(18px, 3vw, 46px);
 }
 
-.league-lobby__banners--education {
-  right: 22%;
-  left: 22%;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap: clamp(24px, 6vw, 90px);
-}
-
-.league-lobby--hackathons .league-lobby__banners {
-  right: 38%;
-  left: 38%;
-  grid-template-columns: minmax(0, 1fr);
-}
-
 .league-banner {
   position: relative;
   display: flex;
@@ -147,6 +134,14 @@
   height: 74%;
   object-fit: contain;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.55));
+}
+
+.league-banner__pending {
+  color: #d6c89d;
+  font: 700 20px/1 "League Spartan", Arial, sans-serif;
+  letter-spacing: 0.12em;
+  text-indent: 0.12em;
+  transform: translateY(-2px);
 }
 
 .league-banner__name {
@@ -264,6 +259,11 @@
 .league-role-legend__item small {
   font-size: 7px;
   letter-spacing: 0.04em;
+}
+
+.league-role-legend--education .league-role-legend__item small {
+  line-height: 1.25;
+  text-align: center;
 }
 
 .league-selected {
@@ -517,9 +517,7 @@
   }
 
   .league-lobby__banners,
-  .league-lobby__banners:not(.league-lobby__banners--projects),
-  .league-lobby__banners--education,
-  .league-lobby--hackathons .league-lobby__banners {
+  .league-lobby__banners:not(.league-lobby__banners--projects) {
     display: grid;
     min-height: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -583,9 +581,7 @@
   }
 
   .league-lobby__banners,
-  .league-lobby__banners:not(.league-lobby__banners--projects),
-  .league-lobby__banners--education,
-  .league-lobby--hackathons .league-lobby__banners {
+  .league-lobby__banners:not(.league-lobby__banners--projects) {
     grid-template-columns: minmax(0, 1fr) !important;
     gap: 12px;
   }
@@ -644,5 +640,135 @@
 @media (prefers-reduced-motion: reduce) {
   .league-banner {
     transition: none;
+  }
+}
+
+/* Projects lobby geometry matched to the active 1920px Figma root. */
+.league-lobby__banners--projects {
+  top: calc(9% + 25px);
+}
+
+.league-role-legend--projects {
+  left: 34%;
+  width: 508px;
+  height: 94px;
+  min-height: 94px;
+  padding: 12px 14px;
+}
+
+.league-role-legend--projects .league-role-legend__item img {
+  width: 34px;
+  height: 34px;
+}
+
+.league-selected--projects {
+  min-height: 220px;
+}
+
+.league-selected__stack {
+  margin-top: 4px !important;
+  color: #b9c4c5 !important;
+}
+
+@media (min-width: 1800px) and (min-height: 1000px) {
+  .league-lobby__banners--projects {
+    top: 2px;
+    right: 107px;
+    bottom: 28.65%;
+    left: 107px;
+    grid-template-columns: 246px 246px 246px 246px 246px;
+    gap: 26px;
+  }
+
+  .league-lobby__banners--projects .league-banner:nth-child(4),
+  .league-lobby__banners--projects .league-banner:nth-child(5) {
+    position: relative;
+    left: 12px;
+  }
+
+  .league-lobby__banners--projects .league-banner--owner {
+    top: -14px;
+  }
+
+  .league-lobby__banners--projects .league-banner__art {
+    height: calc(100% + 6px);
+  }
+
+  .league-lobby__banners--projects .league-banner__medallion {
+    width: 82px;
+    height: 82px;
+    margin-top: 145px;
+    overflow: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .league-lobby__banners--projects .league-banner__frame {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 140px;
+    height: 140px;
+    max-width: none;
+    object-fit: contain;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+  }
+
+  .league-lobby__banners--projects .league-banner__mark {
+    position: relative;
+    z-index: 1;
+    width: 82px;
+    height: 82px;
+    max-width: none;
+    filter: none;
+  }
+
+  .league-lobby__banners--projects .league-banner--owner .league-banner__mark {
+    width: 90px;
+    height: 90px;
+  }
+
+  .league-lobby__banners--projects .league-banner__name {
+    margin-top: 73px;
+  }
+
+  .league-lobby__banners--projects .league-banner__role {
+    margin-top: 36px;
+  }
+
+  .league-lobby__banners--projects .league-banner__roles {
+    margin-top: 36px;
+  }
+
+  .league-lobby__banners--projects .league-banner__roles img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .league-lobby__banners--projects .league-banner__selection-cap {
+    top: 2px;
+    left: 20px;
+    width: 206px;
+    height: 2px;
+    background: #0dd1e5;
+    clip-path: none;
+    box-shadow: 0 0 8px rgba(13, 209, 229, 0.45);
+  }
+}
+
+@media (max-width: 900px) {
+  .league-lobby__banners--projects {
+    top: auto;
+  }
+
+  .league-role-legend--projects {
+    left: auto;
+    width: 100%;
+    height: auto;
+    min-height: 72px;
   }
 }

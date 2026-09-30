@@ -4,12 +4,12 @@ import { describe, expect, it } from "vitest";
 import App from "./App";
 
 const storyRoutes = [
-  ["Food Tracker", "/projects/food-tracker", "Mobile food logging,"],
+  ["Food Tracker", "/projects/food-tracker", "Simple food logs."],
   ["Crest", "/projects/crest", "<h1>Crest</h1>"],
-  ["Cho’Veigo", "/projects/choveigo", "What should job fit actually mean?"],
-  ["Fraymakers", "/projects/fraymakers", "From match data"],
-  ["Living in Silico", "/experience/living-in-silico", "Molecular generation, through experiments."],
-  ["Stush Patties", "/experience/stush-patties", "A reporting pipeline for data that arrived in different shapes."],
+  ["Cho’Veigo", "/projects/choveigo", "AUTHENTIC PRODUCT VIEW / RECOMMENDATIONS"],
+  ["Fraymakers", "/projects/fraymakers", "MATCH DATA TO VOD THUMBNAILS"],
+  ["Living in Silico", "/experience/living-in-silico", "Molecules need representation before generation."],
+  ["Stush Patties", "/experience/stush-patties", "Different file shapes. One reporting path."],
 ] as const;
 
 function renderRoute(path: string) {
@@ -34,7 +34,7 @@ describe("extracted case study pages", () => {
     const markup = renderRoute(path);
 
     expect(markup).toContain('class="skip-link" href="#main"');
-    expect(markup).toContain('class="header"');
+    expect(markup).toMatch(/class="header(?:\s[^"]*)?"/);
     expect(markup).toContain(`class="main main--detail ${pageClass}"`);
     expect(markup).toContain('class="rail" aria-label="Portfolio index"');
   });
