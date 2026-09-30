@@ -1,14 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+
 .opening-route {
-  --opening-handoff-duration: 180ms;
   position: relative;
   min-height: 100vh;
   min-height: 100svh;
   overflow: hidden;
-  background: #070c13;
-}
-
-.opening-route--reduced {
-  --opening-handoff-duration: 120ms;
+  background: #06080c;
 }
 
 .opening__underlay {
@@ -17,15 +14,23 @@
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity var(--opening-handoff-duration) ease-out;
+  animation: opening-client-reveal 2s linear 1 both;
 }
 
-.opening-route--leaving .opening__underlay {
+.opening-route--reduced .opening__underlay {
+  opacity: 0;
+  animation: none;
+}
+
+/* Preserve the reviewed short crossfade against the global reduced-motion duration override. */
+.opening-route--reduced.opening-route--leaving .opening__underlay {
   opacity: 1;
+  transition: opacity 120ms ease-out;
+  transition-duration: 120ms !important;
+  animation: none;
 }
 
 .opening {
-  --opening-duration: 2s;
   position: relative;
   z-index: 1;
   display: grid;
@@ -34,244 +39,528 @@
   overflow: hidden;
   place-items: center;
   isolation: isolate;
-  background:
-    radial-gradient(ellipse at 50% 48%, rgb(19 23 27 / 72%), transparent 58%),
-    #070c13;
+  background: transparent;
   color: #e9e2d4;
-  opacity: 1;
 }
 
-.opening .opening__center {
-  position: relative;
-  display: grid;
-  width: min(76vw, 468px);
-  aspect-ratio: 1;
-  place-items: center;
-}
-
-.opening .opening__registration {
+.opening__treatment {
   position: absolute;
   z-index: 0;
-  top: 50%;
-  left: 50%;
-  width: 113.675%;
-  height: auto;
-  overflow: visible;
-  opacity: 0;
-  transform: translate(-50%, -50%) rotate(1.2deg);
-  animation:
-    opening-registration-fade 180ms ease-out both,
-    opening-registration-settle 280ms ease-out 180ms both;
-  pointer-events: none;
+  inset: 0;
+  overflow: hidden;
+  background: #06080c;
+  animation: opening-treatment-out 2s linear 1 both;
 }
 
-.opening .opening__mark {
-  position: relative;
-  z-index: 1;
+.opening__environment {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  pointer-events: none;
+  user-select: none;
+}
+
+.opening__mechanism {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(40.2778vw, 64.4444svh);
+  aspect-ratio: 1;
+  container-type: size;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.opening__layer {
+  position: absolute;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.opening__asset-frame {
+  position: absolute;
+  inset: 0;
   overflow: visible;
 }
 
-.opening .opening__ring {
-  stroke-dasharray: 1150;
-  stroke-dashoffset: 1150;
+.opening__archive-mark {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: fill;
+  clip-path: circle(42.105263% at 50% 50%);
+  user-select: none;
 }
 
-.opening .opening__ring--registration {
-  opacity: 0;
-  animation: opening-register 180ms ease-out both;
+.opening__asset-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  user-select: none;
 }
 
-.opening .opening__ring--gold {
-  opacity: 0;
-  animation: opening-ring 280ms ease-out 180ms both;
+.opening__bezel {
+  inset: 0;
 }
 
-.opening .opening__ring--highlight {
-  opacity: 0;
-  animation: opening-ring-highlight 280ms ease-out 180ms both;
+.opening__overscan--outer {
+  inset: -1.38% -2.24% -3.1%;
 }
 
-.opening .opening__j-shadow,
-.opening .opening__j-body,
-.opening .opening__j-metal,
-.opening .opening__j-detail {
-  opacity: 0;
+.opening__bevel {
+  top: 1.37931%;
+  left: 1.37931%;
+  width: 97.24138%;
+  height: 97.24138%;
 }
 
-.opening .opening__j-shadow {
-  animation: opening-shadow 240ms ease-out 460ms both;
+.opening__overscan--bevel {
+  inset: -1.42% -2.3% -3.19%;
 }
 
-.opening .opening__j-body {
-  animation: opening-j 420ms cubic-bezier(0.2, 0.7, 0.2, 1) 700ms both;
+.opening__enamel-bed {
+  top: 3.10345%;
+  left: 3.10345%;
+  width: 93.7931%;
+  height: 93.7931%;
 }
 
-.opening .opening__j-metal {
-  transform-box: fill-box;
-  transform-origin: 50% 50%;
-  animation: opening-metal 260ms ease-out 1120ms both;
+.opening__overscan--enamel {
+  inset: -1.47% -2.39% -3.31%;
 }
 
-.opening .opening__j-detail {
-  animation: opening-detail 260ms ease-out 1120ms both;
+.opening__inner-rail {
+  top: 7.58621%;
+  left: 7.58621%;
+  width: 84.82759%;
+  height: 84.82759%;
 }
 
-.opening .opening__light-pass {
-  opacity: 0;
-  transform-box: fill-box;
-  transform: translateX(0);
-  animation: opening-light 240ms linear 1380ms both;
+.opening__overscan--rail {
+  inset: -1.63% -2.64% -3.66%;
 }
 
-.opening .opening__skip {
+.opening__j-seat-rim {
+  top: 15.51724%;
+  left: 15.51724%;
+  width: 68.96552%;
+  height: 68.96552%;
+}
+
+.opening__overscan--j-rim {
+  inset: -2% -3.25% -4.5%;
+}
+
+.opening__j-seat-enamel {
+  top: 17.24138%;
+  left: 17.24138%;
+  width: 65.51724%;
+  height: 65.51724%;
+}
+
+.opening__overscan--j-enamel {
+  inset: -2.11% -3.42% -4.74%;
+}
+
+.opening__segmented-bezel,
+.opening__tick-track,
+.opening__cyan,
+.opening__jewels,
+.opening__glint {
+  top: 1.72414%;
+  left: 1.72414%;
+  width: 96.55172%;
+  height: 96.55172%;
+}
+
+.opening__ticks-frame {
   position: absolute;
-  z-index: 1;
-  top: clamp(16px, 3.2vw, 34px);
-  right: clamp(16px, 3.2vw, 34px);
-  display: inline-grid;
-  min-width: 48px;
-  min-height: 48px;
-  padding: 0 16px;
-  place-items: center;
-  border: 1px solid rgb(203 171 105 / 46%);
-  border-radius: 2px;
-  background: rgb(7 12 19 / 68%);
-  color: #e9d4a3;
-  font: inherit;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.17em;
-  cursor: pointer;
-  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
+  top: 3.0242%;
+  left: 0;
+  width: 100%;
+  height: 93.9516%;
+  overflow: clip;
+  opacity: 0.44;
 }
 
-.opening .opening__skip:hover {
-  border-color: #d0aa63;
-  background: rgb(191 145 72 / 14%);
+.opening__ticks-content {
+  position: absolute;
+  top: 5.3641%;
+  left: 7.8629%;
+  width: 84.2742%;
+  height: 89.704%;
+  overflow: visible;
+  opacity: 0.6;
+  mask-image: url("/media/opening/circle-tick-mask.svg");
+  mask-mode: alpha;
+  mask-repeat: no-repeat;
+  mask-size: 96.552cqw 90.712cqw;
+  mask-position: -7.592cqw -4.866cqw;
+}
+
+.opening__tick-art {
+  position: absolute;
+  inset: -1.91%;
+  display: block;
+  width: 103.82%;
+  height: 103.82%;
+  max-width: none;
+  user-select: none;
+}
+
+.opening__construction,
+.opening__j-body {
+  top: 17.24138%;
+  left: 17.24138%;
+  width: 65.51724%;
+  height: 65.51724%;
+}
+
+.opening__motion--outer {
+  opacity: 0;
+  animation: opening-layer-cycle 2s linear 1 both;
+}
+
+/* Figma 2025:84/88/125: the segmented bezel starts at +1.2rad and the tick
+   ring at -1rad, then both settle by 23% (460ms) so the centered J holds. */
+.opening__motion--segmented {
+  opacity: 0;
+  transform: rotate(68.75deg);
+  transform-origin: 50% 50%;
+  animation:
+    opening-segmented-opacity 2s linear 1 both,
+    opening-segmented-rotation 2s linear 1 both;
+}
+
+.opening__motion--ticks {
+  opacity: 0;
+  transform: rotate(-57.3deg);
+  transform-origin: 50% 50%;
+  animation:
+    opening-ticks-opacity 2s linear 1 both,
+    opening-ticks-rotation 2s linear 1 both;
+}
+
+.opening__motion--cyan {
+  opacity: 0;
+  animation: opening-cyan 2s linear 1 both;
+}
+
+.opening__motion--construction {
+  opacity: 0;
+  animation: opening-construction 2s linear 1 both;
+}
+
+.opening__motion--j-body {
+  opacity: 0;
+  animation: opening-j-body 2s linear 1 both;
+}
+
+.opening__motion--glint {
+  opacity: 0;
+  transform-origin: 50% 50%;
+  animation:
+    opening-glint-opacity 2s linear 1 both,
+    opening-glint-rotation 2s linear 1 both;
+}
+
+.opening__skip {
+  position: absolute;
+  z-index: 2;
+  top: 28px;
+  right: clamp(20px, 3.4722vw, 50px);
+  display: block;
+  width: 96px;
+  height: 48px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #e0cfa3;
+  font-family: Inter, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+  transition: color 140ms ease;
+}
+
+.opening__skip span {
+  position: absolute;
+  top: 16px;
+  left: 19px;
+}
+
+.opening__skip::before {
+  position: absolute;
+  z-index: -1;
+  inset: 6px 0;
+  border: 1px solid rgb(125 105 71 / 72%);
+  border-radius: 2px;
+  background: rgb(14 16 20 / 86%);
+  content: "";
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.opening__skip:hover {
   color: #fff0ca;
 }
 
-.opening .opening__skip:focus-visible {
+.opening__skip:hover::before {
+  border-color: #d0aa63;
+  background: rgb(191 145 72 / 14%);
+}
+
+.opening__skip:focus-visible {
   outline: 2px solid #f2d68e;
-  outline-offset: 4px;
+  outline-offset: 3px;
 }
 
-.opening.opening--leaving {
-  transition: opacity var(--opening-handoff-duration) ease-out;
-  opacity: 0;
-}
-
-.opening.opening--reduced .opening__ring,
-.opening.opening--reduced .opening__registration,
-.opening.opening--reduced .opening__j-shadow,
-.opening.opening--reduced .opening__j-body,
-.opening.opening--reduced .opening__j-metal,
-.opening.opening--reduced .opening__j-detail,
-.opening.opening--reduced .opening__light-pass {
+.opening--reduced {
+  opacity: 1;
   animation: none;
 }
 
-.opening.opening--reduced .opening__registration {
-  opacity: 0.28;
-  transform: translate(-50%, -50%);
+.opening--reduced .opening__treatment,
+.opening--reduced .opening__layer {
+  animation: none;
 }
 
-.opening.opening--reduced .opening__ring--registration {
-  stroke-dasharray: none;
-  stroke-dashoffset: 0;
-  opacity: 0.52;
-}
-
-.opening.opening--reduced .opening__ring--gold {
-  stroke-dasharray: none;
-  stroke-dashoffset: 0;
+.opening--reduced .opening__treatment {
   opacity: 1;
 }
 
-.opening.opening--reduced .opening__ring--highlight {
-  stroke-dasharray: none;
-  stroke-dashoffset: 0;
-  opacity: 0.55;
-}
-
-.opening.opening--reduced .opening__j-shadow {
-  opacity: 0.5;
-}
-
-.opening.opening--reduced .opening__j-body,
-.opening.opening--reduced .opening__j-metal {
+.opening--reduced .opening__motion--outer,
+.opening--reduced .opening__motion--segmented,
+.opening--reduced .opening__motion--ticks,
+.opening--reduced .opening__motion--cyan,
+.opening--reduced .opening__motion--j-body {
   opacity: 1;
+  transform: none;
 }
 
-.opening.opening--reduced .opening__j-detail {
-  opacity: 0.56;
+.opening--reduced .opening__motion--construction {
+  opacity: 0.62;
 }
 
-.opening.opening--reduced .opening__light-pass {
+.opening--reduced .opening__motion--glint {
   opacity: 0;
+  transform: none;
 }
 
-.opening.opening--reduced.opening--leaving {
-  transition-duration: var(--opening-handoff-duration);
+.opening-route--reduced.opening-route--leaving .opening__treatment {
+  opacity: 0;
+  transition: opacity 120ms ease-out;
+  transition-duration: 120ms !important;
 }
 
-@keyframes opening-registration-fade {
-  from { opacity: 0; }
-  to { opacity: 0.28; }
+.opening-route--reduced .opening__skip,
+.opening-route--reduced .opening__skip::before {
+  transition: none;
 }
 
-@keyframes opening-registration-settle {
-  from { transform: translate(-50%, -50%) rotate(1.2deg); }
-  to { transform: translate(-50%, -50%) rotate(0deg); }
+@keyframes opening-client-reveal {
+  0%,
+  91% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-@keyframes opening-register {
-  from { opacity: 0; }
-  to { opacity: 0.52; }
+@keyframes opening-treatment-out {
+  0%,
+  91% {
+    opacity: 1;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes opening-ring {
-  from { opacity: 0; stroke-dashoffset: 1150; }
-  to { opacity: 1; stroke-dashoffset: 0; }
+@keyframes opening-layer-cycle {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  9% {
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+  91% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes opening-ring-highlight {
-  from { opacity: 0; stroke-dashoffset: 1150; }
-  to { opacity: 0.55; stroke-dashoffset: 0; }
+@keyframes opening-segmented-opacity {
+  0% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  9% {
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+  91% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes opening-shadow {
-  from { opacity: 0; }
-  to { opacity: 0.5; }
+@keyframes opening-segmented-rotation {
+  0% {
+    transform: rotate(68.75deg);
+    animation-timing-function: linear;
+  }
+  9% {
+    transform: rotate(68.75deg);
+    animation-timing-function: ease-out;
+  }
+  23% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-@keyframes opening-j {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes opening-ticks-opacity {
+  0%,
+  4% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  15% {
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+  91% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes opening-metal {
-  from { opacity: 0; transform: translateY(2px); }
-  to { opacity: 1; transform: translateY(0); }
+@keyframes opening-ticks-rotation {
+  0% {
+    transform: rotate(-57.3deg);
+    animation-timing-function: linear;
+  }
+  9% {
+    transform: rotate(-57.3deg);
+    animation-timing-function: ease-out;
+  }
+  23% {
+    transform: rotate(0deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
-@keyframes opening-detail {
-  from { opacity: 0; }
-  to { opacity: 0.56; }
+@keyframes opening-cyan {
+  0%,
+  11% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  23% {
+    opacity: 1;
+    animation-timing-function: linear;
+  }
+  91% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes opening-light {
-  0% { opacity: 0; transform: translateX(0); }
-  50% { opacity: 0.34; transform: translateX(100%); }
-  100% { opacity: 0; transform: translateX(200%); }
+@keyframes opening-construction {
+  0%,
+  23% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  35%,
+  100% {
+    opacity: 0.62;
+  }
 }
 
-@media (max-width: 480px) {
-  .opening .opening__center {
-    width: min(82vw, 360px);
+@keyframes opening-j-body {
+  0%,
+  35% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  56%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes opening-glint-opacity {
+  0%,
+  69% {
+    opacity: 0;
+    animation-timing-function: ease-out;
+  }
+  74% {
+    opacity: 0.48;
+    animation-timing-function: linear;
+  }
+  78% {
+    opacity: 0.48;
+    animation-timing-function: ease-in;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes opening-glint-rotation {
+  0%,
+  69% {
+    transform: rotate(0deg);
+  }
+  69% {
+    animation-timing-function: ease-in-out;
+  }
+  81% {
+    transform: rotate(-32deg);
+    animation-timing-function: linear;
+  }
+  100% {
+    transform: rotate(-32deg);
+  }
+}
+
+@media (max-width: 640px) {
+  .opening__mechanism {
+    width: min(78vw, 54svh, 380px);
   }
 }
 
@@ -282,7 +571,8 @@
     scroll-behavior: auto !important;
   }
 
-  .opening .opening__skip {
+  .opening .opening__skip,
+  .opening .opening__skip::before {
     transition: none;
   }
 }
