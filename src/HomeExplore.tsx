@@ -12,7 +12,8 @@ const modes = [
       "Explore products and systems I build outside the classroom. Select a focus, then confirm to enter the project lobby.",
     path: "/projects",
     emblem: "/media/lobby/home-mode-projects.svg",
-    glyph: "/media/lobby/home-mode-projects-glyph-pass-04.svg",
+    glyph: "/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+    glyphNodeId: "3339:684",
     focus: [
       { label: "Featured", detail: "Strongest work", featured: true },
       { label: "AI / ML", detail: "Machine intelligence" },
@@ -29,7 +30,8 @@ const modes = [
       "Research engineering and client-facing software workflows.",
     path: "/experience",
     emblem: "/media/lobby/home-mode-experience.svg",
-    glyph: "/media/lobby/home-mode-experience-glyph-pass-04.svg",
+    glyph: "/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+    glyphNodeId: "3339:696",
     focus: [
       { label: "Research / ML", detail: "Living in Silico" },
       { label: "Data pipelines", detail: "Stush Patties" },
@@ -43,7 +45,8 @@ const modes = [
       "Competition work shaped around focused team builds and clear constraints.",
     path: "/hackathons",
     emblem: "/media/lobby/home-mode-hackathons.svg",
-    glyph: "/media/lobby/home-mode-hackathons-glyph-pass-04.svg",
+    glyph: "/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+    glyphNodeId: "3339:708",
     focus: [
       { label: "Crest", detail: "MPC Hacks 2026" },
       { label: "Brim Financial Challenge", detail: "Third place" },
@@ -56,8 +59,9 @@ const modes = [
     description:
       "Computer Engineering coursework and academic foundations.",
     path: "/education",
-    emblem: "/media/lobby/home-mode-education.svg",
-    glyph: null,
+    emblem: "/media/lobby/home-mode-experience.svg",
+    glyph: "/media/lobby/home-mode-education-glyph-review-candidate.svg",
+    glyphNodeId: "3339:718",
     focus: [
       { label: "Degree", detail: "Computer Engineering" },
       { label: "Coursework", detail: "Toronto Metropolitan University" },
@@ -148,7 +152,7 @@ function HomeExploreContent() {
                 />
                 {mode.glyph && (
                   <span className={`home-explore__mode-glyph home-explore__mode-glyph--${mode.id}`}>
-                    <img src={mode.glyph} alt="" />
+                    <img src={mode.glyph} alt="" data-node-id={mode.glyphNodeId} />
                   </span>
                 )}
                 <img
