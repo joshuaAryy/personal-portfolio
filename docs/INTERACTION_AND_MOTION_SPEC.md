@@ -6,7 +6,7 @@ This is the active behavior contract. Use the file key and inspection date in [F
 
 - Opening retains the liked segmented Hextech direction: coordinated rings rotate in opposing directions, restrained mechanical motion, a strong central J, and an approximately two-second sequence.
 - Keep Skip visible. Reduced-motion behavior remains near-instant.
-- Implement now with archive mark `159:2`, the approved launch fallback. The bounded archive-faithful primary reconstruction may replace it after rendered comparison; it does not block Opening or unrelated implementation.
+- Implement with archive mark `159:2`, the selected launch identity. The bounded reconstruction is closed and rejected; rendered comparison may check only display softness and optical-size clarity. Do not reopen J design, and do not block any implementation on it.
 - Treat the primary and small mark as optical sizes. Check the small mark at 54/32/16px instead of forcing the full complex identity into every slot.
 - Avoid continuous extra spins, excessive flashes, or effects that compete with the J.
 
@@ -20,7 +20,7 @@ The visible Projects / Experience / Hackathon / Academics strip is a review-only
 
 ## First-run and Home
 
-Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The Opening hands off to Home. Refine icons, materials, backgrounds, no-overflow behavior, and implemented states without changing the structure.
+Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The current icon set has passed live critique at 1920x1080; preserve it while syncing backgrounds, materials, spacing, shell, and implemented states. Remove only concrete overflow or rendered mismatches; do not reopen structure.
 
 ## Resume Found
 

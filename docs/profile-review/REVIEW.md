@@ -2,7 +2,7 @@
 
 The owner-selected behavior is static with respect to main-page navigation: the signal counts do not navigate or pin another panel. Projects, Experience, Hackathon, and Academics each preview their own hover/focus overlay, returning to the default Projects state when pointer or focus leaves the Profile overview.
 
-The approved layout still has four equal Projects sectors. In the live Figma frame `998:3`, the Food Tracker mark (`1096:2`), Crest mark (`1237:2`), and official Fraymakers wordmark (`3115:45`) now sit with their respective titles. Cho’Veigo remains a typographic project name because its public repository has no standalone logo; generic initials are not used. The lower signal counts remain static, with distinct transient hover/focus overlays supplied by implementation.
+The approved layout still has four equal Projects sectors. This capture set records an earlier typographic-only Cho'Veigo state and is superseded for that asset. Current direction uses the canonical match-path mark `public/media/profile/choveigo-mark.svg` in Profile/lobby contexts (`3297:45/54/63/72`); critique is clear and the asset is frozen. Do not treat the historical capture below as current identity proof.
 
 ## Visual evidence
 
