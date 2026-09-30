@@ -34,8 +34,7 @@ function OpeningArchiveMark({
       <img
         className="opening__archive-mark"
         data-node-id="159:2"
-        src="/media/profile/open-portfolio-j-archive-source.jpg"
-        srcSet="/media/profile/open-portfolio-j-archive-source-700.png 1x"
+        src="/media/profile/open-portfolio-j-archive-source-700.png"
         alt=""
         draggable={false}
       />
