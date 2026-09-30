@@ -8,7 +8,7 @@ Owner review overrides old pass approvals. A critique clearance is scoped to the
 
 ## Identity and client shell
 
-- **Canonical J — NEEDS REDESIGN:** archive `159:2` is the target and remains a temporary production fallback. The current editable reconstruction is below the archive. Do not describe Pass30 as converged, canonical, or owner-approved. Compare the archive, current J, and upper-serif studies. Solve macro silhouette, crown, vertical proportion, hook, orbit relationship, embedded identity, and first read before material detail. Prove at 54/32/16px; small cyan detail cannot compensate for a weak mark.
+- **Canonical J — NEEDS REDESIGN:** archive `159:2` is the target and remains a temporary production fallback. The current editable reconstruction is below the archive. Pass30 clearance is superseded. Pass31/32 on `3089:2` are reversible archive-first macro candidates only; neither is owner-approved. Compare the archive, current J, upper-serif studies, and both candidates. Solve macro silhouette, crown, vertical proportion, hook, orbit relationship, embedded identity, and first read before material detail. Prove at 54/32/16px; small cyan detail cannot compensate for a weak mark.
 - **Opening — DIRECTION PRESERVED; IMPLEMENTATION NEEDS SYNC:** keep the liked segmented Hextech opening. Coordinated opposing ring rotations, a strong central J, restrained mechanical motion, about two seconds, Skip, and near-instant reduced motion. Keep it premium and authored; avoid extra spin/effects. The J blocks final acceptance.
 - **Home — STRUCTURE PRESERVED; REFINE:** keep the approved four-destination architecture in `2252:3445`. Finish all four authentic/client-quality icons, intended background, shell/material details, spacing, states, and implementation clarity. Remove incomplete artifacts and scrollbar when no page overflow exists. Pass 04 is historical, not final icon approval.
 - **Profile — BASE PRESERVED:** use `960:2`. Four lower counts are static. Each of Projects, Experience, Hackathon, and Academics has its own hover/focus overlay and never changes main-page navigation. Projects is four equal sectors. Reject featured-left/three-stacked-right.
@@ -35,7 +35,7 @@ Figures should communicate their point within seconds, make the system’s scale
 - Home structure: archive `69:37` and active root `2252:3445`.
 - Opening and motion notes: `2025:2`, `2025:84/88/125`.
 - Profile base/state frames: `960:2`; `998:3/46/63/79`.
-- Canonical J source/comparisons: archive `159:2`, current reconstruction `1950:6`, Pass30 comparison board `3079:2`.
+- Canonical J source/comparisons: archive `159:2`, current reconstruction `1950:6`, Pass30 comparison board `3079:2`, Pass31/32 candidate board `3089:2`.
 - Resume authentic art: CommunityDragon 9.22 Ready Check bundle, recorded in [PROVENANCE.md](../public/media/resume/communitydragon/PROVENANCE.md).
 
 Statuses are conservative: DESIGNING, NEEDS REDESIGN, REVIEW CANDIDATE, IMPLEMENT READY, IMPLEMENTED, NEEDS SYNC. Owner reopening overrides prior pass language. A design decision is not implementation acceptance; site comparison remains its own step.

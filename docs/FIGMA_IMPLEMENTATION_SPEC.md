@@ -15,7 +15,7 @@ Figma defines appearance and page composition. This spec maps accepted direction
 
 | Surface | Implementation direction |
 |---|---|
-| Opening and J | The unresolved J is a redesign task. Use archive `159:2` as macro standard; do not treat Pass30 as canonical. Keep the coordinated opposing segmented rings, about 2s, Skip and near-instant reduced-motion path. Update site identity placements only after a J clears owner review at hero and 54/32/16px. |
+| Opening and J | The unresolved J is a redesign task. Use archive `159:2` as macro standard; Pass30 clearance is superseded and Pass31/32 on `3089:2` remain review candidates. Keep the coordinated opposing segmented rings, about 2s, Skip and near-instant reduced-motion path. Update site identity placements only after a J clears owner review at hero and 54/32/16px. |
 | Home | Keep the approved architecture in `2252:3445`. Build the final four icons, exact backgrounds/materials, spacing, selection/hover/focus states, and no-overflow/no-scrollbar behavior from the finished Figma. |
 | Profile | Preserve `960:2` base composition. Four static lower counts own four separate hover/focus overlays and never change the main Profile panel. Projects uses four equal sectors. Keep the rejected feature-left/three-stacked-right layout out of design and implementation. |
 | Projects / Experience lobbies | Preserve approved lobbies and asset-backed destinations. Keep selection separate from the explicit open action. |

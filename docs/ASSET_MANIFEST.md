@@ -6,7 +6,7 @@ Tracks media, visual sources, and current use. Authentic asset selection for dev
 
 Home direction (owner review supersedes Pass 04 icon clearance): keep the existing four-destination structure. All four icons need final client-quality review; Pass 04 exports remain historical implementation assets, not approved final iconography. The recorded mountain export `2356:514` and current shell assets must be checked against the intended live background/materials before they are treated as final. Preserve no-scroll behavior when the page has no overflow. Website comparison remains open.
 
-Identity code note: `src/identity/JMark.tsx` has no active consumers. The archive raster `159:2` is the temporary identity fallback, not final canonical approval; the ring-free 16px glyph is a scale-specific interim favicon fallback. Do not infer accepted J design from the unused component.
+Identity code note: `src/identity/JMark.tsx` has no active consumers. The archive raster `159:2` is the temporary identity fallback, not final canonical approval; the ring-free 16px glyph is a scale-specific interim favicon fallback. Pass31/32 on Figma board `3089:2` are study-only and have not been exported or promoted. Do not infer accepted J design from the unused component.
 
 | File | Use | Provenance and display status |
 |---|---|---|

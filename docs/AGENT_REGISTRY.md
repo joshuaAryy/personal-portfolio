@@ -7,7 +7,7 @@ Updated 2026-09-29. The director owns cross-surface priorities, owner direction,
 | Role | Owner | Current direction |
 |---|---|---|
 | Direction and documentation | Director | Keep the active control docs synchronized after every durable owner/Figma decision. A docs-only commit and push to `feat/portfolio-integration` is expected before waiting for website implementation. |
-| Canonical J | Director with completed reviewer context | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** Archive `159:2` is the quality target and temporary production fallback. Current reconstruction remains below it. Pass30 `3079:2` is only a review candidate; never describe it as approved or converged. See [J source review](j-source-review/REVIEW.md). |
+| Canonical J | Director with completed reviewer context | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** Archive `159:2` is the quality target and temporary production fallback. Current reconstruction remains below it. Pass30 clearance is superseded; Pass31/32 `3089:2` are unapproved macro candidates. See [J source review](j-source-review/REVIEW.md). |
 | Food Tracker | Director with completed story-audit context | Flagship. Pass09 is an opening baseline only. Redesign/review all eight long-form sections; distinguish retrieval detail from whole-product architecture and contextualize evaluation. |
 | Profile | Director with completed overlay-audit context | Keep `960:2`. Static lower counts, separate Projects/Experience/Hackathon/Academics hover overlays, four equal Projects sectors, no main-panel switching. |
 | Home / shell | Director | Preserve the approved architecture. Reopen all four icons and finish intended background, shell/material, spacing, state, and no-scroll clarity. Pass04 icon clearance is superseded. |

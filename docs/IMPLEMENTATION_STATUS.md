@@ -13,7 +13,7 @@ Updated 2026-09-29. This is the active status ledger, not a pass archive. Read-o
 
 | Surface | Authoritative Figma reference | Current status and implementation direction |
 |---|---|---|
-| Canonical J | Archive target `159:2`; current reconstruction `1950:6`; upper-serif studies and Pass30 board `3079:2` | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** The archive is the quality standard and remains a temporary production fallback. The current reconstruction has not converged and is below the archive. Pass30 is a review candidate only; its pass count or independent macro-direction clearance does not approve it. Resolve silhouette, crown, vertical proportion, hook, orbit integration, first read, and 54/32/16px recognition before promotion. See [J review](j-source-review/REVIEW.md). |
+| Canonical J | Archive target `159:2`; current reconstruction `1950:6`; Pass30 comparison `3079:2`; archive-first candidates Pass31/32 `3089:2` | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** The archive is the quality standard and temporary production fallback. The current reconstruction remains below it. Pass30 clearance is superseded. Pass31/32 test archive-like vertical proportion, crown/hook contour, and an open orbit integrated at both ends; both are reversible review candidates, not owner-approved. Continue macro review and 54/32/16px recognition before promotion. See [J review](j-source-review/REVIEW.md). |
 | Opening | Active frame `2025:2`; motion notes `2025:84/88/125` | **DESIGNING / NEEDS SYNC.** Preserve the liked segmented Hextech direction: coordinated opposing ring rotations, centered J, restrained two-second opening, Skip, and near-instant reduced motion. The J is the critical gate. Website implementation must catch up to the reviewed Figma mechanism; avoid extra spins/effects. |
 | Home / Explore | Archive structure `69:37`; active root `2252:3445`; environment `2356:514` | **REFINEMENT / IMPLEMENTATION CLARITY OPEN.** Keep the existing architecture. Replace/refine all four final icons, use the intended background, finish shell/material/state/spacing detail, remove accidental artifacts, and show no irrelevant scrollbar when the page does not overflow. Pass 04 icon clearance is superseded by owner review. |
 | Profile Overview | Base `960:2`; states Projects `998:3`, Experience `998:46`, Hackathon `998:63`, Academics `998:79` | **APPROVED BASE / INTERACTION REVIEW OPEN.** Preserve the base composition. Counts stay static. Each signal has a separate hover/focus overlay and never switches the main Profile panel. Projects uses four equal sectors. The rejected featured-left/three-stacked-right layout is not a target. |
@@ -32,7 +32,7 @@ Updated 2026-09-29. This is the active status ledger, not a pass archive. Read-o
 
 ## Live Figma reconciliation — 2026-09-29
 
-- J comparison board `3079:2` still places archive `159:2` beside the current reconstruction and upper-serif studies. The archive is visibly the stronger finished identity; Pass30 remains a study, not approval.
+- J comparison boards `3079:2` and `3089:2` place the archive, current reconstruction, upper-serif studies, Pass30, and Pass31/32 candidates in direct comparison. The archive remains the stronger finished identity; Pass31/32 are exploratory, unapproved candidates.
 - Home `2252:3445` retains the four-destination architecture, mountain environment, queue, Confirm/Back, and shell. Its four icons are visible but remain reopened for final quality; the screenshot has no page scrollbar.
 - Profile `960:2` retains the four equal Projects sectors and static lower counts. The separate overlay frames remain the implementation references; no main-panel navigation is specified by those counts.
 - Food Tracker metadata confirms body `1813:42` is 1,560×2,528.14 with eight sections. The screenshot endpoint returns only 1,560×938, so this review confirms the product-first opening and visible retrieval section, not the complete page.
@@ -43,7 +43,7 @@ Updated 2026-09-29. This is the active status ledger, not a pass archive. Read-o
 
 - Profile Projects feature-left plus three stacked right entries: rejected; use four equal sectors and separate signal overlays.
 - Pass 04 Home icon clearance: superseded; all four icons need final review while Home structure stays.
-- Pass30 J macro clearance: review evidence only; owner status remains NEEDS REDESIGN.
+- Pass30 J macro clearance: superseded by direct owner review; Pass31/32 remain review candidates and owner status remains NEEDS REDESIGN.
 - Food Tracker Pass 09 first-fold clearance: baseline only; full flagship page reopened.
 - Ownership-first / internal-logistics-first case-study openings: superseded by each product/system-first order above.
 - Custom Resume Found ring treatment as canonical: rejected as final authority; use authentic asset-led reconstruction.
