@@ -35,14 +35,14 @@ describe("Journey story", () => {
       previousIndex = nextIndex;
     }
     expect(markup).toContain("From play to deeper questions to building with care.");
-    expect(markup).toContain("I could make an idea real in Studio, then show it to friends. Watching them play was exciting; it was my first glimpse of building something for others.");
-    expect(markup).toContain("I could spend hours asking how chips and design choices inside MacBooks and iPhones shaped the way they worked.");
+    expect(markup).toContain("I built an idea in Roblox Studio and shared it with friends. Watching them play was exciting; it was my first glimpse of building for others.");
+    expect(markup).toContain("I spent hours wondering how the chips and design choices in MacBooks and iPhones shaped the way they worked.");
     expect(markup).toContain("At TMU, curiosity shifted from what devices did to the systems underneath. Computer Engineering gave me a way to study what I wanted to build.");
-    expect(markup).toContain("Could embeddings find Naruto characters by personality, abilities, or relationships—not just exact terms? I liked imagining a playful way to explore a series I already loved.");
-    expect(markup).toContain("Generative molecular modeling made ML feel tangible: a tool I could work with to explore a research question.");
-    expect(markup).toContain("I was busy, but I made time before school for a Stanford ML lecture. I wanted to connect its algorithms to our research.");
-    expect(markup).toContain("I started noticing ML questions in everyday interests, too. Could audio features and neural networks help a recommender understand the music I listen to?");
-    expect(markup).toContain("Working with a teammate and a real client showed me where engineering starts: with a messy reporting need. Together, we shaped it into a repeatable workflow.");
+    expect(markup).toContain("Could embeddings find Naruto characters by personality, abilities, or relationships—not just exact terms? I imagined a playful way to explore a series I already loved.");
+    expect(markup).toContain("Generative molecular modeling made machine learning tangible: I could use it to explore a research question.");
+    expect(markup).toContain("I made time before school for a Stanford ML lecture because I wanted to connect its algorithms to our research.");
+    expect(markup).toContain("Everyday interests raised new ML questions. Could audio features and neural networks help recommend music I might like?");
+    expect(markup).toContain("Working with a teammate at Stush Patties showed me how to turn a messy reporting need into a repeatable workflow.");
     expect(markup).toContain("Food Tracker, Crest, and Cho’Veigo are teaching me to carry ideas through details, make decisions, and keep working toward a finish.");
     expect(markup).toContain("More to learn. More to build.");
     expect(markup).not.toContain("NEVER BUILT");

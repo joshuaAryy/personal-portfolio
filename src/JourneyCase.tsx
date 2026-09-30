@@ -223,7 +223,7 @@ export default function JourneyCase() {
         >
           <p className="journey-card__eyebrow">FIRST SPARK · GRADE 6</p>
           <h2 id="journey-origin">Roblox Studio</h2>
-          <p>I could make an idea real in Studio, then show it to friends. Watching them play was exciting; it was my first glimpse of building something for others.</p>
+          <p>I built an idea in Roblox Studio and shared it with friends. Watching them play was exciting; it was my first glimpse of building for others.</p>
           <span className="journey-builder-cue" aria-hidden="true">
             <i /><i />
           </span>
@@ -232,7 +232,7 @@ export default function JourneyCase() {
         <article className="journey-card journey-card--apple" aria-labelledby="journey-apple-title">
           <p className="journey-card__eyebrow">HIGH SCHOOL · HARDWARE CURIOSITY</p>
           <h2 id="journey-apple-title">Curiosity about the hardware</h2>
-          <p>I could spend hours asking how chips and design choices inside MacBooks and iPhones shaped the way they worked.</p>
+          <p>I spent hours wondering how the chips and design choices in MacBooks and iPhones shaped the way they worked.</p>
           <span className="journey-device-cue" aria-hidden="true"><i /><i /></span>
         </article>
 
@@ -248,7 +248,7 @@ export default function JourneyCase() {
         <article className="journey-card journey-card--idea journey-card--naruto" aria-labelledby="journey-naruto-title">
           <p className="journey-card__eyebrow">EARLY ML CURIOSITY</p>
           <h2 id="journey-naruto-title">Naruto semantic search</h2>
-          <p>Could embeddings find Naruto characters by personality, abilities, or relationships—not just exact terms? I liked imagining a playful way to explore a series I already loved.</p>
+          <p>Could embeddings find Naruto characters by personality, abilities, or relationships—not just exact terms? I imagined a playful way to explore a series I already loved.</p>
         </article>
 
         <article
@@ -257,7 +257,7 @@ export default function JourneyCase() {
         >
           <p className="journey-card__eyebrow">LIVING IN SILICO · SPRING 2025 · RESEARCH NOTE</p>
           <h2 id="journey-living-in-silico">Machine learning became tangible</h2>
-          <p>Generative molecular modeling made ML feel tangible: a tool I could work with to explore a research question.</p>
+          <p>Generative molecular modeling made machine learning tangible: I could use it to explore a research question.</p>
         </article>
 
         <article
@@ -266,13 +266,13 @@ export default function JourneyCase() {
         >
           <p className="journey-card__eyebrow">LIVING IN SILICO · SPRING 2025 · RESEARCH MOMENT</p>
           <h2 id="journey-stanford-lecture">Connecting algorithms to research</h2>
-          <p>I was busy, but I made time before school for a Stanford ML lecture. I wanted to connect its algorithms to our research.</p>
+          <p>I made time before school for a Stanford ML lecture because I wanted to connect its algorithms to our research.</p>
         </article>
 
         <article className="journey-card journey-card--idea journey-card--spotify" aria-labelledby="journey-spotify-title">
           <p className="journey-card__eyebrow">AN EVERYDAY ML QUESTION</p>
           <h2 id="journey-spotify-title">Spotify recommender idea</h2>
-          <p>I started noticing ML questions in everyday interests, too. Could audio features and neural networks help a recommender understand the music I listen to?</p>
+          <p>Everyday interests raised new ML questions. Could audio features and neural networks help recommend music I might like?</p>
         </article>
 
         <article
@@ -281,7 +281,7 @@ export default function JourneyCase() {
         >
           <p className="journey-card__eyebrow">SEP–NOV 2025 · STUSH PATTIES</p>
           <h2 id="journey-stush">Software Engineering Intern</h2>
-          <p>Working with a teammate and a real client showed me where engineering starts: with a messy reporting need. Together, we shaped it into a repeatable workflow.</p>
+          <p>Working with a teammate at Stush Patties showed me how to turn a messy reporting need into a repeatable workflow.</p>
         </article>
 
         <article
