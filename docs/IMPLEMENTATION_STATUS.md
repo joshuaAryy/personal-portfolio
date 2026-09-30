@@ -8,6 +8,7 @@ Updated 2026-09-30. This is the active status ledger, not a pass archive. Live r
 - Use explicit statuses: DESIGNING, NEEDS REDESIGN, REVIEW CANDIDATE, IMPLEMENT READY, IMPLEMENTED, NEEDS SYNC. Do not infer acceptance from pass count.
 - After any durable owner-direction or Figma change, update this ledger and the relevant decision/spec/source docs, mark the old direction superseded, then make and push a documentation-only commit to `feat/portfolio-integration`. Do this before waiting for React work. Skip transient spacing experiments.
 - Full-page case studies require the complete long-form Figma page. A first-fold capture is not page acceptance. Site acceptance additionally needs rendered comparison and correction.
+- The owner’s 2026-09-30 case-study re-review reconfirms the positive directions below; it is not a mandate to redesign every case. Preserve owner-positive work and allocate further passes to specific open gaps.
 
 ## Current control table
 
