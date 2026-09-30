@@ -11,7 +11,7 @@ This file tracks genuinely missing facts/media. It does not gate design work or 
 
 ## Genuine gaps or optional evidence
 
-- **Figma inspection boundary:** the active file key is `9zvk9iSRPKSsJ6llDJrQmA` (page `510:14`) and was directly inspected on 2026-09-29. The Figma screenshot endpoint crops case-study bodies at 938px; full lower-page visual review remains open.
+- **Figma inspection boundary:** the active file key is `9zvk9iSRPKSsJ6llDJrQmA` (Foundations page `510:14`) was directly rechecked on 2026-09-30 for the J macro studies. The Figma screenshot endpoint crops case-study bodies at 938px; full lower-page visual review remains open.
 - **Food Tracker:** no authentic current-build screenshot/demo is recorded. Preserve the owner-positive Pass10 first-fold and retrieval story. Keep the Demos entry and do not fabricate a product capture; when authentic current-build media becomes available, use it for the next major visual uplift rather than restarting the first fold speculatively.
 - **Personal Highlights:** separate owner photos/content direction are unavailable; remain deferred unless brought into scope.
 - **Crest:** a successful Policy Compliance capture is optional if that specific state is shown. The selected sample capture is usable.
