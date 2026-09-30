@@ -1,6 +1,6 @@
 # Portfolio Figma Node Map
 
-This map is the active index from durable docs to live Figma. Active file key: `9zvk9iSRPKSsJ6llDJrQmA`. Live reconciliation: 2026-09-30, including Profile page `510:20`, Foundations page `510:14`, and direct Cho’Veigo screenshots/metadata for body `1813:419`, opening `1817:425`, and architecture section `1817:428`. Case-study body screenshots from the Figma endpoint are cropped to 938px; taller metadata bounds do not equal full-page visual inspection.
+This map is the active index from durable docs to live Figma. Active file key: `9zvk9iSRPKSsJ6llDJrQmA`. Live reconciliation on 2026-09-30 covered pages `510:14` through `510:24` plus Archive `510:2`, including Home `2252:3445`, Profile `960:2`, Journey `1287:7`, all three Demos states, the six long-form case-study bodies, Help, Resume Found, and the segmented Opening. Case-study content extents are indexed below; screenshot endpoint crops to 938px and does not establish full-page visual acceptance.
 
 Owner review controls status. A node may be an archive target, a review candidate, or an implementation reference; none is automatically approved because it exists.
 

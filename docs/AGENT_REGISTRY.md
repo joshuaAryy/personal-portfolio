@@ -4,17 +4,20 @@ Updated 2026-09-30. **Mingo is the project director.** Mingo can execute directl
 
 ## Current assignments and durable context
 
-| Role | Owner | Current direction |
-|---|---|---|
-| Direction and documentation | Mingo (project director) | Keep the active control docs synchronized after every durable owner/Figma decision. Mingo may execute directly and coordinate persistent specialist lanes. A docs-only commit and push to `feat/portfolio-integration` is expected before waiting for website implementation. |
-| Canonical J | Mingo with completed reviewer context | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** Archive `159:2` remains the quality target and temporary fallback. Pass52 `3210:2` tested a 0.88× J-only width reduction; reject it because the hook separates from its orbit. Pass53 `3213:2` refines Pass51’s hook into a clearer curved point with 468/54/32px full-mark and 16px J-only proofs. It is unapproved; the archive remains stronger. See [J source review](j-source-review/REVIEW.md). |
-| Food Tracker | Mingo with completed story-audit context | Flagship. Preserve the owner-positive Pass10 first-fold and retrieval story; do not restart it. Complete long-form depth and visual review remain open. The next major visual uplift should use authentic product/demo media when available, not speculative redesign. |
-| Profile | Mingo with completed overlay-audit context | Keep `960:2`. Static lower counts, separate Projects/Experience/Hackathon/Academics hover overlays, four equal Projects sectors, no main-panel switching. Complete final project marks/assets without changing the base composition. |
-| Home / shell | Mingo | Preserve the approved architecture. Reopen all four icons and finish intended background, shell/material, spacing, state, and no-scroll clarity. Pass04 icon clearance is superseded. |
-| Case studies | Mingo | Use [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for facts and [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md) for public hierarchy. Preserve owner-positive Stush and Living in Silico; keep Food Tracker’s revised first fold and retrieval story, awaiting authentic media for the next major lift; retain Fraymakers’ visual language. Cho’Veigo’s current demo dominates the visible opening: review its framing and whole-page architecture balance without shrinking blindly. Continue Crest’s visual storytelling while preserving its effective workflow. Complete the entire page; allocate iteration by identified gap, not activity. |
-| Interaction / utilities | Mingo | Preserve contextual Help. Keep 404/recovery polish bounded. Resume Found must use authentic Riot/CommunityDragon Match Found / Ready Check material as its basis. |
+Mingo is the active director and can execute directly. The live specialist tree is deliberately small; completed advisors are reused by follow-up rather than replaced with disposable workers.
 
-Completed read-only audits: `/root/canonical_j_macro_review`, `/root/food_tracker_story_audit`, and `/root/profile_overlay_audit`. Their findings inform the current direction above; completion of an audit does not approve the design.
+| Role | Persistent owner | Current status and assignment |
+|---|---|---|
+| Project direction, synthesis, and documentation | Mingo (`/root`) | Active director. Owns critical path, owner-direction reconciliation, cross-lane decisions, acceptance, and docs commits/pushes. |
+| Identity / J design | `/root/identity_j_owner` | Running. Build the next archive-led macro study from live Figma, compare with archive/current/prior best, and keep all edits study-only until owner acceptance. |
+| Identity / J critique | `/root/canonical_j_macro_review` | Reusable critic, ready for follow-up. Retains rejected hook/orbit failure modes; review the same builder's next candidate and route actionable corrections back to that builder. |
+| Frontend implementation | `/root/frontend_owner` | Reusable implementation lane, available after Figma acceptance gates. Prior audit mapped Opening and authentic Resume Found assets. Existing implementation edits in the worktree are uncommitted; preserve them and stage only explicitly assigned work. |
+| Case-study visual/technical critique | `/root/case_study_visual_critic` | Running a read-only full-page audit. Preserve owner-positive Stush, Living in Silico, Food Tracker, and Fraymakers; focus Cho'Veigo balance and Crest storytelling. Reuse this critic for the same designer's revisions. |
+| Case-study design, shell, and utilities | Mingo directly until execution shifts | No active builder is in the live tree. Use the critic's evidence, then keep the first focused design pass to Cho'Veigo or Crest; defer additional specialist lanes until repeated work calls for them. |
+
+The current sequence is Identity/J builder -> Identity/J critic -> same builder for correction -> Mingo acceptance. Frontend sync follows only after the design gate. Mingo remains available for small and cross-surface execution.
+
+Retained read-only audit findings from `/root/food_tracker_story_audit` and `/root/profile_overlay_audit` remain useful context, but those handles are not in the current live agent tree. Current live Figma key is `9zvk9iSRPKSsJ6llDJrQmA`; active page roots and long-form content are indexed in [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md).
 
 ## Shared working rules
 
