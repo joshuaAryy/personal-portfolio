@@ -27,6 +27,10 @@ Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language a
 
 Help is a reusable, dismissible overlay above the current route; dismissal returns to the same context. Keep the underlying screen visible and preserve keyboard focus/dismissal behavior. Route and empty/error states are contextual and use only real actions. Keep utility polish bounded; do not invent retries or exhaustive states without a real trigger.
 
+## Case-study diagrams
+
+Subtle motion may be used on the implemented site when it makes a technical figure easier to follow: arrows can gently pulse or travel, pipeline stages can illuminate in sequence, source files can move through transformations, retrieval branches can light before joining, and schema fields can align into a canonical structure. Keep movement restrained, professional, and subordinate to the figure’s static explanation; do not turn case studies into animated infographics. Detailed animation design belongs with implementation. Respect reduced motion by presenting the complete understandable state immediately, with no motion required to follow the story.
+
 ## Accessibility and implementation review
 
 Use semantic controls, visible focus, keyboard activation, and focus return after overlays. Respect reduced motion with near-instant transitions and immediate scrolling. Review browser behavior at desktop and narrow breakpoints after design sync. A design reference or source-code review does not establish rendered interaction acceptance.

@@ -1,18 +1,18 @@
 # Active Agent Registry
 
-Updated 2026-09-29. The director owns cross-surface priorities, owner direction, source reconciliation, acceptance, and documentation sync. Active Figma key `9zvk9iSRPKSsJ6llDJrQmA`, page `510:14`, was directly inspected on 2026-09-29. Body screenshot crops do not constitute full-page review.
+Updated 2026-09-29. **Mingo is the project director.** Mingo can execute directly while coordinating persistent specialist lanes, and owns cross-surface priorities, owner direction, source reconciliation, acceptance, and documentation sync. Record this director identity in the root `AGENTS.md` when that operating document is created. Active Figma key `9zvk9iSRPKSsJ6llDJrQmA`, page `510:14`, was directly inspected on 2026-09-29. Body screenshot crops do not constitute full-page review.
 
 ## Current assignments and durable context
 
 | Role | Owner | Current direction |
 |---|---|---|
-| Direction and documentation | Director | Keep the active control docs synchronized after every durable owner/Figma decision. A docs-only commit and push to `feat/portfolio-integration` is expected before waiting for website implementation. |
-| Canonical J | Director with completed reviewer context | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** Archive `159:2` is the quality target and temporary production fallback. Current reconstruction remains below it. Pass30 clearance is superseded; Pass31/32 `3089:2` are unapproved macro candidates. See [J source review](j-source-review/REVIEW.md). |
-| Food Tracker | Director with completed story-audit context | Flagship. Pass09 is an opening baseline only. Redesign/review all eight long-form sections; distinguish retrieval detail from whole-product architecture and contextualize evaluation. |
-| Profile | Director with completed overlay-audit context | Keep `960:2`. Static lower counts, separate Projects/Experience/Hackathon/Academics hover overlays, four equal Projects sectors, no main-panel switching. |
-| Home / shell | Director | Preserve the approved architecture. Reopen all four icons and finish intended background, shell/material, spacing, state, and no-scroll clarity. Pass04 icon clearance is superseded. |
-| Case studies | Director | Use [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for facts and [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md) for public hierarchy. Complete the entire page; do not place all source caveats in public copy. |
-| Interaction / utilities | Director | Preserve contextual Help. Keep 404/recovery polish bounded. Resume Found must use authentic Riot/CommunityDragon Match Found / Ready Check material as its basis. |
+| Direction and documentation | Mingo (project director) | Keep the active control docs synchronized after every durable owner/Figma decision. Mingo may execute directly and coordinate persistent specialist lanes. A docs-only commit and push to `feat/portfolio-integration` is expected before waiting for website implementation. |
+| Canonical J | Mingo with completed reviewer context | **ACTIVE RECONSTRUCTION / NEEDS REDESIGN.** Archive `159:2` is the quality target and temporary production fallback. Current reconstruction remains below it. Pass30 clearance is superseded; Pass31/32 `3089:2` are unapproved macro candidates. See [J source review](j-source-review/REVIEW.md). |
+| Food Tracker | Mingo with completed story-audit context | Flagship. Preserve the owner-positive Pass10 first-fold and retrieval story; do not restart it. Complete long-form depth and visual review remain open. The next major visual uplift should use authentic product/demo media when available, not speculative redesign. |
+| Profile | Mingo with completed overlay-audit context | Keep `960:2`. Static lower counts, separate Projects/Experience/Hackathon/Academics hover overlays, four equal Projects sectors, no main-panel switching. Complete final project marks/assets without changing the base composition. |
+| Home / shell | Mingo | Preserve the approved architecture. Reopen all four icons and finish intended background, shell/material, spacing, state, and no-scroll clarity. Pass04 icon clearance is superseded. |
+| Case studies | Mingo | Use [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for facts and [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md) for public hierarchy. Complete the entire page; do not place all source caveats in public copy. Preserve pages that meet the current quality bar and allocate more iteration to weaker pages; do not redesign for activity. |
+| Interaction / utilities | Mingo | Preserve contextual Help. Keep 404/recovery polish bounded. Resume Found must use authentic Riot/CommunityDragon Match Found / Ready Check material as its basis. |
 
 Completed read-only audits: `/root/canonical_j_macro_review`, `/root/food_tracker_story_audit`, and `/root/profile_overlay_audit`. Their findings inform the current direction above; completion of an audit does not approve the design.
 
