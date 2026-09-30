@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "test": "vitest",
     "preview": "vite preview",
-    "deploy": "npm run build && npx --yes wrangler@4.141.0 pages deploy dist --project-name joshuaik2 --branch feat/initial-client-shell"
+    "deploy": "npm run build && npx --yes wrangler@4.141.0 pages deploy dist --project-name joshuaik2 --branch feat/portfolio-integration"
   },
   "dependencies": {
     "react": "^19.1.1",
