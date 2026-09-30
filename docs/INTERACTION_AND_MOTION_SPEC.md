@@ -29,7 +29,7 @@ Help is a reusable, dismissible overlay above the current route; dismissal retur
 
 ## Case-study diagrams
 
-Subtle motion may be used on the implemented site when it makes a technical figure easier to follow: arrows can gently pulse or travel, pipeline stages can illuminate in sequence, source files can move through transformations, retrieval branches can light before joining, and schema fields can align into a canonical structure. This is an optional implementation direction, not a requirement to animate every figure or add motion to the current Figma pass. Keep movement restrained, professional, and subordinate to the figure’s static explanation; do not turn case studies into animated infographics. Detailed animation design belongs with implementation. Respect reduced motion by presenting the complete understandable state immediately, with no motion required to follow the story.
+Owner review on 2026-09-30 endorsed subtle diagram motion as a possibility for the actual site when it makes a technical figure easier to follow: arrows can gently pulse or travel, pipeline stages can illuminate in sequence, source files can move through transformations, retrieval branches can light before joining, and schema fields can align into a canonical structure. This is optional; do not animate every figure or add motion to the current Figma pass. Keep movement restrained, professional, and subordinate to the figure’s static explanation; do not turn case studies into animated infographics. Detail behavior during implementation. Respect reduced motion by presenting the complete understandable state immediately, with no motion required to follow the story.
 
 ## Accessibility and implementation review
 
