@@ -1,4 +1,4 @@
-﻿# Canonical J Review
+# Canonical J Review
 
 Updated 2026-09-30. This is the active review summary. The live comparison is on Foundations page `510:14` in Figma file `9zvk9iSRPKSsJ6llDJrQmA`.
 
@@ -21,11 +21,11 @@ Updated 2026-09-30. This is the active review summary. The live comparison is on
 - Pass40/41: preliminary width calibration `3135:2` is hidden; macro silhouette comparison `3137:2` tests wider and shorter archive-derived letterforms.
 - Pass42/43: `3138:2` and `3139:2` compare the same +20%-wider archive-derived J with no orbit, an open orbit, and a hook-to-shaft sweep.
 - Pass44: `3152:2` directly compares archive target `159:2`, current reconstruction `1950:6`, upper-serif studies `2662:47` and `2668:6`, the Pass43 baseline, a sharpened rising-hook edit, and a narrower-crown/rising-hook edit. It includes ring-free 54/32/16px proofs.
-- Pass45: `3159:2` compares archive/current marks with the same wide archive-derived J under a centered circle, a raised circle aligned to crown/hook, and a wide oval aligned to those junctions. Includes 300px and 54/32/16px proofs.
+- Pass45: 3`159:2` compares archive/current marks with centered, raised, and oval orbit placements around the archive-derived J, with 300px and 54/32/16px proofs.
 
 ## Current findings
 
-The archive remains the stronger finished and integrated first read. Pass41’s wider archive-derived silhouette carries more visual weight than its source-width version; the shorter option compresses the letter too much. Pass42/43 compare the wider J with no orbit, an open arc, and a return sweep that disappears toward the shaft. Pass44 tests a sharper hook terminal and a narrower crown at shared large scale. Pass45 holds the wide J constant while testing centered circular, raised circular, and flatter oval orbital placements. The raised and oval paths meet the crown/hook more directly than a centered ring, but the archive remains the quality target and these studies do not establish a winner. Compare the earlier archive-contour/vector mark at `3111:2` against the new studies before deciding which base to continue.
+The archive remains the quality target and the strongest finished first read. Pass46 `3167:2` directly compares it with the earlier Pass35 archive-contour vector, the current reconstruction, and both upper-serif studies at a shared 468px scale plus 54/32/16px proofs. The direct read confirms Pass35 as the strongest editable integrated base to improve: its crown-to-hook open orbit makes the J feel embedded, while the current medallion read and upper-serif studies do not close the gap. Pass35 remains unapproved. Continue from its macro silhouette and refine crown, vertical proportion, hook, and orbit entry/exit before material detail.
 
 Pass31 tests a taller archive-like proportion with a slimmer shaft, a lifted tapered terminal, and one open orbit sweep connecting the crown and hook. Pass32 tests a tighter crown and a higher hook terminal. Both remain reversible study candidates; neither is an approved direction or production mark.
 
@@ -35,4 +35,4 @@ The `3089:2` board directly compares the archive, current reconstruction, Pass30
 
 ## Promotion gate
 
-Keep the archive as the fallback. Continue macro work from that benchmark; compare crown, proportion, hook, orbit relationship, and first read before material. Pass44–45 are review candidates, not approvals. Compare against the archive-contour/vector base at `3111:2`; do not promote a candidate, change shared placements, or treat the editable reconstruction as canonical until owner review clears the hero and 54/32/16px reads. Pass37–45 changed Figma study boards only; website code and identity assets remain unchanged.
+Keep the archive as the fallback. Continue macro work from that benchmark; compare crown, proportion, hook, orbit relationship, and first read before material. Pass44–46 are review candidates, not approvals; Pass46 identifies Pass35 as the next editable base for macro refinement. Compare against the archive-contour/vector base at `3111:2`; do not promote a candidate, change shared placements, or treat the editable reconstruction as canonical until owner review clears the hero and 54/32/16px reads. Pass37–46 changed Figma study boards only; website code and identity assets remain unchanged.
