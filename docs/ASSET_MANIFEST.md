@@ -10,7 +10,7 @@ The Profile base at `960:2` remains compositionally approved. Keep the Projects 
 
 Home direction (owner review supersedes Pass 04 icon clearance): keep the existing four-destination structure. All four icons need final client-quality review; Pass 04 exports remain historical implementation assets, not approved final iconography. The recorded mountain export `2356:514` and current shell assets must be checked against the intended live background/materials before they are treated as final. Preserve no-scroll behavior when the page has no overflow. Website comparison remains open.
 
-Identity code note: `src/identity/JMark.tsx` has no active consumers. The archive raster `159:2` is the temporary identity fallback, not final canonical approval; the ring-free 16px glyph is a scale-specific interim favicon fallback. Pass31/32 on Figma board `3089:2` are study-only and have not been exported or promoted. Do not infer accepted J design from the unused component.
+Identity code note: `src/identity/JMark.tsx` has no active consumers. The archive raster `159:2` is the temporary identity fallback, not final canonical approval; the ring-free 16px glyph is a scale-specific interim favicon fallback. Pass31–35 on Figma boards `3089:2`, `3107:2`, `3109:2`, and `3111:2` are study-only and have not been exported or promoted. Do not infer accepted J design from the unused component.
 
 | File | Use | Provenance and display status |
 |---|---|---|
@@ -121,7 +121,7 @@ The earlier 2026-09-29 manifest baseline recorded provisional Pass16 J assets. T
 
 ## J identity status - archive base active, macro redesign open - 2026-09-29
 
-The owner found reconstruction `1950:6` materially weaker than archive reference `159:2` and then reopened the flagship identity for a macro redesign. Pass24 records the archive image as a larger-scale baseline and a separately reviewed ring-free 16px vector. These are interim assets, not final approval; improve the J from the archive at silhouette, crown, vertical proportion, hook, orbit integration, and large first-read. Historical vector/material studies remain in the file for comparison.
+The owner found reconstruction `1950:6` materially weaker than archive reference `159:2` and reopened the flagship identity for a macro redesign. Pass24 records the archive image as a larger-scale baseline and a separately reviewed ring-free 16px vector. Pass33–35 test archive-derived macro silhouettes, archive-image isolation, and one open orbit. Pass35 is the strongest current review candidate but remains unapproved; no new study has been exported or used by the website. Improve the J from the archive at silhouette, crown, vertical proportion, hook, orbit integration, and large first-read. Historical vector/material studies remain in the file for comparison.
 
 Pass16 source files remain locally as history and are no longer used by the active J consumers. Opening, Resume Found, header, and rail currently use the archive source; the favicon uses the 16px fallback. Do not treat the legacy `open-portfolio-j-canonical.svg` filename as current. Website comparison remains open until a supported Browser session is available.
 
