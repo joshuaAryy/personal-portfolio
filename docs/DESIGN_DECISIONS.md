@@ -20,7 +20,18 @@ Every case study is a complete long-form page, from the opening through the clos
 
 Figures should communicate their point within seconds, make the system’s scale and relationships visible, and remain technically accurate. Fraymakers is the internal quality reference for immediate system communication, layered technical figures, and depth. Do not reuse its composition mechanically.
 
-Effort follows distance from this quality bar. Preserve and polish strong work; spend further design iteration on pages with a specific communication or composition gap. Do not reopen every case study to demonstrate activity. The owner’s 2026-09-30 re-review is a quality and effort calibration, not a request for another redesign pass on every page. It reconfirmed Stush’s brief problem and “I built” pipeline, Living in Silico’s representation-first figures, Food Tracker’s product-to-retrieval story, and Fraymakers’ system-visual language as strong current directions. These are quality references, not templates. Food Tracker’s next major visual uplift should use authentic product/demo media when available; do not restart its first fold. Cho’Veigo’s product-first sequence remains correct, but the Recommendations demo currently dominates the visible opening. Review its scale, crop/framing, relation to the introduction, architecture visibility, and balance across the complete page before deciding; do not shrink it blindly. Crest needs further visual-storytelling work while preserving its effective explanation and “One transaction. Two sources. Human review.” workflow. Profile remains compositionally liked; finish authentic project marks/assets and preserve the four-sector Projects overlay and separate lower-signal hover states.
+### Current owner-calibrated quality references
+
+The 2026-09-30 owner re-review is a quality and effort calibration, not a request for another redesign pass on every case study. Preserve the working directions below and use their distinct strengths to judge other pages; do not clone their layouts.
+
+| Reference | Preserve and learn from |
+|---|---|
+| Stush Patties | A very brief problem statement, direct “I built” ownership, immediate outcome, and a files → parse → shared schema → normalization → handoff → Power BI pipeline that reads quickly. |
+| Living in Silico | A concise representation-first story that makes SMILES, Morgan fingerprints, and experimental methods understandable through figures before adding explanatory detail. |
+| Fraymakers | A system schematic with enough visual weight to explain the match-to-frame path, layered compositor, and later YAML configuration without relying on dense prose. |
+| Food Tracker | Product and problem first, then a four-step retrieval story that gives the technical challenge and benchmark meaning. Keep the owner-positive first fold; its next major visual lift should use authentic product/demo media when available. |
+
+Allocate work by the gap to this bar: preserve and polish strong work, and iterate where a concrete communication or composition problem remains. Cho’Veigo’s product-first sequence remains correct, but the Recommendations demo currently dominates the visible opening. Review its scale, crop/framing, relationship to the introduction, architecture visibility, and balance across the complete page before deciding; do not shrink it blindly. Crest needs further visual-storytelling work while preserving its effective product explanation and “One transaction. Two sources. Human review.” workflow. Profile remains compositionally liked; finish authentic project marks/assets and preserve the four-sector Projects overlay and separate lower-signal hover states.
 
 ## Story order
 
