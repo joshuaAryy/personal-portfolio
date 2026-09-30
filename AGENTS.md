@@ -6,9 +6,9 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 
 ## Convergence and implementation
 
-- Progress means closing a real communication/design problem, making a durable implementation-ready decision, moving mature work into React, or improving the rendered site after comparison. Pass count, documentation volume, agent count, and new Figma nodes do not define progress.
-- Implementation may start when structure, public content hierarchy, and interaction intent are stable enough to translate. Do not wait for final owner acceptance before each implementation pass. Final completion still requires render → compare with Figma/reference → critique → correct → owner review → freeze.
-- The archive J at Figma `159:2` is the approved launch fallback. The identity lane may make one archive-faithful primary reconstruction and at most two meaningful correction cycles. Do not start another orbit/hook micro-variant chain. If the primary remains weaker than the archive, ship the archive; use a separately simplified small mark at 54/32/16px when the complex primary does not scale well.
+- Progress means closing a real communication/design problem, making a durable implementation-ready decision, moving mature work into React, or improving the rendered site after comparison. Pass count, documentation volume, agent count, and new Figma nodes do not define progress. Converge by implementing, rendering the actual site, comparing with Figma/reference, critiquing, correcting, obtaining owner review, and freezing. Owner acceptance follows render comparison; it is not a gate before each implementation pass.
+- Implementation may start when structure, public content hierarchy, and interaction intent are stable enough to translate. Do not wait for final owner acceptance before each implementation pass. Final completion still requires render, compare with Figma/reference, critique, correct, owner review, and freeze.
+- The large/primary J is selected: Figma archive `159:2` is the launch mark for Opening, Resume Found, and large identity placements. The archive-faithful vector candidate `3289:31` lost after its one permitted asymmetric-orbit correction and is retained as history; the reconstruction loop is CLOSED. Use the separate ring-free small glyph shown in Figma `3289:157/162/167` for 54/32/16px optical-size contexts. Only rendered-size quality comparison remains; do not reopen J exploration.
 - Keep persistent specialist lanes focused on bounded deliverables and coordinate them in parallel when their files/surfaces are independent. Implementation must not be blocked by an unresolved logo if a documented fallback exists.
 
 ## Figma reviewability
@@ -19,9 +19,9 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 
 ## Bounded identity and asset work
 
-- The final J decision is bounded as above and must not hold Opening, Resume Found, or unrelated site implementation.
-- Cho’Veigo is the only remaining Profile project mark. Create one canonical portfolio mark for its product identity; do not wait indefinitely for an external logo and do not use generic AI sparkle imagery. Frozen Food Tracker, Crest, Fraymakers, Living in Silico, and Stush Patties marks stay closed.
-- Resume Found refinement is one targeted environment pass using collected Riot/CommunityDragon Ready Check/Match Found material: dimmed page underlay, dark radial vignette, subtle teal/navy light, authentic mechanical material, localized central energy, and a demoted but visible shell/rail. Avoid generic splash art and random effects.
+- The final J decision is closed as described above and must not hold Opening, Resume Found, or unrelated site implementation.
+- Cho'Veigo canonical match-path mark: `public/media/profile/choveigo-mark.svg`, placed in Figma at `3297:45/54/63/72`. Visual critique is clear; the logo is frozen for implementation and render sync. Food Tracker, Crest, Fraymakers, Living in Silico, and Stush Patties marks stay closed.
+- Resume Found has received its one targeted Figma/React environment pass using authentic Riot/CommunityDragon Ready Check material (Figma `2407:176`, overlays `3292:484/485/486`): dim underlay, dark radial vignette, subtle teal/navy light, authentic chassis, localized central energy, and demoted but visible shell/rail. Render comparison remains open; do not restart the architecture.
 
 ## Durable direction and documentation
 
