@@ -1,0 +1,39 @@
+.brand-glyph-frame {
+  display: block;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+}
+
+.brand .brand-glyph {
+  display: block;
+  width: 54px;
+  height: 54px;
+  clip-path: none;
+  object-fit: initial;
+}
+
+.rail-availability__mark-frame {
+  display: grid;
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+}
+
+.rail-availability__mark-image {
+  display: block;
+}
+
+@media (max-width: 760px) {
+  .brand-glyph-frame {
+    flex-basis: 32px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .brand .brand-glyph {
+    width: 32px;
+    height: 32px;
+  }
+}

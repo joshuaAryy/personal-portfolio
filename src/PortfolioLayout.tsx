@@ -32,12 +32,19 @@ function Header() {
         to="/home"
         aria-label="Portfolio home"
       >
-        <img
-          className="brand-glyph"
-          src="/media/profile/topbar-client-emblem.svg"
-          alt=""
-          aria-hidden="true"
-        />
+        <picture className="brand-glyph-frame">
+          <source
+            media="(max-width: 760px)"
+            srcSet="/media/profile/open-portfolio-j-small-32.svg"
+          />
+          <img
+            className="brand-glyph"
+            src="/media/profile/open-portfolio-j-small-54.svg"
+            alt=""
+            aria-hidden="true"
+            data-node-id="3289:157"
+          />
+        </picture>
         <strong>PORTFOLIO</strong>
       </Link>
       <nav className="top-nav" aria-label="Main navigation">
@@ -151,12 +158,14 @@ function Rail() {
   return (
     <aside className="rail" aria-label="Portfolio index">
       <div className="rail-availability">
-        <img
-          className="rail-availability__mark"
-          src="/media/profile/open-portfolio-j.svg"
-          alt=""
-          aria-hidden="true"
-        />
+        <span className="rail-availability__mark-frame" aria-hidden="true">
+          <img
+            className="rail-availability__mark-image"
+            src="/media/profile/open-portfolio-j-small-48.svg"
+            alt=""
+            data-node-id="3317:4"
+          />
+        </span>
         <div className="rail-party" aria-hidden="true">
           {["active", "active", "idle", "idle"].map((state, index) => (
             <span className={`rail-party__slot rail-party__slot--${state}`} key={index}>
