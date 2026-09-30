@@ -91,15 +91,23 @@ export default function DemosPage() {
                   alt={current.imageAlt}
                 />
                 {selected === "crest" && (
-                  <button
-                    className="demo-player__play"
-                    type="button"
-                    onClick={() => setCrestIsPlaying(true)}
-                    aria-label="Play Crest demo in player"
-                    data-node-id="1316:4622"
-                  >
-                    <span className="demo-player__play-icon" aria-hidden="true" />
-                  </button>
+                  <>
+                    <span
+                      className="demo-player__sample-badge"
+                      data-node-id="1553:45"
+                    >
+                      SAMPLE DATA
+                    </span>
+                    <button
+                      className="demo-player__play"
+                      type="button"
+                      onClick={() => setCrestIsPlaying(true)}
+                      aria-label="Play Crest demo in player"
+                      data-node-id="1316:4622"
+                    >
+                      <span className="demo-player__play-icon" aria-hidden="true" />
+                    </button>
+                  </>
                 )}
               </>
             )}

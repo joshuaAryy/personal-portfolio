@@ -139,6 +139,21 @@
   pointer-events: none;
 }
 
+#root .main.main--demos .demo-player__sample-badge {
+  position: absolute;
+  z-index: 2;
+  top: 9px;
+  right: 10px;
+  padding: 5px 10px;
+  border: 1px solid #b89b56;
+  border-radius: 2px;
+  background: rgba(4, 10, 19, 0.94);
+  color: #e5c367;
+  font: 600 10px/1 Inter, Arial, sans-serif;
+  letter-spacing: 0.055em;
+  white-space: nowrap;
+}
+
 #root .main.main--demos .demo-player--food .demo-player__still {
   width: min(45%, 480px);
   height: auto;

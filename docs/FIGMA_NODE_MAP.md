@@ -20,7 +20,7 @@ Owner review controls status. Archive `159:2` is selected for large/primary use.
 | Stush Patties | Root `1438:276`; body `1438:278`; system diagram `3051:2`; copy nodes `1833:77/78/81/82` | Owner-reconfirmed opening/pipeline. Preserve concise “I built” story and files → parse → shared schema → normalize → repeatable outputs → Power BI figure. Full-page review remains distinct; keep source-specific terms later only if they explain a real decision. |
 | Projects / Experience lobbies | Projects `511:2`; Experience `704:2` | Direction accepted; do not reopen without a concrete issue. |
 | Hackathons / Education | Hackathons `730:3316`; Education `738:3316` | Direction accepted; do not reopen without a concrete issue. |
-| Journey / Demos | Journey `1287:7`; Demos `1316:35/4534` and `1298:2` | Preserve authored architecture; separate code/render review from Figma design status. |
+| Journey / Demos | Journey `1287:7`; Demos Food `1316:35`, Crest `1316:4534` with sample badge `1553:45/46`, Cho'Veigo `1298:2` | Keep Journey as the authored personal progression. Demos remains a media browser: Food and Cho'Veigo use static captures; Crest uses a still and explicit play action. The visible `SAMPLE DATA` qualifier is required on Crest. |
 
 ## Review-only Figma representations
 
