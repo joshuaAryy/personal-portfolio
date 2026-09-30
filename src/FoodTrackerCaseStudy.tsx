@@ -120,9 +120,8 @@ function FoodBenchmark() {
           </section>
         ))}
       </div>
-      <p className="food-benchmark__scale">
-        REFERENCE CATALOG · 12,363 ACTIVE FOODS · 277,341 NUTRIENT ROWS · CATALOG
-        SCALE, NOT PRODUCT IMPACT
+      <p className="food-benchmark__scope">
+        OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES
       </p>
     </figure>
   );
