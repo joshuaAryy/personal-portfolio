@@ -4,15 +4,94 @@ Tracks media, visual sources, and current use. Authentic asset selection for dev
 
 ## Bundled media currently recorded
 
+Home direction (owner review supersedes Pass 04 icon clearance): keep the existing four-destination structure. All four icons need final client-quality review; Pass 04 exports remain historical implementation assets, not approved final iconography. The recorded mountain export `2356:514` and current shell assets must be checked against the intended live background/materials before they are treated as final. Preserve no-scroll behavior when the page has no overflow. Website comparison remains open.
+
+Identity code note: `src/identity/JMark.tsx` has no active consumers. The archive raster `159:2` is the temporary identity fallback, not final canonical approval; the ring-free 16px glyph is a scale-specific interim favicon fallback. Do not infer accepted J design from the unused component.
+
 | File | Use | Provenance and display status |
 |---|---|---|
+| `public/favicon.svg` | Browser tab/favicon | Interim Pass24 ring-free 16px J proof `2966:195`; 1,206 bytes; SHA-256 `0CF87D627DEE95F13F6FB90235EF3C59F3A31AAC00BDB8AC4AD920BBC1CC4538`. |
+| `public/media/profile/open-portfolio-j-archive-source.jpg` | Current interim Opening, Resume Found, shared header and Projects rail placements | Exact archive base image from Figma `159:2`; 220 × 220 px, 4,307 bytes; SHA-1 `359C8487F282DF11448DDF0FB31A874433069531`; SHA-256 `89A4512EEB9C7C0511E6B0D46E68C74F52903A336CDB5BBFD0ECE8A03B0D9751`. Figma groups use centered circular matte crops per slot. The owner reopened the macro identity; this raster is a base/reference, not final approval. |
+| `public/media/profile/open-portfolio-j-ringless-16px.svg` | Interim favicon / 16px fallback | Pass24 `2966:195`, derived from the Pass16 simplified vector and strengthened by a centered 1px gold stroke; 16 × 16 px, 1,206 bytes; SHA-256 `0CF87D627DEE95F13F6FB90235EF3C59F3A31AAC00BDB8AC4AD920BBC1CC4538`. |
+| `public/media/lobby/home-mode-environment.png` | Home / Explore environment | Exact 1600 x 970 Figma export of node `2356:514`; 967,425 bytes; SHA-256 `3558A3410CC88BCC7B2FD516E32E9B8FE6C92AE2C422C5FF2A3D0BEC8084FC01`. |
+| `public/media/lobby/home-mode-projects.svg` | Home / Projects destination shell | 150 x 150 local enclosure composite; Pass 04 cube is overlaid from the separate glyph asset; 1,467 bytes; SHA-256 `7D8794E5E0F73143AAA206E405170B8CE462B9B9B3F9A0E43DDA3C65F32A23`; Figma enclosure `2356:534`. |
+| `public/media/lobby/home-mode-experience.svg` | Home / Experience destination shell | 150 x 150 local enclosure composite; Pass 04 folio is overlaid from the separate glyph asset; 1,464 bytes; SHA-256 `5A34D73357F8BDB1E58B30792C766855C0F7C8E0675043D610ED1587C53A7FA1`; Figma enclosure `2356:547`. |
+| `public/media/lobby/home-mode-hackathons.svg` | Home / Hackathons destination shell | 150 x 150 local enclosure composite; Pass 04 medal crest is overlaid from the separate glyph asset; 1,510 bytes; SHA-256 `F439782D86CE055C98FCF25FED7F6AE8A5ACF3A9700832D6AADD70F540272155`; Figma enclosure `2356:559`. |
+| `public/media/lobby/home-mode-projects-glyph-pass-04.svg` | Historical Pass 04 Home / Projects cube; final icon review reopened | Direct SVG export of Figma `3014:310`, 46.7 x 50; 2,045 bytes; SHA-256 `0BAB8E98FA4FB26D4FE7A262A103FFA56735BF863BE891C3D01DAA9CD4A42233`. |
+| `public/media/lobby/home-mode-experience-glyph-pass-04.svg` | Historical Pass 04 Home / Experience folio; final icon review reopened | Direct SVG export of Figma `3014:322`, 41.7 x 46.5; 2,830 bytes; SHA-256 `7C9460F0D991D98FF28A59C1AEC816331876F550F51727C74BA4600D9C4DE495`. |
+| `public/media/lobby/home-mode-hackathons-glyph-pass-04.svg` | Historical Pass 04 Home / Hackathons medal; final icon review reopened | Direct SVG export of Figma `3014:337`, 34.3 x 51.5; 2,508 bytes; SHA-256 `05C44EE7AC1198E4CD0085AC1A1A1796952D566B512D06FBAE4437D0AF39B5E6`.
+| `public/media/lobby/home-mode-education.svg` | Home / Education destination | Historical Pass 02 site-bundle export; open codex with page detail and bookmark, shared medal shell; 2,223 bytes; SHA-256 `6BEA4A429F0A8BDB76D2AB67C027293BCF1625DA4E2C50D010620D71458EDE49`; original Figma container `2920:350`. |
+| `public/media/lobby/home-mode-selected-ring.svg` | Home selected-destination state | Reusable 150 x 150 cyan outline from the selected state in `2252:3445`; React positions it above whichever destination is selected; 208 bytes; SHA-256 `e3cc922257ca6a9e0f2a112a7c946c70de13eac1c4fbe3b97c00b5c9ceb3393b`. |
+| `public/media/lobby/client-account-avatar.png` | Home / Resume account avatar | Exact 64x64 Figma shell illustration from nested source `I2356:611;68:49` in Home root `2252:3445`; 23,212 bytes; SHA-256 `8C38647C00EBC325FC6EF53AEEC6A2ADE843196E3EC1655EB635BCCC9E8953F9`. |
+| `public/media/lobby/project-owner-j.svg` | Projects lobby owner mark | Exact 90x90 SVG from Projects frame `511:2`, owner mark `572:77`; 3,111 bytes; SHA-256 `8C3C49F71F01E3A5C081D8D91F9CAD8018A5845B5778910648B410887688D022`. |
+| `public/media/profile/topbar-client-emblem.svg` | Superseded header export, retained as provenance | 52 x 52 px; SHA-256 `0d70c43c658f9878eda9275676aba6c171ca3d79e804bb4fdaa77ac30cc5e13b`; mapped to Figma `908:6` in the Profile O3 Pass 11 review candidate. |
+| `public/media/profile/open-portfolio-j.svg` | Superseded shared rail composite | Pass 11 Figma `526:3` export retained unchanged for provenance; SHA-256 `01485e20302aacb88a2ca71923051ecbe62544031dbbacc3aae45315f8adb624`; no longer used by the active rail. |
+| `public/media/profile/open-portfolio-shell.svg` | Shared rail shell base | Figma `526:4`; intrinsic SVG 41.7267 × 41.7267 px; placed in its 36.2667 × 36.2667 px Figma layer bounds; 461 bytes; SHA-256 `E4539F6DC0CEC7E939B88D4D1EB544B9EE82C4A51B897A929C26406DB5D6F656`. |
+| `public/media/profile/open-portfolio-orbit.svg` | Shared rail orbit | Figma `526:5`; intrinsic SVG 35.7967 × 35.7967 px; placed in its 33.0667 × 33.0667 px Figma layer bounds; 780 bytes; SHA-256 `813A07893895C64AA82B585F19EF5BB489FA0C32F4143B52893B970DCC8D8844`. |
+| `public/media/profile/open-portfolio-energy-ring.svg` | Shared rail cyan energy ring | Figma `526:6`; intrinsic SVG 29.736 × 29.736 px; placed in its 28.8 × 28.8 px Figma layer bounds; 448 bytes; SHA-256 `B52986EC4DCD499F77392BD2B511E8F8F33E7301DD184F3D7ED9BF311C953FE3`. |
+| `public/media/profile/open-portfolio-energy-lines.svg` | Shared rail energy lines | Figma `526:7`; intrinsic SVG 24.9052 × 17.416 px; placed in its 24 × 16.2458 px Figma layer bounds; 487 bytes; SHA-256 `3A569D16947C4C14D65F5FCBC7E9FE1199B10C15F7ADDF46C0F002C242628534`. |
+| `public/media/profile/open-portfolio-j-canonical.svg` | Superseded shared rail J face, retained for provenance | Pass16 transparent J contour, no longer used by the active header or rail; 1,974 bytes; SHA-256 `9679197663B6D9C985A2233DF31DDC9B75D004C095843C0A33CDBC3F518E0274`. |
+| `public/media/profile/open-portfolio-j-archive-led.svg` | Pass 16 complete emblem source and Figma comparison import `2835:3`; 4,978 bytes; SHA-256 `2A9DFBEF299699F5BA83737E0F8E7C86EACBEC42E93A408358ECF601743FF039`. |
+| `public/media/profile/open-portfolio-j-archive-led-micro.svg` | Pass 16 ring-free monochrome favicon / 16px proof `2837:2`; 549 bytes; SHA-256 `CC7F14480B8F5AAE31313FF03AB5B8AC1B9BEBE51FA1C819FF3586EFCC8A7304`. |
+| public/media/case-studies/food-product-flow-pass-09-inset.png | Active Food Tracker first-fold product-use schematic | Figma frame 2995:2 with caption text node 2995:3 inset by 8px; 884 x 222 px, 20,238 bytes; SHA-256 331D776B6BFF377BB8935E6490D450D85EFB08AA33C6131A3324984AF94E10EC. React references this corrected export. Persistent critic CLEAR for the caption-inset delta; whole-page and site review remain open. |
+| public/media/case-studies/food-product-flow-pass-09.png | Superseded pre-inset Pass09 export, retained for history | Figma source caption touched the top export edge; replaced by the inset export above. 884 x 222 px, 20,236 bytes; SHA-256 458DC192C61CB9C93137EA48CBF260BB4C13AE19F049C5536B66FEDB78EA789B. Not referenced by React. |
+| public/media/case-studies/food-product-flow-pass-08.png | Historical Pass08 product-use schematic, retained for provenance | Figma frame 2995:2 before Pass09 expansion; 884 x 58 px, 6,780 bytes; SHA-256 147868FB1F993A5F87B892E047A462E7C513D5FF944E10E6C865CDBC094ECEDC. No longer referenced by React. |
+| `public/media/case-studies/food-system-pass-07.png` | Full 1,432 × 380 Figma export of system figure `2850:2`, reused for Pass 08 after visual comparison with the complete Pass 08 body capture. The separately requested Pass 08 PNG export was clipped to 1,432 × 129 and is not used; this original asset remains unchanged at 98,620 bytes, SHA-256 `222DF2944F68B1AE027E2D173AF05891FCF4A8DCC9568D5231D73CE3D0696B01`. |
+| `public/media/case-studies/food-search-to-log.svg` | Superseded Pass 06 explanatory system flow retained as history; exact/fuzzy/semantic retrieval and deterministic ranking resolve a selected match through independent catalog and serving authorities into the canonical log; 9,896 bytes; SHA-256 `29D9C797D911AB301DEA1B1E638BE169006AB8C52D24CE4C23D1382B75E45564`. |
+| `public/media/profile/open-portfolio-j-prior-pass15.svg` | Pass 15 body retained as local comparison history; 7,047 bytes; SHA-256 `519A5FB4C3672B5E980309FB2A47AF4F58BF38360C175FEFF58E3D28F687C594`. |
 | `public/media/crest-sample.png` | Crest case study and Demos | Owner-cleared selected sample interface capture. Retain `SAMPLE DATA` context; values do not show customer outcomes or production volume. |
-| `public/media/choveigo-recommendations.png` | Cho’Veigo case study and Demos | Owner-cleared selected static Recommendations capture. Do not show a play affordance. Strength labels remain unvalidated because role-specific evaluation evidence is unavailable. |
+| `public/media/choveigo-recommendations.png` | Cho’Veigo case study and Demos | Owner-cleared selected static Recommendations capture (864×486); also copied byte-for-byte to `demos-choveigo.png`. Current 1,432×806 display enlarges the capture and exposes a visible cursor. No sharper authentic capture is in the workspace; image-finish clearance is open. Do not show a play affordance. Strength labels remain unvalidated because role-specific evaluation evidence is unavailable. |
 | `public/media/profile-owner-portrait.png` | Profile Overview identity | 2× crop of approved Figma node `960:4515`, 312 × 312 px; SHA-256 `E1DDDD6647B3BA7B20265BF01C46444310BE43FDBCF64B2902FD2A4D3DF52499`; displayed at 156 × 156 px. |
+| `public/media/resume/communitydragon/9.22-ready-check/` | Authentic League Ready Check frame and action states | CommunityDragon patch 9.22 client art used as the Resume Found frame, plaque, and `VIEW RESUME` plate. Source URLs, byte sizes, hashes, and retained client animation states are in [`PROVENANCE.md`](../public/media/resume/communitydragon/PROVENANCE.md). |
+| `public/media/profile/resume-client-plate.svg` | Resume header Client Plate | Exact 228x63 SVG for Figma node `124:751`; 1,152 bytes; SHA-256 `6C1A20461AE0C77BB112673370B0FFAA4A5F7F78D6F0DE87C8128BB3AA0ECDA5`. |
+| `public/media/resume-j-pass16-ring-free.svg` | Superseded Resume Found identity mark, retained for provenance | Pass16 ring-free vector from Figma `1950:46`; no longer used in Resume Found. The active center uses archive raster `159:2`. |
+| `public/media/resume-j-ring-free.svg` | Legacy Resume Found J composite | Earlier Figma `2407:364` export retained for comparison only; not used by Resume Found; 1,949 bytes; SHA-256 `D93D476F7FF8F6306B8254C4FAA2600FCA7E3D039AE0BDB9989EB5CFDC3BBB2F`. |
+| `public/media/resume/resume-j-forged-side.svg` | Legacy Resume Found center J side | Earlier replacement frame `2705:326`; retained for comparison only after the Pass 16 J became the active center mark. |
+| `public/media/resume/resume-j-warm-metal-face.svg` | Legacy Resume Found center J face | Earlier replacement frame `2705:328`; retained for comparison only after the Pass 16 J became the active center mark. |
 | `public/resume/Joshua_Aryeetey_General_Resume_v13.pdf` | Resume viewer/download/open | Exact owner-authorized General Resume v13; 164,726 bytes; SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`. Embedded, downloaded, and opened as the same file. |
+
+### Historical Home icon export — Pass 04, superseded by owner review
+
+Pass 04 revised the Projects cube (`3014:310`), Experience folio (`3014:322`), and Hackathons medal (`3014:337`); the prior independent critic’s CLEAR applied only to those changes at that time. The owner has since reopened all four destination icons, including Education, for stronger final client-quality iconography. Keep these local SVGs as historical/synced assets only, not final design approval. Home’s four-destination structure remains approved; background, shell/materials, states, spacing, final icons, and no-overflow behavior still require implementation clarity. The earlier page/crop captures at [`case-study-review/home-pass-03`](case-study-review/home-pass-03/HOME_SHELL_REVIEW_2026-09-29.md) do not supersede the latest owner direction.
+
+The authentic CommunityDragon Ready Check source and collected frame/action art are documented in [`PROVENANCE.md`](../public/media/resume/communitydragon/PROVENANCE.md). Live Figma `2407:176` was inspected on 2026-09-29: it shows the archive J within a custom ring composition. Owner direction is to use the authentic Match Found / Ready Check mechanism as the reconstruction foundation and adapt it to the portfolio action. The current custom ring composition remains unaccepted.
 
 ## League and project assets
 
+- The website Opening source currently uses archive raster `159:2` in the recorded phase groups `2983:310/313` as a temporary fallback while the identity is redesigned. The old Pass16 vectors and duplicate seat layers remain historical. Preserve the liked segmented outer mechanism, restrained opposing ring motion, Skip, and roughly 2s sequence; reduced-motion behavior stays near-instant. Figma/website sync and visual acceptance remain open until the improved J is approved.
+- The ornamental circle source is the vector `2448:315` (`circle-lines-gold.svg`, 490 × 490 px) with the alpha mask vector `2448:317` (`circle-tick-mask.svg`, 560 × 526.129 px), inside `2448:312` / animated frame `2443:71`. The tick frame opacity is 0.44 and the source group opacity is 0.60. Legacy treatment, custom ticks and J vectors stay archived under `2448:2`; the active cohort uses only visible current layers. Figma motion/provenance notes remain in `2025:84`, `2025:88` and `2025:125`.
+
+| `public/media/opening/` asset | Source node | Intrinsic SVG size | Bytes | SHA-256 |
+|---|---|---:|---:|---|
+| `gameflow-background.jpg` | `2448:3` | 1440 × 900 source | 259171 | `B2A69A3AC017F8DE59E04BB56BC4137A9709FBF6E272190552CC4DDC09535110` |
+| `outer-dark-alloy-bezel.svg` | `2443:2` | 606 × 606 | 1127 | `813CC5BAE897F4033E9FC4A45ADADAC8AF42CC9EBC15B52244EF43D74BB31873` |
+| `bevel-catch.svg` | `2443:8` | 590 × 590 | 1116 | `CD1D058AB96304731CFFAE287DF516F32D948D30F1254B6D8F76B0788CB0599B` |
+| `black-enamel-bed.svg` | `2443:14` | 570 × 570 | 1125 | `237E48544119AE8E0660E7D8716DE8BBEE85F237C166382BA180AB5EE574D893` |
+| `recessed-inner-rail.svg` | `2443:20` | 518 × 518 | 1128 | `3471ABA4ED3BB6705A978358F75A09696A9B59141D005C30D5D57BBBCBD9BF12` |
+| `j-seat-outer-rim.svg` | `2443:26` | 426 × 426 | 1125 | `173F88DB4C40EBDF17197A03A0CB37DA696F4C5E0E108A02CE5A80F0D34BDFA0` |
+| `j-seat-enamel.svg` | `2443:32` | 406 × 406 | 1423 | `73EDDD2CCFDA4BB1CE81804B2CCBB8940DE2CFEEF7CE5A367FFBC0BE77D45B80` |
+| `segmented-outer-bezel.svg` | `2443:38` | 560 × 560 | 5691 | `EFE5E21D0EB4CE36136EC092A38C121B4962B0DBB13020693129E239CDA0229F` |
+| `circle-lines-gold.svg` | `2448:315` | 490 × 490 | 480 | `5F9C0BFC1A237300DF7401A08BD24279BFAF621F547AFBFBE0565E940B685A96` |
+| `circle-tick-mask.svg` | `2448:317` | 560 × 526.129 | 595 | `CD2A609B7A7C9559FD32F12D07B47951FC87C8C04EDED8807FAC8239A96495FC` |
+| `cyan-energy-insets.svg` | `2443:92` | 560 × 560 | 3100 | `61F31A99FE00A6EC56878916E37C784D2FE5436A092A13D4432B3E1136A74FDB` |
+| `indexed-jewel-marks.svg` | `2443:110` | 560 × 560 | 3183 | `EF809025E5881F785817004ACDEC12D8CFA29CDD85089CCD10725250D23CCB56` |
+| `j-archive-led-extrusion.svg` | Pass 16 Figma `2843:10` | 182.483 ? 341.233 | 699 | `A9ADE3999B074B27BBBE0FAD94A665E9BB657DB70E5993A64AF721FFA01D5311` |
+| `j-archive-led-forged-face.svg` | Pass 16 Figma `2843:2` | 177.199 ? 355.109 | 1900 | `3CD397CD561D94993B9D2CC92AEA8B297ADB0F308E2FBA6238BA4CDB7BDFB6A8` |
+| `j-canonical-forged-extrusion.svg` | `2711:353` and `2704:310` | 182.483 × 341.233 | 1254 | `7E345A7E321077A36107A1447CB334A93F9816C72437177B92BD426088509C57` |
+| `j-canonical-forged-gold-face.svg` | `2704:312` | 177.199 × 355.109 | 3980 | `E71E3D7A7DB79A1B7A57704E793B39ED0326436A439E711A3A231C6D0A0F5565` |
+| `j-canonical-tapered-right-plane.svg` | `2704:316` | 8.65267 × 259.6 | 808 | `53ECC715824D0DFC90D27AEC20EE9CBCD8C8C0020AEFC01AF3E1DAA9939AB366` |
+| `j-canonical-asymmetric-crown-plane.svg` | `2704:318` | 171.855 × 55.6712 | 905 | `C0A88734558D4DE08654C2EA1C2C75EAB852C62F2B7489C2FF5B25B4220D6E5B` |
+| `j-canonical-crown-bevel-facet.svg` | `2704:321` | 150.564 × 11.3894 | 559 | `2F4B9B996D5F03E6C00988D007371CAA4F5566E5A1EA772A7A6021E5F9FD2D23` |
+| `j-canonical-shoulder-undercut.svg` | `2704:323` | 152 × 36.9932 | 515 | `7163F0383D7C77D07566AF8D7CC65454146F93189B0A46258C9D692A0D2D8088` |
+| `j-canonical-stem-face-plane.svg` | `2704:325` | 32.1294 × 255.088 | 532 | `612091D859A94505ABF9EE4A7B7EFF4C8A1013D06417D783FD4394DCFB7C82A3` |
+| `j-canonical-shoulder-polish.svg` | `2704:327` | 160.396 × 19.5334 | 518 | `FD0D2FCDB2F619BA84DC16B67FABA53489C73C70A4AB0EDC3425D043F781E4E4` |
+| `j-canonical-inner-hook-bevel.svg` | `2704:329` | 95.247 × 26.5608 | 482 | `B28EC8C4265F9B0B90F9237DD682B6BA759EA0EE223E0086F2BC57E1129114A2` |
+| `j-canonical-forged-crown-facet.svg` | `2704:331` | 76.632 × 6.254 | 550 | `E791DB8539D5C111BB774A081486DD0E23526FA7AB62D8B1024FDB2FFE7FC66E` |
+| `j-canonical-forged-stem-facet.svg` | `2704:333` | 2.27157 × 113.28 | 649 | `E61CEB9B9C0D44C5DFE82A276C434FB4FDE3F327159923C2A13C0264A4E16484` |
+| `j-canonical-forged-hook-facet.svg` | `2704:335` | 21.777 × 8.49587 | 455 | `FD6A05D6B21EBFEFBCD191D83F3F6F24536AC0E41546C4E07EAECED13F6035D5` |
+| `canonical-j-construction-edge.svg` | Superseded Figma frame `2443:132` | 380 × 380 | 1337 | `0770BAB98C9DA297CCDD2CEB113F130F80FC9E2114CA1CC27149D357B8BA44B6` |
+| `j-sculpted-asymmetric-forged-mark.svg` | Historical flattened export of the earlier `2443:138` vector (unused); the live `2443:138` is a visible group wrapper around active vectors `2443:139–150` | 205.698 × 319.978 | 6834 | `A6C7CB758834DDD463FF3419A4AEFDF223B97ABC68AC1B91C8654016EAF478FD` |
+| `restrained-rail-glint.svg` | `2443:154` | 32 × 32 | 983 | `5F17D1ACEF5B09F42787748DC0141F54049798FD108786A4CF5FCE89DD7C039D` |
 - The active development direction prefers intended collected Riot/League/CommunityDragon assets and approved Figma exports where selected. Workspace studies record authentic source URLs and local files, including the League client environment and circular framing element in `exploration-assets/STUDIES-REVIEW.md` and the research packet. Inspect those existing assets before creating or acquiring replacements.
 - `public/media/lobby/` records the exact Party background, banner, selected tray/button, role marks, owner portrait, academic/hackathon marks, four vector Home-mode emblems, Home Confirm/Back controls, five client-shell utilities, and Activity toolbar glyphs. The current production Home root is `2252:3445`, rebuilt from Archive `69:37`; some byte-identical SVGs were originally exported from prior study `2297:3474`. Source node history, byte lengths, and hashes are in [`public/media/lobby/PROVENANCE.md`](../public/media/lobby/PROVENANCE.md). Use selected Figma artwork rather than generic CSS approximations.
 - The source/provenance record for an asset should remain intact. CommunityDragon hosting alone is not a blanket license grant; that fact belongs to final release review and does not prevent using selected material for faithful private/public-repository development.
@@ -22,7 +101,8 @@ Tracks media, visual sources, and current use. Authentic asset selection for dev
 
 ## Other visual sources
 
-- The canonical J is a first-party inline SVG in `src/identity/JMark.tsx`, but its former acceptance is revoked; design exploration remains open.
+- `public/media/profile/open-portfolio-j.svg` preserves the original Projects Lobby Pass 11 Figma `526:3` composite as provenance. Active code now uses the exact archive raster at `public/media/profile/open-portfolio-j-archive-source.jpg` for the shared header and rail; it applies the Figma-proportioned circular crops. Former shell/orbit/energy vectors and the Pass16 face remain on disk but are inactive.
+- The legacy inline component `src/identity/JMark.tsx` remains unused and does not define the active candidate. Opening, Resume Found, shared header, and rail code now point to the archive raster; the 16px favicon points to the refined ring-free vector. Rendered website comparison is still open.
 - Case-study diagrams and Journey graphics currently use authored markup/vector shapes. They are explanatory graphics, not product screenshots. Keep or replace them according to the revised Figma technical story.
 - League Spartan and Cinzel are served by Google Fonts. League Spartan is distributed under the [SIL Open Font License 1.1](https://github.com/google/fonts/blob/main/ofl/leaguespartan/OFL.txt); family source: [Google Fonts League Spartan](https://github.com/google/fonts/tree/main/ofl/leaguespartan).
 
@@ -33,4 +113,31 @@ Tracks media, visual sources, and current use. Authentic asset selection for dev
 - Profile Overview's portrait does not provide a separate Personal Highlights photo set.
 - Preserve citations/provenance in research records and keep final publication/licensing review separate from design use. Do not suppress an authentic intended asset or replace it with a generic approximation based on a release gate.
 
-Updated 2026-09-27 to supersede the previous rule excluding Riot/CommunityDragon material and marks from active builds pending public-use clearance.
+The earlier 2026-09-29 manifest baseline recorded provisional Pass16 J assets. The current asset rows and the source-sync entry below supersede that state; rendered website visual acceptance remains pending.
+
+## J identity status - archive base active, macro redesign open - 2026-09-29
+
+The owner found reconstruction `1950:6` materially weaker than archive reference `159:2` and then reopened the flagship identity for a macro redesign. Pass24 records the archive image as a larger-scale baseline and a separately reviewed ring-free 16px vector. These are interim assets, not final approval; improve the J from the archive at silhouette, crown, vertical proportion, hook, orbit integration, and large first-read. Historical vector/material studies remain in the file for comparison.
+
+Pass16 source files remain locally as history and are no longer used by the active J consumers. Opening, Resume Found, header, and rail currently use the archive source; the favicon uses the 16px fallback. Do not treat the legacy `open-portfolio-j-canonical.svg` filename as current. Website comparison remains open until a supported Browser session is available.
+
+## Pass24 archive image in active Figma contexts - 2026-09-29
+
+The archive base image in Figma file `9zvk9iSRPKSsJ6llDJrQmA` is source `159:2` (SHA-1 `359c8487f282df11448ddf0fb31a874433069531`). Its current interim website consumers and favicon are synchronized as described in the next section.
+
+| Active context | Figma page/root and active nodes | Crop/size | Capture |
+|---|---|---|---|
+| Opening | Page `510:15`, source `2025:2` / treatment `2025:18`; construction `2983:310`, settled `2983:313` | 320px circular matte crop over native 380px source; visible phases align in existing center seat | [Full treatment](j-source-review/captures/pass24-opening-active-20260929.png), [mark crop](j-source-review/captures/pass24-opening-active-mark-320-20260929.png) |
+| Resume Found | Page `510:22`, root `2407:176`, aperture `2407:340`, archive group `2984:484` | 388px circular matte crop over 460px raster, centered at x71/y71 | [Full context](j-source-review/captures/pass24-resume-active-20260929.png), [mark crop](j-source-review/captures/pass24-resume-active-mark-388-20260929.png) |
+| Shared header | Page `510:16`, root `511:2`, slot `524:7`, archive group `2985:2` | 54px slot; old static ring/energy/J layers hidden | [54px proof](j-source-review/captures/pass24-active-header-proof-54-20260929.png) |
+| Projects rail | Page `510:16`, root `511:2`, slot `526:3`, archive group `2985:5` | 48px slot; old static ring/energy/J layers hidden | [48px proof](j-source-review/captures/pass24-active-rail-proof-48-20260929.png) |
+
+Opening remains 2.00s with Skip and its existing reduced-motion intent unchanged; segmented outer structure `2443:38/71/92/110` is preserved. A read-only track check confirmed no motion edits: construction `2443:132` transitions from 0 opacity at 0.46s to 0.62 at 0.70s; body `2443:137` transitions from 0 at 0.70s to 1 at 1.12s; treatment `2025:18` holds until 1.82s and fades by 2.00s. The segmented bezel and authentic Riot circle retain their existing entry, rotation and fade tracks. Prior J and duplicate seat layers are hidden, not deleted. Resume retains authentic Ready Check main/action art `2888:164/165`. Each reversible context received a separate CLEAR review before promotion. The 300/150/54/32 archive image proofs and ring-free 16px vector proof are unchanged on Pass24 board `2966:2`; see the source review for captures and hashes. The owner has since reopened the final J identity; these placements and proofs are interim baseline evidence. Website rendered comparison remains open.
+
+## Pass24 archive J website source sync - 2026-09-29
+
+The website currently uses the archive base across its principal identity placements while the owner-reopened macro redesign is active. Source image `159:2` is `public/media/profile/open-portfolio-j-archive-source.jpg` (220 × 220; exact Figma bytes). `Opening.tsx` uses the archive image in its existing 380px phase frames with centered 320px circular crops; the old seat rim/enamel duplicates are removed from the rendered stack. The existing 2.00-second animation, opposing ring tracks, Skip, and reduced-motion handoff are preserved. `ResumeMechanism.tsx` uses the same source in a 460px wrapper with the measured 388px circular crop inside the authentic Ready Check. `PortfolioLayout.tsx` uses it in the shared brand and rail slots. The favicon uses the interim 16px ring-free vector from `2966:195`.
+
+Figma source groups are Opening `2983:310/313`, Resume Found `2984:484`, shared header `2985:2`, and rail `2985:5`; they remain inside their existing frames. Previous Pass16 and shell/orbit vectors remain on disk as historical files. The source dimensions, hashes, and individual node crops are recorded in the asset rows above and [J review](j-source-review/REVIEW.md).
+
+The in-app Browser runtime returned no available browser and its availability list was empty. Therefore no new website screenshot, live animation comparison, or render acceptance is recorded. No tests or build were run.

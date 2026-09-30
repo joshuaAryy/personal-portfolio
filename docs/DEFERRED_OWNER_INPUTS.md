@@ -1,24 +1,25 @@
-# Deferred Portfolio Inputs
+# Deferred Owner Inputs and Evidence
 
-This file tracks genuine missing facts or media. It does not impose a design/build gate for selected Riot, League, CommunityDragon, or owner-project identity assets. Those assets may be used during active development when they are the intended source; publication/licensing decisions belong to final release review.
+This file tracks genuinely missing facts/media. It does not gate design work or asset-led development when the relevant source is already available. Unknown source detail stays here or in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md); it should not automatically become public copy.
 
-## Supplied and cleared
+## Supplied and usable
 
-- The owner-authorized General Resume v13 PDF is approved for portfolio use and is not deferred. Use the exact file for embedded viewing, Download, and Open Fullscreen; SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`.
-- Crest's selected sample capture is owner-cleared for display. Keep sample-data claims bounded.
-- Cho’Veigo's selected Recommendations capture is owner-cleared for static display. This does not claim playable video.
-- Project marks found in owner/project sources are intended design materials. No additional owner permission is needed to use them for faithful development under the current direction.
+- The owner-authorized General Resume v13 PDF is approved for embedded viewing, Download, and Open Fullscreen; SHA-256 `514BA79F001794501EBDD20841F8654E2998C1CA1AEAE2E7BD1CE12D84B09299`.
+- Crest’s selected sample capture is owner-cleared; keep its sample-data meaning bounded.
+- Cho’Veigo’s Recommendations image is owner-cleared for static display only.
+- Project marks and selected Riot/League/CommunityDragon assets are intended development material. The authentic Ready Check bundle is already collected and provenance-recorded at [PROVENANCE.md](../public/media/resume/communitydragon/PROVENANCE.md); use it as the Resume Found design foundation rather than rebuilding a generic mechanism.
 
 ## Genuine gaps or optional evidence
 
-- **Food Tracker:** No authentic current-build screenshot/demo is recorded in the collection. Keep its Demos entry and use the best authentic approved logo/mark/media available; a real product capture is a future evidence enhancement, not a blocker to designing the entry or technical story.
-- **Personal Highlights:** Separate owner photo set and content direction are not present. This surface may remain deferred unless needed for the current scope.
-- **Crest:** A successful Policy Compliance capture is optional if that specific state is to be shown. The selected sample capture is already cleared.
-- **Cho’Veigo:** A real accessible playable source is optional; the approved static capture remains usable in-client.
-- **Fraymakers:** Authentic thumbnails, representative VOD, and YAML/config example from the other device are unavailable here. Do not fabricate media; the technical workflow can be explained with truthful diagrams.
-- **Living in Silico:** Run artifacts are unavailable to verify how all method details relate to the 500 DeepMol samples. Keep the method/output distinction explicit. Extra experiment media is optional.
-- **Stush Patties:** The supplied facts do not include a field-level Koyo example. Do not invent a raw record; explain the temporary position-and-cell exception at the supported level.
-- **Education:** Owner-authorized General Resume v13 verifies Computer Engineering at Toronto Metropolitan University, B.Eng., Software Specialization, Sept. 2024–Apr. 2028, and the four selected course titles used in Profile / Education. Do not show course codes, Dean's List, or scholarship until an owner source verifies those specific claims.
-- **Verified utility links:** Email, GitHub, LinkedIn, and Resume destinations must come from existing project sources. Do not invent URLs.
+- **Figma inspection boundary:** the active file key is `9zvk9iSRPKSsJ6llDJrQmA` (page `510:14`) and was directly inspected on 2026-09-29. The Figma screenshot endpoint crops case-study bodies at 938px; full lower-page visual review remains open.
+- **Food Tracker:** no authentic current-build screenshot/demo is recorded. Keep the Demos entry and design the technical story without fabricating a product capture; a real capture is optional evidence, not a design blocker.
+- **Personal Highlights:** separate owner photos/content direction are unavailable; remain deferred unless brought into scope.
+- **Crest:** a successful Policy Compliance capture is optional if that specific state is shown. The selected sample capture is usable.
+- **Cho’Veigo:** a playable media source is optional; use the approved static view honestly. A sharper authentic Recommendations capture would improve framing if one exists.
+- **Fraymakers:** representative VOD and YAML/config example from the other device are unavailable. Do not fabricate media; explain the verified workflow with a truthful schematic.
+- **Living in Silico:** run artifacts do not resolve the exact relation between every method setting and the 500 generated samples. Preserve this uncertainty internally; do not publish the bookkeeping caveat as the lead story.
+- **Stush Patties:** no field-level Koyo example is supplied. Do not invent raw data; use a generic system figure and explain the exception later only if useful.
+- **Education:** Resume v13 verifies Computer Engineering at Toronto Metropolitan University, B.Eng., Software Specialization, Sept. 2024–Apr. 2028, and four selected course titles. Course codes, Dean’s List, and scholarship remain unsupported.
+- **Verified utility links:** email, GitHub, LinkedIn, and Resume destinations must be read from existing project sources; do not invent URLs.
 
-Updated 2026-09-27 to remove prior public-reuse confirmation requirements as active asset/build blockers.
+Publication/licensing decisions remain part of release review, not an active design/build gate.

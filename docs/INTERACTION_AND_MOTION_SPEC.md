@@ -1,37 +1,32 @@
 # Interaction and Motion Specification
 
-This is the controlling interaction direction for design and implementation. Current production Figma pages plus selected authentic League references define appearance; archive page 11 (`510:2`) is active interaction history. Website implementation details in this document describe the current code only where explicitly marked; they do not establish visual completion.
+This is the active behavior contract. Use the file key and inspection date in [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md) to reach the live file. A named Figma frame records current appearance only to the extent noted in the status ledger; unresolved owner decisions below remain controlling. Owner-approved behavior overrides older authored reactions.
 
-## Intended navigation and interactions
+## Opening and identity gate
 
-| Surface | Intended behavior |
-|---|---|
-| First run | Opening → Home / Explore → visitor chooses Projects, Experience, Hackathons, or Education. Use Archive `69:37` structure: four major modes arranged horizontally within the League-client shell, a compact lower-left context queue, centered Confirm paired with the separate Back disc, right Activity rail and toolbar, and top-right Profile account entry. Selection and Confirm are separate; arrows move among modes and Enter confirms. Profile is not a main mode; opening and Skip must not dump the visitor directly into Projects. |
-| Profile entry | Top-right avatar/account composition opens Profile. The central Joshua lobby card may select/focus first; opening Profile from it requires an explicit second action. |
-| Project/experience lobby | One action may select/focus an item, with hover and selected feedback. A clear explicit action opens its story. Use authentic selected assets. |
-| Help | Following Archive `69:207`, opens a reusable dismissible overlay above the current screen. Keep that screen visible beneath the dim/blue guided treatment; on Home, call out mode navigation, the party/activity rail, filter/selection, and Confirm/Enter open behavior with focus boxes. Dismissal returns to the same context. A `/help` URL may remain for access/deep linking, while visible behavior stays overlay-oriented. Standalone `2014:11` is rejected. |
-| Errors and empty states | Attach unavailable, empty, offline, or not-found feedback to the affected client surface/item. Offer valid destinations/actions only. Do not invent an outage, automatic retry, or generic portfolio landing guide. |
-| Profile Overview | Project identity/media/name/card opens the case study. A small source icon may open a verified public repository. The top-right avatar remains the Profile entry; preserve Figma overlay/connective behavior and right rail. |
-| Demos | Selector switches among Food Tracker, Crest, and Cho’Veigo in the in-client media browser. Crest plays in-client if an actual accessible demo is available; external open may be secondary. Cho’Veigo capture is static and must not imply playback. Food Tracker remains present even if its current capture is unresolved. |
-| Resume | Resume Found provides `PORTFOLIO UTILITY`, a refined J mechanism, `RESUME FOUND`, `VIEW RESUME`, and close/home behavior, with no explanatory paragraph. Viewer embeds the exact authorized General Resume v13 PDF and exposes Download and Open Fullscreen against that same file. Use the League Match Found mechanism as reference: concentric segmented metal rings, a centered emblem, restrained cyan light, and a strong lower action relationship. |
-| Journey | Preserve the full-length track/locator and scroll-driven active beat. Rewrite copy around curiosity, motivation, confidence, and learning rather than a résumé chronology. Support keyboard activation and reduced motion. |
+- Opening retains the liked segmented Hextech direction: coordinated rings rotate in opposing directions, restrained mechanical motion, a strong central J, and an approximately two-second sequence.
+- Keep Skip visible. Reduced-motion behavior remains near-instant.
+- The J remains the quality gate. Do not consider Opening approved or implementation-complete until the J is approved at large scale and recognized at 54/32/16px.
+- Avoid continuous extra spins, excessive flashes, or effects that compete with the J.
 
-## Opening motion
+## Profile
 
-Target roughly two seconds. Retain Skip and a reduced-motion path. The existing `2025:2` / notes `2025:84` composition is directionally useful but remains open until compared with real League logo/loading formation behavior: concentric mechanism, segmentation, registration marks, proportions, line weights, rotation/settle, material, light pass, and emblem-to-ring scale. A circle with four ticks around a J is not sufficient evidence of a faithful sequence. Riot's [League login-screen motion notes](https://www.riotgames.com/en/work-with-us/disciplines/art/illustrations-come-to-life-in-leagues-login-screens) emphasize a clear focal point, cohesive environmental motion, and only a few seconds to set the tone; use that principle to make the J formation deliberate and readable. Riot's [League client animation notes](https://www.riotgames.com/en/news/animation-league-legends-client) distinguish simple transitions from richer stateful animation. The next implementation must follow the revised Figma behavior; do not treat previous Projects handoff timings as controlling where they conflict with Home/Explore first-run flow.
+Base: `960:2`. Projects state: `998:3`. Experience: `998:46`. Hackathon: `998:63`. Academics: `998:79`.
 
-## Authentic League Match Found reference
+The four lower signals are static counts. Hover or keyboard focus temporarily shows the matching independent overlay; pointer/focus exit returns to the base Projects overview. These signals never navigate the main Profile panel or pin a new selection. Projects overlay retains four equal sectors. The rejected featured-left/three-stacked-right composition must not return. Journey and Demos remain their separate Profile destinations; preserve verified project identity links.
 
-Riot's [League Client Hextech UI article](https://www.riotgames.com/en/news/under-hood-league-client%e2%80%99s-hextech-ui) includes the actual Ready Check countdown animation. The visible composition places a crest inside a large double-ring mechanism, uses narrow segmented gold outlines around a cool, softly lit center, and anchors the primary cyan `ACCEPT!` plate at the bottom with the smaller `DECLINE` action below it. Riot's implementation notes describe a short accept-intro transition followed by a looping idle state, with 200 ms fades in and 300 ms fades out. This is a historical League-client reference, not a claim about the newest live client. For Resume Found, carry over the material hierarchy, scale, segmentation, centered emblem, and restrained light. Adapt these principles to the archived portfolio mechanism and remove the unrelated explanatory copy; do not copy the ready-check controls literally.
+## First-run and Home
 
-## Reduced motion, focus, and accessibility
+Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The Opening hands off to Home. Refine icons, materials, backgrounds, no-overflow behavior, and implemented states without changing the structure.
 
-Retain semantic controls, visible keyboard focus, a skip-to-main path, and focus movement appropriate to route or overlay changes. Reduced-motion preferences should remove nonessential movement and make scrolling immediate. Overlay dismissal, focus return, narrow-screen behavior, and keyboard paths require browser review after implementation; source inspection alone does not verify them.
+## Resume Found
 
-## Existing code behavior and validation limits
+Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language as the foundation. Adapt the real frame/ring/plate action mechanism to the portfolio J and `VIEW RESUME`. Keep the authorized v13 resume and portfolio labels. Do not treat the current custom ring approximation as accepted. Preserve close-to-origin behavior and the direct-entry fallback.
 
-The opening hands off to Home/Explore. `Help.tsx` now contains the four Home callouts and corresponding focus boxes from overlay draft `2298:3474`, with the current route visible underneath, Escape dismissal, and focus management. Rendered browser comparison remains pending. Error/empty/offline recovery still needs the archive-first contextual state-family redesign. These are code facts pending browser rendering; none establishes visual completion. Existing timings and utility semantics do not supersede this owner direction.
+## Help and recovery
 
-Recorded baseline checks dated 2026-09-27: 47 tests across 11 files passed; an earlier Home/Help/shell checkpoint passed 76 tests across 20 files plus a production build. Case-study workers report focused tests and builds for their isolated first passes. No integrated post-handoff run or browser rendering has been performed for the current combined work. The supported in-app Browser returned no available browser instance. Journey coverage dispatches a synthetic `popstate` with a restored hash; it does not verify native browser back/forward or real scrolling. Seven deployed route probes returned the SPA shell only. No browser-rendered comparison, live keyboard/responsive review, reduced-motion review, or native PDF browser review is claimed complete.
+Help is a reusable, dismissible overlay above the current route; dismissal returns to the same context. Keep the underlying screen visible and preserve keyboard focus/dismissal behavior. Route and empty/error states are contextual and use only real actions. Keep utility polish bounded; do not invent retries or exhaustive states without a real trigger.
 
-Updated 2026-09-27. This document supersedes the previous Projects-first, standalone Help guide, and generic recovery interaction as design requirements.
+## Accessibility and implementation review
+
+Use semantic controls, visible focus, keyboard activation, and focus return after overlays. Respect reduced motion with near-instant transitions and immediate scrolling. Review browser behavior at desktop and narrow breakpoints after design sync. A design reference or source-code review does not establish rendered interaction acceptance.
