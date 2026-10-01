@@ -30,15 +30,15 @@ export function resolveActiveChapter(
 }
 
 const fitDimensions = [
-  ["FIT", "Evidence against the responsibilities"],
-  ["ELIGIBILITY", "Essential conditions and core requirements"],
-  ["RECOMMENDATION", "Whether to bring the role forward"],
+  ["FIT", "How closely does the evidence line up with the work?"],
+  ["ELIGIBILITY", "Are essential conditions and core requirements met?"],
+  ["RECOMMENDATION", "Is this role worth bringing forward?"],
 ] as const;
 
 const fitPrinciples = [
   [
     "RESPONSIBILITIES OVER STACK",
-    "Compare the work a role asks for, not just familiar technology.",
+    "I compared the work a role asks for, not just familiar technology.",
   ],
   [
     "CORE REQUIREMENTS FIRST",
@@ -61,15 +61,6 @@ const evidenceInputs = [
   ["ROLE REQUIREMENTS", "Responsibilities and essential criteria"],
   ["CANDIDATE EVIDENCE", "Demonstrated and transferable experience"],
   ["EVIDENCE GAPS", "Missing requirements stay visible"],
-] as const;
-
-const openingPath = [
-  ["ROLE EVIDENCE", "Responsibilities + candidate evidence"],
-  ["FIT", "Deterministic evidence assessment"],
-  ["ELIGIBILITY", "Essential criteria check"],
-  ["GEMINI", "Bounded text interpretation"],
-  ["RECOMMENDATION", "Bring the role forward"],
-  ["NEXT ACTION", "Resume tailoring"],
 ] as const;
 
 export default function ChoViegoCase() {
@@ -168,7 +159,6 @@ export default function ChoViegoCase() {
             </aside>
           </div>
 
-          <OpeningPath />
         </section>
 
         <section className="choveigo-section choveigo-system" id="choveigo-system">
@@ -227,7 +217,7 @@ export default function ChoViegoCase() {
         <section className="choveigo-section choveigo-review" id="choveigo-review">
           <div className="choveigo-review__story">
             <p className="choveigo-eyebrow">HUMAN-REVIEWED EVALUATION</p>
-            <h2>A mismatch became a regression case.</h2>
+            <h2>A mismatch became a better test.</h2>
             <p>
               With Shiv, I reviewed mismatches and agreed on expected behavior. Human review informed deterministic regression fixtures for later changes.
             </p>
@@ -242,7 +232,7 @@ export default function ChoViegoCase() {
             ))}
           </ol>
           <p className="choveigo-review__lesson">
-            Keep the expected behavior intact; don’t weaken a fixture just to make the current output pass.
+            I learned to make ambiguous match behavior concrete enough to test.
           </p>
         </section>
 
@@ -279,13 +269,13 @@ function WholeProductArchitecture() {
       <div className="choveigo-system-map__inputs" aria-label="System inputs">
         <section className="choveigo-system-map__input choveigo-system-map__input--roles">
           <h3>Role discovery</h3>
-          <p>Feeds, company sites, and career pages</p>
-          <p>Structured responsibilities and criteria</p>
+          <p>Feeds · company sites · career pages</p>
+          <p>Structured responsibilities + criteria</p>
         </section>
         <section className="choveigo-system-map__input choveigo-system-map__input--candidate">
           <h3>Candidate evidence</h3>
-          <p>Resume and profile evidence</p>
-          <p>Demonstrated and transferable experience</p>
+          <p>Resume + profile · demonstrated</p>
+          <p>and transferable experience</p>
         </section>
       </div>
       <section className="choveigo-system-map__decision" aria-label="Decision layers">
@@ -301,7 +291,7 @@ function WholeProductArchitecture() {
             <p>Deterministic<br />essential requirements</p>
           </article>
           <article className="choveigo-system-map__layer choveigo-system-map__layer--model">
-            <h4>Gemini, structured</h4>
+            <h4>GEMINI · STRUCTURED</h4>
             <p>Interprets supplied text; rules decide Fit and Eligibility.</p>
           </article>
         </div>
@@ -313,28 +303,10 @@ function WholeProductArchitecture() {
           <p>A distinct judgment: bring the role forward.</p>
         </article>
         <article className="choveigo-system-map__outcome">
-          <h4>Next: resume tailoring</h4>
+          <h4>NEXT · RESUME TAILORING</h4>
           <p>A separate action after recommendation.</p>
         </article>
       </section>
-    </figure>
-  );
-}
-
-function OpeningPath() {
-  return (
-    <figure className="choveigo-opening-path" aria-labelledby="choveigo-opening-path-title">
-      <figcaption id="choveigo-opening-path-title">
-        MATCHING PATH / ROLE EVIDENCE TO THE NEXT STEP
-      </figcaption>
-      <ol aria-label="From role evidence to resume tailoring">
-        {openingPath.map(([label, detail], index) => (
-          <li className={index === 4 ? "is-accent" : undefined} key={label}>
-            <span>{String(index + 1).padStart(2, "0")} · {label}</span>
-            <strong>{detail}</strong>
-          </li>
-        ))}
-      </ol>
     </figure>
   );
 }
@@ -370,7 +342,7 @@ function EvidenceWorksheet() {
       </dl>
       <div className="cho-evidence-worksheet__boundary">
         <span>MODEL BOUNDARY</span>
-        <p>Structured Gemini interprets evidence and helps shape wording; deterministic rules retain Fit and Eligibility authority.</p>
+        <p>Structured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment.</p>
       </div>
     </figure>
   );

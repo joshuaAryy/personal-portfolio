@@ -13,68 +13,6 @@
 .choveigo-hero__proof { min-width: 0; }
 .choveigo-hero .choveigo-recommendations { padding-top: 24px; }
 .choveigo-hero .choveigo-recommendations img { margin-top: 18px; }
-.choveigo-opening-path {
-  grid-column: 1 / -1;
-  min-width: 0;
-  margin: 0;
-  padding: 18px 0 0;
-  border-top: 1px solid #263844;
-}
-.choveigo-opening-path figcaption {
-  margin: 0 0 14px;
-  color: #57c6cb;
-  font-size: 10px;
-  line-height: 14px;
-  font-weight: 700;
-  letter-spacing: .11em;
-}
-.choveigo-opening-path ol {
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: 12px;
-  list-style: none;
-}
-.choveigo-opening-path li {
-  position: relative;
-  min-width: 0;
-  min-height: 82px;
-  padding: 12px 12px 11px;
-  border: 1px solid #29414d;
-  border-left: 2px solid #57c6cb;
-  background: linear-gradient(100deg, rgba(16, 36, 49, .92), rgba(9, 25, 36, .86));
-}
-.choveigo-opening-path li.is-accent { border-left-color: #d6b76b; }
-.choveigo-opening-path li:not(:last-child)::after {
-  position: absolute;
-  top: 28px;
-  right: -11px;
-  color: #57c6cb;
-  content: "›";
-  font-size: 17px;
-  font-weight: 700;
-}
-.choveigo-opening-path li > span,
-.choveigo-opening-path li > strong {
-  display: block;
-  font-family: "League Spartan", sans-serif;
-}
-.choveigo-opening-path li > span {
-  color: #57c6cb;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: .08em;
-}
-.choveigo-opening-path li.is-accent > span { color: #d6b76b; }
-.choveigo-opening-path li > strong {
-  margin-top: 8px;
-  color: #dce3df;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.25;
-}
-
 .choveigo-story-content > .choveigo-system { padding-top: 42px; }
 .choveigo-system > h2 { max-width: 990px; }
 .choveigo-system__intro { max-width: 850px; }
@@ -258,8 +196,6 @@
 }
 @media (max-width: 900px) {
   .choveigo-review__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .choveigo-opening-path ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-  .choveigo-opening-path li:not(:last-child)::after { display: none; }
   .cho-evidence-worksheet__inputs,
   .cho-evidence-worksheet__judgments { gap: 12px; }
 }
@@ -269,9 +205,6 @@
     gap: 24px;
   }
   .choveigo-hero__focus { margin-top: 28px; }
-  .choveigo-opening-path { grid-column: auto; }
-  .choveigo-opening-path ol { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
-  .choveigo-opening-path li:not(:last-child)::after { display: none; }
   .choveigo-system__steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .choveigo-system__tailoring { display: block; }
   .choveigo-system__tailoring > p { margin-top: 6px; }

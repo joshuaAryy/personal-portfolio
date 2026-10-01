@@ -34,7 +34,7 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(fit).toContain("Demonstrated and transferable experience");
     expect(fit).toContain("Missing requirements stay visible");
     expect(fit).toContain("MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT");
-    expect(fit).toContain("deterministic rules retain Fit and Eligibility authority");
+    expect(fit).toContain("deterministic rules determine Fit and Eligibility");
     expect(fitIndex).toBeGreaterThan(-1);
     expect(eligibilityIndex).toBeGreaterThan(fitIndex);
     expect(recommendationIndex).toBeGreaterThan(eligibilityIndex);
@@ -58,8 +58,8 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(markup).toContain("Candidate evidence");
     expect(markup).toContain("Decision layers");
     expect(markup).toContain("Product actions");
-    expect(markup).toContain("deterministic rules retain Fit and Eligibility authority");
-    expect(markup).toContain("Structured Gemini interprets evidence");
+    expect(markup).toContain("deterministic rules determine Fit and Eligibility");
+    expect(markup).toContain("Structured Gemini interprets role and candidate evidence within its boundary");
     expect(markup).toContain("cannot invent experience or decide Fit and Eligibility");
     expect(markup).toContain("Recommendation stays separate.");
     expect(markup).toContain("Tailor a resume for a selected role as a distinct step.");
