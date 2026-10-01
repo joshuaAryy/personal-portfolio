@@ -9,3 +9,6 @@ test-results/
 .worktrees/
 .superpowers/
 docs/superpowers/plans/
+# Local browser profile state from archived capture passes; keep out of portfolio history.
+.tmp-edge-pass*/
+docs/j-source-review/captures/pass*/edge-profile*/
