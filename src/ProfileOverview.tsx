@@ -387,7 +387,10 @@ export default function ProfileOverview({
                 key={signal.id}
                 aria-label={`${signal.label}, ${signal.value}. Focus to preview ${signal.label.toLowerCase()} details.`}
                 onMouseEnter={() => setHoveredSignal(signal.id)}
-                onFocus={() => setFocusedSignal(signal.id)}
+                onFocus={() => {
+                  setFocusedSignal(signal.id);
+                  setHoveredSignal(null);
+                }}
               >
                 <img className="profile-signal__emblem" src={signal.src} alt="" />
                 <span className="profile-signal__label">{signal.label}</span>
