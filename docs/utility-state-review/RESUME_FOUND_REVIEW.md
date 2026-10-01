@@ -10,7 +10,7 @@ The prior custom ring construction and Pass 16 J remain superseded. Use archive 
 
 React retains the authentic 530x530 chassis, default/hover action plates, archive J, dimmed route underlay, and demoted shell. `src/resume.css` now uses a 22%/15% page wash and 28%/18%/12% chassis halo with 24px blur and wider halo bounds. Preserve the resume action, close/origin behavior, and authorized v13 PDF.
 
-The Figma environment pass is clear, but the updated React values have not yet been rendered and compared. This is the remaining visual sync item; do not infer rendered parity from the previous capture.
+The Figma environment pass is clear, but the updated React values have not yet been rendered and compared. This is the remaining visual sync item; do not infer rendered parity from the previous capture. A local Vite server was started, but the supported browser connection returned `No browser is available` for `http://127.0.0.1:5173/resume`. Browser setup guidance disallows substituting standalone automation, so no post-change site capture was produced.
 
 ## Existing render evidence
 
