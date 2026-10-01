@@ -116,7 +116,7 @@
   height: 35.75vh;
 }
 
-.client-help-overlay__spotlight--home-filter {
+.client-help-overlay__spotlight--home-focus {
   top: 47.22vh;
   left: 1.3vw;
   width: min(22.92vw, 360px);
@@ -690,7 +690,7 @@
     display: none;
   }
 
-  .client-help-overlay__spotlight--home-filter {
+  .client-help-overlay__spotlight--home-focus {
     top: 60vh;
     left: 12px;
     width: min(88vw, 620px);

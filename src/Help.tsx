@@ -67,8 +67,8 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
           }]
         : []),
       {
-        title: "Filter & Select",
-        detail: "Choose a mode, then narrow the queue with Featured, AI / ML, or another filter.",
+        title: "Preview a mode",
+        detail: "Selecting a mode previews its description and focus areas. Use the arrows to compare destinations.",
       },
       {
         title: "Open the Selection",
@@ -145,7 +145,7 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     location.pathname,
   );
   const homeHighlights = isHome
-    ? ["navigation", ...(railVisible ? ["rail"] : []), "filter", "confirm"]
+    ? ["navigation", ...(railVisible ? ["rail"] : []), "focus", "confirm"]
     : [];
 
   return (
