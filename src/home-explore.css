@@ -21,37 +21,56 @@
 .home-explore__subnav {
   display: flex;
   align-items: stretch;
-  gap: 30px;
+  gap: 0;
   margin: 0 -20px;
-  padding: 0 20px;
-  border-bottom: 1px solid rgba(188, 148, 67, 0.34);
-  background: rgba(4, 10, 15, 0.38);
+  padding: 0 30px;
+  border-bottom: 1px solid rgba(105, 77, 33, 0.55);
+  background: rgba(1, 5, 7, 0.72);
 }
 
 .home-explore__subnav span {
   position: relative;
   display: flex;
   align-items: center;
-  color: rgba(219, 208, 183, 0.66);
+  color: #ada182;
   font-family: "Cinzel", Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 0.035em;
+  font-size: 14px;
   text-transform: uppercase;
 }
 
 .home-explore__subnav .home-explore__subnav-current {
-  color: #f0d894;
+  color: #e8e0c7;
   font-weight: 700;
 }
 
 .home-explore__subnav-current::after {
   position: absolute;
-  right: 0;
+  right: auto;
   bottom: 7px;
-  left: 0;
+  left: -1px;
+  width: 72px;
   height: 2px;
-  background: #39d4e2;
+  background: rgba(232, 201, 130, 0.92);
   content: "";
+}
+
+/* Figma 2356:529–532 places these labels at x=30, 132, 238, and 340. */
+@media (min-width: 761px) {
+  .home-explore__subnav span:nth-child(1) {
+    flex: 0 0 102px;
+  }
+
+  .home-explore__subnav span:nth-child(2) {
+    flex: 0 0 106px;
+  }
+
+  .home-explore__subnav span:nth-child(3) {
+    flex: 0 0 102px;
+  }
+
+  .home-explore__subnav span:nth-child(4) {
+    flex: 0 0 72px;
+  }
 }
 
 .home-explore__heading {
@@ -434,8 +453,8 @@
   .home-explore__subnav {
     margin-right: -20px;
     margin-left: -20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
   }
 
   .home-explore__modes {
@@ -466,6 +485,13 @@
 
   .home-explore__subnav span {
     font-size: 9px;
+    flex: 0 0 auto;
+  }
+
+  .home-explore__subnav-current::after {
+    right: 0;
+    left: 0;
+    width: auto;
   }
 
   .home-explore__heading {
