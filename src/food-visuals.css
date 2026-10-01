@@ -1344,11 +1344,11 @@
 .food-benchmark--flagship .food-benchmark__split { min-width: 0; min-height: 112px; padding: 13px 14px; border: 1px solid #344d54; border-radius: 9px; background: #11242a; }
 .food-benchmark--flagship .food-benchmark__split h3 { margin: 0 0 4px; color: #e3c57e; font-size: 11px; }
 .food-benchmark__definition { margin: 0 0 10px; color: #a9b5ba; font-size: 9px; }
-.food-benchmark__bar-row { display: grid; grid-template-columns: 108px minmax(0, 1fr) 44px; align-items: center; gap: 8px; margin-top: 7px; }
+.food-benchmark__bar-row { display: grid; grid-template-columns: 108px minmax(0, 1fr) 76px; align-items: center; gap: 8px; margin-top: 7px; }
 .food-benchmark__bar-row > span { color: #b7c0c2; font-size: 9px; font-weight: 700; }
 .food-benchmark__bar-row > div { height: 5px; overflow: hidden; border-radius: 5px; background: #293c42; }
 .food-benchmark__bar-row > div i { display: block; height: 100%; border-radius: inherit; background: #6f96a6; }
-.food-benchmark__bar-row strong { color: #eee7d8; font-size: 10px; font-variant-numeric: tabular-nums; text-align: right; }
+.food-benchmark__bar-row strong { color: #eee7d8; font-size: 10px; font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 .food-benchmark__bar-row--hybrid > div i { background: #58b392; }
 .food-benchmark__secondary { margin: 9px 0 0; color: #91a3aa; font-size: 9px; }
 .food-benchmark__secondary span { padding: 0 8px; color: #52656c; }
@@ -1381,7 +1381,7 @@
   .food-evaluation-heading { grid-template-columns: minmax(0, 1fr); gap: 7px; }
   .food-benchmark--flagship .food-benchmark__splits { grid-template-columns: minmax(0, 1fr); }
   .food-benchmark--flagship .food-benchmark__split { min-height: 0; }
-  .food-benchmark__bar-row { grid-template-columns: 92px minmax(0, 1fr) 42px; }
+  .food-benchmark__bar-row { grid-template-columns: 92px minmax(0, 1fr) 76px; }
   .food-retrieval-flow__sources { grid-template-columns: minmax(0, 1fr); }
   .food-retrieval-flow__notes { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .food-retrieval-flow__notes p + p { padding: 10px 0 0; border-top: 1px solid #30454d; border-left: 0; }

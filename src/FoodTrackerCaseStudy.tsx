@@ -110,7 +110,9 @@ function FoodBenchmark() {
               <div role="img" aria-label={`Full hybrid: ${set.hybrid.top1} of ${set.queries}`}>
                 <i style={{ width: `${(set.hybrid.top1 / set.queries) * 100}%` }} />
               </div>
-              <strong>{set.hybrid.top1}/{set.queries}</strong>
+              <strong>
+                {set.hybrid.top1}/{set.queries} (+{set.hybrid.top1 - set.legacy.top1})
+              </strong>
             </div>
             <p className="food-benchmark__secondary">
               Top-3&nbsp; {set.legacy.top3}/{set.queries} → {set.hybrid.top3}/{set.queries}
