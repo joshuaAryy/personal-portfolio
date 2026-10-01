@@ -8,11 +8,11 @@ Production continues to use archive `159:2` as its large/medium fallback. Sonnet
 
 The 468px comparison supports v8 as a stronger J reconstruction direction than the rejected Codex line: the crown, long vertical, and lifted hook read clearly as a J, and its textured gold face with localized cyan S-flow is closer to the archive than v7. This is a scoped visual critique of the supplied large-size comparison, not owner approval.
 
-Whole-mark integration remains **NOT CLEAR**. The bright near-continuous rim still encloses the J like a medallion, the hook reads apart from that rim, and the cyan flow appears laid over a blue disc instead of joining the mark. The archive's uneven rim and cyan sweep remain more integrated. The v8 board review covered 468px only; it does not establish performance at 54/32/16px.
+Whole-mark integration remains **NOT CLEAR**. The bright near-continuous rim still encloses the J like a medallion, the hook reads apart from that rim, and the cyan flow appears laid over a blue disc instead of joining the mark. The archive's uneven rim and cyan sweep remain more integrated. A separate screenshot-based downsample of the archive and v8 comparison at 54/32/16px shows that v8's J silhouette remains recognizable at 54px and 32px; at 16px the rim and energy details collapse. This supports retaining separate small optical marks. The downsample is only indicative size-fit evidence: it does not establish production raster sharpness, browser rendering, or owner approval. See [archive/v8 size comparison](captures/sonnet-v8-optical-size-check-2026-10-01.png).
 
 ## Separate small optical-size check (2026-10-01)
 
-The current ring-free marks at `3289:157` (54px), `3289:162` (32px), and `3289:167` (16px) were checked separately. The 54px and 32px marks read clearly as J glyphs; the 16px mark remains recognizable, with necessarily limited fine detail. These checks apply only to the existing optical-size marks, not to v8. Keep the small marks while v8 remains under review; this evidence does not justify replacing them or promoting v8.
+The current ring-free marks at `3289:157` (54px), `3289:162` (32px), and `3289:167` (16px) were checked separately. The 54px and 32px marks read clearly as J glyphs; the 16px mark remains recognizable, with necessarily limited fine detail. These exact Figma optical proofs are distinct from the screenshot-based downsample of the primary archive/v8 mark. Keep the small marks while v8 remains under review; the size comparison does not justify replacing them or promoting v8.
 
 In v8 `3325:191`, the editable ring group is `3325:325` (outer rim `3325:331`, inner rim `3325:332`); the hook-energy spill is `3325:362`. These IDs locate the critique only; keep the candidate unchanged until owner review.
 
