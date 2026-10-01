@@ -11,3 +11,11 @@ The approved layout still has four equal Projects sectors. Cho'Veigo's current m
 - The former `projects-overlay-current-2026-09-29.png` capture showed an empty Projects panel despite its later timestamp. It has been renamed [`projects-overlay-empty-panel-stale-2026-09-29.png`](projects-overlay-empty-panel-stale-2026-09-29.png) so it cannot be mistaken for a current state.
 
 The live Figma update has been directly inspected. Website render synchronization, responsive acceptance, and browser interaction review remain open. The base Profile composition stays anchored to Figma `960:2`.
+
+## Live side-by-side state review - 2026-09-30
+
+The current Profile page (`510:20`) contains a visible review-only strip at `3285:45`, titled `REVIEW ONLY · Profile Signal States · Projects | Experience | Hackathon | Academics`. It is 4552x740 at x=0/y=2200. Its four visible 1090x330 state cards are Projects `3285:47`, Experience `3285:341`, Hackathon `3285:563`, and Academics `3285:789`; all fit without clipping or scroll. The exact-size capture is [`profile-signal-states-3285-45-20260930.png`](profile-signal-states-3285-45-20260930.png).
+
+Production frame `960:2` remains unchanged at 1920x1080 with clipping enabled and `overflowDirection: NONE`. The capture [`profile-root-live-960-2-20260930.png`](profile-root-live-960-2-20260930.png) shows the Projects default view and the four summary categories side by side. Existing prototype reactions remain on the Journey and Demos navigation tabs. In implementation, [`ProfileOverview.tsx`](../../src/ProfileOverview.tsx) retains the four hover/focus buttons; the preview resets to Projects when neither hover nor focus is active. The review strip is a static visual comparison of the four states.
+
+Home audit: active frame `2252:3445` still shows its approved mountain environment `2356:514` and shell `2356:611`; the 1920x1080 root clips with `overflowDirection: NONE`, and filter thumb `2356:602` is hidden. No background, shell, or page-scroll correction is indicated by the current capture [`home-active-before-icon-refinement-20260930.png`](../case-study-review/home-pass-03/home-active-before-icon-refinement-20260930.png). No Figma or code changes were needed.
