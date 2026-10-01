@@ -222,10 +222,10 @@ export default function CrestCaseStudy() {
             </p>
           </div>
           <figure className="crest-evidence-map" aria-labelledby="crest-evidence-map-caption">
-            <figcaption className="sr-only" id="crest-evidence-map-caption">
+            <figcaption className="crest-evidence-map__sr-only" id="crest-evidence-map-caption">
               A sample expense request moves through two evidence paths before a person makes the decision.
             </figcaption>
-            <svg className="crest-evidence-map__connectors" viewBox="0 0 1432 206" preserveAspectRatio="none" aria-hidden="true">
+            <svg className="crest-evidence-map__connectors" viewBox="0 0 1432 230" preserveAspectRatio="none" aria-hidden="true">
               <defs>
                 <marker id="crest-flow-gold-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
                   <path d="M0 0L7 3.5L0 7Z" fill="#c79b45" />
@@ -234,15 +234,15 @@ export default function CrestCaseStudy() {
                   <path d="M0 0L7 3.5L0 7Z" fill="#56bdbc" />
                 </marker>
               </defs>
-              <path className="crest-evidence-map__route--gold" d="M255 76H275V73H320" markerEnd="url(#crest-flow-gold-arrow)" />
-              <path className="crest-evidence-map__route--teal" d="M255 124H275H320" markerEnd="url(#crest-flow-teal-arrow)" />
-              <path className="crest-evidence-map__route--gold" d="M652 73H1082V103H1128" markerEnd="url(#crest-flow-gold-arrow)" />
-              <path className="crest-evidence-map__route--teal" d="M570 143H692" markerEnd="url(#crest-flow-teal-arrow)" />
-              <path className="crest-evidence-map__route--teal" d="M975 143H1082V103H1128" markerEnd="url(#crest-flow-teal-arrow)" />
-              <circle className="crest-evidence-map__junction--gold" cx="275" cy="76" r="4" />
-              <circle className="crest-evidence-map__junction--teal" cx="275" cy="124" r="4" />
-              <circle className="crest-evidence-map__junction--gold" cx="1082" cy="73" r="4" />
-              <circle className="crest-evidence-map__junction--teal" cx="1082" cy="143" r="4" />
+              <path className="crest-evidence-map__route--gold" d="M255 116H275V74H320" markerEnd="url(#crest-flow-gold-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M275 116V174H320" markerEnd="url(#crest-flow-teal-arrow)" />
+              <path className="crest-evidence-map__route--gold" d="M652 74H1082V120H1128" markerEnd="url(#crest-flow-gold-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M570 174H692" markerEnd="url(#crest-flow-teal-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M975 174H1082V120H1128" markerEnd="url(#crest-flow-teal-arrow)" />
+              <circle className="crest-evidence-map__junction--gold" cx="275" cy="74" r="4" />
+              <circle className="crest-evidence-map__junction--teal" cx="275" cy="174" r="4" />
+              <circle className="crest-evidence-map__junction--gold" cx="1082" cy="74" r="4" />
+              <circle className="crest-evidence-map__junction--teal" cx="1082" cy="174" r="4" />
             </svg>
             <div className="crest-evidence-map__stage-labels" aria-hidden="true">
               <span>01 REQUEST</span>
