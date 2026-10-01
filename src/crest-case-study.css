@@ -93,33 +93,8 @@
   grid-template-columns: auto minmax(0, 1fr) auto;
 }
 
-.crest-demo-figure__decision-boundary {
-  display: grid;
-  gap: 5px;
-  margin-top: 31px;
-  padding: 7px 10px;
-  border: 1px solid rgba(84, 190, 188, 0.52);
-  border-left: 2px solid #2ab9c5;
-  background: rgba(16, 39, 43, 0.94);
-  color: #d4ddda;
-}
 
-.crest-demo-figure__decision-boundary p {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 3px 7px;
-  margin: 0;
-  font-size: 9px;
-  line-height: 1.3;
-}
 
-.crest-demo-figure__decision-boundary strong {
-  color: #e3c57e;
-  font-size: 8px;
-  font-weight: 750;
-  letter-spacing: 0.035em;
-}
 
 .crest-system {
   grid-template-columns: minmax(230px, 0.72fr) minmax(0, 1.48fr);
@@ -143,128 +118,20 @@
   line-height: 25px;
 }
 
-.crest-transaction-flow {
-  min-width: 0;
-  margin: 0;
-  padding: 20px 22px 16px;
-  border: 1px solid #344b51;
-  border-top: 2px solid #c79b45;
-  background:
-    linear-gradient(115deg, rgba(19, 46, 51, 0.9), rgba(10, 25, 31, 0.92)),
-    #102127;
-  color: #eee7d8;
-}
 
-.crest-transaction-flow figcaption {
-  margin: 0 0 17px;
-  color: #c79b45;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
 
-.crest-transaction-flow__stages {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) 20px minmax(0, 1.2fr) 20px minmax(0, 0.9fr);
-  align-items: stretch;
-  gap: 10px;
-}
 
-.crest-transaction-flow__transaction,
-.crest-transaction-flow__review {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-width: 0;
-  padding: 13px 12px;
-  border: 1px solid #52666b;
-  background: #172c32;
-}
 
-.crest-transaction-flow__review {
-  border-color: rgba(84, 190, 188, 0.65);
-  background: #132d31;
-}
 
-.crest-transaction-flow__stages section > span {
-  display: block;
-  margin-bottom: 8px;
-  color: #d2ae63;
-  font-size: 8px;
-  font-weight: 750;
-  letter-spacing: 0.07em;
-  line-height: 1.25;
-}
 
-.crest-transaction-flow__review > span {
-  color: #73d1cf;
-}
 
-.crest-transaction-flow__stages h3 {
-  margin: 0 0 8px;
-  color: #eee7d8;
-  font-size: 11px;
-  line-height: 1.32;
-}
 
-.crest-transaction-flow__stages p {
-  margin: 0;
-  color: #b6c3c5;
-  font-size: 10px;
-  line-height: 1.45;
-}
 
-.crest-transaction-flow__context {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  justify-content: center;
-  padding: 13px 12px;
-  border: 1px solid #344b51;
-  border-top: 2px solid #56bdbc;
-  background: rgba(25, 49, 55, 0.9);
-}
 
-.crest-transaction-flow__context > span {
-  display: block;
-  margin-bottom: 8px;
-  color: #73d1cf;
-  font-size: 8px;
-  font-weight: 750;
-  letter-spacing: 0.07em;
-  line-height: 1.25;
-}
 
-.crest-transaction-flow__context h3 {
-  margin: 0 0 8px;
-  color: #eee7d8;
-  font-size: 11px;
-  line-height: 1.32;
-}
 
-.crest-transaction-flow__context p {
-  margin: 0;
-  color: #b6c3c5;
-  font-size: 10px;
-  line-height: 1.45;
-}
 
-.crest-transaction-flow__arrow {
-  align-self: center;
-  color: #d2ae63;
-  font-size: 18px;
-  text-align: center;
-}
 
-.crest-transaction-flow__boundary {
-  margin: 13px 0 0;
-  padding-top: 10px;
-  border-top: 1px solid #344b51;
-  color: #a9b5ba;
-  font-size: 10px;
-  line-height: 1.4;
-}
 
 .crest-finance-workflow {
   grid-column: 2;
@@ -484,10 +351,6 @@
     max-width: 760px;
   }
 
-  .crest-transaction-flow__stages {
-    grid-template-columns: minmax(0, .9fr) 16px minmax(0, 1.2fr) 16px minmax(0, .9fr);
-    gap: 7px;
-  }
 }
 
 @media (max-width: 900px) {
@@ -500,18 +363,8 @@
     max-width: 760px;
   }
 
-  .crest-transaction-flow__stages {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 8px;
-  }
 
-  .crest-transaction-flow__context {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 
-  .crest-transaction-flow__arrow {
-    transform: rotate(90deg);
-  }
 
   .crest-team {
     grid-template-columns: minmax(0, 1fr);
@@ -519,13 +372,7 @@
 }
 
 @media (max-width: 650px) {
-  .crest-transaction-flow {
-    padding: 15px 14px 13px;
-  }
 
-  .crest-transaction-flow__context {
-    grid-template-columns: minmax(0, 1fr);
-  }
 
   .crest-finance-workflow {
     padding: 12px;
@@ -584,28 +431,9 @@
     row-gap: 42px;
   }
 
-  .crest-section.crest-system .crest-transaction-flow {
-    padding: 0;
-    border: 0;
-    background: transparent;
-  }
 
-  .crest-section.crest-system .crest-transaction-flow figcaption {
-    margin-bottom: 33px;
-  }
 
-  .crest-section.crest-system .crest-transaction-flow__transaction,
-  .crest-section.crest-system .crest-transaction-flow__review,
-  .crest-section.crest-system .crest-transaction-flow__context {
-    padding: 0;
-    border: 0;
-    background: transparent;
-  }
 
-  .crest-section.crest-system .crest-transaction-flow__boundary {
-    padding-top: 0;
-    border-top: 0;
-  }
 
   .crest-section.crest-system .crest-finance-workflow {
     padding: 10px 16px 12px;
@@ -625,6 +453,396 @@
   }
 }
 
+/* Full-width evidence map: one expense request branches into rules and
+   retrieved-policy interpretation before a person makes the decision. */
+.crest-story-content > .crest-section.crest-system {
+  grid-template-columns: minmax(0, 1fr);
+  align-items: start;
+  gap: 24px;
+  margin-top: 0;
+  padding-bottom: 38px;
+}
+
+.crest-story-content > .crest-section.crest-system .crest-system__story h2 {
+  position: static;
+  max-width: 100%;
+  margin: 0 0 14px;
+}
+
+.crest-story-content > .crest-section.crest-system .crest-system__story > p:last-child {
+  max-width: 820px;
+}
+
+.crest-evidence-map {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  height: 206px;
+  min-width: 0;
+  margin: 0;
+  color: #f0ebde;
+}
+
+.crest-evidence-map__connectors {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.crest-evidence-map__connectors path {
+  fill: none;
+  stroke-width: 1.35;
+  vector-effect: non-scaling-stroke;
+}
+
+.crest-evidence-map__route--gold {
+  stroke: #bd9141;
+}
+
+.crest-evidence-map__route--teal {
+  stroke: #54aaa8;
+}
+
+.crest-evidence-map__junction--gold {
+  fill: #bd9141;
+}
+
+.crest-evidence-map__junction--teal {
+  fill: #54aaa8;
+}
+
+.crest-evidence-map__stage-labels {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  color: #c79b45;
+  font-size: 10px;
+  font-weight: 720;
+  letter-spacing: 0.025em;
+  line-height: 14px;
+  pointer-events: none;
+}
+
+.crest-evidence-map__stage-labels span:nth-child(2) {
+  position: absolute;
+  left: 22.35%;
+  color: #56bdbc;
+}
+
+.crest-evidence-map__stage-labels span:nth-child(3) {
+  position: absolute;
+  left: 78.8%;
+}
+
+.crest-evidence-map__node {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 10px 13px;
+  border: 1px solid #29434b;
+  border-radius: 9px;
+  background: #0e2027;
+}
+
+.crest-evidence-map__request {
+  top: 34px;
+  left: 0;
+  width: 17.8%;
+  height: 132px;
+  padding: 12px 15px;
+  border-color: #614d2d;
+  background: #101e24;
+}
+
+.crest-evidence-map__signals {
+  top: 21px;
+  left: 22.35%;
+  width: 23.2%;
+  height: 75px;
+  border-top: 2px solid #bd9141;
+  background: #10242a;
+}
+
+.crest-evidence-map__policy {
+  top: 108px;
+  left: 22.35%;
+  width: 17.5%;
+  height: 69px;
+  border-top: 2px solid #56bdbc;
+  background: #10242a;
+}
+
+.crest-evidence-map__interpretation {
+  top: 108px;
+  left: 48.3%;
+  width: 19.8%;
+  height: 69px;
+  border-top: 2px solid #56bdbc;
+  background: #10242a;
+}
+
+.crest-evidence-map__decision {
+  top: 52px;
+  left: 78.8%;
+  width: 21.2%;
+  height: 103px;
+  padding: 11px 15px;
+  border-color: #2c6264;
+  border-left: 3px solid #56bdbc;
+  background: #102a30;
+}
+
+.crest-evidence-map__eyebrow {
+  display: block;
+  margin: 0 0 5px;
+  color: #d5a447;
+  font-size: clamp(8px, 0.62vw, 10px);
+  font-weight: 750;
+  letter-spacing: 0.025em;
+  line-height: 1.2;
+}
+
+.crest-evidence-map__policy .crest-evidence-map__eyebrow,
+.crest-evidence-map__interpretation .crest-evidence-map__eyebrow {
+  color: #62c2bf;
+}
+
+.crest-evidence-map__decision .crest-evidence-map__eyebrow {
+  color: #62c2bf;
+}
+
+.crest-evidence-map__node-head {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 10px;
+}
+
+.crest-evidence-map__node-head svg {
+  width: 19px;
+  height: 20px;
+  flex: 0 0 auto;
+  fill: none;
+  stroke: #54aaa8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.45;
+}
+
+.crest-evidence-map__signals .crest-evidence-map__node-head svg {
+  stroke: #d0a34d;
+}
+
+.crest-evidence-map__node h3 {
+  min-width: 0;
+  margin: 0;
+  color: #f0ebde;
+  font-size: clamp(11px, 0.88vw, 14px);
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.crest-evidence-map__node p {
+  margin: 4px 0 0 29px;
+  color: #a7b7b9;
+  font-size: clamp(9px, 0.68vw, 11px);
+  line-height: 1.25;
+}
+
+.crest-evidence-map__request .crest-evidence-map__node-head {
+  justify-content: space-between;
+}
+
+.crest-evidence-map__request .crest-evidence-map__node-head svg {
+  width: 16px;
+  height: 18px;
+  stroke: #d5a447;
+}
+
+.crest-evidence-map__request h3 {
+  margin-top: 9px;
+  font-size: clamp(12px, 0.95vw, 15px);
+}
+
+.crest-evidence-map__amount {
+  margin-top: 4px;
+  color: #f0ebde;
+  font-size: clamp(19px, 1.45vw, 23px);
+  line-height: 1;
+}
+
+.crest-evidence-map__category {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  width: fit-content;
+  margin-top: 10px;
+  padding: 0 9px;
+  border: 1px solid #57492f;
+  border-radius: 5px;
+  color: #aebfc0;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.crest-evidence-map__decision .crest-evidence-map__node-head {
+  gap: 9px;
+}
+
+.crest-evidence-map__decision .crest-evidence-map__node-head svg {
+  width: 20px;
+  height: 21px;
+}
+
+.crest-evidence-map__decision p {
+  margin: 5px 0 0 29px;
+  color: #b1c1c2;
+}
+
+.crest-evidence-map__actions {
+  display: flex;
+  gap: 8px;
+  margin: 9px 0 0 29px;
+}
+
+.crest-evidence-map__actions span {
+  display: inline-flex;
+  min-width: 82px;
+  min-height: 24px;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 8px;
+  border: 1px solid #386a64;
+  border-radius: 5px;
+  background: #1b514a;
+  color: #91cfbf;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.crest-evidence-map__actions span + span {
+  min-width: 67px;
+  border-color: #713a39;
+  background: #412a2d;
+  color: #dc9a91;
+}
+
+.crest-story-content > .crest-section.crest-system .crest-finance-workflow {
+  position: static;
+  top: auto;
+  left: auto;
+  grid-column: auto;
+  width: min(100%, 820px);
+  margin: 0 0 0 auto;
+}
+
+@media (max-width: 1100px) {
+  .crest-evidence-map {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding-top: 0;
+  }
+
+  .crest-evidence-map__connectors,
+  .crest-evidence-map__stage-labels {
+    display: none;
+  }
+
+  .crest-evidence-map__node {
+    position: relative;
+    inset: auto;
+    width: auto;
+    height: auto;
+    min-height: 90px;
+  }
+
+  .crest-evidence-map__request,
+  .crest-evidence-map__decision {
+    grid-column: 1 / -1;
+  }
+
+  .crest-evidence-map__request {
+    grid-row: 1;
+    min-height: 148px;
+  }
+
+  .crest-evidence-map__signals {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .crest-evidence-map__policy {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .crest-evidence-map__interpretation {
+    grid-column: 2;
+    grid-row: 3;
+  }
+
+  .crest-evidence-map__decision {
+    grid-row: 4;
+    min-height: 120px;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .crest-story-content > .crest-section.crest-system {
+    gap: 18px;
+  }
+
+  .crest-evidence-map {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .crest-evidence-map__request,
+  .crest-evidence-map__decision {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .crest-evidence-map__signals,
+  .crest-evidence-map__policy,
+  .crest-evidence-map__interpretation {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .crest-evidence-map__request {
+    min-height: 145px;
+  }
+
+  .crest-evidence-map__node {
+    min-height: 82px;
+  }
+
+  .crest-evidence-map__decision {
+    min-height: 120px;
+  }
+}
+
 @media (min-width: 1201px) {
   .crest-story-content > .crest-section.crest-hero::after {
     bottom: -3px;
@@ -635,91 +853,16 @@
     top: -11px;
   }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow {
-    position: relative;
-    left: -30px;
-    width: calc(100% + 30px);
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages {
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 250px);
-    justify-content: space-between;
-    width: calc(100% - 32px);
-    margin-top: 56px;
-    gap: 0;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages section {
-    position: relative;
-    align-self: start;
-    justify-content: flex-start;
-    width: 250px;
-    padding: 0;
-    border: 0;
-    background: transparent;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__context {
-    left: 2px;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages section > span {
-    width: 44px;
-    margin-bottom: 15px;
-    color: #c79c47;
-    font-size: 13px;
-    letter-spacing: 0;
-    line-height: 17px;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages h3 {
-    width: 250px;
-    margin: 0 0 17px;
-    font-size: 15px;
-    line-height: 20px;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__stages p {
-    max-width: 235px;
-    margin: 0;
-    color: #a3b8ba;
-    font-size: 15px;
-    line-height: 22px;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow {
-    position: absolute;
-    top: 37px;
-    width: 38px;
-    height: 1px;
-    padding: 0;
-    background: #5c4729;
-    color: transparent;
-    font-size: 0;
-    line-height: 0;
-    transform: none;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow:nth-child(2) {
-    left: 252px;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow:nth-child(4) {
-    left: 560px;
-  }
 
-  .crest-story-content > .crest-section.crest-system .crest-transaction-flow__arrow::after {
-    position: absolute;
-    top: -2px;
-    right: 0;
-    width: 5px;
-    height: 5px;
-    background: #c79c47;
-    content: "";
-    transform: rotate(45deg);
-  }
 
   .crest-story-content > .crest-section.crest-system .crest-finance-workflow {
     position: relative;
@@ -778,5 +921,19 @@
     color: #a3b8ba;
     font-size: 10px;
     line-height: 13px;
+  }
+}
+
+@media (min-width: 1201px) {
+  .crest-story-content > .crest-section.crest-system .crest-system__story h2 {
+    top: auto;
+  }
+
+  .crest-story-content > .crest-section.crest-system .crest-finance-workflow {
+    position: static;
+    top: auto;
+    left: auto;
+    width: min(100%, 820px);
+    margin: 0 0 0 auto;
   }
 }

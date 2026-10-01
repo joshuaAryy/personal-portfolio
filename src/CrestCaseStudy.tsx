@@ -209,19 +209,6 @@ export default function CrestCaseStudy() {
                 </a>
               </figcaption>
             </figure>
-            <aside className="crest-demo-figure__decision-boundary" aria-label="Decision authority">
-              <p>
-                <strong>DETERMINISTIC RULES</strong>
-                <span>finance + policy authority</span>
-              </p>
-              <p>
-                <strong>GEMINI</strong>
-                <span>interprets retrieved policy</span>
-                <span aria-hidden="true">/</span>
-                <strong>HUMAN REVIEW</strong>
-                <span>decides the workflow action</span>
-              </p>
-            </aside>
           </div>
         </section>
 
@@ -234,28 +221,92 @@ export default function CrestCaseStudy() {
               people retain decision authority.
             </p>
           </div>
-          <figure className="crest-transaction-flow" aria-label="Transaction, policy and rules, and human review">
-            <div className="crest-transaction-flow__stages">
-              <section className="crest-transaction-flow__transaction">
-                <span>01</span>
-                <h3>TRANSACTION</h3>
-                <p>A request enters expense review.</p>
-              </section>
-              <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
-              <section className="crest-transaction-flow__context" aria-label="Policy and deterministic rules">
-                <span>02</span>
-                <h3>POLICY + RULES</h3>
-                <p>Rules surface patterns; retrieval supplies relevant policy passages.</p>
-              </section>
-              <span className="crest-transaction-flow__arrow" aria-hidden="true">→</span>
-              <section className="crest-transaction-flow__review">
-                <span>03</span>
-                <h3>HUMAN REVIEW</h3>
-                <p>A reviewer weighs the context and can move a request toward preapproval.</p>
-              </section>
+          <figure className="crest-evidence-map" aria-labelledby="crest-evidence-map-caption">
+            <figcaption className="sr-only" id="crest-evidence-map-caption">
+              A sample expense request moves through two evidence paths before a person makes the decision.
+            </figcaption>
+            <svg className="crest-evidence-map__connectors" viewBox="0 0 1432 206" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="crest-flow-gold-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0 0L7 3.5L0 7Z" fill="#c79b45" />
+                </marker>
+                <marker id="crest-flow-teal-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0 0L7 3.5L0 7Z" fill="#56bdbc" />
+                </marker>
+              </defs>
+              <path className="crest-evidence-map__route--gold" d="M255 76H275V73H320" markerEnd="url(#crest-flow-gold-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M255 124H275H320" markerEnd="url(#crest-flow-teal-arrow)" />
+              <path className="crest-evidence-map__route--gold" d="M652 73H1082V103H1128" markerEnd="url(#crest-flow-gold-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M570 143H692" markerEnd="url(#crest-flow-teal-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M975 143H1082V103H1128" markerEnd="url(#crest-flow-teal-arrow)" />
+              <circle className="crest-evidence-map__junction--gold" cx="275" cy="76" r="4" />
+              <circle className="crest-evidence-map__junction--teal" cx="275" cy="124" r="4" />
+              <circle className="crest-evidence-map__junction--gold" cx="1082" cy="73" r="4" />
+              <circle className="crest-evidence-map__junction--teal" cx="1082" cy="143" r="4" />
+            </svg>
+            <div className="crest-evidence-map__stage-labels" aria-hidden="true">
+              <span>01 REQUEST</span>
+              <span>02 TWO EVIDENCE PATHS</span>
+              <span>03 HUMAN DECISION</span>
             </div>
-          </figure>
-          <figure className="crest-finance-workflow" aria-labelledby="crest-finance-workflow-title">
+            <section className="crest-evidence-map__node crest-evidence-map__request" aria-label="Sample request: Conference registration, 1,200 dollars">
+              <div className="crest-evidence-map__node-head">
+                <span className="crest-evidence-map__eyebrow">SAMPLE REQUEST</span>
+                <svg viewBox="0 0 20 22" aria-hidden="true">
+                  <path d="M4 2.5h12v17l-6-4-6 4z" />
+                  <path d="M7 7h6M7 10h6" />
+                </svg>
+              </div>
+              <h3>Conference registration</h3>
+              <strong className="crest-evidence-map__amount">$1,200</strong>
+              <span className="crest-evidence-map__category">TRAVEL &amp; EVENTS</span>
+            </section>
+            <section className="crest-evidence-map__node crest-evidence-map__signals" aria-label="DETERMINISTIC RULES: budget and spend signals">
+              <span className="crest-evidence-map__eyebrow">DETERMINISTIC SIGNALS</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 24 22" aria-hidden="true">
+                  <path d="M3 19V12M9 19V7M15 19V3M21 19V9" />
+                </svg>
+                <h3>Budget + spend rules</h3>
+              </div>
+              <p>Budget · prior spend · thresholds</p>
+            </section>
+            <section className="crest-evidence-map__node crest-evidence-map__policy" aria-label="Retrieved policy passages matched to the request">
+              <span className="crest-evidence-map__eyebrow">RETRIEVED POLICY</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 20 22" aria-hidden="true">
+                  <path d="M4 2.5h8l4 4v13H4z" />
+                  <path d="M12 2.5v4h4M7 11h6M7 14h6" />
+                </svg>
+                <h3>Relevant passages</h3>
+              </div>
+              <p>Matched to the request</p>
+            </section>
+            <section className="crest-evidence-map__node crest-evidence-map__interpretation" aria-label="Gemini interprets retrieved policy context">
+              <span className="crest-evidence-map__eyebrow">POLICY INTERPRETATION</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 24 22" aria-hidden="true">
+                  <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM20 16v4M18 18h4" />
+                </svg>
+                <h3>Gemini</h3>
+              </div>
+              <p>Reads retrieved policy context</p>
+            </section>
+            <section className="crest-evidence-map__node crest-evidence-map__decision" aria-label="Human review retains decision authority">
+              <span className="crest-evidence-map__eyebrow">DECISION AUTHORITY</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 22 24" aria-hidden="true">
+                  <circle cx="11" cy="6" r="3.2" />
+                  <path d="M4 21v-3.2a7 7 0 0 1 14 0V21M7 21h8" />
+                </svg>
+                <h3>HUMAN REVIEW</h3>
+              </div>
+              <p>A reviewer weighs the context and chooses the next action.</p>
+              <div className="crest-evidence-map__actions" aria-hidden="true">
+                <span>APPROVE</span><span>DENY</span>
+              </div>
+            </section>
+          </figure>          <figure className="crest-finance-workflow" aria-labelledby="crest-finance-workflow-title">
             <figcaption id="crest-finance-workflow-title">
               <span>FINANCE Q&amp;A + REPORTING</span>
             </figcaption>
