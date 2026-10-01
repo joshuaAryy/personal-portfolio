@@ -10,6 +10,8 @@ The 468px comparison supports v8 as a stronger J reconstruction direction than t
 
 Whole-mark integration remains **NOT CLEAR**. The bright near-continuous rim still encloses the J like a medallion, the hook reads apart from that rim, and the cyan flow appears laid over a blue disc instead of joining the mark. The archive's uneven rim and cyan sweep remain more integrated. The review covered 468px only; it does not establish performance at 54/32/16px.
 
+In v8 `3325:191`, the editable ring group is `3325:325` (outer rim `3325:331`, inner rim `3325:332`); the hook-energy spill is `3325:362`. These IDs locate the critique only; keep the candidate unchanged until owner review.
+
 Keep archive `159:2` in production. Keep v8 `3325:191` as the active owner-review candidate pending owner review; this critique does not reject or promote it. No production asset or implementation changed.
 
 ## Earlier history and superseded statuses
