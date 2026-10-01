@@ -290,12 +290,12 @@
 /* Product-first Cho?Veigo pass 03: translate the Figma story into a readable system. */
 .choveigo-story-content > .choveigo-hero {
   min-height: 0;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(320px, 548px) minmax(0, 820px);
   align-items: start;
-  gap: 30px;
+  gap: 30px 64px;
   border-bottom: 0;
 }
-.choveigo-hero__opening { max-width: 790px; }
+.choveigo-hero__opening { max-width: 548px; }
 .choveigo-hero__opening h1 {
   max-width: 790px;
   margin-top: 25px;
@@ -514,6 +514,18 @@
 .choveigo-system__tailoring > p { font-size: 13px; }
 .choveigo-fit { padding-top: 34px; }
 .choveigo-review__story > p:last-child { max-width: 620px; }
+
+@media (max-width: 1600px) {
+  .choveigo-story-content > .choveigo-hero {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+  }
+  .choveigo-hero__opening { max-width: 790px; }
+  .choveigo-hero .choveigo-recommendations {
+    max-width: 920px;
+    padding-top: 0;
+  }
+}
 
 @media (max-width: 1200px) {
   .choveigo-story-content > .choveigo-hero {
