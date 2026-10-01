@@ -27,7 +27,7 @@ The 2026-09-30 owner re-review is a quality and effort calibration, not a reques
 | Reference | Preserve and learn from |
 |---|---|
 | Stush Patties | A very brief problem statement, direct “I built” ownership, immediate outcome, and a files → parse → shared schema → normalization → handoff → Power BI pipeline that reads quickly. |
-| Living in Silico | A concise representation-first story that makes SMILES, Morgan fingerprints, and experimental methods understandable through figures before adding explanatory detail. |
+| Living in Silico | A concise representation-first story that makes SMILES, Morgan fingerprints, and experimental methods understandable through figures before adding explanatory detail. Keep the radius/bit parameters in the representation schematic rather than the DeepMol run step; source records do not establish their exact relationship to the 500 generated samples. |
 | Fraymakers | A system schematic with enough visual weight to explain the match-to-frame path, layered compositor, and later YAML configuration without relying on dense prose. |
 | Food Tracker | Product and problem first, then a four-step retrieval story that gives the technical challenge and benchmark meaning. Keep the owner-positive first fold; its next major visual lift should use authentic product/demo media when available. |
 

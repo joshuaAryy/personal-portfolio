@@ -6,7 +6,7 @@ const experiments = [
     number: "01",
     kind: "SEQUENCE GENERATION",
     title: "DeepMol",
-    steps: ["CSVLoader", "Morgan fingerprints (radius 2 / 128 bits)", "RNN MolecularGenerator"],
+    steps: ["CSVLoader", "Morgan fingerprints", "RNN MolecularGenerator"],
     purpose: "SMILES sequence generation",
     outcomeLabel: "METHOD",
     outcome: "SMILES sequence generation",
