@@ -323,7 +323,7 @@ export default function CrestCaseStudy() {
               </div>
             </div>
             <p className="crest-finance-workflow__boundary">
-              Separate from the documented Brim policy PDF retrieval path.
+              Ask a finance question or open a reporting view.
             </p>
           </figure>
         </section>

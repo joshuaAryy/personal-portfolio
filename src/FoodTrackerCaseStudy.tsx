@@ -97,7 +97,7 @@ function FoodBenchmark() {
             aria-label={`${set.name.toLowerCase()} query set`}
           >
             <h3>{set.name} · {set.queries} QUERIES</h3>
-            <p className="food-benchmark__definition">Top-1 means the correct food ranked first.</p>
+            <p className="food-benchmark__definition">Top-1 means the correct food ranked first. Bars show share.</p>
             <div className="food-benchmark__bar-row">
               <span>LEGACY BASELINE</span>
               <div role="img" aria-label={`Legacy baseline: ${set.legacy.top1} of ${set.queries}`}>
