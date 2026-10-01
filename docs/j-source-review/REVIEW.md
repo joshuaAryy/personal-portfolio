@@ -4,6 +4,14 @@
 
 Production continues to use archive `159:2` as its large/medium fallback. Sonnet 5.5 v8 `3325:191` is the active owner-review candidate; board `3325:36` compares archive, v7 `3311:2`, and v8. The owner identifies this as a materially stronger, separate reconstruction direction. Do not move v8 into production before owner review. The old Codex reconstruction lineage, including Pass16-80 and archive-trace candidate `3364:2`, is rejected/closed. Small contexts keep separate ring-free optical marks.
 
+## Sonnet v8 scoped macro critique (2026-10-01)
+
+The 468px comparison supports v8 as a stronger J reconstruction direction than the rejected Codex line: the crown, long vertical, and lifted hook read clearly as a J, and its textured gold face with localized cyan S-flow is closer to the archive than v7. This is a scoped visual critique of the supplied large-size comparison, not owner approval.
+
+Whole-mark integration remains **NOT CLEAR**. The bright near-continuous rim still encloses the J like a medallion, the hook reads apart from that rim, and the cyan flow appears laid over a blue disc instead of joining the mark. The archive's uneven rim and cyan sweep remain more integrated. The review covered 468px only; it does not establish performance at 54/32/16px.
+
+Keep archive `159:2` in production. Keep v8 `3325:191` as the active owner-review candidate pending owner review; this critique does not reject or promote it. No production asset or implementation changed.
+
 ## Earlier history and superseded statuses
 
 ## Superseded archive-closure record (historical only)
