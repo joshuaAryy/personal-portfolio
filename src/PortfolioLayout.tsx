@@ -143,9 +143,73 @@ function Header() {
 const projectRailMarks: Record<string, string | undefined> = {
   "food-tracker": "/media/profile/food-tracker-mark.svg",
   crest: "/media/profile/profile-crest-emblem.png",
-  choveigo: "/media/choveigo-recommendations.png",
+  choveigo: "/media/profile/choveigo-mark.svg",
   fraymakers: "/media/lobby/project-fraymakers-index.png",
 };
+
+const activityArt = {
+  "food-tracker": {
+    src: "/media/lobby/activity-art/activity-food-tracker.svg",
+    size: 50,
+    frameSize: 34,
+    nodeId: "I2356:611;95:51",
+  },
+  choveigo: {
+    src: "/media/lobby/activity-art/activity-choveigo.svg",
+    size: 54,
+    frameSize: 38,
+    nodeId: "I2356:611;95:11",
+  },
+  "living-in-silico": {
+    src: "/media/lobby/activity-art/activity-living-in-silico.svg",
+    size: 54,
+    frameSize: 38,
+    nodeId: "I2356:611;95:25",
+  },
+  "stush-patties": {
+    src: "/media/lobby/activity-art/activity-stush-patties.svg",
+    size: 54,
+    frameSize: 38,
+    nodeId: "I2356:611;95:37",
+  },
+  crest: {
+    src: "/media/lobby/activity-art/activity-crest.svg",
+    size: 54,
+    frameSize: 38,
+    nodeId: "I2356:611;95:44",
+  },
+} as const;
+
+type ActivityArtId = keyof typeof activityArt;
+
+function RailActivityArt({ activity }: { activity: ActivityArtId }) {
+  const art = activityArt[activity];
+  const focusSize = art.frameSize === 34;
+  return (
+    <span
+      className={`rail-avatar rail-avatar--activity${focusSize ? " rail-avatar--activity-focus" : ""}`}
+      aria-hidden="true"
+      data-node-id={art.nodeId}
+    >
+      <img src={art.src} alt="" width={art.size} height={art.size} />
+    </span>
+  );
+}
+
+function PortfolioActivityArt() {
+  return (
+    <span className="rail-avatar rail-avatar--activity rail-avatar--activity-portfolio" aria-hidden="true" data-node-id="I2356:611;95:18">
+      <img
+        src="/media/lobby/activity-art/activity-portfolio-ring.svg"
+        alt=""
+        width={38}
+        height={38}
+        data-node-id="I2356:611;95:19"
+      />
+      <span data-node-id="I2356:611;95:20">J</span>
+    </span>
+  );
+}
 
 function RailIdentity({ src, className = "" }: { src?: string; className?: string }) {
   return (
@@ -184,7 +248,7 @@ function Rail() {
           <>
             <strong className="rail-availability__eyebrow">CURRENT FOCUS</strong>
             <Link className="rail-availability__focus-link" to={projectCasePaths["food-tracker"]}>
-              <RailIdentity src={projectRailMarks["food-tracker"]} className="rail-avatar--focus" />
+              <RailActivityArt activity="food-tracker" />
               <span>
                 <strong>Food Tracker</strong>
                 <small>IN DEVELOPMENT</small>
@@ -241,26 +305,26 @@ function Rail() {
             <div className="rail-group rail-group--activity-status rail-group--activity-status-development">
               <h3>IN DEVELOPMENT (2)</h3>
               <Link className="rail-link rail-link--status" to={projectCasePaths.choveigo}>
-                <RailIdentity src={projectRailMarks.choveigo} />
+                <RailActivityArt activity="choveigo" />
                 <span><span>{railProjects.find((item) => item.slug === "choveigo")?.name}</span><small>IN DEVELOPMENT</small></span>
               </Link>
               <Link className="rail-link rail-link--status" to="/home">
-                <RailIdentity src="/media/lobby/client-j-mark.svg" />
+                <PortfolioActivityArt />
                 <span><span>Portfolio</span><small>IN DEVELOPMENT</small></span>
               </Link>
             </div>
             <div className="rail-group rail-group--activity-status rail-group--activity-status-completed">
               <h3>COMPLETED (3)</h3>
               <Link className="rail-link rail-link--status" to={experienceStoryPaths["living-in-silico"]}>
-                <RailIdentity src="/media/profile/living-in-silico-logo.png" />
+                <RailActivityArt activity="living-in-silico" />
                 <span><span>Living in Silico</span><small>COMPLETED</small></span>
               </Link>
               <Link className="rail-link rail-link--status" to={experienceStoryPaths["stush-patties"]}>
-                <RailIdentity src="/media/profile/stush-patties-logo.png" />
+                <RailActivityArt activity="stush-patties" />
                 <span><span>Stush Patties</span><small>COMPLETED</small></span>
               </Link>
               <Link className="rail-link rail-link--status" to={projectCasePaths.crest}>
-                <RailIdentity src="/media/lobby/hackathon-trophy.svg" />
+                <RailActivityArt activity="crest" />
                 <span><span>Crest</span><small>{"3RD PLACE \u00b7 COMPLETED"}</small></span>
               </Link>
             </div>

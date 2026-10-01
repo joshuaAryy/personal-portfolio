@@ -1,0 +1,25 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Activity Art / Chovego" filter="url(#filter0_d_0_504)">
+<g clip-path="url(#clip0_0_504)">
+<circle id="Ellipse" cx="27" cy="27" r="18.5" fill="#031317" stroke="#B87A24"/>
+<rect id="Rectangle" x="20.66" y="16.86" width="12.68" height="17.24" fill="#010507" stroke="#F5BF4F"/>
+<line id="Line" x1="22.82" y1="21.94" x2="31.18" y2="21.94" stroke="#00C7C9"/>
+<line id="Line_2" x1="22.82" y1="26.88" x2="31.18" y2="26.88" stroke="#B87A24"/>
+</g>
+<rect x="8.75" y="8.75" width="36.5" height="36.5" rx="18.25" stroke="#B88533" stroke-opacity="0.6" stroke-width="1.5"/>
+</g>
+<defs>
+<filter id="filter0_d_0_504" x="0" y="0" width="54" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.04 0 0 0 0 0.74 0 0 0 0 0.86 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_504"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_504" result="shape"/>
+</filter>
+<clipPath id="clip0_0_504">
+<rect x="8" y="8" width="38" height="38" rx="19" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -13,6 +13,7 @@ Assets collected for League-client shell and lobby reuse. The current production
 - Revised contextual Help overlay review: [2298:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2298-3474), page `510:22`; based on Archive `69:207`.
 - Education icon source frame nodes are `738:3316` / `741:*`; Hackathon trophy source frame is `730:3316` / `733:*`.
 - Archive Home reference: [node 69:37](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=69-37) on page `510:2`.
+- Home/Resume summary Activity Art was aligned to the current shell instance `2356:611` on 2026-10-01. These compact status illustrations are distinct from project logos; project-list slots retain the selected project marks.
 
 ## Current Education usage (2026-09-28)
 
@@ -29,6 +30,12 @@ Dimensions are intrinsic raster pixels or SVG viewBox units. SHA-256 values are 
 | `academic-expected-2028.svg` | SVG | 0 0 22 22 | 565 | `ad34f2d51ab2b7c20c519811fe8fd018b94c30683a33a98b91542e447a38e909` | [753:2](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=753-2) |
 | `academic-scholarship.svg` | SVG | 0 0 22 22 | 497 | `e4124edf79e48a28f834ca9e08275baa03ecaefb346e7ced258197ca77b650e3` | [741:8](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=741-8) |
 | `academic-software-specialization.svg` | SVG | 0 0 22 22 | 350 | `1c1368421a71dc11ef3a319a2230eb64d8b244d7f0b5fbbc8fd150894ec9bbd1` | [741:14](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=741-14) |
+| `activity-art/activity-choveigo.svg` | SVG | 0 0 54 54 | 1490 | `975b85f067e78d21da62a277d9760dd44f22f0f5c47c302d91ce342683ca03ac` | Shell `2356:611`, Activity Art child `95:11` |
+| `activity-art/activity-crest.svg` | SVG | 0 0 54 54 | 1489 | `83d58fabff554627eab8ed6bb3822ddc6adaae9e473afbf26b6133565eef60bf` | Shell `2356:611`, Activity Art child `95:44` |
+| `activity-art/activity-food-tracker.svg` | SVG | 0 0 50 50 | 1432 | `b6366d08e8db828c842019b00ae33827658c361a69fca3e4972c12f6db3b7b1d` | Shell `2356:611`, Activity Art child `95:51` |
+| `activity-art/activity-living-in-silico.svg` | SVG | 0 0 54 54 | 1926 | `7668cdfa2a2946bbf1e88281ce12d550a4c350012ad7e7c3b26a50081cf22d7` | Shell `2356:611`, Activity Art child `95:25` |
+| `activity-art/activity-portfolio-ring.svg` | SVG | 0 0 38 38 | 253 | `56c6c00049d321c3faaad921a41857fa5c8572f2b6da7a7b2080e295f5e57594` | Shell `2356:611`, Portfolio ring child `95:19`; J is text child `95:20` |
+| `activity-art/activity-stush-patties.svg` | SVG | 0 0 54 54 | 1484 | `85cd0c0d1d29d034a37ff5817c943019ef8d2414e068f9c317a9d7c5b990892c` | Shell `2356:611`, Activity Art child `95:37` |
 | `banner-art.svg` | SVG | 0 0 246 716 | 3266 | `2a29cfe3137388596e944f7735a6b9a610998ce8f5320aee6e2800a946f8b5a1` | [599:2](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=599-2) |
 | `circle-lines-gold.svg` | SVG | 0 0 496 466 | 757 | `8eb7c346ee6c4e732d0b68ab9616850aeb284cbae99e3d3a262cbaf382f062f3` | [CommunityDragon](https://raw.communitydragon.org/latest/plugins/rcp-fe-lol-static-assets/global/default/svg/circle-lines-gold.svg) |
 | `client-j-mark.svg` | SVG | 0 0 54 54 | 2833 | `88cff156b8cbb74a9708dad57f594263f5035cf829de07cce3af15cc722860f1` | [2252:3450](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2252-3450) |

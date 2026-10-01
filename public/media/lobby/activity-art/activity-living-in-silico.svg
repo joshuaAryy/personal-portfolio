@@ -1,0 +1,30 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Activity Art / Living in Silico" filter="url(#filter0_d_0_511)">
+<g clip-path="url(#clip0_0_511)">
+<circle id="Ellipse" cx="27" cy="27" r="18.5" fill="#031317" stroke="#B87A24"/>
+<line id="Line" x1="26.6927" y1="17.7561" x2="17.1927" y2="6.35607" stroke="#B87A24" stroke-width="0.8"/>
+<line id="Line_2" x1="17.4756" y1="28.5007" x2="36.0956" y2="27.3607" stroke="#B87A24" stroke-width="0.8"/>
+<line id="Line_3" x1="35.8639" y1="30.3473" x2="26.7439" y2="22.7473" stroke="#B87A24" stroke-width="0.8"/>
+<line id="Line_4" x1="27.4" y1="37.64" x2="27.4" y2="57.78" stroke="#B87A24" stroke-width="0.8"/>
+<circle id="Ellipse_2" cx="27" cy="17.5" r="2.5" fill="#00C7C9"/>
+<circle id="Ellipse_3" cx="17.5" cy="28.9" r="2.5" fill="#00C7C9"/>
+<circle id="Ellipse_4" cx="36.12" cy="30.04" r="2.5" fill="#00C7C9"/>
+<circle id="Ellipse_5" cx="27" cy="37.64" r="2.5" fill="#00C7C9"/>
+</g>
+<rect x="8.75" y="8.75" width="36.5" height="36.5" rx="18.25" stroke="#B88533" stroke-opacity="0.6" stroke-width="1.5"/>
+</g>
+<defs>
+<filter id="filter0_d_0_511" x="0" y="0" width="54" height="54" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.04 0 0 0 0 0.74 0 0 0 0 0.86 0 0 0 0.1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_0_511"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_0_511" result="shape"/>
+</filter>
+<clipPath id="clip0_0_511">
+<rect x="8" y="8" width="38" height="38" rx="19" fill="white"/>
+</clipPath>
+</defs>
+</svg>
