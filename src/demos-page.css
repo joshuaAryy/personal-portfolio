@@ -204,6 +204,10 @@
   border-left: 14px solid #f0e4bb;
 }
 
+#root .main.main--demos .demo-player__play-icon::after {
+  content: none;
+}
+
 #root .main.main--demos .demo-player__play:active {
   transform: translate(-50%, -50%) scale(0.97);
 }
