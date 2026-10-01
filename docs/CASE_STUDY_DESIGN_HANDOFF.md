@@ -116,6 +116,8 @@ All six first-fold passes are source-synced, and the integrated production build
 
 ## Crest | policy retrieval attribution | pass 01
 
+**Superseded on 2026-10-01:** the public “Deployment details are owner-reported” caption was removed from Figma node `1962:33` and React. Keep the deployment qualification in `CASE_STUDY_CONTENT_SOURCE.md`; it is source truth, not visitor-facing copy. Existing renders remain valid for their original map geometry/accessibility scope, but Crest is queued for a post-change render comparison of the policy figure and full page.
+
 - Revealed the existing caption node `1962:33` directly below the unchanged five-stage retrieval path with the copy: `Deployment details are owner-reported.` This scopes the detailed deployment path to owner-reported information without claiming live-service verification.
 - Auto-layout path group `1962:7` grew from 50 px to 75 px. Divider `1962:34` and decision-authority row `1962:35` reflowed down 25 px with the existing 24 px gaps preserved; parent plate `1962:2` remains 370 px tall. The documented PDF-to-chunking-to-Gemini-embedding-to-Atlas-vector-search-to-grounded-prompt stages remain intact.
 - Left the first-fold sample capture and adjacent role annotation (`2304:2`) unchanged. The separate Finance Q&A/reporting workflow (`2367:2`) remains separate.

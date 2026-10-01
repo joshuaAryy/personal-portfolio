@@ -352,9 +352,6 @@ export default function CrestCaseStudy() {
                 </li>
               ))}
             </ol>
-            <p className="crest-policy-figure__attribution">
-              Deployment details are owner-reported.
-            </p>
             <p className="crest-policy-figure__trace">
               PDF extraction + chunking → embedding-001 (3,072 dimensions) →
               Atlas vector search → retrieved passages in a grounded prompt.
