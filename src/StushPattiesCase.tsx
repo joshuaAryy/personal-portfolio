@@ -156,15 +156,15 @@ export default function StushPattiesCase() {
         <h1 id="stush-title">Stush Patties</h1>
         <div className="stush-data-hero__eyebrow">
           <span>SOFTWARE ENGINEERING INTERN · DATA PIPELINES &amp; AUTOMATION</span>
-          <span>SEP—NOV 2025</span>
+          <span>Sep–Nov 2025</span>
         </div>
         <div className="stush-data-hero__bottom">
           <div className="stush-data-hero__contribution">
             <p className="stush-overline stush-data-hero__contribution-label">
-              SOFTWARE ENGINEERING INTERN · PYTHON DATA PIPELINE · SEP—NOV 2025
+              INCONSISTENT SALES FILES → REPEATABLE REPORTING
             </p>
             <p>
-              Inconsistent sales files made repeatable reporting difficult. I built Python parsing and
+              Sales files arrived in inconsistent layouts, making repeatable reporting difficult. I built Python parsing and
               normalization steps to map them into one shared schema for Power BI reporting.
             </p>
           </div>
@@ -172,9 +172,9 @@ export default function StushPattiesCase() {
             <strong>FILES</strong>
             <div>
               <p>SALES FILES · LAYOUTS VARY</p>
-              <span>Different file structures</span>
+              <span>Different structures</span>
             </div>
-            <p className="stush-input-summary__formats">CSV / XLSX / XLSB · FORMATS ACROSS INPUTS</p>
+            <p className="stush-input-summary__formats">CSV / XLSX / XLSB · ACROSS INPUTS</p>
             <span className="stush-input-summary__rule" aria-hidden="true" />
           </aside>
         </div>
