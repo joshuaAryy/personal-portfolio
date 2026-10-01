@@ -312,8 +312,7 @@
   .stush-learning__close { text-align: left; }
 }
 
-/* Pass 02 opening: put the project identity and the end-to-end transformation
-   in the first fold, with Koyo kept as a separate source-specific branch. */
+/* Current story overrides preserve the source-neutral pipeline and supporting sections. */
 .stush-data-story { padding-top: 0; }
 .stush-case-nav {
   display: flex;
@@ -458,48 +457,6 @@
 .stush-handoff-stage ul { gap: 4px; margin-top: 8px; }
 .stush-handoff-stage li { min-height: 23px; font-size: 10px; }
 .stush-powerbi { margin-top: 6px; padding: 6px; }
-.stush-koyo-branch {
-  grid-column: 1 / -1;
-  grid-row: 3;
-  display: grid;
-  grid-template-columns: auto 18px minmax(0, 1fr) 18px auto;
-  align-items: center;
-  gap: 8px;
-  min-height: 31px;
-  margin-top: 6px;
-  padding: 5px 9px;
-  border: 1px solid rgba(196, 145, 81, .58);
-  background: rgba(52, 39, 24, .58);
-  color: #dca65f;
-  font-size: 9px;
-  letter-spacing: .05em;
-  text-align: center;
-}
-.stush-koyo-branch > span { color: #dca65f; font-size: 14px; }
-.stush-koyo-branch > b { font-weight: 700; }
-.stush-data-story .stush-koyo-note {
-  position: relative;
-  grid-column: 1 / -1;
-  grid-row: 4;
-  margin: 0;
-  padding: 5px 0 0 40px;
-  border: 0;
-  background: transparent;
-  color: #dca65f;
-  font-size: 9px;
-  line-height: 1.4;
-}
-.stush-data-story .stush-koyo-note::before {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 28px;
-  height: 1px;
-  background: #dca65f;
-  content: "";
-}
-.stush-data-story .stush-koyo-note strong { margin-right: 6px; letter-spacing: .06em; }
-.stush-pipeline figcaption { grid-row: 5; padding-top: 6px; font-size: 9px; }
 .stush-section-heading { order: 0; margin-top: 42px; }
 .stush-contract { order: 1; margin-top: 22px; }
 .stush-exception { order: 2; }
@@ -520,18 +477,12 @@
     padding-bottom: 0;
   }
 
-  .stush-data-story .stush-koyo-note {
-    margin-top: 14px;
-  }
 }
 
 @media (max-width: 1150px) {
   .stush-data-hero__bottom { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .stush-input-summary { min-height: 84px; }
   .stush-input-summary__rule { display: none; }
-  .stush-koyo-branch { grid-row: 4; }
-  .stush-koyo-note { grid-row: 5; }
-  .stush-pipeline figcaption { grid-row: 6; }
 }
 
 @media (max-width: 740px) {
@@ -547,17 +498,6 @@
   .stush-input-summary > strong { font-size: 22px; }
   .stush-pipeline { margin-top: 12px; padding: 14px 12px 12px; }
   .stush-pipeline__topline h3 { font-size: 10px; line-height: 1.55; }
-  .stush-koyo-branch {
-    grid-row: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 5px;
-    padding: 8px;
-    font-size: 8px;
-  }
-  .stush-koyo-note,
-  .stush-pipeline figcaption { grid-row: auto; }
   .stush-section-heading { margin-top: 30px; }
   .stush-contract { margin-top: 18px; }
 }

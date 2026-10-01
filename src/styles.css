@@ -4123,7 +4123,6 @@ a:focus-visible {
 .stush-map__eyebrow,
 .stush-map__source-label,
 .stush-flow__number,
-.stush-koyo-note > span,
 .stush-role__context > span,
 .stush-reflection > span {
   color: #d8b773;
@@ -4379,22 +4378,6 @@ a:focus-visible {
   color: #4d5b50;
   font-size: 13px;
   line-height: 1.48;
-}
-.stush-koyo-note {
-  margin-top: 14px;
-  padding: 10px 11px;
-  border-left: 2px solid #ad753e;
-  background: #e1d8c7;
-}
-.stush-koyo-note > span {
-  color: #87542f;
-  font-size: 9px;
-}
-.stush-koyo-note p {
-  margin-top: 5px;
-  color: #38463b;
-  font-size: 11px;
-  line-height: 1.4;
 }
 .stush-map figcaption {
   padding-top: 15px;
@@ -4994,7 +4977,6 @@ a:focus-visible {
   .stush-flow__stage:not(:last-child)::after { display: none; }
   .stush-flow__stage h3 { max-width: none; margin-top: 9px; font-size: 18px; }
   .stush-flow__stage > p { max-width: none; margin-top: 7px; font-size: 13px; }
-  .stush-koyo-note { max-width: 360px; }
   .stush-map figcaption { font-size: 10px; }
   .stush-role { padding: 43px 0; }
   .stush-role__context { grid-column: 1; margin-top: 0; padding-left: 14px; }
