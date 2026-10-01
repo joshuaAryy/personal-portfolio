@@ -20,7 +20,7 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 ## Bounded identity and asset work
 
 - Frontend implementation is continuous. Archive `159:2` is the selected large-mark asset; no identity exploration gates mature React work. Final visual acceptance follows render → compare → critique → correct → owner review.
-- Cho'Veigo is the only remaining project-mark decision. Treat `public/media/profile/choveigo-mark.svg` and Figma `3297:45/54/63/72` as an interim match-path candidate, not a frozen canonical identity. Create and select one product-appropriate canonical mark in a bounded pass; do not start a prolonged logo loop. Other project marks remain frozen.
+- Cho'Veigo's canonical mark is selected and frozen: the existing product-specific match-path art in `public/media/profile/choveigo-mark.svg`, matching Figma `3297:45/54/63/72`. It is supported at 26px and larger for the actual Profile/lobby placements; it is too diagrammatic at 16px, which has no active product placement. Review proof `3374:2` documents the limit. No new logo pass is needed. All project marks are frozen.
 - Resume Found has received its one targeted Figma/React environment pass using authentic Riot/CommunityDragon Ready Check material (Figma `2407:176`, overlays `3292:484/485/486`): dim underlay, dark radial vignette, subtle teal/navy light, authentic chassis, localized central energy, and demoted but visible shell/rail. Render comparison remains open; do not restart the architecture.
 
 ## Durable direction and documentation
