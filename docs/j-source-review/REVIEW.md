@@ -1,14 +1,14 @@
 # Canonical J Review
 
-## Current decision - CLOSED / ARCHIVE SELECTED (2026-09-30)
+## Current owner direction - BOUNDED FINAL RECONSTRUCTION ACTIVE; ARCHIVE FALLBACK IN USE (2026-09-30)
 
-Archive 159:2 is the selected large/primary mark for Opening, Resume Found, and other large contexts. The bounded final candidate frame 3321:2 places the exact archive image at 3350:2 (matching source hash 359c8487f282df11448ddf0fb31a874433069531). This is exact source reuse, not a stronger editable reconstruction, so the archive ships and the J design loop is closed. Keep separate ring-free optical glyphs 3289:157/162/167 at 54/32/16px. A source-resolution audit on 2026-09-30 found only the 220×220 JPEG in Figma; the 700×700 export is resampled, and no exact higher-resolution copy was found in the Figma/repository sources inspected. React keeps the 700px export for smoother output sampling, not added detail. A prior large Opening render shows softness against the crisp chassis; this is a fixed source limit, not a reason to reopen reconstruction.
+Archive 159:2 remains the strongest complete mark and current React fallback. The owner reauthorized one final archive-faithful whole-mark reconstruction: one primary attempt plus at most two meaningful correction cycles, then stop. Reconstruct the integrated J silhouette, crown, shaft, bowl/hook, counter, orbit, overlaps, internal energy, and material hierarchy together. Do not return to orbit variants or micro-adjustments. If the result is not materially stronger than the archive at large/medium size, keep archive 159:2 for launch; small 54/32/16px optical marks remain separate. This work does not block React.
 
-Updated 2026-09-30. Historical comparison detail is preserved below; the closed decision above controls.
+## Prior decision - SUPERSEDED BY CURRENT OWNER DIRECTION
 
-## Status
+## Historical status before latest owner steering
 
-**CLOSED / ARCHIVE SELECTED; SOURCE LIMIT RECORDED.**
+Prior status: CLOSED / ARCHIVE SELECTED; current owner direction above supersedes this status. Historical comparison detail below remains evidence only.
 
 ## Historical comparison record
 
@@ -47,10 +47,10 @@ The `3089:2` board directly compares the archive, current reconstruction, Pass30
 
 ## Current selection and implementation check
 
-Archive 159:2 is selected in React for Opening, Resume Found, and other large identity contexts. The ring-free glyphs 3289:157/162/167 remain the optical-size reference at 54/32/16px. The 700px Figma export is resampled from the 220px source. Source audit found no exact higher-resolution copy in the Figma/repository material inspected; prior large render shows softness against crisp UI. Keep the archive fallback and separate small glyphs. J design is closed; this source constraint does not authorize another reconstruction.
+Historical source note: archive 159:2 is in React for Opening, Resume Found, and other large identity contexts. The owner has since reauthorized one bounded whole-mark reconstruction; React continues on the archive fallback while that work runs. The ring-free glyphs 3289:157/162/167 remain the optical-size reference at 54/32/16px. The 700px Figma export is resampled from the 220px source; no exact higher-resolution copy was found in the inspected Figma/repository material. This source limit does not block implementation.
 
 ## Historical recommendation - superseded by final selection, 2026-09-30
 
-Earlier pass recommendations and candidates remain historical evidence only. The final operating decision is archive 159:2 for large identity use, with ring-free optical sizes for smaller contexts. No further J reconstruction is authorized. A prior large Opening render shows the softness inherent in the 220px source; no exact larger source was found in the inspected Figma/repository copies. Broader Opening and Resume Found render parity remains separate from J design.
+Earlier pass recommendations and candidates remain historical evidence only. At the time of the prior closure, archive 159:2 was selected for large identity use, with ring-free optical sizes for smaller contexts. The latest owner steering supersedes the prior no-more-reconstruction rule with one final bounded whole-mark exercise. A prior large Opening render shows the softness inherent in the 220px source; no exact larger source was found in the inspected copies. Broader Opening and Resume Found render parity remains separate from J design.
 
 The cited Pass54–80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37–58 changed Figma study boards; Pass59–80 are local evidence. The final archive selection supersedes the old NEEDS REDESIGN status and its proposed next steps. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.
