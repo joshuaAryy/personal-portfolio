@@ -40,6 +40,8 @@ Latest recorded staging deployment, 2026-10-01: commit `fee85b3` was published t
 
 These artifacts are now created. Production roots remain 1920×1080 with intended scrolling. Review frames are unclipped exact clones of the authored body, with no manual copy rewrite; regenerate or synchronize a review clone after any source-body edit. Their creation makes the complete page inspectable, not automatically accepted.
 
+On 2026-10-01, a live Figma text audit confirmed exact authored-body/review-clone text matches across all six stories, including Cho’Veigo’s current “IN PRACTICE” copy and Crest’s removed provenance sentence. This verifies Figma clone currency only; the current React renders and full-page visual parity remain open in the queue below.
+
 | Story | Production/client root | Authored body | Review frame |
 |---|---|---|---|
 | Food Tracker | `1813:2` | `1813:42` | `3286:2` |
