@@ -4,6 +4,7 @@ import {
   useContext,
   useEffect,
   useId,
+  useLayoutEffect,
   useMemo,
   useRef,
   useState,
@@ -263,21 +264,15 @@ export function HelpExperienceProvider({ children }: { children: ReactNode }) {
     });
   }, [location.hash, location.key, location.pathname, location.search, location.state, navigate]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!open) return;
     const client = document.querySelector<HTMLElement>(".client");
     const active = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     const previousAriaHidden = client ? client.getAttribute("aria-hidden") : null;
     const wasInert = client?.hasAttribute("inert") ?? false;
+    document.querySelector<HTMLButtonElement>(".client-help-overlay__close")?.focus();
     client?.setAttribute("aria-hidden", "true");
     client?.setAttribute("inert", "");
-    closeRefocus();
-
-    function closeRefocus() {
-      requestAnimationFrame(() => {
-        document.querySelector<HTMLButtonElement>(".client-help-overlay__close")?.focus();
-      });
-    }
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") closeHelp();

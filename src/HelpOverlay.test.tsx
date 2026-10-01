@@ -79,7 +79,7 @@ describe("contextual Help overlay", () => {
     expect(view.querySelectorAll('[class*="spotlight--home-"]')).toHaveLength(4);
     expect(
       Array.from(view.querySelectorAll(".client-help-overlay__steps h3")).map((node) => node.textContent),
-    ).toEqual(["Navigation", "Party / Activity Rail", "Filter & Select", "Open the Selection"]);
+    ).toEqual(["Navigation", "Party / Activity Rail", "Preview a mode", "Open the Selection"]);
     expect(view.querySelector('[role="dialog"] h2')?.textContent).toBe("Home controls");
   });
 });
