@@ -13,7 +13,6 @@ This file tracks genuinely missing facts/media and owner-reserved interaction ch
 
 ## Genuine gaps or optional evidence
 
-- **Home cold-entry Back behavior — OWNER DECISION OPEN:** Figma `2252:3445` shows Back nodes `2356:603/604` without prototype reactions. React calls `navigate(-1)`, but `/` and Skip replace the opening history entry with `/home`, and direct `/home` is supported; Back can therefore leave the portfolio on a cold entry. Decide whether cold Back stays in the client or follows browser history. Do not infer a route fallback from current design evidence.
 - **Figma inspection boundary:** Active file `9zvk9iSRPKSsJ6llDJrQmA` was directly reconciled across the relevant portfolio pages on 2026-09-30. Source-body screenshots crop at 938px; separate exact-clone full-page review frames `3286:2`, `3286:603`, `3286:813`, `3286:1031`, `3287:2`, and `3287:288` expose all six long-form pages without clipping. They are kept in sync with their authored bodies and make visual review possible; page-specific owner review and rendered-site parity remain separate.
 - **Food Tracker:** no authentic current-build screenshot/demo is recorded. Preserve the owner-positive Pass10 first-fold and retrieval story. Keep the Demos entry and do not fabricate a product capture; when authentic current-build media becomes available, use it for the next major visual uplift rather than restarting the first fold speculatively.
 - **Personal Highlights:** separate owner photos/content direction are unavailable; remain deferred unless brought into scope.

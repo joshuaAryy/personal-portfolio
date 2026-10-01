@@ -23,7 +23,7 @@ The visible Projects / Experience / Hackathon / Academics strip is a review-only
 
 Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The icon proposal in review frame `3339:310` has been synced into React as a review candidate; it has not received final owner/render acceptance. Keep `2252:3445` as the Figma fallback, preserve the structure, and use rendered comparison to resolve icon, background, material, spacing, shell, and overflow details. Remove only concrete overflow or rendered mismatches; do not reopen structure.
 
-The Home Back disc and chevron (`2356:603/604`) have no Figma prototype reaction. React currently uses `navigate(-1)`, but `/` and Skip replace the opening history entry with `/home`, so a cold Home entry can leave the portfolio. The cold-entry fallback is an owner decision; do not invent a destination until resolved.
+The Home Back disc and chevron (`2356:603/604`) have no Figma prototype reaction. Return to the previous React Router-managed in-app entry when the router history index is greater than zero; on a direct/cold Home entry, remain on `/home`. This avoids sending a visitor outside the portfolio when no in-app destination exists. Browser interaction and visual behavior remain queued for supported-browser validation.
 
 ## Resume Found
 

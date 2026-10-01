@@ -73,6 +73,12 @@ type ModeId = (typeof modes)[number]["id"];
 
 function HomeExploreContent() {
   const navigate = useNavigate();
+  const goBackWithinPortfolio = () => {
+    const historyIndex = window.history.state?.idx;
+    if (typeof historyIndex === "number" && historyIndex > 0) {
+      navigate(-1);
+    }
+  };
   const [selectedId, setSelectedId] = useState<ModeId>("projects");
   const buttonRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const selectedIndex = modes.findIndex((mode) => mode.id === selectedId);
@@ -192,7 +198,7 @@ function HomeExploreContent() {
             className="home-explore__back"
             type="button"
             aria-label="Back to the previous screen"
-            onClick={() => navigate(-1)}
+            onClick={goBackWithinPortfolio}
           >
             <img className="home-explore__back-disc" src="/media/lobby/home-confirm-disc.svg" alt="" aria-hidden="true" />
             <img className="home-explore__back-chevron" src="/media/lobby/home-confirm-chevron.svg" alt="" aria-hidden="true" />
