@@ -19,7 +19,7 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 
 ## Bounded identity and asset work
 
-- The bounded J exercise is complete: archive `159:2` ships as the large mark; no further reconstruction is authorized. Keep large-image softness in the rendered-site validation queue.
+- The bounded J exercise is complete: archive `159:2` ships as the large mark; no further reconstruction is authorized. The 220px source and lack of a larger exact copy are recorded; the 700px runtime export is resampled. Do not leave softness framed as an unexamined J task.
 - Cho'Veigo `public/media/profile/choveigo-mark.svg` is frozen as the canonical project mark after review at Figma `3297:45/54/63/72`; its converging paths, match diamond, and job-document endpoint remain distinct from 26px through 50px. All project-mark design decisions are closed; rendered parity remains part of site validation.
 - Resume Found has received its one targeted Figma/React environment pass using authentic Riot/CommunityDragon Ready Check material (Figma `2407:176`, overlays `3292:484/485/486`): dim underlay, dark radial vignette, subtle teal/navy light, authentic chassis, localized central energy, and demoted but visible shell/rail. Render comparison remains open; do not restart the architecture.
 

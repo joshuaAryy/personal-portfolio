@@ -12,6 +12,6 @@ The current React implementation uses the authentic 530×530 frame, authentic de
 
 ## Render sync
 
-The 2026-09-29 screenshot records the earlier composition and is historical evidence only; it does not validate the current environment pass. No current site screenshot was captured on 2026-09-30 because the in-app Browser had no connected browser. Rendered comparison, including archive-J softness against crisp UI, remains open. Do not report visual acceptance until a current 1920×1080 render is compared with Figma `2407:176`.
+The 2026-09-29 screenshot records the earlier composition and is historical evidence only; it does not validate the current environment pass. No connected browser was available for a current Resume Found capture on 2026-09-30. The archive-J source softness is already visible in the prior large Opening render and is documented as a fixed 220px-source limit; it does not reopen J design. Resume Found's environment and full-page rendered parity still need a current 1920×1080 comparison with Figma `2407:176` before visual acceptance.
 
 `npm run build` passes (77 modules transformed) and `npm test -- --run` passes (80 tests). These checks validate the implementation build and behavior, not its visual match. Ready Check source URLs, packaging scope, and hashes are in [`CommunityDragon provenance`](../../public/media/resume/communitydragon/PROVENANCE.md).

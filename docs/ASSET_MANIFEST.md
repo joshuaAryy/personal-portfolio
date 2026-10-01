@@ -120,7 +120,7 @@ The authentic CommunityDragon Ready Check source and collected frame/action art 
 ## Other visual sources
 
 - `public/media/profile/open-portfolio-j.svg` preserves the original Projects Lobby Pass 11 Figma `526:3` composite as provenance. Former shell/orbit/energy vectors and Pass16 face remain on disk but are inactive; active code uses selected archive art in large/medium contexts and needs rendered-size comparison.
-- The legacy inline component src/identity/JMark.tsx is unused and does not define the selected mark. J design is closed: Opening and Resume Found use archive art 159:2, with the 700px Figma-resampled export for large contexts. Small contexts use separate 54px, 32px, 48px rail, and native 16px optical assets. No further J reconstruction is active; compare softness in rendered validation.
+- The legacy inline component src/identity/JMark.tsx is unused and does not define the selected mark. J design is closed: Opening and Resume Found use archive art 159:2, with the 700px Figma-resampled export for large contexts. Small contexts use separate 54px, 32px, 48px rail, and native 16px optical assets. The 220px source limit and visible large-render softness are documented; this does not authorize further J reconstruction.
 - Case-study diagrams and Journey graphics currently use authored markup/vector shapes. They are explanatory graphics, not product screenshots. Keep or replace them according to the revised Figma technical story.
 - League Spartan and Cinzel are served by Google Fonts. League Spartan is distributed under the [SIL Open Font License 1.1](https://github.com/google/fonts/blob/main/ofl/leaguespartan/OFL.txt); family source: [Google Fonts League Spartan](https://github.com/google/fonts/tree/main/ofl/leaguespartan).
 
@@ -141,7 +141,7 @@ The authentic upload is a 220×220 JPEG (4,307 bytes; SHA-256 `89A4512E…B0D975
 
 ## Archive and optical-size J in active Figma contexts - 2026-09-30
 
-The archive base image in Figma file 9zvk9iSRPKSsJ6llDJrQmA is source 159:2 (SHA-1 359c8487f282df11448ddf0fb31a874433069531). It is selected as the large mark; final candidate frame 3321:2 / image 3350:2 is an exact archive duplicate. Render softness remains to be checked.
+The archive base image in Figma file 9zvk9iSRPKSsJ6llDJrQmA is source 159:2 (SHA-1 359c8487f282df11448ddf0fb31a874433069531). It is selected as the large mark; final candidate frame 3321:2 / image 3350:2 is an exact archive duplicate. The Figma source audit found only a 220px JPEG and no exact higher-resolution source among inspected copies; prior large rendering shows the resulting softness.
 
 | Active context | Figma page/root and active nodes | Crop/size | Capture |
 |---|---|---|---|
@@ -150,7 +150,7 @@ The archive base image in Figma file 9zvk9iSRPKSsJ6llDJrQmA is source 159:2 (SHA
 | Shared header | Page `510:16`, root `511:2`, slot `524:7`; historical archive group `2985:2` hidden; selected vector `3317:3` cloned from glyph proof `3289:157` | 54px small optical mark; centered/cropped by the 54px parent frame | Current selected small mark; rendered site comparison pending |
 | Projects rail | Page `510:16`, root `511:2`, slot `526:3`; historical archive group `2985:5` hidden; selected vector `3317:4` cloned from glyph proof `3289:157` | 28.6413x46.9499px vector centered in a 48x48px parent frame; preserve intrinsic export dimensions | Current selected small mark; rendered site comparison pending |
 
-Opening remains 2.00s with Skip and near-instant reduced-motion intent; segmented outer structure 2443:38/71/92/110 is preserved. Resume retains authentic Ready Check main/action art 2888:164/165. Archive J is selected in both large contexts. Header uses 54px/32px optical sizes; rail uses its exact 48px Figma clone; the old archive groups are hidden. Historical scale proofs remain in the source review; rendered website softness and parity remain open.
+Opening remains 2.00s with Skip and near-instant reduced-motion intent; segmented outer structure 2443:38/71/92/110 is preserved. Resume retains authentic Ready Check main/action art 2888:164/165. Archive J is selected in both large contexts. Header uses 54px/32px optical sizes; rail uses its exact 48px Figma clone; the old archive groups are hidden. Historical scale proofs remain in the source review. The large-mark source limit is recorded; broader rendered Opening/Resume parity remains open.
 
 ## Archive large mark and small optical implementation sync - 2026-09-30
 

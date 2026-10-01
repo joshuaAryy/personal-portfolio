@@ -8,7 +8,7 @@ Updated 2026-09-30. Historical comparison detail is preserved below; the closed 
 
 ## Status
 
-**CLOSED / ARCHIVE SELECTED; RENDER SOFTNESS CHECK OPEN.**
+**CLOSED / ARCHIVE SELECTED; SOURCE LIMIT RECORDED.**
 
 ## Historical comparison record
 
@@ -51,6 +51,6 @@ Archive 159:2 is selected in React for Opening, Resume Found, and other large id
 
 ## Historical recommendation - superseded by final selection, 2026-09-30
 
-Earlier pass recommendations and candidates remain historical evidence only. The final operating decision is archive 159:2 for large identity use, with ring-free optical sizes for smaller contexts. No further J reconstruction is authorized; only rendered softness/parity remains open.
+Earlier pass recommendations and candidates remain historical evidence only. The final operating decision is archive 159:2 for large identity use, with ring-free optical sizes for smaller contexts. No further J reconstruction is authorized. A prior large Opening render shows the softness inherent in the 220px source; no exact larger source was found in the inspected Figma/repository copies. Broader Opening and Resume Found render parity remains separate from J design.
 
 The cited Pass54–80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37–58 changed Figma study boards; Pass59–80 are local evidence. The final archive selection supersedes the old NEEDS REDESIGN status and its proposed next steps. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.

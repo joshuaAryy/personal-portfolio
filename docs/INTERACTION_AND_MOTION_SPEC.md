@@ -6,7 +6,7 @@ This is the active behavior contract. Use the file key and inspection date in [F
 
 - Opening retains the liked segmented Hextech direction: coordinated rings rotate in opposing directions, restrained mechanical motion, a strong central J, and an approximately two-second sequence.
 - Keep Skip visible. Reduced-motion behavior remains near-instant.
-- Use selected archive mark 159:2 for large identity contexts; J design is closed after the final bounded comparison reused the exact archive image rather than producing a stronger editable reconstruction. React uses the 700px Figma-resampled export for large slots, while the authentic upload is 220px. Compare actual softness against crisp UI as a render-sync check, not a new design loop.
+- Use selected archive mark 159:2 for large identity contexts; J design is closed after the final bounded comparison reused the exact archive image rather than producing a stronger editable reconstruction. React uses the 700px Figma-resampled export for large slots; the authentic Figma upload is 220px and no exact larger source was found among inspected copies. The prior large Opening capture shows the source softness. Record this as a fixed asset limit, not a new motion or identity-design task.
 - Treat the primary and small mark as optical sizes. Keep ring-free glyphs at 54/32/16px instead of forcing the full complex identity into every slot; render-check clarity at each size.
 - Avoid continuous extra spins, excessive flashes, or effects that compete with the J.
 
