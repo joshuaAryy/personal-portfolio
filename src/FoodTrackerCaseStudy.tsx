@@ -87,7 +87,7 @@ function FoodBenchmark() {
   return (
     <figure className="food-benchmark food-benchmark--flagship" aria-labelledby="food-benchmark-title">
       <figcaption id="food-benchmark-title" className="food-benchmark__title">
-        OFFLINE RETRIEVAL · TOP-1 FIRST RESULT
+        OFFLINE SEARCH EVALUATION · FIRST RESULT
       </figcaption>
       <div className="food-benchmark__splits">
         {foodBenchmarkSets.map((set) => (
@@ -283,11 +283,11 @@ export default function FoodTrackerCaseStudy() {
         <section className="food-section food-evaluation" id="food-evaluation">
           <p className="food-section-label">OFFLINE EVALUATION · DEVELOPMENT + HOLDOUT</p>
           <div className="food-evaluation-heading">
-            <h2>Full hybrid improved the correct first result in both offline sets.</h2>
+            <h2>Hybrid search put the intended food first more often.</h2>
             <p>
-              Offline evaluation exposed misses in the legacy search, so I
-              broadened candidate retrieval while keeping deterministic ranking
-              in control.
+              Development improved sharply, the separate holdout moved up
+              modestly. I broadened candidate search while keeping the final
+              order deterministic.
             </p>
           </div>
           <FoodBenchmark />
@@ -295,15 +295,15 @@ export default function FoodTrackerCaseStudy() {
 
         <section className="food-section food-iteration" id="food-iteration">
           <p className="food-section-label">VALIDATION PRACTICE</p>
-          <h2>Search quality and index state are separate checks.</h2>
+          <h2>Passing tests did not guarantee useful search.</h2>
           <div className="food-iteration__episodes">
             <article>
               <span className="food-iteration__number">01</span>
               <div>
                 <h3>RELEVANCE</h3>
                 <p>
-                  My tests passed while search still missed foods. Offline query
-                  evaluation made relevance visible beside code correctness.
+                  My tests passed while search still missed foods. I added offline
+                  query evaluation to measure relevance beside code correctness.
                 </p>
               </div>
             </article>
@@ -312,8 +312,9 @@ export default function FoodTrackerCaseStudy() {
               <div>
                 <h3>INDEX COMPLETENESS</h3>
                 <p>
-                  An earlier Pinecone pagination issue left partial or stale index
-                  state. I kept index completeness separate from relevance.
+                  A pagination bug left the search index partial or stale. I
+                  checked index completeness separately from whether the right
+                  food was returned.
                 </p>
               </div>
             </article>
@@ -351,25 +352,24 @@ export default function FoodTrackerCaseStudy() {
         <section className="food-section food-workflow" id="food-workflow">
           <div className="food-workflow__story">
             <p className="food-section-label">
-              HOW MY WORKFLOW EVOLVED
+              WHAT SEARCH EVALUATION TAUGHT ME
             </p>
-            <h2>I kept product and architecture decisions owner-led.</h2>
+            <h2>Useful search means the right food appears first.</h2>
             <p>
-              Over time, I moved toward bounded tasks, explicit acceptance
-              criteria, relevance evaluation, regression checks, and independent
-              review. Codex and AI agents supported much of the implementation; I
-              kept requirements, architecture, and acceptance owner-led.
+              I measured whether the intended food ranked first, then weighed
+              relevance gains against latency and the need to keep nutrition
+              authoritative.
             </p>
             <p className="food-workflow__role">
-              Product initiator · architecture direction · retrieval evaluation
+              PRODUCT INITIATION · SEARCH EVALUATION · SYSTEM DESIGN
             </p>
           </div>
           <ol className="food-workflow__steps">
             {[
-              "BOUND THE TASK",
-              "WRITE ACCEPTANCE",
-              "EVALUATE BEHAVIOR",
-              "REVIEW + ACCEPT",
+              "SET RELEVANCE TARGET",
+              "WIDEN CANDIDATE SEARCH",
+              "COMPARE QUALITY + LATENCY",
+              "KEEP NUTRITION TRUSTED",
             ].map((step, index) => (
               <li key={step}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -380,16 +380,16 @@ export default function FoodTrackerCaseStudy() {
         </section>
 
         <section className="food-section food-reflection" id="food-reflection">
-          <p className="food-section-label">WHAT I TOOK FORWARD</p>
-          <h2>Good search is only one part of a trustworthy food log.</h2>
+          <p className="food-section-label">WHAT I LEARNED</p>
+          <h2>A useful match must resolve into trusted nutrition.</h2>
           <p>
-            I measured relevance separately from code correctness, then kept
-            nutrition authority in trusted food data and serving rules. Search
-            widened candidates; deterministic evaluation set final rank; the
-            canonical log preserved recorded history.
+            Search finds a candidate; trusted reference data and serving
+            conversion define what gets logged. An append-only record keeps past
+            days stable. Separating those jobs made the product easier to reason
+            about and trust.
           </p>
           <small>
-            MY PRODUCT RULE · SIMPLE TO LOG · TRUSTED UNDERNEATH
+            PRODUCT RULE · SIMPLE TO LOG · TRUSTED UNDERNEATH
           </small>
         </section>
       </article>

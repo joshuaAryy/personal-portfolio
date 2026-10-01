@@ -23,6 +23,8 @@ The visible Projects / Experience / Hackathon / Academics strip is a review-only
 
 Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The icon proposal in review frame `3339:310` has been synced into React as a review candidate; it has not received final owner/render acceptance. Keep `2252:3445` as the Figma fallback, preserve the structure, and use rendered comparison to resolve icon, background, material, spacing, shell, and overflow details. Remove only concrete overflow or rendered mismatches; do not reopen structure.
 
+The Home Back disc and chevron (`2356:603/604`) have no Figma prototype reaction. React currently uses `navigate(-1)`, but `/` and Skip replace the opening history entry with `/home`, so a cold Home entry can leave the portfolio. The cold-entry fallback is an owner decision; do not invent a destination until resolved.
+
 ## Resume Found
 
 Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language as the foundation. Adapt the real frame/ring/plate action mechanism to the portfolio J and `VIEW RESUME`. Keep the authorized v13 resume and portfolio labels. Do not treat the current custom ring approximation as accepted. Preserve close-to-origin behavior and the direct-entry fallback.
