@@ -1,14 +1,14 @@
 # Canonical J Review
 
-## Current result - CLOSED / ARCHIVE 159:2 SELECTED (2026-10-01)
+## Current status - PRODUCTION FALLBACK ARCHIVE / SONNET v8 OWNER-REVIEW CANDIDATE (2026-10-01)
 
-Archive `159:2` is the selected large/medium launch mark. Final review board `3360:2` compares it with current reconstruction `1950:6` and the final archive-traced editable candidate `3364:2`. The candidate received one primary attempt and two meaningful correction cycles. It improved as an editable mark but remains weaker in silhouette and orbit/material integration, and reads more like a J inside a badge. Keep the archive; retain separate ring-free 54/32/16px optical marks. The source is a 220px JPEG and its 700px export is resampled. The Figma board status now records this decision. **No further J reconstruction, orbit, or micro-adjustment passes. The J loop is closed and does not gate implementation.**
+Production continues to use archive `159:2` as its large/medium fallback. Sonnet 5.5 v8 `3325:191` is the active owner-review candidate; board `3325:36` compares archive, v7 `3311:2`, and v8. The owner identifies this as a materially stronger, separate reconstruction direction. Do not move v8 into production before owner review. The old Codex reconstruction lineage, including Pass16-80 and archive-trace candidate `3364:2`, is rejected/closed. Small contexts keep separate ring-free optical marks.
 
 ## Earlier history and superseded statuses
 
-## Historical status before latest owner steering
+## Superseded archive-closure record (historical only)
 
-The archive-selection status was temporarily reopened on 2026-09-30 for one bounded whole-mark exercise. That exercise is complete and the archive is selected again. Historical comparison detail below remains evidence only, not an active pass queue.
+An earlier owner direction reopened archive selection for a bounded Codex whole-mark exercise; that Codex branch was later rejected. The current Sonnet branch is separate and remains open for owner review.
 
 ## Historical comparison record
 
@@ -45,12 +45,12 @@ Pass33–36 rebuilt and compared the archive contour, then tested orbit integrat
 
 The `3089:2` board directly compares the archive, current reconstruction, Pass30, both upper-serif studies, and Pass31/32. Pass43 `3139:2` compared the wider archive-derived J and orbit options. Pass44 `3152:2` adds a direct macro read and ring-free 54/32/16px proofs for two letterform edits. These proofs help assess recognition at intended sizes but do not establish approval. See [Pass36 capture](pass36-orbit-read-test-2026-09-30.png), SHA-256 `88CA8A888AEE4A6ED07A12381EAE1F49F5FAE1006838BF1B86A7838787649073`, and [Pass43 capture](pass43-orbit-hook-to-shaft-2026-09-30.png), SHA-256 `2ECB613EC8BF4E1662AC27ACAAF43B08A193771AA485148BB3E2E5D57BABEE50`.
 
-## Current selection and implementation check
+## Production fallback and implementation check
 
-Current implementation note: archive `159:2` is selected in React for Opening, Resume Found, and other large identity contexts. Ring-free glyphs `3289:157/162/167` remain the optical-size reference at 54/32/16px. The 700px Figma export is resampled from the 220px source; no exact higher-resolution copy was found in the inspected Figma/repository material. This source limit does not block implementation.
+Current implementation note: React continues to use archive `159:2` as the production fallback in Opening and Resume Found
 
-## Historical recommendation - superseded by final selection, 2026-10-01
+## Earlier reconstruction recommendations - rejected history, 2026-10-01
 
-Earlier pass recommendations and candidates remain historical evidence only. The 2026-09-30 owner steering temporarily reopened the archive-selection decision for one bounded whole-mark exercise; the final comparison on 2026-10-01 closes it again with archive `159:2` selected for large use and separate optical sizes for smaller contexts. A prior large Opening render shows the softness inherent in the 220px source; no exact larger source was found in the inspected copies. Broader Opening and Resume Found render parity remains separate from J design.
+Pass16-80 and the `3364:2` archive-trace candidate remain rejected historical evidence only. They do not supersede the separate Sonnet v8 owner-review candidate at `3325:191`.
 
-The cited Pass54–80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37–58 changed Figma study boards; Pass59–80 are local evidence. The final archive selection supersedes the old NEEDS REDESIGN status and its proposed next steps. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.
+The cited Pass54-80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37-58 changed Figma study boards; Pass59-80 are local evidence. These older Codex studies do not evaluate or supersede the current Sonnet v8 candidate. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.
