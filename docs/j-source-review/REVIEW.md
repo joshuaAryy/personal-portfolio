@@ -2,7 +2,7 @@
 
 ## Current decision - CLOSED / ARCHIVE SELECTED (2026-09-30)
 
-Archive 159:2 is the selected large/primary mark for Opening, Resume Found, and other large contexts. The bounded final candidate frame 3321:2 places the exact archive image at 3350:2 (matching source hash 359c8487f282df11448ddf0fb31a874433069531). This is exact source reuse, not a stronger editable reconstruction, so the archive ships and the J design loop is closed. Keep separate ring-free optical glyphs 3289:157/162/167 at 54/32/16px. React uses the 700px Figma-resampled export for large slots to avoid directly upscaling the 220px JPEG; the export adds output samples, not source detail. Actual softness against crisp UI remains a render-sync check.
+Archive 159:2 is the selected large/primary mark for Opening, Resume Found, and other large contexts. The bounded final candidate frame 3321:2 places the exact archive image at 3350:2 (matching source hash 359c8487f282df11448ddf0fb31a874433069531). This is exact source reuse, not a stronger editable reconstruction, so the archive ships and the J design loop is closed. Keep separate ring-free optical glyphs 3289:157/162/167 at 54/32/16px. A source-resolution audit on 2026-09-30 found only the 220×220 JPEG in Figma; the 700×700 export is resampled, and no exact higher-resolution copy was found in the Figma/repository sources inspected. React keeps the 700px export for smoother output sampling, not added detail. A prior large Opening render shows softness against the crisp chassis; this is a fixed source limit, not a reason to reopen reconstruction.
 
 Updated 2026-09-30. Historical comparison detail is preserved below; the closed decision above controls.
 
@@ -47,7 +47,7 @@ The `3089:2` board directly compares the archive, current reconstruction, Pass30
 
 ## Current selection and implementation check
 
-Archive 159:2 is selected in React for Opening, Resume Found, and other large identity contexts. The ring-free glyphs 3289:157/162/167 remain the optical-size reference at 54/32/16px. The 700px Figma export is resampled from the 220px source, so compare the 320/388px site slots for softness against crisp UI. J design is closed; the render check does not authorize another reconstruction.
+Archive 159:2 is selected in React for Opening, Resume Found, and other large identity contexts. The ring-free glyphs 3289:157/162/167 remain the optical-size reference at 54/32/16px. The 700px Figma export is resampled from the 220px source. Source audit found no exact higher-resolution copy in the Figma/repository material inspected; prior large render shows softness against crisp UI. Keep the archive fallback and separate small glyphs. J design is closed; this source constraint does not authorize another reconstruction.
 
 ## Historical recommendation - superseded by final selection, 2026-09-30
 
