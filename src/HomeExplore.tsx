@@ -107,14 +107,14 @@ function HomeExploreContent() {
 
   return (
     <section className="home-explore" aria-labelledby="home-explore-title">
-      <nav className="home-explore__subnav" aria-label="Home navigation">
+      <div className="home-explore__subnav">
         <span className="home-explore__subnav-current" aria-current="page">
           Explore
         </span>
         <span>Curated</span>
         <span>Recent</span>
         <span>About</span>
-      </nav>
+      </div>
 
       <header className="home-explore__heading">
         <div>
