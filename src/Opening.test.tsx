@@ -34,7 +34,7 @@ describe("opening route handoff", () => {
     expect(markup).toContain('data-node-id="2443:38"');
     expect(markup).toContain('data-node-id="2443:71"');
     expect(markup).toContain('src="/media/opening/segmented-outer-bezel.svg"');
-    expect(markup).toContain('src="/media/profile/open-portfolio-j-archive-source.jpg"');
+    expect(markup).toContain('src="/media/profile/open-portfolio-j-archive-source-700.png"');
     expect(markup).toContain('aria-label="Skip to Home"');
   });
 
