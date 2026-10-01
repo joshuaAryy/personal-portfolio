@@ -264,7 +264,7 @@ export default function JourneyCase() {
           className="journey-card journey-card--lis"
           aria-labelledby="journey-stanford-lecture"
         >
-          <p className="journey-card__eyebrow">LIVING IN SILICO · SPRING 2025 · RESEARCH MOMENT</p>
+          <p className="journey-card__eyebrow">LIVING IN SILICO · MAKING TIME TO UNDERSTAND</p>
           <h2 id="journey-stanford-lecture">Connecting algorithms to research</h2>
           <p>I made time before school for a Stanford ML lecture because I wanted to connect its algorithms to our research.</p>
         </article>
