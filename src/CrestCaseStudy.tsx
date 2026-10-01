@@ -333,7 +333,7 @@ export default function CrestCaseStudy() {
             <figcaption className="crest-policy-figure__eyebrow">
               POLICY RETRIEVAL / SOURCE → CONTEXT
             </figcaption>
-              <h2 id="crest-policy-title">A policy source becomes grounded context.</h2>
+              <h2 id="crest-policy-title">Policy context. Deterministic decisions.</h2>
             <p className="crest-policy-figure__intro">
               The team extracted and chunked the Brim policy, embedded the
               passages, then retrieved relevant context for Gemini to interpret.
@@ -405,7 +405,7 @@ export default function CrestCaseStudy() {
 
         <section className="crest-section crest-takeaway" id="crest-takeaway">
           <p className="food-section-label">ENGINEERING PRINCIPLE</p>
-          <h2>Keep interpretation separate from decision authority.</h2>
+          <h2>Signals organize review. People own the decision.</h2>
           <p>
             Building this workflow sharpened my approach to human-in-the-loop
             systems: make supporting evidence visible and keep approval
