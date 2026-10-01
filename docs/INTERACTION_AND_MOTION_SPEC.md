@@ -27,7 +27,7 @@ Home uses the existing four-destination structure in `2252:3445`. Selection and 
 
 Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language as the foundation. Adapt the real frame/ring/plate action mechanism to the portfolio J and `VIEW RESUME`. Keep the authorized v13 resume and portfolio labels. Do not treat the current custom ring approximation as accepted. Preserve close-to-origin behavior and the direct-entry fallback.
 
-Make one targeted environment pass: dim the page underlay, add a restrained dark radial vignette and teal/navy atmosphere, use authentic mechanical/rune chassis material, localize energy around the central mechanism, and demote—but retain—the shell/activity rail. Avoid random splash art or a new architecture pass.
+The single targeted environment pass is clear in Figma after widening the existing teal/navy light beyond the authentic chassis; the dimmed underlay, vignette, Ready Check mechanism, and demoted-but-visible shell/activity rail remain. React has the corresponding atmosphere values, and the post-change render comparison remains open. Avoid random splash art or a new architecture pass.
 
 ## Help and recovery
 

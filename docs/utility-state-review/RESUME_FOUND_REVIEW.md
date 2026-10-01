@@ -1,22 +1,22 @@
-# Resume Found — rendered sync review (2026-09-30)
+# Resume Found - environment render sync review (2026-10-01)
 
-## Direction
+## Current direction
 
-Figma root `2407:176` is the active composition. It uses authentic CommunityDragon Ready Check frame and action plates (`2888:164/165`), with the selected archive J `159:2` in the aperture. The route should read as a League client event: dim the current page and shell, focus a restrained radial navy/teal environment around the chassis, and keep the rail visible but demoted. Do not restart the event architecture or add unrelated splash art.
+Figma root `2407:176` is the active composition. It uses authentic CommunityDragon Ready Check frame and action plates (`2888:164/165`) with selected archive J `159:2`. Keep the dimmed page/shell, dark radial vignette, and visible-but-demoted rail. The final targeted environment pass broadens the existing teal/navy light around and beyond the chassis (Figma node `3292:486`, 1160x1160, gradient stop alpha 38%/22%). Scoped visual critique is clear: the event environment reads while the chassis and J remain dominant. No further Figma environment adjustment is indicated.
 
-The previous custom ring construction and Pass 16 J are superseded. Large placements use archive `159:2`; small-size identity uses the separate optical marks in [ASSET_MANIFEST.md](../../ASSET_MANIFEST.md).
+The prior custom ring construction and Pass 16 J remain superseded. Use archive `159:2` for large placements and separate optical marks at small sizes. Do not reopen the J decision.
 
-## React status
+## React sync
 
-React uses the authentic 530×530 chassis, authentic default/hover action plates, archive J, restrained atmosphere, dimmed route underlay, and demoted client shell. The v13 PDF and return/close behavior remain connected. Countdown and accepted-idle videos are not part of the direct resume flow.
+React retains the authentic 530x530 chassis, default/hover action plates, archive J, dimmed route underlay, and demoted shell. `src/resume.css` now uses a 22%/15% page wash and 28%/18%/12% chassis halo with 24px blur and wider halo bounds. Preserve the resume action, close/origin behavior, and authorized v13 PDF.
 
-## Current desktop comparison
+The Figma environment pass is clear, but the updated React values have not yet been rendered and compared. This is the remaining visual sync item; do not infer rendered parity from the previous capture.
 
-The current site capture is [1920×1080 React](resume-found-site-1920x1080-2026-09-30.png). The current Figma capture is [node `2407:176`](resume-found-figma-2407-176-1024x576-2026-09-30.png), delivered at 1024×576 from the 1920×1080 design frame. Comparing the frames at the same aspect ratio, the central mechanism scale and placement, `RESUME FOUND` / `VIEW RESUME` hierarchy, dimmed shell and right rail, and localized environment align. This scoped static desktop comparison found no concrete layout or environment correction to make.
+## Existing render evidence
 
-The archive J is visibly soft at large display size in both representations. The authentic source available in the inspected Figma/repository copies is 220×220; the 700px runtime file is a resampled derivative and adds no image detail. Keep the selected archive fallback and treat softness as the known source limit. This does not reopen the closed J design loop.
+The saved [1920x1080 React capture](resume-found-site-1920x1080-2026-09-30.png) and [Figma capture](resume-found-figma-2407-176-1024x576-2026-09-30.png) predate the latest environment adjustment. They remain useful as the baseline for mechanism scale/placement, action hierarchy, and shell demotion, but do not represent current atmosphere.
 
-This comparison establishes static desktop composition only. Owner acceptance, responsive behavior, and broader rendered-site review remain open. The 2026-09-29 capture is historical evidence and does not represent the current environment.
+The archive J appears soft against crisp UI because the available authentic source is 220x220; the 700px runtime file is a resampled derivative and adds no image detail. Keep this source limitation distinct from environment review. Responsive behavior, post-change render comparison, browser behavior, and owner acceptance remain open.
 
 ## Source provenance
 
