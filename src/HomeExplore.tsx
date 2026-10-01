@@ -59,7 +59,7 @@ const modes = [
     description:
       "Computer Engineering coursework and academic foundations.",
     path: "/education",
-    emblem: "/media/lobby/home-mode-experience.svg",
+    emblem: "/media/lobby/home-mode-education.svg",
     glyph: "/media/lobby/home-mode-education-glyph-review-candidate.svg",
     glyphNodeId: "3339:718",
     focus: [
