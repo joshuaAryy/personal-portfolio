@@ -253,8 +253,8 @@ export default function ChoViegoCase() {
             <p>Review made regression work more meaningful: each check represented agreed behavior instead of a test changed just to pass.</p>
           </div>
           <div className="choveigo-change__result">
-            <p className="choveigo-eyebrow choveigo-eyebrow--cyan">OWNER-REPORTED EXAMPLE</p>
-            <p>Search surfaced a relevant role Joshua may not have found manually.</p>
+            <p className="choveigo-eyebrow choveigo-eyebrow--cyan">IN PRACTICE</p>
+            <p>One recommendation surfaced a role I might have missed.</p>
           </div>
           <p className="choveigo-change__credit">BUILT WITH SHIV ARORA · JOB DISCOVERY + RESUME TAILORING</p>
         </section>

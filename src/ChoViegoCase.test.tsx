@@ -63,7 +63,8 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(markup).toContain("cannot invent experience or decide Fit and Eligibility");
     expect(markup).toContain("Recommendation stays separate.");
     expect(markup).toContain("Tailor a resume for a selected role as a distinct step.");
-    expect(markup).toContain("OWNER-REPORTED EXAMPLE");
+    expect(markup).toContain("One recommendation surfaced a role I might have missed.");
+    expect(markup).not.toContain("OWNER-REPORTED EXAMPLE");
     expect(markup).not.toContain("No employer-specific or time-saving claim is made.");
     expect(markup).not.toMatch(/\b(?:Top-1|precision|recall|\d+%|hours saved|Greenhouse|Lever|DOCX|PDF)\b/i);
   });
