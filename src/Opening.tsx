@@ -4,6 +4,7 @@ import "./opening.css";
 
 const OPENING_DURATION_MS = 2_000;
 const REDUCED_HANDOFF_MS = 120;
+const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
 type OpeningAssetProps = {
   className: string;
@@ -44,12 +45,29 @@ function OpeningArchiveMark({
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
   const navigate = useNavigate();
-  const [reducedMotion] = useState(
-    () => window.matchMedia("(prefers-reduced-motion: reduce)").matches,
+  const [reducedMotion, setReducedMotion] = useState(
+    () => window.matchMedia(REDUCED_MOTION_QUERY).matches,
   );
   const [leaving, setLeaving] = useState(false);
   const completed = useRef(false);
   const timers = useRef<number[]>([]);
+
+  useEffect(() => {
+    const preference = window.matchMedia(REDUCED_MOTION_QUERY);
+    const syncPreference = (event: MediaQueryListEvent) => {
+      setReducedMotion(event.matches);
+    };
+
+    if (typeof preference.addEventListener === "function") {
+      preference.addEventListener("change", syncPreference);
+      return () => preference.removeEventListener("change", syncPreference);
+    }
+
+    if (typeof preference.addListener === "function") {
+      preference.addListener(syncPreference);
+      return () => preference.removeListener(syncPreference);
+    }
+  }, []);
 
   useEffect(() => {
     const goToHome = () => {
