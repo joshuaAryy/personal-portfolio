@@ -312,12 +312,14 @@
 }
 
 .crest-team__story h2 {
-  margin: 12px 0 15px;
-  font-size: clamp(25px, 2.15vw, 34px);
+  margin: 0 0 22px;
+  font-size: 32px;
+  line-height: 39px;
 }
 
 .crest-team__story > p:last-child {
-  font-size: 13px;
+  font-size: 17px;
+  line-height: 25px;
 }
 
 .crest-takeaway {

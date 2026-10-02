@@ -383,23 +383,43 @@ export default function CrestCaseStudy() {
         <section className="crest-section crest-team" id="crest-team">
           <div className="crest-team__story">
             <p className="food-section-label">TECHNICAL OWNERSHIP</p>
-            <h2>Backend workflows were my focus.</h2>
+            <h2>I built backend workflows for human review.</h2>
             <p>
-              On a four-person team, I built the Policy Compliance Engine
-              workflows, deterministic anomaly signals, policy retrieval, and
-              part of preapproval.
+              I built Policy Compliance Engine workflows, deterministic anomaly
+              signals, policy retrieval, and part of preapproval.
             </p>
           </div>
-          <div className="crest-team__result">
-            <strong>3RD PLACE</strong>
-            <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
-            <a
-              href="https://devpost.com/software/crest-kglqay"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PROJECT RECORD ↗
-            </a>
+          <div className="crest-team__ownership">
+            <p className="crest-team__ownership-label">WORK I BUILT</p>
+            <ul className="crest-team__ownership-grid" aria-label="Backend work Joshua built">
+              <li>
+                <span>POLICY ENGINE</span>
+                <strong>Compliance workflows</strong>
+              </li>
+              <li>
+                <span>ANOMALY SIGNALS</span>
+                <strong>Deterministic rules</strong>
+              </li>
+              <li>
+                <span>POLICY RETRIEVAL</span>
+                <strong>Relevant passages</strong>
+              </li>
+              <li>
+                <span>PREAPPROVAL</span>
+                <strong>Part of the workflow</strong>
+              </li>
+            </ul>
+            <div className="crest-team__result">
+              <strong>3RD PLACE</strong>
+              <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
+              <a
+                href="https://devpost.com/software/crest-kglqay"
+                target="_blank"
+                rel="noreferrer"
+              >
+                PROJECT RECORD ↗
+              </a>
+            </div>
           </div>
         </section>
 

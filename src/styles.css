@@ -2686,31 +2686,84 @@ a:focus-visible {
   margin: 0 0 22px;
   color: #eee7d8;
   font-size: 32px;
-  line-height: 1.12;
+  line-height: 39px;
 }
 .crest-team__story > p:last-child {
   max-width: 725px;
   margin: 0;
   color: #a9b5ba;
-  font-size: 14px;
-  line-height: 1.55;
+  font-size: 17px;
+  line-height: 25px;
 }
 .crest-team__result {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  padding-top: 2px;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px 12px;
 }
 .crest-team__result strong {
   color: #c79b45;
-  font-size: clamp(42px, 4vw, 56px);
+  font-size: 32px;
   line-height: 1;
 }
 .crest-team__result span {
   color: #c79b45;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 19px;
+}
+.crest-team__result a {
+  grid-column: 1 / -1;
+  width: max-content;
+}
+.crest-team__ownership {
+  min-width: 0;
+}
+.crest-team__ownership-label {
+  margin: 0 0 10px;
+  color: #57c4c2;
   font-size: 12px;
   font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 16px;
+}
+.crest-team__ownership-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.crest-team__ownership-grid li {
+  box-sizing: border-box;
+  display: flex;
+  min-height: 40px;
+  flex-direction: column;
+  gap: 3px;
+  border: 1px solid #2e474f;
+  border-radius: 4px;
+  background: #0e1f26;
+  padding: 5px 10px;
+}
+.crest-team__ownership-grid li span {
+  color: #c79b45;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  line-height: 10px;
+}
+.crest-team__ownership-grid li:nth-child(n + 3) span {
+  color: #57c4c2;
+}
+.crest-team__ownership-grid li strong {
+  color: #ede8db;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 16px;
+}
+.crest-team__ownership .crest-team__result {
+  margin-top: 13px;
 }
 .crest-team__reflection {
   grid-column: 1 / -1;
@@ -3443,11 +3496,23 @@ a:focus-visible {
     gap: 24px;
   }
   .crest-team__result strong {
-    font-size: 48px;
+    font-size: 32px;
+  }
+  .crest-team__result span {
+    grid-column: 1 / -1;
+  }
+  .crest-team__result {
+    grid-template-columns: minmax(0, 1fr);
   }
   .crest-team__reflection {
     grid-column: auto;
     font-size: 16px;
+  }
+}
+@media (max-width: 650px) {
+  .crest-team__ownership-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
   }
 }
 @media (prefers-reduced-motion: reduce) {
