@@ -743,7 +743,21 @@ a:focus-visible {
   font-weight: 600;
   white-space: nowrap;
 }
+.rail-social-footer > a:not(.rail-social-footer__help) {
+  color: inherit;
+  text-decoration: none;
+}
+.rail-social-footer > a:not(.rail-social-footer__help):hover,
+.rail-social-footer > a:not(.rail-social-footer__help):focus-visible {
+  color: #f1dc9f;
+}
+.rail-social-footer > a:not(.rail-social-footer__help):focus-visible {
+  outline: 1px solid #c79b45;
+  outline-offset: 3px;
+}
 .rail-social-footer__email {
+  display: inline-flex;
+  align-items: center;
   color: #f0e6d2;
   font-size: 14px;
 }

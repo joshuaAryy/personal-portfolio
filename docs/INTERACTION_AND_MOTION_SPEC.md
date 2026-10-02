@@ -25,6 +25,10 @@ Home uses the existing four-destination structure in `2252:3445`. Selection and 
 
 The Home Back disc and chevron (`2356:603/604`) have no Figma prototype reaction. Return to the previous React Router-managed in-app entry when the router history index is greater than zero; on a direct/cold Home entry, remain on `/home`. This avoids sending a visitor outside the portfolio when no in-app destination exists. Browser interaction and visual behavior remain queued for supported-browser validation.
 
+## Shared shell footer
+
+The rail footer uses the source-verified GitHub and LinkedIn profiles as external links and the verified `mailto:` address for email. External profiles open in a new tab and expose that behavior to assistive technology. Resume navigation remains the shell's `/resume` destination. The visible X glyph is decorative and has no action until a verified profile URL is available. Keyboard focus and footer rendering remain part of the Home/shell browser validation queue.
+
 ## Resume Found
 
 Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language as the foundation. Adapt the real frame/ring/plate action mechanism to the portfolio J and `VIEW RESUME`. Keep the authorized v13 resume and portfolio labels. Do not treat the current custom ring approximation as accepted. Preserve close-to-origin behavior and the direct-entry fallback.

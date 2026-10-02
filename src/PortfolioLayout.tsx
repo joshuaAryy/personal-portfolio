@@ -378,10 +378,10 @@ function Rail() {
         )}
       </div>
       <footer className="rail-social-footer" aria-label="Social and support links">
-        <span>GitHub</span>
-        <span>LinkedIn</span>
-        <span>X</span>
-        <span className="rail-social-footer__email" aria-label="Email">✉</span>
+        <a href="https://github.com/joshuaAryy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a>
+        <a href="https://ca.linkedin.com/in/joshua-ary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a>
+        <span aria-hidden="true">X</span>
+        <a className="rail-social-footer__email" href="mailto:joshuaaryy@gmail.com" aria-label="Email Joshua">✉</a>
         {helpOverlay ? (
           <button className="rail-social-footer__help" type="button" onClick={helpOverlay.openHelp}>
             Help
