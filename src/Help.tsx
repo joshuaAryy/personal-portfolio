@@ -91,8 +91,8 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
             detail: "The tray updates to show academic information for the selected entry.",
           }]
         : [{
-            title: "Open the story",
-            detail: "Use the explicit action in the tray. The small source icon opens a verified repository.",
+            title: "Use the tray",
+            detail: "Use its action, when present, to open the story or Profile. A source icon opens the verified repository when one exists.",
           }]),
       {
         title: "Move around",
