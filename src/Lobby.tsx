@@ -14,6 +14,8 @@ type LobbyItem = {
   name: string;
   subtitle: string;
   role: string;
+  selectedTitle?: string;
+  selectedAward?: string;
   mark?: string;
   markAlt?: string;
   path?: string;
@@ -149,6 +151,8 @@ const hackathonItems: LobbyItem[] = [
     name: "Crest",
     subtitle: "MPC Hacks · 2026",
     role: "3RD PLACE · BRIM FINANCIAL",
+    selectedTitle: "Crest · MPC Hacks",
+    selectedAward: "3rd Place · Brim Financial Challenge",
     mark: "/media/lobby/hackathon-trophy.svg",
     markAlt: "Hackathon award mark",
     path: projectCasePaths.crest,
@@ -335,18 +339,24 @@ function SelectedTray({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
   const actionLabel = mode === "experience" ? "VIEW EXPERIENCE" : mode === "hackathons" ? "VIEW HACKATHON" : mode === "education" ? "VIEW EDUCATION" : "VIEW PROJECT";
   const isProfile = item.owner;
   const actionPath = isProfile ? "/profile" : item.path;
+  const selectedTrayClassName = [
+    "league-selected",
+    mode === "projects" ? "league-selected--projects" : "",
+    item.selectedAward ? "league-selected--hackathons" : "",
+  ].filter(Boolean).join(" ");
 
   return (
     <>
-      <section className={`league-selected${mode === "projects" ? " league-selected--projects" : ""}`} aria-label={`Selected ${copy.itemLabel}`}>
+      <section className={selectedTrayClassName} aria-label={`Selected ${copy.itemLabel}`}>
         <img className="league-selected__art" src="/media/lobby/collapsible-tray.png" alt="" aria-hidden="true" />
         <div className="league-selected__main">
-          <h2>{item.name.toUpperCase()}</h2>
+          <h2>{(item.selectedTitle ?? item.name).toUpperCase()}</h2>
+          {item.selectedAward && <p className="league-selected__award">{item.selectedAward}</p>}
           <p>{item.detail ?? item.subtitle}</p>
           {item.stack && <p className="league-selected__stack">{item.stack}</p>}
           {actionPath ? (
             <Link className="league-selected__story" to={actionPath}>
-              {isProfile ? "OPEN PROFILE" : mode === "projects" || mode === "hackathons" ? "OPEN CASE STUDY" : actionLabel}
+              {isProfile ? "OPEN PROFILE" : mode === "projects" ? "OPEN CASE STUDY" : actionLabel}
               <span aria-hidden="true">↗</span>
             </Link>
           ) : (

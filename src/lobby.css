@@ -307,6 +307,14 @@
   line-height: 1.4;
 }
 
+.league-selected__main .league-selected__award {
+  margin-top: 7px;
+  color: #d6c89d;
+  font-size: 9px;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
 .league-selected__story {
   display: inline-flex;
   align-items: center;
@@ -345,6 +353,12 @@
   width: 78%;
   height: 78%;
   object-fit: contain;
+}
+
+@media (min-width: 901px) {
+  .league-selected--hackathons .league-selected__main {
+    max-width: 327px;
+  }
 }
 
 .league-lobby__source {
