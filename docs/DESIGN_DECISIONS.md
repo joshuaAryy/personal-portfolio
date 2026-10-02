@@ -20,6 +20,8 @@ Every case study is a complete long-form page, from the opening through the clos
 
 Figures should communicate their point within seconds, make the system’s scale and relationships visible, and remain technically accurate. Fraymakers is the internal quality reference for immediate system communication, layered technical figures, and depth. Do not reuse its composition mechanically.
 
+**Case-study Activity rail:** detail pages show project/experience names and marks without portfolio-production status sublabels. Those labels (for example, “DESIGNING / NEEDS REDESIGN” and “CASE STUDY READY”) describe the portfolio workflow, not the work, and are not public case-study content. The six production roots were aligned to this rule on 2026-10-02; Home and Resume summary rails keep their status groupings. React’s existing detail rail already follows the name-and-mark treatment, so this was a Figma sync rather than a React change.
+
 ### Current owner-calibrated quality references
 
 The 2026-09-30 owner re-review is a quality and effort calibration, not a request for another redesign pass on every case study. Preserve the working directions below and use their distinct strengths to judge other pages; do not clone their layouts.

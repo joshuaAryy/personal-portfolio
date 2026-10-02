@@ -17,6 +17,8 @@ Figma defines appearance and page composition. This spec maps accepted direction
 
 **Home subnav behavior:** Figma nodes `2356:527–533` and root `2252:3445` have no prototype reactions. React therefore keeps `Explore / Curated / Recent / About` as static labels with Explore marked current; the current frame specifies no other subnav view or state.
 
+**Case-study Activity rail:** on detail pages, show the project/experience names and marks without workflow-status sublabels. The status labels belong only to Home/Resume summary groupings; they are not public descriptions of the case studies. The 2026-10-02 Figma correction covers all six production roots. React detail pages already use this name-and-mark behavior; keep the full-page route comparison queued because existing captures predate the Figma correction.
+
 | Surface | Implementation direction |
 |---|---|
 | Opening and J | **OPENING IMPLEMENTED / NEEDS RENDER SYNC; PRODUCTION J FALLBACK: ARCHIVE `159:2`; SONNET v8 OWNER-REVIEW CANDIDATE.** Sonnet 5.5 v8 is `3325:191`; comparison board `3325:36` shows archive and v7 `3311:2`. Do not change production before owner review. The old Codex reconstruction lineage, including Pass16-80 and candidate `3364:2`, is rejected/closed; this does not close the Sonnet direction. Keep ring-free glyphs `3289:157/162/167` at 54/32/16px, rail clone `3317:4` in a 48px wrapper, and native 16px favicon. Opening keeps opposing segmented rings, restrained two-second motion, visible Skip, and near-instant reduced motion. |
