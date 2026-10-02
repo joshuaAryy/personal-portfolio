@@ -20,6 +20,8 @@ Keep archive `159:2` in production. Keep v8 `3325:191` as the active owner-revie
 
 ## Earlier history and superseded statuses
 
+The pass notes below are historical records of the Codex reconstruction lineage. Any earlier recommendation to use the archive as a reconstruction base or to stop further J work applies to that rejected lineage only; it does not supersede the active Sonnet v8 owner-review candidate stated above. The archive remains the production fallback while that review is open.
+
 ## Superseded archive-closure record (historical only)
 
 An earlier owner direction reopened archive selection for a bounded Codex whole-mark exercise; that Codex branch was later rejected. The current Sonnet branch is separate and remains open for owner review.
