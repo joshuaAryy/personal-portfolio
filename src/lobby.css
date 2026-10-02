@@ -369,6 +369,15 @@
   }
 }
 
+.league-selected--hackathons .league-selected__main > p:not(.league-selected__award) {
+  color: #8f999c;
+  line-height: normal;
+}
+
+.league-selected--hackathons .league-selected__main .league-selected__supporting {
+  margin-top: 0;
+}
+
 .league-lobby__source {
   position: absolute;
   z-index: 2;

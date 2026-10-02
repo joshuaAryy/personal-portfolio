@@ -158,7 +158,8 @@ const hackathonItems: LobbyItem[] = [
     markAlt: "Hackathon award mark",
     path: projectCasePaths.crest,
     source: projects.find((project) => project.slug === "crest")?.source,
-    detail: "4,235 demo/dev transactions · policy engine · anomaly rules",
+    detail: "4,235 demo/dev transactions",
+    supportingDetail: "Policy engine · anomaly rules",
     roles: ["software", "ai", "data", "research"],
   },
 ];
@@ -186,7 +187,7 @@ const educationItems: LobbyItem[] = [
     mark: "/media/lobby/education-coursework.svg",
     markAlt: "Current coursework emblem",
     detail: "Algorithms & Data Structures",
-    supportingDetail: "Software Systems · Database Systems\nMicroprocessor Systems",
+    supportingDetail: "Software Systems · Database Systems I\nMicroprocessor Systems",
     roles: [],
     featured: true,
   },

@@ -22,6 +22,7 @@ This file tracks genuinely missing facts/media and owner-reserved interaction ch
 - **Living in Silico:** run artifacts do not resolve the exact relation between every method setting and the 500 generated samples. Preserve this uncertainty internally; do not publish the bookkeeping caveat as the lead story.
 - **Stush Patties:** no field-level Koyo example is supplied. Do not invent raw data; use a generic system figure and explain the exception later only if useful.
 - **Education:** Resume v13 verifies Computer Engineering at Toronto Metropolitan University, B.Eng., Software Specialization, Sept. 2024–Apr. 2028, and four selected course titles. Course codes, Dean’s List, and scholarship remain unsupported.
+- **Education CTA destination:** Figma `738:3449` shows `VIEW EDUCATION` but has no prototype destination. React `/education` already displays the lobby and no Education detail route exists, so the current coursework tray omits the action rather than linking to itself. Owner direction is needed: create a dedicated Education detail view, open Profile academics, or remove the CTA from Figma and keep the lobby terminal.
 - **Verified utility links:** email, GitHub, LinkedIn, and Resume destinations must be read from existing project sources; do not invent URLs.
 
 Publication/licensing decisions remain part of release review, not an active design/build gate.
