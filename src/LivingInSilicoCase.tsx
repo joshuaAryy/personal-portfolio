@@ -127,7 +127,7 @@ export default function LivingInSilicoCase() {
           <p className="lis-kicker lis-kicker--teal">GENERATIVE MOLECULAR MODELING&nbsp; / &nbsp;EXPERIENCE · 2025</p>
           <h1 id="lis-title">Molecules need representation before generation.</h1>
           <p className="lis-public-hero__lead">
-            I joined a biomedical research group new to computational chemistry. Before exploring generation, I had to learn how molecular structures become SMILES and model-ready features.
+            During an AI/ML research internship in generative molecular modeling, I learned how molecular structures become SMILES and model-ready features before exploring generation.
           </p>
         </div>
         <aside className="lis-public-role" aria-label="Research role">

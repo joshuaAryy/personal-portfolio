@@ -223,14 +223,14 @@ export default function FraymakersCase() {
           <div className="fray-case__section-head fray-case__section-head--compact">
             <div>
               <p className="fray-case__eyebrow">TECHNICAL OWNERSHIP</p>
-              <h2 id="fraymakers-ownership-title">I built the thumbnail-generation path.</h2>
+              <h2 id="fraymakers-ownership-title">I built thumbnail.js.</h2>
             </div>
           </div>
           <div className="fray-case__ownership-grid">
             <section className="fray-case__ownership-card fray-case__ownership-card--joshua" aria-labelledby="fraymakers-joshua-title">
               <p className="fray-case__eyebrow">THUMBNAIL WORKFLOW</p>
               <h3 id="fraymakers-joshua-title"><code>thumbnail.js</code></h3>
-              <p>I built <code>thumbnail.js</code>. I also helped with the match-specific YAML configuration, thumbnail generation, and integration, and prototyped part of the YouTube API work.</p>
+              <p>I built <code>thumbnail.js</code> and worked on match-specific YAML configuration, thumbnail generation, and integration. I also prototyped part of the YouTube API work.</p>
             </section>
             <section className="fray-case__ownership-card" aria-labelledby="fraymakers-brother-title">
               <p className="fray-case__eyebrow">SHARED PROJECT FOUNDATION</p>

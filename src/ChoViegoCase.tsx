@@ -175,7 +175,7 @@ export default function ChoViegoCase() {
             </div>
             <div>
               <p className="choveigo-eyebrow">STRUCTURED GEMINI INTERPRETATION</p>
-              <p>Gemini interprets supplied evidence in a structured form. It cannot invent experience or decide Fit and Eligibility; Recommendation stays separate.</p>
+              <p>The prompt constrains Gemini to interpret supplied evidence; deterministic rules assess Fit and Eligibility, with Recommendation handled separately.</p>
             </div>
           </div>
           <div className="choveigo-system__tailoring">
