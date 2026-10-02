@@ -16,6 +16,7 @@ type LobbyItem = {
   role: string;
   selectedTitle?: string;
   selectedAward?: string;
+  supportingDetail?: string;
   mark?: string;
   markAlt?: string;
   path?: string;
@@ -180,11 +181,12 @@ const educationItems: LobbyItem[] = [
   {
     id: "coursework",
     name: "Selected Coursework",
-    subtitle: "Toronto Metropolitan University",
-    role: "4 COURSES",
+    subtitle: "Four selected course titles",
+    role: "4 SELECTED COURSES",
     mark: "/media/lobby/education-coursework.svg",
     markAlt: "Current coursework emblem",
-    detail: "Algorithms & Data Structures · Software Systems · Database Systems I · Microprocessor Systems",
+    detail: "Algorithms & Data Structures",
+    supportingDetail: "Software Systems · Database Systems I\nMicroprocessor Systems",
     roles: [],
     featured: true,
   },
@@ -353,6 +355,7 @@ function SelectedTray({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
           <h2>{(item.selectedTitle ?? item.name).toUpperCase()}</h2>
           {item.selectedAward && <p className="league-selected__award">{item.selectedAward}</p>}
           <p>{item.detail ?? item.subtitle}</p>
+          {item.supportingDetail && <p className="league-selected__supporting">{item.supportingDetail}</p>}
           {item.stack && <p className="league-selected__stack">{item.stack}</p>}
           {actionPath ? (
             <Link className="league-selected__story" to={actionPath}>

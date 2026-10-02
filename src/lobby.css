@@ -315,6 +315,14 @@
   text-transform: uppercase;
 }
 
+.league-selected__main .league-selected__supporting {
+  margin-top: 4px;
+  color: #8f999c;
+  font-size: 10px;
+  line-height: 1.15;
+  white-space: pre-line;
+}
+
 .league-selected__story {
   display: inline-flex;
   align-items: center;
