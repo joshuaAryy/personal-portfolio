@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Client } from "./PortfolioLayout";
 import ProfileNav from "./ProfileNav";
 import "./demos-page.css";
@@ -35,7 +35,14 @@ const crestEmbedUrl =
 export default function DemosPage() {
   const [selected, setSelected] = useState<DemoKey>("food");
   const [crestIsPlaying, setCrestIsPlaying] = useState(false);
+  const crestVideoRef = useRef<HTMLIFrameElement>(null);
   const current = demoOptions.find((item) => item.key === selected)!;
+
+  useEffect(() => {
+    if (selected === "crest" && crestIsPlaying) {
+      crestVideoRef.current?.focus({ preventScroll: true });
+    }
+  }, [crestIsPlaying, selected]);
 
   function selectDemo(key: DemoKey) {
     setSelected(key);
@@ -75,9 +82,11 @@ export default function DemosPage() {
           <div className={`demo-player demo-player--${selected}`}>
             {selected === "crest" && crestIsPlaying ? (
               <iframe
+                ref={crestVideoRef}
                 className="demo-player__video"
                 src={crestEmbedUrl}
                 title="Crest expense intelligence demo video"
+                tabIndex={0}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen

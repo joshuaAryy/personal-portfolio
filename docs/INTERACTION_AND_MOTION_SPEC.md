@@ -41,7 +41,7 @@ Help is a reusable, dismissible overlay above the current route; dismissal retur
 
 Lobby guidance must match the selected entry's available actions. In Projects, Experience, and Hackathons, the tray action opens the story when the entry has one, or Joshua's Profile for the owner entry; placeholders may have no destination. A source icon appears only when a verified repository exists and opens that repository. Education currently supports selection and academic-detail preview only: Figma's `VIEW EDUCATION` target is unresolved, so do not promise an open action, create a self-link, or invent a destination. Help and accessible selection instructions describe only the preview until the owner resolves that CTA.
 
-Demos Help and accessible labels must distinguish the media roles: Food Tracker is a static identity poster, Cho'Veigo is a static Recommendations capture, and Crest alone has user-initiated in-client playback. Do not call every entry a recording or describe Crest playback as merely available conditionally when its Play action is present.
+Demos Help and accessible labels must distinguish the media roles: Food Tracker is a static identity poster, Cho'Veigo is a static Recommendations capture, and Crest alone has user-initiated in-client playback. Do not call every entry a recording or describe Crest playback as merely available conditionally when its Play action is present. When Crest playback replaces the Play button with its titled iframe, move keyboard focus to that iframe so focus remains in the player.
 
 ## Case-study diagrams
 
