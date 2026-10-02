@@ -17,7 +17,7 @@ Figma defines appearance and page composition. This spec maps accepted direction
 
 **Home subnav behavior:** Figma nodes `2356:527–533` and root `2252:3445` have no prototype reactions. React therefore keeps `Explore / Curated / Recent / About` as static labels with Explore marked current; the current frame specifies no other subnav view or state.
 
-**Case-study Activity rail:** on detail pages, show the project/experience names and marks without workflow-status sublabels. The status labels belong only to Home/Resume summary groupings; they are not public descriptions of the case studies. The 2026-10-02 Figma correction covers all six production roots. React detail pages already use this name-and-mark behavior; keep the full-page route comparison queued because existing captures predate the Figma correction.
+**Case-study Activity rail:** on detail pages, show the project/experience names and marks without workflow-status sublabels. The status labels belong only to Home/Resume summary groupings; they are not public descriptions of the case studies. The 2026-10-02 Figma correction covers all six production roots. React detail pages already use this name-and-mark behavior, so the Figma-only correction does not itself invalidate existing React captures. Keep any full-page comparison open for the separate page changes documented in its queue row.
 
 | Surface | Implementation direction |
 |---|---|
