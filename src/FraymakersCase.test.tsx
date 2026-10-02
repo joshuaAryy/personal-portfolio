@@ -25,7 +25,8 @@ describe("Fraymakers technical case study", () => {
     expect(opening).toContain("MATCH DATA TO VOD THUMBNAILS");
     expect(opening).toContain("One match");
     expect(opening).not.toMatch(/joined later|brother project|my scope/i);
-    expect(markup).toContain("I built the thumbnail-generation path.");
+    expect(markup).toContain("I built <code>thumbnail.js</code>");
+    expect(markup).toContain("worked on match-specific YAML configuration, thumbnail generation, and integration.");
     expect(markup).not.toContain("I joined later");
     expect(markup).toContain("Automatic upload was not completed");
   });
