@@ -414,7 +414,7 @@ export function Client({
   }, [pathname]);
 
   return (
-    <div className={`client${projectShell ? " client--project-shell" : ""}${caseDetailShell ? " client--case-detail-shell" : ""}${isExperienceDetail(pathname) ? " client--experience-detail-shell" : ""}${homeShell ? " client--home-shell" : ""}${pathname.startsWith("/resume") ? " client--resume-shell" : ""}`}>
+    <div className={`client${projectShell ? " client--project-shell" : ""}${caseDetailShell ? " client--case-detail-shell" : ""}${isExperienceDetail(pathname) ? " client--experience-detail-shell" : ""}${homeShell ? " client--home-shell" : ""}${pathname.startsWith("/resume") ? " client--resume-shell" : ""}${pathname === "/profile/journey" ? " client--journey" : ""}`}>
       <a className="skip-link" href="#main">
         Skip to content
       </a>

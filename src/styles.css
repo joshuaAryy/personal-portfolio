@@ -5742,9 +5742,12 @@ a:focus-visible {
     linear-gradient(180deg, #101522 0%, #09121d 48%, #071813 100%);
   scroll-behavior: smooth;
 }
+.client--journey .client-body {
+  grid-template-columns: minmax(0, 1fr) clamp(220px, 18.75vw, 360px);
+}
 .journey-layout {
   display: grid;
-  grid-template-columns: 370px minmax(0, 1170px);
+  grid-template-columns: 390px minmax(0, 1170px);
   min-height: calc(100vh - 82px);
 }
 .journey-identity {
@@ -5758,6 +5761,8 @@ a:focus-visible {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  width: 370px;
+  margin-left: 8px;
   padding: clamp(88px, 18.7vh, 202px) 0 48px;
   border-right: 1px solid #c79b4533;
   background:
@@ -6388,10 +6393,15 @@ a:focus-visible {
 }
 
 @media (max-width: 1200px) {
+  .client--journey .client-body {
+    grid-template-columns: minmax(0, 1fr) clamp(220px, 18.33vw, 270px);
+  }
   .journey-layout {
     grid-template-columns: clamp(220px, 32vw, 320px) minmax(0, 1fr);
   }
   .journey-identity {
+    width: auto;
+    margin-left: 0;
     padding-right: 0;
     padding-left: 0;
   }
