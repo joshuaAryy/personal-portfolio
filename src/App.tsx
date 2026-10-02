@@ -14,7 +14,7 @@ import { NotFoundContent } from "./NotFoundContent";
 import { ResumeFound, ResumeViewer } from "./ResumeFlow";
 import Opening from "./Opening";
 import ProfileNav from "./ProfileNav";
-import ProfileOverview from "./ProfileOverview";
+import ProfileOverview, { JourneyTraitMedallions } from "./ProfileOverview";
 import Lobby from "./Lobby";
 import DemosPage from "./DemosPage";
 import HomeExplore from "./HomeExplore";
@@ -100,11 +100,7 @@ export default function App() {
                   <p className="journey-identity__name">JOSHUA ARYEETEY</p>
                   <p>COMPUTER ENGINEERING</p>
                   <p>SOFTWARE · AI / ML</p>
-                  <div className="journey-identity__traits" aria-label="Creative, proactive, execution">
-                    <span aria-hidden="true">✧</span>
-                    <span aria-hidden="true">➤</span>
-                    <span aria-hidden="true">◇</span>
-                  </div>
+                  <JourneyTraitMedallions />
                 </div>
               </aside>
               <div className="journey-content">

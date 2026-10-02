@@ -96,16 +96,18 @@ function SourceMark() {
 function TraitMedallion({
   label,
   parts,
+  frameSrc = "/media/profile/portrait-medallion.png",
 }: {
   label: string;
   parts: { src: string; className: string }[];
+  frameSrc?: string;
 }) {
   return (
     <li className="profile-trait">
       <span className="profile-trait__medallion" aria-hidden="true">
         <img
           className="profile-trait__frame"
-          src="/media/profile/portrait-medallion.png"
+          src={frameSrc}
           alt=""
         />
         {parts.map((part) => (
@@ -180,6 +182,80 @@ const traitParts = {
     },
   ],
 };
+
+const journeyBaseTraitParts = [
+  {
+    src: "/media/profile/journey-trait-shared-shell.svg",
+    className: "journey-trait__outer",
+  },
+  {
+    src: "/media/profile/trait-creative-b.svg",
+    className: "journey-trait__inner",
+  },
+];
+
+const journeyTraitParts = {
+  creative: [
+    {
+      src: "/media/profile/journey-trait-creative-shell.svg",
+      className: "journey-trait__outer",
+    },
+    journeyBaseTraitParts[1],
+    {
+      src: "/media/profile/trait-creative-c.svg",
+      className: "journey-trait__creative-bulb",
+    },
+    {
+      src: "/media/profile/trait-creative-d.svg",
+      className: "journey-trait__creative-base",
+    },
+    {
+      src: "/media/profile/trait-proactive-a.svg",
+      className: "journey-trait__creative-rays",
+    },
+  ],
+  proactive: [
+    ...journeyBaseTraitParts,
+    {
+      src: "/media/profile/trait-proactive-b.svg",
+      className: "journey-trait__proactive-compass",
+    },
+    {
+      src: "/media/profile/trait-proactive-d.svg",
+      className: "journey-trait__proactive-needle",
+    },
+    {
+      src: "/media/profile/trait-proactive-c.svg",
+      className: "journey-trait__proactive-center",
+    },
+    {
+      src: "/media/profile/trait-execution-a.svg",
+      className: "journey-trait__proactive-orbit",
+    },
+  ],
+  execution: [
+    ...journeyBaseTraitParts,
+    {
+      src: "/media/profile/trait-execution-b.svg",
+      className: "journey-trait__execution-mark",
+    },
+    {
+      src: "/media/profile/trait-execution-c.svg",
+      className: "journey-trait__execution-check",
+    },
+  ],
+};
+
+export function JourneyTraitMedallions() {
+  const frameSrc = "/media/lobby/project-medallion-frame.png";
+  return (
+    <ul className="journey-identity__traits" aria-label="Profile traits">
+      <TraitMedallion label="CREATIVE" parts={journeyTraitParts.creative} frameSrc={frameSrc} />
+      <TraitMedallion label="PROACTIVE" parts={journeyTraitParts.proactive} frameSrc={frameSrc} />
+      <TraitMedallion label="EXECUTION" parts={journeyTraitParts.execution} frameSrc={frameSrc} />
+    </ul>
+  );
+}
 
 function ProjectSignalPanel({
   projects,

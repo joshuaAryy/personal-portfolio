@@ -5833,10 +5833,83 @@ a:focus-visible {
 }
 .journey-identity__traits {
   display: flex;
-  gap: 15px;
+  align-items: flex-start;
+  gap: 30px;
+  width: 270px;
   margin-top: 27px;
-  color: #c9ad64;
-  font-size: 18px;
+  padding: 0;
+  list-style: none;
+}
+.journey-identity__traits .profile-trait {
+  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
+}
+.journey-identity__traits .profile-trait__medallion {
+  width: 70px;
+  height: 70px;
+}
+.journey-trait__outer {
+  inset: 2.47%;
+  width: 95.06%;
+  height: 95.06%;
+}
+.journey-trait__inner {
+  inset: 11.19%;
+  width: 77.62%;
+  height: 77.62%;
+}
+.journey-trait__creative-bulb {
+  top: 26.35%;
+  left: 33.76%;
+  width: 32.48%;
+  height: 41%;
+}
+.journey-trait__creative-base {
+  top: 64.72%;
+  left: 42.31%;
+  width: 15.38%;
+  height: 8.71%;
+}
+.journey-trait__creative-rays {
+  top: 14.81%;
+  left: 18.52%;
+  width: 62.96%;
+  height: 36.78%;
+}
+.journey-trait__proactive-compass {
+  top: 25.56%;
+  left: 29.16%;
+  width: 38.37%;
+  height: 43.85%;
+}
+.journey-trait__proactive-needle {
+  top: 33.25%;
+  left: 43.99%;
+  width: 18.05%;
+  height: 18.05%;
+}
+.journey-trait__proactive-center {
+  inset: 44.44%;
+  width: 11.12%;
+  height: 11.12%;
+}
+.journey-trait__proactive-orbit {
+  inset: 12.96%;
+  width: 74.08%;
+  height: 74.08%;
+}
+.journey-trait__execution-mark {
+  top: 23%;
+  left: 19.29%;
+  width: 61.42%;
+  height: 61.42%;
+}
+.journey-trait__execution-check {
+  top: 39.03%;
+  left: 34.54%;
+  width: 32.76%;
+  height: 22.12%;
 }
 .journey-content {
   min-width: 0;
@@ -6257,6 +6330,24 @@ a:focus-visible {
     padding-left: 28px;
   }
   .journey-identity__copy .journey-identity__name { font-size: 16px; }
+  .journey-identity__traits {
+    gap: 10px;
+    width: 170px;
+  }
+  .journey-identity__traits .profile-trait {
+    flex-basis: 50px;
+    width: 50px;
+    height: 50px;
+  }
+  .journey-identity__traits .profile-trait__medallion {
+    width: 50px;
+    height: 50px;
+  }
+  .journey-identity__traits .profile-trait__label {
+    top: 58px;
+    font-size: 8px;
+    line-height: 10px;
+  }
 }
 @media (max-width: 900px) {
   .main--journey {
@@ -6286,7 +6377,7 @@ a:focus-visible {
     margin-bottom: 8px;
     font-size: 15px;
   }
-  .journey-identity__traits { margin-top: 10px; font-size: 15px; }
+  .journey-identity__traits { margin-top: 10px; }
   .journey-content { width: 100%; }
   .journey-scrollport {
     height: auto;
@@ -6332,6 +6423,48 @@ a:focus-visible {
   .journey-card--summer { width: 100%; }
   .journey-card h2 { font-size: 16px; }
   .journey-card > p:last-of-type { max-width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .journey-identity__traits {
+    gap: 8px;
+    width: 178px;
+  }
+  .journey-identity__traits .profile-trait {
+    flex-basis: 54px;
+    width: 54px;
+    height: 54px;
+  }
+  .journey-identity__traits .profile-trait__medallion {
+    width: 54px;
+    height: 54px;
+  }
+  .journey-identity__traits .profile-trait__label {
+    top: 61px;
+    font-size: 9px;
+    line-height: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .journey-identity__traits {
+    gap: 4px;
+    width: 134px;
+  }
+  .journey-identity__traits .profile-trait {
+    flex-basis: 42px;
+    width: 42px;
+    height: 42px;
+  }
+  .journey-identity__traits .profile-trait__medallion {
+    width: 42px;
+    height: 42px;
+  }
+  .journey-identity__traits .profile-trait__label {
+    top: 48px;
+    font-size: 8px;
+    line-height: 10px;
+  }
 }
 
 @media (min-width:1800px) and (min-height:1000px) {
