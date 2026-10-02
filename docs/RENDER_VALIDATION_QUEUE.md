@@ -27,6 +27,11 @@ Process each queued item in order: use the listed Figma reference and current im
 
 | 16 | Shared rail footer: verify profile/email link targets, new-tab indication, keyboard focus visibility, spacing, and the decorative X mark in context | Home shell `2252:3445`; shared shell/activity art `2356:611`; Resume Found shell `2407:181` | **IMPLEMENTED / VERIFIED GITHUB, LINKEDIN, AND EMAIL DESTINATIONS WIRED / NEEDS RENDER SYNC** | Existing Home capture `docs/profile-review/home-site-pass-current-1920x1080-2026-09-29.png` predates these links | Source confirms verified GitHub and LinkedIn targets, a verified `mailto:` address, and no X destination. The old Home capture predates this source change and cannot confirm visual fit, focus, or activation. Validate with the current Home shell when supported-browser access returns.
 
+## Non-browser source audit (2026-10-02)
+
+- **Home overflow:** `src/home-explore.css` uses `overflow: auto`, which exposes a scrollbar only when the Home content actually exceeds its scrollport. At widths up to 900px, the shared main region returns to document flow; the Home grid also expands its card/content rows at narrow widths. No source-only change is justified. Whether the 1920×1080 Home render shows an unnecessary scrollbar remains part of the queued browser comparison.
+- **Opening mechanism:** `Opening.tsx` sets a 2,000ms sequence, Skip cancels pending timers and routes directly to `/home`, and reduced motion removes the animation with a 120ms handoff. In `opening.css`, the segmented bezel starts at +68.75° and the tick track at −57.3°, then both settle by 23% (460ms). These are source-level behavior checks only; actual playback, visual weight, and reduced-motion rendering remain queued.
+
 ## Preserved prior comparison evidence
 
 - **Resume Found:** source inspection identified a concrete comparison point: Figma `3292:484/485` applies a full-frame 48% near-black wash and radial vignette across 1920×1080, while React `src/resume.css` composes the gradients over the main area and uses a `.72` brightness filter on the header/rail. Visual equivalence is unknown until the supported-browser render. Preserve the `98a63d1` environment update and current `NEEDS POST-CHANGE RENDER SYNC` status; do not infer parity or revert from source inspection alone.
