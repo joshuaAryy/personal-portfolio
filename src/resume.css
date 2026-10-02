@@ -55,12 +55,16 @@
 .resume-found__system::before {
   position: absolute;
   z-index: -1;
-  inset: -35%;
-  border-radius: 50%;
-  background:
-    radial-gradient(circle at 50% 48%, rgb(12 210 195 / 28%) 0%, rgb(16 124 166 / 18%) 28%, rgb(6 38 66 / 12%) 48%, transparent 71%);
+  top: 50%;
+  left: 50%;
+  width: 218.87%;
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background-image: url("/media/resume/environment-03-localized-teal-navy-chassis-light.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
   content: "";
-  filter: blur(24px);
   pointer-events: none;
 }
 

@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="1160" height="1160" viewBox="0 0 1160 1160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Environment 03 &#194;&#183; localized teal/navy chassis light">
+<circle cx="580" cy="580" r="580" fill="url(#paint0_radial_0_4)" style="mix-blend-mode:screen"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(580 580) scale(580)">
+<stop stop-color="#055763" stop-opacity="0.38"/>
+<stop offset="0.48" stop-color="#042B3D" stop-opacity="0.22"/>
+<stop offset="1" stop-color="#031424" stop-opacity="0"/>
+</radialGradient>
+</defs>
+</svg>
