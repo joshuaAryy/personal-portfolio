@@ -98,8 +98,17 @@ export default function App() {
                 </div>
                 <div className="journey-identity__copy">
                   <p className="journey-identity__name">JOSHUA ARYEETEY</p>
-                  <p>COMPUTER ENGINEERING</p>
-                  <p>SOFTWARE · AI / ML</p>
+                  <div className="journey-identity__credentials">
+                    <div className="journey-identity__education">
+                      <p className="journey-identity__program">COMPUTER ENGINEERING</p>
+                      <p className="journey-identity__specialization">SOFTWARE · AI / ML</p>
+                    </div>
+                    <div className="journey-identity__degree-medallion" aria-hidden="true">
+                      <img src="/media/lobby/project-medallion-frame.png" alt="" />
+                      <span>CE</span>
+                    </div>
+                  </div>
+                  <div className="journey-identity__divider" aria-hidden="true" />
                   <JourneyTraitMedallions />
                 </div>
               </aside>
