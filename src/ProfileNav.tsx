@@ -9,7 +9,7 @@ export default function ProfileNav() {
       <NavLink end className={({ isActive }) => (isActive ? "active" : "")} to="/profile/journey">
         Journey
       </NavLink>
-      <span aria-disabled="true" title="Awaiting owner photos">
+      <span aria-disabled="true">
         Personal Highlights
       </span>
       <NavLink end className={({ isActive }) => (isActive ? "active" : "")} to="/profile/demos">
