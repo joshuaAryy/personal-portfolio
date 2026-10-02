@@ -262,7 +262,7 @@ function Rail() {
               src="/media/lobby/client-j-mark.svg"
               alt=""
               aria-hidden="true"
-              data-node-id="2252:3450"
+              data-node-id="I2356:611;137:2"
             />
             <span className="rail-availability__copy">
               <strong>OPEN TO OPPORTUNITIES</strong>
