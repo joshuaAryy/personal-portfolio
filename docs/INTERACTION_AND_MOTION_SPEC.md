@@ -5,7 +5,7 @@ This is the active behavior contract. Use the file key and inspection date in [F
 ## Opening and identity convergence
 
 - Opening retains the liked segmented Hextech direction: coordinated rings rotate in opposing directions, restrained mechanical motion, a strong central J, and an approximately two-second sequence.
-- Keep Skip visible. Reduced-motion behavior remains near-instant.
+- Keep Skip visible. Reduced-motion behavior remains near-instant; if the system preference changes during the opening, update the motion and handoff timing immediately.
 - Figma's two-second timeline loops for design inspection; the website intentionally plays one cycle and hands off to Home after two seconds, with a 120ms reduced-motion handoff. A 2026-09-30 comparison of live Figma motion contexts with `src/opening.css` found the layer timings and start/settle angles consistent. Actual browser playback comparison remains open because static captures cannot verify motion.
 - Production uses archive mark `159:2` as the large identity fallback. Sonnet 5.5 v8 `3325:191` is the active owner-review candidate; board `3325:36` shows archive, v7 `3311:2`, and v8. Do not promote v8 before owner review. The old Codex reconstruction lineage, including Pass16-80 and `3364:2`, is rejected/closed; this does not close the separate Sonnet direction.
 - Treat the primary and small mark as optical sizes. Keep ring-free glyphs at 54/32/16px instead of forcing the full complex identity into every slot; render-check clarity at each size.
