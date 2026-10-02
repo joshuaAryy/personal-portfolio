@@ -79,15 +79,21 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   }
 
   if (["/projects", "/experience", "/hackathons", "/education"].includes(pathname)) {
+    const isEducation = pathname === "/education";
     return [
       {
         title: "Select an entry",
         detail: "Choose a banner to focus its details in the tray below.",
       },
-      {
-        title: "Open the story",
-        detail: "Use the explicit action in the tray. The small source icon opens a verified repository.",
-      },
+      ...(isEducation
+          ? [{
+            title: "Review details",
+            detail: "The tray updates to show academic information for the selected entry.",
+          }]
+        : [{
+            title: "Open the story",
+            detail: "Use the explicit action in the tray. The small source icon opens a verified repository.",
+          }]),
       {
         title: "Move around",
         detail: railVisible

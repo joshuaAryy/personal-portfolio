@@ -303,7 +303,11 @@ function LobbyCard({
         </span>
       )}
       {selected && <span className="league-banner__selection-cap" aria-hidden="true" />}
-      <span className="visually-hidden">Press Enter to select. Use the action below to open.</span>
+      <span className="visually-hidden">
+        {mode === "education"
+          ? "Press Enter to select and review details below."
+          : "Press Enter to select. Use the action below to open."}
+      </span>
       <span className="league-banner__mode-visually-hidden">{mode}</span>
     </button>
   );
@@ -454,7 +458,11 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
         </div>
         <RoleLegend item={selected} mode={mode} />
         <SelectedTray item={selected} mode={mode} />
-        <p className="league-lobby__hint">Select an entry, then use the action in its tray to open the story.</p>
+        <p className="league-lobby__hint">
+          {mode === "education"
+            ? "Select an entry to review its academic details below."
+            : "Select an entry, then use the action in its tray to open the story."}
+        </p>
       </section>
     </Client>
   );
