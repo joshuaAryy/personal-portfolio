@@ -370,7 +370,10 @@ function ProfileSignalPanel({
             <strong className="profile-academics-feature__program">Computer Engineering</strong>
             <span className="profile-academics-feature__specialization">Software Specialization</span>
             <span className="profile-academics-feature__school">Toronto Metropolitan University</span>
-            <span className="profile-academics-feature__school">Expected 2028</span>
+            <div className="profile-academics-feature__graduation">
+              <strong className="profile-academics-feature__year">2028</strong>
+              <span className="profile-academics-feature__graduation-label">EXPECTED GRADUATION</span>
+            </div>
           </div>
           <div>
             <span className="profile-academics-feature__eyebrow">SELECTED COURSEWORK</span>

@@ -750,6 +750,31 @@
   padding: 0 52px;
 }
 
+.profile-academics-feature {
+  left: 0;
+  width: 1088px;
+  grid-template-columns: 560px 528px;
+}
+
+.profile-academics-feature::before {
+  position: absolute;
+  top: 8px;
+  left: 560px;
+  width: 1px;
+  height: 148px;
+  background: rgba(140, 107, 64, 0.32);
+  content: "";
+  pointer-events: none;
+}
+
+.profile-academics-feature > div:first-child {
+  border-right: 0;
+}
+
+.profile-academics-feature > div:nth-child(2) {
+  padding-left: 60px;
+}
+
 .profile-academics-feature__program {
   color: #ebd9b0;
   font: 400 25px/1.25 "Marcellus SC", Georgia, serif;
@@ -765,6 +790,25 @@
   margin-top: 9px;
   color: #c2a8cc;
   font-size: 14px;
+}
+
+.profile-academics-feature__graduation {
+  position: relative;
+  margin-top: 9px;
+}
+
+.profile-academics-feature__year {
+  display: block;
+  color: #ebd9b0;
+  font: 400 36px/44px "Marcellus SC", Georgia, serif;
+}
+
+.profile-academics-feature__graduation-label {
+  position: absolute;
+  top: 18px;
+  left: 136px;
+  color: #c29440;
+  font: 700 11px/16px Lato, Arial, sans-serif;
 }
 
 .profile-academics-feature__course-list {
@@ -1061,6 +1105,10 @@
     border-bottom: 1px solid rgba(140, 107, 64, 0.32);
   }
 
+  .profile-academics-feature::before {
+    display: none;
+  }
+
   .profile-hackathon-feature__placement {
     font-size: clamp(26px, 8vw, 38px);
   }
@@ -1069,6 +1117,20 @@
   .profile-academics-feature > div {
     min-height: 0;
     padding: 14px 20px;
+  }
+
+  .profile-academics-feature > div:nth-child(2) {
+    padding: 14px 20px;
+  }
+
+  .profile-academics-feature__graduation {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .profile-academics-feature__graduation-label {
+    position: static;
   }
 
   .profile-hackathon-feature__project img {
