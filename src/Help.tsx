@@ -106,12 +106,12 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   if (pathname === "/profile/demos") {
     return [
       {
-        title: "Choose a recording",
-        detail: "Use the left selector to switch between Food Tracker, Crest, and Cho’Veigo.",
+        title: "Choose a demo",
+        detail: "View Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.",
       },
       {
-        title: "Stay in the client",
-        detail: "Crest plays in the portfolio when available. Cho’Veigo is a still capture.",
+        title: "Play Crest",
+        detail: "Crest is the only playable entry. Use Play to start its in-client video.",
       },
       {
         title: "Change sections",

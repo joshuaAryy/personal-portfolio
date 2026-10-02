@@ -46,7 +46,7 @@ export default function DemosPage() {
     <Client pageClass="main--demos">
       <ProfileNav />
       <div className="demo-layout">
-        <nav className="demo-selector" aria-label="Demo recordings">
+        <nav className="demo-selector" aria-label="Demo selector">
           {demoOptions.map((item, index) => (
             <button
               key={item.key}

@@ -37,6 +37,8 @@ Help is a reusable, dismissible overlay above the current route; dismissal retur
 
 Lobby guidance must match the actions available on that route. Projects, Experience, and Hackathons can explain how to open the selected story. Education currently supports selection and academic-detail preview only: Figma's `VIEW EDUCATION` target is unresolved, so do not promise an open action, create a self-link, or invent a destination. Help and accessible selection instructions describe only the preview until the owner resolves that CTA.
 
+Demos Help and accessible labels must distinguish the media roles: Food Tracker is a static identity poster, Cho'Veigo is a static Recommendations capture, and Crest alone has user-initiated in-client playback. Do not call every entry a recording or describe Crest playback as merely available conditionally when its Play action is present.
+
 ## Case-study diagrams
 
 Owner review on 2026-09-30 endorsed subtle diagram motion as a possibility for the actual site when it makes a technical figure easier to follow: arrows can gently pulse or travel, pipeline stages can illuminate in sequence, source files can move through transformations, retrieval branches can light before joining, and schema fields can align into a canonical structure. This is optional; do not animate every figure or add motion to the current Figma pass. Keep movement restrained, professional, and subordinate to the figure’s static explanation; do not turn case studies into animated infographics. Detail behavior during implementation. Respect reduced motion by presenting the complete understandable state immediately, with no motion required to follow the story.
