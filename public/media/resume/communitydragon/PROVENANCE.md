@@ -27,3 +27,5 @@ The current [latest videos directory](https://raw.communitydragon.org/latest/plu
 The earlier Pass 16 J vector (Figma `1950:46`) is superseded. The active large identity uses selected archive mark `159:2`; small client contexts use the separate optical glyphs documented in [`ASSET_MANIFEST.md`](../../../../docs/ASSET_MANIFEST.md).
 
 These files retain Riot Games' original visual assets and provenance. Their use does not assert a separate license grant; publication decisions remain in the final release review.
+
+Follow-up source check on 2026-10-01 confirmed that the live CommunityDragon `latest` and `pbe` endpoints still serve the selected 9.22 frame and default/hover action plates byte-for-byte. The files saved under `docs/utility-state-review/cd-pbe-compare-2026-09-29/` are older local research snapshots labeled 2026-05-19, not captures of the current endpoints. Their main frame is a different opaque-aperture variant (530×530, SHA-256 `020EA0A758F71B10457EE973554A1FB8FA4456DD7AEBD0B7250C84E3B6171C86`); it would cover the separate central J and is not a replacement candidate. Keep those snapshots as historical research only.
