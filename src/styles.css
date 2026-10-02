@@ -5745,6 +5745,19 @@ a:focus-visible {
 .client--journey .client-body {
   grid-template-columns: minmax(0, 1fr) clamp(220px, 18.75vw, 360px);
 }
+.client--journey {
+  --client-header-height: 82px;
+}
+@media (max-width: 760px) {
+  .client--journey {
+    --client-header-height: 68px;
+  }
+}
+@media (max-width: 650px) {
+  .client--journey {
+    --client-header-height: 70px;
+  }
+}
 .journey-layout {
   display: grid;
   grid-template-columns: 390px minmax(0, 1170px);
