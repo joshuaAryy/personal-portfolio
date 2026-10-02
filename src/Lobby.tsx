@@ -186,7 +186,7 @@ const educationItems: LobbyItem[] = [
     mark: "/media/lobby/education-coursework.svg",
     markAlt: "Current coursework emblem",
     detail: "Algorithms & Data Structures",
-    supportingDetail: "Software Systems · Database Systems I\nMicroprocessor Systems",
+    supportingDetail: "Software Systems · Database Systems\nMicroprocessor Systems",
     roles: [],
     featured: true,
   },
