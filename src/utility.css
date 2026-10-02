@@ -173,6 +173,17 @@
   box-shadow: none;
 }
 
+/* Reduce the reserved rail gap only as the desktop Help dialog would leave the viewport. */
+@media (min-width: 621px) and (max-width: 900px) {
+  .client-help-overlay__dialog {
+    right: clamp(24px, calc(100vw - 434px), 248px);
+  }
+
+  .client-help-overlay__dialog--home {
+    right: clamp(24px, calc(100vw - 434px), 280px);
+  }
+}
+
 .client-help-overlay__sr-only {
   position: absolute;
   width: 1px;
