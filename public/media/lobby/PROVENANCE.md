@@ -1,6 +1,6 @@
 # Lobby asset provenance
 
-Assets collected for League-client shell and lobby reuse. The current production Home root is `2252:3445`, rebuilt from Archive `69:37`. The exact Home emblem/control SVGs below were originally exported from prior shell study `2297:3474` and are reused in the rebuilt four-mode composition; original export provenance remains recorded per file.
+Assets collected for League-client shell and lobby reuse. The active Home root `2252:3445` derives from Archive `69:37`. Shell/control SVGs noted below originate in prior study `2297:3474`; the Education backing is from `2920:350`. Four selected glyph overlays from review frame `3339:310` are now active in the existing Home slots. Per-file source and hashes are recorded below.
 
 ## Figma references
 
@@ -13,6 +13,7 @@ Assets collected for League-client shell and lobby reuse. The current production
 - Revised contextual Help overlay review: [2298:3474](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2298-3474), page `510:22`; based on Archive `69:207`.
 - Education icon source frame nodes are `738:3316` / `741:*`; Hackathon trophy source frame is `730:3316` / `733:*`.
 - Archive Home reference: [node 69:37](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=69-37) on page `510:2`.
+- Selected Home glyph set: review frame [3339:310](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=3339-310), now merged into active root `2252:3445`.
 - Home/Resume summary Activity Art was aligned to the current shell instance `2356:611` on 2026-10-01. These compact status illustrations are distinct from project logos; project-list slots retain the selected project marks.
 
 ## Current Education usage (2026-09-28)
@@ -58,7 +59,11 @@ Dimensions are intrinsic raster pixels or SVG viewBox units. SHA-256 values are 
 | `home-mode-projects-glyph-pass-04.svg` | SVG | 46.7 x 50 | 2045 | `0BAB8E98FA4FB26D4FE7A262A103FFA56735BF863BE891C3D01DAA9CD4A42233` | Direct Figma SVG export `3014:310`; systems-cube glyph for Home Pass 04. |
 | `home-mode-experience-glyph-pass-04.svg` | SVG | 41.7 x 46.5 | 2830 | `7C9460F0D991D98FF28A59C1AEC816331876F550F51727C74BA4600D9C4DE495` | Direct Figma SVG export `3014:322`; field-folio glyph for Home Pass 04. |
 | `home-mode-hackathons-glyph-pass-04.svg` | SVG | 34.3 x 51.5 | 2508 | `05C44EE7AC1198E4CD0085AC1A1A1796952D566B512D06FBAE4437D0AF39B5E6` | Direct Figma SVG export `3014:337`; tournament-medal glyph for Home Pass 04. |
-| `home-mode-education.svg` | SVG | 150 x 150 | 2223 | `6BEA4A429F0A8BDB76D2AB67C027293BCF1625DA4E2C50D010620D71458EDE49` | Active production emblem `2252:3445` / `2356:570`; open codex with page detail and bookmark. Refreshed vector imported to Figma node `2920:350`; prior open book retained as hidden history. |
+| `home-mode-projects-glyph-review-candidate.svg` | SVG | 64 x 64 | 1947 | `11d3d730bb2f88bfb763d9da484d0c6c1e4760e4d320713180796c0227b7308c` | Selected active Projects overlay; direct Figma export [3339:684](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=3339-684). |
+| `home-mode-experience-glyph-review-candidate.svg` | SVG | 64 x 64 | 1931 | `9470a5d50bd962f4989e6005c7cc8ffbcbf1a608665659b0807f561d861c1031` | Selected active Experience overlay; direct Figma export [3339:696](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=3339-696). |
+| `home-mode-hackathons-glyph-review-candidate.svg` | SVG | 64 x 64 | 2090 | `d04ab0cc26d05d0c14374ee6b7d9f041ca449ef381703ba93db0424f38ff4bd6` | Selected active Hackathons overlay; direct Figma export [3339:708](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=3339-708). |
+| `home-mode-education-glyph-review-candidate.svg` | SVG | 64 x 64 | 1616 | `e3c950eec73d9e6e138356788c2722f19755c7222845ac6aff575c5424dd4d30` | Selected active Education overlay; direct Figma export [3339:718](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=3339-718). |
+| `home-mode-education.svg` | SVG | 150 x 150 | 2223 | `6BEA4A429F0A8BDB76D2AB67C027293BCF1625DA4E2C50D010620D71458EDE49` | Earlier open-codex composite from Figma `2920:350`, retained for provenance; no longer used by React. Current Home layers selected glyph `3339:718` over the frame-only Experience shell. |
 | `home-mode-selected-ring.svg` | SVG | 150×150 | 208 | `e3cc922257ca6a9e0f2a112a7c946c70de13eac1c4fbe3b97c00b5c9ceb3393b` | Shared cyan selection outline from Figma `2252:3445`; React shows it on the selected destination. Active ring examples are `2883:2`, `2883:4`, `2883:6`, and `2883:8` under emblem frames `2356:534`, `2356:547`, `2356:559`, and `2356:570`. |
 | `home-confirm-button.svg` | SVG | 300×64 | 828 | `edfc5c46c5f7b501cf89c93d9e41813ce19915dcb1b8d1a2bfbecc883e28f803` | Exact vector export from prior Home Confirm CTA [2297:3701](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3701); current rebuilt control is `2252:3445` / `2356:605`; text stays live in HTML |
 | `home-confirm-disc.svg` | SVG | 58×58 | 238 | `aedb6c89b167be3ee67f629156145028fdd5347d2dc0f1e2e1beaff1759a4964` | Exact vector export from prior Home Back disc [2297:3699](https://www.figma.com/design/9zvk9iSRPKSsJ6llDJrQmA?node-id=2297-3699); current rebuilt Back group is in `2252:3445` |
