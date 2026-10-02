@@ -265,6 +265,7 @@ function LobbyCard({
   const mark = mode === "projects" && item.id === "crest"
     ? "/media/lobby/project-crest-index.png"
     : item.mark;
+  const instructionId = `lobby-card-instructions-${mode}-${item.id}`;
 
   return (
     <button
@@ -275,6 +276,7 @@ function LobbyCard({
         item.owner ? "league-banner--owner" : "",
       ].filter(Boolean).join(" ")}
       aria-label={`Select ${item.name}`}
+      aria-describedby={instructionId}
       aria-pressed={selected}
       onClick={onSelect}
     >
@@ -303,10 +305,10 @@ function LobbyCard({
         </span>
       )}
       {selected && <span className="league-banner__selection-cap" aria-hidden="true" />}
-      <span className="visually-hidden">
+      <span id={instructionId} className="visually-hidden">
         {mode === "education"
-          ? "Press Enter to select and review details below."
-          : "Press Enter to select. Use the action below to open."}
+          ? "Press Enter or Space to select and review details below."
+          : "Press Enter or Space to select. Use the action below to open."}
       </span>
       <span className="league-banner__mode-visually-hidden">{mode}</span>
     </button>
