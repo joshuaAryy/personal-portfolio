@@ -5,11 +5,53 @@
 }
 
 #root .main.main--demos > .profile-nav {
-  width: 100%;
+  position: relative;
+  display: flex;
+  width: 700px;
   height: 52px;
   margin: 0 0 30px;
-  padding-left: 2.3%;
-  gap: 4.2%;
+  padding: 0;
+  gap: 0;
+  color: #f0d28a;
+  font: 700 12px/normal "Lato", Arial, sans-serif;
+}
+
+#root .main.main--demos > .profile-nav > a,
+#root .main.main--demos > .profile-nav > span {
+  position: absolute;
+  top: 0;
+  display: flex;
+  height: 52px;
+  align-items: center;
+  padding: 0;
+  color: inherit;
+  opacity: 1;
+  text-align: left;
+}
+
+#root .main.main--demos > .profile-nav > :nth-child(1) {
+  left: 36px;
+  width: 100px;
+}
+
+#root .main.main--demos > .profile-nav > :nth-child(2) {
+  left: 168px;
+  width: 84px;
+}
+
+#root .main.main--demos > .profile-nav > :nth-child(3) {
+  left: 284px;
+  width: 180px;
+}
+
+#root .main.main--demos > .profile-nav > :nth-child(4) {
+  left: 496px;
+  width: 60px;
+}
+
+#root .main.main--demos > .profile-nav > a.active::after {
+  left: 0;
+  background: rgba(215, 179, 101, 0.9);
 }
 
 #root .main.main--demos .demo-layout {
@@ -281,9 +323,33 @@
   }
 
   #root .main.main--demos > .profile-nav {
+    position: relative;
+    display: flex;
+    width: 100%;
     margin-bottom: 20px;
     padding-right: 14px;
     padding-left: 14px;
+    gap: 16px;
+    overflow-x: auto;
+    font-size: 11px;
+  }
+
+  #root .main.main--demos > .profile-nav > a,
+  #root .main.main--demos > .profile-nav > span {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    flex: 0 0 auto;
+    padding: 0;
+  }
+
+  #root .main.main--demos > .profile-nav > :nth-child(1),
+  #root .main.main--demos > .profile-nav > :nth-child(2),
+  #root .main.main--demos > .profile-nav > :nth-child(3),
+  #root .main.main--demos > .profile-nav > :nth-child(4) {
+    left: auto;
+    width: auto;
   }
 
   #root .main.main--demos .demo-layout {
