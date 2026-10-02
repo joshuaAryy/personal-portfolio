@@ -80,6 +80,7 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
       setLeaving(true);
       timers.current.push(window.setTimeout(goToHome, REDUCED_HANDOFF_MS));
     } else {
+      setLeaving(false);
       timers.current.push(window.setTimeout(goToHome, OPENING_DURATION_MS));
     }
 
