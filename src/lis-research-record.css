@@ -895,11 +895,6 @@
   line-height: 1.55;
 }
 
-.lis-public-dataset { margin-top: 10px; }
-.lis-public-dataset > .lis-kicker { margin-bottom: 6px; }
-.lis-public-dataset > p:not(.lis-kicker) { margin: 3px 0 0; color: var(--lis-muted); font-size: 12px; line-height: 1.4; }
-.lis-public-dataset strong { color: var(--lis-paper); font-weight: 600; }
-
 .lis-public-representation {
   min-width: 0;
   min-height: 231px;
@@ -1052,22 +1047,6 @@
 .living-story.lis-record--public .lis-public-section__heading > p:not(.lis-kicker) {
   font-size: 16px;
   line-height: 1.18;
-}
-
-.living-story.lis-record--public .lis-public-dataset {
-  margin-top: 15px;
-}
-
-.living-story.lis-record--public .lis-public-dataset > .lis-kicker {
-  margin: 0 0 3px;
-  font-size: 12px;
-  line-height: 1.4;
-}
-
-.living-story.lis-record--public .lis-public-dataset > p:not(.lis-kicker) {
-  margin: 3px 0 0;
-  font-size: 15px;
-  line-height: 1.5;
 }
 
 .living-story.lis-record--public .lis-public-representation {

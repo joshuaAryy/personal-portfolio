@@ -1,8 +1,8 @@
 # Living in Silico — Figma and site render, pass 05
 
-The public page now follows the complete 1,560 × 2,260 Figma story at desktop size. The dataset callout describes the source collection and curated experiment sets as two useful scopes; it omits the snapshot date. The factual handoff in `CASE_STUDY_CONTENT_SOURCE.md` still preserves the exact dataset context and the uncertainty about how the method settings relate to the 500 generated SMILES samples.
+This 2026-09-29 report documents a prior public-page version at desktop size. It included a dataset-scope callout that was removed from active React/Figma on 2026-10-02 to keep the story focused on representation, methods, outcomes, and learning. Exact dataset counts and run-record uncertainty remain in `CASE_STUDY_CONTENT_SOURCE.md`. Do not treat this report or its captures as evidence of current public copy.
 
-The site opening and all later section anchors match the current Figma page. The experiment routes now include their method paths, explanation, and outcome; the 500-sample result has its own heading and identifies the sequence-generation output; the contribution and close sections use the authored public copy.
+At that time, the site opening and later section anchors matched the 2026-09-29 Figma page. The experiment routes now include their method paths, explanation, and outcome; the 500-sample result has its own heading and identifies the sequence-generation output; the contribution and close sections use the authored public copy.
 
 ## Rendered captures
 

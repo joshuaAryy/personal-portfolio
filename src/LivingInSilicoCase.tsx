@@ -148,11 +148,6 @@ export default function LivingInSilicoCase() {
           <p>
             I moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.
           </p>
-          <div className="lis-public-dataset" aria-label="Dataset scope">
-            <p className="lis-kicker">DATA SCOPE</p>
-            <p>Source collection · <strong>15,696 records</strong> / <strong>14,487 unique SMILES</strong>.</p>
-            <p>Curated experiment sets · roughly <strong>400–600 entries</strong>.</p>
-          </div>
         </div>
         <RepresentationFigure />
       </section>
