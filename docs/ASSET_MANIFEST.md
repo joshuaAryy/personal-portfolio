@@ -93,37 +93,37 @@ The authentic CommunityDragon Ready Check source and collected frame/action art 
 - The website Opening source uses selected archive artwork
 - The ornamental circle source is the vector `2448:315` (`circle-lines-gold.svg`, 490 × 490 px) with the alpha mask vector `2448:317` (`circle-tick-mask.svg`, 560 × 526.129 px), inside `2448:312` / animated frame `2443:71`. The tick frame opacity is 0.44 and the source group opacity is 0.60. Legacy treatment, custom ticks and J vectors stay archived under `2448:2`; the active cohort uses only visible current layers. Figma motion/provenance notes remain in `2025:84`, `2025:88` and `2025:125`.
 
-| `public/media/opening/` asset | Source node | Intrinsic SVG size | Bytes | SHA-256 |
-|---|---|---:|---:|---|
-| `gameflow-background.jpg` | `2448:3` | 1440 × 900 source | 259171 | `B2A69A3AC017F8DE59E04BB56BC4137A9709FBF6E272190552CC4DDC09535110` |
-| `outer-dark-alloy-bezel.svg` | `2443:2` | 606 × 606 | 1127 | `813CC5BAE897F4033E9FC4A45ADADAC8AF42CC9EBC15B52244EF43D74BB31873` |
-| `bevel-catch.svg` | `2443:8` | 590 × 590 | 1116 | `CD1D058AB96304731CFFAE287DF516F32D948D30F1254B6D8F76B0788CB0599B` |
-| `black-enamel-bed.svg` | `2443:14` | 570 × 570 | 1125 | `237E48544119AE8E0660E7D8716DE8BBEE85F237C166382BA180AB5EE574D893` |
-| `recessed-inner-rail.svg` | `2443:20` | 518 × 518 | 1128 | `3471ABA4ED3BB6705A978358F75A09696A9B59141D005C30D5D57BBBCBD9BF12` |
-| `j-seat-outer-rim.svg` | `2443:26` | 426 × 426 | 1125 | `173F88DB4C40EBDF17197A03A0CB37DA696F4C5E0E108A02CE5A80F0D34BDFA0` |
-| `j-seat-enamel.svg` | `2443:32` | 406 × 406 | 1423 | `73EDDD2CCFDA4BB1CE81804B2CCBB8940DE2CFEEF7CE5A367FFBC0BE77D45B80` |
-| `segmented-outer-bezel.svg` | `2443:38` | 560 × 560 | 5691 | `EFE5E21D0EB4CE36136EC092A38C121B4962B0DBB13020693129E239CDA0229F` |
-| `circle-lines-gold.svg` | `2448:315` | 490 × 490 | 480 | `5F9C0BFC1A237300DF7401A08BD24279BFAF621F547AFBFBE0565E940B685A96` |
-| `circle-tick-mask.svg` | `2448:317` | 560 × 526.129 | 595 | `CD2A609B7A7C9559FD32F12D07B47951FC87C8C04EDED8807FAC8239A96495FC` |
-| `cyan-energy-insets.svg` | `2443:92` | 560 × 560 | 3100 | `61F31A99FE00A6EC56878916E37C784D2FE5436A092A13D4432B3E1136A74FDB` |
-| `indexed-jewel-marks.svg` | `2443:110` | 560 × 560 | 3183 | `EF809025E5881F785817004ACDEC12D8CFA29CDD85089CCD10725250D23CCB56` |
-| `j-archive-led-extrusion.svg` | Pass 16 Figma `2843:10` | 182.483 x 341.233 | 699 | `A9ADE3999B074B27BBBE0FAD94A665E9BB657DB70E5993A64AF721FFA01D5311` |
-| `j-archive-led-forged-face.svg` | Pass 16 Figma `2843:2` | 177.199 x 355.109 | 1900 | `3CD397CD561D94993B9D2CC92AEA8B297ADB0F308E2FBA6238BA4CDB7BDFB6A8` |
-| `j-canonical-forged-extrusion.svg` | `2711:353` and `2704:310` | 182.483 × 341.233 | 1254 | `7E345A7E321077A36107A1447CB334A93F9816C72437177B92BD426088509C57` |
-| `j-canonical-forged-gold-face.svg` | `2704:312` | 177.199 × 355.109 | 3980 | `E71E3D7A7DB79A1B7A57704E793B39ED0326436A439E711A3A231C6D0A0F5565` |
-| `j-canonical-tapered-right-plane.svg` | `2704:316` | 8.65267 × 259.6 | 808 | `53ECC715824D0DFC90D27AEC20EE9CBCD8C8C0020AEFC01AF3E1DAA9939AB366` |
-| `j-canonical-asymmetric-crown-plane.svg` | `2704:318` | 171.855 × 55.6712 | 905 | `C0A88734558D4DE08654C2EA1C2C75EAB852C62F2B7489C2FF5B25B4220D6E5B` |
-| `j-canonical-crown-bevel-facet.svg` | `2704:321` | 150.564 × 11.3894 | 559 | `2F4B9B996D5F03E6C00988D007371CAA4F5566E5A1EA772A7A6021E5F9FD2D23` |
-| `j-canonical-shoulder-undercut.svg` | `2704:323` | 152 × 36.9932 | 515 | `7163F0383D7C77D07566AF8D7CC65454146F93189B0A46258C9D692A0D2D8088` |
-| `j-canonical-stem-face-plane.svg` | `2704:325` | 32.1294 × 255.088 | 532 | `612091D859A94505ABF9EE4A7B7EFF4C8A1013D06417D783FD4394DCFB7C82A3` |
-| `j-canonical-shoulder-polish.svg` | `2704:327` | 160.396 × 19.5334 | 518 | `FD0D2FCDB2F619BA84DC16B67FABA53489C73C70A4AB0EDC3425D043F781E4E4` |
-| `j-canonical-inner-hook-bevel.svg` | `2704:329` | 95.247 × 26.5608 | 482 | `B28EC8C4265F9B0B90F9237DD682B6BA759EA0EE223E0086F2BC57E1129114A2` |
-| `j-canonical-forged-crown-facet.svg` | `2704:331` | 76.632 × 6.254 | 550 | `E791DB8539D5C111BB774A081486DD0E23526FA7AB62D8B1024FDB2FFE7FC66E` |
-| `j-canonical-forged-stem-facet.svg` | `2704:333` | 2.27157 × 113.28 | 649 | `E61CEB9B9C0D44C5DFE82A276C434FB4FDE3F327159923C2A13C0264A4E16484` |
-| `j-canonical-forged-hook-facet.svg` | `2704:335` | 21.777 × 8.49587 | 455 | `FD6A05D6B21EBFEFBCD191D83F3F6F24536AC0E41546C4E07EAECED13F6035D5` |
-| `canonical-j-construction-edge.svg` | Superseded Figma frame `2443:132` | 380 × 380 | 1337 | `0770BAB98C9DA297CCDD2CEB113F130F80FC9E2114CA1CC27149D357B8BA44B6` |
-| `j-sculpted-asymmetric-forged-mark.svg` | Historical flattened export of the earlier `2443:138` vector (unused); the live `2443:138` is a visible group wrapper around active vectors `2443:139–150` | 205.698 × 319.978 | 6834 | `A6C7CB758834DDD463FF3419A4AEFDF223B97ABC68AC1B91C8654016EAF478FD` |
-| `restrained-rail-glint.svg` | `2443:154` | 32 × 32 | 983 | `5F17D1ACEF5B09F42787748DC0141F54049798FD108786A4CF5FCE89DD7C039D` |
+| `public/media/opening/` asset | Source node | Intrinsic SVG size | Bytes | SHA-256 | Repository / implementation status |
+|---|---|---:|---:|---|---|
+| `gameflow-background.jpg` | `2448:3` | 1440 × 900 source | 259171 | `B2A69A3AC017F8DE59E04BB56BC4137A9709FBF6E272190552CC4DDC09535110` | **TRACKED / ACTIVE** Opening background source. |
+| `outer-dark-alloy-bezel.svg` | `2443:2` | 606 × 606 | 1127 | `813CC5BAE897F4033E9FC4A45ADADAC8AF42CC9EBC15B52244EF43D74BB31873` | **TRACKED / ACTIVE** Opening chassis layer. |
+| `bevel-catch.svg` | `2443:8` | 590 × 590 | 1116 | `CD1D058AB96304731CFFAE287DF516F32D948D30F1254B6D8F76B0788CB0599B` | **TRACKED / ACTIVE** Opening chassis layer. |
+| `black-enamel-bed.svg` | `2443:14` | 570 × 570 | 1125 | `237E48544119AE8E0660E7D8716DE8BBEE85F237C166382BA180AB5EE574D893` | **TRACKED / ACTIVE** Opening chassis layer. |
+| `recessed-inner-rail.svg` | `2443:20` | 518 × 518 | 1128 | `3471ABA4ED3BB6705A978358F75A09696A9B59141D005C30D5D57BBBCBD9BF12` | **TRACKED / ACTIVE** Opening chassis layer. |
+| `j-seat-outer-rim.svg` | `2443:26` | 426 × 426 | 1125 | `173F88DB4C40EBDF17197A03A0CB37DA696F4C5E0E108A02CE5A80F0D34BDFA0` | **LOCAL ONLY / NOT PRODUCTION** Historical J-seat study export; untracked and not imported by React. |
+| `j-seat-enamel.svg` | `2443:32` | 406 × 406 | 1423 | `73EDDD2CCFDA4BB1CE81804B2CCBB8940DE2CFEEF7CE5A367FFBC0BE77D45B80` | **LOCAL ONLY / NOT PRODUCTION** Historical J-seat study export; untracked and not imported by React. |
+| `segmented-outer-bezel.svg` | `2443:38` | 560 × 560 | 5691 | `EFE5E21D0EB4CE36136EC092A38C121B4962B0DBB13020693129E239CDA0229F` | **TRACKED / ACTIVE** Segmented Opening ring layer. |
+| `circle-lines-gold.svg` | `2448:315` | 490 × 490 | 480 | `5F9C0BFC1A237300DF7401A08BD24279BFAF621F547AFBFBE0565E940B685A96` | **TRACKED / ACTIVE** Opening ornamental circle. |
+| `circle-tick-mask.svg` | `2448:317` | 560 × 526.129 | 595 | `CD2A609B7A7C9559FD32F12D07B47951FC87C8C04EDED8807FAC8239A96495FC` | **TRACKED / ACTIVE** Opening circle alpha mask. |
+| `cyan-energy-insets.svg` | `2443:92` | 560 × 560 | 3100 | `61F31A99FE00A6EC56878916E37C784D2FE5436A092A13D4432B3E1136A74FDB` | **TRACKED / ACTIVE** Opening energy layer. |
+| `indexed-jewel-marks.svg` | `2443:110` | 560 × 560 | 3183 | `EF809025E5881F785817004ACDEC12D8CFA29CDD85089CCD10725250D23CCB56` | **TRACKED / ACTIVE** Opening jewel-mark layer. |
+| `j-archive-led-extrusion.svg` | Pass 16 Figma `2843:10` | 182.483 x 341.233 | 699 | `A9ADE3999B074B27BBBE0FAD94A665E9BB657DB70E5993A64AF721FFA01D5311` | **LOCAL ONLY / REJECTED** Pass 16 Codex J reconstruction; historical evidence only, not production. |
+| `j-archive-led-forged-face.svg` | Pass 16 Figma `2843:2` | 177.199 x 355.109 | 1900 | `3CD397CD561D94993B9D2CC92AEA8B297ADB0F308E2FBA6238BA4CDB7BDFB6A8` | **LOCAL ONLY / REJECTED** Pass 16 Codex J reconstruction; historical evidence only, not production. |
+| `j-canonical-forged-extrusion.svg` | `2711:353` and `2704:310` | 182.483 × 341.233 | 1254 | `7E345A7E321077A36107A1447CB334A93F9816C72437177B92BD426088509C57` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-forged-gold-face.svg` | `2704:312` | 177.199 × 355.109 | 3980 | `E71E3D7A7DB79A1B7A57704E793B39ED0326436A439E711A3A231C6D0A0F5565` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-tapered-right-plane.svg` | `2704:316` | 8.65267 × 259.6 | 808 | `53ECC715824D0DFC90D27AEC20EE9CBCD8C8C0020AEFC01AF3E1DAA9939AB366` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-asymmetric-crown-plane.svg` | `2704:318` | 171.855 × 55.6712 | 905 | `C0A88734558D4DE08654C2EA1C2C75EAB852C62F2B7489C2FF5B25B4220D6E5B` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-crown-bevel-facet.svg` | `2704:321` | 150.564 × 11.3894 | 559 | `2F4B9B996D5F03E6C00988D007371CAA4F5566E5A1EA772A7A6021E5F9FD2D23` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-shoulder-undercut.svg` | `2704:323` | 152 × 36.9932 | 515 | `7163F0383D7C77D07566AF8D7CC65454146F93189B0A46258C9D692A0D2D8088` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-stem-face-plane.svg` | `2704:325` | 32.1294 × 255.088 | 532 | `612091D859A94505ABF9EE4A7B7EFF4C8A1013D06417D783FD4394DCFB7C82A3` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-shoulder-polish.svg` | `2704:327` | 160.396 × 19.5334 | 518 | `FD0D2FCDB2F619BA84DC16B67FABA53489C73C70A4AB0EDC3425D043F781E4E4` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-inner-hook-bevel.svg` | `2704:329` | 95.247 × 26.5608 | 482 | `B28EC8C4265F9B0B90F9237DD682B6BA759EA0EE223E0086F2BC57E1129114A2` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-forged-crown-facet.svg` | `2704:331` | 76.632 × 6.254 | 550 | `E791DB8539D5C111BB774A081486DD0E23526FA7AB62D8B1024FDB2FFE7FC66E` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-forged-stem-facet.svg` | `2704:333` | 2.27157 × 113.28 | 649 | `E61CEB9B9C0D44C5DFE82A276C434FB4FDE3F327159923C2A13C0264A4E16484` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `j-canonical-forged-hook-facet.svg` | `2704:335` | 21.777 × 8.49587 | 455 | `FD6A05D6B21EBFEFBCD191D83F3F6F24536AC0E41546C4E07EAECED13F6035D5` | **LOCAL ONLY / NOT PRODUCTION** Earlier J reconstruction study; untracked and not imported by React. |
+| `canonical-j-construction-edge.svg` | Superseded Figma frame `2443:132` | 380 × 380 | 1337 | `0770BAB98C9DA297CCDD2CEB113F130F80FC9E2114CA1CC27149D357B8BA44B6` | **LOCAL ONLY / SUPERSEDED** Untracked historical export; not imported by React. |
+| `j-sculpted-asymmetric-forged-mark.svg` | Historical flattened export of the earlier `2443:138` vector (unused); the live `2443:138` is a visible group wrapper around active vectors `2443:139–150` | 205.698 × 319.978 | 6834 | `A6C7CB758834DDD463FF3419A4AEFDF223B97ABC68AC1B91C8654016EAF478FD` | **LOCAL ONLY / NOT PRODUCTION** Historical flattened export; not imported by React. |
+| `restrained-rail-glint.svg` | `2443:154` | 32 × 32 | 983 | `5F17D1ACEF5B09F42787748DC0141F54049798FD108786A4CF5FCE89DD7C039D` | **TRACKED / ACTIVE** Opening rail glint. |
 - The active development direction prefers intended collected Riot/League/CommunityDragon assets and approved Figma exports where selected. Supplementary studies and the collection research packet are workspace-level files outside this Git repository; they are not build/runtime dependencies. This branch's tracked asset and provenance records are the durable implementation references.
 - `public/media/lobby/` records the exact Party background, banner, selected tray/button, role marks, owner portrait, academic/hackathon marks, four vector Home-mode emblems, Home Confirm/Back controls, five client-shell utilities, and Activity toolbar glyphs. The current production Home root is `2252:3445`, rebuilt from Archive `69:37`; some byte-identical SVGs were originally exported from prior study `2297:3474`. Source node history, byte lengths, and hashes are in [`public/media/lobby/PROVENANCE.md`](../public/media/lobby/PROVENANCE.md). Use selected Figma artwork rather than generic CSS approximations.
 - The source/provenance record for an asset should remain intact. CommunityDragon hosting alone is not a blanket license grant; that fact belongs to final release review and does not prevent using selected material for faithful private/public-repository development.
