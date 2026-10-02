@@ -133,7 +133,12 @@ function HomeExploreContent() {
         <span className="home-explore__state">EXPLORE / SELECT A MODE</span>
       </header>
 
-      <div className="home-explore__modes" role="group" aria-label="Portfolio modes">
+      <div
+        className="home-explore__modes"
+        role="group"
+        aria-label="Portfolio modes"
+        aria-describedby="home-explore-keyboard-help"
+      >
         {modes.map((mode, index) => {
           const isSelected = selected.id === mode.id;
           return (
@@ -213,7 +218,10 @@ function HomeExploreContent() {
             <span>Confirm</span>
           </button>
         </div>
-        <p>Use the arrows to move. Enter confirms.</p>
+        <p className="home-explore__keyboard-help" id="home-explore-keyboard-help">
+          Use Left and Right Arrow to move between modes. Home and End jump to the
+          first or last mode. Press Enter to open the selected mode.
+        </p>
       </div>
     </section>
   );

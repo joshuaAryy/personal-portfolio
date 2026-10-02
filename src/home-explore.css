@@ -353,7 +353,7 @@
   position: absolute;
   z-index: 2;
   right: 0;
-  bottom: 74px;
+  bottom: 99px;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -367,7 +367,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  transform: translateX(8px);
   pointer-events: auto;
+}
+
+.home-explore__confirm-area > .home-explore__keyboard-help {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  border: 0;
+  white-space: nowrap;
 }
 
 .home-explore__back {
@@ -565,6 +579,10 @@
 
   .home-explore__confirm-area {
     bottom: 22px;
+  }
+
+  .home-explore__confirm-pair {
+    transform: none;
   }
 
   .home-explore__back {
