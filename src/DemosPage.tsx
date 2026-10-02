@@ -96,7 +96,12 @@ export default function DemosPage() {
                       className="demo-player__sample-badge"
                       data-node-id="1553:45"
                     >
-                      SAMPLE DATA
+                      <span
+                        className="demo-player__sample-badge-label"
+                        data-node-id="1553:46"
+                      >
+                        SAMPLE DATA
+                      </span>
                     </span>
                     <button
                       className="demo-player__play"
