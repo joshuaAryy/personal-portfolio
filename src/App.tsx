@@ -85,7 +85,16 @@ export default function App() {
             <div className="journey-layout">
               <aside className="journey-identity" aria-label="Profile identity">
                 <div className="journey-identity__portrait" aria-hidden="true">
-                  JA
+                  <img
+                    className="journey-identity__photo"
+                    src="/media/lobby/profile-portrait-source.jpg"
+                    alt=""
+                  />
+                  <img
+                    className="journey-identity__frame"
+                    src="/media/lobby/project-medallion-frame.png"
+                    alt=""
+                  />
                 </div>
                 <div className="journey-identity__copy">
                   <p className="journey-identity__name">JOSHUA ARYEETEY</p>

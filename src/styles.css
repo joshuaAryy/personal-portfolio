@@ -5772,19 +5772,32 @@ a:focus-visible {
 .journey-identity__portrait {
   position: relative;
   z-index: 1;
-  width: 112px;
-  height: 112px;
-  margin-bottom: 24px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #d3b86d94;
+  flex: 0 0 208px;
+  width: 208px;
+  height: 208px;
+  margin-bottom: 20px;
+}
+.journey-identity__photo,
+.journey-identity__frame {
+  position: absolute;
+  display: block;
+  object-fit: contain;
+  pointer-events: none;
+}
+.journey-identity__photo {
+  top: 12.5%;
+  left: 12.5%;
+  width: 75%;
+  height: 75%;
+  border: 1px solid #d3b86d;
   border-radius: 50%;
-  outline: 1px solid #92a4a044;
-  outline-offset: 5px;
-  background: radial-gradient(circle at 38% 31%, #53445c, #151a20 72%);
-  color: #f0e5c7;
-  font-size: 30px;
-  letter-spacing: 2px;
+  object-fit: cover;
+  object-position: center;
+}
+.journey-identity__frame {
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 .journey-identity__copy {
   position: relative;
@@ -6251,7 +6264,6 @@ a:focus-visible {
     width: 72px;
     height: 72px;
     margin: 0 4px 0 0;
-    font-size: 22px;
   }
   .journey-identity__copy .journey-identity__name {
     margin-bottom: 8px;
