@@ -422,7 +422,7 @@ export default function FoodTrackerCaseStudy() {
             about and trust.
           </p>
           <small>
-            PRODUCT RULE · SIMPLE TO LOG · TRUSTED UNDERNEATH
+            Simple and Complex are presentation levels over one product and backend.
           </small>
         </section>
       </article>
