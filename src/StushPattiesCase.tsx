@@ -232,8 +232,8 @@ export default function StushPattiesCase() {
             case packs, and reporting months.
           </p>
           <p>
-            I worked in a two-person technical team with Shiv. Stakeholder conversations shaped the business
-            rules and reporting handoff across the shared fields.
+            Working with Shiv and client stakeholders, I translated the shared fields into business rules and a
+            repeatable reporting handoff.
           </p>
         </div>
       </section>
