@@ -62,7 +62,7 @@ function SystemFlowFigure() {
           </p>
         </section>
 
-        <span className="stush-system-flow__arrow stush-system-flow__arrow--inputs" aria-hidden="true">→</span>
+        <span className="stush-system-flow__arrow stush-system-flow__arrow--inputs stush-system-flow__arrow--cue-1" aria-hidden="true">→</span>
 
         <div className="stush-system-flow__transformation">
           <section className="stush-flow-parser" aria-label="Layout-aware parsing">
@@ -88,7 +88,7 @@ function SystemFlowFigure() {
             <p className="stush-parser-caption">Fields found in each layout</p>
           </section>
 
-          <span className="stush-system-flow__arrow stush-system-flow__arrow--inner" aria-hidden="true">→</span>
+          <span className="stush-system-flow__arrow stush-system-flow__arrow--inner stush-system-flow__arrow--cue-2" aria-hidden="true">→</span>
 
           <section className="stush-flow-schema" aria-label="One shared field contract">
             <p className="stush-flow-kicker">SHARED FIELD CONTRACT</p>
@@ -103,7 +103,7 @@ function SystemFlowFigure() {
             </ul>
           </section>
 
-          <span className="stush-system-flow__arrow stush-system-flow__arrow--inner" aria-hidden="true">→</span>
+          <span className="stush-system-flow__arrow stush-system-flow__arrow--inner stush-system-flow__arrow--cue-3" aria-hidden="true">→</span>
 
           <section className="stush-flow-normalize" aria-label="Normalization using shared reporting rules">
             <p className="stush-flow-kicker">NORMALIZE</p>
@@ -132,7 +132,7 @@ function SystemFlowFigure() {
                 </li>
               ))}
             </ul>
-            <span className="stush-system-flow__arrow" aria-hidden="true">→</span>
+            <span className="stush-system-flow__arrow stush-system-flow__arrow--cue-4" aria-hidden="true">→</span>
             <div className="stush-powerbi-destination">
               <strong>Power BI</strong>
               <span>Reporting handoff</span>

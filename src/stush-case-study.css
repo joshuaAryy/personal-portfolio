@@ -732,6 +732,16 @@
 .stush-system-flow__formats span { color: var(--stush-muted); font-size: 8px; }
 .stush-system-flow__arrow { display: flex; align-items: center; justify-content: center; color: var(--stush-amber); font-size: 20px; line-height: 1; }
 .stush-system-flow__arrow--inputs { position: relative; left: -5px; }
+@keyframes stush-flow-direction-cue {
+  0%, 10%, 100% { color: var(--stush-amber); opacity: .76; }
+  4%, 8% { color: #d4e7df; opacity: 1; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .stush-system-flow__arrow--cue-1 { animation: stush-flow-direction-cue 7.2s ease-in-out 0s infinite; }
+  .stush-system-flow__arrow--cue-2 { animation: stush-flow-direction-cue 7.2s ease-in-out .9s infinite; }
+  .stush-system-flow__arrow--cue-3 { animation: stush-flow-direction-cue 7.2s ease-in-out 1.8s infinite; }
+  .stush-system-flow__arrow--cue-4 { animation: stush-flow-direction-cue 7.2s ease-in-out 2.7s infinite; }
+}
 .stush-system-flow__transformation {
   display: grid;
   grid-template-columns: 153px 22px 300px 22px minmax(0, 1fr);
