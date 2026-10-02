@@ -20,8 +20,8 @@ const experiments = [
     steps: ["Structure", "Fragment selection", "Recombination"],
     purpose: "Select structurally compatible fragments with RDKit / Fragmenstein.",
     outcomeLabel: "OUTCOME",
-    outcome: "Explored in some workflows",
-    outcomeDetail: "I explored structure decomposition and fragment recombination with RDKit / Fragmenstein.",
+    outcome: "Some fragment workflows succeeded",
+    outcomeDetail: "I explored fragment linking and spatial workflows with RDKit / Fragmenstein.",
     tone: "teal",
   },
   {

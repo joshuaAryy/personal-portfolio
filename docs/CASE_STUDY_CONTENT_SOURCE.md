@@ -54,7 +54,7 @@ Living in Silico covers technical learning during an AI/ML Research Intern role 
 
 The April 12 dataset snapshot (15,696 rows; 14,487 unique SMILES) is separate from curated experimental subsets of roughly 400–600 entries. Owner-supplied method details include DeepMol CSVLoader, Morgan fingerprints (radius 2, 128 bits), and an RNN MolecularGenerator run for 10 epochs with batch size 64. DeepMol work produced 500 generated SMILES samples; do not call them valid, unique, or novel molecules. Run artifacts do not verify how every method detail relates to those 500 samples. That uncertainty remains in this factual source; it is not automatically public copy.
 
-Fragmenstein workflows used fragment-based molecular design with RDKit. REINVENT4 was researched/attempted, but successful generation was not achieved. Do not claim research impact, a consumer product result, or successful REINVENT4 generation. The technical public story should explain representation, methods, outcomes, and learning; this is presentation direction, not an instruction to reproduce every source caveat.
+Some fragment-based workflows succeeded, including fragment linking and spatial workflows using RDKit / Fragmenstein. REINVENT4 was researched/attempted, but successful generation was not achieved. Do not claim research impact, a consumer product result, or successful REINVENT4 generation. The technical public story should explain representation, methods, outcomes, and learning; this is presentation direction, not an instruction to reproduce every source caveat.
 
 ## Stush Patties — source truth
 

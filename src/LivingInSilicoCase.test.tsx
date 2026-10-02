@@ -12,15 +12,15 @@ function renderCase() {
 }
 
 describe("Living in Silico public research story", () => {
-  it("explains molecular representation and the experiment data scope", () => {
+  it("explains molecular representation without exposing source dataset bookkeeping", () => {
     const markup = renderCase();
     expect(markup).toContain("Molecules need representation before generation.");
     expect(markup).toContain("AI / ML Research Intern");
     expect(markup).toContain("SMILES");
     expect(markup).toContain("RDKit");
-    expect(markup).toContain("15,696 records");
-    expect(markup).toContain("14,487 unique SMILES");
-    expect(markup).toContain("400");
+    expect(markup).not.toContain("15,696 records");
+    expect(markup).not.toContain("14,487 unique SMILES");
+    expect(markup).not.toContain("400");
     expect(markup).not.toContain("April snapshot");
     expect(markup).not.toContain("3–4 AM");
   });
@@ -32,7 +32,8 @@ describe("Living in Silico public research story", () => {
       "Morgan fingerprints (radius 2 / 128 bits)",
       "RNN MolecularGenerator",
       "RDKit + Fragmenstein",
-      "Explored in some workflows",
+      "Some fragment workflows succeeded",
+      "I explored fragment linking and spatial workflows with RDKit / Fragmenstein.",
       "500",
       "generated SMILES samples",
       "SEQUENCE-GENERATION OUTPUT",
