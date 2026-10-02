@@ -761,6 +761,9 @@ a:focus-visible {
   color: #f0e6d2;
   font-size: 14px;
 }
+.rail-social-footer > a.rail-social-footer__email {
+  color: #f0e6d2;
+}
 .rail-social-footer__help {
   display: grid;
   flex: 0 0 70px;
