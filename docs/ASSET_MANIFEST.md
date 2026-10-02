@@ -150,7 +150,9 @@ Production continues to use archive `159:2` as the large mark for Opening, Resum
 
 The authentic upload is a 220x220 JPEG (4,307 bytes; SHA-256 89A4512E...B0D9751). Figma exposes no vector or larger raw source for node `159:2`; the 700x700 PNG is a resampled export, is byte-identical to the React copy, and adds no image detail. Prior captures show source softness against crisp UI. Production keeps the archive fallback while Sonnet v8 `3325:191` is under owner review; the old Codex reconstruction line is rejected. Preserve separate ring-free optical glyphs at 54/32/16px.
 
-A live Figma asset download on 2026-10-01 reconfirmed that node `159:2` exposes only that same JPEG and no SVG/vector source. The separate J Pixel Match Lab node `147:2` also exposes a single 220x220 JPEG as its raw image, so it adds no higher-resolution raster source for the archive fallback. A strict generative-upscale preview changed the metal texture and energy detail, so it was rejected as an unfaithful source treatment and was not added to production. Keep the existing 700px resampled export; judge its actual sharpness in the queued supported-browser render comparison.
+The 2026-10-01 live Figma asset check reconfirmed that `159:2` exposes only the same 220x220 JPEG and no vector source. The `147:2` lab also exposes that single JPEG as its raw image, not a larger original. The 700x700 PNG is a resampled export. A generative-upscale preview changed the metal texture and energy detail, so it was rejected and not added to production. Keep the current 700px export; judge its sharpness in the queued supported-browser render comparison.
+
+A 2026-10-02 hierarchy check found hidden editable candidates `149:2` (v9), `160:2` (v10), `161:2` (v11), and `162:2` (v12) under `147:2`. These are separate vector reconstructions, not exports or higher-resolution sources for archive raster target `159:2`; keep them historical and do not substitute them for the production fallback.
 
 ## Archive fallback and optical-size J in active Figma contexts - 2026-09-30
 
