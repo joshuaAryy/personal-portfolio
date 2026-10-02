@@ -23,7 +23,7 @@ The visible Projects / Experience / Hackathon / Academics strip is a review-only
 
 Home uses the existing four-destination structure in `2252:3445`. Selection and confirmation stay separate; Profile remains in the top-right account entry, not a fifth mode. The four glyphs from review frame `3339:310` (`3339:684/696/708/718`) are now merged into the active Figma slots and use the same SVG exports in React. This is not final owner or render acceptance. Preserve the structure, shell, background, material, spacing, and no-scroll behavior; resolve only concrete rendered mismatches. Do not reopen structure.
 
-The Home Back disc and chevron (`2356:603/604`) have no Figma prototype reaction. Return to the previous React Router-managed in-app entry when the router history index is greater than zero; on a direct/cold Home entry, remain on `/home`. This avoids sending a visitor outside the portfolio when no in-app destination exists. Browser interaction and visual behavior remain queued for supported-browser validation.
+The Home Back disc and chevron (`2356:603/604`) have no Figma prototype reaction. Return to the previous React Router-managed in-app entry when the router history index is greater than zero; on a direct/cold Home entry, remain on `/home`. The active 1920×1080 frame places Back at x=640/y=920/58×58 and Confirm (`2356:605`) at x=676/y=917/300×64. React aligns to this source geometry; its keyboard-mode instructions remain available to assistive technology without adding a visible hint absent from Figma. Browser interaction and visual behavior remain queued for supported-browser validation.
 
 ## Shared shell footer
 
