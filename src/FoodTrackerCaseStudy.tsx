@@ -282,6 +282,37 @@ export default function FoodTrackerCaseStudy() {
           <FoodSystemMap />
         </section>
 
+        <section
+          className="food-section food-interface"
+          id="food-interface"
+          aria-labelledby="food-interface-title"
+        >
+          <div className="food-interface__story">
+            <p className="food-section-label">IN THE PRODUCT · MOBILE SEARCH</p>
+            <h2 id="food-interface-title">
+              One query can surface
+              <br />
+              several plausible foods.
+            </h2>
+            <p>
+              The intended food needs to rank near the top before its serving
+              and nutrition can be trusted. This earlier simulator capture
+              shows that decision in the product.
+            </p>
+          </div>
+          <figure className="food-interface__capture">
+            <img
+              src="/media/case-studies/food-tracker-search-banana-earlier-ui.png"
+              alt="Earlier Food Tracker mobile interface showing a banana query and candidate food results."
+              width="368"
+              height="800"
+            />
+            <figcaption>
+              EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH
+            </figcaption>
+          </figure>
+        </section>
+
         <section className="food-section food-evaluation" id="food-evaluation">
           <p className="food-section-label">OFFLINE EVALUATION · DEVELOPMENT + HOLDOUT</p>
           <div className="food-evaluation-heading">
