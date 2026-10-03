@@ -4,6 +4,12 @@
 
 Mingo is the project director. Mingo may execute directly while coordinating the persistent specialist lanes, and owns cross-surface priorities, owner direction, source reconciliation, acceptance, and documentation sync.
 
+## Session continuity and model routing
+
+**Authority order:** current owner instructions, current durable project documents, and current Figma/repository state override historical chat summaries. Historical context explains decisions; it never overrides current truth. The canonical continuation checkpoint is [docs/SESSION_HANDOFF_2026-10-02.md](docs/SESSION_HANDOFF_2026-10-02.md); verify its branch, staging, browser, and agent facts against live state before acting.
+
+For the next director session, the owner requests **Sol 6.1 for Mingo**. Concentrate cross-surface judgment and acceptance there. Use **Luna** for routine React edits, documentation, audits, copy sync, and deterministic QA where available. Establish or reuse one narrow **Sol 6.1 identity/J specialist** for bounded whole-mark critique and reconstruction; its proposed handle is `/root/identity_j_sol61`. The current thread has no active J specialist, so the next session must verify/recreate the lane rather than assume it exists. Do not create a continuously running Astra lane; any Astra use must be exceptional, bounded, justified, and owner-approved.
+
 ## Convergence and implementation
 
 - Progress means closing a real communication/design problem, making a durable implementation-ready decision, moving mature work into React, or improving the rendered site after comparison. Pass count, documentation volume, agent count, and new Figma nodes do not define progress. Converge by implementing, rendering the actual site, comparing with Figma/reference, critiquing, correcting, obtaining owner review, and freezing. Owner acceptance follows render comparison; it is not a gate before each implementation pass.

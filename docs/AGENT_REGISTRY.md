@@ -4,7 +4,16 @@ Updated 2026-10-02. Project director: **Mingo** (`/root`), who may execute direc
 
 The live collaboration tree is the authority for handle availability. Completed specialist handles can be reactivated with `followup_task`; a listed handle is not necessarily currently working. Keep the graph small and preserve domain context across iterations.
 
+For cross-chat continuity, start with [SESSION_HANDOFF_2026-10-02.md](SESSION_HANDOFF_2026-10-02.md), then verify its branch, staging, Figma, browser, and agent state against current tools. The handoff is an index to durable truth, not a substitute for live reconciliation.
+
 Live tree check, 2026-10-02: `/root`, `/root/frontend_owner`, `/root/home_shell_owner`, and `/root/runtime_a11y_qa` are present. All three specialists are completed/idle; none is currently running. `case_study_visual_critic`, `case_study_truth_reviewer`, and `identity_j_owner` are absent. Their completed findings remain durable context, not callable lanes. Mingo currently handles direct implementation, J/asset reconciliation, case-study synthesis, and integration. Reactivate an existing specialist or establish a missing recurring lane only when a concrete domain task warrants it.
+
+## Next-session model routing
+
+- **Mingo / project director: Sol 6.1.** The owner wants director-level reasoning concentrated on reconciliation, priorities, contradiction resolution, acceptance, and lane routing. Select this model when opening the next Mingo chat; this registry cannot change the model selected in the chat UI.
+- **Canonical J: Sol 6.1 specialist, proposed handle `/root/identity_j_sol61`.** No such handle is active in this thread. Establish or reuse it in the next session with only the J source review, `docs/j-source-review/REVIEW.md`, relevant asset provenance, and current J status. First orient read-only; then, if directed, make only 2–3 substantial whole-mark attempts before owner review. Preserve the archive production fallback; do not promote a candidate automatically.
+- **Routine specialists: Luna when available** for mechanical implementation, Figma/source comparison, documentation, copy, asset checks, and accessibility audits. Reuse persistent handles when they exist; do not create agents as a proxy for progress.
+- **Astra:** no continuous lane. Any exceptional use must be short, specifically justified, and owner-approved.
 
 | Lane | Reusable handle | Domain and durable context | Current status / assignment | Reports to |
 |---|---|---|---|---|

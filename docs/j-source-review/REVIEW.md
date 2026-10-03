@@ -1,8 +1,10 @@
 # Canonical J Review
 
-## Current status - PRODUCTION FALLBACK ARCHIVE / SONNET v8 OWNER-REVIEW CANDIDATE (2026-10-01)
+## Current status - J OPEN / PRODUCTION FALLBACK ARCHIVE / SONNET v8 OWNER-REVIEW CANDIDATE (2026-10-02)
 
-Production continues to use archive `159:2` as its large/medium fallback. Sonnet 5.5 v8 `3325:191` is the active owner-review candidate; board `3325:36` compares archive, v7 `3311:2`, and v8. The owner identifies this as a materially stronger, separate reconstruction direction. Do not move v8 into production before owner review. The old Codex reconstruction lineage, including Pass16-80 and archive-trace candidate `3364:2`, is rejected/closed. Small contexts keep separate ring-free optical marks.
+Production continues to use archive `159:2` as its large/medium fallback. Sonnet 5.5 v8 `3325:191` is the strongest current editable reconstruction and active owner-review candidate; board `3325:36` compares archive, v7 `3311:2`, and v8. Do not move v8 into production before owner review. The old Codex reconstruction lineage, including Pass16-80 and archive-trace candidate `3364:2`, is rejected/closed. Small contexts keep separate ring-free optical marks.
+
+The owner explicitly confirms that **the J is not finished**. The old Codex branch being closed does not close the separate Sonnet branch. For the next project phase, use a narrow Sol 6.1 identity lane (proposed handle `/root/identity_j_sol61`) with J-specific history. Preserve Sonnet's layered illustration approach and make only about 2–3 serious whole-mark improvements before owner review; do not resume a long micro-pass chain. Known gaps remain whole-mark integration, the too-continuous orbit/rim, hook/orbit relationship, cyan energy sitting like strands over a disc, and less-organic material relationships. Archive remains the production fallback until the owner selects an approved replacement.
 
 ## Sonnet v8 scoped macro critique (2026-10-01)
 
