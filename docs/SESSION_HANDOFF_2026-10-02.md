@@ -1,5 +1,7 @@
 # League Portfolio — Canonical Session Handoff
 
+> **Current owner update:** [2026-10-03 direction](OWNER_DIRECTION_2026-10-03.md) supersedes older browser-blocked and narrow coverage conclusions below. This is Codex CLI; existing Playwright/installed Chrome now produces actual rendered evidence. Six case studies require breadth/depth expansion. Education CTA is resolved to `/education/projects`; detailed project claims still require authentic evidence. Journey must continue Void through `3492:2`. Preserve compact Foundations (3600×3140) and keep J Candidate 02 held. Older outage/CTA statements below are historical, not current instructions.
+
 **Checkpoint:** created 2026-10-02; reconciled against live repository, Wrangler, Figma, and agent state on 2026-10-03. Mingo is preparing a clean-chat continuation, not closing or restarting the project.
 
 > **CURRENT OWNER INSTRUCTIONS + CURRENT DURABLE DOCS + CURRENT FIGMA/REPOSITORY STATE OVERRIDE HISTORICAL CHAT SUMMARIES.** Historical notes explain decisions; they do not supersede current truth. Recheck the facts below against live state before acting.

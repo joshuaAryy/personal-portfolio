@@ -1,5 +1,7 @@
 # Figma-to-Implementation Specification
 
+> **2026-10-03 owner update:** [current direction](OWNER_DIRECTION_2026-10-03.md) supersedes prior narrow case-study preservation, unresolved Education CTA, and desktop-browser outage conclusions. CLI Playwright/Chrome rendering is available; parity remains unverified. Journey background continuation is `3492:2`. Education destination is `/education/projects`. Six stories require meaningful coverage expansion before convergence; preserve subject-specific visual language. Foundations `510:14` stays compact at 3600×3140 with old explorations hidden. J Candidate 02 remains held.
+
 Figma defines appearance and page composition. This spec maps accepted direction into implementation; it does not declare any route visually accepted. Use [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md) as the current status source, [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md) for node identity, and [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for factual claims.
 
 ## Controls

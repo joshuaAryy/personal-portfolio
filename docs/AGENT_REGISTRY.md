@@ -1,5 +1,7 @@
 # Persistent Agent Registry
 
+> **Current owner update:** [2026-10-03 direction](OWNER_DIRECTION_2026-10-03.md) supersedes older browser-blocked and narrow coverage conclusions below. This is Codex CLI; existing Playwright/installed Chrome now produces actual rendered evidence. Six case studies require breadth/depth expansion. Education CTA is resolved to `/education/projects`; detailed project claims still require authentic evidence. Journey must continue Void through `3492:2`. Preserve compact Foundations (3600×3140) and keep J Candidate 02 held. Older outage/CTA statements below are historical, not current instructions.
+
 Updated 2026-10-03. Project director: **Mingo** (`/root`), who may execute directly and owns priorities, source reconciliation, cross-lane decisions, acceptance, and documentation sync. Active Figma file: `9zvk9iSRPKSsJ6llDJrQmA`. Working branch: `feat/portfolio-integration`.
 
 The live collaboration tree is the authority for handle availability. Completed specialist handles can be reactivated with `followup_task`; a listed handle is not necessarily currently working. Keep the graph small and preserve domain context across iterations.

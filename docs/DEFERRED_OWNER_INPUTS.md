@@ -1,5 +1,7 @@
 # Deferred Owner Inputs and Evidence
 
+> **Current owner update:** [2026-10-03 direction](OWNER_DIRECTION_2026-10-03.md) supersedes older browser-blocked and narrow coverage conclusions below. This is Codex CLI; existing Playwright/installed Chrome now produces actual rendered evidence. Six case studies require breadth/depth expansion. Education CTA is resolved to `/education/projects`; detailed project claims still require authentic evidence. Journey must continue Void through `3492:2`. Preserve compact Foundations (3600×3140) and keep J Candidate 02 held. Older outage/CTA statements below are historical, not current instructions.
+
 This file tracks genuinely missing facts/media and owner-reserved interaction choices. It does not gate design work or asset-led development when the relevant source is already available. Unknown source detail stays here or in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md); it should not automatically become public copy.
 
 ## Supplied and usable
@@ -23,7 +25,7 @@ This file tracks genuinely missing facts/media and owner-reserved interaction ch
 - **Living in Silico:** run artifacts do not resolve the exact relation between every method setting and the 500 generated samples. Preserve this uncertainty internally; do not publish the bookkeeping caveat as the lead story.
 - **Stush Patties:** no field-level Koyo example is supplied. Do not invent raw data; use a generic system figure and explain the exception later only if useful.
 - **Education:** Resume v13 verifies Computer Engineering at Toronto Metropolitan University, B.Eng., Software Specialization, Sept. 2024–Apr. 2028, and four selected course titles. Course codes, Dean’s List, and scholarship remain unsupported.
-- **Education CTA destination:** Figma `738:3449` shows `VIEW EDUCATION`; the frame's hint says `Click or press ENTER to view current coursework`. The intent is to review coursework, but no prototype reaction or destination defines whether that opens a detail view, overlay, or route. React `/education` already displays the lobby and no Education detail route exists, so the current coursework tray omits the action rather than linking to itself. Owner direction is needed on the presentation/target; options include a dedicated coursework detail, Profile Academics, or removing the CTA from Figma and keeping the lobby terminal. Do not self-link or invent a route; this is an owner decision, not a browser blocker.
+- **Education CTA destination — RESOLVED 2026-10-03:** `VIEW EDUCATION` opens a short dedicated academic-project page at `/education/projects`. This route is authorized by owner direction. Detailed Dental, Bookstore, and CMOS copy still needs authentic artifacts; Quartus ALU/FSM originals were located. See `coverage-audit/EDUCATION.md`. No awards or scholarship padding.
 - **X profile destination:** no verified X/Twitter URL appears in the project sources or legacy portfolio. Keep the Figma X glyph decorative and non-interactive until a destination is supplied; do not guess. GitHub, LinkedIn, email, and Resume destinations are now source-verified and wired in the shared shell.
 
 Publication/licensing decisions remain part of release review, not an active design/build gate.

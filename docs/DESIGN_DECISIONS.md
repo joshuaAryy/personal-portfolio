@@ -1,5 +1,7 @@
 # Design Decisions
 
+> **2026-10-03 owner update:** [current direction](OWNER_DIRECTION_2026-10-03.md) supersedes prior narrow case-study preservation, unresolved Education CTA, and desktop-browser outage conclusions. CLI Playwright/Chrome rendering is available; parity remains unverified. Journey background continuation is `3492:2`. Education destination is `/education/projects`. Six stories require meaningful coverage expansion before convergence; preserve subject-specific visual language. Foundations `510:14` stays compact at 3600×3140 with old explorations hidden. J Candidate 02 remains held.
+
 This file records durable owner-approved direction. Figma node IDs below are the latest recorded references; they are not evidence of fresh live inspection. Factual truth and uncertainty live in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md). This file decides how that truth should be presented.
 
 ## Decision and documentation control
