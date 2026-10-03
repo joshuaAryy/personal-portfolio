@@ -42,6 +42,9 @@ function RepresentationFigure() {
     <figure className="lis-public-representation" aria-labelledby="lis-representation-title">
       <figcaption id="lis-representation-title">
         <span>SCHEMATIC · NOT A PROJECT SAMPLE</span>
+        <span className="lis-public-representation__sr-only">
+          Representation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits.
+        </span>
       </figcaption>
       <div className="lis-public-representation__flow">
         <div className="lis-public-representation__structure">

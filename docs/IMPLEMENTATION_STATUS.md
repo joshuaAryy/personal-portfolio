@@ -7,6 +7,8 @@ Latest recorded staging deployment, 2026-10-02: clean checkout of branch commit 
 
 Figma sync, 2026-10-02: six case-study client roots now hide portfolio-workflow status sublabels in the Activity detail rail; names and marks remain. React already renders the detail rail without those sublabels, so no implementation change is needed and this Figma-only correction does not itself invalidate existing React captures. Preserve their recorded evidence scope; keep full-page checks open for the separate page changes already documented per story. Home/Resume summary status groupings are unchanged. See [the design decision](DESIGN_DECISIONS.md#public-case-study-principles) and [the validation queue](RENDER_VALIDATION_QUEUE.md).
 
+Case-study figure accessibility source sync, 2026-10-02: Food Tracker benchmark bars are decorative to avoid repeating visible labels/counts; Crest's evidence map names the deterministic and retrieved-policy/Gemini branches into human review; Fraymakers' schematic label includes the 1280×720 PNG and node-canvas output; Living in Silico's representation caption describes structure → SMILES → Morgan fingerprint (radius 2 / 128 bits). No visible layout changed. Supported-browser accessibility-tree verification remains open in the [render validation queue](RENDER_VALIDATION_QUEUE.md).
+
 ## Status and sync rules
 
 - Owner rejection or reopening immediately supersedes prior pass clearance. A critic’s scoped “CLEAR” is not owner approval or whole-surface acceptance.

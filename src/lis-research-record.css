@@ -906,6 +906,18 @@
 }
 
 .lis-public-representation figcaption { color: var(--lis-teal); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 10px; font-weight: 600; letter-spacing: 0.06em; }
+.lis-public-representation__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
 .lis-public-representation__flow { min-height: 170px; display: grid; grid-template-columns: minmax(100px, 0.8fr) 24px minmax(120px, 0.9fr) 24px minmax(140px, 1.1fr); align-items: center; gap: 8px; }
 .lis-public-representation__structure > p,
 .lis-public-representation__fingerprint > p { margin: 0 0 10px; color: var(--lis-gold); font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 9px; letter-spacing: 0.05em; text-align: center; }

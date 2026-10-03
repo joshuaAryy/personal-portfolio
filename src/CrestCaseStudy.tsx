@@ -223,7 +223,7 @@ export default function CrestCaseStudy() {
           </div>
           <figure className="crest-evidence-map" aria-labelledby="crest-evidence-map-caption">
             <figcaption className="crest-evidence-map__sr-only" id="crest-evidence-map-caption">
-              A sample expense request moves through two evidence paths before a person makes the decision.
+              A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.
             </figcaption>
             <svg className="crest-evidence-map__connectors" viewBox="0 0 1432 230" preserveAspectRatio="none" aria-hidden="true">
               <defs>

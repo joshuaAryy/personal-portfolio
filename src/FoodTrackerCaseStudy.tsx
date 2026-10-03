@@ -100,14 +100,14 @@ function FoodBenchmark() {
             <p className="food-benchmark__definition">Top-1 means the correct food ranked first. Bars show share.</p>
             <div className="food-benchmark__bar-row">
               <span>LEGACY BASELINE</span>
-              <div role="img" aria-label={`Legacy baseline: ${set.legacy.top1} of ${set.queries}`}>
+              <div aria-hidden="true">
                 <i style={{ width: `${(set.legacy.top1 / set.queries) * 100}%` }} />
               </div>
               <strong>{set.legacy.top1}/{set.queries}</strong>
             </div>
             <div className="food-benchmark__bar-row food-benchmark__bar-row--hybrid">
               <span>FULL HYBRID</span>
-              <div role="img" aria-label={`Full hybrid: ${set.hybrid.top1} of ${set.queries}`}>
+              <div aria-hidden="true">
                 <i style={{ width: `${(set.hybrid.top1 / set.queries) * 100}%` }} />
               </div>
               <strong>

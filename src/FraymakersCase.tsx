@@ -97,7 +97,7 @@ export default function FraymakersCase() {
           <div
             className="fray-case__spec"
             role="img"
-            aria-label="Explanatory layout schematic: stage background, two characters, player and set text, logos, and overlays; not original project art"
+            aria-label="Explanatory layout schematic of stage background, two characters, set and player text, logos, and overlays; exported as a 1280 by 720 PNG composed with node-canvas. Schematic, not original project art."
           >
             <span className="fray-case__spec-label">SCHEMATIC OUTPUT / LAYOUT ONLY</span>
             <div className="fray-case__schematic-preview" aria-hidden="true">
