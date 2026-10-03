@@ -9,6 +9,197 @@
   background: #06111a;
 }
 
+.food-story-content--technical .food-logging,
+.food-story-content--technical .food-insights {
+  padding: 24px 28px;
+  border: 1px solid #30454d;
+  background: #0b171d;
+}
+
+.food-logging__intro,
+.food-insights__intro { max-width: 760px; }
+
+.food-logging__intro h2,
+.food-insights__intro h2 {
+  margin: 12px 0 8px;
+  color: #eee7d8;
+  font-size: 26px;
+  line-height: 1.12;
+}
+
+.food-logging__intro > p:last-child,
+.food-insights__intro > p:last-child {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.food-logging__paths {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 22px 0 0;
+  list-style: none;
+}
+
+.food-logging__paths li {
+  min-width: 0;
+  min-height: 92px;
+  padding: 14px;
+  border: 1px solid #30454d;
+  border-top: 2px solid #c79b45;
+  background: #10232a;
+}
+
+.food-logging__paths li strong,
+.food-logging__paths li span { display: block; }
+
+.food-logging__paths li strong {
+  color: #e3c57e;
+  font-size: 10px;
+  letter-spacing: .05em;
+}
+
+.food-logging__paths li span {
+  margin-top: 8px;
+  color: #d9e0dc;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.food-logging__review {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 14px;
+  padding: 12px 16px;
+  border: 1px solid #427c80;
+  background: #102431;
+}
+
+.food-logging__review span,
+.food-insights__levels article > span {
+  color: #57c6cb;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.food-logging__review strong {
+  color: #eee7d8;
+  font-size: 13px;
+}
+
+.food-logging__photo,
+.food-insights__coverage {
+  margin: 14px 0 0;
+  color: #a9b5ba;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.food-logging__photo strong,
+.food-insights__coverage strong { color: #e3c57e; }
+
+.food-story-content--technical .food-system__architecture-note {
+  max-width: 980px;
+  margin: 16px 0 0;
+  color: #a9b5ba;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.food-system__architecture-note strong { color: #e3c57e; }
+
+.food-insights__levels {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.food-insights__flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+
+.food-insights__flow li {
+  position: relative;
+  min-width: 0;
+  min-height: 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 12px 15px;
+  border: 1px solid #30454d;
+  border-top: 2px solid #57c6cb;
+  background: #10232a;
+}
+
+.food-insights__flow li:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -10px;
+  z-index: 1;
+  color: #e3c57e;
+  font-size: 14px;
+  transform: translate(50%, -50%);
+  content: "→";
+}
+
+.food-insights__flow li strong {
+  color: #eee7d8;
+  font-size: 12px;
+}
+
+.food-insights__flow li span {
+  margin-top: 4px;
+  color: #a9b5ba;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.food-insights__levels article {
+  min-width: 0;
+  padding: 15px 17px;
+  border: 1px solid #30454d;
+  background: #10232a;
+}
+
+.food-insights__levels h3 {
+  margin: 6px 0;
+  color: #eee7d8;
+  font-size: 20px;
+}
+
+.food-insights__levels p {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+@media (max-width: 760px) {
+  .food-story-content--technical .food-logging,
+  .food-story-content--technical .food-insights { padding: 18px; }
+  .food-logging__paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .food-logging__review { align-items: flex-start; flex-direction: column; gap: 5px; }
+  .food-insights__levels { grid-template-columns: minmax(0, 1fr); }
+  .food-insights__flow { grid-template-columns: minmax(0, 1fr); }
+  .food-insights__flow li:not(:last-child)::after {
+    top: auto;
+    right: 50%;
+    bottom: -10px;
+    transform: translate(50%, 50%) rotate(90deg);
+  }
+}
+
 .food-story-content--technical,
 .food-story-content--technical * {
   box-sizing: border-box;

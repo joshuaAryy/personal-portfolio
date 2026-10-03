@@ -445,6 +445,61 @@
 }
 .choveigo-system__tailoring > span { font-size: 11px; }
 .choveigo-system__tailoring > p { font-size: 13px; }
+.choveigo-tailoring-workflow {
+  margin-top: 22px;
+  padding: 20px 22px;
+  border: 1px solid #29414d;
+  border-top: 2px solid #d6b76b;
+  border-radius: 4px;
+  background: #0c202b;
+}
+.choveigo-tailoring-workflow__intro { max-width: 860px; }
+.choveigo-tailoring-workflow__intro h3 {
+  margin: 9px 0 7px;
+  color: #e1e7e3;
+  font-size: 20px;
+  line-height: 1.2;
+}
+.choveigo-tailoring-workflow__intro > p:last-child {
+  margin: 0;
+  color: #aebbbd;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.choveigo-tailoring-workflow > ol {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0 0;
+  list-style: none;
+}
+.choveigo-tailoring-workflow > ol > li {
+  min-width: 0;
+  min-height: 128px;
+  padding: 12px;
+  border: 1px solid #29414d;
+  background: #102431;
+}
+.choveigo-tailoring-workflow > ol > li > span {
+  display: block;
+  color: #57c6cb;
+  font-size: 10px;
+}
+.choveigo-tailoring-workflow > ol > li > strong {
+  display: block;
+  margin-top: 9px;
+  color: #d6b76b;
+  font-size: 10px;
+  line-height: 1.35;
+  letter-spacing: .035em;
+}
+.choveigo-tailoring-workflow > ol > li > p {
+  margin: 7px 0 0;
+  color: #aebbbd;
+  font-size: 12px;
+  line-height: 1.4;
+}
 .choveigo-fit { padding-top: 34px; }
 .choveigo-review__story > p:last-child { max-width: 620px; }
 
@@ -461,6 +516,7 @@
 }
 
 @media (max-width: 1200px) {
+  .choveigo-tailoring-workflow > ol { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .choveigo-story-content > .choveigo-hero {
     min-height: 0;
     grid-template-columns: minmax(0, 1fr);
@@ -508,6 +564,9 @@
   .choveigo-system__tailoring { margin-top: 12px; }
 }
 @media (max-width: 650px) {
+  .choveigo-tailoring-workflow { padding: 16px; }
+  .choveigo-tailoring-workflow > ol { grid-template-columns: minmax(0, 1fr); }
+  .choveigo-tailoring-workflow > ol > li { min-height: 0; }
   .choveigo-hero__opening h1 {
     max-width: 520px;
     font-size: clamp(34px, 10vw, 42px);

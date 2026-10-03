@@ -1181,6 +1181,12 @@ a:focus-visible {
 }
 
 @media (max-width: 1180px) {
+  .client--project-shell .header-account-area {
+    width: auto;
+    flex: 0 0 auto;
+    padding: 0;
+  }
+
   .client--project-shell .brand--project-shell {
     width: 182px;
     flex-basis: 182px;

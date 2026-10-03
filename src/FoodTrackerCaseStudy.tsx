@@ -4,7 +4,11 @@ import "./food-visuals.css";
 
 const foodChapters = [
   { id: "overview", label: "PRODUCT" },
-  { id: "search", label: "SYSTEM" },
+  { id: "logging", label: "LOGGING" },
+  { id: "insights", label: "INSIGHTS" },
+  { id: "search", label: "RETRIEVAL" },
+  { id: "interface", label: "IN PRODUCT" },
+  { id: "system", label: "ARCHITECTURE" },
   { id: "evaluation", label: "RESULTS" },
   { id: "workflow", label: "LEARNING" },
   { id: "reflection", label: "CLOSE" },
@@ -32,10 +36,10 @@ function FoodSystemMap() {
     <figure className="food-system-map food-system-map--flagship" aria-labelledby="food-system-map-title">
       <img
       className="food-system-map__illustration"
-      src="/media/case-studies/food-system-pass-07.png"
+      src="/media/case-studies/food-system-pass-10.png"
       width="1432"
-      height="380"
-      alt="In-app food search gathers exact, fuzzy, and semantic candidates into one deterministic ranking. Trusted food data and serving rules resolve nutrition before an append-only daily log records the result."
+      height="710"
+      alt="Illustrative composite system figure, not a product screenshot: above, in-app search gathers exact, fuzzy, and semantic food candidates, deterministic ranking orders them, trusted food data and serving rules resolve nutrition, and an editable food log records the result; below, React Native and Expo connect through Express and Prisma to a normalized catalog and backend serving resolution, then PostgreSQL stores the log and serving snapshot for editable History and Insights."
       />
       <ol className="food-system-map__mobile-steps" aria-label="Food Tracker system path">
         <li>
@@ -52,11 +56,11 @@ function FoodSystemMap() {
         </li>
         <li>
           <strong>Record the result</strong>
-          <span>The append-only daily log preserves recorded history.</span>
+          <span>A serving snapshot supports later portion edits in History.</span>
         </li>
       </ol>
       <figcaption id="food-system-map-title" className="food-system-map__sr-only">
-        Illustrative system flow, not a product screenshot: the app gathers food candidates, deterministic evaluation chooses their order, trusted catalog data and serving rules resolve nutrition, and the append-only canonical log records the result.
+        Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.
       </figcaption>
     </figure>
   );
@@ -176,6 +180,69 @@ function FoodRetrievalFlow() {
   );
 }
 
+function FoodLoggingPaths() {
+  return (
+    <section className="food-section food-logging" id="food-logging" aria-labelledby="food-logging-title">
+      <div className="food-logging__intro">
+        <p className="food-section-label">LOGGING PATHS</p>
+        <h2 id="food-logging-title">A meal can start in five ways.</h2>
+        <p>Each path brings a food and serving choice to the same review before it is saved.</p>
+      </div>
+      <ol className="food-logging__paths">
+        {[
+          ["MANUAL", "Enter a food directly"],
+          ["SAVED / RECENT", "Saved or recent food"],
+          ["BARCODE", "Use a barcode lookup"],
+          ["TEXT", "Text description of the meal"],
+          ["PHOTO", "Suggest visible foods and portions"],
+        ].map(([label, detail]) => (
+          <li key={label}><strong>{label}</strong><span>{detail}</span></li>
+        ))}
+      </ol>
+      <div className="food-logging__review">
+        <span>REVIEW FOOD + PORTION</span>
+        <strong>You can review the food and portion before saving.</strong>
+      </div>
+      <p className="food-logging__photo"><strong>Photo suggestions:</strong> AI estimates are low-trust and editable. A trusted catalog match and backend serving rules supply nutrition; the person can review or change the suggestion before saving.</p>
+    </section>
+  );
+}
+
+function FoodInsights() {
+  return (
+    <section className="food-section food-insights" id="food-insights" aria-labelledby="food-insights-title">
+      <div className="food-insights__intro">
+        <p className="food-section-label">INSIGHTS FROM LOGGED FOOD</p>
+        <h2 id="food-insights-title">Turn saved logs into a view of patterns over time.</h2>
+        <p>Nutrient aggregation turns logged values into totals, with coverage showing where food data is incomplete.</p>
+      </div>
+      <ol className="food-insights__flow" aria-label="Insights data flow">
+        <li><strong>Logged Items</strong><span>Saved food entries</span></li>
+        <li><strong>Nutrient Aggregation</strong><span>Totals from logged values</span></li>
+        <li><strong>Coverage</strong><span>Missing nutrient data stays visible</span></li>
+      </ol>
+      <div className="food-insights__levels">
+        <article>
+          <span>FOCUSED OVERVIEW</span>
+          <h3>Simple</h3>
+          <p>A focused daily view of logged foods and nutrition.</p>
+        </article>
+        <article>
+          <span>MORE DETAIL</span>
+          <h3>Complex</h3>
+          <p>Nutrient detail and comparisons across selected ranges.</p>
+        </article>
+        <article>
+          <span>RETURN TO ANALYSIS</span>
+          <h3>Saved views</h3>
+          <p>Reopen an analysis you have saved.</p>
+        </article>
+      </div>
+      <p className="food-insights__coverage"><strong>Unknown nutrition stays unknown.</strong> Simple and Complex use the same product and backend; they change the level of detail in view.</p>
+    </section>
+  );
+}
+
 export default function FoodTrackerCaseStudy() {
   const [activeChapter, setActiveChapter] = useState<FoodChapterId>("overview");
 
@@ -196,7 +263,7 @@ export default function FoodTrackerCaseStudy() {
 
         for (const chapter of foodChapters) {
           const section = document.getElementById(`food-${chapter.id}`);
-          if (section && section.getBoundingClientRect().top <= activationLine) {
+          if (section && section.getBoundingClientRect().top <= activationLine + 1) {
             nextChapter = chapter.id;
           }
         }
@@ -276,13 +343,13 @@ export default function FoodTrackerCaseStudy() {
           </div>
         </section>
 
+        <FoodLoggingPaths />
+
+        <FoodInsights />
+
         <section className="food-section food-search" id="food-search">
           <p className="food-section-label">WHY FOOD SEARCH IS HARD</p>
           <FoodRetrievalFlow />
-        </section>
-
-        <section className="food-section food-system" id="food-system">
-          <FoodSystemMap />
         </section>
 
         <section
@@ -314,6 +381,18 @@ export default function FoodTrackerCaseStudy() {
               EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH
             </figcaption>
           </figure>
+        </section>
+
+        <section className="food-section food-system" id="food-system">
+          <p className="food-section-label">ARCHITECTURE + DATA FOUNDATION</p>
+          <FoodSystemMap />
+          <p className="food-system__architecture-note">
+            <strong>React Native / Expo</strong> sends the chosen food and serving to
+            <strong> Express / Prisma</strong>. Food records are normalized into one
+            trusted catalog; backend serving resolution writes a
+            <strong> PostgreSQL</strong> food log with a serving snapshot that supports
+            later portion edits in History and Insights.
+          </p>
         </section>
 
         <section className="food-section food-evaluation" id="food-evaluation">
@@ -378,8 +457,8 @@ export default function FoodTrackerCaseStudy() {
             <article>
               <h3>HISTORICAL INTEGRITY</h3>
               <p>
-                The log is canonical. History stays immutable; unknown nutrition
-                stays unknown.
+                The serving basis is retained so a later portion edit can be
+                recalculated. Unknown nutrition stays unknown.
               </p>
             </article>
           </div>
@@ -419,10 +498,10 @@ export default function FoodTrackerCaseStudy() {
           <p className="food-section-label">WHAT I LEARNED</p>
           <h2>A useful match must resolve into trusted nutrition.</h2>
           <p>
-            Search finds a candidate; trusted reference data and serving
-            conversion define what gets logged. An append-only record keeps past
-            days stable. Separating those jobs made the product easier to reason
-            about and trust.
+            Search finds a candidate; trusted reference data and backend serving
+            conversion define what gets logged. The saved serving snapshot
+            supports later portion edits. Separating those jobs made the product
+            easier to reason about and trust.
           </p>
           <small>
             Simple and Complex are presentation levels over one product and backend.

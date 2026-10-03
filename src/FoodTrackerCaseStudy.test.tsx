@@ -69,4 +69,44 @@ describe("Food Tracker flagship technical case study", () => {
     expect(markup).not.toContain("15,000 users");
     expect(markup).not.toContain("milliseconds");
   });
+
+  it("tells the logging and insights story before retrieval and architecture", () => {
+    const markup = renderFoodTracker();
+    const order = [
+      'id="food-overview"',
+      'id="food-logging"',
+      'id="food-insights"',
+      'id="food-search"',
+      'id="food-interface"',
+      'id="food-system"',
+      'id="food-evaluation"',
+    ].map((anchor) => markup.indexOf(anchor));
+
+    expect(order.every((position) => position >= 0)).toBe(true);
+    expect(order).toEqual([...order].sort((a, b) => a - b));
+    expect(markup).toContain("Saved or recent food");
+    expect(markup).toContain("barcode");
+    expect(markup).toContain("Text description");
+    expect(markup).toContain("Photo suggestions");
+    expect(markup).toContain("low-trust and editable");
+    expect(markup).toContain("review the food and portion before saving");
+    expect(markup).toContain("Nutrient aggregation");
+    expect(markup).toContain("Simple");
+    expect(markup).toContain("Complex");
+    expect(markup).toContain("Saved views");
+    expect(markup).toContain("Unknown nutrition stays unknown");
+  });
+
+  it("describes an editable serving snapshot across the Food architecture", () => {
+    const markup = renderFoodTracker();
+
+    expect(markup).toContain("React Native / Expo");
+    expect(markup).toContain("Express / Prisma");
+    expect(markup).toContain("normalized into one trusted catalog");
+    expect(markup).toContain("PostgreSQL");
+    expect(markup).toContain("serving snapshot");
+    expect(markup).toContain("History and Insights");
+    expect(markup).toContain("supports later portion edits");
+    expect(markup).not.toMatch(/append-only|immutable history/i);
+  });
 });

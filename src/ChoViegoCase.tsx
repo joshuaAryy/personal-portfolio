@@ -165,7 +165,7 @@ export default function ChoViegoCase() {
           <p className="choveigo-eyebrow">SYSTEM / DISCOVERY TO TAILORING</p>
           <h2>How a role becomes a recommendation.</h2>
           <p className="choveigo-system__intro">
-            Role listings and candidate evidence move through separate checks. Cho’Veigo brings the results together in a recommendation, then offers resume tailoring as a follow-up.
+            Cho’Veigo brings roles from job feeds and persisted role data into a structured record of responsibilities and core requirements. Candidate evidence stays distinct from visible gaps as the product prepares Fit, Eligibility, and Recommendation for review.
           </p>
           <WholeProductArchitecture />
           <div className="choveigo-system__boundaries">
@@ -180,8 +180,20 @@ export default function ChoViegoCase() {
           </div>
           <div className="choveigo-system__tailoring">
             <span className="choveigo-eyebrow">NEXT ACTION / RESUME TAILORING FOLLOWS RECOMMENDATION</span>
-            <p>Tailor a resume for a selected role as a distinct step.</p>
+            <p>A selected role and profile prepare the inputs; the person starts tailoring separately.</p>
           </div>
+          <section className="choveigo-tailoring-workflow" aria-labelledby="choveigo-tailoring-title">
+            <div className="choveigo-tailoring-workflow__intro">
+              <p className="choveigo-eyebrow">RESUME STUDIO / SEPARATE WORKFLOW</p>
+              <h3 id="choveigo-tailoring-title">From a selected role to a reviewed document.</h3>
+              <p>The handoff passes selected posting context and the selected profile as prepared inputs; it does not generate content.</p>
+            </div>
+            <ol>
+              <li><span>01</span><strong>SELECTED ROLE + PROFILE</strong><p>Carry the selected role context and profile into the separate tailoring step.</p></li>
+              <li><span>02</span><strong>RESUME STUDIO</strong><p>From reviewed profile evidence and an editable job description, it selects grounded content, constrains rewrites to that evidence, and validates the wording.</p></li>
+              <li><span>03</span><strong>REVIEW + OUTPUT</strong><p>Person reviews the result, verifies the page, then exports a document.</p></li>
+            </ol>
+          </section>
         </section>
 
         <section className="choveigo-section choveigo-fit" id="choveigo-fit">
@@ -269,18 +281,19 @@ function WholeProductArchitecture() {
       <div className="choveigo-system-map__inputs" role="group" aria-label="System inputs">
         <div className="choveigo-system-map__input choveigo-system-map__input--roles">
           <h3>Role discovery</h3>
-          <p>Feeds · company sites · career pages</p>
-          <p>Structured responsibilities + criteria</p>
+          <p>Job feeds + persisted role data</p>
+          <p>A structured role record</p>
+          <p>Responsibilities + core requirements</p>
         </div>
         <div className="choveigo-system-map__input choveigo-system-map__input--candidate">
           <h3>Candidate evidence</h3>
-          <p>Resume + profile · demonstrated</p>
-          <p>and transferable experience</p>
+          <p>Resume + selected profile</p>
+          <p>Demonstrated and transferable evidence stays distinct from visible gaps.</p>
         </div>
       </div>
       <div className="choveigo-system-map__decision">
         <h3>Decision layers</h3>
-        <p className="choveigo-system-map__decision-note">Rules assess; Gemini interprets within the evidence boundary.</p>
+        <p className="choveigo-system-map__decision-note">Structured Gemini interpretation remains tied to the supplied role and candidate material.</p>
         <div className="choveigo-system-map__layers">
           <article className="choveigo-system-map__layer">
             <h4>Fit</h4>
