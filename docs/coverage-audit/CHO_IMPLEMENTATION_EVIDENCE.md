@@ -24,7 +24,9 @@ The portfolio’s CASE_STUDY_CONTENT_SOURCE.md §Cho’Veigo remains the authori
 
 ## Copy implication and claim limits
 
-The current plan’s single sentence “resume tailoring is a follow-up action” names a product step without explaining the inputs, method, or resulting artifact. A truthful chapter can show two explicit stages:
+The React case study now shows two explicit stages: the selected discovered/saved role and reviewed profile are handed to Resume Studio as prepared inputs, then Resume Studio separately selects or rewrites grounded evidence under validation and requires human review, page verification, and document export. The handoff itself does not generate a document. Current Figma review-frame copy still has older “company sites/career pages” wording; source-sync it to the verified job-feed/persisted-role boundary before calling Figma and React fully aligned.
+
+A truthful chapter separates these two stages:
 
 1. Recommendation → user choice → handoff: keep Recommendation distinct and formula-unspecified; a selected discovered or saved role contributes its preserved title/company/description and selected reviewed profile to Resume Studio. The button prepares inputs only.
 2. Resume Studio → reviewed output: the profile evidence and editable job description are evaluated; supported wording is selected or rewritten under evidence validation; the person reviews the result before page verification and document download.

@@ -1,6 +1,6 @@
 # Food Tracker and Cho’Veigo — breadth design checkpoint
 
-2026-10-03. Mingo inspected the actual corrected full-page Figma renders and Food’s architecture section. **Macro structure accepted for React implementation; independent factual critique, website render comparison, and owner review remain open.** No case study is frozen or converged by this checkpoint.
+2026-10-03. Mingo inspected the actual corrected full-page Figma renders and Food’s architecture section. **Macro structure accepted; React sync and current-Preview desktop/narrow comparison are complete; owner review remains open.** The source-backed product contract is recorded below and the exact browser evidence is in the [render-sync report](../case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-03.md). No case study is frozen or converged by this checkpoint.
 
 ## Food Tracker
 
@@ -32,6 +32,6 @@ An initial tailoring placement overlapped the system diagram. Mingo rejected tha
 
 ## Next acceptance steps
 
-Sync accepted sections and corrected native figures into React without promoting unrelated untracked assets. Compare actual Chrome page renders with these Figma references, correct observed discrepancies, check interactions/narrow states, and obtain owner review. The existing Food system PNG still contains obsolete history wording until the source sync replaces it.
+The accepted Food and Cho breadth is synced into React in `e88eb59`; the Cho end-anchor chapter-selection correction is `86d5d89`. Desktop and 390px Chrome comparisons, interactions, evidence, and open owner review are recorded in [the render-sync review](../case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-03.md). The current Preview was built from the clean pushed source. No redesign or filler is planned. Cho’s current Figma review capture still has older role-source wording; reconcile it against the verified job-feed/persisted-role copy before declaring design/source sync complete.
 
 Foundations and the held J exploration were untouched. Archive `159:2` remains the production identity fallback.
