@@ -2,7 +2,7 @@
 
 This update supersedes earlier stalled/browser conclusions and narrow case-study preservation instructions. Current owner instructions and live source/Figma remain authoritative.
 
-> **Model routing supersession:** the current policy in `docs/MODEL_ROUTING.md` replaces the Sol-director sentence below. Persistent Mingo is GPT-6 Luna · XHigh; Sol is an episodic GPT-6.1 Medium adjudicator only when Luna identifies a consequential judgment question. No Sol director or continuous Astra lane.
+> **Hierarchical model routing:** this file's execution guidance is superseded by [MODEL_ROUTING.md](MODEL_ROUTING.md). Persistent Mingo is a Luna XHigh control plane with an episodic Sol Medium strategic core. Frontend and product work route through domain-owner pods; runtime QA remains shallow. The reusable skill is `~/.agents/skills/hierarchical-agent-orchestration/SKILL.md`.
 
 ## CLI browser correction
 
@@ -42,7 +42,7 @@ Factual authority: `CASE_STUDY_CONTENT_SOURCE.md`, supplemented by authentic rep
 
 ## Execution and acceptance
 
-Phases: A reconcile client/live Figma/state → B Journey and Education skeleton → C six coverage maps → D project-specific Figma expansion → E React sync → F actual browser comparison. Review macro breadth before micro polish. Use Luna builders/critics and Luna Mingo for ordinary acceptance; follow `MODEL_ROUTING.md` for rare bounded Sol adjudication. No continuous Astra; J lane idle.
+Phases: A reconcile client/live Figma/state → B Journey and Education skeleton → C six coverage maps → D project-specific Figma expansion → E React sync → F actual browser comparison. This sequence is historical and is not active during the architecture migration. On restart, follow hierarchical pod ownership in `MODEL_ROUTING.md`. No continuous Astra; J lane idle.
 
 Worker assignments from this owner direction are historical. At the 2026-10-03 architecture checkpoint, frontend_owner, product_coverage, and runtime_a11y_qa had all errored at the usage limit; preserve their unfinished outputs and reconcile them only after the owner restarts portfolio work.
 

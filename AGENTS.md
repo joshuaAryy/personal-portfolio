@@ -10,7 +10,7 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 
 ## Session continuity and model routing
 
-**Current model allocation:** follow [docs/MODEL_ROUTING.md](docs/MODEL_ROUTING.md). The prior persistent-Sol-director instruction below is superseded: Mingo runs on GPT-6 Luna · XHigh; Sol is an episodic, one-question GPT-6.1 Medium adjudicator. The runtime-selected model is not changed by this file.
+**Current hierarchical routing:** follow [docs/MODEL_ROUTING.md](docs/MODEL_ROUTING.md) and the reusable `~/.agents/skills/hierarchical-agent-orchestration/SKILL.md`. Mingo is a black-box control system: persistent GPT-6 Luna · XHigh control plane, with an episodic GPT-6.1 Sol · Medium strategic core for consequential decisions. Luna operationalizes Sol's decision contract. Do not bottleneck Sol's judgment or flatten domain pods into a worker list. The prior flat-routing policy is superseded; this file cannot switch the active runtime model.
 
 **Authority order:** current owner instructions, current durable project documents, and current Figma/repository state override historical chat summaries. Historical context explains decisions; it never overrides current truth. The canonical continuation checkpoint is [docs/SESSION_HANDOFF_2026-10-02.md](docs/SESSION_HANDOFF_2026-10-02.md); verify its branch, staging, browser, and agent facts against live state before acting.
 
