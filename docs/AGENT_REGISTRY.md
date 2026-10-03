@@ -1,5 +1,7 @@
 # Persistent Agent Registry
 
+**Live assignment checkpoint, 2026-10-03:** `/root/frontend_owner` is syncing macro-accepted Food/Cho Figma breadth into React; `/root/product_coverage` is implementing the accepted Crest/Fray Figma story plan; `/root/runtime_a11y_qa` independently critiques Food/Cho truth and subsequent browser renders. Mingo owns acceptance and integration. All three persistent specialist handles are reusable Luna lanes. Existing Playwright/Chrome provides actual CLI browser evidence; the historical outage and assignments below are superseded. J specialist remains absent and Candidate 02 held.
+
 > **Current owner update:** [2026-10-03 direction](OWNER_DIRECTION_2026-10-03.md) supersedes older browser-blocked and narrow coverage conclusions below. This is Codex CLI; existing Playwright/installed Chrome now produces actual rendered evidence. Six case studies require breadth/depth expansion. Education CTA is resolved to `/education/projects`; detailed project claims still require authentic evidence. Journey must continue Void through `3492:2`. Preserve compact Foundations (3600×3140) and keep J Candidate 02 held. Older outage/CTA statements below are historical, not current instructions.
 
 Updated 2026-10-03. Project director: **Mingo** (`/root`), who may execute directly and owns priorities, source reconciliation, cross-lane decisions, acceptance, and documentation sync. Active Figma file: `9zvk9iSRPKSsJ6llDJrQmA`. Working branch: `feat/portfolio-integration`.
