@@ -16,7 +16,8 @@ describe("Crest technical case study", () => {
 
     expect(markup).toContain('id="crest-system"');
     expect(markup).toContain("One transaction. Two sources. Human review.");
-    expect(markup).toContain("DETERMINISTIC RULES");
+    expect(markup).toContain("DETERMINISTIC SIGNALS");
+    expect(markup).toContain("Deterministic rules");
     expect(markup).toContain("retrieved policy context support review");
     expect(markup).toContain("HUMAN REVIEW");
     expect(markup).toContain("A reviewer weighs the context");

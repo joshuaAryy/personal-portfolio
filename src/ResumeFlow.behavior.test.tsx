@@ -74,13 +74,13 @@ describe("Resume Found return behavior", () => {
     expectDestinationMainFocused("/profile/demos");
   });
 
-  it("Close falls back to Projects for a resume route as the saved origin", () => {
+  it("Close falls back to Home for a resume route as the saved origin", () => {
     renderAppAtResume("/resume/viewer");
     const close = host.querySelector<HTMLButtonElement>(".resume-found__close");
     expect(close).not.toBeNull();
 
     act(() => close!.click());
 
-    expectDestinationMainFocused("/projects");
+    expectDestinationMainFocused("/home");
   });
 });

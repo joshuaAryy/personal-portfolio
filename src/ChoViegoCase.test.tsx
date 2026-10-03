@@ -62,7 +62,7 @@ describe("Cho’Veigo evidence-based matching story", () => {
     expect(markup).toContain("Structured Gemini interprets role and candidate evidence within its boundary");
     expect(markup).toContain("The prompt constrains Gemini to interpret supplied evidence");
     expect(markup).toContain("deterministic rules assess Fit and Eligibility, with Recommendation handled separately.");
-    expect(markup).toContain("Recommendation stays separate.");
+    expect(markup).toContain("A distinct judgment: bring the role forward.");
     expect(markup).toContain("Tailor a resume for a selected role as a distinct step.");
     expect(markup).toContain("One recommendation surfaced a role I might have missed.");
     expect(markup).not.toContain("OWNER-REPORTED EXAMPLE");

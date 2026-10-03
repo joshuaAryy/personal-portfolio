@@ -54,9 +54,13 @@ describe("Food Tracker flagship technical case study", () => {
   it("states source-backed technical ownership and keeps indexing causes distinct", () => {
     const markup = renderFoodTracker();
 
-    expect(markup).toContain("I kept requirements, architecture, and acceptance owner-led.");
-    expect(markup).toContain("Codex and AI agents supported much of the implementation");
-    expect(markup).toContain("Search quality and index state are separate checks.");
+    expect(markup).toContain("PRODUCT INITIATION");
+    expect(markup).toContain("SEARCH EVALUATION");
+    expect(markup).toContain("SYSTEM DESIGN");
+    expect(markup).toContain("Passing tests did not guarantee useful search.");
+    expect(markup).toContain("A pagination bug left the search index partial or stale.");
+    expect(markup).toContain("checked index completeness separately from whether the right food was returned.");
+    expect(markup).not.toContain("Codex and AI agents supported much of the implementation");
     expect(markup).not.toContain("integrated-inference token quota");
     expect(markup).not.toContain("bounded 429 retries");
     expect(markup).not.toContain("production-oriented API");

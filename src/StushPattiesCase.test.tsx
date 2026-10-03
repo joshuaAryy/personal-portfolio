@@ -39,7 +39,7 @@ describe("Stush Patties technical data-pipeline story", () => {
     const normalized = html.toLowerCase();
     expect(normalized).toContain("i built python parsing and");
     expect(normalized).toContain("one distributor file needed a separate parsing branch");
-    expect(normalized).toContain("two-person technical team with shiv");
+    expect(normalized).toContain("working with shiv and client stakeholders");
     expect(normalized).not.toContain("i contributed to python parsing and normalization");
     const opening = html.split("</header>")[0];
     expect(opening).not.toMatch(/Koyo|two-person team|team size/i);

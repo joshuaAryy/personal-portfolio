@@ -29,7 +29,9 @@ describe("Living in Silico public research story", () => {
     const markup = renderCase();
     for (const detail of [
       "CSVLoader",
-      "Morgan fingerprints (radius 2 / 128 bits)",
+      "Morgan fingerprints",
+      "radius 2",
+      "128 bits",
       "RNN MolecularGenerator",
       "RDKit + Fragmenstein",
       "Some fragment workflows succeeded",
