@@ -139,10 +139,14 @@ function FoodRetrievalFlow() {
         <span>RETRIEVAL FLOW · CANDIDATE SOURCES ONLY</span>
         <strong>Search broadly. Rank deterministically.</strong>
       </figcaption>
-      <div className="food-retrieval-flow__diagram" aria-label="Food query flows into deterministic, fuzzy, and semantic candidate sources. Candidates are joined, deterministically evaluated, then ranked.">
+      <div
+        className="food-retrieval-flow__diagram"
+        role="img"
+        aria-label="Food retrieval flow: a query branches into deterministic, fuzzy, and semantic candidates. The candidates are combined, deterministically evaluated, then ranked. Pinecone supplies candidates only."
+      >
         <div className="food-retrieval-flow__query">USER QUERY</div>
         <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
-        <div className="food-retrieval-flow__sources" aria-label="Candidate generation paths">
+        <div className="food-retrieval-flow__sources">
           <span><strong>DETERMINISTIC</strong><small>Direct matches</small></span>
           <span><strong>FUZZY</strong><small>Near-text matches</small></span>
           <span><strong>SEMANTIC · PINECONE</strong><small>Candidate supply only</small></span>
