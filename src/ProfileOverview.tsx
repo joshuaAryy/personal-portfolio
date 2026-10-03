@@ -324,7 +324,7 @@ function ProfileSignalPanel({
 }) {
   const title = signal.toUpperCase();
   return (
-    <section className={`profile-project-panel profile-project-panel--${signal}`} aria-labelledby="profile-panel-heading">
+    <section id="profile-signal-preview-panel" className={`profile-project-panel profile-project-panel--${signal}`} aria-labelledby="profile-panel-heading">
       <img className="profile-project-panel__enclosure" src="/media/profile/profile-enclosure.svg" alt="" aria-hidden="true" />
       <h2 id="profile-panel-heading">{title}</h2>
       <img className="profile-project-panel__divider" src="/media/profile/profile-title-divider.png" alt="" aria-hidden="true" />
@@ -454,7 +454,7 @@ export default function ProfileOverview({
 
           <div className="profile-signal-grid" role="group" aria-label="Profile summary details">
             {signals.map((signal) => (
-              <button
+              <div
                 className={`profile-signal${
                   hoveredSignal === signal.id || focusedSignal === signal.id
                     ? " profile-signal--preview"
@@ -462,8 +462,10 @@ export default function ProfileOverview({
                       ? " profile-signal--selected"
                       : ""
                 }`}
-                type="button"
+                role="group"
+                tabIndex={0}
                 key={signal.id}
+                aria-controls="profile-signal-preview-panel"
                 aria-label={`${signal.label}, ${signal.value}. Focus to preview ${signal.label.toLowerCase()} details.`}
                 onMouseEnter={() => setHoveredSignal(signal.id)}
                 onFocus={() => {
@@ -474,7 +476,7 @@ export default function ProfileOverview({
                 <img className="profile-signal__emblem" src={signal.src} alt="" />
                 <span className="profile-signal__label">{signal.label}</span>
                 <span className="profile-signal__value">{signal.value}</span>
-              </button>
+              </div>
             ))}
           </div>
         </div>

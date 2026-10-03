@@ -1151,7 +1151,7 @@
 /* Profile signal overlays ? static counts, reversible detail states */
 .profile-project-panel { z-index: 2; }
 .profile-signal-grid { z-index: 1; }
-.profile-signal { cursor: pointer; }
+.profile-signal { cursor: default; }
 .profile-signal--selected .profile-signal__label,
 .profile-signal--preview .profile-signal__label {
   border-color: rgba(184, 141, 75, 0.76);
