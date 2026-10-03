@@ -8,6 +8,8 @@ The owner explicitly confirms that **the J is not finished**. The old Codex bran
 
 ## Sol 6.1 bounded whole-mark study 01 (2026-10-02)
 
+**Recovery checkpoint, 2026-10-03:** live Figma metadata confirms review board `3482:2` and Candidate 01 `3482:3` remain present; the board explicitly says `NOT APPROVED`. Attempt 1 of the owner's bounded 2–3 is complete. Do not start Candidate 02 or another attempt before owner review of Candidate 01 or explicit owner direction to continue. `/root/identity_j_sol61` is absent from this chat's live tree; recreate the narrow Sol 6.1 lane only when an owner-authorized follow-up warrants it. Archive remains production fallback; v8 remains the strongest established editable baseline; J remains NOT FINISHED.
+
 Figma candidate `3482:3` is shown on review board `3482:2` beside archive `159:2` and Sonnet v8 `3325:191`. The candidate makes the shaft lighter, widens/lifts the hook, flattens the crown, narrows and offsets the orbit, and shifts cyan energy into the counter. The review found better counter continuity and material interaction, but the complete rim still reads as a medallion around a J. The integration objective is only partly met. This candidate merits owner comparison as a directional study; it is **not accepted, production-ready, or a reason to change the React fallback**. The board also shows the existing separate 54/32/16px optical glyphs; those remain unchanged.
 
 ## Sonnet v8 scoped macro critique (2026-10-01)
