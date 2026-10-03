@@ -228,11 +228,11 @@
   animation: opening-layer-cycle 2s linear 1 both;
 }
 
-/* Figma 2025:84/88/125: the segmented bezel starts at +1.2rad and the tick
-   ring at -1rad, then both settle by 23% (460ms) so the centered J holds. */
+/* Figma 2443:38/71: the segmented bezel starts at +0.021rad and the tick
+   ring at -0.017rad, then both settle by 23% (460ms) so the centered J holds. */
 .opening__motion--segmented {
   opacity: 0;
-  transform: rotate(68.75deg);
+  transform: rotate(0.021rad);
   transform-origin: 50% 50%;
   animation:
     opening-segmented-opacity 2s linear 1 both,
@@ -241,7 +241,7 @@
 
 .opening__motion--ticks {
   opacity: 0;
-  transform: rotate(-57.3deg);
+  transform: rotate(-0.017rad);
   transform-origin: 50% 50%;
   animation:
     opening-ticks-opacity 2s linear 1 both,
@@ -425,11 +425,11 @@
 
 @keyframes opening-segmented-rotation {
   0% {
-    transform: rotate(68.75deg);
+    transform: rotate(0.021rad);
     animation-timing-function: linear;
   }
   9% {
-    transform: rotate(68.75deg);
+    transform: rotate(0.021rad);
     animation-timing-function: ease-out;
   }
   23% {
@@ -462,11 +462,11 @@
 
 @keyframes opening-ticks-rotation {
   0% {
-    transform: rotate(-57.3deg);
+    transform: rotate(-0.017rad);
     animation-timing-function: linear;
   }
   9% {
-    transform: rotate(-57.3deg);
+    transform: rotate(-0.017rad);
     animation-timing-function: ease-out;
   }
   23% {
