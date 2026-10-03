@@ -17,7 +17,7 @@ Live tree check, 2026-10-02: `/root`, `/root/case_study_visual_critic`, `/root/f
 
 ## Context and coordination
 
-- Earlier Food Tracker story, Home, and utility reviews remain documented in `IMPLEMENTATION_STATUS.md`, `CASE_STUDY_CONTENT_SOURCE.md`, and the relevant design/spec files. The current case-study truth lane is `/root/case_study_truth_reviewer`; it audits recurring cross-story copy accuracy while Mingo owns any resulting edits.
+- Earlier Food Tracker story, Home, and utility reviews remain documented in `IMPLEMENTATION_STATUS.md`, `CASE_STUDY_CONTENT_SOURCE.md`, and the relevant design/spec files. The case-study truth-review handle is absent from the current tree; its prior findings remain durable, and Mingo owns new factual audits unless that reusable lane is re-established.
 - Profile review strip `3285:45` and the six full-page case-study review frames are complete artifacts. Mingo keeps them synchronized with authored content.
 - No separate runtime/accessibility specialist handle is present in the current tree. Existing source-audit findings are context only and do not prove browser behavior.
 - Current supported-browser status and the exact validation queue live in `RENDER_VALIDATION_QUEUE.md`. The browser is unavailable; no specific owner-side reconnect/open/attach action is known. Continue non-browser work and do not use unsupported browser automation.
