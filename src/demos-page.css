@@ -129,6 +129,11 @@
   outline-offset: 3px;
 }
 
+#root .main.main--demos .demo-player__video:focus-visible {
+  outline: 2px solid #f4cb69;
+  outline-offset: -3px;
+}
+
 #root .main.main--demos .demo-selector__thumb {
   display: block;
   width: 56px;
