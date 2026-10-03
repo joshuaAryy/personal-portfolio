@@ -126,7 +126,7 @@ export default function FraymakersCase() {
           </div>
         </header>
 
-        <section className="fray-case__pipeline" aria-labelledby="fraymakers-pipeline-title">
+        <section className="fray-case__pipeline" id="fraymakers-pipeline" aria-labelledby="fraymakers-pipeline-title">
           <div className="fray-case__section-head">
             <div>
               <p className="fray-case__eyebrow">SYSTEM / MEDIA PREPARATION</p>

@@ -19,6 +19,17 @@ describe("Fraymakers technical case study", () => {
     ]) expect(markup).toContain(stage);
   });
 
+  it("links every rendered chapter fragment to one unique section target", () => {
+    const markup = render();
+    const chapterLinks = [...markup.matchAll(/<a href="#(fraymakers-[^"]+)"/g)];
+    const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map(([, id]) => id);
+
+    expect(chapterLinks.length).toBeGreaterThan(0);
+    for (const [, targetId] of chapterLinks) {
+      expect(ids.filter((id) => id === targetId)).toHaveLength(1);
+    }
+  });
+
   it("leads with the system before ownership context", () => {
     const markup = render();
     const opening = markup.split("</header>")[0];
