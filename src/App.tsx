@@ -7,6 +7,7 @@ import StushPattiesCase from "./StushPattiesCase";
 import FraymakersCase from "./FraymakersCase";
 import LivingInSilicoCase from "./LivingInSilicoCase";
 import JourneyCase from "./JourneyCase";
+import JourneyVoidField from "./JourneyVoidField";
 import FoodTrackerPage from "./project-pages/FoodTrackerPage";
 import CrestPage from "./project-pages/CrestPage";
 import { HelpExperienceProvider, HelpRouteEntry } from "./Help";
@@ -18,6 +19,7 @@ import ProfileOverview, { JourneyTraitMedallions } from "./ProfileOverview";
 import Lobby from "./Lobby";
 import DemosPage from "./DemosPage";
 import HomeExplore from "./HomeExplore";
+import EducationProjects from "./EducationProjects";
 
 function ReservedDetailRoute({ kind }: { kind: "project" | "experience" }) {
   const { slug } = useParams();
@@ -53,6 +55,7 @@ export default function App() {
       <Route path="/experience" element={<Lobby mode="experience" />} />
       <Route path="/hackathons" element={<Lobby mode="hackathons" />} />
       <Route path="/education" element={<Lobby mode="education" />} />
+      <Route path="/education/projects" element={<EducationProjects />} />
       <Route
         path="/profile"
         element={
@@ -83,6 +86,7 @@ export default function App() {
         element={
           <Client pageClass="main--detail main--journey">
             <div className="journey-layout">
+              <JourneyVoidField />
               <aside className="journey-identity" aria-label="Profile identity">
                 <div className="journey-identity__portrait" aria-hidden="true">
                   <img

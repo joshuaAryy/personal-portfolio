@@ -1,0 +1,11 @@
+{
+  "attribution": "Uncommitted Phase B working tree; not deployed staging",
+  "browser": "153.0.8010.53",
+  "metrics": {
+    "height": 878,
+    "total": 1857
+  },
+  "ctaCount": 2,
+  "ctaDestination": "http://127.0.0.1:4175/education/projects",
+  "errors": []
+}

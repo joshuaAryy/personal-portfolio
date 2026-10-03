@@ -114,6 +114,7 @@ export default function JourneyCase() {
     const track = trackRef.current;
     if (!scrollport || !track) return;
 
+    const journeyLayout = scrollport.closest<HTMLElement>(".journey-layout");
     let frame = 0;
     const updateWaypoint = () => {
       if (frame) return;
@@ -121,6 +122,10 @@ export default function JourneyCase() {
         frame = 0;
         const overflowY = window.getComputedStyle(scrollport).overflowY;
         const contentIsScroller = overflowY === "auto" || overflowY === "scroll";
+        journeyLayout?.style.setProperty(
+          "--journey-background-scroll",
+          contentIsScroller ? `${scrollport.scrollTop}px` : "0px",
+        );
         const rootTop = contentIsScroller ? scrollport.getBoundingClientRect().top : 0;
         const viewportHeight = contentIsScroller
           ? scrollport.clientHeight
@@ -151,6 +156,7 @@ export default function JourneyCase() {
       scrollport.removeEventListener("scroll", updateWaypoint);
       window.removeEventListener("scroll", updateWaypoint);
       window.removeEventListener("resize", updateWaypoint);
+      journeyLayout?.style.removeProperty("--journey-background-scroll");
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);

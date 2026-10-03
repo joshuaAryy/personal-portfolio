@@ -1,5 +1,7 @@
 # CLI browser capability proof
 
+**Loading follow-up:** [viewer after load](resume-viewer-after-load.png) visibly renders the actual authorized v13 PDF with native Chrome PDF controls. A fresh direct viewer navigation received HTTP 200 `application/pdf`; its frame tree includes Chrome's native PDF extension. Capture followed network-idle plus a five-second document-loading interval and was visually inspected. The initial blank capture was premature, not evidence of a broken PDF. Layout/Figma comparison and action acceptance remain open.
+
 Actual Chrome 153.0.8010.53, launched using existing Playwright 1.63.0 `channel: chrome`, headless, isolated browser context, 1920×1080, DPR 1. No installation or owner-profile access. Source and interaction metadata: [evidence.json](evidence.json).
 
 Preview source `6accc709a5dea97a22a8b0dfaf0755d11ba8884c` at `https://d7164429.joshuaik2.pages.dev/`. Captured Resume Found, clicked View Resume, observed the iframe, returned to Resume Found, closed to Home. No page errors. Both PNGs visually inspected by Mingo.

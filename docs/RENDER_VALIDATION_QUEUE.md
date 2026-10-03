@@ -4,6 +4,8 @@
 
 ## Current CLI rendering status
 
+**PDF loading follow-up:** [loaded viewer evidence](site-render-review/2026-10-03-cli-capability/REVIEW.md) confirms visible native Chrome PDF rendering after loading. The first blank capture was premature. Complete viewer/Figma/layout/action comparison remains queued.
+
 **CLI BROWSER RENDER VALIDATION AVAILABLE / PORTFOLIO EXECUTION CONTINUES.** Existing Playwright 1.63.0 launched installed Chrome 153.0.8010.53 without an installation or owner-profile access. Actual 1920×1080 staging screenshots and Resume interactions succeeded with no page errors. Desktop built-in Browser discovery was the wrong client check; previous empty-list conclusions are superseded. Chrome extension control is unavailable, but it is not required for this isolated real-browser lane.
 
 Current Preview source is `6accc709a5dea97a22a8b0dfaf0755d11ba8884c` at `https://d7164429.joshuaik2.pages.dev/`, alias `https://feat-portfolio-integration.joshuaik2.pages.dev/`, deployment `d7164429-f221-4a41-9df5-d3e1a94ba6fe`. Opening correction `ca85398` and Fraymakers chapter target fix are included. Browser capability proof is at `C:/Users/samue/AppData/Local/Temp/league-cli-browser-proof-20261003/`; captures were inspected, but no Figma comparison or acceptance is claimed. The PDF viewer screenshot is blank and needs actual document-loading investigation; iframe existence is insufficient.

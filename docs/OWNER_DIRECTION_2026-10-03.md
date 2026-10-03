@@ -4,6 +4,8 @@ This update supersedes earlier stalled/browser conclusions and narrow case-study
 
 ## CLI browser correction
 
+**Document-loading follow-up:** native Chrome PDF rendering is now visually confirmed in [the loaded viewer capture](site-render-review/2026-10-03-cli-capability/resume-viewer-after-load.png). The earlier blank screenshot below was premature. Actual document rendering is established; Figma/layout/action acceptance is still separate.
+
 Mingo runs in Windows Codex CLI. Desktop built-in Browser discovery is inappropriate for this client; stop retrying an empty desktop browser list. Existing Chrome extension control returned `Browser is not available: chrome`, but existing Playwright 1.63.0 successfully launched installed Chrome 153.0.8010.53 through `channel: chrome`, without installing anything or using the owner's browser profile.
 
 Real staging evidence: `https://d7164429.joshuaik2.pages.dev/`, source `6accc709a5dea97a22a8b0dfaf0755d11ba8884c`. A 1920×1080 browser loaded Resume Found, clicked View Resume, observed the viewer iframe, returned, and closed to Home, with no page errors. Evidence is temporarily at `C:/Users/samue/AppData/Local/Temp/league-cli-browser-proof-20261003/` (two PNGs and `evidence.json`). Both captures were visually inspected. The first viewer capture has a blank document area: iframe existence does not establish PDF rendering. This is capability proof, not visual acceptance.

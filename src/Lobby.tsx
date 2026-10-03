@@ -346,7 +346,7 @@ function SelectedTray({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
   const copy = copyByMode[mode];
   const actionLabel = mode === "experience" ? "VIEW EXPERIENCE" : mode === "hackathons" ? "VIEW HACKATHON" : mode === "education" ? "VIEW EDUCATION" : "VIEW PROJECT";
   const isProfile = item.owner;
-  const actionPath = mode === "education" ? undefined : isProfile ? "/profile" : item.path;
+  const actionPath = mode === "education" ? "/education/projects" : isProfile ? "/profile" : item.path;
   const selectedTrayClassName = [
     "league-selected",
     mode === "projects" ? "league-selected--projects" : "",
