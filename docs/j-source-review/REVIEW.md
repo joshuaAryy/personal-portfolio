@@ -1,10 +1,14 @@
 # Canonical J Review
 
-## Current status - J OPEN / PRODUCTION FALLBACK ARCHIVE / SONNET v8 OWNER-REVIEW CANDIDATE (2026-10-02)
+## Current status - J NOT FINISHED / PRODUCTION FALLBACK ARCHIVE / OWNER REVIEW OPEN (2026-10-02)
 
-Production continues to use archive `159:2` as its large/medium fallback. Sonnet 5.5 v8 `3325:191` is the strongest current editable reconstruction and active owner-review candidate; board `3325:36` compares archive, v7 `3311:2`, and v8. Do not move v8 into production before owner review. The old Codex reconstruction lineage, including Pass16-80 and archive-trace candidate `3364:2`, is rejected/closed. Small contexts keep separate ring-free optical marks.
+Production continues to use archive `159:2` as its large/medium fallback. Sonnet v8 `3325:191` remains the strongest existing editable baseline; board `3325:36` compares archive, v7 `3311:2`, and v8. Sol 6.1 added one derivative study `3482:3` on review board `3482:2`. It is an unapproved directional candidate, not a production replacement. The old Codex reconstruction lineage, including Pass16-80 and archive-trace candidate `3364:2`, is rejected/closed as a design branch only. Small contexts keep separate ring-free optical marks.
 
-The owner explicitly confirms that **the J is not finished**. The old Codex branch being closed does not close the separate Sonnet branch. For the next project phase, use a narrow Sol 6.1 identity lane (proposed handle `/root/identity_j_sol61`) with J-specific history. Preserve Sonnet's layered illustration approach and make only about 2–3 serious whole-mark improvements before owner review; do not resume a long micro-pass chain. Known gaps remain whole-mark integration, the too-continuous orbit/rim, hook/orbit relationship, cyan energy sitting like strands over a disc, and less-organic material relationships. Archive remains the production fallback until the owner selects an approved replacement.
+The owner explicitly confirms that **the J is not finished**. The old Codex branch being closed does not close the separate Sonnet direction. The Sol 6.1 lane `/root/identity_j_sol61` completed one bounded whole-mark attempt. Preserve Sonnet's layered illustration approach; at most one or two additional serious attempts remain before an owner decision, and only if owner feedback warrants them. Do not resume a long micro-pass chain. Known gaps remain whole-mark integration, the too-continuous orbit/rim, hook/orbit relationship, cyan energy sitting like strands over a disc, and less-organic material relationships. Archive remains the production fallback.
+
+## Sol 6.1 bounded whole-mark study 01 (2026-10-02)
+
+Figma candidate `3482:3` is shown on review board `3482:2` beside archive `159:2` and Sonnet v8 `3325:191`. The candidate makes the shaft lighter, widens/lifts the hook, flattens the crown, narrows and offsets the orbit, and shifts cyan energy into the counter. The review found better counter continuity and material interaction, but the complete rim still reads as a medallion around a J. The integration objective is only partly met. This candidate merits owner comparison as a directional study; it is **not accepted, production-ready, or a reason to change the React fallback**. The board also shows the existing separate 54/32/16px optical glyphs; those remain unchanged.
 
 ## Sonnet v8 scoped macro critique (2026-10-01)
 
@@ -14,15 +18,15 @@ Whole-mark integration remains **NOT CLEAR**. The bright near-continuous rim sti
 
 ## Separate small optical-size check (2026-10-01)
 
-The current ring-free marks at `3289:157` (54px), `3289:162` (32px), and `3289:167` (16px) were checked separately. The 54px and 32px marks read clearly as J glyphs; the 16px mark remains recognizable, with necessarily limited fine detail. These exact Figma optical proofs are distinct from the screenshot-based downsample of the primary archive/v8 mark. Keep the small marks while v8 remains under review; the size comparison does not justify replacing them or promoting v8.
+The current ring-free marks at `3289:157` (54px), `3289:162` (32px), and `3289:167` (16px) were checked separately. The 54px and 32px marks read clearly as J glyphs; the 16px mark remains recognizable, with necessarily limited fine detail. These exact Figma optical proofs are distinct from screenshot-based downsampling of the archive/v8 mark. Keep the small marks through owner review; the size comparison does not justify replacing them or promoting either large mark candidate.
 
 In v8 `3325:191`, the editable ring group is `3325:325` (outer rim `3325:331`, inner rim `3325:332`); the hook-energy spill is `3325:362`. These IDs locate the critique only; keep the candidate unchanged until owner review.
 
-Keep archive `159:2` in production. Keep v8 `3325:191` as the active owner-review candidate pending owner review; this critique does not reject or promote it. No production asset or implementation changed.
+Keep archive `159:2` in production. Compare archive, v8, and the new study with the owner before any production change. No production asset or implementation was changed by the J study.
 
 ## Earlier history and superseded statuses
 
-The pass notes below are historical records of the Codex reconstruction lineage. Any earlier recommendation to use the archive as a reconstruction base or to stop further J work applies to that rejected lineage only; it does not supersede the active Sonnet v8 owner-review candidate stated above. The archive remains the production fallback while that review is open.
+The pass notes below are historical records of the Codex reconstruction lineage. Any earlier recommendation to use the archive as a reconstruction base or to stop further J work applies to that rejected lineage only; it does not supersede the current Sonnet/Sol directions stated above. The archive remains the production fallback while review is open.
 
 ## Superseded archive-closure record (historical only)
 
@@ -69,6 +73,6 @@ Current implementation note: React continues to use archive `159:2` as the produ
 
 ## Earlier reconstruction recommendations - rejected history, 2026-10-01
 
-Pass16-80 and the `3364:2` archive-trace candidate remain rejected historical evidence only. They do not supersede the separate Sonnet v8 owner-review candidate at `3325:191`.
+Pass16-80 and the `3364:2` archive-trace candidate remain rejected historical evidence only. They do not supersede the separate Sonnet v8 baseline or Sol 6.1 study `3482:3`.
 
-The cited Pass54-80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37-58 changed Figma study boards; Pass59-80 are local evidence. These older Codex studies do not evaluate or supersede the current Sonnet v8 candidate. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.
+The cited Pass54-80 studies are historical comparisons only: width compression was rejected, Pass78 remains the strongest reconstructed J-only silhouette, and Pass79/80 still read as a J inside a badge. Pass37-58 changed Figma study boards; Pass59-80 are local evidence. These older Codex studies do not evaluate or supersede the current Sonnet v8 baseline or Sol 6.1 candidate. [Pass78 board](captures/pass78/pass78-macro-comparison.png), SHA-256 e4affc284228991192174d42a710daf0921a604e7e84a55a20479ba802c0ab99; [Pass79 board](captures/pass79/pass79-comparison.png), SHA-256 F4E404F27C16345B698748A4D9652E60512DD21A797E2FE1AD2815D2DDC91860 / manifest ECCA6163DC833BCE7E55C833F3854D71C7E1DBEDB9C23D4034871E7833CE77D0; [Pass80 board](captures/pass80/pass80-comparison.png), SHA-256 70710C9B448AC88645538DECFE982A386AD66AD9B6791951C8FDA5DACB33C1CE / manifest BE1938A68875F870789C7CEA8CD9F7DE477E7ACC10B4C507193CA6521F87F627. Both Pass79/80 bundles contain complete references, decoded PNGs, and manifests verified after regeneration.
