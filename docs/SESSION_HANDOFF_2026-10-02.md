@@ -1,6 +1,6 @@
 # League Portfolio — Canonical Session Handoff
 
-**Checkpoint:** 2026-10-02. Mingo is preparing a clean-chat continuation, not closing or restarting the project.
+**Checkpoint:** created 2026-10-02; reconciled against live repository, Wrangler, Figma, and agent state on 2026-10-03. Mingo is preparing a clean-chat continuation, not closing or restarting the project.
 
 > **CURRENT OWNER INSTRUCTIONS + CURRENT DURABLE DOCS + CURRENT FIGMA/REPOSITORY STATE OVERRIDE HISTORICAL CHAT SUMMARIES.** Historical notes explain decisions; they do not supersede current truth. Recheck the facts below against live state before acting.
 
@@ -14,9 +14,9 @@ Use this quality order: **macro structure and first read → meso hierarchy and 
 
 - Worktree: `production-portfolio/.worktrees/public-integration`
 - Branch: `feat/portfolio-integration`
-- Pre-transition checkpoint HEAD: `1f92b31d2588742488ff65fa8e33e5bda69c7688` (`origin/feat/portfolio-integration` matched it). The Opening source correction was committed as `ca85398a447db65a000dc888ace027ceecfbd8b8`; the documentation-sync push that contains this handoff advances the branch again. On bootstrap, verify exact HEAD with `git rev-parse HEAD` and confirm origin parity.
-- Latest Cloudflare Pages Preview **confirmed by a read-only Wrangler deployment listing on 2026-10-02**: commit `2fcb37ad53e26afc503e2fe8b5d730c63a3b163e` (`fix(a11y): clarify case-study figure summaries`), immutable preview `https://c0f164f5.joshuaik2.pages.dev/`; branch alias `https://feat-portfolio-integration.joshuaik2.pages.dev/`. The primary production project was not targeted.
-- Branch source has two website-code changes after that deployment: `6b81a4e` adds the visible gold `:focus-visible` ring to the Crest playback iframe, and `ca85398` corrects Opening ring start offsets to the live Figma values. The latter changes only `src/opening.css`; the two-second sequence, 460ms settle, Skip, and reduced-motion path remain unchanged. The Preview predates both corrections; deploy a descendant of `ca85398` before validating either. No deployment was made for this transition.
+- Pre-transition checkpoint HEAD: `1f92b31d2588742488ff65fa8e33e5bda69c7688` (`origin/feat/portfolio-integration` matched it). At the start of this refresh, local and origin HEAD matched `b4d2fedd16e66337abf0cf390b50a5fe12fe0c2c`; this documentation correction advances the branch. On bootstrap, verify exact HEAD with `git rev-parse HEAD` and confirm origin parity.
+- Latest Cloudflare Pages Preview confirmed by read-only Wrangler listing on 2026-10-03: source commit `2fcb37ad53e26afc503e2fe8b5d730c63a3b163e` (`fix(a11y): clarify case-study figure summaries`), immutable preview `https://c0f164f5.joshuaik2.pages.dev/`; branch alias `https://feat-portfolio-integration.joshuaik2.pages.dev/`. The prior `c671a8e` Preview is superseded. The primary production project was not targeted.
+- Branch source has three code changes after that deployment: `6b81a4e` adds the visible gold `:focus-visible` ring to the Crest playback iframe; `ca85398` corrects Opening ring start offsets to live Figma values; and `d6c15b6` removes redundant nested figure landmarks from four case studies without changing visible layout. The Preview predates all three; deploy a descendant of `d6c15b6` before validating them. No post-deploy supported-browser capture exists. The primary production project was not targeted.
 - Worktree has no staged changes after the source commit; the documentation checkpoint is pushed separately. Preserve one unrelated tracked modification: `docs/j-source-review/captures/pass76/pass76-j-only-16-native.png`, plus the untracked review/capture/source-media/local-experiment artifacts present in the worktree. The current status count is authoritative at bootstrap. Do not clean, stage, or treat these items as approved production work without auditing them. No production deployment or asset promotion occurred.
 
 ## 3. Operating architecture for the next session
@@ -161,8 +161,8 @@ When browser availability returns: deploy a revision containing the latest sourc
 2. Read this handoff, `AGENTS.md`, `docs/AGENT_REGISTRY.md`, `docs/IMPLEMENTATION_STATUS.md`, `docs/RENDER_VALIDATION_QUEUE.md`, `docs/DEFERRED_OWNER_INPUTS.md`, `docs/CASE_STUDY_CONTENT_SOURCE.md`, and the J review before acting.
 3. Recheck branch/HEAD/remote, current tracked/untracked worktree state, latest recorded deployment, current Figma, live agent tree, and browser availability. Preserve this checkpoint's dirty items.
 4. Continue stable implementation/source work without broad redesign. Do not wait on J or missing optional media to work elsewhere.
-5. Review Sol 6.1 study `3482:3` against archive `159:2` and v8 `3325:191`; keep archive in production. The first bounded attempt is complete. Get owner direction before continuing the remaining one or two attempts.
-6. The latest recorded Preview predates both `6b81a4e` and Opening correction `ca85398`; deploy a descendant of `ca85398` before the next supported-browser validation.
+5. Review Sol 6.1 study `3482:3` against archive `159:2` and v8 `3325:191`; keep archive in production. The first bounded attempt is complete. An owner choice was requested on 2026-10-03: one final attempt, pause J work, or select Candidate 01. Do not repeat the question; wait for and follow the owner response before further J work.
+6. The latest recorded Preview source `2fcb37a` predates `6b81a4e`, Opening correction `ca85398`, and landmark correction `d6c15b6`; deploy a descendant of `d6c15b6` before the next supported-browser validation.
 7. Do not retry the supported browser until availability changes or a natural checkpoint. Keep working the non-browser lanes and queue.
 8. For each meaningful new design or owner decision, update the relevant status/spec, remove superseded guidance, commit, and push without waiting for a large code batch.
 
