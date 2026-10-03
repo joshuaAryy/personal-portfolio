@@ -20,6 +20,7 @@ const isProjectDetail = (pathname: string) => pathname.startsWith("/projects/");
 
 function Header() {
   const { pathname } = useLocation();
+  const helpOverlay = useHelpOverlay();
   const isHome = pathname === "/" || pathname === "/home";
   const isProjectShell = usesProjectDetailShell(pathname);
   const isResumeShell = pathname.startsWith("/resume");
@@ -89,6 +90,15 @@ function Header() {
           >
             Resume
           </NavLink>
+        )}
+        {helpOverlay ? (
+          <button className="header-help" type="button" onClick={helpOverlay.openHelp}>
+            Help
+          </button>
+        ) : (
+          <Link className="header-help" to="/help" state={{ returnTo: pathname }}>
+            Help
+          </Link>
         )}
       </nav>
       {!isProjectShell && (

@@ -40,6 +40,8 @@ Shared ProfileNav correction, commit `0250592` (2026-10-02): the disabled Person
 - **Opening mechanism:** `Opening.tsx` sets a 2,000ms sequence, Skip cancels pending timers and routes directly to `/home`, and reduced motion removes the animation with a 120ms handoff. In `opening.css`, the segmented bezel starts at +68.75° and the tick track at −57.3°, then both settle by 23% (460ms). These are source-level behavior checks only; actual playback, visual weight, and reduced-motion rendering remain queued.
 
 - **Home Back behavior:** `src/HomeExplore.tsx` calls `navigate(-1)` only when React Router has a numeric history index greater than zero. With no positive in-app history index, the handler leaves the visitor on `/home`. This matches the cold-entry requirement at source level; rendered activation and the in-app return path remain queued for supported-browser validation.
+- **Resume Found close behavior:** `src/ResumeFlow.tsx` returns to a validated in-app origin when present and falls back to `/home` for direct entry or an invalid/resume origin. Close and Escape share that destination. This source correction does not verify rendered behavior; see queue row 1 for the supported-browser comparison.
+- **Responsive Help entry:** `src/PortfolioLayout.tsx` exposes a header Help button while the rail is hidden at widths up to 900px; in the app it opens the contextual overlay in place, preserving the current route and trigger for focus return. This source update still needs responsive and interaction validation in queue rows 12–13.
 
 ## Preserved prior comparison evidence
 

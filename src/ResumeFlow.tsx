@@ -8,7 +8,7 @@ const resumeFileName = "Joshua_Aryeetey_General_Resume_v13.pdf";
 
 function getReturnPath(state: unknown): string {
   if (!state || typeof state !== "object" || !("from" in state)) {
-    return "/projects";
+    return "/home";
   }
 
   const from = state.from;
@@ -21,7 +21,7 @@ function getReturnPath(state: unknown): string {
     return from;
   }
 
-  return "/projects";
+  return "/home";
 }
 
 export function ResumeFound() {

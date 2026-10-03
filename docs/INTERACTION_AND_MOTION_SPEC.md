@@ -31,7 +31,7 @@ The rail footer uses the source-verified GitHub and LinkedIn profiles as externa
 
 ## Resume Found
 
-Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language as the foundation. Adapt the real frame/ring/plate action mechanism to the portfolio J and `VIEW RESUME`. Keep the authorized v13 resume and portfolio labels. Do not treat the current custom ring approximation as accepted. Preserve close-to-origin behavior and the direct-entry fallback.
+Use authentic Riot/CommunityDragon Match Found and Ready Check assets/language as the foundation. Adapt the real frame/ring/plate action mechanism to the portfolio J and `VIEW RESUME`. Keep the authorized v13 resume and portfolio labels. Do not treat the current custom ring approximation as accepted. Close returns to a valid originating route; direct entry or an invalid/resume origin falls back to `/home`.
 
 The single targeted environment pass is clear in Figma after widening the existing teal/navy light beyond the authentic chassis; the dimmed underlay, vignette, Ready Check mechanism, and demoted-but-visible shell/activity rail remain. React has the corresponding atmosphere values, and the post-change render comparison remains open. Avoid random splash art or a new architecture pass.
 

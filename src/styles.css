@@ -149,6 +149,24 @@ a:focus-visible {
 .top-nav a.header-help {
   display: none;
 }
+.top-nav button.header-help {
+  display: none;
+  place-items: center;
+  min-width: 122px;
+  padding: 4px 12px 0;
+  border: 0;
+  background: transparent;
+  color: #9e9e96;
+  text-transform: uppercase;
+  font: inherit;
+  font-size: 12px;
+  position: relative;
+  cursor: pointer;
+}
+.top-nav button.header-help:hover,
+.top-nav button.header-help:focus-visible {
+  color: var(--gold-light);
+}
 .header-name {
   margin-left: auto;
   margin-right: 28px;
@@ -2988,7 +3006,8 @@ a:focus-visible {
   }
 }
 @media (max-width: 900px) {
-  .top-nav a.header-help {
+  .top-nav a.header-help,
+  .top-nav button.header-help {
     display: grid;
     min-width: 84px;
   }
