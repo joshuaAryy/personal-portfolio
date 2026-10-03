@@ -267,18 +267,18 @@ function WholeProductArchitecture() {
         <span className="choveigo-system-map__output-line" />
       </div>
       <div className="choveigo-system-map__inputs" role="group" aria-label="System inputs">
-        <section className="choveigo-system-map__input choveigo-system-map__input--roles">
+        <div className="choveigo-system-map__input choveigo-system-map__input--roles">
           <h3>Role discovery</h3>
           <p>Feeds · company sites · career pages</p>
           <p>Structured responsibilities + criteria</p>
-        </section>
-        <section className="choveigo-system-map__input choveigo-system-map__input--candidate">
+        </div>
+        <div className="choveigo-system-map__input choveigo-system-map__input--candidate">
           <h3>Candidate evidence</h3>
           <p>Resume + profile · demonstrated</p>
           <p>and transferable experience</p>
-        </section>
+        </div>
       </div>
-      <section className="choveigo-system-map__decision" aria-label="Decision layers">
+      <div className="choveigo-system-map__decision">
         <h3>Decision layers</h3>
         <p className="choveigo-system-map__decision-note">Rules assess; Gemini interprets within the evidence boundary.</p>
         <div className="choveigo-system-map__layers">
@@ -295,8 +295,8 @@ function WholeProductArchitecture() {
             <p>Interprets supplied text; rules decide Fit and Eligibility.</p>
           </article>
         </div>
-      </section>
-      <section className="choveigo-system-map__outcomes" aria-label="Product actions">
+      </div>
+      <div className="choveigo-system-map__outcomes">
         <h3>Product actions</h3>
         <article className="choveigo-system-map__outcome choveigo-system-map__outcome--recommendation">
           <h4>Recommendation</h4>
@@ -306,7 +306,7 @@ function WholeProductArchitecture() {
           <h4>NEXT · RESUME TAILORING</h4>
           <p>A separate action after recommendation.</p>
         </article>
-      </section>
+      </div>
     </figure>
   );
 }

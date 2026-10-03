@@ -91,10 +91,9 @@ function FoodBenchmark() {
       </figcaption>
       <div className="food-benchmark__splits">
         {foodBenchmarkSets.map((set) => (
-          <section
+          <div
             className="food-benchmark__split"
             key={set.name}
-            aria-label={`${set.name.toLowerCase()} query set`}
           >
             <h3>{set.name} · {set.queries} QUERIES</h3>
             <p className="food-benchmark__definition">Top-1 means the correct food ranked first. Bars show share.</p>
@@ -119,7 +118,7 @@ function FoodBenchmark() {
               <span>·</span>
               Top-5&nbsp; {set.legacy.top5}/{set.queries} → {set.hybrid.top5}/{set.queries}
             </p>
-          </section>
+          </div>
         ))}
       </div>
       <p className="food-benchmark__scope">

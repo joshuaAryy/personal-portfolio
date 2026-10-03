@@ -249,7 +249,7 @@ export default function CrestCaseStudy() {
               <span>02 TWO EVIDENCE PATHS</span>
               <span>03 HUMAN DECISION</span>
             </div>
-            <section className="crest-evidence-map__node crest-evidence-map__request" aria-label="Sample request: Conference registration, 1,200 dollars">
+            <div className="crest-evidence-map__node crest-evidence-map__request">
               <div className="crest-evidence-map__node-head">
                 <span className="crest-evidence-map__eyebrow">SAMPLE REQUEST</span>
                 <svg viewBox="0 0 20 22" aria-hidden="true">
@@ -260,8 +260,8 @@ export default function CrestCaseStudy() {
               <h3>Conference registration</h3>
               <strong className="crest-evidence-map__amount">$1,200</strong>
               <span className="crest-evidence-map__category">TRAVEL &amp; EVENTS</span>
-            </section>
-            <section className="crest-evidence-map__node crest-evidence-map__signals" aria-label="DETERMINISTIC RULES: budget and spend signals">
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__signals">
               <span className="crest-evidence-map__eyebrow">DETERMINISTIC SIGNALS</span>
               <div className="crest-evidence-map__node-head">
                 <svg viewBox="0 0 24 22" aria-hidden="true">
@@ -270,8 +270,8 @@ export default function CrestCaseStudy() {
                 <h3>Budget + spend rules</h3>
               </div>
               <p>Budget · prior spend · thresholds</p>
-            </section>
-            <section className="crest-evidence-map__node crest-evidence-map__policy" aria-label="Retrieved policy passages matched to the request">
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__policy">
               <span className="crest-evidence-map__eyebrow">RETRIEVED POLICY</span>
               <div className="crest-evidence-map__node-head">
                 <svg viewBox="0 0 20 22" aria-hidden="true">
@@ -281,8 +281,8 @@ export default function CrestCaseStudy() {
                 <h3>Relevant passages</h3>
               </div>
               <p>Matched to the request</p>
-            </section>
-            <section className="crest-evidence-map__node crest-evidence-map__interpretation" aria-label="Gemini interprets retrieved policy context">
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__interpretation">
               <span className="crest-evidence-map__eyebrow">POLICY INTERPRETATION</span>
               <div className="crest-evidence-map__node-head">
                 <svg viewBox="0 0 24 22" aria-hidden="true">
@@ -291,8 +291,8 @@ export default function CrestCaseStudy() {
                 <h3>Gemini</h3>
               </div>
               <p>Reads retrieved policy context</p>
-            </section>
-            <section className="crest-evidence-map__node crest-evidence-map__decision" aria-label="Human review retains decision authority">
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__decision">
               <span className="crest-evidence-map__eyebrow">DECISION AUTHORITY</span>
               <div className="crest-evidence-map__node-head">
                 <svg viewBox="0 0 22 24" aria-hidden="true">
@@ -305,7 +305,7 @@ export default function CrestCaseStudy() {
               <div className="crest-evidence-map__actions" aria-hidden="true">
                 <span>APPROVE</span><span>DENY</span>
               </div>
-            </section>
+            </div>
           </figure>          <figure className="crest-finance-workflow" aria-labelledby="crest-finance-workflow-title">
             <figcaption id="crest-finance-workflow-title">
               <span>FINANCE Q&amp;A + REPORTING</span>

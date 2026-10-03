@@ -36,7 +36,7 @@ function SystemFlowFigure() {
       </ol>
 
       <div className="stush-system-flow__visual">
-        <section className="stush-system-flow__inputs" aria-label="Heterogeneous sales files">
+        <div className="stush-system-flow__inputs">
           <h4>Sales files</h4>
           <p>Different layouts</p>
           <div className="stush-file-sheets" aria-hidden="true">
@@ -60,12 +60,12 @@ function SystemFlowFigure() {
             <strong>CSV · XLSX · XLSB</strong>
             <span>Formats across inputs</span>
           </p>
-        </section>
+        </div>
 
         <span className="stush-system-flow__arrow stush-system-flow__arrow--inputs stush-system-flow__arrow--cue-1" aria-hidden="true">→</span>
 
         <div className="stush-system-flow__transformation">
-          <section className="stush-flow-parser" aria-label="Layout-aware parsing">
+          <div className="stush-flow-parser">
             <p className="stush-flow-kicker">PARSE</p>
             <h4>Read each structure</h4>
             <p className="stush-flow-copy">Field positions vary</p>
@@ -86,11 +86,11 @@ function SystemFlowFigure() {
               ))}
             </ol>
             <p className="stush-parser-caption">Fields found in each layout</p>
-          </section>
+          </div>
 
           <span className="stush-system-flow__arrow stush-system-flow__arrow--inner stush-system-flow__arrow--cue-2" aria-hidden="true">→</span>
 
-          <section className="stush-flow-schema" aria-label="One shared field contract">
+          <div className="stush-flow-schema">
             <p className="stush-flow-kicker">SHARED FIELD CONTRACT</p>
             <h4>Four stable meanings</h4>
             <ul className="stush-schema-fields">
@@ -101,11 +101,11 @@ function SystemFlowFigure() {
                 </li>
               ))}
             </ul>
-          </section>
+          </div>
 
           <span className="stush-system-flow__arrow stush-system-flow__arrow--inner stush-system-flow__arrow--cue-3" aria-hidden="true">→</span>
 
-          <section className="stush-flow-normalize" aria-label="Normalization using shared reporting rules">
+          <div className="stush-flow-normalize">
             <p className="stush-flow-kicker">NORMALIZE</p>
             <h4>Apply shared rules</h4>
             <ul className="stush-normalize-rows">
@@ -118,10 +118,10 @@ function SystemFlowFigure() {
                 </li>
               ))}
             </ul>
-          </section>
+          </div>
         </div>
 
-        <section className="stush-system-flow__handoff" aria-label="Standardized reporting outputs for Power BI">
+        <div className="stush-system-flow__handoff">
           <p className="stush-flow-kicker">STANDARDIZED OUTPUT</p>
           <div className="stush-handoff-content">
             <ul className="stush-report-artifacts">
@@ -138,7 +138,7 @@ function SystemFlowFigure() {
               <span>Reporting handoff</span>
             </div>
           </div>
-        </section>
+        </div>
       </div>
 
       <figcaption>Conceptual pipeline · no source values shown.</figcaption>
