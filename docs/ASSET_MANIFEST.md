@@ -4,6 +4,8 @@ Tracks media, visual sources, and current use. Authentic asset selection for dev
 
 Repository boundary: a path under `public/` in this manifest does not by itself mean the file is tracked or shipped. Rows marked **LOCAL ONLY** describe untracked historical exports present in this checkout; they have no active production consumer and are not part of the integration branch. The workspace-level `exploration-assets/` folder and `collection-research-packet.md` are outside this Git repository and are optional research aids, not build or runtime dependencies. Use tracked assets and provenance recorded in this repository for implementation.
 
+Source path audit, 2026-10-03: 108 unique literal `/media` and `/fonts` references in `src/` all resolve to existing, tracked files under `public/`. No untracked local review asset is required by those references. This verifies literal source-path availability only; it does not verify dynamic paths, built output, browser fetches, or rendered loading.
+
 ## Tracked media and historical local exports
 
 ### Profile project identity assets
