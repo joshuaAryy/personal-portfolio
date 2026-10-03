@@ -2,9 +2,9 @@
 
 > **Hierarchical architecture:** follow MODEL_ROUTING.md and `~/.agents/skills/hierarchical-agent-orchestration/SKILL.md`. Persistent Mingo is an L2 Luna XHigh control plane with an episodic, internal L3 Sol Medium strategic core; frontend/product are domain-owner pods, runtime QA stays shallow. This replaces the prior flat worker/reviewer model. Runtime does not expose the selected root model.
 
-**Current portfolio state (updated 2026-10-03):** branch `feat/portfolio-integration` includes Food/Cho React breadth commit `e88eb59` and Cho end-anchor selection fix `86d5d89`. Current clean Preview `https://b79f647d.joshuaik2.pages.dev/` (deployment `b79f647d-a93b-4a41-b3c2-98f70686e362`, source `86d5d89`) passed Food/Cho desktop and 390px Chrome checks. Their source/render status and evidence are in [the render-sync report](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-03.md). Current Figma screenshots for Crest `3286:813` and Fraymakers `3286:1031` and existing React components already contain the requested broader stories; fresh current-Preview rendering and comparison are next. Preserve the remaining Education audit and Pass 76 capture modifications and all untracked local/review material; do not bulk stage or clean. No Sol agent is active. J Candidate 02 remains owner-held.
+**Current portfolio state (updated 2026-10-03):** branch `feat/portfolio-integration` is pushed through source checkpoint `a9633b8`. Food/Cho implementations (`e88eb59`, `86d5d89`) passed current-Preview desktop and 390px Chrome checks; Crest/Fray source corrections are committed at `a9633b8` and passed local Chrome comparison at desktop and 390px against Figma `3286:813` / `3286:1031`. Reports: [Food/Cho](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-03.md) and [Crest/Fray](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-03.md). Preview still serves `86d5d89` and does not include Crest/Fray. The dirty Education audit, Pass 76 capture, and all unrelated local/review material remain preserved. No Sol agent is active; J Candidate 02 remains owner-held. Next substantive order: Living in Silico and Stush Patties, then Education evidence/design.
 
-> **Latest staging:** clean pushed source `86d5d899a374c030d40060e98890e7484593e98b` deployed to Pages **Preview** `https://b79f647d.joshuaik2.pages.dev/`, branch alias `https://feat-portfolio-integration.joshuaik2.pages.dev/`, deployment `b79f647d-a93b-4a41-b3c2-98f70686e362`. Food/Cho desktop and 390px browser validation passed. Crest/Fraymakers are the next current-Preview render targets. Production was not targeted.
+> **Latest staging:** clean pushed source `86d5d899a374c030d40060e98890e7484593e98b` deployed to Pages **Preview** `https://b79f647d.joshuaik2.pages.dev/`, branch alias `https://feat-portfolio-integration.joshuaik2.pages.dev/`, deployment `b79f647d-a93b-4a41-b3c2-98f70686e362`. Food/Cho desktop and 390px browser validation passed. The branch source has since advanced to `a9633b8`; Crest/Fray browser evidence is local, and this Preview does not yet contain that checkpoint. Production was not targeted.
 
 > **Current owner update:** [2026-10-03 direction](OWNER_DIRECTION_2026-10-03.md) supersedes older browser-blocked and narrow coverage conclusions below. This is Codex CLI; existing Playwright/installed Chrome now produces actual rendered evidence. Six case studies require breadth/depth expansion. Education CTA is resolved to `/education/projects`; detailed project claims still require authentic evidence. Journey must continue Void through `3492:2`. Preserve compact Foundations (3600×3140) and keep J Candidate 02 held. Older outage/CTA statements below are historical, not current instructions.
 
@@ -113,9 +113,9 @@ Use [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for exact claim
 
 ## 9. Browser/render validation state
 
-**CLI BROWSER RENDER VALIDATION AVAILABLE / PORTFOLIO EXECUTION CONTINUES.** Playwright 1.63 launches installed Chrome 153 in this Codex CLI environment. Food and Cho were rendered on the current clean Preview at desktop and 390px; details and evidence are in [the render-sync report](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-03.md). Earlier desktop-app browser discovery was the wrong client check and is superseded. Next current-Preview page-level comparisons are Crest and Fraymakers. Figma imagery, source inspection, builds, tests, and HTTP status alone do not establish rendered parity.
+**CLI BROWSER RENDER VALIDATION AVAILABLE / PORTFOLIO EXECUTION CONTINUES.** Playwright 1.63 launches installed Chrome 153 in this Codex CLI environment. Food/Cho passed current-Preview desktop/narrow checks; Crest/Fray passed local-source desktop/390px renders after commit `a9633b8`. Details are in the [Food/Cho](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-03.md) and [Crest/Fray](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-03.md) reports. The Preview remains on `86d5d89` and does not include Crest/Fray. Figma imagery, source inspection, builds, tests, and HTTP status alone do not establish visual parity.
 
-Use the actual CLI Chrome lane at page-level checkpoints. The immediate render queue follows the Food/Cho implementation sync, tests, and build; compare against the accepted Figma nodes recorded in [RENDER_VALIDATION_QUEUE.md](RENDER_VALIDATION_QUEUE.md), correct observed mismatches, rerender, then request owner review. Figma images, source inspection, builds, tests, and HTTP status alone do not establish rendered parity. Other queued surfaces remain governed by the durable render queue.
+Use actual CLI Chrome at page-level checkpoints. Crest/Fray local render sync is complete; the next case-study work is Living in Silico and Stush Patties, followed by Education evidence/design. Compare each updated implementation against current Figma, correct concrete mismatches, rerender, then request owner review. Other queued surfaces remain governed by `RENDER_VALIDATION_QUEUE.md`.
 
 ## 10. Actual owner-only inputs
 
@@ -152,12 +152,12 @@ Use the actual CLI Chrome lane at page-level checkpoints. The immediate render q
 - Preserve unrelated modified and untracked worktree contents. Stage only intended deliverables; never bulk-clean this worktree.
 - CLI browser rendering is available. The Food/Cho checkpoint is complete; remaining page-level render items stay in [RENDER_VALIDATION_QUEUE.md](RENDER_VALIDATION_QUEUE.md).
 
-## 13. Current next actions (2026-10-03)
+## 13. Current next actions (2026-10-03, after Crest/Fray checkpoint)
 
-1. Reuse `product_coverage__luna_xhigh` to compare live Crest/Fraymakers Figma frames, current React stories, and source truth. Preserve the existing broad direction unless it identifies a concrete missing workstream or claim issue.
-2. Reuse `runtime_a11y_qa__luna_high` to render Crest and Fraymakers from the current Preview at desktop and narrow widths, compare against the live Figma frames, and report only observed mismatches.
-3. Route concrete React discrepancies through `frontend_owner__luna_xhigh`; rerender and update the queue after corrections.
-4. Continue Living in Silico and Stush Patties after this checkpoint, then finish Education source/design. Keep J Candidate 02 held.
+1. Continue Living in Silico and Stush Patties using `CASE_STUDY_CONTENT_SOURCE.md`, authentic project artifacts, coverage maps, and the current Figma direction; make only justified story changes.
+2. Keep each page authored for its subject, then sync accepted React changes and render the complete desktop/narrow routes with CLI Chrome at natural checkpoints.
+3. Complete the short `/education/projects` page after verifying the Dental DBMS, Bookstore, ALU/FSM, and CMOS amplifier evidence; exclude academic awards and scholarship promotion.
+4. Preserve Journey, Food/Cho/Crest/Fray accepted direction, and compact Foundations. Keep J Candidate 02 held pending owner direction.
 
 ## Historical next-session actions — superseded
 

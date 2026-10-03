@@ -1,0 +1,1252 @@
+{
+  "capturedAt": "2026-10-03T23:26:42.137Z",
+  "browser": "153.0.8010.53",
+  "source": "current local Vite worktree",
+  "base": "http://127.0.0.1:5173",
+  "figmaReferences": {
+    "crest": {
+      "node": "3286:813",
+      "file": "figma-crest-post-copy.png",
+      "size": "1920x2348"
+    },
+    "fraymakers": {
+      "node": "3286:1031",
+      "file": "figma-fraymakers-post-copy.png",
+      "size": "1920x1841"
+    }
+  },
+  "routes": [
+    {
+      "case": "crest",
+      "url": "http://127.0.0.1:5173/projects/crest",
+      "status": 200,
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      "initial": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/crest-sample.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          }
+        ],
+        "navs": [
+          [
+            {
+              "label": "OVERVIEW",
+              "href": "#crest-overview"
+            },
+            {
+              "label": "TRANSACTION FLOW",
+              "href": "#crest-system"
+            },
+            {
+              "label": "POLICY RETRIEVAL",
+              "href": "#crest-policy"
+            },
+            {
+              "label": "OWNERSHIP",
+              "href": "#crest-team"
+            },
+            {
+              "label": "LESSON",
+              "href": "#crest-takeaway"
+            }
+          ]
+        ],
+        "policy": {
+          "figure": {
+            "x": 64,
+            "y": 1306,
+            "width": 1432,
+            "height": 395,
+            "scrollWidth": 1429,
+            "clientWidth": 1429,
+            "scrollHeight": 393,
+            "clientHeight": 393,
+            "background": "rgb(14, 32, 38)",
+            "border": "",
+            "borderTop": "1px solid rgb(52, 75, 81)",
+            "transform": "none",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "divider": {
+            "x": 104,
+            "y": 1543,
+            "width": 1353,
+            "height": 1,
+            "scrollWidth": 1353,
+            "clientWidth": 1353,
+            "scrollHeight": 0,
+            "clientHeight": 0,
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "",
+            "borderTop": "1px solid rgb(52, 75, 81)",
+            "transform": "none",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "dividerInsideFigure": true,
+          "evidence": {
+            "x": 104,
+            "y": 1562,
+            "width": 1353,
+            "height": 108,
+            "scrollWidth": 1353,
+            "clientWidth": 1353,
+            "scrollHeight": 108,
+            "clientHeight": 108,
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(238, 231, 216)",
+            "borderTop": "0px none rgb(238, 231, 216)",
+            "transform": "none",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "evidenceInsideFigure": true,
+          "cards": [
+            {
+              "text": "RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide.",
+              "insideFigure": true,
+              "box": {
+                "x": 104,
+                "y": 1562,
+                "width": 425,
+                "height": 108,
+                "scrollWidth": 423,
+                "clientWidth": 423,
+                "scrollHeight": 105,
+                "clientHeight": 105,
+                "background": "rgb(16, 36, 42)",
+                "border": "",
+                "borderTop": "2px solid rgb(86, 189, 188)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            },
+            {
+              "text": "DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance.",
+              "insideFigure": true,
+              "box": {
+                "x": 563,
+                "y": 1562,
+                "width": 425,
+                "height": 108,
+                "scrollWidth": 423,
+                "clientWidth": 423,
+                "scrollHeight": 105,
+                "clientHeight": 105,
+                "background": "rgb(16, 36, 42)",
+                "border": "",
+                "borderTop": "2px solid rgb(199, 155, 69)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            },
+            {
+              "text": "HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+              "insideFigure": true,
+              "box": {
+                "x": 1032,
+                "y": 1562,
+                "width": 425,
+                "height": 108,
+                "scrollWidth": 423,
+                "clientWidth": 423,
+                "scrollHeight": 105,
+                "clientHeight": 105,
+                "background": "rgb(16, 36, 42)",
+                "border": "",
+                "borderTop": "2px solid rgb(86, 189, 188)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            }
+          ],
+          "connectors": [
+            {
+              "text": "+",
+              "box": {
+                "x": 541,
+                "y": 1606,
+                "width": 11,
+                "height": 20,
+                "scrollWidth": 11,
+                "clientWidth": 11,
+                "scrollHeight": 20,
+                "clientHeight": 20,
+                "background": "rgba(0, 0, 0, 0)",
+                "border": "0px none rgb(199, 155, 69)",
+                "borderTop": "0px none rgb(199, 155, 69)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            },
+            {
+              "text": "→",
+              "box": {
+                "x": 1000,
+                "y": 1606,
+                "width": 20,
+                "height": 20,
+                "scrollWidth": 20,
+                "clientWidth": 20,
+                "scrollHeight": 20,
+                "clientHeight": 20,
+                "background": "rgba(0, 0, 0, 0)",
+                "border": "0px none rgb(115, 209, 207)",
+                "borderTop": "0px none rgb(115, 209, 207)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            }
+          ],
+          "order": [
+            {
+              "className": "crest-policy-evidence__card",
+              "text": "RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide."
+            },
+            {
+              "className": "crest-policy-evidence__connector",
+              "text": "+"
+            },
+            {
+              "className": "crest-policy-evidence__card crest-policy-evidence__card--rules",
+              "text": "DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance."
+            },
+            {
+              "className": "crest-policy-evidence__connector crest-policy-evidence__connector--decision",
+              "text": "→"
+            },
+            {
+              "className": "crest-policy-evidence__card",
+              "text": "HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype."
+            }
+          ],
+          "textFit": [
+            {
+              "text": "Ask a finance question or open a reporting view.",
+              "clientWidth": 787,
+              "scrollWidth": 787,
+              "clientHeight": 13,
+              "scrollHeight": 13
+            },
+            {
+              "text": "A standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.",
+              "clientWidth": 1353,
+              "scrollWidth": 1353,
+              "clientHeight": 17,
+              "scrollHeight": 17
+            },
+            {
+              "text": "Grounded context supported review; it did not detect or decide.",
+              "clientWidth": 391,
+              "scrollWidth": 391,
+              "clientHeight": 16,
+              "scrollHeight": 16
+            },
+            {
+              "text": "Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance.",
+              "clientWidth": 391,
+              "scrollWidth": 391,
+              "clientHeight": 32,
+              "scrollHeight": 32
+            },
+            {
+              "text": "Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+              "clientWidth": 391,
+              "scrollWidth": 391,
+              "clientHeight": 32,
+              "scrollHeight": 32
+            },
+            {
+              "text": "POLICY ENGINE Compliance workflows",
+              "clientWidth": 281,
+              "scrollWidth": 281,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            },
+            {
+              "text": "ANOMALY SIGNALS Deterministic rules",
+              "clientWidth": 281,
+              "scrollWidth": 281,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            },
+            {
+              "text": "POLICY RETRIEVAL Relevant passages",
+              "clientWidth": 281,
+              "scrollWidth": 281,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            },
+            {
+              "text": "PREAPPROVAL Part of the workflow",
+              "clientWidth": 281,
+              "scrollWidth": 281,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            }
+          ]
+        },
+        "policyScreenshot": "crest-desktop-policy-detail.png"
+      },
+      "screenshotSize": {
+        "width": 1920,
+        "height": 2257
+      },
+      "fullPageScreenshot": "crest-desktop-full.png",
+      "viewportScreenshot": "crest-desktop-viewport.png",
+      "fullPageMethod": "capture-only expansion of internal main scroller",
+      "anchorChecks": [
+        {
+          "label": "OVERVIEW",
+          "expectedHash": "#crest-overview",
+          "actualHash": "#crest-overview",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "TRANSACTION FLOW",
+          "expectedHash": "#crest-system",
+          "actualHash": "#crest-system",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "POLICY RETRIEVAL",
+          "expectedHash": "#crest-policy",
+          "actualHash": "#crest-policy",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "OWNERSHIP",
+          "expectedHash": "#crest-team",
+          "actualHash": "#crest-team",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "LESSON",
+          "expectedHash": "#crest-takeaway",
+          "actualHash": "#crest-takeaway",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "case": "crest",
+      "url": "http://127.0.0.1:5173/projects/crest",
+      "status": 200,
+      "viewport": {
+        "name": "narrow",
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 3583
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/crest-sample.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          }
+        ],
+        "navs": [
+          [
+            {
+              "label": "OVERVIEW",
+              "href": "#crest-overview"
+            },
+            {
+              "label": "TRANSACTION FLOW",
+              "href": "#crest-system"
+            },
+            {
+              "label": "POLICY RETRIEVAL",
+              "href": "#crest-policy"
+            },
+            {
+              "label": "OWNERSHIP",
+              "href": "#crest-team"
+            },
+            {
+              "label": "LESSON",
+              "href": "#crest-takeaway"
+            }
+          ]
+        ],
+        "policy": {
+          "figure": {
+            "x": 20,
+            "y": 1616,
+            "width": 350,
+            "height": 1003,
+            "scrollWidth": 347,
+            "clientWidth": 347,
+            "scrollHeight": 1001,
+            "clientHeight": 1001,
+            "background": "rgb(14, 32, 38)",
+            "border": "",
+            "borderTop": "1px solid rgb(52, 75, 81)",
+            "transform": "none",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "divider": {
+            "x": 36,
+            "y": 2143,
+            "width": 319,
+            "height": 1,
+            "scrollWidth": 319,
+            "clientWidth": 319,
+            "scrollHeight": 0,
+            "clientHeight": 0,
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "",
+            "borderTop": "1px solid rgb(52, 75, 81)",
+            "transform": "none",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "dividerInsideFigure": true,
+          "evidence": {
+            "x": 36,
+            "y": 2162,
+            "width": 319,
+            "height": 438,
+            "scrollWidth": 319,
+            "clientWidth": 319,
+            "scrollHeight": 438,
+            "clientHeight": 438,
+            "background": "rgba(0, 0, 0, 0)",
+            "border": "0px none rgb(238, 231, 216)",
+            "borderTop": "0px none rgb(238, 231, 216)",
+            "transform": "none",
+            "overflowX": "visible",
+            "overflowY": "visible"
+          },
+          "evidenceInsideFigure": true,
+          "cards": [
+            {
+              "text": "RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide.",
+              "insideFigure": true,
+              "box": {
+                "x": 36,
+                "y": 2162,
+                "width": 319,
+                "height": 127,
+                "scrollWidth": 317,
+                "clientWidth": 317,
+                "scrollHeight": 124,
+                "clientHeight": 124,
+                "background": "rgb(16, 36, 42)",
+                "border": "",
+                "borderTop": "2px solid rgb(86, 189, 188)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            },
+            {
+              "text": "DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance.",
+              "insideFigure": true,
+              "box": {
+                "x": 36,
+                "y": 2317,
+                "width": 319,
+                "height": 127,
+                "scrollWidth": 317,
+                "clientWidth": 317,
+                "scrollHeight": 124,
+                "clientHeight": 124,
+                "background": "rgb(16, 36, 42)",
+                "border": "",
+                "borderTop": "2px solid rgb(199, 155, 69)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            },
+            {
+              "text": "HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+              "insideFigure": true,
+              "box": {
+                "x": 36,
+                "y": 2472,
+                "width": 319,
+                "height": 127,
+                "scrollWidth": 317,
+                "clientWidth": 317,
+                "scrollHeight": 124,
+                "clientHeight": 124,
+                "background": "rgb(16, 36, 42)",
+                "border": "",
+                "borderTop": "2px solid rgb(86, 189, 188)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            }
+          ],
+          "connectors": [
+            {
+              "text": "+",
+              "box": {
+                "x": 190,
+                "y": 2297,
+                "width": 11,
+                "height": 12,
+                "scrollWidth": 11,
+                "clientWidth": 11,
+                "scrollHeight": 20,
+                "clientHeight": 12,
+                "background": "rgba(0, 0, 0, 0)",
+                "border": "0px none rgb(199, 155, 69)",
+                "borderTop": "0px none rgb(199, 155, 69)",
+                "transform": "none",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            },
+            {
+              "text": "→",
+              "box": {
+                "x": 190,
+                "y": 2448,
+                "width": 12,
+                "height": 20,
+                "scrollWidth": 20,
+                "clientWidth": 20,
+                "scrollHeight": 20,
+                "clientHeight": 12,
+                "background": "rgba(0, 0, 0, 0)",
+                "border": "0px none rgb(115, 209, 207)",
+                "borderTop": "0px none rgb(115, 209, 207)",
+                "transform": "matrix(0, 1, -1, 0, 0, 0)",
+                "overflowX": "visible",
+                "overflowY": "visible"
+              }
+            }
+          ],
+          "order": [
+            {
+              "className": "crest-policy-evidence__card",
+              "text": "RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide."
+            },
+            {
+              "className": "crest-policy-evidence__connector",
+              "text": "+"
+            },
+            {
+              "className": "crest-policy-evidence__card crest-policy-evidence__card--rules",
+              "text": "DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance."
+            },
+            {
+              "className": "crest-policy-evidence__connector crest-policy-evidence__connector--decision",
+              "text": "→"
+            },
+            {
+              "className": "crest-policy-evidence__card",
+              "text": "HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype."
+            }
+          ],
+          "textFit": [
+            {
+              "text": "Ask a finance question or open a reporting view.",
+              "clientWidth": 323,
+              "scrollWidth": 323,
+              "clientHeight": 12,
+              "scrollHeight": 12
+            },
+            {
+              "text": "A standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.",
+              "clientWidth": 319,
+              "scrollWidth": 319,
+              "clientHeight": 70,
+              "scrollHeight": 70
+            },
+            {
+              "text": "Grounded context supported review; it did not detect or decide.",
+              "clientWidth": 285,
+              "scrollWidth": 285,
+              "clientHeight": 32,
+              "scrollHeight": 32
+            },
+            {
+              "text": "Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance.",
+              "clientWidth": 285,
+              "scrollWidth": 285,
+              "clientHeight": 32,
+              "scrollHeight": 32
+            },
+            {
+              "text": "Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+              "clientWidth": 285,
+              "scrollWidth": 285,
+              "clientHeight": 32,
+              "scrollHeight": 32
+            },
+            {
+              "text": "POLICY ENGINE Compliance workflows",
+              "clientWidth": 348,
+              "scrollWidth": 348,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            },
+            {
+              "text": "ANOMALY SIGNALS Deterministic rules",
+              "clientWidth": 348,
+              "scrollWidth": 348,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            },
+            {
+              "text": "POLICY RETRIEVAL Relevant passages",
+              "clientWidth": 348,
+              "scrollWidth": 348,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            },
+            {
+              "text": "PREAPPROVAL Part of the workflow",
+              "clientWidth": 348,
+              "scrollWidth": 348,
+              "clientHeight": 39,
+              "scrollHeight": 39
+            }
+          ]
+        },
+        "policyScreenshot": "crest-narrow-policy-detail.png"
+      },
+      "screenshotSize": {
+        "width": 390,
+        "height": 3583
+      },
+      "fullPageScreenshot": "crest-narrow-full.png",
+      "viewportScreenshot": "crest-narrow-viewport.png",
+      "fullPageMethod": "native fullPage",
+      "anchorChecks": [
+        {
+          "label": "OVERVIEW",
+          "expectedHash": "#crest-overview",
+          "actualHash": "#crest-overview",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "TRANSACTION FLOW",
+          "expectedHash": "#crest-system",
+          "actualHash": "#crest-system",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "POLICY RETRIEVAL",
+          "expectedHash": "#crest-policy",
+          "actualHash": "#crest-policy",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "OWNERSHIP",
+          "expectedHash": "#crest-team",
+          "actualHash": "#crest-team",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "LESSON",
+          "expectedHash": "#crest-takeaway",
+          "actualHash": "#crest-takeaway",
+          "targetFound": true,
+          "ariaCurrent": "location",
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "case": "fraymakers",
+      "url": "http://127.0.0.1:5173/projects/fraymakers",
+      "status": 200,
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      "initial": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          }
+        ],
+        "navs": [
+          [
+            {
+              "label": "PIPELINE",
+              "href": "#fraymakers-pipeline"
+            },
+            {
+              "label": "COMPOSITION",
+              "href": "#fraymakers-composition"
+            },
+            {
+              "label": "YAML CONFIG",
+              "href": "#fraymakers-configuration"
+            },
+            {
+              "label": "OWNERSHIP",
+              "href": "#fraymakers-ownership"
+            },
+            {
+              "label": "OUTCOME",
+              "href": "#fraymakers-outcome"
+            }
+          ]
+        ],
+        "heading": {
+          "title": "MATCH DATA TO VOD THUMBNAILS",
+          "subtitle": "A tournament media workflow connected match context to the right video, then composed a consistent thumbnail for the VOD.",
+          "expectedTitle": "MATCH DATA TO VOD THUMBNAILS",
+          "expectedSubtitle": "A tournament media workflow connected match context to the right video, then composed a consistent thumbnail for the VOD.",
+          "titleMatchesFigma": true,
+          "subtitleMatchesFigma": true
+        },
+        "pipeline": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ]
+      },
+      "screenshotSize": {
+        "width": 1920,
+        "height": 1704
+      },
+      "fullPageScreenshot": "fraymakers-desktop-full.png",
+      "viewportScreenshot": "fraymakers-desktop-viewport.png",
+      "fullPageMethod": "capture-only expansion of internal main scroller",
+      "anchorChecks": [
+        {
+          "label": "PIPELINE",
+          "expectedHash": "#fraymakers-pipeline",
+          "actualHash": "#fraymakers-pipeline",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "COMPOSITION",
+          "expectedHash": "#fraymakers-composition",
+          "actualHash": "#fraymakers-composition",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "YAML CONFIG",
+          "expectedHash": "#fraymakers-configuration",
+          "actualHash": "#fraymakers-configuration",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "OWNERSHIP",
+          "expectedHash": "#fraymakers-ownership",
+          "actualHash": "#fraymakers-ownership",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        },
+        {
+          "label": "OUTCOME",
+          "expectedHash": "#fraymakers-outcome",
+          "actualHash": "#fraymakers-outcome",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 1920,
+          "clientWidth": 1920
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "case": "fraymakers",
+      "url": "http://127.0.0.1:5173/projects/fraymakers",
+      "status": 200,
+      "viewport": {
+        "name": "narrow",
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 3356
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "hasAlt": true
+          }
+        ],
+        "navs": [
+          [
+            {
+              "label": "PIPELINE",
+              "href": "#fraymakers-pipeline"
+            },
+            {
+              "label": "COMPOSITION",
+              "href": "#fraymakers-composition"
+            },
+            {
+              "label": "YAML CONFIG",
+              "href": "#fraymakers-configuration"
+            },
+            {
+              "label": "OWNERSHIP",
+              "href": "#fraymakers-ownership"
+            },
+            {
+              "label": "OUTCOME",
+              "href": "#fraymakers-outcome"
+            }
+          ]
+        ],
+        "heading": {
+          "title": "MATCH DATA TO VOD THUMBNAILS",
+          "subtitle": "A tournament media workflow connected match context to the right video, then composed a consistent thumbnail for the VOD.",
+          "expectedTitle": "MATCH DATA TO VOD THUMBNAILS",
+          "expectedSubtitle": "A tournament media workflow connected match context to the right video, then composed a consistent thumbnail for the VOD.",
+          "titleMatchesFigma": true,
+          "subtitleMatchesFigma": true
+        },
+        "pipeline": [
+          "01",
+          "02",
+          "03",
+          "04"
+        ]
+      },
+      "screenshotSize": {
+        "width": 390,
+        "height": 3356
+      },
+      "fullPageScreenshot": "fraymakers-narrow-full.png",
+      "viewportScreenshot": "fraymakers-narrow-viewport.png",
+      "fullPageMethod": "native fullPage",
+      "anchorChecks": [
+        {
+          "label": "PIPELINE",
+          "expectedHash": "#fraymakers-pipeline",
+          "actualHash": "#fraymakers-pipeline",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "COMPOSITION",
+          "expectedHash": "#fraymakers-composition",
+          "actualHash": "#fraymakers-composition",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "YAML CONFIG",
+          "expectedHash": "#fraymakers-configuration",
+          "actualHash": "#fraymakers-configuration",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "OWNERSHIP",
+          "expectedHash": "#fraymakers-ownership",
+          "actualHash": "#fraymakers-ownership",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        {
+          "label": "OUTCOME",
+          "expectedHash": "#fraymakers-outcome",
+          "actualHash": "#fraymakers-outcome",
+          "targetFound": true,
+          "ariaCurrent": null,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        }
+      ],
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  ]
+}
