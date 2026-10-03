@@ -297,6 +297,7 @@ function LobbyCard({
       {roleMarks.length > 0 && (
         <span
           className="league-banner__roles"
+          role="group"
           aria-label={item.badges ? `${item.name}: ${item.badges.map((badge) => badge.label).join(", ")}` : `${item.name} roles`}
         >
           {roleMarks.slice(0, 2).map((mark) => (
@@ -399,7 +400,7 @@ function RoleLegend({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
       { label: "SOFTWARE SPECIALIZATION", src: "/media/lobby/academic-software-specialization.svg" },
     ];
     return (
-      <div className="league-role-legend league-role-legend--education" aria-label="Academic highlights">
+      <div className="league-role-legend league-role-legend--education" role="group" aria-label="Academic highlights">
         <strong>ACADEMIC HIGHLIGHTS</strong>
         {highlights.map((highlight) => (
           <span className="league-role-legend__item" key={highlight.label}>

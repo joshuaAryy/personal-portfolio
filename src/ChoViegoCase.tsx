@@ -266,7 +266,7 @@ function WholeProductArchitecture() {
         <span className="choveigo-system-map__merge-line" />
         <span className="choveigo-system-map__output-line" />
       </div>
-      <div className="choveigo-system-map__inputs" aria-label="System inputs">
+      <div className="choveigo-system-map__inputs" role="group" aria-label="System inputs">
         <section className="choveigo-system-map__input choveigo-system-map__input--roles">
           <h3>Role discovery</h3>
           <p>Feeds · company sites · career pages</p>

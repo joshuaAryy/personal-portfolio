@@ -334,7 +334,7 @@ function ProfileSignalPanel({
       )}
 
       {signal === "experience" && (
-        <div className="profile-experience-grid" aria-label="Two professional experiences">
+        <div className="profile-experience-grid" role="group" aria-label="Two professional experiences">
           {experienceSignals.map((item) => (
             <Link className="profile-experience" to={item.path} key={item.name}>
               <img className="profile-experience__mark" src={item.mark} alt="" />
@@ -424,7 +424,7 @@ export default function ProfileOverview({
           <p>COMPUTER ENGINEERING</p>
           <p>SOFTWARE · AI / ML</p>
         </div>
-        <div className="identity-panel__degree" aria-label="Computer Engineering">
+        <div className="identity-panel__degree" role="img" aria-label="Computer Engineering">
           <img src="/media/profile/portrait-medallion.png" alt="" aria-hidden="true" />
           <span aria-hidden="true">CE</span>
         </div>
