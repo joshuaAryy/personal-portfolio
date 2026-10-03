@@ -39,6 +39,8 @@ Shared ProfileNav correction, commit `0250592` (2026-10-02): the disabled Person
 - **Home overflow:** `src/home-explore.css` uses `overflow: auto`, which exposes a scrollbar only when the Home content actually exceeds its scrollport. At widths up to 900px, the shared main region returns to document flow; the Home grid also expands its card/content rows at narrow widths. No source-only change is justified. Whether the 1920×1080 Home render shows an unnecessary scrollbar remains part of the queued browser comparison.
 - **Opening mechanism:** `Opening.tsx` sets a 2,000ms sequence, Skip cancels pending timers and routes directly to `/home`, and reduced motion removes the animation with a 120ms handoff. In `opening.css`, the segmented bezel starts at +68.75° and the tick track at −57.3°, then both settle by 23% (460ms). These are source-level behavior checks only; actual playback, visual weight, and reduced-motion rendering remain queued.
 
+- **Home Back behavior:** `src/HomeExplore.tsx` calls `navigate(-1)` only when React Router has a numeric history index greater than zero. With no positive in-app history index, the handler leaves the visitor on `/home`. This matches the cold-entry requirement at source level; rendered activation and the in-app return path remain queued for supported-browser validation.
+
 ## Preserved prior comparison evidence
 
 - **Resume Found halo source sync (2026-10-02):** React now uses the exact Figma SVG at `3292:486` (1160×1160px), centered behind the 530px mechanism at 218.87% scale. The broad page wash and dimmed shell/rail remain in place; the supported-browser post-change comparison is still required.
