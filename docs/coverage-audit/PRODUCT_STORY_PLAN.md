@@ -99,7 +99,7 @@ Close on the role and learning: Joshua initiated the product and led requirement
 
 ### Editorial throughline
 
-Keep the current product-first title, authentic Recommendations capture, and whole-system framing. Then trace **role data → candidate evidence → distinct Fit and Eligibility assessments → bounded interpretation → separate Recommendation → optional resume-tailoring action**. Carry Joshua’s actual Jobs-side and shared evaluation role through the explanation. A recommendation formula and the internals of resume tailoring are not established, so explain their place in the product journey without reverse-engineering either.
+Keep the current product-first title, authentic Recommendations capture, and whole-system framing. Then trace **role data → candidate evidence → distinct Fit and Eligibility assessments → bounded interpretation → separate Recommendation → handoff → evidence-grounded resume tailoring**. Carry Joshua’s actual Jobs-side and shared evaluation role through the explanation. A Recommendation formula remains unspecified. Tailoring uses the newly verified committed handoff and separately inspected current staged Resume Studio source; do not imply release or new Joshua-specific ownership.
 
 ### Ordered sections and working copy
 
@@ -167,13 +167,17 @@ Boundary label: `INTERPRETS PROVIDED EVIDENCE · CONSTRAINED TO SUPPLIED EXPERIE
 
 **Draft paragraph:**
 
-> Cho’Veigo presents Recommendation as a separate judgment that helps a person decide which role to consider next. After reviewing a selected role, the person can move into resume tailoring. Role selection and resume preparation remain separate steps in the product.
+> Cho’Veigo presents Recommendation as a separate judgment that helps a person decide which role to consider next. Choosing a discovered or saved role passes its posting context and the selected profile into Resume Studio. This step prepares the inputs; the person starts tailoring separately.
+
+> Resume Studio works from reviewed profile evidence and an editable job description. It selects grounded content and constrains rewriting to that evidence, validates the wording, and presents the result for review before page verification and document export. Discovery helps choose the role; tailoring prepares a document for that role.
 
 **Diagram labels:**
 
 `ROLE + CANDIDATE EVIDENCE` → `DISTINCT PRODUCT OUTPUTS: FIT · ELIGIBILITY · RECOMMENDATION` → `OPTIONAL NEXT STEP / RESUME TAILORING`.
 
-Visually present the three outputs as separate results; the line indicates the product journey, not a formula deriving Recommendation from the other two judgments. Do not imply the displayed Recommendation is a specific score, model verdict, deterministic rule, or guaranteed result. Do not describe tailoring inputs, rewrite algorithms, output quality, or application submission without further verified source evidence.
+Visually present the three outputs as separate results; the line indicates the product journey, not a formula deriving Recommendation from the other two judgments. Do not imply the displayed Recommendation is a specific score, model verdict, deterministic rule, or guaranteed result. Tailoring now has [authentic source evidence](CHO_IMPLEMENTATION_EVIDENCE.md): committed handoff and separately inspected staged Resume Studio implementation. Do not claim release, output quality, authorship of those staged mechanics, or application submission.
+
+Tailoring figure: `SELECTED ROLE + PROFILE` → `HANDOFF / INPUTS ONLY` → `RESUME STUDIO` → `EVIDENCE-GROUNDED CONTENT + VALIDATED REWRITE` → `PERSON REVIEWS` → `PAGE VERIFICATION + DOCUMENT EXPORT`.
 
 #### 7. Joshua’s work and evaluation — explain contribution through a real decision
 
@@ -193,7 +197,7 @@ Closing credit: `BUILT WITH SHIV ARORA · JOB DISCOVERY + RESUME TAILORING`.
 
 - Ownership, system roles, model boundary, matching criteria, evaluation scope, personal anecdote qualification, and explicit no-claim boundaries: [CASE_STUDY_CONTENT_SOURCE.md §Cho’Veigo](../CASE_STUDY_CONTENT_SOURCE.md#choveigo--source-truth).
 - Existing visitor-facing sequence and diagrams: [ChoViegoCase.tsx](../../src/ChoViegoCase.tsx#L134), system flow [lines 165–214](../../src/ChoViegoCase.tsx#L165), matching/evaluation [lines 219–249](../../src/ChoViegoCase.tsx#L219), and current system labels [lines 260–310](../../src/ChoViegoCase.tsx#L260).
-- Use the existing reviewed capture and static-media qualification; do not reopen the accepted product-first opening merely to fit more copy. No source examined here specifies a separate Recommendation formula or resume-tailoring implementation.
+- Use the existing reviewed capture and static-media qualification; do not reopen the accepted product-first opening merely to fit more copy. Recommendation's formula remains unspecified. The [new implementation evidence map](CHO_IMPLEMENTATION_EVIDENCE.md) establishes tailoring breadth while separating committed handoff from current staged Resume Studio source.
 
 ## Review checks before Figma content sync
 

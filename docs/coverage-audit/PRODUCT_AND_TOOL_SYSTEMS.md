@@ -1,5 +1,7 @@
 # Product and Tool Systems Coverage Audit
 
+**Follow-up evidence:** [Cho implementation audit](CHO_IMPLEMENTATION_EVIDENCE.md) now verifies a committed posting/profile handoff and separately inspected staged Resume Studio workflow. Its source-boundary notes supersede the earlier unresolved tailoring-detail gap below. Public design still needs to explain both input preparation and grounded tailoring/review/export, without new ownership or release claims.
+
 Scope: Food Tracker, Cho’Veigo, Crest, and Fraymakers. This is a source-and-current-page coverage map, not proposed final copy or a redesign. The current owner direction is to represent each project’s actual breadth without arbitrary length or filler. Detailed claims should earn space by explaining the product, Joshua’s work, a consequential decision, or a real limit.
 
 Evidence reviewed: `docs/CASE_STUDY_CONTENT_SOURCE.md`; current components named below; portfolio project source links in `src/data.ts`; the linked public repository READMEs for Food Tracker, Cho’Veigo, and Crest. No credentials or environment files were read. For claims that exceed those sources, the gap is called out. Repository README status may change independently of this audit.
