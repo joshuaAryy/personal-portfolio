@@ -1,5 +1,7 @@
 # Repository Operating Instructions
 
+> **Latest staging:** source `d9101c8870baa635e8fb9964f52e25bd59b18084` at `https://ede7aa0a.joshuaik2.pages.dev/`, Preview deployment `ede7aa0a-3635-4612-ba94-409de6eda2bf`. Journey continuity and Education route are included. [Actual CLI Chrome evidence](docs/site-render-review/2026-10-03-phase-b-staging/REVIEW.md) confirms the bounded desktop sync and CTA navigation; broad parity/owner acceptance remain open. Earlier `6accc70` staging statements below are superseded; historical captures retain their original source attribution.
+
 > **Current owner update:** [2026-10-03 direction](docs/OWNER_DIRECTION_2026-10-03.md) supersedes older browser-blocked and narrow coverage conclusions below. This is Codex CLI; existing Playwright/installed Chrome now produces actual rendered evidence. Six case studies require breadth/depth expansion. Education CTA is resolved to `/education/projects`; detailed project claims still require authentic evidence. Journey must continue Void through `3492:2`. Preserve compact Foundations (3600×3140) and keep J Candidate 02 held. Older outage/CTA statements below are historical, not current instructions.
 
 ## Project direction
