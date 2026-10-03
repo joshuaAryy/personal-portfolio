@@ -1,13 +1,26 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
-import ChoViegoCase from "./ChoViegoCase";
+import ChoViegoCase, { resolveActiveChapter } from "./ChoViegoCase";
 
 function renderCase() {
   return renderToStaticMarkup(<MemoryRouter><ChoViegoCase /></MemoryRouter>);
 }
 
 describe("Cho’Veigo evidence-based matching story", () => {
+  it("keeps an explicitly selected chapter at the story end while passive tracking selects the last chapter", () => {
+    const sectionTops = {
+      overview: -2129,
+      system: -1465,
+      fit: -494,
+      review: 337,
+      change: 654,
+    };
+
+    expect(resolveActiveChapter(sectionTops, 160, true)).toBe("change");
+    expect(resolveActiveChapter(sectionTops, 160, true, "review")).toBe("review");
+  });
+
   it("opens with the product and authentic Recommendations view before Joshua’s focus", () => {
     const markup = renderCase();
     const hero = markup.slice(markup.indexOf('id="choveigo-overview"'), markup.indexOf('id="choveigo-system"'));

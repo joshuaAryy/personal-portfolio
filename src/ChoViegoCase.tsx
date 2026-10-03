@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./cho-evidence-worksheet.css";
 
@@ -16,8 +16,9 @@ export function resolveActiveChapter(
   sectionTops: Partial<Record<ChapterId, number>>,
   activationLine: number,
   atStoryEnd: boolean,
+  selectedChapterAtEnd: ChapterId | null = null,
 ): ChapterId {
-  if (atStoryEnd) return chapters[chapters.length - 1].id;
+  if (atStoryEnd) return selectedChapterAtEnd ?? chapters[chapters.length - 1].id;
 
   let nextChapter: ChapterId = chapters[0].id;
   for (const chapter of chapters) {
@@ -65,6 +66,7 @@ const evidenceInputs = [
 
 export default function ChoViegoCase() {
   const [activeChapter, setActiveChapter] = useState<ChapterId>("overview");
+  const selectedChapterAtEnd = useRef<ChapterId | null>(null);
 
   useEffect(() => {
     const main = document.querySelector<HTMLElement>(".main--choveigo-case");
@@ -90,19 +92,48 @@ export default function ChoViegoCase() {
           const section = document.getElementById(`choveigo-${chapter.id}`);
           if (section) sectionTops[chapter.id] = section.getBoundingClientRect().top;
         }
-        setActiveChapter(resolveActiveChapter(sectionTops, activationLine, atStoryEnd));
+        setActiveChapter(
+          resolveActiveChapter(
+            sectionTops,
+            activationLine,
+            atStoryEnd,
+            selectedChapterAtEnd.current,
+          ),
+        );
       });
+    };
+
+    const clearSelectedChapterAtEnd = (event: Event) => {
+      if (selectedChapterAtEnd.current === null) return;
+      if (
+        event.type === "keydown" &&
+        !["ArrowDown", "ArrowUp", "End", "Home", " ", "PageDown", "PageUp"].includes(
+          (event as KeyboardEvent).key,
+        )
+      ) {
+        return;
+      }
+      selectedChapterAtEnd.current = null;
+      updateChapter();
     };
 
     main.addEventListener("scroll", updateChapter, { passive: true });
     window.addEventListener("scroll", updateChapter, { passive: true });
     window.addEventListener("resize", updateChapter);
+    window.addEventListener("wheel", clearSelectedChapterAtEnd, { passive: true });
+    window.addEventListener("touchstart", clearSelectedChapterAtEnd, { passive: true });
+    window.addEventListener("pointerdown", clearSelectedChapterAtEnd);
+    window.addEventListener("keydown", clearSelectedChapterAtEnd);
     updateChapter();
 
     return () => {
       main.removeEventListener("scroll", updateChapter);
       window.removeEventListener("scroll", updateChapter);
       window.removeEventListener("resize", updateChapter);
+      window.removeEventListener("wheel", clearSelectedChapterAtEnd);
+      window.removeEventListener("touchstart", clearSelectedChapterAtEnd);
+      window.removeEventListener("pointerdown", clearSelectedChapterAtEnd);
+      window.removeEventListener("keydown", clearSelectedChapterAtEnd);
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);
@@ -116,7 +147,10 @@ export default function ChoViegoCase() {
               href={`#choveigo-${chapter.id}`}
               aria-current={activeChapter === chapter.id ? "location" : undefined}
               key={chapter.id}
-              onClick={() => setActiveChapter(chapter.id)}
+              onClick={() => {
+                selectedChapterAtEnd.current = chapter.id;
+                setActiveChapter(chapter.id);
+              }}
             >
               {chapter.label}
             </a>
