@@ -110,13 +110,16 @@ Do not substitute Playwright, Selenium, Puppeteer, ad hoc screenshot automation,
 The durable queue is [RENDER_VALIDATION_QUEUE.md](RENDER_VALIDATION_QUEUE.md). Current sequence:
 
 1. Resume Found post-change environment and sharpness.
-2. Resume PDF viewer behavior.
-3. Opening playback, Skip, handoff, reduced motion, and preference reversal.
-4. Home; then Profile hover/focus.
-5. Food Tracker full page.
-6. Living in Silico, Stush Patties, and Fraymakers full pages.
-7. Crest and Cho’Veigo full pages (preserve their meaningful prior render evidence; latest story changes still require a post-change compare).
-8. Journey, Demos, Help/recovery and narrow screens; then Hackathons/Education and shared footer.
+1a. Resume PDF viewer behavior.
+2. Opening playback, Skip, handoff, reduced motion, and preference reversal.
+3. Home; then Profile hover/focus.
+4. Food Tracker full page.
+5–7. Living in Silico, Stush Patties, and Fraymakers full pages.
+8–9. Crest and Cho’Veigo full pages (preserve their meaningful prior render evidence; latest story changes still require a post-change compare).
+10–11. Journey and Demos.
+12–13. Help/recovery and narrow screens.
+14–15. Hackathons and Education lobbies.
+16. Shared rail/footer.
 
 When browser availability returns: deploy a revision containing the latest source, compare against authoritative Figma, identify concrete discrepancies, correct, rerender, update statuses, then owner review and freeze. Do not retry just because a new chat began; retry when availability changes or at a natural validation checkpoint.
 
