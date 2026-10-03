@@ -1,5 +1,7 @@
 # League Portfolio — Canonical Session Handoff
 
+> **Architecture migration, 2026-10-03:** later owner direction supersedes older model, active-agent, and next-session instructions throughout this historical handoff. Use [MODEL_ROUTING.md](MODEL_ROUTING.md): Mingo = GPT-6 Luna · XHigh; Sol = bounded GPT-6.1 Medium adjudicator only. All three current Luna worker handles errored at the usage limit; no Sol agent is active. Local and origin matched db183c6aeb38d1cc64532dd05ee94dd37a7034fa. Portfolio work is paused pending explicit owner restart. Do not execute the older Sol-Mingo bootstrap below.
+
 **Current breadth checkpoint, 2026-10-03:** [Food/Cho Figma expansion](coverage-audit/FOOD_CHO_FIGMA_CHECKPOINT.md) is macro accepted for React sync, now assigned to `/root/frontend_owner`. `/root/product_coverage` is building Crest/Fray Figma expansions; `/root/runtime_a11y_qa` critiques truth and real browser evidence. Living in Silico/Stush have accepted subject-specific plans but await expansion. Education has its functional route/skeleton; detailed academic evidence/design remains open. Browser rendering works in CLI through existing Playwright/installed Chrome; do not repeat desktop discovery. Current staging is Phase B `d9101c8` at `ede7aa0a.joshuaik2.pages.dev`, before case-study expansion. Older dimensions, outage statements, and Education CTA questions below are historical. J Candidate 02 remains held.
 
 > **Latest staging:** source `d9101c8870baa635e8fb9964f52e25bd59b18084` at `https://ede7aa0a.joshuaik2.pages.dev/`, Preview deployment `ede7aa0a-3635-4612-ba94-409de6eda2bf`. Journey continuity and Education route are included. [Actual CLI Chrome evidence](site-render-review/2026-10-03-phase-b-staging/REVIEW.md) confirms the bounded desktop sync and CTA navigation; broad parity/owner acceptance remain open. Earlier `6accc70` staging statements below are superseded; historical captures retain their original source attribution.
@@ -27,9 +29,10 @@ Use this quality order: **macro structure and first read → meso hierarchy and 
 - Supported-browser check still returns `No browser is available`; discovery was empty and no page/capture resulted. No post-deploy supported-browser capture exists. Current agents are `/root`, `/root/frontend_owner`, and `/root/runtime_a11y_qa`; the J specialist is absent. Bounded Opening/Resume and Help/recovery source audits found no actionable discrepancy; rendered behavior remains unverified.
 - Worktree has no staged changes after the source commit; the documentation checkpoint is pushed separately. Preserve one unrelated tracked modification: `docs/j-source-review/captures/pass76/pass76-j-only-16-native.png`, plus the untracked review/capture/source-media/local-experiment artifacts present in the worktree. The current status count is authoritative at bootstrap. Do not clean, stage, or treat these items as approved production work without auditing them. No production deployment or asset promotion occurred.
 
-## 3. Operating architecture for the next session
+## 3. Historical operating architecture — superseded
 
-- **Mingo is the project director. The owner requests Sol 6.1 for the next Mingo session.** Select that model in the new-chat UI; repository documentation cannot change a chat's model.
+The former Sol-director model below is superseded by MODEL_ROUTING.md. Keep historical J and project facts; ignore obsolete model-selection and current-agent claims.
+- Mingo remains project director; historical model-selection instructions in this section are superseded by the canonical model-routing policy.
 - Concentrate reconciliation, prioritization, contradiction resolution, acceptance judgment, and agent routing at Mingo.
 - Use Luna for routine React implementation, Figma/source audits, documentation, copy sync, accessibility review, and deterministic asset checks when available.
 - A narrowly scoped **Sol 6.1 J specialist** `/root/identity_j_sol61` completed one bounded whole-mark study in the prior session. Its candidate is Figma `3482:3`, review board `3482:2`; give any follow-up only J-specific source review, provenance, and current status—not the full portfolio. The recovery bootstrap found this handle absent from the live tree; recreate it only for an owner-authorized J follow-up. Do not start Candidate 02 before owner review of Candidate 01 or explicit owner direction to continue.
@@ -168,9 +171,10 @@ When browser availability returns: deploy a revision containing the latest sourc
 - Preserve unrelated modified and untracked worktree contents. Stage only intended deliverables; never bulk-clean this worktree.
 - The browser outage blocks render validation only, never all portfolio work.
 
-## 13. Immediate next-session actions
+## 13. Historical next-session actions — superseded
 
-1. Open a new Mingo chat on **Sol 6.1** and use the bootstrap prompt below.
+Do not run this historical checklist automatically. The current owner explicitly paused portfolio execution for architecture migration and said to wait for an owner restart. On restart, select GPT-6 Luna · XHigh if the runtime permits, then reconcile state and agents using MODEL_ROUTING.md.
+1. (Superseded) Open a new Mingo chat on Sol 6.1; use MODEL_ROUTING.md for current model selection and do not start portfolio work before owner restart.
 2. Read this handoff, `AGENTS.md`, `docs/AGENT_REGISTRY.md`, `docs/IMPLEMENTATION_STATUS.md`, `docs/RENDER_VALIDATION_QUEUE.md`, `docs/DEFERRED_OWNER_INPUTS.md`, `docs/CASE_STUDY_CONTENT_SOURCE.md`, and the J review before acting.
 3. Recheck branch/HEAD/remote, current tracked/untracked worktree state, latest recorded deployment, current Figma, live agent tree, and browser availability. Preserve this checkpoint's dirty items.
 4. Continue stable implementation/source work without broad redesign. Do not wait on J or missing optional media to work elsewhere. The 2026-10-03 Profile source review found that its static hover/focus preview controls were native buttons without an activation action. The current branch now uses named, keyboard-focusable, non-activating groups linked to the preview panel with `aria-controls`, preserving default Projects, hover/focus preview, and visible focus treatment without click-to-pin behavior. Keep actual screen-reader announcement verification in the browser/assistive-technology queue.
@@ -189,6 +193,7 @@ When browser availability returns: deploy a revision containing the latest sourc
 - Do not promote a J candidate because it has many passes or looks editable; owner review decides production.
 - Do not call a page accepted from a Figma-only view or source-only review.
 
-## 15. Bootstrap prompt for the next Sol 6.1 Mingo chat
+## 15. Historical bootstrap prompt — superseded
 
+Do not use this old Sol-director prompt. Current model and execution routing lives in MODEL_ROUTING.md; portfolio work remains paused until the owner restarts it.
 > You are Mingo, director of the existing League portfolio project. Continue from `docs/SESSION_HANDOFF_2026-10-02.md`; do not restart the project or enter Plan Mode. First verify branch, exact HEAD/remote, worktree, latest staging record, live Figma, active agent tree, and supported-browser availability. Current owner instructions and current repo/Figma override historical chat summaries. Preserve approved surfaces and continue mature React/source work; browser render validation is blocked only for that lane, so do not use unsupported browser automation or infer parity. Keep archive J `159:2` in production; v8 `3325:191` is the editable baseline and Sol 6.1 study `3482:3` is an unapproved directional candidate on board `3482:2`. Review it with the owner before any further attempt or production change; the old Codex lineage is rejected. Reuse/re-establish one narrow Sol 6.1 J specialist only if the owner wants the remaining bounded attempt(s). Use Luna for routine execution and no continuous Astra lane. Before any work, inspect the queue and source-truth docs; preserve all dirty/untracked work. For meaningful decisions, update durable docs, commit, and push. Continue without broad redesign or redundant pass generation.

@@ -10,9 +10,11 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 
 ## Session continuity and model routing
 
+**Current model allocation:** follow [docs/MODEL_ROUTING.md](docs/MODEL_ROUTING.md). The prior persistent-Sol-director instruction below is superseded: Mingo runs on GPT-6 Luna · XHigh; Sol is an episodic, one-question GPT-6.1 Medium adjudicator. The runtime-selected model is not changed by this file.
+
 **Authority order:** current owner instructions, current durable project documents, and current Figma/repository state override historical chat summaries. Historical context explains decisions; it never overrides current truth. The canonical continuation checkpoint is [docs/SESSION_HANDOFF_2026-10-02.md](docs/SESSION_HANDOFF_2026-10-02.md); verify its branch, staging, browser, and agent facts against live state before acting.
 
-The owner requests **Sol 6.1 for Mingo**. Concentrate cross-surface judgment and acceptance there. Use **Luna** for routine React edits, documentation, audits, copy sync, and deterministic QA where available. The narrow **Sol 6.1 identity/J specialist** `/root/identity_j_sol61` completed one bounded attempt (`3482:3` on board `3482:2`) in the prior session. The recovery bootstrap on 2026-10-03 found only `/root` in the live tree; that specialist is absent here. Re-establish the narrow Sol 6.1 lane only when owner direction authorizes a concrete J follow-up. **Do not start Candidate 02 or another J attempt before owner review of Candidate 01 or explicit owner direction to continue.** Do not create a continuously running Astra lane; any Astra use must be exceptional, bounded, justified, and owner-approved.
+The prior Sol director instruction is historical and superseded by the model-routing policy above. Current J history remains: `/root/identity_j_sol61` completed one bounded Candidate 01 (`3482:3` on board `3482:2`) and is absent from the current tree. **Do not start Candidate 02 before owner review or explicit authorization.** Astra remains off without explicit owner approval.
 
 ## Convergence and implementation
 
