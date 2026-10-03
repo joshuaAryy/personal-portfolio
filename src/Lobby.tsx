@@ -262,6 +262,7 @@ function LobbyCard({
   onSelect: () => void;
 }) {
   const roleMarks = item.badges ?? item.roles.map((role) => roleAssets[role]);
+  const roleSummary = [item.role, ...roleMarks.map((mark) => mark.label)].filter(Boolean).join(". ");
   const mark = mode === "projects" && item.id === "crest"
     ? "/media/lobby/project-crest-index.png"
     : item.mark;
@@ -295,11 +296,7 @@ function LobbyCard({
       <span className="league-banner__subtitle">{item.subtitle}</span>
       <span className="league-banner__role">{item.role}</span>
       {roleMarks.length > 0 && (
-        <span
-          className="league-banner__roles"
-          role="group"
-          aria-label={item.badges ? `${item.name}: ${item.badges.map((badge) => badge.label).join(", ")}` : `${item.name} roles`}
-        >
+        <span className="league-banner__roles">
           {roleMarks.slice(0, 2).map((mark) => (
             <img key={mark.label} src={mark.src} alt={mark.label} title={mark.label} />
           ))}
@@ -307,6 +304,7 @@ function LobbyCard({
       )}
       {selected && <span className="league-banner__selection-cap" aria-hidden="true" />}
       <span id={instructionId} className="visually-hidden">
+        {roleSummary && `${roleSummary}. `}
         {mode === "education"
           ? "Press Enter or Space to select and review details below."
           : "Press Enter or Space to select. Use the action below to open."}
