@@ -218,6 +218,9 @@
 
 .crest-policy-figure {
   padding: 28px 30px 22px;
+}
+
+.crest-story-content .crest-policy-figure {
   border: 1px solid #344b51;
   border-left: 2px solid #56bdbc;
   background:
@@ -226,23 +229,23 @@
   color: #eee7d8;
 }
 
-.crest-policy-figure__eyebrow {
+.crest-story-content .crest-policy-figure__eyebrow {
   color: #73d1cf;
 }
 
-.crest-policy-figure h2,
-.crest-policy-pipeline strong {
+.crest-story-content .crest-policy-figure h2,
+.crest-story-content .crest-policy-pipeline strong {
   color: #eee7d8;
 }
 
-.crest-policy-figure__intro,
-.crest-policy-pipeline small {
+.crest-story-content .crest-policy-figure__intro,
+.crest-story-content .crest-policy-pipeline small {
   color: #a9b5ba;
 }
 
 .crest-policy-pipeline {
   gap: 22px;
-  margin: 22px 0 19px;
+  margin: 22px 0 0;
 }
 
 .crest-policy-pipeline li {
@@ -287,22 +290,67 @@
   gap: 16px;
 }
 
-.crest-signal-boundary {
-  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
-  margin-top: 0;
-  border-left-color: #c79b45;
+.crest-policy-divider {
+  margin: 21px 0 18px;
+  border-top: 1px solid #344b51;
 }
 
-.crest-signal-boundary__signals li {
-  border-top-color: rgba(199, 155, 69, 0.55);
+.crest-policy-evidence {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: stretch;
+  gap: 12px;
 }
 
-.crest-signal-boundary__ai {
-  border-top-color: rgba(115, 209, 207, 0.35);
+.crest-policy-evidence__card {
+  min-width: 0;
+  padding: 15px 16px 14px;
+  border: 1px solid #344b51;
+  border-top: 2px solid #56bdbc;
+  background: #10242a;
 }
 
-.crest-signal-boundary__ai h4 {
+.crest-policy-evidence__card--rules {
+  border-top-color: #c79b45;
+}
+
+.crest-policy-evidence__connector {
+  align-self: center;
+  color: #c79b45;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.crest-policy-evidence__connector--decision {
   color: #73d1cf;
+}
+
+.crest-policy-evidence__label {
+  display: block;
+  margin-bottom: 9px;
+  color: #73d1cf;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.crest-policy-evidence__card--rules .crest-policy-evidence__label {
+  color: #c79b45;
+}
+
+.crest-policy-evidence h3 {
+  margin: 0 0 8px;
+  color: #eee7d8;
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.crest-policy-evidence p {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 11px;
+  line-height: 1.45;
 }
 
 .crest-team {
@@ -407,15 +455,18 @@
     text-align: center;
   }
 
-  .crest-signal-boundary {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 17px;
-    padding: 17px;
-  }
-
-  .crest-signal-boundary__ai {
+  .crest-policy-evidence {
     grid-template-columns: minmax(0, 1fr);
     gap: 8px;
+  }
+
+  .crest-policy-evidence__connector {
+    justify-self: center;
+    height: 12px;
+  }
+
+  .crest-policy-evidence__connector--decision {
+    transform: rotate(90deg);
   }
 
 }

@@ -155,16 +155,15 @@ export default function FraymakersCase() {
           <div className="fray-case__section-head fray-case__section-head--compact">
             <div>
               <p className="fray-case__eyebrow">COMPOSITOR INPUTS</p>
-              <h2 id="fraymakers-composition-title">A frame assembled from separate layers.</h2>
+              <h2 id="fraymakers-composition-title">Layered game art meets match context.</h2>
             </div>
             <p className="fray-case__composition-note">
-              Repeatability depended on how game art and match context met in the output.
+              Composition inputs include logos, stage and character art, costumes, assists, foreground, and set text.
             </p>
           </div>
           <ul className="fray-case__layer-list" aria-label="Thumbnail composition inputs">
-            {compositionInputs.map((input, index) => (
+            {compositionInputs.map((input) => (
               <li key={input}>
-                <span className="fray-case__layer-index">L{String(index + 1).padStart(2, "0")}</span>
                 <span>{input}</span>
               </li>
             ))}

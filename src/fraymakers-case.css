@@ -385,7 +385,7 @@
 .fray-case__layer-list li {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  justify-content: center;
   min-height: 65px;
   padding: 10px 10px 9px;
   border-top: 1px solid rgba(214, 183, 107, .7);
@@ -396,12 +396,6 @@
   font-weight: 700;
   letter-spacing: .06em;
   line-height: 1.2;
-}
-.fray-case__layer-index {
-  color: #77909a;
-  font-family: "Roboto", sans-serif;
-  font-size: 8px;
-  letter-spacing: .12em;
 }
 .fray-case__edge-list {
   display: grid;

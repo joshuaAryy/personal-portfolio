@@ -44,9 +44,25 @@ describe("Fraymakers technical case study", () => {
 
   it("explains the rendered frame's layers and technical edge cases", () => {
     const markup = render();
+    const compositionStart = markup.indexOf('id="fraymakers-composition"');
+    const configurationStart = markup.indexOf('id="fraymakers-configuration"');
+    const composition = markup.slice(compositionStart, configurationStart);
+    const compositorInputs = markup.slice(
+      composition.indexOf('class="fray-case__layer-list"'),
+      composition.indexOf('class="fray-case__edge-list"'),
+    );
+    const pipeline = markup.slice(
+      markup.indexOf('class="fray-case__stages"'),
+      markup.indexOf("A connected route from match context"),
+    );
+
     for (const item of ["LOGOS", "BACKGROUND / STAGE", "PLAYER 1 CHARACTER", "PLAYER 2 CHARACTER", "SET / PLAYER TEXT", "OTHER OVERLAYS", "ALIASES", "P2 MIRRORING", "LONG NAMES", "MISSING ASSETS"]) {
       expect(markup).toContain(item);
     }
+    expect(composition).toContain("Layered game art meets match context.");
+    expect(composition).toContain("Composition inputs include logos, stage and character art, costumes, assists, foreground, and set text.");
+    expect(compositorInputs).not.toContain("fray-case__layer-index");
+    expect([...pipeline.matchAll(/fray-case__stage-number">(\d{2})/g)].map(([, number]) => number)).toEqual(["01", "02", "03", "04"]);
     expect(markup).toContain("SCHEMATIC OUTPUT / LAYOUT ONLY");
     expect(markup).toContain("1280 × 720");
   });

@@ -122,11 +122,11 @@ export default function CrestCaseStudy() {
   }, []);
 
   const policyStages = [
-    ["01", "POLICY PDF", "Brim source"],
-    ["02", "EXTRACT + CHUNK", "Searchable passages"],
-    ["03", "EMBED", "Gemini embedding-001 · 3,072-D"],
-    ["04", "VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
-    ["05", "GROUNDED PROMPT", "Retrieved passages"],
+    ["01", "BRIM POLICY PDF", "Brim source material"],
+    ["02", "EXTRACT + CHUNK", "Prepare searchable passages"],
+    ["03", "gemini-embedding-001", "3,072 dimensions"],
+    ["04", "ATLAS VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
+    ["05", "GROUNDED PROMPT", "Top retrieved passages"],
   ];
 
   return (
@@ -331,12 +331,14 @@ export default function CrestCaseStudy() {
         <section className="crest-section crest-policy" id="crest-policy">
           <figure className="crest-policy-figure" aria-labelledby="crest-policy-title">
             <figcaption className="crest-policy-figure__eyebrow">
-              POLICY RETRIEVAL / SOURCE → CONTEXT
+              DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY
             </figcaption>
-              <h2 id="crest-policy-title">Policy context. Deterministic decisions.</h2>
+            <h2 id="crest-policy-title">Policy context. Deterministic decisions.</h2>
             <p className="crest-policy-figure__intro">
-              The team extracted and chunked the Brim policy, embedded the
-              passages, then retrieved relevant context for Gemini to interpret.
+              A standalone prototype indexed a Brim policy PDF and retrieved
+              passages for Gemini; a live endpoint or deployed workflow was not
+              verified. Finance and policy rules remained authoritative; anomaly
+              heuristics surfaced review cues.
             </p>
             <ol className="crest-policy-pipeline">
               {policyStages.map(([number, title, detail], index) => (
@@ -352,32 +354,27 @@ export default function CrestCaseStudy() {
                 </li>
               ))}
             </ol>
-            <p className="crest-policy-figure__trace">
-              PDF extraction + chunking → embedding-001 (3,072 dimensions) →
-              Atlas vector search → retrieved passages in a grounded prompt.
-            </p>
+            <div className="crest-policy-divider" aria-hidden="true" />
+            <div className="crest-policy-evidence" role="list" aria-label="Policy and human-review boundaries">
+              <article className="crest-policy-evidence__card" role="listitem">
+                <span className="crest-policy-evidence__label">RETRIEVED POLICY CONTEXT</span>
+                <h3>Gemini interpreted the top retrieved passages.</h3>
+                <p>Grounded context supported review; it did not detect or decide.</p>
+              </article>
+              <span className="crest-policy-evidence__connector" aria-hidden="true">+</span>
+              <article className="crest-policy-evidence__card crest-policy-evidence__card--rules" role="listitem">
+                <span className="crest-policy-evidence__label">DETERMINISTIC RULES + SIGNALS</span>
+                <h3>Finance and policy rules remained authoritative.</h3>
+                <p>Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance.</p>
+              </article>
+              <span className="crest-policy-evidence__connector crest-policy-evidence__connector--decision" aria-hidden="true">→</span>
+              <article className="crest-policy-evidence__card" role="listitem">
+                <span className="crest-policy-evidence__label">HUMAN REVIEW</span>
+                <h3>Sample queue uses budget + employee history.</h3>
+                <p>Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.</p>
+              </article>
+            </div>
           </figure>
-          <div className="crest-signal-boundary">
-            <div className="crest-signal-boundary__intro">
-              <p className="crest-signal-boundary__eyebrow">ANOMALY SIGNALS / REVIEW SUPPORT</p>
-              <h3>Signals are review cues.</h3>
-              <p>Rule-based heuristics surface patterns for a person to assess.</p>
-            </div>
-            <ul className="crest-signal-boundary__signals" aria-label="Rule-based anomaly signals">
-              <li>Bursts</li>
-              <li>Vendor patterns</li>
-              <li>Duplicates</li>
-              <li>Unusual merchants</li>
-              <li>Threshold avoidance</li>
-            </ul>
-            <div className="crest-signal-boundary__ai">
-              <h4>AI boundary</h4>
-              <p>
-                Gemini interpreted retrieved policy passages. Finance and
-                policy rules stayed deterministic and authoritative.
-              </p>
-            </div>
-          </div>
         </section>
 
         <section className="crest-section crest-team" id="crest-team">
