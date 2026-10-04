@@ -33,6 +33,9 @@
 .fray-case li,
 .fray-case dd { font-family: "League Spartan", sans-serif; }
 
+.fray-case > section[id],
+.fray-case > footer[id] { scroll-margin-top: 8px; }
+
 .fray-case__intro {
   position: relative;
   display: grid;
@@ -592,6 +595,9 @@
   .fray-case__layer-list { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
 @media (max-width: 700px) {
+  .fray-case > section[id],
+  .fray-case > footer[id] { scroll-margin-top: 36px; }
+
   .fray-case { padding: 25px 21px 48px; }
   .fray-case__intro {
     grid-template-columns: minmax(0, 1fr);

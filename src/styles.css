@@ -4838,6 +4838,16 @@ a:focus-visible {
   white-space: nowrap;
 }
 .fraymakers-nav__chapters a:hover { color: #e3c57e; }
+.fraymakers-nav__chapters a[aria-current="location"] { color: #e3c57e; }
+.fraymakers-nav__chapters a[aria-current="location"]::after {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: #d6b76b;
+  content: "";
+}
 .fraymakers-nav a:focus-visible {
   outline: 2px solid #2ab9c5;
   outline-offset: 4px;

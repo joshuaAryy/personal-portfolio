@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./fraymakers-case.css";
 
@@ -8,6 +9,8 @@ const chapters = [
   { id: "ownership", label: "OWNERSHIP" },
   { id: "outcome", label: "OUTCOME" },
 ] as const;
+
+type ChapterId = (typeof chapters)[number]["id"];
 
 const stages = [
   {
@@ -54,12 +57,93 @@ const edgeCases = [
 ] as const;
 
 export default function FraymakersCase() {
+  const [activeChapter, setActiveChapter] = useState<ChapterId>("pipeline");
+  const selectedChapterAtEnd = useRef<ChapterId | null>(null);
+
+  useEffect(() => {
+    const main = document.querySelector<HTMLElement>(".main--fraymakers-case");
+    if (!main) return;
+    const nav = main.querySelector<HTMLElement>(".fraymakers-nav");
+    if (!nav) return;
+
+    let frame = 0;
+    const updateChapter = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const overflowY = window.getComputedStyle(main).overflowY;
+        const mainIsScroller = overflowY === "auto" || overflowY === "scroll";
+        const activationLine = nav.getBoundingClientRect().bottom + 8;
+        const atStoryEnd = mainIsScroller
+          ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
+          : window.scrollY + window.innerHeight >=
+            document.documentElement.scrollHeight - 2;
+        let nextChapter: ChapterId = chapters[0].id;
+
+        if (atStoryEnd) {
+          nextChapter = selectedChapterAtEnd.current ?? chapters[chapters.length - 1].id;
+        } else {
+          for (const chapter of chapters) {
+            const section = document.getElementById(`fraymakers-${chapter.id}`);
+            if (section && section.getBoundingClientRect().top <= activationLine + 1) {
+              nextChapter = chapter.id;
+            }
+          }
+        }
+
+        setActiveChapter(nextChapter);
+      });
+    };
+
+    const clearSelectedChapterAtEnd = (event: Event) => {
+      if (selectedChapterAtEnd.current === null) return;
+      if (
+        event.type === "keydown" &&
+        !["ArrowDown", "ArrowUp", "End", "Home", " ", "PageDown", "PageUp"].includes(
+          (event as KeyboardEvent).key,
+        )
+      ) {
+        return;
+      }
+      selectedChapterAtEnd.current = null;
+      updateChapter();
+    };
+
+    main.addEventListener("scroll", updateChapter, { passive: true });
+    window.addEventListener("scroll", updateChapter, { passive: true });
+    window.addEventListener("resize", updateChapter);
+    window.addEventListener("wheel", clearSelectedChapterAtEnd, { passive: true });
+    window.addEventListener("touchstart", clearSelectedChapterAtEnd, { passive: true });
+    window.addEventListener("pointerdown", clearSelectedChapterAtEnd);
+    window.addEventListener("keydown", clearSelectedChapterAtEnd);
+    updateChapter();
+
+    return () => {
+      main.removeEventListener("scroll", updateChapter);
+      window.removeEventListener("scroll", updateChapter);
+      window.removeEventListener("resize", updateChapter);
+      window.removeEventListener("wheel", clearSelectedChapterAtEnd);
+      window.removeEventListener("touchstart", clearSelectedChapterAtEnd);
+      window.removeEventListener("pointerdown", clearSelectedChapterAtEnd);
+      window.removeEventListener("keydown", clearSelectedChapterAtEnd);
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
   return (
     <>
       <nav className="fraymakers-nav" aria-label="Fraymakers case study">
         <div className="fraymakers-nav__chapters">
           {chapters.map((chapter) => (
-            <a href={`#fraymakers-${chapter.id}`} key={chapter.id}>
+            <a
+              href={`#fraymakers-${chapter.id}`}
+              aria-current={activeChapter === chapter.id ? "location" : undefined}
+              key={chapter.id}
+              onClick={() => {
+                selectedChapterAtEnd.current = chapter.id;
+                setActiveChapter(chapter.id);
+              }}
+            >
               {chapter.label}
             </a>
           ))}

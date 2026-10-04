@@ -42,6 +42,20 @@ describe("Fraymakers technical case study", () => {
     );
   });
 
+  it("clears every chapter target from below the sticky chapter navigation", () => {
+    const css = readFileSync("src/fraymakers-case.css", "utf8");
+
+    expect(css).toMatch(
+      /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{[^}]*scroll-margin-top:\s*8px/s,
+    );
+    const mobileRules = css.slice(css.lastIndexOf("@media (max-width: 700px)"));
+    expect(mobileRules).toMatch(/\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{[^}]*scroll-margin-top:\s*36px/s);
+
+    const shellCss = readFileSync("src/styles.css", "utf8");
+    expect(shellCss).toMatch(/\.fraymakers-nav__chapters a\[aria-current="location"\]\s*\{[^}]*color:\s*#e3c57e/s);
+    expect(shellCss).toMatch(/\.fraymakers-nav__chapters a\[aria-current="location"\]::after\s*\{[^}]*height:\s*2px;[^}]*background:\s*#d6b76b/s);
+  });
+
   it("leads with the system before ownership context", () => {
     const markup = render();
     const opening = markup.split("</header>")[0];
