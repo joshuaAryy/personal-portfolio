@@ -661,7 +661,7 @@
   .stush-exception { gap: 18px; margin-top: 45px; padding: 30px 0 38px; }
   .stush-exception__label { padding-bottom: 15px; }
   .stush-exception__detail h4 { font-size: 21px; }
-  .stush-ownership { padding: 34px 0 38px; }
+  .stush-ownership { grid-template-columns: minmax(0, 1fr); gap: 19px; padding: 34px 0 38px; }
   .stush-ownership__details { gap: 14px; }
   .stush-ownership__details > p { font-size: 13px; }
   .stush-output { grid-template-columns: 1fr; gap: 22px; min-height: 0; padding: 35px 0 30px; }

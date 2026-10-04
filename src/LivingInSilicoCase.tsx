@@ -6,10 +6,10 @@ const experiments = [
     number: "01",
     kind: "SEQUENCE GENERATION",
     title: "DeepMol",
-    steps: ["CSVLoader", "Morgan fingerprints", "RNN MolecularGenerator"],
+    steps: ["CSVLoader", "SMILES sequences", "RNN MolecularGenerator"],
     purpose: "SMILES sequence generation",
     outcomeLabel: "METHOD",
-    outcome: "SMILES sequence generation",
+    outcome: "Recorded run · 10 epochs · batch size 64",
     outcomeDetail: "",
     tone: "amber",
   },
@@ -32,7 +32,7 @@ const experiments = [
     purpose: "Generation attempt did not succeed.",
     outcomeLabel: "OUTCOME",
     outcome: "No successful generation",
-    outcomeDetail: "I researched and attempted REINVENT4, but did not reach successful molecule generation.",
+    outcomeDetail: "I tried it as another generative approach alongside sequence and fragment work.",
     tone: "coral",
   },
 ] as const;
@@ -149,7 +149,9 @@ export default function LivingInSilicoCase() {
           <p className="lis-kicker">01 / MODEL REPRESENTATION</p>
           <h2 id="lis-model-title">Represent the molecule first.</h2>
           <p>
-            I moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.
+            I moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.<br />
+            April 12 snapshot: 15,696 rows · 14,487 unique SMILES.<br />
+            Curated experimental subsets: ~400–600 entries.
           </p>
         </div>
         <RepresentationFigure />
@@ -176,7 +178,6 @@ export default function LivingInSilicoCase() {
           </div>
           <div className="lis-public-output__sample">
             <h3>generated SMILES samples</h3>
-            <p>SEQUENCE-GENERATION OUTPUT</p>
           </div>
         </div>
       </section>
@@ -186,14 +187,14 @@ export default function LivingInSilicoCase() {
           <p className="lis-kicker">04 / MY CONTRIBUTION</p>
           <h2 id="lis-contribution-title">Research engineering across the workflow.</h2>
           <p>
-            I worked across data loading, SMILES processing, molecular features, sequence generation, and fragment workflows.
+            My DeepMol contribution covered data loading, SMILES processing, molecular features and sequence generation; I also worked on fragment workflows.
           </p>
         </div>
         <aside className="lis-public-learning">
           <p className="lis-kicker lis-kicker--teal">TECHNICAL LEARNING</p>
           <h3>Sequence vs. fragments</h3>
           <p>
-            One route modeled SMILES sequences; another selected and recombined compatible fragments. Comparing them made molecular representation a core modeling choice.
+            DeepMol&apos;s SMILES sequence path differed from fragment selection and recombination; comparing the two made molecular representation a core modeling choice.
           </p>
         </aside>
       </section>

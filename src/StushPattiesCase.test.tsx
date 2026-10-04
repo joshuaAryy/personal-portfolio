@@ -29,19 +29,24 @@ describe("Stush Patties technical data-pipeline story", () => {
 
   it("keeps formats grouped across generic inputs", () => {
     const html = markup();
+    const inputSummaryStart = html.indexOf('aria-label="Input set"');
+    const inputSummaryEnd = html.indexOf("</aside>", inputSummaryStart);
+    const inputSummary = html.slice(inputSummaryStart, inputSummaryEnd);
+    expect(inputSummary).toContain("Koyo · UNFI · Dovre");
     expect(html).toContain("CSV · XLSX · XLSB");
     expect(html).toContain("Formats across inputs");
-    expect(html).not.toMatch(/Koyo|Riipen|IBM SkillsBuild/i);
+    expect(inputSummary).not.toMatch(/Koyo\s+(CSV|XLSX|XLSB)|UNFI\s+(CSV|XLSX|XLSB)|Dovre\s+(CSV|XLSX|XLSB)/i);
   });
 
   it("states Joshua's parsing ownership and places the generic edge case later", () => {
     const html = markup();
     const normalized = html.toLowerCase();
     expect(normalized).toContain("i built python parsing and");
-    expect(normalized).toContain("one distributor file needed a separate parsing branch");
-    expect(normalized).toContain("working with shiv and client stakeholders");
+    expect(normalized).toContain("temporary koyo position-and-cell parsing exception");
+    expect(normalized).toContain("i mapped the position-and-cell data into the shared schema, then returned it to the common normalization path");
+    expect(normalized).toContain("in our two-person technical team, shiv and i worked with client stakeholders");
     expect(normalized).not.toContain("i contributed to python parsing and normalization");
     const opening = html.split("</header>")[0];
-    expect(opening).not.toMatch(/Koyo|two-person team|team size/i);
+    expect(opening).not.toMatch(/two-person team|team size/i);
   });
 });

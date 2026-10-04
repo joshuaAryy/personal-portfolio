@@ -172,7 +172,7 @@ export default function StushPattiesCase() {
             <strong>FILES</strong>
             <div>
               <p>SALES FILES · LAYOUTS VARY</p>
-              <span>Different structures</span>
+              <span>Koyo · UNFI · Dovre</span>
             </div>
             <p className="stush-input-summary__formats">CSV / XLSX / XLSB · ACROSS INPUTS</p>
             <span className="stush-input-summary__rule" aria-hidden="true" />
@@ -213,9 +213,9 @@ export default function StushPattiesCase() {
             <h3>ONE OUTLIER</h3>
           </div>
           <div className="stush-exception__detail">
-            <h4 id="stush-exception-title">One distributor file needed a separate parsing branch.</h4>
+            <h4 id="stush-exception-title">Temporary Koyo position-and-cell parsing exception.</h4>
             <p>
-              I mapped its position-and-cell data into the shared schema so it could use the same normalization path as the other inputs.
+              I mapped the position-and-cell data into the shared schema, then returned it to the common normalization path.
             </p>
           </div>
         </aside>
@@ -232,8 +232,7 @@ export default function StushPattiesCase() {
             case packs, and reporting months.
           </p>
           <p>
-            Working with Shiv and client stakeholders, I translated the shared fields into business rules and a
-            repeatable reporting handoff.
+            In our two-person technical team, Shiv and I worked with client stakeholders to translate shared fields into business rules and a repeatable reporting handoff.
           </p>
         </div>
       </section>
