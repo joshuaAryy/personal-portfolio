@@ -1,0 +1,277 @@
+{
+  "browserVersion": "153.0.8010.53",
+  "viewports": {
+    "1920x1080": {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "playButton": {
+        "aria": "Play Crest demo in player",
+        "tabIndex": 0,
+        "rect": {
+          "x": 965.71875,
+          "y": 524.09375,
+          "width": 70,
+          "height": 70
+        },
+        "focusStyle": "rgb(240, 228, 187) none 3px"
+      },
+      "focusedBefore": {
+        "activeTag": "BUTTON",
+        "activeClass": "demo-player__play",
+        "activeAria": "Play Crest demo in player"
+      },
+      "afterPlay": {
+        "activeTag": "IFRAME",
+        "activeClass": "demo-player__video",
+        "activeTitle": "Crest expense intelligence demo video",
+        "activeIsIframe": true,
+        "iframe": {
+          "title": "Crest expense intelligence demo video",
+          "src": "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1",
+          "rect": {
+            "x": 402.4,
+            "y": 223,
+            "width": 1196.6,
+            "height": 672.2
+          },
+          "outline": "rgb(244, 203, 105) solid 2px",
+          "outlineColor": "rgb(244, 203, 105)",
+          "outlineWidth": "2px",
+          "outlineOffset": "-3px"
+        },
+        "player": {
+          "rect": {
+            "x": 401.4,
+            "y": 222,
+            "width": 1198.6,
+            "height": 674.2
+          },
+          "overflow": "hidden",
+          "outline": "rgb(239, 231, 216) none 3px"
+        },
+        "width": 1920,
+        "clientWidth": 1920,
+        "selector": [
+          {
+            "name": "FOOD TRACKER",
+            "selected": false,
+            "tabIndex": 0
+          },
+          {
+            "name": "CREST",
+            "selected": true,
+            "tabIndex": 0
+          },
+          {
+            "name": "CHO’VEIGO",
+            "selected": false,
+            "tabIndex": 0
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-crest-playing.png",
+      "keyboardBack": [
+        {
+          "tag": "IFRAME",
+          "cls": "demo-player__video",
+          "aria": null,
+          "text": ""
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "demo-selector__button",
+          "aria": null,
+          "text": "CHO’VEIGO"
+        }
+      ],
+      "returnScreenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-crest-keyboard-return.png",
+      "help": {
+        "dialogs": [
+          {
+            "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation, Profile tabs, or activity rail to continue.\n\nThe current screen stays open underneath this guide.",
+            "aria": null,
+            "labelledby": "_r_0_"
+          }
+        ],
+        "text": "Skip to content\nPORTFOLIO\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\n2028\n3RD\nJoshua Aryeetey\nOPEN TO SUMMER 2027\nOVERVIEW\nJOURNEY\nPERSONAL HIGHLIGHTS\nDEMOS\nFOOD TRACKER\nCREST\nCHO’VEIGO\nCREST\nACTIVITY\n\nGENERAL · PORTFOLIO\n\nCURRENT FOCUS\nFood Tracker\nPROJECTS (4)\nFood Tracker\nCho’Veigo\nCrest\nFraymakers\nEXPERIENCE (2)\nLiving in Silico\nStush Patties\nGitHub\nLinkedIn\nX\n✉\nHELP\n\nPORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation, Profile tabs, or activity rail to continue.\n\nThe current screen stays open underneath this guide.",
+        "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-help.png"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [
+          {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_m7s2_vr9a-URZ8SU5IImXm-Mf0-NqqRhWQpDEgf9vCn-B03oaMDnxNs4fPH8K8N5WflA=s68-c-k-c0x00ffffff-no-rj",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/qoe?fmt=298&cpn=N14CRNVz8JcHi4lV&el=embedded&ns=yt&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2C69795%2C30907%2C15105%2C25059%2C4174%2C30446%2C18706%2C26008%2C13016%2C1190%2C14897%2C6621%2C2783%2C23826%2C9500%2C1840%2C53632%2C41205%2C20589%2C4200%2C30113%2C9181%2C20864%2C31489%2C630%2C6032%2C191%2C977%2C372%2C7759%2C34320%2C11462%2C26847%2C1352%2C13723%2C4366%2C9716%2C3614%2C26539%2C3843%2C17160%2C1339%2C6471%2C4434%2C3243%2C1%2C17340%2C9038%2C1537%2C1810%2C4013%2C20493%2C2060%2C13658%2C2236%2C15390%2C9178%2C4921%2C1466%2C1648%2C1658%2C10936%2C2938%2C3640%2C9%2C5315%2C1327%2C5723%2C5469%2C3424%2C10734%2C1505%2C3749%2C6813%2C2730%2C589%2C10553&cl=990399410&seq=1&docid=kiq6XjNi9J8&ei=JynCaoTAPPzfybgPkomfuAU&event=streamingstats&plid=AAZdASh-zYaqgJrl&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&vps=0.000:N,0.041:B,0.930:B,0.930:B&cat=streaming,sabr&cmt=0.041:0.000,0.930:0.000&cfs=0.470:a.en:::s&vfs=0.930:298:298::a:sms.2:CAEoAQ&view=0.930:1197:672&bwm=0.930:1925:0.716&bwe=0.930:655360&bat=0.930:1:1&vis=0.930:0&bh=0.930:0.000",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/ptracking?html5=1&video_id=kiq6XjNi9J8&cpn=N14CRNVz8JcHi4lV&ei=JynCaoTAPPzfybgPkomfuAU&ptk=youtube_none&pltype=contentugc",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/playback?ns=yt&el=embedded&cpn=N14CRNVz8JcHi4lV&ver=2&cmt=0.003&fmt=298&fs=0&rt=1.159&euri=https%3A%2F%2Fa7047ffc.joshuaik2.pages.dev%2F&lact=1178&cl=990399410&mos=0&volume=100&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&autoplay=1&epm=1&hl=en_US&cr=CA&len=104.621&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2C69795%2C30907%2C15105%2C25059%2C4174%2C30446%2C18706%2C26008%2C13016%2C1190%2C14897%2C6621%2C2783%2C23826%2C9500%2C1840%2C53632%2C41205%2C20589%2C4200%2C30113%2C9181%2C20864%2C31489%2C630%2C6032%2C191%2C977%2C372%2C7759%2C34320%2C11462%2C26847%2C1352%2C13723%2C4366%2C9716%2C3614%2C26539%2C3843%2C17160%2C1339%2C6471%2C4434%2C3243%2C1%2C17340%2C9038%2C1537%2C1810%2C4013%2C20493%2C2060%2C13658%2C2236%2C15390%2C9178%2C4921%2C1466%2C1648%2C1658%2C10936%2C2938%2C3640%2C9%2C5315%2C1327%2C5723%2C5469%2C3424%2C10734%2C1505%2C3749%2C6813%2C2730%2C589%2C10553&rtn=11&afmt=251&size=1197%3A672&inview=1&muted=0&cc=a.en&docid=kiq6XjNi9J8&ei=JynCaoTAPPzfybgPkomfuAU&plid=AAZdASh-zYaqgJrl&referrer=https%3A%2F%2Fwww.youtube-nocookie.com%2Fembed%2Fkiq6XjNi9J8%3Fautoplay%3D1&of=2dVkz7e1rF9t_XNU6wGWIw&vm=CAEQABgEOjJBSHFpSlRMTnZia25MOGxqOEp3WnE5dTBNeWpob1p3UG5GWWdUbHo2WDl2SVFYdmpBZ2JjQUNPdTRMUnl1eVNsaThsZllsNm1DUDJoODhJeTI0MkZ5b2w1YnB5S1g3bjZRTmc4SkZGUVlNQmlDcWJIRVJsZFpDR291MnRqdXlBTkhqaWxnYVlLTXhCb2dPbmxTYldPNWVz",
+            "error": "net::ERR_ABORTED"
+          }
+        ],
+        "response": []
+      }
+    },
+    "390x844": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "playButton": {
+        "aria": "Play Crest demo in player",
+        "tabIndex": 0,
+        "rect": {
+          "x": 175,
+          "y": 341,
+          "width": 54,
+          "height": 54
+        },
+        "focusStyle": "rgb(240, 228, 187) none 3px"
+      },
+      "focusedBefore": {
+        "activeTag": "BUTTON",
+        "activeClass": "demo-player__play",
+        "activeAria": "Play Crest demo in player"
+      },
+      "afterPlay": {
+        "activeTag": "IFRAME",
+        "activeClass": "demo-player__video",
+        "activeTitle": "Crest expense intelligence demo video",
+        "activeIsIframe": true,
+        "iframe": {
+          "title": "Crest expense intelligence demo video",
+          "src": "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1",
+          "rect": {
+            "x": 27,
+            "y": 270,
+            "width": 350,
+            "height": 196
+          },
+          "outline": "rgb(244, 203, 105) solid 2px",
+          "outlineColor": "rgb(244, 203, 105)",
+          "outlineWidth": "2px",
+          "outlineOffset": "-3px"
+        },
+        "player": {
+          "rect": {
+            "x": 26,
+            "y": 269,
+            "width": 352,
+            "height": 198
+          },
+          "overflow": "hidden",
+          "outline": "rgb(239, 231, 216) none 3px"
+        },
+        "width": 390,
+        "clientWidth": 390,
+        "selector": [
+          {
+            "name": "FOOD TRACKER",
+            "selected": false,
+            "tabIndex": 0
+          },
+          {
+            "name": "CREST",
+            "selected": true,
+            "tabIndex": 0
+          },
+          {
+            "name": "CHO’VEIGO",
+            "selected": false,
+            "tabIndex": 0
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-crest-playing.png",
+      "keyboardBack": [
+        {
+          "tag": "IFRAME",
+          "cls": "demo-player__video",
+          "aria": null,
+          "text": ""
+        },
+        {
+          "tag": "BUTTON",
+          "cls": "demo-selector__button",
+          "aria": null,
+          "text": "CHO’VEIGO"
+        }
+      ],
+      "returnScreenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-crest-keyboard-return.png",
+      "help": {
+        "dialogs": [
+          {
+            "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation or Profile tabs to continue.\n\nThe current screen stays open underneath this guide.",
+            "aria": null,
+            "labelledby": "_r_0_"
+          }
+        ],
+        "active": "client-help-overlay__close",
+        "initial": {
+          "rect": {
+            "x": 437,
+            "y": 0.5,
+            "w": 84,
+            "h": 68
+          },
+          "tabIndex": 0,
+          "visible": true
+        },
+        "afterFocus": {
+          "scrollX": 0,
+          "navScroll": [
+            {
+              "scrollLeft": 185,
+              "scrollWidth": 448,
+              "clientWidth": 263
+            },
+            {
+              "scrollLeft": 0,
+              "scrollWidth": 390,
+              "clientWidth": 390
+            },
+            {
+              "scrollLeft": 0,
+              "scrollWidth": 366,
+              "clientWidth": 366
+            }
+          ],
+          "active": "header-help"
+        }
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [
+          {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_m7s2_vr9a-URZ8SU5IImXm-Mf0-NqqRhWQpDEgf9vCn-B03oaMDnxNs4fPH8K8N5WflA=s68-c-k-c0x00ffffff-no-rj",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/qoe?fmt=134&afmt=251&cpn=k7nOmwWd5hNMfJWo&el=embedded&ns=yt&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C47714%2C76960%2C117689%2C9252%2C16509%2C23206%2C35402%2C65300%2C15105%2C25059%2C4174%2C30447%2C18705%2C26008%2C9673%2C3342%2C1192%2C13474%2C1422%2C6621%2C2783%2C23826%2C9500%2C1840%2C29673%2C23958%2C3014%2C38192%2C20589%2C4200%2C30113%2C9181%2C32873%2C20110%2C6032%2C1168%2C372%2C7759%2C33731%2C589%2C11462%2C26848%2C1351%2C13722%2C4367%2C9717%2C3613%2C26539%2C3844%2C17159%2C1339%2C6470%2C4435%2C1261%2C1981%2C2%2C17340%2C9038%2C1537%2C5789%2C34%2C20491%2C654%2C1407%2C15895%2C15389%2C9179%2C6387%2C3306%2C10935%2C2939%2C1729%2C1909%2C11%2C5315%2C1327%2C2686%2C3037%2C1051%2C4418%2C3423%2C3130%2C4217%2C4893%2C13291%2C590%2C12410&cl=990399410&seq=1&docid=kiq6XjNi9J8&ei=LSnCapWPBb-W-coPsMTI2QQ&event=streamingstats&plid=AAZdASjMQpj7l3Ns&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&vps=0.000:N,0.046:B,1.006:B,1.006:B&cat=streaming,sabr&cmt=0.046:0.000,1.006:0.000&cfs=0.332:a.en:::s&afs=0.993:251::i:fl.-12.59;tl.-14;vg.-1.4100000000000001;nm.1;sms.2:CAEoAQ&vfs=1.006:134:134::a:sms.2:CAEoAQ&view=1.006:350:196&bwm=1.006:28964:0.844&bwe=1.006:224059&bat=1.006:1:1&vis=1.006:0&bh=1.006:0.000&qclc=ChBrN25PbXdXZDVoTk1mSldvEAE",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/ptracking?html5=1&video_id=kiq6XjNi9J8&cpn=k7nOmwWd5hNMfJWo&ei=LSnCapWPBb-W-coPsMTI2QQ&ptk=youtube_none&pltype=contentugc",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/playback?ns=yt&el=embedded&cpn=k7nOmwWd5hNMfJWo&ver=2&cmt=0.03&fmt=134&fs=0&rt=1.133&euri=https%3A%2F%2Fa7047ffc.joshuaik2.pages.dev%2F&lact=1153&cl=990399410&mos=0&volume=100&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&autoplay=1&epm=1&hl=en_US&cr=CA&len=104.621&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C47714%2C76960%2C117689%2C9252%2C16509%2C23206%2C35402%2C65300%2C15105%2C25059%2C4174%2C30447%2C18705%2C26008%2C9673%2C3342%2C1192%2C13474%2C1422%2C6621%2C2783%2C23826%2C9500%2C1840%2C29673%2C23958%2C3014%2C38192%2C20589%2C4200%2C30113%2C9181%2C32873%2C20110%2C6032%2C1168%2C372%2C7759%2C33731%2C589%2C11462%2C26848%2C1351%2C13722%2C4367%2C9717%2C3613%2C26539%2C3844%2C17159%2C1339%2C6470%2C4435%2C1261%2C1981%2C2%2C17340%2C9038%2C1537%2C5789%2C34%2C20491%2C654%2C1407%2C15895%2C15389%2C9179%2C6387%2C3306%2C10935%2C2939%2C1729%2C1909%2C11%2C5315%2C1327%2C2686%2C3037%2C1051%2C4418%2C3423%2C3130%2C4217%2C4893%2C13291%2C590%2C12410&rtn=11&afmt=251&size=350%3A196&inview=1&muted=0&cc=a.en&docid=kiq6XjNi9J8&ei=LSnCapWPBb-W-coPsMTI2QQ&plid=AAZdASjMQpj7l3Ns&referrer=https%3A%2F%2Fwww.youtube-nocookie.com%2Fembed%2Fkiq6XjNi9J8%3Fautoplay%3D1&of=2dVkz7e1rF9t_XNU6wGWIw&vm=CAEQABgEOjJBSHFpSlRMbTBUM2RCdGVBaFh2M1k4TGh2am9yN3ZYX0ZSNkU0ZzRQM2t3U1BtaHBNd2JjQUNPdTRMVGhvMzctZ3FuYldHSjBaZmhxdnh0UzRIRXFHckR4ZmdWb3hmWUFNNUdhY1FCR0J2YmRJYk5SQmprWll1UFhTSVNUbndaOFV2aklxeS1ScmFIejBidkVfWmF3M1Qw",
+            "error": "net::ERR_ABORTED"
+          }
+        ],
+        "response": []
+      }
+    }
+  }
+}

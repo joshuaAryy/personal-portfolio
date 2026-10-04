@@ -1,0 +1,1675 @@
+{
+  "preview": "https://a7047ffc.joshuaik2.pages.dev",
+  "sourceCommit": "9fd23f9d45314f2319cffa97722cd7925ef2be52",
+  "browserVersion": "153.0.8010.53",
+  "viewports": {
+    "1920x1080": {
+      "status": 200,
+      "data": {
+        "url": "https://a7047ffc.joshuaik2.pages.dev/profile/demos",
+        "title": "Joshua Aryeetey · Portfolio",
+        "width": 1920,
+        "clientWidth": 1920,
+        "scrollHeight": 1080,
+        "headings": [
+          "FOOD TRACKER",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "links": [
+          {
+            "text": "Skip to content",
+            "aria": null,
+            "href": "#main",
+            "rect": {
+              "x": 14,
+              "y": -100,
+              "w": 130.1,
+              "h": 35
+            }
+          },
+          {
+            "text": "PORTFOLIO",
+            "aria": "Portfolio home",
+            "href": "/home",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 249.6,
+              "h": 109
+            }
+          },
+          {
+            "text": "PROJECTS",
+            "aria": null,
+            "href": "/projects",
+            "rect": {
+              "x": 276.5,
+              "y": -0.5,
+              "w": 122.9,
+              "h": 110
+            }
+          },
+          {
+            "text": "EXPERIENCE",
+            "aria": null,
+            "href": "/experience",
+            "rect": {
+              "x": 399.3,
+              "y": -0.5,
+              "w": 147.8,
+              "h": 110
+            }
+          },
+          {
+            "text": "HACKATHONS",
+            "aria": null,
+            "href": "/hackathons",
+            "rect": {
+              "x": 547.2,
+              "y": -0.5,
+              "w": 158,
+              "h": 110
+            }
+          },
+          {
+            "text": "EDUCATION",
+            "aria": null,
+            "href": "/education",
+            "rect": {
+              "x": 705.2,
+              "y": -0.5,
+              "w": 123.8,
+              "h": 110
+            }
+          },
+          {
+            "text": "RESUME",
+            "aria": null,
+            "href": "/resume",
+            "rect": {
+              "x": 829,
+              "y": -0.5,
+              "w": 80,
+              "h": 110
+            }
+          },
+          {
+            "text": "Joshua Aryeetey\nOPEN TO SUMMER 2027",
+            "aria": "Open profile",
+            "href": "/profile",
+            "rect": {
+              "x": 1620,
+              "y": 9.5,
+              "w": 234.1,
+              "h": 90
+            }
+          },
+          {
+            "text": "OVERVIEW",
+            "aria": null,
+            "href": "/profile",
+            "rect": {
+              "x": 36,
+              "y": 140,
+              "w": 100,
+              "h": 52
+            }
+          },
+          {
+            "text": "JOURNEY",
+            "aria": null,
+            "href": "/profile/journey",
+            "rect": {
+              "x": 168,
+              "y": 140,
+              "w": 84,
+              "h": 52
+            }
+          },
+          {
+            "text": "DEMOS",
+            "aria": null,
+            "href": "/profile/demos",
+            "rect": {
+              "x": 496,
+              "y": 140,
+              "w": 60,
+              "h": 52
+            }
+          },
+          {
+            "text": "Food Tracker",
+            "aria": null,
+            "href": "/projects/food-tracker",
+            "rect": {
+              "x": 1637,
+              "y": 360,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "Food Tracker",
+            "aria": null,
+            "href": "/projects/food-tracker",
+            "rect": {
+              "x": 1637,
+              "y": 456,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "Cho’Veigo",
+            "aria": null,
+            "href": "/projects/choveigo",
+            "rect": {
+              "x": 1637,
+              "y": 505,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "Crest",
+            "aria": null,
+            "href": "/projects/crest",
+            "rect": {
+              "x": 1637,
+              "y": 554,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "Fraymakers",
+            "aria": null,
+            "href": "/projects/fraymakers",
+            "rect": {
+              "x": 1637,
+              "y": 603,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "Living in Silico",
+            "aria": null,
+            "href": "/experience/living-in-silico",
+            "rect": {
+              "x": 1637,
+              "y": 689,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "Stush Patties",
+            "aria": null,
+            "href": "/experience/stush-patties",
+            "rect": {
+              "x": 1637,
+              "y": 738,
+              "w": 247,
+              "h": 49
+            }
+          },
+          {
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "href": "https://github.com/joshuaAryy",
+            "rect": {
+              "x": 1621,
+              "y": 1045,
+              "w": 30.4,
+              "h": 9
+            }
+          },
+          {
+            "text": "LinkedIn",
+            "aria": "LinkedIn (opens in a new tab)",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "rect": {
+              "x": 1682,
+              "y": 1045,
+              "w": 35.5,
+              "h": 9
+            }
+          },
+          {
+            "text": "✉",
+            "aria": "Email Joshua",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "rect": {
+              "x": 1785.5,
+              "y": 1040,
+              "w": 13.9,
+              "h": 19
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "Help",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "header-help",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "FOOD TRACKER",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "demo-selector__button is-selected",
+            "rect": {
+              "x": 4,
+              "y": 222,
+              "w": 373.4,
+              "h": 78
+            }
+          },
+          {
+            "text": "CREST",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "demo-selector__button",
+            "rect": {
+              "x": 4,
+              "y": 312,
+              "w": 373.4,
+              "h": 78
+            }
+          },
+          {
+            "text": "CHO’VEIGO",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "demo-selector__button",
+            "rect": {
+              "x": 4,
+              "y": 402,
+              "w": 373.4,
+              "h": 78
+            }
+          },
+          {
+            "text": "HELP",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "rail-social-footer__help",
+            "rect": {
+              "x": 1830,
+              "y": 1034.5,
+              "w": 70,
+              "h": 30
+            }
+          }
+        ],
+        "iframes": [],
+        "images": [
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 54,
+            "nh": 54,
+            "rect": {
+              "x": 6,
+              "y": 27.5,
+              "w": 54,
+              "h": 54
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 917,
+              "y": 35.5,
+              "w": 38,
+              "h": 38
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 970,
+              "y": 35.5,
+              "w": 38,
+              "h": 38
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 1023,
+              "y": 35.5,
+              "w": 38,
+              "h": 38
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 1076,
+              "y": 35.5,
+              "w": 38,
+              "h": 38
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 1129,
+              "y": 35.5,
+              "w": 38,
+              "h": 38
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 160,
+            "nh": 160,
+            "rect": {
+              "x": 1620,
+              "y": 23.5,
+              "w": 76,
+              "h": 76
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 128,
+            "nh": 128,
+            "rect": {
+              "x": 1626,
+              "y": 29.5,
+              "w": 64,
+              "h": 64
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 1254,
+            "nh": 1254,
+            "rect": {
+              "x": 18,
+              "y": 245,
+              "w": 56,
+              "h": 32
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/crest-sample.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 1152,
+            "nh": 648,
+            "rect": {
+              "x": 18,
+              "y": 335,
+              "w": 56,
+              "h": 32
+            },
+            "fit": "cover"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/choveigo-recommendations.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 864,
+            "nh": 486,
+            "rect": {
+              "x": 18,
+              "y": 425,
+              "w": 56,
+              "h": 32
+            },
+            "fit": "cover"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-rail-food.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 24,
+            "nh": 200,
+            "rect": {
+              "x": 377.4,
+              "y": 251,
+              "w": 24,
+              "h": 200
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+            "alt": "Food Tracker selected mark",
+            "loaded": true,
+            "nw": 1254,
+            "nh": 1254,
+            "rect": {
+              "x": 760.7,
+              "y": 319.1,
+              "w": 480,
+              "h": 480
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 29,
+            "nh": 47,
+            "rect": {
+              "x": 1628.7,
+              "y": 153.5,
+              "w": 28.6,
+              "h": 46.9
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 13,
+            "nh": 13,
+            "rect": {
+              "x": 1846,
+              "y": 262.5,
+              "w": 13,
+              "h": 13
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 8,
+            "nh": 7,
+            "rect": {
+              "x": 1871,
+              "y": 265.5,
+              "w": 8,
+              "h": 7
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 7,
+            "nh": 6,
+            "rect": {
+              "x": 1891,
+              "y": 266,
+              "w": 7,
+              "h": 6
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 40,
+            "nh": 40,
+            "rect": {
+              "x": 1641,
+              "y": 371.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 40,
+            "nh": 40,
+            "rect": {
+              "x": 1641,
+              "y": 467.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 150,
+            "nh": 150,
+            "rect": {
+              "x": 1641,
+              "y": 516.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 310,
+            "nh": 230,
+            "rect": {
+              "x": 1641,
+              "y": 565.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 82,
+            "nh": 82,
+            "rect": {
+              "x": 1641,
+              "y": 614.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 96,
+            "nh": 96,
+            "rect": {
+              "x": 1641,
+              "y": 700.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 96,
+            "nh": 96,
+            "rect": {
+              "x": 1641,
+              "y": 749.5,
+              "w": 26,
+              "h": 26
+            },
+            "fit": "contain"
+          }
+        ],
+        "nav": [
+          {
+            "text": "PROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME",
+            "rect": {
+              "x": 276.5,
+              "y": -0.5,
+              "w": 632.5,
+              "h": 110
+            }
+          },
+          {
+            "text": "OVERVIEW\nJOURNEY\nPERSONAL HIGHLIGHTS\nDEMOS",
+            "rect": {
+              "x": 0,
+              "y": 140,
+              "w": 700,
+              "h": 52
+            }
+          },
+          {
+            "text": "FOOD TRACKER\nCREST\nCHO’VEIGO",
+            "rect": {
+              "x": 0,
+              "y": 222,
+              "w": 377.4,
+              "h": 270
+            }
+          }
+        ],
+        "player": [
+          {
+            "cls": "main main--demos",
+            "text": "OVERVIEW\nJOURNEY\nPERSONAL HIGHLIGHTS\nDEMOS\nFOOD TRACKER\nCREST\nCHO’VEIGO\nFOOD TRACKER",
+            "rect": {
+              "x": 0,
+              "y": 110,
+              "w": 1600,
+              "h": 970
+            }
+          },
+          {
+            "cls": "demo-layout",
+            "text": "FOOD TRACKER\nCREST\nCHO’VEIGO\nFOOD TRACKER",
+            "rect": {
+              "x": 0,
+              "y": 222,
+              "w": 1600,
+              "h": 747.2
+            }
+          },
+          {
+            "cls": "demo-selector",
+            "text": "FOOD TRACKER\nCREST\nCHO’VEIGO",
+            "rect": {
+              "x": 0,
+              "y": 222,
+              "w": 377.4,
+              "h": 270
+            }
+          },
+          {
+            "cls": "demo-selector__button is-selected",
+            "text": "FOOD TRACKER",
+            "rect": {
+              "x": 4,
+              "y": 222,
+              "w": 373.4,
+              "h": 78
+            }
+          },
+          {
+            "cls": "demo-selector__thumb",
+            "text": "",
+            "rect": {
+              "x": 18,
+              "y": 245,
+              "w": 56,
+              "h": 32
+            }
+          },
+          {
+            "cls": "demo-selector__button",
+            "text": "CREST",
+            "rect": {
+              "x": 4,
+              "y": 312,
+              "w": 373.4,
+              "h": 78
+            }
+          },
+          {
+            "cls": "demo-selector__thumb",
+            "text": "",
+            "rect": {
+              "x": 18,
+              "y": 335,
+              "w": 56,
+              "h": 32
+            }
+          },
+          {
+            "cls": "demo-selector__button",
+            "text": "CHO’VEIGO",
+            "rect": {
+              "x": 4,
+              "y": 402,
+              "w": 373.4,
+              "h": 78
+            }
+          },
+          {
+            "cls": "demo-selector__thumb",
+            "text": "",
+            "rect": {
+              "x": 18,
+              "y": 425,
+              "w": 56,
+              "h": 32
+            }
+          },
+          {
+            "cls": "demo-recording-rail",
+            "text": "",
+            "rect": {
+              "x": 377.4,
+              "y": 251,
+              "w": 24,
+              "h": 200
+            }
+          },
+          {
+            "cls": "demo-stage",
+            "text": "FOOD TRACKER",
+            "rect": {
+              "x": 401.4,
+              "y": 222,
+              "w": 1198.6,
+              "h": 747.2
+            }
+          },
+          {
+            "cls": "demo-player demo-player--food",
+            "text": "",
+            "rect": {
+              "x": 401.4,
+              "y": 222,
+              "w": 1198.6,
+              "h": 674.2
+            }
+          },
+          {
+            "cls": "demo-player__still",
+            "text": "",
+            "rect": {
+              "x": 760.7,
+              "y": 319.1,
+              "w": 480,
+              "h": 480
+            }
+          },
+          {
+            "cls": "demo-title",
+            "text": "FOOD TRACKER",
+            "rect": {
+              "x": 433.4,
+              "y": 917.2,
+              "w": 1134.6,
+              "h": 52
+            }
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-initial.png",
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    "390x844": {
+      "status": 200,
+      "data": {
+        "url": "https://a7047ffc.joshuaik2.pages.dev/profile/demos",
+        "title": "Joshua Aryeetey · Portfolio",
+        "width": 390,
+        "clientWidth": 390,
+        "scrollHeight": 844,
+        "headings": [
+          "FOOD TRACKER",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "links": [
+          {
+            "text": "Skip to content",
+            "aria": null,
+            "href": "#main",
+            "rect": {
+              "x": 14,
+              "y": -100,
+              "w": 130.1,
+              "h": 35
+            }
+          },
+          {
+            "text": "",
+            "aria": "Portfolio home",
+            "href": "/home",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 68,
+              "h": 69
+            }
+          },
+          {
+            "text": "PROJECTS",
+            "aria": null,
+            "href": "/projects",
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "w": 72,
+              "h": 68
+            }
+          },
+          {
+            "text": "EXPERIENCE",
+            "aria": null,
+            "href": "/experience",
+            "rect": {
+              "x": 145,
+              "y": 0.5,
+              "w": 78,
+              "h": 68
+            }
+          },
+          {
+            "text": "HACKATHONS",
+            "aria": null,
+            "href": "/hackathons",
+            "rect": {
+              "x": 223,
+              "y": 0.5,
+              "w": 82,
+              "h": 68
+            }
+          },
+          {
+            "text": "EDUCATION",
+            "aria": null,
+            "href": "/education",
+            "rect": {
+              "x": 305,
+              "y": 0.5,
+              "w": 76,
+              "h": 68
+            }
+          },
+          {
+            "text": "RESUME",
+            "aria": null,
+            "href": "/resume",
+            "rect": {
+              "x": 381,
+              "y": 0.5,
+              "w": 56,
+              "h": 68
+            }
+          },
+          {
+            "text": "",
+            "aria": "Open profile",
+            "href": "/profile",
+            "rect": {
+              "x": 340,
+              "y": 13.5,
+              "w": 42,
+              "h": 42
+            }
+          },
+          {
+            "text": "OVERVIEW",
+            "aria": null,
+            "href": "/profile",
+            "rect": {
+              "x": 14,
+              "y": 94,
+              "w": 58.9,
+              "h": 52
+            }
+          },
+          {
+            "text": "JOURNEY",
+            "aria": null,
+            "href": "/profile/journey",
+            "rect": {
+              "x": 88.9,
+              "y": 94,
+              "w": 50.6,
+              "h": 52
+            }
+          },
+          {
+            "text": "DEMOS",
+            "aria": null,
+            "href": "/profile/demos",
+            "rect": {
+              "x": 296.4,
+              "y": 94,
+              "w": 39.5,
+              "h": 52
+            }
+          },
+          {
+            "text": "Food Tracker",
+            "aria": null,
+            "href": "/projects/food-tracker",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "Food Tracker",
+            "aria": null,
+            "href": "/projects/food-tracker",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "Cho’Veigo",
+            "aria": null,
+            "href": "/projects/choveigo",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "Crest",
+            "aria": null,
+            "href": "/projects/crest",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "Fraymakers",
+            "aria": null,
+            "href": "/projects/fraymakers",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "Living in Silico",
+            "aria": null,
+            "href": "/experience/living-in-silico",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "Stush Patties",
+            "aria": null,
+            "href": "/experience/stush-patties",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "href": "https://github.com/joshuaAryy",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "LinkedIn",
+            "aria": "LinkedIn (opens in a new tab)",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "text": "✉",
+            "aria": "Email Joshua",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          }
+        ],
+        "buttons": [
+          {
+            "text": "HELP",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "header-help",
+            "rect": {
+              "x": 437,
+              "y": 0.5,
+              "w": 84,
+              "h": 68
+            }
+          },
+          {
+            "text": "FOOD TRACKER",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "demo-selector__button is-selected",
+            "rect": {
+              "x": 12,
+              "y": 166,
+              "w": 118,
+              "h": 72
+            }
+          },
+          {
+            "text": "CREST",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "demo-selector__button",
+            "rect": {
+              "x": 136,
+              "y": 166,
+              "w": 118,
+              "h": 72
+            }
+          },
+          {
+            "text": "CHO’VEIGO",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "demo-selector__button",
+            "rect": {
+              "x": 260,
+              "y": 166,
+              "w": 118,
+              "h": 72
+            }
+          },
+          {
+            "text": "Help",
+            "aria": null,
+            "title": "",
+            "role": null,
+            "cls": "rail-social-footer__help",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            }
+          }
+        ],
+        "iframes": [],
+        "images": [
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 32,
+            "nh": 32,
+            "rect": {
+              "x": 10,
+              "y": 18.5,
+              "w": 32,
+              "h": 32
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 38,
+            "nh": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 160,
+            "nh": 160,
+            "rect": {
+              "x": 340,
+              "y": 13.5,
+              "w": 42,
+              "h": 42
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 128,
+            "nh": 128,
+            "rect": {
+              "x": 346,
+              "y": 19.5,
+              "w": 30,
+              "h": 30
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 1254,
+            "nh": 1254,
+            "rect": {
+              "x": 47,
+              "y": 181,
+              "w": 48,
+              "h": 25
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/crest-sample.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 1152,
+            "nh": 648,
+            "rect": {
+              "x": 171,
+              "y": 181,
+              "w": 48,
+              "h": 25
+            },
+            "fit": "cover"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/choveigo-recommendations.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 864,
+            "nh": 486,
+            "rect": {
+              "x": 295,
+              "y": 181,
+              "w": 48,
+              "h": 25
+            },
+            "fit": "cover"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-rail-food.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 24,
+            "nh": 200,
+            "rect": {
+              "x": 12,
+              "y": 260,
+              "w": 14,
+              "h": 116
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+            "alt": "Food Tracker selected mark",
+            "loaded": true,
+            "nw": 1254,
+            "nh": 1254,
+            "rect": {
+              "x": 123.3,
+              "y": 289.3,
+              "w": 157.5,
+              "h": 157.5
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 29,
+            "nh": 47,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 13,
+            "nh": 13,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 8,
+            "nh": 7,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 7,
+            "nh": 6,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "fill"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 40,
+            "nh": 40,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 40,
+            "nh": 40,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "nw": 150,
+            "nh": 150,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 310,
+            "nh": 230,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 82,
+            "nh": 82,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 96,
+            "nh": 96,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "alt": "",
+            "loaded": true,
+            "nw": 96,
+            "nh": 96,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "w": 0,
+              "h": 0
+            },
+            "fit": "contain"
+          }
+        ],
+        "nav": [
+          {
+            "text": "PROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\nHELP",
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "w": 263,
+              "h": 68
+            }
+          },
+          {
+            "text": "OVERVIEW\nJOURNEY\nPERSONAL HIGHLIGHTS\nDEMOS",
+            "rect": {
+              "x": 0,
+              "y": 94,
+              "w": 390,
+              "h": 52
+            }
+          },
+          {
+            "text": "FOOD TRACKER\nCREST\nCHO’VEIGO",
+            "rect": {
+              "x": 12,
+              "y": 166,
+              "w": 366,
+              "h": 72
+            }
+          }
+        ],
+        "player": [
+          {
+            "cls": "main main--demos",
+            "text": "OVERVIEW\nJOURNEY\nPERSONAL HIGHLIGHTS\nDEMOS\nFOOD TRACKER\nCREST\nCHO’VEIGO\nFOOD TRACKER",
+            "rect": {
+              "x": 0,
+              "y": 70,
+              "w": 390,
+              "h": 774
+            }
+          },
+          {
+            "cls": "demo-layout",
+            "text": "FOOD TRACKER\nCREST\nCHO’VEIGO\nFOOD TRACKER",
+            "rect": {
+              "x": 0,
+              "y": 166,
+              "w": 390,
+              "h": 357
+            }
+          },
+          {
+            "cls": "demo-selector",
+            "text": "FOOD TRACKER\nCREST\nCHO’VEIGO",
+            "rect": {
+              "x": 12,
+              "y": 166,
+              "w": 366,
+              "h": 72
+            }
+          },
+          {
+            "cls": "demo-selector__button is-selected",
+            "text": "FOOD TRACKER",
+            "rect": {
+              "x": 12,
+              "y": 166,
+              "w": 118,
+              "h": 72
+            }
+          },
+          {
+            "cls": "demo-selector__thumb",
+            "text": "",
+            "rect": {
+              "x": 47,
+              "y": 181,
+              "w": 48,
+              "h": 25
+            }
+          },
+          {
+            "cls": "demo-selector__button",
+            "text": "CREST",
+            "rect": {
+              "x": 136,
+              "y": 166,
+              "w": 118,
+              "h": 72
+            }
+          },
+          {
+            "cls": "demo-selector__thumb",
+            "text": "",
+            "rect": {
+              "x": 171,
+              "y": 181,
+              "w": 48,
+              "h": 25
+            }
+          },
+          {
+            "cls": "demo-selector__button",
+            "text": "CHO’VEIGO",
+            "rect": {
+              "x": 260,
+              "y": 166,
+              "w": 118,
+              "h": 72
+            }
+          },
+          {
+            "cls": "demo-selector__thumb",
+            "text": "",
+            "rect": {
+              "x": 295,
+              "y": 181,
+              "w": 48,
+              "h": 25
+            }
+          },
+          {
+            "cls": "demo-recording-rail",
+            "text": "",
+            "rect": {
+              "x": 12,
+              "y": 260,
+              "w": 14,
+              "h": 116
+            }
+          },
+          {
+            "cls": "demo-stage",
+            "text": "FOOD TRACKER",
+            "rect": {
+              "x": 26,
+              "y": 254,
+              "w": 352,
+              "h": 269
+            }
+          },
+          {
+            "cls": "demo-player demo-player--food",
+            "text": "",
+            "rect": {
+              "x": 26,
+              "y": 269,
+              "w": 352,
+              "h": 198
+            }
+          },
+          {
+            "cls": "demo-player__still",
+            "text": "",
+            "rect": {
+              "x": 123.3,
+              "y": 289.3,
+              "w": 157.5,
+              "h": 157.5
+            }
+          },
+          {
+            "cls": "demo-title",
+            "text": "FOOD TRACKER",
+            "rect": {
+              "x": 26,
+              "y": 481,
+              "w": 352,
+              "h": 42
+            }
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-initial.png",
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    }
+  }
+}

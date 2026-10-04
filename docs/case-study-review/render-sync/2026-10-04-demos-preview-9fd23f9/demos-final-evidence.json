@@ -1,0 +1,410 @@
+{
+  "sourceCommit": "9fd23f9d45314f2319cffa97722cd7925ef2be52",
+  "preview": "https://a7047ffc.joshuaik2.pages.dev",
+  "route": "/profile/demos",
+  "browser": "Chrome 153.0.8010.53",
+  "viewports": {
+    "1920x1080": {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "documentWidthByState": {
+        "food": 1920,
+        "crest": 1920,
+        "choveigo": 1920
+      },
+      "imagesLoaded": {
+        "food": 24,
+        "total": 24
+      },
+      "selectors": [
+        {
+          "text": "FOOD TRACKER",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "true",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": true,
+          "accessibleName": "FOOD TRACKER"
+        },
+        {
+          "text": "CREST",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CREST"
+        },
+        {
+          "text": "CHO’VEIGO",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CHO’VEIGO"
+        }
+      ],
+      "mediaState": {
+        "playerRect": {
+          "x": 401.4375,
+          "y": 222,
+          "width": 1198.5625,
+          "height": 674.1875
+        },
+        "poster": {
+          "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+          "alt": "Food Tracker selected mark",
+          "loaded": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "rect": {
+            "x": 760.71875,
+            "y": 319.09375,
+            "width": 480,
+            "height": 480
+          },
+          "objectFit": "contain"
+        }
+      },
+      "screenshots": {
+        "initial": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-initial.png",
+        "food": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-food.png",
+        "crest": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-crest.png",
+        "choveigo": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-choveigo.png",
+        "crestPlaying": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-crest-playing.png",
+        "crestKeyboardReturn": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-crest-keyboard-return.png",
+        "help": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-help-description.png"
+      },
+      "play": {
+        "button": {
+          "aria": "Play Crest demo in player",
+          "tabIndex": 0,
+          "rect": {
+            "x": 965.71875,
+            "y": 524.09375,
+            "width": 70,
+            "height": 70
+          },
+          "focusStyle": "rgb(240, 228, 187) none 3px"
+        },
+        "focusedBefore": {
+          "activeTag": "BUTTON",
+          "activeClass": "demo-player__play",
+          "activeAria": "Play Crest demo in player"
+        },
+        "afterPlay": {
+          "activeTag": "IFRAME",
+          "activeClass": "demo-player__video",
+          "activeTitle": "Crest expense intelligence demo video",
+          "activeIsIframe": true,
+          "iframe": {
+            "title": "Crest expense intelligence demo video",
+            "src": "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1",
+            "rect": {
+              "x": 402.4,
+              "y": 223,
+              "width": 1196.6,
+              "height": 672.2
+            },
+            "outline": "rgb(244, 203, 105) solid 2px",
+            "outlineColor": "rgb(244, 203, 105)",
+            "outlineWidth": "2px",
+            "outlineOffset": "-3px"
+          },
+          "player": {
+            "rect": {
+              "x": 401.4,
+              "y": 222,
+              "width": 1198.6,
+              "height": 674.2
+            },
+            "overflow": "hidden",
+            "outline": "rgb(239, 231, 216) none 3px"
+          },
+          "width": 1920,
+          "clientWidth": 1920,
+          "selector": [
+            {
+              "name": "FOOD TRACKER",
+              "selected": false,
+              "tabIndex": 0
+            },
+            {
+              "name": "CREST",
+              "selected": true,
+              "tabIndex": 0
+            },
+            {
+              "name": "CHO’VEIGO",
+              "selected": false,
+              "tabIndex": 0
+            }
+          ]
+        },
+        "keyboardBack": [
+          {
+            "tag": "IFRAME",
+            "cls": "demo-player__video",
+            "aria": null,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "demo-selector__button",
+            "aria": null,
+            "text": "CHO’VEIGO"
+          }
+        ]
+      },
+      "help": {
+        "open": true,
+        "ariaLabel": null,
+        "labelledby": "_r_0_",
+        "title": "A quick orientation",
+        "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation, Profile tabs, or activity rail to continue.\n\nThe current screen stays open underneath this guide.",
+        "rect": {
+          "x": 1162,
+          "y": 507.59375,
+          "width": 410,
+          "height": 342.515625
+        },
+        "activeClass": "client-help-overlay__close",
+        "dialogText": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation, Profile tabs, or activity rail to continue.\n\nThe current screen stays open underneath this guide."
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "response": [],
+        "externalAbortedRequests": [
+          {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_m7s2_vr9a-URZ8SU5IImXm-Mf0-NqqRhWQpDEgf9vCn-B03oaMDnxNs4fPH8K8N5WflA=s68-c-k-c0x00ffffff-no-rj",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/qoe",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/ptracking",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/playback",
+            "error": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    },
+    "390x844": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "documentWidthByState": {
+        "food": 390,
+        "crest": 390,
+        "choveigo": 390
+      },
+      "imagesLoaded": {
+        "food": 24,
+        "total": 24
+      },
+      "selectors": [
+        {
+          "text": "FOOD TRACKER",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "true",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": true,
+          "accessibleName": "FOOD TRACKER"
+        },
+        {
+          "text": "CREST",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CREST"
+        },
+        {
+          "text": "CHO’VEIGO",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CHO’VEIGO"
+        }
+      ],
+      "mediaState": {
+        "playerRect": {
+          "x": 26,
+          "y": 269,
+          "width": 352,
+          "height": 198
+        },
+        "poster": {
+          "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+          "alt": "Food Tracker selected mark",
+          "loaded": true,
+          "naturalWidth": 1254,
+          "naturalHeight": 1254,
+          "rect": {
+            "x": 123.25,
+            "y": 289.25,
+            "width": 157.5,
+            "height": 157.5
+          },
+          "objectFit": "contain"
+        }
+      },
+      "screenshots": {
+        "initial": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-initial.png",
+        "food": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-food.png",
+        "crest": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-crest.png",
+        "choveigo": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-choveigo.png",
+        "crestPlaying": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-crest-playing.png",
+        "crestKeyboardReturn": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-crest-keyboard-return.png",
+        "help": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-help-description.png"
+      },
+      "play": {
+        "button": {
+          "aria": "Play Crest demo in player",
+          "tabIndex": 0,
+          "rect": {
+            "x": 175,
+            "y": 341,
+            "width": 54,
+            "height": 54
+          },
+          "focusStyle": "rgb(240, 228, 187) none 3px"
+        },
+        "focusedBefore": {
+          "activeTag": "BUTTON",
+          "activeClass": "demo-player__play",
+          "activeAria": "Play Crest demo in player"
+        },
+        "afterPlay": {
+          "activeTag": "IFRAME",
+          "activeClass": "demo-player__video",
+          "activeTitle": "Crest expense intelligence demo video",
+          "activeIsIframe": true,
+          "iframe": {
+            "title": "Crest expense intelligence demo video",
+            "src": "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1",
+            "rect": {
+              "x": 27,
+              "y": 270,
+              "width": 350,
+              "height": 196
+            },
+            "outline": "rgb(244, 203, 105) solid 2px",
+            "outlineColor": "rgb(244, 203, 105)",
+            "outlineWidth": "2px",
+            "outlineOffset": "-3px"
+          },
+          "player": {
+            "rect": {
+              "x": 26,
+              "y": 269,
+              "width": 352,
+              "height": 198
+            },
+            "overflow": "hidden",
+            "outline": "rgb(239, 231, 216) none 3px"
+          },
+          "width": 390,
+          "clientWidth": 390,
+          "selector": [
+            {
+              "name": "FOOD TRACKER",
+              "selected": false,
+              "tabIndex": 0
+            },
+            {
+              "name": "CREST",
+              "selected": true,
+              "tabIndex": 0
+            },
+            {
+              "name": "CHO’VEIGO",
+              "selected": false,
+              "tabIndex": 0
+            }
+          ]
+        },
+        "keyboardBack": [
+          {
+            "tag": "IFRAME",
+            "cls": "demo-player__video",
+            "aria": null,
+            "text": ""
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "demo-selector__button",
+            "aria": null,
+            "text": "CHO’VEIGO"
+          }
+        ]
+      },
+      "help": {
+        "open": true,
+        "ariaLabel": null,
+        "labelledby": "_r_0_",
+        "title": "A quick orientation",
+        "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation or Profile tabs to continue.\n\nThe current screen stays open underneath this guide.",
+        "rect": {
+          "x": 12,
+          "y": 555.671875,
+          "width": 366,
+          "height": 276.328125
+        },
+        "activeClass": "client-help-overlay__close",
+        "dialogText": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation or Profile tabs to continue.\n\nThe current screen stays open underneath this guide."
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "response": [],
+        "externalAbortedRequests": [
+          {
+            "url": "https://yt3.ggpht.com/ytc/AIdro_m7s2_vr9a-URZ8SU5IImXm-Mf0-NqqRhWQpDEgf9vCn-B03oaMDnxNs4fPH8K8N5WflA=s68-c-k-c0x00ffffff-no-rj",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/qoe",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/ptracking",
+            "error": "net::ERR_ABORTED"
+          },
+          {
+            "url": "https://www.youtube-nocookie.com/api/stats/playback",
+            "error": "net::ERR_ABORTED"
+          }
+        ]
+      }
+    }
+  }
+}
