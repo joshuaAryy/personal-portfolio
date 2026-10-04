@@ -260,11 +260,19 @@ export default function FoodTrackerCaseStudy() {
         const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
         const activationLine = rootTop + 78;
         let nextChapter: FoodChapterId = "overview";
+        const atStoryEnd = mainIsScroller
+          ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
+          : window.scrollY + window.innerHeight >=
+            document.documentElement.scrollHeight - 2;
 
-        for (const chapter of foodChapters) {
-          const section = document.getElementById(`food-${chapter.id}`);
-          if (section && section.getBoundingClientRect().top <= activationLine + 1) {
-            nextChapter = chapter.id;
+        if (atStoryEnd) {
+          nextChapter = foodChapters[foodChapters.length - 1].id;
+        } else {
+          for (const chapter of foodChapters) {
+            const section = document.getElementById(`food-${chapter.id}`);
+            if (section && section.getBoundingClientRect().top <= activationLine + 1) {
+              nextChapter = chapter.id;
+            }
           }
         }
         setActiveChapter(nextChapter);
