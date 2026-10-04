@@ -71,4 +71,26 @@ describe("Crest technical case study", () => {
     expect(markup).toContain("anomaly heuristics surfaced review cues");
     expect(markup).not.toContain("ML fraud classifier");
   });
+
+  it("keeps the split cue, Finance Q&A boundary, and close lesson within their scopes", () => {
+    const markup = renderCrest();
+    const financeStart = markup.indexOf('<figure class="crest-finance-workflow"');
+    const financeEnd = markup.indexOf("</figure>", financeStart);
+    const financeWorkflow = markup.slice(financeStart, financeEnd);
+    const policyStart = markup.indexOf('<section class="crest-section crest-policy"');
+    const policyEnd = markup.indexOf("</section>", policyStart);
+    const policySection = markup.slice(policyStart, policyEnd);
+    const ruleCardStart = policySection.indexOf('class="crest-policy-evidence__card crest-policy-evidence__card--rules"');
+    const ruleCardEnd = policySection.indexOf("</article>", ruleCardStart);
+    const ruleCard = policySection.slice(ruleCardStart, ruleCardEnd);
+    const takeawayStart = markup.indexOf('<section class="crest-section crest-takeaway"');
+    const takeawayEnd = markup.indexOf("</section>", takeawayStart);
+    const takeaway = markup.slice(takeawayStart, takeawayEnd);
+
+    expect(financeWorkflow).toContain("Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.");
+    expect(financeWorkflow).not.toContain("Joshua built");
+    expect(ruleCard).toContain("Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.");
+    expect(ruleCard).not.toContain("fraud detection");
+    expect(takeaway).toContain("The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review.");
+  });
 });

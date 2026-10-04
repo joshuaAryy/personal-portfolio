@@ -323,7 +323,7 @@ export default function CrestCaseStudy() {
               </div>
             </div>
             <p className="crest-finance-workflow__boundary">
-              Ask a finance question or open a reporting view.
+              Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.
             </p>
           </figure>
         </section>
@@ -365,7 +365,7 @@ export default function CrestCaseStudy() {
               <article className="crest-policy-evidence__card crest-policy-evidence__card--rules" role="listitem">
                 <span className="crest-policy-evidence__label">DETERMINISTIC RULES + SIGNALS</span>
                 <h3>Finance and policy rules remained authoritative.</h3>
-                <p>Heuristic flags: bursts, vendor patterns, duplicates, unusual merchants and threshold avoidance.</p>
+                <p>Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.</p>
               </article>
               <span className="crest-policy-evidence__connector crest-policy-evidence__connector--decision" aria-hidden="true">→</span>
               <article className="crest-policy-evidence__card" role="listitem">
@@ -424,9 +424,7 @@ export default function CrestCaseStudy() {
           <p className="food-section-label">ENGINEERING PRINCIPLE</p>
           <h2>Signals organize review. People own the decision.</h2>
           <p>
-            Building this workflow sharpened my approach to human-in-the-loop
-            systems: make supporting evidence visible and keep approval
-            authority explicit.
+            The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review.
           </p>
           <small>CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</small>
         </section>
