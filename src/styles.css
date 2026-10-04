@@ -5377,6 +5377,7 @@ a:focus-visible {
   .brand strong { min-width: 0; padding: 14px 15px; font-size: 13px; }
   .top-nav { margin-left: 16px; gap: 2px; }
   .top-nav a { min-width: 84px; padding-right: 8px; padding-left: 8px; font-size: 11px; }
+  .client--home-shell .top-nav .header-help:focus-visible { outline-offset: -3px; }
   .header-name { display: none; }
 }
 

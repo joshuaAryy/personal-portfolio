@@ -1,5 +1,6 @@
 // @vitest-environment happy-dom
 
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
@@ -103,6 +104,17 @@ describe("League client shell", () => {
 });
 
 describe("Client route focus", () => {
+  it("keeps the Home Help focus ring inside the tablet header", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const tabletRules = css.slice(
+      css.lastIndexOf("@media (min-width: 651px) and (max-width: 900px)"),
+    );
+
+    expect(tabletRules).toMatch(
+      /\.client--home-shell \.top-nav \.header-help:focus-visible\s*\{[^}]*outline-offset:\s*-3px/s,
+    );
+  });
+
   it("focuses the narrow Home main without scrolling the header out of view", () => {
     Object.defineProperty(window, "innerWidth", { configurable: true, value: 390 });
     const focus = vi.spyOn(HTMLElement.prototype, "focus").mockImplementation(() => {});
@@ -122,5 +134,53 @@ describe("Client route focus", () => {
     expect.soft(scrollTo).toHaveBeenCalledWith(0, 0);
     expect.soft(focus).toHaveBeenCalledWith({ preventScroll: true });
     expect(focus.mock.instances[0]).toBe(host.querySelector("main"));
+  });
+
+  it("keeps the Home header visible when focusing main at tablet widths", () => {
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 900 });
+    const focus = vi.spyOn(HTMLElement.prototype, "focus").mockImplementation(() => {});
+    const scrollTo = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    host = document.createElement("div");
+    document.body.append(host);
+    root = createRoot(host);
+
+    act(() => {
+      root.render(
+        <MemoryRouter initialEntries={["/home"]}>
+          <Client pageClass="main--home-explore">Home content</Client>
+        </MemoryRouter>,
+      );
+    });
+
+    expect(scrollTo).toHaveBeenCalledWith(0, 0);
+    expect(focus).toHaveBeenCalledWith({ preventScroll: true });
+    expect(focus.mock.instances[0]).toBe(host.querySelector("main"));
+  });
+
+  it("reveals the full Home Help control when it receives focus on mobile", () => {
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 390 });
+    vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    host = document.createElement("div");
+    document.body.append(host);
+    root = createRoot(host);
+
+    act(() => {
+      root.render(
+        <MemoryRouter initialEntries={["/home"]}>
+          <Client pageClass="main--home-explore">Home content</Client>
+        </MemoryRouter>,
+      );
+    });
+
+    const nav = host.querySelector<HTMLElement>(".top-nav")!;
+    const help = host.querySelector<HTMLElement>(".header-help")!;
+    vi.spyOn(nav, "getBoundingClientRect").mockReturnValue(new DOMRect(73, 0, 263, 68));
+    vi.spyOn(help, "getBoundingClientRect").mockReturnValue(new DOMRect(302, 6, 84, 56));
+    Object.defineProperty(nav, "scrollWidth", { configurable: true, value: 321 });
+    Object.defineProperty(nav, "clientWidth", { configurable: true, value: 263 });
+
+    act(() => help.focus());
+
+    expect(nav.scrollLeft).toBe(58);
   });
 });

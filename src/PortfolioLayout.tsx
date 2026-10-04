@@ -91,6 +91,26 @@ function Header() {
     return () => window.removeEventListener("resize", revealEducationAndHelp);
   }, [isEducationProjectsPage]);
 
+  const revealMobileHomeHelp = (help: HTMLElement) => {
+    if (!isHome || window.innerWidth > 760 || !help.matches(":focus-visible")) return;
+
+    const topNav = topNavRef.current;
+    if (!topNav) return;
+
+    const navBounds = topNav.getBoundingClientRect();
+    const helpBounds = help.getBoundingClientRect();
+    const focusRingInset = 8;
+    const visibleStart = navBounds.left + focusRingInset;
+    const visibleEnd = navBounds.right - focusRingInset;
+    const maxScroll = Math.max(0, topNav.scrollWidth - topNav.clientWidth);
+
+    if (helpBounds.left < visibleStart) {
+      topNav.scrollLeft = Math.max(0, topNav.scrollLeft - (visibleStart - helpBounds.left));
+    } else if (helpBounds.right > visibleEnd) {
+      topNav.scrollLeft = Math.min(maxScroll, topNav.scrollLeft + (helpBounds.right - visibleEnd));
+    }
+  };
+
   return (
     <header className={`header${isProjectShell ? " header--project-shell" : ""}${isResumeShell ? " header--resume-shell" : ""}`}>
       <Link
@@ -152,11 +172,21 @@ function Header() {
           </NavLink>
         )}
         {helpOverlay ? (
-          <button className="header-help" type="button" onClick={helpOverlay.openHelp}>
+          <button
+            className="header-help"
+            type="button"
+            onClick={helpOverlay.openHelp}
+            onFocus={(event) => revealMobileHomeHelp(event.currentTarget)}
+          >
             Help
           </button>
         ) : (
-          <Link className="header-help" to="/help" state={{ returnTo: pathname }}>
+          <Link
+            className="header-help"
+            to="/help"
+            state={{ returnTo: pathname }}
+            onFocus={(event) => revealMobileHomeHelp(event.currentTarget)}
+          >
             Help
           </Link>
         )}
@@ -481,7 +511,7 @@ export function Client({
     const main = mainRef.current;
     if (!main) return;
 
-    if (homeShell && window.innerWidth <= 650) {
+    if (homeShell && window.innerWidth <= 900) {
       window.scrollTo(0, 0);
       main.focus({ preventScroll: true });
       return;
