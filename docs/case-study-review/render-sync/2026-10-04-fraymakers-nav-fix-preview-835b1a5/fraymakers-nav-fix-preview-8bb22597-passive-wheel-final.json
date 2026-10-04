@@ -1,0 +1,109 @@
+{
+  "url": "https://8bb22597.joshuaik2.pages.dev/projects/fraymakers",
+  "viewport": "390x844",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "method": "click COMPOSITION then real mouse wheel forward/back",
+  "capturedAt": "2026-10-04T15:14:35.319Z",
+  "states": [
+    {
+      "step": "click composition",
+      "hash": "#fraymakers-composition",
+      "scrollY": 1345,
+      "active": [
+        {
+          "text": "COMPOSITION",
+          "ariaCurrent": "location",
+          "color": "rgb(227, 197, 126)",
+          "pseudoColor": "rgb(214, 183, 107)",
+          "pseudoHeight": "2px"
+        }
+      ],
+      "headingTops": [
+        {
+          "id": "fraymakers-pipeline",
+          "top": -551.515625
+        },
+        {
+          "id": "fraymakers-composition",
+          "top": 92.359375
+        },
+        {
+          "id": "fraymakers-configuration",
+          "top": 702.953125
+        },
+        {
+          "id": "fraymakers-ownership",
+          "top": 1400.671875
+        }
+      ]
+    },
+    {
+      "step": "wheel forward 700",
+      "hash": "#fraymakers-composition",
+      "scrollY": 2045,
+      "active": [
+        {
+          "text": "YAML CONFIG",
+          "ariaCurrent": "location",
+          "color": "rgb(227, 197, 126)",
+          "pseudoColor": "rgb(214, 183, 107)",
+          "pseudoHeight": "2px"
+        }
+      ],
+      "headingTops": [
+        {
+          "id": "fraymakers-pipeline",
+          "top": -1251.515625
+        },
+        {
+          "id": "fraymakers-composition",
+          "top": -607.640625
+        },
+        {
+          "id": "fraymakers-configuration",
+          "top": 2.953125
+        },
+        {
+          "id": "fraymakers-ownership",
+          "top": 700.671875
+        }
+      ]
+    },
+    {
+      "step": "wheel back 700",
+      "hash": "#fraymakers-composition",
+      "scrollY": 1345,
+      "active": [
+        {
+          "text": "COMPOSITION",
+          "ariaCurrent": "location",
+          "color": "rgb(227, 197, 126)",
+          "pseudoColor": "rgb(214, 183, 107)",
+          "pseudoHeight": "2px"
+        }
+      ],
+      "headingTops": [
+        {
+          "id": "fraymakers-pipeline",
+          "top": -551.515625
+        },
+        {
+          "id": "fraymakers-composition",
+          "top": 92.359375
+        },
+        {
+          "id": "fraymakers-configuration",
+          "top": 702.953125
+        },
+        {
+          "id": "fraymakers-ownership",
+          "top": 1400.671875
+        }
+      ]
+    }
+  ]
+}
