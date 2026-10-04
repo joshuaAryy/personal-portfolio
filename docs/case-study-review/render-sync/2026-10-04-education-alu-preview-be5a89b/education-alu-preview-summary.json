@@ -1,0 +1,103 @@
+{
+  "target": "https://b2e00552.joshuaik2.pages.dev/education/projects",
+  "expectedSource": "be5a89b",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T12:04:55.729Z",
+  "checks": {
+    "routeStatusAll200": true,
+    "allImagesLoaded": true,
+    "browserAndNetworkErrors": {
+      "1920x1080": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "390x844": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    "noHorizontalOverflow": {
+      "1920x1080": {
+        "documentWidth": 1920,
+        "documentClientWidth": 1920,
+        "mainWidth": 1600,
+        "mainClientWidth": 1600
+      },
+      "390x844": {
+        "documentWidth": 390,
+        "documentClientWidth": 390,
+        "mainWidth": 390,
+        "mainClientWidth": 390
+      }
+    },
+    "cards": {
+      "1920x1080": [
+        "Dental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING",
+        "Bookstore Management System\n\nEVIDENCE PENDING",
+        "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+        "Four-stage CMOS amplifier\n\nEVIDENCE PENDING"
+      ],
+      "390x844": [
+        "Dental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING",
+        "Bookstore Management System\n\nEVIDENCE PENDING",
+        "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+        "Four-stage CMOS amplifier\n\nEVIDENCE PENDING"
+      ]
+    },
+    "figure": {
+      "name": "Lab 6 part 2 system map",
+      "readingOrder": [
+        "DATA PATH",
+        "CONTROL PATH",
+        "PROCESS",
+        "DISPLAY PATH",
+        "source-derived caption"
+      ],
+      "content": "DATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted."
+    },
+    "desktopArrows": "horizontal, pointing right between stages",
+    "narrowArrows": "vertical, pointing down between stages",
+    "identifierValuesFound": {
+      "1920x1080": 0,
+      "390x844": 0
+    },
+    "desktopInnerScrollBottom": {
+      "scrollTop": 294,
+      "scrollHeight": 1264,
+      "clientHeight": 970,
+      "screenshot": "education-alu-preview-1920x1080-main-bottom.png",
+      "visibleHeadings": [
+        "Computer Engineering",
+        "Dental Clinic DBMS",
+        "Bookstore Management System",
+        "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+        "Four-stage CMOS amplifier",
+        "An opcode-driven ALU and controller",
+        "NINE OPCODE BRANCHES",
+        "STATE PROGRESSION"
+      ]
+    },
+    "visualInspection": "No visible text clipping or card/diagram overlap in inspected captures; runtime/layout only, no detailed Figma body reference."
+  },
+  "screenshots": {
+    "1920x1080": {
+      "viewport": "education-alu-preview-1920x1080-viewport.png",
+      "fullPage": "education-alu-preview-1920x1080-fullpage.png"
+    },
+    "390x844": {
+      "viewport": "education-alu-preview-390x844-viewport.png",
+      "fullPage": "education-alu-preview-390x844-fullpage.png"
+    },
+    "desktopMainBottom": {
+      "mainBottom": "education-alu-preview-1920x1080-main-bottom.png"
+    }
+  }
+}

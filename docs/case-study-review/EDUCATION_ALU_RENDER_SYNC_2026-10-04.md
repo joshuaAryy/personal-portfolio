@@ -13,6 +13,16 @@ Read-only local browser QA for `/education/projects` at `http://127.0.0.1:5173/e
 - Desktop diagram arrows point horizontally from the input/control cards to the process card and onward to display. At 390px, those connections stack vertically and both arrows point down between the cards.
 - On desktop, content scrolls inside `main` (`scrollHeight 1264`, `clientHeight 970`), so the browser’s `fullPage` screenshot covers the outer viewport rather than expanding the internal scroller. A separate bottom-scroll screenshot records the rest of the page, including all nine opcode branches, state progression, and source caveat. On narrow, the document naturally expands to show the full story.
 
+## Feature Preview follow-up — commit `be5a89b`
+
+After the Education source was committed and deployed to the `feat/portfolio-integration` Pages branch, the immutable Preview at `https://b2e00552.joshuaik2.pages.dev/education/projects` was checked with Playwright 1.63.0 and Chrome 153.0.8010.53 at the same desktop and narrow sizes. Both returned HTTP 200; all 19 images loaded; there were no browser, request, or response errors and no horizontal overflow. The four cards and accessible system-map reading order were present, arrows ran rightward on desktop and downward on narrow, and the desktop bottom-scroll capture showed the opcode/state content. Visual inspection found no visible clipping or overlap. This is runtime/layout evidence only; the route has no detailed Figma body reference, so no Figma parity claim is made.
+
+Preview folder: `docs/case-study-review/render-sync/2026-10-04-education-alu-preview-be5a89b/`
+
+- `education-alu-preview-summary.json` — target, source, browser, viewport and validation summary.
+- `education-alu-preview-evidence.json` — detailed route, image, error, width, card, and figure evidence.
+- Viewport and full-page screenshots at 1920×1080 and 390×844, plus the desktop main-bottom screenshot.
+
 ## Evidence
 
 Folder: `docs/case-study-review/render-sync/2026-10-04-education-alu-local/`
