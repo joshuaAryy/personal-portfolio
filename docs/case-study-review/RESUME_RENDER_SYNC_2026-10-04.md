@@ -10,6 +10,16 @@ The earlier 8680eeb clipped outline at 390px and a474032 top/edge clipping at 65
 
 Evidence: [current Figma review export](render-sync/2026-10-04-resume-preview-f8762c0/figma-resume-found-2407-176.png), [machine-readable results](render-sync/2026-10-04-resume-preview-f8762c0/resume-preview-f8762c0-evidence.json), and [rendered screenshots](render-sync/2026-10-04-resume-preview-f8762c0/).
 
+## Resume PDF Viewer rerender — Preview `f8762c0`
+
+The immutable Preview [source `f8762c0`](https://bb5ce74d.joshuaik2.pages.dev/) was checked at `/resume` and `/resume/viewer` in Chrome `153.0.8010.53` with Playwright `1.63.0`, at 1920×1080 and 390×844. Both routes returned HTTP 200; document width matched the viewport, all images loaded (21/21 on `/resume`, 17/17 on `/resume/viewer`), and no console, page, request, or HTTP response errors occurred.
+
+The approved v13 PDF returns `200 application/pdf`, 164,726 bytes, with a `%PDF-` signature. Keyboard Tab reaches Download and Enter saves the matching PDF at both sizes. Tab then reaches Open Fullscreen; Enter opens the same PDF in a new tab. Focus is visible on both action links. At desktop, real mouse wheel input over the PDF moves from its top content to its lower Projects content while the outer page and main scroll positions stay at zero, confirming scrolling inside Chrome's PDF viewer. At 390px the one-page PDF fits the viewer; wheel input scrolls the outer document instead. The page remains free of horizontal overflow.
+
+The rendered app shell and action geometry remain intact. The desktop footer measures x=1601, y=1018, 319×62; at 390px it is hidden and follows the responsive shell behavior. Figma viewer references `3419:484/485/656/660/663/664` show the intended viewer/page and app actions; Chrome's native PDF toolbar and thumbnail rail appear in the real browser capture and are browser UI, not an app mismatch. No concrete app defect was found. Owner review remains open.
+
+Evidence: [machine-readable results and screenshots](render-sync/2026-10-04-resume-viewer-preview-f8762c0/). The evidence folder contains the two downloaded v13 PDFs for byte/signature verification.
+
 **Preview:** [source `92d3c26`](https://965f0e82.joshuaik2.pages.dev/), feature branch `feat/portfolio-integration`. Production was not targeted.
 
 **Browser:** Chrome `153.0.8010.53`, at `1920×1080` and `390×844`. The deployed `/resume` shell, dimming, authentic Ready Check chassis, View Resume action, and close label align with the existing Figma/local captures. Both routes returned 200, all 21 images loaded at both sizes, document width matched the viewport, and there were no browser/request errors.

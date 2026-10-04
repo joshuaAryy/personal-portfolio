@@ -1,0 +1,448 @@
+{
+  "source": "f8762c0",
+  "preview": "https://bb5ce74d.joshuaik2.pages.dev",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T17:38:57.160Z",
+  "pdf": {
+    "url": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+    "directFetch": {
+      "status": 200,
+      "contentType": "application/pdf",
+      "contentLength": 164726,
+      "downloadedBytes": 164726,
+      "signature": "%PDF-",
+      "valid": true
+    },
+    "notes": "The Chromium native PDF plugin load is not exposed as a normal parent-page response event in Playwright. The explicit Playwright APIRequestContext fetch confirmed the deployed PDF status/type/length/signature; keyboard Download independently saved matching bytes.",
+    "shellRouteImages": {
+      "total": 21,
+      "loaded": 21
+    },
+    "viewerRouteImages": {
+      "total": 17,
+      "loaded": 17
+    }
+  },
+  "viewports": {
+    "desktop": {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "route": {
+        "status": 200,
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 110,
+          "width": 1600,
+          "height": 970,
+          "scrollTop": 0,
+          "scrollHeight": 970,
+          "clientHeight": 970
+        },
+        "footer": {
+          "x": 1601,
+          "y": 1018,
+          "width": 319,
+          "height": 62
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21
+        }
+      },
+      "viewer": {
+        "status": 200,
+        "initial": {
+          "url": "https://bb5ce74d.joshuaik2.pages.dev/resume/viewer",
+          "title": "Joshua Aryeetey · Portfolio",
+          "document": {
+            "width": 1920,
+            "clientWidth": 1920,
+            "height": 1080,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "main": {
+            "x": 0,
+            "y": 110,
+            "width": 1600,
+            "height": 970,
+            "scrollTop": 0,
+            "scrollHeight": 970,
+            "clientHeight": 970,
+            "overflowY": "auto"
+          },
+          "iframe": {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "title": "Joshua Aryeetey’s approved general resume, version 13",
+            "x": 141,
+            "y": 246,
+            "width": 1318,
+            "height": 734.390625
+          },
+          "actions": [
+            {
+              "text": "DOWNLOAD PDF",
+              "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "target": "",
+              "download": "Joshua_Aryeetey_General_Resume_v13.pdf"
+            },
+            {
+              "text": "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)",
+              "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "target": "_blank",
+              "download": ""
+            }
+          ],
+          "images": {
+            "total": 17,
+            "loaded": 17
+          },
+          "footer": {
+            "x": 1601,
+            "y": 1018,
+            "width": 319,
+            "height": 62
+          }
+        },
+        "download": {
+          "focus": {
+            "tabPresses": 2,
+            "tag": "A",
+            "text": "DOWNLOAD PDF",
+            "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": null,
+            "download": "Joshua_Aryeetey_General_Resume_v13.pdf",
+            "cls": "resume-action resume-action--primary",
+            "focusVisible": true,
+            "outline": "rgb(244, 203, 105) solid 2px",
+            "rect": {
+              "x": 1100.53125,
+              "y": 180,
+              "width": 163.734375,
+              "height": 48
+            }
+          },
+          "filename": "Joshua_Aryeetey_General_Resume_v13.pdf",
+          "saved": "desktop-downloaded-v13.pdf",
+          "size": 164726,
+          "pdfSignature": "%PDF-",
+          "isPdf": true
+        },
+        "fullscreen": {
+          "focus": {
+            "tag": "A",
+            "text": "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)",
+            "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": "_blank",
+            "download": null,
+            "cls": "resume-action resume-action--secondary",
+            "focusVisible": true,
+            "outline": "rgb(244, 203, 105) solid 2px",
+            "rect": {
+              "x": 1274.265625,
+              "y": 180,
+              "width": 185.734375,
+              "height": 48
+            }
+          },
+          "newTab": {
+            "url": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "title": "",
+            "isPdf": true,
+            "response": null
+          }
+        },
+        "scroll": {
+          "before": {
+            "windowY": 0,
+            "mainTop": 0,
+            "iframe": {
+              "x": 141,
+              "y": 246,
+              "width": 1318,
+              "height": 734.390625,
+              "top": 246,
+              "right": 1459,
+              "bottom": 980.390625,
+              "left": 141
+            }
+          },
+          "after": {
+            "windowY": 0,
+            "mainTop": 0,
+            "iframe": {
+              "x": 141,
+              "y": 246,
+              "width": 1318,
+              "height": 734.390625,
+              "top": 246,
+              "right": 1459,
+              "bottom": 980.390625,
+              "left": 141
+            }
+          },
+          "mouseWheel": {
+            "deltaY": 690,
+            "x": 800,
+            "y": 613
+          }
+        }
+      },
+      "pdf": {
+        "responses": [],
+        "loadedImages": {
+          "total": 17,
+          "loaded": 17
+        },
+        "errors": {
+          "console": [],
+          "page": [],
+          "request": [],
+          "response": []
+        }
+      },
+      "checks": {
+        "http200": true,
+        "noHorizontalOverflow": true,
+        "pdfDirectFetch200": true,
+        "pdfIframePresent": true,
+        "downloadKeyboardFocus": true,
+        "downloadValidPdf": true,
+        "fullscreenKeyboardFocus": true,
+        "fullscreenOpensSamePdf": true,
+        "desktopPdfInternalScrollObserved": true,
+        "narrowPageScrollObserved": null,
+        "noBrowserErrors": true
+      }
+    },
+    "narrow": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "route": {
+        "status": 200,
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 905,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 70,
+          "width": 390,
+          "height": 774,
+          "scrollTop": 0,
+          "scrollHeight": 774,
+          "clientHeight": 774
+        },
+        "footer": {
+          "display": "not visible at narrow breakpoint"
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21
+        }
+      },
+      "viewer": {
+        "status": 200,
+        "initial": {
+          "url": "https://bb5ce74d.joshuaik2.pages.dev/resume/viewer",
+          "title": "Joshua Aryeetey · Portfolio",
+          "document": {
+            "width": 390,
+            "clientWidth": 390,
+            "height": 1008,
+            "scrollX": 0,
+            "scrollY": 0
+          },
+          "main": {
+            "x": 0,
+            "y": 70,
+            "width": 390,
+            "height": 877,
+            "scrollTop": 0,
+            "scrollHeight": 877,
+            "clientHeight": 877,
+            "overflowY": "visible"
+          },
+          "iframe": {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "title": "Joshua Aryeetey’s approved general resume, version 13",
+            "x": 15,
+            "y": 243,
+            "width": 360,
+            "height": 640
+          },
+          "actions": [
+            {
+              "text": "DOWNLOAD PDF",
+              "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "target": "",
+              "download": "Joshua_Aryeetey_General_Resume_v13.pdf"
+            },
+            {
+              "text": "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)",
+              "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "target": "_blank",
+              "download": ""
+            }
+          ],
+          "images": {
+            "total": 17,
+            "loaded": 17
+          },
+          "footer": {
+            "display": "not visible at narrow breakpoint"
+          }
+        },
+        "download": {
+          "focus": {
+            "tabPresses": 2,
+            "tag": "A",
+            "text": "DOWNLOAD PDF",
+            "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": null,
+            "download": "Joshua_Aryeetey_General_Resume_v13.pdf",
+            "cls": "resume-action resume-action--primary",
+            "focusVisible": true,
+            "outline": "rgb(244, 203, 105) solid 2px",
+            "rect": {
+              "x": 14,
+              "y": 177,
+              "width": 176,
+              "height": 48
+            }
+          },
+          "filename": "Joshua_Aryeetey_General_Resume_v13.pdf",
+          "saved": "narrow-downloaded-v13.pdf",
+          "size": 164726,
+          "pdfSignature": "%PDF-",
+          "isPdf": true
+        },
+        "fullscreen": {
+          "focus": {
+            "tag": "A",
+            "text": "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)",
+            "href": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": "_blank",
+            "download": null,
+            "cls": "resume-action resume-action--secondary",
+            "focusVisible": true,
+            "outline": "rgb(244, 203, 105) solid 2px",
+            "rect": {
+              "x": 200,
+              "y": 177,
+              "width": 176,
+              "height": 48
+            }
+          },
+          "newTab": {
+            "url": "https://bb5ce74d.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "title": "",
+            "isPdf": true,
+            "response": null
+          }
+        },
+        "scroll": {
+          "before": {
+            "windowY": 0,
+            "mainTop": 0,
+            "iframe": {
+              "x": 15,
+              "y": 243,
+              "width": 360,
+              "height": 640,
+              "top": 243,
+              "right": 375,
+              "bottom": 883,
+              "left": 15
+            }
+          },
+          "after": {
+            "windowY": 164,
+            "mainTop": 0,
+            "iframe": {
+              "x": 15,
+              "y": 79,
+              "width": 360,
+              "height": 640,
+              "top": 79,
+              "right": 375,
+              "bottom": 719,
+              "left": 15
+            }
+          },
+          "mouseWheel": {
+            "deltaY": 690,
+            "x": 195,
+            "y": 563
+          }
+        }
+      },
+      "pdf": {
+        "responses": [],
+        "loadedImages": {
+          "total": 17,
+          "loaded": 17
+        },
+        "errors": {
+          "console": [],
+          "page": [],
+          "request": [],
+          "response": []
+        }
+      },
+      "checks": {
+        "http200": true,
+        "noHorizontalOverflow": true,
+        "pdfDirectFetch200": true,
+        "pdfIframePresent": true,
+        "downloadKeyboardFocus": true,
+        "downloadValidPdf": true,
+        "fullscreenKeyboardFocus": true,
+        "fullscreenOpensSamePdf": true,
+        "desktopPdfInternalScrollObserved": null,
+        "narrowPageScrollObserved": true,
+        "noBrowserErrors": true
+      }
+    }
+  },
+  "visualComparison": {
+    "desktopBefore": "desktop-viewer-initial-viewport.png",
+    "desktopAfter": "desktop-viewer-after-wheel-viewport.png",
+    "narrowBefore": "narrow-viewer-initial-viewport.png",
+    "narrowAfter": "narrow-viewer-after-wheel-viewport.png",
+    "observed": "Desktop wheel input moves the visible PDF from the upper resume content to lower Projects content while the parent page/main scroll positions remain 0. Narrow wheel input moves the outer document; the one-page PDF fits the narrow viewer.",
+    "nativeBrowserUi": "Chrome native PDF toolbar and thumbnail rail are rendered inside the embedded and fullscreen PDF surfaces; these are Chrome UI, distinct from the Figma app-viewer frame."
+  }
+}
