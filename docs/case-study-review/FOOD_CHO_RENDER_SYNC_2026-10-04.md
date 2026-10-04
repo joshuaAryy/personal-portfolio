@@ -31,3 +31,11 @@ The desktop viewport captures show the page in its normal shell. Desktop full-st
 ## Disposition
 
 The concrete Food logging/Insights copy and connector differences and the missing Cho’Veigo input row have been synced. These checks do not close owner review. Cho’Veigo’s separate Figma role-source wording follow-up remains open. Accessibility-tree/screen-reader review remains a separate check. No claim of owner approval or production deployment is made.
+
+## Current Preview follow-up — app source `be5a89b`
+
+After the Education update was deployed to the feature Pages Preview, `/projects/food-tracker` and `/projects/choveigo` were rechecked at 1920×1080 and 390×844 on immutable source `be5a89b`, using Playwright 1.63.0 and Chrome 153.0.8010. Both routes returned HTTP 200; Food loaded 18/18 images and Cho’Veigo 15/15 at each viewport. No browser/request errors, horizontal overflow, clipping, or overlap were observed. All Food hashes resolved; Cho’Veigo’s five anchors settled to their own active states. Figure accessibility snapshots exposed named diagrams and ordered content. No live screen-reader test was run, and this was not a new detailed Figma body comparison.
+
+At the Food story limit, `CLOSE` is the active chapter; `RESULTS` is active three pixels before the end threshold. Clicking `LEARNING` reaches its `#food-workflow` target, then `CLOSE` becomes active at the shared scroll limit. This matches the previously recorded end behavior. Cho’Veigo selects `WHAT CHANGED` at the end with ordinary 500px wheel steps or a single 800px/1200px wheel input. An artificial 20,000px wheel delta briefly retained the preceding `HUMAN REVIEW` marker; this did not persist with normal input and is recorded as a synthetic overshoot.
+
+Current Preview captures and machine-readable evidence: [be5a89b evidence folder](render-sync/2026-10-04-food-cho-preview-be5a89b/). The prior Figma/render set remains at source `8a82e9a` above.
