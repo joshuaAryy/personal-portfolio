@@ -1,0 +1,1194 @@
+{
+  "capturedAt": "2026-10-04T07:54:07.962Z",
+  "preview": "https://965f0e82.joshuaik2.pages.dev",
+  "source": "92d3c26",
+  "browser": "153.0.8010.53",
+  "runs": [
+    {
+      "name": "food",
+      "route": "/projects/food-tracker",
+      "viewport": "desktop",
+      "status": 200,
+      "url": "https://965f0e82.joshuaik2.pages.dev/projects/food-tracker",
+      "axFigureLines": [
+        "    - figure \"Food Tracker product path schematic\":",
+        "    - figure \"RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.\":",
+        "      - figure \"EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH\":",
+        "    - figure \"Food Tracker system map.\": \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\"",
+        "    - figure \"OFFLINE SEARCH EVALUATION · FIRST RESULT\":"
+      ],
+      "foodMapAx": "    - figure \"Food Tracker system map.\": \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\"",
+      "descriptionCount": 1,
+      "dom": {
+        "width": {
+          "document": 1920,
+          "client": 1920
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "figures": [
+          {
+            "class": "food-product-flow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": "Food Tracker product path schematic",
+            "ariaLabelledby": null,
+            "caption": null,
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-retrieval-flow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "food-retrieval-flow-title",
+            "caption": "RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.",
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-interface__capture",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": null,
+            "caption": "EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH",
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-system-map food-system-map--flagship",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "food-system-map-title",
+            "caption": "Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.",
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-benchmark food-benchmark--flagship",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "food-benchmark-title",
+            "caption": "OFFLINE SEARCH EVALUATION · FIRST RESULT",
+            "focusableDescendants": []
+          }
+        ],
+        "foodMapImage": {
+          "alt": "",
+          "ariaHidden": null,
+          "role": null,
+          "tabIndex": -1
+        },
+        "dimension": null,
+        "watch": null
+      },
+      "focusableFigureContainers": [],
+      "tabSequenceInsideFigures": [],
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true,
+        "foodNameExact": true,
+        "foodFullDescriptionOnce": true,
+        "foodImageDecorative": true,
+        "figureContainersNotFocusable": true
+      }
+    },
+    {
+      "name": "food",
+      "route": "/projects/food-tracker",
+      "viewport": "narrow",
+      "status": 200,
+      "url": "https://965f0e82.joshuaik2.pages.dev/projects/food-tracker",
+      "axFigureLines": [
+        "    - figure \"Food Tracker product path schematic\":",
+        "    - figure \"RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.\":",
+        "      - figure \"EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH\":",
+        "    - figure \"Food Tracker system map.\":",
+        "    - figure \"OFFLINE SEARCH EVALUATION · FIRST RESULT\":"
+      ],
+      "foodMapAx": "    - figure \"Food Tracker system map.\":",
+      "descriptionCount": 1,
+      "dom": {
+        "width": {
+          "document": 390,
+          "client": 390
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "figures": [
+          {
+            "class": "food-product-flow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": "Food Tracker product path schematic",
+            "ariaLabelledby": null,
+            "caption": null,
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-retrieval-flow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "food-retrieval-flow-title",
+            "caption": "RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.",
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-interface__capture",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": null,
+            "caption": "EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH",
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-system-map food-system-map--flagship",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "food-system-map-title",
+            "caption": "Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.",
+            "focusableDescendants": []
+          },
+          {
+            "class": "food-benchmark food-benchmark--flagship",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "food-benchmark-title",
+            "caption": "OFFLINE SEARCH EVALUATION · FIRST RESULT",
+            "focusableDescendants": []
+          }
+        ],
+        "foodMapImage": {
+          "alt": "",
+          "ariaHidden": null,
+          "role": null,
+          "tabIndex": -1
+        },
+        "dimension": null,
+        "watch": null
+      },
+      "focusableFigureContainers": [],
+      "tabSequenceInsideFigures": [],
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true,
+        "foodNameExact": true,
+        "foodFullDescriptionOnce": true,
+        "foodImageDecorative": true,
+        "figureContainersNotFocusable": true
+      }
+    },
+    {
+      "name": "crest",
+      "route": "/projects/crest",
+      "viewport": "desktop",
+      "status": 200,
+      "url": "https://965f0e82.joshuaik2.pages.dev/projects/crest",
+      "axFigureLines": [
+        "    - figure \"Expense review / policy context / preapproval\":",
+        "    - figure \"A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\":",
+        "    - figure \"FINANCE Q&A + REPORTING\":",
+        "    - figure \"Policy context. Deterministic decisions.\":"
+      ],
+      "descriptionCount": 0,
+      "dom": {
+        "width": {
+          "document": 1920,
+          "client": 1920
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/crest-sample.png",
+            "loaded": true,
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "figures": [
+          {
+            "class": "crest-demo-figure",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-demo-caption",
+            "caption": "SAMPLE DATA Expense review / policy context / preapproval WATCH DEMO ↗",
+            "focusableDescendants": [
+              {
+                "tag": "A",
+                "text": "WATCH DEMO ↗",
+                "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8"
+              }
+            ]
+          },
+          {
+            "class": "crest-evidence-map",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-evidence-map-caption",
+            "caption": "A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.",
+            "focusableDescendants": []
+          },
+          {
+            "class": "crest-finance-workflow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-finance-workflow-title",
+            "caption": "FINANCE Q&A + REPORTING",
+            "focusableDescendants": []
+          },
+          {
+            "class": "crest-policy-figure",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-policy-title",
+            "caption": "DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY",
+            "focusableDescendants": []
+          }
+        ],
+        "foodMapImage": null,
+        "dimension": null,
+        "watch": {
+          "text": "WATCH DEMO ↗",
+          "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+          "insideFigure": true,
+          "tabIndex": 0
+        }
+      },
+      "focusableFigureContainers": [],
+      "tabSequenceInsideFigures": [
+        {
+          "tag": "A",
+          "text": "WATCH DEMO ↗",
+          "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+          "insideFigure": true,
+          "figureClass": "crest-demo-figure"
+        }
+      ],
+      "watchFocused": {
+        "tag": "A",
+        "text": "WATCH DEMO ↗",
+        "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+        "insideFigure": true,
+        "figureClass": "crest-demo-figure"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true,
+        "crestNameExcludesWatch": true,
+        "crestWatchSeparateAndReachable": true,
+        "figureContainersNotFocusable": true
+      }
+    },
+    {
+      "name": "crest",
+      "route": "/projects/crest",
+      "viewport": "narrow",
+      "status": 200,
+      "url": "https://965f0e82.joshuaik2.pages.dev/projects/crest",
+      "axFigureLines": [
+        "    - figure \"Expense review / policy context / preapproval\":",
+        "    - figure \"A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\":",
+        "    - figure \"FINANCE Q&A + REPORTING\":",
+        "    - figure \"Policy context. Deterministic decisions.\":"
+      ],
+      "descriptionCount": 0,
+      "dom": {
+        "width": {
+          "document": 390,
+          "client": 390
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/crest-sample.png",
+            "loaded": true,
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "figures": [
+          {
+            "class": "crest-demo-figure",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-demo-caption",
+            "caption": "SAMPLE DATA Expense review / policy context / preapproval WATCH DEMO ↗",
+            "focusableDescendants": [
+              {
+                "tag": "A",
+                "text": "WATCH DEMO ↗",
+                "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8"
+              }
+            ]
+          },
+          {
+            "class": "crest-evidence-map",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-evidence-map-caption",
+            "caption": "A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.",
+            "focusableDescendants": []
+          },
+          {
+            "class": "crest-finance-workflow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-finance-workflow-title",
+            "caption": "FINANCE Q&A + REPORTING",
+            "focusableDescendants": []
+          },
+          {
+            "class": "crest-policy-figure",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "crest-policy-title",
+            "caption": "DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY",
+            "focusableDescendants": []
+          }
+        ],
+        "foodMapImage": null,
+        "dimension": null,
+        "watch": {
+          "text": "WATCH DEMO ↗",
+          "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+          "insideFigure": true,
+          "tabIndex": 0
+        }
+      },
+      "focusableFigureContainers": [],
+      "tabSequenceInsideFigures": [
+        {
+          "tag": "A",
+          "text": "WATCH DEMO ↗",
+          "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+          "insideFigure": true,
+          "figureClass": "crest-demo-figure"
+        }
+      ],
+      "watchFocused": {
+        "tag": "A",
+        "text": "WATCH DEMO ↗",
+        "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+        "insideFigure": true,
+        "figureClass": "crest-demo-figure"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true,
+        "crestNameExcludesWatch": true,
+        "crestWatchSeparateAndReachable": true,
+        "figureContainersNotFocusable": true
+      }
+    },
+    {
+      "name": "stush",
+      "route": "/experience/stush-patties",
+      "viewport": "desktop",
+      "status": 200,
+      "url": "https://965f0e82.joshuaik2.pages.dev/experience/stush-patties",
+      "axFigureLines": [
+        "      - figure \"Different file shapes. One reporting path.\":"
+      ],
+      "descriptionCount": 0,
+      "dom": {
+        "width": {
+          "document": 1920,
+          "client": 1920
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "figures": [
+          {
+            "class": "stush-system-flow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "stush-flow-title",
+            "caption": "Conceptual pipeline · no source values shown.",
+            "focusableDescendants": []
+          }
+        ],
+        "foodMapImage": null,
+        "dimension": {
+          "text": "Four business dimensions needed the same meaning across file layouts.",
+          "visible": true,
+          "closestRegion": null
+        },
+        "watch": null
+      },
+      "focusableFigureContainers": [],
+      "tabSequenceInsideFigures": [],
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true,
+        "stushDimensionVisible": true,
+        "stushDimensionRegionAbsent": true,
+        "figureContainersNotFocusable": true
+      }
+    },
+    {
+      "name": "stush",
+      "route": "/experience/stush-patties",
+      "viewport": "narrow",
+      "status": 200,
+      "url": "https://965f0e82.joshuaik2.pages.dev/experience/stush-patties",
+      "axFigureLines": [
+        "      - figure \"Different file shapes. One reporting path.\":"
+      ],
+      "descriptionCount": 0,
+      "dom": {
+        "width": {
+          "document": 390,
+          "client": 390
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": "true",
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "figures": [
+          {
+            "class": "stush-system-flow",
+            "tabIndex": -1,
+            "tabindexAttr": null,
+            "ariaLabel": null,
+            "ariaLabelledby": "stush-flow-title",
+            "caption": "Conceptual pipeline · no source values shown.",
+            "focusableDescendants": []
+          }
+        ],
+        "foodMapImage": null,
+        "dimension": {
+          "text": "Four business dimensions needed the same meaning across file layouts.",
+          "visible": true,
+          "closestRegion": null
+        },
+        "watch": null
+      },
+      "focusableFigureContainers": [],
+      "tabSequenceInsideFigures": [],
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "noHorizontalOverflow": true,
+        "noBrowserErrors": true,
+        "stushDimensionVisible": true,
+        "stushDimensionRegionAbsent": true,
+        "figureContainersNotFocusable": true
+      }
+    }
+  ]
+}

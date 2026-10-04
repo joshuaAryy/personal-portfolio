@@ -1,0 +1,5 @@
+- figure "Expense review / policy context / preapproval":
+  - img "Crest expense-review sample screen with policy context and preapproval controls"
+  - text: SAMPLE DATA Expense review / policy context / preapproval
+  - link "WATCH DEMO ↗":
+    - /url: https://www.youtube.com/watch?v=kiq6XjNi9J8
