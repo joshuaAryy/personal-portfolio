@@ -555,6 +555,11 @@
     gap: 18px;
   }
 
+  .league-lobby__banners:not(.league-lobby__banners--projects) {
+    left: 0;
+    right: 0;
+  }
+
   .league-banner {
     min-height: 400px;
   }
