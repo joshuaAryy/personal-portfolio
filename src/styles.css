@@ -6897,7 +6897,7 @@ a:focus-visible {
   .food-case-nav { grid-template-columns: minmax(0,643px) 124px minmax(0,1fr); }
   .crest-case-nav,
   .choveigo-case-nav { grid-template-columns: minmax(0,890px) 124px minmax(0,1fr); }
-  .fraymakers-nav { grid-template-columns: minmax(0,410px) 124px minmax(0,1fr); }
+  .fraymakers-nav { grid-template-columns: minmax(0,446px) 124px minmax(0,1fr); }
 }
 
 /* Resume Found shell, measured against Figma 2407:176 at 1920×1080. */

@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -28,6 +29,17 @@ describe("Fraymakers technical case study", () => {
     for (const [, targetId] of chapterLinks) {
       expect(ids.filter((id) => id === targetId)).toHaveLength(1);
     }
+  });
+
+  it("gives the desktop chapter rail enough width to show all five labels", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const activeDesktopRules = css.slice(
+      css.lastIndexOf("@media (min-width:1800px) and (min-height:1000px)"),
+    );
+
+    expect(activeDesktopRules).toMatch(
+      /\.fraymakers-nav\s*\{\s*grid-template-columns:\s*minmax\(0,\s*446px\)/,
+    );
   });
 
   it("leads with the system before ownership context", () => {
