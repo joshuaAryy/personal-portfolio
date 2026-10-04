@@ -802,6 +802,7 @@ a:focus-visible {
   color: #f1dc9f;
   border-color: #c79b45;
 }
+.mobile-contact-row { display: none; }
 
 @media (max-width: 1180px) {
   .header-client-tools,
@@ -3130,6 +3131,37 @@ a:focus-visible {
   }
   .rail {
     display: none;
+  }
+  .mobile-contact-row {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 8px 12px;
+    width: 100%;
+    max-width: 100%;
+    padding: 8px 20px calc(8px + env(safe-area-inset-bottom));
+    border-top: 1px solid #142126;
+    background: var(--rail);
+  }
+  .mobile-contact-row > a {
+    display: inline-flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 0 8px;
+    color: #a09b8c;
+    font-size: 11px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .mobile-contact-row > a:hover,
+  .mobile-contact-row > a:focus-visible {
+    color: #f1dc9f;
+  }
+  .mobile-contact-row > a:focus-visible {
+    outline: 1px solid #c79b45;
+    outline-offset: 2px;
   }
   .main {
     min-height: calc(100vh - var(--client-header-height));

@@ -18,6 +18,24 @@ const usesProjectDetailShell = (pathname: string) =>
 const isExperienceDetail = (pathname: string) => pathname.startsWith("/experience/");
 const isProjectDetail = (pathname: string) => pathname.startsWith("/projects/");
 
+function ContactLinks() {
+  return (
+    <>
+      <a href="https://github.com/joshuaAryy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a>
+      <a href="https://ca.linkedin.com/in/joshua-ary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a>
+      <a className="rail-social-footer__email" href="mailto:joshuaaryy@gmail.com" aria-label="Email Joshua">✉</a>
+    </>
+  );
+}
+
+function MobileContactRow() {
+  return (
+    <nav className="mobile-contact-row" aria-label="Contact links">
+      <ContactLinks />
+    </nav>
+  );
+}
+
 function Header() {
   const { pathname } = useLocation();
   const helpOverlay = useHelpOverlay();
@@ -430,10 +448,8 @@ function Rail() {
         )}
       </div>
       <footer className="rail-social-footer" aria-label="Social and support links">
-        <a href="https://github.com/joshuaAryy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a>
-        <a href="https://ca.linkedin.com/in/joshua-ary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a>
+        <ContactLinks />
         <span aria-hidden="true">X</span>
-        <a className="rail-social-footer__email" href="mailto:joshuaaryy@gmail.com" aria-label="Email Joshua">✉</a>
         {helpOverlay ? (
           <button className="rail-social-footer__help" type="button" onClick={helpOverlay.openHelp}>
             Help
@@ -489,6 +505,7 @@ export function Client({
         >
           {children}
         </main>
+        <MobileContactRow />
         <Rail />
       </div>
     </div>

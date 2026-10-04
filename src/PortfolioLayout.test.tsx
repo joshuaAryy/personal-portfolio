@@ -65,6 +65,26 @@ describe("League client shell", () => {
     expect(markup).not.toContain("VIEW SOURCE REPOSITORY");
   });
 
+  it("places the three contact destinations after page content for the narrow shell", () => {
+    const markup = renderClient("/projects");
+    const mainEnd = markup.indexOf("</main>");
+    const contactStart = markup.indexOf('<nav class="mobile-contact-row" aria-label="Contact links">');
+    const contactEnd = markup.indexOf("</nav>", contactStart);
+    const railFooterStart = markup.indexOf('<footer class="rail-social-footer"');
+    const contactMarkup = markup.slice(contactStart, contactEnd + "</nav>".length);
+
+    expect(contactStart).toBeGreaterThan(mainEnd);
+    expect(contactStart).toBeLessThan(railFooterStart);
+    expect(contactMarkup).toContain('href="https://github.com/joshuaAryy"');
+    expect(contactMarkup).toContain('aria-label="GitHub (opens in a new tab)"');
+    expect(contactMarkup).toContain('href="https://ca.linkedin.com/in/joshua-ary"');
+    expect(contactMarkup).toContain('aria-label="LinkedIn (opens in a new tab)"');
+    expect(contactMarkup).toContain('href="mailto:joshuaaryy@gmail.com"');
+    expect(contactMarkup).toContain('aria-label="Email Joshua"');
+    expect(contactMarkup).not.toContain("Help");
+    expect(contactMarkup).not.toContain(">X<");
+  });
+
   it("matches Home Figma by keeping Resume out of the main destination navigation", () => {
     for (const path of ["/", "/home"]) {
       const markup = renderClient(path);
