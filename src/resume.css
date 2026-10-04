@@ -21,7 +21,7 @@
 
 .client--resume-shell > .header,
 .client--resume-shell .client-body > .rail {
-  filter: brightness(0.72) saturate(0.78);
+  filter: brightness(0.56) saturate(0.78);
 }
 
 .resume-found {
@@ -400,6 +400,14 @@
 }
 
 @media (max-width: 650px) {
+  .client--resume-shell .top-nav {
+    justify-content: flex-end;
+  }
+
+  .client--resume-shell .top-nav a:not(.header-help) {
+    display: none;
+  }
+
   .top-nav a.header-resume {
     min-width: auto;
   }
@@ -407,6 +415,10 @@
   .resume-found {
     min-height: max(100%, calc(100vh - var(--client-header-height)));
     padding-inline: 16px;
+  }
+
+  .resume-found__system::before {
+    width: min(218.87%, calc(100vw - 32px));
   }
 
   .main--resume-viewer {
