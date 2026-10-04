@@ -3160,6 +3160,18 @@ a:focus-visible {
     font-size: 9px;
     white-space: nowrap;
   }
+  .client--home-shell .top-nav::before,
+  .client--home-shell .top-nav::after {
+    content: "";
+    flex: 0 0 8px;
+  }
+  .client--home-shell .top-nav > a,
+  .client--home-shell .top-nav > button {
+    height: 56px;
+    min-height: 56px;
+    align-self: center;
+    box-sizing: border-box;
+  }
   .top-nav a.current:after {
     bottom: 12px;
     width: 40px;
