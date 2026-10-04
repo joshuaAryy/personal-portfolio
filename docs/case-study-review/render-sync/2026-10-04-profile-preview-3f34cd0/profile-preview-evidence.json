@@ -1,0 +1,2440 @@
+{
+  "capturedAt": "2026-10-04T09:57:07.946Z",
+  "preview": "https://fc9f3ef5.joshuaik2.pages.dev",
+  "source": "3f34cd0 clean immutable Preview",
+  "browser": "153.0.8010.53",
+  "route": "/profile",
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "status": 200,
+      "initial": {
+        "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+        "activeSection": "OVERVIEW",
+        "panel": {
+          "heading": "PROJECTS",
+          "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+          "rect": {
+            "x": 444,
+            "y": 434,
+            "width": 1090,
+            "height": 330,
+            "right": 1534,
+            "bottom": 764
+          },
+          "ariaLabelledby": "profile-panel-heading"
+        },
+        "selectedSignal": {
+          "name": "PROJECTS, 4. Focus to preview projects details.",
+          "rect": {
+            "x": 464,
+            "y": 742,
+            "width": 267.5,
+            "height": 329,
+            "right": 731.5,
+            "bottom": 1071
+          }
+        },
+        "summary": [
+          {
+            "name": "PROJECTS, 4. Focus to preview projects details.",
+            "text": "PROJECTS 4",
+            "rect": {
+              "x": 464,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 731.5,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "EXPERIENCE, 2. Focus to preview experience details.",
+            "text": "EXPERIENCE 2",
+            "rect": {
+              "x": 731.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 999,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "HACKATHON, 1. Focus to preview hackathon details.",
+            "text": "HACKATHON 1",
+            "rect": {
+              "x": 999,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 1266.5,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "ACADEMICS, 2028. Focus to preview academics details.",
+            "text": "ACADEMICS 2028",
+            "rect": {
+              "x": 1266.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 1534,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          }
+        ],
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 110,
+            "width": 1600,
+            "height": 970,
+            "right": 1600,
+            "bottom": 1080
+          },
+          "scrollWidth": 1600,
+          "clientWidth": 1600,
+          "scrollHeight": 998,
+          "clientHeight": 970,
+          "scrollTop": 0
+        }
+      },
+      "counts": {
+        "signalLabels": [
+          "PROJECTS 4",
+          "EXPERIENCE 2",
+          "HACKATHON 1",
+          "ACADEMICS 2028"
+        ],
+        "visibleProfileHeader": true
+      },
+      "accessible": {
+        "roleGroups": [
+          {
+            "expected": "PROJECTS",
+            "count": 1,
+            "aria": "PROJECTS, 4. Focus to preview projects details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          },
+          {
+            "expected": "EXPERIENCE",
+            "count": 1,
+            "aria": "EXPERIENCE, 2. Focus to preview experience details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          },
+          {
+            "expected": "HACKATHON",
+            "count": 1,
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          },
+          {
+            "expected": "ACADEMICS",
+            "count": 1,
+            "aria": "ACADEMICS, 2028. Focus to preview academics details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          }
+        ],
+        "experienceGroupCount": 1,
+        "academicsGroupCount": 1,
+        "degreeImageCount": 1,
+        "degree": "Computer Engineering"
+      },
+      "hover": [
+        {
+          "signal": "PROJECTS",
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "PROJECTS",
+              "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          },
+          "panelKeepsHover": true,
+          "withinPanel": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "PROJECTS",
+              "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "signal": "EXPERIENCE",
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "EXPERIENCE",
+              "text": "EXPERIENCE Living in Silico AI/ML Research Intern Generative Molecular Modeling Stush Patties Software Engineering Intern Data Pipelines & Automation",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          },
+          "panelKeepsHover": true,
+          "withinPanel": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "EXPERIENCE",
+              "text": "EXPERIENCE Living in Silico AI/ML Research Intern Generative Molecular Modeling Stush Patties Software Engineering Intern Data Pipelines & Automation",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "signal": "HACKATHON",
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "HACKATHON",
+              "text": "HACKATHON 3RD PLACE MPC HACKS 2026 BRIM FINANCIAL CHALLENGE Crest MPC HACKS 2026",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          },
+          "panelKeepsHover": true,
+          "withinPanel": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "HACKATHON",
+              "text": "HACKATHON 3RD PLACE MPC HACKS 2026 BRIM FINANCIAL CHALLENGE Crest MPC HACKS 2026",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "signal": "ACADEMICS",
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "ACADEMICS",
+              "text": "ACADEMICS EDUCATION Computer Engineering Software Specialization Toronto Metropolitan University 2028 EXPECTED GRADUATION SELECTED COURSEWORK Algorithms & Data Structures Software Systems Database Systems I Microprocessor Systems",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          },
+          "panelKeepsHover": true,
+          "withinPanel": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "ACADEMICS",
+              "text": "ACADEMICS EDUCATION Computer Engineering Software Specialization Toronto Metropolitan University 2028 EXPECTED GRADUATION SELECTED COURSEWORK Algorithms & Data Structures Software Systems Database Systems I Microprocessor Systems",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        }
+      ],
+      "resetAfterLeave": {
+        "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+        "activeSection": "OVERVIEW",
+        "panel": {
+          "heading": "PROJECTS",
+          "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+          "rect": {
+            "x": 444,
+            "y": 434,
+            "width": 1090,
+            "height": 330,
+            "right": 1534,
+            "bottom": 764
+          },
+          "ariaLabelledby": "profile-panel-heading"
+        },
+        "selectedSignal": {
+          "name": "PROJECTS, 4. Focus to preview projects details.",
+          "rect": {
+            "x": 464,
+            "y": 742,
+            "width": 267.5,
+            "height": 329,
+            "right": 731.5,
+            "bottom": 1071
+          }
+        },
+        "summary": [
+          {
+            "name": "PROJECTS, 4. Focus to preview projects details.",
+            "text": "PROJECTS 4",
+            "rect": {
+              "x": 464,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 731.5,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "EXPERIENCE, 2. Focus to preview experience details.",
+            "text": "EXPERIENCE 2",
+            "rect": {
+              "x": 731.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 999,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "HACKATHON, 1. Focus to preview hackathon details.",
+            "text": "HACKATHON 1",
+            "rect": {
+              "x": 999,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 1266.5,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "ACADEMICS, 2028. Focus to preview academics details.",
+            "text": "ACADEMICS 2028",
+            "rect": {
+              "x": 1266.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 1534,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          }
+        ],
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 110,
+            "width": 1600,
+            "height": 970,
+            "right": 1600,
+            "bottom": 1080
+          },
+          "scrollWidth": 1600,
+          "clientWidth": 1600,
+          "scrollHeight": 998,
+          "clientHeight": 970,
+          "scrollTop": 0
+        }
+      },
+      "focus": [
+        {
+          "key": "focus-first",
+          "active": {
+            "text": "PROJECTS 4",
+            "aria": "PROJECTS, 4. Focus to preview projects details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "PROJECTS",
+              "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Tab",
+          "active": {
+            "text": "EXPERIENCE 2",
+            "aria": "EXPERIENCE, 2. Focus to preview experience details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "EXPERIENCE",
+              "text": "EXPERIENCE Living in Silico AI/ML Research Intern Generative Molecular Modeling Stush Patties Software Engineering Intern Data Pipelines & Automation",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Tab",
+          "active": {
+            "text": "HACKATHON 1",
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "HACKATHON",
+              "text": "HACKATHON 3RD PLACE MPC HACKS 2026 BRIM FINANCIAL CHALLENGE Crest MPC HACKS 2026",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Tab",
+          "active": {
+            "text": "ACADEMICS 2028",
+            "aria": "ACADEMICS, 2028. Focus to preview academics details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "ACADEMICS",
+              "text": "ACADEMICS EDUCATION Computer Engineering Software Specialization Toronto Metropolitan University 2028 EXPECTED GRADUATION SELECTED COURSEWORK Algorithms & Data Structures Software Systems Database Systems I Microprocessor Systems",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Shift+Tab",
+          "active": {
+            "text": "HACKATHON 1",
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "HACKATHON",
+              "text": "HACKATHON 3RD PLACE MPC HACKS 2026 BRIM FINANCIAL CHALLENGE Crest MPC HACKS 2026",
+              "rect": {
+                "x": 444,
+                "y": 434,
+                "width": 1090,
+                "height": 330,
+                "right": 1534,
+                "bottom": 764
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 464,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 731.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 731.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 999,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 999,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1266.5,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 1266.5,
+                  "y": 742,
+                  "width": 267.5,
+                  "height": 329,
+                  "right": 1534,
+                  "bottom": 1071
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 1920,
+              "clientWidth": 1920
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": 110,
+                "width": 1600,
+                "height": 970,
+                "right": 1600,
+                "bottom": 1080
+              },
+              "scrollWidth": 1600,
+              "clientWidth": 1600,
+              "scrollHeight": 998,
+              "clientHeight": 970,
+              "scrollTop": 0
+            }
+          }
+        }
+      ],
+      "images": {
+        "count": 48,
+        "failed": []
+      },
+      "errors": []
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "initial": {
+        "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+        "activeSection": "OVERVIEW",
+        "panel": {
+          "heading": "PROJECTS",
+          "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+          "rect": {
+            "x": 18,
+            "y": 844,
+            "width": 354,
+            "height": 500,
+            "right": 372,
+            "bottom": 1344
+          },
+          "ariaLabelledby": "profile-panel-heading"
+        },
+        "selectedSignal": {
+          "name": "PROJECTS, 4. Focus to preview projects details.",
+          "rect": {
+            "x": 18,
+            "y": 1369,
+            "width": 177,
+            "height": 235,
+            "right": 195,
+            "bottom": 1604
+          }
+        },
+        "summary": [
+          {
+            "name": "PROJECTS, 4. Focus to preview projects details.",
+            "text": "PROJECTS 4",
+            "rect": {
+              "x": 18,
+              "y": 1369,
+              "width": 177,
+              "height": 235,
+              "right": 195,
+              "bottom": 1604
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "EXPERIENCE, 2. Focus to preview experience details.",
+            "text": "EXPERIENCE 2",
+            "rect": {
+              "x": 195,
+              "y": 1369,
+              "width": 177,
+              "height": 235,
+              "right": 372,
+              "bottom": 1604
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "HACKATHON, 1. Focus to preview hackathon details.",
+            "text": "HACKATHON 1",
+            "rect": {
+              "x": 18,
+              "y": 1604,
+              "width": 177,
+              "height": 235,
+              "right": 195,
+              "bottom": 1839
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "ACADEMICS, 2028. Focus to preview academics details.",
+            "text": "ACADEMICS 2028",
+            "rect": {
+              "x": 195,
+              "y": 1604,
+              "width": 177,
+              "height": 235,
+              "right": 372,
+              "bottom": 1839
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          }
+        ],
+        "document": {
+          "width": 390,
+          "clientWidth": 390
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 390,
+            "height": 1867,
+            "right": 390,
+            "bottom": 1867
+          },
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 1867,
+          "clientHeight": 1867,
+          "scrollTop": 0
+        }
+      },
+      "counts": {
+        "signalLabels": [
+          "PROJECTS 4",
+          "EXPERIENCE 2",
+          "HACKATHON 1",
+          "ACADEMICS 2028"
+        ],
+        "visibleProfileHeader": true
+      },
+      "accessible": {
+        "roleGroups": [
+          {
+            "expected": "PROJECTS",
+            "count": 1,
+            "aria": "PROJECTS, 4. Focus to preview projects details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          },
+          {
+            "expected": "EXPERIENCE",
+            "count": 1,
+            "aria": "EXPERIENCE, 2. Focus to preview experience details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          },
+          {
+            "expected": "HACKATHON",
+            "count": 1,
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          },
+          {
+            "expected": "ACADEMICS",
+            "count": 1,
+            "aria": "ACADEMICS, 2028. Focus to preview academics details.",
+            "controls": "profile-signal-preview-panel",
+            "tabIndex": 0
+          }
+        ],
+        "experienceGroupCount": 1,
+        "academicsGroupCount": 1,
+        "degreeImageCount": 1,
+        "degree": "Computer Engineering"
+      },
+      "hover": [],
+      "resetAfterLeave": {
+        "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+        "activeSection": "OVERVIEW",
+        "panel": {
+          "heading": "PROJECTS",
+          "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+          "rect": {
+            "x": 444,
+            "y": 434,
+            "width": 1090,
+            "height": 330,
+            "right": 1534,
+            "bottom": 764
+          },
+          "ariaLabelledby": "profile-panel-heading"
+        },
+        "selectedSignal": {
+          "name": "PROJECTS, 4. Focus to preview projects details.",
+          "rect": {
+            "x": 464,
+            "y": 742,
+            "width": 267.5,
+            "height": 329,
+            "right": 731.5,
+            "bottom": 1071
+          }
+        },
+        "summary": [
+          {
+            "name": "PROJECTS, 4. Focus to preview projects details.",
+            "text": "PROJECTS 4",
+            "rect": {
+              "x": 464,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 731.5,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "EXPERIENCE, 2. Focus to preview experience details.",
+            "text": "EXPERIENCE 2",
+            "rect": {
+              "x": 731.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 999,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "HACKATHON, 1. Focus to preview hackathon details.",
+            "text": "HACKATHON 1",
+            "rect": {
+              "x": 999,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 1266.5,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          },
+          {
+            "name": "ACADEMICS, 2028. Focus to preview academics details.",
+            "text": "ACADEMICS 2028",
+            "rect": {
+              "x": 1266.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329,
+              "right": 1534,
+              "bottom": 1071
+            },
+            "role": "group",
+            "tabIndex": 0,
+            "controls": "profile-signal-preview-panel"
+          }
+        ],
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 110,
+            "width": 1600,
+            "height": 970,
+            "right": 1600,
+            "bottom": 1080
+          },
+          "scrollWidth": 1600,
+          "clientWidth": 1600,
+          "scrollHeight": 998,
+          "clientHeight": 970,
+          "scrollTop": 0
+        }
+      },
+      "focus": [
+        {
+          "key": "focus-first",
+          "active": {
+            "text": "PROJECTS 4",
+            "aria": "PROJECTS, 4. Focus to preview projects details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "PROJECTS",
+              "text": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automation",
+              "rect": {
+                "x": 18,
+                "y": -179,
+                "width": 354,
+                "height": 500,
+                "right": 372,
+                "bottom": 321
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 18,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 195,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 18,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 195,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 390,
+              "clientWidth": 390
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": -1023,
+                "width": 390,
+                "height": 1867,
+                "right": 390,
+                "bottom": 844
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 1867,
+              "clientHeight": 1867,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Tab",
+          "active": {
+            "text": "EXPERIENCE 2",
+            "aria": "EXPERIENCE, 2. Focus to preview experience details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "EXPERIENCE",
+              "text": "EXPERIENCE Living in Silico AI/ML Research Intern Generative Molecular Modeling Stush Patties Software Engineering Intern Data Pipelines & Automation",
+              "rect": {
+                "x": 18,
+                "y": -179,
+                "width": 354,
+                "height": 500,
+                "right": 372,
+                "bottom": 321
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 18,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 195,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 18,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 195,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 390,
+              "clientWidth": 390
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": -1023,
+                "width": 390,
+                "height": 1867,
+                "right": 390,
+                "bottom": 844
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 1867,
+              "clientHeight": 1867,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Tab",
+          "active": {
+            "text": "HACKATHON 1",
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "HACKATHON",
+              "text": "HACKATHON 3RD PLACE MPC HACKS 2026 BRIM FINANCIAL CHALLENGE Crest MPC HACKS 2026",
+              "rect": {
+                "x": 18,
+                "y": -179,
+                "width": 354,
+                "height": 500,
+                "right": 372,
+                "bottom": 321
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 18,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 195,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 18,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 195,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 390,
+              "clientWidth": 390
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": -1023,
+                "width": 390,
+                "height": 1867,
+                "right": 390,
+                "bottom": 844
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 1867,
+              "clientHeight": 1867,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Tab",
+          "active": {
+            "text": "ACADEMICS 2028",
+            "aria": "ACADEMICS, 2028. Focus to preview academics details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "ACADEMICS",
+              "text": "ACADEMICS EDUCATION Computer Engineering Software Specialization Toronto Metropolitan University 2028 EXPECTED GRADUATION SELECTED COURSEWORK Algorithms & Data Structures Software Systems Database Systems I Microprocessor Systems",
+              "rect": {
+                "x": 18,
+                "y": -179,
+                "width": 354,
+                "height": 500,
+                "right": 372,
+                "bottom": 321
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 18,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 195,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 18,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 195,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 390,
+              "clientWidth": 390
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": -1023,
+                "width": 390,
+                "height": 1867,
+                "right": 390,
+                "bottom": 844
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 1867,
+              "clientHeight": 1867,
+              "scrollTop": 0
+            }
+          }
+        },
+        {
+          "key": "Shift+Tab",
+          "active": {
+            "text": "HACKATHON 1",
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "focusVisible": true
+          },
+          "state": {
+            "url": "https://fc9f3ef5.joshuaik2.pages.dev/profile",
+            "activeSection": "OVERVIEW",
+            "panel": {
+              "heading": "HACKATHON",
+              "text": "HACKATHON 3RD PLACE MPC HACKS 2026 BRIM FINANCIAL CHALLENGE Crest MPC HACKS 2026",
+              "rect": {
+                "x": 18,
+                "y": -179,
+                "width": 354,
+                "height": 500,
+                "right": 372,
+                "bottom": 321
+              },
+              "ariaLabelledby": "profile-panel-heading"
+            },
+            "selectedSignal": null,
+            "summary": [
+              {
+                "name": "PROJECTS, 4. Focus to preview projects details.",
+                "text": "PROJECTS 4",
+                "rect": {
+                  "x": 18,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "EXPERIENCE, 2. Focus to preview experience details.",
+                "text": "EXPERIENCE 2",
+                "rect": {
+                  "x": 195,
+                  "y": 346,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 581
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "HACKATHON, 1. Focus to preview hackathon details.",
+                "text": "HACKATHON 1",
+                "rect": {
+                  "x": 18,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 195,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              },
+              {
+                "name": "ACADEMICS, 2028. Focus to preview academics details.",
+                "text": "ACADEMICS 2028",
+                "rect": {
+                  "x": 195,
+                  "y": 581,
+                  "width": 177,
+                  "height": 235,
+                  "right": 372,
+                  "bottom": 816
+                },
+                "role": "group",
+                "tabIndex": 0,
+                "controls": "profile-signal-preview-panel"
+              }
+            ],
+            "document": {
+              "width": 390,
+              "clientWidth": 390
+            },
+            "main": {
+              "rect": {
+                "x": 0,
+                "y": -1023,
+                "width": 390,
+                "height": 1867,
+                "right": 390,
+                "bottom": 844
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 1867,
+              "clientHeight": 1867,
+              "scrollTop": 0
+            }
+          }
+        }
+      ],
+      "images": {
+        "count": 48,
+        "failed": []
+      },
+      "errors": []
+    }
+  ]
+}
