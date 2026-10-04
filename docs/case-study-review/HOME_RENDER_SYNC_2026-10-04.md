@@ -38,9 +38,9 @@ Earlier 901/900/899px breakpoint captures remain from the `b56d3a2` Preview. Thi
 
 This validates the narrow focus correction and confirms desktop geometry; it does not close owner review of the Home/Figma comparison. The prior browser comparison observed a difference at the upper-left identity: Figma shows the circular gold/cyan J medallion, while the Preview shows a small flat gold J glyph. Preserve the current Home structure and do not alter the J identity here. Keep archive `159:2` as production fallback and leave the identity decision owner-gated.
 
-## Current Preview rerender - source `f8762c0`
+## Prior Preview finding - source `f8762c0` (superseded)
 
-The current immutable Preview `https://bb5ce74d.joshuaik2.pages.dev/home` was rendered with Playwright 1.63.0 and Chrome 153.0.8010.53 at 1920x1080, 901x844, 900x844, 650x844, and 390x844. Every route returned HTTP 200, loaded 32/32 images, had no console/page/request/response errors, and kept document width equal to the viewport. At desktop, the main region is `(0,110,1600x970)`, Confirm is `(676,917,300x64)`, and Back is `(640,920,58x58)`.
+The following issue findings were captured on the earlier immutable Preview `https://bb5ce74d.joshuaik2.pages.dev/home`. They are historical and superseded by the final 477d812 check below.
 
 The breakpoint sweep found a concrete fresh-entry issue at 900x844: Home initializes at `scrollY=82`, with the header and top navigation shifted above the viewport (`header y=-82`) and `main` at `y=0`. At 901x844, `scrollY=0` and the header is visible; at 650x844 and 390x844, `scrollY=0` as well. No document-width overflow occurs. At 390x844, the main nav is 263px wide with 321px of content. Tab reaches Help without moving that nav, leaving the 84px Help control clipped at the nav edge (`x=336`); Enter still opens the Help dialog. Escape closes it, restores focus to Help, and leaves the route and scroll unchanged.
 
@@ -49,3 +49,13 @@ Education selection worked by both click and keyboard: clicking Education set `a
 The desktop render retains the broad Figma composition, four-mode order, selected-mode treatment, environment, subnav, and control placement. The previously recorded Figma-versus-React identity difference remains: Figma shows a circular gold/cyan J medallion and React shows a flat gold glyph. The captured Figma frame also has small square markers beside the selected-focus rows that are absent from React. Keep both visible differences in owner review; no identity or structure changes were made during QA. No narrow-Figma parity claim is made.
 
 Current source-specific captures and JSON are in [`render-sync/2026-10-04-home-preview-f8762c0/`](render-sync/2026-10-04-home-preview-f8762c0/), including the five viewport screenshots, full narrow page, Education selected/confirmed, Help focused/open, cold Back, and in-app Back evidence. The machine-readable record is `home-preview-f8762c0-evidence.json`.
+
+## Final Preview rerender - source `477d812`
+
+The immutable Preview `https://ae260dc8.joshuaik2.pages.dev/home` was rendered with Playwright 1.63.0 and Chrome 153.0.8010.53 at 390, 650, 760, 761, 900, and 901px (844px high), plus 1920×1080. Fresh entry has `scrollY=0` and the header visible at all seven sizes, including 900px; this resolves the previous 900px initial-focus scroll finding. All routes returned HTTP 200, loaded 32/32 images, had no console/page/request/response errors, and document width equaled viewport width.
+
+Tab reaches Help at each width. At 390px, focus scrolls the top nav from `scrollLeft=0` to `58`, placing Help at x=244.08–328.08 inside the nav clip x=73–336. At 650, 760, 761, and 900px, the Help control and its complete focus outline fit in the top nav without horizontal scroll. At 901px and 1920px, Help is in the rail footer and Tab reaches it with the focus outline inside the viewport. Enter opens the Home controls dialog; Escape closes it, restores focus to Help, and preserves route and scroll at the tested widths.
+
+At 760px, the brand wordmark bounds are x=52–82 and the Projects link bounds are x=84–156, leaving a 2px gap with no overlap. At 761px, the wordmark is x=74–152 and Projects is x=180–252, leaving a 28px gap. At desktop, the main region is `(0,110,1600×970)`, Confirm `(676,917,300×64)`, and Back `(640,920,58×58)`, unchanged from the previous desktop evidence.
+
+Captures and exact measurements are in [`render-sync/2026-10-04-home-preview-477d812/`](render-sync/2026-10-04-home-preview-477d812/). The machine-readable record `home-preview-477d812-evidence.json` includes all viewport widths, Help focus/activation, image counts, errors, wordmark/link bounds, and desktop geometry. Preserve the recorded circular J medallion versus flat React glyph and selected-focus square markers absent in React as owner-review differences. Narrow-Figma parity was not assessed.

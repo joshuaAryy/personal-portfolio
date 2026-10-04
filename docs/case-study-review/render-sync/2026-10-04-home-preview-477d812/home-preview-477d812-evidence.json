@@ -1,0 +1,2343 @@
+{
+  "testedAt": "2026-10-04T18:59:00.556Z",
+  "preview": "https://ae260dc8.joshuaik2.pages.dev/home",
+  "sourceCommit": "477d812 (provided deployment identity)",
+  "browser": "153.0.8010.53",
+  "viewports": [
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 1031
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "bottom": 70,
+          "width": 390,
+          "height": 70
+        },
+        "nav": {
+          "x": 73,
+          "y": 0.5,
+          "left": 73,
+          "right": 336,
+          "top": 0.5,
+          "bottom": 68.5,
+          "width": 263,
+          "height": 68
+        },
+        "navMetrics": {
+          "clientWidth": 263,
+          "scrollWidth": 321,
+          "scrollLeft": 0,
+          "overflowX": "auto"
+        },
+        "help": {
+          "x": 302.078125,
+          "y": 6.5,
+          "left": 302.078125,
+          "right": 386.078125,
+          "top": 6.5,
+          "bottom": 62.5,
+          "width": 84,
+          "height": 56
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 70,
+          "left": 0,
+          "right": 390,
+          "top": 70,
+          "bottom": 970.171875,
+          "width": 390,
+          "height": 900.171875
+        },
+        "confirm": {
+          "x": 90,
+          "y": 896.984375,
+          "left": 90,
+          "right": 330,
+          "top": 896.984375,
+          "bottom": 948.171875,
+          "width": 240,
+          "height": 51.1875
+        },
+        "back": {
+          "x": 60,
+          "y": 898.578125,
+          "left": 60,
+          "right": 108,
+          "top": 898.578125,
+          "bottom": 946.578125,
+          "width": 48,
+          "height": 48
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "complete": true,
+            "naturalWidth": 32
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "tabsToHelp": 17,
+        "tag": "BUTTON",
+        "className": "header-help",
+        "label": "Help",
+        "bounds": {
+          "left": 244.078125,
+          "right": 328.078125,
+          "top": 6.5,
+          "bottom": 62.5,
+          "width": 84,
+          "height": 56
+        },
+        "focusStyle": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "3px",
+          "boxShadow": "none"
+        },
+        "nav": {
+          "left": 73,
+          "right": 336,
+          "top": 0.5,
+          "bottom": 68.5,
+          "clientWidth": 263,
+          "scrollWidth": 321,
+          "scrollLeft": 58
+        },
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "clientWidth": 390
+        },
+        "scrollY": 0
+      },
+      "activation": {
+        "open": {
+          "visible": true,
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0,
+          "activeClass": "client-help-overlay__close client-help-overlay__close--floating",
+          "bounds": {
+            "x": 12,
+            "y": 649.625,
+            "width": 366,
+            "height": 182.375
+          }
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "header-help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 650,
+        "height": 844
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 650,
+          "height": 844
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 650,
+          "clientWidth": 650,
+          "height": 1071
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 650,
+          "top": 0,
+          "bottom": 70,
+          "width": 650,
+          "height": 70
+        },
+        "nav": {
+          "x": 73,
+          "y": 0.5,
+          "left": 73,
+          "right": 596,
+          "top": 0.5,
+          "bottom": 68.5,
+          "width": 523,
+          "height": 68
+        },
+        "navMetrics": {
+          "clientWidth": 523,
+          "scrollWidth": 523,
+          "scrollLeft": 0,
+          "overflowX": "auto"
+        },
+        "help": {
+          "x": 302.078125,
+          "y": 6.5,
+          "left": 302.078125,
+          "right": 386.078125,
+          "top": 6.5,
+          "bottom": 62.5,
+          "width": 84,
+          "height": 56
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 70,
+          "left": 0,
+          "right": 650,
+          "top": 70,
+          "bottom": 1010.171875,
+          "width": 650,
+          "height": 940.171875
+        },
+        "confirm": {
+          "x": 220,
+          "y": 936.984375,
+          "left": 220,
+          "right": 460,
+          "top": 936.984375,
+          "bottom": 988.171875,
+          "width": 240,
+          "height": 51.1875
+        },
+        "back": {
+          "x": 190,
+          "y": 938.578125,
+          "left": 190,
+          "right": 238,
+          "top": 938.578125,
+          "bottom": 986.578125,
+          "width": 48,
+          "height": 48
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "complete": true,
+            "naturalWidth": 32
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "tabsToHelp": 17,
+        "tag": "BUTTON",
+        "className": "header-help",
+        "label": "Help",
+        "bounds": {
+          "left": 302.078125,
+          "right": 386.078125,
+          "top": 6.5,
+          "bottom": 62.5,
+          "width": 84,
+          "height": 56
+        },
+        "focusStyle": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "3px",
+          "boxShadow": "none"
+        },
+        "nav": {
+          "left": 73,
+          "right": 596,
+          "top": 0.5,
+          "bottom": 68.5,
+          "clientWidth": 523,
+          "scrollWidth": 523,
+          "scrollLeft": 0
+        },
+        "viewport": {
+          "width": 650,
+          "height": 844
+        },
+        "document": {
+          "width": 650,
+          "clientWidth": 650
+        },
+        "scrollY": 0
+      },
+      "activation": {
+        "open": {
+          "visible": true,
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0,
+          "activeClass": "client-help-overlay__close client-help-overlay__close--floating",
+          "bounds": {
+            "x": 24,
+            "y": 373.890625,
+            "width": 410,
+            "height": 315
+          }
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "header-help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 760,
+        "height": 844
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 760,
+          "height": 844
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 760,
+          "clientWidth": 760,
+          "height": 1069
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 760,
+          "top": 0,
+          "bottom": 68,
+          "width": 760,
+          "height": 68
+        },
+        "nav": {
+          "x": 84,
+          "y": -0.5,
+          "left": 84,
+          "right": 706,
+          "top": -0.5,
+          "bottom": 67.5,
+          "width": 622,
+          "height": 68
+        },
+        "navMetrics": {
+          "clientWidth": 622,
+          "scrollWidth": 622,
+          "scrollLeft": 0,
+          "overflowX": "auto"
+        },
+        "help": {
+          "x": 400.359375,
+          "y": -0.5,
+          "left": 400.359375,
+          "right": 484.359375,
+          "top": -0.5,
+          "bottom": 67.5,
+          "width": 84,
+          "height": 68
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 68,
+          "left": 0,
+          "right": 760,
+          "top": 68,
+          "bottom": 1008.171875,
+          "width": 760,
+          "height": 940.171875
+        },
+        "confirm": {
+          "x": 275,
+          "y": 934.984375,
+          "left": 275,
+          "right": 515,
+          "top": 934.984375,
+          "bottom": 986.171875,
+          "width": 240,
+          "height": 51.1875
+        },
+        "back": {
+          "x": 245,
+          "y": 936.578125,
+          "left": 245,
+          "right": 293,
+          "top": 936.578125,
+          "bottom": 984.578125,
+          "width": 48,
+          "height": 48
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "complete": true,
+            "naturalWidth": 32
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "tabsToHelp": 17,
+        "tag": "BUTTON",
+        "className": "header-help",
+        "label": "Help",
+        "bounds": {
+          "left": 400.359375,
+          "right": 484.359375,
+          "top": -0.5,
+          "bottom": 67.5,
+          "width": 84,
+          "height": 68
+        },
+        "focusStyle": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-3px",
+          "boxShadow": "none"
+        },
+        "nav": {
+          "left": 84,
+          "right": 706,
+          "top": -0.5,
+          "bottom": 67.5,
+          "clientWidth": 622,
+          "scrollWidth": 622,
+          "scrollLeft": 0
+        },
+        "viewport": {
+          "width": 760,
+          "height": 844
+        },
+        "document": {
+          "width": 760,
+          "clientWidth": 760
+        },
+        "scrollY": 0
+      },
+      "activation": {
+        "open": {
+          "visible": true,
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0,
+          "activeClass": "client-help-overlay__close client-help-overlay__close--floating",
+          "bounds": {
+            "x": 70,
+            "y": 373.890625,
+            "width": 410,
+            "height": 315
+          }
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "header-help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 761,
+        "height": 844
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 761,
+          "height": 844
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 761,
+          "clientWidth": 761,
+          "height": 1013
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 761,
+          "top": 0,
+          "bottom": 82,
+          "width": 761,
+          "height": 82
+        },
+        "nav": {
+          "x": 180,
+          "y": -0.5,
+          "left": 180,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 400.359375,
+          "height": 82
+        },
+        "navMetrics": {
+          "clientWidth": 400,
+          "scrollWidth": 400,
+          "scrollLeft": 0,
+          "overflowX": "visible"
+        },
+        "help": {
+          "x": 496.359375,
+          "y": -0.5,
+          "left": 496.359375,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 84,
+          "height": 82
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 82,
+          "left": 0,
+          "right": 761,
+          "top": 82,
+          "bottom": 952,
+          "width": 761,
+          "height": 870
+        },
+        "confirm": {
+          "x": 256.5,
+          "y": 789,
+          "left": 256.5,
+          "right": 556.5,
+          "top": 789,
+          "bottom": 853,
+          "width": 300,
+          "height": 64
+        },
+        "back": {
+          "x": 220.5,
+          "y": 792,
+          "left": 220.5,
+          "right": 278.5,
+          "top": 792,
+          "bottom": 850,
+          "width": 58,
+          "height": 58
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "tabsToHelp": 17,
+        "tag": "BUTTON",
+        "className": "header-help",
+        "label": "Help",
+        "bounds": {
+          "left": 496.359375,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 84,
+          "height": 82
+        },
+        "focusStyle": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-3px",
+          "boxShadow": "none"
+        },
+        "nav": {
+          "left": 180,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "clientWidth": 400,
+          "scrollWidth": 400,
+          "scrollLeft": 0
+        },
+        "viewport": {
+          "width": 761,
+          "height": 844
+        },
+        "document": {
+          "width": 761,
+          "clientWidth": 761
+        },
+        "scrollY": 0
+      },
+      "activation": {
+        "open": {
+          "visible": true,
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0,
+          "activeClass": "client-help-overlay__close client-help-overlay__close--floating",
+          "bounds": {
+            "x": 71,
+            "y": 373.890625,
+            "width": 410,
+            "height": 315
+          }
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "header-help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 900,
+        "height": 844
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 900,
+          "height": 844
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 900,
+          "clientWidth": 900,
+          "height": 1013
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 900,
+          "top": 0,
+          "bottom": 82,
+          "width": 900,
+          "height": 82
+        },
+        "nav": {
+          "x": 180,
+          "y": -0.5,
+          "left": 180,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 400.359375,
+          "height": 82
+        },
+        "navMetrics": {
+          "clientWidth": 400,
+          "scrollWidth": 400,
+          "scrollLeft": 0,
+          "overflowX": "visible"
+        },
+        "help": {
+          "x": 496.359375,
+          "y": -0.5,
+          "left": 496.359375,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 84,
+          "height": 82
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 82,
+          "left": 0,
+          "right": 900,
+          "top": 82,
+          "bottom": 952,
+          "width": 900,
+          "height": 870
+        },
+        "confirm": {
+          "x": 326,
+          "y": 789,
+          "left": 326,
+          "right": 626,
+          "top": 789,
+          "bottom": 853,
+          "width": 300,
+          "height": 64
+        },
+        "back": {
+          "x": 290,
+          "y": 792,
+          "left": 290,
+          "right": 348,
+          "top": 792,
+          "bottom": 850,
+          "width": 58,
+          "height": 58
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "tabsToHelp": 17,
+        "tag": "BUTTON",
+        "className": "header-help",
+        "label": "Help",
+        "bounds": {
+          "left": 496.359375,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 84,
+          "height": 82
+        },
+        "focusStyle": {
+          "outlineStyle": "solid",
+          "outlineWidth": "2px",
+          "outlineOffset": "-3px",
+          "boxShadow": "none"
+        },
+        "nav": {
+          "left": 180,
+          "right": 580.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "clientWidth": 400,
+          "scrollWidth": 400,
+          "scrollLeft": 0
+        },
+        "viewport": {
+          "width": 900,
+          "height": 844
+        },
+        "document": {
+          "width": 900,
+          "clientWidth": 900
+        },
+        "scrollY": 0
+      },
+      "activation": {
+        "open": {
+          "visible": true,
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0,
+          "activeClass": "client-help-overlay__close client-help-overlay__close--floating",
+          "bounds": {
+            "x": 210,
+            "y": 373.890625,
+            "width": 410,
+            "height": 315
+          }
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "header-help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 901,
+        "height": 844
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 901,
+          "height": 844
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 901,
+          "clientWidth": 901,
+          "height": 844
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 901,
+          "top": 0,
+          "bottom": 82,
+          "width": 901,
+          "height": 82
+        },
+        "nav": {
+          "x": 168,
+          "y": -0.5,
+          "left": 168,
+          "right": 476.359375,
+          "top": -0.5,
+          "bottom": 81.5,
+          "width": 308.359375,
+          "height": 82
+        },
+        "navMetrics": {
+          "clientWidth": 308,
+          "scrollWidth": 308,
+          "scrollLeft": 0,
+          "overflowX": "visible"
+        },
+        "help": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 82,
+          "left": 0,
+          "right": 681,
+          "top": 82,
+          "bottom": 844,
+          "width": 681,
+          "height": 762
+        },
+        "confirm": {
+          "x": 216.5,
+          "y": 789,
+          "left": 216.5,
+          "right": 516.5,
+          "top": 789,
+          "bottom": 853,
+          "width": 300,
+          "height": 64
+        },
+        "back": {
+          "x": 180.5,
+          "y": 792,
+          "left": 180.5,
+          "right": 238.5,
+          "top": 792,
+          "bottom": 850,
+          "width": 58,
+          "height": 58
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "className": "rail-social-footer__help",
+        "tag": "BUTTON",
+        "text": "Help",
+        "bounds": {
+          "left": 820.515625,
+          "right": 890.515625,
+          "top": 798.5,
+          "bottom": 828.5,
+          "width": 70,
+          "height": 30
+        },
+        "outline": {
+          "style": "solid",
+          "width": "2px",
+          "offset": "3px"
+        },
+        "footer": {
+          "left": 682,
+          "right": 901,
+          "top": 782,
+          "bottom": 844
+        },
+        "scrollY": 0,
+        "docWidth": 901,
+        "clientWidth": 901,
+        "tabsToRailHelp": 16
+      },
+      "activation": {
+        "open": {
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "rail-social-footer__help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "initial": {
+        "url": "https://ae260dc8.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "scrollY": 0,
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080
+        },
+        "header": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 1920,
+          "top": 0,
+          "bottom": 110,
+          "width": 1920,
+          "height": 110
+        },
+        "nav": {
+          "x": 276.46875,
+          "y": -0.5,
+          "left": 276.46875,
+          "right": 829,
+          "top": -0.5,
+          "bottom": 109.5,
+          "width": 552.53125,
+          "height": 110
+        },
+        "navMetrics": {
+          "clientWidth": 553,
+          "scrollWidth": 553,
+          "scrollLeft": 0,
+          "overflowX": "visible"
+        },
+        "help": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "helpTag": "BUTTON",
+        "main": {
+          "x": 0,
+          "y": 110,
+          "left": 0,
+          "right": 1600,
+          "top": 110,
+          "bottom": 1080,
+          "width": 1600,
+          "height": 970
+        },
+        "confirm": {
+          "x": 676,
+          "y": 917,
+          "left": 676,
+          "right": 976,
+          "top": 917,
+          "bottom": 981,
+          "width": 300,
+          "height": 64
+        },
+        "back": {
+          "x": 640,
+          "y": 920,
+          "left": 640,
+          "right": 698,
+          "top": 920,
+          "bottom": 978,
+          "width": 58,
+          "height": 58
+        },
+        "images": [
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://ae260dc8.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ]
+      },
+      "focus": {
+        "reached": true,
+        "className": "rail-social-footer__help",
+        "tag": "BUTTON",
+        "text": "Help",
+        "bounds": {
+          "left": 1830,
+          "right": 1900,
+          "top": 1034.5,
+          "bottom": 1064.5,
+          "width": 70,
+          "height": 30
+        },
+        "outline": {
+          "style": "solid",
+          "width": "2px",
+          "offset": "3px"
+        },
+        "footer": {
+          "left": 1601,
+          "right": 1920,
+          "top": 1018,
+          "bottom": 1080
+        },
+        "scrollY": 0,
+        "docWidth": 1920,
+        "clientWidth": 1920,
+        "tabsToRailHelp": 16
+      },
+      "activation": {
+        "open": {
+          "heading": "Home controls",
+          "route": "/home",
+          "scrollY": 0
+        },
+        "closed": {
+          "dialog": false,
+          "activeClass": "rail-social-footer__help",
+          "route": "/home",
+          "scrollY": 0
+        }
+      },
+      "images": {
+        "loaded": 32,
+        "total": 32
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  ],
+  "desktopGeometry": {
+    "main": {
+      "x": 0,
+      "y": 110,
+      "left": 0,
+      "right": 1600,
+      "top": 110,
+      "bottom": 1080,
+      "width": 1600,
+      "height": 970
+    },
+    "confirm": {
+      "x": 676,
+      "y": 917,
+      "left": 676,
+      "right": 976,
+      "top": 917,
+      "bottom": 981,
+      "width": 300,
+      "height": 64
+    },
+    "back": {
+      "x": 640,
+      "y": 920,
+      "left": 640,
+      "right": 698,
+      "top": 920,
+      "bottom": 978,
+      "width": 58,
+      "height": 58
+    },
+    "header": {
+      "x": 0,
+      "y": 0,
+      "left": 0,
+      "right": 1920,
+      "top": 0,
+      "bottom": 110,
+      "width": 1920,
+      "height": 110
+    },
+    "nav": {
+      "x": 276.46875,
+      "y": -0.5,
+      "left": 276.46875,
+      "right": 829,
+      "top": -0.5,
+      "bottom": 109.5,
+      "width": 552.53125,
+      "height": 110
+    }
+  },
+  "breakpointOverlap": [
+    {
+      "viewport": 760,
+      "scrollY": 0,
+      "documentWidth": 760,
+      "brandBox": {
+        "text": "PORTFOLIO",
+        "left": 0,
+        "right": 68,
+        "top": 0,
+        "bottom": 67,
+        "width": 68,
+        "height": 67
+      },
+      "wordmark": {
+        "text": "PORTFOLIO",
+        "left": 52,
+        "right": 82,
+        "top": 10.5,
+        "bottom": 56.5,
+        "width": 30,
+        "height": 46
+      },
+      "projectsLink": {
+        "text": "PROJECTS",
+        "left": 84,
+        "right": 156,
+        "top": -0.5,
+        "bottom": 67.5,
+        "width": 72,
+        "height": 68
+      },
+      "overlapPx": 0,
+      "nav": {
+        "text": "PROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nHELP",
+        "left": 84,
+        "right": 706,
+        "top": -0.5,
+        "bottom": 67.5,
+        "width": 622,
+        "height": 68
+      }
+    },
+    {
+      "viewport": 761,
+      "scrollY": 0,
+      "documentWidth": 761,
+      "brandBox": {
+        "text": "PORTFOLIO",
+        "left": 0,
+        "right": 164,
+        "top": 0,
+        "bottom": 81,
+        "width": 164,
+        "height": 81
+      },
+      "wordmark": {
+        "text": "PORTFOLIO",
+        "left": 74,
+        "right": 152,
+        "top": 17.5,
+        "bottom": 63.5,
+        "width": 78,
+        "height": 46
+      },
+      "projectsLink": {
+        "text": "PROJECTS",
+        "left": 180,
+        "right": 252,
+        "top": -0.5,
+        "bottom": 81.5,
+        "width": 72,
+        "height": 82
+      },
+      "overlapPx": 0,
+      "nav": {
+        "text": "PROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nHELP",
+        "left": 180,
+        "right": 580.359375,
+        "top": -0.5,
+        "bottom": 81.5,
+        "width": 400.359375,
+        "height": 82
+      }
+    }
+  ]
+}
