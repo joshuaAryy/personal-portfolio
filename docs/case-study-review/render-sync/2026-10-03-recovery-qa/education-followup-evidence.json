@@ -1,0 +1,659 @@
+﻿{
+    "route":  "http://127.0.0.1:4173/education/projects",
+    "browser":  "153.0.8010.53",
+    "capturedAt":  "2026-10-04T02:13:36.948Z",
+    "viewports":  [
+                      {
+                          "name":  "desktop",
+                          "status":  200,
+                          "initial":  {
+                                          "viewport":  {
+                                                           "width":  1920,
+                                                           "height":  1080
+                                                       },
+                                          "document":  {
+                                                           "scrollWidth":  1920,
+                                                           "clientWidth":  1920,
+                                                           "scrollHeight":  1080,
+                                                           "scrollX":  0,
+                                                           "scrollY":  0
+                                                       },
+                                          "nav":  {
+                                                      "x":  276.46875,
+                                                      "y":  -0.5,
+                                                      "right":  909,
+                                                      "bottom":  109.5,
+                                                      "width":  633,
+                                                      "scrollWidth":  633,
+                                                      "scrollLeft":  0,
+                                                      "overflowX":  "visible"
+                                                  },
+                                          "links":  [
+                                                        {
+                                                            "text":  "PROJECTS",
+                                                            "href":  "/projects",
+                                                            "x":  276.46875,
+                                                            "y":  -0.5,
+                                                            "right":  399.34375,
+                                                            "bottom":  109.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  ""
+                                                        },
+                                                        {
+                                                            "text":  "EXPERIENCE",
+                                                            "href":  "/experience",
+                                                            "x":  399.34375,
+                                                            "y":  -0.5,
+                                                            "right":  547.171875,
+                                                            "bottom":  109.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  ""
+                                                        },
+                                                        {
+                                                            "text":  "HACKATHONS",
+                                                            "href":  "/hackathons",
+                                                            "x":  547.171875,
+                                                            "y":  -0.5,
+                                                            "right":  705.171875,
+                                                            "bottom":  109.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  ""
+                                                        },
+                                                        {
+                                                            "text":  "EDUCATION",
+                                                            "href":  "/education",
+                                                            "x":  705.171875,
+                                                            "y":  -0.5,
+                                                            "right":  829,
+                                                            "bottom":  109.5,
+                                                            "ariaCurrent":  "page",
+                                                            "className":  "current active"
+                                                        },
+                                                        {
+                                                            "text":  "RESUME",
+                                                            "href":  "/resume",
+                                                            "x":  829,
+                                                            "y":  -0.5,
+                                                            "right":  909,
+                                                            "bottom":  109.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  "header-resume"
+                                                        }
+                                                    ],
+                                          "activeEducation":  {
+                                                                  "text":  "EDUCATION",
+                                                                  "href":  "/education",
+                                                                  "x":  705.171875,
+                                                                  "y":  -0.5,
+                                                                  "right":  829,
+                                                                  "bottom":  109.5,
+                                                                  "ariaCurrent":  "page",
+                                                                  "className":  "current active"
+                                                              },
+                                          "help":  {
+                                                       "x":  0,
+                                                       "y":  0,
+                                                       "right":  0,
+                                                       "bottom":  0,
+                                                       "fullyInViewport":  true
+                                                   },
+                                          "images":  [
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-54.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  54,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-flag.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-trophy.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-briefcase.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-clash.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-clock.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/topbar-account-ring.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  160,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/client-account-avatar.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  128,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-48.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  29,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/activity-add.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  13,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/activity-list.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  8,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/activity-collapse.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  7,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/education-coursework.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  50,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/food-tracker-mark.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  40,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/choveigo-mark.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  150,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/profile-crest-emblem.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  310,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/project-fraymakers-index.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  82,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/living-in-silico-logo.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  96,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/stush-patties-logo.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  96,
+                                                             "alt":  ""
+                                                         }
+                                                     ],
+                                          "copy":  {
+                                                       "projectCount":  4,
+                                                       "evidencePendingCount":  3,
+                                                       "dentalInProgress":  true,
+                                                       "aluFsmSourceDetail":  true
+                                                   }
+                                      },
+                          "focusSequence":  [
+
+                                            ],
+                          "helpActivation":  null,
+                          "errors":  {
+                                         "console":  [
+
+                                                     ],
+                                         "page":  [
+
+                                                  ],
+                                         "request":  [
+
+                                                     ],
+                                         "response":  [
+
+                                                      ]
+                                     }
+                      },
+                      {
+                          "name":  "narrow",
+                          "status":  200,
+                          "initial":  {
+                                          "viewport":  {
+                                                           "width":  390,
+                                                           "height":  844
+                                                       },
+                                          "document":  {
+                                                           "scrollWidth":  390,
+                                                           "clientWidth":  390,
+                                                           "scrollHeight":  1149,
+                                                           "scrollX":  0,
+                                                           "scrollY":  0
+                                                       },
+                                          "nav":  {
+                                                      "x":  73,
+                                                      "y":  0.5,
+                                                      "right":  336,
+                                                      "bottom":  68.5,
+                                                      "width":  263,
+                                                      "scrollWidth":  448,
+                                                      "scrollLeft":  185,
+                                                      "overflowX":  "auto"
+                                                  },
+                                          "links":  [
+                                                        {
+                                                            "text":  "PROJECTS",
+                                                            "href":  "/projects",
+                                                            "x":  -112,
+                                                            "y":  0.5,
+                                                            "right":  -40,
+                                                            "bottom":  68.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  ""
+                                                        },
+                                                        {
+                                                            "text":  "EXPERIENCE",
+                                                            "href":  "/experience",
+                                                            "x":  -40,
+                                                            "y":  0.5,
+                                                            "right":  38,
+                                                            "bottom":  68.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  ""
+                                                        },
+                                                        {
+                                                            "text":  "HACKATHONS",
+                                                            "href":  "/hackathons",
+                                                            "x":  38,
+                                                            "y":  0.5,
+                                                            "right":  120,
+                                                            "bottom":  68.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  ""
+                                                        },
+                                                        {
+                                                            "text":  "EDUCATION",
+                                                            "href":  "/education",
+                                                            "x":  120,
+                                                            "y":  0.5,
+                                                            "right":  196,
+                                                            "bottom":  68.5,
+                                                            "ariaCurrent":  "page",
+                                                            "className":  "current active"
+                                                        },
+                                                        {
+                                                            "text":  "RESUME",
+                                                            "href":  "/resume",
+                                                            "x":  196,
+                                                            "y":  0.5,
+                                                            "right":  252,
+                                                            "bottom":  68.5,
+                                                            "ariaCurrent":  null,
+                                                            "className":  "header-resume"
+                                                        }
+                                                    ],
+                                          "activeEducation":  {
+                                                                  "text":  "EDUCATION",
+                                                                  "href":  "/education",
+                                                                  "x":  120,
+                                                                  "y":  0.5,
+                                                                  "right":  196,
+                                                                  "bottom":  68.5,
+                                                                  "ariaCurrent":  "page",
+                                                                  "className":  "current active"
+                                                              },
+                                          "help":  {
+                                                       "x":  252,
+                                                       "y":  0.5,
+                                                       "right":  336,
+                                                       "bottom":  68.5,
+                                                       "fullyInViewport":  true
+                                                   },
+                                          "images":  [
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-32.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  32,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-flag.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-trophy.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-briefcase.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-clash.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/shell-utility-clock.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  38,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/topbar-account-ring.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  160,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/client-account-avatar.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  128,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-48.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  29,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/activity-add.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  13,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/activity-list.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  8,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/activity-collapse.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  7,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/education-coursework.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  50,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/food-tracker-mark.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  40,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/choveigo-mark.svg",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  150,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/profile-crest-emblem.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  310,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/lobby/project-fraymakers-index.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  82,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/living-in-silico-logo.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  96,
+                                                             "alt":  ""
+                                                         },
+                                                         {
+                                                             "src":  "http://127.0.0.1:4173/media/profile/stush-patties-logo.png",
+                                                             "loaded":  true,
+                                                             "naturalWidth":  96,
+                                                             "alt":  ""
+                                                         }
+                                                     ],
+                                          "copy":  {
+                                                       "projectCount":  4,
+                                                       "evidencePendingCount":  3,
+                                                       "dentalInProgress":  true,
+                                                       "aluFsmSourceDetail":  true
+                                                   }
+                                      },
+                          "focusSequence":  [
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "education-projects__back",
+                                                    "text":  "Education",
+                                                    "href":  "/education",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  23,
+                                                                   "y":  101,
+                                                                   "right":  93,
+                                                                   "bottom":  113
+                                                               },
+                                                    "navScrollLeft":  185,
+                                                    "tabIndex":  1
+                                                },
+                                                {
+                                                    "tag":  "BODY",
+                                                    "cls":  "",
+                                                    "text":  "Skip to content PROJECTS EXPERIENCE HACKATHONS EDUCATION RES",
+                                                    "href":  null,
+                                                    "isHelp":  false,
+                                                    "focusVisible":  false,
+                                                    "outline":  "none",
+                                                    "bounds":  {
+                                                                   "x":  0,
+                                                                   "y":  0,
+                                                                   "right":  390,
+                                                                   "bottom":  1149
+                                                               },
+                                                    "navScrollLeft":  185,
+                                                    "tabIndex":  2
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "skip-link",
+                                                    "text":  "Skip to content",
+                                                    "href":  "#main",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  14,
+                                                                   "y":  10,
+                                                                   "right":  144,
+                                                                   "bottom":  45
+                                                               },
+                                                    "navScrollLeft":  185,
+                                                    "tabIndex":  3
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "brand",
+                                                    "text":  "",
+                                                    "href":  "/home",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  0,
+                                                                   "y":  0,
+                                                                   "right":  68,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  185,
+                                                    "tabIndex":  4
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "",
+                                                    "text":  "PROJECTS",
+                                                    "href":  "/projects",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  73,
+                                                                   "y":  1,
+                                                                   "right":  145,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  0,
+                                                    "tabIndex":  5
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "",
+                                                    "text":  "EXPERIENCE",
+                                                    "href":  "/experience",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  145,
+                                                                   "y":  1,
+                                                                   "right":  223,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  0,
+                                                    "tabIndex":  6
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "",
+                                                    "text":  "HACKATHONS",
+                                                    "href":  "/hackathons",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  223,
+                                                                   "y":  1,
+                                                                   "right":  305,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  0,
+                                                    "tabIndex":  7
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "current active",
+                                                    "text":  "EDUCATION",
+                                                    "href":  "/education",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  305,
+                                                                   "y":  1,
+                                                                   "right":  381,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  0,
+                                                    "tabIndex":  8
+                                                },
+                                                {
+                                                    "tag":  "A",
+                                                    "cls":  "header-resume",
+                                                    "text":  "RESUME",
+                                                    "href":  "/resume",
+                                                    "isHelp":  false,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  196,
+                                                                   "y":  1,
+                                                                   "right":  252,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  185,
+                                                    "tabIndex":  9
+                                                },
+                                                {
+                                                    "tag":  "BUTTON",
+                                                    "cls":  "header-help",
+                                                    "text":  "HELP",
+                                                    "href":  null,
+                                                    "isHelp":  true,
+                                                    "focusVisible":  true,
+                                                    "outline":  "solid",
+                                                    "bounds":  {
+                                                                   "x":  252,
+                                                                   "y":  1,
+                                                                   "right":  336,
+                                                                   "bottom":  69
+                                                               },
+                                                    "navScrollLeft":  185,
+                                                    "tabIndex":  10
+                                                }
+                                            ],
+                          "helpActivation":  {
+                                                 "dialogCount":  1,
+                                                 "route":  "http://127.0.0.1:4173/education/projects",
+                                                 "routePreserved":  true
+                                             },
+                          "errors":  {
+                                         "console":  [
+
+                                                     ],
+                                         "page":  [
+
+                                                  ],
+                                         "request":  [
+
+                                                     ],
+                                         "response":  [
+
+                                                      ]
+                                     }
+                      }
+                  ],
+    "verification":  {
+                         "desktopNav":  "At 1920px, nav width 633px, scrollWidth=633px, x≈276, active Education link aria-current=page/class=current active.",
+                         "narrowInitial":  "At initial 390px load, nav scrollLeft=185; Education x=120..196 and Help x=252..336, both fully within viewport. Document width 390/390.",
+                         "keyboard":  "Tab sequence reaches Projects, Experience, Hackathons, Education, Resume, Help with visible focus outline; Help at tab 10 and Enter opens one dialog in place without route change.",
+                         "ownerContent":  "Four project headings; three EVIDENCE PENDING labels; Dental Clinic DBMS CURRENT · IN PROGRESS; ALU and FSM source notes present.",
+                         "errors":  "HTTP 200 at both widths; 19/19 images loaded; no console/page/request/HTTP errors."
+                     }
+}

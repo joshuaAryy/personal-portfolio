@@ -58,9 +58,14 @@ describe("primary App route mapping", () => {
     expect(page.match(/class="education-projects__item"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Java Swing Bookstore");
-    expect(page).toContain("Custom 8-bit ALU / FSM");
-    expect(page).toContain("CMOS Amplifier");
+    expect(page).toContain("Quartus/VHDL 8-bit ALU and nine-state FSM lab project");
+    expect(page).toContain("Four-stage CMOS amplifier");
     expect(page).toContain("IN PROGRESS");
+    expect(page.match(/EVIDENCE PENDING/g)).toHaveLength(3);
     expect(page).not.toMatch(/Dean|scholarship/i);
+    expect(page).toContain('class="top-nav top-nav--education-projects"');
+    expect(page).toContain('aria-current="page"');
+    expect(page).toContain('class="header-help"');
+    expect(page).toContain("<code>data_in</code> is high");
   });
 });

@@ -1972,10 +1972,54 @@ a:focus-visible {
   font-weight: 500;
 }
 .education-projects__status { margin: 14px 0 0; font-size: 9px; }
+.education-projects__technical {
+  margin-top: 36px;
+  padding: 24px;
+  border: 1px solid #c7b78255;
+  background: #081620;
+}
+.education-projects__technical h2 {
+  margin: 0 0 22px;
+  color: #f0e8da;
+  font-family: Cinzel, Georgia, serif;
+  font-size: 19px;
+  font-weight: 400;
+}
+.education-projects__technical-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+.education-projects__component h3 {
+  margin: 0 0 8px;
+  color: #c7b782;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.education-projects__component p,
+.education-projects__source-note {
+  margin: 0;
+  color: #bcc3c7;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.education-projects__technical code {
+  color: #e9e5dc;
+  font-size: 0.94em;
+}
+.education-projects__source-note {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #c7b78235;
+  font-size: 12px;
+}
 @media (max-width: 600px) {
   .education-projects__heading { margin: 38px 0 32px; }
   .education-projects__list { grid-template-columns: 1fr; }
   .education-projects__item { min-height: 86px; }
+  .education-projects__technical { padding: 18px; }
+  .education-projects__technical-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 .main--food-case {
   padding: 0;

@@ -21,6 +21,8 @@ const isProjectDetail = (pathname: string) => pathname.startsWith("/projects/");
 function Header() {
   const { pathname } = useLocation();
   const helpOverlay = useHelpOverlay();
+  const isEducationProjectsPage = pathname === "/education/projects";
+  const topNavRef = useRef<HTMLElement>(null);
   const isHome = pathname === "/" || pathname === "/home";
   const isProjectShell = usesProjectDetailShell(pathname);
   const isResumeShell = pathname.startsWith("/resume");
@@ -28,13 +30,49 @@ function Header() {
     ? "home"
     : pathname.startsWith("/experience")
     ? "experience"
-    : pathname.startsWith("/hackathons")
-      ? "hackathons"
-      : pathname.startsWith("/education")
-        ? "education"
-        : pathname.startsWith("/resume")
-          ? "resume"
-          : "projects";
+      : pathname.startsWith("/hackathons")
+        ? "hackathons"
+        : pathname.startsWith("/education")
+          ? "education"
+          : pathname.startsWith("/resume")
+            ? "resume"
+            : "projects";
+
+  useEffect(() => {
+    if (!isEducationProjectsPage) return;
+
+    const topNav = topNavRef.current;
+    if (!topNav) return;
+
+    const revealEducationAndHelp = () => {
+      const activeEducation = topNav.querySelector<HTMLElement>("a.current");
+      const help = topNav.querySelector<HTMLElement>(".header-help");
+      if (!activeEducation || !help) return;
+
+      if (!window.matchMedia("(max-width: 650px)").matches) {
+        topNav.scrollLeft = 0;
+        return;
+      }
+
+      const navBounds = topNav.getBoundingClientRect();
+      const activeBounds = activeEducation.getBoundingClientRect();
+      const helpBounds = help.getBoundingClientRect();
+      const activeStart = activeBounds.left - navBounds.left + topNav.scrollLeft;
+      const helpEnd = helpBounds.right - navBounds.left + topNav.scrollLeft;
+      const helpRevealOffset = Math.max(0, helpEnd - topNav.clientWidth);
+      const educationVisibleOffset = Math.min(
+        activeStart,
+        topNav.scrollWidth - topNav.clientWidth,
+      );
+
+      topNav.scrollLeft = Math.max(0, Math.min(helpRevealOffset, educationVisibleOffset));
+    };
+
+    revealEducationAndHelp();
+    window.addEventListener("resize", revealEducationAndHelp);
+    return () => window.removeEventListener("resize", revealEducationAndHelp);
+  }, [isEducationProjectsPage]);
+
   return (
     <header className={`header${isProjectShell ? " header--project-shell" : ""}${isResumeShell ? " header--resume-shell" : ""}`}>
       <Link
@@ -57,7 +95,11 @@ function Header() {
         </picture>
         <strong>PORTFOLIO</strong>
       </Link>
-      <nav className="top-nav" aria-label="Main navigation">
+      <nav
+        ref={topNavRef}
+        className={`top-nav${isEducationProjectsPage ? " top-nav--education-projects" : ""}`}
+        aria-label="Main navigation"
+      >
         <NavLink
           className={section === "projects" ? "current" : ""}
           to="/projects"
