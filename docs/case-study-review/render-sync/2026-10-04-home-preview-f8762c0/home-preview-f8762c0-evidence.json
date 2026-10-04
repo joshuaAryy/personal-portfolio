@@ -1,0 +1,2350 @@
+{
+  "testedAt": "2026-10-04T18:23:41.524Z",
+  "preview": "https://bb5ce74d.joshuaik2.pages.dev",
+  "sourceCommit": "f8762c0 (provided)",
+  "browser": "153.0.8010.53",
+  "views": [
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "state": {
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 110,
+          "width": 1600,
+          "height": 970,
+          "left": 0,
+          "right": 1600,
+          "top": 110,
+          "bottom": 1080
+        },
+        "mainScroll": {
+          "clientHeight": 970,
+          "scrollHeight": 970,
+          "scrollTop": 0
+        },
+        "topNav": null,
+        "topNavScroll": null,
+        "selected": "PROJECTS\nBUILT SYSTEMS",
+        "confirm": {
+          "x": 676,
+          "y": 917,
+          "width": 300,
+          "height": 64,
+          "left": 676,
+          "right": 976,
+          "top": 917,
+          "bottom": 981
+        },
+        "back": {
+          "x": 640,
+          "y": 920,
+          "width": 58,
+          "height": 58,
+          "left": 640,
+          "right": 698,
+          "top": 920,
+          "bottom": 978
+        },
+        "help": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "images": [
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ],
+        "anchors": [
+          {
+            "text": "Skip to content",
+            "href": "#main",
+            "aria": null
+          },
+          {
+            "text": "PORTFOLIO",
+            "href": "/home",
+            "aria": "Portfolio home"
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "aria": null
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "aria": null
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "aria": null
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "aria": null
+          },
+          {
+            "text": "Joshua Aryeetey\nOPEN TO SUMMER 2027",
+            "href": "/profile",
+            "aria": "Open profile"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          },
+          {
+            "text": "Food Tracker\nIN DEVELOPMENT",
+            "href": "/projects/food-tracker",
+            "aria": null
+          },
+          {
+            "text": "Cho’Veigo\nIN DEVELOPMENT",
+            "href": "/projects/choveigo",
+            "aria": null
+          },
+          {
+            "text": "J\nPortfolio\nIN DEVELOPMENT",
+            "href": "/home",
+            "aria": null
+          },
+          {
+            "text": "Living in Silico\nCOMPLETED",
+            "href": "/experience/living-in-silico",
+            "aria": null
+          },
+          {
+            "text": "Stush Patties\nCOMPLETED",
+            "href": "/experience/stush-patties",
+            "aria": null
+          },
+          {
+            "text": "Crest\n3RD PLACE · COMPLETED",
+            "href": "/projects/crest",
+            "aria": null
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "state": {
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 1031,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 70,
+          "width": 390,
+          "height": 900.171875,
+          "left": 0,
+          "right": 390,
+          "top": 70,
+          "bottom": 970.171875
+        },
+        "mainScroll": {
+          "clientHeight": 900,
+          "scrollHeight": 900,
+          "scrollTop": 0
+        },
+        "topNav": null,
+        "topNavScroll": null,
+        "selected": "PROJECTS\nBUILT SYSTEMS",
+        "confirm": {
+          "x": 90,
+          "y": 896.984375,
+          "width": 240,
+          "height": 51.1875,
+          "left": 90,
+          "right": 330,
+          "top": 896.984375,
+          "bottom": 948.171875
+        },
+        "back": {
+          "x": 60,
+          "y": 898.578125,
+          "width": 48,
+          "height": 48,
+          "left": 60,
+          "right": 108,
+          "top": 898.578125,
+          "bottom": 946.578125
+        },
+        "help": {
+          "x": 302.078125,
+          "y": 6.5,
+          "width": 84,
+          "height": 56,
+          "left": 302.078125,
+          "right": 386.078125,
+          "top": 6.5,
+          "bottom": 62.5
+        },
+        "images": [
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "complete": true,
+            "naturalWidth": 32
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ],
+        "anchors": [
+          {
+            "text": "Skip to content",
+            "href": "#main",
+            "aria": null
+          },
+          {
+            "text": "",
+            "href": "/home",
+            "aria": "Portfolio home"
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "aria": null
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "aria": null
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "aria": null
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "aria": null
+          },
+          {
+            "text": "",
+            "href": "/profile",
+            "aria": "Open profile"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          },
+          {
+            "text": "Food TrackerIN DEVELOPMENT",
+            "href": "/projects/food-tracker",
+            "aria": null
+          },
+          {
+            "text": "Cho’VeigoIN DEVELOPMENT",
+            "href": "/projects/choveigo",
+            "aria": null
+          },
+          {
+            "text": "JPortfolioIN DEVELOPMENT",
+            "href": "/home",
+            "aria": null
+          },
+          {
+            "text": "Living in SilicoCOMPLETED",
+            "href": "/experience/living-in-silico",
+            "aria": null
+          },
+          {
+            "text": "Stush PattiesCOMPLETED",
+            "href": "/experience/stush-patties",
+            "aria": null
+          },
+          {
+            "text": "Crest3RD PLACE · COMPLETED",
+            "href": "/projects/crest",
+            "aria": null
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "viewport": {
+        "width": 650,
+        "height": 844
+      },
+      "status": 200,
+      "state": {
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 650,
+          "height": 844
+        },
+        "document": {
+          "width": 650,
+          "clientWidth": 650,
+          "height": 1071,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 70,
+          "width": 650,
+          "height": 940.171875,
+          "left": 0,
+          "right": 650,
+          "top": 70,
+          "bottom": 1010.171875
+        },
+        "mainScroll": {
+          "clientHeight": 940,
+          "scrollHeight": 940,
+          "scrollTop": 0
+        },
+        "topNav": null,
+        "topNavScroll": null,
+        "selected": "PROJECTS\nBUILT SYSTEMS",
+        "confirm": {
+          "x": 220,
+          "y": 936.984375,
+          "width": 240,
+          "height": 51.1875,
+          "left": 220,
+          "right": 460,
+          "top": 936.984375,
+          "bottom": 988.171875
+        },
+        "back": {
+          "x": 190,
+          "y": 938.578125,
+          "width": 48,
+          "height": 48,
+          "left": 190,
+          "right": 238,
+          "top": 938.578125,
+          "bottom": 986.578125
+        },
+        "help": {
+          "x": 302.078125,
+          "y": 6.5,
+          "width": 84,
+          "height": 56,
+          "left": 302.078125,
+          "right": 386.078125,
+          "top": 6.5,
+          "bottom": 62.5
+        },
+        "images": [
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "complete": true,
+            "naturalWidth": 32
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ],
+        "anchors": [
+          {
+            "text": "Skip to content",
+            "href": "#main",
+            "aria": null
+          },
+          {
+            "text": "",
+            "href": "/home",
+            "aria": "Portfolio home"
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "aria": null
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "aria": null
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "aria": null
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "aria": null
+          },
+          {
+            "text": "",
+            "href": "/profile",
+            "aria": "Open profile"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          },
+          {
+            "text": "Food TrackerIN DEVELOPMENT",
+            "href": "/projects/food-tracker",
+            "aria": null
+          },
+          {
+            "text": "Cho’VeigoIN DEVELOPMENT",
+            "href": "/projects/choveigo",
+            "aria": null
+          },
+          {
+            "text": "JPortfolioIN DEVELOPMENT",
+            "href": "/home",
+            "aria": null
+          },
+          {
+            "text": "Living in SilicoCOMPLETED",
+            "href": "/experience/living-in-silico",
+            "aria": null
+          },
+          {
+            "text": "Stush PattiesCOMPLETED",
+            "href": "/experience/stush-patties",
+            "aria": null
+          },
+          {
+            "text": "Crest3RD PLACE · COMPLETED",
+            "href": "/projects/crest",
+            "aria": null
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "viewport": {
+        "width": 900,
+        "height": 844
+      },
+      "status": 200,
+      "state": {
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 900,
+          "height": 844
+        },
+        "document": {
+          "width": 900,
+          "clientWidth": 900,
+          "height": 1013,
+          "scrollY": 82
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 900,
+          "height": 870,
+          "left": 0,
+          "right": 900,
+          "top": 0,
+          "bottom": 870
+        },
+        "mainScroll": {
+          "clientHeight": 870,
+          "scrollHeight": 870,
+          "scrollTop": 0
+        },
+        "topNav": null,
+        "topNavScroll": null,
+        "selected": "PROJECTS\nBUILT SYSTEMS",
+        "confirm": {
+          "x": 326,
+          "y": 707,
+          "width": 300,
+          "height": 64,
+          "left": 326,
+          "right": 626,
+          "top": 707,
+          "bottom": 771
+        },
+        "back": {
+          "x": 290,
+          "y": 710,
+          "width": 58,
+          "height": 58,
+          "left": 290,
+          "right": 348,
+          "top": 710,
+          "bottom": 768
+        },
+        "help": {
+          "x": 496.359375,
+          "y": -82.5,
+          "width": 84,
+          "height": 82,
+          "left": 496.359375,
+          "right": 580.359375,
+          "top": -82.5,
+          "bottom": -0.5
+        },
+        "images": [
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ],
+        "anchors": [
+          {
+            "text": "Skip to content",
+            "href": "#main",
+            "aria": null
+          },
+          {
+            "text": "PORTFOLIO",
+            "href": "/home",
+            "aria": "Portfolio home"
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "aria": null
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "aria": null
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "aria": null
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "aria": null
+          },
+          {
+            "text": "",
+            "href": "/profile",
+            "aria": "Open profile"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          },
+          {
+            "text": "Food TrackerIN DEVELOPMENT",
+            "href": "/projects/food-tracker",
+            "aria": null
+          },
+          {
+            "text": "Cho’VeigoIN DEVELOPMENT",
+            "href": "/projects/choveigo",
+            "aria": null
+          },
+          {
+            "text": "JPortfolioIN DEVELOPMENT",
+            "href": "/home",
+            "aria": null
+          },
+          {
+            "text": "Living in SilicoCOMPLETED",
+            "href": "/experience/living-in-silico",
+            "aria": null
+          },
+          {
+            "text": "Stush PattiesCOMPLETED",
+            "href": "/experience/stush-patties",
+            "aria": null
+          },
+          {
+            "text": "Crest3RD PLACE · COMPLETED",
+            "href": "/projects/crest",
+            "aria": null
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "viewport": {
+        "width": 901,
+        "height": 844
+      },
+      "status": 200,
+      "state": {
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/home",
+        "viewport": {
+          "width": 901,
+          "height": 844
+        },
+        "document": {
+          "width": 901,
+          "clientWidth": 901,
+          "height": 844,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 681,
+          "height": 762,
+          "left": 0,
+          "right": 681,
+          "top": 82,
+          "bottom": 844
+        },
+        "mainScroll": {
+          "clientHeight": 762,
+          "scrollHeight": 870,
+          "scrollTop": 0
+        },
+        "topNav": null,
+        "topNavScroll": null,
+        "selected": "PROJECTS\nBUILT SYSTEMS",
+        "confirm": {
+          "x": 216.5,
+          "y": 789,
+          "width": 300,
+          "height": 64,
+          "left": 216.5,
+          "right": 516.5,
+          "top": 789,
+          "bottom": 853
+        },
+        "back": {
+          "x": 180.5,
+          "y": 792,
+          "width": 58,
+          "height": 58,
+          "left": 180.5,
+          "right": 238.5,
+          "top": 792,
+          "bottom": 850
+        },
+        "help": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0,
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0
+        },
+        "images": [
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "complete": true,
+            "naturalWidth": 128
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "complete": true,
+            "naturalWidth": 58
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "complete": true,
+            "naturalWidth": 9
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "complete": true,
+            "naturalWidth": 300
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "complete": true,
+            "naturalWidth": 38
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "https://bb5ce74d.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "complete": true,
+            "naturalWidth": 54
+          }
+        ],
+        "anchors": [
+          {
+            "text": "Skip to content",
+            "href": "#main",
+            "aria": null
+          },
+          {
+            "text": "PORTFOLIO",
+            "href": "/home",
+            "aria": "Portfolio home"
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "aria": null
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "aria": null
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "aria": null
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "aria": null
+          },
+          {
+            "text": "",
+            "href": "/profile",
+            "aria": "Open profile"
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          },
+          {
+            "text": "Food Tracker\nIN DEVELOPMENT",
+            "href": "/projects/food-tracker",
+            "aria": null
+          },
+          {
+            "text": "Cho’Veigo\nIN DEVELOPMENT",
+            "href": "/projects/choveigo",
+            "aria": null
+          },
+          {
+            "text": "J\nPortfolio\nIN DEVELOPMENT",
+            "href": "/home",
+            "aria": null
+          },
+          {
+            "text": "Living in Silico\nCOMPLETED",
+            "href": "/experience/living-in-silico",
+            "aria": null
+          },
+          {
+            "text": "Stush Patties\nCOMPLETED",
+            "href": "/experience/stush-patties",
+            "aria": null
+          },
+          {
+            "text": "Crest\n3RD PLACE · COMPLETED",
+            "href": "/projects/crest",
+            "aria": null
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "aria": "GitHub (opens in a new tab)"
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "aria": "LinkedIn (opens in a new tab)"
+          },
+          {
+            "text": "✉",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          }
+        ]
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  ],
+  "interactions": {
+    "mobileHelp": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "navMetrics": {
+        "bounds": {
+          "left": 73,
+          "right": 336,
+          "top": 0.5,
+          "bottom": 68.5,
+          "width": 263,
+          "height": 68
+        },
+        "clientWidth": 263,
+        "scrollWidth": 321,
+        "scrollLeft": 0,
+        "overflowX": "auto"
+      },
+      "navLinks": [
+        {
+          "label": "PROJECTS",
+          "href": "/projects",
+          "bounds": {
+            "x": 81,
+            "y": 6.5,
+            "width": 47.859375,
+            "height": 56
+          }
+        },
+        {
+          "label": "EXPERIENCE",
+          "href": "/experience",
+          "bounds": {
+            "x": 128.859375,
+            "y": 6.5,
+            "width": 56.953125,
+            "height": 56
+          }
+        },
+        {
+          "label": "HACKATHONS",
+          "href": "/hackathons",
+          "bounds": {
+            "x": 185.8125,
+            "y": 6.5,
+            "width": 62.296875,
+            "height": 56
+          }
+        },
+        {
+          "label": "EDUCATION",
+          "href": "/education",
+          "bounds": {
+            "x": 248.109375,
+            "y": 6.5,
+            "width": 53.96875,
+            "height": 56
+          }
+        }
+      ],
+      "tabOrderToHelp": [
+        {
+          "tag": "BUTTON",
+          "text": "ProjectsBuilt systems",
+          "cls": "home-explore__mode",
+          "aria": "Projects",
+          "rect": {
+            "x": 15,
+            "y": 166,
+            "width": 176,
+            "height": 179.234375
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "text": "ExperienceProfessional work",
+          "cls": "home-explore__mode",
+          "aria": "Experience",
+          "rect": {
+            "x": 199,
+            "y": 166,
+            "width": 176,
+            "height": 179.234375
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "text": "HackathonsBuild under pressure",
+          "cls": "home-explore__mode",
+          "aria": "Hackathons",
+          "rect": {
+            "x": 15,
+            "y": 353.234375,
+            "width": 176,
+            "height": 179.234375
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "text": "EducationAcademic path",
+          "cls": "home-explore__mode",
+          "aria": "Education",
+          "rect": {
+            "x": 199,
+            "y": 353.234375,
+            "width": 176,
+            "height": 179.234375
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "text": "",
+          "cls": "home-explore__back",
+          "aria": "Back to the previous screen",
+          "rect": {
+            "x": 60,
+            "y": 711.578125,
+            "width": 48,
+            "height": 48
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Confirm",
+          "cls": "home-explore__confirm",
+          "aria": "Confirm Projects destination",
+          "rect": {
+            "x": 90,
+            "y": 709.984375,
+            "width": 240,
+            "height": 51.1875
+          }
+        },
+        {
+          "tag": "A",
+          "text": "GitHub",
+          "cls": "",
+          "aria": "GitHub (opens in a new tab)",
+          "rect": {
+            "x": 117.296875,
+            "y": 792.171875,
+            "width": 49.453125,
+            "height": 44
+          }
+        },
+        {
+          "tag": "A",
+          "text": "LinkedIn",
+          "cls": "",
+          "aria": "LinkedIn (opens in a new tab)",
+          "rect": {
+            "x": 178.75,
+            "y": 792.171875,
+            "width": 55.03125,
+            "height": 44
+          }
+        },
+        {
+          "tag": "A",
+          "text": "✉",
+          "cls": "rail-social-footer__email",
+          "aria": "Email Joshua",
+          "rect": {
+            "x": 245.78125,
+            "y": 792.171875,
+            "width": 26.921875,
+            "height": 44
+          }
+        },
+        {
+          "tag": "BODY",
+          "text": "Skip to contentPORTFOLIOProjectsExperienceHackathonsEducationHelp20283RDJoshua AryeeteyOPEN TO SUMMER 2027ExploreCuratedRecentAboutPortfolio client / HomeSelect a portfolio modeSelect a destination. Confirm to enter its lobby.EXPLORE / SELECT A MODEProjectsBuilt systemsExperienceProfessional workHackathonsBuild under pressureEducationAcademic pathProjectsExplore products and systems I build outside the classroom. Select a focus, then confirm to enter the project lobby.FeaturedStrongest workAI / MLMachine intelligenceSoftwareSystems + applicationsFull stackEnd-to-end productsData / automationPipelines + toolingConfirmUse Left and Right Arrow to move between modes. Home and End jump to the first or last mode. Press Enter to open the selected mode.GitHubLinkedIn✉CURRENT FOCUSFood TrackerIN DEVELOPMENTACTIVITYGENERAL · PORTFOLIOIN DEVELOPMENT (2)Cho’VeigoIN DEVELOPMENTJPortfolioIN DEVELOPMENTCOMPLETED (3)Living in SilicoCOMPLETEDStush PattiesCOMPLETEDCrest3RD PLACE · COMPLETEDGitHubLinkedIn✉XHelp",
+          "cls": "",
+          "aria": null,
+          "rect": {
+            "x": 0,
+            "y": -187,
+            "width": 390,
+            "height": 1031.171875
+          }
+        },
+        {
+          "tag": "A",
+          "text": "Skip to content",
+          "cls": "skip-link",
+          "aria": null,
+          "rect": {
+            "x": 14,
+            "y": 10,
+            "width": 130.09375,
+            "height": 35
+          }
+        },
+        {
+          "tag": "A",
+          "text": "PORTFOLIO",
+          "cls": "brand brand--current",
+          "aria": "Portfolio home",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 68,
+            "height": 69
+          }
+        },
+        {
+          "tag": "A",
+          "text": "Projects",
+          "cls": "",
+          "aria": null,
+          "rect": {
+            "x": 81,
+            "y": 6.5,
+            "width": 47.859375,
+            "height": 56
+          }
+        },
+        {
+          "tag": "A",
+          "text": "Experience",
+          "cls": "",
+          "aria": null,
+          "rect": {
+            "x": 128.859375,
+            "y": 6.5,
+            "width": 56.953125,
+            "height": 56
+          }
+        },
+        {
+          "tag": "A",
+          "text": "Hackathons",
+          "cls": "",
+          "aria": null,
+          "rect": {
+            "x": 185.8125,
+            "y": 6.5,
+            "width": 62.296875,
+            "height": 56
+          }
+        },
+        {
+          "tag": "A",
+          "text": "Education",
+          "cls": "",
+          "aria": null,
+          "rect": {
+            "x": 248.109375,
+            "y": 6.5,
+            "width": 53.96875,
+            "height": 56
+          }
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Help",
+          "cls": "header-help",
+          "aria": null,
+          "rect": {
+            "x": 302.078125,
+            "y": 6.5,
+            "width": 84,
+            "height": 56
+          }
+        }
+      ],
+      "focusedBefore": {
+        "className": "header-help",
+        "text": "Help",
+        "rect": {
+          "x": 302.078125,
+          "y": 6.5,
+          "width": 84,
+          "height": 56
+        }
+      },
+      "dialog": {
+        "title": "_r_0_",
+        "heading": "Home controls",
+        "active": "client-help-overlay__close client-help-overlay__close--floating",
+        "scrollY": 0,
+        "route": "/home",
+        "rect": {
+          "x": 12,
+          "y": 649.625,
+          "width": 366,
+          "height": 182.375
+        }
+      },
+      "afterEscape": {
+        "dialog": false,
+        "activeClass": "header-help",
+        "activeText": "Help",
+        "route": "/home",
+        "scrollY": 0
+      },
+      "errors": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      },
+      "afterHelpFocus": {
+        "active": "header-help",
+        "nav": {
+          "clientWidth": 263,
+          "scrollWidth": 321,
+          "scrollLeft": 0,
+          "bounds": {
+            "left": 73,
+            "right": 336
+          }
+        },
+        "help": {
+          "left": 302.078125,
+          "right": 386.078125,
+          "top": 6.5,
+          "bottom": 62.5,
+          "width": 84,
+          "height": 56
+        },
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "scrollY": 0
+        }
+      }
+    },
+    "inAppBack": {
+      "entry": "https://bb5ce74d.joshuaik2.pages.dev/projects",
+      "afterPortfolioLink": "home",
+      "indexBeforeBack": 1,
+      "afterBack": "https://bb5ce74d.joshuaik2.pages.dev/projects",
+      "status": 200
+    },
+    "education": {
+      "selectedAriaPressed": "true",
+      "selectionHeading": "EDUCATION",
+      "url": "https://bb5ce74d.joshuaik2.pages.dev/education",
+      "http": 200,
+      "clickConfirm": true,
+      "keyboard": {
+        "arrowRightSelects": "Experience",
+        "endSelects": "Education",
+        "enterUrl": "https://bb5ce74d.joshuaik2.pages.dev/education",
+        "enterHttp": 200
+      }
+    },
+    "coldBack": {
+      "before": "https://bb5ce74d.joshuaik2.pages.dev/home",
+      "after": "https://bb5ce74d.joshuaik2.pages.dev/home",
+      "historyIndex": 0
+    }
+  },
+  "geometry": {
+    "390": {
+      "doc": {
+        "width": 390,
+        "clientWidth": 390,
+        "height": 1031
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 390,
+        "height": 70,
+        "right": 390,
+        "bottom": 70
+      },
+      "brand": {
+        "x": 0,
+        "y": 0,
+        "width": 68,
+        "height": 69,
+        "right": 68,
+        "bottom": 69
+      },
+      "main": {
+        "x": 0,
+        "y": 70,
+        "width": 390,
+        "height": 900.171875,
+        "right": 390,
+        "bottom": 970.171875
+      },
+      "nav": {
+        "x": 73,
+        "y": 0.5,
+        "width": 263,
+        "height": 68,
+        "right": 336,
+        "bottom": 68.5
+      },
+      "navContent": {
+        "clientWidth": 263,
+        "scrollWidth": 321,
+        "scrollLeft": 0,
+        "overflow": "auto"
+      },
+      "confirm": {
+        "x": 90,
+        "y": 896.984375,
+        "width": 240,
+        "height": 51.1875,
+        "right": 330,
+        "bottom": 948.171875
+      },
+      "back": {
+        "x": 60,
+        "y": 898.578125,
+        "width": 48,
+        "height": 48,
+        "right": 108,
+        "bottom": 946.578125
+      },
+      "rail": null,
+      "selected": "Projects"
+    },
+    "650": {
+      "doc": {
+        "width": 650,
+        "clientWidth": 650,
+        "height": 1071
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 650,
+        "height": 70,
+        "right": 650,
+        "bottom": 70
+      },
+      "brand": {
+        "x": 0,
+        "y": 0,
+        "width": 68,
+        "height": 69,
+        "right": 68,
+        "bottom": 69
+      },
+      "main": {
+        "x": 0,
+        "y": 70,
+        "width": 650,
+        "height": 940.171875,
+        "right": 650,
+        "bottom": 1010.171875
+      },
+      "nav": {
+        "x": 73,
+        "y": 0.5,
+        "width": 523,
+        "height": 68,
+        "right": 596,
+        "bottom": 68.5
+      },
+      "navContent": {
+        "clientWidth": 523,
+        "scrollWidth": 523,
+        "scrollLeft": 0,
+        "overflow": "auto"
+      },
+      "confirm": {
+        "x": 220,
+        "y": 936.984375,
+        "width": 240,
+        "height": 51.1875,
+        "right": 460,
+        "bottom": 988.171875
+      },
+      "back": {
+        "x": 190,
+        "y": 938.578125,
+        "width": 48,
+        "height": 48,
+        "right": 238,
+        "bottom": 986.578125
+      },
+      "rail": null,
+      "selected": "Projects"
+    },
+    "900": {
+      "doc": {
+        "width": 900,
+        "clientWidth": 900,
+        "height": 1013
+      },
+      "header": {
+        "x": 0,
+        "y": -82,
+        "width": 900,
+        "height": 82,
+        "right": 900,
+        "bottom": 0
+      },
+      "brand": {
+        "x": 0,
+        "y": -82,
+        "width": 164,
+        "height": 81,
+        "right": 164,
+        "bottom": -1
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 900,
+        "height": 870,
+        "right": 900,
+        "bottom": 870
+      },
+      "nav": {
+        "x": 180,
+        "y": -82.5,
+        "width": 400.359375,
+        "height": 82,
+        "right": 580.359375,
+        "bottom": -0.5
+      },
+      "navContent": {
+        "clientWidth": 400,
+        "scrollWidth": 400,
+        "scrollLeft": 0,
+        "overflow": "visible"
+      },
+      "confirm": {
+        "x": 326,
+        "y": 707,
+        "width": 300,
+        "height": 64,
+        "right": 626,
+        "bottom": 771
+      },
+      "back": {
+        "x": 290,
+        "y": 710,
+        "width": 58,
+        "height": 58,
+        "right": 348,
+        "bottom": 768
+      },
+      "rail": null,
+      "selected": "Projects"
+    },
+    "901": {
+      "doc": {
+        "width": 901,
+        "clientWidth": 901,
+        "height": 844
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 901,
+        "height": 82,
+        "right": 901,
+        "bottom": 82
+      },
+      "brand": {
+        "x": 0,
+        "y": 0,
+        "width": 164,
+        "height": 81,
+        "right": 164,
+        "bottom": 81
+      },
+      "main": {
+        "x": 0,
+        "y": 82,
+        "width": 681,
+        "height": 762,
+        "right": 681,
+        "bottom": 844
+      },
+      "nav": {
+        "x": 168,
+        "y": -0.5,
+        "width": 308.359375,
+        "height": 82,
+        "right": 476.359375,
+        "bottom": 81.5
+      },
+      "navContent": {
+        "clientWidth": 308,
+        "scrollWidth": 308,
+        "scrollLeft": 0,
+        "overflow": "visible"
+      },
+      "confirm": {
+        "x": 216.5,
+        "y": 789,
+        "width": 300,
+        "height": 64,
+        "right": 516.5,
+        "bottom": 853
+      },
+      "back": {
+        "x": 180.5,
+        "y": 792,
+        "width": 58,
+        "height": 58,
+        "right": 238.5,
+        "bottom": 850
+      },
+      "rail": null,
+      "selected": "Projects"
+    },
+    "1920": {
+      "doc": {
+        "width": 1920,
+        "clientWidth": 1920,
+        "height": 1080
+      },
+      "header": {
+        "x": 0,
+        "y": 0,
+        "width": 1920,
+        "height": 110,
+        "right": 1920,
+        "bottom": 110
+      },
+      "brand": {
+        "x": 0,
+        "y": 0,
+        "width": 249.59375,
+        "height": 109,
+        "right": 249.59375,
+        "bottom": 109
+      },
+      "main": {
+        "x": 0,
+        "y": 110,
+        "width": 1600,
+        "height": 970,
+        "right": 1600,
+        "bottom": 1080
+      },
+      "nav": {
+        "x": 276.46875,
+        "y": -0.5,
+        "width": 552.53125,
+        "height": 110,
+        "right": 829,
+        "bottom": 109.5
+      },
+      "navContent": {
+        "clientWidth": 553,
+        "scrollWidth": 553,
+        "scrollLeft": 0,
+        "overflow": "visible"
+      },
+      "confirm": {
+        "x": 676,
+        "y": 917,
+        "width": 300,
+        "height": 64,
+        "right": 976,
+        "bottom": 981
+      },
+      "back": {
+        "x": 640,
+        "y": 920,
+        "width": 58,
+        "height": 58,
+        "right": 698,
+        "bottom": 978
+      },
+      "rail": null,
+      "selected": "Projects"
+    },
+    "keyboard": {
+      "afterArrowRight": {
+        "active": "Experience",
+        "pressed": "true"
+      },
+      "afterEnd": {
+        "active": "Education",
+        "pressed": "true"
+      },
+      "afterEnter": {
+        "url": "https://bb5ce74d.joshuaik2.pages.dev/education",
+        "status": 200
+      }
+    }
+  }
+}

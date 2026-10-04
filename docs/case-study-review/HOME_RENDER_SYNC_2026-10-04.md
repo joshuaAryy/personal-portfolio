@@ -37,3 +37,15 @@ Earlier 901/900/899px breakpoint captures remain from the `b56d3a2` Preview. Thi
 ## Remaining review
 
 This validates the narrow focus correction and confirms desktop geometry; it does not close owner review of the Home/Figma comparison. The prior browser comparison observed a difference at the upper-left identity: Figma shows the circular gold/cyan J medallion, while the Preview shows a small flat gold J glyph. Preserve the current Home structure and do not alter the J identity here. Keep archive `159:2` as production fallback and leave the identity decision owner-gated.
+
+## Current Preview rerender - source `f8762c0`
+
+The current immutable Preview `https://bb5ce74d.joshuaik2.pages.dev/home` was rendered with Playwright 1.63.0 and Chrome 153.0.8010.53 at 1920x1080, 901x844, 900x844, 650x844, and 390x844. Every route returned HTTP 200, loaded 32/32 images, had no console/page/request/response errors, and kept document width equal to the viewport. At desktop, the main region is `(0,110,1600x970)`, Confirm is `(676,917,300x64)`, and Back is `(640,920,58x58)`.
+
+The breakpoint sweep found a concrete fresh-entry issue at 900x844: Home initializes at `scrollY=82`, with the header and top navigation shifted above the viewport (`header y=-82`) and `main` at `y=0`. At 901x844, `scrollY=0` and the header is visible; at 650x844 and 390x844, `scrollY=0` as well. No document-width overflow occurs. At 390x844, the main nav is 263px wide with 321px of content. Tab reaches Help without moving that nav, leaving the 84px Help control clipped at the nav edge (`x=336`); Enter still opens the Help dialog. Escape closes it, restores focus to Help, and leaves the route and scroll unchanged.
+
+Education selection worked by both click and keyboard: clicking Education set `aria-pressed="true"`, and Confirm navigated to `/education` (HTTP 200); from the mode group, ArrowRight selected Experience, End selected Education, and Enter opened `/education` (HTTP 200). Cold-entry Back stays on `/home`; entering Home from `/projects` through the Portfolio link and activating Back returns to `/projects` (HTTP 200).
+
+The desktop render retains the broad Figma composition, four-mode order, selected-mode treatment, environment, subnav, and control placement. The previously recorded Figma-versus-React identity difference remains: Figma shows a circular gold/cyan J medallion and React shows a flat gold glyph. The captured Figma frame also has small square markers beside the selected-focus rows that are absent from React. Keep both visible differences in owner review; no identity or structure changes were made during QA. No narrow-Figma parity claim is made.
+
+Current source-specific captures and JSON are in [`render-sync/2026-10-04-home-preview-f8762c0/`](render-sync/2026-10-04-home-preview-f8762c0/), including the five viewport screenshots, full narrow page, Education selected/confirmed, Help focused/open, cold Back, and in-app Back evidence. The machine-readable record is `home-preview-f8762c0-evidence.json`.
