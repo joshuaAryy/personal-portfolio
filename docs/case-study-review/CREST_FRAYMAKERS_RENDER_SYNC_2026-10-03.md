@@ -36,3 +36,11 @@ The full-page measurements provide comparison context, not a target scroll lengt
 The local browser render exercised the source now checkpointed as `a9633b8`. The deployed Preview remains on `86d5d89`, so this report does not claim that the current deployed Preview contains these changes. Production was not targeted. Owner review remains open.
 
 Desktop and narrow full-page captures, targeted Crest policy crops, Figma exports, and the machine-readable browser evidence are in [`render-sync/2026-10-03-crest-fray/`](render-sync/2026-10-03-crest-fray/). The evidence JSON records viewports, image loads, anchors, geometry, and browser errors.
+
+## Crest copy follow-up — 2026-10-03
+
+This follow-up records the small source-backed content sync after the `a9633b8` render report above. Fraymakers is unchanged.
+
+Live Figma pairs `1962:44 / 3286:862`, `2367:7 / 3286:962`, and `1817:422 / 3286:954` were verified before sync. React source `377d640` now includes the employee/merchant/day anomaly grouping as a review-only heuristic; makes transaction-backed Finance Q&A distinct from the standalone policy-PDF retrieval prototype; and states the presentation timing lesson without inventing a duration. It does not claim an ML fraud classifier or Joshua's ownership of Finance Q&A.
+
+Focused Crest tests passed 5/5; the full suite passed (21 files / 92 tests), build and diff check passed. Local Chrome and clean Preview source `377d640` were checked at 1920×1080 and 390×844. All 16 images loaded, no browser/request errors or document overflow appeared, and all five chapter links updated the matching active state. The longer copy fit at both sizes. Evidence: [local copy follow-up](render-sync/2026-10-03-crest-fray/crest-copy-followup/) and [clean Preview QA](render-sync/2026-10-03-preview-clean-377d640/). No concrete render mismatch was found; owner review remains open.

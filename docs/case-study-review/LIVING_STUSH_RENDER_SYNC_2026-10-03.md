@@ -38,3 +38,13 @@ The clean archive of pushed commit `1904549bca547e31582486ada19bf28aa224ad23` wa
 Durable Preview evidence: [Living desktop viewport](render-sync/2026-10-03-living-stush/preview-1904549/living-desktop-viewport.png), [Living narrow full page](render-sync/2026-10-03-living-stush/preview-1904549/living-narrow-full.png), [Stush desktop viewport](render-sync/2026-10-03-living-stush/preview-1904549/stush-desktop-viewport.png), [Stush narrow full page](render-sync/2026-10-03-living-stush/preview-1904549/stush-narrow-full.png), and [machine-readable evidence](render-sync/2026-10-03-living-stush/preview-1904549/evidence.json).
 
 The case-study direction and visual comparison are ready for owner review; they are not owner-approved or frozen.
+
+## Living route-depth follow-up — 2026-10-03
+
+This follow-up covers the later route-depth expansion; it supersedes the earlier Living-only copy and fit summary above. The Stush result is unchanged.
+
+Each approach now has its own rationale, input/representation, method, Joshua contribution, outcome, and learning: DeepMol/RNN, RDKit/Fragmenstein, and REINVENT4. The April snapshot (15,696 rows / 14,487 unique SMILES) remains distinct from the ~400–600 curated experimental subsets. Morgan fingerprints remain a separate representation lane from the RNN's SMILES-sequence input. The 10 epochs and batch size 64 are method settings; 500 generated SMILES are separate output, with no validity, uniqueness, or novelty claim. REINVENT4's input, configuration, and failure cause remain undocumented; no successful generation is implied.
+
+React source `2544f50` passed 4 focused Living tests, the 21-file / 92-test suite, build, and diff check. Chrome 153 at 1920×1080 and 390×844 returned HTTP 200, loaded 14/14 images, matched document width to viewport, and reported no browser/request errors or visible overflow. The REINVENT4 card measured 396×100 desktop and 302×127 narrow. No concrete Figma mismatch was found. Screenshots and machine-readable results are in [the route-depth follow-up evidence](render-sync/2026-10-03-living-stush/living-route-depth-followup/).
+
+The same updated route was then checked on clean feature Preview source `377d640` at `https://13b8b49c.joshuaik2.pages.dev/`; results are in [clean Preview QA](render-sync/2026-10-03-preview-clean-377d640/). This is technical review evidence, not owner acceptance.
