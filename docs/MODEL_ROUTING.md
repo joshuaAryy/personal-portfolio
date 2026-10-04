@@ -116,4 +116,4 @@ Keep one active Sol invocation maximum by default, whether strategic or speciali
 
 ## Current migration checkpoint
 
-This policy changes orchestration only. Portfolio execution remains paused pending explicit owner restart. The current persistent Luna worker handles (`frontend_owner`, `product_coverage`, `runtime_a11y_qa`) are listed but errored at the usage limit. Do not restart them, overwrite their files, or stage interrupted output during architecture migration; reconcile their work first after restart.
+The architecture migration is complete. The owner explicitly resumed portfolio execution; the earlier pause is superseded. Continue under the Luna control-plane / episodic Sol strategic-core split defined above. Check the live agent tree and registry before routing; completed Luna pods may be reactivated for a concrete next task, but do not redo completed work or overwrite preserved artifacts. Current branch, Preview, queue, and pending owner decisions live in `IMPLEMENTATION_STATUS.md`, `RENDER_VALIDATION_QUEUE.md`, and `SESSION_HANDOFF_2026-10-02.md`.
