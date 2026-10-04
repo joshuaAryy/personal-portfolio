@@ -37,7 +37,7 @@ The former Sol-director model below is superseded by MODEL_ROUTING.md. Keep hist
 - Use Luna for routine React implementation, Figma/source audits, documentation, copy sync, accessibility review, and deterministic asset checks when available.
 - A narrowly scoped **Sol 6.1 J specialist** `/root/identity_j_sol61` completed one bounded whole-mark study in the prior session. Its candidate is Figma `3482:3`, review board `3482:2`; give any follow-up only J-specific source review, provenance, and current status—not the full portfolio. The recovery bootstrap found this handle absent from the live tree; recreate it only for an owner-authorized J follow-up. Do not start Candidate 02 before owner review of Candidate 01 or explicit owner direction to continue.
 - Do not create a continuously running Astra lane. Any exceptional Astra use must be short, justified, and owner-approved.
-- Historical recovery bootstrap live tree (2026-10-03, superseded): only `/root` was present at that moment; the prior `/root/frontend_owner` and `/root/runtime_a11y_qa` handles had not yet been recreated. Current reusable Luna handles are `/root/frontend_owner` and `/root/runtime_a11y_qa` (completed/idle); the J specialist remains absent, and J follow-up requires owner direction.
+- Historical recovery bootstrap live tree (2026-10-03, superseded): only `/root` was present then. The current reusable Luna pods are `/root/frontend_owner__luna_xhigh`, `/root/product_coverage__luna_xhigh`, and `/root/runtime_a11y_qa__luna_high` (completed and reusable via follow-up); check the live tree before routing. The J specialist remains absent and J work remains owner-gated.
 - For recurring specialist work, use **builder → critic → Mingo → same builder → same critic**. Reuse capable handles. Do not spawn agents, Figma nodes, or review artifacts just to appear active.
 
 ## 4. Source-of-truth hierarchy
@@ -152,10 +152,10 @@ Use actual CLI Chrome at page-level checkpoints. Queue item 17 completed on Prev
 - Preserve unrelated modified and untracked worktree contents. Stage only intended deliverables; never bulk-clean this worktree.
 - CLI browser rendering is available. The Food/Cho checkpoint is complete; remaining page-level render items stay in [RENDER_VALIDATION_QUEUE.md](RENDER_VALIDATION_QUEUE.md).
 
-## 13. Current next actions (2026-10-04, after Help/recovery Preview sync)
+## 13. Current next actions (2026-10-04, after Help and shared rail footer validation)
 
 1. Help/recovery row 13 and shared rail footer row 16 have current Preview evidence on source `e4e1050`. See [Help/recovery](case-study-review/HELP_RECOVERY_RENDER_SYNC_2026-10-04.md) and [rail footer](case-study-review/RAIL_FOOTER_RENDER_SYNC_2026-10-04.md). The rail footer passes desktop checks; mobile link availability remains a responsive design question because the rail is hidden and no narrow Figma reference exists. Do not reopen completed surfaces without a concrete discrepancy; continue other approved portfolio work.
-2. Continue the remaining surface checks in queue order, making concrete evidence-backed corrections and checkpointing completed units. Keep Opening's underlay difference visible for owner review; do not redesign the current Home shell to match the exported Figma hero without owner direction.
+2. Queue rows through 18 now have source-specific browser evidence; owner-review statuses and the row-16 mobile contact gap remain open as recorded. Do not repeat completed render passes without a new discrepancy. Use new owner feedback or another concrete gap to select the next correction; keep Opening's underlay difference visible for owner review and preserve the current Home shell.
 3. Keep Education on verified ALU/FSM detail; Dental, Bookstore, and CMOS remain evidence-pending until authentic files or owner-supplied context arrive. They do not block other portfolio work.
 4. Preserve accepted case-study direction, Journey, compact Foundations, and archive J fallback. Candidate 02 remains held.
 
