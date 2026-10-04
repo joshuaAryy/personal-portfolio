@@ -1,0 +1,300 @@
+{
+  "deployment": "https://4684a5d6.joshuaik2.pages.dev",
+  "route": "https://4684a5d6.joshuaik2.pages.dev/projects/fraymakers",
+  "expectedSource": "ff23eed082f9d9b5048c1955fdaf2e2521286812",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T12:55:14.208Z",
+  "viewports": {
+    "1920x1080": {
+      "status": 200,
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "deviceScaleFactor": 1
+      },
+      "data": {
+        "url": "https://4684a5d6.joshuaik2.pages.dev/projects/fraymakers",
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080
+        },
+        "rail": {
+          "rect": {
+            "left": 64,
+            "right": 510,
+            "top": 93.5,
+            "bottom": 129.5,
+            "width": 446,
+            "height": 36
+          },
+          "scrollWidth": 446,
+          "clientWidth": 446,
+          "scrollLeft": 0,
+          "overflowX": "auto",
+          "links": [
+            {
+              "text": "PIPELINE",
+              "href": "#fraymakers-pipeline",
+              "rect": {
+                "left": 64,
+                "right": 110.75,
+                "top": 93.5,
+                "bottom": 129.5,
+                "width": 46.75,
+                "height": 36
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "COMPOSITION",
+              "href": "#fraymakers-composition",
+              "rect": {
+                "left": 142.75,
+                "right": 219.88,
+                "top": 93.5,
+                "bottom": 129.5,
+                "width": 77.13,
+                "height": 36
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "YAML CONFIG",
+              "href": "#fraymakers-configuration",
+              "rect": {
+                "left": 251.88,
+                "right": 326.86,
+                "top": 93.5,
+                "bottom": 129.5,
+                "width": 74.98,
+                "height": 36
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "OWNERSHIP",
+              "href": "#fraymakers-ownership",
+              "rect": {
+                "left": 358.86,
+                "right": 423.5,
+                "top": 93.5,
+                "bottom": 129.5,
+                "width": 64.64,
+                "height": 36
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "OUTCOME",
+              "href": "#fraymakers-outcome",
+              "rect": {
+                "left": 455.5,
+                "right": 509.25,
+                "top": 93.5,
+                "bottom": 129.5,
+                "width": 53.75,
+                "height": 36
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            }
+          ]
+        },
+        "images": {
+          "total": 14,
+          "loaded": 14
+        }
+      },
+      "cssChecks": [
+        {
+          "url": "https://4684a5d6.joshuaik2.pages.dev/assets/index-CeDSRlWx.css",
+          "status": 200,
+          "contains446px": true,
+          "ruleMatches": [
+            ".fraymakers-nav{grid-template-columns:minmax(0,446px) 124px minmax(0,1fr)}"
+          ],
+          "excerpt": "veigo-case-nav{grid-template-columns:minmax(0,890px) 124px minmax(0,1fr)}.fraymakers-nav{grid-template-columns:minmax(0,446px) 124px minmax(0,1fr)}}.header-client-tool{display:contents}@media(min-width:1565px){.client--resume-shell .brand--"
+        }
+      ],
+      "interactions": null,
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {
+        "viewport": "fraymakers-nav-preview-1920x1080-viewport.png"
+      }
+    },
+    "390x844": {
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 1
+      },
+      "data": {
+        "url": "https://4684a5d6.joshuaik2.pages.dev/projects/fraymakers",
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 3356
+        },
+        "rail": {
+          "rect": {
+            "left": 22,
+            "right": 368,
+            "top": 47,
+            "bottom": 77,
+            "width": 346,
+            "height": 30
+          },
+          "scrollWidth": 405,
+          "clientWidth": 346,
+          "scrollLeft": 0,
+          "overflowX": "auto",
+          "links": [
+            {
+              "text": "PIPELINE",
+              "href": "#fraymakers-pipeline",
+              "rect": {
+                "left": 22,
+                "right": 68.75,
+                "top": 47,
+                "bottom": 77,
+                "width": 46.75,
+                "height": 30
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "COMPOSITION",
+              "href": "#fraymakers-composition",
+              "rect": {
+                "left": 90.75,
+                "right": 167.88,
+                "top": 47,
+                "bottom": 77,
+                "width": 77.13,
+                "height": 30
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "YAML CONFIG",
+              "href": "#fraymakers-configuration",
+              "rect": {
+                "left": 189.88,
+                "right": 264.86,
+                "top": 47,
+                "bottom": 77,
+                "width": 74.98,
+                "height": 30
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "OWNERSHIP",
+              "href": "#fraymakers-ownership",
+              "rect": {
+                "left": 286.86,
+                "right": 351.5,
+                "top": 47,
+                "bottom": 77,
+                "width": 64.64,
+                "height": 30
+              },
+              "insideRail": true,
+              "ariaCurrent": null
+            },
+            {
+              "text": "OUTCOME",
+              "href": "#fraymakers-outcome",
+              "rect": {
+                "left": 373.5,
+                "right": 427.25,
+                "top": 47,
+                "bottom": 77,
+                "width": 53.75,
+                "height": 30
+              },
+              "insideRail": false,
+              "ariaCurrent": null
+            }
+          ]
+        },
+        "images": {
+          "total": 14,
+          "loaded": 14
+        }
+      },
+      "cssChecks": [
+        {
+          "url": "https://4684a5d6.joshuaik2.pages.dev/assets/index-CeDSRlWx.css",
+          "status": 200,
+          "contains446px": true,
+          "ruleMatches": [
+            ".fraymakers-nav{grid-template-columns:minmax(0,446px) 124px minmax(0,1fr)}"
+          ],
+          "excerpt": "veigo-case-nav{grid-template-columns:minmax(0,890px) 124px minmax(0,1fr)}.fraymakers-nav{grid-template-columns:minmax(0,446px) 124px minmax(0,1fr)}}.header-client-tool{display:contents}@media(min-width:1565px){.client--resume-shell .brand--"
+        }
+      ],
+      "interactions": {
+        "before": {
+          "scrollLeft": 0,
+          "scrollWidth": 405,
+          "clientWidth": 346
+        },
+        "afterWheel": {
+          "scrollLeft": 59,
+          "scrollWidth": 405,
+          "clientWidth": 346
+        },
+        "outcome": {
+          "text": "OUTCOME",
+          "href": "#fraymakers-outcome",
+          "focusVisible": true,
+          "rect": {
+            "left": 314.5,
+            "right": 368.25
+          },
+          "rail": {
+            "left": 22,
+            "right": 368,
+            "scrollLeft": 59,
+            "scrollWidth": 405,
+            "clientWidth": 346
+          },
+          "visible": false
+        },
+        "documentAfter": {
+          "width": 390,
+          "clientWidth": 390
+        }
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {
+        "viewport": "fraymakers-nav-preview-390x844-viewport.png",
+        "outcomeFocused": "fraymakers-nav-preview-390x844-outcome-focused.png"
+      }
+    }
+  }
+}
