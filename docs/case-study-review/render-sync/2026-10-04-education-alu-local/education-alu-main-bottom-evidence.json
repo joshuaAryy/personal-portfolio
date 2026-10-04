@@ -1,0 +1,19 @@
+﻿{
+  "route": "http://127.0.0.1:5173/education/projects",
+  "headCommit": "02ea2f7042dd16f61173d0350b20e729538f2fb6",
+  "browser": "Chrome 153.0.8010.53 via Playwright 1.63.0",
+  "viewport": {"width":1920,"height":1080,"deviceScaleFactor":1},
+  "scrollContainer": "main.main--education-projects",
+  "scrollTop": 294,
+  "scrollHeight": 1264,
+  "clientHeight": 970,
+  "documentScrollWidth": 1920,
+  "documentClientWidth": 1920,
+  "figureName": "Lab 6 part 2 system map",
+  "arrows": [
+    {"from":"input/data + control cards","to":"process card","visual":"horizontal right arrow"},
+    {"from":"process card","to":"display card","visual":"horizontal right arrow"}
+  ],
+  "screenshot": "education-alu-1920x1080-main-bottom.png",
+  "observation": "All lower diagram content, opcode branches, state progression, and source caveat fit within the scrolled main viewport; no horizontal document overflow."
+}

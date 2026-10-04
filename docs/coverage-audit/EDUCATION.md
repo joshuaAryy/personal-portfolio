@@ -2,7 +2,7 @@
 
 Internal discovery note for factual gating of the Education route. The scan was read-only. It covered the portfolio worktree/repository, local Desktop project folders, and filename-filtered source files in the user’s OneDrive Desktop, Documents, and Downloads locations. This is not an exhaustive search of cloud-only storage or unmounted repositories; absence below means not found in that local scan.
 
-## Verified local artifact: Quartus ALU / FSM
+## Separate source variant: Lab 6 part 1 components
 
 **Available files:**
 
@@ -18,9 +18,22 @@ Internal discovery note for factual gating of the Education route. The scan was 
 
 Verified source SHA-256: `ALU.vhd` = `7EC8EA671DDBB2AF5D36E27ECF90293A2FE26F3B857DABEF5E7C0C664E64A8BC`; `FSM.vhd` = `DF8C8B28B22B16690F73D39B7A0F5724D9033B158E0B60E31E666D4AB671BF2B`; `Lab6.qsf` = `3DF91307D0E1AB8D0715D6E9508EFE309287A4BA3021A764FB1C78C89D959EE1`.
 
-**Concise section direction:** explain two 8-bit inputs and clocked arithmetic/logic, the nine-state sequencing controller, and the result split into hexadecimal display nibbles with separate sign indication. Use a clearly labeled source-derived block diagram or a verified original capture. Do not assert successful board operation, passing waveforms, exact controller-to-operation mapping, or reset polarity until the selected top-level design is traced. Keep identifier values out of public copy and diagrams. The other three projects remain evidence-pending rather than permanently sparse; future authentic files or owner-supplied project context may support fuller sections.
+**Part 1-only section direction:** these component files support describing two 8-bit inputs and clocked arithmetic/logic, the nine-state sequencing controller, and hexadecimal display nibbles with a separate sign indication. Do not combine these operations/sign behavior with another iteration or claim a controller mapping from this component-only view. This variant is not the selected public-page snapshot below.
 
-**Safe current wording:** “Quartus/VHDL 8-bit ALU and nine-state FSM lab project,” with operation details if useful. These files show design artifacts and project configuration; they do not independently prove authorship, successful board demonstration, course grade, or performance. Do not conflate the separate ALU/FSM iterations (part 1/2/3) into one exact final architecture without checking the selected project/revision.
+**Safe part 1-only wording:** “Quartus/VHDL 8-bit ALU and nine-state FSM lab project,” with operation details if useful. These files show design artifacts and project configuration; they do not independently prove authorship, successful board demonstration, course grade, or performance. The public page uses the separately traced part 2 snapshot below.
+
+## Additional verified configured snapshot: Lab 6 part 2
+
+The public Education page now uses this specific integrated snapshot rather than mixing it with the separate part 1 files above:
+
+- `C:/Users/samue/OneDrive/Desktop/Lab 6 Joshua/Lab 6 part 2/Lab6.qsf` sets `TOP_LEVEL_ENTITY part1`, `BDF_FILE part1.bdf`, device `EP2C35F672C6`, and includes the ALU, FSM, decoder, latch, and seven-segment VHDL modules.
+- `part1.bdf` traces the FSM `current_state[3..0]` output into `modified_dec3to8.w[3..0]`; the decoder's 16-bit output connects to `ALU.OP[15..0]`. The two top-level 8-bit inputs pass through separate `latch1` instances into ALU A/B. ALU R1/R2 outputs connect to separate `sseg` nibble inputs.
+- This snapshot's ALU has nine opcode branches: shift A right by two with high bits set, `(A-B)+4`, max(A,B), concatenate B's low nibble with A's high nibble, increment A, AND A/B, invert A's high nibble, rotate B left by three, or output zero. R1 is the low result nibble and R2 is the high result nibble.
+- The nine-state Moore FSM advances on a rising clock edge when `data_in` is high, holds when low, and wraps s9 to s1. Its reset input returns to s1. Do not state system-level reset polarity: the BDF pin is named `Resetn`, while module behavior and the top-level route require care.
+- In this ALU snapshot, `Neg` is assigned low at each active clock and no opcode branch raises it. The page therefore does not describe signed-result behavior. The BDF includes a separate identifier display path; omit that path and all identifier values from public evidence.
+- `ALU2_waveform.vwf` and other waveform files are setup/source artifacts only. They are not proof of passing simulation or successful board operation. No such claim is made.
+
+Source SHA-256 for this selected snapshot: `Lab6.qsf` = `873C5D3DB6761EED8B481A3CC7794943407045C60756EF13D4CEF22C8E9A4FA9`; `part1.bdf` = `A68A1FD32D27B1D82BE7EA6A232616148F8B52847D7087BAF8AE886B3FD44C1A`; `ALU.vhd` = `C0A97E198ED6F5684539B2445C2ED1DE5C027C77EB5590D50BE5A8B2D236BF32`; `FSM.vhd` = `BE30074CCC1C3B23C2636F4988F90132EDB018BDA38A8AF51D8D7EC98D92A299`; `modified_dec3to8.vhd` = `F1EC07C2783726370C61D6857C23DA3BE8E5958BEF906DC16F3A1A1393118F27`.
 
 ## Evidence not found in the inspected local project files
 

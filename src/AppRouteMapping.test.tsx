@@ -68,4 +68,16 @@ describe("primary App route mapping", () => {
     expect(page).toContain('class="header-help"');
     expect(page).toContain("<code>data_in</code> is high");
   });
+
+  it("shows the traced Lab 6 part 2 data, control, and display paths accessibly", () => {
+    const page = renderRoute("/education/projects");
+    expect(page).toContain('aria-label="Lab 6 part 2 system map"');
+    expect(page).toContain("Two latch1 input registers");
+    expect(page).toContain("nine-state FSM");
+    expect(page).toContain("one-hot opcode decoder");
+    expect(page).toContain("R1 and R2");
+    expect(page).toContain("seven-segment decoders");
+    expect(page).toContain("does not claim a hardware demonstration");
+    expect(page).not.toContain("501305419");
+  });
 });

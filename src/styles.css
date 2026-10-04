@@ -1999,6 +1999,71 @@ a:focus-visible {
   font-size: 13px;
   line-height: 1.65;
 }
+.education-system-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) 22px minmax(180px, 0.8fr) 22px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 26px;
+}
+.education-system-map__stage,
+.education-system-map__sources {
+  display: grid;
+  gap: 10px;
+}
+.education-system-map__node {
+  min-width: 0;
+  padding: 15px;
+  border: 1px solid #c7b78245;
+  background: #07121b;
+}
+.education-system-map__node > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #c7b782;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.education-system-map__node strong {
+  display: block;
+  color: #eee8dc;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.45;
+}
+.education-system-map__node p {
+  margin: 6px 0 0;
+  color: #abb7bd;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.education-system-map__arrow {
+  color: #c7b782;
+  font-size: 22px;
+  text-align: center;
+}
+.education-system-map figcaption {
+  grid-column: 1 / -1;
+  color: #929fa7;
+  font-size: 11px;
+  line-height: 1.5;
+}
+.education-projects__operation-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.education-projects__operation-list li {
+  padding: 8px 9px;
+  border: 1px solid #c7b78235;
+  color: #c6cdd0;
+  font-size: 11px;
+  line-height: 1.4;
+}
 .education-projects__technical code {
   color: #e9e5dc;
   font-size: 0.94em;
@@ -2015,6 +2080,10 @@ a:focus-visible {
   .education-projects__item { min-height: 86px; }
   .education-projects__technical { padding: 18px; }
   .education-projects__technical-grid { grid-template-columns: 1fr; gap: 20px; }
+  .education-system-map { grid-template-columns: 1fr; gap: 8px; }
+  .education-system-map__sources { grid-template-columns: 1fr; }
+  .education-system-map__arrow { transform: rotate(90deg); line-height: 1; }
+  .education-projects__operation-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 .main--food-case {
   padding: 0;
