@@ -1,0 +1,964 @@
+{
+  "preview": "https://723c7b0d.joshuaik2.pages.dev",
+  "source": "8680eeb",
+  "browser": "Chrome 153.0.8010.53",
+  "routes": {
+    "food": {
+      "route": "/projects/food-tracker",
+      "status": 200,
+      "desktop": {
+        "status": "complete",
+        "path": "/projects/food-tracker",
+        "title": "Joshua Aryeetey · Portfolio",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 1560,
+          "height": 998,
+          "bottom": 1080,
+          "right": 1560
+        },
+        "mainScroll": {
+          "height": 4727,
+          "client": 998,
+          "overflow": "auto"
+        },
+        "navLabels": [
+          {
+            "label": "Main navigation",
+            "text": "PROJECTS EXPERIENCE HACKATHONS EDUCATION RESUME",
+            "rect": {
+              "x": 232.875,
+              "y": -0.5,
+              "width": 1054.53125,
+              "height": 82,
+              "bottom": 81.5,
+              "right": 1287.40625
+            }
+          },
+          {
+            "label": "Food Tracker case study",
+            "text": "PRODUCT LOGGING INSIGHTS RETRIEVAL IN PRODUCT ARCHITECTURE RESULTS LEARNING CLOSE ‹ PROJECTS CASE STUDY / FOOD TRACKER",
+            "rect": {
+              "x": 0,
+              "y": 82,
+              "width": 1560,
+              "height": 60,
+              "bottom": 142,
+              "right": 1560
+            }
+          },
+          {
+            "label": "Contact links",
+            "text": "GitHubLinkedIn✉",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "right": 0
+            }
+          }
+        ],
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Simple food logs. Trusted nutrition.",
+            "id": "",
+            "section": "food-overview"
+          },
+          {
+            "tag": "H2",
+            "text": "A quick log still needs the right food and serving.",
+            "id": "",
+            "section": "food-overview"
+          },
+          {
+            "tag": "H2",
+            "text": "One meal, several ways to get started.",
+            "id": "food-logging-title",
+            "section": "food-logging"
+          },
+          {
+            "tag": "H2",
+            "text": "Turn saved logs into a view of patterns over time.",
+            "id": "food-insights-title",
+            "section": "food-insights"
+          },
+          {
+            "tag": "H3",
+            "text": "SIMPLE / FOCUSED OVERVIEW",
+            "id": "",
+            "section": "food-insights"
+          },
+          {
+            "tag": "H3",
+            "text": "COMPLEX / RANGE COMPARISON",
+            "id": "",
+            "section": "food-insights"
+          },
+          {
+            "tag": "H3",
+            "text": "SAVED VIEWS",
+            "id": "",
+            "section": "food-insights"
+          },
+          {
+            "tag": "H2",
+            "text": "One query can surface several plausible foods.",
+            "id": "food-interface-title",
+            "section": "food-interface"
+          },
+          {
+            "tag": "H2",
+            "text": "Hybrid search put the intended food first more often.",
+            "id": "",
+            "section": "food-evaluation"
+          },
+          {
+            "tag": "H3",
+            "text": "DEVELOPMENT · 80 QUERIES",
+            "id": "",
+            "section": "food-evaluation"
+          },
+          {
+            "tag": "H3",
+            "text": "HOLDOUT · 40 QUERIES",
+            "id": "",
+            "section": "food-evaluation"
+          },
+          {
+            "tag": "H2",
+            "text": "Passing tests did not guarantee useful search.",
+            "id": "",
+            "section": "food-iteration"
+          },
+          {
+            "tag": "H3",
+            "text": "RELEVANCE",
+            "id": "",
+            "section": "food-iteration"
+          },
+          {
+            "tag": "H3",
+            "text": "INDEX COMPLETENESS",
+            "id": "",
+            "section": "food-iteration"
+          },
+          {
+            "tag": "H2",
+            "text": "Keep intent, nutrition, and recorded history distinct.",
+            "id": "",
+            "section": "food-boundaries"
+          },
+          {
+            "tag": "H3",
+            "text": "INTENT INTERPRETATION",
+            "id": "",
+            "section": "food-boundaries"
+          },
+          {
+            "tag": "H3",
+            "text": "NUTRITION AUTHORITY",
+            "id": "",
+            "section": "food-boundaries"
+          },
+          {
+            "tag": "H3",
+            "text": "HISTORICAL INTEGRITY",
+            "id": "",
+            "section": "food-boundaries"
+          },
+          {
+            "tag": "H2",
+            "text": "Useful search means the right food appears first.",
+            "id": "",
+            "section": "food-workflow"
+          },
+          {
+            "tag": "H2",
+            "text": "A useful match must resolve into trusted nutrition.",
+            "id": "",
+            "section": "food-reflection"
+          }
+        ],
+        "figures": [
+          {
+            "className": "food-product-flow",
+            "caption": "",
+            "imageSrc": [
+              {
+                "src": "/media/case-studies/food-product-flow-pass-09-inset.png",
+                "complete": true,
+                "naturalWidth": 884,
+                "naturalHeight": 222,
+                "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record."
+              }
+            ],
+            "rect": {
+              "x": 612,
+              "y": 318.78125,
+              "width": 884,
+              "height": 222,
+              "bottom": 540.78125,
+              "right": 1496
+            }
+          },
+          {
+            "className": "food-retrieval-flow",
+            "caption": "RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.",
+            "imageSrc": [],
+            "rect": {
+              "x": 64,
+              "y": 1388.4375,
+              "width": 1432,
+              "height": 329,
+              "bottom": 1717.4375,
+              "right": 1496
+            }
+          },
+          {
+            "className": "food-interface__capture",
+            "caption": "EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH",
+            "imageSrc": [
+              {
+                "src": "/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+                "complete": true,
+                "naturalWidth": 368,
+                "naturalHeight": 800,
+                "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results."
+              }
+            ],
+            "rect": {
+              "x": 1064.03125,
+              "y": 1792.109375,
+              "width": 368,
+              "height": 818.640625,
+              "bottom": 2610.75,
+              "right": 1432.03125
+            }
+          },
+          {
+            "className": "food-system-map food-system-map--flagship",
+            "caption": "Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.",
+            "imageSrc": [
+              {
+                "src": "/media/case-studies/food-system-pass-10.png",
+                "complete": true,
+                "naturalWidth": 1432,
+                "naturalHeight": 710,
+                "alt": ""
+              }
+            ],
+            "rect": {
+              "x": 64,
+              "y": 2698.625,
+              "width": 1432,
+              "height": 710,
+              "bottom": 3408.625,
+              "right": 1496
+            }
+          },
+          {
+            "className": "food-benchmark food-benchmark--flagship",
+            "caption": "OFFLINE SEARCH EVALUATION · FIRST RESULT",
+            "imageSrc": [],
+            "rect": {
+              "x": 64,
+              "y": 3589.59375,
+              "width": 1432,
+              "height": 192.6875,
+              "bottom": 3782.28125,
+              "right": 1496
+            }
+          }
+        ],
+        "sections": [
+          {
+            "id": "food-overview",
+            "heading": "Simple food logs. Trusted nutrition.",
+            "rect": {
+              "x": 64,
+              "y": 206,
+              "width": 1432,
+              "height": 334.78125,
+              "bottom": 540.78125,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-logging",
+            "heading": "One meal, several ways to get started.",
+            "rect": {
+              "x": 64,
+              "y": 594.78125,
+              "width": 1432,
+              "height": 303.140625,
+              "bottom": 897.921875,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-insights",
+            "heading": "Turn saved logs into a view of patterns over time.",
+            "rect": {
+              "x": 64,
+              "y": 951.921875,
+              "width": 1432,
+              "height": 357.328125,
+              "bottom": 1309.25,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-search",
+            "heading": "",
+            "rect": {
+              "x": 64,
+              "y": 1363.25,
+              "width": 1432,
+              "height": 354.1875,
+              "bottom": 1717.4375,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-interface",
+            "heading": "One query can surface several plausible foods.",
+            "rect": {
+              "x": 64,
+              "y": 1771.4375,
+              "width": 1432,
+              "height": 860,
+              "bottom": 2631.4375,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-system",
+            "heading": "",
+            "rect": {
+              "x": 64,
+              "y": 2685.4375,
+              "width": 1432,
+              "height": 778.1875,
+              "bottom": 3463.625,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-evaluation",
+            "heading": "Hybrid search put the intended food first more often.",
+            "rect": {
+              "x": 64,
+              "y": 3517.625,
+              "width": 1432,
+              "height": 281,
+              "bottom": 3798.625,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-iteration",
+            "heading": "Passing tests did not guarantee useful search.",
+            "rect": {
+              "x": 64,
+              "y": 3852.625,
+              "width": 1432,
+              "height": 208,
+              "bottom": 4060.625,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-boundaries",
+            "heading": "Keep intent, nutrition, and recorded history distinct.",
+            "rect": {
+              "x": 64,
+              "y": 4114.625,
+              "width": 1432,
+              "height": 146,
+              "bottom": 4260.625,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-workflow",
+            "heading": "Useful search means the right food appears first.",
+            "rect": {
+              "x": 64,
+              "y": 4314.625,
+              "width": 1432,
+              "height": 175,
+              "bottom": 4489.625,
+              "right": 1496
+            }
+          },
+          {
+            "id": "food-reflection",
+            "heading": "A useful match must resolve into trusted nutrition.",
+            "rect": {
+              "x": 64,
+              "y": 4543.625,
+              "width": 1432,
+              "height": 205,
+              "bottom": 4748.625,
+              "right": 1496
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "/media/profile/food-tracker-mark.svg",
+            "complete": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "/media/case-studies/food-product-flow-pass-09-inset.png",
+            "complete": true,
+            "naturalWidth": 884,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record."
+          },
+          {
+            "src": "/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "complete": true,
+            "naturalWidth": 368,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results."
+          },
+          {
+            "src": "/media/case-studies/food-system-pass-10.png",
+            "complete": true,
+            "naturalWidth": 1432,
+            "alt": ""
+          }
+        ]
+      },
+      "desktopScrollMax": 3729,
+      "narrow": {
+        "status": 200,
+        "path": "/projects/food-tracker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 6864
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 6733.453125,
+          "scrollHeight": 6733,
+          "clientHeight": 6733,
+          "overflow": "visible"
+        },
+        "headings": [
+          {
+            "text": "Simple food logs. Trusted nutrition.",
+            "section": "food-overview"
+          },
+          {
+            "text": "A quick log still needs the right food and serving.",
+            "section": "food-overview"
+          },
+          {
+            "text": "One meal, several ways to get started.",
+            "section": "food-logging"
+          },
+          {
+            "text": "Turn saved logs into a view of patterns over time.",
+            "section": "food-insights"
+          },
+          {
+            "text": "SIMPLE / FOCUSED OVERVIEW",
+            "section": "food-insights"
+          },
+          {
+            "text": "COMPLEX / RANGE COMPARISON",
+            "section": "food-insights"
+          },
+          {
+            "text": "SAVED VIEWS",
+            "section": "food-insights"
+          },
+          {
+            "text": "One query can surface several plausible foods.",
+            "section": "food-interface"
+          },
+          {
+            "text": "Hybrid search put the intended food first more often.",
+            "section": "food-evaluation"
+          },
+          {
+            "text": "DEVELOPMENT · 80 QUERIES",
+            "section": "food-evaluation"
+          },
+          {
+            "text": "HOLDOUT · 40 QUERIES",
+            "section": "food-evaluation"
+          },
+          {
+            "text": "Passing tests did not guarantee useful search.",
+            "section": "food-iteration"
+          },
+          {
+            "text": "RELEVANCE",
+            "section": "food-iteration"
+          },
+          {
+            "text": "INDEX COMPLETENESS",
+            "section": "food-iteration"
+          },
+          {
+            "text": "Keep intent, nutrition, and recorded history distinct.",
+            "section": "food-boundaries"
+          },
+          {
+            "text": "INTENT INTERPRETATION",
+            "section": "food-boundaries"
+          },
+          {
+            "text": "NUTRITION AUTHORITY",
+            "section": "food-boundaries"
+          },
+          {
+            "text": "HISTORICAL INTEGRITY",
+            "section": "food-boundaries"
+          },
+          {
+            "text": "Useful search means the right food appears first.",
+            "section": "food-workflow"
+          },
+          {
+            "text": "A useful match must resolve into trusted nutrition.",
+            "section": "food-reflection"
+          }
+        ],
+        "images": [
+          {
+            "src": "/media/profile/food-tracker-mark.svg",
+            "complete": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "/media/case-studies/food-product-flow-pass-09-inset.png",
+            "complete": true,
+            "naturalWidth": 884,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record."
+          },
+          {
+            "src": "/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "complete": true,
+            "naturalWidth": 368,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results."
+          },
+          {
+            "src": "/media/case-studies/food-system-pass-10.png",
+            "complete": true,
+            "naturalWidth": 1432,
+            "alt": ""
+          }
+        ],
+        "nav": [
+          "Main navigation",
+          "Food Tracker case study",
+          "Contact links"
+        ]
+      }
+    },
+    "cho": {
+      "route": "/projects/choveigo",
+      "status": 200,
+      "desktop": {
+        "status": "complete",
+        "path": "/projects/choveigo",
+        "title": "Joshua Aryeetey · Portfolio",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 1560,
+          "height": 998,
+          "bottom": 1080,
+          "right": 1560
+        },
+        "mainScroll": {
+          "height": 3355,
+          "client": 998,
+          "overflow": "auto"
+        },
+        "navLabels": [
+          {
+            "label": "Main navigation",
+            "text": "PROJECTS EXPERIENCE HACKATHONS EDUCATION RESUME",
+            "rect": {
+              "x": 232.875,
+              "y": -0.5,
+              "width": 1054.53125,
+              "height": 82,
+              "bottom": 81.5,
+              "right": 1287.40625
+            }
+          },
+          {
+            "label": "Cho’Veigo case study",
+            "text": "OVERVIEW SYSTEM PATH FIT MODEL HUMAN REVIEW WHAT CHANGED ‹ PROJECTS CASE STUDY / CHO’VEIGO",
+            "rect": {
+              "x": 0,
+              "y": 82,
+              "width": 1560,
+              "height": 60,
+              "bottom": 142,
+              "right": 1560
+            }
+          },
+          {
+            "label": "Contact links",
+            "text": "GitHubLinkedIn✉",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "bottom": 0,
+              "right": 0
+            }
+          }
+        ],
+        "headings": [
+          {
+            "tag": "H1",
+            "text": "Cho’Veigo",
+            "id": "",
+            "section": "choveigo-overview"
+          },
+          {
+            "tag": "H2",
+            "text": "How a role becomes a recommendation.",
+            "id": "",
+            "section": "choveigo-system"
+          },
+          {
+            "tag": "H3",
+            "text": "ROLE DISCOVERY",
+            "id": "",
+            "section": "choveigo-system"
+          },
+          {
+            "tag": "H3",
+            "text": "CANDIDATE EVIDENCE",
+            "id": "",
+            "section": "choveigo-system"
+          },
+          {
+            "tag": "H3",
+            "text": "DECISION LAYERS",
+            "id": "",
+            "section": "choveigo-system"
+          },
+          {
+            "tag": "H3",
+            "text": "PRODUCT ACTIONS",
+            "id": "",
+            "section": "choveigo-system"
+          },
+          {
+            "tag": "H3",
+            "text": "ROLE RECORD",
+            "id": "",
+            "section": ""
+          },
+          {
+            "tag": "H3",
+            "text": "PROFILE + RESUME EVIDENCE",
+            "id": "",
+            "section": ""
+          },
+          {
+            "tag": "H3",
+            "text": "The recommendation opens a path; the person starts tailoring.",
+            "id": "choveigo-tailoring-title",
+            "section": ""
+          },
+          {
+            "tag": "H2",
+            "text": "A title or stack is only a clue.",
+            "id": "",
+            "section": "choveigo-fit"
+          },
+          {
+            "tag": "H3",
+            "text": "RESPONSIBILITIES OVER STACK",
+            "id": "",
+            "section": "choveigo-fit"
+          },
+          {
+            "tag": "H3",
+            "text": "CORE REQUIREMENTS FIRST",
+            "id": "",
+            "section": "choveigo-fit"
+          },
+          {
+            "tag": "H3",
+            "text": "TRANSFERABILITY COUNTS",
+            "id": "",
+            "section": "choveigo-fit"
+          },
+          {
+            "tag": "H2",
+            "text": "A mismatch became a better test.",
+            "id": "",
+            "section": "choveigo-review"
+          },
+          {
+            "tag": "H2",
+            "text": "I learned to evaluate recommendations through the evidence that supports them.",
+            "id": "",
+            "section": "choveigo-change"
+          }
+        ],
+        "figures": [
+          {
+            "className": "choveigo-recommendations__figure",
+            "caption": "Role recommendations with fit evidence visible in context.",
+            "imageSrc": [
+              {
+                "src": "/media/choveigo-recommendations.png",
+                "complete": true,
+                "naturalWidth": 864,
+                "naturalHeight": 486,
+                "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence"
+              }
+            ],
+            "rect": {
+              "x": 676,
+              "y": 231.1875,
+              "width": 820,
+              "height": 490.25,
+              "bottom": 721.4375,
+              "right": 1496
+            }
+          },
+          {
+            "className": "choveigo-system-map",
+            "caption": "Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.",
+            "imageSrc": [],
+            "rect": {
+              "x": 64,
+              "y": 1033.328125,
+              "width": 1432,
+              "height": 320,
+              "bottom": 1353.328125,
+              "right": 1496
+            }
+          },
+          {
+            "className": "cho-evidence-worksheet",
+            "caption": "MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT",
+            "imageSrc": [],
+            "rect": {
+              "x": 64,
+              "y": 2389.359375,
+              "width": 1432,
+              "height": 269.84375,
+              "bottom": 2659.203125,
+              "right": 1496
+            }
+          }
+        ],
+        "sections": [
+          {
+            "id": "choveigo-overview",
+            "heading": "Cho’Veigo",
+            "rect": {
+              "x": 64,
+              "y": 176,
+              "width": 1432,
+              "height": 633.515625,
+              "bottom": 809.515625,
+              "right": 1496
+            }
+          },
+          {
+            "id": "choveigo-system",
+            "heading": "How a role becomes a recommendation.",
+            "rect": {
+              "x": 64,
+              "y": 839.515625,
+              "width": 1432,
+              "height": 1105.40625,
+              "bottom": 1944.921875,
+              "right": 1496
+            }
+          },
+          {
+            "id": "choveigo-fit",
+            "heading": "A title or stack is only a clue.",
+            "rect": {
+              "x": 64,
+              "y": 1944.921875,
+              "width": 1432,
+              "height": 831.28125,
+              "bottom": 2776.203125,
+              "right": 1496
+            }
+          },
+          {
+            "id": "choveigo-review",
+            "heading": "A mismatch became a better test.",
+            "rect": {
+              "x": 64,
+              "y": 2776.203125,
+              "width": 1432,
+              "height": 316.71875,
+              "bottom": 3092.921875,
+              "right": 1496
+            }
+          },
+          {
+            "id": "choveigo-change",
+            "heading": "I learned to evaluate recommendations through the evidence that supports them.",
+            "rect": {
+              "x": 64,
+              "y": 3092.921875,
+              "width": 1432,
+              "height": 300.34375,
+              "bottom": 3393.265625,
+              "right": 1496
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "/media/choveigo-recommendations.png",
+            "complete": true,
+            "naturalWidth": 864,
+            "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence"
+          }
+        ]
+      },
+      "desktopScrollMax": 2357,
+      "narrow": {
+        "status": 200,
+        "path": "/projects/choveigo",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 5534
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 5403.140625,
+          "scrollHeight": 5403,
+          "clientHeight": 5403,
+          "overflow": "visible"
+        },
+        "headings": [
+          {
+            "text": "Cho’Veigo",
+            "section": "choveigo-overview"
+          },
+          {
+            "text": "How a role becomes a recommendation.",
+            "section": "choveigo-system"
+          },
+          {
+            "text": "ROLE DISCOVERY",
+            "section": "choveigo-system"
+          },
+          {
+            "text": "CANDIDATE EVIDENCE",
+            "section": "choveigo-system"
+          },
+          {
+            "text": "DECISION LAYERS",
+            "section": "choveigo-system"
+          },
+          {
+            "text": "PRODUCT ACTIONS",
+            "section": "choveigo-system"
+          },
+          {
+            "text": "ROLE RECORD",
+            "section": ""
+          },
+          {
+            "text": "PROFILE + RESUME EVIDENCE",
+            "section": ""
+          },
+          {
+            "text": "The recommendation opens a path; the person starts tailoring.",
+            "section": ""
+          },
+          {
+            "text": "A title or stack is only a clue.",
+            "section": "choveigo-fit"
+          },
+          {
+            "text": "RESPONSIBILITIES OVER STACK",
+            "section": "choveigo-fit"
+          },
+          {
+            "text": "CORE REQUIREMENTS FIRST",
+            "section": "choveigo-fit"
+          },
+          {
+            "text": "TRANSFERABILITY COUNTS",
+            "section": "choveigo-fit"
+          },
+          {
+            "text": "A mismatch became a better test.",
+            "section": "choveigo-review"
+          },
+          {
+            "text": "I learned to evaluate recommendations through the evidence that supports them.",
+            "section": "choveigo-change"
+          }
+        ],
+        "images": [
+          {
+            "src": "/media/choveigo-recommendations.png",
+            "complete": true,
+            "naturalWidth": 864,
+            "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence"
+          }
+        ],
+        "nav": [
+          "Main navigation",
+          "Cho’Veigo case study",
+          "Contact links"
+        ]
+      }
+    }
+  },
+  "errors": []
+}
