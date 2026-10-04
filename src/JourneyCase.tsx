@@ -58,7 +58,7 @@ export function resolveActiveWaypoint(
   if (atEnd) return "summer-2026";
   let active: JourneyWaypointId = "origin";
   for (const waypoint of journeyWaypoints) {
-    if (sectionTops[waypoint.id] <= activationLine) active = waypoint.id;
+    if (sectionTops[waypoint.id] <= activationLine + 1) active = waypoint.id;
   }
   return active;
 }

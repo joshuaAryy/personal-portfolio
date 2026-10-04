@@ -6633,6 +6633,10 @@ a:focus-visible {
     scroll-behavior: auto;
   }
   .journey-layout { display: block; }
+  .journey-void-field { bottom: 0; height: auto; }
+  .journey-void-field__continuation { bottom: 0; height: auto; }
+  .journey-void-field__fade { height: 100%; }
+  .journey-page { padding-bottom: 148px; }
   .journey-identity {
     position: relative;
     height: auto;

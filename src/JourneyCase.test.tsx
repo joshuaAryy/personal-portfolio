@@ -88,6 +88,18 @@ describe("Journey waypoint selection", () => {
 
     expect(resolveActiveWaypoint(tops, 78, false)).toBe("origin");
   });
+
+  it("keeps a heading active when integer scroll rounding leaves it fractionally past the line", () => {
+    const tops = {
+      origin: -120,
+      tmu: 471.48,
+      "living-in-silico": 900,
+      stush: 1300,
+      "summer-2026": 1600,
+    };
+
+    expect(resolveActiveWaypoint(tops, 471.3, false)).toBe("tmu");
+  });
 });
 
 describe("Journey waypoint fragments", () => {
