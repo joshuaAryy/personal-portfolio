@@ -1,6 +1,10 @@
+// @vitest-environment happy-dom
+
 import { renderToStaticMarkup } from "react-dom/server";
+import { act } from "react";
+import { createRoot, type Root } from "react-dom/client";
 import { MemoryRouter } from "react-router-dom";
-import { describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { Client } from "./PortfolioLayout";
 
 function renderClient(path = "/profile") {
@@ -12,6 +16,22 @@ function renderClient(path = "/profile") {
     </MemoryRouter>,
   );
 }
+
+let host: HTMLDivElement;
+let root: Root;
+const originalInnerWidth = window.innerWidth;
+
+beforeEach(() => {
+  vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+});
+
+afterEach(() => {
+  if (root) act(() => root.unmount());
+  host?.remove();
+  vi.restoreAllMocks();
+  vi.unstubAllGlobals();
+  Object.defineProperty(window, "innerWidth", { configurable: true, value: originalInnerWidth });
+});
 
 describe("League client shell", () => {
   it("uses the optical-size header J and makes the top-right account the Profile entry", () => {
@@ -59,5 +79,28 @@ describe("League client shell", () => {
       expect(navigation).toContain('href="/education"');
       expect(navigation).not.toContain('href="/resume"');
     }
+  });
+});
+
+describe("Client route focus", () => {
+  it("focuses the narrow Home main without scrolling the header out of view", () => {
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 390 });
+    const focus = vi.spyOn(HTMLElement.prototype, "focus").mockImplementation(() => {});
+    const scrollTo = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    host = document.createElement("div");
+    document.body.append(host);
+    root = createRoot(host);
+
+    act(() => {
+      root.render(
+        <MemoryRouter initialEntries={["/home"]}>
+          <Client pageClass="main--home-explore">Home content</Client>
+        </MemoryRouter>,
+      );
+    });
+
+    expect.soft(scrollTo).toHaveBeenCalledWith(0, 0);
+    expect.soft(focus).toHaveBeenCalledWith({ preventScroll: true });
+    expect(focus.mock.instances[0]).toBe(host.querySelector("main"));
   });
 });

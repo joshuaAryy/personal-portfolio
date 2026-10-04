@@ -462,8 +462,17 @@ export function Client({
   const caseDetailShell = isProjectDetail(pathname) || isExperienceDetail(pathname);
 
   useEffect(() => {
-    mainRef.current?.focus();
-  }, [pathname]);
+    const main = mainRef.current;
+    if (!main) return;
+
+    if (homeShell && window.innerWidth <= 650) {
+      window.scrollTo(0, 0);
+      main.focus({ preventScroll: true });
+      return;
+    }
+
+    main.focus();
+  }, [pathname, homeShell]);
 
   return (
     <div className={`client${projectShell ? " client--project-shell" : ""}${caseDetailShell ? " client--case-detail-shell" : ""}${isExperienceDetail(pathname) ? " client--experience-detail-shell" : ""}${homeShell ? " client--home-shell" : ""}${pathname.startsWith("/resume") ? " client--resume-shell" : ""}${pathname === "/profile/journey" ? " client--journey" : ""}`}>
