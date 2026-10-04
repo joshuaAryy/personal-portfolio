@@ -1,0 +1,510 @@
+{
+  "status": 200,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "initial": {
+    "url": "https://a7047ffc.joshuaik2.pages.dev/route-recovery-check-404",
+    "title": "Joshua Aryeetey · Portfolio",
+    "width": 1920,
+    "clientWidth": 1920,
+    "scrollHeight": 1080,
+    "headings": [
+      "This page isn’t here.",
+      "ACTIVITY",
+      "CURRENT FOCUS",
+      "PROJECTS (4)",
+      "EXPERIENCE (2)"
+    ],
+    "links": [
+      {
+        "text": "Skip to content",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/route-recovery-check-404#main",
+        "rect": {
+          "x": 14,
+          "y": -100,
+          "width": 130.1,
+          "height": 35
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "PORTFOLIO",
+        "aria": "Portfolio home",
+        "href": "https://a7047ffc.joshuaik2.pages.dev/home",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 249.6,
+          "height": 109
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "PROJECTS",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects",
+        "rect": {
+          "x": 276.5,
+          "y": -0.5,
+          "width": 122.9,
+          "height": 110
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "EXPERIENCE",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/experience",
+        "rect": {
+          "x": 399.3,
+          "y": -0.5,
+          "width": 147.8,
+          "height": 110
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "HACKATHONS",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/hackathons",
+        "rect": {
+          "x": 547.2,
+          "y": -0.5,
+          "width": 158,
+          "height": 110
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "EDUCATION",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/education",
+        "rect": {
+          "x": 705.2,
+          "y": -0.5,
+          "width": 123.8,
+          "height": 110
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "RESUME",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/resume",
+        "rect": {
+          "x": 829,
+          "y": -0.5,
+          "width": 80,
+          "height": 110
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Joshua Aryeetey\nOPEN TO SUMMER 2027",
+        "aria": "Open profile",
+        "href": "https://a7047ffc.joshuaik2.pages.dev/profile",
+        "rect": {
+          "x": 1620,
+          "y": 9.5,
+          "width": 234.1,
+          "height": 90
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Go to Projects",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects",
+        "rect": {
+          "x": 84,
+          "y": 565.8,
+          "width": 202,
+          "height": 48
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Food Tracker",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects/food-tracker",
+        "rect": {
+          "x": 1637,
+          "y": 360,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Food Tracker",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects/food-tracker",
+        "rect": {
+          "x": 1637,
+          "y": 456,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Cho’Veigo",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects/choveigo",
+        "rect": {
+          "x": 1637,
+          "y": 505,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Crest",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects/crest",
+        "rect": {
+          "x": 1637,
+          "y": 554,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Fraymakers",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/projects/fraymakers",
+        "rect": {
+          "x": 1637,
+          "y": 603,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Living in Silico",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/experience/living-in-silico",
+        "rect": {
+          "x": 1637,
+          "y": 689,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "Stush Patties",
+        "aria": null,
+        "href": "https://a7047ffc.joshuaik2.pages.dev/experience/stush-patties",
+        "rect": {
+          "x": 1637,
+          "y": 738,
+          "width": 247,
+          "height": 49
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "GitHub",
+        "aria": "GitHub (opens in a new tab)",
+        "href": "https://github.com/joshuaAryy",
+        "rect": {
+          "x": 1621,
+          "y": 1045,
+          "width": 30.4,
+          "height": 9
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "LinkedIn",
+        "aria": "LinkedIn (opens in a new tab)",
+        "href": "https://ca.linkedin.com/in/joshua-ary",
+        "rect": {
+          "x": 1682,
+          "y": 1045,
+          "width": 35.5,
+          "height": 9
+        },
+        "tabIndex": 0
+      },
+      {
+        "text": "✉",
+        "aria": "Email Joshua",
+        "href": "mailto:joshuaaryy@gmail.com",
+        "rect": {
+          "x": 1785.5,
+          "y": 1040,
+          "width": 13.9,
+          "height": 19
+        },
+        "tabIndex": 0
+      }
+    ],
+    "buttons": [
+      {
+        "text": "Help",
+        "aria": null,
+        "class": "header-help",
+        "rect": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        }
+      },
+      {
+        "text": "HELP",
+        "aria": null,
+        "class": "rail-social-footer__help",
+        "rect": {
+          "x": 1830,
+          "y": 1034.5,
+          "width": 70,
+          "height": 30
+        }
+      }
+    ],
+    "images": [
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 6,
+          "y": 27.5,
+          "width": 54,
+          "height": 54
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 917,
+          "y": 35.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 970,
+          "y": 35.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1023,
+          "y": 35.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1076,
+          "y": 35.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1129,
+          "y": 35.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1620,
+          "y": 23.5,
+          "width": 76,
+          "height": 76
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1626,
+          "y": 29.5,
+          "width": 64,
+          "height": 64
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1628.7,
+          "y": 153.5,
+          "width": 28.6,
+          "height": 46.9
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1846,
+          "y": 262.5,
+          "width": 13,
+          "height": 13
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1871,
+          "y": 265.5,
+          "width": 8,
+          "height": 7
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1891,
+          "y": 266,
+          "width": 7,
+          "height": 6
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 371.5,
+          "width": 26,
+          "height": 26
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 467.5,
+          "width": 26,
+          "height": 26
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 516.5,
+          "width": 26,
+          "height": 26
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 565.5,
+          "width": 26,
+          "height": 26
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 614.5,
+          "width": 26,
+          "height": 26
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 700.5,
+          "width": 26,
+          "height": 26
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1641,
+          "y": 749.5,
+          "width": 26,
+          "height": 26
+        }
+      }
+    ]
+  },
+  "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-9fd23f9/recovery-404-1920x1080.png",
+  "activation": {
+    "found": true,
+    "meta": {
+      "text": "Go to Projects",
+      "href": "https://a7047ffc.joshuaik2.pages.dev/projects",
+      "tabIndex": 0,
+      "rect": {
+        "x": 84,
+        "y": 565.8125,
+        "width": 202,
+        "height": 48
+      }
+    },
+    "urlAfter": "https://a7047ffc.joshuaik2.pages.dev/projects",
+    "titleAfter": "Joshua Aryeetey · Portfolio"
+  },
+  "afterScreenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-9fd23f9/recovery-404-1920x1080-after-action.png",
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [],
+    "response": []
+  }
+}
