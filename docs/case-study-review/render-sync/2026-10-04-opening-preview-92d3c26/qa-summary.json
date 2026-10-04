@@ -1,0 +1,165 @@
+{
+    "capturedAt":  "2026-10-04T08:35:48.6088161Z",
+    "preview":  "https://965f0e82.joshuaik2.pages.dev/",
+    "source":  "92d3c26",
+    "sourceVerification":  {
+                               "immutablePreviewUrlResponds200":  true,
+                               "entryAssetsMatchCurrentWorktreeDist":  true,
+                               "js":  {
+                                          "path":  "/assets/index-ut2N3GmH.js",
+                                          "status":  200,
+                                          "bytes":  415137,
+                                          "sha256":  "8bbb53b306e2bc56cbae22fe17c42aae489a471d420d3b6b17a245230fb9f790"
+                                      },
+                               "css":  {
+                                           "path":  "/assets/index-DSv4XJ47.css",
+                                           "status":  200,
+                                           "bytes":  345730,
+                                           "sha256":  "02de14673b955094e341f9c85e1d92f3bba196df6bfcf10fb6d133a64e0ae266"
+                                       },
+                               "sourceDirsSrcPublicUnchangedFrom92d3ToWorktreeHead":  true
+                           },
+    "browser":  "Chrome 153.0.8010.53, Playwright CLI",
+    "viewports":  [
+                      {
+                          "height":  1080,
+                          "width":  1920
+                      },
+                      {
+                          "height":  844,
+                          "width":  390
+                      }
+                  ],
+    "results":  {
+                    "http200":  true,
+                    "noHorizontalOverflow":  true,
+                    "noConsolePageRequestOrHttpErrors":  true,
+                    "openingArtworkPresentOnBothViewports":  true,
+                    "normalAnimationDurationMs":  2000,
+                    "observedAnimationCurrentTimeMs":  [
+                                                           252.06,
+                                                           884.15,
+                                                           1242.91,
+                                                           1578.24,
+                                                           1910.35
+                                                       ],
+                    "handoff":  "normal opening route / transitioned to /home by the observed ~2.0s animation completion",
+                    "rings":  {
+                                  "firstSampleMs":  252,
+                                  "segmentedRotationDegrees":  0.737,
+                                  "tickTrackRotationDegrees":  -0.595,
+                                  "sampleAround884ms":  "both computed transforms at identity (0deg), indicating opposing rotation back to settled alignment"
+                              },
+                    "skip":  {
+                                 "buttonCount":  1,
+                                 "clickedAtAnimationTimeMs":  215.36,
+                                 "result":  "/home",
+                                 "evidence":  "skip-confirmed-handoff.png"
+                             },
+                    "reducedMotionInitial":  {
+                                                 "mediaMatches":  true,
+                                                 "openingAnimations":  0,
+                                                 "initialShellVisible":  true,
+                                                 "screenshot":  "desktop-reduced-initial.png"
+                                             },
+                    "livePreferenceReversal":  {
+                                                   "changedFromNoPreferenceToReduce":  true,
+                                                   "after80ms":  "handoff transition visibly in progress",
+                                                   "after2300ms":  "settled shell",
+                                                   "errors":  [
+
+                                                              ]
+                                               },
+                    "archiveMark":  {
+                                        "centralJVisible":  true,
+                                        "desktopDisplaySizePx":  456,
+                                        "narrowScreenshot":  "narrow-0000ms.png",
+                                        "finding":  "visible but soft at presentation size, consistent with known archived 159:2 source-resolution limitation; preserved"
+                                    },
+                    "imageLoads":  {
+                                       "desktop":  "44/44 loaded",
+                                       "narrow":  "44/44 loaded"
+                                   },
+                    "figmaComparison":  {
+                                            "source":  "C:\\Users\\samue\\AppData\\Local\\Temp\\opening-figma-2025-2-live-20261004.mp4",
+                                            "videoSizePx":  "1440x900",
+                                            "videoDurationSeconds":  2.033008,
+                                            "extractedFrames":  [
+                                                                    "figma-0000ms.png",
+                                                                    "figma-0250ms.png",
+                                                                    "figma-0500ms.png",
+                                                                    "figma-0700ms.png",
+                                                                    "figma-0900ms.png",
+                                                                    "figma-1200ms.png",
+                                                                    "figma-1500ms.png",
+                                                                    "figma-1800ms.png",
+                                                                    "figma-1980ms.png"
+                                                                ],
+                                            "previewMatchingFrames":  [
+                                                                          "preview-1440-500ms.png (actual WAAPI time ~630ms)",
+                                                                          "preview-1440-900ms.png (actual WAAPI time ~900ms)",
+                                                                          "preview-1440-1200ms.png (actual WAAPI time ~1205ms)",
+                                                                          "preview-1440-1500ms.png (actual WAAPI time ~1511ms)",
+                                                                          "preview-1440-1900ms.png (actual WAAPI time ~1907ms)"
+                                                                      ],
+                                            "composition":  "At 1440x900 the centered mechanism (about 580px overall), ~380px central mark, forest background, and top-right SKIP treatment visually align with current Figma frames; around 900ms both show the settled full J.",
+                                            "motion":  "Figma clip duration is 2.033s. Preview WAAPI duration is 2.000s. The clip shows opposing segmented/tick motion settling by about 460ms; Preview sampled +0.737deg / -0.595deg at 252ms and both transforms at identity by 630ms, consistent with the direction and settle window.",
+                                            "skip":  "Figma keeps the top-right SKIP label during the clip; Preview shows same placement/treatment, and a click at 215ms hands off to /home.",
+                                            "handoffDiscrepancy":  "At 1.98s the current Figma clip fades the opening over its minimalist Joshua Aryeetey hero/header. The Preview at ~1.91s still overlays the current portfolio mode-picker/lobby shell (category icons, activity tray, Confirm); after completion it transitions to /home. This is a concrete underlay/handoff composition delta for owner direction; the opening mechanism itself remains centered and aligned.",
+                                            "j":  "Central archive J identity is retained. It appears visibly soft at 380px in both the Figma clip/static capture and Preview, consistent with known source-resolution limitation.",
+                                            "evidence":  "figma-frames/evidence.json and figma-frames/preview-evidence-1440.json in this Temp folder",
+                                            "limitations":  "The early Preview at 0-250ms was not captured as a direct screenshot; timing comparison is representative, not pixel-by-pixel frame comparison."
+                                        },
+                    "reduceToNoPreferenceReversal":  {
+                                                         "evidence":  "reduce-reversal-evidence.json",
+                                                         "reducePreferenceEventAtPerformanceMs":  1350.1,
+                                                         "noPreferenceReturnEventAtPerformanceMs":  1428.3,
+                                                         "intervalMs":  78.2,
+                                                         "leavingClassAddedAtMs":  1354.5,
+                                                         "leavingClassRemovedAtMs":  1432.7,
+                                                         "routeAtReturnAnd225ms":  "/",
+                                                         "openingAnimationsResumed":  true,
+                                                         "normalCompletion":  "/home",
+                                                         "noBrowserErrors":  true,
+                                                         "checksPassed":  true,
+                                                         "screenshots":  [
+                                                                             "reverse-before-reduce.png",
+                                                                             "reverse-after-return-immediate.png",
+                                                                             "reverse-after-return-75ms.png",
+                                                                             "reverse-after-return-225ms.png",
+                                                                             "reverse-natural-complete.png"
+                                                                         ]
+                                                     }
+                },
+    "evidenceFiles":  [
+                          "evidence.json",
+                          "timing-evidence.json",
+                          "desktop-0000ms.png",
+                          "desktop-0250ms.png",
+                          "desktop-0500ms.png",
+                          "desktop-0800ms.png",
+                          "narrow-0000ms.png",
+                          "narrow-0500ms.png",
+                          "desktop-reduced-initial.png",
+                          "desktop-reduced-settled.png",
+                          "desktop-live-reduced-080ms.png",
+                          "desktop-live-reduced-settled.png",
+                          "desktop-skip-handoff.png",
+                          "skip-confirmed-handoff.png",
+                          "phase-900ms.png",
+                          "phase-1200ms.png",
+                          "phase-1600ms.png",
+                          "reduce-reversal-evidence.json",
+                          "reverse-before-reduce.png",
+                          "reverse-after-return-immediate.png",
+                          "reverse-after-return-75ms.png",
+                          "reverse-after-return-225ms.png",
+                          "reverse-natural-complete.png",
+                          "reduce-reversal-evidence.json",
+                          "reverse-before-reduce.png",
+                          "reverse-after-return-immediate.png",
+                          "reverse-after-return-75ms.png",
+                          "reverse-after-return-225ms.png",
+                          "reverse-natural-complete.png"
+                      ]
+}

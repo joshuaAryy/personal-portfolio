@@ -1,0 +1,100 @@
+{
+  "source": "C:/Users/samue/AppData/Local/Temp/opening-figma-2025-2-live-20261004.mp4",
+  "browser": "153.0.8010.53",
+  "viewport": [
+    1440,
+    900
+  ],
+  "meta": {
+    "duration": 2.033008,
+    "width": 1440,
+    "height": 900,
+    "readyState": 1,
+    "currentTime": 0,
+    "paused": true
+  },
+  "frames": [
+    {
+      "requested": 0,
+      "state": {
+        "time": 0,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-0000ms.png"
+    },
+    {
+      "requested": 0.25,
+      "state": {
+        "time": 0.25,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-0250ms.png"
+    },
+    {
+      "requested": 0.5,
+      "state": {
+        "time": 0.5,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-0500ms.png"
+    },
+    {
+      "requested": 0.7,
+      "state": {
+        "time": 0.7,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-0700ms.png"
+    },
+    {
+      "requested": 0.9,
+      "state": {
+        "time": 0.9,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-0900ms.png"
+    },
+    {
+      "requested": 1.2,
+      "state": {
+        "time": 1.2,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-1200ms.png"
+    },
+    {
+      "requested": 1.5,
+      "state": {
+        "time": 1.5,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-1500ms.png"
+    },
+    {
+      "requested": 1.8,
+      "state": {
+        "time": 1.8,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-1800ms.png"
+    },
+    {
+      "requested": 1.98,
+      "state": {
+        "time": 1.98,
+        "paused": true,
+        "readyState": 4
+      },
+      "screenshot": "figma-1980ms.png"
+    }
+  ],
+  "errors": []
+}
