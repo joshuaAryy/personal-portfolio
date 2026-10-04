@@ -6,7 +6,7 @@ const academicProjects = [
     title: "Dental Clinic DBMS",
     status: ["CURRENT · IN PROGRESS", "EVIDENCE PENDING"],
   },
-  { title: "Java Swing Bookstore", status: ["EVIDENCE PENDING"] },
+  { title: "Bookstore Management System", status: ["EVIDENCE PENDING"] },
   { title: "Quartus/VHDL 8-bit ALU and nine-state FSM lab project" },
   { title: "Four-stage CMOS amplifier", status: ["EVIDENCE PENDING"] },
 ];

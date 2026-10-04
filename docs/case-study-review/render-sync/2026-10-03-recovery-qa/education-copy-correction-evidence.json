@@ -1,0 +1,538 @@
+{
+  "route": "http://127.0.0.1:4173/education/projects",
+  "browser": "153.0.8010.53",
+  "capturedAt": "2026-10-04T02:41:34.207Z",
+  "runs": [
+    {
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080,
+          "scrollY": 0
+        },
+        "nav": {
+          "x": 276,
+          "y": 0,
+          "width": 633,
+          "scrollWidth": 633,
+          "scrollLeft": 0
+        },
+        "activeEducation": "page",
+        "help": {
+          "x": 0,
+          "y": 0,
+          "right": 0,
+          "bottom": 0,
+          "fullyVisible": true
+        },
+        "headings": [
+          "Computer Engineering",
+          "Dental Clinic DBMS",
+          "Bookstore Management System",
+          "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "Four-stage CMOS amplifier",
+          "ALU and FSM source notes",
+          "ALU",
+          "FSM",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "required": {
+          "projectHeadingCount": 4,
+          "evidencePending": 3,
+          "dentalStatus": true,
+          "bookstoreExact": true,
+          "oldBookstoreAbsent": true,
+          "aluFsmNotes": true
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "naturalWidth": 128,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-48.svg",
+            "loaded": true,
+            "naturalWidth": 29,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/education-coursework.svg",
+            "loaded": true,
+            "naturalWidth": 50,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "focusSequence": [],
+      "helpActivation": null,
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    {
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 1149,
+          "scrollY": 0
+        },
+        "nav": {
+          "x": 73,
+          "y": 1,
+          "width": 263,
+          "scrollWidth": 448,
+          "scrollLeft": 185
+        },
+        "activeEducation": "page",
+        "help": {
+          "x": 252,
+          "y": 0.5,
+          "right": 336,
+          "bottom": 68.5,
+          "fullyVisible": true
+        },
+        "headings": [
+          "Computer Engineering",
+          "Dental Clinic DBMS",
+          "Bookstore Management System",
+          "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "Four-stage CMOS amplifier",
+          "ALU and FSM source notes",
+          "ALU",
+          "FSM",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "required": {
+          "projectHeadingCount": 4,
+          "evidencePending": 3,
+          "dentalStatus": true,
+          "bookstoreExact": true,
+          "oldBookstoreAbsent": true,
+          "aluFsmNotes": true
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "naturalWidth": 128,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/open-portfolio-j-small-48.svg",
+            "loaded": true,
+            "naturalWidth": 29,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/education-coursework.svg",
+            "loaded": true,
+            "naturalWidth": 50,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          },
+          {
+            "src": "http://127.0.0.1:4173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "focusSequence": [
+        {
+          "tag": "A",
+          "className": "education-projects__back",
+          "text": "Education",
+          "href": "/education",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 23,
+            "y": 101,
+            "right": 93,
+            "bottom": 113
+          },
+          "navScrollLeft": 185,
+          "tabIndex": 1
+        },
+        {
+          "tag": "BODY",
+          "className": "",
+          "text": "Skip to content PROJECTS EXPERIENCE HACKATHONS EDUCATION RES",
+          "href": null,
+          "isHelp": false,
+          "focusVisible": false,
+          "outline": "none",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "right": 390,
+            "bottom": 1149
+          },
+          "navScrollLeft": 185,
+          "tabIndex": 2
+        },
+        {
+          "tag": "A",
+          "className": "skip-link",
+          "text": "Skip to content",
+          "href": "#main",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 14,
+            "y": 10,
+            "right": 144,
+            "bottom": 45
+          },
+          "navScrollLeft": 185,
+          "tabIndex": 3
+        },
+        {
+          "tag": "A",
+          "className": "brand",
+          "text": "",
+          "href": "/home",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "right": 68,
+            "bottom": 69
+          },
+          "navScrollLeft": 185,
+          "tabIndex": 4
+        },
+        {
+          "tag": "A",
+          "className": "",
+          "text": "PROJECTS",
+          "href": "/projects",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 73,
+            "y": 1,
+            "right": 145,
+            "bottom": 69
+          },
+          "navScrollLeft": 0,
+          "tabIndex": 5
+        },
+        {
+          "tag": "A",
+          "className": "",
+          "text": "EXPERIENCE",
+          "href": "/experience",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 145,
+            "y": 1,
+            "right": 223,
+            "bottom": 69
+          },
+          "navScrollLeft": 0,
+          "tabIndex": 6
+        },
+        {
+          "tag": "A",
+          "className": "",
+          "text": "HACKATHONS",
+          "href": "/hackathons",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 223,
+            "y": 1,
+            "right": 305,
+            "bottom": 69
+          },
+          "navScrollLeft": 0,
+          "tabIndex": 7
+        },
+        {
+          "tag": "A",
+          "className": "current active",
+          "text": "EDUCATION",
+          "href": "/education",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 305,
+            "y": 1,
+            "right": 381,
+            "bottom": 69
+          },
+          "navScrollLeft": 0,
+          "tabIndex": 8
+        },
+        {
+          "tag": "A",
+          "className": "header-resume",
+          "text": "RESUME",
+          "href": "/resume",
+          "isHelp": false,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 196,
+            "y": 1,
+            "right": 252,
+            "bottom": 69
+          },
+          "navScrollLeft": 185,
+          "tabIndex": 9
+        },
+        {
+          "tag": "BUTTON",
+          "className": "header-help",
+          "text": "HELP",
+          "href": null,
+          "isHelp": true,
+          "focusVisible": true,
+          "outline": "solid",
+          "bounds": {
+            "x": 252,
+            "y": 1,
+            "right": 336,
+            "bottom": 69
+          },
+          "navScrollLeft": 185,
+          "tabIndex": 10
+        }
+      ],
+      "helpActivation": {
+        "dialogCount": 1,
+        "route": "http://127.0.0.1:4173/education/projects",
+        "routePreserved": true,
+        "navScrollLeft": 185,
+        "focusVisible": true
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    }
+  ]
+}

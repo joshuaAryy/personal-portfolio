@@ -57,7 +57,7 @@ describe("primary App route mapping", () => {
     const page = renderRoute("/education/projects");
     expect(page.match(/class="education-projects__item"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
-    expect(page).toContain("Java Swing Bookstore");
+    expect(page).toContain("Bookstore Management System");
     expect(page).toContain("Quartus/VHDL 8-bit ALU and nine-state FSM lab project");
     expect(page).toContain("Four-stage CMOS amplifier");
     expect(page).toContain("IN PROGRESS");
