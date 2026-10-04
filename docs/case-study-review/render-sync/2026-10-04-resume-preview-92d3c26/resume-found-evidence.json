@@ -1,0 +1,645 @@
+{
+  "capturedAt": "2026-10-04T08:07:27.590Z",
+  "preview": "https://965f0e82.joshuaik2.pages.dev",
+  "source": "92d3c26",
+  "browser": "153.0.8010.53",
+  "viewports": [
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "runs": [
+    {
+      "viewport": "desktop",
+      "route": "https://965f0e82.joshuaik2.pages.dev/resume",
+      "status": 200,
+      "initial": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/resume",
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 110,
+            "width": 1600,
+            "height": 970,
+            "right": 1600,
+            "bottom": 1080
+          },
+          "clientWidth": 1600,
+          "scrollWidth": 1600,
+          "overflowX": "auto",
+          "overflowY": "auto"
+        },
+        "mechanism": {
+          "x": 535,
+          "y": 204,
+          "width": 530,
+          "height": 530,
+          "right": 1065,
+          "bottom": 734
+        },
+        "archiveMark": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-archive-source-700.png",
+          "loaded": true,
+          "naturalWidth": 700,
+          "naturalHeight": 700,
+          "rendered": {
+            "x": 570,
+            "y": 239,
+            "width": 460,
+            "height": 460,
+            "right": 1030,
+            "bottom": 698.9
+          },
+          "alt": "Joshua's archive-led J mark"
+        },
+        "readyCheckFrame": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "naturalWidth": 530,
+          "rendered": {
+            "x": 535,
+            "y": 204,
+            "width": 530,
+            "height": 530,
+            "right": 1065,
+            "bottom": 734
+          },
+          "visible": "visible"
+        },
+        "viewResume": {
+          "tag": "A",
+          "href": "/resume/viewer",
+          "rect": {
+            "x": 694,
+            "y": 675,
+            "width": 212,
+            "height": 70,
+            "right": 906,
+            "bottom": 745
+          }
+        },
+        "close": [
+          {
+            "text": "ESC · CLOSE",
+            "rect": {
+              "x": 751,
+              "y": 790,
+              "width": 98,
+              "height": 18,
+              "right": 849,
+              "bottom": 808
+            },
+            "shortcut": "Escape"
+          }
+        ],
+        "help": {
+          "text": "Help",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "visible": false,
+          "tabIndex": 0
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "naturalWidth": 128,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-archive-source-700.png",
+            "loaded": true,
+            "naturalWidth": 700,
+            "alt": "Joshua's archive-led J mark"
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+            "loaded": true,
+            "naturalWidth": 530,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+            "loaded": true,
+            "naturalWidth": 212,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+            "loaded": true,
+            "naturalWidth": 212,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "loaded": true,
+            "naturalWidth": 50,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          }
+        ],
+        "heading": "RESUME FOUND"
+      },
+      "help": {
+        "initialBounds": {
+          "text": "Help",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          "visible": false,
+          "tabIndex": 0
+        },
+        "result": null,
+        "routePreserved": false
+      },
+      "viewer": {
+        "entry": {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/viewer",
+          "pathname": "/resume/viewer",
+          "title": "RESUME",
+          "iframe": {
+            "title": "Joshua Aryeetey’s approved general resume, version 13",
+            "src": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "width": 1318,
+            "height": 734
+          },
+          "back": "https://965f0e82.joshuaik2.pages.dev/resume",
+          "download": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "actions": "DOWNLOAD PDF\nOPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)"
+        },
+        "back": {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume",
+          "pathname": "/resume"
+        }
+      },
+      "close": {
+        "text": "ESC · CLOSE",
+        "ariaKeyshortcuts": "Escape"
+      },
+      "closeState": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/home",
+        "pathname": "/home"
+      },
+      "escapeState": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/home",
+        "pathname": "/home"
+      },
+      "originClose": {
+        "from": "/projects",
+        "opened": "https://965f0e82.joshuaik2.pages.dev/resume",
+        "closed": "https://965f0e82.joshuaik2.pages.dev/projects",
+        "pathname": "/projects"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "documentNoHorizontalOverflow": true,
+        "viewResumeReachedViewer": true,
+        "backReturnedToResume": true,
+        "closeReturnsHome": true,
+        "escapeReturnsHome": true,
+        "originRestored": true,
+        "noBrowserErrors": true
+      }
+    },
+    {
+      "viewport": "narrow",
+      "route": "https://965f0e82.joshuaik2.pages.dev/resume",
+      "status": 200,
+      "initial": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/resume",
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 844,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 70,
+            "width": 390,
+            "height": 774,
+            "right": 390,
+            "bottom": 844
+          },
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        "mechanism": {
+          "x": 16,
+          "y": 153.1,
+          "width": 358,
+          "height": 358,
+          "right": 374,
+          "bottom": 511.1
+        },
+        "archiveMark": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-archive-source-700.png",
+          "loaded": true,
+          "naturalWidth": 700,
+          "naturalHeight": 700,
+          "rendered": {
+            "x": 39.6,
+            "y": 176.7,
+            "width": 310.7,
+            "height": 310.7,
+            "right": 350.3,
+            "bottom": 487.4
+          },
+          "alt": "Joshua's archive-led J mark"
+        },
+        "readyCheckFrame": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "naturalWidth": 530,
+          "rendered": {
+            "x": 16,
+            "y": 153.1,
+            "width": 358,
+            "height": 358,
+            "right": 374,
+            "bottom": 511.1
+          },
+          "visible": "visible"
+        },
+        "viewResume": {
+          "tag": "A",
+          "href": "/resume/viewer",
+          "rect": {
+            "x": 123.4,
+            "y": 471.2,
+            "width": 143.2,
+            "height": 47.3,
+            "right": 266.6,
+            "bottom": 518.5
+          }
+        },
+        "close": [
+          {
+            "text": "ESC · CLOSE",
+            "rect": {
+              "x": 146,
+              "y": 554.9,
+              "width": 98,
+              "height": 18,
+              "right": 244,
+              "bottom": 572.9
+            },
+            "shortcut": "Escape"
+          }
+        ],
+        "help": {
+          "text": "HELP",
+          "rect": {
+            "x": 252,
+            "y": 0.5,
+            "width": 84,
+            "height": 68,
+            "right": 336,
+            "bottom": 68.5
+          },
+          "visible": false,
+          "tabIndex": 0
+        },
+        "images": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "naturalWidth": 128,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/profile/open-portfolio-j-archive-source-700.png",
+            "loaded": true,
+            "naturalWidth": 700,
+            "alt": "Joshua's archive-led J mark"
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+            "loaded": true,
+            "naturalWidth": 530,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+            "loaded": true,
+            "naturalWidth": 212,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+            "loaded": true,
+            "naturalWidth": 212,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "loaded": true,
+            "naturalWidth": 50,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "loaded": true,
+            "naturalWidth": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          }
+        ],
+        "heading": "RESUME FOUND"
+      },
+      "help": {
+        "initialBounds": {
+          "text": "HELP",
+          "rect": {
+            "x": 252,
+            "y": 0.5,
+            "width": 84,
+            "height": 68,
+            "right": 336,
+            "bottom": 68.5
+          },
+          "visible": false,
+          "tabIndex": 0
+        },
+        "result": {
+          "route": "/resume",
+          "dialogs": [
+            {
+              "label": null,
+              "labelledby": "_r_0_",
+              "text": "PORTFOLIO CLIENT / HELP A quick orientation CLOSE ESC 01 USE THE TOP NAVIGATION Projects, Experience, Hackathons, and Education remain available from the client shell. 02 OPEN PROFILE The account portrait at the top right is the canonical Profile entry. The current screen stays open underneath this "
+            }
+          ],
+          "closeButtons": [
+            "CLOSE\nESC"
+          ]
+        },
+        "routePreserved": true
+      },
+      "viewer": {
+        "entry": {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/viewer",
+          "pathname": "/resume/viewer",
+          "title": "RESUME",
+          "iframe": {
+            "title": "Joshua Aryeetey’s approved general resume, version 13",
+            "src": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "width": 360,
+            "height": 640
+          },
+          "back": "https://965f0e82.joshuaik2.pages.dev/resume",
+          "download": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "actions": "DOWNLOAD PDF\nOPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)"
+        },
+        "back": {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume",
+          "pathname": "/resume"
+        }
+      },
+      "close": {
+        "text": "ESC · CLOSE",
+        "ariaKeyshortcuts": "Escape"
+      },
+      "closeState": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/home",
+        "pathname": "/home"
+      },
+      "escapeState": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/home",
+        "pathname": "/home"
+      },
+      "originClose": {
+        "from": "/projects",
+        "opened": "https://965f0e82.joshuaik2.pages.dev/resume",
+        "closed": "https://965f0e82.joshuaik2.pages.dev/projects",
+        "pathname": "/projects"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "imagesLoaded": true,
+        "documentNoHorizontalOverflow": true,
+        "helpInitiallyVisible": false,
+        "viewResumeReachedViewer": true,
+        "backReturnedToResume": true,
+        "closeReturnsHome": true,
+        "escapeReturnsHome": true,
+        "originRestored": true,
+        "noBrowserErrors": true
+      }
+    }
+  ]
+}

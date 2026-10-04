@@ -1,0 +1,73 @@
+{
+  "route": "https://965f0e82.joshuaik2.pages.dev/resume",
+  "viewport": "390x844",
+  "before": {
+    "navScrollLeft": 0,
+    "help": {
+      "x": 252,
+      "y": 0.5,
+      "right": 336,
+      "bottom": 68.5,
+      "width": 84,
+      "height": 68
+    }
+  },
+  "tabSequence": [
+    {
+      "tag": "A",
+      "className": "resume-action resume-action--primary resume-found__action",
+      "text": "VIEW RESUME",
+      "outline": "solid",
+      "href": "/resume/viewer"
+    },
+    {
+      "tag": "BUTTON",
+      "className": "resume-found__close",
+      "text": "ESC · CLOSE",
+      "outline": "solid",
+      "href": null
+    },
+    {
+      "tag": "BODY",
+      "className": "",
+      "text": "Skip to content\nHELP\n\nPORTFOLIO UTILITY\n\nRESUME FOUND\nVIEW RESUME\nESC · CLOSE",
+      "outline": "none",
+      "href": null
+    },
+    {
+      "tag": "A",
+      "className": "skip-link",
+      "text": "Skip to content",
+      "outline": "solid",
+      "href": "#main"
+    },
+    {
+      "tag": "A",
+      "className": "brand brand--resume-shell",
+      "text": "",
+      "outline": "solid",
+      "href": "/home"
+    },
+    {
+      "tag": "BUTTON",
+      "className": "header-help",
+      "text": "HELP",
+      "outline": "solid",
+      "href": null
+    }
+  ],
+  "focused": {
+    "tabIndex": 6,
+    "tag": "BUTTON",
+    "className": "header-help",
+    "text": "HELP",
+    "outline": "solid",
+    "href": null
+  },
+  "after": {
+    "pathname": "/resume",
+    "dialogCount": 1,
+    "navScrollLeft": 0
+  },
+  "opensInPlace": true
+}
