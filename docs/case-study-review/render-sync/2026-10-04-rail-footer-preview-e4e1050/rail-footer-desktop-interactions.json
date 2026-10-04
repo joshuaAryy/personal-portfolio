@@ -1,0 +1,72 @@
+{
+  "github": {
+    "text": "GitHub",
+    "aria": "GitHub (opens in a new tab)",
+    "href": "https://github.com/joshuaAryy",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "focused": true,
+    "focusVisible": true,
+    "rect": {
+      "x": 1621,
+      "y": 1045,
+      "w": 30.4,
+      "h": 9
+    },
+    "outline": "rgb(199, 155, 69) solid 1px",
+    "outlineOffset": "3px",
+    "boxShadow": "none",
+    "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-github-focused.png"
+  },
+  "linkedin": {
+    "text": "LinkedIn",
+    "aria": "LinkedIn (opens in a new tab)",
+    "href": "https://ca.linkedin.com/in/joshua-ary",
+    "target": "_blank",
+    "rel": "noopener noreferrer",
+    "focused": true,
+    "focusVisible": true,
+    "rect": {
+      "x": 1682,
+      "y": 1045,
+      "w": 35.5,
+      "h": 9
+    },
+    "outline": "rgb(199, 155, 69) solid 1px",
+    "outlineOffset": "3px",
+    "boxShadow": "none",
+    "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-linkedin-focused.png"
+  },
+  "newTabs": {
+    "github": {
+      "url": "https://github.com/joshuaAryy",
+      "title": "joshuaAryy · GitHub"
+    },
+    "linkedin": {
+      "url": "https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEGEb5a-Lv11wAAAaEGm24gkciTq7rIHl_lxzfsjg0HnbbcVGmdhTWS8lOM7sc-1jxiXPHYqH4OUbwJgDza_g91jRzR-ma4OST2-tqMt3tPjeoUMN6ZOhoJQN-nEvtQy3I1NPs=&original_referer=&sessionRedirect=https%3A%2F%2Fca.linkedin.com%2Fin%2Fjoshua-ary",
+      "title": "Sign Up | LinkedIn"
+    }
+  },
+  "email": {
+    "aria": "Email Joshua",
+    "href": "mailto:joshuaaryy@gmail.com",
+    "activation": {
+      "clicked": {
+        "href": "mailto:joshuaaryy@gmail.com",
+        "aria": "Email Joshua"
+      },
+      "activeClass": "rail-social-footer__email"
+    }
+  },
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [
+      {
+        "url": "mailto:joshuaaryy@gmail.com",
+        "failure": "net::ERR_ABORTED"
+      }
+    ],
+    "response": []
+  }
+}

@@ -1,0 +1,507 @@
+{
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "tabVisited": [
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "PROJECTS\nBUILT SYSTEMS",
+      "href": null,
+      "rect": {
+        "x": 15,
+        "y": 166,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "EXPERIENCE\nPROFESSIONAL WORK",
+      "href": null,
+      "rect": {
+        "x": 199,
+        "y": 166,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "HACKATHONS\nBUILD UNDER PRESSURE",
+      "href": null,
+      "rect": {
+        "x": 15,
+        "y": 353.234375,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "EDUCATION\nACADEMIC PATH",
+      "href": null,
+      "rect": {
+        "x": 199,
+        "y": 353.234375,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__back",
+      "text": "",
+      "href": null,
+      "rect": {
+        "x": 60,
+        "y": 772.578125,
+        "w": 48,
+        "h": 48
+      },
+      "scrollY": 126,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__confirm",
+      "text": "CONFIRM",
+      "href": null,
+      "rect": {
+        "x": 90,
+        "y": 770.984375,
+        "w": 240,
+        "h": 51.1875
+      },
+      "scrollY": 126,
+      "activeRail": false
+    },
+    {
+      "tag": "BODY",
+      "class": "",
+      "text": "Skip to content\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDU",
+      "href": null,
+      "rect": {
+        "x": 0,
+        "y": -126,
+        "w": 390,
+        "h": 970.171875
+      },
+      "scrollY": 126,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "skip-link",
+      "text": "Skip to content",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/home#main",
+      "rect": {
+        "x": 14,
+        "y": 10,
+        "w": 130.09375,
+        "h": 35
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "brand brand--current",
+      "text": "",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/home",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 68,
+        "h": 69
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "PROJECTS",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/projects",
+      "rect": {
+        "x": 81,
+        "y": 6.5,
+        "w": 47.859375,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "EXPERIENCE",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/experience",
+      "rect": {
+        "x": 128.859375,
+        "y": 6.5,
+        "w": 56.953125,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "HACKATHONS",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/hackathons",
+      "rect": {
+        "x": 185.8125,
+        "y": 6.5,
+        "w": 62.296875,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "EDUCATION",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/education",
+      "rect": {
+        "x": 248.109375,
+        "y": 6.5,
+        "w": 53.96875,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "header-help",
+      "text": "HELP",
+      "href": null,
+      "rect": {
+        "x": 302.078125,
+        "y": 6.5,
+        "w": 84,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "header-account",
+      "text": "",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/profile",
+      "rect": {
+        "x": 340,
+        "y": 13.5,
+        "w": 42,
+        "h": 42
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "PROJECTS\nBUILT SYSTEMS",
+      "href": null,
+      "rect": {
+        "x": 15,
+        "y": 166,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "EXPERIENCE\nPROFESSIONAL WORK",
+      "href": null,
+      "rect": {
+        "x": 199,
+        "y": 166,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "HACKATHONS\nBUILD UNDER PRESSURE",
+      "href": null,
+      "rect": {
+        "x": 15,
+        "y": 353.234375,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "EDUCATION\nACADEMIC PATH",
+      "href": null,
+      "rect": {
+        "x": 199,
+        "y": 353.234375,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__back",
+      "text": "",
+      "href": null,
+      "rect": {
+        "x": 60,
+        "y": 772.578125,
+        "w": 48,
+        "h": 48
+      },
+      "scrollY": 126,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__confirm",
+      "text": "CONFIRM",
+      "href": null,
+      "rect": {
+        "x": 90,
+        "y": 770.984375,
+        "w": 240,
+        "h": 51.1875
+      },
+      "scrollY": 126,
+      "activeRail": false
+    },
+    {
+      "tag": "BODY",
+      "class": "",
+      "text": "Skip to content\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDU",
+      "href": null,
+      "rect": {
+        "x": 0,
+        "y": -126,
+        "w": 390,
+        "h": 970.171875
+      },
+      "scrollY": 126,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "skip-link",
+      "text": "Skip to content",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/home#main",
+      "rect": {
+        "x": 14,
+        "y": 10,
+        "w": 130.09375,
+        "h": 35
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "brand brand--current",
+      "text": "",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/home",
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "w": 68,
+        "h": 69
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "PROJECTS",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/projects",
+      "rect": {
+        "x": 81,
+        "y": 6.5,
+        "w": 47.859375,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "EXPERIENCE",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/experience",
+      "rect": {
+        "x": 128.859375,
+        "y": 6.5,
+        "w": 56.953125,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "HACKATHONS",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/hackathons",
+      "rect": {
+        "x": 185.8125,
+        "y": 6.5,
+        "w": 62.296875,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "",
+      "text": "EDUCATION",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/education",
+      "rect": {
+        "x": 248.109375,
+        "y": 6.5,
+        "w": 53.96875,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "header-help",
+      "text": "HELP",
+      "href": null,
+      "rect": {
+        "x": 302.078125,
+        "y": 6.5,
+        "w": 84,
+        "h": 56
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "A",
+      "class": "header-account",
+      "text": "",
+      "href": "https://38b1abfa.joshuaik2.pages.dev/profile",
+      "rect": {
+        "x": 340,
+        "y": 13.5,
+        "w": 42,
+        "h": 42
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "PROJECTS\nBUILT SYSTEMS",
+      "href": null,
+      "rect": {
+        "x": 15,
+        "y": 166,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "EXPERIENCE\nPROFESSIONAL WORK",
+      "href": null,
+      "rect": {
+        "x": 199,
+        "y": 166,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "HACKATHONS\nBUILD UNDER PRESSURE",
+      "href": null,
+      "rect": {
+        "x": 15,
+        "y": 353.234375,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__mode",
+      "text": "EDUCATION\nACADEMIC PATH",
+      "href": null,
+      "rect": {
+        "x": 199,
+        "y": 353.234375,
+        "w": 176,
+        "h": 179.234375
+      },
+      "scrollY": 0,
+      "activeRail": false
+    },
+    {
+      "tag": "BUTTON",
+      "class": "home-explore__back",
+      "text": "",
+      "href": null,
+      "rect": {
+        "x": 60,
+        "y": 772.578125,
+        "w": 48,
+        "h": 48
+      },
+      "scrollY": 126,
+      "activeRail": false
+    }
+  ],
+  "railLinksFocusable": false,
+  "finalScrollY": 126,
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [],
+    "response": []
+  },
+  "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-mobile-focus-traversal.png"
+}

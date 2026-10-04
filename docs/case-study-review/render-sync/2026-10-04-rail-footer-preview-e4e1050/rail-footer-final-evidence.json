@@ -1,0 +1,134 @@
+{
+  "preview": "https://38b1abfa.joshuaik2.pages.dev",
+  "sourceCommit": "e4e1050",
+  "route": "/home",
+  "browser": "Chrome 153.0.8010.53",
+  "references": {
+    "shell": "Figma 2356:611",
+    "home": "Figma 2252:3445"
+  },
+  "result": {
+    "desktop": {
+      "status": 200,
+      "documentWidth": 1920,
+      "clientWidth": 1920,
+      "footer": {
+        "x": 1601,
+        "y": 1018,
+        "width": 319,
+        "height": 62
+      },
+      "visualPositionMatchesFigma": "Footer border/row aligns to current shared shell frame within about 1px.",
+      "links": {
+        "github": {
+          "href": "https://github.com/joshuaAryy",
+          "ariaLabel": "GitHub (opens in a new tab)",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "focusVisible": true,
+          "outline": "rgb(199, 155, 69) solid 1px",
+          "rect": {
+            "x": 1621,
+            "y": 1045,
+            "w": 30.4,
+            "h": 9
+          },
+          "newTab": {
+            "url": "https://github.com/joshuaAryy",
+            "title": "joshuaAryy · GitHub"
+          }
+        },
+        "linkedin": {
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "ariaLabel": "LinkedIn (opens in a new tab)",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "focusVisible": true,
+          "outline": "rgb(199, 155, 69) solid 1px",
+          "rect": {
+            "x": 1682,
+            "y": 1045,
+            "w": 35.5,
+            "h": 9
+          },
+          "newTab": {
+            "url": "https://www.linkedin.com/authwall?trk=gf&trkInfo=AQEGEb5a-Lv11wAAAaEGm24gkciTq7rIHl_lxzfsjg0HnbbcVGmdhTWS8lOM7sc-1jxiXPHYqH4OUbwJgDza_g91jRzR-ma4OST2-tqMt3tPjeoUMN6ZOhoJQN-nEvtQy3I1NPs=&original_referer=&sessionRedirect=https%3A%2F%2Fca.linkedin.com%2Fin%2Fjoshua-ary",
+            "title": "Sign Up | LinkedIn"
+          }
+        },
+        "email": {
+          "href": "mailto:joshuaaryy@gmail.com",
+          "ariaLabel": "Email Joshua",
+          "keyboardClickRecorded": {
+            "href": "mailto:joshuaaryy@gmail.com",
+            "aria": "Email Joshua"
+          },
+          "externalMailHandler": "Not opened by headless Chrome; mailto request was aborted."
+        }
+      },
+      "decorativeX": {
+        "text": "X",
+        "ariaHidden": true,
+        "interactive": false
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-1920x1080.png",
+      "focusScreenshots": {
+        "github": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-github-focused.png",
+        "linkedin": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-linkedin-focused.png"
+      },
+      "browserErrors": {
+        "console": [],
+        "page": [],
+        "request": [
+          {
+            "url": "mailto:joshuaaryy@gmail.com",
+            "failure": "net::ERR_ABORTED"
+          }
+        ],
+        "response": []
+      }
+    },
+    "narrow": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "documentWidth": 390,
+      "clientWidth": 390,
+      "railDisplay": "none",
+      "railRect": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0
+      },
+      "tabStopsChecked": 35,
+      "socialLinksReceivedFocus": false,
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-390x844.png",
+      "browserErrors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "observation": "The rail is display:none at this width; footer and descendants have zero-sized bounds, and no social link was reached in 35 Tab stops."
+    }
+  },
+  "findings": {
+    "desktop": "GitHub and LinkedIn activate in new tabs at their specified destinations; accessible names explicitly say they open in a new tab. Email has an Email Joshua accessible name and keyboard Enter dispatches its mailto link. X is aria-hidden decorative text.",
+    "narrowGap": "The shared rail/footer is absent at 390px, leaving GitHub, LinkedIn, X, and email unavailable in the rendered/keyboard tab sequence; no narrow substitute was found on /home.",
+    "comparisonLimit": "Figma references show desktop only; narrow footer availability has no corresponding reference frame."
+  },
+  "evidenceFiles": [
+    "rail-footer-initial-evidence.json",
+    "rail-footer-desktop-interactions.json",
+    "rail-footer-mobile-interactions.json",
+    "rail-footer-1920x1080.png",
+    "rail-footer-390x844.png",
+    "rail-footer-github-focused.png",
+    "rail-footer-linkedin-focused.png",
+    "figma-shell-2356-611.png",
+    "figma-home-2252-3445.png"
+  ]
+}
