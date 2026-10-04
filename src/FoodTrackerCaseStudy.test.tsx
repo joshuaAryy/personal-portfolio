@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -84,17 +85,80 @@ describe("Food Tracker flagship technical case study", () => {
 
     expect(order.every((position) => position >= 0)).toBe(true);
     expect(order).toEqual([...order].sort((a, b) => a - b));
-    expect(markup).toContain("Saved or recent food");
-    expect(markup).toContain("barcode");
-    expect(markup).toContain("Text description");
-    expect(markup).toContain("Photo suggestions");
+    expect(markup).toContain("Reuse a food and serving already in the log.");
+    expect(markup).toContain("Scan packaged food to find a catalog match.");
+    expect(markup).toContain("Describe an item, then review the returned suggestion.");
+    expect(markup).toContain("Review visible-food suggestions; any estimate stays low-trust and editable.");
     expect(markup).toContain("low-trust and editable");
-    expect(markup).toContain("review the food and portion before saving");
-    expect(markup).toContain("Nutrient aggregation");
+    expect(markup).toContain("Check the food and portion.");
+    expect(markup).toContain("Nutrient Aggregation");
     expect(markup).toContain("Simple");
     expect(markup).toContain("Complex");
-    expect(markup).toContain("Saved views");
+    expect(markup).toContain("Saved Views");
     expect(markup).toContain("Unknown nutrition stays unknown");
+  });
+
+  it("describes the five entry paths and keeps photo estimates low-trust before save", () => {
+    const markup = renderFoodTracker();
+    const logging = markup.slice(markup.indexOf('id="food-logging"'), markup.indexOf('id="food-insights"'));
+
+    expect(logging).toContain("One meal, several ways to get started.");
+    expect(logging).toContain("Each route moves toward the same useful check: confirm the food and portion before the entry is saved.");
+    for (const copy of [
+      "Find a food and choose the serving that matches the meal.",
+      "Reuse a food and serving already in the log.",
+      "Scan packaged food to find a catalog match.",
+      "Describe an item, then review the returned suggestion.",
+      "Review visible-food suggestions; any estimate stays low-trust and editable.",
+    ]) expect(logging).toContain(copy);
+    expect(logging.match(/<li>/g)).toHaveLength(5);
+    expect(logging).toContain("Check the food and portion. A supplied catalog match uses backend food and serving rules; a photo estimate is an editable, low-trust starting point that can be changed or excluded.");
+  });
+
+  it("matches the Figma logging and Insights labels and exposes the shared review connector", () => {
+    const markup = renderFoodTracker();
+    const logging = markup.slice(markup.indexOf('id="food-logging"'), markup.indexOf('id="food-insights"'));
+    const insights = markup.slice(markup.indexOf('id="food-insights"'), markup.indexOf('id="food-search"'));
+
+    expect.soft(logging).toContain('<h2 id="food-logging-title">One meal, several ways to get started.</h2>');
+    expect.soft(insights).toContain('<p class="food-section-label">INSIGHTS</p>');
+    expect.soft(logging).toContain('class="food-logging__connectors" aria-hidden="true"');
+    expect(logging.match(/<li>/g)).toHaveLength(5);
+  });
+
+  it("routes the narrow Logging cards through one centered connector", () => {
+    const css = readFileSync("src/food-visuals.css", "utf8");
+    const start = css.indexOf("@media (max-width: 760px)");
+    const end = css.indexOf("\n}", start) + 2;
+    const narrowRules = css.slice(start, end);
+
+    expect(narrowRules).toMatch(/\.food-logging__paths\s*\{[^}]*grid-template-columns:\s*repeat\(2, minmax\(0, 1fr\)\)/);
+    expect(narrowRules).toMatch(/\.food-logging__paths::before,\s*\.food-logging__paths li::after\s*\{\s*display:\s*none;\s*\}/);
+    expect(narrowRules).toMatch(/\.food-logging__connectors\s*\{\s*width:\s*0;\s*height:\s*20px;\s*border-top:\s*0;\s*border-left:\s*1px solid #c79b45;\s*\}/);
+  });
+
+  it("separates nutrient flow, detail levels, and saved-view reopening in Insights", () => {
+    const markup = renderFoodTracker();
+    const insights = markup.slice(markup.indexOf('id="food-insights"'), markup.indexOf('id="food-search"'));
+
+    for (const copy of [
+      "The product aggregates logged nutrients and keeps data coverage visible before people choose how much detail to explore.",
+      "Logged Items",
+      "Foods and serving choices",
+      "Nutrient Aggregation",
+      "Totals from saved logs",
+      "Coverage",
+      "Missing data stays visible",
+      "Simple / Focused Overview",
+      "A clear daily view over the same logged foods and nutrition.",
+      "Complex / Range Comparison",
+      "Open nutrient detail and compare selected time ranges.",
+      "Saved Views",
+      "Return to a chosen analysis without changing the underlying log.",
+      "Unknown nutrition stays unknown.",
+      "ONE PRODUCT · ONE BACKEND · DIFFERENT LEVELS OF DETAIL",
+    ]) expect(insights).toContain(copy);
+    expect(insights.match(/Return to a chosen analysis without changing the underlying log\./g)).toHaveLength(1);
   });
 
   it("describes an editable serving snapshot across the Food architecture", () => {

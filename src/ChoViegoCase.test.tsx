@@ -86,7 +86,20 @@ describe("Cho’Veigo evidence-based matching story", () => {
   it("separates the selected-role handoff from the Resume Studio method and output", () => {
     const markup = renderCase();
     const system = markup.slice(markup.indexOf('id="choveigo-system"'), markup.indexOf('id="choveigo-fit"'));
+    const architecture = system.indexOf('class="choveigo-system-map"');
+    const distinctInputs = system.indexOf("INPUTS THAT STAY DISTINCT");
+    const ruleBoundary = system.indexOf('class="choveigo-system__boundaries"');
+    const distinctRow = system.slice(distinctInputs, ruleBoundary);
 
+    expect(architecture).toBeGreaterThan(-1);
+    expect(distinctInputs).toBeGreaterThan(architecture);
+    expect(ruleBoundary).toBeGreaterThan(distinctInputs);
+    expect(distinctRow).toContain("ROLE RECORD");
+    expect(distinctRow).toContain("Job feeds and persisted role data lead to a structured role record. Responsibilities and core requirements give matching something concrete to evaluate.");
+    expect(distinctRow).toContain("PROFILE + RESUME EVIDENCE");
+    expect(distinctRow).toContain("Demonstrated and transferable evidence stays distinct from visible gaps. Structured Gemini interpretation remains tied to the supplied role and candidate material.");
+    expect(system).toContain("A SEPARATE RESUME STUDIO WORKFLOW");
+    expect(system).toContain("The recommendation opens a path; the person starts tailoring.");
     expect(system).toContain("persisted role data");
     expect(system).toContain("structured role record");
     expect(system).toContain("Demonstrated and transferable evidence stays distinct from visible gaps.");

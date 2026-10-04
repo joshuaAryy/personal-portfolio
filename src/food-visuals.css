@@ -36,6 +36,7 @@
 }
 
 .food-logging__paths {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 10px;
@@ -45,6 +46,7 @@
 }
 
 .food-logging__paths li {
+  position: relative;
   min-width: 0;
   min-height: 92px;
   padding: 14px;
@@ -69,18 +71,44 @@
   line-height: 1.35;
 }
 
+.food-logging__paths li::after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 20px;
+  border-left: 1px solid #c79b45;
+  content: "";
+}
+
+.food-logging__connectors {
+  position: relative;
+  width: calc(80% + 8px);
+  height: 20px;
+  margin: 0 auto;
+  border-top: 1px solid #c79b45;
+}
+
+.food-logging__connectors::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  border-left: 1px solid #c79b45;
+  content: "";
+}
+
 .food-logging__review {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 18px;
-  margin-top: 14px;
+  margin-top: 0;
   padding: 12px 16px;
   border: 1px solid #427c80;
   background: #102431;
 }
 
-.food-logging__review span,
-.food-insights__levels article > span {
+.food-logging__review span {
   color: #57c6cb;
   font-size: 10px;
   font-weight: 700;
@@ -92,7 +120,6 @@
   font-size: 13px;
 }
 
-.food-logging__photo,
 .food-insights__coverage {
   margin: 14px 0 0;
   color: #a9b5ba;
@@ -100,8 +127,15 @@
   line-height: 1.45;
 }
 
-.food-logging__photo strong,
 .food-insights__coverage strong { color: #e3c57e; }
+
+.food-insights__footer {
+  margin: 10px 0 0;
+  color: #a9b5ba;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .05em;
+}
 
 .food-story-content--technical .food-system__architecture-note {
   max-width: 980px;
@@ -173,9 +207,13 @@
 }
 
 .food-insights__levels h3 {
-  margin: 6px 0;
-  color: #eee7d8;
-  font-size: 20px;
+  margin: 0 0 8px;
+  color: #e3c57e;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .food-insights__levels p {
@@ -188,7 +226,19 @@
 @media (max-width: 760px) {
   .food-story-content--technical .food-logging,
   .food-story-content--technical .food-insights { padding: 18px; }
-  .food-logging__paths { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .food-logging__paths {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 20px;
+  }
+  .food-logging__paths::before,
+  .food-logging__paths li::after { display: none; }
+  .food-logging__connectors {
+    width: 0;
+    height: 20px;
+    border-top: 0;
+    border-left: 1px solid #c79b45;
+  }
+  .food-logging__connectors::after { display: none; }
   .food-logging__review { align-items: flex-start; flex-direction: column; gap: 5px; }
   .food-insights__levels { grid-template-columns: minmax(0, 1fr); }
   .food-insights__flow { grid-template-columns: minmax(0, 1fr); }

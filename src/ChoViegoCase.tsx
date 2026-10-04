@@ -202,6 +202,19 @@ export default function ChoViegoCase() {
             Cho’Veigo brings roles from job feeds and persisted role data into a structured record of responsibilities and core requirements. Candidate evidence stays distinct from visible gaps as the product prepares Fit, Eligibility, and Recommendation for review.
           </p>
           <WholeProductArchitecture />
+          <section className="choveigo-system__distinct-inputs" aria-labelledby="choveigo-distinct-inputs-title">
+            <p className="choveigo-eyebrow" id="choveigo-distinct-inputs-title">INPUTS THAT STAY DISTINCT</p>
+            <div className="choveigo-system__distinct-inputs-grid">
+              <article>
+                <h3>ROLE RECORD</h3>
+                <p>Job feeds and persisted role data lead to a structured role record. Responsibilities and core requirements give matching something concrete to evaluate.</p>
+              </article>
+              <article>
+                <h3>PROFILE + RESUME EVIDENCE</h3>
+                <p>Demonstrated and transferable evidence stays distinct from visible gaps. Structured Gemini interpretation remains tied to the supplied role and candidate material.</p>
+              </article>
+            </div>
+          </section>
           <div className="choveigo-system__boundaries">
             <div>
               <p className="choveigo-eyebrow choveigo-eyebrow--cyan">DETERMINISTIC RULE BOUNDARY</p>
@@ -218,8 +231,8 @@ export default function ChoViegoCase() {
           </div>
           <section className="choveigo-tailoring-workflow" aria-labelledby="choveigo-tailoring-title">
             <div className="choveigo-tailoring-workflow__intro">
-              <p className="choveigo-eyebrow">RESUME STUDIO / SEPARATE WORKFLOW</p>
-              <h3 id="choveigo-tailoring-title">From a selected role to a reviewed document.</h3>
+              <p className="choveigo-eyebrow">A SEPARATE RESUME STUDIO WORKFLOW</p>
+              <h3 id="choveigo-tailoring-title">The recommendation opens a path; the person starts tailoring.</h3>
               <p>The handoff passes selected posting context and the selected profile as prepared inputs; it does not generate content.</p>
             </div>
             <ol>

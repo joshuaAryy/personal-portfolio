@@ -185,25 +185,25 @@ function FoodLoggingPaths() {
     <section className="food-section food-logging" id="food-logging" aria-labelledby="food-logging-title">
       <div className="food-logging__intro">
         <p className="food-section-label">LOGGING PATHS</p>
-        <h2 id="food-logging-title">A meal can start in five ways.</h2>
-        <p>Each path brings a food and serving choice to the same review before it is saved.</p>
+        <h2 id="food-logging-title">One meal, several ways to get started.</h2>
+        <p>Each route moves toward the same useful check: confirm the food and portion before the entry is saved.</p>
       </div>
       <ol className="food-logging__paths">
         {[
-          ["MANUAL", "Enter a food directly"],
-          ["SAVED / RECENT", "Saved or recent food"],
-          ["BARCODE", "Use a barcode lookup"],
-          ["TEXT", "Text description of the meal"],
-          ["PHOTO", "Suggest visible foods and portions"],
+          ["MANUAL", "Find a food and choose the serving that matches the meal."],
+          ["SAVED / RECENT", "Reuse a food and serving already in the log."],
+          ["BARCODE", "Scan packaged food to find a catalog match."],
+          ["TEXT", "Describe an item, then review the returned suggestion."],
+          ["PHOTO", "Review visible-food suggestions; any estimate stays low-trust and editable."],
         ].map(([label, detail]) => (
           <li key={label}><strong>{label}</strong><span>{detail}</span></li>
         ))}
       </ol>
+      <div className="food-logging__connectors" aria-hidden="true" />
       <div className="food-logging__review">
-        <span>REVIEW FOOD + PORTION</span>
-        <strong>You can review the food and portion before saving.</strong>
+        <span>REVIEW BEFORE SAVE</span>
+        <strong>Check the food and portion. A supplied catalog match uses backend food and serving rules; a photo estimate is an editable, low-trust starting point that can be changed or excluded.</strong>
       </div>
-      <p className="food-logging__photo"><strong>Photo suggestions:</strong> AI estimates are low-trust and editable. A trusted catalog match and backend serving rules supply nutrition; the person can review or change the suggestion before saving.</p>
     </section>
   );
 }
@@ -212,33 +212,31 @@ function FoodInsights() {
   return (
     <section className="food-section food-insights" id="food-insights" aria-labelledby="food-insights-title">
       <div className="food-insights__intro">
-        <p className="food-section-label">INSIGHTS FROM LOGGED FOOD</p>
+        <p className="food-section-label">INSIGHTS</p>
         <h2 id="food-insights-title">Turn saved logs into a view of patterns over time.</h2>
-        <p>Nutrient aggregation turns logged values into totals, with coverage showing where food data is incomplete.</p>
+        <p>The product aggregates logged nutrients and keeps data coverage visible before people choose how much detail to explore.</p>
       </div>
       <ol className="food-insights__flow" aria-label="Insights data flow">
-        <li><strong>Logged Items</strong><span>Saved food entries</span></li>
-        <li><strong>Nutrient Aggregation</strong><span>Totals from logged values</span></li>
-        <li><strong>Coverage</strong><span>Missing nutrient data stays visible</span></li>
+        <li><strong>Logged Items</strong><span>Foods and serving choices</span></li>
+        <li><strong>Nutrient Aggregation</strong><span>Totals from saved logs</span></li>
+        <li><strong>Coverage</strong><span>Missing data stays visible</span></li>
       </ol>
       <div className="food-insights__levels">
         <article>
-          <span>FOCUSED OVERVIEW</span>
-          <h3>Simple</h3>
-          <p>A focused daily view of logged foods and nutrition.</p>
+          <h3>Simple / Focused Overview</h3>
+          <p>A clear daily view over the same logged foods and nutrition.</p>
         </article>
         <article>
-          <span>MORE DETAIL</span>
-          <h3>Complex</h3>
-          <p>Nutrient detail and comparisons across selected ranges.</p>
+          <h3>Complex / Range Comparison</h3>
+          <p>Open nutrient detail and compare selected time ranges.</p>
         </article>
         <article>
-          <span>RETURN TO ANALYSIS</span>
-          <h3>Saved views</h3>
-          <p>Reopen an analysis you have saved.</p>
+          <h3>Saved Views</h3>
+          <p>Return to a chosen analysis without changing the underlying log.</p>
         </article>
       </div>
-      <p className="food-insights__coverage"><strong>Unknown nutrition stays unknown.</strong> Simple and Complex use the same product and backend; they change the level of detail in view.</p>
+      <p className="food-insights__coverage"><strong>Unknown nutrition stays unknown.</strong></p>
+      <p className="food-insights__footer">ONE PRODUCT · ONE BACKEND · DIFFERENT LEVELS OF DETAIL</p>
     </section>
   );
 }
