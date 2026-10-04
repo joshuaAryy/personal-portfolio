@@ -1575,12 +1575,7 @@ a:focus-visible {
   background: #0b5265;
 }
 .main--profile {
-  background: radial-gradient(
-    ellipse at 60% 70%,
-    #50305a 0%,
-    #283145 42%,
-    #101821 90%
-  );
+  background: #05070a url("/media/profile/the-void-background.jpg") center / cover no-repeat;
 }
 .profile-layout {
   display: grid;

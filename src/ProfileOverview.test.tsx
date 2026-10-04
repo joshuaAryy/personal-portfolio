@@ -2,6 +2,7 @@
 
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { projects } from "./data";
 import ProfileOverview from "./ProfileOverview";
@@ -55,5 +56,15 @@ describe("Profile Overview", () => {
     expect(markup).not.toContain("profile-tab-");
     expect(markup).not.toContain('role="tablist"');
     expect(markup).not.toContain('role="tabpanel"');
+  });
+
+  it("keeps the smoky Profile field and circular Experience badges from the current Figma treatment", () => {
+    const shellCss = readFileSync("src/styles.css", "utf8");
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const shellRule = shellCss.match(/\.main--profile\s*\{([^}]*)\}/)?.[1] ?? "";
+    const badgeRule = profileCss.match(/\.profile-experience__mark\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect.soft(shellRule).toContain('url("/media/profile/the-void-background.jpg")');
+    expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });
 });
