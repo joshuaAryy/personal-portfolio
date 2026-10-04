@@ -190,7 +190,7 @@ export default function CrestCaseStudy() {
           </div>
 
           <div className="crest-demo-media">
-            <figure className="crest-demo-figure">
+            <figure className="crest-demo-figure" aria-labelledby="crest-demo-caption">
               <img
                 src="/media/crest-sample.png"
                 alt="Crest expense-review sample screen with policy context and preapproval controls"
@@ -199,7 +199,7 @@ export default function CrestCaseStudy() {
               />
               <figcaption>
                 <span className="crest-sample-cue">SAMPLE DATA</span>
-                <span>Expense review / policy context / preapproval</span>
+                <span id="crest-demo-caption">Expense review / policy context / preapproval</span>
                 <a
                   href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
                   target="_blank"

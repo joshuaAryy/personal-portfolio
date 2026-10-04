@@ -161,6 +161,18 @@ describe("Food Tracker flagship technical case study", () => {
     expect(insights.match(/Return to a chosen analysis without changing the underlying log\./g)).toHaveLength(1);
   });
 
+  it("gives the system figure a concise name and keeps its full description once", () => {
+    const markup = renderFoodTracker();
+    const start = markup.indexOf('<figure class="food-system-map food-system-map--flagship"');
+    const end = markup.indexOf("</figure>", start) + "</figure>".length;
+    const figure = markup.slice(start, end);
+
+    expect.soft(figure).toContain('aria-labelledby="food-system-map-title"');
+    expect.soft(figure).toContain('alt=""');
+    expect.soft(figure).toContain('<span id="food-system-map-title">Food Tracker system map.</span>');
+    expect(figure.match(/Illustrative composite system figure, not a product screenshot/g)).toHaveLength(1);
+  });
+
   it("describes an editable serving snapshot across the Food architecture", () => {
     const markup = renderFoodTracker();
 

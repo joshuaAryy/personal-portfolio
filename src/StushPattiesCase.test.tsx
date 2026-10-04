@@ -27,6 +27,17 @@ describe("Stush Patties technical data-pipeline story", () => {
     expect(html).toContain("Conceptual pipeline");
   });
 
+  it("keeps the Dimensions content visible without a nested landmark", () => {
+    const html = markup();
+    const start = html.indexOf('<section class="stush-problem-map"');
+    const end = html.indexOf('class="stush-ownership"', start);
+    const inputSection = html.slice(start, end);
+
+    expect(inputSection).toContain('class="stush-contract"');
+    expect(inputSection).not.toMatch(/<section[^>]*class="stush-contract"/);
+    expect(inputSection).toContain("Four business dimensions needed the same meaning across file layouts.");
+  });
+
   it("keeps formats grouped across generic inputs", () => {
     const html = markup();
     const inputSummaryStart = html.indexOf('aria-label="Input set"');

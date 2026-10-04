@@ -194,7 +194,7 @@ export default function StushPattiesCase() {
 
         <SystemFlowFigure />
 
-        <section className="stush-contract" aria-labelledby="stush-contract-title">
+        <div className="stush-contract">
           <div className="stush-contract__heading">
             <p className="stush-overline">WHY A SHARED FIELD CONTRACT</p>
             <h3 id="stush-contract-title">Four business dimensions needed the same meaning across file layouts.</h3>
@@ -205,7 +205,7 @@ export default function StushPattiesCase() {
               <li>Sales</li><li>Units</li><li>Case pack</li><li>Reporting month</li>
             </ul>
           </div>
-        </section>
+        </div>
 
         <aside className="stush-exception" aria-labelledby="stush-exception-title">
           <div className="stush-exception__label">

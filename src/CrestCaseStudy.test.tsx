@@ -35,6 +35,17 @@ describe("Crest technical case study", () => {
     expect(markup.match(/3RD PLACE/g)).toHaveLength(1);
   });
 
+  it("names the demo figure without absorbing its separate video link", () => {
+    const markup = renderCrest();
+    const start = markup.indexOf('<figure class="crest-demo-figure"');
+    const end = markup.indexOf("</figure>", start) + "</figure>".length;
+    const figure = markup.slice(start, end);
+
+    expect.soft(figure).toContain('aria-labelledby="crest-demo-caption"');
+    expect.soft(figure).toContain('<span id="crest-demo-caption">Expense review / policy context / preapproval</span>');
+    expect(figure).toMatch(/<a[^>]+href="https:\/\/www\.youtube\.com\/watch\?v=kiq6XjNi9J8"[^>]*>\s*WATCH DEMO/);
+  });
+
   it("shows the owner-reported policy retrieval path and role boundary", () => {
     const markup = renderCrest();
     const policyFigureStart = markup.indexOf('<figure class="crest-policy-figure"');

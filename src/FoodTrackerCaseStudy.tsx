@@ -39,7 +39,7 @@ function FoodSystemMap() {
       src="/media/case-studies/food-system-pass-10.png"
       width="1432"
       height="710"
-      alt="Illustrative composite system figure, not a product screenshot: above, in-app search gathers exact, fuzzy, and semantic food candidates, deterministic ranking orders them, trusted food data and serving rules resolve nutrition, and an editable food log records the result; below, React Native and Expo connect through Express and Prisma to a normalized catalog and backend serving resolution, then PostgreSQL stores the log and serving snapshot for editable History and Insights."
+      alt=""
       />
       <ol className="food-system-map__mobile-steps" aria-label="Food Tracker system path">
         <li>
@@ -59,8 +59,9 @@ function FoodSystemMap() {
           <span>A serving snapshot supports later portion edits in History.</span>
         </li>
       </ol>
-      <figcaption id="food-system-map-title" className="food-system-map__sr-only">
-        Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.
+      <figcaption className="food-system-map__sr-only">
+        <span id="food-system-map-title">Food Tracker system map.</span>
+        <span>Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.</span>
       </figcaption>
     </figure>
   );
