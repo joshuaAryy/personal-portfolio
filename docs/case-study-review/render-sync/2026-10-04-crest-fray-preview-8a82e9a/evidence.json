@@ -1,0 +1,757 @@
+{
+  "capturedAt": "2026-10-04T05:52:41.319Z",
+  "browser": "153.0.8010.53",
+  "base": "https://8bfcb118.joshuaik2.pages.dev",
+  "viewports": [
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "runs": [
+    {
+      "page": "crest",
+      "route": "/projects/crest",
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "viewportWidth": 1920,
+          "viewportHeight": 1080
+        },
+        "main": {
+          "width": 1560,
+          "scrollWidth": 1560,
+          "height": 998,
+          "scrollHeight": 2175,
+          "overflowY": "auto"
+        },
+        "images": [
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/crest-sample.png",
+            "loaded": true,
+            "naturalWidth": 1152,
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls"
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "expandedFullStory": {
+        "width": 1920,
+        "height": 2257,
+        "mainHeight": 2175.34375
+      },
+      "interactions": {
+        "links": [
+          {
+            "label": "OVERVIEW",
+            "href": "#crest-overview",
+            "targetCount": 1,
+            "hash": "#crest-overview",
+            "targetExists": true,
+            "targetTop": 158,
+            "mainTop": 82,
+            "active": "OVERVIEW"
+          },
+          {
+            "label": "TRANSACTION FLOW",
+            "href": "#crest-system",
+            "targetCount": 1,
+            "hash": "#crest-system",
+            "targetExists": true,
+            "targetTop": 158,
+            "mainTop": 82,
+            "active": "TRANSACTION FLOW"
+          },
+          {
+            "label": "POLICY RETRIEVAL",
+            "href": "#crest-policy",
+            "targetCount": 1,
+            "hash": "#crest-policy",
+            "targetExists": true,
+            "targetTop": 157.84375,
+            "mainTop": 82,
+            "active": "POLICY RETRIEVAL"
+          },
+          {
+            "label": "OWNERSHIP",
+            "href": "#crest-team",
+            "targetCount": 1,
+            "hash": "#crest-team",
+            "targetExists": true,
+            "targetTop": 603.65625,
+            "mainTop": 82,
+            "active": "OWNERSHIP"
+          },
+          {
+            "label": "LESSON",
+            "href": "#crest-takeaway",
+            "targetCount": 1,
+            "hash": "#crest-takeaway",
+            "targetExists": true,
+            "targetTop": 874.65625,
+            "mainTop": 82,
+            "active": "LESSON"
+          }
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 16,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true,
+        "allChapterTargetsUnique": true,
+        "allAnchorHashesSet": true
+      }
+    },
+    {
+      "page": "fraymakers",
+      "route": "/projects/fraymakers",
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "viewportWidth": 1920,
+          "viewportHeight": 1080
+        },
+        "main": {
+          "width": 1560,
+          "scrollWidth": 1560,
+          "height": 998,
+          "scrollHeight": 1622,
+          "overflowY": "auto"
+        },
+        "images": [
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "expandedFullStory": {
+        "width": 1920,
+        "height": 1704,
+        "mainHeight": 1622.015625
+      },
+      "interactions": {
+        "links": [
+          {
+            "label": "PIPELINE",
+            "href": "#fraymakers-pipeline",
+            "targetCount": 1,
+            "hash": "#fraymakers-pipeline",
+            "targetExists": true,
+            "targetTop": 81.75,
+            "mainTop": 82,
+            "active": null
+          },
+          {
+            "label": "COMPOSITION",
+            "href": "#fraymakers-composition",
+            "targetCount": 1,
+            "hash": "#fraymakers-composition",
+            "targetExists": true,
+            "targetTop": 137.6875,
+            "mainTop": 82,
+            "active": null
+          },
+          {
+            "label": "YAML CONFIG",
+            "href": "#fraymakers-configuration",
+            "targetCount": 1,
+            "hash": "#fraymakers-configuration",
+            "targetExists": true,
+            "targetTop": 383.265625,
+            "mainTop": 82,
+            "active": null
+          },
+          {
+            "label": "OWNERSHIP",
+            "href": "#fraymakers-ownership",
+            "targetCount": 1,
+            "hash": "#fraymakers-ownership",
+            "targetExists": true,
+            "targetTop": 664.25,
+            "mainTop": 82,
+            "active": null
+          },
+          {
+            "label": "OUTCOME",
+            "href": "#fraymakers-outcome",
+            "targetCount": 1,
+            "hash": "#fraymakers-outcome",
+            "targetExists": true,
+            "targetTop": 922.328125,
+            "mainTop": 82,
+            "active": null
+          }
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 14,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true,
+        "allChapterTargetsUnique": true,
+        "allAnchorHashesSet": true
+      }
+    },
+    {
+      "page": "crest",
+      "route": "/projects/crest",
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 3612,
+          "viewportWidth": 390,
+          "viewportHeight": 844
+        },
+        "main": {
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 3542,
+          "scrollHeight": 3542,
+          "overflowY": "visible"
+        },
+        "images": [
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/crest-sample.png",
+            "loaded": true,
+            "naturalWidth": 1152,
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls"
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "fullPage": {
+        "width": 390,
+        "height": 3612,
+        "mainOverflowY": "visible"
+      },
+      "interactions": {
+        "links": [
+          {
+            "label": "OVERVIEW",
+            "href": "#crest-overview",
+            "targetCount": 1,
+            "hash": "#crest-overview",
+            "targetExists": true,
+            "targetTop": 76,
+            "mainTop": -24,
+            "active": "OVERVIEW"
+          },
+          {
+            "label": "TRANSACTION FLOW",
+            "href": "#crest-system",
+            "targetCount": 1,
+            "hash": "#crest-system",
+            "targetExists": true,
+            "targetTop": 75.59375,
+            "mainTop": -610,
+            "active": "TRANSACTION FLOW"
+          },
+          {
+            "label": "POLICY RETRIEVAL",
+            "href": "#crest-policy",
+            "targetCount": 1,
+            "hash": "#crest-policy",
+            "targetExists": true,
+            "targetTop": 75.9375,
+            "mainTop": -1552,
+            "active": "POLICY RETRIEVAL"
+          },
+          {
+            "label": "OWNERSHIP",
+            "href": "#crest-team",
+            "targetCount": 1,
+            "hash": "#crest-team",
+            "targetExists": true,
+            "targetTop": 75.6875,
+            "mainTop": -2627,
+            "active": "OWNERSHIP"
+          },
+          {
+            "label": "LESSON",
+            "href": "#crest-takeaway",
+            "targetCount": 1,
+            "hash": "#crest-takeaway",
+            "targetExists": true,
+            "targetTop": 596.875,
+            "mainTop": -2698,
+            "active": "LESSON"
+          }
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 16,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true,
+        "allChapterTargetsUnique": true,
+        "allAnchorHashesSet": true
+      }
+    },
+    {
+      "page": "fraymakers",
+      "route": "/projects/fraymakers",
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 3356,
+          "viewportWidth": 390,
+          "viewportHeight": 844
+        },
+        "main": {
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 3286,
+          "scrollHeight": 3286,
+          "overflowY": "visible"
+        },
+        "images": [
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          },
+          {
+            "src": "https://8bfcb118.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "fullPage": {
+        "width": 390,
+        "height": 3356,
+        "mainOverflowY": "visible"
+      },
+      "interactions": {
+        "links": [
+          {
+            "label": "PIPELINE",
+            "href": "#fraymakers-pipeline",
+            "targetCount": 1,
+            "hash": "#fraymakers-pipeline",
+            "targetExists": true,
+            "targetTop": 0.484375,
+            "mainTop": -663,
+            "active": null
+          },
+          {
+            "label": "COMPOSITION",
+            "href": "#fraymakers-composition",
+            "targetCount": 1,
+            "hash": "#fraymakers-composition",
+            "targetExists": true,
+            "targetTop": 0.359375,
+            "mainTop": -1311,
+            "active": null
+          },
+          {
+            "label": "YAML CONFIG",
+            "href": "#fraymakers-configuration",
+            "targetCount": 1,
+            "hash": "#fraymakers-configuration",
+            "targetExists": true,
+            "targetTop": -0.046875,
+            "mainTop": -1920,
+            "active": null
+          },
+          {
+            "label": "OWNERSHIP",
+            "href": "#fraymakers-ownership",
+            "targetCount": 1,
+            "hash": "#fraymakers-ownership",
+            "targetExists": true,
+            "targetTop": 174.671875,
+            "mainTop": -2442,
+            "active": null
+          },
+          {
+            "label": "OUTCOME",
+            "href": "#fraymakers-outcome",
+            "targetCount": 1,
+            "hash": "#fraymakers-outcome",
+            "targetExists": true,
+            "targetTop": 610.578125,
+            "mainTop": -2442,
+            "active": null
+          }
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 14,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true,
+        "allChapterTargetsUnique": true,
+        "allAnchorHashesSet": true
+      }
+    }
+  ]
+}
