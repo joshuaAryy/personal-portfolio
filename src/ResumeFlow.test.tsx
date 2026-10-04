@@ -25,6 +25,18 @@ describe("approved resume flow", () => {
     );
   });
 
+  it("bounds the Resume Found decorative glow across tablet widths", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const tabletRules = css.slice(
+      css.lastIndexOf("@media (max-width: 900px)"),
+      css.lastIndexOf("@media (max-width: 650px)"),
+    );
+
+    expect(tabletRules).toMatch(
+      /\.resume-found__system::before\s*\{[^}]*width:\s*min\(218\.87%,\s*calc\(100vw - 32px\)\)/s,
+    );
+  });
+
   it("links Resume Found to the viewer", () => {
     const markup = renderRoute("/resume");
 

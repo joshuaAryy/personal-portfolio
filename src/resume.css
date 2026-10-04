@@ -381,6 +381,10 @@
     min-height: max(100%, calc(100vh - var(--client-header-height)));
   }
 
+  .resume-found__system::before {
+    width: min(218.87%, calc(100vw - 32px));
+  }
+
   .main--resume-viewer {
     padding: 24px;
   }
