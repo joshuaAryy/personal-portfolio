@@ -385,6 +385,10 @@
     width: min(218.87%, calc(100vw - 32px));
   }
 
+  .client--resume-shell .top-nav .header-help:focus-visible {
+    outline-offset: -3px;
+  }
+
   .main--resume-viewer {
     padding: 24px;
   }
@@ -410,10 +414,6 @@
 
   .client--resume-shell .top-nav a:not(.header-help) {
     display: none;
-  }
-
-  .client--resume-shell .top-nav .header-help:focus-visible {
-    outline-offset: -3px;
   }
 
   .top-nav a.header-resume {

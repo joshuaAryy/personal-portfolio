@@ -16,11 +16,14 @@ function renderRoute(path: string) {
 }
 
 describe("approved resume flow", () => {
-  it("keeps the narrow Resume Help focus ring inside the horizontally scrolling nav", () => {
+  it("keeps the Resume Help focus ring inside the nav through tablet widths", () => {
     const css = readFileSync("src/resume.css", "utf8");
-    const mobileRules = css.slice(css.lastIndexOf("@media (max-width: 650px)"));
+    const tabletRules = css.slice(
+      css.lastIndexOf("@media (max-width: 900px)"),
+      css.lastIndexOf("@media (max-width: 650px)"),
+    );
 
-    expect(mobileRules).toMatch(
+    expect(tabletRules).toMatch(
       /\.client--resume-shell \.top-nav \.header-help:focus-visible\s*\{[^}]*outline-offset:\s*-3px/s,
     );
   });
