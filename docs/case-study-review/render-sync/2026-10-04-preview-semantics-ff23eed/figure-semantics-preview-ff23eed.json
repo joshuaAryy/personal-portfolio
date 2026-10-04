@@ -1,0 +1,1197 @@
+{
+  "deployment": "https://4684a5d6.joshuaik2.pages.dev",
+  "expectedSource": "ff23eed082f9d9b5048c1955fdaf2e2521286812",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T13:37:38.467Z",
+  "liveScreenReaderTest": false,
+  "routes": {
+    "crest": {
+      "path": "/projects/crest",
+      "viewports": {
+        "1920x1080": {
+          "status": 200,
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          },
+          "metrics": {
+            "url": "https://4684a5d6.joshuaik2.pages.dev/projects/crest",
+            "document": {
+              "scrollWidth": 1920,
+              "clientWidth": 1920,
+              "scrollHeight": 1080
+            },
+            "main": {
+              "className": "main main--detail main--crest-case",
+              "scrollWidth": 1560,
+              "clientWidth": 1560,
+              "scrollHeight": 2175,
+              "clientHeight": 998,
+              "overflowY": "auto"
+            },
+            "headings": [
+              {
+                "level": "H1",
+                "text": "Crest",
+                "rect": {
+                  "x": 152,
+                  "y": 301.3,
+                  "width": 596,
+                  "height": 49.9,
+                  "right": 748,
+                  "bottom": 351.2
+                }
+              },
+              {
+                "level": "H2",
+                "text": "One transaction. Two sources. Human review.",
+                "rect": {
+                  "x": 64,
+                  "y": 724,
+                  "width": 1432,
+                  "height": 32.5,
+                  "right": 1496,
+                  "bottom": 756.5
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Conference registration",
+                "rect": {
+                  "x": 80,
+                  "y": 928,
+                  "width": 222.9,
+                  "height": 18.8,
+                  "right": 302.9,
+                  "bottom": 946.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Budget + spend rules",
+                "rect": {
+                  "x": 427,
+                  "y": 903.2,
+                  "width": 128,
+                  "height": 17.5,
+                  "right": 555,
+                  "bottom": 920.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Relevant passages",
+                "rect": {
+                  "x": 427,
+                  "y": 1003.7,
+                  "width": 114.5,
+                  "height": 17.5,
+                  "right": 541.5,
+                  "bottom": 1021.2
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Gemini",
+                "rect": {
+                  "x": 798.6,
+                  "y": 1003.7,
+                  "width": 43.6,
+                  "height": 17.5,
+                  "right": 842.3,
+                  "bottom": 1021.2
+                }
+              },
+              {
+                "level": "H3",
+                "text": "HUMAN REVIEW",
+                "rect": {
+                  "x": 1239.4,
+                  "y": 924.8,
+                  "width": 101.9,
+                  "height": 17.5,
+                  "right": 1341.3,
+                  "bottom": 942.3
+                }
+              },
+              {
+                "level": "H2",
+                "text": "Policy context. Deterministic decisions.",
+                "rect": {
+                  "x": 104,
+                  "y": 1358.8,
+                  "width": 1353,
+                  "height": 31.4,
+                  "right": 1457,
+                  "bottom": 1390.2
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Gemini interpreted the top retrieved passages.",
+                "rect": {
+                  "x": 121,
+                  "y": 1595.6,
+                  "width": 390.8,
+                  "height": 19.2,
+                  "right": 511.8,
+                  "bottom": 1614.8
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Finance and policy rules remained authoritative.",
+                "rect": {
+                  "x": 580.4,
+                  "y": 1595.6,
+                  "width": 390.8,
+                  "height": 19.2,
+                  "right": 971.2,
+                  "bottom": 1614.8
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Sample queue uses budget + employee history.",
+                "rect": {
+                  "x": 1049.2,
+                  "y": 1595.6,
+                  "width": 390.8,
+                  "height": 19.2,
+                  "right": 1440,
+                  "bottom": 1614.8
+                }
+              },
+              {
+                "level": "H2",
+                "text": "I built backend workflows for human review.",
+                "rect": {
+                  "x": 64,
+                  "y": 1793.8,
+                  "width": 777.1,
+                  "height": 39,
+                  "right": 841.1,
+                  "bottom": 1832.8
+                }
+              },
+              {
+                "level": "H2",
+                "text": "Signals organize review. People own the decision.",
+                "rect": {
+                  "x": 64,
+                  "y": 2082.8,
+                  "width": 920,
+                  "height": 34.5,
+                  "right": 984,
+                  "bottom": 2117.3
+                }
+              }
+            ],
+            "figures": [
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-demo-caption",
+                "text": "SAMPLE DATA\nExpense review / policy context / preapproval\nWATCH DEMO ↗",
+                "focusableDescendants": 1
+              },
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-evidence-map-caption",
+                "text": "A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\n01 REQUEST\n02 TWO EVIDENCE PATHS\n03 HUMAN DECISION\nSAMPLE REQUEST\nConference registration\n$1,200\nTRAVEL & EVENTS\nDETERMINISTIC SIGNALS\nBudget + spend rules\n\nBudget · prior spend · thresholds\n\nRETRIEVED POLICY\nRelevant passages\n\nMatched to the request\n\nPOLICY INTERPRETATION\nGemini\n\nReads retrieved policy context\n\nDECISION AUTHORITY\nHUMAN REVIEW\n\nA reviewer weighs the context and chooses the next action.\n\nAPPROVE\nDENY",
+                "focusableDescendants": 0
+              },
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-finance-workflow-title",
+                "text": "FINANCE Q&A + REPORTING\nFINANCE QUESTION\n→\nFINANCE Q&A ANSWER\nREPORTING NEED\n→\nREPORT VIEW\n\nFinance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.",
+                "focusableDescendants": 0
+              },
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-policy-title",
+                "text": "DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY\nPolicy context. Deterministic decisions.\n\nA standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.\n\n01\nBRIM POLICY PDF\nBrim source material\n→\n02\nEXTRACT + CHUNK\nPrepare searchable passages\n→\n03\ngemini-embedding-001\n3,072 dimensions\n→\n04\nATLAS VECTOR SEARCH\nMongoDB Atlas · policy_chunks\n→\n05\nGROUNDED PROMPT\nTop retrieved passages\nRETRIEVED POLICY CONTEXT\nGemini interpreted the top retrieved passages.\n\nGrounded context supported review; it did not detect or decide.\n\n+\nDETERMINISTIC RULES + SIGNALS\nFinance and policy rules remained authoritative.\n\nHeuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.\n\n→\nHUMAN REVIEW\nSample queue uses budget + employee history.\n\nGemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+                "focusableDescendants": 0
+              }
+            ],
+            "regions": [],
+            "images": {
+              "total": 16,
+              "loaded": 16
+            },
+            "demoLinks": [
+              {
+                "text": "WATCH DEMO ↗",
+                "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+                "target": "_blank",
+                "rect": {
+                  "x": 1424.1,
+                  "y": 614.9,
+                  "width": 71.9,
+                  "height": 14,
+                  "right": 1496,
+                  "bottom": 628.9
+                }
+              }
+            ],
+            "dimensionHeadings": []
+          },
+          "aria": {
+            "figureNodes": [
+              {
+                "role": "figure",
+                "name": "Expense review / policy context / preapproval",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 84,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "figure",
+                "name": "A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 91,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "figure",
+                "name": "FINANCE Q&A + REPORTING",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 153,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "figure",
+                "name": "Policy context. Deterministic decisions.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 167,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              }
+            ],
+            "dimensionRegionNodes": [],
+            "regionNodes": [],
+            "figureSnapshots": [
+              "- figure \"Expense review / policy context / preapproval\":\n  - img \"Crest expense-review sample screen with policy context and preapproval controls\"\n  - text: SAMPLE DATA Expense review / policy context / preapproval\n  - link \"WATCH DEMO ↗\":\n    - /url: https://www.youtube.com/watch?v=kiq6XjNi9J8",
+              "- figure \"A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\":\n  - text: A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review. SAMPLE REQUEST\n  - heading \"Conference registration\" [level=3]\n  - strong: $1,200\n  - text: TRAVEL & EVENTS DETERMINISTIC SIGNALS\n  - heading \"Budget + spend rules\" [level=3]\n  - paragraph: Budget · prior spend · thresholds\n  - text: RETRIEVED POLICY\n  - heading \"Relevant passages\" [level=3]\n  - paragraph: Matched to the request\n  - text: POLICY INTERPRETATION\n  - heading \"Gemini\" [level=3]\n  - paragraph: Reads retrieved policy context\n  - text: DECISION AUTHORITY\n  - heading \"HUMAN REVIEW\" [level=3]\n  - paragraph: A reviewer weighs the context and chooses the next action.",
+              "- figure \"FINANCE Q&A + REPORTING\":\n  - text: FINANCE Q&A + REPORTING FINANCE QUESTION FINANCE Q&A ANSWER REPORTING NEED REPORT VIEW\n  - paragraph: Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.",
+              "- figure \"Policy context. Deterministic decisions.\":\n  - text: DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY\n  - heading \"Policy context. Deterministic decisions.\" [level=2]\n  - paragraph: A standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.\n  - list:\n    - listitem:\n      - text: \"01\"\n      - strong: BRIM POLICY PDF\n      - text: Brim source material\n    - listitem:\n      - text: \"02\"\n      - strong: EXTRACT + CHUNK\n      - text: Prepare searchable passages\n    - listitem:\n      - text: \"03\"\n      - strong: gemini-embedding-001\n      - text: 3,072 dimensions\n    - listitem:\n      - text: \"04\"\n      - strong: ATLAS VECTOR SEARCH\n      - text: MongoDB Atlas · policy_chunks\n    - listitem:\n      - text: \"05\"\n      - strong: GROUNDED PROMPT\n      - text: Top retrieved passages\n  - list \"Policy and human-review boundaries\":\n    - listitem:\n      - text: RETRIEVED POLICY CONTEXT\n      - heading \"Gemini interpreted the top retrieved passages.\" [level=3]\n      - paragraph: Grounded context supported review; it did not detect or decide.\n    - listitem:\n      - text: DETERMINISTIC RULES + SIGNALS\n      - heading \"Finance and policy rules remained authoritative.\" [level=3]\n      - paragraph: \"Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.\"\n    - listitem:\n      - text: HUMAN REVIEW\n      - heading \"Sample queue uses budget + employee history.\" [level=3]\n      - paragraph: Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype."
+            ]
+          },
+          "keyboard": {
+            "tabReachedWatchDemo": true,
+            "focusOrder": [
+              {
+                "tag": "A",
+                "text": "OVERVIEW",
+                "href": "#crest-overview",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "TRANSACTION FLOW",
+                "href": "#crest-system",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "POLICY RETRIEVAL",
+                "href": "#crest-policy",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "OWNERSHIP",
+                "href": "#crest-team",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "LESSON",
+                "href": "#crest-takeaway",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "‹ PROJECTS",
+                "href": "/projects",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "WATCH DEMO ↗",
+                "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+                "target": "_blank"
+              }
+            ],
+            "state": {
+              "tag": "A",
+              "text": "WATCH DEMO ↗",
+              "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+              "target": "_blank",
+              "rect": {
+                "x": 1424.1,
+                "y": 614.9,
+                "right": 1496,
+                "bottom": 628.9
+              },
+              "focusVisible": true,
+              "figure": {
+                "ariaLabel": null,
+                "labelledby": "crest-demo-caption",
+                "tabIndex": -1
+              }
+            }
+          },
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshot": "crest-1920x1080-viewport.png"
+        },
+        "390x844": {
+          "status": 200,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "metrics": {
+            "url": "https://4684a5d6.joshuaik2.pages.dev/projects/crest",
+            "document": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 3612
+            },
+            "main": {
+              "className": "main main--detail main--crest-case",
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 3542,
+              "clientHeight": 3542,
+              "overflowY": "visible"
+            },
+            "headings": [
+              {
+                "level": "H1",
+                "text": "Crest",
+                "rect": {
+                  "x": 88,
+                  "y": 88,
+                  "width": 282,
+                  "height": 40.5,
+                  "right": 370,
+                  "bottom": 128.5
+                }
+              },
+              {
+                "level": "H2",
+                "text": "One transaction. Two sources. Human review.",
+                "rect": {
+                  "x": 20,
+                  "y": 685.6,
+                  "width": 350,
+                  "height": 56,
+                  "right": 370,
+                  "bottom": 741.6
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Conference registration",
+                "rect": {
+                  "x": 36,
+                  "y": 878.7,
+                  "width": 318,
+                  "height": 15,
+                  "right": 354,
+                  "bottom": 893.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Budget + spend rules",
+                "rect": {
+                  "x": 63,
+                  "y": 1006,
+                  "width": 100.6,
+                  "height": 13.8,
+                  "right": 163.6,
+                  "bottom": 1019.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Relevant passages",
+                "rect": {
+                  "x": 63,
+                  "y": 1097,
+                  "width": 89.9,
+                  "height": 13.8,
+                  "right": 152.9,
+                  "bottom": 1110.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Gemini",
+                "rect": {
+                  "x": 63,
+                  "y": 1188,
+                  "width": 34.3,
+                  "height": 13.8,
+                  "right": 97.3,
+                  "bottom": 1201.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "HUMAN REVIEW",
+                "rect": {
+                  "x": 67,
+                  "y": 1280.5,
+                  "width": 80.1,
+                  "height": 13.8,
+                  "right": 147.1,
+                  "bottom": 1294.2
+                }
+              },
+              {
+                "level": "H2",
+                "text": "Policy context. Deterministic decisions.",
+                "rect": {
+                  "x": 36,
+                  "y": 1673.9,
+                  "width": 319,
+                  "height": 49.3,
+                  "right": 355,
+                  "bottom": 1723.2
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Gemini interpreted the top retrieved passages.",
+                "rect": {
+                  "x": 53,
+                  "y": 2208,
+                  "width": 285,
+                  "height": 38.4,
+                  "right": 338,
+                  "bottom": 2246.4
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Finance and policy rules remained authoritative.",
+                "rect": {
+                  "x": 53,
+                  "y": 2363.3,
+                  "width": 285,
+                  "height": 38.4,
+                  "right": 338,
+                  "bottom": 2401.6
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Sample queue uses budget + employee history.",
+                "rect": {
+                  "x": 53,
+                  "y": 2534.4,
+                  "width": 285,
+                  "height": 38.4,
+                  "right": 338,
+                  "bottom": 2572.8
+                }
+              },
+              {
+                "level": "H2",
+                "text": "I built backend workflows for human review.",
+                "rect": {
+                  "x": 20,
+                  "y": 2715.9,
+                  "width": 350,
+                  "height": 78,
+                  "right": 370,
+                  "bottom": 2793.9
+                }
+              },
+              {
+                "level": "H2",
+                "text": "Signals organize review. People own the decision.",
+                "rect": {
+                  "x": 20,
+                  "y": 3326.1,
+                  "width": 350,
+                  "height": 57.5,
+                  "right": 370,
+                  "bottom": 3383.6
+                }
+              }
+            ],
+            "figures": [
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-demo-caption",
+                "text": "SAMPLE DATA\nExpense review / policy context / preapproval\nWATCH DEMO ↗",
+                "focusableDescendants": 1
+              },
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-evidence-map-caption",
+                "text": "A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\nSAMPLE REQUEST\nConference registration\n$1,200\nTRAVEL & EVENTS\nDETERMINISTIC SIGNALS\nBudget + spend rules\n\nBudget · prior spend · thresholds\n\nRETRIEVED POLICY\nRelevant passages\n\nMatched to the request\n\nPOLICY INTERPRETATION\nGemini\n\nReads retrieved policy context\n\nDECISION AUTHORITY\nHUMAN REVIEW\n\nA reviewer weighs the context and chooses the next action.\n\nAPPROVE\nDENY",
+                "focusableDescendants": 0
+              },
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-finance-workflow-title",
+                "text": "FINANCE Q&A + REPORTING\nFINANCE QUESTION\n→\nFINANCE Q&A ANSWER\nREPORTING NEED\n→\nREPORT VIEW\n\nFinance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.",
+                "focusableDescendants": 0
+              },
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "crest-policy-title",
+                "text": "DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY\nPolicy context. Deterministic decisions.\n\nA standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.\n\n01\nBRIM POLICY PDF\nBrim source material\n→\n02\nEXTRACT + CHUNK\nPrepare searchable passages\n→\n03\ngemini-embedding-001\n3,072 dimensions\n→\n04\nATLAS VECTOR SEARCH\nMongoDB Atlas · policy_chunks\n→\n05\nGROUNDED PROMPT\nTop retrieved passages\nRETRIEVED POLICY CONTEXT\nGemini interpreted the top retrieved passages.\n\nGrounded context supported review; it did not detect or decide.\n\n+\nDETERMINISTIC RULES + SIGNALS\nFinance and policy rules remained authoritative.\n\nHeuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.\n\n→\nHUMAN REVIEW\nSample queue uses budget + employee history.\n\nGemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+                "focusableDescendants": 0
+              }
+            ],
+            "regions": [],
+            "images": {
+              "total": 16,
+              "loaded": 16
+            },
+            "demoLinks": [
+              {
+                "text": "WATCH DEMO ↗",
+                "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+                "target": "_blank",
+                "rect": {
+                  "x": 103.7,
+                  "y": 615.6,
+                  "width": 71.9,
+                  "height": 14,
+                  "right": 175.7,
+                  "bottom": 629.6
+                }
+              }
+            ],
+            "dimensionHeadings": []
+          },
+          "aria": {
+            "figureNodes": [
+              {
+                "role": "figure",
+                "name": "Expense review / policy context / preapproval",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 76,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "figure",
+                "name": "A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 14,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "figure",
+                "name": "FINANCE Q&A + REPORTING",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 142,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "figure",
+                "name": "Policy context. Deterministic decisions.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 156,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              }
+            ],
+            "dimensionRegionNodes": [],
+            "regionNodes": [],
+            "figureSnapshots": [
+              "- figure \"Expense review / policy context / preapproval\":\n  - img \"Crest expense-review sample screen with policy context and preapproval controls\"\n  - text: SAMPLE DATA Expense review / policy context / preapproval\n  - link \"WATCH DEMO ↗\":\n    - /url: https://www.youtube.com/watch?v=kiq6XjNi9J8",
+              "- figure \"A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\":\n  - text: A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review. SAMPLE REQUEST\n  - heading \"Conference registration\" [level=3]\n  - strong: $1,200\n  - text: TRAVEL & EVENTS DETERMINISTIC SIGNALS\n  - heading \"Budget + spend rules\" [level=3]\n  - paragraph: Budget · prior spend · thresholds\n  - text: RETRIEVED POLICY\n  - heading \"Relevant passages\" [level=3]\n  - paragraph: Matched to the request\n  - text: POLICY INTERPRETATION\n  - heading \"Gemini\" [level=3]\n  - paragraph: Reads retrieved policy context\n  - text: DECISION AUTHORITY\n  - heading \"HUMAN REVIEW\" [level=3]\n  - paragraph: A reviewer weighs the context and chooses the next action.",
+              "- figure \"FINANCE Q&A + REPORTING\":\n  - text: FINANCE Q&A + REPORTING FINANCE QUESTION FINANCE Q&A ANSWER REPORTING NEED REPORT VIEW\n  - paragraph: Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.",
+              "- figure \"Policy context. Deterministic decisions.\":\n  - text: DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY\n  - heading \"Policy context. Deterministic decisions.\" [level=2]\n  - paragraph: A standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.\n  - list:\n    - listitem:\n      - text: \"01\"\n      - strong: BRIM POLICY PDF\n      - text: Brim source material\n    - listitem:\n      - text: \"02\"\n      - strong: EXTRACT + CHUNK\n      - text: Prepare searchable passages\n    - listitem:\n      - text: \"03\"\n      - strong: gemini-embedding-001\n      - text: 3,072 dimensions\n    - listitem:\n      - text: \"04\"\n      - strong: ATLAS VECTOR SEARCH\n      - text: MongoDB Atlas · policy_chunks\n    - listitem:\n      - text: \"05\"\n      - strong: GROUNDED PROMPT\n      - text: Top retrieved passages\n  - list \"Policy and human-review boundaries\":\n    - listitem:\n      - text: RETRIEVED POLICY CONTEXT\n      - heading \"Gemini interpreted the top retrieved passages.\" [level=3]\n      - paragraph: Grounded context supported review; it did not detect or decide.\n    - listitem:\n      - text: DETERMINISTIC RULES + SIGNALS\n      - heading \"Finance and policy rules remained authoritative.\" [level=3]\n      - paragraph: \"Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.\"\n    - listitem:\n      - text: HUMAN REVIEW\n      - heading \"Sample queue uses budget + employee history.\" [level=3]\n      - paragraph: Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype."
+            ]
+          },
+          "keyboard": {
+            "tabReachedWatchDemo": true,
+            "focusOrder": [
+              {
+                "tag": "A",
+                "text": "OVERVIEW",
+                "href": "#crest-overview",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "TRANSACTION FLOW",
+                "href": "#crest-system",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "POLICY RETRIEVAL",
+                "href": "#crest-policy",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "OWNERSHIP",
+                "href": "#crest-team",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "LESSON",
+                "href": "#crest-takeaway",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "‹ PROJECTS",
+                "href": "/projects",
+                "target": null
+              },
+              {
+                "tag": "A",
+                "text": "WATCH DEMO ↗",
+                "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+                "target": "_blank"
+              }
+            ],
+            "state": {
+              "tag": "A",
+              "text": "WATCH DEMO ↗",
+              "href": "https://www.youtube.com/watch?v=kiq6XjNi9J8",
+              "target": "_blank",
+              "rect": {
+                "x": 103.7,
+                "y": 615.6,
+                "right": 175.7,
+                "bottom": 629.6
+              },
+              "focusVisible": true,
+              "figure": {
+                "ariaLabel": null,
+                "labelledby": "crest-demo-caption",
+                "tabIndex": -1
+              }
+            }
+          },
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshot": "crest-390x844-viewport.png"
+        }
+      }
+    },
+    "stush": {
+      "path": "/experience/stush-patties",
+      "viewports": {
+        "1920x1080": {
+          "status": 200,
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          },
+          "metrics": {
+            "url": "https://4684a5d6.joshuaik2.pages.dev/experience/stush-patties",
+            "document": {
+              "scrollWidth": 1920,
+              "clientWidth": 1920,
+              "scrollHeight": 1080
+            },
+            "main": {
+              "className": "main main--detail main--stush-case",
+              "scrollWidth": 1560,
+              "clientWidth": 1560,
+              "scrollHeight": 2399,
+              "clientHeight": 998,
+              "overflowY": "auto"
+            },
+            "headings": [
+              {
+                "level": "H1",
+                "text": "Stush Patties",
+                "rect": {
+                  "x": 64,
+                  "y": 146,
+                  "width": 1050,
+                  "height": 39.6,
+                  "right": 1114,
+                  "bottom": 185.6
+                }
+              },
+              {
+                "level": "H2",
+                "text": "The same fields had to line up before reporting.",
+                "rect": {
+                  "x": 64,
+                  "y": 512.4,
+                  "width": 820,
+                  "height": 41,
+                  "right": 884,
+                  "bottom": 553.4
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Different file shapes. One reporting path.",
+                "rect": {
+                  "x": 87,
+                  "y": 710.4,
+                  "width": 495.8,
+                  "height": 31.9,
+                  "right": 582.8,
+                  "bottom": 742.3
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Four business dimensions needed the same meaning across file layouts.",
+                "rect": {
+                  "x": 64,
+                  "y": 1114.8,
+                  "width": 1120,
+                  "height": 79.2,
+                  "right": 1184,
+                  "bottom": 1194
+                }
+              },
+              {
+                "level": "H3",
+                "text": "ONE OUTLIER",
+                "rect": {
+                  "x": 64,
+                  "y": 1567.6,
+                  "width": 353.7,
+                  "height": 37.2,
+                  "right": 417.7,
+                  "bottom": 1604.8
+                }
+              },
+              {
+                "level": "H2",
+                "text": "I built the parsing and normalization steps.",
+                "rect": {
+                  "x": 64,
+                  "y": 1835.5,
+                  "width": 547.2,
+                  "height": 82.1,
+                  "right": 611.2,
+                  "bottom": 1917.5
+                }
+              },
+              {
+                "level": "H2",
+                "text": "A repeatable path from raw files to Power BI reporting.",
+                "rect": {
+                  "x": 64,
+                  "y": 2135.4,
+                  "width": 703.6,
+                  "height": 82.1,
+                  "right": 767.6,
+                  "bottom": 2217.5
+                }
+              },
+              {
+                "level": "H2",
+                "text": "The work taught me to translate a business question into data rules that make the next reporting step repeatable.",
+                "rect": {
+                  "x": 64,
+                  "y": 2351.4,
+                  "width": 1100,
+                  "height": 82.1,
+                  "right": 1164,
+                  "bottom": 2433.5
+                }
+              }
+            ],
+            "figures": [
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "stush-flow-title",
+                "text": "THE DATA PIPELINE\n\nDifferent file shapes. One reporting path.\n\nFrom incoming sales files to a Power BI handoff\n\n01\nFILES\n02\nPARSE\n03\nSHARED SCHEMA\n04\nNORMALIZE\n05\nHANDOFF\nSales files\n\nDifferent layouts\n\nFILE 01\nFILE 02\nFILE 03\n\nCSV · XLSX · XLSB\nFormats across inputs\n\n→\n\nPARSE\n\nRead each structure\n\nField positions vary\n\n01\n02\n03\n\nFields found in each layout\n\n→\n\nSHARED FIELD CONTRACT\n\nFour stable meanings\nSales\nUnits\nCase pack\nReporting month\n→\n\nNORMALIZE\n\nApply shared rules\nSales + units\n→\nCase pack\n→\nReporting month\n→\n\nSTANDARDIZED OUTPUT\n\nUnified CSV\nData dictionary\nQuality report\n→\nPower BI\nREPORTING HANDOFF\nConceptual pipeline · no source values shown.",
+                "focusableDescendants": 0
+              }
+            ],
+            "regions": [
+              {
+                "tag": "SECTION",
+                "role": null,
+                "ariaLabel": null,
+                "ariaLabelledby": "stush-problem-title",
+                "text": "THE INPUTS\n\nThe same fields had to line up before reporting.\n\nSource layouts varied across CSV, XLSX, and XLSB. Sales, units, case packs, and reporting months n"
+              },
+              {
+                "tag": "SECTION",
+                "role": null,
+                "ariaLabel": null,
+                "ariaLabelledby": "stush-output-title",
+                "text": "OUTPUTS FOR THE NEXT STEP\n\nA repeatable path from raw files to Power BI reporting.\nUnified CSV\nData dictionary\nQuality report\n→\nPower BI\n\nREPORTING HANDOFF"
+              }
+            ],
+            "images": {
+              "total": 14,
+              "loaded": 14
+            },
+            "demoLinks": [],
+            "dimensionHeadings": [
+              {
+                "text": "Four business dimensions needed the same meaning across file layouts.",
+                "visible": true,
+                "rect": {
+                  "x": 64,
+                  "y": 1114.8,
+                  "width": 1120,
+                  "height": 79.2,
+                  "right": 1184,
+                  "bottom": 1194
+                },
+                "parentTag": "DIV",
+                "parentRole": null,
+                "parentLabel": null,
+                "context": "WHY A SHARED FIELD CONTRACT\n\nFour business dimensions needed the same meaning across file layouts."
+              }
+            ]
+          },
+          "aria": {
+            "figureNodes": [
+              {
+                "role": "figure",
+                "name": "Different file shapes. One reporting path.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 38,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              }
+            ],
+            "dimensionRegionNodes": [],
+            "regionNodes": [
+              {
+                "role": "region",
+                "name": "The same fields had to line up before reporting.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 99,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "region",
+                "name": "A repeatable path from raw files to Power BI reporting.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 260,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              }
+            ],
+            "figureSnapshots": [
+              "- figure \"Different file shapes. One reporting path.\":\n  - paragraph: THE DATA PIPELINE\n  - heading \"Different file shapes. One reporting path.\" [level=3]\n  - paragraph: From incoming sales files to a Power BI handoff\n  - list \"Pipeline stages\":\n    - listitem: 01 Files\n    - listitem: 02 Parse\n    - listitem: 03 Shared schema\n    - listitem: 04 Normalize\n    - listitem: 05 Handoff\n  - heading \"Sales files\" [level=4]\n  - paragraph: Different layouts\n  - paragraph:\n    - strong: CSV · XLSX · XLSB\n    - text: Formats across inputs\n  - paragraph: PARSE\n  - heading \"Read each structure\" [level=4]\n  - paragraph: Field positions vary\n  - paragraph: Fields found in each layout\n  - paragraph: SHARED FIELD CONTRACT\n  - heading \"Four stable meanings\" [level=4]\n  - list:\n    - listitem: Sales\n    - listitem: Units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: NORMALIZE\n  - heading \"Apply shared rules\" [level=4]\n  - list:\n    - listitem: Sales + units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: STANDARDIZED OUTPUT\n  - list:\n    - listitem: Unified CSV\n    - listitem: Data dictionary\n    - listitem: Quality report\n  - strong: Power BI\n  - text: Reporting handoff Conceptual pipeline · no source values shown."
+            ]
+          },
+          "keyboard": null,
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshot": "stush-1920x1080-viewport.png"
+        },
+        "390x844": {
+          "status": 200,
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "metrics": {
+            "url": "https://4684a5d6.joshuaik2.pages.dev/experience/stush-patties",
+            "document": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 3352
+            },
+            "main": {
+              "className": "main main--detail main--stush-case",
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 3282,
+              "clientHeight": 3282,
+              "overflowY": "visible"
+            },
+            "headings": [
+              {
+                "level": "H1",
+                "text": "Stush Patties",
+                "rect": {
+                  "x": 22,
+                  "y": 54,
+                  "width": 346,
+                  "height": 34.3,
+                  "right": 368,
+                  "bottom": 88.3
+                }
+              },
+              {
+                "level": "H2",
+                "text": "The same fields had to line up before reporting.",
+                "rect": {
+                  "x": 22,
+                  "y": 462.6,
+                  "width": 346,
+                  "height": 58.3,
+                  "right": 368,
+                  "bottom": 521
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Different file shapes. One reporting path.",
+                "rect": {
+                  "x": 36,
+                  "y": 660.3,
+                  "width": 318,
+                  "height": 48.4,
+                  "right": 354,
+                  "bottom": 708.7
+                }
+              },
+              {
+                "level": "H3",
+                "text": "Four business dimensions needed the same meaning across file layouts.",
+                "rect": {
+                  "x": 22,
+                  "y": 1823.7,
+                  "width": 346,
+                  "height": 79.2,
+                  "right": 368,
+                  "bottom": 1902.9
+                }
+              },
+              {
+                "level": "H3",
+                "text": "ONE OUTLIER",
+                "rect": {
+                  "x": 22,
+                  "y": 2183.5,
+                  "width": 346,
+                  "height": 37.2,
+                  "right": 368,
+                  "bottom": 2220.7
+                }
+              },
+              {
+                "level": "H2",
+                "text": "I built the parsing and normalization steps.",
+                "rect": {
+                  "x": 22,
+                  "y": 2480.3,
+                  "width": 346,
+                  "height": 58.3,
+                  "right": 368,
+                  "bottom": 2538.6
+                }
+              },
+              {
+                "level": "H2",
+                "text": "A repeatable path from raw files to Power BI reporting.",
+                "rect": {
+                  "x": 22,
+                  "y": 2798.3,
+                  "width": 346,
+                  "height": 60.5,
+                  "right": 368,
+                  "bottom": 2858.7
+                }
+              },
+              {
+                "level": "H2",
+                "text": "The work taught me to translate a business question into data rules that make the next reporting step repeatable.",
+                "rect": {
+                  "x": 22,
+                  "y": 3052.7,
+                  "width": 346,
+                  "height": 121,
+                  "right": 368,
+                  "bottom": 3173.7
+                }
+              }
+            ],
+            "figures": [
+              {
+                "tabIndex": -1,
+                "ariaLabel": null,
+                "labelledby": "stush-flow-title",
+                "text": "THE DATA PIPELINE\n\nDifferent file shapes. One reporting path.\n\nFrom incoming sales files to a Power BI handoff\n\n01\nFILES\n02\nPARSE\n03\nSHARED SCHEMA\n04\nNORMALIZE\n05\nHANDOFF\nSales files\n\nDifferent layouts\n\nFILE 01\nFILE 02\nFILE 03\n\nCSV · XLSX · XLSB\nFormats across inputs\n\n→\n\nPARSE\n\nRead each structure\n\nField positions vary\n\n01\n02\n03\n\nFields found in each layout\n\n→\n\nSHARED FIELD CONTRACT\n\nFour stable meanings\nSales\nUnits\nCase pack\nReporting month\n→\n\nNORMALIZE\n\nApply shared rules\nSales + units\n→\nCase pack\n→\nReporting month\n→\n\nSTANDARDIZED OUTPUT\n\nUnified CSV\nData dictionary\nQuality report\n→\nPower BI\nREPORTING HANDOFF\nConceptual pipeline · no source values shown.",
+                "focusableDescendants": 0
+              }
+            ],
+            "regions": [
+              {
+                "tag": "SECTION",
+                "role": null,
+                "ariaLabel": null,
+                "ariaLabelledby": "stush-problem-title",
+                "text": "THE INPUTS\n\nThe same fields had to line up before reporting.\n\nSource layouts varied across CSV, XLSX, and XLSB. Sales, units, case packs, and reporting months n"
+              },
+              {
+                "tag": "SECTION",
+                "role": null,
+                "ariaLabel": null,
+                "ariaLabelledby": "stush-output-title",
+                "text": "OUTPUTS FOR THE NEXT STEP\n\nA repeatable path from raw files to Power BI reporting.\nUnified CSV\nData dictionary\nQuality report\n→\nPower BI\n\nREPORTING HANDOFF"
+              }
+            ],
+            "images": {
+              "total": 14,
+              "loaded": 14
+            },
+            "demoLinks": [],
+            "dimensionHeadings": [
+              {
+                "text": "Four business dimensions needed the same meaning across file layouts.",
+                "visible": true,
+                "rect": {
+                  "x": 22,
+                  "y": 1823.7,
+                  "width": 346,
+                  "height": 79.2,
+                  "right": 368,
+                  "bottom": 1902.9
+                },
+                "parentTag": "DIV",
+                "parentRole": null,
+                "parentLabel": null,
+                "context": "WHY A SHARED FIELD CONTRACT\n\nFour business dimensions needed the same meaning across file layouts."
+              }
+            ]
+          },
+          "aria": {
+            "figureNodes": [
+              {
+                "role": "figure",
+                "name": "Different file shapes. One reporting path.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 82,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              }
+            ],
+            "dimensionRegionNodes": [],
+            "regionNodes": [
+              {
+                "role": "region",
+                "name": "The same fields had to line up before reporting.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 76,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              },
+              {
+                "role": "region",
+                "name": "A repeatable path from raw files to Power BI reporting.",
+                "description": "",
+                "ignored": false,
+                "backendDOMNodeId": 248,
+                "properties": [
+                  {
+                    "name": "labelledby"
+                  }
+                ]
+              }
+            ],
+            "figureSnapshots": [
+              "- figure \"Different file shapes. One reporting path.\":\n  - paragraph: THE DATA PIPELINE\n  - heading \"Different file shapes. One reporting path.\" [level=3]\n  - paragraph: From incoming sales files to a Power BI handoff\n  - list \"Pipeline stages\":\n    - listitem: 01 Files\n    - listitem: 02 Parse\n    - listitem: 03 Shared schema\n    - listitem: 04 Normalize\n    - listitem: 05 Handoff\n  - heading \"Sales files\" [level=4]\n  - paragraph: Different layouts\n  - paragraph:\n    - strong: CSV · XLSX · XLSB\n    - text: Formats across inputs\n  - paragraph: PARSE\n  - heading \"Read each structure\" [level=4]\n  - paragraph: Field positions vary\n  - paragraph: Fields found in each layout\n  - paragraph: SHARED FIELD CONTRACT\n  - heading \"Four stable meanings\" [level=4]\n  - list:\n    - listitem: Sales\n    - listitem: Units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: NORMALIZE\n  - heading \"Apply shared rules\" [level=4]\n  - list:\n    - listitem: Sales + units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: STANDARDIZED OUTPUT\n  - list:\n    - listitem: Unified CSV\n    - listitem: Data dictionary\n    - listitem: Quality report\n  - strong: Power BI\n  - text: Reporting handoff Conceptual pipeline · no source values shown."
+            ]
+          },
+          "keyboard": null,
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshot": "stush-390x844-viewport.png"
+        }
+      }
+    }
+  }
+}
