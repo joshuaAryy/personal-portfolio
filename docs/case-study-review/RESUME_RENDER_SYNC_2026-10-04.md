@@ -1,5 +1,15 @@
 # Resume Found and viewer render check — 2026-10-04
 
+## Final responsive Help rerender — Preview `f8762c0`
+
+The immutable Preview at [source `f8762c0`](https://bb5ce74d.joshuaik2.pages.dev/) was checked on `/resume` in Chrome `153.0.8010.53` with Playwright `1.63.0` at 390×844, 650×844, 651×844, 760×844, 900×844, and 1920×1080. The /resume route returned HTTP 200 in all six viewport runs; document width equaled viewport width at every size, 21/21 images loaded, and console, page, request, and response error lists were empty.
+
+At 390, 650, 651, and 900px, keyboard Tab reaches Help with the full 2px gold focus outline inside both the nav and viewport. Enter opens the Help dialog in place; Escape restores focus to Help without changing `/resume` or scroll position. At 651px the button box starts at y=-0.5px, but its inset outline starts at y=0.5px and remains fully visible. The 760px layout was checked for fit and width. At 1920px the desktop rail remains x=1600, w=320 and the footer x=1601, y=1018, 319×62, matching the prior desktop geometry.
+
+The earlier 8680eeb clipped outline at 390px and a474032 top/edge clipping at 651px are resolved in this Preview. The archive J remains the known inherited source-resolution limitation: its 700×700 source renders at about 460px on desktop and 310.7px at 390px and still appears soft. No new layout mismatch was observed; owner review remains open.
+
+Evidence: [current Figma review export](render-sync/2026-10-04-resume-preview-f8762c0/figma-resume-found-2407-176.png), [machine-readable results](render-sync/2026-10-04-resume-preview-f8762c0/resume-preview-f8762c0-evidence.json), and [rendered screenshots](render-sync/2026-10-04-resume-preview-f8762c0/).
+
 **Preview:** [source `92d3c26`](https://965f0e82.joshuaik2.pages.dev/), feature branch `feat/portfolio-integration`. Production was not targeted.
 
 **Browser:** Chrome `153.0.8010.53`, at `1920×1080` and `390×844`. The deployed `/resume` shell, dimming, authentic Ready Check chassis, View Resume action, and close label align with the existing Figma/local captures. Both routes returned 200, all 21 images loaded at both sizes, document width matched the viewport, and there were no browser/request errors.

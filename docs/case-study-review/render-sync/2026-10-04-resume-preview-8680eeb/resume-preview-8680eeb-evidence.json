@@ -1,0 +1,629 @@
+{
+  "requestedSource": "8680eeb",
+  "preview": "https://723c7b0d.joshuaik2.pages.dev",
+  "route": "/resume",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T16:42:36.398Z",
+  "viewports": {
+    "1920x1080": {
+      "status": 200,
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/resume",
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 110,
+            "left": 0,
+            "right": 1600,
+            "top": 110,
+            "bottom": 1080,
+            "width": 1600,
+            "height": 970
+          },
+          "clientWidth": 1600,
+          "scrollWidth": 1600,
+          "overflowX": "auto",
+          "overflowY": "auto"
+        },
+        "rail": {
+          "tag": "ASIDE",
+          "class": "rail",
+          "rect": {
+            "x": 1600,
+            "y": 110,
+            "left": 1600,
+            "right": 1920,
+            "top": 110,
+            "bottom": 1080,
+            "width": 320,
+            "height": 970
+          },
+          "opacity": "1"
+        },
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "mechanism": [
+          {
+            "class": "resume-mechanism",
+            "rect": {
+              "x": 535.015625,
+              "y": 204,
+              "left": 535.015625,
+              "right": 1064.96875,
+              "top": 204,
+              "bottom": 733.953125,
+              "width": 529.953125,
+              "height": 529.953125
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__j",
+            "rect": {
+              "x": 570,
+              "y": 238.984375,
+              "left": 570,
+              "right": 1029.953125,
+              "top": 238.984375,
+              "bottom": 698.9375,
+              "width": 459.953125,
+              "height": 459.953125
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__j-image",
+            "rect": {
+              "x": 570,
+              "y": 238.984375,
+              "left": 570,
+              "right": 1029.953125,
+              "top": 238.984375,
+              "bottom": 698.9375,
+              "width": 459.953125,
+              "height": 459.953125
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__frame",
+            "rect": {
+              "x": 535.015625,
+              "y": 204,
+              "left": 535.015625,
+              "right": 1064.96875,
+              "top": 204,
+              "bottom": 733.953125,
+              "width": 529.953125,
+              "height": 529.953125
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__title",
+            "rect": {
+              "x": 680.0078125,
+              "y": 648.9375,
+              "left": 680.0078125,
+              "right": 919.9609375,
+              "top": 648.9375,
+              "bottom": 672.9375,
+              "width": 239.953125,
+              "height": 24
+            },
+            "opacity": "1"
+          }
+        ],
+        "archive": {
+          "src": "https://723c7b0d.joshuaik2.pages.dev/media/profile/open-portfolio-j-archive-source-700.png",
+          "alt": "Joshua's archive-led J mark",
+          "loaded": true,
+          "naturalWidth": 700,
+          "naturalHeight": 700,
+          "rendered": {
+            "x": 570,
+            "y": 238.984375,
+            "left": 570,
+            "right": 1029.953125,
+            "top": 238.984375,
+            "bottom": 698.9375,
+            "width": 459.953125,
+            "height": 459.953125
+          },
+          "filter": "none"
+        },
+        "readyCheck": {
+          "src": "https://723c7b0d.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "alt": "",
+          "loaded": true,
+          "naturalWidth": 530,
+          "rendered": {
+            "x": 535.015625,
+            "y": 204,
+            "left": 535.015625,
+            "right": 1064.96875,
+            "top": 204,
+            "bottom": 733.953125,
+            "width": 529.953125,
+            "height": 529.953125
+          },
+          "visible": "visible"
+        },
+        "viewResume": {
+          "text": "VIEW RESUME",
+          "href": "/resume/viewer",
+          "rect": {
+            "x": 694,
+            "y": 674.96875,
+            "left": 694,
+            "right": 905.96875,
+            "top": 674.96875,
+            "bottom": 744.953125,
+            "width": 211.96875,
+            "height": 69.984375
+          }
+        },
+        "close": {
+          "text": "ESC · CLOSE",
+          "ariaKeyshortcuts": "Escape",
+          "rect": {
+            "x": 750.984375,
+            "y": 789.953125,
+            "left": 750.984375,
+            "right": 849,
+            "top": 789.953125,
+            "bottom": 807.953125,
+            "width": 98.015625,
+            "height": 18
+          }
+        },
+        "help": {
+          "text": "Help",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "tabIndex": 0,
+          "visibility": "visible",
+          "display": "none"
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "archiveJ": {
+            "naturalWidth": 700,
+            "renderedWidth": 459.953125
+          }
+        },
+        "assets": [
+          "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+          "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+        ]
+      },
+      "viewResumeFocus": {
+        "tabPresses": 1,
+        "state": {
+          "tag": "A",
+          "text": "VIEW RESUME",
+          "aria": null,
+          "href": "/resume/viewer",
+          "class": "resume-action resume-action--primary resume-found__action",
+          "focusVisible": true,
+          "outline": "rgb(156, 249, 240) solid 2px",
+          "outlineOffset": "3px",
+          "rect": {
+            "x": 694,
+            "y": 674.96875,
+            "right": 905.96875,
+            "bottom": 744.953125,
+            "width": 211.96875,
+            "height": 69.984375
+          }
+        },
+        "preceding": [
+          {
+            "tag": "A",
+            "text": "VIEW RESUME",
+            "aria": null,
+            "href": "/resume/viewer",
+            "class": "resume-action resume-action--primary resume-found__action",
+            "focusVisible": true,
+            "outline": "rgb(156, 249, 240) solid 2px",
+            "outlineOffset": "3px",
+            "rect": {
+              "x": 694,
+              "y": 674.96875,
+              "right": 905.96875,
+              "bottom": 744.953125,
+              "width": 211.96875,
+              "height": 69.984375
+            }
+          }
+        ]
+      },
+      "viewerEntry": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/resume/viewer",
+        "pathname": "/resume/viewer",
+        "heading": "‹\nBack to Resume Found\n\nAPPROVED GENERAL RESUME · VERSION 13\n\nRESUME\nDOWNLOAD PDF\nOPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)",
+        "title": "Joshua Aryeetey · Portfolio",
+        "iframe": "/resume/Joshua_Aryeetey_General_Resume_v13.pdf"
+      },
+      "backReturned": "/resume",
+      "closeState": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "pathname": "/home"
+      },
+      "escapeState": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "pathname": "/home"
+      },
+      "origin": {
+        "started": "/projects",
+        "opened": "/resume",
+        "closed": {
+          "url": "https://723c7b0d.joshuaik2.pages.dev/projects",
+          "pathname": "/projects"
+        }
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-preview-8680eeb-desktop-1920x1080.png",
+        "resume-preview-8680eeb-view-resume-focus.png",
+        "resume-preview-8680eeb-viewer-entry.png"
+      ]
+    },
+    "390x844": {
+      "status": 200,
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/resume",
+        "title": "Joshua Aryeetey · Portfolio",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 905,
+          "scrollY": 0
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 70,
+            "left": 0,
+            "right": 390,
+            "top": 70,
+            "bottom": 844,
+            "width": 390,
+            "height": 774
+          },
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        "rail": {
+          "tag": "ASIDE",
+          "class": "rail",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "opacity": "1"
+        },
+        "bodyBackground": "rgba(0, 0, 0, 0)",
+        "mechanism": [
+          {
+            "class": "resume-mechanism",
+            "rect": {
+              "x": 16,
+              "y": 153.0625,
+              "left": 16,
+              "right": 374,
+              "top": 153.0625,
+              "bottom": 511.0625,
+              "width": 358,
+              "height": 358
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__j",
+            "rect": {
+              "x": 39.640625,
+              "y": 176.703125,
+              "left": 39.640625,
+              "right": 350.34375,
+              "top": 176.703125,
+              "bottom": 487.40625,
+              "width": 310.703125,
+              "height": 310.703125
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__j-image",
+            "rect": {
+              "x": 39.640625,
+              "y": 176.703125,
+              "left": 39.640625,
+              "right": 350.34375,
+              "top": 176.703125,
+              "bottom": 487.40625,
+              "width": 310.703125,
+              "height": 310.703125
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__frame",
+            "rect": {
+              "x": 16,
+              "y": 153.0625,
+              "left": 16,
+              "right": 374,
+              "top": 153.0625,
+              "bottom": 511.0625,
+              "width": 358,
+              "height": 358
+            },
+            "opacity": "1"
+          },
+          {
+            "class": "resume-mechanism__title",
+            "rect": {
+              "x": 113.953125,
+              "y": 453.625,
+              "left": 113.953125,
+              "right": 276.046875,
+              "top": 453.625,
+              "bottom": 469.828125,
+              "width": 162.09375,
+              "height": 16.203125
+            },
+            "opacity": "1"
+          }
+        ],
+        "archive": {
+          "src": "https://723c7b0d.joshuaik2.pages.dev/media/profile/open-portfolio-j-archive-source-700.png",
+          "alt": "Joshua's archive-led J mark",
+          "loaded": true,
+          "naturalWidth": 700,
+          "naturalHeight": 700,
+          "rendered": {
+            "x": 39.640625,
+            "y": 176.703125,
+            "left": 39.640625,
+            "right": 350.34375,
+            "top": 176.703125,
+            "bottom": 487.40625,
+            "width": 310.703125,
+            "height": 310.703125
+          },
+          "filter": "none"
+        },
+        "readyCheck": {
+          "src": "https://723c7b0d.joshuaik2.pages.dev/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "alt": "",
+          "loaded": true,
+          "naturalWidth": 530,
+          "rendered": {
+            "x": 16,
+            "y": 153.0625,
+            "left": 16,
+            "right": 374,
+            "top": 153.0625,
+            "bottom": 511.0625,
+            "width": 358,
+            "height": 358
+          },
+          "visible": "visible"
+        },
+        "viewResume": {
+          "text": "VIEW RESUME",
+          "href": "/resume/viewer",
+          "rect": {
+            "x": 123.40625,
+            "y": 471.203125,
+            "left": 123.40625,
+            "right": 266.59375,
+            "top": 471.203125,
+            "bottom": 518.46875,
+            "width": 143.1875,
+            "height": 47.265625
+          }
+        },
+        "close": {
+          "text": "ESC · CLOSE",
+          "ariaKeyshortcuts": "Escape",
+          "rect": {
+            "x": 145.984375,
+            "y": 554.9375,
+            "left": 145.984375,
+            "right": 244,
+            "top": 554.9375,
+            "bottom": 572.9375,
+            "width": 98.015625,
+            "height": 18
+          }
+        },
+        "help": {
+          "text": "HELP",
+          "rect": {
+            "x": 252,
+            "y": 0.5,
+            "left": 252,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5,
+            "width": 84,
+            "height": 68
+          },
+          "tabIndex": 0,
+          "visibility": "visible",
+          "display": "grid"
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "archiveJ": {
+            "naturalWidth": 700,
+            "renderedWidth": 310.703125
+          }
+        },
+        "assets": [
+          "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+          "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+        ]
+      },
+      "helpKeyboard": {
+        "tabPresses": 9,
+        "focused": {
+          "tag": "BUTTON",
+          "text": "HELP",
+          "aria": null,
+          "href": null,
+          "class": "header-help",
+          "focusVisible": true,
+          "outline": "rgb(244, 203, 105) solid 2px",
+          "outlineOffset": "3px",
+          "rect": {
+            "x": 252,
+            "y": 0.5,
+            "right": 336,
+            "bottom": 68.5,
+            "width": 84,
+            "height": 68
+          },
+          "scrollX": 0,
+          "scrollY": 0,
+          "navScroll": [
+            {
+              "class": "top-nav",
+              "scrollLeft": 0,
+              "scrollWidth": 263,
+              "clientWidth": 263
+            },
+            {
+              "class": "mobile-contact-row",
+              "scrollLeft": 0,
+              "scrollWidth": 390,
+              "clientWidth": 390
+            }
+          ]
+        },
+        "open": {
+          "route": "/resume",
+          "dialogs": [
+            {
+              "ariaLabel": null,
+              "labelledby": "_r_0_",
+              "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nUSE THE TOP NAVIGATION\n\nProjects, Experience, Hackathons, and Education remain available from the client shell.\n\n02\nOPEN PROFILE\n\nThe account ",
+              "rect": {
+                "x": 12,
+                "y": 613.671875,
+                "width": 366,
+                "height": 218.328125
+              }
+            }
+          ],
+          "active": {
+            "tag": "BUTTON",
+            "text": "CLOSE\nESC",
+            "aria": null
+          }
+        },
+        "closed": {
+          "route": "/resume",
+          "activeClass": "header-help",
+          "activeText": "HELP",
+          "focusVisible": true,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "focusIndicatorAudit": {
+          "tabPresses": 9,
+          "class": "header-help",
+          "focusVisible": true,
+          "buttonRect": {
+            "left": 252,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5,
+            "width": 84,
+            "height": 68
+          },
+          "outlineStyle": "rgb(244, 203, 105) solid 2px",
+          "outlineOffset": "3px",
+          "expectedOutlineRect": {
+            "left": 247,
+            "right": 341,
+            "top": -4.5,
+            "bottom": 73.5
+          },
+          "containingNav": {
+            "class": "top-nav",
+            "rect": {
+              "left": 73,
+              "right": 336,
+              "top": 0.5,
+              "bottom": 68.5,
+              "width": 263,
+              "height": 68
+            },
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          "clipped": {
+            "top": true,
+            "right": true,
+            "bottom": true,
+            "left": false
+          },
+          "scroll": {
+            "x": 0,
+            "y": 0,
+            "navScrollLeft": 0
+          }
+        }
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-preview-8680eeb-narrow-390x844.png",
+        "resume-preview-8680eeb-narrow-help-focus.png",
+        "resume-preview-8680eeb-narrow-help-open.png",
+        "resume-preview-8680eeb-narrow-help-focus-clip.png"
+      ]
+    }
+  },
+  "figmaReference": "tmp/figma-review/resume-viewer/resume-found.png"
+}
