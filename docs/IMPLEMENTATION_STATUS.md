@@ -64,7 +64,7 @@ Fraymakers chapter navigation correction, app commit `835b1a5`: deployed Chrome 
 
 ### Shared shell footer
 
-The shell footer now links to the verified GitHub and LinkedIn profiles and email address; the visible X mark remains decorative because no verified profile destination is known. Keyboard focus and rendered targets are **NEEDS RENDER SYNC** with Home/shell validation. See [INTERACTION_AND_MOTION_SPEC.md](INTERACTION_AND_MOTION_SPEC.md) and [RENDER_VALIDATION_QUEUE.md](RENDER_VALIDATION_QUEUE.md).
+The shell footer links to the verified GitHub and LinkedIn profiles and email address; the visible X mark remains decorative because no verified profile destination is known. Desktop link destinations, new-tab announcements, keyboard focus, spacing, and X treatment passed on Preview `e4e1050`. The narrow rail is hidden, so commit `8680eeb` adds a page-end contact row through 900px. Current Preview validation passed at Home 390/650/900/901/1920px and Fraymakers 390px; the adaptation makes no narrow-Figma parity claim. See [the render report](case-study-review/RAIL_FOOTER_RENDER_SYNC_2026-10-04.md), [interaction spec](INTERACTION_AND_MOTION_SPEC.md), and [validation queue](RENDER_VALIDATION_QUEUE.md).
 
 ## Owner-review representations
 
