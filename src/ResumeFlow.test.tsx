@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -15,6 +16,15 @@ function renderRoute(path: string) {
 }
 
 describe("approved resume flow", () => {
+  it("keeps the narrow Resume Help focus ring inside the horizontally scrolling nav", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const mobileRules = css.slice(css.lastIndexOf("@media (max-width: 650px)"));
+
+    expect(mobileRules).toMatch(
+      /\.client--resume-shell \.top-nav \.header-help:focus-visible\s*\{[^}]*outline-offset:\s*-3px/s,
+    );
+  });
+
   it("links Resume Found to the viewer", () => {
     const markup = renderRoute("/resume");
 

@@ -408,6 +408,10 @@
     display: none;
   }
 
+  .client--resume-shell .top-nav .header-help:focus-visible {
+    outline-offset: -3px;
+  }
+
   .top-nav a.header-resume {
     min-width: auto;
   }
