@@ -2,7 +2,7 @@
 
 ## Scope and source model
 
-Reviewed the complete `portfolio_owner_source_v2.zip` supplied by the owner, including its README, ingestion prompt, provenance index, six deep project dossiers, Education capability brief, and `raw_context/CASE_STUDY_CONTENT_SOURCE_old.md`. The package was extracted outside the repository at `C:\Users\samue\AppData\Local\Temp\portfolio-owner-source-v2-ingestion-2026-10-04-root\portfolio_owner_source_v2` for inspection. The old raw-context file is provenance, not a replacement for the current portfolio source record.
+Reviewed the complete archive at `C:\Users\samue\Downloads\portfolio_owner_source_v2.zip`, including its README, ingestion prompt, provenance index, six deep project dossiers, Education capability brief, and `raw_context/CASE_STUDY_CONTENT_SOURCE_old.md`. The package was extracted outside the repository at `C:\Users\samue\AppData\Local\Temp\portfolio-owner-source-v2-ingestion-2026-10-04-root\portfolio_owner_source_v2` for inspection. The old raw-context file is provenance, not a replacement for the current portfolio source record. The exact dossier filenames are `01_FOOD_TRACKER_DEEP_DOSSIER.md`, `02_CREST_DEEP_DOSSIER.md`, `03_CHO_VIEGO_DEEP_DOSSIER.md`, `04_FRAYMAKERS_DEEP_DOSSIER.md`, `05_LIVING_IN_SILICO_DEEP_DOSSIER.md`, `06_STUSH_PATTIES_DEEP_DOSSIER.md`, and `07_EDUCATION_CAPABILITY_BRIEFS.md`.
 
 This report preserves three separate layers:
 
@@ -26,7 +26,7 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **Evidence still open:** No canonical current-build app screenshot/demo is available in this portfolio evidence set. Some native/provider/device and photo-adjudication paths have not been proven at the same checkpoint. Current interface evidence should not be inferred from an older search capture.
 
-**References:** [Food source truth](CASE_STUDY_CONTENT_SOURCE.md#food-tracker--source-truth); [Product/tool coverage audit](coverage-audit/PRODUCT_AND_TOOL_SYSTEMS.md#food-tracker); [latest Food/Cho render sync](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-04.md); dossier §1–21.
+**References:** [Food source truth](CASE_STUDY_CONTENT_SOURCE.md#food-tracker--source-truth); [Product/tool coverage audit](coverage-audit/PRODUCT_AND_TOOL_SYSTEMS.md#food-tracker); [latest Food/Cho render sync](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-04.md); v2 `01_FOOD_TRACKER_DEEP_DOSSIER.md` §§1–21.
 
 ## Crest — reconciled; full workstream breadth is present, with bounded depth questions
 
@@ -42,7 +42,7 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **Evidence still open:** Capture-time dataset/HAR or equivalent evidence for the showcased data path; a successful compliance state if that UI is to be shown; precise ownership for Q&A/preapproval stages; deployment claims.
 
-**References:** [Crest source truth](CASE_STUDY_CONTENT_SOURCE.md#crest--source-truth); [Crest implementation evidence](coverage-audit/CREST_IMPLEMENTATION_EVIDENCE.md); [latest Crest/Fraymakers render sync](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-04.md); dossier §1–15.
+**References:** [Crest source truth](CASE_STUDY_CONTENT_SOURCE.md#crest--source-truth); [Crest implementation evidence](coverage-audit/CREST_IMPLEMENTATION_EVIDENCE.md); [latest Crest/Fraymakers render sync](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-04.md); v2 `02_CREST_DEEP_DOSSIER.md` §§1–15.
 
 ## Cho’Veigo — reconciled; accepted pipeline is broad, with optional product surfaces
 
@@ -58,7 +58,7 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **Evidence still open:** Current deployment/domain; provenance for staged Resume Studio mechanics and authorship; safe public media endpoint and full privacy review; module-level ownership evidence; canonical current-build screenshots.
 
-**References:** [Cho source truth](CASE_STUDY_CONTENT_SOURCE.md#cho-veigo--source-truth); [Cho implementation evidence](coverage-audit/CHO_IMPLEMENTATION_EVIDENCE.md); [Food/Cho render sync](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-04.md); dossier §1–18.
+**References:** [Cho source truth](CASE_STUDY_CONTENT_SOURCE.md#cho-veigo--source-truth); [Cho implementation evidence](coverage-audit/CHO_IMPLEMENTATION_EVIDENCE.md); [Food/Cho render sync](case-study-review/FOOD_CHO_RENDER_SYNC_2026-10-04.md); v2 `03_CHO_VIEGO_DEEP_DOSSIER.md` §§1–18.
 
 ## Fraymakers / UploadAssistant — reconciled; complete media pipeline is represented
 
@@ -74,7 +74,7 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **Evidence still open:** Private repo/ZIP, generated thumbnail examples and matching VODs, YAML samples, game assets, and exact API work from the other laptop. Do not repeat local-machine searches or fabricate a product capture.
 
-**References:** [Fraymakers source truth](CASE_STUDY_CONTENT_SOURCE.md#fraymakers--uploadassistant--source-truth); [latest Crest/Fraymakers render sync](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-04.md); dossier §1–11.
+**References:** [Fraymakers source truth](CASE_STUDY_CONTENT_SOURCE.md#fraymakers--uploadassistant--source-truth); [latest Crest/Fraymakers render sync](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-04.md); v2 `04_FRAYMAKERS_DEEP_DOSSIER.md` §§1–11.
 
 ## Living in Silico — reconciled; three distinct research paths are now explained
 
@@ -90,7 +90,7 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **Evidence still open:** Notebooks/source, run logs/output inspection, dataset provenance and permission, report conflict resolution, and logo-use permission. Internal research materials should not become public evidence by default.
 
-**References:** [Living in Silico source truth](CASE_STUDY_CONTENT_SOURCE.md#living-in-silico--source-truth); [Research/data audit](coverage-audit/RESEARCH_AND_DATA.md#living-in-silico); [latest Living/Stush render sync](case-study-review/LIVING_STUSH_PREVIEW_RENDER_SYNC_2026-10-04.md); dossier §1–14.
+**References:** [Living in Silico source truth](CASE_STUDY_CONTENT_SOURCE.md#living-in-silico--source-truth); [Research/data audit](coverage-audit/RESEARCH_AND_DATA.md#living-in-silico); [latest Living/Stush render sync](case-study-review/LIVING_STUSH_PREVIEW_RENDER_SYNC_2026-10-04.md); v2 `05_LIVING_IN_SILICO_DEEP_DOSSIER.md` §§1–14.
 
 ## Stush Patties — reconciled; data-engineering breadth is represented
 
@@ -106,7 +106,7 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **Evidence still open:** Original source files and exact field rules are not present. Use only synthetic/reconstructed visuals; no real client workbook or dashboard data.
 
-**References:** [Stush source truth](CASE_STUDY_CONTENT_SOURCE.md#stush-patties--source-truth); [Research/data audit](coverage-audit/RESEARCH_AND_DATA.md#stush-patties); [latest Living/Stush render sync](case-study-review/LIVING_STUSH_PREVIEW_RENDER_SYNC_2026-10-04.md); dossier §1–12.
+**References:** [Stush source truth](CASE_STUDY_CONTENT_SOURCE.md#stush-patties--source-truth); [Research/data audit](coverage-audit/RESEARCH_AND_DATA.md#stush-patties); [latest Living/Stush render sync](case-study-review/LIVING_STUSH_PREVIEW_RENDER_SYNC_2026-10-04.md); v2 `06_STUSH_PATTIES_DEEP_DOSSIER.md` §§1–12.
 
 ## Education capability briefs — new owner layer; three sections remain evidence-pending
 
