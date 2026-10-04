@@ -31,4 +31,10 @@ At 390px, the ownership title now precedes full-width details: the section spans
 - Rendered full-page captures: Living 1920×2325 desktop / 390×3983 narrow; Stush 1920×2481 desktop / 390×3357 narrow. Figma frames contain the story body; browser captures include the portfolio shell, so these total heights are context rather than a pixel-height acceptance target.
 - npm test -- --run: 21 files / 90 tests passed. npm run build passed. git diff --check passed.
 
-The case-study direction and browser comparison are ready for owner review; they are not owner-approved or frozen. Preview remains at source 86d5d89 and does not contain this checkpoint. No deployment or production change was made.
+## Refreshed Preview smoke check
+
+The clean archive of pushed commit `1904549bca547e31582486ada19bf28aa224ad23` was deployed to Pages Preview `https://f8189697.joshuaik2.pages.dev/` (deployment `f8189697-ea52-4ad2-8be6-d54a8143f93e`; feature-branch alias updated). Production was not targeted. CLI Playwright with Chrome 153.0.8010.53 checked both routes at 1920×1080 and 390×844 on 2026-10-04 01:07 UTC. All four runs returned HTTP 200; all 14 images loaded in each run; document width matched the viewport; there were no console/page errors, failed requests, or bad responses. The Figma spot-check found no concrete page-shape mismatch. Desktop captures show the viewport because story content scrolls inside `<main>`; the narrow captures include the full story.
+
+Durable Preview evidence: [Living desktop viewport](render-sync/2026-10-03-living-stush/preview-1904549/living-desktop-viewport.png), [Living narrow full page](render-sync/2026-10-03-living-stush/preview-1904549/living-narrow-full.png), [Stush desktop viewport](render-sync/2026-10-03-living-stush/preview-1904549/stush-desktop-viewport.png), [Stush narrow full page](render-sync/2026-10-03-living-stush/preview-1904549/stush-narrow-full.png), and [machine-readable evidence](render-sync/2026-10-03-living-stush/preview-1904549/evidence.json).
+
+The case-study direction and visual comparison are ready for owner review; they are not owner-approved or frozen.
