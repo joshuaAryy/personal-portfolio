@@ -1,6 +1,6 @@
 # Deferred Owner Inputs and Evidence
 
-> **Current owner update:** the 2026-10-03 direction and 2026-10-04 Education clarification govern execution. CLI Playwright/installed Chrome works; six case studies need breadth/depth. Education CTA is /education/projects. Use verified ALU/FSM detail; Dental, Bookstore, and CMOS remain EVIDENCE PENDING while owner-supplied prior-chat context or original files may be reconciled later. This does not block other portfolio work. Journey Void through 3492:2 and compact Foundations 510:14 are preserved; J Candidate 02 remains held.
+> **Current owner update:** the 2026-10-03 direction and 2026-10-04 Education clarification govern execution. CLI Playwright/installed Chrome works; all six case-study breadth expansions are implemented and have route-level desktop/narrow renders, with owner review still open. Education CTA is /education/projects. Use verified ALU/FSM detail; Dental, Bookstore, and CMOS remain EVIDENCE PENDING while owner-supplied prior-chat context or original files may be reconciled later. This does not block other portfolio work. Journey Void through 3492:2 and compact Foundations 510:14 are preserved; J Candidate 02 remains held.
 
 This file tracks genuinely missing facts/media and owner-reserved interaction choices. It does not gate design work or asset-led development when the relevant source is already available. Unknown source detail stays here or in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md); it should not automatically become public copy.
 
