@@ -152,7 +152,7 @@ The authentic CommunityDragon Ready Check source and collected frame/action art 
 | `IMG_0308.jpeg` | 533441 | `34E6B92ADACDE4B94B0151F84F282EA00FE3AE77B9B35B3C2409E97F7AAD67C9` |
 | `IMG_0320.jpeg` | 574126 | `502D086058DB5CD90C4D8250123A935FF0724DD80C705579394E243B55FD4BA3` |
 | `IMG_0394.jpeg` | 408829 | `CEF1500F9788BB9D5E53B65A434542E0ADC0205B7A664CEAF3F56E5CE5140894` |
-| `IMG_0422.jpeg` | 507906 | `C9421E955C24D9B6C8E901902BC1FA25733E76CD3F88A120463FDDB6B9B6E8EEA8` |
+| `IMG_0422.jpeg` | 507906 | `C9421E955C24D9B6C8E901902BC1FA25733E76CD3F88A120463FDDB9B6E8EEA8` |
 
 - Resume Found's localized chassis light uses the exact Figma SVG export `public/media/resume/environment-03-localized-teal-navy-chassis-light.svg` from node `3292:486` (1160 × 1160px, 697 bytes; SHA-256 `431393C9F9640ECFB4D7B7C28BC1AC35652C6F383BD827214279DABC0D707DF7`). The wrapper is centered behind the 530px Ready Check mechanism at 218.87% of its width, matching the Figma halo bounds while preserving the SVG's square aspect ratio. This replaces the earlier CSS gradient approximation; render comparison remains open.
 - `public/media/profile/open-portfolio-j.svg` preserves the original Projects Lobby Pass 11 Figma `526:3` composite as tracked provenance. Its former shell/orbit/energy layers and Pass16 face exports are untracked local-only history, not production assets. Active code uses selected archive art in large/medium contexts and needs rendered-size comparison.
