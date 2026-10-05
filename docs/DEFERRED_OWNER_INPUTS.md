@@ -1,6 +1,6 @@
 # Deferred Owner Inputs and Evidence
 
-> **Current owner direction (2026-10-05 post-Preview):** [OWNER_DIRECTION_2026-10-05_POST_PREVIEW_REVIEW.md](OWNER_DIRECTION_2026-10-05_POST_PREVIEW_REVIEW.md) supersedes conflicting prior selections. Personal Highlights is no longer considered final at seven images; re-review the entire owner source library, choose for photo/story quality, and crop/redact only genuinely sensitive details. Keep authentic image/video constraints for Food and Cho'Veigo; Education evidence limits remain unchanged. The prior J order remains v8 > Candidate 02 > Candidates 03/04; Candidate 05 is a separate unranked review study. Production archive remains in place.
+> **Current owner direction (2026-10-05):** [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) supersedes earlier partial prompts. Highlights should prioritize the strongest image/story for staging review, with fixable sensitive detail handled by crop/mask/redaction; Food and Cho video remain pending unless authentic safe media exists. Education technical evidence limits remain. J is separate; v8 is the preferred editable baseline and archive the production fallback. Production stays untouched.
 
 This file tracks genuinely missing facts/media and owner-reserved interaction choices. It does not gate design work or asset-led development when the relevant source is already available. Unknown source detail stays here or in [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md); it should not automatically become public copy.
 
