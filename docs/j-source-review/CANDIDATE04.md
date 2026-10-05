@@ -40,3 +40,19 @@ Changed files in this specialist attempt:
 - `docs/j-source-review/captures/candidate04-owner-review-20261005.png`
 
 One Candidate 04 created; no alternate direction, design second pass, or Candidate 05. Existing dirty/untracked material, including `captures/pass76/pass76-j-only-16-native.png`, was preserved.
+
+## Mingo comparison — 2026-10-05
+
+**Decision:** Candidate 04 is a credible, materially new owner-review candidate. Keep it **NOT APPROVED**; it does not replace the archive in production or displace v8 as the established editable baseline.
+
+**Comparison:**
+
+- **Archive `159:2`:** still has the most organic relationship between the J, orbit, and turbulent cyan energy. Candidate 04 brings back an orbital cue, but the archive remains more atmospheric and integrated; its small raster source is still soft when enlarged.
+- **Sonnet v8 `3325:191`:** remains the strongest editable forged-gold/cyan baseline, but its continuous outer rim makes the J read inside a complete badge. Candidate 04 opens that enclosure while retaining the broad crown, warm metal, and cyan counter energy.
+- **Candidate 01 `3482:3`:** retains the full-rim weakness. Candidate 04 removes the continuous rim and gives the hook/crescent a new asymmetrical relationship.
+- **Candidate 02 `3606:459`:** has the freer cyan stroke and a cleaner open silhouette. Its energy reads more like a separate graphic gesture; Candidate 04 restores more of the forged, crest-like gold/cyan atmosphere but is busier at the crescent/hook junction.
+- **Candidate 03 `3619:549`:** is the clearest freestanding geometric J and the least crowded. Candidate 04 has a stronger atmospheric signature at presentation scale, at the cost of a partial-crest read and reduced clarity at 32px. Its separate ring-free glyphs deliberately retain Candidate 03's supporting optical silhouette.
+
+**Preserve:** archive `159:2` in production; v8 `3325:191` as the strongest established editable baseline; Candidates 01–04 as unapproved studies; the separate ring-free small glyphs; compact Foundations `510:14`. No React or production identity changes before owner selection.
+
+**Owner review:** compare the presentation-scale mark and 54/32/16px proofs on board `3623:2`. Candidate 04 is clearest as a full-size mark at 54px; at 32px its energy details compress, and the complete mark is crowded at 16px, where the separate solid glyph is clearer. The question is whether its open crescent restores enough archive atmosphere to justify the busier partial-crest silhouette versus the freer Candidate 02 and cleaner Candidate 03. This is a comparison for owner judgment, not a promotion recommendation.

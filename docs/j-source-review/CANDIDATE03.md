@@ -1,4 +1,6 @@
-# J Candidate 03 — Cut / Current
+# J Candidate 03 — Cut / Previous
+
+Historical candidate record. Candidate 04 `3623:573` is now the latest bounded owner-review study; see [CANDIDATE04.md](CANDIDATE04.md) and [current J review](REVIEW.md). Candidate 03 remains directional and unapproved.
 
 Status: **NOT APPROVED / OWNER REVIEW**. Created 2026-10-05 as one bounded specialist attempt. Archive `159:2` remains the production fallback. No production or React assets changed.
 
