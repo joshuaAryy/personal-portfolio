@@ -38,7 +38,7 @@ Figures should communicate their point within seconds, make the system’s scale
 
 ### Current owner-calibrated quality references
 
-The 2026-09-30 owner re-review is a quality and effort calibration, not a request for another redesign pass on every case study. Preserve the working directions below and use their distinct strengths to judge other pages; do not clone their layouts.
+**Historical decision — superseded by the 2026-10-05 consolidated owner review.** The 2026-09-30 owner re-review was originally treated as a quality/effort calibration. The owner has since directly reviewed all six long-form pages and reopened them for substantial storytelling and layout re-authoring. The prior instruction to avoid another redesign pass is no longer active. Preserve strong pieces, not whole structures; do not clone one case-study layout across the others.
 
 | Reference | Preserve and learn from |
 |---|---|

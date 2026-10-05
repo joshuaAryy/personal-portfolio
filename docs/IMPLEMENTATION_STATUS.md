@@ -1,6 +1,8 @@
 # Implementation Status
 
-**Active owner goal (2026-10-05):** the consolidated direction in [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) controls. All six long-form case studies are OPEN for substantial re-authoring; prior accepted-breadth/no-comprehension-gap conclusions are superseded. Current baseline: snapshot `7b4fc3a5198d8b848f9920c25e346c4439c51fba`, Preview [2321d13e](https://2321d13e.joshuaik2.pages.dev/), app code last changed at `3f9c741247cff2994ea3df1adfaa280f4702a233`. Production is untouched.
+**Active owner goal (2026-10-05):** the consolidated direction in [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) controls. All six long-form case studies are OPEN for substantial re-authoring; prior accepted-breadth/no-comprehension-gap conclusions are superseded. Live local/origin branch HEAD is `2fa8550c655d5f80f48a69b76aebf95207111781`. The deployed comparison baseline remains snapshot `7b4fc3a5198d8b848f9920c25e346c4439c51fba`, Preview [2321d13e](https://2321d13e.joshuaik2.pages.dev/), and does not include later branch work. Opening and Food Tracker have additional in-progress local edits. Production is untouched.
+
+**Acceptance reset:** the project-specific rows below preserve facts and evidence from earlier implementation/render passes only. Labels such as “breadth implemented,” “preserve,” “full route,” or “no concrete mismatch” describe their historical scope and MUST NOT be used as current owner acceptance. All six stories need a fresh macro-to-micro critique and material re-authoring where the current rendered story remains compressed.
 
 **Hierarchical architecture:** see MODEL_ROUTING.md and the installed orchestration skill. Mingo is an L2 Luna XHigh control plane with episodic L3 Sol Medium strategic judgment; runtime does not expose the selected root model. Check live domain-owner state before routing.
 
