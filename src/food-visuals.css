@@ -147,6 +147,39 @@
 
 .food-system__architecture-note strong { color: #e3c57e; }
 
+.food-evidence-grid {
+  width: 100%;
+  max-width: 760px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 368px));
+  align-items: start;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.food-evidence {
+  width: 100%;
+  min-width: 0;
+  max-width: 368px;
+  margin: 0;
+}
+
+.food-evidence img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #455e63;
+  background: #080e12;
+}
+
+.food-evidence figcaption {
+  margin-top: 8px;
+  color: #e3c57e;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
 .food-insights__levels {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -226,6 +259,7 @@
 @media (max-width: 760px) {
   .food-story-content--technical .food-logging,
   .food-story-content--technical .food-insights { padding: 18px; }
+  .food-evidence-grid { grid-template-columns: minmax(0, 368px); }
   .food-logging__paths {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     row-gap: 20px;
