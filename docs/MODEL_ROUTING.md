@@ -31,8 +31,8 @@ OWNER
 |  + optional L0 children |  +--------------------+  +-------------------+
 +------------------------+
 
-MINGO SPECIALIST PATH (owner-gated J shown as example)
-Luna control <-> Sol strategic framing -> /root/identity_j_sol61 (S: Sol Medium)
+MINGO SPECIALIST PATH (production J selection remains owner-gated)
+Luna control <-> Sol strategic framing -> /root/identity_j__sol61_medium (S: Sol Medium)
                                       -> Mingo review -> OWNER decision
                                       -> frontend integration after approval
 
@@ -110,7 +110,7 @@ Keep source/evidence research local to the pod that needs it. Communicate across
 
 **Specialist Sol** answers **how do we solve this well-specified difficult problem?** It has narrow expertise and no project-wide authority. Do not confuse its execution remit with strategic ownership.
 
-The J route is exceptional and owner-gated. Archive `159:2` remains production fallback; Sonnet v8 `3325:191` remains the strongest established editable baseline; Sol Candidate 01 `3482:3` on review board `3482:2` is directional/unapproved. Candidate 02 remains held. Only after explicit owner authorization may the Sol 6.1 Medium `/root/identity_j_sol61` specialist make one serious attempt. Sol Mingo may frame the strategic decision; the specialist receives J-specific task context and implementation constraints without a Luna-defined fundamental identity solution. Mingo reviews, the owner decides, and frontend integration follows approval.
+The J route is exceptional and owner-gated for production selection. Archive `159:2` remains production fallback; Sonnet v8 `3325:191` remains the strongest established editable baseline. Sol Candidate 01 `3482:3` on board `3482:2` and Candidate 02 `3606:459` on board `3606:2` are directional and unapproved. The owner reopened the lane on 2026-10-05, and `/root/identity_j__sol61_medium` completed one bounded Candidate 02 attempt. Mingo reviews the evidence, the owner decides, and frontend integration follows approval. Keep the J context task-specific; do not turn a bounded specialist assignment into a long autonomous pass chain.
 
 Keep one active Sol invocation maximum by default, whether strategic or specialist. No Sol agent may spawn another Sol agent. Astra is off; use it only with explicit owner approval after a meaningful Sol attempt leaves an unusually difficult, tightly bounded issue.
 
