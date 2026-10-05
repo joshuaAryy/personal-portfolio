@@ -81,6 +81,10 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
           <div className="opening__mechanism" data-node-id="3581:2">
             <span className="opening__ring opening__ring--outer" />
             <span className="opening__ring opening__ring--inner" />
+            <span className="opening__tick opening__tick--north" data-node-id="3617:14" />
+            <span className="opening__tick opening__tick--east" data-node-id="3617:21" />
+            <span className="opening__tick opening__tick--south" data-node-id="3617:28" />
+            <span className="opening__tick opening__tick--west" data-node-id="3617:35" />
             <img
               className="opening__archive-mark"
               data-node-id="159:2"

@@ -22,7 +22,6 @@
   animation: none;
 }
 
-/* Preserve the reviewed short crossfade against the global reduced-motion duration override. */
 .opening-route--reduced.opening-route--leaving .opening__underlay {
   opacity: 1;
   transition: opacity 120ms ease-out;
@@ -52,223 +51,15 @@
   animation: opening-treatment-out 2s linear 1 both;
 }
 
-.opening__environment {
-  position: absolute;
-  z-index: 0;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.42;
-  pointer-events: none;
-  user-select: none;
-}
-
 .opening__mechanism {
   position: absolute;
-  top: 50%;
+  top: 44.5%;
   left: 50%;
   width: min(40.2778vw, 64.4444svh);
   aspect-ratio: 1;
   container-type: size;
   transform: translate(-50%, -50%);
   pointer-events: none;
-}
-
-.opening__layer {
-  position: absolute;
-  overflow: visible;
-  pointer-events: none;
-}
-
-.opening__asset-frame {
-  position: absolute;
-  inset: 0;
-  overflow: visible;
-}
-
-.opening__archive-mark {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: fill;
-  clip-path: circle(42.105263% at 50% 50%);
-  user-select: none;
-}
-
-.opening__asset-frame img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  user-select: none;
-}
-
-.opening__bezel {
-  inset: 0;
-}
-
-.opening__overscan--outer {
-  inset: -1.38% -2.24% -3.1%;
-}
-
-.opening__bevel {
-  top: 1.37931%;
-  left: 1.37931%;
-  width: 97.24138%;
-  height: 97.24138%;
-}
-
-.opening__overscan--bevel {
-  inset: -1.42% -2.3% -3.19%;
-}
-
-.opening__enamel-bed {
-  top: 3.10345%;
-  left: 3.10345%;
-  width: 93.7931%;
-  height: 93.7931%;
-}
-
-.opening__overscan--enamel {
-  inset: -1.47% -2.39% -3.31%;
-}
-
-.opening__inner-rail {
-  top: 7.58621%;
-  left: 7.58621%;
-  width: 84.82759%;
-  height: 84.82759%;
-}
-
-.opening__overscan--rail {
-  inset: -1.63% -2.64% -3.66%;
-}
-
-.opening__j-seat-rim {
-  top: 15.51724%;
-  left: 15.51724%;
-  width: 68.96552%;
-  height: 68.96552%;
-}
-
-.opening__overscan--j-rim {
-  inset: -2% -3.25% -4.5%;
-}
-
-.opening__j-seat-enamel {
-  top: 17.24138%;
-  left: 17.24138%;
-  width: 65.51724%;
-  height: 65.51724%;
-}
-
-.opening__overscan--j-enamel {
-  inset: -2.11% -3.42% -4.74%;
-}
-
-.opening__segmented-bezel,
-.opening__tick-track,
-.opening__cyan,
-.opening__jewels,
-.opening__glint {
-  top: 1.72414%;
-  left: 1.72414%;
-  width: 96.55172%;
-  height: 96.55172%;
-}
-
-.opening__ticks-frame {
-  position: absolute;
-  top: 3.0242%;
-  left: 0;
-  width: 100%;
-  height: 93.9516%;
-  overflow: clip;
-  opacity: 0.44;
-}
-
-.opening__ticks-content {
-  position: absolute;
-  top: 5.3641%;
-  left: 7.8629%;
-  width: 84.2742%;
-  height: 89.704%;
-  overflow: visible;
-  opacity: 0.6;
-  mask-image: url("/media/opening/circle-tick-mask.svg");
-  mask-mode: alpha;
-  mask-repeat: no-repeat;
-  mask-size: 96.552cqw 90.712cqw;
-  mask-position: -7.592cqw -4.866cqw;
-}
-
-.opening__tick-art {
-  position: absolute;
-  inset: -1.91%;
-  display: block;
-  width: 103.82%;
-  height: 103.82%;
-  max-width: none;
-  user-select: none;
-}
-
-.opening__construction,
-.opening__j-body {
-  top: 17.24138%;
-  left: 17.24138%;
-  width: 65.51724%;
-  height: 65.51724%;
-}
-
-.opening__motion--outer {
-  opacity: 0;
-  animation: opening-layer-cycle 2s linear 1 both;
-}
-
-/* Figma 2443:38/71: the segmented bezel starts at +0.021rad and the tick
-   ring at -0.017rad, then both settle by 23% (460ms) so the centered J holds. */
-.opening__motion--segmented {
-  opacity: 0;
-  transform: rotate(0.021rad);
-  transform-origin: 50% 50%;
-  animation:
-    opening-segmented-opacity 2s linear 1 both,
-    opening-segmented-rotation 2s linear 1 both;
-}
-
-.opening__motion--ticks {
-  opacity: 0;
-  transform: rotate(-0.017rad);
-  transform-origin: 50% 50%;
-  animation:
-    opening-ticks-opacity 2s linear 1 both,
-    opening-ticks-rotation 2s linear 1 both;
-}
-
-.opening__motion--cyan {
-  opacity: 0;
-  animation: opening-cyan 2s linear 1 both;
-}
-
-.opening__motion--construction {
-  opacity: 0;
-  animation: opening-construction 2s linear 1 both;
-}
-
-.opening__motion--j-body {
-  opacity: 0;
-  animation: opening-j-body 2s linear 1 both;
-}
-
-.opening__motion--glint {
-  opacity: 0;
-  transform-origin: 50% 50%;
-  animation:
-    opening-glint-opacity 2s linear 1 both,
-    opening-glint-rotation 2s linear 1 both;
 }
 
 .opening__skip {
@@ -322,36 +113,178 @@
   outline-offset: 3px;
 }
 
+.opening__ring,
+.opening__archive-mark,
+.opening__ring-arc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.opening__ring {
+  box-sizing: border-box;
+  border: 1px solid rgb(93 113 132 / 52%);
+  border-radius: 50%;
+}
+
+.opening__ring--outer,
+.opening__ring-arc {
+  width: 74%;
+  height: 74%;
+}
+
+.opening__ring--inner {
+  width: 67%;
+  height: 67%;
+  border-color: rgb(93 113 132 / 38%);
+}
+
+.opening__ring--outer,
+.opening__ring--inner {
+  opacity: 0;
+  animation: opening-loader-reveal 2s linear 1 both;
+}
+
+.opening__tick {
+  position: absolute;
+  display: block;
+  border-radius: 1px;
+  background: rgb(93 113 132 / 60%);
+  opacity: 0;
+  animation: opening-loader-reveal 2s linear 1 both;
+  pointer-events: none;
+}
+
+.opening__tick--north {
+  top: 12.76%;
+  left: 50%;
+  width: 1.5px;
+  height: 7px;
+  transform: translate(-50%, -50%);
+}
+
+.opening__tick--east {
+  top: 50%;
+  left: 87.24%;
+  width: 7px;
+  height: 1.5px;
+  transform: translate(-50%, -50%);
+}
+
+.opening__tick--south {
+  top: 87.24%;
+  left: 50%;
+  width: 1.5px;
+  height: 7px;
+  transform: translate(-50%, -50%);
+}
+
+.opening__tick--west {
+  top: 50%;
+  left: 12.76%;
+  width: 7px;
+  height: 1.5px;
+  transform: translate(-50%, -50%);
+}
+
+.opening__archive-mark {
+  width: 46.55%;
+  height: 46.55%;
+  max-width: none;
+  object-fit: contain;
+  clip-path: circle(49% at 50% 50%);
+  user-select: none;
+  animation: opening-mark-sequence 2s linear 1 both;
+}
+
+.opening__ring-arc {
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-top-color: #c5a252;
+  border-right-color: #c5a252;
+  border-radius: 50%;
+  clip-path: inset(0 0 50% 50%);
+  opacity: 0;
+  animation:
+    opening-loader-reveal 2s linear 1 both,
+    opening-loading-turn 2s linear 1 both;
+}
+
+.opening__loader-label,
+.opening__progress-line {
+  position: absolute;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  animation: opening-loader-copy-reveal 2s linear 1 both;
+}
+
+.opening__loader-label {
+  top: 91%;
+  color: #c5a252;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(9px, 1.55cqw, 12px);
+  font-weight: 600;
+  letter-spacing: .2em;
+}
+
+.opening__progress-line {
+  top: 97%;
+  width: 24.14%;
+  height: 1px;
+  overflow: hidden;
+  background: rgb(197 162 82 / 24%);
+}
+
+.opening__progress-line::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #c5a252;
+  content: "";
+  animation: opening-progress-fill 2s linear 1 both;
+}
+
 .opening--reduced {
   opacity: 1;
   animation: none;
 }
 
-.opening--reduced .opening__treatment,
-.opening--reduced .opening__layer {
+.opening--reduced .opening__treatment {
+  opacity: 1;
   animation: none;
 }
 
-.opening--reduced .opening__treatment {
+.opening--reduced .opening__ring--outer,
+.opening--reduced .opening__ring--inner,
+.opening--reduced .opening__tick,
+.opening--reduced .opening__ring-arc,
+.opening--reduced .opening__loader-label,
+.opening--reduced .opening__progress-line {
   opacity: 1;
+  animation: none;
 }
 
-.opening--reduced .opening__motion--outer,
-.opening--reduced .opening__motion--segmented,
-.opening--reduced .opening__motion--ticks,
-.opening--reduced .opening__motion--cyan,
-.opening--reduced .opening__motion--j-body {
+.opening--reduced .opening__archive-mark {
   opacity: 1;
-  transform: none;
+  transform: translate(-50%, -50%) scale(.76);
+  animation: none;
 }
 
-.opening--reduced .opening__motion--construction {
-  opacity: 0.62;
+.opening--reduced .opening__ring-arc {
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.opening--reduced .opening__motion--glint {
-  opacity: 0;
-  transform: none;
+.opening--reduced .opening__progress-line::after {
+  transform: scaleX(1);
+  animation: none;
 }
 
 .opening-route--reduced.opening-route--leaving .opening__treatment {
@@ -387,174 +320,79 @@
   }
 }
 
-@keyframes opening-layer-cycle {
-  0% {
-    opacity: 0;
-    animation-timing-function: ease-out;
-  }
-  9% {
-    opacity: 1;
-    animation-timing-function: linear;
-  }
-  91% {
-    opacity: 1;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes opening-segmented-opacity {
-  0% {
-    opacity: 0;
-    animation-timing-function: ease-out;
-  }
-  9% {
-    opacity: 1;
-    animation-timing-function: linear;
-  }
-  91% {
-    opacity: 1;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes opening-segmented-rotation {
-  0% {
-    transform: rotate(0.021rad);
-    animation-timing-function: linear;
-  }
-  9% {
-    transform: rotate(0.021rad);
-    animation-timing-function: ease-out;
-  }
-  23% {
-    transform: rotate(0deg);
-    animation-timing-function: linear;
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes opening-ticks-opacity {
+@keyframes opening-mark-sequence {
   0%,
-  4% {
-    opacity: 0;
-    animation-timing-function: ease-out;
-  }
-  15% {
+  17% {
     opacity: 1;
-    animation-timing-function: linear;
+    transform: translate(-50%, -50%) scale(1.28);
   }
-  91% {
-    opacity: 1;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes opening-ticks-rotation {
-  0% {
-    transform: rotate(-0.017rad);
-    animation-timing-function: linear;
-  }
-  9% {
-    transform: rotate(-0.017rad);
-    animation-timing-function: ease-out;
-  }
-  23% {
-    transform: rotate(0deg);
-    animation-timing-function: linear;
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes opening-cyan {
-  0%,
-  11% {
-    opacity: 0;
-    animation-timing-function: ease-out;
-  }
-  23% {
-    opacity: 1;
-    animation-timing-function: linear;
-  }
-  91% {
-    opacity: 1;
-    animation-timing-function: ease-in;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes opening-construction {
-  0%,
-  23% {
-    opacity: 0;
-    animation-timing-function: ease-out;
+  25% {
+    opacity: .42;
+    transform: translate(-50%, -50%) scale(.76);
   }
   35%,
+  41% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.76);
+  }
+  45%,
+  91% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(.76);
+  }
   100% {
-    opacity: 0.62;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.76);
   }
 }
 
-@keyframes opening-j-body {
+@keyframes opening-loader-reveal {
   0%,
   35% {
     opacity: 0;
-    animation-timing-function: ease-out;
   }
-  56%,
-  100% {
+  45%,
+  91% {
     opacity: 1;
   }
-}
-
-@keyframes opening-glint-opacity {
-  0%,
-  69% {
-    opacity: 0;
-    animation-timing-function: ease-out;
-  }
-  74% {
-    opacity: 0.48;
-    animation-timing-function: linear;
-  }
-  78% {
-    opacity: 0.48;
-    animation-timing-function: ease-in;
-  }
-  81%,
   100% {
     opacity: 0;
   }
 }
 
-@keyframes opening-glint-rotation {
+@keyframes opening-loader-copy-reveal {
   0%,
-  69% {
-    transform: rotate(0deg);
+  37% {
+    opacity: 0;
   }
-  69% {
-    animation-timing-function: ease-in-out;
-  }
-  81% {
-    transform: rotate(-32deg);
-    animation-timing-function: linear;
+  46%,
+  91% {
+    opacity: 1;
   }
   100% {
-    transform: rotate(-32deg);
+    opacity: 0;
+  }
+}
+
+@keyframes opening-loading-turn {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  91%,
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes opening-progress-fill {
+  0%,
+  37% {
+    transform: scaleX(0);
+  }
+  84%,
+  91%,
+  100% {
+    transform: scaleX(1);
   }
 }
 
@@ -575,131 +413,4 @@
   .opening .opening__skip::before {
     transition: none;
   }
-}
-
-.opening__mechanism {
-  top: 44.5%;
-}
-
-.opening__ring,
-.opening__archive-mark,
-.opening__ring-arc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: block;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-}
-
-.opening__ring {
-  box-sizing: border-box;
-  border: 1px solid rgb(93 113 132 / 52%);
-  border-radius: 50%;
-}
-
-.opening__ring--outer,
-.opening__ring-arc {
-  width: 74%;
-  height: 74%;
-}
-
-.opening__ring--inner {
-  width: 67%;
-  height: 67%;
-  border-color: rgb(93 113 132 / 38%);
-}
-
-.opening__archive-mark {
-  width: 42%;
-  height: 42%;
-  max-width: none;
-  object-fit: contain;
-  clip-path: circle(49% at 50% 50%);
-  user-select: none;
-  animation: opening-mark-form 420ms cubic-bezier(.4, 0, .6, 1) both;
-}
-
-.opening__ring-arc {
-  box-sizing: border-box;
-  border: 2px solid transparent;
-  border-top-color: #c5a252;
-  border-right-color: #c5a252;
-  border-radius: 50%;
-  clip-path: inset(0 0 50% 50%);
-  animation: opening-loading-turn 2s linear 1 both;
-}
-
-.opening__loader-label,
-.opening__progress-line {
-  position: absolute;
-  left: 50%;
-  display: block;
-  transform: translateX(-50%);
-  pointer-events: none;
-}
-
-.opening__loader-label {
-  top: 91%;
-  color: #c5a252;
-  font-family: Inter, Arial, sans-serif;
-  font-size: clamp(9px, 1.55cqw, 12px);
-  font-weight: 600;
-  letter-spacing: .2em;
-}
-
-.opening__progress-line {
-  top: 97%;
-  width: 25%;
-  height: 1px;
-  overflow: hidden;
-  background: rgb(197 162 82 / 24%);
-}
-
-.opening__progress-line::after {
-  display: block;
-  width: 100%;
-  height: 100%;
-  transform: scaleX(0);
-  transform-origin: left;
-  background: #c5a252;
-  content: "";
-  animation: opening-progress-fill 2s linear 1 both;
-}
-
-.opening-route--reduced .opening__ring-arc {
-  animation: none;
-}
-
-.opening-route--reduced .opening__archive-mark {
-  animation: none;
-  opacity: 1;
-  transform: translate(-50%, -50%);
-}
-
-.opening-route--reduced .opening__progress-line::after {
-  animation: none;
-  transform: scaleX(1);
-}
-
-@keyframes opening-loading-turn {
-  from { transform: translate(-50%, -50%) rotate(0deg); }
-  to { transform: translate(-50%, -50%) rotate(360deg); }
-}
-
-@keyframes opening-mark-form {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -50%) scale(.84);
-  }
-  to {
-    opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-}
-
-@keyframes opening-progress-fill {
-  0%, 12% { transform: scaleX(0); }
-  84% { transform: scaleX(1); }
-  100% { transform: scaleX(0); }
 }
