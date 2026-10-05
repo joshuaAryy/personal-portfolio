@@ -29,7 +29,7 @@ const primaryRoutes = [
   ["profile overview", "/profile", "<h1>JOSHUA ARYEETEY</h1>"],
   ["profile journey", "/profile/journey", "<h1>Curiosity became building.</h1>"],
   ["profile demos", "/profile/demos", "data-node-id=\"1316:131\">FOOD TRACKER</h1>"],
-  ["personal highlights", "/profile/highlights", '<h1 id="personal-highlights-title">PERSONAL HIGHLIGHTS</h1>'],
+  ["personal highlights", "/profile/highlights", '<h1 id="personal-highlights-title">Things worth keeping.</h1>'],
   ["resume found", "/resume", 'id="resume-found-title" class="resume-mechanism__title"'],
   ["resume viewer", "/resume/viewer", "APPROVED GENERAL RESUME"],
 ] as const;
@@ -49,21 +49,26 @@ describe("primary App route mapping", () => {
     expect(page).toContain('aria-current="page"');
   });
 
-  it("renders seven accessible owner-supplied Highlights photos and omits private/held-back items", () => {
+  it("renders a varied owner-supplied Highlights story and masks embedded sensitive details", () => {
     const page = renderRoute("/profile/highlights");
-    expect(page.match(/class="personal-highlights__photo"[^>]*alt="[^"]+"/g)).toHaveLength(7);
+    expect(page.match(/class="personal-highlights__photo"[^>]*alt="[^"]+"/g)).toHaveLength(9);
     for (const source of [
       "IMG_0098.jpeg",
       "IMG_0208.jpeg",
       "IMG_0305.jpeg",
       "IMG_0308.jpeg",
-      "IMG_0320.jpeg",
-      "IMG_0394.jpeg",
       "IMG_0422.jpeg",
+      "IMG_0285.jpeg",
+      "IMG_0334.jpeg",
+      "IMG_0618.jpeg",
+      "IMG_0755.jpeg",
     ]) {
       expect(page).toContain(`/media/profile/highlights/${source}`);
     }
-    expect(page).not.toMatch(/IMG_0618|IMG_0334|IMG_0338|shih-tzu/i);
+    expect(page).toContain('data-privacy-mask="qr"');
+    expect(page).toContain('data-privacy-mask="league-account"');
+    expect(page).toContain('class="personal-highlights__caption"');
+    expect(page).not.toMatch(/IMG_0320|IMG_0394|shih-tzu/i);
   });
 
   it("places the continuous Figma Void field at the Journey layout root", () => {

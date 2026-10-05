@@ -1,7 +1,9 @@
 #root .main.main--personal-highlights {
   min-height: 100%;
-  padding: 30px 0 48px;
-  background: #040a13;
+  padding: 22px 0 70px;
+  background:
+    radial-gradient(ellipse at 52% 14%, rgba(24, 48, 69, 0.24), transparent 52%),
+    #040a13;
 }
 
 #root .main.main--personal-highlights > .profile-nav {
@@ -9,7 +11,7 @@
   display: flex;
   width: 700px;
   height: 52px;
-  margin: 0 0 30px;
+  margin: 0 0 26px;
   padding: 0;
   gap: 0;
   color: #f0d28a;
@@ -54,75 +56,477 @@
 }
 
 #root .main.main--personal-highlights .personal-highlights {
-  width: min(1240px, calc(100% - 64px));
+  width: min(1240px, calc(100% - 72px));
   margin: 0 auto;
+  color: #e9e5dc;
 }
 
-#root .main.main--personal-highlights .personal-highlights h1 {
-  margin: 0 0 26px;
-  color: #ead9b2;
-  font: 400 clamp(24px, 3vw, 34px)/1.2 "Marcellus SC", Georgia, serif;
-  letter-spacing: 0.03em;
-}
-
-#root .main.main--personal-highlights .personal-highlights__gallery {
+#root .main.main--personal-highlights .personal-highlights__intro {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-auto-rows: minmax(128px, 12vw);
-  grid-auto-flow: dense;
-  gap: 14px;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  align-items: end;
+  gap: 16px 54px;
+  padding: 16px 0 40px;
+  border-bottom: 1px solid rgba(214, 179, 108, 0.25);
 }
 
-#root .main.main--personal-highlights .personal-highlights__item {
-  min-width: 0;
-  min-height: 0;
+#root .main.main--personal-highlights .personal-highlights__eyebrow,
+#root .main.main--personal-highlights .personal-highlights__chapter-index {
   margin: 0;
+  color: #c5a568;
+  font: 700 10px/1.4 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+#root .main.main--personal-highlights .personal-highlights__eyebrow {
+  grid-column: 1 / -1;
+}
+
+#root .main.main--personal-highlights .personal-highlights__intro h1 {
+  max-width: 760px;
+  margin: 0;
+  color: #f1e7cf;
+  font: 500 clamp(44px, 6.4vw, 82px)/0.99 "Marcellus SC", Georgia, serif;
+  letter-spacing: -0.035em;
+}
+
+#root .main.main--personal-highlights .personal-highlights__dek {
+  max-width: 440px;
+  margin: 0 0 4px auto;
+  color: #aab1b6;
+  font: 400 clamp(15px, 1.35vw, 18px)/1.65 Lato, Arial, sans-serif;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter {
+  padding: clamp(46px, 6vw, 78px) 0;
+  border-bottom: 1px solid rgba(154, 170, 179, 0.15);
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter h2,
+#root .main.main--personal-highlights .personal-highlights__ending h2 {
+  margin: 13px 0 0;
+  color: #f2eadb;
+  font: 500 clamp(26px, 3vw, 42px)/1.12 "Marcellus SC", Georgia, serif;
+  letter-spacing: -0.02em;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter--company {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 82px);
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter-copy {
+  max-width: 400px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter--company .personal-highlights__figure {
+  width: min(100%, 590px);
+  justify-self: end;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 36px;
+  margin-bottom: 28px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter-heading h2 {
+  max-width: 680px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter-heading--split > p {
+  max-width: 400px;
+  margin: 0 0 2px;
+  color: #aab1b6;
+  font: 400 15px/1.65 Lato, Arial, sans-serif;
+}
+
+#root .main.main--personal-highlights .personal-highlights__detour-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 32px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--hallway {
+  grid-column: 1 / -1;
+  width: 88%;
+  margin-inline: auto;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--hallway .personal-highlights__image-frame {
+  aspect-ratio: 1.55;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--demolition {
+  width: 92%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--museum {
+  width: 88%;
+  justify-self: end;
+  margin-top: 74px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--demolition .personal-highlights__image-frame,
+#root .main.main--personal-highlights .personal-highlights__figure--museum .personal-highlights__image-frame {
+  aspect-ratio: 0.82;
+}
+
+#root .main.main--personal-highlights .personal-highlights__making-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: start;
+  gap: 34px 28px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--build-room {
+  grid-column: 1 / span 5;
+  width: 94%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--bench {
+  grid-column: 8 / span 5;
+  width: 86%;
+  justify-self: end;
+  margin-top: 86px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--rank-up {
+  grid-column: 3 / span 9;
+  width: 100%;
+  margin-top: -6px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__image-frame {
+  aspect-ratio: 1.36;
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter--table {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: clamp(28px, 6vw, 84px);
+}
+
+#root .main.main--personal-highlights .personal-highlights__chapter--table .personal-highlights__figure {
+  width: min(100%, 590px);
+  justify-self: end;
+}
+
+#root .main.main--personal-highlights .personal-highlights__ending {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
+  align-items: center;
+  gap: 48px;
+  padding: clamp(48px, 6vw, 78px) 0 12px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__ending h2 {
+  max-width: 400px;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--sunset {
+  width: 100%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--sunset .personal-highlights__image-frame {
+  aspect-ratio: 1.8;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure {
+  min-width: 0;
+  margin: 0;
+}
+
+#root .main.main--personal-highlights .personal-highlights__image-frame {
+  position: relative;
   overflow: hidden;
-  border: 1px solid rgba(199, 166, 98, 0.48);
-  border-radius: 4px;
-  background: #111b26;
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.24);
-}
-
-#root .main.main--personal-highlights .personal-highlights__item--wide {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-
-#root .main.main--personal-highlights .personal-highlights__item--tall {
-  grid-row: span 2;
+  border: 1px solid rgba(204, 175, 112, 0.56);
+  background: #111a25;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.34);
 }
 
 #root .main.main--personal-highlights .personal-highlights__photo {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
   object-position: center;
 }
 
+#root .main.main--personal-highlights .personal-highlights__figure--hallway .personal-highlights__photo,
+#root .main.main--personal-highlights .personal-highlights__figure--demolition .personal-highlights__photo,
+#root .main.main--personal-highlights .personal-highlights__figure--museum .personal-highlights__photo,
+#root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__photo,
+#root .main.main--personal-highlights .personal-highlights__figure--sunset .personal-highlights__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--hallway .personal-highlights__photo {
+  object-position: center 58%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--demolition .personal-highlights__photo {
+  object-position: 50% 40%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--museum .personal-highlights__photo {
+  object-position: 50% 46%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__photo {
+  object-position: center 38%;
+  transform: scale(1.85);
+  transform-origin: 50% 38%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__figure--sunset .personal-highlights__photo {
+  object-position: center 52%;
+}
+
+#root .main.main--personal-highlights .personal-highlights__caption {
+  display: flex;
+  align-items: baseline;
+  gap: 11px;
+  margin-top: 12px;
+  color: #c4c7c7;
+  font: 400 13px/1.55 Lato, Arial, sans-serif;
+}
+
+#root .main.main--personal-highlights .personal-highlights__caption p {
+  margin: 0;
+}
+
+#root .main.main--personal-highlights .personal-highlights__caption-mark {
+  position: relative;
+  top: -2px;
+  flex: 0 0 12px;
+  height: 1px;
+  background: #c6a866;
+}
+
+#root .main.main--personal-highlights .personal-highlights__privacy-mask {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  pointer-events: none;
+}
+
+#root .main.main--personal-highlights .personal-highlights__privacy-mask--qr {
+  top: 36.5%;
+  left: 64.5%;
+  width: 15%;
+  height: 10%;
+  border: 1px solid rgba(234, 227, 211, 0.8);
+  background: rgba(238, 237, 229, 0.98);
+  box-shadow: 0 0 0 5px rgba(18, 27, 34, 0.14);
+}
+
+#root .main.main--personal-highlights .personal-highlights__privacy-mask--league-account {
+  top: 48.5%;
+  left: 42%;
+  width: 17.5%;
+  height: 5%;
+  border-radius: 2px;
+  background: rgba(10, 19, 33, 0.97);
+  box-shadow: 0 0 0 1px rgba(208, 183, 117, 0.6);
+}
+
+@media (max-width: 900px) {
+  #root .main.main--personal-highlights .personal-highlights__intro {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.75fr);
+    gap: 16px 28px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter--company,
+  #root .main.main--personal-highlights .personal-highlights__chapter--table,
+  #root .main.main--personal-highlights .personal-highlights__ending {
+    gap: 30px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter-heading--split {
+    align-items: start;
+  }
+}
+
 @media (max-width: 760px) {
   #root .main.main--personal-highlights {
-    padding: 18px 0 32px;
+    padding: 18px 0 42px;
   }
 
   #root .main.main--personal-highlights > .profile-nav {
-    width: 100%;
-    margin: 0 0 20px;
-    overflow-x: auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    width: calc(100% - 24px);
+    height: 48px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+  }
+
+  #root .main.main--personal-highlights > .profile-nav > a {
+    position: relative;
+    inset: auto;
+    display: flex;
+    width: auto;
+    min-width: 0;
+    height: 48px;
+    justify-content: center;
+    padding: 0 2px;
+    font-size: clamp(8px, 2.35vw, 10px);
+    line-height: 1.15;
+    text-align: center;
+    white-space: normal;
+  }
+
+  #root .main.main--personal-highlights > .profile-nav > a:nth-child(n) {
+    left: auto;
+    width: auto;
+  }
+
+  #root .main.main--personal-highlights > .profile-nav > a.active::after {
+    right: 12%;
+    bottom: 1px;
+    left: 12%;
+    width: auto;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__privacy-mask--league-account {
+    top: 48.5%;
+    left: 42%;
+    width: 17.5%;
+    height: 5%;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__photo {
+    object-position: center 38%;
+    transform-origin: 50% 38%;
   }
 
   #root .main.main--personal-highlights .personal-highlights {
     width: calc(100% - 32px);
   }
 
-  #root .main.main--personal-highlights .personal-highlights h1 {
-    margin-bottom: 18px;
+  #root .main.main--personal-highlights .personal-highlights__intro {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 15px;
+    padding: 8px 0 27px;
   }
 
-  #root .main.main--personal-highlights .personal-highlights__gallery {
+  #root .main.main--personal-highlights .personal-highlights__intro h1 {
+    max-width: 100%;
+    font-size: clamp(44px, 12vw, 62px);
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__dek {
+    max-width: 430px;
+    margin: 0;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter {
+    padding: 38px 0;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter h2,
+  #root .main.main--personal-highlights .personal-highlights__ending h2 {
+    font-size: clamp(27px, 8vw, 38px);
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter--company,
+  #root .main.main--personal-highlights .personal-highlights__chapter--table,
+  #root .main.main--personal-highlights .personal-highlights__ending {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 21px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter--company .personal-highlights__figure,
+  #root .main.main--personal-highlights .personal-highlights__chapter--table .personal-highlights__figure {
+    width: 100%;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter-heading,
+  #root .main.main--personal-highlights .personal-highlights__chapter-heading--split {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__chapter-heading--split > p {
+    margin-top: 14px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__detour-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px 14px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--hallway {
+    width: 100%;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--demolition,
+  #root .main.main--personal-highlights .personal-highlights__figure--museum {
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--demolition .personal-highlights__image-frame,
+  #root .main.main--personal-highlights .personal-highlights__figure--museum .personal-highlights__image-frame {
+    aspect-ratio: 0.74;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__making-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-auto-rows: minmax(116px, 31vw);
-    gap: 9px;
+    gap: 22px 14px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--build-room {
+    grid-column: 1 / -1;
+    width: 88%;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--bench {
+    grid-column: 1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--rank-up {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__image-frame {
+    aspect-ratio: 1.18;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--pizza {
+    width: 100%;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--sunset .personal-highlights__image-frame {
+    aspect-ratio: 1.3;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__caption {
+    align-items: start;
+    gap: 8px;
+    margin-top: 9px;
+    font-size: 12px;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__privacy-mask--qr {
+    top: 36.5%;
+    left: 64.5%;
+    width: 15%;
+    height: 10%;
   }
 }
