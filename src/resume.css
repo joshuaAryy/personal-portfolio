@@ -57,13 +57,15 @@
   z-index: -1;
   top: 50%;
   left: 50%;
-  width: 218.87%;
+  width: 100%;
   aspect-ratio: 1;
   transform: translate(-50%, -50%);
-  background-image: url("/media/resume/environment-03-localized-teal-navy-chassis-light.svg");
+  background-image: radial-gradient(circle at center, rgb(9 61 79 / 18%), transparent 72%);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+  border-radius: 50%;
+  filter: saturate(.68) brightness(.64);
   content: "";
   pointer-events: none;
 }
@@ -75,41 +77,80 @@
   overflow: visible;
 }
 
-.resume-mechanism__j,
-.resume-mechanism__frame {
+.resume-mechanism__scene {
   position: absolute;
+  z-index: 0;
+  top: 15%;
+  left: 15%;
   display: block;
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgb(216 183 115 / 48%);
+  border-radius: 50%;
+  background: #06111a;
+  animation: resume-found-entry 680ms ease-out both;
+}
+
+.resume-mechanism__scene-image {
+  display: block;
+  width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
+  filter: brightness(.66) saturate(.72);
+}
+
+.resume-mechanism__j-medallion {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  width: 46%;
+  height: 46%;
+  aspect-ratio: 1 / 1;
+  place-items: center;
+  overflow: hidden;
+  border: 2px solid #bd9145;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 42%, #0d3850, #02080e 72%);
+  box-shadow: 0 0 0 5px rgb(1 7 12 / 88%), 0 0 16px rgb(0 0 0 / 55%);
+  transform: translate(-50%, -50%);
+  animation: resume-found-entry 620ms cubic-bezier(.2,.8,.2,1) 80ms both;
 }
 
 .resume-mechanism__j {
-  z-index: 0;
-  top: 6.6038%;
-  left: 6.6038%;
-  width: 86.7925%;
-  height: 86.7925%;
-  clip-path: circle(42.1739% at 50% 50%);
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+  clip-path: circle(48% at 50% 50%);
 }
 
 .resume-mechanism__j-image {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
   user-select: none;
 }
 
 .resume-mechanism__frame {
-  z-index: 1;
+  position: absolute;
+  z-index: 2;
   inset: 0;
+  display: block;
   width: 100%;
+  height: 100%;
+  object-fit: contain;
   pointer-events: none;
 }
 
 .resume-mechanism__title {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 83.96%;
   left: 50%;
   display: flex;
@@ -264,9 +305,11 @@
   position: relative;
   z-index: 4;
   margin-top: clamp(32px, 5.2vh, 56px);
-  padding: 0 12px;
-  border: 0;
-  background: transparent;
+  min-width: 114px;
+  min-height: 38px;
+  padding: 0 18px;
+  border: 1px solid rgba(199, 155, 69, .68);
+  background: rgba(4, 13, 20, .72);
   color: #f0e6d2;
   font-size: 11px;
   line-height: 18px;
@@ -274,7 +317,14 @@
 }
 
 .resume-found__close:hover {
-  color: #d7e0dc;
+  border-color: #ead292;
+  background: rgba(12, 26, 34, .9);
+  color: #fff0c1;
+}
+
+.resume-found__close:focus-visible {
+  outline: 2px solid #9cf9f0;
+  outline-offset: 3px;
 }
 
 .main--resume-viewer {
@@ -381,10 +431,6 @@
     min-height: max(100%, calc(100vh - var(--client-header-height)));
   }
 
-  .resume-found__system::before {
-    width: min(218.87%, calc(100vw - 32px));
-  }
-
   .client--resume-shell .top-nav .header-help:focus-visible {
     outline-offset: -3px;
   }
@@ -425,10 +471,6 @@
     padding-inline: 16px;
   }
 
-  .resume-found__system::before {
-    width: min(218.87%, calc(100vw - 32px));
-  }
-
   .main--resume-viewer {
     padding: 18px 14px 28px;
   }
@@ -464,8 +506,24 @@
     transition: none;
   }
 
+  .resume-mechanism__scene,
+  .resume-mechanism__j-medallion {
+    animation: none;
+  }
+
   .resume-found__action-plate--hover {
     transition: none;
+  }
+}
+
+@keyframes resume-found-entry {
+  from {
+    opacity: 0;
+    scale: .9;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
   }
 }
 

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Client } from "./PortfolioLayout";
 import ProfileNav from "./ProfileNav";
+import { projectIdentities } from "./data";
 import "./demos-page.css";
 
 const demoOptions = [
@@ -9,6 +10,7 @@ const demoOptions = [
     label: "FOOD TRACKER",
     image: "/media/demos-food.png",
     imageAlt: "Food Tracker selected mark",
+    mark: projectIdentities["food-tracker"].mark,
     rail: "/media/demos-rail-food.svg",
   },
   {
@@ -16,6 +18,7 @@ const demoOptions = [
     label: "CREST",
     image: "/media/crest-sample.png",
     imageAlt: "Crest expense approval sample workspace",
+    mark: projectIdentities.crest.mark,
     rail: "/media/demos-rail-crest.svg",
   },
   {
@@ -23,6 +26,7 @@ const demoOptions = [
     label: "CHO’VEIGO",
     image: "/media/choveigo-recommendations.png",
     imageAlt: "Cho’Veigo recommendations interface capture",
+    mark: projectIdentities.choveigo.mark,
     rail: "/media/demos-rail-choveigo.svg",
   },
 ] as const;
@@ -65,7 +69,7 @@ export default function DemosPage() {
                 index === 0 ? "1316:103" : index === 1 ? "1316:107" : "1316:113"
               }
             >
-              <img className="demo-selector__thumb" src={item.image} alt="" />
+              <img className="demo-selector__thumb" src={item.mark} alt="" />
               <span>{item.label}</span>
             </button>
           ))}

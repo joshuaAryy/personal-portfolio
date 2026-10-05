@@ -68,6 +68,7 @@ describe("Resume Found return behavior", () => {
     renderAppAtResume("/profile/demos");
     const close = host.querySelector<HTMLButtonElement>(".resume-found__close");
     expect(close).not.toBeNull();
+    expect(close?.textContent).toBe("CLOSE");
 
     act(() => close!.click());
 

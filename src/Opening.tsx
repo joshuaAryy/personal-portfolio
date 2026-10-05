@@ -6,43 +6,6 @@ const OPENING_DURATION_MS = 2_000;
 const REDUCED_HANDOFF_MS = 120;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 
-type OpeningAssetProps = {
-  className: string;
-  src: string;
-  nodeId: string;
-  overscan?: string;
-};
-
-function OpeningAsset({ className, src, nodeId, overscan = "" }: OpeningAssetProps) {
-  return (
-    <div className={`opening__layer ${className}`} data-node-id={nodeId}>
-      <div className={`opening__asset-frame ${overscan}`}>
-        <img src={src} alt="" draggable={false} />
-      </div>
-    </div>
-  );
-}
-
-function OpeningArchiveMark({
-  className,
-  nodeId,
-}: {
-  className: string;
-  nodeId: string;
-}) {
-  return (
-    <div className={`opening__layer ${className}`} data-node-id={nodeId}>
-      <img
-        className="opening__archive-mark"
-        data-node-id="159:2"
-        src="/media/profile/open-portfolio-j-archive-source-700.png"
-        alt=""
-        draggable={false}
-      />
-    </div>
-  );
-}
-
 export default function Opening({ underlay }: { underlay: ReactNode }) {
   const navigate = useNavigate();
   const [reducedMotion, setReducedMotion] = useState(
@@ -114,87 +77,20 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
         aria-label="Portfolio introduction"
         data-node-id="2025:2"
       >
-        <div className="opening__treatment" data-node-id="2025:18" aria-hidden="true">
-          <img
-            className="opening__environment"
-            src="/media/opening/gameflow-background.jpg"
-            alt=""
-            draggable={false}
-            data-node-id="2448:3"
-          />
-          <div className="opening__mechanism">
-            <OpeningAsset
-              className="opening__bezel opening__motion--outer"
-              src="/media/opening/outer-dark-alloy-bezel.svg"
-              nodeId="2443:2"
-              overscan="opening__overscan--outer"
+        <div className="opening__treatment" data-node-id="3580:2" aria-hidden="true">
+          <div className="opening__mechanism" data-node-id="3581:2">
+            <span className="opening__ring opening__ring--outer" />
+            <span className="opening__ring opening__ring--inner" />
+            <img
+              className="opening__archive-mark"
+              data-node-id="159:2"
+              src="/media/profile/open-portfolio-j-archive-source-700.png"
+              alt=""
+              draggable={false}
             />
-            <OpeningAsset
-              className="opening__bevel opening__motion--outer"
-              src="/media/opening/bevel-catch.svg"
-              nodeId="2443:8"
-              overscan="opening__overscan--bevel"
-            />
-            <OpeningAsset
-              className="opening__enamel-bed opening__motion--outer"
-              src="/media/opening/black-enamel-bed.svg"
-              nodeId="2443:14"
-              overscan="opening__overscan--enamel"
-            />
-            <OpeningAsset
-              className="opening__inner-rail opening__motion--outer"
-              src="/media/opening/recessed-inner-rail.svg"
-              nodeId="2443:20"
-              overscan="opening__overscan--rail"
-            />
-            <OpeningAsset
-              className="opening__segmented-bezel opening__motion--segmented"
-              src="/media/opening/segmented-outer-bezel.svg"
-              nodeId="2443:38"
-            />
-            <div
-              className="opening__layer opening__tick-track opening__motion--ticks"
-              data-node-id="2443:71"
-            >
-              <div className="opening__ticks-frame" data-node-id="2448:312">
-                <div
-                  className="opening__ticks-content"
-                  data-node-id="2448:314"
-                  data-mask-node-id="2448:317"
-                >
-                  <img
-                    className="opening__tick-art"
-                    src="/media/opening/circle-lines-gold.svg"
-                    alt=""
-                    draggable={false}
-                    data-node-id="2448:315"
-                  />
-                </div>
-              </div>
-            </div>
-            <OpeningAsset
-              className="opening__cyan opening__motion--cyan"
-              src="/media/opening/cyan-energy-insets.svg"
-              nodeId="2443:92"
-            />
-            <OpeningAsset
-              className="opening__jewels opening__motion--outer"
-              src="/media/opening/indexed-jewel-marks.svg"
-              nodeId="2443:110"
-            />
-            <OpeningArchiveMark
-              className="opening__construction opening__motion--construction"
-              nodeId="2983:310"
-            />
-            <OpeningArchiveMark
-              className="opening__j-body opening__motion--j-body"
-              nodeId="2983:313"
-            />
-            <OpeningAsset
-              className="opening__glint opening__motion--glint"
-              src="/media/opening/restrained-rail-glint.svg"
-              nodeId="2443:154"
-            />
+            <span className="opening__ring-arc" />
+            <span className="opening__loader-label">LOADING</span>
+            <span className="opening__progress-line" />
           </div>
         </div>
         <button

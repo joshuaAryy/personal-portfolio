@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { projectIdentities } from "./data";
 import "./food-visuals.css";
 
 const foodChapters = [
@@ -316,7 +317,7 @@ export default function FoodTrackerCaseStudy() {
         <section className="food-section food-hero" id="food-overview">
           <div className="food-hero__opening">
             <p className="food-project-label">
-              <img src="/media/profile/food-tracker-mark.svg" alt="" />
+              <img src={projectIdentities["food-tracker"].mark} alt="" />
               <span>
                 <strong>FOOD TRACKER</strong>
                 <span>PRODUCT INITIATOR · SYSTEM DIRECTION · EVALUATION</span>

@@ -8,65 +8,49 @@ const modes = [
     id: "projects",
     label: "Projects",
     subtitle: "Built systems",
-    description:
-      "Explore products and systems I build outside the classroom. Select a focus, then confirm to enter the project lobby.",
+    description: "Products and systems built across software, AI, data and automation.",
     path: "/projects",
     emblem: "/media/lobby/home-mode-projects.svg",
     glyph: "/media/lobby/home-mode-projects-glyph-review-candidate.svg",
     glyphNodeId: "3339:684",
-    focus: [
-      { label: "Featured", detail: "Strongest work", featured: true },
-      { label: "AI / ML", detail: "Machine intelligence" },
-      { label: "Software", detail: "Systems + applications" },
-      { label: "Full stack", detail: "End-to-end products" },
-      { label: "Data / automation", detail: "Pipelines + tooling" },
-    ],
   },
   {
     id: "experience",
     label: "Experience",
     subtitle: "Professional work",
-    description:
-      "Research engineering and client-facing software workflows.",
+    description: "Research engineering and client-facing data workflows.",
     path: "/experience",
     emblem: "/media/lobby/home-mode-experience.svg",
     glyph: "/media/lobby/home-mode-experience-glyph-review-candidate.svg",
     glyphNodeId: "3339:696",
-    focus: [
-      { label: "Research / ML", detail: "Living in Silico" },
-      { label: "Data pipelines", detail: "Stush Patties" },
-    ],
   },
   {
     id: "hackathons",
     label: "Hackathons",
     subtitle: "Build under pressure",
-    description:
-      "Competition work shaped around focused team builds and clear constraints.",
+    description: "Competition builds shaped around focused teams and clear constraints.",
     path: "/hackathons",
     emblem: "/media/lobby/home-mode-hackathons.svg",
     glyph: "/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
     glyphNodeId: "3339:708",
-    focus: [
-      { label: "Crest", detail: "MPC Hacks 2026" },
-      { label: "Brim Financial Challenge", detail: "Third place" },
-    ],
   },
   {
     id: "education",
     label: "Education",
     subtitle: "Academic path",
-    description:
-      "Computer Engineering coursework and academic foundations.",
+    description: "Computer Engineering coursework and academic foundations.",
     path: "/education",
-    emblem: "/media/lobby/home-mode-experience.svg",
+    emblem: "/media/lobby/home-mode-education.svg",
     glyph: "/media/lobby/home-mode-education-glyph-review-candidate.svg",
     glyphNodeId: "3339:718",
-    focus: [
-      { label: "Degree", detail: "Computer Engineering" },
-      { label: "Coursework", detail: "Toronto Metropolitan University" },
-    ],
   },
+] as const;
+
+const projectAreas = [
+  { label: "AI / ML", detail: "Machine intelligence" },
+  { label: "Software", detail: "Systems + applications" },
+  { label: "Full Stack", detail: "End-to-end products" },
+  { label: "Data / Automation", detail: "Pipelines + tooling" },
 ] as const;
 
 type ModeId = (typeof modes)[number]["id"];
@@ -113,24 +97,11 @@ function HomeExploreContent() {
 
   return (
     <section className="home-explore" aria-labelledby="home-explore-title">
-      <div className="home-explore__subnav">
-        <span className="home-explore__subnav-current" aria-current="page">
-          Explore
-        </span>
-        <span>Curated</span>
-        <span>Recent</span>
-        <span>About</span>
-      </div>
-
       <header className="home-explore__heading">
         <div>
           <p className="home-explore__eyebrow">Portfolio client / Home</p>
           <h1 id="home-explore-title">Select a portfolio mode</h1>
-          <p className="home-explore__intro">
-            Select a destination. Confirm to enter its lobby.
-          </p>
         </div>
-        <span className="home-explore__state">EXPLORE / SELECT A MODE</span>
       </header>
 
       <div
@@ -183,17 +154,23 @@ function HomeExploreContent() {
       <section className="home-explore__selection" aria-live="polite">
         <div className="home-explore__selection-copy">
           <h2>{selected.label}</h2>
+          <p className="home-explore__instruction">Choose a mode, then Confirm to continue.</p>
           <p>{selected.description}</p>
         </div>
         <div className="home-explore__selection-focus">
-          <ul aria-label={`${selected.label} focus options`}>
-            {selected.focus.map((item) => (
-              <li data-featured={"featured" in item && item.featured} key={item.label}>
-                <strong>{item.label}</strong>
-                <small>{item.detail}</small>
-              </li>
-            ))}
-          </ul>
+          {selected.id === "projects" && (
+            <>
+              <h3>PROJECT AREAS</h3>
+              <ul aria-label="Project areas">
+                {projectAreas.map((area) => (
+                  <li key={area.label}>
+                    <strong>{area.label}</strong>
+                    <small>{area.detail}</small>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
         </div>
       </section>
 

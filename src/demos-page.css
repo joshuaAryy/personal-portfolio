@@ -141,12 +141,6 @@
   flex: none;
   border: 1px solid #293b4f;
   border-radius: 2px;
-  background: #071321;
-  object-fit: cover;
-  object-position: center;
-}
-
-#root .main.main--demos .demo-selector__button:first-child .demo-selector__thumb {
   background: #f3f1ea;
   object-fit: contain;
 }

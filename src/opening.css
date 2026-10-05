@@ -576,3 +576,130 @@
     transition: none;
   }
 }
+
+.opening__mechanism {
+  top: 44.5%;
+}
+
+.opening__ring,
+.opening__archive-mark,
+.opening__ring-arc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.opening__ring {
+  box-sizing: border-box;
+  border: 1px solid rgb(93 113 132 / 52%);
+  border-radius: 50%;
+}
+
+.opening__ring--outer,
+.opening__ring-arc {
+  width: 74%;
+  height: 74%;
+}
+
+.opening__ring--inner {
+  width: 67%;
+  height: 67%;
+  border-color: rgb(93 113 132 / 38%);
+}
+
+.opening__archive-mark {
+  width: 42%;
+  height: 42%;
+  max-width: none;
+  object-fit: contain;
+  clip-path: circle(49% at 50% 50%);
+  user-select: none;
+  animation: opening-mark-form 420ms cubic-bezier(.4, 0, .6, 1) both;
+}
+
+.opening__ring-arc {
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-top-color: #c5a252;
+  border-right-color: #c5a252;
+  border-radius: 50%;
+  clip-path: inset(0 0 50% 50%);
+  animation: opening-loading-turn 2s linear 1 both;
+}
+
+.opening__loader-label,
+.opening__progress-line {
+  position: absolute;
+  left: 50%;
+  display: block;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.opening__loader-label {
+  top: 91%;
+  color: #c5a252;
+  font-family: Inter, Arial, sans-serif;
+  font-size: clamp(9px, 1.55cqw, 12px);
+  font-weight: 600;
+  letter-spacing: .2em;
+}
+
+.opening__progress-line {
+  top: 97%;
+  width: 25%;
+  height: 1px;
+  overflow: hidden;
+  background: rgb(197 162 82 / 24%);
+}
+
+.opening__progress-line::after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #c5a252;
+  content: "";
+  animation: opening-progress-fill 2s linear 1 both;
+}
+
+.opening-route--reduced .opening__ring-arc {
+  animation: none;
+}
+
+.opening-route--reduced .opening__archive-mark {
+  animation: none;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+
+.opening-route--reduced .opening__progress-line::after {
+  animation: none;
+  transform: scaleX(1);
+}
+
+@keyframes opening-loading-turn {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes opening-mark-form {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.84);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes opening-progress-fill {
+  0%, 12% { transform: scaleX(0); }
+  84% { transform: scaleX(1); }
+  100% { transform: scaleX(0); }
+}

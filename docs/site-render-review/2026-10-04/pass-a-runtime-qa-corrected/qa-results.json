@@ -1,0 +1,228 @@
+{
+  "browser": "Installed Chrome via Playwright channel=chrome",
+  "desktop": "1440x900",
+  "narrow": "390x844",
+  "escapePath": "/home",
+  "resume": {
+    "visibleText": "Skip to content\nPORTFOLIO\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nLINKEDIN\nRESUME\nGITHUB\nEMAIL\nJoshua Aryeetey\nOPEN TO SUMMER 2027\n\nPORTFOLIO UTILITY\n\nRESUME FOUND\nVIEW RESUME\nCLOSE\nCURRENT FOCUS\nFood Tracker\nIN DEVELOPMENT\nACTIVITY\nIN DEVELOPMENT (2)\nCho’Veigo\nIN DEVELOPMENT\nPortfolio\nIN DEVELOPMENT\nCOMPLETED (3)\nLiving in Silico\nCOMPLETED\nStush Patties\nCOMPLETED\nCrest\n3RD PLACE · COMPLETED\nGitHub\nLinkedIn\n✉\nX\nHELP",
+    "els": [
+      {
+        "cls": "main main--detail main--resume-found",
+        "animation": "none",
+        "rect": {
+          "x": 0,
+          "y": 82.5,
+          "w": 1199.953125,
+          "h": 817.484375
+        }
+      },
+      {
+        "cls": "resume-found",
+        "animation": "none",
+        "rect": {
+          "x": 0,
+          "y": 82.5,
+          "w": 1199.953125,
+          "h": 817.484375
+        }
+      },
+      {
+        "cls": "resume-found__eyebrow",
+        "animation": "none",
+        "rect": {
+          "x": 531.421875,
+          "y": 124.15625,
+          "w": 137.09375,
+          "h": 20
+        }
+      },
+      {
+        "cls": "resume-found__system",
+        "animation": "none",
+        "rect": {
+          "x": 379.15625,
+          "y": 168.15625,
+          "w": 441.625,
+          "h": 441.625
+        }
+      },
+      {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "animation": "none",
+        "rect": {
+          "x": 511.6484375,
+          "y": 560.625,
+          "w": 176.640625,
+          "h": 58.3125
+        }
+      },
+      {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "animation": "none",
+        "rect": {
+          "x": 511.6484375,
+          "y": 560.625,
+          "w": 176.640625,
+          "h": 58.3125
+        }
+      },
+      {
+        "cls": "resume-found__action-plate resume-found__action-plate--hover",
+        "animation": "none",
+        "rect": {
+          "x": 511.6484375,
+          "y": 560.625,
+          "w": 176.640625,
+          "h": 58.3125
+        }
+      },
+      {
+        "cls": "resume-found__close",
+        "animation": "none",
+        "rect": {
+          "x": 542.96875,
+          "y": 656.578125,
+          "w": 114,
+          "h": 38
+        }
+      }
+    ]
+  },
+  "resumeButtons": [
+    {
+      "text": "VIEW RESUME",
+      "aria": null,
+      "href": "/resume/viewer",
+      "cls": "resume-action resume-action--primary resume-found__action"
+    },
+    {
+      "text": "CLOSE",
+      "aria": null,
+      "href": null,
+      "cls": "resume-found__close"
+    }
+  ],
+  "viewer": "/resume/viewer",
+  "escapeResumePath": "/home",
+  "reducedMotionUnexpectedAnimations": [],
+  "narrowHome": {
+    "help": {
+      "x": 302.078125,
+      "y": 6.5,
+      "right": 350.078125,
+      "bottom": 62.5,
+      "w": 48,
+      "h": 56
+    },
+    "account": {
+      "x": 340,
+      "y": 13.5,
+      "right": 382,
+      "bottom": 55.5,
+      "w": 42,
+      "h": 42
+    },
+    "overlap": true,
+    "modes": [
+      {
+        "name": "Projects",
+        "pressed": "true",
+        "rect": {
+          "x": 15,
+          "y": 122,
+          "right": 191,
+          "bottom": 301.234375
+        }
+      },
+      {
+        "name": "Experience",
+        "pressed": "false",
+        "rect": {
+          "x": 199,
+          "y": 122,
+          "right": 375,
+          "bottom": 301.234375
+        }
+      },
+      {
+        "name": "Hackathons",
+        "pressed": "false",
+        "rect": {
+          "x": 15,
+          "y": 309.234375,
+          "right": 191,
+          "bottom": 488.46875
+        }
+      },
+      {
+        "name": "Education",
+        "pressed": "false",
+        "rect": {
+          "x": 199,
+          "y": 309.234375,
+          "right": 375,
+          "bottom": 488.46875
+        }
+      }
+    ],
+    "oldUi": false,
+    "utility": [
+      {
+        "text": "LinkedIn",
+        "href": "https://ca.linkedin.com/in/joshua-ary"
+      },
+      {
+        "text": "Resume",
+        "href": "/resume"
+      },
+      {
+        "text": "GitHub",
+        "href": "https://github.com/joshuaAryy"
+      },
+      {
+        "text": "Email",
+        "href": "mailto:joshuaaryy@gmail.com"
+      }
+    ]
+  },
+  "narrowRouteReachability": [
+    {
+      "label": "Projects",
+      "actual": "/projects",
+      "expected": "/projects",
+      "correct": true,
+      "confirm": "Confirm Projects destination"
+    },
+    {
+      "label": "Experience",
+      "actual": "/experience",
+      "expected": "/experience",
+      "correct": true,
+      "confirm": "Confirm Experience destination"
+    },
+    {
+      "label": "Hackathons",
+      "actual": "/hackathons",
+      "expected": "/hackathons",
+      "correct": true,
+      "confirm": "Confirm Hackathons destination"
+    },
+    {
+      "label": "Education",
+      "actual": "/education",
+      "expected": "/education",
+      "correct": true,
+      "confirm": "Confirm Education destination"
+    }
+  ],
+  "narrowResume": {
+    "vw": 390,
+    "doc": 390,
+    "overflow": false,
+    "broken": []
+  },
+  "narrowClosePath": "/home",
+  "errors": [
+    "requestfailed chrome-extension://mhjfbmdgcfjbbpaeojofohoefgiehjai/pdf_embedder.css"
+  ]
+}

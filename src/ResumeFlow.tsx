@@ -79,7 +79,7 @@ export function ResumeFound() {
         onClick={closeResume}
         aria-keyshortcuts="Escape"
       >
-        ESC <span aria-hidden="true">·</span> CLOSE
+        CLOSE
       </button>
     </section>
   );

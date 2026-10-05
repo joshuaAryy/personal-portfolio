@@ -733,16 +733,7 @@ a:focus-visible {
   width: 38px;
   height: 38px;
   max-width: none;
-}
-.rail-avatar--activity-portfolio > span {
-  position: absolute;
-  top: 2.5px;
-  left: 11.5px;
-  color: #f5bf4f;
-  font-family: "Cinzel", Georgia, serif;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: normal;
+  transform: none;
 }
 .rail-group a:hover > span:last-child,
 .rail-group a:focus-visible > span:last-child {
@@ -916,7 +907,6 @@ a:focus-visible {
   letter-spacing: 0;
 }
 
-.client--project-shell .header-client-tools,
 .client--project-shell .header-achievement {
   display: none;
 }
@@ -1139,7 +1129,7 @@ a:focus-visible {
 
 .client--home-shell .rail-link--status,
 .client--resume-shell .rail-link--status {
-  min-height: 54px;
+  min-height: 62px;
   gap: 16px;
 }
 
@@ -7151,5 +7141,45 @@ a:focus-visible {
     position: relative;
     top: -2px;
     margin-left: -30px;
+  }
+}
+
+/* Shared-shell contact labels and authentic portrait alignment. */
+.header-client-tools {
+  align-items: center;
+  gap: clamp(8px, .9vw, 17px);
+  white-space: nowrap;
+}
+.header-client-tool {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  color: #d7d0c0;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 140ms ease;
+}
+.header-client-tool:hover,
+.header-client-tool:focus-visible { color: #f0d58a; }
+.header-client-tool:focus-visible { outline: 1px solid #c79b45; outline-offset: 4px; }
+.client--project-shell .header-account__ring { display: block; }
+.client--project-shell .header-account__avatar {
+  top: 7.9%;
+  left: 7.9%;
+  width: 84.2%;
+  height: 84.2%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (max-width: 650px) {
+  .client--home-shell .top-nav .header-help {
+    flex: 0 0 36px;
+    min-width: 36px;
+    padding-inline: 2px;
   }
 }

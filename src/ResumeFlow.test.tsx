@@ -28,14 +28,13 @@ describe("approved resume flow", () => {
     );
   });
 
-  it("bounds the Resume Found decorative glow across tablet widths", () => {
+  it("keeps Resume Found scenery in its circular field instead of a large exterior glow", () => {
     const css = readFileSync("src/resume.css", "utf8");
-    const tabletRules = css.slice(
-      css.lastIndexOf("@media (max-width: 900px)"),
-      css.lastIndexOf("@media (max-width: 650px)"),
-    );
+    const glowRule = css.match(/\.resume-found__system::before\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(tabletRules).toMatch(
+    expect(glowRule).toMatch(/width:\s*100%/);
+    expect(glowRule).not.toContain("gameflow-background.jpg");
+    expect(css).not.toMatch(
       /\.resume-found__system::before\s*\{[^}]*width:\s*min\(218\.87%,\s*calc\(100vw - 32px\)\)/s,
     );
   });
@@ -52,6 +51,27 @@ describe("approved resume flow", () => {
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/button-accept-default.png"');
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png"');
     expect(markup).not.toContain("A concise view of experience");
+  });
+
+  it("separates the scenic ring field from a smaller J medallion and animates entry", () => {
+    const markup = renderRoute("/resume");
+    const css = readFileSync("src/resume.css", "utf8");
+
+    expect(markup).toContain('class="resume-mechanism__scene"');
+    expect(markup).toContain('src="/media/opening/gameflow-background.jpg"');
+    expect(markup).toContain('class="resume-mechanism__j-medallion"');
+    expect(css).toMatch(
+      /\.resume-mechanism__scene\s*\{[^}]*aspect-ratio:\s*1\s*\/\s*1;[^}]*border-radius:\s*50%/s,
+    );
+    const exteriorGlow = css.match(/\.resume-found__system::before\s*\{([^}]*)\}/)?.[1] ?? "";
+    expect(exteriorGlow).not.toContain("gameflow-background.jpg");
+    expect(css).toMatch(
+      /\.resume-mechanism__j-medallion\s*\{[^}]*width:\s*46%;[^}]*height:\s*46%/s,
+    );
+    expect(css).toMatch(/animation:\s*resume-found-entry\s+/);
+    expect(css).toMatch(
+      /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*\.resume-mechanism__scene[\s\S]*animation:\s*none/s,
+    );
   });
 
   it("uses only the approved v13 PDF for display, download, and fullscreen", () => {

@@ -1,0 +1,203 @@
+## home
+- main:
+  - region "Select a portfolio mode":
+    - heading "Select a portfolio mode" [level=1]
+    - group "Portfolio modes":
+      - button "Projects" [pressed]: Projects Built systems
+      - button "Experience": Experience Professional work
+      - button "Hackathons": Hackathons Build under pressure
+      - button "Education": Education Academic path
+    - heading "Projects" [level=2]
+    - paragraph: Choose a mode, then Confirm to continue.
+    - paragraph: Products and systems built across software, AI, data and automation.
+    - heading "PROJECT AREAS" [level=3]
+    - list "Project areas":
+      - listitem:
+        - strong: AI / ML
+      - listitem:
+        - strong: Software
+      - listitem:
+        - strong: Full Stack
+      - listitem:
+        - strong: Data / Automation
+    - button "Back to the previous screen"
+    - button "Confirm Projects destination": Confirm
+    - paragraph: Use Left and Right Arrow to move between modes. Home and End jump to the first or last mode. Press Enter to open the selected mode.
+
+## resume
+- main:
+  - region "Resume Found":
+    - paragraph: PORTFOLIO UTILITY
+    - img "Joshua's archive-led J mark"
+    - heading "Resume Found" [level=1]
+    - link "View Resume":
+      - /url: /resume/viewer
+    - button "CLOSE"
+
+## projects
+- main:
+  - region "projects lobby":
+    - heading "PROJECTS · FEATURED" [level=1]
+    - paragraph: SELECT A PROJECT TO OPEN ITS CASE STUDY
+    - button "Select Fraymakers":
+      - img "Fraymakers official wordmark"
+      - strong: Fraymakers
+      - text: Tournament automation · 2025 SOFTWARE · DATA
+      - img "SOFTWARE"
+      - img "DATA"
+      - text: SOFTWARE · DATA. SOFTWARE. DATA. Press Enter or Space to select. Use the action below to open. projects
+    - button "Select Crest":
+      - img "Crest project mark"
+      - strong: Crest
+      - text: MPC Hacks · 2026 AI · DATA
+      - img "AI"
+      - img "DATA"
+      - text: AI · DATA. AI. DATA. Press Enter or Space to select. Use the action below to open. projects
+    - button "Select Joshua Aryeetey":
+      - img "Portfolio J medallion"
+      - strong: Joshua Aryeetey
+      - text: Computer Engineering · Software PORTFOLIO OWNER
+      - img "SOFTWARE"
+      - img "RESEARCH"
+      - text: PORTFOLIO OWNER. SOFTWARE. RESEARCH. Press Enter or Space to select. Use the action below to open. projects
+    - button "Select Food Tracker" [pressed]:
+      - img "Food Tracker approved project mark"
+      - strong: Food Tracker
+      - text: Nutrition intelligence platform MOBILE · BACKEND
+      - img "SOFTWARE"
+      - img "MOBILE"
+      - text: MOBILE · BACKEND. SOFTWARE. MOBILE. Press Enter or Space to select. Use the action below to open. projects
+    - button "Select Cho’Veigo":
+      - img "Cho’Veigo match-path mark"
+      - strong: Cho’Veigo
+      - text: Evidence-first job matching AI · SOFTWARE
+      - img "AI"
+      - img "SOFTWARE"
+      - text: AI · SOFTWARE. AI. SOFTWARE. Press Enter or Space to select. Use the action below to open. projects
+    - strong: PROJECT ROLES
+    - text: SOFTWARE AI DATA MOBILE RESEARCH
+    - region "Selected project":
+      - heading "FOOD TRACKER" [level=2]
+      - paragraph: Nutrition tracking · search · analytics
+      - paragraph: React Native · Node.js · PostgreSQL
+      - link "OPEN CASE STUDY":
+        - /url: /projects/food-tracker
+      - link "Food Tracker source repository":
+        - /url: https://github.com/joshuaAryy/food-tracker
+      - text: SELECTED PROJECT
+      - strong: FOOD TRACKER
+    - link "VIEW PROJECT":
+      - /url: /projects/food-tracker
+    - paragraph: Select an entry, then use the action in its tray to open the story.
+
+## experience
+- main:
+  - region "experience lobby":
+    - heading "EXPERIENCE" [level=1]
+    - paragraph: PROFESSIONAL WORK · RESEARCH · DATA SYSTEMS
+    - button "Select Living in Silico" [pressed]:
+      - img "Living in Silico logo"
+      - strong: Living in Silico
+      - text: AI / ML Research Intern · Mar–Jun 2025 AI · RESEARCH
+      - img "AI"
+      - img "RESEARCH"
+      - text: AI · RESEARCH. AI. RESEARCH. Press Enter or Space to select. Use the action below to open. experience
+    - button "Select Joshua Aryeetey":
+      - img "Joshua Aryeetey portrait"
+      - strong: Joshua Aryeetey
+      - text: Computer Engineering · Software PORTFOLIO OWNER
+      - img "SOFTWARE"
+      - img "RESEARCH"
+      - text: PORTFOLIO OWNER. SOFTWARE. RESEARCH. Press Enter or Space to select. Use the action below to open. experience
+    - button "Select Stush Patties":
+      - img "Stush Patties logo"
+      - strong: Stush Patties
+      - text: Software Engineering Intern · Sep–Nov 2025 SOFTWARE · DATA
+      - img "SOFTWARE"
+      - img "DATA"
+      - text: SOFTWARE · DATA. SOFTWARE. DATA. Press Enter or Space to select. Use the action below to open. experience
+    - strong: EXPERIENCE ROLES
+    - text: AI RESEARCH
+    - region "Selected experience":
+      - heading "LIVING IN SILICO" [level=2]
+      - paragraph: SMILES · RDKit · DeepMol · Fragmenstein
+      - link "VIEW EXPERIENCE":
+        - /url: /experience/living-in-silico
+      - text: SELECTED EXPERIENCE
+      - strong: LIVING IN SILICO
+    - link "VIEW EXPERIENCE":
+      - /url: /experience/living-in-silico
+    - paragraph: Select an entry, then use the action in its tray to open the story.
+
+## hackathons
+- main:
+  - region "hackathons lobby":
+    - heading "HACKATHONS" [level=1]
+    - paragraph: COMPETITION BUILDS · AWARDS · RAPID SHIPPING
+    - button "Select Coming Soon":
+      - strong: Coming Soon
+      - text: Next hackathon build NEXT EVENT · TBD NEXT EVENT · TBD. Press Enter or Space to select. Use the action below to open. hackathons
+    - button "Select Joshua Aryeetey":
+      - img "Joshua Aryeetey portrait"
+      - strong: Joshua Aryeetey
+      - text: Computer Engineering · Software PORTFOLIO OWNER
+      - img "SOFTWARE"
+      - img "RESEARCH"
+      - text: PORTFOLIO OWNER. SOFTWARE. RESEARCH. Press Enter or Space to select. Use the action below to open. hackathons
+    - button "Select Crest" [pressed]:
+      - img "Crest project mark"
+      - strong: Crest
+      - text: MPC Hacks · 2026 3RD PLACE · BRIM FINANCIAL
+      - img "SOFTWARE"
+      - img "AI"
+      - text: 3RD PLACE · BRIM FINANCIAL. SOFTWARE. AI. DATA. RESEARCH. Press Enter or Space to select. Use the action below to open. hackathons
+    - strong: HACKATHON ROLES
+    - text: SOFTWARE AI DATA RESEARCH
+    - region "Selected hackathon":
+      - heading "CREST · MPC HACKS" [level=2]
+      - paragraph: 3rd Place · Brim Financial Challenge
+      - paragraph: 4,235 demo/dev transactions
+      - paragraph: Policy engine · anomaly rules
+      - link "VIEW HACKATHON":
+        - /url: /projects/crest
+      - link "Crest source repository":
+        - /url: https://github.com/Atlearia/mpchacks
+      - text: SELECTED HACKATHON
+      - strong: CREST
+    - link "VIEW HACKATHON":
+      - /url: /projects/crest
+    - paragraph: Select an entry, then use the action in its tray to open the story.
+
+## education
+- main:
+  - region "education lobby":
+    - heading "EDUCATION" [level=1]
+    - paragraph: DEGREE · COURSEWORK · SPECIALIZATION
+    - button "Select Computer Engineering":
+      - img "Computer Engineering degree emblem"
+      - strong: Computer Engineering
+      - text: Toronto Metropolitan University B.ENG. · EXPECTED 2028 B.ENG. · EXPECTED 2028. Press Enter or Space to select and review details below. education
+    - button "Select Joshua Aryeetey":
+      - img "Joshua Aryeetey portrait"
+      - strong: Joshua Aryeetey
+      - text: Computer Engineering · Software PORTFOLIO OWNER
+      - img "SOFTWARE SPECIALIZATION"
+      - text: PORTFOLIO OWNER. SOFTWARE SPECIALIZATION. Press Enter or Space to select and review details below. education
+    - button "Select Selected Coursework" [pressed]:
+      - img "Current coursework emblem"
+      - strong: Selected Coursework
+      - text: Four selected course titles 4 SELECTED COURSES 4 SELECTED COURSES. Press Enter or Space to select and review details below. education
+    - group "Academic highlights":
+      - strong: ACADEMIC HIGHLIGHTS
+      - text: EXPECTED 2028 SOFTWARE SPECIALIZATION
+    - region "Selected academic focus":
+      - heading "SELECTED COURSEWORK" [level=2]
+      - paragraph: Algorithms & Data Structures
+      - paragraph: Software Systems · Database Systems I Microprocessor Systems
+      - link "VIEW EDUCATION":
+        - /url: /education/projects
+      - text: SELECTED ACADEMIC FOCUS
+      - strong: SELECTED COURSEWORK
+    - link "VIEW EDUCATION":
+      - /url: /education/projects
+    - paragraph: Select an entry to review its academic details below.

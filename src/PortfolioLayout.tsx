@@ -1,15 +1,14 @@
 import { useEffect, useRef, type ReactNode } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { experience } from "./data";
+import { experience, experienceIdentities, portfolioIdentity, projectIdentities } from "./data";
 import { experienceStoryPaths, projectCasePaths, railProjects } from "./project-route-paths";
 import { useHelpOverlay } from "./Help";
 
-const headerUtilityAssets = [
-  ["/media/lobby/shell-utility-flag.svg", "Flag"],
-  ["/media/lobby/shell-utility-trophy.svg", "Trophy"],
-  ["/media/lobby/shell-utility-briefcase.svg", "Briefcase"],
-  ["/media/lobby/shell-utility-clash.svg", "Clash"],
-  ["/media/lobby/shell-utility-clock.svg", "Clock"],
+const headerUtilityLinks = [
+  { label: "LinkedIn", href: "https://ca.linkedin.com/in/joshua-ary", external: true },
+  { label: "Resume", href: "/resume", external: false },
+  { label: "GitHub", href: "https://github.com/joshuaAryy", external: true },
+  { label: "Email", href: "mailto:joshuaaryy@gmail.com", external: false },
 ] as const;
 
 const usesProjectDetailShell = (pathname: string) =>
@@ -29,9 +28,13 @@ function ContactLinks() {
 }
 
 function MobileContactRow() {
+  const { pathname } = useLocation();
   return (
     <nav className="mobile-contact-row" aria-label="Contact links">
       <ContactLinks />
+      <Link to="/resume" state={{ from: pathname }} aria-label="Resume">
+        Resume
+      </Link>
     </nav>
   );
 }
@@ -162,15 +165,6 @@ function Header() {
         >
           Education
         </NavLink>
-        {section !== "home" && !isResumeShell && (
-          <NavLink
-            className={section === "resume" ? "current header-resume" : "header-resume"}
-            to="/resume"
-            state={pathname.startsWith("/resume") ? undefined : { from: pathname }}
-          >
-            Resume
-          </NavLink>
-        )}
         {helpOverlay ? (
           <button
             className="header-help"
@@ -191,24 +185,26 @@ function Header() {
           </Link>
         )}
       </nav>
-      {!isProjectShell && (
-        <div className="header-client-tools" aria-hidden="true">
-          {headerUtilityAssets.map(([src, name]) => (
-            <span className="header-client-tool" key={name}>
-              <img src={src} alt="" />
-            </span>
-          ))}
-        </div>
-      )}
-      {!isProjectShell && (
-        <div
-          className="header-achievement"
-          aria-label="Expected graduation 2028; third place in the Brim Financial Challenge"
-        >
-          <span>2028</span>
-          <strong>3RD</strong>
-        </div>
-      )}
+      <nav className="header-client-tools" aria-label="Contact and resume">
+        {headerUtilityLinks.map((item) => (
+          item.href === "/resume" ? (
+            <Link className="header-client-tool" key={item.label} to="/resume" state={{ from: pathname }}>
+              {item.label}
+            </Link>
+          ) : (
+            <a
+              className="header-client-tool"
+              key={item.label}
+              href={item.href}
+              target={item.external ? "_blank" : undefined}
+              rel={item.external ? "noopener noreferrer" : undefined}
+              aria-label={item.external ? `${item.label} (opens in a new tab)` : item.label}
+            >
+              {item.label}
+            </a>
+          )
+        ))}
+      </nav>
       <div className="header-account-area">
         <Link
           className="header-account"
@@ -225,7 +221,7 @@ function Header() {
             />
             <img
               className="header-account__avatar"
-              src={isProjectShell ? "/media/lobby/client-j-mark.svg" : "/media/lobby/client-account-avatar.png"}
+              src="/media/profile/topbar-avatar.png"
               alt=""
               aria-hidden="true"
             />
@@ -240,40 +236,37 @@ function Header() {
   );
 }
 
-const projectRailMarks: Record<string, string | undefined> = {
-  "food-tracker": "/media/profile/food-tracker-mark.svg",
-  crest: "/media/profile/profile-crest-emblem.png",
-  choveigo: "/media/profile/choveigo-mark.svg",
-  fraymakers: "/media/lobby/project-fraymakers-index.png",
-};
+const projectRailMarks: Record<string, string | undefined> = Object.fromEntries(
+  Object.entries(projectIdentities).map(([slug, identity]) => [slug, identity.mark]),
+);
 
 const activityArt = {
   "food-tracker": {
-    src: "/media/lobby/activity-art/activity-food-tracker.svg",
+    src: projectIdentities["food-tracker"].mark,
     size: 50,
     frameSize: 34,
     nodeId: "I2356:611;95:51",
   },
   choveigo: {
-    src: "/media/lobby/activity-art/activity-choveigo.svg",
+    src: projectIdentities.choveigo.mark,
     size: 54,
     frameSize: 38,
     nodeId: "I2356:611;95:11",
   },
   "living-in-silico": {
-    src: "/media/lobby/activity-art/activity-living-in-silico.svg",
+    src: experienceIdentities["living-in-silico"].mark,
     size: 54,
     frameSize: 38,
     nodeId: "I2356:611;95:25",
   },
   "stush-patties": {
-    src: "/media/lobby/activity-art/activity-stush-patties.svg",
+    src: experienceIdentities["stush-patties"].mark,
     size: 54,
     frameSize: 38,
     nodeId: "I2356:611;95:37",
   },
   crest: {
-    src: "/media/lobby/activity-art/activity-crest.svg",
+    src: projectIdentities.crest.mark,
     size: 54,
     frameSize: 38,
     nodeId: "I2356:611;95:44",
@@ -306,7 +299,13 @@ function PortfolioActivityArt() {
         height={38}
         data-node-id="I2356:611;95:19"
       />
-      <span data-node-id="I2356:611;95:20">J</span>
+      <img
+        src={portfolioIdentity.mark}
+        alt=""
+        width={38}
+        height={38}
+        data-node-id="I2356:611;95:20"
+      />
     </span>
   );
 }
@@ -330,10 +329,10 @@ function Rail() {
     ? {
         name: "Living in Silico",
         path: experienceStoryPaths["living-in-silico"],
-        src: "/media/profile/living-in-silico-logo.png",
+        src: experienceIdentities["living-in-silico"].mark,
       }
     : pathname.startsWith("/hackathons")
-      ? { name: "Crest", path: projectCasePaths.crest, src: "/media/lobby/hackathon-trophy.svg" }
+      ? { name: "Crest", path: projectCasePaths.crest, src: projectIdentities.crest.mark }
       : pathname.startsWith("/education")
         ? { name: "Current Coursework", path: "/education", src: "/media/lobby/education-coursework.svg" }
         : {
@@ -456,8 +455,8 @@ function Rail() {
                     <RailIdentity
                       src={
                         item.slug === "living-in-silico"
-                          ? "/media/profile/living-in-silico-logo.png"
-                          : "/media/profile/stush-patties-logo.png"
+                          ? experienceIdentities["living-in-silico"].mark
+                          : experienceIdentities["stush-patties"].mark
                       }
                     />
                     <span>{item.name}</span>

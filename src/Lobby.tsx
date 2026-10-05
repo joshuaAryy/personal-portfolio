@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { experience, projects } from "./data";
+import { experience, experienceIdentities, projectIdentities, projects } from "./data";
 import { Client } from "./PortfolioLayout";
 import { experienceStoryPaths, projectCasePaths, railProjects } from "./project-route-paths";
 import "./lobby.css";
@@ -62,8 +62,8 @@ const projectItems: LobbyItem[] = [
     id: "fraymakers",
     subtitle: "Tournament automation · 2025",
     role: "SOFTWARE · DATA",
-    mark: "/media/lobby/project-fraymakers-index.png",
-    markAlt: "Fraymakers portfolio index artwork",
+    mark: projectIdentities.fraymakers.mark,
+    markAlt: projectIdentities.fraymakers.alt,
     path: projectCasePaths.fraymakers,
     source: projects.find((project) => project.slug === "fraymakers")?.source,
     detail: "Match metadata · configuration · thumbnail generation",
@@ -74,7 +74,7 @@ const projectItems: LobbyItem[] = [
     id: "crest",
     subtitle: "MPC Hacks · 2026",
     role: "AI · DATA",
-    mark: "/media/profile/profile-crest-emblem.png",
+    mark: projectIdentities.crest.mark,
     markAlt: "Crest project mark",
     path: projectCasePaths.crest,
     source: projects.find((project) => project.slug === "crest")?.source,
@@ -87,7 +87,7 @@ const projectItems: LobbyItem[] = [
     id: "food-tracker",
     subtitle: "Nutrition intelligence platform",
     role: "MOBILE · BACKEND",
-    mark: "/media/profile/food-tracker-mark.svg",
+    mark: projectIdentities["food-tracker"].mark,
     markAlt: "Food Tracker approved project mark",
     path: projectCasePaths["food-tracker"],
     source: projects.find((project) => project.slug === "food-tracker")?.source,
@@ -101,7 +101,7 @@ const projectItems: LobbyItem[] = [
     id: "choveigo",
     subtitle: "Evidence-first job matching",
     role: "AI · SOFTWARE",
-    mark: "/media/profile/choveigo-mark.svg",
+    mark: projectIdentities.choveigo.mark,
     markAlt: "Cho’Veigo match-path mark",
     path: projectCasePaths.choveigo,
     source: projects.find((project) => project.slug === "choveigo")?.source,
@@ -116,7 +116,7 @@ const experienceItems: LobbyItem[] = [
     name: experience[0].name,
     subtitle: "AI / ML Research Intern · Mar–Jun 2025",
     role: "AI · RESEARCH",
-    mark: "/media/profile/living-in-silico-logo.png",
+    mark: experienceIdentities["living-in-silico"].mark,
     markAlt: "Living in Silico logo",
     path: experienceStoryPaths["living-in-silico"],
     detail: "SMILES · RDKit · DeepMol · Fragmenstein",
@@ -128,7 +128,7 @@ const experienceItems: LobbyItem[] = [
     name: experience[1].name,
     subtitle: "Software Engineering Intern · Sep–Nov 2025",
     role: "SOFTWARE · DATA",
-    mark: "/media/profile/stush-patties-logo.png",
+    mark: experienceIdentities["stush-patties"].mark,
     markAlt: "Stush Patties logo",
     path: experienceStoryPaths["stush-patties"],
     detail: "Distributor inputs · normalized data · reporting handoff",
@@ -154,8 +154,8 @@ const hackathonItems: LobbyItem[] = [
     role: "3RD PLACE · BRIM FINANCIAL",
     selectedTitle: "Crest · MPC Hacks",
     selectedAward: "3rd Place · Brim Financial Challenge",
-    mark: "/media/lobby/hackathon-trophy.svg",
-    markAlt: "Hackathon award mark",
+    mark: projectIdentities.crest.mark,
+    markAlt: projectIdentities.crest.alt,
     path: projectCasePaths.crest,
     source: projects.find((project) => project.slug === "crest")?.source,
     detail: "4,235 demo/dev transactions",
@@ -263,9 +263,7 @@ function LobbyCard({
 }) {
   const roleMarks = item.badges ?? item.roles.map((role) => roleAssets[role]);
   const roleSummary = [item.role, ...roleMarks.map((mark) => mark.label)].filter(Boolean).join(". ");
-  const mark = mode === "projects" && item.id === "crest"
-    ? "/media/lobby/project-crest-index.png"
-    : item.mark;
+  const mark = item.mark;
   const instructionId = `lobby-card-instructions-${mode}-${item.id}`;
 
   return (
@@ -443,6 +441,12 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
       <section className={`league-lobby league-lobby--${mode}`} aria-label={`${mode} lobby`}>
         <div className="league-lobby__environment" aria-hidden="true" />
         <ModeHeading mode={mode} />
+        {mode !== "projects" && (
+          <div className="league-lobby__balance-slots" aria-hidden="true">
+            <span className="league-lobby__balance-slot league-lobby__balance-slot--left">+</span>
+            <span className="league-lobby__balance-slot league-lobby__balance-slot--right">+</span>
+          </div>
+        )}
         <div className={[
           "league-lobby__banners",
           isProjects ? "league-lobby__banners--projects" : "",

@@ -1,15 +1,24 @@
 export default function ResumeMechanism() {
   return (
     <div className="resume-mechanism" data-node-id="2407:340">
-      <div className="resume-mechanism__j" data-node-id="2984:484">
+      <div className="resume-mechanism__scene" aria-hidden="true">
         <img
-          className="resume-mechanism__j-image"
-          data-node-id="159:2"
-          src="/media/profile/open-portfolio-j-archive-source-700.png"
-          alt="Joshua's archive-led J mark"
-          width="460"
-          height="460"
+          className="resume-mechanism__scene-image"
+          src="/media/opening/gameflow-background.jpg"
+          alt=""
         />
+      </div>
+      <div className="resume-mechanism__j-medallion">
+        <div className="resume-mechanism__j" data-node-id="2984:484">
+          <img
+            className="resume-mechanism__j-image"
+            data-node-id="159:2"
+            src="/media/profile/open-portfolio-j-archive-source-700.png"
+            alt="Joshua's archive-led J mark"
+            width="460"
+            height="460"
+          />
+        </div>
       </div>
       <img
         className="resume-mechanism__frame"

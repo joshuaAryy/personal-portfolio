@@ -42,10 +42,31 @@ describe("League client shell", () => {
     expect(markup).toContain('href="/profile"');
     expect(markup).toContain('aria-label="Open profile"');
     expect(markup).toContain('/media/profile/topbar-account-ring.png');
-    expect(markup).toContain('/media/lobby/client-account-avatar.png');
-    expect(markup).toContain('/media/lobby/shell-utility-flag.svg');
-    expect(markup).toContain('/media/lobby/shell-utility-clock.svg');
+    expect(markup).toContain('/media/profile/topbar-avatar.png');
+    expect(markup).toContain('href="https://ca.linkedin.com/in/joshua-ary"');
+    expect(markup).toContain('href="/resume"');
+    expect(markup).toContain('href="https://github.com/joshuaAryy"');
+    expect(markup).toContain('href="mailto:joshuaaryy@gmail.com"');
+    expect(markup).not.toContain('/media/lobby/shell-utility-flag.svg');
+    expect(markup).not.toContain('aria-label="Expected graduation 2028; third place in the Brim Financial Challenge"');
     expect(markup).toContain("Joshua Aryeetey");
+  });
+
+  it("keeps the authentic portrait and verified utilities on project detail shells", () => {
+    const markup = renderClient("/projects/food-tracker");
+
+    expect(markup).toContain('class="header-account__avatar" src="/media/profile/topbar-avatar.png"');
+    expect(markup).toContain('href="https://ca.linkedin.com/in/joshua-ary"');
+    expect(markup).toContain('href="/resume"');
+    expect(markup).toContain('href="https://github.com/joshuaAryy"');
+    expect(markup).toContain('href="mailto:joshuaaryy@gmail.com"');
+  });
+
+  it("does not hide the approved utility links on project shells", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    expect(css).not.toMatch(
+      /\.client--project-shell \.header-client-tools,[^{]+\{[^}]*display:\s*none/,
+    );
   });
 
   it("keeps the rail compact, uses approved marks, and omits hidden draft labels", () => {
@@ -57,6 +78,12 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
+    expect(markup).toContain('/media/profile/open-portfolio-j-small-54.svg');
+    expect(markup).toContain('/media/profile/food-tracker-mark.svg');
+    expect(markup).not.toContain('/media/lobby/activity-art/activity-food-tracker.svg');
+    expect(markup).not.toContain('/media/lobby/activity-art/activity-crest.svg');
+    expect(markup).not.toContain('data-node-id="I2356:611;95:20">J</span>');
+    expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/lobby/activity-add.svg');
     expect(markup).toContain('/media/lobby/activity-list.svg');
     expect(markup).toContain('/media/lobby/activity-collapse.svg');
@@ -64,6 +91,30 @@ describe("League client shell", () => {
     expect(markup).toContain("OPEN TO SUMMER 2027");
     expect(markup).not.toContain("CASE STUDY");
     expect(markup).not.toContain("VIEW SOURCE REPOSITORY");
+  });
+
+  it("uses the canonical J mark in the Portfolio Activity medallion", () => {
+    const markup = renderClient("/home");
+    const portfolioStart = markup.indexOf('class="rail-avatar rail-avatar--activity rail-avatar--activity-portfolio"');
+    const portfolioEnd = markup.indexOf("</span>", portfolioStart);
+    const portfolioMark = markup.slice(portfolioStart, portfolioEnd);
+    const headerMark = markup.match(/class="brand-glyph" src="([^"]+)"/)?.[1];
+    const activityMark = portfolioMark.match(/src="([^"]+)" alt="" width="38" height="38" data-node-id="I2356:611;95:20"/)?.[1];
+
+    expect(portfolioMark).toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
+    expect(activityMark).toBe(headerMark);
+    expect(portfolioMark).not.toContain(">J</span>");
+    expect(readFileSync("src/styles.css", "utf8")).toMatch(
+      /\.rail-avatar--activity-portfolio img\s*\{[^}]*transform:\s*none/s,
+    );
+  });
+
+  it("gives Home and Resume Activity rows the Figma breathing room", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+
+    expect(css).toMatch(
+      /\.client--home-shell \.rail-link--status,\s*\.client--resume-shell \.rail-link--status\s*\{[^}]*min-height:\s*62px/s,
+    );
   });
 
   it("places the three contact destinations after page content for the narrow shell", () => {
@@ -82,16 +133,22 @@ describe("League client shell", () => {
     expect(contactMarkup).toContain('aria-label="LinkedIn (opens in a new tab)"');
     expect(contactMarkup).toContain('href="mailto:joshuaaryy@gmail.com"');
     expect(contactMarkup).toContain('aria-label="Email Joshua"');
+    expect(contactMarkup).toContain('href="/resume"');
+    expect(contactMarkup).toContain(">Resume</a>");
     expect(contactMarkup).not.toContain("Help");
     expect(contactMarkup).not.toContain(">X<");
   });
 
   it("matches Home Figma by keeping Resume out of the main destination navigation", () => {
-    for (const path of ["/", "/home"]) {
+    for (const path of ["/", "/home", "/projects", "/experience", "/hackathons", "/education"]) {
       const markup = renderClient(path);
       const navigation = markup.slice(
         markup.indexOf('<nav class="top-nav"'),
         markup.indexOf("</nav>", markup.indexOf('<nav class="top-nav"')),
+      );
+      const utilityNavigation = markup.slice(
+        markup.indexOf('<nav class="header-client-tools"'),
+        markup.indexOf("</nav>", markup.indexOf('<nav class="header-client-tools"')),
       );
 
       expect(navigation).toContain('href="/projects"');
@@ -99,6 +156,7 @@ describe("League client shell", () => {
       expect(navigation).toContain('href="/hackathons"');
       expect(navigation).toContain('href="/education"');
       expect(navigation).not.toContain('href="/resume"');
+      expect(utilityNavigation).toContain('href="/resume"');
     }
   });
 });
@@ -182,5 +240,21 @@ describe("Client route focus", () => {
     act(() => help.focus());
 
     expect(nav.scrollLeft).toBe(58);
+  });
+
+  it("reserves a compact Home Help slot before the narrow account control", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const narrowRules = css.slice(css.lastIndexOf("@media (max-width: 650px)"));
+    const helpRule = narrowRules.match(
+      /\.client--home-shell \.top-nav \.header-help\s*\{([^}]*)\}/,
+    )?.[1];
+
+    expect(helpRule).toMatch(/min-width:\s*36px/);
+    expect(helpRule).toMatch(/flex:\s*0\s+0\s+36px/);
+    expect(helpRule).toMatch(/padding-inline:\s*2px/);
+    expect(css).toMatch(
+      /\.client--home-shell \.top-nav a:nth-child\(-n \+ 4\)\s*\{[^}]*flex:\s*0 0 auto/s,
+    );
+    expect(css).toMatch(/\.top-nav\s*\{[^}]*overflow-x:\s*auto/s);
   });
 });

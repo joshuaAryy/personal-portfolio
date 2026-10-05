@@ -49,6 +49,15 @@ describe("Demos media browser", () => {
       "false",
       "false",
     ]);
+    expect(
+      buttons[0].querySelector<HTMLImageElement>(".demo-selector__thumb")?.getAttribute("src"),
+    ).toBe("/media/profile/food-tracker-mark.svg");
+    expect(
+      buttons[1].querySelector<HTMLImageElement>(".demo-selector__thumb")?.getAttribute("src"),
+    ).toBe("/media/profile/profile-crest-emblem.png");
+    expect(
+      buttons[2].querySelector<HTMLImageElement>(".demo-selector__thumb")?.getAttribute("src"),
+    ).toBe("/media/profile/choveigo-mark.svg");
     expect(host.querySelector<HTMLImageElement>(".demo-recording-rail")?.src).toContain(
       "/media/demos-rail-food.svg",
     );

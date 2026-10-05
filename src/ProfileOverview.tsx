@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import type { Project } from "./data";
+import { experienceIdentities, projectIdentities, type Project } from "./data";
 import ProfileNav from "./ProfileNav";
 import "./profile-overview.css";
 
@@ -26,19 +26,19 @@ const projectDetails: Record<string, ReactNode> = {
 
 const projectMarks: Record<string, { src: string; alt: string; wordmark?: boolean } | undefined> = {
   "food-tracker": {
-    src: "/media/profile/food-tracker-mark.svg",
+    src: projectIdentities["food-tracker"].mark,
     alt: "Food Tracker project mark",
   },
   choveigo: {
-    src: "/media/profile/choveigo-mark.svg",
+    src: projectIdentities.choveigo.mark,
     alt: "Cho’Veigo match-path project mark",
   },
   crest: {
-    src: "/media/profile/profile-crest-emblem.png",
+    src: projectIdentities.crest.mark,
     alt: "Crest project mark",
   },
   fraymakers: {
-    src: "/media/profile/fraymakers-logo.png",
+    src: projectIdentities.fraymakers.mark,
     alt: "Fraymakers official wordmark",
     wordmark: true,
   },
@@ -58,14 +58,14 @@ const experienceSignals = [
     name: "Living in Silico",
     role: "AI/ML Research Intern",
     focus: "Generative Molecular Modeling",
-    mark: "/media/profile/living-in-silico-logo.png",
+    mark: experienceIdentities["living-in-silico"].mark,
     path: "/experience/living-in-silico",
   },
   {
     name: "Stush Patties",
     role: "Software Engineering Intern",
     focus: "Data Pipelines & Automation",
-    mark: "/media/profile/stush-patties-logo.png",
+    mark: experienceIdentities["stush-patties"].mark,
     path: "/experience/stush-patties",
   },
 ] as const;

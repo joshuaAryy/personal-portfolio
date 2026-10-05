@@ -3,6 +3,7 @@ import { act } from "react";
 import { createRoot } from "react-dom/client";
 import { MemoryRouter, useLocation } from "react-router-dom";
 import { afterEach, describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import HomeExplore from "./HomeExplore";
 
 Object.defineProperty(globalThis, "IS_REACT_ACT_ENVIRONMENT", {
@@ -63,21 +64,45 @@ describe("HomeExplore", () => {
     expect(
       view.querySelector('[aria-label="Projects"] .home-explore__mode-emblem')?.getAttribute("src"),
     ).toBe("/media/lobby/home-mode-projects.svg");
+    expect(
+      view.querySelector('[aria-label="Education"] .home-explore__mode-emblem')?.getAttribute("src"),
+    ).toBe("/media/lobby/home-mode-education.svg");
   });
 
-  it("shows the archive's selected-project context in the lower queue", () => {
+  it("presents mode guidance and static project areas without project filters", () => {
     const view = renderHomeExplore();
     const queue = view.querySelector(".home-explore__selection");
 
     expect(queue?.querySelector("h2")?.textContent).toBe("Projects");
-    expect(queue?.textContent).toContain(
-      "Explore products and systems I build outside the classroom.",
-    );
-    expect(queue?.textContent).toContain(
-      "Select a focus, then confirm to enter the project lobby.",
-    );
-    expect(queue?.textContent).not.toContain("SELECTED MODE");
-    expect(queue?.textContent).not.toContain("MODE CONTENT");
+    expect(view.textContent).toContain("Choose a mode, then Confirm to continue.");
+    expect(view.textContent).not.toContain("EXPLORE / SELECT A MODE");
+    expect(view.textContent?.match(/Choose a mode, then Confirm to continue\./g)).toHaveLength(1);
+    expect(view.textContent).toContain("PROJECT AREAS");
+    expect(
+      [...(queue?.querySelectorAll(".home-explore__selection-focus li") ?? [])].map((row) => [
+        row.querySelector("strong")?.textContent,
+        row.querySelector("small")?.textContent,
+      ]),
+    ).toEqual([
+      ["AI / ML", "Machine intelligence"],
+      ["Software", "Systems + applications"],
+      ["Full Stack", "End-to-end products"],
+      ["Data / Automation", "Pipelines + tooling"],
+    ]);
+    expect(view.textContent).toContain("Products and systems built across software, AI, data and automation.");
+    expect(view.querySelector(".home-explore__selection-focus button")).toBeNull();
+    expect(view.querySelector(".home-explore__subnav")).toBeNull();
+  });
+
+  it("separates Back and Confirm and compacts project areas on mobile", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const pairRule = css.match(/\.home-explore__confirm-pair\s*\{([^}]*)\}/)?.[1];
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 760px)"));
+
+    expect(pairRule).toMatch(/gap:\s*12px/);
+    expect(pairRule).not.toMatch(/margin-right:\s*-/);
+    expect(mobileRules).toMatch(/\.home-explore__selection-focus ul\s*\{[^}]*grid-template-columns:\s*repeat\(2,/s);
+    expect(mobileRules).toMatch(/\.home-explore__selection-focus small\s*\{[^}]*display:\s*none/s);
   });
 
   it("keeps selection separate from confirming a destination", () => {

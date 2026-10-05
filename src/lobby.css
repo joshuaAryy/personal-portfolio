@@ -80,6 +80,32 @@
   gap: clamp(18px, 3vw, 46px);
 }
 
+.league-lobby__balance-slots {
+  position: absolute;
+  z-index: 1;
+  top: 25.5%;
+  right: 4.5%;
+  left: 4.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.league-lobby__balance-slot {
+  display: grid;
+  width: clamp(52px, 4.4vw, 70px);
+  aspect-ratio: 1 / 1;
+  place-items: center;
+  border: 1px solid #ac8238;
+  border-radius: 50%;
+  background: rgb(3 11 16 / 72%);
+  color: #e0bd6a;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 1;
+}
+
 .league-banner {
   position: relative;
   display: flex;
@@ -704,6 +730,28 @@
 .league-selected__stack {
   margin-top: 4px !important;
   color: #b9c4c5 !important;
+}
+
+@media (min-width: 901px) {
+  .league-lobby__banners--projects .league-banner__medallion {
+    width: clamp(66px, 6.4vw, 88px);
+    height: clamp(66px, 6.4vw, 88px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+  }
+
+  .league-lobby__banners--projects .league-banner__frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 140px;
+    height: 140px;
+    max-width: none;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
 }
 
 @media (min-width: 1800px) and (min-height: 1000px) {

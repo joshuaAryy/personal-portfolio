@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { projectIdentities } from "./data";
 import "./crest-case-study.css";
 
 const crestChapters = [
@@ -169,7 +170,7 @@ export default function CrestCaseStudy() {
           <div className="crest-hero__opening">
             <div className="crest-hero__identity">
               <div className="crest-hero__emblem" role="img" aria-label="Crest">
-                <img src="/media/profile/profile-crest-emblem.png" alt="" aria-hidden="true" />
+                <img src={projectIdentities.crest.mark} alt="" aria-hidden="true" />
                 <span>CREST</span>
               </div>
               <div>
