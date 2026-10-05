@@ -28,11 +28,16 @@ function ContactLinks() {
 }
 
 function MobileContactRow() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
   return (
     <nav className="mobile-contact-row" aria-label="Contact links">
       <ContactLinks />
-      <Link to="/resume" state={{ from: pathname }} aria-label="Resume">
+      <Link
+        to="/resume"
+        state={{ from: pathname, backgroundLocation: location }}
+        aria-label="Resume"
+      >
         Resume
       </Link>
     </nav>
@@ -40,7 +45,8 @@ function MobileContactRow() {
 }
 
 function Header() {
-  const { pathname } = useLocation();
+  const location = useLocation();
+  const { pathname } = location;
   const helpOverlay = useHelpOverlay();
   const isEducationProjectsPage = pathname === "/education/projects";
   const topNavRef = useRef<HTMLElement>(null);
@@ -188,7 +194,12 @@ function Header() {
       <nav className="header-client-tools" aria-label="Contact and resume">
         {headerUtilityLinks.map((item) => (
           item.href === "/resume" ? (
-            <Link className="header-client-tool header-client-tool--resume" key={item.label} to="/resume" state={{ from: pathname }}>
+            <Link
+              className="header-client-tool header-client-tool--resume"
+              key={item.label}
+              to="/resume"
+              state={{ from: pathname, backgroundLocation: location }}
+            >
               {item.label}
             </Link>
           ) : (

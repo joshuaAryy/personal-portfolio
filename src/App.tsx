@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { Navigate, Route, Routes, useLocation, useParams, type Location } from "react-router-dom";
 import { experience, projects } from "./data";
 import { Client } from "./PortfolioLayout";
 import { projectCasePaths } from "./project-route-paths";
@@ -12,7 +12,7 @@ import FoodTrackerPage from "./project-pages/FoodTrackerPage";
 import CrestPage from "./project-pages/CrestPage";
 import { HelpExperienceProvider, HelpRouteEntry } from "./Help";
 import { NotFoundContent } from "./NotFoundContent";
-import { ResumeFound, ResumeViewer } from "./ResumeFlow";
+import { ResumeFound, ResumeFoundTakeover, ResumeViewer } from "./ResumeFlow";
 import Opening from "./Opening";
 import ProfileNav from "./ProfileNav";
 import ProfileOverview, { JourneyTraitMedallions } from "./ProfileOverview";
@@ -44,9 +44,25 @@ function NotFound() {
   );
 }
 export default function App() {
+  const location = useLocation();
+  const routeState = location.state as { backgroundLocation?: Location } | null;
+  const candidateBackground = routeState?.backgroundLocation;
+  const backgroundLocation =
+    location.pathname === "/resume" &&
+    candidateBackground &&
+    !candidateBackground.pathname.startsWith("/resume")
+      ? candidateBackground
+      : undefined;
+
   return (
     <HelpExperienceProvider>
-    <Routes>
+    <>
+    <div
+      className="app-route-underlay"
+      aria-hidden={backgroundLocation ? true : undefined}
+      inert={backgroundLocation ? true : undefined}
+    >
+    <Routes location={backgroundLocation ?? location}>
       <Route
         path="/"
         element={<Opening underlay={<HomeExplore />} />}
@@ -177,6 +193,20 @@ export default function App() {
       />
       <Route path="*" element={<NotFound />} />
     </Routes>
+    </div>
+    {backgroundLocation && (
+      <Routes>
+        <Route
+          path="/resume"
+          element={
+            <ResumeFoundTakeover>
+              <ResumeFound />
+            </ResumeFoundTakeover>
+          }
+        />
+      </Routes>
+    )}
+    </>
     </HelpExperienceProvider>
   );
 }

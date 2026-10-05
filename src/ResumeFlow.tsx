@@ -1,10 +1,79 @@
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useRef, type KeyboardEvent as ReactKeyboardEvent, type ReactNode } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import ResumeMechanism from "./ResumeMechanism";
 import "./resume.css";
 
 const resumePdfUrl = "/resume/Joshua_Aryeetey_General_Resume_v13.pdf";
 const resumeFileName = "Joshua_Aryeetey_General_Resume_v13.pdf";
+
+export function ResumeFoundTakeover({ children }: { children: ReactNode }) {
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const returnFocusRef = useRef<HTMLElement | null>(null);
+  const hasCapturedFocusRef = useRef(false);
+
+  useLayoutEffect(() => {
+    if (!hasCapturedFocusRef.current) {
+      const activeElement = document.activeElement;
+      returnFocusRef.current = activeElement instanceof HTMLElement && activeElement !== document.body
+        ? activeElement
+        : null;
+      hasCapturedFocusRef.current = true;
+    }
+    dialogRef.current?.focus({ preventScroll: true });
+  }, []);
+
+  useEffect(() => () => {
+    const previousTarget = returnFocusRef.current;
+    const target = previousTarget?.isConnected
+      ? previousTarget
+      : document.querySelector<HTMLElement>("#main");
+    target?.focus({ preventScroll: true });
+  }, []);
+
+  function keepFocusInside(event: ReactKeyboardEvent<HTMLDivElement>) {
+    if (event.key !== "Tab") return;
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+
+    const focusable = Array.from(
+      dialog.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
+      ),
+    ).filter((element) => !element.hasAttribute("hidden"));
+    if (!focusable.length) {
+      event.preventDefault();
+      dialog.focus({ preventScroll: true });
+      return;
+    }
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const activeElement = document.activeElement;
+    if (event.shiftKey && (activeElement === first || activeElement === dialog)) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  }
+
+  return (
+    <div className="resume-takeover">
+      <div
+        ref={dialogRef}
+        className="resume-takeover__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="resume-found-title"
+        tabIndex={-1}
+        onKeyDown={keepFocusInside}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
 
 function getReturnPath(state: unknown): string {
   if (!state || typeof state !== "object" || !("from" in state)) {
