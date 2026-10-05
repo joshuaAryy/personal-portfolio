@@ -8,7 +8,7 @@ const storyRoutes = [
   ["Crest", "/projects/crest", "<h1>Crest</h1>"],
   ["Cho’Veigo", "/projects/choveigo", "AUTHENTIC PRODUCT VIEW / RECOMMENDATIONS"],
   ["Fraymakers", "/projects/fraymakers", "MATCH DATA TO VOD THUMBNAILS"],
-  ["Living in Silico", "/experience/living-in-silico", "Molecules need representation before generation."],
+  ["Living in Silico", "/experience/living-in-silico", "A research internship in molecular generation."],
   ["Stush Patties", "/experience/stush-patties", "Different file shapes. One reporting path."],
 ] as const;
 
