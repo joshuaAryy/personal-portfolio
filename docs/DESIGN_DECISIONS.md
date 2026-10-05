@@ -24,6 +24,8 @@ Owner review overrides old pass approvals. A critique clearance is scoped to the
 
 ## Public case-study principles
 
+> **Supersession:** the specific case-study structures, story orders, “quality references,” and convergence conclusions documented below were authored before the 2026-10-05 owner review. They remain historical evidence, but they do not freeze any page or establish sufficient breadth. All six case studies are open for substantial project-specific story and layout re-authoring. Use [the consolidated owner direction](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) as the current design contract; keep verified facts and ownership boundaries from [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md).
+
 Every case study is a complete long-form page, from the opening through the close. Do not design only a 1080px viewport and leave the rest to implementation. Owner/source notes are not a public-copy checklist. Ask whether each item helps a first-time visitor understand the product or Joshua’s technical work; relocate or omit it when it does not. Keep factual caveats in the source record, not automatically in the hero.
 
 2026-10-02 truth audit: Cho’Veigo now describes Gemini as prompt-constrained, Fraymakers scopes direct ownership to `thumbnail.js`, and Living in Silico keeps its opening on the documented internship and personal learning without assigning a prior expertise level to the research group. React, authored Figma bodies, and exact review clones are synchronized; their render status was subsequently verified in the route-specific Preview reports and queue rows 5-10; owner review remains open.

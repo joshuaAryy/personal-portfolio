@@ -1,5 +1,7 @@
 # Client Architecture
 
+> **Current owner correction (2026-10-05):** this file describes implementation structure, not current design acceptance. The owner reopened all six long-form case studies for substantial project-specific story and layout re-authoring. Older convergence, preserve, or “no material gap” statements below are historical only. Follow [the consolidated owner direction](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) for the active correction goal. Preserve strong qualities without freezing whole pages.
+
 - Vite, React, TypeScript, and React Router provide a static client with direct-route support on a host configured for SPA fallback.
 - `src/App.tsx` owns route registration and page composition. `src/PortfolioLayout.tsx` owns the shared shell/rail; `src/HomeExplore.tsx` owns first-run mode selection; `src/Lobby.tsx` owns Projects, Experience, Hackathons, and Education lobbies; `src/DemosPage.tsx` owns Demos; `src/ProfileNav.tsx` and `src/ProfileOverview.tsx` own Profile navigation and Overview. `src/Help.tsx` owns contextual overlay state and help routing. Case-study pages use focused route/story components. Recovery, Resume Found, and the PDF viewer are separate components.
 - `src/data.ts` contains short project and experience labels; it is not a CMS. `src/styles.css` contains shared shell, focus, reduced-motion, and responsive rules. `src/profile-overview.css` owns Overview styling.

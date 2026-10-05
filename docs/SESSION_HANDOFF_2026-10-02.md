@@ -58,7 +58,9 @@ The former Sol-director model below is superseded by MODEL_ROUTING.md. Keep hist
 6. [CASE_STUDY_CONTENT_SOURCE.md](CASE_STUDY_CONTENT_SOURCE.md) for factual truth. It intentionally preserves facts, caveats, ownership boundaries, and uncertainty that may never belong in public-facing copy. Public story decisions live in design/spec docs; do not paste internal research or owner notes verbatim into a case study.
 7. Historical chats and archived passes are explanatory evidence only. They never override current owner direction.
 
-## 5. Current surface status
+## 5. Historical surface status snapshot — superseded by the 2026-10-05 owner review
+
+The rows below preserve evidence from prior implementation and render passes; they are not current design acceptance or a direction to freeze whole surfaces. The owner’s consolidated 2026-10-05 review found all six long-form case studies too condensed and reopened them for substantial story/layout re-authoring. It also reopened the named shell, environment, Opening, Resume Found hierarchy, Profile composition, Journey header, and Highlights corrections. Use [the consolidated owner direction](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) and [current implementation status](IMPLEMENTATION_STATUS.md) for the active goal. Test success, route completeness, and prior critic clearance do not establish owner acceptance.
 
 | Surface | Authoritative Figma | Current status and preserve | Remaining work / review state |
 |---|---|---|---|
