@@ -159,6 +159,25 @@ describe("League client shell", () => {
       expect(utilityNavigation).toContain('href="/resume"');
     }
   });
+
+  it("fits the four primary labels and Help before the account control on narrow shells", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+
+    expect(css).toMatch(/(?:^|[}\n])\s*\.top-nav a:nth-child\(-n \+ 4\)\s*\{[^}]*font-size:\s*9px/s);
+    expect(css).toMatch(/(?:^|[}\n])\s*\.top-nav a\.header-help,\s*\.top-nav button\.header-help\s*\{[^}]*min-width:\s*36px/s);
+    expect(css).toMatch(/(?:^|[}\n])\s*\.top-nav > a,\s*\.top-nav > button\s*\{[^}]*height:\s*56px/s);
+  });
+
+  it("keeps the narrow Help button from inheriting the wider desktop minimum", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const narrowRules = css.slice(css.indexOf("@media (max-width: 650px)"));
+    const helpButtonRule = narrowRules.match(
+      /\.top-nav a\.header-help,\s*\.top-nav button\.header-help\s*\{([^}]*)\}/,
+    )?.[1];
+
+    expect(helpButtonRule).toMatch(/min-width:\s*36px/);
+    expect(helpButtonRule).toMatch(/flex:\s*0\s+0\s+36px/);
+  });
 });
 
 describe("Client route focus", () => {
@@ -242,18 +261,18 @@ describe("Client route focus", () => {
     expect(nav.scrollLeft).toBe(58);
   });
 
-  it("reserves a compact Home Help slot before the narrow account control", () => {
+  it("reserves a compact Help slot before the narrow account control", () => {
     const css = readFileSync("src/styles.css", "utf8");
-    const narrowRules = css.slice(css.lastIndexOf("@media (max-width: 650px)"));
+    const narrowRules = css.slice(css.indexOf("@media (max-width: 650px)"));
     const helpRule = narrowRules.match(
-      /\.client--home-shell \.top-nav \.header-help\s*\{([^}]*)\}/,
+      /\.top-nav a\.header-help,\s*\.top-nav button\.header-help\s*\{([^}]*)\}/,
     )?.[1];
 
     expect(helpRule).toMatch(/min-width:\s*36px/);
     expect(helpRule).toMatch(/flex:\s*0\s+0\s+36px/);
     expect(helpRule).toMatch(/padding-inline:\s*2px/);
     expect(css).toMatch(
-      /\.client--home-shell \.top-nav a:nth-child\(-n \+ 4\)\s*\{[^}]*flex:\s*0 0 auto/s,
+      /(?:^|[}\n])\s*\.top-nav a:nth-child\(-n \+ 4\)\s*\{[^}]*flex:\s*0 0 auto/s,
     );
     expect(css).toMatch(/\.top-nav\s*\{[^}]*overflow-x:\s*auto/s);
   });

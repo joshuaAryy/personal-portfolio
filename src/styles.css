@@ -3239,24 +3239,30 @@ a:focus-visible {
     min-width: auto;
     padding: 0 8px;
   }
-  .client--home-shell .top-nav a:nth-child(-n + 4) {
+  .top-nav a:nth-child(-n + 4) {
     flex: 0 0 auto;
     min-width: 0;
     padding-inline: 4px;
     font-size: 9px;
     white-space: nowrap;
   }
-  .client--home-shell .top-nav::before,
-  .client--home-shell .top-nav::after {
+  .top-nav::before,
+  .top-nav::after {
     content: "";
     flex: 0 0 8px;
   }
-  .client--home-shell .top-nav > a,
-  .client--home-shell .top-nav > button {
+  .top-nav > a,
+  .top-nav > button {
     height: 56px;
     min-height: 56px;
     align-self: center;
     box-sizing: border-box;
+  }
+  .top-nav a.header-help,
+  .top-nav button.header-help {
+    flex: 0 0 36px;
+    min-width: 36px;
+    padding-inline: 2px;
   }
   .top-nav a.current:after {
     bottom: 12px;
@@ -5982,7 +5988,8 @@ a:focus-visible {
 /* Journey: an original, full-length path composition without reference art. */
 .main--journey {
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   background: #05060f;
   scroll-behavior: smooth;
 }
@@ -6003,7 +6010,6 @@ a:focus-visible {
   }
 }
 .journey-layout {
-  --journey-background-scroll: 0px;
   position: relative;
   isolation: isolate;
   display: grid;
@@ -6019,7 +6025,6 @@ a:focus-visible {
   height: 1922px;
   overflow: hidden;
   pointer-events: none;
-  transform: translateY(calc(0px - var(--journey-background-scroll)));
 }
 .journey-void-field__upper,
 .journey-void-field__continuation,
@@ -6294,21 +6299,9 @@ a:focus-visible {
   container-name: journey-content;
   container-type: inline-size;
 }
-.journey-scrollport {
+.journey-story-content {
   position: relative;
-  --journey-scrollport-height: calc(100vh - 202px);
-  height: var(--journey-scrollport-height);
-  min-height: 420px;
-  overflow-x: hidden;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  scrollbar-color: #806e43 #091119;
-  scrollbar-width: thin;
-  scroll-behavior: smooth;
-}
-.journey-scrollport:focus-visible {
-  outline: 2px solid #f4cb69;
-  outline-offset: -2px;
+  overflow: visible;
 }
 .journey-content > .profile-nav {
   width: min(1170px, calc(100% - 72px));
@@ -6369,7 +6362,7 @@ a:focus-visible {
   width: 44px;
   height: min(
     760px,
-    calc(var(--journey-scrollport-height) - var(--journey-locator-top) - 20px)
+    calc(100vh - 202px - var(--journey-locator-top) - 20px)
   );
   display: flex;
   flex-direction: column;
@@ -6460,32 +6453,45 @@ a:focus-visible {
   position: absolute;
   top: 12px;
   bottom: 134px;
-  left: 5.2%;
-  width: 18px;
+  left: 0;
+  right: 0;
   pointer-events: none;
 }
-.journey-path:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 8px;
-  width: 3px;
-  background: linear-gradient(180deg, #c3a453 0%, #c3a453 34%, #78b7b8 54%, #c3a453 80%, #767052 100%);
-  transform: rotate(2deg);
-  transform-origin: center;
+.journey-path__drawing {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
 }
-.journey-path__segment {
-  position: absolute;
-  left: -2px;
-  width: 26px;
-  height: 2px;
-  transform: rotate(-3deg);
-  background: #96804c;
+.journey-path__spine {
+  fill: none;
+  stroke: url(#journey-spine-gradient);
+  stroke-width: 0.32;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
-.journey-path__segment--gold { top: 23%; }
-.journey-path__segment--cyan { top: 50%; background: #7db6b7; }
-.journey-path__segment--future { top: 76%; background: #9a8d61; opacity: 0.55; }
+.journey-path__connector {
+  fill: none;
+  stroke: #988857;
+  stroke-width: 0.13;
+  vector-effect: non-scaling-stroke;
+}
+.journey-path__connector--tmu,
+.journey-path__connector--lis-spark,
+.journey-path__connector--lis { stroke: #77a6a9; }
+.journey-path__connector--summer { stroke: #c3a453; }
+.journey-path__nodes ellipse {
+  fill: #181d20;
+  stroke: #c1a452;
+  stroke-width: 0.22;
+  vector-effect: non-scaling-stroke;
+}
+.journey-path__nodes ellipse:nth-child(3),
+.journey-path__nodes ellipse:nth-child(5),
+.journey-path__nodes ellipse:nth-child(9) {
+  fill: #c3a453;
+  stroke-width: 0.3;
+}
 .journey-card {
   position: absolute;
   padding: 15px 18px 16px;
@@ -6665,14 +6671,48 @@ a:focus-visible {
     margin-left: max(24px, calc((100% - 860px) / 2));
     padding: 12px 0 0 22px;
   }
-  .journey-path { left: 3px; top: 0; bottom: 24px; }
+  .journey-path { left: 3px; right: auto; top: 0; bottom: 24px; width: 18px; }
+  .journey-path__connector { display: none; }
+  .journey-path__nodes { display: none; }
   .journey-card {
+    --journey-connector-offset: 0%;
     position: relative;
     inset: auto;
     width: 100%;
     min-height: unset;
     padding: 17px 18px;
   }
+  .journey-card::before,
+  .journey-card::after {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+    content: "";
+  }
+  .journey-card::before {
+    top: 50%;
+    left: calc(-18px - var(--journey-connector-offset));
+    width: calc(18px + var(--journey-connector-offset));
+    height: 1px;
+    background: var(--journey-connector-color, #988857);
+    transform: translateY(-50%);
+  }
+  .journey-card::after {
+    top: calc(50% - 4px);
+    left: calc(-22px - var(--journey-connector-offset));
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--journey-connector-color, #c1a452);
+    border-radius: 50%;
+    background: #181d20;
+  }
+  .journey-card--apple,
+  .journey-card--naruto,
+  .journey-card--spotify { --journey-connector-offset: 16.28%; }
+  .journey-card--tmu,
+  .journey-card--lis-spark,
+  .journey-card--lis { --journey-connector-color: #77a6a9; }
+  .journey-card--summer { --journey-connector-color: #c3a453; }
   .journey-card--apple,
   .journey-card--naruto,
   .journey-card--spotify { width: 86%; margin-left: auto; }
@@ -6811,12 +6851,6 @@ a:focus-visible {
   }
   .journey-identity__traits { margin-top: 10px; }
   .journey-content { width: 100%; }
-  .journey-scrollport {
-    height: auto;
-    min-height: 0;
-    overflow: visible;
-    scroll-behavior: auto;
-  }
   .journey-content > .profile-nav,
   .journey-heading {
     width: calc(100% - 36px);
@@ -7174,12 +7208,4 @@ a:focus-visible {
   height: 84.2%;
   border-radius: 50%;
   object-fit: cover;
-}
-
-@media (max-width: 650px) {
-  .client--home-shell .top-nav .header-help {
-    flex: 0 0 36px;
-    min-width: 36px;
-    padding-inline: 2px;
-  }
 }

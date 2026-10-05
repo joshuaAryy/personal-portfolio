@@ -103,6 +103,11 @@ export default function DemosPage() {
                   src={current.image}
                   alt={current.imageAlt}
                 />
+                {selected === "food" && (
+                  <span className="demo-player__pending" role="status">
+                    DEMO PENDING
+                  </span>
+                )}
                 {selected === "crest" && (
                   <>
                     <span

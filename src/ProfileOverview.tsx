@@ -318,15 +318,15 @@ function ProfileSignalPanel({
   projects,
   projectCasePaths,
 }: {
-  signal: ProfileSignalId;
+  signal: ProfileSignalId | null;
   projects: Project[];
   projectCasePaths: Record<string, string>;
 }) {
-  const title = signal.toUpperCase();
+  const title = signal?.toUpperCase();
   return (
-    <section id="profile-signal-preview-panel" className={`profile-project-panel profile-project-panel--${signal}`} aria-labelledby="profile-panel-heading">
+    <section id="profile-signal-preview-panel" className={`profile-project-panel${signal ? ` profile-project-panel--${signal}` : " profile-project-panel--neutral"}`} aria-label={title ? `${title} details` : "Profile signal details"} hidden={!signal}>
       <img className="profile-project-panel__enclosure" src="/media/profile/profile-enclosure.svg" alt="" aria-hidden="true" />
-      <h2 id="profile-panel-heading">{title}</h2>
+      {title && <h2 id="profile-panel-heading">{title}</h2>}
       <img className="profile-project-panel__divider" src="/media/profile/profile-title-divider.png" alt="" aria-hidden="true" />
 
       {signal === "projects" && (
@@ -393,7 +393,7 @@ export default function ProfileOverview({
 }: ProfileOverviewProps) {
   const [hoveredSignal, setHoveredSignal] = useState<ProfileSignalId | null>(null);
   const [focusedSignal, setFocusedSignal] = useState<ProfileSignalId | null>(null);
-  const displayedSignal = hoveredSignal ?? focusedSignal ?? "projects";
+  const displayedSignal = hoveredSignal ?? focusedSignal;
   return (
     <div className="profile-layout">
       <aside className="identity-panel" aria-label="Joshua Aryeetey profile">
@@ -424,7 +424,7 @@ export default function ProfileOverview({
           <p>COMPUTER ENGINEERING</p>
           <p>SOFTWARE · AI / ML</p>
         </div>
-        <div className="identity-panel__degree" role="img" aria-label="Computer Engineering">
+        <div className="identity-panel__degree" role="img" aria-label="Computer Engineering degree">
           <img src="/media/profile/portrait-medallion.png" alt="" aria-hidden="true" />
           <span aria-hidden="true">CE</span>
         </div>
@@ -458,9 +458,7 @@ export default function ProfileOverview({
                 className={`profile-signal${
                   hoveredSignal === signal.id || focusedSignal === signal.id
                     ? " profile-signal--preview"
-                    : !hoveredSignal && !focusedSignal && signal.id === "projects"
-                      ? " profile-signal--selected"
-                      : ""
+                    : ""
                 }`}
                 role="group"
                 tabIndex={0}

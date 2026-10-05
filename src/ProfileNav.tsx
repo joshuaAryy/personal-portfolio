@@ -9,9 +9,9 @@ export default function ProfileNav() {
       <NavLink end className={({ isActive }) => (isActive ? "active" : "")} to="/profile/journey">
         Journey
       </NavLink>
-      <span aria-disabled="true">
+      <NavLink end className={({ isActive }) => (isActive ? "active" : "")} to="/profile/highlights">
         Personal Highlights
-      </span>
+      </NavLink>
       <NavLink end className={({ isActive }) => (isActive ? "active" : "")} to="/profile/demos">
         Demos
       </NavLink>

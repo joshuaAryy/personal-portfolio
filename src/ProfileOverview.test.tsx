@@ -41,19 +41,14 @@ function cssPixels(rule: string, property: string) {
 }
 
 describe("Profile Overview", () => {
-  it("opens each project from its identity and keeps verified source links icon-sized", () => {
+  it("keeps project details out of the initial neutral panel", () => {
     const markup = renderProfile();
 
-    expect(markup).toContain('href="/projects/food-tracker"');
-    expect(markup).toContain('href="/projects/choveigo"');
-    expect(markup).toContain('href="/projects/crest"');
-    expect(markup).toContain('href="/projects/fraymakers"');
-    expect(markup).toContain('href="https://github.com/joshuaAryy/food-tracker"');
-    expect(markup).toContain('aria-label="Open Food Tracker source repository"');
+    expect(markup).toMatch(/<section id="profile-signal-preview-panel"[^>]*hidden=""/);
+    expect(markup).not.toContain('href="/projects/food-tracker"');
+    expect(markup).not.toContain('href="https://github.com/joshuaAryy/food-tracker"');
     expect(markup).toContain('aria-label="Joshua Aryeetey profile"');
     expect(markup).toContain('alt="Joshua Aryeetey"');
-    expect(markup).toContain("/media/profile/food-tracker-mark.svg");
-    expect(markup).toContain("/media/profile/profile-crest-emblem.png");
     expect(markup).not.toContain("CASE STUDY");
     expect(markup).not.toContain("VIEW SOURCE");
   });
@@ -69,17 +64,71 @@ describe("Profile Overview", () => {
     expect(markup).toContain("/media/profile/academics-signal.svg");
   });
 
-  it("keeps the four lower Figma signals as static summaries with Projects selected", () => {
+  it("keeps the four lower Figma signals as static summaries without a default preview", () => {
     const markup = renderProfile();
 
     expect(markup).toContain('role="group" aria-label="Profile summary details"');
     expect(markup.match(/class="profile-signal(?:\s[^"]*)?"/g)).toHaveLength(4);
-    expect(markup).toContain('<h2 id="profile-panel-heading">PROJECTS</h2>');
+    expect(markup).not.toContain('id="profile-panel-heading"');
+    expect(markup).not.toContain("Food tracking");
+    expect(markup).not.toContain("Resume tailoring");
+    expect(markup).not.toContain("MPC Hacks 2026");
     expect(markup).toContain('<span class="profile-signal__label">PROJECTS</span>');
     expect(markup).toContain('<span class="profile-signal__value">2028</span>');
     expect(markup).not.toContain("profile-tab-");
     expect(markup).not.toContain('role="tablist"');
     expect(markup).not.toContain('role="tabpanel"');
+    expect(markup).toContain('<span class="profile-signal__value">4</span>');
+    expect(markup).toContain('<span class="profile-signal__value">2</span>');
+    expect(markup).toContain('<span class="profile-signal__value">1</span>');
+    expect(markup).toContain('<span class="profile-signal__value">2028</span>');
+  });
+
+  it("separates the CE credential and stacks trait emblems above their labels", () => {
+    const markup = renderProfile();
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const traitRule = cssBlock(profileCss, ".main--profile .identity-traits");
+    const traitItemRule = cssBlock(profileCss, ".main--profile .identity-traits > .profile-trait");
+    const traitSpanRule = cssBlock(profileCss, ".main--profile .identity-traits > .profile-trait > span");
+    const medallionRule = cssBlock(profileCss, ".profile-trait__medallion");
+    const labelRule = cssBlock(profileCss, ".profile-trait__label");
+
+    expect(markup).toContain('aria-label="Computer Engineering degree"');
+    expect(traitRule).toContain("grid-template-columns: 1fr");
+    expect(traitRule).toContain("grid-template-rows: repeat(3");
+    expect(traitItemRule).toContain("display: flex");
+    expect(traitSpanRule).toContain("display: block");
+    expect(medallionRule).toContain("position: relative");
+    expect(labelRule).toContain("margin-top:");
+
+    const narrowRules = cssBlock(profileCss, "@media (max-width: 900px)");
+    const degreeRule = cssBlock(narrowRules, ".identity-panel__degree");
+    const finalDisciplineRule = cssBlock(narrowRules, ".identity-panel__discipline p:last-child");
+    const degreeTop = cssPixels(degreeRule, "top") ?? 0;
+    const disciplineTop = cssPixels(finalDisciplineRule, "top") ?? 0;
+    expect(degreeTop).toBeGreaterThanOrEqual(disciplineTop + 26);
+  });
+
+  it("places the desktop signal row below the hero border with breathing room", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const overviewRule = cssBlock(profileCss, ".main--profile .profile-overview");
+    const enclosureRule = cssBlock(profileCss, ".profile-project-panel__enclosure");
+    const signalRule = cssBlock(profileCss, ".profile-signal-grid");
+    const tabletRule = cssBlock(profileCss, "@media (max-width: 1858px) and (min-width: 901px)");
+    const tabletOverview = cssBlock(tabletRule, ".main--profile .profile-overview");
+    const narrowRule = cssBlock(profileCss, "@media (max-width: 900px)");
+    const narrowOverview = cssBlock(narrowRule, ".main--profile .profile-overview");
+    const heroBottom = (cssPixels(enclosureRule, "top") ?? 0) + (cssPixels(enclosureRule, "height") ?? 0);
+    const signalTop = cssPixels(signalRule, "top") ?? 0;
+    const signalBottom = signalTop + (cssPixels(signalRule, "height") ?? 0);
+    const overviewHeight = cssPixels(overviewRule, "height") ?? 0;
+
+    expect(signalTop).toBeGreaterThanOrEqual(heroBottom + 24);
+    expect(overviewHeight).toBeGreaterThanOrEqual(signalBottom + 24);
+    expect(tabletOverview).toContain("flex-direction: column");
+    expect(tabletOverview).toContain("gap: 24px");
+    expect(narrowOverview).toContain("flex-direction: column");
+    expect(narrowOverview).toContain("gap: 24px");
   });
 
   it("keeps the smoky Profile field and circular Experience badges from the current Figma treatment", () => {

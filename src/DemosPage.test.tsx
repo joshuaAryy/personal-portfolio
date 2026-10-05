@@ -36,6 +36,15 @@ function select(label: string) {
 }
 
 describe("Demos media browser", () => {
+  it("labels Food's static identity poster as pending without suggesting playback", () => {
+    expect(host.querySelector('[role="status"]')?.textContent?.trim()).toBe("DEMO PENDING");
+    expect(host.querySelector(".demo-player__play")).toBeNull();
+    expect(host.querySelector("iframe")).toBeNull();
+
+    select("CREST");
+    expect(host.querySelector('[role="status"]')).toBeNull();
+  });
+
   it("keeps the three recordings available and shows Food Tracker's selected Figma still", () => {
     const buttons = [...host.querySelectorAll<HTMLButtonElement>(".demo-selector__button")];
 

@@ -18,6 +18,7 @@ import ProfileNav from "./ProfileNav";
 import ProfileOverview, { JourneyTraitMedallions } from "./ProfileOverview";
 import Lobby from "./Lobby";
 import DemosPage from "./DemosPage";
+import PersonalHighlightsPage from "./PersonalHighlightsPage";
 import HomeExplore from "./HomeExplore";
 import EducationProjects from "./EducationProjects";
 
@@ -125,6 +126,7 @@ export default function App() {
         }
       />
       <Route path="/profile/demos" element={<DemosPage />} />
+      <Route path="/profile/highlights" element={<PersonalHighlightsPage />} />
       <Route
         path="/projects/food-tracker"
         element={<FoodTrackerPage />}

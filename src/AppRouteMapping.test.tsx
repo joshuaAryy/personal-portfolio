@@ -29,6 +29,7 @@ const primaryRoutes = [
   ["profile overview", "/profile", "<h1>JOSHUA ARYEETEY</h1>"],
   ["profile journey", "/profile/journey", "<h1>Curiosity became building.</h1>"],
   ["profile demos", "/profile/demos", "data-node-id=\"1316:131\">FOOD TRACKER</h1>"],
+  ["personal highlights", "/profile/highlights", '<h1 id="personal-highlights-title">PERSONAL HIGHLIGHTS</h1>'],
   ["resume found", "/resume", 'id="resume-found-title" class="resume-mechanism__title"'],
   ["resume viewer", "/resume/viewer", "APPROVED GENERAL RESUME"],
 ] as const;
@@ -40,6 +41,29 @@ describe("primary App route mapping", () => {
 
   it("links the Education selected tray to its projects page", () => {
     expect(renderRoute("/education")).toContain('href="/education/projects"');
+  });
+
+  it("makes Personal Highlights a reachable Profile navigation destination", () => {
+    const page = renderRoute("/profile/highlights");
+    expect(page).toContain('href="/profile/highlights"');
+    expect(page).toContain('aria-current="page"');
+  });
+
+  it("renders seven accessible owner-supplied Highlights photos and omits private/held-back items", () => {
+    const page = renderRoute("/profile/highlights");
+    expect(page.match(/class="personal-highlights__photo"[^>]*alt="[^"]+"/g)).toHaveLength(7);
+    for (const source of [
+      "IMG_0098.jpeg",
+      "IMG_0208.jpeg",
+      "IMG_0305.jpeg",
+      "IMG_0308.jpeg",
+      "IMG_0320.jpeg",
+      "IMG_0394.jpeg",
+      "IMG_0422.jpeg",
+    ]) {
+      expect(page).toContain(`/media/profile/highlights/${source}`);
+    }
+    expect(page).not.toMatch(/IMG_0618|IMG_0334|IMG_0338|shih-tzu/i);
   });
 
   it("places the continuous Figma Void field at the Journey layout root", () => {

@@ -106,33 +106,30 @@ function JourneyLocator({
 
 export default function JourneyCase() {
   const [activeWaypoint, setActiveWaypoint] = useState<JourneyWaypointId>("origin");
-  const scrollportRef = useRef<HTMLDivElement | null>(null);
+  const storyRef = useRef<HTMLDivElement | null>(null);
   const trackRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const scrollport = scrollportRef.current;
+    const story = storyRef.current;
     const track = trackRef.current;
-    if (!scrollport || !track) return;
+    if (!story || !track) return;
 
-    const journeyLayout = scrollport.closest<HTMLElement>(".journey-layout");
+    const main = story.closest<HTMLElement>(".main--journey");
     let frame = 0;
     const updateWaypoint = () => {
       if (frame) return;
       frame = window.requestAnimationFrame(() => {
         frame = 0;
-        const overflowY = window.getComputedStyle(scrollport).overflowY;
-        const contentIsScroller = overflowY === "auto" || overflowY === "scroll";
-        journeyLayout?.style.setProperty(
-          "--journey-background-scroll",
-          contentIsScroller ? `${scrollport.scrollTop}px` : "0px",
+        const mainIsScroller = main !== null && ["auto", "scroll"].includes(
+          window.getComputedStyle(main).overflowY,
         );
-        const rootTop = contentIsScroller ? scrollport.getBoundingClientRect().top : 0;
-        const viewportHeight = contentIsScroller
-          ? scrollport.clientHeight
+        const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
+        const viewportHeight = mainIsScroller
+          ? main.clientHeight
           : window.innerHeight;
         const activationLine = rootTop + viewportHeight * 0.35;
-        const atEnd = contentIsScroller
-          ? scrollport.scrollTop + scrollport.clientHeight >= scrollport.scrollHeight - 2
+        const atEnd = mainIsScroller
+          ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
           : window.scrollY + window.innerHeight >=
             document.documentElement.scrollHeight - 2;
         const sectionTops = Object.fromEntries(
@@ -148,37 +145,38 @@ export default function JourneyCase() {
       });
     };
 
-    scrollport.addEventListener("scroll", updateWaypoint, { passive: true });
+    main?.addEventListener("scroll", updateWaypoint, { passive: true });
     window.addEventListener("scroll", updateWaypoint, { passive: true });
     window.addEventListener("resize", updateWaypoint);
     updateWaypoint();
     return () => {
-      scrollport.removeEventListener("scroll", updateWaypoint);
+      main?.removeEventListener("scroll", updateWaypoint);
       window.removeEventListener("scroll", updateWaypoint);
       window.removeEventListener("resize", updateWaypoint);
-      journeyLayout?.style.removeProperty("--journey-background-scroll");
       if (frame) window.cancelAnimationFrame(frame);
     };
   }, []);
 
   const selectWaypoint = useCallback((id: JourneyWaypointId) => {
     const waypoint = journeyWaypoints.find((item) => item.id === id);
-    const scrollport = scrollportRef.current;
+    const story = storyRef.current;
     const target = waypoint && document.getElementById(waypoint.target);
-    if (!scrollport || !target) return;
+    if (!story || !target) return;
 
-    const overflowY = window.getComputedStyle(scrollport).overflowY;
-    const contentIsScroller = overflowY === "auto" || overflowY === "scroll";
-    const rootTop = contentIsScroller ? scrollport.getBoundingClientRect().top : 0;
-    const viewportHeight = contentIsScroller ? scrollport.clientHeight : window.innerHeight;
+    const main = story.closest<HTMLElement>(".main--journey");
+    const mainIsScroller = main !== null && ["auto", "scroll"].includes(
+      window.getComputedStyle(main).overflowY,
+    );
+    const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
+    const viewportHeight = mainIsScroller ? main.clientHeight : window.innerHeight;
     const activationLine = rootTop + viewportHeight * 0.35;
     const targetTop = target.getBoundingClientRect().top;
     const behavior: ScrollBehavior = prefersReducedMotion() ? "auto" : "smooth";
 
     setActiveWaypoint(id);
-    if (contentIsScroller) {
-      scrollport.scrollTo({
-        top: scrollport.scrollTop + targetTop - activationLine,
+    if (mainIsScroller) {
+      main.scrollTo({
+        top: main.scrollTop + targetTop - activationLine,
         behavior,
       });
     } else {
@@ -199,12 +197,9 @@ export default function JourneyCase() {
 
   return (
     <div
-      className="journey-scrollport"
-      id="journey-scrollport"
-      ref={scrollportRef}
-      role="region"
-      aria-label="Journey story"
-      tabIndex={0}
+      className="journey-story-content"
+      id="journey-story-content"
+      ref={storyRef}
     >
       <div className="journey-page">
         <div className="journey-sticky-locator">
@@ -218,9 +213,43 @@ export default function JourneyCase() {
 
         <div className="journey-track" ref={trackRef}>
         <div className="journey-path" aria-hidden="true">
-          <span className="journey-path__segment journey-path__segment--gold" />
-          <span className="journey-path__segment journey-path__segment--cyan" />
-          <span className="journey-path__segment journey-path__segment--future" />
+          <svg className="journey-path__drawing" viewBox="0 0 100 1592" preserveAspectRatio="none" focusable="false">
+            <defs>
+              <linearGradient id="journey-spine-gradient" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#c3a453" />
+                <stop offset="35%" stopColor="#c3a453" />
+                <stop offset="47%" stopColor="#78b7b8" />
+                <stop offset="60%" stopColor="#78b7b8" />
+                <stop offset="70%" stopColor="#c3a453" />
+                <stop offset="100%" stopColor="#767052" />
+              </linearGradient>
+            </defs>
+            <polyline className="journey-path__spine" points="5,0 11,172 7.5,282 5,435 8,548 11,678 7,830 13,1002 8,1133 6,1198 5,1573 3,1592" />
+            <g className="journey-path__connectors">
+              <line className="journey-path__connector journey-path__connector--origin" x1="7" y1="57" x2="8.8" y2="57" />
+              <line className="journey-path__connector journey-path__connector--apple" x1="10" y1="179" x2="34" y2="179" />
+              <line className="journey-path__connector journey-path__connector--tmu" x1="7" y1="309" x2="12" y2="309" />
+              <line className="journey-path__connector journey-path__connector--naruto" x1="7" y1="450" x2="39" y2="450" />
+              <line className="journey-path__connector journey-path__connector--lis-spark" x1="8" y1="569" x2="18" y2="569" />
+              <line className="journey-path__connector journey-path__connector--lis" x1="9" y1="710" x2="12.8" y2="710" />
+              <line className="journey-path__connector journey-path__connector--spotify" x1="8" y1="878" x2="45.7" y2="878" />
+              <line className="journey-path__connector journey-path__connector--stush" x1="8" y1="1033" x2="12" y2="1033" />
+              <line className="journey-path__connector journey-path__connector--summer" x1="8" y1="1194" x2="13.5" y2="1194" />
+              <line className="journey-path__connector journey-path__connector--continuing" x1="5" y1="1565" x2="10.7" y2="1565" />
+            </g>
+            <g className="journey-path__nodes">
+              <ellipse cx="7" cy="57" rx="0.27" ry="3.2" />
+              <ellipse cx="10" cy="179" rx="0.27" ry="3.2" />
+              <ellipse cx="7" cy="309" rx="0.42" ry="5" />
+              <ellipse cx="7" cy="450" rx="0.27" ry="3.2" />
+              <ellipse cx="8" cy="569" rx="0.42" ry="5" />
+              <ellipse cx="9" cy="710" rx="0.27" ry="3.2" />
+              <ellipse cx="8" cy="878" rx="0.27" ry="3.2" />
+              <ellipse cx="8" cy="1033" rx="0.27" ry="3.2" />
+              <ellipse cx="8" cy="1194" rx="0.42" ry="5" />
+              <ellipse cx="5" cy="1565" rx="0.27" ry="3.2" />
+            </g>
+          </svg>
         </div>
 
         <article

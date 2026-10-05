@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import JourneyCase from "./JourneyCase";
 import * as JourneyCaseModule from "./JourneyCase";
 import { resolveActiveWaypoint } from "./JourneyCase";
+import { readFileSync } from "node:fs";
 
 function renderJourneyRoute() {
   return renderToStaticMarkup(
@@ -11,6 +12,22 @@ function renderJourneyRoute() {
       <JourneyCase />
     </MemoryRouter>,
   );
+}
+
+function cssBlock(source: string, selector: string) {
+  const selectorStart = source.indexOf(selector);
+  if (selectorStart < 0) return "";
+  const openBrace = source.indexOf("{", selectorStart);
+  if (openBrace < 0) return "";
+  let depth = 0;
+  for (let index = openBrace; index < source.length; index += 1) {
+    if (source[index] === "{") depth += 1;
+    if (source[index] === "}") {
+      depth -= 1;
+      if (depth === 0) return source.slice(openBrace + 1, index);
+    }
+  }
+  return "";
 }
 
 describe("Journey story", () => {
@@ -99,6 +116,43 @@ describe("Journey waypoint selection", () => {
     };
 
     expect(resolveActiveWaypoint(tops, 471.3, false)).toBe("tmu");
+  });
+
+  it("draws a connected zigzag milestone path aligned with the story cards", () => {
+    const markup = renderJourneyRoute();
+    const css = readFileSync("src/styles.css", "utf8");
+    const responsive = cssBlock(css, "@container journey-content (max-width: 900px)");
+
+    expect(markup).toContain('class="journey-path" aria-hidden="true"');
+    expect(markup).toContain('class="journey-path__spine"');
+    expect(markup).toContain('class="journey-path__connector journey-path__connector--origin"');
+    expect(markup).toContain('class="journey-path__connector journey-path__connector--continuing"');
+    expect(markup.match(/class="journey-path__connector /g)).toHaveLength(10);
+    expect(markup.match(/<ellipse\b/g)).toHaveLength(10);
+    expect(markup).toContain('rx="0.27" ry="3.2"');
+    expect(markup).not.toContain("<circle");
+    expect(css).toContain(".journey-path__spine");
+    expect(css).toContain(".journey-path__connector--summer");
+    expect(css).toContain(".journey-path__nodes ellipse");
+    expect(responsive).toContain(".journey-card::before");
+    expect(responsive).toContain(".journey-card::after");
+    expect(responsive).toContain(".journey-path__nodes { display: none; }");
+    expect(responsive).toContain("--journey-connector-offset: 16.28%");
+    expect(css).not.toContain("transform: rotate(2deg)");
+  });
+
+  it("uses the Journey page as the only desktop scroll region", () => {
+    const markup = renderJourneyRoute();
+    const css = readFileSync("src/styles.css", "utf8");
+    const mainRule = cssBlock(css, ".main--journey");
+    const contentRule = cssBlock(css, ".journey-story-content");
+
+    expect(mainRule).toContain("overflow-y: auto");
+    expect(mainRule).not.toContain("overflow: hidden");
+    expect(contentRule).toContain("overflow: visible");
+    expect(contentRule).not.toContain("overflow-y: auto");
+    expect(markup).not.toContain('role="region" aria-label="Journey story"');
+    expect(markup).not.toContain('tabindex="0"');
   });
 });
 
