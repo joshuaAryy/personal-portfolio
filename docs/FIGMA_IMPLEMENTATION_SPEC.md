@@ -17,7 +17,7 @@ Figma defines appearance and page composition. This spec maps accepted direction
 
 ## Surface requirements
 
-**Home subnav behavior:** Figma nodes `2356:527–533` and root `2252:3445` have no prototype reactions. React therefore keeps `Explore / Curated / Recent / About` as static labels with Explore marked current; the current frame specifies no other subnav view or state.
+**Home mode navigation:** the primary Home choices are Projects, Experience, Hackathons, and Education. Remove the obsolete Explore / Curated / Recent / About layer; it was a set of static labels without useful destinations. Preserve the League selection glow and underline. Project filters remain an optional future interaction and are not part of the current flow.
 
 **Case-study Activity rail:** on detail pages, show the project/experience names and marks without workflow-status sublabels. The status labels belong only to Home/Resume summary groupings; they are not public descriptions of the case studies. The 2026-10-02 Figma correction covers all six production roots. React detail pages already use this name-and-mark behavior, so the Figma-only correction does not itself invalidate existing React captures. Keep any full-page comparison open for the separate page changes documented in its queue row.
 
