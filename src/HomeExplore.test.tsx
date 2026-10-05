@@ -50,6 +50,15 @@ afterEach(() => {
 });
 
 describe("HomeExplore", () => {
+  it("uses the authentic forest scene with a top-origin fade", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const homeRule = css.match(/\.main\.main--home-explore\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(homeRule).toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(homeRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.68\)[^;]*rgba\(1, 8, 13, 0\.18\)/s);
+    expect(homeRule).not.toContain("home-mode-environment.png");
+  });
+
   it("offers all four destinations", () => {
     const view = renderHomeExplore();
 
@@ -110,6 +119,43 @@ describe("HomeExplore", () => {
     }
   });
 
+  it("gives each non-Project mode a distinct, useful preview cue that remains visible on narrow screens", () => {
+    const view = renderHomeExplore();
+    const selection = view.querySelector(".home-explore__selection");
+
+    const experience = view.querySelector('[aria-label="Experience"]');
+    if (!experience) throw new Error("Experience choice is missing");
+    click(experience);
+    expect(selection?.querySelector(".home-explore__preview--experience")).not.toBeNull();
+    expect(selection?.querySelector('[data-preview-fact="research"]')?.textContent).toContain("AI/ML research");
+    expect(selection?.querySelector('[data-preview-fact="research"]')?.textContent).toContain("Living in Silico");
+    expect(selection?.querySelector('[data-preview-fact="software-engineering"]')?.textContent).toContain("Software engineering");
+    expect(selection?.querySelector('[data-preview-fact="software-engineering"]')?.textContent).toContain("Stush Patties");
+
+    const hackathons = view.querySelector('[aria-label="Hackathons"]');
+    if (!hackathons) throw new Error("Hackathons choice is missing");
+    click(hackathons);
+    const award = selection?.querySelector('[data-preview-fact="award"]');
+    expect(award?.querySelector(".home-explore__preview-result")?.textContent).toBe("3rd Place");
+    expect(award?.querySelector(".home-explore__preview-challenge")?.textContent).toBe("Brim Financial Challenge");
+    expect(selection?.textContent).toContain("MPC Hacks 2026");
+
+    const education = view.querySelector('[aria-label="Education"]');
+    if (!education) throw new Error("Education choice is missing");
+    click(education);
+    expect(selection?.querySelector(".home-explore__preview--education")).not.toBeNull();
+    expect(selection?.querySelector(".home-explore__course-chips")?.textContent).toContain("Algorithms & Data Structures");
+    expect(selection?.querySelector(".home-explore__course-chips")?.textContent).toContain("Microprocessor Systems");
+    expect(selection?.querySelector(".home-explore__preview-expected")?.textContent).toBe("Expected 2028");
+
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 760px)"));
+    expect(mobileRules).toMatch(/\.home-explore__selection-focus \.home-explore__preview-detail[^}]*display:\s*block/s);
+    expect(mobileRules).toMatch(/\.home-explore__course-chips\s*\{[^}]*gap:/s);
+    expect(mobileRules).not.toMatch(/\.home-explore__course-chips\s*\{[^}]*display:\s*none/s);
+    expect(mobileRules).toMatch(/\.home-explore__selection-focus--education h3\s*\{[^}]*margin-bottom:\s*9px/s);
+  });
+
   it("separates Back and Confirm and compacts project areas on mobile", () => {
     const css = readFileSync("src/home-explore.css", "utf8");
     const pairRule = css.match(/\.home-explore__confirm-pair\s*\{([^}]*)\}/)?.[1];
@@ -118,7 +164,7 @@ describe("HomeExplore", () => {
     expect(pairRule).toMatch(/gap:\s*12px/);
     expect(pairRule).not.toMatch(/margin-right:\s*-/);
     expect(mobileRules).toMatch(/\.home-explore__selection-focus ul\s*\{[^}]*grid-template-columns:\s*repeat\(2,/s);
-    expect(mobileRules).toMatch(/\.home-explore__selection-focus small\s*\{[^}]*display:\s*none/s);
+    expect(mobileRules).toMatch(/\.home-explore__selection-focus li small\s*\{[^}]*display:\s*none/s);
   });
 
   it("keeps selection separate from confirming a destination", () => {

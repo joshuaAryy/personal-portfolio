@@ -160,7 +160,7 @@ function HomeExploreContent() {
           <p className="home-explore__instruction">Choose a mode, then Confirm to continue.</p>
           <p>{selected.description}</p>
         </div>
-        <div className="home-explore__selection-focus">
+        <div className={`home-explore__selection-focus home-explore__selection-focus--${selected.id}`}>
           {selected.id === "projects" && (
             <>
               <h3>PROJECT AREAS</h3>
@@ -176,41 +176,57 @@ function HomeExploreContent() {
           )}
           {selected.id === "experience" && (
             <>
-              <h3>EXPERIENCE SNAPSHOT</h3>
-              <ul aria-label="Experience preview">
-                {experience.map((role) => (
-                  <li key={role.slug}>
-                    <strong>{role.name}</strong>
-                    <small>{role.title} · {role.dates}</small>
-                  </li>
-                ))}
-              </ul>
+              <h3>WORK IN TWO LANES</h3>
+              <div className="home-explore__preview home-explore__preview--experience" aria-label="Experience preview">
+                {experience.map((role) => {
+                  const isResearch = role.slug === "living-in-silico";
+                  return (
+                    <article
+                      className="home-explore__preview-fact"
+                      data-preview-fact={isResearch ? "research" : "software-engineering"}
+                      key={role.slug}
+                    >
+                      <span className="home-explore__preview-kind">
+                        {isResearch ? "AI/ML research" : "Software engineering"}
+                      </span>
+                      <strong>{role.name}</strong>
+                      <small className="home-explore__preview-detail">
+                        {role.title} · {role.dates}
+                      </small>
+                    </article>
+                  );
+                })}
+              </div>
             </>
           )}
           {selected.id === "hackathons" && crest && (
             <>
-              <h3>HACKATHON SNAPSHOT</h3>
-              <ul aria-label="Hackathon preview">
-                <li>
-                  <strong>{crest.name}</strong>
-                  <small>{crest.detail}</small>
-                </li>
-              </ul>
+              <h3>COMPETITION RESULT</h3>
+              <div className="home-explore__preview home-explore__preview--hackathons" aria-label="Hackathon preview">
+                <div className="home-explore__preview-event" data-preview-fact="award">
+                  <span className="home-explore__preview-kind">{crest.name} · MPC Hacks 2026</span>
+                  <strong className="home-explore__preview-result">3rd Place</strong>
+                  <span className="home-explore__preview-challenge">Brim Financial Challenge</span>
+                </div>
+              </div>
             </>
           )}
           {selected.id === "education" && (
             <>
-              <h3>ACADEMIC SNAPSHOT</h3>
-              <ul aria-label="Education preview">
-                <li>
+              <h3>DEGREE + SELECTED COURSEWORK</h3>
+              <div className="home-explore__preview home-explore__preview--education" aria-label="Education preview">
+                <div className="home-explore__preview-degree">
                   <strong>Computer Engineering</strong>
-                  <small>B.Eng. · Software Specialization · Expected 2028</small>
-                </li>
-                <li>
-                  <strong>Selected Coursework</strong>
-                  <small>Algorithms &amp; Data Structures · Software Systems · Database Systems I · Microprocessor Systems</small>
-                </li>
-              </ul>
+                  <span>B.Eng. · Software Specialization</span>
+                  <small className="home-explore__preview-expected">Expected 2028</small>
+                </div>
+                <div className="home-explore__course-chips" aria-label="Selected coursework">
+                  <span>Algorithms &amp; Data Structures</span>
+                  <span>Software Systems</span>
+                  <span>Database Systems I</span>
+                  <span>Microprocessor Systems</span>
+                </div>
+              </div>
             </>
           )}
         </div>

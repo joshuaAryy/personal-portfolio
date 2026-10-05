@@ -48,6 +48,15 @@ afterEach(() => {
 });
 
 describe("Projects lobby", () => {
+  it("uses the authentic forest scene with a top-origin fade", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(environmentRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.68\)[^;]*rgba\(1, 8, 13, 0\.18\)/s);
+    expect(environmentRule).not.toContain("party-background.png");
+  });
+
   it("uses real project marks and keeps selection separate from opening a story", () => {
     const view = renderProjectsLobby();
 
