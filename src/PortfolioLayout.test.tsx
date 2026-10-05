@@ -35,6 +35,47 @@ afterEach(() => {
 });
 
 describe("League client shell", () => {
+  it("keeps the complete canonical Food mark inside its SVG and clip bounds", () => {
+    const svg = readFileSync("public/media/profile/food-tracker-mark.svg", "utf8");
+    const rootAttributes = svg.match(/^<svg\b([^>]*)>/)?.[1] ?? "";
+    const viewBoxMatch = svg.match(/viewBox="([\d.]+) ([\d.]+) ([\d.]+) ([\d.]+)"/);
+    const circleMatch = svg.match(/<circle\b([^>]*)\/>/);
+    const clipMatch = svg.match(/<clipPath id="clip0_0_10">([\s\S]*?)<\/clipPath>/);
+    const clipRectMatch = clipMatch?.[1].match(/<rect\b([^>]*)\/>/);
+    const readNumber = (attributes: string, name: string, fallback = 0) =>
+      Number(attributes.match(new RegExp(`\\b${name}="([\\d.]+)"`))?.[1] ?? fallback);
+
+    expect(viewBoxMatch).not.toBeNull();
+    expect(circleMatch).not.toBeNull();
+    expect(clipRectMatch).not.toBeNull();
+    expect(rootAttributes).toMatch(/\bpreserveAspectRatio="xMidYMid meet"/);
+
+    const [, viewX, viewY, viewWidth, viewHeight] = viewBoxMatch!.map(Number);
+    const circle = circleMatch![1];
+    const centerX = readNumber(circle, "cx");
+    const centerY = readNumber(circle, "cy");
+    const radius = readNumber(circle, "r");
+    const halfStroke = readNumber(circle, "stroke-width") / 2;
+    const circleLeft = centerX - radius - halfStroke;
+    const circleTop = centerY - radius - halfStroke;
+    const circleRight = centerX + radius + halfStroke;
+    const circleBottom = centerY + radius + halfStroke;
+    const clipRect = clipRectMatch![1];
+    const clipX = readNumber(clipRect, "x");
+    const clipY = readNumber(clipRect, "y");
+    const clipRight = clipX + readNumber(clipRect, "width");
+    const clipBottom = clipY + readNumber(clipRect, "height");
+
+    expect(circleLeft).toBeGreaterThanOrEqual(viewX);
+    expect(circleTop).toBeGreaterThanOrEqual(viewY);
+    expect(circleRight).toBeLessThanOrEqual(viewX + viewWidth);
+    expect(circleBottom).toBeLessThanOrEqual(viewY + viewHeight);
+    expect(circleLeft).toBeGreaterThanOrEqual(clipX);
+    expect(circleTop).toBeGreaterThanOrEqual(clipY);
+    expect(circleRight).toBeLessThanOrEqual(clipRight);
+    expect(circleBottom).toBeLessThanOrEqual(clipBottom);
+  });
+
   it("uses the optical-size header J and makes the top-right account the Profile entry", () => {
     const markup = renderClient();
 
