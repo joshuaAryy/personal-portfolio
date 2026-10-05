@@ -1,0 +1,1024 @@
+{
+  "runtime": "Playwright 1.63.0 / installed Chrome 153",
+  "route": "/projects/food-tracker",
+  "generatedAt": "2026-10-05T05:43:53.813Z",
+  "errors": [],
+  "viewports": [
+    {
+      "httpStatus": 200,
+      "viewport": 390,
+      "docWidth": 390,
+      "bodyWidth": 390,
+      "scrollY": 0,
+      "mainOverflowY": "visible",
+      "header": [
+        {
+          "text": "Portfolio home",
+          "href": "/home",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 0,
+            "right": 68,
+            "top": 0,
+            "bottom": 69,
+            "width": 68,
+            "height": 69
+          }
+        },
+        {
+          "text": "PROJECTS",
+          "href": "/projects",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 81,
+            "right": 120.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 39.6,
+            "height": 56
+          }
+        },
+        {
+          "text": "EXPERIENCE",
+          "href": "/experience",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 120.6,
+            "right": 168.9,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 48.2,
+            "height": 56
+          }
+        },
+        {
+          "text": "HACKATHONS",
+          "href": "/hackathons",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 168.9,
+            "right": 222.2,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 53.3,
+            "height": 56
+          }
+        },
+        {
+          "text": "EDUCATION",
+          "href": "/education",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 222.2,
+            "right": 267.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 45.4,
+            "height": 56
+          }
+        },
+        {
+          "text": "HELP",
+          "href": null,
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 267.6,
+            "right": 303.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 36,
+            "height": 56
+          }
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Resume",
+          "href": "/resume",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/joshuaAryy",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Email",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Open profile",
+          "href": "/profile",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 328,
+            "right": 382,
+            "top": 7.5,
+            "bottom": 61.5,
+            "width": 54,
+            "height": 54
+          }
+        }
+      ]
+    },
+    {
+      "httpStatus": 200,
+      "viewport": 400,
+      "docWidth": 400,
+      "bodyWidth": 400,
+      "scrollY": 0,
+      "mainOverflowY": "visible",
+      "header": [
+        {
+          "text": "Portfolio home",
+          "href": "/home",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 0,
+            "right": 68,
+            "top": 0,
+            "bottom": 69,
+            "width": 68,
+            "height": 69
+          }
+        },
+        {
+          "text": "PROJECTS",
+          "href": "/projects",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 81,
+            "right": 120.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 39.6,
+            "height": 56
+          }
+        },
+        {
+          "text": "EXPERIENCE",
+          "href": "/experience",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 120.6,
+            "right": 168.9,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 48.2,
+            "height": 56
+          }
+        },
+        {
+          "text": "HACKATHONS",
+          "href": "/hackathons",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 168.9,
+            "right": 222.2,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 53.3,
+            "height": 56
+          }
+        },
+        {
+          "text": "EDUCATION",
+          "href": "/education",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 222.2,
+            "right": 267.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 45.4,
+            "height": 56
+          }
+        },
+        {
+          "text": "HELP",
+          "href": null,
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 267.6,
+            "right": 303.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 36,
+            "height": 56
+          }
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Resume",
+          "href": "/resume",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/joshuaAryy",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Email",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Open profile",
+          "href": "/profile",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 338,
+            "right": 392,
+            "top": 7.5,
+            "bottom": 61.5,
+            "width": 54,
+            "height": 54
+          }
+        }
+      ]
+    },
+    {
+      "httpStatus": 200,
+      "viewport": 405,
+      "docWidth": 405,
+      "bodyWidth": 405,
+      "scrollY": 0,
+      "mainOverflowY": "visible",
+      "header": [
+        {
+          "text": "Portfolio home",
+          "href": "/home",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 0,
+            "right": 68,
+            "top": 0,
+            "bottom": 69,
+            "width": 68,
+            "height": 69
+          }
+        },
+        {
+          "text": "PROJECTS",
+          "href": "/projects",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 81,
+            "right": 120.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 39.6,
+            "height": 56
+          }
+        },
+        {
+          "text": "EXPERIENCE",
+          "href": "/experience",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 120.6,
+            "right": 168.9,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 48.2,
+            "height": 56
+          }
+        },
+        {
+          "text": "HACKATHONS",
+          "href": "/hackathons",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 168.9,
+            "right": 222.2,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 53.3,
+            "height": 56
+          }
+        },
+        {
+          "text": "EDUCATION",
+          "href": "/education",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 222.2,
+            "right": 267.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 45.4,
+            "height": 56
+          }
+        },
+        {
+          "text": "HELP",
+          "href": null,
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 267.6,
+            "right": 303.6,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 36,
+            "height": 56
+          }
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Resume",
+          "href": "/resume",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/joshuaAryy",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Email",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Open profile",
+          "href": "/profile",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 343,
+            "right": 397,
+            "top": 7.5,
+            "bottom": 61.5,
+            "width": 54,
+            "height": 54
+          }
+        }
+      ]
+    },
+    {
+      "httpStatus": 200,
+      "viewport": 406,
+      "docWidth": 406,
+      "bodyWidth": 406,
+      "scrollY": 0,
+      "mainOverflowY": "visible",
+      "header": [
+        {
+          "text": "Portfolio home",
+          "href": "/home",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 0,
+            "right": 68,
+            "top": 0,
+            "bottom": 69,
+            "width": 68,
+            "height": 69
+          }
+        },
+        {
+          "text": "PROJECTS",
+          "href": "/projects",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 81,
+            "right": 128.9,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 47.9,
+            "height": 56
+          }
+        },
+        {
+          "text": "EXPERIENCE",
+          "href": "/experience",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 128.9,
+            "right": 185.8,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 57,
+            "height": 56
+          }
+        },
+        {
+          "text": "HACKATHONS",
+          "href": "/hackathons",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 185.8,
+            "right": 248.1,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 62.3,
+            "height": 56
+          }
+        },
+        {
+          "text": "EDUCATION",
+          "href": "/education",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 248.1,
+            "right": 302.1,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 54,
+            "height": 56
+          }
+        },
+        {
+          "text": "HELP",
+          "href": null,
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 302.1,
+            "right": 338.1,
+            "top": 6.5,
+            "bottom": 62.5,
+            "width": 36,
+            "height": 56
+          }
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Resume",
+          "href": "/resume",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/joshuaAryy",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Email",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "Open profile",
+          "href": "/profile",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 344,
+            "right": 398,
+            "top": 7.5,
+            "bottom": 61.5,
+            "width": 54,
+            "height": 54
+          }
+        }
+      ]
+    },
+    {
+      "httpStatus": 200,
+      "viewport": 1920,
+      "docWidth": 1920,
+      "bodyWidth": 1920,
+      "scrollY": 0,
+      "mainOverflowY": "auto",
+      "header": [
+        {
+          "text": "PORTFOLIO",
+          "href": "/home",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 0,
+            "right": 206,
+            "top": 0,
+            "bottom": 81,
+            "width": 206,
+            "height": 81
+          }
+        },
+        {
+          "text": "PROJECTS",
+          "href": "/projects",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 232.9,
+            "right": 355.8,
+            "top": -0.5,
+            "bottom": 81.5,
+            "width": 122.9,
+            "height": 82
+          }
+        },
+        {
+          "text": "EXPERIENCE",
+          "href": "/experience",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 355.8,
+            "right": 503.6,
+            "top": -0.5,
+            "bottom": 81.5,
+            "width": 147.8,
+            "height": 82
+          }
+        },
+        {
+          "text": "HACKATHONS",
+          "href": "/hackathons",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 503.6,
+            "right": 661.6,
+            "top": -0.5,
+            "bottom": 81.5,
+            "width": 158,
+            "height": 82
+          }
+        },
+        {
+          "text": "EDUCATION",
+          "href": "/education",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 661.6,
+            "right": 785.4,
+            "top": -0.5,
+            "bottom": 81.5,
+            "width": 123.8,
+            "height": 82
+          }
+        },
+        {
+          "text": "Help",
+          "href": null,
+          "tabIndex": 0,
+          "visible": false,
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        {
+          "text": "LINKEDIN",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 793.4,
+            "right": 840.5,
+            "top": 24.5,
+            "bottom": 56.5,
+            "width": 47.1,
+            "height": 32
+          }
+        },
+        {
+          "text": "RESUME",
+          "href": "/resume",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 857.5,
+            "right": 898.4,
+            "top": 24.5,
+            "bottom": 56.5,
+            "width": 40.9,
+            "height": 32
+          }
+        },
+        {
+          "text": "GITHUB",
+          "href": "https://github.com/joshuaAryy",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 915.4,
+            "right": 953.1,
+            "top": 24.5,
+            "bottom": 56.5,
+            "width": 37.7,
+            "height": 32
+          }
+        },
+        {
+          "text": "EMAIL",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 970.1,
+            "right": 1001.2,
+            "top": 24.5,
+            "bottom": 56.5,
+            "width": 31,
+            "height": 32
+          }
+        },
+        {
+          "text": "Joshua Aryeetey OPEN TO SUMMER 2027",
+          "href": "/profile",
+          "tabIndex": 0,
+          "visible": true,
+          "rect": {
+            "left": 1628,
+            "right": 1844.1,
+            "top": 6.5,
+            "bottom": 74.5,
+            "width": 216.1,
+            "height": 68
+          }
+        }
+      ]
+    }
+  ],
+  "narrowInteractions": {
+    "primary": [
+      {
+        "name": "Projects",
+        "exists": true,
+        "tabIndex": 0,
+        "visible": true,
+        "textVisible": true,
+        "rect": {
+          "left": 81,
+          "right": 120.6,
+          "top": 6.5,
+          "bottom": 62.5
+        }
+      },
+      {
+        "name": "Experience",
+        "exists": true,
+        "tabIndex": 0,
+        "visible": true,
+        "textVisible": true,
+        "rect": {
+          "left": 120.6,
+          "right": 168.9,
+          "top": 6.5,
+          "bottom": 62.5
+        }
+      },
+      {
+        "name": "Hackathons",
+        "exists": true,
+        "tabIndex": 0,
+        "visible": true,
+        "textVisible": true,
+        "rect": {
+          "left": 168.9,
+          "right": 222.2,
+          "top": 6.5,
+          "bottom": 62.5
+        }
+      },
+      {
+        "name": "Education",
+        "exists": true,
+        "tabIndex": 0,
+        "visible": true,
+        "textVisible": true,
+        "rect": {
+          "left": 222.2,
+          "right": 267.6,
+          "top": 6.5,
+          "bottom": 62.5
+        }
+      }
+    ],
+    "helpVisible": true,
+    "helpTabIndex": 0,
+    "helpClickOpens": true,
+    "helpFocus": true,
+    "helpEnterOpens": true,
+    "passiveScroll": {
+      "before": {
+        "sectionTop": 100.3,
+        "active": [
+          "LOGGING"
+        ]
+      },
+      "after": {
+        "sectionTop": 92.3,
+        "active": [
+          "LOGGING"
+        ]
+      },
+      "activationLine": 100,
+      "scrollY": 907
+    }
+  },
+  "narrowAnchors": [
+    {
+      "name": "LOGGING",
+      "hash": "#food-logging",
+      "ariaCurrent": "location",
+      "active": [
+        "LOGGING"
+      ],
+      "targetTop": 100.3,
+      "heading": "One meal, several ways to get started.",
+      "headingRect": {
+        "top": 144.5,
+        "bottom": 202.7
+      },
+      "navRect": {
+        "top": 0,
+        "bottom": 77
+      },
+      "headingClear": true
+    },
+    {
+      "name": "INSIGHTS",
+      "hash": "#food-insights",
+      "ariaCurrent": "location",
+      "active": [
+        "INSIGHTS"
+      ],
+      "targetTop": 100.3,
+      "heading": "Turn saved logs into a view of patterns over time.",
+      "headingRect": {
+        "top": 144.5,
+        "bottom": 202.7
+      },
+      "navRect": {
+        "top": 0,
+        "bottom": 77
+      },
+      "headingClear": true
+    },
+    {
+      "name": "ARCHITECTURE",
+      "hash": "#food-system",
+      "ariaCurrent": "location",
+      "active": [
+        "ARCHITECTURE"
+      ],
+      "targetTop": 100.1,
+      "heading": "SEARCH, RETRIEVAL + LOGGING",
+      "headingRect": {
+        "top": 223.5,
+        "bottom": 231.5
+      },
+      "navRect": {
+        "top": 0,
+        "bottom": 77
+      },
+      "headingClear": true
+    }
+  ],
+  "desktopAnchors": [
+    {
+      "name": "LOGGING",
+      "hash": "#food-logging",
+      "ariaCurrent": "location",
+      "active": [
+        "LOGGING"
+      ],
+      "headingRect": {
+        "top": 208.4,
+        "bottom": 237.5
+      },
+      "navRect": {
+        "top": 82,
+        "bottom": 142
+      },
+      "headingClear": true
+    },
+    {
+      "name": "INSIGHTS",
+      "hash": "#food-insights",
+      "ariaCurrent": "location",
+      "active": [
+        "INSIGHTS"
+      ],
+      "headingRect": {
+        "top": 208.5,
+        "bottom": 237.6
+      },
+      "navRect": {
+        "top": 82,
+        "bottom": 142
+      },
+      "headingClear": true
+    },
+    {
+      "name": "ARCHITECTURE",
+      "hash": "#food-system",
+      "ariaCurrent": "location",
+      "active": [
+        "ARCHITECTURE"
+      ],
+      "headingRect": {
+        "top": 272.2,
+        "bottom": 280.2
+      },
+      "navRect": {
+        "top": 82,
+        "bottom": 142
+      },
+      "headingClear": true
+    }
+  ],
+  "desktopPassive": {
+    "active": [
+      "LOGGING"
+    ],
+    "mainScrollTop": 521,
+    "docWidth": 1920
+  }
+}

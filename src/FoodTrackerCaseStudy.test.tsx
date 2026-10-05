@@ -1,3 +1,6 @@
+// @vitest-environment happy-dom
+import { act } from "react";
+import { createRoot } from "react-dom/client";
 import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
@@ -168,9 +171,171 @@ describe("Food Tracker flagship technical case study", () => {
     const figure = markup.slice(start, end);
 
     expect.soft(figure).toContain('aria-labelledby="food-system-map-title"');
-    expect.soft(figure).toContain('alt=""');
     expect.soft(figure).toContain('<span id="food-system-map-title">Food Tracker system map.</span>');
     expect(figure.match(/Illustrative composite system figure, not a product screenshot/g)).toHaveLength(1);
+  });
+
+  it("renders both system layers as native ordered diagram stages", () => {
+    const markup = renderFoodTracker();
+    const start = markup.indexOf('<figure class="food-system-map food-system-map--flagship"');
+    const end = markup.indexOf("</figure>", start) + "</figure>".length;
+    const figure = markup.slice(start, end);
+
+    expect(figure).not.toMatch(/<img\b/);
+    expect(figure).toContain('aria-label="Food search and logging flow"');
+    expect(figure).toContain('aria-label="Food Tracker data foundation"');
+    expect(figure.match(/<ol\b/g)).toHaveLength(2);
+    expect(figure).toContain("Search in the app");
+    expect(figure).toContain("Find and rank candidates · three paths, one ranked set");
+    expect(figure).toContain("Resolve nutrition · two authorities, one result");
+    expect(figure).toContain("Record the result · save to the daily log");
+    expect(figure).toContain("React Native / Expo");
+    expect(figure).toContain("Express / Prisma");
+    expect(figure).toContain("Normalized food catalog");
+    expect(figure).toContain("PostgreSQL food log");
+    expect(figure).toContain("History and Insights");
+    expect(figure).toContain("Selected food match");
+    expect(figure).toContain("amount + unit conversion");
+    expect(figure).toContain("CANONICAL FOOD LOG");
+    expect(figure).toContain("Serving basis retained");
+    expect(figure).toContain("Receives the entry and shared domain rules");
+    expect(figure).toContain("Food Tracker system map.");
+    expect(figure).toContain("Find the food. Resolve nutrition. Keep the log.");
+    expect(figure).toContain("Illustrative system flow · not a product screenshot");
+    expect(figure).toContain("Exact / fuzzy / semantic → candidate pool → deterministic final order → select match");
+    expect(figure).toContain("two authorities, one result");
+    expect(figure).toContain("Selected food match");
+    expect(figure).toContain("trusted food data");
+    expect(figure).toContain("serving rules");
+    expect(figure).toContain("catalog nutrient values");
+    expect(figure).toContain("amount + unit conversion");
+    expect(figure).toContain("resolved values");
+    expect(figure).toContain("Daily canonical food log status");
+    expect(figure).toContain("TODAY · CANONICAL FOOD LOG");
+    expect(figure).toContain("Selected food");
+    expect(figure).toContain("MATCHED");
+    expect(figure).toContain("Serving");
+    expect(figure).toContain("RESOLVED");
+    expect(figure).toContain("Nutrition");
+    expect(figure).toContain("SAVED");
+    expect(figure).toContain("Serving basis retained · entries can be edited.");
+    expect(figure).toContain("DATA FOUNDATION · MOBILE TO INSIGHT");
+    expect(figure).toContain("A saved serving basis connects the app to the nutrition people revisit.");
+    expect(figure).toContain("Pinecone supplies semantic candidates; deterministic evaluation ranks the union; catalog + serving rules set nutrition; unknown nutrition is not zero");
+    expect(figure).toContain("RESOLVED NUTRITION VALUES");
+    expect(figure).toContain("NORMALIZED FOOD AUTHORITY · STORED SERVING BASIS · EDITABLE HISTORY");
+  });
+
+  it("renders the four product path stages natively in order", () => {
+    const markup = renderFoodTracker();
+    const start = markup.indexOf('<figure class="food-product-flow"');
+    const end = markup.indexOf("</figure>", start) + "</figure>".length;
+    const figure = markup.slice(start, end);
+
+    expect(figure).not.toMatch(/<img\b/);
+    expect(figure.match(/<li>/g)).toHaveLength(4);
+    expect(figure.indexOf("Log a meal")).toBeLessThan(figure.indexOf("Match the food"));
+    expect(figure.indexOf("Match the food")).toBeLessThan(figure.indexOf("Resolve a serving"));
+    expect(figure.indexOf("Resolve a serving")).toBeLessThan(figure.indexOf("Keep history"));
+    expect(figure).toContain("Schematic, not an app screen");
+  });
+
+  it("keeps the Food chapter rail scrollable and Help pinned in the narrow header", () => {
+    const css = readFileSync("src/food-visuals.css", "utf8");
+
+    expect(css).toMatch(/\.client:has\(\.main--food-case\) \.top-nav button\.header-help\s*\{[^}]*position:\s*sticky;[^}]*right:\s*0/s);
+    expect(css).toMatch(/\.client:has\(\.main--food-case\) \.food-case-nav\s*\{[^}]*grid-template-columns:\s*minmax\(0, 1fr\)/s);
+    expect(css).toMatch(/\.client:has\(\.main--food-case\) \.food-case-nav__chapters\s*\{[^}]*overflow-x:\s*auto/s);
+    expect(css).toMatch(/\.client:has\(\.main--food-case\) \.food-case-nav__chapters a\s*\{[^}]*white-space:\s*nowrap/s);
+    expect(css).toMatch(/\.client:has\(\.main--food-case\) \.food-section\s*\{[^}]*scroll-margin-top:\s*(?:9[0-9]|[1-9][0-9]{2})px/s);
+    expect(css).toMatch(/@media\s*\(max-width:\s*405px\)\s*\{[^}]*\.client:has\(\.main--food-case\) \.top-nav a:nth-child\(-n \+ 4\)/s);
+    expect(css).toMatch(/\.client:has\(\.main--food-case\) \.top-nav a:nth-child\(-n \+ 4\)\s*\{[^}]*font-size:\s*8\.5px;[^}]*padding-inline:\s*1px/s);
+  });
+
+  it("keeps a mobile anchor chapter active after its 100px landing scroll", () => {
+    const previousActEnvironment = (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT;
+    (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
+
+    const main = document.createElement("main");
+    main.id = "main";
+    main.style.overflowY = "visible";
+    document.body.append(main);
+
+    const previousInnerWidth = Object.getOwnPropertyDescriptor(window, "innerWidth");
+    const previousInnerHeight = Object.getOwnPropertyDescriptor(window, "innerHeight");
+    const previousScrollY = Object.getOwnPropertyDescriptor(window, "scrollY");
+    const previousDocumentScrollHeight = Object.getOwnPropertyDescriptor(document.documentElement, "scrollHeight");
+    const previousGetBoundingClientRect = HTMLElement.prototype.getBoundingClientRect;
+    const previousRequestAnimationFrame = window.requestAnimationFrame;
+    const previousCancelAnimationFrame = window.cancelAnimationFrame;
+    const sectionTops: Record<string, number> = {
+      "food-overview": -100,
+      "food-logging": 100,
+      "food-insights": 300,
+      "food-search": 500,
+      "food-interface": 700,
+      "food-system": 900,
+      "food-evaluation": 1100,
+      "food-workflow": 1300,
+      "food-reflection": 1500,
+    };
+    let pendingFrame: FrameRequestCallback | undefined;
+    window.requestAnimationFrame = (callback) => {
+      pendingFrame = callback;
+      return 1;
+    };
+    window.cancelAnimationFrame = () => {
+      pendingFrame = undefined;
+    };
+    HTMLElement.prototype.getBoundingClientRect = function getBoundingClientRect() {
+      const top = this.id === "main" ? 0 : sectionTops[this.id] ?? 1800;
+      return new DOMRect(0, top, 390, 200);
+    };
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 390 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 600 });
+    Object.defineProperty(window, "scrollY", { configurable: true, value: 0 });
+    Object.defineProperty(document.documentElement, "scrollHeight", { configurable: true, value: 2400 });
+
+    const flushFrame = () => {
+      const callback = pendingFrame;
+      pendingFrame = undefined;
+      callback?.(0);
+    };
+    const root = createRoot(main);
+    try {
+      act(() => root.render(<MemoryRouter><FoodTrackerCaseStudy /></MemoryRouter>));
+      act(flushFrame);
+
+      const loggingLink = [...main.querySelectorAll<HTMLAnchorElement>(".food-case-nav__chapters a")]
+        .find((link) => link.textContent === "LOGGING");
+      expect(loggingLink).toBeDefined();
+      act(() => loggingLink?.click());
+      act(() => {
+        window.dispatchEvent(new Event("scroll"));
+        flushFrame();
+      });
+
+      expect(loggingLink?.getAttribute("aria-current")).toBe("location");
+    } finally {
+      act(() => root.unmount());
+      main.remove();
+      HTMLElement.prototype.getBoundingClientRect = previousGetBoundingClientRect;
+      window.requestAnimationFrame = previousRequestAnimationFrame;
+      window.cancelAnimationFrame = previousCancelAnimationFrame;
+      if (previousInnerWidth) Object.defineProperty(window, "innerWidth", previousInnerWidth);
+      else Reflect.deleteProperty(window, "innerWidth");
+      if (previousInnerHeight) Object.defineProperty(window, "innerHeight", previousInnerHeight);
+      else Reflect.deleteProperty(window, "innerHeight");
+      if (previousScrollY) Object.defineProperty(window, "scrollY", previousScrollY);
+      else Reflect.deleteProperty(window, "scrollY");
+      if (previousDocumentScrollHeight) Object.defineProperty(document.documentElement, "scrollHeight", previousDocumentScrollHeight);
+      else Reflect.deleteProperty(document.documentElement, "scrollHeight");
+      if (previousActEnvironment === undefined) {
+        delete (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT;
+      } else {
+        (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = previousActEnvironment;
+      }
+    }
   });
 
   it("describes an editable serving snapshot across the Food architecture", () => {

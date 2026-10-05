@@ -34,35 +34,60 @@ const foodBenchmarkSets = [
 
 function FoodSystemMap() {
   return (
-    <figure className="food-system-map food-system-map--flagship" aria-labelledby="food-system-map-title">
-      <img
-      className="food-system-map__illustration"
-      src="/media/case-studies/food-system-pass-10.png"
-      width="1432"
-      height="710"
-      alt=""
-      />
-      <ol className="food-system-map__mobile-steps" aria-label="Food Tracker system path">
-        <li>
-          <strong>Search in the app</strong>
-          <span>Start with a meal or ingredient.</span>
-        </li>
-        <li>
-          <strong>Find and rank candidates</strong>
-          <span>Exact, fuzzy, and semantic paths feed one deterministic ranking.</span>
-        </li>
-        <li>
-          <strong>Resolve nutrition</strong>
-          <span>Trusted food data and serving rules independently resolve nutrition.</span>
-        </li>
-        <li>
-          <strong>Record the result</strong>
-          <span>A serving snapshot supports later portion edits in History.</span>
-        </li>
-      </ol>
+    <figure className="food-system-map food-system-map--flagship" aria-labelledby="food-system-map-title" aria-describedby="food-system-map-description">
+      <header className="food-system-map__heading">
+        <p>FOOD TRACKER · ONE SEARCH TO ONE TRUSTWORTHY DAILY LOG</p>
+        <strong>Find the food. Resolve nutrition. Keep the log.</strong>
+        <span>Illustrative system flow · not a product screenshot</span>
+      </header>
+      <div className="food-system-map__layer food-system-map__layer--product">
+        <h3>SEARCH, RETRIEVAL + LOGGING</h3>
+        <ol className="food-system-map__upper-flow" aria-label="Food search and logging flow">
+          <li>
+            <span className="food-system-map__step" aria-hidden="true">01</span>
+            <strong>Search in the app</strong>
+            <span>Start with a meal or ingredient.</span>
+          </li>
+          <li>
+            <span className="food-system-map__step" aria-hidden="true">02</span>
+            <strong>Find and rank candidates · three paths, one ranked set</strong>
+            <span>Exact / fuzzy / semantic → candidate pool → deterministic final order → select match</span>
+          </li>
+          <li>
+            <span className="food-system-map__step" aria-hidden="true">03</span>
+            <strong>Resolve nutrition · two authorities, one result</strong>
+            <span>Selected food match → trusted food data (catalog nutrient values) + serving rules (amount + unit conversion).</span>
+            <strong className="food-system-map__resolved-title">RESOLVED NUTRITION VALUES</strong>
+          </li>
+          <li>
+            <span className="food-system-map__step" aria-hidden="true">04</span>
+            <strong>Record the result · save to the daily log</strong>
+            <span className="food-system-map__log-title">TODAY · CANONICAL FOOD LOG</span>
+            <div className="food-system-map__log-status" aria-label="Daily canonical food log status">
+              <span><b>Selected food</b><strong>MATCHED</strong></span>
+              <span><b>Serving</b><strong>RESOLVED</strong></span>
+              <span><b>Nutrition</b><strong>SAVED</strong></span>
+            </div>
+            <span>Serving basis retained · entries can be edited.</span>
+          </li>
+        </ol>
+      </div>
+      <div className="food-system-map__layer food-system-map__layer--foundation">
+        <h3>DATA FOUNDATION · MOBILE TO INSIGHT</h3>
+        <p className="food-system-map__foundation-summary">A saved serving basis connects the app to the nutrition people revisit.</p>
+        <ol className="food-system-map__foundation-flow" aria-label="Food Tracker data foundation">
+          <li><span className="food-system-map__step" aria-hidden="true">01</span><strong>MOBILE APP · React Native / Expo</strong><span>Records the chosen food and serving.</span></li>
+          <li><span className="food-system-map__step" aria-hidden="true">02</span><strong>API + DATA · Express / Prisma</strong><span>Receives the entry and shared domain rules.</span></li>
+          <li><span className="food-system-map__step" aria-hidden="true">03</span><strong>FOOD AUTHORITY</strong><span>Normalized food catalog + backend serving resolution.</span></li>
+          <li><span className="food-system-map__step" aria-hidden="true">04</span><strong>PERSISTED LOG · PostgreSQL food log</strong><span>Stores the food entry and serving snapshot.</span></li>
+          <li><span className="food-system-map__step" aria-hidden="true">05</span><strong>HISTORY + INSIGHTS</strong><span>Saved entries; portion edits use the retained basis.</span></li>
+        </ol>
+        <p className="food-system-map__authority-footer">Pinecone supplies semantic candidates; deterministic evaluation ranks the union; catalog + serving rules set nutrition; unknown nutrition is not zero.</p>
+        <p className="food-system-map__foundation-footer">NORMALIZED FOOD AUTHORITY · STORED SERVING BASIS · EDITABLE HISTORY</p>
+      </div>
       <figcaption className="food-system-map__sr-only">
         <span id="food-system-map-title">Food Tracker system map.</span>
-        <span>Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.</span>
+        <span id="food-system-map-description">Illustrative composite system figure, not a product screenshot. Search gathers exact, fuzzy, and semantic candidates into a pool; deterministic evaluation orders the union and selects the match. Two authorities resolve nutrition: trusted food data supplies catalog nutrient values, while serving rules convert the amount and unit into resolved values. The daily canonical food log records matched food, resolved serving, and saved nutrition; the serving basis is retained and entries remain editable. The data foundation runs from the mobile app through Express and Prisma shared domain rules to normalized catalog and backend serving resolution, PostgreSQL food entry and serving snapshot, and saved History and Insights entries whose portion edits use the retained basis.</span>
       </figcaption>
     </figure>
   );
@@ -70,21 +95,14 @@ function FoodSystemMap() {
 
 function FoodProductFlow() {
   return (
-    <figure className="food-product-flow" aria-label="Food Tracker product path schematic">
-      <div className="food-product-flow__art">
-        <img
-          src="/media/case-studies/food-product-flow-pass-09-inset.png"
-          width="884"
-          height="222"
-          alt="Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record."
-        />
-      </div>
-      <ol className="food-product-flow__mobile-steps" aria-label="Product path stages">
-        <li><strong>01 · Log a meal</strong><span>Quick entry.</span></li>
-        <li><strong>02 · Match the food</strong><span>Search proposes candidates.</span></li>
-        <li><strong>03 · Resolve a serving</strong><span>Trusted food data and serving rules set nutrition.</span></li>
-        <li><strong>04 · Keep history</strong><span>Record a canonical log entry.</span></li>
+    <figure className="food-product-flow" aria-labelledby="food-product-flow-title">
+      <ol className="food-product-flow__stages" aria-label="Product path stages">
+        <li><span className="food-product-flow__step" aria-hidden="true">01</span><strong>Log a meal</strong><span>Quick entry.</span></li>
+        <li><span className="food-product-flow__step" aria-hidden="true">02</span><strong>Match the food</strong><span>Search proposes candidates.</span></li>
+        <li><span className="food-product-flow__step" aria-hidden="true">03</span><strong>Resolve a serving</strong><span>Trusted food data and serving rules set nutrition.</span></li>
+        <li><span className="food-product-flow__step" aria-hidden="true">04</span><strong>Keep history</strong><span>Record a canonical log entry.</span></li>
       </ol>
+      <figcaption id="food-product-flow-title" className="food-product-flow__caption">Food Tracker product path. Schematic, not an app screen.</figcaption>
     </figure>
   );
 }
@@ -258,7 +276,8 @@ export default function FoodTrackerCaseStudy() {
         const overflowY = window.getComputedStyle(main).overflowY;
         const mainIsScroller = overflowY === "auto" || overflowY === "scroll";
         const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
-        const activationLine = rootTop + 78;
+        const activationOffset = window.innerWidth <= 520 ? 100 : 78;
+        const activationLine = rootTop + activationOffset;
         let nextChapter: FoodChapterId = "overview";
         const atStoryEnd = mainIsScroller
           ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
