@@ -247,7 +247,7 @@ const journeyTraitParts = {
 };
 
 export function JourneyTraitMedallions() {
-  const frameSrc = "/media/lobby/project-medallion-frame.png";
+  const frameSrc = "/media/profile/portrait-medallion.png";
   return (
     <ul className="journey-identity__traits" aria-label="Profile traits">
       <TraitMedallion label="CREATIVE" parts={journeyTraitParts.creative} frameSrc={frameSrc} />

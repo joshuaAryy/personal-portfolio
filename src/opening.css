@@ -14,7 +14,7 @@
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  animation: opening-client-reveal 2s linear 1 both;
+  animation: opening-client-reveal 3.5s linear 1 both;
 }
 
 .opening-route--reduced .opening__underlay {
@@ -48,7 +48,7 @@
   inset: 0;
   overflow: hidden;
   background: #06080c;
-  animation: opening-treatment-out 2s linear 1 both;
+  animation: opening-treatment-out 3.5s linear 1 both;
 }
 
 .opening__mechanism {
@@ -60,6 +60,166 @@
   container-type: size;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+.opening__radial-field,
+.opening__peripheral-lines {
+  position: absolute;
+  z-index: 0;
+  inset: -12%;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.opening__radial-field {
+  background:
+    radial-gradient(circle at 50% 44%, transparent 0 21.9%, rgb(123 145 164 / 15%) 22%, transparent 22.08% 33.9%, rgb(123 145 164 / 11%) 34%, transparent 34.08% 48.9%, rgb(123 145 164 / 8%) 49%, transparent 49.08% 65.9%, rgb(123 145 164 / 5%) 66%, transparent 66.08%);
+  transform: scale(.78);
+  animation: opening-radial-expansion 3.5s ease-out 1 both;
+}
+
+.opening__peripheral-lines {
+  background: repeating-conic-gradient(
+    from -5deg at 50% 44%,
+    transparent 0deg 9.85deg,
+    rgb(171 186 197 / 24%) 10deg 10.08deg,
+    transparent 10.23deg 20deg
+  );
+  mask-image: radial-gradient(ellipse at 50% 44%, transparent 0 31%, #000 56%, transparent 84%);
+  transform: rotate(-8deg) scale(.94);
+  animation: opening-peripheral-drift 3.5s ease-in-out 1 both;
+}
+
+.opening__peripheral-mark {
+  position: absolute;
+  z-index: 0;
+  top: var(--mark-y);
+  left: var(--mark-x);
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgb(211 187 128 / 72%);
+  box-shadow: 0 0 11px rgb(203 174 101 / 24%);
+  opacity: 0;
+  transform: translate(-50%, -50%) rotate(45deg) scale(.4);
+  animation: opening-mark-reveal 3.5s ease-out 1 both;
+  pointer-events: none;
+}
+
+.opening__peripheral-mark::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(7vw, 82px);
+  height: 1px;
+  background: linear-gradient(90deg, rgb(211 187 128 / 62%), rgb(171 186 197 / 16%), transparent);
+  content: "";
+  transform: rotate(var(--mark-angle)) translateX(6px);
+  transform-origin: left center;
+}
+
+.opening__peripheral-mark--northwest { --mark-x: 15%; --mark-y: 24%; --mark-angle: 225deg; }
+.opening__peripheral-mark--northeast { --mark-x: 85%; --mark-y: 24%; --mark-angle: 315deg; }
+.opening__peripheral-mark--west { --mark-x: 8%; --mark-y: 49%; --mark-angle: 180deg; }
+.opening__peripheral-mark--east { --mark-x: 92%; --mark-y: 49%; --mark-angle: 0deg; }
+.opening__peripheral-mark--southwest { --mark-x: 15%; --mark-y: 76%; --mark-angle: 135deg; }
+.opening__peripheral-mark--southeast { --mark-x: 85%; --mark-y: 76%; --mark-angle: 45deg; }
+.opening__peripheral-mark--north { --mark-x: 50%; --mark-y: 8%; --mark-angle: 270deg; }
+.opening__peripheral-mark--south { --mark-x: 50%; --mark-y: 88%; --mark-angle: 90deg; }
+
+.opening__mark-motion {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  transform-origin: 50% 50%;
+  animation: opening-mark-sequence 3.5s linear 1 both;
+  pointer-events: none;
+}
+
+.opening__j-mark {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.opening__j-layer {
+  position: absolute;
+  display: block;
+  max-width: none;
+  animation-duration: 3.5s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(.2, .68, .18, 1);
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+}
+
+.opening__j-layer > img,
+.opening__j-detail-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.opening__j-layer--deep {
+  inset: 10.68% 25.64% 12.99% 25.61%;
+  animation-name: opening-j-deep-assemble;
+}
+
+.opening__j-layer--mid {
+  inset: 9.94% 26.07% 13.73% 25.19%;
+  animation-name: opening-j-mid-assemble;
+}
+
+.opening__j-layer--face {
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  animation-name: opening-j-face-assemble;
+}
+
+.opening__j-detail {
+  position: absolute;
+  display: block;
+  max-width: none;
+  inset: 9.19% 26.5% 14.32% 24.76%;
+  overflow: visible;
+  -webkit-mask-image: url("/media/opening/j-sonnet-v8/j-detail-mask.svg");
+  mask-image: url("/media/opening/j-sonnet-v8/j-detail-mask.svg");
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  animation: opening-j-detail-assemble 3.5s cubic-bezier(.2, .68, .18, 1) 1 both;
+}
+
+.opening__j-layer--bevel {
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  animation-name: opening-j-bevel-assemble;
+}
+
+.opening__j-layer--edge {
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  animation-name: opening-j-edge-assemble;
+}
+
+.opening__j-detail-mask-probe {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.opening__j-detail-art {
+  position: absolute;
+  inset: -0.42% -1.41% -2.79% -1%;
+}
+
+.opening__j-edge-light-art {
+  position: absolute;
+  inset: -0.19% -0.71% -0.18% -0.29%;
 }
 
 .opening__skip {
@@ -145,7 +305,7 @@
 .opening__ring--outer,
 .opening__ring--inner {
   opacity: 0;
-  animation: opening-loader-reveal 2s linear 1 both;
+  animation: opening-loader-reveal 3.5s linear 1 both;
 }
 
 .opening__tick {
@@ -154,7 +314,7 @@
   border-radius: 1px;
   background: rgb(93 113 132 / 60%);
   opacity: 0;
-  animation: opening-loader-reveal 2s linear 1 both;
+  animation: opening-loader-reveal 3.5s linear 1 both;
   pointer-events: none;
 }
 
@@ -191,13 +351,16 @@
 }
 
 .opening__archive-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
   width: 46.55%;
   height: 46.55%;
   max-width: none;
+  transform: translate(-50%, -50%);
   object-fit: contain;
   clip-path: circle(49% at 50% 50%);
   user-select: none;
-  animation: opening-mark-sequence 2s linear 1 both;
 }
 
 .opening__ring-arc {
@@ -209,8 +372,8 @@
   clip-path: inset(0 0 50% 50%);
   opacity: 0;
   animation:
-    opening-loader-reveal 2s linear 1 both,
-    opening-loading-turn 2s linear 1 both;
+    opening-loader-reveal 3.5s linear 1 both,
+    opening-loading-turn 3.5s linear 1 both;
 }
 
 .opening__loader-label,
@@ -221,7 +384,7 @@
   transform: translateX(-50%);
   pointer-events: none;
   opacity: 0;
-  animation: opening-loader-copy-reveal 2s linear 1 both;
+  animation: opening-loader-copy-reveal 3.5s linear 1 both;
 }
 
 .opening__loader-label {
@@ -249,7 +412,7 @@
   transform-origin: left;
   background: #c5a252;
   content: "";
-  animation: opening-progress-fill 2s linear 1 both;
+  animation: opening-progress-fill 3.5s linear 1 both;
 }
 
 .opening--reduced {
@@ -259,6 +422,26 @@
 
 .opening--reduced .opening__treatment {
   opacity: 1;
+  animation: none;
+}
+
+.opening--reduced .opening__radial-field,
+.opening--reduced .opening__peripheral-lines,
+.opening--reduced .opening__peripheral-mark {
+  opacity: 0;
+  animation: none;
+}
+
+.opening--reduced .opening__mark-motion {
+  opacity: 1;
+  animation: none;
+}
+
+.opening--reduced .opening__j-layer,
+.opening--reduced .opening__j-detail {
+  opacity: 1;
+  clip-path: none;
+  transform: none;
   animation: none;
 }
 
@@ -300,7 +483,7 @@
 
 @keyframes opening-client-reveal {
   0%,
-  91% {
+  94% {
     opacity: 0;
     animation-timing-function: ease-out;
   }
@@ -311,7 +494,7 @@
 
 @keyframes opening-treatment-out {
   0%,
-  91% {
+  94% {
     opacity: 1;
     animation-timing-function: ease-out;
   }
@@ -322,37 +505,140 @@
 
 @keyframes opening-mark-sequence {
   0%,
-  17% {
+  8% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1.28);
+    transform: scale(1.12);
   }
-  25% {
-    opacity: .42;
-    transform: translate(-50%, -50%) scale(.76);
-  }
-  35%,
-  41% {
+  18%,
+  24% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(.76);
+    transform: scale(.76);
   }
-  45%,
-  91% {
+  28% {
+    opacity: 0;
+    transform: scale(.76);
+  }
+  32%,
+  94% {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(.76);
+    transform: scale(.76);
   }
   100% {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(.76);
+    transform: scale(.76);
+  }
+}
+
+@keyframes opening-j-deep-assemble {
+  0%, 20% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+  24%, 27% { opacity: 0; clip-path: inset(80% 0 0); transform: translateY(2.4%); }
+  35%, 94% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes opening-j-mid-assemble {
+  0%, 20% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
+  24%, 30% { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-2.2%); }
+  38%, 94% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes opening-j-face-assemble {
+  0%, 20% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+  24%, 33% { opacity: 0; clip-path: inset(100% 0 0); transform: translateY(-1.4%); }
+  41%, 94% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes opening-j-detail-assemble {
+  0%, 20% { opacity: 1; clip-path: inset(0); transform: scale(1); }
+  24%, 37% { opacity: 0; clip-path: inset(42%); transform: scale(.97); }
+  45%, 94% { opacity: 1; clip-path: inset(0); transform: scale(1); }
+  100% { opacity: 0; }
+}
+
+@keyframes opening-j-bevel-assemble {
+  0%, 20% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
+  24%, 40% { opacity: 0; clip-path: inset(0 0 0 100%); transform: translateX(1.7%); }
+  48%, 94% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes opening-j-edge-assemble {
+  0%, 20% { opacity: 1; transform: translateY(0); }
+  24%, 44% { opacity: 0; transform: translateY(-1.1%); }
+  51%, 94% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; }
+}
+
+@keyframes opening-radial-expansion {
+  0%,
+  24% {
+    opacity: 0;
+    transform: scale(.78);
+  }
+  42% {
+    opacity: .28;
+    transform: scale(.88);
+  }
+  84%,
+  94% {
+    opacity: .14;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+}
+
+@keyframes opening-peripheral-drift {
+  0%,
+  24% {
+    opacity: 0;
+    transform: rotate(-8deg) scale(.94);
+  }
+  42% {
+    opacity: .26;
+    transform: rotate(-3deg) scale(.98);
+  }
+  84%,
+  94% {
+    opacity: .12;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(1deg) scale(1.02);
+  }
+}
+
+@keyframes opening-mark-reveal {
+  0%, 28% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(.4);
+  }
+  48% {
+    opacity: .78;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+  84%, 94% {
+    opacity: .52;
+    transform: translate(-50%, -50%) rotate(45deg) scale(.92);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1.05);
   }
 }
 
 @keyframes opening-loader-reveal {
   0%,
-  35% {
+  24% {
     opacity: 0;
   }
-  45%,
-  91% {
+  40%,
+  94% {
     opacity: 1;
   }
   100% {
@@ -362,11 +648,11 @@
 
 @keyframes opening-loader-copy-reveal {
   0%,
-  37% {
+  32% {
     opacity: 0;
   }
-  46%,
-  91% {
+  42%,
+  94% {
     opacity: 1;
   }
   100% {
@@ -378,7 +664,7 @@
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
-  91%,
+  94%,
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
@@ -386,11 +672,11 @@
 
 @keyframes opening-progress-fill {
   0%,
-  37% {
+  32% {
     transform: scaleX(0);
   }
-  84%,
-  91%,
+  82%,
+  90%,
   100% {
     transform: scaleX(1);
   }

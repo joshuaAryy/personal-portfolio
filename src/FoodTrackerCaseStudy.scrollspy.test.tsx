@@ -8,13 +8,11 @@ import FoodTrackerCaseStudy from "./FoodTrackerCaseStudy";
 const sectionTops: Record<string, number> = {
   "food-overview": -500,
   "food-logging": -400,
+  "food-architecture": -350,
   "food-insights": -300,
   "food-search": -200,
-  "food-interface": -100,
-  "food-system": -50,
-  "food-evaluation": 0,
-  "food-workflow": 100,
-  "food-reflection": 200,
+  "food-evaluation": -100,
+  "food-validation": 0,
 };
 
 function restoreProperty(target: object, name: string, descriptor: PropertyDescriptor | undefined) {
@@ -26,7 +24,7 @@ describe("Food Tracker chapter scrollspy at story end", () => {
   it.each([
     { name: "internal main scroller", mainScrolls: true },
     { name: "window scroller", mainScrolls: false },
-  ])("selects CLOSE after a passive scroll at the bottom with the $name", ({ mainScrolls }) => {
+  ])("selects the final chapter after a passive scroll at the bottom with the $name", ({ mainScrolls }) => {
     const previousActEnvironment = (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT;
     (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
 
@@ -85,16 +83,15 @@ describe("Food Tracker chapter scrollspy at story end", () => {
         flushFrames();
       });
 
-      const resultsLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "RESULTS");
-      const learningLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "LEARNING");
-      const closeLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "CLOSE");
-      expect(learningLink?.getAttribute("href")).toBe("#food-workflow");
-      expect(resultsLink?.getAttribute("aria-current")).toBe("location");
+      const retrievalLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "RETRIEVAL");
+      const validationLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "VALIDATION");
+      expect(validationLink?.getAttribute("href")).toBe("#food-validation");
+      expect(validationLink?.getAttribute("aria-current")).toBe("location");
 
       act(() => {
-        learningLink?.click();
+        retrievalLink?.click();
       });
-      expect(learningLink?.getAttribute("aria-current")).toBe("location");
+      expect(retrievalLink?.getAttribute("aria-current")).toBe("location");
 
       act(() => {
         if (mainScrolls) main.scrollTop = 900;
@@ -103,9 +100,8 @@ describe("Food Tracker chapter scrollspy at story end", () => {
         flushFrames();
       });
 
-      expect(closeLink?.getAttribute("aria-current")).toBe("location");
-      expect(learningLink?.getAttribute("aria-current")).toBeNull();
-      expect(resultsLink?.getAttribute("aria-current")).toBeNull();
+      expect(validationLink?.getAttribute("aria-current")).toBe("location");
+      expect(retrievalLink?.getAttribute("aria-current")).toBeNull();
     } finally {
       act(() => root.unmount());
       main.remove();

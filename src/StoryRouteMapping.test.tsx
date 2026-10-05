@@ -6,10 +6,10 @@ import App from "./App";
 const storyRoutes = [
   ["Food Tracker", "/projects/food-tracker", "Simple food logs."],
   ["Crest", "/projects/crest", "<h1>Crest</h1>"],
-  ["Cho’Veigo", "/projects/choveigo", "AUTHENTIC PRODUCT VIEW / RECOMMENDATIONS"],
-  ["Fraymakers", "/projects/fraymakers", "MATCH DATA TO VOD THUMBNAILS"],
-  ["Living in Silico", "/experience/living-in-silico", "A research internship in molecular generation."],
-  ["Stush Patties", "/experience/stush-patties", "Different file shapes. One reporting path."],
+  ["Cho’Veigo", "/projects/choveigo", "AUTHENTIC RECOMMENDATIONS CAPTURE"],
+  ["Fraymakers", "/projects/fraymakers", "TOURNAMENT CONTEXT"],
+  ["Living in Silico", "/experience/living-in-silico", "Molecules need representation before generation."],
+  ["Stush Patties", "/experience/stush-patties", "A business goal came before a clean data specification."],
 ] as const;
 
 function renderRoute(path: string) {

@@ -7,17 +7,22 @@ import FraymakersCase from "./FraymakersCase";
 describe("Fraymakers technical case study", () => {
   const render = () => renderToStaticMarkup(<MemoryRouter><FraymakersCase /></MemoryRouter>);
 
-  it("explains the match-to-thumbnail system and later YAML configuration", () => {
+  it("teaches the full match-to-render sequence without inventing lookup details", () => {
     const markup = render();
-    for (const stage of [
-      "Tournament match data",
-      "YAML configuration",
-      "Match-to-video mapping",
-      "thumbnail.js",
-      "node-canvas",
-      "1280 × 720",
-      "One render path; values change by match.",
-    ]) expect(markup).toContain(stage);
+    const orderedStages = [
+      "TOURNAMENT CONTEXT",
+      "METADATA",
+      "YAML / CONFIG",
+      "VIDEO ASSOCIATION",
+      "THUMBNAIL.JS",
+    ].map((stage) => markup.indexOf(stage));
+
+    expect(orderedStages.every((index) => index >= 0)).toBe(true);
+    expect(orderedStages).toEqual([...orderedStages].sort((a, b) => a - b));
+    expect(markup).toContain("1280");
+    expect(markup).toContain("exact lookup details are not represented here");
+    expect(markup).toContain("thumbnail.js");
+    expect(markup).toContain("node-canvas");
   });
 
   it("links every rendered chapter fragment to one unique section target", () => {
@@ -31,65 +36,68 @@ describe("Fraymakers technical case study", () => {
     }
   });
 
-  it("gives the desktop chapter rail enough width to show all five labels", () => {
-    const css = readFileSync("src/styles.css", "utf8");
-    const activeDesktopRules = css.slice(
-      css.lastIndexOf("@media (min-width:1800px) and (min-height:1000px)"),
+  it("keeps the broader foundation and Joshua's later subsystem ownership distinct", () => {
+    const markup = render();
+    const opening = markup.split("</header>")[0];
+    expect(opening).toContain("FROM MATCH CONTEXT TO VOD-READY FRAME");
+    expect(opening).toContain("I built");
+    expect(markup).toContain("I built <code>thumbnail.js</code>");
+    expect(markup).toContain("I joined later");
+    expect(markup).toContain("My brother started the broader project");
+    expect(markup).toContain("earlier CLI/workflow");
+    expect(markup).toContain("much of the Challonge integration and early API groundwork");
+    expect(markup).toContain("Automatic upload");
+    expect(markup).toContain("Not completed");
+  });
+
+  it("uses native explanatory figures and describes supported composition cases", () => {
+    const markup = render();
+    const compositionStart = markup.indexOf('id="fraymakers-composition"');
+    const ownershipStart = markup.indexOf('id="fraymakers-ownership"');
+    const composition = markup.slice(compositionStart, ownershipStart);
+
+    for (const item of ["stage/background art", "character sprites", "alternate costumes", "assists", "foreground elements", "logos", "P2 MIRRORING", "ALIASES", "LONG NAMES", "MISSING ASSETS"]) {
+      expect(markup).toContain(item);
+    }
+    expect(composition).toContain("no fixed layer order is implied");
+    expect(markup.match(/<figure/g)?.length).toBeGreaterThanOrEqual(5);
+    expect(markup).not.toContain("<img");
+    expect(markup).toContain("exact YAML keys and sample values are not shown");
+    expect(markup).toContain("used on real Fraymakers VODs");
+  });
+
+  it("positions chapter targets below the desktop and mobile sticky rails", () => {
+    const css = readFileSync("src/fraymakers-case.css", "utf8");
+
+    expect(css).toMatch(
+      /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*68px/s,
+    );
+    const lastMobileRules = css.slice(css.lastIndexOf("@media (max-width: 700px)"));
+    expect(lastMobileRules).toMatch(
+      /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*94px/s,
+    );
+  });
+
+  it("keeps the Fraymakers chapter rail sized and styled in the shared shell", () => {
+    const shellCss = readFileSync("src/styles.css", "utf8");
+    const activeDesktopRules = shellCss.slice(
+      shellCss.lastIndexOf("@media (min-width:1800px) and (min-height:1000px)"),
     );
 
     expect(activeDesktopRules).toMatch(
       /\.fraymakers-nav\s*\{\s*grid-template-columns:\s*minmax\(0,\s*446px\)/,
     );
-  });
-
-  it("clears every chapter target from below the sticky chapter navigation", () => {
-    const css = readFileSync("src/fraymakers-case.css", "utf8");
-
-    expect(css).toMatch(
-      /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{[^}]*scroll-margin-top:\s*8px/s,
-    );
-    const mobileRules = css.slice(css.lastIndexOf("@media (max-width: 700px)"));
-    expect(mobileRules).toMatch(/\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{[^}]*scroll-margin-top:\s*36px/s);
-
-    const shellCss = readFileSync("src/styles.css", "utf8");
     expect(shellCss).toMatch(/\.fraymakers-nav__chapters a\[aria-current="location"\]\s*\{[^}]*color:\s*#e3c57e/s);
     expect(shellCss).toMatch(/\.fraymakers-nav__chapters a\[aria-current="location"\]::after\s*\{[^}]*height:\s*2px;[^}]*background:\s*#d6b76b/s);
   });
 
-  it("leads with the system before ownership context", () => {
+  it("keeps the render boundary separate from the unfinished YouTube path", () => {
     const markup = render();
-    const opening = markup.split("</header>")[0];
-    expect(opening).toContain("MATCH DATA TO VOD THUMBNAILS");
-    expect(opening).toContain("One match");
-    expect(opening).not.toMatch(/joined later|brother project|my scope/i);
-    expect(markup).toContain("I built <code>thumbnail.js</code>");
-    expect(markup).toContain("worked on match-specific YAML configuration, thumbnail generation, and integration.");
-    expect(markup).not.toContain("I joined later");
-    expect(markup).toContain("Automatic upload was not completed");
-  });
+    const outputIndex = markup.indexOf("used on real Fraymakers VODs");
+    const uploadIndex = markup.indexOf("YouTube Data API v3 / OAuth");
 
-  it("explains the rendered frame's layers and technical edge cases", () => {
-    const markup = render();
-    const compositionStart = markup.indexOf('id="fraymakers-composition"');
-    const configurationStart = markup.indexOf('id="fraymakers-configuration"');
-    const composition = markup.slice(compositionStart, configurationStart);
-    const compositorInputs = markup.slice(
-      composition.indexOf('class="fray-case__layer-list"'),
-      composition.indexOf('class="fray-case__edge-list"'),
-    );
-    const pipeline = markup.slice(
-      markup.indexOf('class="fray-case__stages"'),
-      markup.indexOf("A connected route from match context"),
-    );
-
-    for (const item of ["LOGOS", "BACKGROUND / STAGE", "PLAYER 1 CHARACTER", "PLAYER 2 CHARACTER", "SET / PLAYER TEXT", "OTHER OVERLAYS", "ALIASES", "P2 MIRRORING", "LONG NAMES", "MISSING ASSETS"]) {
-      expect(markup).toContain(item);
-    }
-    expect(composition).toContain("Layered game art meets match context.");
-    expect(composition).toContain("Composition inputs include logos, stage and character art, costumes, assists, foreground, and set text.");
-    expect(compositorInputs).not.toContain("fray-case__layer-index");
-    expect([...pipeline.matchAll(/fray-case__stage-number">(\d{2})/g)].map(([, number]) => number)).toEqual(["01", "02", "03", "04"]);
-    expect(markup).toContain("SCHEMATIC OUTPUT / LAYOUT ONLY");
-    expect(markup).toContain("1280 × 720");
+    expect(outputIndex).toBeGreaterThan(-1);
+    expect(uploadIndex).toBeGreaterThan(outputIndex);
+    expect(markup).toContain("full automatic upload did not ship");
   });
 });

@@ -1,13 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import "./cho-evidence-worksheet.css";
+import "./cho-case-study.css";
 
 const chapters = [
   { id: "overview", label: "OVERVIEW" },
-  { id: "system", label: "SYSTEM PATH" },
-  { id: "fit", label: "FIT MODEL" },
-  { id: "review", label: "HUMAN REVIEW" },
-  { id: "change", label: "WHAT CHANGED" },
+  { id: "intake", label: "ROLE INTAKE" },
+  { id: "evidence", label: "EVIDENCE" },
+  { id: "decisions", label: "DECISIONS" },
+  { id: "review", label: "EVALUATION" },
+  { id: "studio", label: "RESUME STUDIO" },
+  { id: "outcome", label: "OUTCOME" },
 ] as const;
 
 type ChapterId = (typeof chapters)[number]["id"];
@@ -23,45 +25,64 @@ export function resolveActiveChapter(
   let nextChapter: ChapterId = chapters[0].id;
   for (const chapter of chapters) {
     const sectionTop = sectionTops[chapter.id];
-    if (sectionTop !== undefined && sectionTop <= activationLine) {
-      nextChapter = chapter.id;
-    }
+    if (sectionTop !== undefined && sectionTop <= activationLine) nextChapter = chapter.id;
   }
   return nextChapter;
 }
 
-const fitDimensions = [
-  ["FIT", "How closely does the evidence line up with the work?"],
-  ["ELIGIBILITY", "Are essential conditions and core requirements met?"],
-  ["RECOMMENDATION", "Is this role worth bringing forward?"],
+const roleFields = [
+  ["TITLE", "Role name"],
+  ["COMPANY", "Organization"],
+  ["DESCRIPTION", "Posting text"],
+  ["SOURCE ID", "Origin"],
+  ["OFFICIAL URL", "Posting link"],
 ] as const;
 
-const fitPrinciples = [
-  [
-    "RESPONSIBILITIES OVER STACK",
-    "I compared the work a role asks for, not just familiar technology.",
-  ],
-  [
-    "CORE REQUIREMENTS FIRST",
-    "A major gap can outweigh several weaker matches.",
-  ],
-  [
-    "TRANSFERABILITY COUNTS",
-    "Relevant experience can matter beyond exact titles or tools.",
-  ],
+const roleSignals = [
+  ["RESPONSIBILITIES", "What the role asks someone to do"],
+  ["CORE REQUIREMENTS", "The essential capabilities and conditions"],
+  ["PREFERRED", "Helpful signals that should not outweigh essentials"],
+] as const;
+
+const evidenceSignals = [
+  ["DEMONSTRATED", "Supported by reviewed profile material"],
+  ["TRANSFERABLE", "Relevant work beyond an exact title or tool"],
+  ["VISIBLE GAP", "No reviewed evidence; do not invent a qualification"],
+] as const;
+
+const decisions = [
+  {
+    number: "01",
+    label: "FIT",
+    question: "How closely does the evidence align with the work?",
+    detail: "Responsibilities and candidate evidence are compared; transferable experience can count.",
+  },
+  {
+    number: "02",
+    label: "ELIGIBILITY",
+    question: "Are essential requirements or conditions met?",
+    detail: "Core requirements stay visible instead of being buried by weaker keyword matches.",
+  },
+  {
+    number: "03",
+    label: "RECOMMENDATION",
+    question: "Should this role be brought forward to the person?",
+    detail: "A separate product outcome. The source does not establish a separate scoring formula.",
+  },
 ] as const;
 
 const reviewSteps = [
-  ["MISMATCH", "Inspect the result"],
-  ["CORRECTION", "Agree on expected behavior"],
-  ["DETERMINISTIC FIXTURE", "Encode the expected case"],
-  ["REGRESSION", "Recheck after changes"],
+  ["01", "NOTICE A MISMATCH", "Compare the result with the intended product behavior."],
+  ["02", "REVIEW THE EXPECTATION", "Was the expected behavior wrong, or was the implementation wrong?"],
+  ["03", "AGREE ON EXPECTED BEHAVIOR", "Joshua and Shiv reviewed the behavior before treating it as a defect."],
+  ["04", "DETERMINISTIC REGRESSION FIXTURE", "Keep the accepted example available for later changes."],
 ] as const;
 
-const evidenceInputs = [
-  ["ROLE REQUIREMENTS", "Responsibilities and essential criteria"],
-  ["CANDIDATE EVIDENCE", "Demonstrated and transferable experience"],
-  ["EVIDENCE GAPS", "Missing requirements stay visible"],
+const studioSteps = [
+  ["01", "SELECT GROUNDED EVIDENCE", "Choose relevant material from the reviewed profile."],
+  ["02", "CONSTRAINED REWRITE + VALIDATION", "A bounded wording pass must stay within supplied evidence; rejected or unavailable wording can fall back to source text."],
+  ["03", "HUMAN REVIEW", "Inspect the assembled resume before treating it as ready."],
+  ["04", "PAGE VERIFICATION + EXPORT", "Check page fit, then export a document."],
 ] as const;
 
 export default function ChoViegoCase() {
@@ -84,8 +105,7 @@ export default function ChoViegoCase() {
         const activationLine = rootTop + 78;
         const atStoryEnd = mainIsScroller
           ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
-          : window.scrollY + window.innerHeight >=
-            document.documentElement.scrollHeight - 2;
+          : window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
         const sectionTops: Partial<Record<ChapterId, number>> = {};
 
         for (const chapter of chapters) {
@@ -110,9 +130,7 @@ export default function ChoViegoCase() {
         !["ArrowDown", "ArrowUp", "End", "Home", " ", "PageDown", "PageUp"].includes(
           (event as KeyboardEvent).key,
         )
-      ) {
-        return;
-      }
+      ) return;
       selectedChapterAtEnd.current = null;
       updateChapter();
     };
@@ -156,254 +174,295 @@ export default function ChoViegoCase() {
             </a>
           ))}
         </div>
-        <Link className="choveigo-case-nav__back" to="/projects">
-          ‹ PROJECTS
-        </Link>
+        <Link className="choveigo-case-nav__back" to="/projects">‹ PROJECTS</Link>
         <span className="choveigo-case-nav__breadcrumb">CASE STUDY / CHO’VEIGO</span>
       </nav>
 
-      <article className="choveigo-story-content">
-        <section className="choveigo-section choveigo-hero" id="choveigo-overview">
-          <div className="choveigo-hero__opening">
-            <p className="choveigo-project-label">PRODUCT</p>
-            <h1>Cho’Veigo</h1>
-            <p className="choveigo-hero__intro">
-              A job-search workspace that surfaces roles, shows where your experience fits, and helps you decide whether to tailor your resume.
-            </p>
-          </div>
-
-          <div className="choveigo-recommendations choveigo-hero__proof">
-            <p className="choveigo-eyebrow">AUTHENTIC PRODUCT VIEW / RECOMMENDATIONS</p>
-            <figure className="choveigo-recommendations__figure">
-              <img
-                src="/media/choveigo-recommendations.png"
-                alt="Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence"
-                width="1280"
-                height="720"
-                decoding="async"
-              />
-              <figcaption>Role recommendations with fit evidence visible in context.</figcaption>
-            </figure>
-            <aside className="choveigo-recommendations__gaps" aria-label="Representative evidence gap">
-              <div>
-                <strong>REPRESENTATIVE GAP</strong>
-                <strong>ILLUSTRATIVE · NOT A MODEL SCORE</strong>
-              </div>
-              <p>A listed skill may have no reviewed resume evidence, so its gap stays visible.</p>
+      <article className="choveigo-story-content cho-study">
+        <section className="cho-study__hero" id="choveigo-overview" aria-labelledby="choveigo-title">
+          <div className="cho-study__hero-head">
+            <div className="cho-study__hero-title">
+              <p className="cho-study__eyebrow">PRODUCT / JOB DISCOVERY + RESUME TAILORING</p>
+              <h1 id="choveigo-title">Cho’Veigo</h1>
+              <p className="cho-study__hero-deck">A role isn’t a keyword match.</p>
+              <p className="cho-study__hero-copy">
+                Cho’Veigo brings job discovery and evidence-based resume tailoring into one workspace. The decision starts with the work a role asks for and the experience a person can actually show.
+              </p>
+            </div>
+            <aside className="cho-study__hero-credit" aria-label="Project collaboration and focus">
+              <span className="cho-study__eyebrow">TWO-PERSON PROJECT</span>
+              <p>Joshua Aryeetey <span aria-hidden="true">+</span> Shiv Arora</p>
+              <span className="cho-study__hero-credit-rule" />
+              <span className="cho-study__eyebrow">JOSHUA’S FOCUS</span>
+              <p>Jobs-side product work and shared evaluation direction</p>
             </aside>
           </div>
 
+          <figure className="cho-study__product-proof" aria-labelledby="cho-recommendations-caption">
+            <div className="cho-study__figure-head">
+              <p className="cho-study__eyebrow">AUTHENTIC RECOMMENDATIONS CAPTURE</p>
+              <p>Roles, evidence, and gaps in the same view</p>
+            </div>
+            <img
+              src="/media/choveigo-recommendations.png"
+              alt="Static Cho’Veigo Recommendations interface showing job roles beside fit evidence and skills to strengthen"
+              width="864"
+              height="486"
+              decoding="async"
+              fetchPriority="high"
+            />
+            <figcaption id="cho-recommendations-caption">
+              Static product capture. A privacy-safe walkthrough is not available for publication.
+            </figcaption>
+          </figure>
+
+          <div className="cho-study__thesis">
+            <span aria-hidden="true">01 — 04</span>
+            <p>Discover the role. Examine the evidence. Make a separate recommendation. Let the person choose what to do next.</p>
+          </div>
         </section>
 
-        <section className="choveigo-section choveigo-system" id="choveigo-system">
-          <p className="choveigo-eyebrow">SYSTEM / DISCOVERY TO TAILORING</p>
-          <h2>How a role becomes a recommendation.</h2>
-          <p className="choveigo-system__intro">
-            Cho’Veigo brings roles from job feeds and persisted role data into a structured record of responsibilities and core requirements. Candidate evidence stays distinct from visible gaps as the product prepares Fit, Eligibility, and Recommendation for review.
-          </p>
-          <WholeProductArchitecture />
-          <section className="choveigo-system__distinct-inputs" aria-labelledby="choveigo-distinct-inputs-title">
-            <p className="choveigo-eyebrow" id="choveigo-distinct-inputs-title">INPUTS THAT STAY DISTINCT</p>
-            <div className="choveigo-system__distinct-inputs-grid">
-              <article>
-                <h3>ROLE RECORD</h3>
-                <p>Job feeds and persisted role data lead to a structured role record. Responsibilities and core requirements give matching something concrete to evaluate.</p>
-              </article>
-              <article>
-                <h3>PROFILE + RESUME EVIDENCE</h3>
-                <p>Demonstrated and transferable evidence stays distinct from visible gaps. Structured Gemini interpretation remains tied to the supplied role and candidate material.</p>
-              </article>
-            </div>
-          </section>
-          <div className="choveigo-system__boundaries">
+        <section className="cho-study__section cho-study__intake" id="choveigo-intake" aria-labelledby="cho-intake-title">
+          <div className="cho-study__section-heading">
+            <p className="cho-study__eyebrow">01 / ROLE INTAKE</p>
+            <h2 id="cho-intake-title">Keep the job attached to the decision.</h2>
+            <p>Provider postings arrive in different shapes. The Jobs path turns a discovered or saved role into a record with enough context to inspect and carry forward.</p>
+          </div>
+          <RoleIntakeFigure />
+          <aside className="cho-study__snapshot-note">
+            <span className="cho-study__note-mark" aria-hidden="true">↳</span>
+            <p><strong>A saved role keeps its posting snapshot.</strong> Feed availability can change; the saved record preserves the title, company, and description from save time.</p>
+          </aside>
+        </section>
+
+        <section className="cho-study__section cho-study__evidence" id="choveigo-evidence" aria-labelledby="cho-evidence-title">
+          <div className="cho-study__section-heading cho-study__section-heading--split">
             <div>
-              <p className="choveigo-eyebrow choveigo-eyebrow--cyan">DETERMINISTIC RULE BOUNDARY</p>
-              <p>Deterministic rules compare structured role requirements with candidate evidence to assess Fit and Eligibility.</p>
+              <p className="cho-study__eyebrow">02 / EVIDENCE MODEL</p>
+              <h2 id="cho-evidence-title">Responsibilities matter more than a familiar stack.</h2>
             </div>
+            <p>Titles and technologies can help describe a role, but they cannot prove someone has done its work. Matching compares structured role signals with reviewed profile evidence, including relevant transferable experience and visible gaps.</p>
+          </div>
+          <EvidenceModelFigure />
+          <div className="cho-study__model-shift">
+            <div className="cho-study__model-shift-copy">
+              <p className="cho-study__eyebrow">A MODEL CHOICE THAT CHANGED</p>
+              <h3>Counting terms can count the same signal twice.</h3>
+              <p>The project moved away from an additive, keyword-heavy start after seeing how related role terms and reused resume evidence could inflate a tally. The later direction gave responsibilities, core requirements, evidence quality, and transferability a clearer place in the decision.</p>
+            </div>
+            <KeywordFailureFigure />
+          </div>
+        </section>
+
+        <section className="cho-study__section cho-study__decisions" id="choveigo-decisions" aria-labelledby="cho-decisions-title">
+          <div className="cho-study__section-heading">
+            <p className="cho-study__eyebrow">03 / THREE DIFFERENT QUESTIONS</p>
+            <h2 id="cho-decisions-title">Fit, Eligibility, and Recommendation are not synonyms.</h2>
+            <p>Keeping these outputs apart makes it easier to see where the evidence is strong, where an essential condition is missing, and whether a role should be brought forward for a person to inspect.</p>
+          </div>
+          <DecisionLenses />
+          <div className="cho-study__model-boundary">
+            <div className="cho-study__boundary-title">
+              <span className="cho-study__boundary-symbol" aria-hidden="true">◇</span>
+              <p className="cho-study__eyebrow">MODEL BOUNDARY</p>
+            </div>
+            <p><strong>Structured Gemini interpretation</strong> helps make role and candidate text usable. It remains constrained to supplied evidence; deterministic rules assess Fit and Eligibility. Recommendation is a separate product outcome, and the source does not establish a standalone formula for it.</p>
+          </div>
+        </section>
+
+        <section className="cho-study__section cho-study__review" id="choveigo-review" aria-labelledby="cho-review-title">
+          <div className="cho-study__review-intro">
+            <p className="cho-study__eyebrow">04 / HUMAN-REVIEWED EVALUATION</p>
+            <h2 id="cho-review-title">A mismatch started a product conversation.</h2>
+            <p>With Shiv, I reviewed mismatches and checked whether the implementation missed the rule or expected behavior needed to change. Once we agreed on a case, it could become a deterministic regression fixture.</p>
+          </div>
+          <ReviewLoopFigure />
+        </section>
+
+        <section className="cho-study__section cho-study__studio" id="choveigo-studio" aria-labelledby="cho-studio-title">
+          <div className="cho-study__section-heading cho-study__section-heading--split">
             <div>
-              <p className="choveigo-eyebrow">STRUCTURED GEMINI INTERPRETATION</p>
-              <p>The prompt constrains Gemini to interpret supplied evidence; deterministic rules assess Fit and Eligibility, with Recommendation handled separately.</p>
+              <p className="cho-study__eyebrow">05 / DOWNSTREAM WORKFLOW</p>
+              <h2 id="cho-studio-title">The handoff prepares context; it does not generate a resume.</h2>
             </div>
+            <p>Choosing a role opens a separate Resume Studio path. That boundary matters: a recommendation should not silently become a generated document or an application sent on someone’s behalf.</p>
           </div>
-          <div className="choveigo-system__tailoring">
-            <span className="choveigo-eyebrow">NEXT ACTION / RESUME TAILORING FOLLOWS RECOMMENDATION</span>
-            <p>A selected role and profile prepare the inputs; the person starts tailoring separately.</p>
+          <ResumeStudioFigure />
+          <div className="cho-study__studio-attribution">
+            <span className="cho-study__eyebrow">SEPARATE PRODUCT WORKSTREAM</span>
+            <p>Shiv initially led more of the foundational resume-generation work. The handoff connects the Jobs experience to that separate workflow without implying one person owned the whole system.</p>
           </div>
-          <section className="choveigo-tailoring-workflow" aria-labelledby="choveigo-tailoring-title">
-            <div className="choveigo-tailoring-workflow__intro">
-              <p className="choveigo-eyebrow">A SEPARATE RESUME STUDIO WORKFLOW</p>
-              <h3 id="choveigo-tailoring-title">The recommendation opens a path; the person starts tailoring.</h3>
-              <p>The handoff passes selected posting context and the selected profile as prepared inputs; it does not generate content.</p>
-            </div>
-            <ol>
-              <li><span>01</span><strong>SELECTED ROLE + PROFILE</strong><p>Carry the selected role context and profile into the separate tailoring step.</p></li>
-              <li><span>02</span><strong>RESUME STUDIO</strong><p>From reviewed profile evidence and an editable job description, it selects grounded content, constrains rewrites to that evidence, and validates the wording.</p></li>
-              <li><span>03</span><strong>REVIEW + OUTPUT</strong><p>Person reviews the result, verifies the page, then exports a document.</p></li>
-            </ol>
-          </section>
         </section>
 
-        <section className="choveigo-section choveigo-fit" id="choveigo-fit">
-          <p className="choveigo-eyebrow">JOSHUA’S FOCUS / MATCHING MODEL</p>
-          <div className="choveigo-fit__definition">
-            <div className="choveigo-fit__story">
-              <h2>A title or stack is only a clue.</h2>
-              <p>
-                Working with Shiv, I helped shape matching around responsibilities, core requirements, transferable evidence, and visible gaps.
-              </p>
-            </div>
-            <dl className="choveigo-fit__dimensions">
-              {fitDimensions.map(([term, definition], index) => (
-                <div className={index === 0 ? "choveigo-fit__dimension is-primary" : "choveigo-fit__dimension"} key={term}>
-                  <dt>{term}</dt>
-                  <dd>{definition}</dd>
-                </div>
-              ))}
-            </dl>
+        <section className="cho-study__ending" id="choveigo-outcome" aria-labelledby="cho-outcome-title">
+          <div className="cho-study__ending-lead">
+            <p className="cho-study__eyebrow">WHAT THE WORK CHANGED</p>
+            <h2 id="cho-outcome-title">From counting words to asking what the evidence supports.</h2>
           </div>
-          <ol className="choveigo-fit__principles">
-            {fitPrinciples.map(([title, detail], index) => (
-              <li key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <h3>{title}</h3>
-                <p>{detail}</p>
-              </li>
-            ))}
-          </ol>
-          <EvidenceWorksheet />
-        </section>
-
-        <section className="choveigo-section choveigo-review" id="choveigo-review">
-          <div className="choveigo-review__story">
-            <p className="choveigo-eyebrow">HUMAN-REVIEWED EVALUATION</p>
-            <h2>A mismatch became a better test.</h2>
-            <p>
-              With Shiv, I reviewed mismatches and agreed on expected behavior. Human review informed deterministic regression fixtures for later changes.
-            </p>
+          <blockquote>
+            <span className="cho-study__eyebrow">OWNER-REPORTED EXPERIENCE</span>
+            <p>“One recommendation surfaced a role I might have missed.”</p>
+          </blockquote>
+          <div className="cho-study__ending-credit">
+            <p className="cho-study__eyebrow">Two-person project · Joshua Aryeetey + Shiv Arora</p>
+            <p><strong>Joshua focused on Jobs and shared product/evaluation direction.</strong> He worked with Shiv on retrieval priorities, matching behavior, and review of expected results.</p>
+            <p>Shiv initially led more of the foundational resume-generation work. Cho’Veigo remained a two-person project.</p>
           </div>
-          <ol className="choveigo-review__steps">
-            {reviewSteps.map(([title, detail], index) => (
-              <li key={title}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <strong>{title}</strong>
-                <p>{detail}</p>
-              </li>
-            ))}
-          </ol>
-          <p className="choveigo-review__lesson">
-            I learned to make ambiguous match behavior concrete enough to test.
-          </p>
-        </section>
-
-        <section className="choveigo-section choveigo-change" id="choveigo-change">
-          <div className="choveigo-change__story">
-            <p className="choveigo-eyebrow">WHAT CHANGED</p>
-            <h2>I learned to evaluate recommendations through the evidence that supports them.</h2>
-            <p>Review made regression work more meaningful: each check represented agreed behavior instead of a test changed just to pass.</p>
-          </div>
-          <div className="choveigo-change__result">
-            <p className="choveigo-eyebrow choveigo-eyebrow--cyan">IN PRACTICE</p>
-            <p>One recommendation surfaced a role I might have missed.</p>
-          </div>
-          <p className="choveigo-change__credit">BUILT WITH SHIV ARORA · JOB DISCOVERY + RESUME TAILORING</p>
+          <Link className="cho-study__back-link" to="/projects">‹ BACK TO PROJECTS</Link>
         </section>
       </article>
     </>
   );
 }
 
-function WholeProductArchitecture() {
+function RoleIntakeFigure() {
   return (
-    <figure className="choveigo-system-map" aria-labelledby="choveigo-system-map-title">
-      <figcaption id="choveigo-system-map-title" className="choveigo-system-map__sr-only">
-        Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.
-      </figcaption>
-      <div className="choveigo-system-map__connectors" aria-hidden="true">
-        <span className="choveigo-system-map__role-line" />
-        <span className="choveigo-system-map__candidate-line" />
-        <span className="choveigo-system-map__input-merge" />
-        <span className="choveigo-system-map__merge-line" />
-        <span className="choveigo-system-map__output-line" />
-      </div>
-      <div className="choveigo-system-map__inputs" role="group" aria-label="System inputs">
-        <div className="choveigo-system-map__input choveigo-system-map__input--roles">
-          <h3>Role discovery</h3>
-          <p>Job feeds + persisted role data</p>
-          <p>A structured role record</p>
-          <p>Responsibilities + core requirements</p>
-        </div>
-        <div className="choveigo-system-map__input choveigo-system-map__input--candidate">
-          <h3>Candidate evidence</h3>
-          <p>Resume + selected profile</p>
-          <p>Demonstrated and transferable evidence stays distinct from visible gaps.</p>
-        </div>
-      </div>
-      <div className="choveigo-system-map__decision">
-        <h3>Decision layers</h3>
-        <p className="choveigo-system-map__decision-note">Structured Gemini interpretation remains tied to the supplied role and candidate material.</p>
-        <div className="choveigo-system-map__layers">
-          <article className="choveigo-system-map__layer">
-            <h4>Fit</h4>
-            <p>Deterministic<br />responsibilities vs. evidence</p>
-          </article>
-          <article className="choveigo-system-map__layer">
-            <h4>Eligibility</h4>
-            <p>Deterministic<br />essential requirements</p>
-          </article>
-          <article className="choveigo-system-map__layer choveigo-system-map__layer--model">
-            <h4>GEMINI · STRUCTURED</h4>
-            <p>Interprets supplied text; rules decide Fit and Eligibility.</p>
-          </article>
-        </div>
-      </div>
-      <div className="choveigo-system-map__outcomes">
-        <h3>Product actions</h3>
-        <article className="choveigo-system-map__outcome choveigo-system-map__outcome--recommendation">
-          <h4>Recommendation</h4>
-          <p>A distinct judgment: bring the role forward.</p>
-        </article>
-        <article className="choveigo-system-map__outcome">
-          <h4>NEXT · RESUME TAILORING</h4>
-          <p>A separate action after recommendation.</p>
-        </article>
-      </div>
+    <figure className="cho-study__intake-figure" aria-labelledby="cho-intake-caption">
+      <ol className="cho-study__intake-flow">
+        <li className="cho-study__intake-source">
+          <span className="cho-study__step-number">01</span>
+          <p className="cho-study__eyebrow">DISCOVERED POSTING</p>
+          <h3>Provider feed</h3>
+          <p>External sources return role listings with provider-specific structure.</p>
+          <div className="cho-study__source-fragments" aria-label="Posting attributes">
+            <span>title</span><span>company</span><span>description</span>
+          </div>
+        </li>
+        <li className="cho-study__intake-record">
+          <span className="cho-study__step-number">02</span>
+          <p className="cho-study__eyebrow">STRUCTURED ROLE CONTEXT</p>
+          <h3>Posting record</h3>
+          <dl>
+            {roleFields.map(([key, value]) => (
+              <div key={key}><dt>{key}</dt><dd>{value}</dd></div>
+            ))}
+          </dl>
+        </li>
+        <li className="cho-study__intake-saved">
+          <span className="cho-study__step-number">03</span>
+          <p className="cho-study__eyebrow">USER-SAVED ROLE</p>
+          <h3>Posting snapshot</h3>
+          <p>The saved job retains the posting details used for later review and tailoring handoff.</p>
+          <span className="cho-study__snapshot-seal">PRESERVED CONTEXT</span>
+        </li>
+      </ol>
+      <figcaption id="cho-intake-caption">The record keeps posting identity, source, and description together so a later review can return to saved role context.</figcaption>
     </figure>
   );
 }
 
-function EvidenceWorksheet() {
+function EvidenceModelFigure() {
   return (
-    <figure className="cho-evidence-worksheet" aria-labelledby="cho-evidence-title">
-      <figcaption id="cho-evidence-title" className="cho-evidence-worksheet__caption">
-        MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT
-      </figcaption>
-      <ol className="cho-evidence-worksheet__inputs" aria-label="Evidence path">
-        {evidenceInputs.map(([label, detail]) => (
-          <li key={label}>
-            <span>{label}</span>
+    <figure className="cho-study__evidence-figure" aria-labelledby="cho-evidence-caption">
+      <div className="cho-study__evidence-pool cho-study__evidence-pool--role">
+        <p className="cho-study__eyebrow">ROLE SIGNALS</p>
+        <ul>{roleSignals.map(([label, detail]) => <li key={label}><strong>{label}</strong><span>{detail}</span></li>)}</ul>
+      </div>
+      <div className="cho-study__evidence-bridge" aria-label="Relevant reviewed profile evidence is retrieved for the role before bounded structured interpretation">
+        <span className="cho-study__bridge-line" aria-hidden="true" />
+        <ol className="cho-study__bridge-steps">
+          <li>
+            <p className="cho-study__eyebrow">01 / RETRIEVE</p>
+            <strong>Relevant reviewed profile context for this role</strong>
+            <span>Bring forward evidence that can be inspected.</span>
+          </li>
+          <li>
+            <p className="cho-study__eyebrow">02 / INTERPRET</p>
+            <strong>STRUCTURED GEMINI INTERPRETATION</strong>
+            <span>Compare the work with the evidence inside a bounded text path.</span>
+          </li>
+        </ol>
+        <span className="cho-study__bridge-line" aria-hidden="true" />
+      </div>
+      <div className="cho-study__evidence-pool cho-study__evidence-pool--candidate">
+        <p className="cho-study__eyebrow">PROFILE EVIDENCE</p>
+        <ul>{evidenceSignals.map(([label, detail]) => <li key={label}><strong>{label}</strong><span>{detail}</span></li>)}</ul>
+      </div>
+      <figcaption id="cho-evidence-caption">Conceptual product model, not a fabricated candidate trace or live match score. Relevant profile evidence is retrieved before bounded interpretation; missing evidence remains visible instead of being filled in by the model.</figcaption>
+    </figure>
+  );
+}
+
+function KeywordFailureFigure() {
+  return (
+    <figure className="cho-study__overlap-figure" aria-labelledby="cho-overlap-caption">
+      <div className="cho-study__overlap-pair">
+        <div className="cho-study__overlap-keywords">
+          <span>RELATED TERM</span><span>RELATED TERM</span><span>RELATED TERM</span>
+        </div>
+        <span className="cho-study__overlap-arrow" aria-hidden="true">→</span>
+        <div className="cho-study__overlap-evidence">
+          <span>SAME PROFILE EVIDENCE</span>
+          <i aria-hidden="true" /><i aria-hidden="true" /><i aria-hidden="true" />
+        </div>
+      </div>
+      <div className="cho-study__overlap-result">
+        <span className="cho-study__eyebrow">CORRELATED TERMS CAN INFLATE A TALLY</span>
+        <strong>One signal receives repeated credit</strong>
+      </div>
+      <figcaption id="cho-overlap-caption">Illustrative failure mode; not a live match result. Related terms and reused evidence can inflate an additive tally.</figcaption>
+    </figure>
+  );
+}
+
+function DecisionLenses() {
+  return (
+    <figure className="cho-study__decision-figure" aria-labelledby="cho-decision-caption">
+      <div className="cho-study__decision-topline">
+        <span>SHARED INPUT</span>
+        <strong>Role requirements + reviewed evidence</strong>
+        <span>THREE SEPARATE LENSES</span>
+      </div>
+      <ol>
+        {decisions.map(({ number, label, question, detail }, index) => (
+          <li className={index === 2 ? "cho-study__decision-card cho-study__decision-card--recommendation" : "cho-study__decision-card"} key={label}>
+            <span className="cho-study__step-number">{number}</span>
+            <h3>{label}</h3>
+            <p className="cho-study__decision-question">{question}</p>
             <p>{detail}</p>
           </li>
         ))}
       </ol>
-      <div className="cho-evidence-worksheet__branch" aria-hidden="true">
-        <span className="cho-evidence-worksheet__stem" />
-        <span className="cho-evidence-worksheet__rail" />
-        <span className="cho-evidence-worksheet__connector" />
-        <span className="cho-evidence-worksheet__connector" />
-        <span className="cho-evidence-worksheet__connector" />
+      <figcaption id="cho-decision-caption">No numeric score is shown here: the diagram explains what each product concept asks, not an invented result.</figcaption>
+    </figure>
+  );
+}
+
+function ReviewLoopFigure() {
+  return (
+    <figure className="cho-study__review-figure" aria-labelledby="cho-review-caption">
+      <ol>{reviewSteps.map(([number, title, detail]) => (
+        <li key={number}>
+          <span className="cho-study__step-number">{number}</span>
+          <h3>{title}</h3>
+          <p>{detail}</p>
+        </li>
+      ))}</ol>
+      <figcaption id="cho-review-caption">Accepted expected behavior became regression fixtures that could be revisited as the matching logic changed.</figcaption>
+    </figure>
+  );
+}
+
+function ResumeStudioFigure() {
+  return (
+    <figure className="cho-study__studio-figure" aria-labelledby="cho-studio-caption">
+      <div className="cho-study__handoff-band">
+        <span className="cho-study__eyebrow">JOBS → RESUME STUDIO</span>
+        <div><span>SELECTED ROLE</span><b aria-hidden="true">+</b><span>REVIEWED PROFILE</span></div>
+        <p>The Jobs handoff prefills context. It does not call the model, generate a plan, or export a document.</p>
       </div>
-      <dl className="cho-evidence-worksheet__judgments">
-        {fitDimensions.map(([term, definition]) => (
-          <div key={term}>
-            <dt>{term}</dt>
-            <dd>{definition}</dd>
-          </div>
-        ))}
-      </dl>
-      <div className="cho-evidence-worksheet__boundary">
-        <span>MODEL BOUNDARY</span>
-        <p>Structured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment.</p>
+      <div className="cho-study__studio-inputs">
+        <span className="cho-study__eyebrow">RESUME STUDIO INPUTS</span>
+        <strong>Reviewed profile + editable job description</strong>
       </div>
+      <ol>{studioSteps.map(([number, title, detail]) => (
+        <li key={number}>
+          <span className="cho-study__step-number">{number}</span>
+          <h3>{title}</h3>
+          <p>{detail}</p>
+        </li>
+      ))}</ol>
+      <figcaption id="cho-studio-caption">A separate inspected workflow path: reviewed evidence and an editable job description inform the draft, followed by person-led review and page verification.</figcaption>
     </figure>
   );
 }

@@ -714,8 +714,9 @@ a:focus-visible {
   flex-basis: 34px;
 }
 .rail-avatar--activity-focus img {
-  width: 50px;
-  height: 50px;
+  width: 34px;
+  height: 34px;
+  object-fit: contain;
 }
 .rail-avatar--activity-portfolio {
   display: block;
@@ -7198,18 +7199,22 @@ a:focus-visible {
   transition: color 140ms ease;
 }
 .header-client-tool--resume {
-  border: 1px solid rgba(199, 155, 69, 0.75);
-  border-radius: 999px;
-  color: #f0d58a;
+  min-height: 38px;
+  padding: 0 15px;
+  border: 1px solid rgba(226, 189, 103, 0.92);
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(197, 155, 69, 0.22), rgba(197, 155, 69, 0.08));
+  box-shadow: inset 0 0 0 1px rgba(236, 206, 135, 0.12), 0 0 14px rgba(172, 126, 42, 0.12);
+  color: #ffe3a1;
   font-weight: 700;
-  padding: 0 12px;
 }
 .header-client-tool--email {
-  border-radius: 4px;
-  background: rgba(199, 155, 69, 0.16);
-  color: #f0d58a;
+  min-height: 28px;
+  padding: 0 4px;
+  border-bottom: 1px solid rgba(55, 202, 215, 0.72);
+  color: #7bdde1;
   font-weight: 700;
-  padding: 0 10px;
+  letter-spacing: 0.06em;
 }
 .header-client-tool:hover,
 .header-client-tool:focus-visible { color: #f0d58a; }

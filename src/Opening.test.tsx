@@ -29,12 +29,28 @@ describe("opening route handoff", () => {
     expect(markup).toContain('class="opening__skip"');
   });
 
-  it("renders the archive mark with a fine native ring treatment", () => {
+  it("renders the editable v8 J layers with a fine native ring treatment", () => {
     const markup = renderOpeningRoute();
 
     expect(markup).toContain('data-node-id="3580:2"');
     expect(markup).toContain('data-node-id="3581:2"');
-    expect(markup).toContain('src="/media/profile/open-portfolio-j-archive-source-700.png"');
+    expect(markup).toContain('class="opening__radial-field"');
+    expect(markup).toContain('class="opening__peripheral-lines"');
+    expect(markup.match(/class="opening__peripheral-mark opening__peripheral-mark--/g)).toHaveLength(8);
+    expect(markup).toContain('data-j-source="v8-3325:335"');
+    expect(markup).toContain('data-node-id="3325:336"');
+    expect(markup).toContain('data-node-id="3325:337"');
+    expect(markup).toContain('data-node-id="3325:338"');
+    expect(markup).toContain('data-node-id="3325:342"');
+    expect(markup).toContain('data-node-id="3325:411"');
+    expect(markup).toContain('data-node-id="3325:412"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-extrusion-deep.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-extrusion-mid.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-face.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-detail.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-detail-mask.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-bevel.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-edge-light.svg"');
     expect(markup).toContain('class="opening__ring opening__ring--outer"');
     expect(markup).toContain('class="opening__ring opening__ring--inner"');
     expect(markup).toContain('class="opening__ring-arc"');
@@ -47,7 +63,10 @@ describe("opening route handoff", () => {
     expect(markup).not.toContain('class="opening__progress"');
     expect(markup).toContain("LOADING");
     expect(markup).toContain('class="opening__progress-line"');
-    expect(markup).toContain('data-node-id="159:2"');
+    expect(readFileSync("src/Opening.tsx", "utf8")).toContain(
+      '"/media/profile/open-portfolio-j-archive-source-700.png"',
+    );
+    expect(markup).not.toContain('data-node-id="159:2"');
     expect(markup).not.toContain("segmented-outer-bezel");
     expect(markup).toContain('aria-label="Skip to Home"');
   });
@@ -75,27 +94,51 @@ describe("opening route handoff", () => {
     expect(mark).toMatch(/width:\s*46\.55%/);
   });
 
-  it("stages the archive J large-first, clear, then smaller inside the loader", () => {
+  it("stages the v8 J through establish, clear, formation, settle, and handoff over 3.5 seconds", () => {
     const css = readFileSync("src/opening.css", "utf8");
-    const markRules = [...css.matchAll(/\.opening__archive-mark\s*\{([^}]*)\}/g)].map((match) => match[1]);
+    const markRules = [...css.matchAll(/\.opening__mark-motion\s*\{([^}]*)\}/g)].map((match) => match[1]);
     const markMotion = markRules.find((rule) => /animation:\s*opening-mark-sequence/.test(rule)) ?? "";
     const markSequence = css.match(/@keyframes opening-mark-sequence\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const fieldMotion = css.match(/\.opening__radial-field\s*\{([^}]*)\}/)?.[1] ?? "";
+    const peripheralMotion = [...css.matchAll(/\.opening__peripheral-lines\s*\{([^}]*)\}/g)]
+      .map((match) => match[1])
+      .find((rule) => /animation:\s*opening-peripheral-drift/.test(rule)) ?? "";
+    const fieldSequence = css.match(/@keyframes opening-radial-expansion\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const loaderReveal = css.match(/@keyframes opening-loader-reveal\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const loadingTurn = css.match(/@keyframes opening-loading-turn\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const progressFill = css.match(/@keyframes opening-progress-fill\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
-    expect(markMotion).toMatch(/animation:\s*opening-mark-sequence\s+2s/);
-    expect(markSequence).toMatch(/0%,\s*17%[\s\S]*?opacity:\s*1[\s\S]*?scale\(1\.28\)/);
-    expect(markSequence).toMatch(/25%[\s\S]*?opacity:\s*\.42[\s\S]*?scale\(\.76\)/);
-    expect(markSequence).toMatch(/35%,\s*41%[\s\S]*?opacity:\s*0/);
-    expect(markSequence).toMatch(/45%,\s*91%[\s\S]*?opacity:\s*1[\s\S]*?scale\(\.76\)/);
-    expect(loaderReveal).toMatch(/0%,\s*35%[\s\S]*?opacity:\s*0/);
-    expect(loaderReveal).toMatch(/45%,\s*91%[\s\S]*?opacity:\s*1/);
-    expect(css).toMatch(/\.opening__ring--outer[\s\S]*?animation:\s*opening-loader-reveal/);
-    expect(css).toMatch(/\.opening__tick[\s\S]*?animation:\s*opening-loader-reveal/);
-    expect(css).toMatch(/\.opening__loader-label[\s\S]*?animation:\s*opening-loader-copy-reveal/);
-    expect(loadingTurn).toMatch(/91%,\s*100%[\s\S]*?rotate\(360deg\)/);
-    expect(progressFill).toMatch(/84%,\s*91%,\s*100%[\s\S]*?scaleX\(1\)/);
+    expect(markMotion).toMatch(/animation:\s*opening-mark-sequence\s+3\.5s/);
+    expect(markSequence).toMatch(/0%,\s*8%[\s\S]*?opacity:\s*1[\s\S]*?scale\(1\.12\)/);
+    expect(markSequence).toMatch(/18%,\s*24%[\s\S]*?opacity:\s*0/);
+    expect(markSequence).toMatch(/28%[\s\S]*?opacity:\s*0/);
+    expect(markSequence).toMatch(/32%,\s*94%[\s\S]*?opacity:\s*1[\s\S]*?scale\(\.76\)/);
+    expect(markSequence).not.toContain("clip-path");
+    expect(css).toMatch(/\.opening__j-layer--deep\s*\{[^}]*animation-name:\s*opening-j-deep-assemble/s);
+    expect(css).toMatch(/\.opening__j-layer--mid\s*\{[^}]*animation-name:\s*opening-j-mid-assemble/s);
+    expect(css).toMatch(/\.opening__j-layer--face\s*\{[^}]*animation-name:\s*opening-j-face-assemble/s);
+    expect(css).toMatch(/\.opening__j-detail\s*\{[^}]*animation:\s*opening-j-detail-assemble/s);
+    expect(css).toMatch(/\.opening__j-layer--bevel\s*\{[^}]*animation-name:\s*opening-j-bevel-assemble/s);
+    expect(css).toMatch(/\.opening__j-layer--edge\s*\{[^}]*animation-name:\s*opening-j-edge-assemble/s);
+    expect(css).toMatch(/@keyframes opening-j-deep-assemble\s*\{[\s\S]*?35%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-mid-assemble\s*\{[\s\S]*?38%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-face-assemble\s*\{[\s\S]*?41%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-detail-assemble\s*\{[\s\S]*?45%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-bevel-assemble\s*\{[\s\S]*?48%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-edge-assemble\s*\{[\s\S]*?51%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(fieldMotion).toMatch(/animation:\s*opening-radial-expansion\s+3\.5s/);
+    expect(peripheralMotion).toMatch(/animation:\s*opening-peripheral-drift\s+3\.5s/);
+    expect(fieldSequence).toMatch(/0%,\s*24%[\s\S]*?scale\(\.78\)/);
+    expect(fieldSequence).toMatch(/84%,\s*94%[\s\S]*?scale\(1\)/);
+    expect(loaderReveal).toMatch(/0%,\s*24%[\s\S]*?opacity:\s*0/);
+    expect(loaderReveal).toMatch(/40%,\s*94%[\s\S]*?opacity:\s*1/);
+    expect(css).toMatch(/\.opening__ring--outer[\s\S]*?animation:\s*opening-loader-reveal\s+3\.5s/);
+    expect(css).toMatch(/\.opening__tick[\s\S]*?animation:\s*opening-loader-reveal\s+3\.5s/);
+    expect(css).toMatch(/\.opening__loader-label[\s\S]*?animation:\s*opening-loader-copy-reveal\s+3\.5s/);
+    expect(loadingTurn).toMatch(/94%,\s*100%[\s\S]*?rotate\(360deg\)/);
+    expect(progressFill).toMatch(/82%,\s*90%,\s*100%[\s\S]*?scaleX\(1\)/);
+    expect(css).toMatch(/opening-client-reveal\s+3\.5s/);
+    expect(css).toMatch(/opening-treatment-out\s+3\.5s/);
   });
 
   it("keeps the phase choreography static for reduced-motion visitors", () => {
@@ -104,9 +147,36 @@ describe("opening route handoff", () => {
     expect(css).toMatch(
       /\.opening--reduced \.opening__archive-mark\s*\{[^}]*animation:\s*none/s,
     );
+    expect(css).toMatch(/\.opening--reduced \.opening__radial-field,[\s\S]*?opacity:\s*0/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__peripheral-lines(?:,|\s*\{)/);
+    expect(css).toMatch(/\.opening--reduced \.opening__peripheral-mark\s*\{/);
     expect(css).toMatch(/\.opening--reduced \.opening__ring--outer[\s\S]*?opacity:\s*1/s);
     expect(css).toMatch(/\.opening--reduced \.opening__tick[\s\S]*?opacity:\s*1/s);
     expect(css).toMatch(/\.opening--reduced \.opening__loader-label[\s\S]*?opacity:\s*1/s);
+  });
+
+  it("preserves the authored v8 layer insets and masked detail geometry", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const detailRule = css.match(/\.opening__j-detail\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(css).toMatch(/\.opening__j-layer--deep\s*\{[^}]*inset:\s*10\.68% 25\.64% 12\.99% 25\.61%/s);
+    expect(css).toMatch(/\.opening__j-layer--mid\s*\{[^}]*inset:\s*9\.94% 26\.07% 13\.73% 25\.19%/s);
+    expect(css).toMatch(/\.opening__j-layer--face\s*\{[^}]*inset:\s*9\.19% 26\.5% 14\.48% 24\.76%/s);
+    expect(css).toMatch(/\.opening__j-layer--bevel\s*\{[^}]*inset:\s*9\.19% 26\.5% 14\.48% 24\.76%/s);
+    expect(css).toMatch(/\.opening__j-layer--edge\s*\{[^}]*inset:\s*9\.19% 26\.5% 14\.48% 24\.76%/s);
+    expect(detailRule).toMatch(/mask-image:\s*url\("\/media\/opening\/j-sonnet-v8\/j-detail-mask\.svg"\)/);
+    expect(css).toMatch(/\.opening__j-detail-art\s*\{[^}]*inset:\s*-0\.42% -1\.41% -2\.79% -1%/s);
+    expect(css).toMatch(/\.opening__j-edge-light-art\s*\{[^}]*inset:\s*-0\.19% -0\.71% -0\.18% -0\.29%/s);
+  });
+
+  it("centers the archive mark if the editable v8 source falls back", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const fallbackRule = css.match(/\.opening__archive-mark\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(fallbackRule).toMatch(/position:\s*absolute/);
+    expect(fallbackRule).toMatch(/left:\s*50%/);
+    expect(fallbackRule).toMatch(/top:\s*50%/);
+    expect(fallbackRule).toMatch(/transform:\s*translate\(-50%,\s*-50%\)/);
   });
 
   it("does not keep the inactive segmented construction styles", () => {

@@ -129,10 +129,13 @@ describe("League client shell", () => {
 
   it("keeps the rail compact, uses approved marks, and omits hidden draft labels", () => {
     const markup = renderClient();
+    const activityMarkup = renderClient("/home");
 
     expect(markup).toContain('data-node-id="3317:4"');
     expect(markup).toContain('/media/profile/open-portfolio-j-small-48.svg');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
+    expect(activityMarkup).toContain('class="rail-avatar rail-avatar--activity rail-avatar--activity-focus" aria-hidden="true" data-node-id="I2356:611;95:51">');
+    expect(activityMarkup).toContain('src="/media/profile/food-tracker-mark.svg" alt="" width="34" height="34"');
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');

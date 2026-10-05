@@ -45,6 +45,7 @@ describe("approved resume flow", () => {
     expect(markup).toContain("Resume Found");
     expect(markup).toContain('href="/resume/viewer"');
     expect(markup).toContain('class="resume-mechanism"');
+    expect(markup).not.toContain("PORTFOLIO UTILITY");
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png"');
     expect(markup).toContain('class="resume-mechanism__j"');
     expect(markup).toContain('src="/media/profile/open-portfolio-j-archive-source-700.png"');
@@ -58,6 +59,9 @@ describe("approved resume flow", () => {
     const css = readFileSync("src/resume.css", "utf8");
 
     expect(markup).toContain('class="resume-mechanism__scene"');
+    expect(markup).toContain('class="resume-found__title">Resume Found</h1>');
+    expect(markup.indexOf('class="resume-found__title"')).toBeGreaterThan(markup.indexOf('class="resume-mechanism"'));
+    expect(markup.search(/class="[^"]*resume-found__action"/)).toBeGreaterThan(markup.indexOf('class="resume-found__title"'));
     expect(markup).toContain('src="/media/opening/gameflow-background.jpg"');
     expect(markup).toContain('class="resume-mechanism__j-medallion"');
     expect(css).toMatch(

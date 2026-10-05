@@ -30,7 +30,7 @@ const primaryRoutes = [
   ["profile journey", "/profile/journey", "<h1>Curiosity became building.</h1>"],
   ["profile demos", "/profile/demos", "data-node-id=\"1316:131\">FOOD TRACKER</h1>"],
   ["personal highlights", "/profile/highlights", '<h1 id="personal-highlights-title">Things worth keeping.</h1>'],
-  ["resume found", "/resume", 'id="resume-found-title" class="resume-mechanism__title"'],
+  ["resume found", "/resume", 'id="resume-found-title" class="resume-found__title"'],
   ["resume viewer", "/resume/viewer", "APPROVED GENERAL RESUME"],
 ] as const;
 
@@ -49,9 +49,9 @@ describe("primary App route mapping", () => {
     expect(page).toContain('aria-current="page"');
   });
 
-  it("renders a varied owner-supplied Highlights story and masks embedded sensitive details", () => {
+  it("renders a varied Highlights story using privacy-safe media derivatives", () => {
     const page = renderRoute("/profile/highlights");
-    expect(page.match(/class="personal-highlights__photo"[^>]*alt="[^"]+"/g)).toHaveLength(9);
+    expect(page.match(/class="personal-highlights__photo"[^>]*alt="[^"]+"/g)).toHaveLength(10);
     for (const source of [
       "IMG_0098.jpeg",
       "IMG_0208.jpeg",
@@ -59,16 +59,17 @@ describe("primary App route mapping", () => {
       "IMG_0308.jpeg",
       "IMG_0422.jpeg",
       "IMG_0285.jpeg",
-      "IMG_0334.jpeg",
-      "IMG_0618.jpeg",
+      "IMG_0334-privacy-safe.jpeg",
+      "IMG_0394.jpeg",
+      "IMG_0618-rank-up-safe.jpeg",
       "IMG_0755.jpeg",
     ]) {
       expect(page).toContain(`/media/profile/highlights/${source}`);
     }
-    expect(page).toContain('data-privacy-mask="qr"');
-    expect(page).toContain('data-privacy-mask="league-account"');
+    expect(page).not.toContain("/media/profile/highlights/IMG_0334.jpeg");
+    expect(page).not.toContain("/media/profile/highlights/IMG_0618.jpeg");
     expect(page).toContain('class="personal-highlights__caption"');
-    expect(page).not.toMatch(/IMG_0320|IMG_0394|shih-tzu/i);
+    expect(page).not.toMatch(/IMG_0320|shih-tzu/i);
   });
 
   it("places the continuous Figma Void field at the Journey layout root", () => {
@@ -80,6 +81,8 @@ describe("primary App route mapping", () => {
     expect(page).toContain('data-node-id="1287:8"');
     expect(page).toContain('data-node-id="3492:2"');
     expect(page).toContain('data-node-id="1976:45"');
+    expect(page).toContain('class="journey-identity__photo" src="/media/profile/owner-portrait.png"');
+    expect(page).toContain('class="journey-identity__frame" src="/media/profile/portrait-medallion.png"');
   });
 
   it("keeps the Education projects page to its four authorized project entries", () => {

@@ -1,5 +1,7 @@
 # Case Study Design Handoff
 
+> **Current owner-state:** This handoff records earlier design decisions and useful source context. The consolidated 2026-10-05 owner review supersedes any implication that a case-study structure, breadth, or first fold is frozen. All six pages remain open to project-specific re-authoring; preserve strong qualities, not weak information architecture. See [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md).
+
 Figma file: `9zvk9iSRPKSsJ6llDJrQmA` · case-study page `510:21`.
 
 This handoff preserves implementation-relevant history. Current status and decisions live in [IMPLEMENTATION_STATUS.md](IMPLEMENTATION_STATUS.md), [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md), and [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md). All six stories have 1920×1080 scrolling production frames and separate unclipped full-page review clones sourced from the same authored bodies. Source-body screenshot exports crop at 938px, but the review clones expose the entire designed page. Keep clones synchronized after source changes; page inspectability, owner review, and rendered-site acceptance are distinct.

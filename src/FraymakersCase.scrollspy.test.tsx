@@ -95,10 +95,10 @@ describe("Fraymakers chapter scrollspy", () => {
       expect(activeLabels()).toEqual(["COMPOSITION"]);
 
       const yamlLink = [...main.querySelectorAll(".fraymakers-nav__chapters a")]
-        .find((link) => link.textContent?.trim() === "YAML CONFIG");
+        .find((link) => link.textContent?.trim() === "CONFIG");
       expect(yamlLink?.getAttribute("href")).toBe("#fraymakers-configuration");
       act(() => yamlLink?.dispatchEvent(new MouseEvent("click", { bubbles: true })));
-      expect(activeLabels()).toEqual(["YAML CONFIG"]);
+      expect(activeLabels()).toEqual(["CONFIG"]);
 
       act(() => {
         if (mainScrolls) main.scrollTop = 900;
@@ -106,7 +106,7 @@ describe("Fraymakers chapter scrollspy", () => {
         (mainScrolls ? main : window).dispatchEvent(new Event("scroll"));
         flushFrames();
       });
-      expect(activeLabels()).toEqual(["YAML CONFIG"]);
+      expect(activeLabels()).toEqual(["CONFIG"]);
 
       act(() => {
         window.dispatchEvent(new WheelEvent("wheel"));

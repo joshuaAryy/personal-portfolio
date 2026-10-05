@@ -58,27 +58,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 12px;
   min-height: max(100%, calc(100vh - var(--client-header-height)));
   box-sizing: border-box;
-  padding: clamp(32px, 4.63vh, 50px) 24px 32px;
+  padding: clamp(24px, 4vh, 40px) 24px;
   text-align: center;
-}
-
-.resume-found__eyebrow {
-  margin: 0 0 24px;
-  color: #f0d58a;
-  font-family: Cinzel, Georgia, serif;
-  font-size: 12px;
-  font-weight: 600;
-  line-height: 20px;
-  letter-spacing: 0.7px;
 }
 
 .resume-found__system {
   position: relative;
   isolation: isolate;
   flex: none;
-  width: min(530px, 49.07vh, calc(100vw - 32px));
+  width: min(530px, 44vh, calc(100vw - 32px));
   container-type: inline-size;
 }
 
@@ -178,25 +170,18 @@
   pointer-events: none;
 }
 
-.resume-mechanism__title {
-  position: absolute;
-  z-index: 3;
-  top: 83.96%;
-  left: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 45.28%;
-  height: 4.53%;
+.resume-found__title {
+  position: relative;
+  z-index: 1;
   margin: 0;
-  transform: translateX(-50%);
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(10px, 2.83cqw, 15px);
+  font-size: clamp(20px, 2.2vw, 30px);
   font-weight: 700;
-  letter-spacing: 0.5px;
-  line-height: 1;
+  letter-spacing: 0.08em;
+  line-height: 1.15;
   text-transform: uppercase;
+  text-shadow: 0 2px 12px rgb(0 0 0 / 58%);
 }
 
 .resume-viewer__eyebrow {
@@ -263,16 +248,16 @@
 
 .resume-found__action {
   z-index: 3;
-  width: 40%;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: min(320px, calc(100vw - 64px));
   aspect-ratio: 212 / 70;
   height: auto;
-  position: absolute;
-  top: 88.87%;
-  left: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: translateX(-50%);
+  transform: none;
   padding: 0;
   border: 0;
   background: transparent;
@@ -334,7 +319,7 @@
 .resume-found__close {
   position: relative;
   z-index: 4;
-  margin-top: clamp(32px, 5.2vh, 56px);
+  margin-top: 0;
   min-width: 114px;
   min-height: 38px;
   padding: 0 18px;
@@ -560,11 +545,6 @@
 @media (max-height: 700px) {
   .resume-found {
     padding-bottom: 16px;
-  }
-
-  .resume-found__eyebrow {
-    margin-bottom: 14px;
-    line-height: 16px;
   }
 
   .resume-found__close {

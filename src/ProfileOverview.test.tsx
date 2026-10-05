@@ -84,7 +84,7 @@ describe("Profile Overview", () => {
     expect(markup).toContain('<span class="profile-signal__value">2028</span>');
   });
 
-  it("separates the CE credential and stacks trait emblems above their labels", () => {
+  it("separates the CE credential and lays proportionate trait emblems left to right", () => {
     const markup = renderProfile();
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const traitRule = cssBlock(profileCss, ".main--profile .identity-traits");
@@ -94,11 +94,12 @@ describe("Profile Overview", () => {
     const labelRule = cssBlock(profileCss, ".profile-trait__label");
 
     expect(markup).toContain('aria-label="Computer Engineering degree"');
-    expect(traitRule).toContain("grid-template-columns: 1fr");
-    expect(traitRule).toContain("grid-template-rows: repeat(3");
+    expect(traitRule).toContain("grid-template-columns: repeat(3");
+    expect(traitRule).toContain("grid-template-rows: 96px");
     expect(traitItemRule).toContain("display: flex");
     expect(traitSpanRule).toContain("display: block");
-    expect(medallionRule).toContain("position: relative");
+    expect(medallionRule).toContain("width: 64px");
+    expect(medallionRule).toContain("height: 64px");
     expect(labelRule).toContain("margin-top:");
 
     const narrowRules = cssBlock(profileCss, "@media (max-width: 900px)");
@@ -114,7 +115,7 @@ describe("Profile Overview", () => {
     const overviewRule = cssBlock(profileCss, ".main--profile .profile-overview");
     const enclosureRule = cssBlock(profileCss, ".profile-project-panel__enclosure");
     const signalRule = cssBlock(profileCss, ".profile-signal-grid");
-    const tabletRule = cssBlock(profileCss, "@media (max-width: 1858px) and (min-width: 901px)");
+    const tabletRule = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1858px)");
     const tabletOverview = cssBlock(tabletRule, ".main--profile .profile-overview");
     const narrowRule = cssBlock(profileCss, "@media (max-width: 900px)");
     const narrowOverview = cssBlock(narrowRule, ".main--profile .profile-overview");
@@ -125,8 +126,8 @@ describe("Profile Overview", () => {
 
     expect(signalTop).toBeGreaterThanOrEqual(heroBottom + 24);
     expect(overviewHeight).toBeGreaterThanOrEqual(signalBottom + 24);
-    expect(tabletOverview).toContain("flex-direction: column");
-    expect(tabletOverview).toContain("gap: 24px");
+    expect(tabletOverview).toContain("margin-top: 135px");
+    expect(tabletOverview).toContain("transform: scale(.7)");
     expect(narrowOverview).toContain("flex-direction: column");
     expect(narrowOverview).toContain("gap: 24px");
   });
@@ -143,15 +144,14 @@ describe("Profile Overview", () => {
 
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
-    const tabletRules = profileCss.match(
-      /@media\s*\(max-width:\s*1858px\)\s*and\s*\(min-width:\s*901px\)\s*\{([\s\S]*)$/,
-    )?.[1] ?? "";
+    const tabletRules = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1858px)");
     const narrowRules = profileCss.split("@media (max-width: 900px)")[1] ?? "";
     const enclosureRule = narrowRules.match(/\.profile-project-panel__enclosure\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(tabletRules).toContain("flex-direction: column");
-    expect(tabletRules).toContain("transform: none");
-    expect(tabletRules).toContain("width: min(100%, 1090px)");
+    expect(profileCss).toContain("@media (min-width: 1400px) and (max-width: 1858px)");
+    expect(tabletRules).toContain("grid-template-columns: 370px minmax(0, 1fr)");
+    expect(tabletRules).toContain("grid-column: 1");
+    expect(tabletRules).toContain("grid-column: 2");
     expect(enclosureRule).toContain("max-width: calc(100vw - 16px)");
     expect(enclosureRule).toContain("left: 50%");
     expect(enclosureRule).toContain("translateX(-50%)");

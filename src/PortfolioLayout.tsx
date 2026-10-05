@@ -254,7 +254,7 @@ const projectRailMarks: Record<string, string | undefined> = Object.fromEntries(
 const activityArt = {
   "food-tracker": {
     src: projectIdentities["food-tracker"].mark,
-    size: 50,
+    size: 34,
     frameSize: 34,
     nodeId: "I2356:611;95:51",
   },

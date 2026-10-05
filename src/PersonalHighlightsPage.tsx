@@ -2,13 +2,10 @@ import { Client } from "./PortfolioLayout";
 import ProfileNav from "./ProfileNav";
 import "./personal-highlights.css";
 
-type PrivacyMask = "qr" | "league-account";
-
 type Moment = {
   source: string;
   alt: string;
   caption: string;
-  privacyMask?: PrivacyMask;
 };
 
 const moments: Record<string, Moment> = {
@@ -33,10 +30,14 @@ const moments: Record<string, Moment> = {
     caption: "The exhibit was doing its part. The pose did the rest.",
   },
   buildRoom: {
-    source: "IMG_0334.jpeg",
+    source: "IMG_0334-privacy-safe.jpeg",
     alt: "Friends gather around open laptops while one relaxes in the foreground.",
     caption: "The laptops stayed open. Not everybody had to.",
-    privacyMask: "qr",
+  },
+  eventTeam: {
+    source: "IMG_0394.jpeg",
+    alt: "Three friends pose together in a red-lit event space, one holding an open laptop.",
+    caption: "Three faces, one laptop, and enough red light to remember the room.",
   },
   bench: {
     source: "IMG_0285.jpeg",
@@ -44,10 +45,9 @@ const moments: Record<string, Moment> = {
     caption: "A scope trace, a power supply, and an improbable amount of orange plastic.",
   },
   rankUp: {
-    source: "IMG_0618.jpeg",
+    source: "IMG_0618-rank-up-safe.jpeg",
     alt: "A League of Legends Silver IV promotion screen glows on a dim desktop monitor.",
     caption: "Silver IV: a small win that earned a very large screen.",
-    privacyMask: "league-account",
   },
   pizza: {
     source: "IMG_0755.jpeg",
@@ -72,7 +72,6 @@ function MomentFigure({
     <figure className={`personal-highlights__figure ${className}`}>
       <div
         className="personal-highlights__image-frame"
-        data-privacy-mask={moment.privacyMask}
       >
         <img
           className="personal-highlights__photo"
@@ -81,12 +80,6 @@ function MomentFigure({
           loading="lazy"
           decoding="async"
         />
-        {moment.privacyMask && (
-          <span
-            aria-hidden="true"
-            className={`personal-highlights__privacy-mask personal-highlights__privacy-mask--${moment.privacyMask}`}
-          />
-        )}
       </div>
       <figcaption className="personal-highlights__caption">
         <span aria-hidden="true" className="personal-highlights__caption-mark" />
@@ -115,6 +108,7 @@ export default function PersonalHighlightsPage() {
             <h2 id="highlights-company-title">Better with other people in the frame.</h2>
           </div>
           <MomentFigure moment={moments.group} className="personal-highlights__figure--group" />
+          <MomentFigure moment={moments.eventTeam} className="personal-highlights__figure--event-team" />
         </section>
 
         <section className="personal-highlights__chapter personal-highlights__chapter--detours" aria-labelledby="highlights-detours-title">

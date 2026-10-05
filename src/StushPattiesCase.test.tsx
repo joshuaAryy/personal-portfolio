@@ -3,61 +3,65 @@ import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import StushPattiesCase from "./StushPattiesCase";
 
-describe("Stush Patties technical data-pipeline story", () => {
+describe("Stush Patties technical data-engineering story", () => {
   const markup = () => renderToStaticMarkup(<MemoryRouter><StushPattiesCase /></MemoryRouter>);
 
-  it("shows the file-to-report transformation and reporting destination", () => {
+  it("teaches the source-aware path from distributor reports to a shared schema", () => {
     const html = markup();
-    for (const stage of [
-      "Different file shapes. One reporting path.",
-      "Read each structure",
-      "Fields found in each layout",
-      "SHARED FIELD CONTRACT",
-      "Four stable meanings",
-      "NORMALIZE",
-      "STANDARDIZED OUTPUT",
-      "Unified CSV",
-      "Data dictionary",
-      "Quality report",
-      "Power BI",
-    ]) expect(html).toContain(stage);
+    const concepts = [
+      "A business goal came before a clean data specification.",
+      "Koyo",
+      "UNFI",
+      "Dovre",
+      "CSV",
+      "XLSX",
+      "XLSB",
+      "Source-aware Python parsers",
+      "Shared reporting schema",
+      "Normalize business dimensions",
+    ];
+
+    for (const concept of concepts) expect(html).toContain(concept);
+    expect(html.indexOf("Koyo")).toBeLessThan(html.indexOf("Source-aware Python parsers"));
+    expect(html.indexOf("Source-aware Python parsers")).toBeLessThan(html.indexOf("Shared reporting schema"));
+    expect(html.indexOf("Shared reporting schema")).toBeLessThan(html.indexOf("Normalize business dimensions"));
+
     for (const field of ["Sales", "Units", "Case pack", "Reporting month"]) {
       expect(html).toContain(field);
     }
-    expect(html).toContain("Conceptual pipeline");
+    expect(html).toContain("No client records or source values are reproduced.");
   });
 
-  it("keeps the Dimensions content visible without a nested landmark", () => {
+  it("shows the Koyo position-and-cell parser as a bounded path that rejoins normalization", () => {
     const html = markup();
-    const start = html.indexOf('<section class="stush-problem-map"');
-    const end = html.indexOf('class="stush-ownership"', start);
-    const inputSection = html.slice(start, end);
+    const exceptionStart = html.indexOf('id="stush-koyo-exception"');
+    const exceptionEnd = html.indexOf("</section>", exceptionStart);
+    const exception = html.slice(exceptionStart, exceptionEnd);
 
-    expect(inputSection).toContain('class="stush-contract"');
-    expect(inputSection).not.toMatch(/<section[^>]*class="stush-contract"/);
-    expect(inputSection).toContain("Four business dimensions needed the same meaning across file layouts.");
+    expect(exception).toContain("Koyo position-and-cell parser");
+    expect(exception).toContain("One source-specific exception");
+    expect(exception).toContain("Rejoins the shared normalization path");
+    expect(exception).not.toMatch(/cell\s*(?:A|B|C|\d+)/i);
   });
 
-  it("keeps formats grouped across generic inputs", () => {
+  it("keeps shared ownership, reporting outputs, and factual limits visible", () => {
     const html = markup();
-    const inputSummaryStart = html.indexOf('aria-label="Input set"');
-    const inputSummaryEnd = html.indexOf("</aside>", inputSummaryStart);
-    const inputSummary = html.slice(inputSummaryStart, inputSummaryEnd);
-    expect(inputSummary).toContain("Koyo · UNFI · Dovre");
-    expect(html).toContain("CSV · XLSX · XLSB");
-    expect(html).toContain("Formats across inputs");
-    expect(inputSummary).not.toMatch(/Koyo\s+(CSV|XLSX|XLSB)|UNFI\s+(CSV|XLSX|XLSB)|Dovre\s+(CSV|XLSX|XLSB)/i);
-  });
+    const text = html.toLowerCase();
 
-  it("states Joshua's parsing ownership and places the generic edge case later", () => {
-    const html = markup();
-    const normalized = html.toLowerCase();
-    expect(normalized).toContain("i built python parsing and");
-    expect(normalized).toContain("temporary koyo position-and-cell parsing exception");
-    expect(normalized).toContain("i mapped the position-and-cell data into the shared schema, then returned it to the common normalization path");
-    expect(normalized).toContain("in our two-person technical team, shiv and i worked with client stakeholders");
-    expect(normalized).not.toContain("i contributed to python parsing and normalization");
-    const opening = html.split("</header>")[0];
-    expect(opening).not.toMatch(/two-person team|team size/i);
+    for (const detail of [
+      "Shiv",
+      "two-person technical team",
+      "client stakeholders",
+      "Standardized CSV",
+      "Data dictionary",
+      "Quality report",
+      "Power BI",
+      "Riipen · IBM SkillsBuild",
+      "recurring client conversations",
+    ]) expect(html).toContain(detail);
+
+    expect(text).toContain("i built python ingestion, parsing, and normalization work");
+    expect(text).not.toMatch(/\b(?:40|50)%\b/);
+    expect(text).not.toContain("dashboard results");
   });
 });

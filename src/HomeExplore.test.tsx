@@ -108,9 +108,9 @@ describe("HomeExplore", () => {
     const selection = view.querySelector(".home-explore__selection");
 
     for (const [mode, expected] of [
-      ["Experience", ["Living in Silico", "AI/ML Research Intern", "Stush Patties"]],
+      ["Experience", ["Living in Silico", "Molecular representations", "Stush Patties"]],
       ["Hackathons", ["Crest", "MPC Hacks", "3rd Place", "Brim Financial"]],
-      ["Education", ["Computer Engineering", "Software Specialization", "Expected 2028"]],
+      ["Education", ["Computer Engineering", "Software Specialization", "Expected 2028", "Dental Clinic DBMS", "Bookstore Management", "8-bit ALU / FSM", "CMOS Amplifier"]],
     ] as const) {
       const button = view.querySelector(`[aria-label="${mode}"]`);
       if (!button) throw new Error(`${mode} choice is missing`);
@@ -127,10 +127,12 @@ describe("HomeExplore", () => {
     if (!experience) throw new Error("Experience choice is missing");
     click(experience);
     expect(selection?.querySelector(".home-explore__preview--experience")).not.toBeNull();
-    expect(selection?.querySelector('[data-preview-fact="research"]')?.textContent).toContain("AI/ML research");
+    expect(selection?.querySelector('[data-preview-fact="research"]')?.textContent).toContain("MOLECULAR RESEARCH");
     expect(selection?.querySelector('[data-preview-fact="research"]')?.textContent).toContain("Living in Silico");
-    expect(selection?.querySelector('[data-preview-fact="software-engineering"]')?.textContent).toContain("Software engineering");
+    expect(selection?.querySelector('[data-preview-fact="research"]')?.textContent).toContain("fragment workflows");
+    expect(selection?.querySelector('[data-preview-fact="software-engineering"]')?.textContent).toContain("DATA ENGINEERING");
     expect(selection?.querySelector('[data-preview-fact="software-engineering"]')?.textContent).toContain("Stush Patties");
+    expect(selection?.querySelector('[data-preview-fact="software-engineering"]')?.textContent).toContain("reporting-ready outputs");
 
     const hackathons = view.querySelector('[aria-label="Hackathons"]');
     if (!hackathons) throw new Error("Hackathons choice is missing");
@@ -139,21 +141,22 @@ describe("HomeExplore", () => {
     expect(award?.querySelector(".home-explore__preview-result")?.textContent).toBe("3rd Place");
     expect(award?.querySelector(".home-explore__preview-challenge")?.textContent).toBe("Brim Financial Challenge");
     expect(selection?.textContent).toContain("MPC Hacks 2026");
+    expect(selection?.querySelector(".home-explore__preview-work")?.textContent).toContain("Expense intelligence");
+    expect(selection?.querySelector(".home-explore__preview-work")?.textContent).toContain("Human decision flow");
 
     const education = view.querySelector('[aria-label="Education"]');
     if (!education) throw new Error("Education choice is missing");
     click(education);
     expect(selection?.querySelector(".home-explore__preview--education")).not.toBeNull();
-    expect(selection?.querySelector(".home-explore__course-chips")?.textContent).toContain("Algorithms & Data Structures");
-    expect(selection?.querySelector(".home-explore__course-chips")?.textContent).toContain("Microprocessor Systems");
+    expect(selection?.querySelector(".home-explore__build-grid")?.textContent).toContain("Dental Clinic DBMS");
+    expect(selection?.querySelector(".home-explore__build-grid")?.textContent).toContain("8-bit ALU / FSM");
     expect(selection?.querySelector(".home-explore__preview-expected")?.textContent).toBe("Expected 2028");
 
     const css = readFileSync("src/home-explore.css", "utf8");
     const mobileRules = css.slice(css.indexOf("@media (max-width: 760px)"));
     expect(mobileRules).toMatch(/\.home-explore__selection-focus \.home-explore__preview-detail[^}]*display:\s*block/s);
-    expect(mobileRules).toMatch(/\.home-explore__course-chips\s*\{[^}]*gap:/s);
-    expect(mobileRules).not.toMatch(/\.home-explore__course-chips\s*\{[^}]*display:\s*none/s);
-    expect(mobileRules).toMatch(/\.home-explore__selection-focus--education h3\s*\{[^}]*margin-bottom:\s*9px/s);
+    expect(mobileRules).toMatch(/\.home-explore__confirm-area\s*\{[^}]*position:\s*relative/s);
+    expect(mobileRules).toMatch(/\.home-explore__preview--education\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s);
   });
 
   it("separates Back and Confirm and compacts project areas on mobile", () => {

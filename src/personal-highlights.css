@@ -127,6 +127,14 @@
   justify-self: end;
 }
 
+#root .main.main--personal-highlights .personal-highlights__figure--event-team {
+  grid-column: 2;
+  grid-row: 2;
+  width: min(78%, 430px);
+  justify-self: start;
+  margin-top: -18px;
+}
+
 #root .main.main--personal-highlights .personal-highlights__chapter-heading {
   display: flex;
   align-items: end;
@@ -204,7 +212,7 @@
 }
 
 #root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__image-frame {
-  aspect-ratio: 1.36;
+  aspect-ratio: 1.7;
 }
 
 #root .main.main--personal-highlights .personal-highlights__chapter--table {
@@ -284,9 +292,7 @@
 }
 
 #root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__photo {
-  object-position: center 38%;
-  transform: scale(1.85);
-  transform-origin: 50% 38%;
+  object-position: center;
 }
 
 #root .main.main--personal-highlights .personal-highlights__figure--sunset .personal-highlights__photo {
@@ -312,33 +318,6 @@
   flex: 0 0 12px;
   height: 1px;
   background: #c6a866;
-}
-
-#root .main.main--personal-highlights .personal-highlights__privacy-mask {
-  position: absolute;
-  z-index: 1;
-  display: block;
-  pointer-events: none;
-}
-
-#root .main.main--personal-highlights .personal-highlights__privacy-mask--qr {
-  top: 36.5%;
-  left: 64.5%;
-  width: 15%;
-  height: 10%;
-  border: 1px solid rgba(234, 227, 211, 0.8);
-  background: rgba(238, 237, 229, 0.98);
-  box-shadow: 0 0 0 5px rgba(18, 27, 34, 0.14);
-}
-
-#root .main.main--personal-highlights .personal-highlights__privacy-mask--league-account {
-  top: 48.5%;
-  left: 42%;
-  width: 17.5%;
-  height: 5%;
-  border-radius: 2px;
-  background: rgba(10, 19, 33, 0.97);
-  box-shadow: 0 0 0 1px rgba(208, 183, 117, 0.6);
 }
 
 @media (max-width: 900px) {
@@ -399,16 +378,8 @@
     width: auto;
   }
 
-  #root .main.main--personal-highlights .personal-highlights__privacy-mask--league-account {
-    top: 48.5%;
-    left: 42%;
-    width: 17.5%;
-    height: 5%;
-  }
-
   #root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__photo {
-    object-position: center 38%;
-    transform-origin: 50% 38%;
+    object-position: center;
   }
 
   #root .main.main--personal-highlights .personal-highlights {
@@ -450,6 +421,14 @@
   #root .main.main--personal-highlights .personal-highlights__chapter--company .personal-highlights__figure,
   #root .main.main--personal-highlights .personal-highlights__chapter--table .personal-highlights__figure {
     width: 100%;
+  }
+
+  #root .main.main--personal-highlights .personal-highlights__figure--event-team {
+    grid-column: 1;
+    grid-row: auto;
+    width: 82%;
+    justify-self: start;
+    margin-top: 0;
   }
 
   #root .main.main--personal-highlights .personal-highlights__chapter-heading,
@@ -505,7 +484,7 @@
   }
 
   #root .main.main--personal-highlights .personal-highlights__figure--rank-up .personal-highlights__image-frame {
-    aspect-ratio: 1.18;
+    aspect-ratio: 1.7;
   }
 
   #root .main.main--personal-highlights .personal-highlights__figure--pizza {
@@ -523,10 +502,4 @@
     font-size: 12px;
   }
 
-  #root .main.main--personal-highlights .personal-highlights__privacy-mask--qr {
-    top: 36.5%;
-    left: 64.5%;
-    width: 15%;
-    height: 10%;
-  }
 }

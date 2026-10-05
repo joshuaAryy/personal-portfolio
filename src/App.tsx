@@ -108,12 +108,12 @@ export default function App() {
                 <div className="journey-identity__portrait" aria-hidden="true">
                   <img
                     className="journey-identity__photo"
-                    src="/media/lobby/profile-portrait-source.jpg"
+                    src="/media/profile/owner-portrait.png"
                     alt=""
                   />
                   <img
                     className="journey-identity__frame"
-                    src="/media/lobby/project-medallion-frame.png"
+                    src="/media/profile/portrait-medallion.png"
                     alt=""
                   />
                 </div>

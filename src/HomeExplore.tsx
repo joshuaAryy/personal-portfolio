@@ -19,7 +19,7 @@ const modes = [
     id: "experience",
     label: "Experience",
     subtitle: "Professional work",
-    description: "Research engineering and client-facing data workflows.",
+    description: "Molecular research and client data work, told through the systems behind them.",
     path: "/experience",
     emblem: "/media/lobby/home-mode-experience.svg",
     glyph: "/media/lobby/home-mode-experience-glyph-review-candidate.svg",
@@ -29,7 +29,7 @@ const modes = [
     id: "hackathons",
     label: "Hackathons",
     subtitle: "Build under pressure",
-    description: "Competition builds shaped around focused teams and clear constraints.",
+    description: "Focused team builds shaped by a challenge, a working demo, and a clear result.",
     path: "/hackathons",
     emblem: "/media/lobby/home-mode-hackathons.svg",
     glyph: "/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
@@ -39,7 +39,7 @@ const modes = [
     id: "education",
     label: "Education",
     subtitle: "Academic path",
-    description: "Computer Engineering coursework and academic foundations.",
+    description: "An engineering degree explored through computing, digital logic, and circuit design.",
     path: "/education",
     emblem: "/media/lobby/home-mode-education.svg",
     glyph: "/media/lobby/home-mode-education-glyph-review-candidate.svg",
@@ -176,7 +176,7 @@ function HomeExploreContent() {
           )}
           {selected.id === "experience" && (
             <>
-              <h3>WORK IN TWO LANES</h3>
+              <h3>RESEARCH + DATA SYSTEMS</h3>
               <div className="home-explore__preview home-explore__preview--experience" aria-label="Experience preview">
                 {experience.map((role) => {
                   const isResearch = role.slug === "living-in-silico";
@@ -186,13 +186,11 @@ function HomeExploreContent() {
                       data-preview-fact={isResearch ? "research" : "software-engineering"}
                       key={role.slug}
                     >
-                      <span className="home-explore__preview-kind">
-                        {isResearch ? "AI/ML research" : "Software engineering"}
-                      </span>
-                      <strong>{role.name}</strong>
-                      <small className="home-explore__preview-detail">
-                        {role.title} · {role.dates}
-                      </small>
+                      <span className="home-explore__preview-kind">{isResearch ? "MOLECULAR RESEARCH" : "DATA ENGINEERING"}</span>
+                      <strong>{isResearch ? "Living in Silico" : "Stush Patties"}</strong>
+                      <small className="home-explore__preview-detail">{isResearch
+                        ? "Molecular representations, generative models, and fragment workflows."
+                        : "Distributor data normalized into reporting-ready outputs."}</small>
                     </article>
                   );
                 })}
@@ -201,30 +199,35 @@ function HomeExploreContent() {
           )}
           {selected.id === "hackathons" && crest && (
             <>
-              <h3>COMPETITION RESULT</h3>
+              <h3>CHALLENGE BUILD</h3>
               <div className="home-explore__preview home-explore__preview--hackathons" aria-label="Hackathon preview">
                 <div className="home-explore__preview-event" data-preview-fact="award">
                   <span className="home-explore__preview-kind">{crest.name} · MPC Hacks 2026</span>
                   <strong className="home-explore__preview-result">3rd Place</strong>
                   <span className="home-explore__preview-challenge">Brim Financial Challenge</span>
                 </div>
+                <div className="home-explore__preview-work" aria-label="Crest system areas">
+                  <span>Expense intelligence</span>
+                  <span>Policy + anomaly review</span>
+                  <span>Human decision flow</span>
+                </div>
               </div>
             </>
           )}
           {selected.id === "education" && (
             <>
-              <h3>DEGREE + SELECTED COURSEWORK</h3>
+              <h3>DEGREE + FOUR SELECTED BUILDS</h3>
               <div className="home-explore__preview home-explore__preview--education" aria-label="Education preview">
                 <div className="home-explore__preview-degree">
                   <strong>Computer Engineering</strong>
                   <span>B.Eng. · Software Specialization</span>
                   <small className="home-explore__preview-expected">Expected 2028</small>
                 </div>
-                <div className="home-explore__course-chips" aria-label="Selected coursework">
-                  <span>Algorithms &amp; Data Structures</span>
-                  <span>Software Systems</span>
-                  <span>Database Systems I</span>
-                  <span>Microprocessor Systems</span>
+                <div className="home-explore__build-grid" aria-label="Selected academic projects">
+                  <span>Dental Clinic DBMS <small>In progress</small></span>
+                  <span>Bookstore Management</span>
+                  <span>8-bit ALU / FSM</span>
+                  <span>CMOS Amplifier</span>
                 </div>
               </div>
             </>

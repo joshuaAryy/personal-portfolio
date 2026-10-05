@@ -29,9 +29,6 @@ export default function ResumeMechanism() {
         width="530"
         height="530"
       />
-      <h1 id="resume-found-title" className="resume-mechanism__title">
-        Resume Found
-      </h1>
     </div>
   );
 }

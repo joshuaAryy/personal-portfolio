@@ -7,113 +7,115 @@ function renderCase() {
   return renderToStaticMarkup(<MemoryRouter><ChoViegoCase /></MemoryRouter>);
 }
 
-describe("Cho’Veigo evidence-based matching story", () => {
-  it("keeps an explicitly selected chapter at the story end while passive tracking selects the last chapter", () => {
+describe("Cho’Veigo evidence-first product story", () => {
+  it("tracks the role-intake through Resume Studio chapters", () => {
     const sectionTops = {
-      overview: -2129,
-      system: -1465,
-      fit: -494,
-      review: 337,
-      change: 654,
+      overview: -2800,
+      intake: -2140,
+      evidence: -1480,
+      decisions: -820,
+      review: -250,
+      studio: 80,
+      outcome: 670,
     };
 
-    expect(resolveActiveChapter(sectionTops, 160, true)).toBe("change");
+    expect(resolveActiveChapter(sectionTops, 160, false)).toBe("studio");
+    expect(resolveActiveChapter(sectionTops, 160, true)).toBe("outcome");
     expect(resolveActiveChapter(sectionTops, 160, true, "review")).toBe("review");
   });
 
-  it("opens with the product and authentic Recommendations view before Joshua’s focus", () => {
+  it("opens on authentic Recommendations evidence and discloses that the public proof is static", () => {
     const markup = renderCase();
-    const hero = markup.slice(markup.indexOf('id="choveigo-overview"'), markup.indexOf('id="choveigo-system"'));
-    const systemStart = markup.indexOf('id="choveigo-system"');
-    const focusStart = markup.indexOf('id="choveigo-fit"');
-    expect(hero).toContain("PRODUCT");
-    expect(hero).toContain("A job-search workspace");
-    expect(hero).toContain("AUTHENTIC PRODUCT VIEW / RECOMMENDATIONS");
+    const hero = markup.slice(markup.indexOf('id="choveigo-overview"'), markup.indexOf('id="choveigo-intake"'));
+
+    expect(hero).toContain("A role isn’t a keyword match.");
     expect(hero).toContain("/media/choveigo-recommendations.png");
-    expect(systemStart).toBeGreaterThan(markup.indexOf('id="choveigo-overview"'));
-    expect(focusStart).toBeGreaterThan(systemStart);
-    expect(markup.slice(systemStart, focusStart)).toContain("How a role becomes a recommendation.");
-    expect(hero).not.toContain("JOSHUA’S FOCUS");
+    expect(hero).toContain("AUTHENTIC RECOMMENDATIONS CAPTURE");
+    expect(hero).toContain("Static product capture");
+    expect(hero).toContain("privacy-safe walkthrough is not available for publication");
     expect(hero).not.toContain("<video");
   });
 
-  it("distinguishes Fit, Eligibility, and Recommendation from evidence and gaps", () => {
+  it("shows provider intake becoming a persisted role snapshot", () => {
     const markup = renderCase();
-    const fit = markup.slice(markup.indexOf('id="choveigo-fit"'), markup.indexOf('id="choveigo-review"'));
-    const fitIndex = fit.indexOf("FIT");
-    const eligibilityIndex = fit.indexOf("ELIGIBILITY");
-    const recommendationIndex = fit.indexOf("RECOMMENDATION");
-    expect(fit).toContain("ROLE REQUIREMENTS");
-    expect(fit).toContain("Demonstrated and transferable experience");
-    expect(fit).toContain("Missing requirements stay visible");
-    expect(fit).toContain("MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT");
-    expect(fit).toContain("deterministic rules determine Fit and Eligibility");
-    expect(fitIndex).toBeGreaterThan(-1);
-    expect(eligibilityIndex).toBeGreaterThan(fitIndex);
-    expect(recommendationIndex).toBeGreaterThan(eligibilityIndex);
+    const intake = markup.slice(markup.indexOf('id="choveigo-intake"'), markup.indexOf('id="choveigo-evidence"'));
+
+    expect(intake).toContain("DISCOVERED POSTING");
+    expect(intake).toContain("USER-SAVED ROLE");
+    expect(intake).toContain("Posting snapshot");
+    expect(intake).toContain("title");
+    expect(intake).toContain("description");
+    expect(intake).toContain("OFFICIAL URL");
+    expect(intake).toContain("Feed availability can change; the saved record preserves the title, company, and description from save time.");
   });
 
-  it("records the human mismatch-to-regression loop without overstating evaluation", () => {
+  it("teaches evidence matching without presenting an illustrative trace as a live score", () => {
     const markup = renderCase();
-    const review = markup.slice(markup.indexOf('id="choveigo-review"'), markup.indexOf('id="choveigo-change"'));
-    expect(review).toContain("MISMATCH");
-    expect(review).toContain("CORRECTION");
-    expect(review).toContain("DETERMINISTIC FIXTURE");
-    expect(review).toContain("REGRESSION");
+    const evidence = markup.slice(markup.indexOf('id="choveigo-evidence"'), markup.indexOf('id="choveigo-decisions"'));
+
+    expect(evidence).toContain("Responsibilities matter more than a familiar stack.");
+    expect(evidence).toContain("DEMONSTRATED");
+    expect(evidence).toContain("TRANSFERABLE");
+    expect(evidence).toContain("VISIBLE GAP");
+    expect(evidence).toContain("CORRELATED TERMS CAN INFLATE A TALLY");
+    expect(evidence).toContain("Illustrative failure mode; not a live match result.");
+    expect(evidence).toContain("01 / RETRIEVE");
+    expect(evidence).toContain("Relevant reviewed profile context for this role");
+    expect(evidence).toContain("STRUCTURED GEMINI INTERPRETATION");
+    expect(evidence).not.toContain("97%");
+  });
+
+  it("keeps Fit, Eligibility, and Recommendation distinct and bounds the model role", () => {
+    const markup = renderCase();
+    const decisions = markup.slice(markup.indexOf('id="choveigo-decisions"'), markup.indexOf('id="choveigo-review"'));
+
+    const fit = decisions.indexOf(">FIT</h3>");
+    const eligibility = decisions.indexOf(">ELIGIBILITY</h3>");
+    const recommendation = decisions.indexOf(">RECOMMENDATION</h3>");
+    expect(fit).toBeGreaterThan(-1);
+    expect(eligibility).toBeGreaterThan(fit);
+    expect(recommendation).toBeGreaterThan(eligibility);
+    expect(decisions).toContain("deterministic rules assess Fit and Eligibility.");
+    expect(decisions).toContain("A separate product outcome.");
+    expect(decisions).toContain("The source does not establish a separate scoring formula.");
+    expect(decisions).toContain("Structured Gemini interpretation");
+    expect(decisions).toContain("constrained to supplied evidence");
+    expect(decisions).not.toContain("Gemini decides whether to hire");
+  });
+
+  it("turns reviewed mismatches into fixtures without claiming research-grade validation", () => {
+    const markup = renderCase();
+    const review = markup.slice(markup.indexOf('id="choveigo-review"'), markup.indexOf('id="choveigo-studio"'));
+
+    expect(review).toContain("Was the expected behavior wrong, or was the implementation wrong?");
+    expect(review).toContain("AGREE ON EXPECTED BEHAVIOR");
+    expect(review).toContain("DETERMINISTIC REGRESSION FIXTURE");
+    expect(review).toContain("With Shiv, I reviewed mismatches");
     expect(review).not.toContain("research-grade validation");
-    expect(review).toContain("With Shiv, I reviewed mismatches and agreed on expected behavior.");
-    expect(review).toContain("Human review informed deterministic regression fixtures");
+    expect(review).not.toContain("inter-rater reliability");
   });
 
-  it("keeps retrieval and Gemini bounded, and does not claim automatic submission or benchmark results", () => {
+  it("separates the selected-role handoff from evidence-grounded Resume Studio work", () => {
     const markup = renderCase();
-    expect(markup).toContain("Role discovery");
-    expect(markup).toContain("Candidate evidence");
-    expect(markup).toContain("Decision layers");
-    expect(markup).toContain("Product actions");
-    expect(markup).toContain("deterministic rules determine Fit and Eligibility");
-    expect(markup).toContain("Structured Gemini interprets role and candidate evidence within its boundary");
-    expect(markup).toContain("The prompt constrains Gemini to interpret supplied evidence");
-    expect(markup).toContain("deterministic rules assess Fit and Eligibility, with Recommendation handled separately.");
-    expect(markup).toContain("A distinct judgment: bring the role forward.");
-    expect(markup).toContain("A selected role and profile prepare the inputs; the person starts tailoring separately.");
-    expect(markup).toContain("One recommendation surfaced a role I might have missed.");
-    expect(markup).not.toContain("OWNER-REPORTED EXAMPLE");
-    expect(markup).not.toContain("No employer-specific or time-saving claim is made.");
-    expect(markup).not.toMatch(/\b(?:Top-1|precision|recall|\d+%|hours saved|Greenhouse|Lever|DOCX|PDF)\b/i);
+    const studio = markup.slice(markup.indexOf('id="choveigo-studio"'), markup.indexOf('id="choveigo-outcome"'));
+
+    expect(studio).toContain("The handoff prepares context; it does not generate a resume.");
+    expect(studio).toContain("Reviewed profile + editable job description");
+    expect(studio).toContain("SELECT GROUNDED EVIDENCE");
+    expect(studio).toContain("CONSTRAINED REWRITE + VALIDATION");
+    expect(studio).toContain("HUMAN REVIEW");
+    expect(studio).toContain("PAGE VERIFICATION + EXPORT");
+    expect(studio).not.toContain("automatically submits an application");
   });
 
-  it("separates the selected-role handoff from the Resume Studio method and output", () => {
+  it("states project ownership and keeps outcomes qualitative", () => {
     const markup = renderCase();
-    const system = markup.slice(markup.indexOf('id="choveigo-system"'), markup.indexOf('id="choveigo-fit"'));
-    const architecture = system.indexOf('class="choveigo-system-map"');
-    const distinctInputs = system.indexOf("INPUTS THAT STAY DISTINCT");
-    const ruleBoundary = system.indexOf('class="choveigo-system__boundaries"');
-    const distinctRow = system.slice(distinctInputs, ruleBoundary);
+    const outcome = markup.slice(markup.indexOf('id="choveigo-outcome"'));
 
-    expect(architecture).toBeGreaterThan(-1);
-    expect(distinctInputs).toBeGreaterThan(architecture);
-    expect(ruleBoundary).toBeGreaterThan(distinctInputs);
-    expect(distinctRow).toContain("ROLE RECORD");
-    expect(distinctRow).toContain("Job feeds and persisted role data lead to a structured role record. Responsibilities and core requirements give matching something concrete to evaluate.");
-    expect(distinctRow).toContain("PROFILE + RESUME EVIDENCE");
-    expect(distinctRow).toContain("Demonstrated and transferable evidence stays distinct from visible gaps. Structured Gemini interpretation remains tied to the supplied role and candidate material.");
-    expect(system).toContain("A SEPARATE RESUME STUDIO WORKFLOW");
-    expect(system).toContain("The recommendation opens a path; the person starts tailoring.");
-    expect(system).toContain("persisted role data");
-    expect(system).toContain("structured role record");
-    expect(system).toContain("Demonstrated and transferable evidence stays distinct from visible gaps.");
-    expect(system).toContain("Structured Gemini interpretation remains tied to the supplied role and candidate material.");
-    expect(system).toContain("selected profile");
-    expect(system).toContain("prepared inputs");
-    expect(system).toContain("does not generate content");
-    expect(system).toContain("editable job description");
-    expect(system).toContain("selects grounded content");
-    expect(system).toContain("validates the wording");
-    expect(system).toContain("Person reviews the result");
-    expect(system).toContain("verifies the page");
-    expect(system).toContain("exports a document");
-    expect(system).not.toContain("Recommendation computes the resume");
-    expect(system).not.toContain("automatically submits an application");
+    expect(outcome).toContain("Two-person project · Joshua Aryeetey + Shiv Arora");
+    expect(outcome).toContain("Joshua focused on Jobs and shared product/evaluation direction.");
+    expect(outcome).toContain("Shiv initially led more of the foundational resume-generation work.");
+    expect(outcome).toContain("One recommendation surfaced a role I might have missed.");
+    expect(markup).not.toMatch(/\b(?:hours saved|\d+%|auto-apply|automated application submission|live production deployment)\b/i);
   });
 });

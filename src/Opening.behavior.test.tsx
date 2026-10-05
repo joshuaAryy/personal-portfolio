@@ -106,15 +106,15 @@ describe("opening route behavior", () => {
     act(() => skip!.click());
     expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/home");
 
-    act(() => vi.advanceTimersByTime(2500));
+    act(() => vi.advanceTimersByTime(4000));
     expect(host.querySelector(".opening--leaving")).toBeNull();
     expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/home");
   });
 
-  it("completes the normal handoff at two seconds and focuses Home / Explore", () => {
+  it("completes the normal handoff at 3.5 seconds and focuses Home / Explore", () => {
     renderOpeningRoute();
 
-    act(() => vi.advanceTimersByTime(1819));
+    act(() => vi.advanceTimersByTime(3199));
     expect(host.querySelector(".opening--leaving")).toBeNull();
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
     expect(host.querySelector(".opening__underlay")?.getAttribute("aria-hidden")).toBe("true");
@@ -123,7 +123,7 @@ describe("opening route behavior", () => {
     act(() => vi.advanceTimersByTime(1));
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
 
-    act(() => vi.advanceTimersByTime(179));
+    act(() => vi.advanceTimersByTime(299));
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
 
     act(() => vi.advanceTimersByTime(1));
