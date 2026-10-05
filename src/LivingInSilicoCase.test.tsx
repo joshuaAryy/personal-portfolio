@@ -102,4 +102,16 @@ describe("Living in Silico public research story", () => {
     expect(markup).toContain("My DeepMol contribution covered data loading, SMILES processing, molecular features and sequence generation; I also worked on fragment workflows.");
     expect(markup).toContain("DeepMol&#x27;s SMILES sequence path differed from fragment selection and recombination; comparing the two made molecular representation a core modeling choice.");
   });
+
+  it("qualifies the 500 DeepMol samples as owner-reported", () => {
+    const markup = renderCase();
+    const outputStart = markup.indexOf('class="lis-public-output"');
+    const outputEnd = markup.indexOf('class="lis-public-section lis-public-contribution"', outputStart);
+    const output = markup.slice(outputStart, outputEnd);
+
+    expect(output).toContain("OWNER-REPORTED OUTPUT · DEEPMOL");
+    expect(output).toContain("<strong>500</strong>");
+    expect(output).toContain("generated SMILES samples");
+    expect(output).not.toContain("REINVENT4");
+  });
 });

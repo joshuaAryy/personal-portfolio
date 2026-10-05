@@ -240,6 +240,65 @@ describe("Food Tracker flagship technical case study", () => {
     expect(figure).toContain("Schematic, not an app screen");
   });
 
+  it("places the five local Phase 24 baseline captures with truthful captions and stateful alt text", () => {
+    const markup = renderFoodTracker();
+    const loggingStart = markup.indexOf('id="food-logging"');
+    const insightsStart = markup.indexOf('id="food-insights"');
+    const searchStart = markup.indexOf('id="food-interface"');
+    const logging = markup.slice(loggingStart, insightsStart);
+    const insights = markup.slice(insightsStart, searchStart);
+    const search = markup.slice(searchStart, markup.indexOf('id="food-system"'));
+    const captures = [
+      {
+        src: "/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png",
+        caption: "Phase 24 pre-redesign baseline — complex logging sheet, empty before a log is saved.",
+        alt: "Complex food logging sheet with no food saved yet.",
+        section: logging,
+      },
+      {
+        src: "/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png",
+        caption: "Phase 24 pre-redesign baseline — banana serving preview; not logged.",
+        alt: "Banana serving preview before the serving is logged.",
+        section: logging,
+      },
+      {
+        src: "/media/case-studies/food-tracker/phase-24/insights-week-current.png",
+        caption: "Phase 24 pre-redesign baseline — current-week report shell; 0 logged days.",
+        alt: "Current-week report shell showing zero logged days.",
+        section: insights,
+      },
+      {
+        src: "/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png",
+        caption: "Phase 24 pre-redesign baseline — calorie trend detail; no recorded values, so the gap remains unknown.",
+        alt: "Calorie trend detail without recorded values; the gap is unknown.",
+        section: insights,
+      },
+      {
+        src: "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+        caption: "Phase 24 pre-redesign baseline — Search foods; banana query with generic results shown per 100 g.",
+        alt: "Search foods screen with a banana query and generic food results shown per 100 grams.",
+        section: search,
+      },
+    ];
+    const renderedPaths = [...markup.matchAll(/src="(\/media\/case-studies\/food-tracker\/phase-24\/[^\"]+\.png)"/g)].map((match) => match[1]);
+
+    expect(renderedPaths).toEqual(captures.map((capture) => capture.src));
+    for (const { src, caption, alt, section } of captures) {
+      expect(section).toContain(`src="${src}"`);
+      expect(section).toContain(`alt="${alt}"`);
+      expect(section).toContain(`>${caption}</figcaption>`);
+      expect(section).toContain('width="368" height="800"');
+    }
+
+    expect(logging.indexOf("REVIEW BEFORE SAVE")).toBeLessThan(logging.indexOf(captures[0].src));
+    expect(logging.indexOf(captures[0].src)).toBeLessThan(logging.indexOf(captures[1].src));
+    expect(insights.indexOf("Saved Views")).toBeLessThan(insights.indexOf(captures[2].src));
+    expect(insights.indexOf(captures[2].src)).toBeLessThan(insights.indexOf(captures[3].src));
+    expect(search).toContain("does not establish result quality");
+    expect(search).not.toContain("food-tracker-search-banana-earlier-ui.png");
+    expect(markup).not.toContain("Supplemental");
+  });
+
   it("keeps the Food chapter rail scrollable and Help pinned in the narrow header", () => {
     const css = readFileSync("src/food-visuals.css", "utf8");
 

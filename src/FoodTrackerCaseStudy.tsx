@@ -224,6 +224,28 @@ function FoodLoggingPaths() {
         <span>REVIEW BEFORE SAVE</span>
         <strong>Check the food and portion. A supplied catalog match uses backend food and serving rules; a photo estimate is an editable, low-trust starting point that can be changed or excluded.</strong>
       </div>
+      <div className="food-evidence-grid food-logging__evidence">
+        <figure className="food-evidence">
+          <img
+            src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
+            alt="Complex food logging sheet with no food saved yet."
+            width="368"
+            height="800"
+            loading="lazy"
+          />
+          <figcaption>Phase 24 pre-redesign baseline — complex logging sheet, empty before a log is saved.</figcaption>
+        </figure>
+        <figure className="food-evidence">
+          <img
+            src="/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png"
+            alt="Banana serving preview before the serving is logged."
+            width="368"
+            height="800"
+            loading="lazy"
+          />
+          <figcaption>Phase 24 pre-redesign baseline — banana serving preview; not logged.</figcaption>
+        </figure>
+      </div>
     </section>
   );
 }
@@ -254,6 +276,28 @@ function FoodInsights() {
           <h3>Saved Views</h3>
           <p>Return to a chosen analysis without changing the underlying log.</p>
         </article>
+      </div>
+      <div className="food-evidence-grid food-insights__evidence">
+        <figure className="food-evidence">
+          <img
+            src="/media/case-studies/food-tracker/phase-24/insights-week-current.png"
+            alt="Current-week report shell showing zero logged days."
+            width="368"
+            height="800"
+            loading="lazy"
+          />
+          <figcaption>Phase 24 pre-redesign baseline — current-week report shell; 0 logged days.</figcaption>
+        </figure>
+        <figure className="food-evidence">
+          <img
+            src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png"
+            alt="Calorie trend detail without recorded values; the gap is unknown."
+            width="368"
+            height="800"
+            loading="lazy"
+          />
+          <figcaption>Phase 24 pre-redesign baseline — calorie trend detail; no recorded values, so the gap remains unknown.</figcaption>
+        </figure>
       </div>
       <p className="food-insights__coverage"><strong>Unknown nutrition stays unknown.</strong></p>
       <p className="food-insights__footer">ONE PRODUCT · ONE BACKEND · DIFFERENT LEVELS OF DETAIL</p>
@@ -393,20 +437,20 @@ export default function FoodTrackerCaseStudy() {
             </h2>
             <p>
               The intended food needs to rank near the top before its serving
-              and nutrition can be trusted. This earlier simulator capture
-              shows that decision in the product.
+              and nutrition can be trusted. This Phase 24 pre-redesign baseline
+              shows a banana query with generic results per 100 g; the capture
+              records the search surface and does not establish result quality.
             </p>
           </div>
           <figure className="food-interface__capture">
             <img
-              src="/media/case-studies/food-tracker-search-banana-earlier-ui.png"
-              alt="Earlier Food Tracker mobile interface showing a banana query and candidate food results."
+              src="/media/case-studies/food-tracker/phase-24/search-banana-results.png"
+              alt="Search foods screen with a banana query and generic food results shown per 100 grams."
               width="368"
               height="800"
+              loading="lazy"
             />
-            <figcaption>
-              EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH
-            </figcaption>
+            <figcaption>Phase 24 pre-redesign baseline — Search foods; banana query with generic results shown per 100 g.</figcaption>
           </figure>
         </section>
 

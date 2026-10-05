@@ -173,7 +173,7 @@ export default function LivingInSilicoCase() {
         </header>
         <div className="lis-public-output__card">
           <div className="lis-public-output__count">
-            <p className="lis-kicker">PROJECT OUTPUT · DEEPMOL</p>
+            <p className="lis-kicker">OWNER-REPORTED OUTPUT · DEEPMOL</p>
             <strong>500</strong>
           </div>
           <div className="lis-public-output__sample">

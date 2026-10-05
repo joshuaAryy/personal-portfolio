@@ -1,0 +1,747 @@
+{
+  "runtime": "Playwright 1.63.0 / installed Chrome 153",
+  "sourceHead": "1c0203395720113b0f0ac72b258bce5363dfc736",
+  "foodRoute": "/projects/food-tracker",
+  "livingRoute": "/experience/living-in-silico",
+  "viewports": [
+    {
+      "label": "desktop-1920",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "base": {
+        "viewport": 1920,
+        "docWidth": 1920,
+        "bodyWidth": 1920,
+        "scrollY": 0,
+        "mainOverflowY": "auto",
+        "header": [
+          {
+            "text": "PORTFOLIO",
+            "href": "/home",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 0,
+              "right": 206,
+              "top": 0,
+              "bottom": 81
+            }
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 232.9,
+              "right": 355.8,
+              "top": -0.5,
+              "bottom": 81.5
+            }
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 355.8,
+              "right": 503.6,
+              "top": -0.5,
+              "bottom": 81.5
+            }
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 503.6,
+              "right": 661.6,
+              "top": -0.5,
+              "bottom": 81.5
+            }
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 661.6,
+              "right": 785.4,
+              "top": -0.5,
+              "bottom": 81.5
+            }
+          },
+          {
+            "text": "Help",
+            "href": null,
+            "tabIndex": 0,
+            "visible": false,
+            "rect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0
+            }
+          },
+          {
+            "text": "LINKEDIN",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 793.4,
+              "right": 840.5,
+              "top": 24.5,
+              "bottom": 56.5
+            }
+          },
+          {
+            "text": "RESUME",
+            "href": "/resume",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 857.5,
+              "right": 898.4,
+              "top": 24.5,
+              "bottom": 56.5
+            }
+          },
+          {
+            "text": "GITHUB",
+            "href": "https://github.com/joshuaAryy",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 915.4,
+              "right": 953.1,
+              "top": 24.5,
+              "bottom": 56.5
+            }
+          },
+          {
+            "text": "EMAIL",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 970.1,
+              "right": 1001.2,
+              "top": 24.5,
+              "bottom": 56.5
+            }
+          },
+          {
+            "text": "Joshua Aryeetey OPEN TO SUMMER 2027",
+            "href": "/profile",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 1628,
+              "right": 1844.1,
+              "top": 6.5,
+              "bottom": 74.5
+            }
+          }
+        ],
+        "status": 200
+      },
+      "phase24Count": 5,
+      "phase24Images": [
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png",
+          "alt": "Complex food logging sheet with no food saved yet.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 368,
+          "renderedHeight": 797.6,
+          "caption": "Phase 24 pre-redesign baseline — complex logging sheet, empty before a log is saved.",
+          "captionFont": "10px",
+          "captionWidth": 368,
+          "sectionId": "food-logging",
+          "sectionLabel": "LOGGING PATHS",
+          "captionInViewport": false,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png",
+          "alt": "Banana serving preview before the serving is logged.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 368,
+          "renderedHeight": 797.6,
+          "caption": "Phase 24 pre-redesign baseline — banana serving preview; not logged.",
+          "captionFont": "10px",
+          "captionWidth": 368,
+          "sectionId": "food-logging",
+          "sectionLabel": "LOGGING PATHS",
+          "captionInViewport": true,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/insights-week-current.png",
+          "alt": "Current-week report shell showing zero logged days.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 368,
+          "renderedHeight": 797.6,
+          "caption": "Phase 24 pre-redesign baseline — current-week report shell; 0 logged days.",
+          "captionFont": "10px",
+          "captionWidth": 368,
+          "sectionId": "food-insights",
+          "sectionLabel": "INSIGHTS",
+          "captionInViewport": true,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png",
+          "alt": "Calorie trend detail without recorded values; the gap is unknown.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 368,
+          "renderedHeight": 797.6,
+          "caption": "Phase 24 pre-redesign baseline — calorie trend detail; no recorded values, so the gap remains unknown.",
+          "captionFont": "10px",
+          "captionWidth": 368,
+          "sectionId": "food-insights",
+          "sectionLabel": "INSIGHTS",
+          "captionInViewport": true,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+          "alt": "Search foods screen with a banana query and generic food results shown per 100 grams.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 368,
+          "renderedHeight": 797.6,
+          "caption": "Phase 24 pre-redesign baseline — Search foods; banana query with generic results shown per 100 g.",
+          "captionFont": "10px",
+          "captionWidth": 368,
+          "sectionId": "food-interface",
+          "sectionLabel": "IN THE PRODUCT · MOBILE SEARCH",
+          "captionInViewport": true,
+          "forbidden": false
+        }
+      ],
+      "foodTrackerImageSources": [
+        "/media/profile/food-tracker-mark.svg",
+        "/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png",
+        "/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png",
+        "/media/case-studies/food-tracker/phase-24/insights-week-current.png",
+        "/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png",
+        "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+        "/media/profile/food-tracker-mark.svg",
+        "/media/profile/food-tracker-mark.svg"
+      ],
+      "nativeDiagrams": [
+        {
+          "key": "product-flow",
+          "tag": "FIGURE",
+          "role": null,
+          "width": 884,
+          "height": 102,
+          "left": 612,
+          "right": 1496,
+          "imgSvgCount": 0,
+          "text": "01 Log a meal Quick entry. 02 Match the food Search proposes candidates. 03 Resolve a serving Trusted food data and serving rules set nutrition. 04 Keep history Record a canonical log entry. Food Tracker product path. Schematic, not an app screen.",
+          "caption": "Food Tracker product path. Schematic, not an app screen."
+        },
+        {
+          "key": "system-map",
+          "tag": "FIGURE",
+          "role": null,
+          "width": 1432,
+          "height": 466.3,
+          "left": 64,
+          "right": 1496,
+          "imgSvgCount": 0,
+          "text": "FOOD TRACKER · ONE SEARCH TO ONE TRUSTWORTHY DAILY LOG Find the food. Resolve nutrition. Keep the log. Illustrative system flow · not a product screenshot SEARCH, RETRIEVAL + LOGGING 01 Search in the app Start with a meal or ingredient. 02 Find and rank candidates · three paths, one ranked set Exact / fuzzy / semantic → candidate pool → deterministic final order → select match 03 Resolve nutrition · two authorities, one result Selected food match → trusted food data (catalog nutrient values) + serving rules (amount + unit conversion). RESOLVED NUTRITION VALUES 04 Record the result · save to the daily log TODAY · CANONICAL FOOD LOG Selected food MATCHED Serving RESOLVED Nutrition SAVED Serving basis retained · entries can be edited. DATA FOUNDATION · MOBILE TO INSIGHT A saved serving basis connects the app to the nutrition people revisit. 01 MOBILE APP · React Native / Expo Records the chosen food and serving. 02 API + DATA · Express / Prisma Receives the entry and shared domain rules. 03 FOOD AUTHORITY Normalized food catalog + backend serving resolution. 04 PERSISTED LOG · PostgreSQL food log Stores the food entry and serving snapshot. 05 HISTORY + INSIGHTS Saved entries; portion ",
+          "caption": "Food Tracker system map.\nIllustrative composite system figure, not a product screenshot. Search gathers exact, fuzzy, and semantic candidates into a pool; deterministic evaluation orders the union and selects the match. Two authorities resolve nutrition: trusted food data supplies catalog nutrient values, while serving rules convert the amount and unit into resolved values. The daily canonical food log records matched food, resolved serving, and saved nutrition; the serving basis is retained and entries remain editable. The data foundation runs from the mobile app through Express and Prisma shared domain rules to normalized catalog and backend serving resolution, PostgreSQL food entry and serving snapshot, and saved History and Insights entries whose portion edits use the retained basis."
+        }
+      ],
+      "chapterAnchors": [
+        {
+          "name": "LOGGING",
+          "hash": "#food-logging",
+          "ariaCurrent": "location",
+          "active": [
+            "LOGGING"
+          ],
+          "heading": "One meal, several ways to get started.",
+          "headingRect": {
+            "top": 208.4,
+            "bottom": 237.5
+          },
+          "navRect": {
+            "top": 82,
+            "bottom": 142
+          },
+          "headingClear": true
+        },
+        {
+          "name": "INSIGHTS",
+          "hash": "#food-insights",
+          "ariaCurrent": "location",
+          "active": [
+            "INSIGHTS"
+          ],
+          "heading": "Turn saved logs into a view of patterns over time.",
+          "headingRect": {
+            "top": 208.7,
+            "bottom": 237.8
+          },
+          "navRect": {
+            "top": 82,
+            "bottom": 142
+          },
+          "headingClear": true
+        },
+        {
+          "name": "ARCHITECTURE",
+          "hash": "#food-system",
+          "ariaCurrent": "location",
+          "active": [
+            "ARCHITECTURE"
+          ],
+          "heading": "SEARCH, RETRIEVAL + LOGGING",
+          "headingRect": {
+            "top": 272,
+            "bottom": 280
+          },
+          "navRect": {
+            "top": 82,
+            "bottom": 142
+          },
+          "headingClear": true
+        }
+      ],
+      "exactlyExpectedPhase24Images": true,
+      "noForbiddenOlderSimulator": true,
+      "allImagesLoaded": true,
+      "noDocumentOverflow": true
+    },
+    {
+      "label": "narrow-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "base": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollY": 0,
+        "mainOverflowY": "visible",
+        "header": [
+          {
+            "text": "Portfolio home",
+            "href": "/home",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 0,
+              "right": 68,
+              "top": 0,
+              "bottom": 69
+            }
+          },
+          {
+            "text": "PROJECTS",
+            "href": "/projects",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 81,
+              "right": 120.6,
+              "top": 6.5,
+              "bottom": 62.5
+            }
+          },
+          {
+            "text": "EXPERIENCE",
+            "href": "/experience",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 120.6,
+              "right": 168.9,
+              "top": 6.5,
+              "bottom": 62.5
+            }
+          },
+          {
+            "text": "HACKATHONS",
+            "href": "/hackathons",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 168.9,
+              "right": 222.2,
+              "top": 6.5,
+              "bottom": 62.5
+            }
+          },
+          {
+            "text": "EDUCATION",
+            "href": "/education",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 222.2,
+              "right": 267.6,
+              "top": 6.5,
+              "bottom": 62.5
+            }
+          },
+          {
+            "text": "HELP",
+            "href": null,
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 267.6,
+              "right": 303.6,
+              "top": 6.5,
+              "bottom": 62.5
+            }
+          },
+          {
+            "text": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "tabIndex": 0,
+            "visible": false,
+            "rect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0
+            }
+          },
+          {
+            "text": "Resume",
+            "href": "/resume",
+            "tabIndex": 0,
+            "visible": false,
+            "rect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0
+            }
+          },
+          {
+            "text": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "tabIndex": 0,
+            "visible": false,
+            "rect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0
+            }
+          },
+          {
+            "text": "Email",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "tabIndex": 0,
+            "visible": false,
+            "rect": {
+              "left": 0,
+              "right": 0,
+              "top": 0,
+              "bottom": 0
+            }
+          },
+          {
+            "text": "Open profile",
+            "href": "/profile",
+            "tabIndex": 0,
+            "visible": true,
+            "rect": {
+              "left": 328,
+              "right": 382,
+              "top": 7.5,
+              "bottom": 61.5
+            }
+          }
+        ],
+        "status": 200
+      },
+      "phase24Count": 5,
+      "phase24Images": [
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png",
+          "alt": "Complex food logging sheet with no food saved yet.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 312,
+          "renderedHeight": 675.9,
+          "caption": "Phase 24 pre-redesign baseline — complex logging sheet, empty before a log is saved.",
+          "captionFont": "10px",
+          "captionWidth": 312,
+          "sectionId": "food-logging",
+          "sectionLabel": "LOGGING PATHS",
+          "captionInViewport": true,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png",
+          "alt": "Banana serving preview before the serving is logged.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 312,
+          "renderedHeight": 675.9,
+          "caption": "Phase 24 pre-redesign baseline — banana serving preview; not logged.",
+          "captionFont": "10px",
+          "captionWidth": 312,
+          "sectionId": "food-logging",
+          "sectionLabel": "LOGGING PATHS",
+          "captionInViewport": false,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/insights-week-current.png",
+          "alt": "Current-week report shell showing zero logged days.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 312,
+          "renderedHeight": 675.9,
+          "caption": "Phase 24 pre-redesign baseline — current-week report shell; 0 logged days.",
+          "captionFont": "10px",
+          "captionWidth": 312,
+          "sectionId": "food-insights",
+          "sectionLabel": "INSIGHTS",
+          "captionInViewport": true,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png",
+          "alt": "Calorie trend detail without recorded values; the gap is unknown.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 312,
+          "renderedHeight": 675.9,
+          "caption": "Phase 24 pre-redesign baseline — calorie trend detail; no recorded values, so the gap remains unknown.",
+          "captionFont": "10px",
+          "captionWidth": 312,
+          "sectionId": "food-insights",
+          "sectionLabel": "INSIGHTS",
+          "captionInViewport": false,
+          "forbidden": false
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+          "alt": "Search foods screen with a banana query and generic food results shown per 100 grams.",
+          "complete": true,
+          "naturalWidth": 368,
+          "naturalHeight": 800,
+          "renderedWidth": 304,
+          "renderedHeight": 658.5,
+          "caption": "Phase 24 pre-redesign baseline — Search foods; banana query with generic results shown per 100 g.",
+          "captionFont": "10px",
+          "captionWidth": 304,
+          "sectionId": "food-interface",
+          "sectionLabel": "IN THE PRODUCT · MOBILE SEARCH",
+          "captionInViewport": true,
+          "forbidden": false
+        }
+      ],
+      "foodTrackerImageSources": [
+        "/media/profile/food-tracker-mark.svg",
+        "/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png",
+        "/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png",
+        "/media/case-studies/food-tracker/phase-24/insights-week-current.png",
+        "/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png",
+        "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+        "/media/profile/food-tracker-mark.svg",
+        "/media/profile/food-tracker-mark.svg"
+      ],
+      "nativeDiagrams": [
+        {
+          "key": "product-flow",
+          "tag": "FIGURE",
+          "role": null,
+          "width": 350,
+          "height": 313,
+          "left": 20,
+          "right": 370,
+          "imgSvgCount": 0,
+          "text": "01 Log a meal Quick entry. 02 Match the food Search proposes candidates. 03 Resolve a serving Trusted food data and serving rules set nutrition. 04 Keep history Record a canonical log entry. Food Tracker product path. Schematic, not an app screen.",
+          "caption": "Food Tracker product path. Schematic, not an app screen."
+        },
+        {
+          "key": "system-map",
+          "tag": "FIGURE",
+          "role": null,
+          "width": 350,
+          "height": 1074,
+          "left": 20,
+          "right": 370,
+          "imgSvgCount": 0,
+          "text": "FOOD TRACKER · ONE SEARCH TO ONE TRUSTWORTHY DAILY LOG Find the food. Resolve nutrition. Keep the log. Illustrative system flow · not a product screenshot SEARCH, RETRIEVAL + LOGGING 01 Search in the app Start with a meal or ingredient. 02 Find and rank candidates · three paths, one ranked set Exact / fuzzy / semantic → candidate pool → deterministic final order → select match 03 Resolve nutrition · two authorities, one result Selected food match → trusted food data (catalog nutrient values) + serving rules (amount + unit conversion). RESOLVED NUTRITION VALUES 04 Record the result · save to the daily log TODAY · CANONICAL FOOD LOG Selected food MATCHED Serving RESOLVED Nutrition SAVED Serving basis retained · entries can be edited. DATA FOUNDATION · MOBILE TO INSIGHT A saved serving basis connects the app to the nutrition people revisit. 01 MOBILE APP · React Native / Expo Records the chosen food and serving. 02 API + DATA · Express / Prisma Receives the entry and shared domain rules. 03 FOOD AUTHORITY Normalized food catalog + backend serving resolution. 04 PERSISTED LOG · PostgreSQL food log Stores the food entry and serving snapshot. 05 HISTORY + INSIGHTS Saved entries; portion ",
+          "caption": "Food Tracker system map.\nIllustrative composite system figure, not a product screenshot. Search gathers exact, fuzzy, and semantic candidates into a pool; deterministic evaluation orders the union and selects the match. Two authorities resolve nutrition: trusted food data supplies catalog nutrient values, while serving rules convert the amount and unit into resolved values. The daily canonical food log records matched food, resolved serving, and saved nutrition; the serving basis is retained and entries remain editable. The data foundation runs from the mobile app through Express and Prisma shared domain rules to normalized catalog and backend serving resolution, PostgreSQL food entry and serving snapshot, and saved History and Insights entries whose portion edits use the retained basis."
+        }
+      ],
+      "chapterAnchors": [
+        {
+          "name": "LOGGING",
+          "hash": "#food-logging",
+          "ariaCurrent": "location",
+          "active": [
+            "LOGGING"
+          ],
+          "heading": "One meal, several ways to get started.",
+          "headingRect": {
+            "top": 144.5,
+            "bottom": 202.7
+          },
+          "navRect": {
+            "top": 0,
+            "bottom": 77
+          },
+          "headingClear": true
+        },
+        {
+          "name": "INSIGHTS",
+          "hash": "#food-insights",
+          "ariaCurrent": "location",
+          "active": [
+            "INSIGHTS"
+          ],
+          "heading": "Turn saved logs into a view of patterns over time.",
+          "headingRect": {
+            "top": 143.8,
+            "bottom": 202
+          },
+          "navRect": {
+            "top": 0,
+            "bottom": 77
+          },
+          "headingClear": true
+        },
+        {
+          "name": "ARCHITECTURE",
+          "hash": "#food-system",
+          "ariaCurrent": "location",
+          "active": [
+            "ARCHITECTURE"
+          ],
+          "heading": "SEARCH, RETRIEVAL + LOGGING",
+          "headingRect": {
+            "top": 223.2,
+            "bottom": 231.2
+          },
+          "navRect": {
+            "top": 0,
+            "bottom": 77
+          },
+          "headingClear": true
+        }
+      ],
+      "exactlyExpectedPhase24Images": true,
+      "noForbiddenOlderSimulator": true,
+      "allImagesLoaded": true,
+      "noDocumentOverflow": true
+    }
+  ],
+  "errors": [],
+  "livingViewports": [
+    {
+      "label": "desktop-1920",
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "status": 200,
+      "top": {
+        "viewport": 1920,
+        "docWidth": 1920,
+        "bodyWidth": 1920,
+        "scrollY": 0
+      },
+      "output": {
+        "cardText": "OWNER-REPORTED OUTPUT · DEEPMOL 500 generated SMILES samples",
+        "cardRect": {
+          "left": 64,
+          "right": 1496,
+          "top": 445.5,
+          "bottom": 715.5,
+          "width": 1432
+        },
+        "kicker": "OWNER-REPORTED OUTPUT · DEEPMOL",
+        "kickerRect": {
+          "left": 93,
+          "right": 446,
+          "top": 477.5,
+          "bottom": 494.3,
+          "width": 353
+        },
+        "kickerVisible": true,
+        "count": "500",
+        "sample": "generated SMILES samples",
+        "associatedText": "OWNER-REPORTED OUTPUT · DEEPMOL 500 generated SMILES samples",
+        "hasReinventAttribution": false,
+        "docWidth": 1920,
+        "viewportWidth": 1920
+      }
+    },
+    {
+      "label": "narrow-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": 200,
+      "top": {
+        "viewport": 390,
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "scrollY": 0
+      },
+      "output": {
+        "cardText": "OWNER-REPORTED OUTPUT · DEEPMOL 500 generated SMILES samples",
+        "cardRect": {
+          "left": 20,
+          "right": 370,
+          "top": 309,
+          "bottom": 535.5,
+          "width": 350
+        },
+        "kicker": "OWNER-REPORTED OUTPUT · DEEPMOL",
+        "kickerRect": {
+          "left": 49,
+          "right": 341,
+          "top": 339,
+          "bottom": 355.8,
+          "width": 292
+        },
+        "kickerVisible": true,
+        "count": "500",
+        "sample": "generated SMILES samples",
+        "associatedText": "OWNER-REPORTED OUTPUT · DEEPMOL 500 generated SMILES samples",
+        "hasReinventAttribution": false,
+        "docWidth": 390,
+        "viewportWidth": 390
+      }
+    }
+  ]
+}
