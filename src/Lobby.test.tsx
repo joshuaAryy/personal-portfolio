@@ -80,6 +80,40 @@ describe("Projects lobby", () => {
     );
   });
 
+  it("provides a Home link beside every category identity", () => {
+    const view = renderProjectsLobby("experience");
+    const home = view.querySelector<HTMLAnchorElement>(".league-lobby__home");
+
+    expect(home?.getAttribute("href")).toBe("/home");
+    expect(home?.getAttribute("aria-label")).toBe("Back to portfolio home");
+    click(home!);
+    expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/home");
+  });
+
+  it("fits brand marks without distortion and crops only the lobby portrait", () => {
+    const view = renderProjectsLobby("experience");
+    const livingInSilico = view.querySelector('[aria-label="Select Living in Silico"]');
+    const stushPatties = view.querySelector('[aria-label="Select Stush Patties"]');
+    const owner = view.querySelector('[aria-label="Select Joshua Aryeetey"]');
+
+    expect(livingInSilico?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--contain")).toBe(true);
+    expect(stushPatties?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--contain")).toBe(true);
+    expect(owner?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--portrait")).toBe(true);
+
+    const css = readFileSync("src/lobby.css", "utf8");
+    expect(css).toMatch(/\.league-banner__mark--contain\s*\{[^}]*object-fit:\s*contain/s);
+    expect(css).toMatch(/\.league-banner__mark--portrait\s*\{[^}]*border-radius:\s*50%[^}]*object-fit:\s*cover/s);
+  });
+
+  it("leaves the Projects owner's J medallion fitting unchanged", () => {
+    const view = renderProjectsLobby("projects");
+    const owner = view.querySelector('[aria-label="Select Joshua Aryeetey"]');
+
+    expect(owner?.querySelector(".league-banner__mark")?.getAttribute("src")).toBe("/media/lobby/project-owner-j.svg");
+    expect(owner?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--portrait")).toBe(false);
+    expect(owner?.querySelector(".league-banner__medallion")?.classList.contains("league-banner__medallion--fit-mark")).toBe(false);
+  });
+
   it("keeps Projects lobby medallion framing circular at desktop widths", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const desktopRules = css.slice(css.indexOf("@media (min-width: 901px)"));

@@ -1,0 +1,161 @@
+{
+  "windowY": 61,
+  "mainTop": 0,
+  "mainHeight": 774,
+  "bodyHeight": 905,
+  "viewport": 844,
+  "docWidth": 390,
+  "row": {
+    "rect": {
+      "x": 0,
+      "y": 783,
+      "right": 390,
+      "bottom": 844,
+      "width": 390,
+      "height": 61
+    },
+    "links": [
+      {
+        "text": "GitHub",
+        "href": "https://github.com/joshuaAryy",
+        "aria": "GitHub (opens in a new tab)",
+        "rect": {
+          "x": 85.140625,
+          "y": 792,
+          "right": 134.59375,
+          "bottom": 836,
+          "width": 49.453125,
+          "height": 44
+        },
+        "tabIndex": 0,
+        "visible": true
+      },
+      {
+        "text": "LinkedIn",
+        "href": "https://ca.linkedin.com/in/joshua-ary",
+        "aria": "LinkedIn (opens in a new tab)",
+        "rect": {
+          "x": 146.59375,
+          "y": 792,
+          "right": 201.625,
+          "bottom": 836,
+          "width": 55.03125,
+          "height": 44
+        },
+        "tabIndex": 0,
+        "visible": true
+      },
+      {
+        "text": "✉",
+        "href": "mailto:joshuaaryy@gmail.com",
+        "aria": "Email Joshua",
+        "rect": {
+          "x": 213.625,
+          "y": 792,
+          "right": 240.546875,
+          "bottom": 836,
+          "width": 26.921875,
+          "height": 44
+        },
+        "tabIndex": 0,
+        "visible": true
+      },
+      {
+        "text": "Resume",
+        "href": "/resume",
+        "aria": "Resume",
+        "rect": {
+          "x": 252.546875,
+          "y": 792,
+          "right": 304.859375,
+          "bottom": 836,
+          "width": 52.3125,
+          "height": 44
+        },
+        "tabIndex": 0,
+        "visible": true
+      }
+    ]
+  },
+  "afterFocusing": {
+    "windowY": 61,
+    "mainTop": 0,
+    "mainHeight": 774,
+    "bodyHeight": 905,
+    "viewport": 844,
+    "docWidth": 390,
+    "row": {
+      "rect": {
+        "x": 0,
+        "y": 783,
+        "right": 390,
+        "bottom": 844,
+        "width": 390,
+        "height": 61
+      },
+      "links": [
+        {
+          "text": "GitHub",
+          "href": "https://github.com/joshuaAryy",
+          "aria": "GitHub (opens in a new tab)",
+          "rect": {
+            "x": 85.140625,
+            "y": 792,
+            "right": 134.59375,
+            "bottom": 836,
+            "width": 49.453125,
+            "height": 44
+          },
+          "tabIndex": 0,
+          "visible": true
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "aria": "LinkedIn (opens in a new tab)",
+          "rect": {
+            "x": 146.59375,
+            "y": 792,
+            "right": 201.625,
+            "bottom": 836,
+            "width": 55.03125,
+            "height": 44
+          },
+          "tabIndex": 0,
+          "visible": true
+        },
+        {
+          "text": "✉",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "aria": "Email Joshua",
+          "rect": {
+            "x": 213.625,
+            "y": 792,
+            "right": 240.546875,
+            "bottom": 836,
+            "width": 26.921875,
+            "height": 44
+          },
+          "tabIndex": 0,
+          "visible": true
+        },
+        {
+          "text": "Resume",
+          "href": "/resume",
+          "aria": "Resume",
+          "rect": {
+            "x": 252.546875,
+            "y": 792,
+            "right": 304.859375,
+            "bottom": 836,
+            "width": 52.3125,
+            "height": 44
+          },
+          "tabIndex": 0,
+          "visible": true
+        }
+      ]
+    }
+  },
+  "errors": []
+}

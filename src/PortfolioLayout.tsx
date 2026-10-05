@@ -188,12 +188,12 @@ function Header() {
       <nav className="header-client-tools" aria-label="Contact and resume">
         {headerUtilityLinks.map((item) => (
           item.href === "/resume" ? (
-            <Link className="header-client-tool" key={item.label} to="/resume" state={{ from: pathname }}>
+            <Link className="header-client-tool header-client-tool--resume" key={item.label} to="/resume" state={{ from: pathname }}>
               {item.label}
             </Link>
           ) : (
             <a
-              className="header-client-tool"
+              className={`header-client-tool${item.label === "Email" ? " header-client-tool--email" : ""}`}
               key={item.label}
               href={item.href}
               target={item.external ? "_blank" : undefined}

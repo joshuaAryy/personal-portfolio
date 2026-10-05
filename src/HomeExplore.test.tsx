@@ -94,6 +94,22 @@ describe("HomeExplore", () => {
     expect(view.querySelector(".home-explore__subnav")).toBeNull();
   });
 
+  it("previews verified experience, hackathon, and education details when selected", () => {
+    const view = renderHomeExplore();
+    const selection = view.querySelector(".home-explore__selection");
+
+    for (const [mode, expected] of [
+      ["Experience", ["Living in Silico", "AI/ML Research Intern", "Stush Patties"]],
+      ["Hackathons", ["Crest", "MPC Hacks", "3rd Place", "Brim Financial"]],
+      ["Education", ["Computer Engineering", "Software Specialization", "Expected 2028"]],
+    ] as const) {
+      const button = view.querySelector(`[aria-label="${mode}"]`);
+      if (!button) throw new Error(`${mode} choice is missing`);
+      click(button);
+      for (const phrase of expected) expect(selection?.textContent).toContain(phrase);
+    }
+  });
+
   it("separates Back and Confirm and compacts project areas on mobile", () => {
     const css = readFileSync("src/home-explore.css", "utf8");
     const pairRule = css.match(/\.home-explore__confirm-pair\s*\{([^}]*)\}/)?.[1];

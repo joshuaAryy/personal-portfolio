@@ -7197,6 +7197,20 @@ a:focus-visible {
   text-transform: uppercase;
   transition: color 140ms ease;
 }
+.header-client-tool--resume {
+  border: 1px solid rgba(199, 155, 69, 0.75);
+  border-radius: 999px;
+  color: #f0d58a;
+  font-weight: 700;
+  padding: 0 12px;
+}
+.header-client-tool--email {
+  border-radius: 4px;
+  background: rgba(199, 155, 69, 0.16);
+  color: #f0d58a;
+  font-weight: 700;
+  padding: 0 10px;
+}
 .header-client-tool:hover,
 .header-client-tool:focus-visible { color: #f0d58a; }
 .header-client-tool:focus-visible { outline: 1px solid #c79b45; outline-offset: 4px; }

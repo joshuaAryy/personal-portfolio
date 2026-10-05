@@ -62,6 +62,23 @@ describe("League client shell", () => {
     expect(markup).toContain('href="mailto:joshuaaryy@gmail.com"');
   });
 
+  it("gives Resume and Email distinct high emphasis in the utility row", () => {
+    const markup = renderClient("/home");
+    const utilityNavigation = markup.slice(
+      markup.indexOf('<nav class="header-client-tools"'),
+      markup.indexOf("</nav>", markup.indexOf('<nav class="header-client-tools"')),
+    );
+
+    expect(utilityNavigation).toContain('class="header-client-tool header-client-tool--resume"');
+    expect(utilityNavigation).toContain('class="header-client-tool header-client-tool--email"');
+    expect(readFileSync("src/styles.css", "utf8")).toMatch(
+      /\.header-client-tool--resume\s*\{[^}]*font-weight:\s*700/s,
+    );
+    expect(readFileSync("src/styles.css", "utf8")).toMatch(
+      /\.header-client-tool--email\s*\{[^}]*font-weight:\s*700/s,
+    );
+  });
+
   it("does not hide the approved utility links on project shells", () => {
     const css = readFileSync("src/styles.css", "utf8");
     expect(css).not.toMatch(

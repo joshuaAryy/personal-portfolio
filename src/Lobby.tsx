@@ -241,6 +241,9 @@ function ModeHeading({ mode }: { mode: LobbyMode }) {
   const copy = copyByMode[mode];
   return (
     <div className="league-lobby__heading">
+      <Link className="league-lobby__home" to="/home" aria-label="Back to portfolio home" title="Back to portfolio home">
+        <span aria-hidden="true">←</span>
+      </Link>
       <img src={modeIcons[mode]} width="28" height="28" alt="" aria-hidden="true" />
       <div>
         <h1>{copy.title}</h1>
@@ -265,6 +268,12 @@ function LobbyCard({
   const roleSummary = [item.role, ...roleMarks.map((mark) => mark.label)].filter(Boolean).join(". ");
   const mark = item.mark;
   const instructionId = `lobby-card-instructions-${mode}-${item.id}`;
+  const markFit = mark === "/media/lobby/profile-portrait-source.jpg"
+    ? "league-banner__mark--portrait"
+    : item.id === "living-in-silico" || item.id === "stush-patties"
+      ? "league-banner__mark--contain"
+      : "";
+  const medallionFit = markFit ? "league-banner__medallion--fit-mark" : "";
 
   return (
     <button
@@ -280,14 +289,14 @@ function LobbyCard({
       onClick={onSelect}
     >
       <img className="league-banner__art" src="/media/lobby/banner-art.svg" alt="" aria-hidden="true" />
-      <span className="league-banner__medallion">
+      <span className={`league-banner__medallion ${medallionFit}`}>
         {mode === "projects" && (
           <img className="league-banner__frame" src="/media/lobby/project-medallion-frame.png" alt="" aria-hidden="true" />
         )}
         {item.placeholder ? (
           <span className="league-banner__pending" aria-hidden="true">···</span>
         ) : mark ? (
-          <img className="league-banner__mark" src={mark} alt={item.markAlt ?? ""} />
+          <img className={`league-banner__mark ${markFit}`} src={mark} alt={item.markAlt ?? ""} />
         ) : null}
       </span>
       <strong className="league-banner__name">{item.name}</strong>

@@ -1,6 +1,7 @@
 import { useRef, useState, type KeyboardEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { Client } from "./PortfolioLayout";
+import { experience, projects } from "./data";
 import "./home-explore.css";
 
 const modes = [
@@ -52,6 +53,8 @@ const projectAreas = [
   { label: "Full Stack", detail: "End-to-end products" },
   { label: "Data / Automation", detail: "Pipelines + tooling" },
 ] as const;
+
+const crest = projects.find((project) => project.slug === "crest");
 
 type ModeId = (typeof modes)[number]["id"];
 
@@ -168,6 +171,45 @@ function HomeExploreContent() {
                     <small>{area.detail}</small>
                   </li>
                 ))}
+              </ul>
+            </>
+          )}
+          {selected.id === "experience" && (
+            <>
+              <h3>EXPERIENCE SNAPSHOT</h3>
+              <ul aria-label="Experience preview">
+                {experience.map((role) => (
+                  <li key={role.slug}>
+                    <strong>{role.name}</strong>
+                    <small>{role.title} · {role.dates}</small>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+          {selected.id === "hackathons" && crest && (
+            <>
+              <h3>HACKATHON SNAPSHOT</h3>
+              <ul aria-label="Hackathon preview">
+                <li>
+                  <strong>{crest.name}</strong>
+                  <small>{crest.detail}</small>
+                </li>
+              </ul>
+            </>
+          )}
+          {selected.id === "education" && (
+            <>
+              <h3>ACADEMIC SNAPSHOT</h3>
+              <ul aria-label="Education preview">
+                <li>
+                  <strong>Computer Engineering</strong>
+                  <small>B.Eng. · Software Specialization · Expected 2028</small>
+                </li>
+                <li>
+                  <strong>Selected Coursework</strong>
+                  <small>Algorithms &amp; Data Structures · Software Systems · Database Systems I · Microprocessor Systems</small>
+                </li>
               </ul>
             </>
           )}

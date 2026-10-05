@@ -43,6 +43,32 @@
   object-fit: contain;
 }
 
+.league-lobby__home {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  flex: none;
+  place-items: center;
+  border: 1px solid rgba(199, 155, 69, 0.7);
+  border-radius: 50%;
+  color: #e0bd6a;
+  font-size: 18px;
+  line-height: 1;
+  text-decoration: none;
+  transition: background 140ms ease, color 140ms ease;
+}
+
+.league-lobby__home:hover,
+.league-lobby__home:focus-visible {
+  background: rgba(199, 155, 69, 0.18);
+  color: #fff0c1;
+}
+
+.league-lobby__home:focus-visible {
+  outline: 2px solid #e0bd6a;
+  outline-offset: 3px;
+}
+
 .league-lobby__heading h1 {
   margin: 0;
   font-size: 12px;
@@ -160,6 +186,23 @@
   height: 74%;
   object-fit: contain;
   filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.55));
+}
+
+.league-banner__medallion--fit-mark {
+  overflow: hidden;
+}
+
+.league-banner__mark--contain {
+  width: 86%;
+  height: 86%;
+  object-fit: contain;
+}
+
+.league-banner__mark--portrait {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .league-banner__pending {
