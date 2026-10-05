@@ -1,5 +1,7 @@
 # Product and Tool Systems Coverage Audit
 
+> **Current-status supersession (2026-10-05 owner review):** this source/implementation audit remains useful for factual boundaries, but its current-page completeness judgments predate the owner's direct review. All six long-form case studies are open for substantial story/layout re-authoring. Do not use any older “strong breadth,” “gap resolved,” or render-clearance conclusion here as owner acceptance; follow [the current owner direction](../OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md).
+
 **Follow-up evidence:** [Cho implementation audit](CHO_IMPLEMENTATION_EVIDENCE.md) now verifies a committed posting/profile handoff and separately inspected staged Resume Studio workflow. Its source-boundary notes supersede the earlier unresolved tailoring-detail gap below. Public design still needs to explain both input preparation and grounded tailoring/review/export, without new ownership or release claims.
 
 Scope: Food Tracker, Cho’Veigo, Crest, and Fraymakers. This is a source-and-current-page coverage map, not proposed final copy or a redesign. The current owner direction is to represent each project’s actual breadth without arbitrary length or filler. Detailed claims should earn space by explaining the product, Joshua’s work, a consequential decision, or a real limit.

@@ -1,5 +1,7 @@
 # Research and data case-study coverage map
 
+> **Current-status supersession (2026-10-05 owner review):** this source/claim audit remains useful for factual boundaries, but its current-page completeness judgments predate the owner's direct review. Living in Silico and Stush Patties are both open for substantial story/layout re-authoring; prior technical coverage or render checks do not establish owner acceptance. See [the current owner direction](../OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md).
+
 Bounded internal copy audit of the current React pages against `docs/CASE_STUDY_CONTENT_SOURCE.md`, `docs/DESIGN_DECISIONS.md`, and the existing implementation direction. This is a source review; it does not establish rendered parity or validate unpublished run artifacts.
 
 ## Living in Silico

@@ -1,5 +1,7 @@
 # Owner Source v2 Reconciliation — 2026-10-04
 
+> **Current-status supersession (2026-10-05 owner review):** The owner has since reviewed the live case-study pages and directly judged all six long-form stories too condensed to represent the work. This report remains useful for its OWNER REPORT / ARTIFACT / RECONCILED SOURCE TRUTH reconciliation and factual boundaries, but its prior public/page completeness assessments, “no material gap” conclusions, and instruction to wait for owner website review are historical and superseded. Continue substantial story/layout re-authoring under [the consolidated owner direction](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md); prior route, test, or render checks are not story acceptance.
+
 ## Scope and source model
 
 Reviewed the complete archive at `C:\Users\samue\Downloads\portfolio_owner_source_v2.zip`, including its README, ingestion prompt, provenance index, six deep project dossiers, Education capability brief, and `raw_context/CASE_STUDY_CONTENT_SOURCE_old.md`. The package was extracted outside the repository at `C:\Users\samue\AppData\Local\Temp\portfolio-owner-source-v2-ingestion-2026-10-04-root\portfolio_owner_source_v2` for inspection. The old raw-context file is provenance, not a replacement for the current portfolio source record. The exact dossier filenames are `01_FOOD_TRACKER_DEEP_DOSSIER.md`, `02_CREST_DEEP_DOSSIER.md`, `03_CHO_VIEGO_DEEP_DOSSIER.md`, `04_FRAYMAKERS_DEEP_DOSSIER.md`, `05_LIVING_IN_SILICO_DEEP_DOSSIER.md`, `06_STUSH_PATTIES_DEEP_DOSSIER.md`, and `07_EDUCATION_CAPABILITY_BRIEFS.md`.
@@ -12,13 +14,13 @@ This report preserves three separate layers:
 
 This is a content/evidence reconciliation only. No public page, Figma design, React component, test, or canonical source-truth document was changed. The current pages are reviewed against the latest available October 4 render-sync records; older coverage rows explicitly labeled historical/pre-sync are not treated as current findings where later evidence resolves them.
 
-## Food Tracker — reconciled; macro breadth is already present
+## Food Tracker — source reconciliation remains useful; later owner review reopened the story
 
 **New OWNER REPORT context:** The project began as Joshua’s own gym/nutrition product, with the internal aim “Simple tracking, serious insight.” The Simple/Complex distinction is explicitly a presentation-depth choice over one backend and product. The dossier adds a deeper longitudinal account of nutrition snapshots, serving conversion, provider expansion, all logging paths, recommendation and analytics evolution, security/authentication, deployment/native validation, engineering failures, and Joshua’s product/technical ownership through a steer-and-delegate process. This is substantially more context than the prior source record’s compact description.
 
 **Already represented correctly:** Current source truth already covers the product purpose, Joshua’s product direction and agent-assisted implementation, trusted nutrition/serving authority, unknown-versus-zero, editable logs with snapshot-backed history, photo suggestions and review limits, hybrid retrieval and its offline benchmark, catalog scale, and important failure distinctions. The immutable implementation audit and tests support the listed current-code paths. The most recent Food/Cho render report says the Food page now leads with product, logging, and Insights before retrieval, then covers evidence, architecture/data trust, evaluation, learning, and close; the five logging paths share a Review Before Save destination. That resolves the old pre-sync criticism that the page was primarily a search story.
 
-**Public/page assessment:** No clear macro-story omission is established by the latest render comparison. The case study communicates the product beyond search. The v2 dossier does expose additional systems that are not independently explained in the public story—especially the recommendation lifecycle, provider/data ingestion depth, account/security evolution, and staging/native/release validation. These are candidates for owner review, not a requirement to append every subsystem.
+**Historical public/page assessment — superseded:** The October 4 render comparison had led to an earlier conclusion that the case study communicated the broader product. The owner's later review rejected that conclusion: Food Tracker remains too condensed and needs substantial re-authoring, stronger larger evidence, and a clearer product/data/architecture story. Select real capabilities with editorial judgment; do not append every subsystem as a checklist.
 
 **Qualified or conflicting claims:** The owner interview says fuzzy retrieval recovered 32/40 legacy misses; repository-backed evidence says 31/40. Historical test totals belong to different checkpoints. Photo adjudication/manual-check paths remain partly untested, and Joshua’s specific authorship of the image-model implementation is not established. Code presence does not prove public deployment or current runtime validation. “Immutable history” means snapshot-backed nutrition authority; user-scoped edits/deletion exist.
 
@@ -76,13 +78,13 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **References:** [Fraymakers source truth](CASE_STUDY_CONTENT_SOURCE.md#fraymakers--uploadassistant--source-truth); [latest Crest/Fraymakers render sync](case-study-review/CREST_FRAYMAKERS_RENDER_SYNC_2026-10-04.md); v2 `04_FRAYMAKERS_DEEP_DOSSIER.md` §§1–11.
 
-## Living in Silico — reconciled; three distinct research paths are now explained
+## Living in Silico — source reconciliation remains useful; major re-authoring is still open
 
 **New OWNER REPORT context:** v2 adds the first-internship/domain-ramp story, supervisor and group context, the owner’s personal learning motivation, experiment/deliverable history, and fuller explanation of why the three methods were tried. DeepMol/RNN, RDKit/Fragmenstein fragment work, and REINVENT4 are explicitly separate routes with separate outcomes.
 
-**Already represented correctly:** Source truth already separates the April snapshot from 400–600-entry experiment subsets, preserves DeepMol’s 500 generated SMILES as strings without validity/novelty claims, describes Morgan settings and fragment workflows, and says REINVENT4 did not successfully generate. The latest React/Figma render report verifies route-specific rationale, input/method, contribution, outcome, and learning are present; it reports no concrete macro or responsive mismatch.
+**Source and implementation facts:** Source truth separates the April snapshot from 400–600-entry experiment subsets, preserves DeepMol’s 500 generated SMILES as owner-reported strings without validity/novelty claims, describes Morgan settings and fragment workflows, and says REINVENT4 did not reach completed generation. Existing React/render evidence is a useful baseline for the three route labels and factual boundaries.
 
-**Public/page assessment:** No material technical workstream omission remains in the current expanded page. Personal learning context is available if useful, but the visitor-facing story does not need to expose private routine details to demonstrate the research arc.
+**Historical public/page assessment — superseded:** The earlier conclusion that no material workstream omission remained is withdrawn. The owner now considers the page far short of representing the internship and requires a substantial re-authoring: research context and evolution first, then three technically distinct investigations with useful evidence and learning. Personal routine details remain optional and need not be public.
 
 **Qualified or conflicting claims:** A dated May 2025 report attributes 500 samples/RDKit checking to REINVENT4, while the owner correction attributes 500 generated SMILES samples to DeepMol/RNN and says REINVENT4 did not reach generation. No run logs/source resolve this; keep the conflict explicit and use the owner-corrected account with the sample count carefully qualified. Do not claim valid, unique, novel molecules, drug candidates, or research impact. Do not reuse older unsupported QSAR/QSPR/GNN/Transformer, molecule-count, or improvement claims.
 
@@ -92,13 +94,13 @@ This is a content/evidence reconciliation only. No public page, Figma design, Re
 
 **References:** [Living in Silico source truth](CASE_STUDY_CONTENT_SOURCE.md#living-in-silico--source-truth); [Research/data audit](coverage-audit/RESEARCH_AND_DATA.md#living-in-silico); [latest Living/Stush render sync](case-study-review/LIVING_STUSH_PREVIEW_RENDER_SYNC_2026-10-04.md); v2 `05_LIVING_IN_SILICO_DEEP_DOSSIER.md` §§1–14.
 
-## Stush Patties — reconciled; data-engineering breadth is represented
+## Stush Patties — source reconciliation remains useful; substantial re-authoring is still open
 
 **New OWNER REPORT context:** The dossier adds richer client/stakeholder and requirements context, how the business goal became practical data rules, and why a temporary Koyo position/cell parser was the bounded exception rather than a general design pattern.
 
 **Already represented correctly:** Current source truth covers the three distributors, formats across inputs without a per-distributor mapping, shared schema and sales/units/case-pack/month dimensions, Koyo exception, CSV/dictionary/quality-report/Power BI outputs, two-person collaboration, and no metrics/private data. Latest Figma/Preview evidence confirms this whole pipeline, ownership, client collaboration, and learning appear in the page.
 
-**Public/page assessment:** No material breadth gap is established by the latest rendered page. The case now explains messy inputs → shared schema → normalization → bounded exception → repeatable reporting. Do not add field-level parsing detail unsupported by the source or expose client data.
+**Historical public/page assessment — superseded:** The prior render assessment was too generous about completeness. The owner finds the current page text-heavy and repetitive and requests substantial visual re-authoring around messy inputs → parsing → canonical schema/rules → report-ready outputs. Do not add unsupported field-level parsing detail or expose client data.
 
 **Qualified or conflicting claims:** CSV/XLSX/XLSB are formats across the set; no distributor-to-format mapping is supported. The exact canonical schema and per-field rules are not fully preserved. Older 40–50% time-improvement claims are unverified. Ownership was shared with Shiv; do not claim sole ownership.
 
@@ -126,25 +128,25 @@ The brief is a capability-demonstration source, not a deep product-case-study ou
 
 ## Cross-project conclusions
 
-### Public pages that are clearly under-informed now
+### Current public-story status after owner review
 
-- **Education is the one clear visitor-facing content gap:** three project cards remain intentionally evidence-pending and therefore have little technical explanation. v2 now provides owner-reported context, so this is no longer a permanently sparse-content problem, but the owner’s earlier instruction keeps technical claims gated until the source context is reviewed and clearly attributed. Dental and Bookstore are especially dependent on original source recovery; the CMOS description must remain free of exact unsupported results. The verified ALU card is not in the same status.
-- For the six professional/research pages, the latest October 4 render reports show the earlier breadth directions synced and present. No other page is currently classified as materially incomplete solely because v2 contains additional detail. The owner may decide later whether optional Food security/recommendation/deployment depth, Cho cover-letter/export paths, or further Crest subsystem detail earns public space.
+- **All six long-form professional/research pages are under-informed at the story/layout level:** Food Tracker, Cho’Veigo, Crest, Fraymakers, Living in Silico, and Stush Patties remain open for substantial re-authoring. Prior October 4 coverage/render assessments are historical; they do not establish that a curious visitor can understand the complete project.
+- **Education remains separately evidence-constrained:** use verified ALU/FSM details. Dental, Bookstore, and CMOS claims remain evidence-pending; the v2 owner reports do not substitute for implementation artifacts and do not make the sections permanently sparse.
 
 ### Durable source documents recommended for a later reconciliation edit
 
 1. **`docs/CASE_STUDY_CONTENT_SOURCE.md`** — keep it as reconciled source truth, not a copy of the dossiers. If future work needs additional detail, add only owner-reported context that materially affects a claim or strategic framing, clearly separated from artifact evidence. Its current Food, Cho’Veigo, Fraymakers, Living in Silico, and Stush sections already capture the main technical and ownership boundaries.
 2. **`docs/coverage-audit/EDUCATION.md`** and **`docs/DEFERRED_OWNER_INPUTS.md`** — no v2 reconciliation edit is currently needed. They already distinguish the Education owner-report context from missing project artifacts, preserve the ALU revision/reset caveats, and keep Dental, Bookstore, and CMOS evidence-pending without making them permanently sparse.
-3. **`docs/coverage-audit/PRODUCT_AND_TOOL_SYSTEMS.md`** and **`docs/coverage-audit/RESEARCH_AND_DATA.md`** — their current render assessments record the accepted breadth and identify older gap rows as historical. Revisit only if owner review identifies a concrete story gap or new evidence changes the source assessment.
+3. **`docs/coverage-audit/PRODUCT_AND_TOOL_SYSTEMS.md`** and **`docs/coverage-audit/RESEARCH_AND_DATA.md`** — factual and implementation audits remain useful, but their page-completeness conclusions predate the direct owner review and must be treated as superseded.
 4. Keep the complete v2 dossiers available to future strategic review with their section references; do not replace them with this report. The supplied archive is currently outside the repository at `C:\Users\samue\Downloads\portfolio_owner_source_v2.zip`. Do not copy it into public project assets. When a consequential review is needed, provide the relevant dossier sections alongside the direct implementation and render evidence.
 
 ### Strategic Sol assessment
 
-**No strategic Sol decision is warranted now.** This checkpoint asks for source reconciliation, not a new narrative hierarchy. Existing accepted Food/Cho direction and October 4 page/render reports resolve the earlier major coverage concerns for the six long-form pages. The Education content gap has a clear owner gate and artifact boundary. If the owner’s site review decides to reopen a major case-study narrative—especially Food’s breadth or Education’s technical framing—send Sol a neutral Decision Packet with the relevant v2 dossier sections and direct page/evidence references; do not send only this report.
+**Historical checkpoint:** this assessment was made before the owner completed the site review and should not constrain current routing. The current explicit story direction does not automatically require a Sol call; invoke strategic Sol only if an actual unresolved high-impact framing decision arises, using direct dossier sections and implementation/render evidence.
 
 ## Review disposition
 
-Wait for owner feedback and the owner’s website-review pass before changing public pages or expanding the six professional stories. No page copy, layout, or implementation is authorized by this reconciliation report alone.
+The owner website-review gate has since been satisfied. Continue with the explicitly requested source-grounded public-page re-authoring and implementation. This source report supplies factual context; use the current owner direction for sequencing and design acceptance.
 ## Owner-supplied archive follow-up - 2026-10-04
 
 The owner later supplied `portfolio_owner_source_v2.zip` while answering the missing Education artifact question. Its 11 entries are Markdown owner-source material only: six deep project dossiers, the Education capability brief, README, ingestion prompt, provenance index, and older raw-context source copy. It contains no Dental SQL/schema, Bookstore Java/submission, or CMOS KiCad/SPICE implementation files. This confirms the archive is the OWNER REPORT layer, not new implementation evidence. Dental, Bookstore, and CMOS remain evidence-pending; the verified ALU source assessment is unchanged. Do not use old resume claims as implementation proof.
