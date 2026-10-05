@@ -4,6 +4,7 @@
 **Runtime:** Playwright 1.63.0 with installed Chrome 153
 **Routes:** `/projects/food-tracker`, `/experience/living-in-silico`
 **Viewports:** 1920×1080 and 390×844
+**Source state:** rendered from the working tree later committed as 91a11e9 + f7c29b9; the recorded Git HEAD during capture was parent 1c02033 because the source delta was uncommitted.
 
 ## Food Tracker
 
