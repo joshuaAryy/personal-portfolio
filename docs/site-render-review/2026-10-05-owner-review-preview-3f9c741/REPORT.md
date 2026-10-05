@@ -22,9 +22,10 @@ Opening; Home shell, mode navigation and utilities; Projects, Experience, Hackat
 - Zero same-origin failed requests, same-origin 4xx/5xx responses, console errors or page errors.
 - No horizontal overflow at either checked width.
 - At desktop and narrow widths, the Resume utility opened `/resume` over the originating Home route. The background was inert and hidden from assistive navigation; Escape returned to `/home`. The local source check also verified Close and focus restoration.
+- Normal-motion Opening reached `/home` at desktop (2,501ms including navigation), and Skip reached `/home` at 390px. The archive mark and Skip loaded at both widths; no overflow or runtime errors. Reduced-motion route entry is also included in the route sweep.
 - Home captures were visually inspected at desktop and narrow widths; the Home mode controls, utility area and narrow layout were usable.
 
-Evidence: [desktop Home](home-desktop-1920.png), [narrow Home](home-narrow-390.png), [machine-readable smoke report](smoke-report.json).
+Evidence: [desktop Opening](opening-desktop-1920.png), [narrow Opening](opening-narrow-390.png), [Opening checks](opening-smoke-report.json), [desktop Home](home-desktop-1920.png), [narrow Home](home-narrow-390.png), [route smoke report](smoke-report.json).
 
 ## Review notes
 
