@@ -117,58 +117,57 @@ export default function LivingInSilicoCase() {
           <p>SMILES made molecular information available as an ordered string. I explored whether a recurrent model could learn from those sequences and generate more strings in that representation.</p>
         </div>
         <figure className="living-deepmol-figure" aria-labelledby="living-deepmol-caption">
-          <p className="living-method-owner">DEEPMOL / RNN · SEQUENCE-GENERATION ROUTE</p>
-          <div className="living-sequence-transformation" role="group" aria-label="SMILES sequence route from experiment input through DeepMol and an RNN to generated strings">
-            <section className="living-sequence-stage living-sequence-stage--input" aria-labelledby="living-sequence-input-title">
-              <p className="living-eyebrow">01 / INPUT</p>
-              <h3 id="living-sequence-input-title">SMILES sequence input</h3>
-              <p>Experiment records make molecular structures available as ordered text.</p>
-              <div className="living-string-schematic" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
-              <small>Sequence marks are schematic; no sample string is reproduced.</small>
-            </section>
-            <section className="living-sequence-stage living-sequence-stage--model" aria-labelledby="living-sequence-model-title">
-              <p className="living-eyebrow">02 / REPRESENT + GENERATE</p>
-              <h3 id="living-sequence-model-title">DeepMol CSVLoader → RNN MolecularGenerator</h3>
-              <p>The loader reads the experiment table. The recurrent model processes sequence steps and generates more SMILES strings.</p>
-              <svg className="living-sequence-loop" viewBox="0 0 480 112" role="img" aria-labelledby="living-sequence-loop-title living-sequence-loop-desc">
-                <title id="living-sequence-loop-title">A recurrent model processes a sequence over multiple steps</title>
-                <desc id="living-sequence-loop-desc">Three ordered sequence positions pass through a recurrent model loop. This is a conceptual explanation, not a reproduced model trace.</desc>
-                <path className="living-sequence-loop__forward" d="M42 65H430m0 0-10-8m10 8-10 8" />
-                <path className="living-sequence-loop__return" d="M397 42C338 9 143 9 84 42" />
-                <path className="living-sequence-loop__arrow" d="m84 42 2-12m-2 12 12-2" />
-                <circle cx="85" cy="65" r="15" /><circle cx="238" cy="65" r="15" /><circle cx="391" cy="65" r="15" />
-                <text x="85" y="101" textAnchor="middle">STEP 1</text><text x="238" y="101" textAnchor="middle">STEP 2</text><text x="391" y="101" textAnchor="middle">STEP 3</text>
-              </svg>
-            </section>
-            <section className="living-sequence-stage living-sequence-stage--output" aria-labelledby="living-sequence-output-title">
-              <p className="living-eyebrow">03 / OUTPUT</p>
-              <h3 id="living-sequence-output-title">Generated SMILES output</h3>
-              <strong className="living-sequence-count">500</strong>
-              <p>Owner-reported samples from the DeepMol / RNN work.</p>
-              <div className="living-string-schematic living-string-schematic--output" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
-            </section>
-            <section className="living-sequence-stage living-sequence-stage--boundary" aria-labelledby="living-sequence-boundary-title">
-              <p className="living-eyebrow">04 / WHAT THE COUNT CANNOT ESTABLISH</p>
-              <h3 id="living-sequence-boundary-title">A sample count is not a chemistry result.</h3>
-              <ul>
-                <li>Validity</li>
-                <li>Uniqueness</li>
-                <li>Novelty</li>
-                <li>Viability</li>
-              </ul>
-              <small>These properties are not established by the count.</small>
-            </section>
+          <p className="living-method-owner">JOSHUA’S WORK · OWNER-REPORTED</p>
+          <div className="living-deepmol-path">
+            <div className="living-deepmol-path__input">
+              <p className="living-eyebrow">EXPERIMENT INPUT</p>
+              <strong>Curated SMILES</strong>
+              <span>an ordered string representation</span>
+            </div>
+            <div className="living-preparation">
+              <p className="living-eyebrow">DATA PREPARATION WORK</p>
+              <ol>
+                <li><span>01</span><strong>Inspect and clean strings</strong></li>
+                <li><span>02</span><strong>RDKit parse and validity checks</strong></li>
+                <li><span>03</span><strong>Handle invalids; review duplicate strings</strong></li>
+              </ol>
+              <small>I loaded and inspected SMILES, cleaned and validated strings, handled invalid strings, reviewed duplicate strings and prepared experiment data. I also used ChemDraw/manual views to inspect structures. Exact filter order and row counts are not preserved.</small>
+            </div>
+          </div>
+          <div className="living-deepmol-path__to-loader">PREPARED EXPERIMENT DATA <span aria-hidden="true">↓</span></div>
+          <div className="living-sequence-model">
+            <div className="living-sequence-model__loader">
+              <p className="living-eyebrow">READ PREPARED DATA</p>
+              <strong>DeepMol CSVLoader</strong>
+              <span>load the experiment table</span>
+            </div>
+            <svg className="living-sequence-model__signal" viewBox="0 0 160 34" role="img" aria-label="Flow from loaded SMILES data into a sequence model">
+              <path d="M2 17H145m0 0-10-9m10 9-10 9" />
+              <circle cx="25" cy="17" r="3" /><circle cx="61" cy="17" r="3" /><circle cx="98" cy="17" r="3" />
+            </svg>
+            <div className="living-sequence-model__rnn">
+              <p className="living-eyebrow">SEQUENCE GENERATION</p>
+              <strong>RNN MolecularGenerator</strong>
+              <span>learns across ordered SMILES sequences</span>
+            </div>
           </div>
           <div className="living-deepmol-figure__details">
-            <div className="living-run-note" aria-label="Reported DeepMol run settings">
+            <div className="living-run-note">
               <p className="living-eyebrow">RECORDED RUN SETTINGS</p>
-              <div><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
+              <div aria-label="Recorded run settings: 10 epochs, batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
+              <p>Reported configuration. Available records do not link these settings to the 500-sample account.</p>
             </div>
-            <p className="living-sequence-detail-note">The run settings and owner-reported output count describe separate evidence; they are not presented as proof of the samples’ properties.</p>
+            <div className="living-sample-output">
+              <p className="living-eyebrow">SEPARATE OWNER-REPORTED OUTPUT</p>
+              <strong aria-label="500 generated SMILES samples">500</strong>
+              <span>generated SMILES samples</span>
+              <small>Count only · no sample strings or chemical properties are established here.</small>
+            </div>
           </div>
-          <figcaption id="living-deepmol-caption">Sequence-generation route · a conceptual explanation, not a reproduced run trace. Generated strings are reported as SMILES samples; no molecular drawing or sample-level validation is implied.</figcaption>
+          <figcaption id="living-deepmol-caption">DeepMol route · preparation, CSV loading and RNN sequence generation are shown as method steps. The separate owner-reported count is not labeled valid, unique, novel or viable.</figcaption>
         </figure>
         <div className="living-route__learning"><span>WHAT THIS ROUTE TAUGHT ME</span><p>Generating a string and establishing what it represents are separate questions. The output count alone does not answer validity, uniqueness or novelty.</p></div>
+        <aside className="living-source-note"><strong>Source note</strong><p>The owner’s later account attributes 500 generated samples to DeepMol/RNN. A May 2025 report attributes the 500-sample account to REINVENT4 and also mentions RDKit checking. No surviving source or run artifact resolves that conflict; this page follows the owner correction.</p></aside>
       </section>
 
       <section className="living-route living-route--fragments" aria-labelledby="living-fragments-title">
@@ -225,7 +224,7 @@ export default function LivingInSilicoCase() {
         <div className="living-route__header">
           <div className="living-section-stamp"><span>06</span><p className="living-eyebrow">ROUTE THREE · RESEARCH AND ATTEMPT</p></div>
           <h2 id="living-reinvent-title">REINVENT4: an approach I researched, but did not complete in scope.</h2>
-          <p>I researched and attempted REINVENT4 as a separate generative route alongside DeepMol/RNN and the fragment work. Successful generation was not achieved within the internship scope.</p>
+          <p>I researched and attempted REINVENT4 as a separate generative route alongside DeepMol/RNN and the fragment work. I did not reach a completed generation within the available internship scope.</p>
         </div>
         <figure className="living-reinvent-figure" aria-labelledby="living-reinvent-caption">
           <p className="living-reinvent-figure__label">JOSHUA’S RESEARCH AND ATTEMPT · OWNER-REPORTED</p>
@@ -234,11 +233,11 @@ export default function LivingInSilicoCase() {
             <i className="living-reinvent-track__line" aria-hidden="true" />
             <div className="living-reinvent-marker living-reinvent-marker--attempt"><span>02</span><strong>Attempted</strong><small>within internship scope</small></div>
             <i className="living-reinvent-track__line" aria-hidden="true" />
-            <div className="living-reinvent-boundary"><span>INTERNSHIP SCOPE BOUNDARY</span><strong>No successful generation</strong></div>
+            <div className="living-reinvent-boundary"><span>INTERNSHIP SCOPE BOUNDARY</span><strong>No completed generation in scope</strong></div>
           </div>
-          <figcaption id="living-reinvent-caption">The stop point is known; inputs, configuration and reason are not established. The figure does not diagnose the attempt.</figcaption>
+          <figcaption id="living-reinvent-caption">This remained an exploratory route, not a demonstrated generation workflow.</figcaption>
         </figure>
-        <div className="living-route__learning"><span>WHAT THIS ROUTE TAUGHT ME</span><p>An attempted route is still part of the investigation. It needs to be reported at the point the evidence supports, without assigning an undocumented cause.</p></div>
+        <div className="living-route__learning"><span>WHAT THIS ROUTE TAUGHT ME</span><p>Researching and attempting a method is different from demonstrating a completed generation workflow.</p></div>
       </section>
 
       <section className="living-compare" aria-labelledby="living-compare-title">
@@ -247,7 +246,7 @@ export default function LivingInSilicoCase() {
         <div className="living-lessons">
           <article><span>01 / DEEPMOL</span><h3>Sequence</h3><p>500 generated SMILES samples were reported. Their count does not establish molecular validity or novelty.</p></article>
           <article><span>02 / FRAGMENTS</span><h3>Structure + space</h3><p>Some fragment workflows succeeded; the surviving evidence does not identify a specific candidate.</p></article>
-          <article><span>03 / REINVENT4</span><h3>Unfinished route</h3><p>Research and an attempt happened, but successful generation was not reached in scope.</p></article>
+          <article><span>03 / REINVENT4</span><h3>Unfinished route</h3><p>Researched and attempted; no completed generation within available internship scope.</p></article>
         </div>
       </section>
 

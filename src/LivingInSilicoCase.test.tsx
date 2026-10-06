@@ -23,34 +23,23 @@ describe("Living in Silico research story", () => {
     expect(markup).not.toContain("15,696 records → 500");
   });
 
-  it("shows how SMILES input becomes generated strings without turning a count into molecular evidence", () => {
+  it("presents DeepMol as sequence work and preserves the output provenance limit", () => {
     const markup = renderLivingRoute();
     const figure = markup.match(/<figure class="living-deepmol-figure"[^>]*>(.*?)<\/figure>/)?.[1] ?? "";
 
     expect(markup).toContain("DeepMol CSVLoader");
     expect(markup).toContain("RNN MolecularGenerator");
-    expect(figure).toContain('aria-label="SMILES sequence route from experiment input through DeepMol and an RNN to generated strings"');
-    expect(figure).toContain("SMILES sequence input");
-    expect(figure).toContain("DeepMol CSVLoader");
-    expect(figure).toContain("RNN MolecularGenerator");
-    expect(figure).toContain("Generated SMILES output");
-    expect(figure).toContain("WHAT THE COUNT CANNOT ESTABLISH");
-    expect(figure.indexOf("SMILES sequence input")).toBeLessThan(figure.indexOf("DeepMol CSVLoader"));
-    expect(figure.indexOf("DeepMol CSVLoader")).toBeLessThan(figure.indexOf("RNN MolecularGenerator"));
-    expect(figure.indexOf("RNN MolecularGenerator")).toBeLessThan(figure.indexOf("Generated SMILES output"));
-    expect(figure.indexOf("Generated SMILES output")).toBeLessThan(figure.indexOf("WHAT THE COUNT CANNOT ESTABLISH"));
-    expect(markup).toContain('aria-label="Reported DeepMol run settings"');
-    expect(markup).toContain("<strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span>");
-    expect(figure).toContain('<strong class="living-sequence-count">500</strong>');
-    expect(figure).toContain("Owner-reported samples from the DeepMol / RNN work.");
-    expect(markup).toContain("Morgan fingerprint");
-    expect(markup).toContain("radius 2");
-    expect(markup).toContain("128 bits");
-    expect(markup).not.toContain("May 2025 report attributes the 500-sample account to REINVENT4");
+    expect(figure).toContain("SMILES");
+    expect(figure).toContain("RDKit parse and validity checks");
+    expect(figure).toContain("reviewed duplicate strings");
+    expect(figure).not.toContain("Morgan fingerprint");
+    expect(markup).toContain("10 epochs");
+    expect(markup).toContain("batch size 64");
+    expect(markup).toContain("do not link these settings to the 500-sample account");
+    expect(markup).toContain("500 generated SMILES samples");
+    expect(markup).toContain("May 2025 report attributes the 500-sample account to REINVENT4");
     expect(markup).not.toContain("500 valid");
     expect(markup).not.toContain("500 novel");
-    expect(markup).not.toContain("500 unique");
-    expect(markup).not.toContain("500 viable");
   });
 
   it("gives fragment and REINVENT4 routes distinct purpose, outcome, and learning", () => {
@@ -63,9 +52,11 @@ describe("Living in Silico research story", () => {
     expect(figure).toContain("spatial / overlap reasoning");
     expect(markup).toContain("Some fragment workflows succeeded");
     expect(markup).toContain("I researched and attempted REINVENT4");
-    expect(markup).toContain("generation was not achieved within the internship");
+    expect(markup).toContain("did not reach a completed generation within the available internship scope");
     expect(markup).toContain("I researched and attempted REINVENT4 as a separate generative route");
-    expect(markup).toContain("inputs, configuration and reason are not established");
+    expect(markup).toContain("This remained an exploratory route, not a demonstrated generation workflow.");
+    expect(markup).not.toContain("inputs, configuration and reason are not established");
+    expect(markup).not.toContain("The figure does not diagnose the attempt");
     expect(markup).not.toContain("KNN");
     expect(markup).not.toContain("REINVENT4 failed");
   });
