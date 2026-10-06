@@ -4,9 +4,9 @@ import { describe, expect, it } from "vitest";
 import App from "./App";
 
 const storyRoutes = [
-  ["Food Tracker", "/projects/food-tracker", "Simple food logs."],
+  ["Food Tracker", "/projects/food-tracker", "Simple tracking."],
   ["Crest", "/projects/crest", "<h1>Crest</h1>"],
-  ["Cho’Veigo", "/projects/choveigo", "AUTHENTIC RECOMMENDATIONS CAPTURE"],
+  ["Cho’Veigo", "/projects/choveigo", "A better match starts with the evidence."],
   ["Fraymakers", "/projects/fraymakers", "TOURNAMENT CONTEXT"],
   ["Living in Silico", "/experience/living-in-silico", "Molecules need representation before generation."],
   ["Stush Patties", "/experience/stush-patties", "A business goal came before a clean data specification."],
