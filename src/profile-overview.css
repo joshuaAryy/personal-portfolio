@@ -1,10 +1,10 @@
-.main--profile {
+.main.main--profile {
   overflow: auto;
   background-color: #05070a;
   background-image:
     linear-gradient(180deg, rgba(3, 8, 14, 0.5), rgba(3, 8, 14, 0.34) 54%, rgba(3, 8, 14, 0.56)),
-    url("/media/opening/gameflow-background.jpg");
-  background-position: center, center 42%;
+    url("/media/lobby/party-background-original.jpg");
+  background-position: center, center 50%;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
 }
@@ -1004,7 +1004,7 @@
     left: 50%;
     width: 106%;
     max-width: calc(100vw - 16px);
-    height: 364px;
+    height: 490px;
     transform: translateX(-50%);
   }
 

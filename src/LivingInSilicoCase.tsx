@@ -117,69 +117,58 @@ export default function LivingInSilicoCase() {
           <p>SMILES made molecular information available as an ordered string. I explored whether a recurrent model could learn from those sequences and generate more strings in that representation.</p>
         </div>
         <figure className="living-deepmol-figure" aria-labelledby="living-deepmol-caption">
-          <p className="living-method-owner">JOSHUA’S WORK · OWNER-REPORTED</p>
-          <div
-            className="living-sequence-transformation"
-            role="img"
-            aria-label="From curated SMILES through sequence preparation and an RNN to generated strings, then interpretation limits"
-          >
-            <div className="living-flow-stage living-flow-stage--data">
-              <p className="living-eyebrow">CURATED EXPERIMENT DATA</p>
-              <strong>Curated SMILES data</strong>
-              <span>strings prepared for this route</span>
-              <div className="living-string-stack" aria-hidden="true"><i /><i /><i /></div>
-            </div>
-            <div className="living-flow-link" aria-hidden="true"><i /></div>
-            <div className="living-flow-stage living-flow-stage--prepare">
-              <p className="living-eyebrow">SEQUENCE PREPARATION</p>
-              <strong>Sequence representation</strong>
-              <span>DeepMol CSVLoader reads the experiment table</span>
-              <div className="living-token-ribbon" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div>
-            </div>
-            <div className="living-flow-link" aria-hidden="true"><i /></div>
-            <div className="living-flow-stage living-flow-stage--rnn">
-              <p className="living-eyebrow">RNN MOLECULARGENERATOR</p>
-              <strong>RNN MolecularGenerator</strong>
-              <svg className="living-recurrent-loop" viewBox="0 0 180 68" aria-hidden="true">
-                <path className="living-recurrent-loop__forward" d="M17 37H163m0 0-9-7m9 7-9 7" />
-                <path className="living-recurrent-loop__return" d="M151 20C130 3 50 3 29 20" />
-                <path className="living-recurrent-loop__arrow" d="m29 20 1-9m-1 9 9-1" />
-                <circle cx="30" cy="37" r="8" /><circle cx="90" cy="37" r="8" /><circle cx="150" cy="37" r="8" />
+          <p className="living-method-owner">DEEPMOL / RNN · SEQUENCE-GENERATION ROUTE</p>
+          <div className="living-sequence-transformation" role="group" aria-label="SMILES sequence route from experiment input through DeepMol and an RNN to generated strings">
+            <section className="living-sequence-stage living-sequence-stage--input" aria-labelledby="living-sequence-input-title">
+              <p className="living-eyebrow">01 / INPUT</p>
+              <h3 id="living-sequence-input-title">SMILES sequence input</h3>
+              <p>Experiment records make molecular structures available as ordered text.</p>
+              <div className="living-string-schematic" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /><i /><i /></div>
+              <small>Sequence marks are schematic; no sample string is reproduced.</small>
+            </section>
+            <section className="living-sequence-stage living-sequence-stage--model" aria-labelledby="living-sequence-model-title">
+              <p className="living-eyebrow">02 / REPRESENT + GENERATE</p>
+              <h3 id="living-sequence-model-title">DeepMol CSVLoader → RNN MolecularGenerator</h3>
+              <p>The loader reads the experiment table. The recurrent model processes sequence steps and generates more SMILES strings.</p>
+              <svg className="living-sequence-loop" viewBox="0 0 480 112" role="img" aria-labelledby="living-sequence-loop-title living-sequence-loop-desc">
+                <title id="living-sequence-loop-title">A recurrent model processes a sequence over multiple steps</title>
+                <desc id="living-sequence-loop-desc">Three ordered sequence positions pass through a recurrent model loop. This is a conceptual explanation, not a reproduced model trace.</desc>
+                <path className="living-sequence-loop__forward" d="M42 65H430m0 0-10-8m10 8-10 8" />
+                <path className="living-sequence-loop__return" d="M397 42C338 9 143 9 84 42" />
+                <path className="living-sequence-loop__arrow" d="m84 42 2-12m-2 12 12-2" />
+                <circle cx="85" cy="65" r="15" /><circle cx="238" cy="65" r="15" /><circle cx="391" cy="65" r="15" />
+                <text x="85" y="101" textAnchor="middle">STEP 1</text><text x="238" y="101" textAnchor="middle">STEP 2</text><text x="391" y="101" textAnchor="middle">STEP 3</text>
               </svg>
-              <span>Recurrence carries context across sequence steps.</span>
-            </div>
-            <div className="living-flow-link" aria-hidden="true"><i /></div>
-            <div className="living-flow-stage living-flow-stage--output">
-              <p className="living-eyebrow">GENERATED OUTPUT</p>
-              <strong>Generate SMILES strings</strong>
-              <span>string output, with contents not reproduced</span>
-              <div className="living-string-stack living-string-stack--output" aria-hidden="true"><i /><i /><i /></div>
-            </div>
-            <div className="living-flow-link" aria-hidden="true"><i /></div>
-            <div className="living-flow-stage living-flow-stage--interpret">
-              <p className="living-eyebrow">INTERPRETATION BOUNDARY</p>
-              <strong>A string is a starting point</strong>
-              <span>Validity? Uniqueness? Novelty? Viability?</span>
-              <small>Not established by the count alone.</small>
-            </div>
+            </section>
+            <section className="living-sequence-stage living-sequence-stage--output" aria-labelledby="living-sequence-output-title">
+              <p className="living-eyebrow">03 / OUTPUT</p>
+              <h3 id="living-sequence-output-title">Generated SMILES output</h3>
+              <strong className="living-sequence-count">500</strong>
+              <p>Owner-reported samples from the DeepMol / RNN work.</p>
+              <div className="living-string-schematic living-string-schematic--output" aria-hidden="true"><i /><i /><i /><i /><i /><i /></div>
+            </section>
+            <section className="living-sequence-stage living-sequence-stage--boundary" aria-labelledby="living-sequence-boundary-title">
+              <p className="living-eyebrow">04 / WHAT THE COUNT CANNOT ESTABLISH</p>
+              <h3 id="living-sequence-boundary-title">A sample count is not a chemistry result.</h3>
+              <ul>
+                <li>Validity</li>
+                <li>Uniqueness</li>
+                <li>Novelty</li>
+                <li>Viability</li>
+              </ul>
+              <small>These properties are not established by the count.</small>
+            </section>
           </div>
           <div className="living-deepmol-figure__details">
-            <div className="living-run-note">
-              <p className="living-eyebrow">REPORTED RUN SETTINGS</p>
-              <div aria-label="Reported settings: 10 epochs and batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
-              <p>Available records do not link these settings to the separate 500-sample account.</p>
+            <div className="living-run-note" aria-label="Reported DeepMol run settings">
+              <p className="living-eyebrow">RECORDED RUN SETTINGS</p>
+              <div><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
             </div>
-            <div className="living-sample-output">
-              <p className="living-eyebrow">SEPARATE OWNER-REPORTED COUNT</p>
-              <strong aria-label="500 generated SMILES samples">500</strong>
-              <span>generated SMILES samples</span>
-              <small>Owner-attributed count only · artifacts do not verify its linkage or sample properties.</small>
-            </div>
+            <p className="living-sequence-detail-note">The run settings and owner-reported output count describe separate evidence; they are not presented as proof of the samples’ properties.</p>
           </div>
-          <figcaption id="living-deepmol-caption">DeepMol route · a conceptual sequence-to-string workflow, not a reproduced run trace. The owner attributes 500 generated SMILES samples to this route; available artifacts do not connect that count to the recorded settings or establish validity, uniqueness, novelty or viability.</figcaption>
+          <figcaption id="living-deepmol-caption">Sequence-generation route · a conceptual explanation, not a reproduced run trace. Generated strings are reported as SMILES samples; no molecular drawing or sample-level validation is implied.</figcaption>
         </figure>
         <div className="living-route__learning"><span>WHAT THIS ROUTE TAUGHT ME</span><p>Generating a string and establishing what it represents are separate questions. The output count alone does not answer validity, uniqueness or novelty.</p></div>
-        <aside className="living-source-note"><strong>Source note</strong><p>The owner’s later account attributes 500 generated samples to DeepMol/RNN. A May 2025 report attributes the 500-sample account to REINVENT4 and also mentions RDKit checking. No surviving source or run artifact resolves that conflict; this page follows the owner correction.</p></aside>
       </section>
 
       <section className="living-route living-route--fragments" aria-labelledby="living-fragments-title">

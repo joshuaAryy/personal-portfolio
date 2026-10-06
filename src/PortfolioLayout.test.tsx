@@ -162,6 +162,8 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
     expect(activityMarkup).toContain('class="rail-avatar rail-avatar--activity rail-avatar--activity-focus" aria-hidden="true" data-node-id="I2356:611;95:51">');
     expect(activityMarkup).toContain('src="/media/profile/food-tracker-mark.svg" alt="" width="34" height="34"');
+    expect(activityMarkup).toContain('src="/media/lobby/activity-art/activity-living-in-silico.svg" alt="" width="54" height="54"');
+    expect(activityMarkup).toContain('src="/media/lobby/activity-art/activity-stush-patties.svg" alt="" width="54" height="54"');
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');

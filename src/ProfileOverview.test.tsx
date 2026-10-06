@@ -133,14 +133,14 @@ describe("Profile Overview", () => {
   });
 
   it("uses clear authentic League scenery and circular Experience badges", () => {
-    const shellCss = readFileSync("src/styles.css", "utf8");
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
-    const shellRule = shellCss.match(/\.main--profile\s*\{([^}]*)\}/)?.[1] ?? "";
+    const shellRule = profileCss.match(/\.main\.main--profile\s*\{([^}]*)\}/)?.[1] ?? "";
     const badgeRule = profileCss.match(/\.profile-experience__mark\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(shellRule).toContain('url("/media/opening/gameflow-background.jpg")');
+    expect(shellRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(shellRule).toContain("linear-gradient(180deg,");
-    expect(shellRule).not.toContain('url("/media/profile/the-void-background.jpg")');
+    expect(shellRule).toContain("background-position: center, center 50%");
+    expect(shellRule).toContain("background-size: cover, cover");
     expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });
 
@@ -171,6 +171,20 @@ describe("Profile Overview", () => {
     const enclosureHeight = cssPixels(narrowEnclosureRule, "height") ?? cssPixels(baseEnclosureRule, "height");
     const gridBottom = (cssPixels(projectGridRule, "top") ?? 0) + (cssPixels(projectGridRule, "height") ?? 0);
     const enclosureBottom = (enclosureTop ?? 0) + (enclosureHeight ?? 0);
+    const panelHeight = cssPixels(panelRule, "height") ?? 0;
+
+    expect(enclosureBottom).toBeGreaterThanOrEqual(gridBottom);
+    expect(enclosureBottom).toBeLessThanOrEqual(panelHeight);
+  });
+
+  it("keeps the narrow Profile Projects enclosure below all four project rows", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const narrowRules = cssBlock(profileCss, "@media (max-width: 900px)");
+    const panelRule = cssBlock(narrowRules, ".profile-project-panel");
+    const enclosureRule = cssBlock(narrowRules, ".profile-project-panel__enclosure");
+    const projectGridRule = cssBlock(narrowRules, ".profile-project-grid");
+    const enclosureBottom = (cssPixels(enclosureRule, "top") ?? 0) + (cssPixels(enclosureRule, "height") ?? 0);
+    const gridBottom = (cssPixels(projectGridRule, "top") ?? 0) + (cssPixels(projectGridRule, "height") ?? 0);
     const panelHeight = cssPixels(panelRule, "height") ?? 0;
 
     expect(enclosureBottom).toBeGreaterThanOrEqual(gridBottom);

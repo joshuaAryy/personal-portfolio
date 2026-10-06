@@ -7,19 +7,27 @@ const formats = ["CSV", "XLSX", "XLSB"] as const;
 const businessRules = [
   {
     field: "Sales",
-    rule: "Map equivalent fields and normalize the numeric representation.",
+    problem: "Sales information arrived inside reports with different layouts and field vocabulary.",
+    decision: "Map corresponding source fields into one shared Sales field before normalization.",
+    consequence: "Each input reaches reporting through the same Sales dimension.",
   },
   {
     field: "Units",
-    rule: "Bring unit measures into a consistent downstream meaning.",
+    problem: "Units needed an explicit meaning beside sales and pack context.",
+    decision: "Keep Units as a separate shared field and align its meaning through business rules.",
+    consequence: "The standardized output retains unit context under one field.",
   },
   {
     field: "Case pack",
-    rule: "Interpret pack context before creating the shared record.",
+    problem: "Pack context had to remain visible as source layouts were normalized.",
+    decision: "Keep Case pack explicit in the shared schema rather than folding it into another field.",
+    consequence: "The Power BI handoff keeps pack context available beside sales and units.",
   },
   {
     field: "Reporting month",
-    rule: "Align periods so the same reporting window is comparable.",
+    problem: "Separate reports did not share one reporting convention.",
+    decision: "Map periods into one shared Reporting month field.",
+    consequence: "Downstream reporting receives a common period dimension.",
   },
 ] as const;
 
@@ -128,34 +136,44 @@ function BusinessRuleLedger() {
     <figure className="stush-rule-ledger" aria-labelledby="stush-rules-title">
       <header className="stush-figure-heading stush-figure-heading--ledger">
         <div>
-          <p className="stush-kicker">NORMALIZATION DECISIONS</p>
-          <h3 id="stush-rules-title">The schema only helped if the business meanings lined up.</h3>
+          <p className="stush-kicker">FROM FIELD ALIGNMENT TO REPORTING</p>
+          <h3 id="stush-rules-title">Agree on meaning before comparing separate reports.</h3>
         </div>
-        <p>Four dimensions carried through the shared reporting path.</p>
+        <p>One shared field contract carried four business dimensions into the handoff.</p>
       </header>
 
       <div className="stush-rule-table" role="table" aria-label="Business dimensions and normalization work">
         <div className="stush-rule-table__head" role="row">
           <span role="columnheader">DIMENSION</span>
-          <span role="columnheader">RULE WORK</span>
-          <span role="columnheader">SHARED RESULT</span>
+          <span role="columnheader">SOURCE PROBLEM</span>
+          <span role="columnheader">NORMALIZATION DECISION</span>
+          <span role="columnheader">REPORTING CONSEQUENCE</span>
         </div>
-        {businessRules.map(({ field, rule }, index) => (
+        {businessRules.map(({ field, problem, decision, consequence }, index) => (
           <div className="stush-rule-row" role="row" key={field}>
             <span className="stush-rule-row__index" aria-hidden="true">0{index + 1}</span>
             <h4 role="rowheader">{field}</h4>
-            <p role="cell">{rule}</p>
-            <span className="stush-rule-row__mapping" role="cell" aria-label={`${field} mapped to shared schema`}>
-              <i aria-hidden="true" />
-              <span aria-hidden="true" />
-              <b>{field}</b>
-            </span>
+            <div className="stush-rule-row__cell" role="cell">
+              <span className="stush-rule-row__cell-label">SOURCE PROBLEM</span>
+              <p>{problem}</p>
+            </div>
+            <div className="stush-rule-row__cell" role="cell">
+              <span className="stush-rule-row__cell-label">NORMALIZATION DECISION</span>
+              <p>{decision}</p>
+            </div>
+            <div className="stush-rule-row__cell stush-rule-row__effect" role="cell">
+              <span className="stush-rule-row__cell-label">SHARED REPORTING FIELD</span>
+              <span className="stush-rule-row__mapping" aria-hidden="true">
+                <i /><span /><b>{field}</b>
+              </span>
+              <p>{consequence}</p>
+            </div>
           </div>
         ))}
       </div>
 
       <figcaption>
-        Lines indicate field mapping only; their lengths do not encode values. The figure does not invent formulas, source headers, or client records.
+        Structural examples only: no client records, source values, or numeric formulas are shown. The shared dimensions and alignment work are documented; exact client calculations are not reproduced.
       </figcaption>
     </figure>
   );
@@ -168,29 +186,30 @@ function KoyoException() {
         <p className="stush-kicker">A BOUNDED EXCEPTION</p>
         <h2 id="stush-koyo-title">One report needed a more explicit reader.</h2>
         <p>
-          The Koyo workbook was the bounded exception: a temporary position-and-cell path handled its irregular layout before returning to the shared normalization path.
+          The Koyo workbook had an irregular layout that required a temporary position-and-cell reader. That reader mapped the input into the shared schema; common normalization then continued. The exception contained one source-specific reading problem without creating a different reporting contract.
         </p>
       </div>
 
       <figure className="stush-koyo__route" aria-label="A source-specific position-and-cell path returns to shared normalization">
         <div className="stush-koyo__stage">
-          <span>GENERAL PIPELINE</span>
-          <strong>Source-aware parsing</strong>
+          <span>SHARED FIELD CONTRACT</span>
+          <strong>Sales · Units · Case pack · Reporting month</strong>
         </div>
         <div className="stush-koyo__branch">
-          <span className="stush-koyo__branch-label">One source-specific exception</span>
+          <span className="stush-koyo__branch-label">ONE SOURCE-SPECIFIC EXCEPTION · IRREGULAR LAYOUT</span>
           <span className="stush-koyo__branch-line" aria-hidden="true" />
           <div className="stush-koyo__stage stush-koyo__stage--exception">
-            <span>TEMPORARY PATH</span>
-            <strong>Temporary position-and-cell path</strong>
+            <span>TEMPORARY POSITION + CELL READER</span>
+            <strong>Map this input back to the shared schema</strong>
           </div>
         </div>
         <span className="stush-koyo__rejoin" aria-hidden="true">↘</span>
         <div className="stush-koyo__stage stush-koyo__stage--rejoin">
-          <span>REJOIN</span>
-          <strong>Rejoins the shared normalization path</strong>
+          <span>REJOIN THE COMMON PATH</span>
+          <strong>Continue shared normalization rules</strong>
+          <small>Same reporting fields and output contract</small>
         </div>
-        <figcaption>One source-specific branch; the broader pipeline stayed shared.</figcaption>
+        <figcaption>One temporary source-specific reader; the input rejoins shared normalization. No client cell positions or records are shown.</figcaption>
       </figure>
     </section>
   );

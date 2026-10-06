@@ -864,13 +864,17 @@
 .fray-case__composition-figure figcaption { grid-column: 1 / -1; padding-top: 10px; border-top: 1px solid rgba(87, 198, 203, .2); }
 .fray-case__edge-list {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 24px !important;
+  margin-top: 16px !important;
   border-top: 1px solid var(--fray-line);
-  border-bottom: 0;
+  border-bottom: 1px solid var(--fray-line);
 }
-.fray-case__edge-list div { padding: 13px 16px; }
+.fray-case__edge-review { margin-top: 25px; padding-top: 19px; border-top: 1px solid var(--fray-line); }
+.fray-case__edge-review-heading { display: grid; grid-template-columns: minmax(180px, .44fr) minmax(0, 1fr); align-items: start; gap: 24px; }
+.fray-case__edge-review-heading > span { padding-top: 3px; }
+.fray-case__edge-review-heading > p { max-width: 790px; color: #9eafb5; font-size: 11px; line-height: 1.55; }
+.fray-case__edge-list div { padding: 14px 16px; }
 .fray-case__edge-list div:first-child { padding-left: 0; }
-.fray-case__edge-list dd { font-size: 12px; line-height: 1.45; }
+.fray-case__edge-list dd { font-size: 11px; line-height: 1.55; }
 .fray-case__ownership-figure {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(132px, .4fr) minmax(0, 1fr);
@@ -1083,4 +1087,16 @@
   .fray-case__config-register > div:nth-child(2) { border-right: 0; }
   .fray-case__config-register > div:nth-child(n + 3) { border-bottom: 0; }
   .fray-case__config-register dd { font-size: 11px; }
+}
+
+@media (max-width: 700px) {
+  .fray-case__edge-review { margin-top: 19px; padding-top: 15px; }
+  .fray-case__edge-review-heading { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .fray-case__edge-review-heading > p { font-size: 10px; }
+  .fray-case__edge-list { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 12px !important; }
+  .fray-case__edge-list div,
+  .fray-case__edge-list div:first-child { padding: 11px 9px; border-right: 1px solid var(--fray-line); border-bottom: 1px solid var(--fray-line); }
+  .fray-case__edge-list div:nth-child(2n) { border-right: 0; }
+  .fray-case__edge-list div:nth-child(n + 3) { border-bottom: 0; }
+  .fray-case__edge-list dd { font-size: 10px; }
 }

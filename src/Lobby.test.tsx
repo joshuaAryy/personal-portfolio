@@ -125,7 +125,10 @@ describe("Projects lobby", () => {
 
   it("keeps Projects lobby medallion framing circular at desktop widths", () => {
     const css = readFileSync("src/lobby.css", "utf8");
-    const desktopRules = css.slice(css.indexOf("@media (min-width: 901px)"));
+    const projectsStylesStart = css.indexOf("/* Projects lobby geometry matched");
+    const desktopRulesStart = css.indexOf("@media (min-width: 901px)", projectsStylesStart);
+    const desktopRulesEnd = css.indexOf("@media (min-width: 1800px)", desktopRulesStart);
+    const desktopRules = css.slice(desktopRulesStart, desktopRulesEnd);
     const projectMedallionRule = desktopRules.match(
       /\.league-lobby__banners--projects \.league-banner__medallion\s*\{([^}]*)\}/,
     )?.[1];
@@ -134,6 +137,23 @@ describe("Projects lobby", () => {
     expect(projectMedallionRule).toMatch(/height:\s*clamp\(/);
     expect(projectMedallionRule).toMatch(/aspect-ratio:\s*1\s*\/\s*1/);
     expect(projectMedallionRule).toMatch(/border-radius:\s*50%/);
+  });
+
+  it("keeps the Projects frame out of the narrow medallion grid track", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const medallionRule = css.match(
+      /\.league-lobby__banners--projects \.league-banner__medallion\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+    const frameRule = css.match(
+      /\.league-lobby__banners--projects \.league-banner__frame\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+
+    expect(medallionRule).toMatch(/height:\s*84px/);
+    expect(medallionRule).toMatch(/grid-template:\s*1fr\s*\/\s*1fr/);
+    expect(medallionRule).toMatch(/border-radius:\s*50%/);
+    expect(frameRule).toMatch(/position:\s*absolute/);
+    expect(frameRule).toMatch(/top:\s*50%/);
+    expect(frameRule).toMatch(/left:\s*50%/);
   });
 
   it("keeps the role legend clear of the bottom story action", () => {

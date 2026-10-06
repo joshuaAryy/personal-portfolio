@@ -78,6 +78,18 @@ describe("approved resume flow", () => {
     );
   });
 
+  it("keeps the Resume Found title white and the primary action larger than Close", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const titleRule = css.match(/\.resume-found__title\s*\{([^}]*)\}/)?.[1] ?? "";
+    const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
+    const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(titleRule).toMatch(/color:\s*#fff(?:fff)?\b/i);
+    expect(actionRule).toMatch(/font-size:\s*clamp\(12px,/);
+    expect(actionRule).toMatch(/font-size:\s*clamp\(12px,\s*\d+(?:\.\d+)?cqw,\s*14px\)/);
+    expect(closeRule).toMatch(/font-size:\s*11px/);
+  });
+
   it("lifts the Resume Found action stack within its takeover composition", () => {
     const css = readFileSync("src/resume.css", "utf8");
     const takeoverRule = css.match(/(?:^|\n)\.resume-found\s*\{([^}]*)\}/)?.[1] ?? "";

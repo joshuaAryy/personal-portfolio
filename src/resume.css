@@ -175,7 +175,7 @@
   position: relative;
   z-index: 1;
   margin: 0;
-  color: #f0e6d2;
+  color: #fff;
   font-family: Cinzel, Georgia, serif;
   font-size: clamp(20px, 2.2vw, 30px);
   font-weight: 700;
@@ -266,7 +266,7 @@
   clip-path: none;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(10px, 2.64cqw, 14px);
+  font-size: clamp(12px, 3.1cqw, 14px);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;

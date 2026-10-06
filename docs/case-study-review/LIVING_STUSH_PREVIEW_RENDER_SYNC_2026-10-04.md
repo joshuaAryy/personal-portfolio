@@ -1,5 +1,7 @@
 ﻿# Living in Silico + Stush Patties Preview Render Sync — 2026-10-04
 
+> **Historical evidence, not current story acceptance:** the consolidated 2026-10-05 owner review reopened all six case studies because their rendered stories remain too condensed. The statements below that found no concrete macro mismatch or supported an “accepted breadth direction” describe this exact 2026-10-04 build only; they are superseded for current routing and acceptance. Preserve useful render/source evidence, not a breadth freeze. See [the controlling owner direction](../OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md).
+
 ## Source, Figma, and Preview
 
 - React source commit: 8a82e9abc45a13b5dd83dda15b48e6b2854f979f.

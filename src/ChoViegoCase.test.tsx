@@ -81,6 +81,8 @@ describe("Cho’Veigo evidence-first product story", () => {
     expect(decisions).toContain("Structured Gemini interpretation");
     expect(decisions).toContain("constrained to supplied evidence");
     expect(decisions).toContain("ROLE DISCOVERY");
+    expect(decisions).toContain("Provider job feeds bring listings into the Jobs path");
+    expect(decisions).not.toContain("company sites");
     expect(decisions).toContain("CANDIDATE EVIDENCE");
     expect(decisions).toContain("DETERMINISTIC DECISION LAYERS");
     expect(decisions).toContain("PRODUCT ACTIONS");
@@ -91,9 +93,12 @@ describe("Cho’Veigo evidence-first product story", () => {
     const markup = renderCase();
     const review = markup.slice(markup.indexOf('id="choveigo-review"'), markup.indexOf('id="choveigo-studio"'));
 
+    expect(review).toContain('aria-label="Human-reviewed evaluation path"');
+    const reviewStages = ["NOTICE A MISMATCH", "REVIEW THE EXPECTATION", "AGREE ON EXPECTED BEHAVIOR", "DETERMINISTIC REGRESSION FIXTURE"];
+    const stagePositions = reviewStages.map((stage) => review.indexOf(stage));
+    expect(stagePositions.every((position) => position >= 0)).toBe(true);
+    expect(stagePositions).toEqual([...stagePositions].sort((left, right) => left - right));
     expect(review).toContain("Was the expected behavior wrong, or was the implementation wrong?");
-    expect(review).toContain("AGREE ON EXPECTED BEHAVIOR");
-    expect(review).toContain("DETERMINISTIC REGRESSION FIXTURE");
     expect(review).toContain("With Shiv, I reviewed mismatches");
     expect(review).not.toContain("research-grade validation");
     expect(review).not.toContain("inter-rater reliability");
@@ -104,11 +109,22 @@ describe("Cho’Veigo evidence-first product story", () => {
     const studio = markup.slice(markup.indexOf('id="choveigo-studio"'), markup.indexOf('id="choveigo-outcome"'));
 
     expect(studio).toContain("The handoff prepares context; it does not generate a resume.");
-    expect(studio).toContain("Reviewed profile + editable job description");
-    expect(studio).toContain("SELECT GROUNDED EVIDENCE");
-    expect(studio).toContain("CONSTRAINED REWRITE + VALIDATION");
-    expect(studio).toContain("HUMAN REVIEW");
-    expect(studio).toContain("PAGE VERIFICATION + EXPORT");
+    expect(studio).toContain("Editable job description");
+    expect(studio).toContain("Career evidence");
+    expect(studio).toContain('aria-label="Resume Studio evidence workflow"');
+    for (const stage of [
+      "NORMALIZE THE ROLE",
+      "RESPONSIBILITIES · REQUIRED · PREFERRED · INCIDENTAL",
+      "SELECT REVIEWED EVIDENCE",
+      "COHERENT EXPERIENCE + PROJECT PACKAGES",
+      "BOUNDED GEMINI REWRITE",
+      "VALIDATE CLAIMS · FALL BACK TO SOURCE WORDING",
+      "PERSON REVIEW",
+      "PAGE FIT",
+      "DOCX",
+      "PDF",
+    ]) expect(studio).toContain(stage);
+    expect(studio).not.toContain("generated resume preview screenshot");
     expect(studio).not.toContain("automatically submits an application");
   });
 

@@ -78,21 +78,25 @@ describe("Food Tracker product story", () => {
     expect(logging).not.toContain("immutable history");
   });
 
-  it("labels the older meal-review and trend-configuration captures by what they show", () => {
+  it("labels the authentic meal-review capture as unsaved product evidence", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
 
+    expect(logging).toContain('/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png');
+    expect(logging).toContain("COMPLEX MODE / ENTRY CHOICES");
+    expect(logging).toContain("This single entry sheet exposes search, text and photo suggestions, the library, recipes, mixed meals, and barcode scan.");
     expect(logging).toContain('/media/case-studies/food-tracker/phase-24/ai-meal-review.png');
     expect(logging).toContain("MEAL REVIEW / UNSAVED EXAMPLE");
     expect(logging).toContain("Review before saving");
     expect(logging).toContain("not saved");
     expect(logging).toContain("Earlier product interface / pre-redesign baseline");
+    expect(logging.indexOf("food-log-complex-clean.png")).toBeLessThan(logging.indexOf("ai-meal-review.png"));
     expect(logging).not.toContain("PHASE 24");
-    expect(insights).toContain('/media/case-studies/food-tracker/phase-24/trend-configuration.png');
-    expect(insights).toContain("TREND CONFIGURATION / SETUP ONLY");
     expect(insights).not.toContain("PHASE 24");
-    expect(insights).toContain("setup capture, not a populated analytics result");
+    expect(insights).not.toContain("trend-configuration.png");
+    expect(insights).not.toContain("insights-week-current.png");
+    expect(insights).not.toContain("trend-detail-calories-unknown.png");
   });
 
   it("shows the verified mobile, API, provider, and authoritative-data relationships", () => {
@@ -118,22 +122,26 @@ describe("Food Tracker product story", () => {
     expect(architecture).not.toContain("Pinecone is the nutrition source");
   });
 
-  it("shows Simple and Complex as two views over the same deterministic insights", () => {
+  it("explains insight eligibility and coverage without inventing a populated trend", () => {
     const markup = renderFoodTracker();
     const insights = section(markup, "food-insights", "food-search");
 
     expect(insights).toContain('class="food-insights-model"');
-    expect(insights).toContain("SAVED FOOD LOGS");
-    expect(insights).toContain("DETERMINISTIC ANALYTICS");
-    expect(insights).toContain("COVERAGE STAYS VISIBLE");
-    expect(insights).toContain("Focused daily overview");
-    expect(insights).toContain("Core progress, selected trends, and curated recommendations");
-    expect(insights).toContain("More nutrients, comparisons, custom ranges, coverage controls, and saved views");
-    expect(insights).toContain("ONE PRODUCT · DIFFERENT LEVELS OF DETAIL");
-    expect(insights).toContain("Recorded, partial, and unknown data stay distinct.");
-    expect(insights).toContain('/media/case-studies/food-tracker/phase-24/trend-configuration.png');
-    expect(insights).toContain("setup capture, not a populated analytics result");
+    expect(insights).toContain("LOGGING DAY");
+    expect(insights).toContain("COMPLETE");
+    expect(insights).toContain("PARTIAL");
+    expect(insights).toContain("UNLOGGED");
+    expect(insights).toContain("METRIC COVERAGE");
+    expect(insights).toContain("RECORDED");
+    expect(insights).toContain("UNKNOWN");
+    expect(insights).toContain("Analytics and recommendation facts are deterministic.");
+    expect(insights).toContain("Keep routine use focused");
+    expect(insights).toContain("Core progress, curated views, and recommendations");
+    expect(insights).toContain("Explore more nutrients, ranges, comparisons, coverage controls, and saved views");
+    expect(insights).toContain("same saved facts");
     expect(insights).not.toContain("Return to a chosen analysis without changing the underlying log");
+    expect(insights).not.toContain("0 days");
+    expect(insights).not.toContain("0 logged days");
   });
 
   it("keeps hybrid retrieval and its offline development/holdout results distinct", () => {

@@ -224,14 +224,14 @@ export default function JourneyCase() {
                 <stop offset="100%" stopColor="#767052" />
               </linearGradient>
             </defs>
-            <polyline className="journey-path__spine" points="5,0 11,172 7.5,282 5,435 8,548 11,678 7,830 13,1002 8,1133 6,1198 5,1573 3,1592" />
+            <polyline className="journey-path__spine" points="5,0 11,172 7.5,282 5,435 8,580 11,710 7,830 13,1002 8,1133 6,1198 5,1573 3,1592" />
             <g className="journey-path__connectors">
               <line className="journey-path__connector journey-path__connector--origin" x1="7" y1="57" x2="8.8" y2="57" />
               <line className="journey-path__connector journey-path__connector--apple" x1="10" y1="179" x2="34" y2="179" />
               <line className="journey-path__connector journey-path__connector--tmu" x1="7" y1="309" x2="12" y2="309" />
               <line className="journey-path__connector journey-path__connector--naruto" x1="7" y1="450" x2="39" y2="450" />
-              <line className="journey-path__connector journey-path__connector--lis-spark" x1="8" y1="569" x2="18" y2="569" />
-              <line className="journey-path__connector journey-path__connector--lis" x1="9" y1="710" x2="12.8" y2="710" />
+              <line className="journey-path__connector journey-path__connector--lis-spark" x1="8" y1="601" x2="18" y2="601" />
+              <line className="journey-path__connector journey-path__connector--lis" x1="9" y1="742" x2="12.8" y2="742" />
               <line className="journey-path__connector journey-path__connector--spotify" x1="8" y1="878" x2="45.7" y2="878" />
               <line className="journey-path__connector journey-path__connector--stush" x1="8" y1="1033" x2="12" y2="1033" />
               <line className="journey-path__connector journey-path__connector--summer" x1="8" y1="1194" x2="13.5" y2="1194" />
@@ -242,8 +242,8 @@ export default function JourneyCase() {
               <ellipse cx="10" cy="179" rx="0.27" ry="3.2" />
               <ellipse cx="7" cy="309" rx="0.42" ry="5" />
               <ellipse cx="7" cy="450" rx="0.27" ry="3.2" />
-              <ellipse cx="8" cy="569" rx="0.42" ry="5" />
-              <ellipse cx="9" cy="710" rx="0.27" ry="3.2" />
+              <ellipse cx="8" cy="601" rx="0.42" ry="5" />
+              <ellipse cx="9" cy="742" rx="0.27" ry="3.2" />
               <ellipse cx="8" cy="878" rx="0.27" ry="3.2" />
               <ellipse cx="8" cy="1033" rx="0.27" ry="3.2" />
               <ellipse cx="8" cy="1194" rx="0.42" ry="5" />

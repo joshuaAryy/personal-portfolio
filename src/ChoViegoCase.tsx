@@ -57,11 +57,10 @@ const reviewSteps = [
   ["04", "DETERMINISTIC REGRESSION FIXTURE", "Keep the accepted example available for later changes."],
 ] as const;
 
-const studioSteps = [
-  ["01", "SELECT GROUNDED EVIDENCE", "Choose relevant material from the reviewed profile."],
-  ["02", "CONSTRAINED REWRITE + VALIDATION", "A bounded wording pass must stay within supplied evidence; rejected or unavailable wording can fall back to source text."],
-  ["03", "HUMAN REVIEW", "Inspect the assembled resume before treating it as ready."],
-  ["04", "PAGE VERIFICATION + EXPORT", "Check page fit, then export a document."],
+const studioStages = [
+  ["01", "NORMALIZE THE ROLE", "Separate responsibilities, required, preferred, and incidental details before comparing the posting with a profile."],
+  ["02", "SELECT REVIEWED EVIDENCE", "Deterministic retrieval admits only evidence from the reviewed profile; related experience and project material stay in coherent packages."],
+  ["03", "BOUNDED GEMINI REWRITE", "A limited wording shortlist can be checked against its source evidence. If wording is unavailable or rejected, the reviewed source text remains."],
 ] as const;
 
 export default function ChoViegoCase() {
@@ -389,7 +388,7 @@ function DecisionLenses() {
           <section className="cho-system-map__input cho-system-map__input--role">
             <p className="cho-study__eyebrow">ROLE DISCOVERY</p>
             <h3>Role sources</h3>
-            <p>Feeds, company sites, and career pages bring postings into the Jobs path.</p>
+            <p>Provider job feeds bring listings into the Jobs path, where a discovered role can be reviewed before it is saved.</p>
             <div className="cho-system-map__signal">Structured responsibilities + criteria</div>
           </section>
           <section className="cho-system-map__input cho-system-map__input--candidate">
@@ -447,7 +446,7 @@ function DecisionLenses() {
 function ReviewLoopFigure() {
   return (
     <figure className="cho-study__review-figure" aria-labelledby="cho-review-caption">
-      <ol>{reviewSteps.map(([number, title, detail]) => (
+      <ol className="cho-study__review-path" aria-label="Human-reviewed evaluation path">{reviewSteps.map(([number, title, detail]) => (
         <li key={number}>
           <span className="cho-study__step-number">{number}</span>
           <h3>{title}</h3>
@@ -467,18 +466,50 @@ function ResumeStudioFigure() {
         <div><span>SELECTED ROLE</span><b aria-hidden="true">+</b><span>REVIEWED PROFILE</span></div>
         <p>The Jobs handoff prefills context. It does not call the model, generate a plan, or export a document.</p>
       </div>
-      <div className="cho-study__studio-inputs">
-        <span className="cho-study__eyebrow">RESUME STUDIO INPUTS</span>
-        <strong>Reviewed profile + editable job description</strong>
+      <div className="cho-study__studio-workflow" role="group" aria-label="Resume Studio evidence workflow">
+        <aside className="cho-study__studio-inputs" aria-label="Resume Studio inputs">
+          <span className="cho-study__eyebrow">STUDIO INPUTS</span>
+          <section>
+            <span>SELECTED ROLE</span>
+            <strong>Editable job description</strong>
+            <p>Responsibilities and requirements provide the tailoring context.</p>
+          </section>
+          <section>
+            <span>REVIEWED PROFILE</span>
+            <strong>Career evidence</strong>
+            <p>Only reviewed experiences and projects can support the draft.</p>
+          </section>
+        </aside>
+        <span className="cho-study__studio-connector" aria-hidden="true">→</span>
+        <ol className="cho-study__studio-method" aria-label="Evidence-grounded tailoring method">
+          {studioStages.map(([number, title, detail]) => (
+            <li key={number}>
+              <span className="cho-study__step-number">{number}</span>
+              <div>
+                <h3>{title}</h3>
+                <p>{detail}</p>
+                {number === "01" && <span className="cho-study__studio-taxonomy">RESPONSIBILITIES · REQUIRED · PREFERRED · INCIDENTAL</span>}
+                {number === "02" && <span className="cho-study__studio-taxonomy">COHERENT EXPERIENCE + PROJECT PACKAGES</span>}
+                {number === "03" && <span className="cho-study__studio-taxonomy">VALIDATE CLAIMS · FALL BACK TO SOURCE WORDING</span>}
+              </div>
+            </li>
+          ))}
+        </ol>
+        <span className="cho-study__studio-connector" aria-hidden="true">→</span>
+        <aside className="cho-study__studio-review" aria-label="Person review, page verification, and document export">
+          <span className="cho-study__eyebrow">REVIEWED OUTPUT</span>
+          <p>PERSON REVIEW</p>
+          <strong>Inspect and edit the assembled draft.</strong>
+          <div className="cho-study__studio-page-check">
+            <span>PAGE FIT</span>
+            <small>Verify the document before download.</small>
+          </div>
+          <div className="cho-study__studio-formats" aria-label="Available document formats">
+            <span>DOCX</span><span>PDF</span>
+          </div>
+        </aside>
       </div>
-      <ol>{studioSteps.map(([number, title, detail]) => (
-        <li key={number}>
-          <span className="cho-study__step-number">{number}</span>
-          <h3>{title}</h3>
-          <p>{detail}</p>
-        </li>
-      ))}</ol>
-      <figcaption id="cho-studio-caption">A separate inspected workflow path: reviewed evidence and an editable job description inform the draft, followed by person-led review and page verification.</figcaption>
+      <figcaption id="cho-studio-caption">A separate inspected workflow: normalize the role, select reviewed evidence, validate bounded wording, then review and page-check the document. This figure is explanatory; it is not a generated resume capture.</figcaption>
     </figure>
   );
 }

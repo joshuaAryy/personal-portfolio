@@ -751,6 +751,32 @@
   }
 }
 
+@media (max-width: 900px) {
+  .league-lobby__banners--projects .league-banner__medallion {
+    width: 84px;
+    height: 84px;
+    grid-template: 1fr / 1fr;
+    border-radius: 50%;
+  }
+
+  .league-lobby__banners--projects .league-banner__frame {
+    position: absolute;
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    max-width: none;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+
+  .league-lobby__banners--projects .league-banner__mark {
+    position: relative;
+    z-index: 1;
+  }
+}
+
 /* Projects lobby geometry matched to the active 1920px Figma root. */
 .league-lobby__banners--projects {
   top: calc(9% + 25px);

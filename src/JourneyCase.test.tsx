@@ -141,6 +141,20 @@ describe("Journey waypoint selection", () => {
     expect(css).not.toContain("transform: rotate(2deg)");
   });
 
+  it("leaves space between the Naruto card and the following research beat", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const markup = renderJourneyRoute();
+    const narutoRule = cssBlock(css, ".journey-card--naruto");
+    const sparkRule = cssBlock(css, ".journey-card--lis-spark");
+    const px = (rule: string, property: string) =>
+      Number(rule.match(new RegExp(`${property}:\\s*(\\d+(?:\\.\\d+)?)px`))?.[1] ?? 0);
+    const narutoBottom = px(narutoRule, "top") + px(narutoRule, "min-height");
+
+    expect(narutoRule).toMatch(/min-height:\s*132px/);
+    expect(px(sparkRule, "top") - narutoBottom).toBeGreaterThanOrEqual(8);
+    expect(markup).toContain('journey-path__connector--lis-spark" x1="8" y1="601"');
+  });
+
   it("uses the Journey page as the only desktop scroll region", () => {
     const markup = renderJourneyRoute();
     const css = readFileSync("src/styles.css", "utf8");

@@ -87,15 +87,27 @@ function FoodLoggingEvidence() {
   return (
     <figure className="food-app-evidence" aria-labelledby="food-logging-evidence-title">
       <div className="food-app-evidence__screens">
-        <article className="food-app-evidence__screen">
-          <span className="food-figure__index">MEAL REVIEW / UNSAVED EXAMPLE</span>
-          <img
-            src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
-            alt="Food Tracker meal-review screen with proposed foods, serving controls, a provisional nutrition preview, and a Log selected action."
-            loading="lazy"
-          />
-          <p>Review before saving: choose the foods and portions that belong in the log. This example meal was not saved during capture.</p>
-        </article>
+        <div className="food-app-evidence__sequence" aria-label="Authentic Complex-mode entry and meal-review screens">
+          <article className="food-app-evidence__screen food-app-evidence__screen--entry">
+            <span className="food-figure__index">COMPLEX MODE / ENTRY CHOICES</span>
+            <img
+              src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
+              alt="Complex-mode Food Tracker logging sheet with food search, Describe meal, Photo logging, Food Library, Recipes, Mixed meal, and barcode scan choices."
+              loading="lazy"
+            />
+            <p>This single entry sheet exposes search, text and photo suggestions, the library, recipes, mixed meals, and barcode scan.</p>
+          </article>
+          <span className="food-app-evidence__sequence-bridge" aria-hidden="true"><i>→</i></span>
+          <article className="food-app-evidence__screen food-app-evidence__screen--review">
+            <span className="food-figure__index">MEAL REVIEW / UNSAVED EXAMPLE</span>
+            <img
+              src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
+              alt="Food Tracker meal-review screen with proposed foods, serving controls, a provisional nutrition preview, and a Log selected action."
+              loading="lazy"
+            />
+            <p>Review before saving: choose the foods and portions that belong in the log. This example meal was not saved during capture.</p>
+          </article>
+        </div>
         <div className="food-app-evidence__context">
           <p className="food-section-label">THE HUMAN CHECKPOINT</p>
           <h3>An interpretation stays a proposal until the person reviews it.</h3>
@@ -106,7 +118,7 @@ function FoodLoggingEvidence() {
         </div>
       </div>
       <figcaption id="food-logging-evidence-title">
-        Product evidence · a review-before-save screen, not a claim that this example meal was logged.
+        Product evidence · an authentic entry screen followed by an unsaved review state. Neither image presents a completed meal log.
       </figcaption>
     </figure>
   );
@@ -185,64 +197,49 @@ function FoodSystemMap() {
 function FoodInsightsModel() {
   return (
     <figure className="food-insights-model" aria-labelledby="food-insights-model-title">
-      <div className="food-insights-model__pipeline" aria-label="Shared data used by both presentation modes">
-        <article>
-          <span className="food-figure__index">SOURCE</span>
-          <strong>SAVED FOOD LOGS</strong>
-          <p>Food and serving/nutrition snapshots</p>
-        </article>
-        <article>
-          <span className="food-figure__index">CALCULATE</span>
-          <strong>DETERMINISTIC ANALYTICS + RECOMMENDATIONS</strong>
-          <p>Progress, trends, and reviewable recommendations</p>
-        </article>
-        <article className="food-insights-model__coverage">
-          <span className="food-figure__index">INTERPRET</span>
-          <strong>COVERAGE STAYS VISIBLE</strong>
-          <p>Recorded, partial, and unknown data stay distinct.</p>
-        </article>
+      <div className="food-insights-model__inputs">
+        <span className="food-figure__index">INPUTS WITH DIFFERENT GRAINS</span>
+        <strong>Food logs · weight logs · goals · local tracking day</strong>
+        <p>Each report starts from saved product records and the question's date range.</p>
       </div>
 
-      <p className="food-insights-model__split-label">ONE PRODUCT · DIFFERENT LEVELS OF DETAIL</p>
+      <div className="food-insights-model__connector" aria-hidden="true"><span>derive facts, then check coverage</span></div>
+
+      <div className="food-insights-model__state-model">
+        <div className="food-insights-model__state-heading">
+          <span className="food-figure__index">TWO QUESTIONS, KEPT SEPARATE</span>
+          <p>A day can be partly logged while a particular nutrient is still unknown.</p>
+        </div>
+        <div className="food-insights-model__state-row">
+          <strong>LOGGING DAY</strong>
+          <div><span>COMPLETE</span><span>PARTIAL</span><span>UNLOGGED</span></div>
+          <p>Was the day eligible for this analysis?</p>
+        </div>
+        <div className="food-insights-model__state-row food-insights-model__state-row--coverage">
+          <strong>METRIC COVERAGE</strong>
+          <div><span>RECORDED</span><span>PARTIAL</span><span>UNKNOWN</span></div>
+          <p>What does the source data actually contain?</p>
+        </div>
+      </div>
+
+      <div className="food-insights-model__connector" aria-hidden="true"><span>same saved facts · different presentation depth</span></div>
+
       <div className="food-insights-model__modes">
-        <article className="food-insights-model__simple">
+        <section className="food-insights-model__simple">
           <span className="food-figure__index">SIMPLE</span>
-          <h3>Focused daily overview</h3>
-          <p>Core progress, selected trends, and curated recommendations keep routine use quick.</p>
-        </article>
-        <article className="food-insights-model__complex">
+          <h3>Keep routine use focused</h3>
+          <p>Core progress, curated views, and recommendations support a quick daily read.</p>
+        </section>
+        <section className="food-insights-model__complex">
           <span className="food-figure__index">COMPLEX</span>
-          <h3>Deeper exploration</h3>
-          <p>More nutrients, comparisons, custom ranges, coverage controls, and saved views.</p>
-        </article>
+          <h3>Open the analysis</h3>
+          <p>Explore more nutrients, ranges, comparisons, coverage controls, and saved views.</p>
+        </section>
       </div>
 
-      <p className="food-insights-model__authority">
-        The two modes share one app, backend, and data model. AI does not calculate analytics or decide recommendations.
-      </p>
+      <p className="food-insights-model__authority">Analytics and recommendation facts are deterministic. Missing values remain missing; AI does not fill gaps or decide the recommendation.</p>
       <figcaption id="food-insights-model-title">
-        Insights model · shared saved data and deterministic facts, presented at two depths.
-      </figcaption>
-    </figure>
-  );
-}
-
-function FoodInsightsEvidence() {
-  return (
-    <figure className="food-insights-evidence" aria-labelledby="food-insights-evidence-title">
-      <img
-        src="/media/case-studies/food-tracker/phase-24/trend-configuration.png"
-        alt="Food Tracker trend configuration with primary and comparison metrics, date range, data coverage, aggregation, visualization, target, and forecast controls."
-        loading="lazy"
-      />
-      <div>
-        <span className="food-figure__index">TREND CONFIGURATION / SETUP ONLY</span>
-        <h3>Make the question explicit before drawing the trend.</h3>
-        <p>The configuration exposes the chosen metric, comparison, range, and data coverage. This is a setup capture, not a populated analytics result.</p>
-        <p className="food-app-evidence__source-note">Earlier product interface / pre-redesign baseline</p>
-      </div>
-      <figcaption id="food-insights-evidence-title">
-        Insights evidence · configuration controls are real; this image does not show logged values or a generated report.
+        Insights state model · a native explanatory figure; status labels are categories, not a populated account report.
       </figcaption>
     </figure>
   );
@@ -494,13 +491,12 @@ export default function FoodTrackerCaseStudy() {
         <section className="food-section food-rewrite__chapter" id="food-insights" aria-labelledby="food-insights-title">
           <header className="food-rewrite__section-heading">
             <p className="food-section-label">03 / AFTER THE LOG</p>
-            <h2 id="food-insights-title">Make the everyday view quick; keep the analytical question inspectable.</h2>
+            <h2 id="food-insights-title">Turn saved days into useful patterns, without smoothing over missing data.</h2>
             <p>
-              The same saved log supports daily progress, reports, comparison and deterministic recommendations. Simple and Complex change how much detail is presented, not which facts are authoritative.
+              Logs can support daily progress, nutrition reports, comparisons, and reviewable recommendations. Coverage and day eligibility shape what a report can say; Simple and Complex present the same product at different depths.
             </p>
           </header>
           <FoodInsightsModel />
-          <FoodInsightsEvidence />
         </section>
 
         <section className="food-section food-rewrite__chapter food-rewrite__retrieval" id="food-search" aria-labelledby="food-search-title">
@@ -539,7 +535,7 @@ export default function FoodTrackerCaseStudy() {
           <FoodValidationBoundary />
           <FoodBuildLoop />
           <p className="food-rewrite__closing">
-            The product is the complete path: interpret an entry, find a trusted food, resolve its serving, preserve the saved basis, and make the resulting history useful later.
+            Food Tracker brings the everyday act and its longer view together: flexible meal entry, a reviewed food and serving, a saved nutrition basis, and analysis that keeps uncertainty visible.
           </p>
           <p className="food-rewrite__release-note">
             The pinned repository records validated Railway staging and a free-Xcode standalone iOS install, not a public launch. Paid Apple distribution and Android standalone validation remain outside that completed boundary.

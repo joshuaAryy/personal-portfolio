@@ -129,6 +129,17 @@ describe("opening route handoff", () => {
     expect(css).toMatch(/@keyframes opening-j-detail-assemble\s*\{[\s\S]*?51%,\s*94%\s*\{\s*opacity:\s*1/);
     expect(css).toMatch(/@keyframes opening-j-bevel-assemble\s*\{[\s\S]*?59%,\s*94%\s*\{\s*opacity:\s*1/);
     expect(css).toMatch(/@keyframes opening-j-edge-assemble\s*\{[\s\S]*?66%,\s*94%\s*\{\s*opacity:\s*1/);
+    for (const animation of [
+      "opening-j-deep-assemble",
+      "opening-j-mid-assemble",
+      "opening-j-face-assemble",
+      "opening-j-detail-assemble",
+      "opening-j-bevel-assemble",
+      "opening-j-edge-assemble",
+    ]) {
+      const sequence = css.match(new RegExp(`@keyframes ${animation}\\s*\\{([\\s\\S]*?)\\n\\}`))?.[1] ?? "";
+      expect(sequence).not.toMatch(/transform:\s*(?!none)/);
+    }
     expect(fieldMotion).toMatch(/animation:\s*opening-radial-expansion\s+3\.5s/);
     expect(peripheralMotion).toMatch(/animation:\s*opening-peripheral-drift\s+3\.5s/);
     expect(fieldSequence).toMatch(/0%,\s*16%,\s*19%[\s\S]*?scale\(\.78\)/);
@@ -142,6 +153,19 @@ describe("opening route handoff", () => {
     expect(css).toMatch(/@keyframes opening-progress-fill\s*\{[\s\S]*?scaleX\(1\)/);
     expect(css).toMatch(/opening-client-reveal\s+3\.5s/);
     expect(css).toMatch(/opening-treatment-out\s+3\.5s/);
+  });
+
+  it("keeps the peripheral field sparse, legible, and rotating through the settle", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const peripheralRule = [...css.matchAll(/\.opening__peripheral-lines\s*\{([^}]*)\}/g)]
+      .map((match) => match[1])
+      .find((rule) => rule.includes("repeating-conic-gradient")) ?? "";
+    const peripheralSequence = css.match(/@keyframes opening-peripheral-drift\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(peripheralRule).toMatch(/repeating-conic-gradient\([\s\S]*?15deg/);
+    expect(peripheralRule).toMatch(/rgb\(181 197 207 \/ 29%\)/);
+    expect(peripheralSequence).toMatch(/68%\s*\{\s*opacity:\s*\.34;\s*transform:\s*rotate\(13deg\)/);
+    expect(peripheralSequence).toMatch(/84%,\s*94%\s*\{\s*opacity:\s*\.28;\s*transform:\s*rotate\(23deg\)/);
   });
 
   it("keeps the phase choreography static for reduced-motion visitors", () => {
@@ -170,6 +194,7 @@ describe("opening route handoff", () => {
     expect(detailRule).toMatch(/mask-image:\s*url\("\/media\/opening\/j-sonnet-v8\/j-detail-mask\.svg"\)/);
     expect(css).toMatch(/\.opening__j-detail-art\s*\{[^}]*inset:\s*-0\.42% -1\.41% -2\.79% -1%/s);
     expect(css).toMatch(/\.opening__j-edge-light-art\s*\{[^}]*inset:\s*-0\.19% -0\.71% -0\.18% -0\.29%/s);
+    expect(css).toMatch(/\.opening__j-edge-light-art\s*>\s*img\s*\{[^}]*width:\s*100%;[^}]*height:\s*100%/s);
   });
 
   it("centers the archive mark if the editable v8 source falls back", () => {

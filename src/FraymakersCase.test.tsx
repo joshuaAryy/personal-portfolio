@@ -89,6 +89,26 @@ describe("Fraymakers technical case study", () => {
     expect(markup).toContain("used on real Fraymakers VODs");
   });
 
+  it("labels owner-reported renderer constraints without inventing implementation fallbacks", () => {
+    const markup = render();
+    const compositionStart = markup.indexOf('id="fraymakers-composition"');
+    const pipelineStart = markup.indexOf('id="fraymakers-pipeline"');
+    const composition = markup.slice(compositionStart, pipelineStart);
+
+    for (const detail of [
+      "OWNER-REPORTED ENGINEERING CONSTRAINTS",
+      "Mirror player-two character art so the two sides read as an opposing matchup",
+      "Handle alternate player and character names in match context",
+      "Fit variable-length player names within the fixed 1280 × 720 frame",
+      "Account for art inputs that are missing from a matchup",
+    ]) expect(composition).toContain(detail);
+
+    expect(composition).not.toContain("original project checkout");
+    expect(composition).not.toContain("not verified");
+    expect(composition).not.toMatch(/fallback (?:used|shown|selected):?\s*(?:placeholder|original|default)/i);
+    expect(markup.match(/thumbnail\.js/g)).toHaveLength(1);
+  });
+
   it("positions chapter targets below the desktop and mobile sticky rails", () => {
     const css = readFileSync("src/fraymakers-case.css", "utf8");
 

@@ -74,22 +74,22 @@
 
 .opening__radial-field {
   background:
-    radial-gradient(circle at 50% 50%, transparent 0 12.9%, rgb(123 145 164 / 11%) 13%, transparent 13.08% 24.9%, rgb(123 145 164 / 9%) 25%, transparent 25.08% 36.9%, rgb(123 145 164 / 8%) 37%, transparent 37.08% 52.9%, rgb(123 145 164 / 6%) 53%, transparent 53.08% 70.9%, rgb(123 145 164 / 4%) 71%, transparent 71.08%);
+    radial-gradient(circle at 50% 50%, transparent 0 12.9%, rgb(123 145 164 / 15%) 13%, transparent 13.08% 24.9%, rgb(123 145 164 / 12%) 25%, transparent 25.08% 36.9%, rgb(123 145 164 / 10%) 37%, transparent 37.08% 52.9%, rgb(123 145 164 / 8%) 53%, transparent 53.08% 70.9%, rgb(123 145 164 / 6%) 71%, transparent 71.08%);
   transform: scale(.78);
   animation: opening-radial-expansion 3.5s ease-out 1 both;
 }
 
 .opening__peripheral-lines {
   background:
-    linear-gradient(180deg, transparent calc(50% - .5px), rgb(171 186 197 / 15%) 50%, transparent calc(50% + .5px)),
+    linear-gradient(180deg, transparent calc(50% - .5px), rgb(181 197 207 / 20%) 50%, transparent calc(50% + .5px)),
     repeating-conic-gradient(
       from -3deg at 50% 50%,
-      transparent 0deg 2.94deg,
-      rgb(171 186 197 / 17%) 2.97deg 3deg,
-      transparent 3.03deg 6deg
+      transparent 0deg 14.82deg,
+      rgb(181 197 207 / 29%) 14.82deg 15deg,
+      transparent 15deg 15deg
     );
   mask-image: radial-gradient(ellipse at 50% 50%, transparent 0 24%, #000 43%, transparent 82%);
-  transform: rotate(-7deg) scale(.92);
+  transform: rotate(-12deg) scale(.88);
   animation: opening-peripheral-drift 3.5s ease-in-out 1 both;
 }
 
@@ -145,7 +145,8 @@
 }
 
 .opening__j-layer > img,
-.opening__j-detail-art {
+.opening__j-detail-art,
+.opening__j-edge-light-art > img {
   display: block;
   width: 100%;
   height: 100%;
@@ -506,44 +507,44 @@
 }
 
 @keyframes opening-j-deep-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
-  19%, 28% { opacity: 0; clip-path: inset(80% 0 0); transform: translateY(2.4%); }
-  30%, 94% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+  0%, 17% { opacity: 1; clip-path: inset(0); }
+  19%, 28% { opacity: 0; clip-path: inset(80% 0 0); }
+  30%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-mid-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
-  19%, 35% { opacity: 0; clip-path: inset(0 100% 0 0); transform: translateX(-2.2%); }
-  37%, 94% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
+  0%, 17% { opacity: 1; clip-path: inset(0); }
+  19%, 35% { opacity: 0; clip-path: inset(0 100% 0 0); }
+  37%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-face-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
-  19%, 41% { opacity: 0; clip-path: inset(100% 0 0); transform: translateY(-1.4%); }
-  43%, 94% { opacity: 1; clip-path: inset(0); transform: translateY(0); }
+  0%, 17% { opacity: 1; clip-path: inset(0); }
+  19%, 41% { opacity: 0; clip-path: inset(100% 0 0); }
+  43%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-detail-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); transform: scale(1); }
-  19%, 48% { opacity: 0; clip-path: inset(42%); transform: scale(.97); }
-  51%, 94% { opacity: 1; clip-path: inset(0); transform: scale(1); }
+  0%, 17% { opacity: 1; clip-path: inset(0); }
+  19%, 48% { opacity: 0; clip-path: inset(42%); }
+  51%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-bevel-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
-  19%, 56% { opacity: 0; clip-path: inset(0 0 0 100%); transform: translateX(1.7%); }
-  59%, 94% { opacity: 1; clip-path: inset(0); transform: translateX(0); }
+  0%, 17% { opacity: 1; clip-path: inset(0); }
+  19%, 56% { opacity: 0; clip-path: inset(0 0 0 100%); }
+  59%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-edge-assemble {
-  0%, 17% { opacity: 1; transform: translateY(0); }
-  19%, 63% { opacity: 0; transform: translateY(-1.1%); }
-  66%, 94% { opacity: 1; transform: translateY(0); }
+  0%, 17% { opacity: 1; }
+  19%, 63% { opacity: 0; }
+  66%, 94% { opacity: 1; }
   100% { opacity: 0; }
 }
 
@@ -553,12 +554,12 @@
     transform: scale(.78);
   }
   32% {
-    opacity: .24;
+    opacity: .34;
     transform: scale(.91);
   }
   82%,
   94% {
-    opacity: .16;
+    opacity: .24;
     transform: scale(1);
   }
   100% {
@@ -570,24 +571,24 @@
 @keyframes opening-peripheral-drift {
   0%, 18% {
     opacity: 0;
-    transform: rotate(-7deg) scale(.9);
+    transform: rotate(-12deg) scale(.88);
   }
   34% {
-    opacity: .24;
-    transform: rotate(-2deg) scale(.96);
+    opacity: .42;
+    transform: rotate(-4deg) scale(.96);
   }
   68% {
-    opacity: .2;
-    transform: rotate(8deg) scale(1);
+    opacity: .34;
+    transform: rotate(13deg) scale(1);
   }
   84%,
   94% {
-    opacity: .16;
-    transform: rotate(14deg) scale(1);
+    opacity: .28;
+    transform: rotate(23deg) scale(1);
   }
   100% {
     opacity: 0;
-    transform: rotate(17deg) scale(1.02);
+    transform: rotate(28deg) scale(1.02);
   }
 }
 

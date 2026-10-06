@@ -230,12 +230,32 @@ export default function FraymakersCase() {
             </div>
             <figcaption id="fraymakers-composition-caption">One illustrative canvas shows the kinds of elements the renderer had to fit together; it does not reproduce a real match or imply a fixed layer order.</figcaption>
           </figure>
-          <dl className="fray-case__edge-list" aria-label="Rendering cases the workflow handled">
-            <div><dt>P2 MIRRORING</dt><dd>Orient player-two character art.</dd></div>
-            <div><dt>ALIASES</dt><dd>Handle alternate player and character names.</dd></div>
-            <div><dt>LONG NAMES</dt><dd>Fit variable-length player text.</dd></div>
-            <div><dt>MISSING ASSETS</dt><dd>Account for absent art inputs.</dd></div>
-          </dl>
+          <div className="fray-case__edge-review" role="note" aria-label="Owner-reported rendering constraints and evidence limits">
+            <div className="fray-case__edge-review-heading">
+              <span className="fray-case__figure-kicker">OWNER-REPORTED ENGINEERING CONSTRAINTS</span>
+              <p>
+                These cases shaped how the 1280 × 720 composition handled match-specific art and text.
+              </p>
+            </div>
+            <dl className="fray-case__edge-list" aria-label="Rendering constraints reported for the thumbnail path">
+              <div>
+                <dt>P2 MIRRORING</dt>
+                <dd>Mirror player-two character art so the two sides read as an opposing matchup.</dd>
+              </div>
+              <div>
+                <dt>ALIASES</dt>
+                <dd>Handle alternate player and character names in match context.</dd>
+              </div>
+              <div>
+                <dt>LONG NAMES</dt>
+                <dd>Fit variable-length player names within the fixed 1280 × 720 frame.</dd>
+              </div>
+              <div>
+                <dt>MISSING ASSETS</dt>
+                <dd>Account for art inputs that are missing from a matchup.</dd>
+              </div>
+            </dl>
+          </div>
         </section>
 
         <section className="fray-case__pipeline" id="fraymakers-pipeline" aria-labelledby="fraymakers-pipeline-title">
@@ -276,8 +296,9 @@ export default function FraymakersCase() {
             <p className="fray-case__section-note">ONE RENDER PATH · MATCH-SPECIFIC VALUES</p>
           </div>
           <p className="fray-case__section-intro fray-case__section-intro--narrow">
-            YAML and configuration overrides carried event- and match-specific choices alongside the player
-            and art inputs. The renderer could reuse its composition path without hardcoding every matchup.
+            YAML and configuration overrides carried event- and match-specific choices alongside player
+            and art inputs. The categories shown here describe the reported configuration scope; exact YAML
+            keys and sample values are not available to verify.
           </p>
           <dl className="fray-case__config-register" aria-label="Categories carried by match-specific YAML overrides">
             {configurationInputs.map(([label, detail]) => (

@@ -265,13 +265,13 @@ const activityArt = {
     nodeId: "I2356:611;95:11",
   },
   "living-in-silico": {
-    src: experienceIdentities["living-in-silico"].mark,
+    src: "/media/lobby/activity-art/activity-living-in-silico.svg",
     size: 54,
     frameSize: 38,
     nodeId: "I2356:611;95:25",
   },
   "stush-patties": {
-    src: experienceIdentities["stush-patties"].mark,
+    src: "/media/lobby/activity-art/activity-stush-patties.svg",
     size: 54,
     frameSize: 38,
     nodeId: "I2356:611;95:37",

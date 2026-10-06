@@ -255,22 +255,26 @@
 
 .stush-rule-ledger { padding: 28px 30px 21px; border-top: 1px solid rgba(114, 201, 188, .38); border-bottom: 1px solid rgba(114, 201, 188, .3); background: rgba(10, 30, 36, .52); }
 .stush-figure-heading--ledger { align-items: end; }
-.stush-figure-heading--ledger > p { max-width: 245px; }
+.stush-figure-heading--ledger > p { max-width: 300px; }
 .stush-rule-table { margin-top: 16px; }
 .stush-rule-table__head,
-.stush-rule-row { display: grid; grid-template-columns: 54px minmax(150px, .72fr) minmax(0, 1.35fr) minmax(190px, .8fr); align-items: center; gap: 18px; }
-.stush-rule-table__head { min-height: 34px; border-bottom: 1px solid var(--stush-rule); }
+.stush-rule-row { display: grid; grid-template-columns: 34px minmax(125px, .68fr) repeat(3, minmax(0, 1fr)); align-items: start; gap: 16px; }
+.stush-rule-table__head { min-height: 38px; border-bottom: 1px solid var(--stush-rule); }
 .stush-rule-table__head > span { color: var(--stush-faint); font-size: 8px; font-weight: 720; letter-spacing: .1em; }
 .stush-rule-table__head > span:first-child { grid-column: 2; }
-.stush-rule-row { min-height: 78px; border-bottom: 1px solid rgba(130, 162, 164, .14); }
+.stush-rule-row { min-height: 112px; padding: 16px 0; border-bottom: 1px solid rgba(130, 162, 164, .14); }
 .stush-rule-row:last-child { border-bottom: 0; }
-.stush-rule-row__index { color: var(--stush-amber); font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.stush-rule-row__index { padding-top: 3px; color: var(--stush-amber); font-size: 10px; font-weight: 700; font-variant-numeric: tabular-nums; }
 .stush-rule-row h4 { color: #e6ede4; font-size: 16px; font-weight: 700; }
-.stush-rule-row > p { max-width: 500px; color: #afc0be; font-size: 12px; line-height: 1.5; }
-.stush-rule-row__mapping { display: grid; grid-template-columns: minmax(32px, .65fr) 18px minmax(75px, 1fr); align-items: center; gap: 8px; }
+.stush-rule-row__cell { min-width: 0; }
+.stush-rule-row__cell-label { display: none; }
+.stush-rule-row__cell p { max-width: 315px; color: #afc0be; font-size: 11px; line-height: 1.55; }
+.stush-rule-row__effect { display: grid; gap: 7px; }
+.stush-rule-row__effect .stush-rule-row__cell-label { display: block; color: var(--stush-faint); font-size: 7px; font-weight: 720; letter-spacing: .08em; }
+.stush-rule-row__mapping { display: grid; max-width: 210px; grid-template-columns: minmax(20px, .5fr) 12px minmax(65px, 1fr); align-items: center; gap: 6px; }
 .stush-rule-row__mapping > i { width: 100%; height: 4px; background: #596e70; }
 .stush-rule-row__mapping > span { height: 1px; background: var(--stush-amber); }
-.stush-rule-row__mapping > b { padding: 8px; border: 1px solid rgba(114, 201, 188, .42); color: #a9d9ce; font-size: 9px; font-weight: 680; text-align: center; }
+.stush-rule-row__mapping > b { padding: 6px; border: 1px solid rgba(114, 201, 188, .42); color: #a9d9ce; font-size: 8px; font-weight: 680; text-align: center; }
 .stush-rule-ledger figcaption { margin-top: 13px; color: #82969a; font-size: 9px; line-height: 1.45; }
 
 .stush-koyo {
@@ -289,6 +293,7 @@
 .stush-koyo__stage { display: grid; min-height: 82px; align-content: center; gap: 8px; padding: 13px; border: 1px solid rgba(130, 162, 164, .35); background: rgba(12, 35, 41, .76); }
 .stush-koyo__stage > span { color: var(--stush-faint); font-size: 7px; font-weight: 720; letter-spacing: .1em; }
 .stush-koyo__stage > strong { color: #dce4dd; font-size: 11px; line-height: 1.35; }
+.stush-koyo__stage > small { color: #a9c5bf; font-size: 9px; line-height: 1.4; }
 .stush-koyo__branch { position: relative; display: grid; gap: 12px; }
 .stush-koyo__branch-label { color: var(--stush-amber); font-size: 8px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 .stush-koyo__branch-line { position: absolute; top: 45px; left: -15px; width: 13px; height: 1px; background: var(--stush-amber); }
@@ -355,7 +360,7 @@
   .stush-readers,
   .stush-schema { padding-right: 10px; padding-left: 10px; }
   .stush-rule-table__head,
-  .stush-rule-row { grid-template-columns: 38px minmax(115px, .68fr) minmax(0, 1.15fr) minmax(150px, .82fr); gap: 12px; }
+  .stush-rule-row { grid-template-columns: 28px minmax(110px, .6fr) repeat(3, minmax(0, 1fr)); gap: 11px; }
   .stush-koyo__route { grid-template-columns: minmax(95px, .72fr) minmax(155px, 1fr) 20px minmax(150px, 1fr); gap: 8px; }
   .stush-handoff { grid-template-columns: minmax(210px, .62fr) minmax(0, 1.38fr); }
   .stush-handoff-figure__flow li { padding: 8px; }
@@ -376,7 +381,7 @@
   .stush-schema { padding: 16px; }
   .stush-readers ol { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .stush-rule-table__head,
-  .stush-rule-row { grid-template-columns: 36px minmax(120px, .7fr) minmax(0, 1.3fr) minmax(150px, .8fr); }
+  .stush-rule-row { grid-template-columns: 28px minmax(100px, .65fr) repeat(3, minmax(0, 1fr)); gap: 10px; }
   .stush-koyo { grid-template-columns: minmax(0, 1fr); gap: 24px; }
   .stush-koyo__intro { max-width: 690px; }
   .stush-koyo__route { grid-template-columns: minmax(0, 1fr); gap: 8px; }
@@ -440,11 +445,14 @@
   .stush-section-intro--split > p:last-child { font-size: 12px; }
   .stush-rule-ledger { padding: 18px 14px 14px; }
   .stush-rule-table__head { display: none; }
-  .stush-rule-row { grid-template-columns: 24px minmax(0, 1fr); gap: 5px 9px; min-height: 0; padding: 14px 0; }
+  .stush-rule-row { grid-template-columns: 24px minmax(0, 1fr); gap: 0 9px; min-height: 0; padding: 14px 0; }
   .stush-rule-row__index { grid-row: 1; font-size: 8px; }
-  .stush-rule-row h4 { grid-column: 2; grid-row: 1; font-size: 14px; }
-  .stush-rule-row > p { grid-column: 2; grid-row: 2; font-size: 11px; }
-  .stush-rule-row__mapping { grid-column: 2; grid-row: 3; max-width: 210px; grid-template-columns: minmax(32px, .65fr) 14px minmax(75px, 1fr); margin-top: 5px; }
+  .stush-rule-row h4 { grid-column: 2; grid-row: 1; margin-bottom: 8px; font-size: 14px; }
+  .stush-rule-row__cell { grid-column: 2; padding: 9px 0; border-top: 1px solid rgba(130, 162, 164, .1); }
+  .stush-rule-row__cell-label { display: block; margin-bottom: 4px; color: var(--stush-faint); font-size: 7px; font-weight: 720; letter-spacing: .08em; }
+  .stush-rule-row__effect .stush-rule-row__cell-label { display: none; }
+  .stush-rule-row__cell p { max-width: none; font-size: 11px; }
+  .stush-rule-row__mapping { max-width: 210px; grid-template-columns: minmax(32px, .65fr) 14px minmax(75px, 1fr); margin: 2px 0 8px; }
   .stush-rule-row__mapping > b { padding: 6px; font-size: 8px; }
   .stush-koyo { gap: 20px; padding: 35px 0 39px; }
   .stush-koyo__intro > p:last-child { font-size: 12px; }

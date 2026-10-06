@@ -23,27 +23,30 @@ describe("Living in Silico research story", () => {
     expect(markup).not.toContain("15,696 records → 500");
   });
 
-  it("presents DeepMol as sequence work and preserves the output provenance limit", () => {
+  it("shows how SMILES input becomes generated strings without turning a count into molecular evidence", () => {
     const markup = renderLivingRoute();
     const figure = markup.match(/<figure class="living-deepmol-figure"[^>]*>(.*?)<\/figure>/)?.[1] ?? "";
 
     expect(markup).toContain("DeepMol CSVLoader");
     expect(markup).toContain("RNN MolecularGenerator");
-    expect(figure).toContain('role="img" aria-label="From curated SMILES through sequence preparation and an RNN to generated strings, then interpretation limits"');
-    expect(figure).toContain("Curated SMILES data");
-    expect(figure).toContain("SEQUENCE PREPARATION");
-    expect(figure).toContain("Sequence representation");
-    expect(figure).toContain("Generate SMILES strings");
-    expect(figure).toContain("INTERPRETATION BOUNDARY");
-    expect(figure).toContain("CSVLoader");
-    expect(figure).toContain("MolecularGenerator");
-    expect(figure).not.toContain("<ol>");
-    expect(figure).not.toContain("Morgan fingerprint");
-    expect(markup).toContain("10 epochs");
-    expect(markup).toContain("batch size 64");
-    expect(markup).toContain("do not link these settings to the separate 500-sample account");
-    expect(markup).toContain("500 generated SMILES samples");
-    expect(markup).toContain("May 2025 report attributes the 500-sample account to REINVENT4");
+    expect(figure).toContain('aria-label="SMILES sequence route from experiment input through DeepMol and an RNN to generated strings"');
+    expect(figure).toContain("SMILES sequence input");
+    expect(figure).toContain("DeepMol CSVLoader");
+    expect(figure).toContain("RNN MolecularGenerator");
+    expect(figure).toContain("Generated SMILES output");
+    expect(figure).toContain("WHAT THE COUNT CANNOT ESTABLISH");
+    expect(figure.indexOf("SMILES sequence input")).toBeLessThan(figure.indexOf("DeepMol CSVLoader"));
+    expect(figure.indexOf("DeepMol CSVLoader")).toBeLessThan(figure.indexOf("RNN MolecularGenerator"));
+    expect(figure.indexOf("RNN MolecularGenerator")).toBeLessThan(figure.indexOf("Generated SMILES output"));
+    expect(figure.indexOf("Generated SMILES output")).toBeLessThan(figure.indexOf("WHAT THE COUNT CANNOT ESTABLISH"));
+    expect(markup).toContain('aria-label="Reported DeepMol run settings"');
+    expect(markup).toContain("<strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span>");
+    expect(figure).toContain('<strong class="living-sequence-count">500</strong>');
+    expect(figure).toContain("Owner-reported samples from the DeepMol / RNN work.");
+    expect(markup).toContain("Morgan fingerprint");
+    expect(markup).toContain("radius 2");
+    expect(markup).toContain("128 bits");
+    expect(markup).not.toContain("May 2025 report attributes the 500-sample account to REINVENT4");
     expect(markup).not.toContain("500 valid");
     expect(markup).not.toContain("500 novel");
     expect(markup).not.toContain("500 unique");

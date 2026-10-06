@@ -43,15 +43,39 @@ describe("Stush Patties technical data-engineering story", () => {
     expect(html).toContain("No client records or source values are reproduced.");
   });
 
+  it("explains the shared business meaning, decision, and reporting role of each field", () => {
+    const html = markup();
+    const ledgerStart = html.indexOf('aria-label="Business dimensions and normalization work"');
+    const ledgerEnd = html.indexOf("</figure>", ledgerStart);
+    const ledger = html.slice(ledgerStart, ledgerEnd);
+
+    for (const label of ["SOURCE PROBLEM", "NORMALIZATION DECISION", "REPORTING CONSEQUENCE"]) {
+      expect(ledger).toContain(label);
+    }
+
+    for (const detail of [
+      "Map corresponding source fields into one shared Sales field",
+      "Keep Units as a separate shared field",
+      "Keep Case pack explicit in the shared schema",
+      "Map periods into one shared Reporting month field",
+      "no client records, source values, or numeric formulas are shown",
+    ]) expect(ledger).toContain(detail);
+
+    expect(ledger).not.toMatch(/\b\d+(?:\.\d+)?%\b/);
+    expect(ledger).not.toMatch(/\$\s?\d/);
+  });
+
   it("shows the Koyo position-and-cell parser as a bounded path that rejoins normalization", () => {
     const html = markup();
     const exceptionStart = html.indexOf('id="stush-koyo-exception"');
     const exceptionEnd = html.indexOf("</section>", exceptionStart);
     const exception = html.slice(exceptionStart, exceptionEnd);
 
-    expect(exception).toContain("temporary position-and-cell path");
-    expect(exception).toContain("One source-specific exception");
-    expect(exception).toContain("Rejoins the shared normalization path");
+    expect(exception).toContain("temporary position-and-cell reader");
+    expect(exception).toContain("ONE SOURCE-SPECIFIC EXCEPTION");
+    expect(exception).toContain("common normalization then continued");
+    expect(exception).toContain("irregular layout");
+    expect(exception).toContain("Same reporting fields and output contract");
     expect(exception.match(/Koyo/g)).toHaveLength(1);
     expect(exception).not.toMatch(/cell\s*(?:A|B|C|\d+)/i);
   });
