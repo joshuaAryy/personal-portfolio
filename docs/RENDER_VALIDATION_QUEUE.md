@@ -1,6 +1,6 @@
 # Browser Render Validation Queue
 
-> **Current Preview baseline (2026-10-05):** `https://2321d13e.joshuaik2.pages.dev/`, pushed source snapshot `7b4fc3a5198d8b848f9920c25e346c4439c51fba`, Preview branch `feat/portfolio-integration`; production untouched. The consolidated direction is [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md). Existing case-study captures are useful only for the exact scope they examined and do not imply story acceptance.
+> **Current owner-review Preview (2026-10-06):** `https://977b240e.joshuaik2.pages.dev/`, application source `6dcaf8ed1839e1b44cc36dee9338883c5c69e54e`, deployment `977b240e-f357-483a-abd4-3c7f2dd43f8b`, Preview branch `feat/portfolio-integration`; production untouched. Installed Chrome verified 18 routes at 1440px/390px, images, interactions, and source revision. All six case studies remain open for owner review. See [the correction Preview report](site-render-review/2026-10-06-correction-preview/REPORT.md) and the [controlling owner direction](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md).
 
 > **Current validation goal:** render every consequential corrected surface in installed Chrome at desktop and narrow widths; compare visual hierarchy, source-quality media, interactions, and story evidence. All six case studies remain open for substantial re-authoring. Smoke checks do not imply visual/story approval. Deploy a new feature Preview only after a coherent implementation checkpoint; never production. J remains separate.
 
