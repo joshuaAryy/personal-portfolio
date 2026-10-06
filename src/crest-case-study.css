@@ -89,8 +89,74 @@
   box-shadow: 0 0 0 5px rgba(16, 34, 39, 0.8);
 }
 
+.crest-demo-launch {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(210, 174, 99, 0.75);
+  background: #07141d;
+  cursor: pointer;
+}
+
+.crest-demo-launch img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: filter 180ms ease, transform 240ms ease;
+}
+
+.crest-demo-launch__cue {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 13px;
+  border: 1px solid rgba(233, 200, 124, 0.72);
+  background: rgba(5, 17, 25, 0.92);
+  color: #f4e7c3;
+  font: 700 10px/1 "IBM Plex Mono", ui-monospace, monospace;
+  letter-spacing: 0.12em;
+}
+
+.crest-demo-launch__icon {
+  color: #f1cf77;
+  font-size: 13px;
+}
+
+.crest-demo-launch:hover img {
+  filter: brightness(0.8);
+  transform: scale(1.015);
+}
+
+.crest-demo-launch:focus-visible {
+  outline: 2px solid #f4cb69;
+  outline-offset: 4px;
+}
+
+.crest-demo-frame {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(210, 174, 99, 0.75);
+  background: #07141d;
+}
+
 .crest-demo-figure figcaption {
   grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.crest-demo-caption__action {
+  color: #e3c57e;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
 }
 
 

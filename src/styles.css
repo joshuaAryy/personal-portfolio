@@ -3693,7 +3693,7 @@ a:focus-visible {
     grid-template-columns: auto minmax(0, 1fr);
     gap: 8px;
   }
-  .crest-demo-figure figcaption a {
+  .crest-demo-caption__action {
     grid-column: 2;
     justify-self: start;
   }

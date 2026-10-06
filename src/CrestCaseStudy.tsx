@@ -107,6 +107,8 @@ function CrestArchitectureMap() {
 }
 
 export default function CrestCaseStudy() {
+  const [crestDemoIsPlaying, setCrestDemoIsPlaying] = useState(false);
+  const crestDemoFrame = useRef<HTMLIFrameElement>(null);
   const [activeChapter, setActiveChapter] = useState<CrestChapterId>("overview");
   const navigationSelection = useRef<{
     chapter: CrestChapterId;
@@ -114,6 +116,12 @@ export default function CrestCaseStudy() {
   } | null>(null);
   const pinnedChapter = useRef<CrestChapterId | null>(null);
   const reconcileChapter = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    if (crestDemoIsPlaying) {
+      crestDemoFrame.current?.focus({ preventScroll: true });
+    }
+  }, [crestDemoIsPlaying]);
 
   useEffect(() => {
     const main = document.getElementById("main");
@@ -286,22 +294,42 @@ export default function CrestCaseStudy() {
 
           <div className="crest-demo-media">
             <figure className="crest-demo-figure" aria-labelledby="crest-demo-caption">
-              <img
-                src="/media/crest-sample.png"
-                alt="Crest expense-review sample screen with policy context and preapproval controls"
-                width="684"
-                height="385"
-              />
+              {crestDemoIsPlaying ? (
+                <iframe
+                  ref={crestDemoFrame}
+                  className="crest-demo-frame"
+                  src="https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1"
+                  title="Crest expense intelligence demo video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  tabIndex={0}
+                />
+              ) : (
+                <button
+                  className="crest-demo-launch"
+                  type="button"
+                  aria-label="Play Crest demo in page"
+                  onClick={() => setCrestDemoIsPlaying(true)}
+                >
+                  <img
+                    src="/media/crest-sample.png"
+                    alt="Crest expense-review sample screen with policy context and preapproval controls"
+                    width="684"
+                    height="385"
+                  />
+                  <span className="crest-demo-launch__cue" aria-hidden="true">
+                    <span className="crest-demo-launch__icon">▶</span>
+                    PLAY DEMO
+                  </span>
+                </button>
+              )}
               <figcaption>
                 <span className="crest-sample-cue">SAMPLE DATA</span>
                 <span id="crest-demo-caption">Expense review / policy context / preapproval</span>
-                <a
-                  href="https://www.youtube.com/watch?v=kiq6XjNi9J8"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  WATCH DEMO ↗
-                </a>
+                <span className="crest-demo-caption__action">
+                  {crestDemoIsPlaying ? "DEMO PLAYING IN PAGE" : "AUTHENTIC PROJECT DEMO"}
+                </span>
               </figcaption>
             </figure>
           </div>
