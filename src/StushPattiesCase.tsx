@@ -3,32 +3,13 @@ import { Link } from "react-router-dom";
 import "./stush-case-study.css";
 
 const formats = ["CSV", "XLSX", "XLSB"] as const;
+const distributorSources = ["Koyo", "UNFI", "Dovre"] as const;
 
-const businessRules = [
-  {
-    field: "Sales",
-    problem: "Sales information arrived inside reports with different layouts and field vocabulary.",
-    decision: "Map corresponding source fields into one shared Sales field before normalization.",
-    consequence: "Each input reaches reporting through the same Sales dimension.",
-  },
-  {
-    field: "Units",
-    problem: "Units needed an explicit meaning beside sales and pack context.",
-    decision: "Keep Units as a separate shared field and align its meaning through business rules.",
-    consequence: "The standardized output retains unit context under one field.",
-  },
-  {
-    field: "Case pack",
-    problem: "Pack context had to remain visible as source layouts were normalized.",
-    decision: "Keep Case pack explicit in the shared schema rather than folding it into another field.",
-    consequence: "The Power BI handoff keeps pack context available beside sales and units.",
-  },
-  {
-    field: "Reporting month",
-    problem: "Separate reports did not share one reporting convention.",
-    decision: "Map periods into one shared Reporting month field.",
-    consequence: "Downstream reporting receives a common period dimension.",
-  },
+const reportingFields = ["Sales", "Units", "Case pack", "Reporting month"] as const;
+const normalizationRules = [
+  { field: "Sales + units", detail: "Mapped into distinct shared fields" },
+  { field: "Case pack", detail: "Retained explicitly in the common contract" },
+  { field: "Reporting month", detail: "Aligned to one shared reporting period" },
 ] as const;
 
 function SourceParsingFigure() {
@@ -63,36 +44,40 @@ function SourceParsingFigure() {
     >
       <header className="stush-figure-heading">
         <div>
-          <p className="stush-kicker">ONE REPORTING CONTRACT</p>
-          <h3 id="stush-source-map-title">Different file shapes resolve into the same fields.</h3>
+          <p className="stush-kicker">REPORTING PIPELINE</p>
+          <h3 id="stush-source-map-title">Different layouts. A shared field contract.</h3>
         </div>
-        <p>Illustrative structure only. No client records, exact source headers, or measured values are shown.</p>
+        <p>Each layout had its own reader. The shared rules carried the business meaning forward.</p>
       </header>
 
-      <div className="stush-transform" role="group" aria-label="Heterogeneous report layouts are parsed into shared fields and reporting outputs">
+      <div className="stush-transform" role="group" aria-label="Koyo, UNFI, and Dovre report layouts flow through Python parsing, a canonical schema, normalization rules, and reporting outputs">
         <section className="stush-transform__sources" aria-labelledby="stush-transform-inputs-title">
-          <p className="stush-transform__eyebrow">INCOMING FILES</p>
-          <h4 id="stush-transform-inputs-title">Different structures</h4>
+          <p className="stush-transform__eyebrow">DISTRIBUTOR INPUTS</p>
+          <h4 id="stush-transform-inputs-title">Three report sources</h4>
+          <ul className="stush-transform__source-set" aria-label="Named distributor sources">
+            {distributorSources.map((source) => <li key={source}>{source}</li>)}
+          </ul>
+          <p className="stush-transform__layout-label">Different layout shapes</p>
           <div className="stush-transform__file-set">
-            <div className="stush-transform__input stush-transform__input--rows" aria-label="Illustrative file A with uneven row layout">
-              <span>FILE A</span><i /><i /><i />
+            <div className="stush-transform__input stush-transform__input--rows" aria-label="Illustrative layout A with uneven row structure, not assigned to a named distributor">
+              <span>LAYOUT A</span><i /><i /><i />
             </div>
-            <div className="stush-transform__input stush-transform__input--grid" aria-label="Illustrative file B with a grid layout">
-              <span>FILE B</span><i /><i /><i /><i /><i /><i />
+            <div className="stush-transform__input stush-transform__input--grid" aria-label="Illustrative layout B with a grid structure, not assigned to a named distributor">
+              <span>LAYOUT B</span><i /><i /><i /><i /><i /><i />
             </div>
-            <div className="stush-transform__input stush-transform__input--groups" aria-label="Illustrative file C with grouped fields">
-              <span>FILE C</span><i /><i /><i /><i />
+            <div className="stush-transform__input stush-transform__input--groups" aria-label="Illustrative layout C with grouped fields, not assigned to a named distributor">
+              <span>LAYOUT C</span><i /><i /><i /><i />
             </div>
           </div>
-          <p className="stush-transform__formats">{formats.join(" · ")} across the input set</p>
+          <p className="stush-transform__formats">Formats across the input set: {formats.join(" · ")}</p>
         </section>
 
         <span className="stush-transform__connector" aria-hidden="true">›</span>
 
         <section className="stush-transform__reader" aria-labelledby="stush-transform-reader-title">
           <p className="stush-transform__eyebrow">PYTHON PARSING</p>
-          <h4 id="stush-transform-reader-title">Read each layout</h4>
-          <p>Source-aware readers interpret structure before fields enter the shared model.</p>
+          <h4 id="stush-transform-reader-title">Parse before mapping</h4>
+          <p>Python readers interpret each source layout before fields enter the shared model.</p>
           <div className="stush-transform__reader-lines" aria-hidden="true"><i /><i /><i /></div>
         </section>
 
@@ -100,11 +85,23 @@ function SourceParsingFigure() {
 
         <section className="stush-transform__schema" aria-labelledby="stush-transform-schema-title">
           <p className="stush-transform__eyebrow">CANONICAL SCHEMA</p>
-          <h4 id="stush-transform-schema-title">Shared reporting schema</h4>
-          <ol aria-label="Shared business dimensions">
-            {businessRules.map(({ field }, index) => (
-              <li className={`stush-transform__field stush-transform__field--${index + 1}`} key={field}>
-                <span>{field}</span><i />
+          <h4 id="stush-transform-schema-title">Shared fields</h4>
+          <ol aria-label="Shared business fields">
+            {reportingFields.map((field) => (
+              <li className="stush-transform__field" key={field}>{field}</li>
+            ))}
+          </ol>
+        </section>
+
+        <span className="stush-transform__connector" aria-hidden="true">›</span>
+
+        <section className="stush-transform__normalization" aria-labelledby="stush-transform-rules-title">
+          <p className="stush-transform__eyebrow">NORMALIZATION RULES</p>
+          <h4 id="stush-transform-rules-title">Apply common rules</h4>
+          <ol aria-label="Business dimensions aligned for reporting">
+            {normalizationRules.map(({ field, detail }, index) => (
+              <li className={`stush-transform__rule stush-transform__rule--${index + 1}`} key={field}>
+                <span>{field}</span><small>{detail}</small>
               </li>
             ))}
           </ol>
@@ -114,7 +111,7 @@ function SourceParsingFigure() {
 
         <section className="stush-transform__outputs" aria-labelledby="stush-transform-output-title">
           <p className="stush-transform__eyebrow">REPORTING HANDOFF</p>
-          <h4 id="stush-transform-output-title">Useful artifacts</h4>
+          <h4 id="stush-transform-output-title">Reporting handoff</h4>
           <ul>
             <li className="stush-transform__output"><i aria-hidden="true" />Standardized CSV</li>
             <li className="stush-transform__output"><i aria-hidden="true" />Data dictionary</li>
@@ -125,55 +122,7 @@ function SourceParsingFigure() {
       </div>
 
       <figcaption>
-        The input illustrations are deliberately generic: CSV, XLSX, and XLSB appeared across sources, but the formats are not assigned to individual distributors. No client records or source values are reproduced.
-      </figcaption>
-    </figure>
-  );
-}
-
-function BusinessRuleLedger() {
-  return (
-    <figure className="stush-rule-ledger" aria-labelledby="stush-rules-title">
-      <header className="stush-figure-heading stush-figure-heading--ledger">
-        <div>
-          <p className="stush-kicker">FROM FIELD ALIGNMENT TO REPORTING</p>
-          <h3 id="stush-rules-title">Agree on meaning before comparing separate reports.</h3>
-        </div>
-        <p>One shared field contract carried four business dimensions into the handoff.</p>
-      </header>
-
-      <div className="stush-rule-table" role="table" aria-label="Business dimensions and normalization work">
-        <div className="stush-rule-table__head" role="row">
-          <span role="columnheader">DIMENSION</span>
-          <span role="columnheader">SOURCE PROBLEM</span>
-          <span role="columnheader">NORMALIZATION DECISION</span>
-          <span role="columnheader">REPORTING CONSEQUENCE</span>
-        </div>
-        {businessRules.map(({ field, problem, decision, consequence }, index) => (
-          <div className="stush-rule-row" role="row" key={field}>
-            <span className="stush-rule-row__index" aria-hidden="true">0{index + 1}</span>
-            <h4 role="rowheader">{field}</h4>
-            <div className="stush-rule-row__cell" role="cell">
-              <span className="stush-rule-row__cell-label">SOURCE PROBLEM</span>
-              <p>{problem}</p>
-            </div>
-            <div className="stush-rule-row__cell" role="cell">
-              <span className="stush-rule-row__cell-label">NORMALIZATION DECISION</span>
-              <p>{decision}</p>
-            </div>
-            <div className="stush-rule-row__cell stush-rule-row__effect" role="cell">
-              <span className="stush-rule-row__cell-label">SHARED REPORTING FIELD</span>
-              <span className="stush-rule-row__mapping" aria-hidden="true">
-                <i /><span /><b>{field}</b>
-              </span>
-              <p>{consequence}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <figcaption>
-        Structural examples only: no client records, source values, or numeric formulas are shown. The shared dimensions and alignment work are documented; exact client calculations are not reproduced.
+        Koyo, UNFI, and Dovre are named as a source set; the generic layout sketches are not assigned to individual distributors. CSV, XLSX, and XLSB appeared across inputs. No client records or source values are reproduced.
       </figcaption>
     </figure>
   );
@@ -199,7 +148,7 @@ function KoyoException() {
           <span className="stush-koyo__branch-label">ONE SOURCE-SPECIFIC EXCEPTION · IRREGULAR LAYOUT</span>
           <span className="stush-koyo__branch-line" aria-hidden="true" />
           <div className="stush-koyo__stage stush-koyo__stage--exception">
-            <span>TEMPORARY POSITION + CELL READER</span>
+            <span>TEMPORARY POSITION + CELL PARSER</span>
             <strong>Map this input back to the shared schema</strong>
           </div>
         </div>
@@ -255,21 +204,10 @@ export default function StushPattiesCase() {
       <section className="stush-ingestion" aria-labelledby="stush-ingestion-title">
         <div className="stush-section-intro">
           <p className="stush-kicker">FROM MESSY SOURCES TO A CONTRACT</p>
-          <h2 id="stush-ingestion-title">Handle variation before it reaches reporting.</h2>
-          <p>Each source was read on its own terms; the downstream schema stayed consistent.</p>
+          <h2 id="stush-ingestion-title">Parse each layout before applying the shared rules.</h2>
+          <p>Source-aware Python parsing fed a canonical schema, a normalization step, and a documented reporting handoff.</p>
         </div>
         <SourceParsingFigure />
-      </section>
-
-      <section className="stush-normalization" aria-labelledby="stush-normalization-title">
-        <div className="stush-section-intro stush-section-intro--split">
-          <div>
-            <p className="stush-kicker">BUSINESS RULES</p>
-            <h2 id="stush-normalization-title">Normalize business dimensions for shared reporting.</h2>
-          </div>
-          <p>Aligning fields was not just renaming columns. Sales, units, pack logic, and calendar periods all needed practical treatment.</p>
-        </div>
-        <BusinessRuleLedger />
       </section>
 
       <KoyoException />

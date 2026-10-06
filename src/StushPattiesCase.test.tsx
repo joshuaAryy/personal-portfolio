@@ -12,19 +12,25 @@ afterEach(() => vi.unstubAllGlobals());
 describe("Stush Patties technical data-engineering story", () => {
   const markup = () => renderToStaticMarkup(<MemoryRouter><StushPattiesCase /></MemoryRouter>);
 
-  it("teaches heterogeneous files resolving into shared fields and reporting outputs", () => {
+  it("names the distributor set without assigning file formats to individual sources", () => {
     const html = markup();
+    const inputsStart = html.indexOf('class="stush-transform__sources"');
+    const inputsEnd = html.indexOf('class="stush-transform__connector"', inputsStart);
+    const inputs = html.slice(inputsStart, inputsEnd);
     const concepts = [
       "A business goal came before a clean data specification.",
-      "FILE A",
-      "FILE B",
-      "FILE C",
+      "LAYOUT A",
+      "LAYOUT B",
+      "LAYOUT C",
+      "Koyo",
+      "UNFI",
+      "Dovre",
       "CSV",
       "XLSX",
       "XLSB",
-      "Source-aware readers",
-      "Shared reporting schema",
-      "Normalize business dimensions",
+      "Python readers interpret each source layout",
+      "CANONICAL SCHEMA",
+      "NORMALIZATION RULES",
       "Standardized CSV",
       "Data dictionary",
       "Quality report",
@@ -32,10 +38,12 @@ describe("Stush Patties technical data-engineering story", () => {
     ];
 
     for (const concept of concepts) expect(html).toContain(concept);
-    expect(html.indexOf("Source-aware readers")).toBeLessThan(html.indexOf("Shared reporting schema"));
-    expect(html.indexOf("Shared reporting schema")).toBeLessThan(html.indexOf("Standardized CSV"));
-    expect(html).not.toContain("UNFI");
-    expect(html).not.toContain("Dovre");
+    expect(html.indexOf("Python readers interpret each source layout")).toBeLessThan(html.indexOf("CANONICAL SCHEMA"));
+    expect(html.indexOf("CANONICAL SCHEMA")).toBeLessThan(html.indexOf("NORMALIZATION RULES"));
+    expect(html.indexOf("NORMALIZATION RULES")).toBeLessThan(html.indexOf("Standardized CSV"));
+    for (const source of ["Koyo", "UNFI", "Dovre"]) expect(inputs).toContain(source);
+    expect(inputs).toContain("Formats across the input set");
+    expect(inputs).not.toMatch(/(?:Koyo|UNFI|Dovre)\s*[:(]\s*(?:CSV|XLSX|XLSB)/i);
 
     for (const field of ["Sales", "Units", "Case pack", "Reporting month"]) {
       expect(html).toContain(field);
@@ -43,26 +51,28 @@ describe("Stush Patties technical data-engineering story", () => {
     expect(html).toContain("No client records or source values are reproduced.");
   });
 
-  it("explains the shared business meaning, decision, and reporting role of each field", () => {
+  it("keeps field meaning inside the main flow instead of repeating it in a second ledger", () => {
     const html = markup();
-    const ledgerStart = html.indexOf('aria-label="Business dimensions and normalization work"');
-    const ledgerEnd = html.indexOf("</figure>", ledgerStart);
-    const ledger = html.slice(ledgerStart, ledgerEnd);
-
-    for (const label of ["SOURCE PROBLEM", "NORMALIZATION DECISION", "REPORTING CONSEQUENCE"]) {
-      expect(ledger).toContain(label);
-    }
+    const flowStart = html.indexOf('class="stush-source-map');
+    const flowEnd = html.indexOf("</figure>", flowStart);
+    const flow = html.slice(flowStart, flowEnd);
 
     for (const detail of [
-      "Map corresponding source fields into one shared Sales field",
-      "Keep Units as a separate shared field",
-      "Keep Case pack explicit in the shared schema",
-      "Map periods into one shared Reporting month field",
-      "no client records, source values, or numeric formulas are shown",
-    ]) expect(ledger).toContain(detail);
+      "Sales",
+      "Units",
+      "Case pack",
+      "Sales + units",
+      "Mapped into distinct shared fields",
+      "Retained explicitly in the common contract",
+      "Reporting month",
+      "Aligned to one shared reporting period",
+    ]) expect(flow).toContain(detail);
 
-    expect(ledger).not.toMatch(/\b\d+(?:\.\d+)?%\b/);
-    expect(ledger).not.toMatch(/\$\s?\d/);
+    expect(html).not.toContain("SOURCE PROBLEM");
+    expect(html).not.toContain('aria-label="Business dimensions and normalization work"');
+    expect(flow).toContain("No client records or source values are reproduced.");
+    expect(flow).not.toMatch(/\b\d+(?:\.\d+)?%\b/);
+    expect(flow).not.toMatch(/\$\s?\d/);
   });
 
   it("shows the Koyo position-and-cell parser as a bounded path that rejoins normalization", () => {
