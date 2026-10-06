@@ -146,6 +146,17 @@ describe("League client shell", () => {
     expect(css).toMatch(/\.client--home-shell \.header-client-tools\s*\{[^}]*margin-left:\s*clamp\(22px,/s);
   });
 
+  it("keeps Home Resume primary and Email clearly actionable in the narrow contact row", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+
+    expect(css).toMatch(
+      /\.client--home-shell \.mobile-contact-row > a\[href="\/resume"\]\s*\{[^}]*min-height:\s*44px[^}]*background:/s,
+    );
+    expect(css).toMatch(
+      /\.client--home-shell \.mobile-contact-row > a\.rail-social-footer__email\s*\{[^}]*width:\s*44px[^}]*height:\s*44px[^}]*border:/s,
+    );
+  });
+
   it("does not hide the approved utility links on project shells", () => {
     const css = readFileSync("src/styles.css", "utf8");
     expect(css).not.toMatch(
