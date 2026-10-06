@@ -8,58 +8,48 @@ type Moment = {
   caption: string;
 };
 
-const moments: Record<string, Moment> = {
-  group: {
+const moments = {
+  crew: {
     source: "IMG_0422.jpeg",
-    alt: "Five friends lean into a night-time group selfie outside a brightly lit building.",
-    caption: "The frame was slightly crooked. The company was not.",
+    alt: "Five friends lean in for a nighttime group selfie with city lights behind them.",
+    caption: "The frame leans. Everyone else leans in.",
   },
-  demolition: {
-    source: "IMG_0305.jpeg",
-    alt: "Two friends take a selfie beside a demolition site and heavy equipment.",
-    caption: "A skyline mid-change, and two people happy to be in the picture.",
+  room: {
+    source: "IMG_0334-privacy-safe.jpeg",
+    alt: "Friends share an open-laptop room while one takes a break across the foreground.",
+    caption: "The laptops stayed open. Not everybody had to.",
   },
   hallway: {
     source: "IMG_0308.jpeg",
-    alt: "Two friends face each other in a wide tiled hallway, mid-gesture.",
-    caption: "One hallway. Two friends. Full commitment to the bit.",
+    alt: "Two people make theatrical poses in a broad, tiled public hall.",
+    caption: "A corridor makes a pretty convincing stage.",
   },
-  museum: {
+  changingCity: {
+    source: "IMG_0305.jpeg",
+    alt: "Two friends smile for a selfie beside a partially demolished structure, with the city behind them.",
+    caption: "The skyline is mid-rebuild; the selfie is fully committed.",
+  },
+  reflection: {
     source: "IMG_0208.jpeg",
-    alt: "A friend leans under a clear exhibit dome at a natural-history museum.",
-    caption: "The exhibit was doing its part. The pose did the rest.",
-  },
-  buildRoom: {
-    source: "IMG_0334-privacy-safe.jpeg",
-    alt: "Friends gather around open laptops while one relaxes in the foreground.",
-    caption: "The laptops stayed open. Not everybody had to.",
-  },
-  eventTeam: {
-    source: "IMG_0394.jpeg",
-    alt: "Three friends pose together in a red-lit event space, one holding an open laptop.",
-    caption: "Three faces, one laptop, and enough red light to remember the room.",
-  },
-  bench: {
-    source: "IMG_0285.jpeg",
-    alt: "An oscilloscope displays two waveforms above a bench power supply.",
-    caption: "A scope trace, a power supply, and an improbable amount of orange plastic.",
+    alt: "A face appears in the reflection of a clear exhibit dome at a natural-history museum.",
+    caption: "An exhibit view turns into an unexpected portrait.",
   },
   rankUp: {
     source: "IMG_0618-rank-up-safe.jpeg",
-    alt: "A League of Legends Silver IV promotion screen glows on a dim desktop monitor.",
-    caption: "Silver IV: a small win that earned a very large screen.",
+    alt: "A desktop monitor displays a promotion to Silver IV above the League of Legends rank emblem.",
+    caption: "One small notification that took over the whole screen.",
   },
-  pizza: {
-    source: "IMG_0755.jpeg",
-    alt: "A friend looks up from a phone behind a pizza box on the table.",
-    caption: "The pizza was supposed to be the subject. The camera had another idea.",
+  dinner: {
+    source: "IMG_0755-table-safe.jpeg",
+    alt: "A friend checks a phone behind a large pizza in an open box on the table.",
+    caption: "Dinner brought a guest star of its own.",
   },
   sunset: {
     source: "IMG_0098.jpeg",
-    alt: "A vivid orange sunset glows through the silhouette of a tree.",
-    caption: "The sky occasionally ships a better gradient than the interface.",
+    alt: "Orange clouds glow behind the silhouette of a tree at sunset.",
+    caption: "Some views can keep the last word.",
   },
-};
+} satisfies Record<string, Moment>;
 
 function MomentFigure({
   moment,
@@ -69,13 +59,11 @@ function MomentFigure({
   className: string;
 }) {
   return (
-    <figure className={`personal-highlights__figure ${className}`}>
-      <div
-        className="personal-highlights__image-frame"
-      >
+    <figure className={"personal-highlights__figure " + className}>
+      <div className="personal-highlights__image-frame">
         <img
           className="personal-highlights__photo"
-          src={`/media/profile/highlights/${moment.source}`}
+          src={"/media/profile/highlights/" + moment.source}
           alt={moment.alt}
           loading="lazy"
           decoding="async"
@@ -96,60 +84,61 @@ export default function PersonalHighlightsPage() {
       <section className="personal-highlights" aria-labelledby="personal-highlights-title">
         <header className="personal-highlights__intro">
           <p className="personal-highlights__eyebrow">PERSONAL / FIELD NOTES</p>
-          <h1 id="personal-highlights-title">Things worth keeping.</h1>
+          <h1 id="personal-highlights-title">The rest of the story.</h1>
           <p className="personal-highlights__dek">
-            Friends, odd detours, screen-sized wins, good food, and views that asked for no explanation.
+            Work gets its case studies. The people, side quests, and small wins around it get a frame of their own.
           </p>
         </header>
 
         <section className="personal-highlights__chapter personal-highlights__chapter--company" aria-labelledby="highlights-company-title">
-          <div className="personal-highlights__chapter-copy">
-            <p className="personal-highlights__chapter-index">01 / GOOD COMPANY</p>
-            <h2 id="highlights-company-title">Better with other people in the frame.</h2>
+          <header className="personal-highlights__chapter-heading">
+            <p className="personal-highlights__chapter-index">WITH PEOPLE</p>
+            <h2 id="highlights-company-title">People first.</h2>
+            <p className="personal-highlights__chapter-note">
+              The best frames leave room for the people around the work, too.
+            </p>
+          </header>
+          <div className="personal-highlights__company-sequence">
+            <MomentFigure moment={moments.crew} className="personal-highlights__figure--crew" />
+            <MomentFigure moment={moments.room} className="personal-highlights__figure--room" />
           </div>
-          <MomentFigure moment={moments.group} className="personal-highlights__figure--group" />
-          <MomentFigure moment={moments.eventTeam} className="personal-highlights__figure--event-team" />
         </section>
 
         <section className="personal-highlights__chapter personal-highlights__chapter--detours" aria-labelledby="highlights-detours-title">
-          <div className="personal-highlights__chapter-heading">
-            <p className="personal-highlights__chapter-index">02 / OFF THE ROUTE</p>
-            <h2 id="highlights-detours-title">A few very good detours.</h2>
-          </div>
-          <div className="personal-highlights__detour-grid">
-            <MomentFigure moment={moments.hallway} className="personal-highlights__figure--hallway" />
-            <MomentFigure moment={moments.demolition} className="personal-highlights__figure--demolition" />
-            <MomentFigure moment={moments.museum} className="personal-highlights__figure--museum" />
-          </div>
-        </section>
-
-        <section className="personal-highlights__chapter personal-highlights__chapter--making" aria-labelledby="highlights-making-title">
-          <div className="personal-highlights__chapter-heading personal-highlights__chapter-heading--split">
-            <div>
-              <p className="personal-highlights__chapter-index">03 / SCREENS & BENCHES</p>
-              <h2 id="highlights-making-title">Progress has more than one shape.</h2>
+          <div className="personal-highlights__detours-lead">
+            <div className="personal-highlights__chapter-copy">
+              <p className="personal-highlights__chapter-index">SIDE QUESTS</p>
+              <h2 id="highlights-detours-title">Out of the expected frame.</h2>
+              <p className="personal-highlights__chapter-note">
+                A corridor becomes a stage. A changing block gets a selfie. A museum display catches a face in the glass.
+              </p>
             </div>
-            <p>Some nights end with a waveform. Some with a rank-up. Some with one person taking a well-earned break.</p>
+            <MomentFigure moment={moments.hallway} className="personal-highlights__figure--hallway" />
           </div>
-          <div className="personal-highlights__making-grid">
-            <MomentFigure moment={moments.buildRoom} className="personal-highlights__figure--build-room" />
-            <MomentFigure moment={moments.bench} className="personal-highlights__figure--bench" />
-            <MomentFigure moment={moments.rankUp} className="personal-highlights__figure--rank-up" />
+          <div className="personal-highlights__detours-followup">
+            <MomentFigure moment={moments.changingCity} className="personal-highlights__figure--changing-city" />
+            <MomentFigure moment={moments.reflection} className="personal-highlights__figure--reflection" />
           </div>
         </section>
 
-        <section className="personal-highlights__chapter personal-highlights__chapter--table" aria-labelledby="highlights-table-title">
-          <div className="personal-highlights__chapter-copy">
-            <p className="personal-highlights__chapter-index">04 / THE IMPORTANT REVIEW</p>
-            <h2 id="highlights-table-title">The table gets a vote.</h2>
+        <section className="personal-highlights__chapter personal-highlights__chapter--small-wins" aria-labelledby="highlights-small-wins-title">
+          <header className="personal-highlights__chapter-heading">
+            <p className="personal-highlights__chapter-index">SMALL WINS</p>
+            <h2 id="highlights-small-wins-title">Some things earn a whole frame.</h2>
+            <p className="personal-highlights__chapter-note">
+              A promotion notification. A dinner that gets its own close-up. There are plenty of ways to mark a moment.
+            </p>
+          </header>
+          <div className="personal-highlights__small-wins-sequence">
+            <MomentFigure moment={moments.rankUp} className="personal-highlights__figure--rank-up" />
+            <MomentFigure moment={moments.dinner} className="personal-highlights__figure--dinner" />
           </div>
-          <MomentFigure moment={moments.pizza} className="personal-highlights__figure--pizza" />
         </section>
 
         <section className="personal-highlights__ending" aria-labelledby="highlights-ending-title">
-          <div>
-            <p className="personal-highlights__chapter-index">05 / LOOK UP</p>
-            <h2 id="highlights-ending-title">And sometimes, just stop for the light.</h2>
+          <div className="personal-highlights__ending-copy">
+            <p className="personal-highlights__chapter-index">A PAUSE</p>
+            <h2 id="highlights-ending-title">And then, look up.</h2>
           </div>
           <MomentFigure moment={moments.sunset} className="personal-highlights__figure--sunset" />
         </section>
