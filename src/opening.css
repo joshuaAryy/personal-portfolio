@@ -481,21 +481,24 @@
 }
 
 @keyframes opening-mark-sequence {
-  0%,
-  9% {
-    opacity: 1;
-    transform: scale(1.12);
+  0% {
+    opacity: .52;
+    transform: scale(1.04);
   }
-  14%,
-  19% {
-    opacity: 0;
+  10% {
+    opacity: .46;
+    transform: scale(1);
+  }
+  17%,
+  20% {
+    opacity: .16;
+    transform: scale(.9);
+  }
+  28% {
+    opacity: .4;
     transform: scale(.82);
   }
-  22% {
-    opacity: 0;
-    transform: scale(.76);
-  }
-  25%,
+  46%,
   94% {
     opacity: 1;
     transform: scale(.76);
@@ -507,59 +510,73 @@
 }
 
 @keyframes opening-j-deep-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 28% { opacity: 0; clip-path: inset(80% 0 0); }
-  30%, 94% { opacity: 1; clip-path: inset(0); }
+  0%, 10% { opacity: .34; clip-path: inset(0); }
+  17%, 21% { opacity: .08; clip-path: inset(58% 0 0); }
+  28% { opacity: .38; clip-path: inset(42% 0 0); }
+  36%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-mid-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 35% { opacity: 0; clip-path: inset(0 100% 0 0); }
-  37%, 94% { opacity: 1; clip-path: inset(0); }
+  0%, 10% { opacity: .3; clip-path: inset(0); }
+  17%, 25% { opacity: .06; clip-path: inset(0 62% 0 0); }
+  33% { opacity: .4; clip-path: inset(0 36% 0 0); }
+  42%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-face-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 41% { opacity: 0; clip-path: inset(100% 0 0); }
-  43%, 94% { opacity: 1; clip-path: inset(0); }
+  0%, 10% { opacity: .26; clip-path: inset(0); }
+  17%, 29% { opacity: .05; clip-path: inset(72% 0 0); }
+  38% { opacity: .38; clip-path: inset(36% 0 0); }
+  48%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-detail-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 48% { opacity: 0; clip-path: inset(42%); }
-  51%, 94% { opacity: 1; clip-path: inset(0); }
+  0%, 10% { opacity: .2; clip-path: inset(0); }
+  17%, 33% { opacity: .04; clip-path: inset(42%); }
+  43% { opacity: .36; clip-path: inset(24%); }
+  54%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-bevel-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 56% { opacity: 0; clip-path: inset(0 0 0 100%); }
-  59%, 94% { opacity: 1; clip-path: inset(0); }
+  0%, 10% { opacity: .18; clip-path: inset(0); }
+  17%, 38% { opacity: .04; clip-path: inset(0 0 0 100%); }
+  48% { opacity: .34; clip-path: inset(0 0 0 42%); }
+  60%, 94% { opacity: 1; clip-path: inset(0); }
   100% { opacity: 0; }
 }
 
 @keyframes opening-j-edge-assemble {
-  0%, 17% { opacity: 1; }
-  19%, 63% { opacity: 0; }
-  66%, 94% { opacity: 1; }
+  0%, 10% { opacity: .22; }
+  17%, 43% { opacity: .04; }
+  53% { opacity: .42; }
+  65%, 94% { opacity: 1; }
   100% { opacity: 0; }
 }
 
 @keyframes opening-radial-expansion {
-  0%, 16%, 19% {
-    opacity: 0;
+  0% {
+    opacity: .1;
     transform: scale(.78);
   }
-  32% {
-    opacity: .34;
+  7% {
+    opacity: .2;
+    transform: scale(.82);
+  }
+  22% {
+    opacity: .32;
     transform: scale(.91);
+  }
+  42% {
+    opacity: .28;
+    transform: scale(1);
   }
   82%,
   94% {
-    opacity: .24;
+    opacity: .2;
     transform: scale(1);
   }
   100% {
@@ -569,11 +586,15 @@
 }
 
 @keyframes opening-peripheral-drift {
-  0%, 18% {
-    opacity: 0;
+  0% {
+    opacity: .08;
     transform: rotate(-12deg) scale(.88);
   }
-  34% {
+  8% {
+    opacity: .22;
+    transform: rotate(-9deg) scale(.91);
+  }
+  28% {
     opacity: .42;
     transform: rotate(-4deg) scale(.96);
   }
@@ -593,9 +614,17 @@
 }
 
 @keyframes opening-mark-reveal {
-  0%, 18% {
-    opacity: 0;
-    transform: translate(-50%, -50%) rotate(45deg) scale(.4);
+  0% {
+    opacity: .16;
+    transform: translate(-50%, -50%) rotate(45deg) scale(.68);
+  }
+  10% {
+    opacity: .38;
+    transform: translate(-50%, -50%) rotate(45deg) scale(.82);
+  }
+  20% {
+    opacity: .56;
+    transform: translate(-50%, -50%) rotate(45deg) scale(.9);
   }
   35% {
     opacity: .78;
@@ -612,8 +641,11 @@
 }
 
 @keyframes opening-ring-form {
-  0%, 19% {
-    opacity: 0;
+  0% {
+    opacity: .12;
+  }
+  12% {
+    opacity: .38;
   }
   36% {
     opacity: .72;
@@ -628,11 +660,11 @@
 }
 
 @keyframes opening-loading-reveal {
-  0%, 55% {
+  0%, 69% {
     opacity: 0;
     transform: translate(-50%, 4px);
   }
-  64%, 88% {
+  77%, 91% {
     opacity: 1;
     transform: translate(-50%, 0);
   }
@@ -643,15 +675,18 @@
 }
 
 @keyframes opening-progress-fill {
-  0%, 55% { transform: scaleX(0); }
-  64% { transform: scaleX(.08); }
-  88%, 94% { transform: scaleX(1); }
+  0%, 69% { transform: scaleX(0); }
+  77% { transform: scaleX(.08); }
+  91%, 94% { transform: scaleX(1); }
   100% { transform: scaleX(1); }
 }
 
 @keyframes opening-ticks-form {
-  0%, 19% {
-    opacity: 0;
+  0% {
+    opacity: .1;
+  }
+  12% {
+    opacity: .4;
   }
   37% {
     opacity: .72;
@@ -665,9 +700,13 @@
 }
 
 @keyframes opening-orbit-turn {
-  0%, 19% {
-    opacity: 0;
+  0% {
+    opacity: .12;
     transform: rotate(-4deg) scale(.9);
+  }
+  14% {
+    opacity: .4;
+    transform: rotate(-1deg) scale(.94);
   }
   39% {
     opacity: .72;

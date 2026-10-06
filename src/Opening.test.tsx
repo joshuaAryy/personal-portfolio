@@ -100,7 +100,7 @@ describe("opening route handoff", () => {
     expect(mark).toMatch(/width:\s*20%/);
   });
 
-  it("stages the v8 J through establish, clear, formation, settle, and handoff over 3.5 seconds", () => {
+  it("stages the v8 J from an early field into a layered settle and handoff over 3.5 seconds", () => {
     const css = readFileSync("src/opening.css", "utf8");
     const markRules = [...css.matchAll(/\.opening__mark-motion\s*\{([^}]*)\}/g)].map((match) => match[1]);
     const markMotion = markRules.find((rule) => /animation:\s*opening-mark-sequence/.test(rule)) ?? "";
@@ -112,10 +112,9 @@ describe("opening route handoff", () => {
     const fieldSequence = css.match(/@keyframes opening-radial-expansion\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
     expect(markMotion).toMatch(/animation:\s*opening-mark-sequence\s+3\.5s/);
-    expect(markSequence).toMatch(/0%,\s*9%[\s\S]*?opacity:\s*1[\s\S]*?scale\(1\.12\)/);
-    expect(markSequence).toMatch(/14%,\s*19%[\s\S]*?opacity:\s*0/);
-    expect(markSequence).toMatch(/22%[\s\S]*?opacity:\s*0/);
-    expect(markSequence).toMatch(/25%,\s*94%[\s\S]*?opacity:\s*1[\s\S]*?scale\(\.76\)/);
+    expect(markSequence).toMatch(/0%\s*\{\s*opacity:\s*\.52;\s*transform:\s*scale\(1\.04\)/);
+    expect(markSequence).toMatch(/17%,\s*20%\s*\{\s*opacity:\s*\.16/);
+    expect(markSequence).toMatch(/46%,\s*94%\s*\{\s*opacity:\s*1[\s\S]*?scale\(\.76\)/);
     expect(markSequence).not.toContain("clip-path");
     expect(css).toMatch(/\.opening__j-layer--deep\s*\{[^}]*animation-name:\s*opening-j-deep-assemble/s);
     expect(css).toMatch(/\.opening__j-layer--mid\s*\{[^}]*animation-name:\s*opening-j-mid-assemble/s);
@@ -123,12 +122,12 @@ describe("opening route handoff", () => {
     expect(css).toMatch(/\.opening__j-detail\s*\{[^}]*animation:\s*opening-j-detail-assemble/s);
     expect(css).toMatch(/\.opening__j-layer--bevel\s*\{[^}]*animation-name:\s*opening-j-bevel-assemble/s);
     expect(css).toMatch(/\.opening__j-layer--edge\s*\{[^}]*animation-name:\s*opening-j-edge-assemble/s);
-    expect(css).toMatch(/@keyframes opening-j-deep-assemble\s*\{[\s\S]*?30%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-mid-assemble\s*\{[\s\S]*?37%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-face-assemble\s*\{[\s\S]*?43%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-detail-assemble\s*\{[\s\S]*?51%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-bevel-assemble\s*\{[\s\S]*?59%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-edge-assemble\s*\{[\s\S]*?66%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-deep-assemble\s*\{[\s\S]*?36%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-mid-assemble\s*\{[\s\S]*?42%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-face-assemble\s*\{[\s\S]*?48%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-detail-assemble\s*\{[\s\S]*?54%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-bevel-assemble\s*\{[\s\S]*?60%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-edge-assemble\s*\{[\s\S]*?65%,\s*94%\s*\{\s*opacity:\s*1/);
     for (const animation of [
       "opening-j-deep-assemble",
       "opening-j-mid-assemble",
@@ -142,7 +141,8 @@ describe("opening route handoff", () => {
     }
     expect(fieldMotion).toMatch(/animation:\s*opening-radial-expansion\s+3\.5s/);
     expect(peripheralMotion).toMatch(/animation:\s*opening-peripheral-drift\s+3\.5s/);
-    expect(fieldSequence).toMatch(/0%,\s*16%,\s*19%[\s\S]*?scale\(\.78\)/);
+    expect(fieldSequence).toMatch(/0%\s*\{\s*opacity:\s*\.1;\s*transform:\s*scale\(\.78\)/);
+    expect(fieldSequence).toMatch(/7%\s*\{\s*opacity:\s*\.2/);
     expect(fieldSequence).toMatch(/82%,\s*94%[\s\S]*?scale\(1\)/);
     expect(css).toMatch(/\.opening__ring--outer,\s*\.opening__ring--inner\s*\{[^}]*animation:\s*opening-ring-form\s+3\.5s/s);
     expect(css).toMatch(/\.opening__orbit-ticks\s*\{[^}]*animation:\s*opening-ticks-form\s+3\.5s/s);
@@ -150,6 +150,7 @@ describe("opening route handoff", () => {
     expect(css).not.toContain("opening-loader-copy-reveal");
     expect(css).toMatch(/\.opening__loading\s*\{[^}]*animation:\s*opening-loading-reveal\s+3\.5s/s);
     expect(css).toMatch(/\.opening__progress-fill\s*\{[^}]*animation:\s*opening-progress-fill\s+3\.5s/s);
+    expect(css).toMatch(/@keyframes opening-loading-reveal\s*\{[\s\S]*?0%,\s*69%[\s\S]*?77%,\s*91%/);
     expect(css).toMatch(/@keyframes opening-progress-fill\s*\{[\s\S]*?scaleX\(1\)/);
     expect(css).toMatch(/opening-client-reveal\s+3\.5s/);
     expect(css).toMatch(/opening-treatment-out\s+3\.5s/);
