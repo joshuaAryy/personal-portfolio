@@ -103,10 +103,17 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
           <div className="opening__mechanism" data-node-id="3581:2">
             <span className="opening__ring opening__ring--outer" />
             <span className="opening__ring opening__ring--inner" />
-            <span className="opening__tick opening__tick--north" data-node-id="3617:14" />
-            <span className="opening__tick opening__tick--east" data-node-id="3617:21" />
-            <span className="opening__tick opening__tick--south" data-node-id="3617:28" />
-            <span className="opening__tick opening__tick--west" data-node-id="3617:35" />
+            <span className="opening__orbit-turn" aria-hidden="true">
+              <span className="opening__orbit-ticks">
+                {Array.from({ length: 180 }, (_, index) => (
+                  <span
+                    className={`opening__orbit-tick${index % 12 === 0 ? " opening__orbit-tick--major" : ""}`}
+                    key={index}
+                    style={{ transform: `rotate(${index * 2}deg)` }}
+                  />
+                ))}
+              </span>
+            </span>
             <div
               className="opening__mark-motion"
               data-j-source={v8MarkUnavailable ? "archive-159:2" : "v8-3325:335"}
@@ -183,9 +190,12 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
                 </div>
               )}
             </div>
-            <span className="opening__ring-arc" />
-            <span className="opening__loader-label">LOADING</span>
-            <span className="opening__progress-line" />
+            <div className="opening__loading" aria-hidden="true">
+              <span className="opening__loading-label">LOADING</span>
+              <span className="opening__progress-line">
+                <span className="opening__progress-fill" />
+              </span>
+            </div>
           </div>
         </div>
         <button

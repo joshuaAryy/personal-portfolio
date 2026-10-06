@@ -997,3 +997,267 @@
     margin: 0 0 0 auto;
   }
 }
+
+.crest-architecture {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 27px;
+  padding: 26px 0 39px;
+}
+
+.crest-architecture__story {
+  max-width: 880px;
+}
+
+.crest-architecture__story h2 {
+  margin: 0 0 13px;
+  color: #f0ebde;
+  font-size: clamp(27px, 2.35vw, 36px);
+  letter-spacing: -.025em;
+  line-height: 1.12;
+}
+
+.crest-architecture__story > p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: #aebcc0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.crest-architecture__figure {
+  min-width: 0;
+  margin: 0;
+  border: 1px solid #28434a;
+  background:
+    radial-gradient(ellipse at 18% 0%, rgb(35 82 82 / 19%), transparent 43%),
+    linear-gradient(145deg, #0c1c23, #071219 68%, #0a1b22);
+  box-shadow: inset 0 1px rgb(220 235 226 / 3%);
+}
+
+.crest-architecture__tracks {
+  display: grid;
+  padding: 10px 22px 0;
+}
+
+.crest-architecture__track {
+  display: grid;
+  grid-template-columns: minmax(170px, .56fr) minmax(0, 1.9fr);
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  padding: 23px 0;
+  border-bottom: 1px solid rgb(118 152 151 / 18%);
+}
+
+.crest-architecture__track-heading > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #7bd0c8;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  line-height: 1.45;
+}
+
+.crest-architecture__track--workspace .crest-architecture__track-heading > span {
+  color: #d1ae67;
+}
+
+.crest-architecture__track--policy .crest-architecture__track-heading > span {
+  color: #9eb4d4;
+}
+
+.crest-architecture__track-heading h3 {
+  margin: 0;
+  color: #f0ebde;
+  font-size: 17px;
+  line-height: 1.25;
+}
+
+.crest-architecture__stages {
+  display: flex;
+  min-width: 0;
+  align-items: stretch;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.crest-architecture__stage {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 102px;
+  flex: 1 1 0;
+  flex-direction: column;
+  justify-content: center;
+  padding: 13px 24px 13px 13px;
+  border: 1px solid #315058;
+  background: rgb(14 35 41 / 82%);
+}
+
+.crest-architecture__track--workspace .crest-architecture__stage {
+  border-top-color: #98783e;
+}
+
+.crest-architecture__track--policy .crest-architecture__stage {
+  border-top-color: #5878a1;
+}
+
+.crest-architecture__stage-index {
+  margin-bottom: 8px;
+  color: #82c9bd;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 8px;
+  letter-spacing: .08em;
+}
+
+.crest-architecture__stage strong {
+  color: #e8e9df;
+  font-size: 11px;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.crest-architecture__stage small {
+  margin-top: 6px;
+  color: #a6b5b7;
+  font-size: 9px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.crest-architecture__arrow {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  color: #d4ad60;
+  font-size: 15px;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.crest-architecture__track--finance .crest-architecture__arrow {
+  color: #72cfca;
+}
+
+.crest-architecture__stack {
+  display: grid;
+  grid-template-columns: minmax(130px, .3fr) minmax(0, 1.7fr);
+  align-items: center;
+  gap: 13px 22px;
+  padding: 20px 22px;
+  background: rgb(3 11 16 / 44%);
+}
+
+.crest-architecture__stack > span {
+  color: #d1ae67;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .11em;
+}
+
+.crest-architecture__stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.crest-architecture__stack li {
+  padding: 7px 9px;
+  border: 1px solid #29454b;
+  color: #c5d2ce;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  line-height: 1.25;
+}
+
+.crest-architecture__source-note {
+  max-width: 890px;
+  margin: 0;
+  color: #86999e;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .crest-architecture__track {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 13px;
+  }
+
+  .crest-architecture__track-heading h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 650px) {
+  .crest-architecture {
+    gap: 19px;
+    padding: 20px 0 29px;
+  }
+
+  .crest-architecture__story h2 {
+    font-size: 27px;
+  }
+
+  .crest-architecture__tracks {
+    padding: 4px 13px 0;
+  }
+
+  .crest-architecture__track {
+    gap: 11px;
+    padding: 18px 0;
+  }
+
+  .crest-architecture__stages {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .crest-architecture__stage {
+    min-height: 78px;
+    padding: 11px 13px 13px 43px;
+  }
+
+  .crest-architecture__stage-index {
+    position: absolute;
+    top: 14px;
+    left: 13px;
+  }
+
+  .crest-architecture__stage strong {
+    font-size: 12px;
+  }
+
+  .crest-architecture__stage small {
+    font-size: 10px;
+  }
+
+  .crest-architecture__arrow {
+    top: auto;
+    right: auto;
+    bottom: -13px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%) rotate(90deg);
+  }
+
+  .crest-architecture__stack {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+    padding: 17px 14px;
+  }
+
+  .crest-architecture__stack li {
+    font-size: 8px;
+  }
+}

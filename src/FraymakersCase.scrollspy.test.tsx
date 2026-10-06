@@ -6,8 +6,8 @@ import { MemoryRouter } from "react-router-dom";
 import FraymakersCase from "./FraymakersCase";
 
 const sectionTops: Record<string, number> = {
-  "fraymakers-pipeline": 0,
-  "fraymakers-composition": 300,
+  "fraymakers-composition": 0,
+  "fraymakers-pipeline": 300,
   "fraymakers-configuration": 500,
   "fraymakers-ownership": 700,
   "fraymakers-outcome": 900,
@@ -84,15 +84,15 @@ describe("Fraymakers chapter scrollspy", () => {
 
       const activeLabels = () => [...main.querySelectorAll(".fraymakers-nav__chapters a[aria-current='location']")]
         .map((link) => link.textContent?.trim());
-      expect(activeLabels()).toEqual(["PIPELINE"]);
+      expect(activeLabels()).toEqual(["COMPOSITION"]);
 
-      sectionTops["fraymakers-pipeline"] = -100;
-      sectionTops["fraymakers-composition"] = mainScrolls ? 69 : 95;
+      sectionTops["fraymakers-composition"] = -100;
+      sectionTops["fraymakers-pipeline"] = mainScrolls ? 69 : 95;
       act(() => {
         (mainScrolls ? main : window).dispatchEvent(new Event("scroll"));
         flushFrames();
       });
-      expect(activeLabels()).toEqual(["COMPOSITION"]);
+      expect(activeLabels()).toEqual(["PIPELINE"]);
 
       const yamlLink = [...main.querySelectorAll(".fraymakers-nav__chapters a")]
         .find((link) => link.textContent?.trim() === "CONFIG");
@@ -127,8 +127,8 @@ describe("Fraymakers chapter scrollspy", () => {
       } else {
         (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = previousActEnvironment;
       }
-      sectionTops["fraymakers-pipeline"] = 0;
-      sectionTops["fraymakers-composition"] = 300;
+      sectionTops["fraymakers-composition"] = 0;
+      sectionTops["fraymakers-pipeline"] = 300;
     }
   });
 });

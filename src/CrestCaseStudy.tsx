@@ -6,11 +6,105 @@ import "./crest-case-study.css";
 const crestChapters = [
   { id: "overview", label: "OVERVIEW" },
   { id: "system", label: "TRANSACTION FLOW" },
+  { id: "architecture", label: "SYSTEM MAP" },
   { id: "policy", label: "POLICY RETRIEVAL" },
   { id: "team", label: "OWNERSHIP" },
   { id: "takeaway", label: "LESSON" },
 ] as const;
 type CrestChapterId = (typeof crestChapters)[number]["id"];
+
+const crestArchitectureTracks = [
+  {
+    id: "workspace",
+    label: "CHALLENGE WORKSPACE",
+    title: "Request review",
+    stages: [
+      ["Vercel frontend", "Workspace + request context"],
+      ["Configured rules", "Budgets, thresholds, policy checks"],
+      ["Mock review queue", "History + budget context"],
+      ["Human decision", "Approve / Deny recorded locally"],
+    ],
+  },
+  {
+    id: "finance",
+    label: "FINANCE Q&A · PARALLEL PATH",
+    title: "Transaction-backed answers",
+    stages: [
+      ["MongoDB Atlas", "transactions_clean"],
+      ["FastAPI /api/ask", "Compact deterministic summary"],
+      ["Gemini", "Answer + chart data"],
+    ],
+  },
+  {
+    id: "policy",
+    label: "POLICY PDF · STANDALONE NODE.JS SCRIPTS",
+    title: "Grounded policy retrieval",
+    stages: [
+      ["Brim policy PDF", "Source document"],
+      ["Extract + chunk", "Searchable passages"],
+      ["Gemini embeddings", "gemini-embedding-001 · 3,072d"],
+      ["MongoDB Atlas", "policy_chunks · vector search"],
+      ["Grounded response", "Retrieved passages to Gemini"],
+    ],
+  },
+] as const;
+
+function CrestArchitectureMap() {
+  return (
+    <section className="crest-section crest-architecture" id="crest-architecture">
+      <header className="crest-architecture__story">
+        <p className="food-section-label">SYSTEM MAP · DIFFERENT PATHS, CLEAR BOUNDARIES</p>
+        <h2>One workspace. More than one technical path.</h2>
+        <p>
+          The challenge workspace, transaction Q&amp;A route, and policy-PDF
+          retrieval scripts solve related review problems through separate
+          implementations.
+        </p>
+      </header>
+      <figure className="crest-architecture__figure" aria-label="Crest system architecture">
+        <div className="crest-architecture__tracks">
+          {crestArchitectureTracks.map((track) => (
+            <article className={`crest-architecture__track crest-architecture__track--${track.id}`} key={track.id}>
+              <div className="crest-architecture__track-heading">
+                <span>{track.label}</span>
+                <h3>{track.title}</h3>
+              </div>
+              <ol className="crest-architecture__stages">
+                {track.stages.map(([title, detail], index) => (
+                  <li className="crest-architecture__stage" key={title}>
+                    <span className="crest-architecture__stage-index">{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{title}</strong>
+                    <small>{detail}</small>
+                    {index < track.stages.length - 1 && (
+                      <span className="crest-architecture__arrow" aria-hidden="true">→</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </article>
+          ))}
+        </div>
+        <figcaption className="crest-architecture__stack">
+          <span>REPORTED STACK CONTEXT</span>
+          <ul aria-label="Reported Crest stack technologies">
+            <li>Python · FastAPI · Uvicorn</li>
+            <li>MongoDB · MongoDB Atlas</li>
+            <li>Gemini · Google Generative AI</li>
+            <li>Vercel frontend</li>
+            <li>Vultr backend</li>
+          </ul>
+        </figcaption>
+      </figure>
+      <p className="crest-architecture__source-note">
+        These are separate implementation paths; repository evidence does not
+        establish one production deployment topology. Vercel and Vultr describe
+        owner-reported deployment context. Joshua’s documented focus included
+        backend/data workflows, the Policy Compliance Engine, rule-based
+        signals, policy retrieval, and part of preapproval.
+      </p>
+    </section>
+  );
+}
 
 export default function CrestCaseStudy() {
   const [activeChapter, setActiveChapter] = useState<CrestChapterId>("overview");
@@ -328,6 +422,8 @@ export default function CrestCaseStudy() {
             </p>
           </figure>
         </section>
+
+        <CrestArchitectureMap />
 
         <section className="crest-section crest-policy" id="crest-policy">
           <figure className="crest-policy-figure" aria-labelledby="crest-policy-title">

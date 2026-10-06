@@ -195,9 +195,10 @@
 }
 
 .league-banner__mark--contain {
-  width: 86%;
-  height: 86%;
-  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .league-banner__mark--portrait {
@@ -290,7 +291,7 @@
 
 .league-role-legend {
   position: absolute;
-  bottom: 10.4%;
+  bottom: 15%;
   left: 34%;
   display: flex;
   align-items: center;

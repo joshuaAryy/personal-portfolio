@@ -120,6 +120,32 @@ describe("League client shell", () => {
     );
   });
 
+  it("groups LinkedIn, GitHub, Email, and Resume in the intended utility order", () => {
+    const markup = renderClient("/home");
+    const utilityNavigation = markup.slice(
+      markup.indexOf('<nav class="header-client-tools"'),
+      markup.indexOf("</nav>", markup.indexOf('<nav class="header-client-tools"')),
+    );
+    const labels = [...utilityNavigation.matchAll(/class="header-client-tool[^\"]*"[^>]*>([^<]+)/g)]
+      .map((match) => match[1]);
+    const mobileNavigation = markup.slice(
+      markup.indexOf('<nav class="mobile-contact-row"'),
+      markup.indexOf("</nav>", markup.indexOf('<nav class="mobile-contact-row"')),
+    );
+    const mobileHrefs = [...mobileNavigation.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
+    const css = readFileSync("src/styles.css", "utf8");
+
+    expect(labels).toEqual(["LinkedIn", "GitHub", "Email", "Resume"]);
+    expect(mobileHrefs).toEqual([
+      "https://ca.linkedin.com/in/joshua-ary",
+      "https://github.com/joshuaAryy",
+      "mailto:joshuaaryy@gmail.com",
+      "/resume",
+    ]);
+    expect(css).toMatch(/\.header-client-tools\s*\{[^}]*padding-left:\s*clamp\(14px,[^}]*border-left:\s*1px solid/s);
+    expect(css).toMatch(/\.client--home-shell \.header-client-tools\s*\{[^}]*margin-left:\s*clamp\(22px,/s);
+  });
+
   it("does not hide the approved utility links on project shells", () => {
     const css = readFileSync("src/styles.css", "utf8");
     expect(css).not.toMatch(

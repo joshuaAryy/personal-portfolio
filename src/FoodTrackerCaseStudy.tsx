@@ -88,7 +88,7 @@ function FoodLoggingEvidence() {
     <figure className="food-app-evidence" aria-labelledby="food-logging-evidence-title">
       <div className="food-app-evidence__screens">
         <article className="food-app-evidence__screen">
-          <span className="food-figure__index">PHASE 24 · CANONICAL CAPTURE</span>
+          <span className="food-figure__index">MEAL REVIEW / UNSAVED EXAMPLE</span>
           <img
             src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
             alt="Food Tracker meal-review screen with proposed foods, serving controls, a provisional nutrition preview, and a Log selected action."
@@ -102,7 +102,7 @@ function FoodLoggingEvidence() {
           <p>
             Text or photo assistance can help identify likely foods and quantities. It does not silently write trusted nutrition into the log: the selected food and serving still pass through shared backend rules.
           </p>
-          <p className="food-app-evidence__source-note">Authentic Phase 24 simulator capture · pre-redesign interface baseline</p>
+          <p className="food-app-evidence__source-note">Earlier product interface / pre-redesign baseline</p>
         </div>
       </div>
       <figcaption id="food-logging-evidence-title">
@@ -236,10 +236,10 @@ function FoodInsightsEvidence() {
         loading="lazy"
       />
       <div>
-        <span className="food-figure__index">COMPLEX INSIGHTS · PHASE 24 CAPTURE</span>
+        <span className="food-figure__index">TREND CONFIGURATION / SETUP ONLY</span>
         <h3>Make the question explicit before drawing the trend.</h3>
         <p>The configuration exposes the chosen metric, comparison, range, and data coverage. This is a setup capture, not a populated analytics result.</p>
-        <p className="food-app-evidence__source-note">Authentic simulator evidence · pre-redesign interface baseline</p>
+        <p className="food-app-evidence__source-note">Earlier product interface / pre-redesign baseline</p>
       </div>
       <figcaption id="food-insights-evidence-title">
         Insights evidence · configuration controls are real; this image does not show logged values or a generated report.
@@ -443,7 +443,7 @@ export default function FoodTrackerCaseStudy() {
               <img src={projectIdentities["food-tracker"].mark} alt="" />
               <span>
                 <strong>FOOD TRACKER</strong>
-                <span>PRODUCT DIRECTION · SYSTEM ARCHITECTURE · EVALUATION</span>
+                <span>PRODUCT · CODE · ARCHITECTURE · EVALUATION</span>
               </span>
             </p>
             <h1>Simple food logs.<br />Trusted nutrition.</h1>
@@ -451,7 +451,7 @@ export default function FoodTrackerCaseStudy() {
               I started Food Tracker for my own gym and nutrition routine: logging had to stay easy to repeat while the record still supported serious insight.
             </p>
             <p className="food-rewrite__ownership">
-              I set product direction, architecture, workflows, and evaluation; Codex and AI agents supported substantial implementation.
+              I set product direction and architecture, shaped workflows and evaluation, and coded and debugged parts of the product directly. I also directed and reviewed substantial implementation with Codex and AI agents.
             </p>
           </div>
 

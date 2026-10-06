@@ -78,6 +78,14 @@ describe("approved resume flow", () => {
     );
   });
 
+  it("lifts the Resume Found action stack within its takeover composition", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const takeoverRule = css.match(/(?:^|\n)\.resume-found\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(takeoverRule).toMatch(/transform:\s*translateY\(-clamp\(/);
+    expect(takeoverRule).toMatch(/translateY\(-clamp\(\d+px,\s*\d+(?:\.\d+)?vh,\s*\d+px\)\)/);
+  });
+
   it("uses only the approved v13 PDF for display, download, and fullscreen", () => {
     const markup = renderRoute("/resume/viewer");
 

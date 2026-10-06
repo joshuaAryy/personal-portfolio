@@ -11,6 +11,27 @@ const renderCrest = () =>
   );
 
 describe("Crest technical case study", () => {
+  it("maps the workspace, Finance Q&A, and standalone policy-retrieval paths without merging them", () => {
+    const markup = renderCrest();
+    const start = markup.indexOf('<section class="crest-section crest-architecture"');
+    const end = markup.indexOf("</section>", start);
+    const architecture = markup.slice(start, end);
+
+    expect(markup).toContain('href="#crest-architecture"');
+    expect(markup).toContain('id="crest-architecture"');
+    expect(architecture).toContain('aria-label="Crest system architecture"');
+    expect(architecture).toContain("Vercel frontend");
+    expect(architecture).toContain("FastAPI /api/ask");
+    expect(architecture).toContain("MongoDB Atlas");
+    expect(architecture).toContain("transactions_clean");
+    expect(architecture).toContain("Gemini");
+    expect(architecture).toContain("Vultr");
+    expect(architecture).toContain("STANDALONE NODE.JS SCRIPTS");
+    expect(architecture).toContain("policy_chunks");
+    expect(architecture).toContain("separate implementation paths");
+    expect(architecture).toContain("does not establish one production deployment topology");
+  });
+
   it("establishes the transaction workflow and decision boundary", () => {
     const markup = renderCrest();
 

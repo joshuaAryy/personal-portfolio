@@ -1,6 +1,12 @@
 .main--profile {
   overflow: auto;
-  background: #05070a url("/media/profile/the-void-background.jpg") center / cover no-repeat;
+  background-color: #05070a;
+  background-image:
+    linear-gradient(180deg, rgba(3, 8, 14, 0.5), rgba(3, 8, 14, 0.34) 54%, rgba(3, 8, 14, 0.56)),
+    url("/media/opening/gameflow-background.jpg");
+  background-position: center, center 42%;
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
 }
 
 .main--profile .profile-layout {

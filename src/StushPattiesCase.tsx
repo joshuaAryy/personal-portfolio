@@ -1,7 +1,7 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./stush-case-study.css";
 
-const distributors = ["Koyo", "UNFI", "Dovre"] as const;
 const formats = ["CSV", "XLSX", "XLSB"] as const;
 
 const businessRules = [
@@ -23,92 +23,101 @@ const businessRules = [
   },
 ] as const;
 
-const deliverables = [
-  { name: "Standardized CSV", note: "One shared output structure", mark: "csv" },
-  { name: "Data dictionary", note: "A reference for the shared fields", mark: "dictionary" },
-  { name: "Quality report", note: "A companion handoff artifact", mark: "quality" },
-] as const;
-
 function SourceParsingFigure() {
+  const figureRef = useRef<HTMLElement | null>(null);
+  const [hasEntered, setHasEntered] = useState(false);
+
+  useEffect(() => {
+    const figure = figureRef.current;
+    if (!figure || hasEntered) return;
+
+    if (typeof IntersectionObserver === "undefined") {
+      setHasEntered(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry?.isIntersecting) return;
+      setHasEntered(true);
+      observer.disconnect();
+    }, { threshold: 0.2 });
+
+    observer.observe(figure);
+    return () => observer.disconnect();
+  }, [hasEntered]);
+
   return (
-    <figure className="stush-source-map" aria-labelledby="stush-source-map-title">
+    <figure
+      ref={figureRef}
+      className={`stush-source-map${hasEntered ? " is-visible" : ""}`}
+      data-flow-entered={hasEntered ? "true" : "false"}
+      aria-labelledby="stush-source-map-title"
+    >
       <header className="stush-figure-heading">
         <div>
-          <p className="stush-kicker">SOURCE-AWARE INGESTION</p>
-          <h3 id="stush-source-map-title">Keep each report’s structure at the edge.</h3>
+          <p className="stush-kicker">ONE REPORTING CONTRACT</p>
+          <h3 id="stush-source-map-title">Different file shapes resolve into the same fields.</h3>
         </div>
-        <p>Read the incoming layout, then give downstream reporting one stable contract.</p>
+        <p>Illustrative structure only. No client records, exact source headers, or measured values are shown.</p>
       </header>
 
-      <div className="stush-source-map__flow">
-        <section className="stush-origin" aria-labelledby="stush-origin-title">
-          <p className="stush-step-label"><span>01</span> DISTRIBUTOR REPORTS</p>
-          <h4 id="stush-origin-title">Separate files</h4>
-          <ul className="stush-origin__sources" aria-label="Named distributor sources">
-            {distributors.map((source, index) => (
-              <li className={`stush-origin__source stush-origin__source--${index + 1}`} key={source}>
-                <span>{source}</span>
-                <i aria-hidden="true" />
-              </li>
-            ))}
-          </ul>
-          <div className="stush-origin__formats">
-            <span>FORMATS ACROSS THE SET</span>
-            <ul aria-label="File formats across inputs">
-              {formats.map((format) => <li key={format}>{format}</li>)}
-            </ul>
-          </div>
-        </section>
-
-        <span className="stush-flow-link" aria-hidden="true" />
-
-        <section className="stush-layouts" aria-labelledby="stush-layouts-title">
-          <p className="stush-step-label"><span>02</span> DIFFERENT STRUCTURES</p>
-          <h4 id="stush-layouts-title">A layout could move the same idea.</h4>
-          <div className="stush-layouts__samples" aria-hidden="true">
-            <div className="stush-layout-sample stush-layout-sample--rows">
-              <i /><i /><i /><i /><i />
+      <div className="stush-transform" role="group" aria-label="Heterogeneous report layouts are parsed into shared fields and reporting outputs">
+        <section className="stush-transform__sources" aria-labelledby="stush-transform-inputs-title">
+          <p className="stush-transform__eyebrow">INCOMING FILES</p>
+          <h4 id="stush-transform-inputs-title">Different structures</h4>
+          <div className="stush-transform__file-set">
+            <div className="stush-transform__input stush-transform__input--rows" aria-label="Illustrative file A with uneven row layout">
+              <span>FILE A</span><i /><i /><i />
             </div>
-            <div className="stush-layout-sample stush-layout-sample--grid">
-              <i /><i /><i /><i /><i /><i /><i /><i /><i />
+            <div className="stush-transform__input stush-transform__input--grid" aria-label="Illustrative file B with a grid layout">
+              <span>FILE B</span><i /><i /><i /><i /><i /><i />
             </div>
-            <div className="stush-layout-sample stush-layout-sample--groups">
-              <i /><i /><i /><i /><i />
+            <div className="stush-transform__input stush-transform__input--groups" aria-label="Illustrative file C with grouped fields">
+              <span>FILE C</span><i /><i /><i /><i />
             </div>
           </div>
-          <p>Illustrative shapes only; they are not assigned to a specific distributor.</p>
+          <p className="stush-transform__formats">{formats.join(" · ")} across the input set</p>
         </section>
 
-        <span className="stush-flow-link" aria-hidden="true" />
+        <span className="stush-transform__connector" aria-hidden="true">›</span>
 
-        <section className="stush-readers" aria-labelledby="stush-readers-title">
-          <p className="stush-step-label"><span>03</span> PYTHON PARSING</p>
-          <h4 id="stush-readers-title">Source-aware Python parsers</h4>
-          <ol aria-label="Parsing paths">
-            {distributors.map((source, index) => (
-              <li key={source}>
-                <span>{source}</span>
-                <i className={`stush-reader-line stush-reader-line--${index + 1}`} aria-hidden="true" />
-                <b>parse</b>
-              </li>
-            ))}
-          </ol>
-          <p>Different upstream layouts, handled before the shared model.</p>
+        <section className="stush-transform__reader" aria-labelledby="stush-transform-reader-title">
+          <p className="stush-transform__eyebrow">PYTHON PARSING</p>
+          <h4 id="stush-transform-reader-title">Read each layout</h4>
+          <p>Source-aware readers interpret structure before fields enter the shared model.</p>
+          <div className="stush-transform__reader-lines" aria-hidden="true"><i /><i /><i /></div>
         </section>
 
-        <span className="stush-flow-link" aria-hidden="true" />
+        <span className="stush-transform__connector" aria-hidden="true">›</span>
 
-        <section className="stush-schema" aria-labelledby="stush-schema-title">
-          <p className="stush-step-label"><span>04</span> SHARED CONTRACT</p>
-          <h4 id="stush-schema-title">Shared reporting schema</h4>
+        <section className="stush-transform__schema" aria-labelledby="stush-transform-schema-title">
+          <p className="stush-transform__eyebrow">CANONICAL SCHEMA</p>
+          <h4 id="stush-transform-schema-title">Shared reporting schema</h4>
           <ol aria-label="Shared business dimensions">
-            {businessRules.map(({ field }) => <li key={field}>{field}</li>)}
+            {businessRules.map(({ field }, index) => (
+              <li className={`stush-transform__field stush-transform__field--${index + 1}`} key={field}>
+                <span>{field}</span><i />
+              </li>
+            ))}
           </ol>
+        </section>
+
+        <span className="stush-transform__connector" aria-hidden="true">›</span>
+
+        <section className="stush-transform__outputs" aria-labelledby="stush-transform-output-title">
+          <p className="stush-transform__eyebrow">REPORTING HANDOFF</p>
+          <h4 id="stush-transform-output-title">Useful artifacts</h4>
+          <ul>
+            <li className="stush-transform__output"><i aria-hidden="true" />Standardized CSV</li>
+            <li className="stush-transform__output"><i aria-hidden="true" />Data dictionary</li>
+            <li className="stush-transform__output"><i aria-hidden="true" />Quality report</li>
+          </ul>
+          <strong className="stush-transform__powerbi">Power BI handoff</strong>
         </section>
       </div>
 
       <figcaption>
-        Formats are shown across the complete input set, not mapped one-to-one to suppliers. No client records or source values are reproduced.
+        The input illustrations are deliberately generic: CSV, XLSX, and XLSB appeared across sources, but the formats are not assigned to individual distributors. No client records or source values are reproduced.
       </figcaption>
     </figure>
   );
@@ -159,21 +168,21 @@ function KoyoException() {
         <p className="stush-kicker">A BOUNDED EXCEPTION</p>
         <h2 id="stush-koyo-title">One report needed a more explicit reader.</h2>
         <p>
-          A generic parser was not reliable for the Koyo workbook layout, so a temporary position-and-cell path handled that irregularity.
+          The Koyo workbook was the bounded exception: a temporary position-and-cell path handled its irregular layout before returning to the shared normalization path.
         </p>
       </div>
 
-      <figure className="stush-koyo__route" aria-label="Koyo position-and-cell parser returns to shared normalization">
+      <figure className="stush-koyo__route" aria-label="A source-specific position-and-cell path returns to shared normalization">
         <div className="stush-koyo__stage">
           <span>GENERAL PIPELINE</span>
           <strong>Source-aware parsing</strong>
         </div>
         <div className="stush-koyo__branch">
-          <span className="stush-koyo__branch-label">One source-specific exception · Koyo</span>
+          <span className="stush-koyo__branch-label">One source-specific exception</span>
           <span className="stush-koyo__branch-line" aria-hidden="true" />
           <div className="stush-koyo__stage stush-koyo__stage--exception">
             <span>TEMPORARY PATH</span>
-            <strong>Koyo position-and-cell parser</strong>
+            <strong>Temporary position-and-cell path</strong>
           </div>
         </div>
         <span className="stush-koyo__rejoin" aria-hidden="true">↘</span>
@@ -206,11 +215,6 @@ export default function StushPattiesCase() {
           <p>
             I built Python ingestion, parsing, and normalization work for an external client project, helping turn uneven sales files into a shared reporting structure.
           </p>
-        </div>
-        <div className="stush-engagement-strip" aria-label="Project context">
-          <div><span>CLIENT</span><strong>External Stush project</strong></div>
-          <div><span>TECHNICAL TEAM</span><strong>Joshua + Shiv</strong></div>
-          <div><span>PROGRAM CONTEXT</span><strong>Riipen · IBM SkillsBuild</strong></div>
         </div>
       </header>
 
@@ -266,39 +270,11 @@ export default function StushPattiesCase() {
         </div>
       </section>
 
-      <section className="stush-handoff" aria-labelledby="stush-handoff-title">
-        <div className="stush-handoff__heading">
-          <p className="stush-kicker">THE HANDOFF</p>
-          <h2 id="stush-handoff-title">Structured outputs ready for the next reporting step.</h2>
-          <p>The work produced a repeatable route from distributor files to a Power BI reporting handoff.</p>
-        </div>
-        <figure className="stush-handoff-figure" aria-labelledby="stush-handoff-figure-title">
-          <figcaption id="stush-handoff-figure-title">THREE DELIVERABLES · ONE REPORTING DESTINATION</figcaption>
-          <div className="stush-handoff-figure__flow">
-            <ol aria-label="Produced handoff artifacts">
-              {deliverables.map(({ name, note, mark }, index) => (
-                <li key={name}>
-                  <span className={`stush-artifact-mark stush-artifact-mark--${mark}`} aria-hidden="true"><i /><i /><i /></span>
-                  <span className="stush-artifact-order">0{index + 1}</span>
-                  <strong>{name}</strong>
-                  <small>{note}</small>
-                </li>
-              ))}
-            </ol>
-            <span className="stush-handoff-figure__connector" aria-hidden="true" />
-            <div className="stush-report-destination">
-              <span>REPORTING HANDOFF</span>
-              <strong>Power BI</strong>
-              <i aria-hidden="true" />
-            </div>
-          </div>
-          <p className="stush-handoff-figure__note">The page describes the handoff structure; it does not reproduce client data or imply a dashboard outcome.</p>
-        </figure>
-      </section>
-
       <footer className="stush-close" id="stush-reflection">
-        <p className="stush-kicker">WHAT THE WORK ESTABLISHED</p>
-        <h2>A messy input problem became a documented, repeatable reporting path.</h2>
+        <div className="stush-close__heading">
+          <p className="stush-kicker">WHAT THE WORK ESTABLISHED</p>
+          <h2>A messy input problem became a documented, repeatable reporting path.</h2>
+        </div>
         <div className="stush-close__reflection">
           <span>THE ENGINEERING LESSON</span>
           <p>Normalize the business meaning. Keep the irregular source exception bounded.</p>

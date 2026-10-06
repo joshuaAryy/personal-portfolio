@@ -103,6 +103,25 @@ describe("HomeExplore", () => {
     expect(view.querySelector(".home-explore__subnav")).toBeNull();
   });
 
+  it("stacks each selected-mode preview vertically in the left reading column", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const selection = css.match(/\.home-explore__selection\s*\{([^}]*)\}/)?.[1] ?? "";
+    const areaList = css.match(/\.home-explore__selection-focus ul\s*\{([^}]*)\}/)?.[1] ?? "";
+    const experience = css.match(/\.home-explore__preview--experience\s*\{([^}]*)\}/)?.[1] ?? "";
+    const hackathon = css.match(/\.home-explore__preview--hackathons\s*\{([^}]*)\}/)?.[1] ?? "";
+    const education = css.match(/\.home-explore__preview--education\s*\{([^}]*)\}/)?.[1] ?? "";
+    const workItems = css.match(/\.home-explore__preview-work\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(selection).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+    expect(selection).toMatch(/justify-self:\s*start/);
+    expect(selection).toMatch(/max-width:\s*540px/);
+    expect(areaList).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+    expect(experience).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+    expect(hackathon).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+    expect(education).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+    expect(workItems).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
+  });
+
   it("previews verified experience, hackathon, and education details when selected", () => {
     const view = renderHomeExplore();
     const selection = view.querySelector(".home-explore__selection");
@@ -159,15 +178,15 @@ describe("HomeExplore", () => {
     expect(mobileRules).toMatch(/\.home-explore__preview--education\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s);
   });
 
-  it("separates Back and Confirm and compacts project areas on mobile", () => {
+  it("separates Back and Confirm and keeps project areas vertical on mobile", () => {
     const css = readFileSync("src/home-explore.css", "utf8");
     const pairRule = css.match(/\.home-explore__confirm-pair\s*\{([^}]*)\}/)?.[1];
     const mobileRules = css.slice(css.indexOf("@media (max-width: 760px)"));
 
     expect(pairRule).toMatch(/gap:\s*12px/);
     expect(pairRule).not.toMatch(/margin-right:\s*-/);
-    expect(mobileRules).toMatch(/\.home-explore__selection-focus ul\s*\{[^}]*grid-template-columns:\s*repeat\(2,/s);
-    expect(mobileRules).toMatch(/\.home-explore__selection-focus li small\s*\{[^}]*display:\s*none/s);
+    expect(mobileRules).toMatch(/\.home-explore__selection-focus ul\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s);
+    expect(mobileRules).not.toMatch(/\.home-explore__selection-focus li small\s*\{[^}]*display:\s*none/s);
   });
 
   it("keeps selection separate from confirming a destination", () => {

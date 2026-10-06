@@ -118,53 +118,65 @@ export default function LivingInSilicoCase() {
         </div>
         <figure className="living-deepmol-figure" aria-labelledby="living-deepmol-caption">
           <p className="living-method-owner">JOSHUA’S WORK · OWNER-REPORTED</p>
-          <div className="living-deepmol-path">
-            <div className="living-deepmol-path__input">
-              <p className="living-eyebrow">EXPERIMENT INPUT</p>
-              <strong>Curated SMILES</strong>
-              <span>an ordered string representation</span>
+          <div
+            className="living-sequence-transformation"
+            role="img"
+            aria-label="From curated SMILES through sequence preparation and an RNN to generated strings, then interpretation limits"
+          >
+            <div className="living-flow-stage living-flow-stage--data">
+              <p className="living-eyebrow">CURATED EXPERIMENT DATA</p>
+              <strong>Curated SMILES data</strong>
+              <span>strings prepared for this route</span>
+              <div className="living-string-stack" aria-hidden="true"><i /><i /><i /></div>
             </div>
-            <div className="living-preparation">
-              <p className="living-eyebrow">DATA PREPARATION WORK</p>
-              <ol>
-                <li><span>01</span><strong>Inspect and clean strings</strong></li>
-                <li><span>02</span><strong>RDKit parse and validity checks</strong></li>
-                <li><span>03</span><strong>Handle invalids; review duplicate strings</strong></li>
-              </ol>
-              <small>I loaded and inspected SMILES, cleaned and validated strings, handled invalid strings, reviewed duplicate strings and prepared experiment data. I also used ChemDraw/manual views to inspect structures. Exact filter order and row counts are not preserved.</small>
+            <div className="living-flow-link" aria-hidden="true"><i /></div>
+            <div className="living-flow-stage living-flow-stage--prepare">
+              <p className="living-eyebrow">SEQUENCE PREPARATION</p>
+              <strong>Sequence representation</strong>
+              <span>DeepMol CSVLoader reads the experiment table</span>
+              <div className="living-token-ribbon" aria-hidden="true"><i /><i /><i /><i /><i /><i /><i /></div>
             </div>
-          </div>
-          <div className="living-deepmol-path__to-loader">PREPARED EXPERIMENT DATA <span aria-hidden="true">↓</span></div>
-          <div className="living-sequence-model">
-            <div className="living-sequence-model__loader">
-              <p className="living-eyebrow">READ PREPARED DATA</p>
-              <strong>DeepMol CSVLoader</strong>
-              <span>load the experiment table</span>
-            </div>
-            <svg className="living-sequence-model__signal" viewBox="0 0 160 34" role="img" aria-label="Flow from loaded SMILES data into a sequence model">
-              <path d="M2 17H145m0 0-10-9m10 9-10 9" />
-              <circle cx="25" cy="17" r="3" /><circle cx="61" cy="17" r="3" /><circle cx="98" cy="17" r="3" />
-            </svg>
-            <div className="living-sequence-model__rnn">
-              <p className="living-eyebrow">SEQUENCE GENERATION</p>
+            <div className="living-flow-link" aria-hidden="true"><i /></div>
+            <div className="living-flow-stage living-flow-stage--rnn">
+              <p className="living-eyebrow">RNN MOLECULARGENERATOR</p>
               <strong>RNN MolecularGenerator</strong>
-              <span>learns across ordered SMILES sequences</span>
+              <svg className="living-recurrent-loop" viewBox="0 0 180 68" aria-hidden="true">
+                <path className="living-recurrent-loop__forward" d="M17 37H163m0 0-9-7m9 7-9 7" />
+                <path className="living-recurrent-loop__return" d="M151 20C130 3 50 3 29 20" />
+                <path className="living-recurrent-loop__arrow" d="m29 20 1-9m-1 9 9-1" />
+                <circle cx="30" cy="37" r="8" /><circle cx="90" cy="37" r="8" /><circle cx="150" cy="37" r="8" />
+              </svg>
+              <span>Recurrence carries context across sequence steps.</span>
+            </div>
+            <div className="living-flow-link" aria-hidden="true"><i /></div>
+            <div className="living-flow-stage living-flow-stage--output">
+              <p className="living-eyebrow">GENERATED OUTPUT</p>
+              <strong>Generate SMILES strings</strong>
+              <span>string output, with contents not reproduced</span>
+              <div className="living-string-stack living-string-stack--output" aria-hidden="true"><i /><i /><i /></div>
+            </div>
+            <div className="living-flow-link" aria-hidden="true"><i /></div>
+            <div className="living-flow-stage living-flow-stage--interpret">
+              <p className="living-eyebrow">INTERPRETATION BOUNDARY</p>
+              <strong>A string is a starting point</strong>
+              <span>Validity? Uniqueness? Novelty? Viability?</span>
+              <small>Not established by the count alone.</small>
             </div>
           </div>
           <div className="living-deepmol-figure__details">
             <div className="living-run-note">
-              <p className="living-eyebrow">RECORDED RUN SETTINGS</p>
-              <div aria-label="Recorded run settings: 10 epochs, batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
-              <p>Reported configuration. Available records do not link these settings to the 500-sample account.</p>
+              <p className="living-eyebrow">REPORTED RUN SETTINGS</p>
+              <div aria-label="Reported settings: 10 epochs and batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
+              <p>Available records do not link these settings to the separate 500-sample account.</p>
             </div>
             <div className="living-sample-output">
-              <p className="living-eyebrow">SEPARATE OWNER-REPORTED OUTPUT</p>
+              <p className="living-eyebrow">SEPARATE OWNER-REPORTED COUNT</p>
               <strong aria-label="500 generated SMILES samples">500</strong>
               <span>generated SMILES samples</span>
-              <small>Count only · no sample strings or chemical properties are established here.</small>
+              <small>Owner-attributed count only · artifacts do not verify its linkage or sample properties.</small>
             </div>
           </div>
-          <figcaption id="living-deepmol-caption">DeepMol route · preparation, CSV loading and RNN sequence generation are shown as method steps. The separate owner-reported count is not labeled valid, unique, novel or viable.</figcaption>
+          <figcaption id="living-deepmol-caption">DeepMol route · a conceptual sequence-to-string workflow, not a reproduced run trace. The owner attributes 500 generated SMILES samples to this route; available artifacts do not connect that count to the recorded settings or establish validity, uniqueness, novelty or viability.</figcaption>
         </figure>
         <div className="living-route__learning"><span>WHAT THIS ROUTE TAUGHT ME</span><p>Generating a string and establishing what it represents are separate questions. The output count alone does not answer validity, uniqueness or novelty.</p></div>
         <aside className="living-source-note"><strong>Source note</strong><p>The owner’s later account attributes 500 generated samples to DeepMol/RNN. A May 2025 report attributes the 500-sample account to REINVENT4 and also mentions RDKit checking. No surviving source or run artifact resolves that conflict; this page follows the owner correction.</p></aside>

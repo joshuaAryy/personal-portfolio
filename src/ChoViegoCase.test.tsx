@@ -77,9 +77,13 @@ describe("Cho’Veigo evidence-first product story", () => {
     expect(recommendation).toBeGreaterThan(eligibility);
     expect(decisions).toContain("deterministic rules assess Fit and Eligibility.");
     expect(decisions).toContain("A separate product outcome.");
-    expect(decisions).toContain("The source does not establish a separate scoring formula.");
+    expect(decisions).toContain("does not establish a standalone formula for it.");
     expect(decisions).toContain("Structured Gemini interpretation");
     expect(decisions).toContain("constrained to supplied evidence");
+    expect(decisions).toContain("ROLE DISCOVERY");
+    expect(decisions).toContain("CANDIDATE EVIDENCE");
+    expect(decisions).toContain("DETERMINISTIC DECISION LAYERS");
+    expect(decisions).toContain("PRODUCT ACTIONS");
     expect(decisions).not.toContain("Gemini decides whether to hire");
   });
 
@@ -115,7 +119,8 @@ describe("Cho’Veigo evidence-first product story", () => {
     expect(outcome).toContain("Two-person project · Joshua Aryeetey + Shiv Arora");
     expect(outcome).toContain("Joshua focused on Jobs and shared product/evaluation direction.");
     expect(outcome).toContain("Shiv initially led more of the foundational resume-generation work.");
-    expect(outcome).toContain("One recommendation surfaced a role I might have missed.");
+    expect(outcome).toContain("one recommendation surfaced a role I might have missed.");
+    expect(outcome).not.toContain("OWNER-REPORTED EXPERIENCE");
     expect(markup).not.toMatch(/\b(?:hours saved|\d+%|auto-apply|automated application submission|live production deployment)\b/i);
   });
 });

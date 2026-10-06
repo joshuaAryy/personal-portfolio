@@ -7,6 +7,25 @@ import FraymakersCase from "./FraymakersCase";
 describe("Fraymakers technical case study", () => {
   const render = () => renderToStaticMarkup(<MemoryRouter><FraymakersCase /></MemoryRouter>);
 
+  it("leads with the native composition figure and keeps match context to one sequence", () => {
+    const markup = render();
+    const introIndex = markup.indexOf('id="fraymakers-intro"');
+    const compositionIndex = markup.indexOf('id="fraymakers-composition"');
+    const pipelineIndex = markup.indexOf('id="fraymakers-pipeline"');
+    const configurationIndex = markup.indexOf('id="fraymakers-configuration"');
+
+    expect(introIndex).toBeGreaterThan(-1);
+    expect(compositionIndex).toBeGreaterThan(introIndex);
+    expect(pipelineIndex).toBeGreaterThan(compositionIndex);
+    expect(configurationIndex).toBeGreaterThan(pipelineIndex);
+    expect(markup.indexOf("SCHEMATIC OUTPUT")).toBeLessThan(markup.indexOf("TOURNAMENT CONTEXT"));
+    expect(markup).not.toContain("fray-case__opening-route");
+    expect(markup).not.toContain("fray-case__config-figure");
+    expect(markup).toContain("Categories carried by match-specific YAML overrides");
+    expect(markup).toContain("ART");
+    expect(markup).toContain("PRESENTATION");
+  });
+
   it("teaches the full match-to-render sequence without inventing lookup details", () => {
     const markup = render();
     const orderedStages = [
@@ -14,14 +33,14 @@ describe("Fraymakers technical case study", () => {
       "METADATA",
       "YAML / CONFIG",
       "VIDEO ASSOCIATION",
-      "THUMBNAIL.JS",
+      "RENDERED THUMBNAIL",
     ].map((stage) => markup.indexOf(stage));
 
     expect(orderedStages.every((index) => index >= 0)).toBe(true);
     expect(orderedStages).toEqual([...orderedStages].sort((a, b) => a - b));
     expect(markup).toContain("1280");
     expect(markup).toContain("exact lookup details are not represented here");
-    expect(markup).toContain("thumbnail.js");
+    expect(markup.match(/thumbnail\.js/g)).toHaveLength(1);
     expect(markup).toContain("node-canvas");
   });
 
@@ -59,8 +78,12 @@ describe("Fraymakers technical case study", () => {
     for (const item of ["stage/background art", "character sprites", "alternate costumes", "assists", "foreground elements", "logos", "P2 MIRRORING", "ALIASES", "LONG NAMES", "MISSING ASSETS"]) {
       expect(markup).toContain(item);
     }
-    expect(composition).toContain("no fixed layer order is implied");
-    expect(markup.match(/<figure/g)?.length).toBeGreaterThanOrEqual(5);
+    expect(composition).toContain("SCHEMATIC OUTPUT");
+    expect(composition).toContain("STAGE / BACKGROUND ART");
+    expect(composition).toContain("P2 · MIRRORED SPRITE");
+    expect(composition).toContain("TOURNAMENT LOGO");
+    expect(composition).toContain("exact layer ordering is not established");
+    expect(markup.match(/<figure/g)?.length).toBeGreaterThanOrEqual(4);
     expect(markup).not.toContain("<img");
     expect(markup).toContain("exact YAML keys and sample values are not shown");
     expect(markup).toContain("used on real Fraymakers VODs");
@@ -72,9 +95,8 @@ describe("Fraymakers technical case study", () => {
     expect(css).toMatch(
       /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*68px/s,
     );
-    const lastMobileRules = css.slice(css.lastIndexOf("@media (max-width: 700px)"));
-    expect(lastMobileRules).toMatch(
-      /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*94px/s,
+    expect(css).toMatch(
+      /@media \(max-width: 700px\)[\s\S]*?\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*94px/s,
     );
   });
 

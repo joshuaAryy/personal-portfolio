@@ -41,7 +41,7 @@ describe("Food Tracker product story", () => {
     expect(markup).toContain('href="#food-validation"');
   });
 
-  it("frames the shared product and Joshua's product-direction ownership", () => {
+  it("frames the shared product and balances Joshua's hands-on work with direction", () => {
     const markup = renderFoodTracker();
     const opening = section(markup, "food-overview", "food-logging");
 
@@ -49,8 +49,10 @@ describe("Food Tracker product story", () => {
     expect(opening).toContain("Trusted nutrition.");
     expect(opening).toContain("my own gym and nutrition routine");
     expect(opening).toContain("Simple and Complex share one app, backend, and data model");
-    expect(opening).toContain("I set product direction, architecture, workflows, and evaluation");
-    expect(opening).toContain("Codex and AI agents supported substantial implementation");
+    expect(opening).toContain("I set product direction and architecture");
+    expect(opening).toContain("shaped workflows and evaluation");
+    expect(opening).toContain("coded and debugged parts of the product directly");
+    expect(opening).toContain("directed and reviewed substantial implementation with Codex and AI agents");
   });
 
   it("teaches the logging lifecycle and separates AI suggestions from nutrition authority", () => {
@@ -76,15 +78,20 @@ describe("Food Tracker product story", () => {
     expect(logging).not.toContain("immutable history");
   });
 
-  it("uses authentic Phase 24 captures to show review-before-save and analytics setup", () => {
+  it("labels the older meal-review and trend-configuration captures by what they show", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
 
     expect(logging).toContain('/media/case-studies/food-tracker/phase-24/ai-meal-review.png');
+    expect(logging).toContain("MEAL REVIEW / UNSAVED EXAMPLE");
     expect(logging).toContain("Review before saving");
     expect(logging).toContain("not saved");
+    expect(logging).toContain("Earlier product interface / pre-redesign baseline");
+    expect(logging).not.toContain("PHASE 24");
     expect(insights).toContain('/media/case-studies/food-tracker/phase-24/trend-configuration.png');
+    expect(insights).toContain("TREND CONFIGURATION / SETUP ONLY");
+    expect(insights).not.toContain("PHASE 24");
     expect(insights).toContain("setup capture, not a populated analytics result");
   });
 

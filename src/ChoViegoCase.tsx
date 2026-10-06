@@ -50,27 +50,6 @@ const evidenceSignals = [
   ["VISIBLE GAP", "No reviewed evidence; do not invent a qualification"],
 ] as const;
 
-const decisions = [
-  {
-    number: "01",
-    label: "FIT",
-    question: "How closely does the evidence align with the work?",
-    detail: "Responsibilities and candidate evidence are compared; transferable experience can count.",
-  },
-  {
-    number: "02",
-    label: "ELIGIBILITY",
-    question: "Are essential requirements or conditions met?",
-    detail: "Core requirements stay visible instead of being buried by weaker keyword matches.",
-  },
-  {
-    number: "03",
-    label: "RECOMMENDATION",
-    question: "Should this role be brought forward to the person?",
-    detail: "A separate product outcome. The source does not establish a separate scoring formula.",
-  },
-] as const;
-
 const reviewSteps = [
   ["01", "NOTICE A MISMATCH", "Compare the result with the intended product behavior."],
   ["02", "REVIEW THE EXPECTATION", "Was the expected behavior wrong, or was the implementation wrong?"],
@@ -299,10 +278,7 @@ export default function ChoViegoCase() {
             <p className="cho-study__eyebrow">WHAT THE WORK CHANGED</p>
             <h2 id="cho-outcome-title">From counting words to asking what the evidence supports.</h2>
           </div>
-          <blockquote>
-            <span className="cho-study__eyebrow">OWNER-REPORTED EXPERIENCE</span>
-            <p>“One recommendation surfaced a role I might have missed.”</p>
-          </blockquote>
+          <p className="cho-study__ending-anecdote">During use, I found that one recommendation surfaced a role I might have missed.</p>
           <div className="cho-study__ending-credit">
             <p className="cho-study__eyebrow">Two-person project · Joshua Aryeetey + Shiv Arora</p>
             <p><strong>Joshua focused on Jobs and shared product/evaluation direction.</strong> He worked with Shiv on retrieval priorities, matching behavior, and review of expected results.</p>
@@ -408,21 +384,61 @@ function KeywordFailureFigure() {
 function DecisionLenses() {
   return (
     <figure className="cho-study__decision-figure" aria-labelledby="cho-decision-caption">
-      <div className="cho-study__decision-topline">
-        <span>SHARED INPUT</span>
-        <strong>Role requirements + reviewed evidence</strong>
-        <span>THREE SEPARATE LENSES</span>
+      <div className="cho-system-map" role="group" aria-label="Role discovery and candidate evidence inform distinct decision layers, followed by a separate recommendation and resume-tailoring action">
+        <div className="cho-system-map__inputs">
+          <section className="cho-system-map__input cho-system-map__input--role">
+            <p className="cho-study__eyebrow">ROLE DISCOVERY</p>
+            <h3>Role sources</h3>
+            <p>Feeds, company sites, and career pages bring postings into the Jobs path.</p>
+            <div className="cho-system-map__signal">Structured responsibilities + criteria</div>
+          </section>
+          <section className="cho-system-map__input cho-system-map__input--candidate">
+            <p className="cho-study__eyebrow">CANDIDATE EVIDENCE</p>
+            <h3>Reviewed profile</h3>
+            <p>Resume and profile material can show direct, transferable, or missing evidence.</p>
+            <div className="cho-system-map__signal">Demonstrated · transferable · gap</div>
+          </section>
+        </div>
+
+        <svg className="cho-system-map__routes" viewBox="0 0 64 220" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 53H25V110H64" />
+          <path d="M0 167H25V110H64" />
+        </svg>
+
+        <section className="cho-system-map__layers">
+          <p className="cho-study__eyebrow">DETERMINISTIC DECISION LAYERS</p>
+          <div className="cho-system-map__rules">
+            <article>
+              <h3>FIT</h3>
+              <p>Responsibilities compared with reviewed evidence</p>
+            </article>
+            <article>
+              <h3>ELIGIBILITY</h3>
+              <p>Essential requirements remain their own check</p>
+            </article>
+          </div>
+          <div className="cho-system-map__interpretation">
+            <span className="cho-study__eyebrow">STRUCTURED GEMINI INTERPRETATION</span>
+            <p>Interprets supplied role and candidate text; rules retain Fit and Eligibility authority.</p>
+          </div>
+        </section>
+
+        <svg className="cho-system-map__routes cho-system-map__routes--out" viewBox="0 0 64 220" preserveAspectRatio="none" aria-hidden="true">
+          <path d="M0 110H64" />
+        </svg>
+
+        <aside className="cho-system-map__actions">
+          <p className="cho-study__eyebrow">PRODUCT ACTIONS</p>
+          <section className="cho-system-map__recommendation">
+            <h3>RECOMMENDATION</h3>
+            <p>A separate product outcome. It brings a role forward for the person to inspect.</p>
+          </section>
+          <section className="cho-system-map__next">
+            <h3>NEXT · RESUME TAILORING</h3>
+            <p>A separate action after recommendation—not an application submission.</p>
+          </section>
+        </aside>
       </div>
-      <ol>
-        {decisions.map(({ number, label, question, detail }, index) => (
-          <li className={index === 2 ? "cho-study__decision-card cho-study__decision-card--recommendation" : "cho-study__decision-card"} key={label}>
-            <span className="cho-study__step-number">{number}</span>
-            <h3>{label}</h3>
-            <p className="cho-study__decision-question">{question}</p>
-            <p>{detail}</p>
-          </li>
-        ))}
-      </ol>
       <figcaption id="cho-decision-caption">No numeric score is shown here: the diagram explains what each product concept asks, not an invented result.</figcaption>
     </figure>
   );

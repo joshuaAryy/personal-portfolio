@@ -63,6 +63,7 @@
   min-height: max(100%, calc(100vh - var(--client-header-height)));
   box-sizing: border-box;
   padding: clamp(24px, 4vh, 40px) 24px;
+  transform: translateY(-clamp(24px, 4.4vh, 50px));
   text-align: center;
 }
 

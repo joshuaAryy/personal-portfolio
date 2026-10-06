@@ -29,17 +29,25 @@ describe("Living in Silico research story", () => {
 
     expect(markup).toContain("DeepMol CSVLoader");
     expect(markup).toContain("RNN MolecularGenerator");
-    expect(figure).toContain("SMILES");
-    expect(figure).toContain("RDKit parse and validity checks");
-    expect(figure).toContain("reviewed duplicate strings");
+    expect(figure).toContain('role="img" aria-label="From curated SMILES through sequence preparation and an RNN to generated strings, then interpretation limits"');
+    expect(figure).toContain("Curated SMILES data");
+    expect(figure).toContain("SEQUENCE PREPARATION");
+    expect(figure).toContain("Sequence representation");
+    expect(figure).toContain("Generate SMILES strings");
+    expect(figure).toContain("INTERPRETATION BOUNDARY");
+    expect(figure).toContain("CSVLoader");
+    expect(figure).toContain("MolecularGenerator");
+    expect(figure).not.toContain("<ol>");
     expect(figure).not.toContain("Morgan fingerprint");
     expect(markup).toContain("10 epochs");
     expect(markup).toContain("batch size 64");
-    expect(markup).toContain("do not link these settings to the 500-sample account");
+    expect(markup).toContain("do not link these settings to the separate 500-sample account");
     expect(markup).toContain("500 generated SMILES samples");
     expect(markup).toContain("May 2025 report attributes the 500-sample account to REINVENT4");
     expect(markup).not.toContain("500 valid");
     expect(markup).not.toContain("500 novel");
+    expect(markup).not.toContain("500 unique");
+    expect(markup).not.toContain("500 viable");
   });
 
   it("gives fragment and REINVENT4 routes distinct purpose, outcome, and learning", () => {

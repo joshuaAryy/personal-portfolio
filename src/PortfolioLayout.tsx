@@ -6,9 +6,9 @@ import { useHelpOverlay } from "./Help";
 
 const headerUtilityLinks = [
   { label: "LinkedIn", href: "https://ca.linkedin.com/in/joshua-ary", external: true },
-  { label: "Resume", href: "/resume", external: false },
   { label: "GitHub", href: "https://github.com/joshuaAryy", external: true },
   { label: "Email", href: "mailto:joshuaaryy@gmail.com", external: false },
+  { label: "Resume", href: "/resume", external: false },
 ] as const;
 
 const usesProjectDetailShell = (pathname: string) =>
@@ -20,8 +20,8 @@ const isProjectDetail = (pathname: string) => pathname.startsWith("/projects/");
 function ContactLinks() {
   return (
     <>
-      <a href="https://github.com/joshuaAryy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a>
       <a href="https://ca.linkedin.com/in/joshua-ary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a>
+      <a href="https://github.com/joshuaAryy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a>
       <a className="rail-social-footer__email" href="mailto:joshuaaryy@gmail.com" aria-label="Email Joshua">✉</a>
     </>
   );

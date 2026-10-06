@@ -110,7 +110,7 @@ describe("Projects lobby", () => {
     expect(owner?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--portrait")).toBe(true);
 
     const css = readFileSync("src/lobby.css", "utf8");
-    expect(css).toMatch(/\.league-banner__mark--contain\s*\{[^}]*object-fit:\s*contain/s);
+    expect(css).toMatch(/\.league-banner__mark--contain\s*\{[^}]*width:\s*100%;[^}]*height:\s*100%;[^}]*border-radius:\s*50%;[^}]*object-fit:\s*cover/s);
     expect(css).toMatch(/\.league-banner__mark--portrait\s*\{[^}]*border-radius:\s*50%[^}]*object-fit:\s*cover/s);
   });
 
@@ -134,6 +134,14 @@ describe("Projects lobby", () => {
     expect(projectMedallionRule).toMatch(/height:\s*clamp\(/);
     expect(projectMedallionRule).toMatch(/aspect-ratio:\s*1\s*\/\s*1/);
     expect(projectMedallionRule).toMatch(/border-radius:\s*50%/);
+  });
+
+  it("keeps the role legend clear of the bottom story action", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const roleRule = css.match(/\.league-role-legend\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(roleRule).toMatch(/bottom:\s*1[45](?:\.\d+)?%;/);
+    expect(roleRule).toMatch(/position:\s*absolute/);
   });
 
   it("adds inert circular plus slots around the three category lobby rows", () => {

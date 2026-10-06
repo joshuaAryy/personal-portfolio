@@ -36,6 +36,8 @@ describe("opening route handoff", () => {
     expect(markup).toContain('data-node-id="3581:2"');
     expect(markup).toContain('class="opening__radial-field"');
     expect(markup).toContain('class="opening__peripheral-lines"');
+    expect(markup).toContain('class="opening__orbit-turn" aria-hidden="true"');
+    expect(markup.match(/class="opening__orbit-tick(?: opening__orbit-tick--major)?"/g)).toHaveLength(180);
     expect(markup.match(/class="opening__peripheral-mark opening__peripheral-mark--/g)).toHaveLength(8);
     expect(markup).toContain('data-j-source="v8-3325:335"');
     expect(markup).toContain('data-node-id="3325:336"');
@@ -53,16 +55,14 @@ describe("opening route handoff", () => {
     expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-edge-light.svg"');
     expect(markup).toContain('class="opening__ring opening__ring--outer"');
     expect(markup).toContain('class="opening__ring opening__ring--inner"');
-    expect(markup).toContain('class="opening__ring-arc"');
-    expect(markup).toContain('class="opening__tick opening__tick--north" data-node-id="3617:14"');
-    expect(markup).toContain('class="opening__tick opening__tick--east" data-node-id="3617:21"');
-    expect(markup).toContain('class="opening__tick opening__tick--south" data-node-id="3617:28"');
-    expect(markup).toContain('class="opening__tick opening__tick--west" data-node-id="3617:35"');
+    expect(markup).toContain('class="opening__loading" aria-hidden="true"');
+    expect(markup).toContain('class="opening__loading-label">LOADING</span>');
+    expect(markup).toContain('class="opening__progress-line"');
+    expect(markup).not.toContain('class="opening__ring-arc"');
+    expect(markup).not.toContain('class="opening__tick opening__tick--');
     expect(markup).not.toContain('class="opening__environment"');
     expect(markup).not.toContain('open-portfolio-energy-lines.svg');
     expect(markup).not.toContain('class="opening__progress"');
-    expect(markup).toContain("LOADING");
-    expect(markup).toContain('class="opening__progress-line"');
     expect(readFileSync("src/Opening.tsx", "utf8")).toContain(
       '"/media/profile/open-portfolio-j-archive-source-700.png"',
     );
@@ -78,20 +78,26 @@ describe("opening route handoff", () => {
     expect(markup).toContain('class="opening opening--reduced"');
   });
 
-  it("keeps the circular marks fine and scales the archive medallion to Figma", () => {
+  it("keeps the ring thin, enlarges the circular field, and scales the archive J for the center", () => {
     const css = readFileSync("src/opening.css", "utf8");
-    const outerRing = css.match(/\.opening__ring--outer,\s*\.opening__ring-arc\s*\{([^}]*)\}/)?.[1] ?? "";
+    const outerRing = css.match(/\.opening__ring--outer\s*\{([^}]*)\}/)?.[1] ?? "";
     const ring = css.match(/\.opening__ring\s*\{([^}]*)\}/)?.[1] ?? "";
     const innerRing = css.match(/\.opening__ring--inner\s*\{([^}]*)\}/)?.[1] ?? "";
     const markRules = [...css.matchAll(/\.opening__archive-mark\s*\{([^}]*)\}/g)].map((match) => match[1]);
-    const mark = markRules.find((rule) => /width:\s*46\.55%/.test(rule)) ?? "";
+    const mark = markRules.find((rule) => /width:\s*20%/.test(rule)) ?? "";
+    const mechanism = css.match(/\.opening__mechanism\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(outerRing).toMatch(/width:\s*74%/);
     expect(ring).toMatch(/border:\s*1px solid/);
     expect(innerRing).toMatch(/width:\s*67%/);
-    expect(css).toMatch(/\.opening__ring-arc\s*\{[^}]*border-top-color:\s*#c5a252/);
-    expect(css).toMatch(/\.opening__ring-arc\s*\{[^}]*clip-path:\s*inset\(0 0 50% 50%\)/);
-    expect(mark).toMatch(/width:\s*46\.55%/);
+    expect(mechanism).toMatch(/width:\s*min\(64vw,\s*100svh\)/);
+    expect(css).toMatch(/\.opening__orbit-tick::before\s*\{[^}]*height:\s*3px/s);
+    expect(css).toMatch(/\.opening__orbit-tick--major::before\s*\{[^}]*height:\s*7px/s);
+    expect(css).toMatch(/@keyframes opening-orbit-turn\s*\{[\s\S]*?rotate\(28deg\)/s);
+    expect(css).not.toContain(".opening__peripheral-mark::after");
+    expect(css).not.toContain("--mark-angle");
+    expect(css).toMatch(/\.opening__peripheral-mark--northwest\s*\{\s*--mark-x:\s*16%;\s*--mark-y:\s*22%;\s*\}/);
+    expect(mark).toMatch(/width:\s*20%/);
   });
 
   it("stages the v8 J through establish, clear, formation, settle, and handoff over 3.5 seconds", () => {
@@ -104,15 +110,12 @@ describe("opening route handoff", () => {
       .map((match) => match[1])
       .find((rule) => /animation:\s*opening-peripheral-drift/.test(rule)) ?? "";
     const fieldSequence = css.match(/@keyframes opening-radial-expansion\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
-    const loaderReveal = css.match(/@keyframes opening-loader-reveal\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
-    const loadingTurn = css.match(/@keyframes opening-loading-turn\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
-    const progressFill = css.match(/@keyframes opening-progress-fill\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
     expect(markMotion).toMatch(/animation:\s*opening-mark-sequence\s+3\.5s/);
-    expect(markSequence).toMatch(/0%,\s*8%[\s\S]*?opacity:\s*1[\s\S]*?scale\(1\.12\)/);
-    expect(markSequence).toMatch(/18%,\s*24%[\s\S]*?opacity:\s*0/);
-    expect(markSequence).toMatch(/28%[\s\S]*?opacity:\s*0/);
-    expect(markSequence).toMatch(/32%,\s*94%[\s\S]*?opacity:\s*1[\s\S]*?scale\(\.76\)/);
+    expect(markSequence).toMatch(/0%,\s*9%[\s\S]*?opacity:\s*1[\s\S]*?scale\(1\.12\)/);
+    expect(markSequence).toMatch(/14%,\s*19%[\s\S]*?opacity:\s*0/);
+    expect(markSequence).toMatch(/22%[\s\S]*?opacity:\s*0/);
+    expect(markSequence).toMatch(/25%,\s*94%[\s\S]*?opacity:\s*1[\s\S]*?scale\(\.76\)/);
     expect(markSequence).not.toContain("clip-path");
     expect(css).toMatch(/\.opening__j-layer--deep\s*\{[^}]*animation-name:\s*opening-j-deep-assemble/s);
     expect(css).toMatch(/\.opening__j-layer--mid\s*\{[^}]*animation-name:\s*opening-j-mid-assemble/s);
@@ -120,23 +123,23 @@ describe("opening route handoff", () => {
     expect(css).toMatch(/\.opening__j-detail\s*\{[^}]*animation:\s*opening-j-detail-assemble/s);
     expect(css).toMatch(/\.opening__j-layer--bevel\s*\{[^}]*animation-name:\s*opening-j-bevel-assemble/s);
     expect(css).toMatch(/\.opening__j-layer--edge\s*\{[^}]*animation-name:\s*opening-j-edge-assemble/s);
-    expect(css).toMatch(/@keyframes opening-j-deep-assemble\s*\{[\s\S]*?35%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-mid-assemble\s*\{[\s\S]*?38%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-face-assemble\s*\{[\s\S]*?41%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-detail-assemble\s*\{[\s\S]*?45%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-bevel-assemble\s*\{[\s\S]*?48%,\s*94%\s*\{\s*opacity:\s*1/);
-    expect(css).toMatch(/@keyframes opening-j-edge-assemble\s*\{[\s\S]*?51%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-deep-assemble\s*\{[\s\S]*?30%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-mid-assemble\s*\{[\s\S]*?37%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-face-assemble\s*\{[\s\S]*?43%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-detail-assemble\s*\{[\s\S]*?51%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-bevel-assemble\s*\{[\s\S]*?59%,\s*94%\s*\{\s*opacity:\s*1/);
+    expect(css).toMatch(/@keyframes opening-j-edge-assemble\s*\{[\s\S]*?66%,\s*94%\s*\{\s*opacity:\s*1/);
     expect(fieldMotion).toMatch(/animation:\s*opening-radial-expansion\s+3\.5s/);
     expect(peripheralMotion).toMatch(/animation:\s*opening-peripheral-drift\s+3\.5s/);
-    expect(fieldSequence).toMatch(/0%,\s*24%[\s\S]*?scale\(\.78\)/);
-    expect(fieldSequence).toMatch(/84%,\s*94%[\s\S]*?scale\(1\)/);
-    expect(loaderReveal).toMatch(/0%,\s*24%[\s\S]*?opacity:\s*0/);
-    expect(loaderReveal).toMatch(/40%,\s*94%[\s\S]*?opacity:\s*1/);
-    expect(css).toMatch(/\.opening__ring--outer[\s\S]*?animation:\s*opening-loader-reveal\s+3\.5s/);
-    expect(css).toMatch(/\.opening__tick[\s\S]*?animation:\s*opening-loader-reveal\s+3\.5s/);
-    expect(css).toMatch(/\.opening__loader-label[\s\S]*?animation:\s*opening-loader-copy-reveal\s+3\.5s/);
-    expect(loadingTurn).toMatch(/94%,\s*100%[\s\S]*?rotate\(360deg\)/);
-    expect(progressFill).toMatch(/82%,\s*90%,\s*100%[\s\S]*?scaleX\(1\)/);
+    expect(fieldSequence).toMatch(/0%,\s*16%,\s*19%[\s\S]*?scale\(\.78\)/);
+    expect(fieldSequence).toMatch(/82%,\s*94%[\s\S]*?scale\(1\)/);
+    expect(css).toMatch(/\.opening__ring--outer,\s*\.opening__ring--inner\s*\{[^}]*animation:\s*opening-ring-form\s+3\.5s/s);
+    expect(css).toMatch(/\.opening__orbit-ticks\s*\{[^}]*animation:\s*opening-ticks-form\s+3\.5s/s);
+    expect(css).toMatch(/\.opening__orbit-turn\s*\{[^}]*animation:\s*opening-orbit-turn\s+3\.5s/s);
+    expect(css).not.toContain("opening-loader-copy-reveal");
+    expect(css).toMatch(/\.opening__loading\s*\{[^}]*animation:\s*opening-loading-reveal\s+3\.5s/s);
+    expect(css).toMatch(/\.opening__progress-fill\s*\{[^}]*animation:\s*opening-progress-fill\s+3\.5s/s);
+    expect(css).toMatch(/@keyframes opening-progress-fill\s*\{[\s\S]*?scaleX\(1\)/);
     expect(css).toMatch(/opening-client-reveal\s+3\.5s/);
     expect(css).toMatch(/opening-treatment-out\s+3\.5s/);
   });
@@ -151,8 +154,8 @@ describe("opening route handoff", () => {
     expect(css).toMatch(/\.opening--reduced \.opening__peripheral-lines(?:,|\s*\{)/);
     expect(css).toMatch(/\.opening--reduced \.opening__peripheral-mark\s*\{/);
     expect(css).toMatch(/\.opening--reduced \.opening__ring--outer[\s\S]*?opacity:\s*1/s);
-    expect(css).toMatch(/\.opening--reduced \.opening__tick[\s\S]*?opacity:\s*1/s);
-    expect(css).toMatch(/\.opening--reduced \.opening__loader-label[\s\S]*?opacity:\s*1/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__orbit-ticks[\s\S]*?opacity:\s*1/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__loading\s*\{[^}]*opacity:\s*0;[^}]*animation:\s*none/s);
   });
 
   it("preserves the authored v8 layer insets and masked detail geometry", () => {
@@ -183,6 +186,6 @@ describe("opening route handoff", () => {
     const css = readFileSync("src/opening.css", "utf8");
 
     expect(css).not.toMatch(/\.opening__(?:environment|layer|asset-frame|bezel|ticks-content|segmented-bezel|cyan|jewels|glint|j-body|motion--)/);
-    expect(css).not.toMatch(/opening-segmented-|opening-ticks-|opening-cyan|opening-construction|opening-glint-/);
+    expect(css).not.toMatch(/opening-segmented-|opening-ticks-(?:content|construction)|opening-cyan|opening-construction|opening-glint-/);
   });
 });

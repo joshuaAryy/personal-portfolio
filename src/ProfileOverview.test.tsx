@@ -132,13 +132,15 @@ describe("Profile Overview", () => {
     expect(narrowOverview).toContain("gap: 24px");
   });
 
-  it("keeps the smoky Profile field and circular Experience badges from the current Figma treatment", () => {
+  it("uses clear authentic League scenery and circular Experience badges", () => {
     const shellCss = readFileSync("src/styles.css", "utf8");
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const shellRule = shellCss.match(/\.main--profile\s*\{([^}]*)\}/)?.[1] ?? "";
     const badgeRule = profileCss.match(/\.profile-experience__mark\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect.soft(shellRule).toContain('url("/media/profile/the-void-background.jpg")');
+    expect(shellRule).toContain('url("/media/opening/gameflow-background.jpg")');
+    expect(shellRule).toContain("linear-gradient(180deg,");
+    expect(shellRule).not.toContain('url("/media/profile/the-void-background.jpg")');
     expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });
 
