@@ -4,139 +4,135 @@ import { describe, expect, it } from "vitest";
 import ChoViegoCase, { resolveActiveChapter } from "./ChoViegoCase";
 
 function renderCase() {
-  return renderToStaticMarkup(<MemoryRouter><ChoViegoCase /></MemoryRouter>);
+  return renderToStaticMarkup(
+    <MemoryRouter>
+      <ChoViegoCase />
+    </MemoryRouter>,
+  );
 }
 
-describe("Cho’Veigo evidence-first product story", () => {
-  it("tracks the role-intake through Resume Studio chapters", () => {
-    const sectionTops = {
-      overview: -2800,
-      intake: -2140,
-      evidence: -1480,
-      decisions: -820,
-      review: -250,
-      studio: 80,
-      outcome: 670,
-    };
+function chapter(markup: string, id: string, nextId?: string) {
+  const start = markup.indexOf(`id="choveigo-${id}"`);
+  const end = nextId ? markup.indexOf(`id="choveigo-${nextId}"`, start + 1) : markup.length;
+  return markup.slice(start, end);
+}
 
-    expect(resolveActiveChapter(sectionTops, 160, false)).toBe("studio");
-    expect(resolveActiveChapter(sectionTops, 160, true)).toBe("outcome");
-    expect(resolveActiveChapter(sectionTops, 160, true, "review")).toBe("review");
+function storyText(markup: string) {
+  return markup
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#x27;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+describe("Cho’Veigo product story", () => {
+  it("orders intake, evidence, decisions, review, Resume Studio, and the ending", () => {
+    const markup = renderCase();
+    const ids = ["overview", "intake", "evidence", "decisions", "review", "studio", "outcome"];
+    const positions = ids.map((id) => markup.indexOf(`id="choveigo-${id}"`));
+
+    expect(positions.every((position) => position >= 0)).toBe(true);
+    expect(positions).toEqual([...positions].sort((left, right) => left - right));
+    expect(resolveActiveChapter({ overview: -10, intake: 20 }, 30, false)).toBe("intake");
+    expect(resolveActiveChapter({ overview: -10, intake: 20 }, 30, true)).toBe("outcome");
   });
 
-  it("opens on authentic Recommendations evidence and discloses that the public proof is static", () => {
-    const markup = renderCase();
-    const hero = markup.slice(markup.indexOf('id="choveigo-overview"'), markup.indexOf('id="choveigo-intake"'));
+  it("opens on the owner-cleared Recommendations still without a media warning", () => {
+    const hero = chapter(renderCase(), "overview", "intake");
 
-    expect(hero).toContain("A role isn’t a keyword match.");
+    expect(hero).toContain("A better match starts with the evidence.");
     expect(hero).toContain("/media/choveigo-recommendations.png");
-    expect(hero).toContain("AUTHENTIC RECOMMENDATIONS CAPTURE");
-    expect(hero).toContain("Static product capture");
-    expect(hero).toContain("privacy-safe walkthrough is not available for publication");
+    expect(hero).toContain("AUTHENTIC PRODUCT VIEW");
+    expect(hero).toContain("Owner-cleared Recommendations still");
+    expect(hero).not.toContain("privacy-safe walkthrough");
     expect(hero).not.toContain("<video");
   });
 
-  it("shows provider intake becoming a persisted role snapshot", () => {
-    const markup = renderCase();
-    const intake = markup.slice(markup.indexOf('id="choveigo-intake"'), markup.indexOf('id="choveigo-evidence"'));
+  it("shows job feeds becoming persisted role context", () => {
+    const intake = storyText(chapter(renderCase(), "intake", "evidence"));
 
-    expect(intake).toContain("DISCOVERED POSTING");
-    expect(intake).toContain("USER-SAVED ROLE");
-    expect(intake).toContain("Posting snapshot");
+    expect(intake).toContain("SOURCE INPUT Job feeds");
+    expect(intake).toContain("PERSISTED ROLE Posting snapshot");
+    expect(intake).toContain("PERSON CHOOSES Resume Studio handoff");
+    expect(intake).toContain("posting snapshot");
     expect(intake).toContain("title");
+    expect(intake).toContain("company");
     expect(intake).toContain("description");
-    expect(intake).toContain("OFFICIAL URL");
-    expect(intake).toContain("Feed availability can change; the saved record preserves the title, company, and description from save time.");
+    expect(intake).toContain("SOURCE");
+    expect(intake).toContain("Selected role context + reviewed profile");
   });
 
-  it("teaches evidence matching without presenting an illustrative trace as a live score", () => {
-    const markup = renderCase();
-    const evidence = markup.slice(markup.indexOf('id="choveigo-evidence"'), markup.indexOf('id="choveigo-decisions"'));
+  it("makes retrieved profile evidence and transferable experience visible without a fabricated candidate trace", () => {
+    const evidence = storyText(chapter(renderCase(), "evidence", "decisions"));
 
-    expect(evidence).toContain("Responsibilities matter more than a familiar stack.");
+    expect(evidence).toContain("RESPONSIBILITIES");
+    expect(evidence).toContain("CORE REQUIREMENTS");
+    expect(evidence).toContain("PREFERRED");
     expect(evidence).toContain("DEMONSTRATED");
     expect(evidence).toContain("TRANSFERABLE");
     expect(evidence).toContain("VISIBLE GAP");
-    expect(evidence).toContain("CORRELATED TERMS CAN INFLATE A TALLY");
-    expect(evidence).toContain("Illustrative failure mode; not a live match result.");
-    expect(evidence).toContain("01 / RETRIEVE");
-    expect(evidence).toContain("Relevant reviewed profile context for this role");
-    expect(evidence).toContain("STRUCTURED GEMINI INTERPRETATION");
+    expect(evidence).toContain("The Jobs path retrieves reviewed profile evidence for the role");
+    expect(evidence).toContain("Illustrative failure mode only");
     expect(evidence).not.toContain("97%");
+    expect(evidence).not.toContain("Gemini");
   });
 
-  it("keeps Fit, Eligibility, and Recommendation distinct and bounds the model role", () => {
-    const markup = renderCase();
-    const decisions = markup.slice(markup.indexOf('id="choveigo-decisions"'), markup.indexOf('id="choveigo-review"'));
+  it("keeps deterministic Fit and Eligibility separate from Recommendation and Gemini", () => {
+    const decisionMarkup = chapter(renderCase(), "decisions", "review");
+    const decisions = storyText(decisionMarkup);
+    const fit = decisionMarkup.indexOf(">Fit</h3>");
+    const eligibility = decisionMarkup.indexOf(">Eligibility</h3>");
+    const recommendation = decisionMarkup.indexOf(">Recommendation</h3>");
 
-    const fit = decisions.indexOf(">FIT</h3>");
-    const eligibility = decisions.indexOf(">ELIGIBILITY</h3>");
-    const recommendation = decisions.indexOf(">RECOMMENDATION</h3>");
     expect(fit).toBeGreaterThan(-1);
     expect(eligibility).toBeGreaterThan(fit);
     expect(recommendation).toBeGreaterThan(eligibility);
-    expect(decisions).toContain("deterministic rules assess Fit and Eligibility.");
-    expect(decisions).toContain("A separate product outcome.");
-    expect(decisions).toContain("does not establish a standalone formula for it.");
-    expect(decisions).toContain("Structured Gemini interpretation");
-    expect(decisions).toContain("constrained to supplied evidence");
-    expect(decisions).toContain("ROLE DISCOVERY");
-    expect(decisions).toContain("Provider job feeds bring listings into the Jobs path");
-    expect(decisions).not.toContain("company sites");
-    expect(decisions).toContain("CANDIDATE EVIDENCE");
-    expect(decisions).toContain("DETERMINISTIC DECISION LAYERS");
-    expect(decisions).toContain("PRODUCT ACTIONS");
-    expect(decisions).not.toContain("Gemini decides whether to hire");
+    expect(decisions).toContain("JOBS ASSESSMENT · DETERMINISTIC");
+    expect(decisions).toContain("How closely does reviewed experience support the work?");
+    expect(decisions).toContain("Are the role’s required conditions met?");
+    expect(decisions).toContain("Bring a role forward for a person to inspect.");
+    expect(decisions).not.toContain("Gemini");
+    expect(decisions).not.toContain("numeric score");
   });
 
-  it("turns reviewed mismatches into fixtures without claiming research-grade validation", () => {
-    const markup = renderCase();
-    const review = markup.slice(markup.indexOf('id="choveigo-review"'), markup.indexOf('id="choveigo-studio"'));
+  it("shows shared human review converting accepted behavior into regression fixtures", () => {
+    const review = storyText(chapter(renderCase(), "review", "studio"));
+    const stages = ["Notice a mismatch", "Inspect the expectation", "Agree together", "Save a regression fixture"];
+    const positions = stages.map((stage) => review.indexOf(stage));
 
-    expect(review).toContain('aria-label="Human-reviewed evaluation path"');
-    const reviewStages = ["NOTICE A MISMATCH", "REVIEW THE EXPECTATION", "AGREE ON EXPECTED BEHAVIOR", "DETERMINISTIC REGRESSION FIXTURE"];
-    const stagePositions = reviewStages.map((stage) => review.indexOf(stage));
-    expect(stagePositions.every((position) => position >= 0)).toBe(true);
-    expect(stagePositions).toEqual([...stagePositions].sort((left, right) => left - right));
-    expect(review).toContain("Was the expected behavior wrong, or was the implementation wrong?");
-    expect(review).toContain("With Shiv, I reviewed mismatches");
-    expect(review).not.toContain("research-grade validation");
-    expect(review).not.toContain("inter-rater reliability");
+    expect(positions.every((position) => position >= 0)).toBe(true);
+    expect(positions).toEqual([...positions].sort((left, right) => left - right));
+    expect(review).toContain("Joshua and Shiv review the matching behavior and product rule.");
+    expect(review).toContain("Was the rule unclear, or did implementation diverge?");
+    expect(review).toContain("not a multi-rater or research-grade evaluation");
   });
 
-  it("separates the selected-role handoff from evidence-grounded Resume Studio work", () => {
-    const markup = renderCase();
-    const studio = markup.slice(markup.indexOf('id="choveigo-studio"'), markup.indexOf('id="choveigo-outcome"'));
+  it("places Gemini role classification and bounded wording inside downstream Resume Studio, with DOCX as the current export", () => {
+    const studio = storyText(chapter(renderCase(), "studio", "outcome"));
 
-    expect(studio).toContain("The handoff prepares context; it does not generate a resume.");
+    expect(studio).toContain("The handoff carries context. Studio prepares a document.");
+    expect(studio).toContain("Reviewed profile evidence");
     expect(studio).toContain("Editable job description");
-    expect(studio).toContain("Career evidence");
-    expect(studio).toContain('aria-label="Resume Studio evidence workflow"');
-    for (const stage of [
-      "NORMALIZE THE ROLE",
-      "RESPONSIBILITIES · REQUIRED · PREFERRED · INCIDENTAL",
-      "SELECT REVIEWED EVIDENCE",
-      "COHERENT EXPERIENCE + PROJECT PACKAGES",
-      "BOUNDED GEMINI REWRITE",
-      "VALIDATE CLAIMS · FALL BACK TO SOURCE WORDING",
-      "PERSON REVIEW",
-      "PAGE FIT",
-      "DOCX",
-      "PDF",
-    ]) expect(studio).toContain(stage);
-    expect(studio).not.toContain("generated resume preview screenshot");
-    expect(studio).not.toContain("automatically submits an application");
+    expect(studio).toContain("Gemini role-family classification");
+    expect(studio).toContain("A limited Gemini rewrite");
+    expect(studio).toContain("checked against source evidence");
+    expect(studio).toContain("person edits the result");
+    expect(studio).toContain("checks page fit");
+    expect(studio).toContain("DOCX");
+    expect(studio).not.toContain("PDF");
+    expect(studio).not.toContain("auto-apply");
   });
 
-  it("states project ownership and keeps outcomes qualitative", () => {
-    const markup = renderCase();
-    const outcome = markup.slice(markup.indexOf('id="choveigo-outcome"'));
+  it("states shared project ownership and keeps the reported outcome qualitative", () => {
+    const outcome = storyText(chapter(renderCase(), "outcome"));
 
-    expect(outcome).toContain("Two-person project · Joshua Aryeetey + Shiv Arora");
-    expect(outcome).toContain("Joshua focused on Jobs and shared product/evaluation direction.");
-    expect(outcome).toContain("Shiv initially led more of the foundational resume-generation work.");
-    expect(outcome).toContain("one recommendation surfaced a role I might have missed.");
-    expect(outcome).not.toContain("OWNER-REPORTED EXPERIENCE");
-    expect(markup).not.toMatch(/\b(?:hours saved|\d+%|auto-apply|automated application submission|live production deployment)\b/i);
+    expect(storyText(chapter(renderCase(), "overview", "intake"))).toContain("Joshua Aryeetey + Shiv Arora");
+    expect(outcome).toContain("Joshua led Jobs-side work and shared product and evaluation direction");
+    expect(outcome).toContain("Shiv initially led more of the foundational resume-generation work");
+    expect(outcome).toContain("OWNER-REPORTED · QUALITATIVE");
+    expect(outcome).toContain("One recommendation surfaced a role I might not have found on my own.");
+    expect(outcome).not.toMatch(/\b(?:hours saved|\d+%|auto-apply|automated application submission|live production deployment|research-grade validation)\b/i);
   });
 });
