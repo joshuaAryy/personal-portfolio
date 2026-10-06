@@ -16,6 +16,9 @@ describe("Crest technical case study", () => {
     const start = markup.indexOf('<section class="crest-section crest-architecture"');
     const end = markup.indexOf("</section>", start);
     const architecture = markup.slice(start, end);
+    const policyStart = markup.indexOf('<section class="crest-section crest-policy"');
+    const policyEnd = markup.indexOf("</section>", policyStart);
+    const policy = markup.slice(policyStart, policyEnd);
 
     expect(markup).toContain('href="#crest-architecture"');
     expect(markup).toContain('id="crest-architecture"');
@@ -27,7 +30,11 @@ describe("Crest technical case study", () => {
     expect(architecture).toContain("Gemini");
     expect(architecture).toContain("Vultr");
     expect(architecture).toContain("STANDALONE NODE.JS SCRIPTS");
-    expect(architecture).toContain("policy_chunks");
+    expect(architecture).toContain("Separate prototype");
+    expect(architecture).not.toContain("gemini-embedding-001");
+    expect(architecture).not.toContain("policy_chunks");
+    expect(policy).toContain("gemini-embedding-001");
+    expect(policy).toContain("MongoDB Atlas · policy_chunks");
     expect(architecture).toContain("separate implementations");
     expect(architecture).toContain("does not establish one production topology");
   });

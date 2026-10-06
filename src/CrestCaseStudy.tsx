@@ -41,11 +41,7 @@ const crestArchitectureTracks = [
     label: "POLICY PDF · STANDALONE NODE.JS SCRIPTS",
     title: "Grounded policy retrieval",
     stages: [
-      ["Brim policy PDF", "Source document"],
-      ["Extract + chunk", "Searchable passages"],
-      ["Gemini embeddings", "gemini-embedding-001 · 3,072d"],
-      ["MongoDB Atlas", "policy_chunks · vector search"],
-      ["Grounded response", "Retrieved passages to Gemini"],
+      ["Separate prototype", "Brim PDF → passages → Gemini interpretation"],
     ],
   },
 ] as const;
