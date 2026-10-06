@@ -59,6 +59,30 @@ describe("Projects lobby", () => {
     expect(environmentRule).not.toContain("party-background.png");
   });
 
+  it("narrows and centers non-Projects banners and fades their environment from the top", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const categoryBanners = css.match(
+      /\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+    const categoryEnvironment = css.match(
+      /\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
+    const mobileCategoryBanners = mobileRules.match(
+      /\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{[^}]*left:\s*0[^}]*right:\s*0[^}]*width:\s*100%[^}]*transform:\s*none[^}]*\}/s,
+    )?.[0] ?? "";
+
+    expect(categoryBanners).toMatch(/left:\s*50%/);
+    expect(categoryBanners).toMatch(/width:\s*min\(68%,\s*680px\)/);
+    expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
+    expect(categoryEnvironment).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 18%/);
+    expect(categoryEnvironment).toMatch(/transparent 88%/);
+    expect(mobileCategoryBanners).toMatch(/left:\s*0/);
+    expect(mobileCategoryBanners).toMatch(/right:\s*0/);
+    expect(mobileCategoryBanners).toMatch(/width:\s*100%/);
+    expect(mobileCategoryBanners).toMatch(/transform:\s*none/);
+  });
+
   it("uses real project marks and keeps selection separate from opening a story", () => {
     const view = renderProjectsLobby();
 

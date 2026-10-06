@@ -1136,10 +1136,6 @@ a:focus-visible {
   gap: 16px;
 }
 
-.client--home-shell .rail-link--status {
-  min-height: 54px;
-}
-
 .client--home-shell .rail-link--status > span:last-child,
 .client--resume-shell .rail-link--status > span:last-child {
   display: grid;

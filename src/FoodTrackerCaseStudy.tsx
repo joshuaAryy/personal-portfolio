@@ -349,6 +349,48 @@ function FoodRetrievalEvidence() {
   );
 }
 
+function FoodSecurityBoundary() {
+  return (
+    <figure
+      className="food-security-boundary"
+      aria-label="Verified identity becomes a server-owned data scope"
+    >
+      <header className="food-security-boundary__header">
+        <span className="food-figure__index">ACCOUNT / RESOURCE BOUNDARY</span>
+        <h3>Verify the caller. Derive the data scope.</h3>
+        <p>Authentication identifies the caller; authorization scopes each resource.</p>
+      </header>
+
+      <ol className="food-security-boundary__path">
+        <li>
+          <span>01 / IDENTITY</span>
+          <strong>Firebase ID token</strong>
+          <p>The signed-in client presents its identity to the API.</p>
+        </li>
+        <li>
+          <span>02 / VERIFY + MAP</span>
+          <strong>Map UID to app-owned UUID</strong>
+          <p>The API verifies the token, then resolves the application identity.</p>
+        </li>
+        <li>
+          <span>03 / AUTHORIZE</span>
+          <strong>Scope each resource query</strong>
+          <p>Ownership comes from verified identity; the client does not choose the owner ID.</p>
+        </li>
+      </ol>
+
+      <div className="food-security-boundary__signout">
+        <span className="food-figure__index">SIGN OUT</span>
+        <strong>Clear user-specific local state.</strong>
+      </div>
+
+      <figcaption>
+        Source boundary · the inspected Phase 24 code verifies the caller and derives an app-owned scope. This is implementation evidence, not a claim that every provider or native path was released.
+      </figcaption>
+    </figure>
+  );
+}
+
 function FoodEvidenceGates() {
   return (
     <div className="food-evidence-gates">
@@ -530,6 +572,7 @@ export default function FoodTrackerCaseStudy() {
             <h2 id="food-validation-title">A passing test, a complete index, and a useful product are different claims.</h2>
             <p>Search correctness, index completeness, account isolation, and real runtime behavior needed separate evidence. A green check in one layer could not stand in for the rest.</p>
           </header>
+          <FoodSecurityBoundary />
           <FoodEvidenceGates />
         </section>
       </article>

@@ -116,6 +116,7 @@ describe("Profile Overview", () => {
     const enclosureRule = cssBlock(profileCss, ".profile-project-panel__enclosure");
     const signalRule = cssBlock(profileCss, ".profile-signal-grid");
     const tabletRule = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1858px)");
+    const shortWideRule = cssBlock(profileCss, "@media (min-width: 1700px) and (max-width: 1858px)");
     const tabletOverview = cssBlock(tabletRule, ".main--profile .profile-overview");
     const tabletSignals = cssBlock(tabletRule, ".profile-signal-grid");
     const narrowRule = cssBlock(profileCss, "@media (max-width: 900px)");
@@ -128,10 +129,15 @@ describe("Profile Overview", () => {
     const tabletOverviewHeight = cssPixels(tabletOverview, "height") ?? 0;
 
     expect(signalTop).toBeGreaterThanOrEqual(heroBottom + 24);
+    expect(overviewRule).toContain("top: 115px");
     expect(overviewHeight).toBeGreaterThanOrEqual(signalBottom + 24);
     expect(tabletOverviewHeight).toBeGreaterThanOrEqual(tabletSignalBottom + 24);
     expect(tabletOverview).toContain("margin-top: 135px");
     expect(tabletOverview).toContain("transform: scale(.7)");
+    expect(tabletOverview).toContain("height: 914px");
+    expect(tabletSignals).toContain("top: 560px");
+    expect(tabletSignals).toContain("height: 250px");
+    expect(shortWideRule).toContain("margin-top: clamp(0px, calc(100vh - 1000px), 135px)");
     expect(narrowOverview).toContain("flex-direction: column");
     expect(narrowOverview).toContain("gap: 24px");
   });

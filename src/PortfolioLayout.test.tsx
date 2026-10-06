@@ -215,6 +215,9 @@ describe("League client shell", () => {
     expect(css).toMatch(
       /\.client--home-shell \.rail-link--status,\s*\.client--resume-shell \.rail-link--status\s*\{[^}]*min-height:\s*62px/s,
     );
+    expect(css).not.toMatch(
+      /\.client--home-shell \.rail-link--status\s*\{[^}]*min-height:\s*54px/s,
+    );
   });
 
   it("places the three contact destinations after page content for the narrow shell", () => {

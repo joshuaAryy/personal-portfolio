@@ -216,4 +216,26 @@ describe("Food Tracker product story", () => {
     expect(endingCopy).not.toContain("15,000 users");
     expect(endingCopy).not.toContain("publicly launched");
   });
+
+  it("teaches the identity-to-resource-scope security boundary", () => {
+    const markup = renderFoodTracker();
+    const ending = section(markup, "food-validation");
+    const endingCopy = storyText(ending);
+
+    expect(ending).toContain('class="food-security-boundary"');
+    expect(ending).toContain('aria-label="Verified identity becomes a server-owned data scope"');
+    for (const copy of [
+      "Firebase ID token",
+      "API verifies the token",
+      "Map UID to app-owned UUID",
+      "the client does not choose the owner ID.",
+      "Scope each resource query",
+      "SIGN OUT",
+      "Clear user-specific local state.",
+      "Authentication identifies the caller; authorization scopes each resource.",
+      "This is implementation evidence, not a claim that every provider or native path was released.",
+    ]) expect(endingCopy).toContain(copy);
+    expect(endingCopy).not.toContain("every route is secure");
+    expect(endingCopy).not.toContain("publicly launched");
+  });
 });

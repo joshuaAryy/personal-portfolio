@@ -28,6 +28,11 @@
   mask-image: linear-gradient(180deg, #000 0%, #000 38%, rgb(0 0 0 / 60%) 74%, transparent 100%);
 }
 
+.league-lobby:not(.league-lobby--projects) .league-lobby__environment {
+  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 18%, rgb(0 0 0 / 60%) 54%, transparent 88%);
+  mask-image: linear-gradient(180deg, #000 0%, #000 18%, rgb(0 0 0 / 60%) 54%, transparent 88%);
+}
+
 .league-lobby__heading {
   position: absolute;
   z-index: 1;
@@ -102,10 +107,12 @@
 }
 
 .league-lobby__banners:not(.league-lobby__banners--projects) {
-  right: 18%;
-  left: 18%;
+  right: auto;
+  left: 50%;
+  width: min(68%, 680px);
+  transform: translateX(-50%);
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 3vw, 46px);
+  gap: clamp(16px, 2.5vw, 36px);
 }
 
 .league-lobby__balance-slots {
@@ -630,6 +637,8 @@
   .league-lobby__banners:not(.league-lobby__banners--projects) {
     left: 0;
     right: 0;
+    width: 100%;
+    transform: none;
   }
 
   .league-banner {

@@ -123,6 +123,20 @@ describe("HomeExplore", () => {
     expect(workItems).toMatch(/grid-template-columns:\s*minmax\(0,\s*1fr\)/);
   });
 
+  it("starts every mode's secondary details close beneath its description", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const selection = css.match(/\.home-explore__selection\s*\{([^}]*)\}/)?.[1] ?? "";
+    const tabletRules = css.slice(
+      css.indexOf("@media (max-width: 1120px)"),
+      css.indexOf("@media (max-width: 760px)"),
+    );
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 760px)"));
+
+    expect(selection).toMatch(/gap:\s*6px/);
+    expect(tabletRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*6px/s);
+    expect(mobileRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*6px/s);
+  });
+
   it("previews verified experience, hackathon, and education details when selected", () => {
     const view = renderHomeExplore();
     const selection = view.querySelector(".home-explore__selection");
