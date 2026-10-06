@@ -33,3 +33,4 @@ Routes checked: `/home`, `/projects`, `/experience`, `/hackathons`, `/education`
 - Dental, Bookstore, and CMOS remain constrained by missing primary implementation artifacts; the ALU/FSM project uses verified source detail.
 - Live screen-reader interaction remains manual. This Preview has not been through final owner visual review, cross-browser certification, or public-release review.
 - J identity remains separate and unapproved. Sonnet v8 is used for the Opening feature-review implementation; archive `159:2` remains production fallback. Candidate 05 is not integrated.
+- Full `npm audit` reports one high advisory for development-only `source-map-js@1.2.1`, reached through PostCSS/Vite. `npm audit --omit=dev` reports no production dependency advisories; the static Preview does not ship the development tool. This was recorded as repository maintenance and left outside the owner-directed UI/content correction.
