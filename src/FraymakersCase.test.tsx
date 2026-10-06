@@ -4,142 +4,82 @@ import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import FraymakersCase from "./FraymakersCase";
 
+const render = () => renderToStaticMarkup(<MemoryRouter><FraymakersCase /></MemoryRouter>);
+
 describe("Fraymakers technical case study", () => {
-  const render = () => renderToStaticMarkup(<MemoryRouter><FraymakersCase /></MemoryRouter>);
-
-  it("leads with the native composition figure and keeps match context to one sequence", () => {
+  it("follows the full workflow before opening the renderer subsystem", () => {
     const markup = render();
-    const introIndex = markup.indexOf('id="fraymakers-intro"');
-    const compositionIndex = markup.indexOf('id="fraymakers-composition"');
-    const pipelineIndex = markup.indexOf('id="fraymakers-pipeline"');
-    const configurationIndex = markup.indexOf('id="fraymakers-configuration"');
-
-    expect(introIndex).toBeGreaterThan(-1);
-    expect(compositionIndex).toBeGreaterThan(introIndex);
-    expect(pipelineIndex).toBeGreaterThan(compositionIndex);
-    expect(configurationIndex).toBeGreaterThan(pipelineIndex);
-    expect(markup.indexOf("SCHEMATIC OUTPUT")).toBeLessThan(markup.indexOf("TOURNAMENT CONTEXT"));
-    expect(markup).not.toContain("fray-case__opening-route");
-    expect(markup).not.toContain("fray-case__config-figure");
-    expect(markup).toContain("Categories carried by match-specific YAML overrides");
-    expect(markup).toContain("ART");
-    expect(markup).toContain("PRESENTATION");
+    const targets = ["pipeline", "configuration", "composition", "ownership", "outcome"]
+      .map((id) => markup.indexOf(`id="fraymakers-${id}"`));
+    expect(targets.every((index) => index >= 0)).toBe(true);
+    expect(targets).toEqual([...targets].sort((a, b) => a - b));
+    const stages = ["TOURNAMENT CONTEXT", "PLAYER METADATA", "YAML / CONFIG", "VIDEO ASSOCIATION", "ASSET COMPOSITION", "PNG OUTPUT", "VOD USE"]
+      .map((label) => markup.indexOf(`>${label}<`));
+    expect(stages.every((index) => index >= 0)).toBe(true);
+    expect(stages).toEqual([...stages].sort((a, b) => a - b));
   });
 
-  it("teaches the full match-to-render sequence without inventing lookup details", () => {
+  it("explains what changes per match without presenting an invented YAML schema", () => {
     const markup = render();
-    const orderedStages = [
-      "TOURNAMENT CONTEXT",
-      "METADATA",
-      "YAML / CONFIG",
-      "VIDEO ASSOCIATION",
-      "RENDERED THUMBNAIL",
-    ].map((stage) => markup.indexOf(stage));
-
-    expect(orderedStages.every((index) => index >= 0)).toBe(true);
-    expect(orderedStages).toEqual([...orderedStages].sort((a, b) => a - b));
-    expect(markup).toContain("1280");
-    expect(markup).toContain("exact lookup details are not represented here");
-    expect(markup.match(/thumbnail\.js/g)).toHaveLength(1);
-    expect(markup).toContain("node-canvas");
+    const config = markup.slice(markup.indexOf('id="fraymakers-configuration"'), markup.indexOf('id="fraymakers-composition"'));
+    expect(config).toContain("Match-specific inputs");
+    expect(config).toContain("Names and aliases");
+    expect(config).toContain("Character and costume choices");
+    expect(config).toContain("Event and set labels");
+    expect(config).toContain("Conceptual input categories");
+    expect(config).toContain("exact YAML keys");
+    expect(config).not.toContain("<pre");
   });
 
-  it("links every rendered chapter fragment to one unique section target", () => {
+  it("gives the fixed-size renderer and its input constraints meaningful explanation", () => {
     const markup = render();
-    const chapterLinks = [...markup.matchAll(/<a href="#(fraymakers-[^"]+)"/g)];
-    const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map(([, id]) => id);
-
-    expect(chapterLinks.length).toBeGreaterThan(0);
-    for (const [, targetId] of chapterLinks) {
-      expect(ids.filter((id) => id === targetId)).toHaveLength(1);
+    const composition = markup.slice(markup.indexOf('id="fraymakers-composition"'), markup.indexOf('id="fraymakers-ownership"'));
+    expect(composition).toContain('viewBox="0 0 1280 720"');
+    expect(composition).toContain("COMPOSITION SCHEMATIC");
+    expect(composition).toContain("node-canvas");
+    for (const constraint of ["P2 mirroring", "Aliases", "Long names", "Missing assets and configuration"]) {
+      expect(composition).toContain(constraint);
     }
+    expect(composition).toContain("Both players face the matchup");
+    expect(composition).toContain("Variable text, fixed frame");
+    expect(composition).toContain("exact fallback behavior");
+    expect(composition).not.toContain("<img");
   });
 
-  it("keeps the broader foundation and Joshua's later subsystem ownership distinct", () => {
+  it("retains the renderer's art relationships in a readable narrow composition view", () => {
     const markup = render();
-    const opening = markup.split("</header>")[0];
-    expect(opening).toContain("FROM MATCH CONTEXT TO VOD-READY FRAME");
-    expect(opening).toContain("I built");
+    const narrow = markup.slice(markup.indexOf('aria-label="Simplified composition for narrow screens"'), markup.indexOf('id="fraymakers-composition-caption"'));
+    expect(narrow).toContain("P1 art");
+    expect(narrow).toContain("P2 art");
+    expect(narrow).toContain("mirrored");
+    expect(narrow).toContain("Stage / background + logos");
+    expect(narrow).toContain("Names / set labels / foreground");
+  });
+
+  it("keeps subsystem authorship and the unfinished upload boundary explicit", () => {
+    const markup = render();
     expect(markup).toContain("I built <code>thumbnail.js</code>");
-    expect(markup).toContain("I joined later");
     expect(markup).toContain("My brother started the broader project");
-    expect(markup).toContain("earlier CLI/workflow");
-    expect(markup).toContain("much of the Challonge integration and early API groundwork");
-    expect(markup).toContain("Automatic upload");
-    expect(markup).toContain("Not completed");
-  });
-
-  it("uses native explanatory figures and describes supported composition cases", () => {
-    const markup = render();
-    const compositionStart = markup.indexOf('id="fraymakers-composition"');
-    const ownershipStart = markup.indexOf('id="fraymakers-ownership"');
-    const composition = markup.slice(compositionStart, ownershipStart);
-
-    for (const item of ["stage/background art", "character sprites", "alternate costumes", "assists", "foreground elements", "logos", "P2 MIRRORING", "ALIASES", "LONG NAMES", "MISSING ASSETS"]) {
-      expect(markup).toContain(item);
-    }
-    expect(composition).toContain("SCHEMATIC OUTPUT");
-    expect(composition).toContain("STAGE / BACKGROUND ART");
-    expect(composition).toContain("P2 · MIRRORED SPRITE");
-    expect(composition).toContain("TOURNAMENT LOGO");
-    expect(composition).toContain("exact layer ordering is not established");
-    expect(markup.match(/<figure/g)?.length).toBeGreaterThanOrEqual(4);
-    expect(markup).not.toContain("<img");
-    expect(markup).toContain("exact YAML keys and sample values are not shown");
+    expect(markup).toContain("CLI");
+    expect(markup).toContain("Challonge integration");
+    expect(markup).toContain("I joined later");
     expect(markup).toContain("used on real Fraymakers VODs");
+    expect(markup).toContain("YouTube Data API v3 / OAuth");
+    expect(markup).toContain("Automatic upload was not completed");
+    expect(markup).not.toMatch(/time saved|hours saved|automatically uploaded/i);
   });
 
-  it("labels owner-reported renderer constraints without inventing implementation fallbacks", () => {
+  it("provides one unique destination for each chapter link in story order", () => {
     const markup = render();
-    const compositionStart = markup.indexOf('id="fraymakers-composition"');
-    const pipelineStart = markup.indexOf('id="fraymakers-pipeline"');
-    const composition = markup.slice(compositionStart, pipelineStart);
-
-    for (const detail of [
-      "OWNER-REPORTED ENGINEERING CONSTRAINTS",
-      "Mirror player-two character art so the two sides read as an opposing matchup",
-      "Handle alternate player and character names in match context",
-      "Fit variable-length player names within the fixed 1280 × 720 frame",
-      "Account for art inputs that are missing from a matchup",
-    ]) expect(composition).toContain(detail);
-
-    expect(composition).not.toContain("original project checkout");
-    expect(composition).not.toContain("not verified");
-    expect(composition).not.toMatch(/fallback (?:used|shown|selected):?\s*(?:placeholder|original|default)/i);
-    expect(markup.match(/thumbnail\.js/g)).toHaveLength(1);
+    const links = [...markup.matchAll(/<a href="#(fraymakers-[^"]+)"/g)].map(([, id]) => id);
+    expect(links).toEqual(["fraymakers-pipeline", "fraymakers-configuration", "fraymakers-composition", "fraymakers-ownership", "fraymakers-outcome"]);
+    const ids = [...markup.matchAll(/\bid="([^"]+)"/g)].map(([, id]) => id);
+    for (const id of links) expect(ids.filter((target) => target === id)).toHaveLength(1);
   });
 
   it("positions chapter targets below the desktop and mobile sticky rails", () => {
     const css = readFileSync("src/fraymakers-case.css", "utf8");
-
-    expect(css).toMatch(
-      /\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*68px/s,
-    );
-    expect(css).toMatch(
-      /@media \(max-width: 700px\)[\s\S]*?\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*94px/s,
-    );
-  });
-
-  it("keeps the Fraymakers chapter rail sized and styled in the shared shell", () => {
-    const shellCss = readFileSync("src/styles.css", "utf8");
-    const activeDesktopRules = shellCss.slice(
-      shellCss.lastIndexOf("@media (min-width:1800px) and (min-height:1000px)"),
-    );
-
-    expect(activeDesktopRules).toMatch(
-      /\.fraymakers-nav\s*\{\s*grid-template-columns:\s*minmax\(0,\s*446px\)/,
-    );
-    expect(shellCss).toMatch(/\.fraymakers-nav__chapters a\[aria-current="location"\]\s*\{[^}]*color:\s*#e3c57e/s);
-    expect(shellCss).toMatch(/\.fraymakers-nav__chapters a\[aria-current="location"\]::after\s*\{[^}]*height:\s*2px;[^}]*background:\s*#d6b76b/s);
-  });
-
-  it("keeps the render boundary separate from the unfinished YouTube path", () => {
-    const markup = render();
-    const outputIndex = markup.indexOf("used on real Fraymakers VODs");
-    const uploadIndex = markup.indexOf("YouTube Data API v3 / OAuth");
-
-    expect(outputIndex).toBeGreaterThan(-1);
-    expect(uploadIndex).toBeGreaterThan(outputIndex);
-    expect(markup).toContain("full automatic upload did not ship");
+    expect(css).toMatch(/\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*68px/s);
+    expect(css).toMatch(/@media \(max-width: 700px\)[\s\S]*?\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{\s*scroll-margin-top:\s*94px/s);
   });
 });
