@@ -17,8 +17,18 @@ function section(markup: string, id: string, nextId?: string) {
   return markup.slice(start, end);
 }
 
+function storyText(markup: string) {
+  return markup
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&#x27;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 describe("Food Tracker product story", () => {
-  it("follows the product arc from logging to insights, retrieval, and validation", () => {
+  it("moves from the product promise through logging, data, insights, retrieval, and release", () => {
     const markup = renderFoodTracker();
     const sections = [
       'id="food-overview"',
@@ -26,182 +36,184 @@ describe("Food Tracker product story", () => {
       'id="food-architecture"',
       'id="food-insights"',
       'id="food-search"',
-      'id="food-evaluation"',
       'id="food-validation"',
     ];
     const positions = sections.map((anchor) => markup.indexOf(anchor));
 
     expect(positions.every((position) => position >= 0)).toBe(true);
     expect(positions).toEqual([...positions].sort((a, b) => a - b));
-    expect(markup).not.toContain('id="food-interface"');
-    expect(markup).not.toContain('id="food-workflow"');
-    expect(markup).toContain('href="#food-search"');
-    expect(markup).toContain('href="#food-evaluation"');
-    expect(markup).toContain('href="#food-architecture"');
-    expect(markup).toContain('href="#food-validation"');
+    expect(markup).not.toContain('id="food-evaluation"');
+    expect(markup).not.toContain('href="#food-evaluation"');
+    expect(markup).toContain("PRODUCT");
+    expect(markup).toContain("LOGGING");
+    expect(markup).toContain("DATA");
+    expect(markup).toContain("INSIGHTS");
+    expect(markup).toContain("SEARCH + EVAL");
+    expect(markup).toContain("RELEASE");
   });
 
-  it("frames the shared product and balances Joshua's hands-on work with direction", () => {
+  it("states Joshua's product and technical ownership without claiming sole implementation", () => {
     const markup = renderFoodTracker();
-    const opening = section(markup, "food-overview", "food-logging");
+    const opening = storyText(section(markup, "food-overview", "food-logging"));
 
-    expect(opening).toContain("Simple food logs.");
-    expect(opening).toContain("Trusted nutrition.");
-    expect(opening).toContain("my own gym and nutrition routine");
-    expect(opening).toContain("Simple and Complex share one app, backend, and data model");
-    expect(opening).toContain("I set product direction and architecture");
-    expect(opening).toContain("shaped workflows and evaluation");
-    expect(opening).toContain("coded and debugged parts of the product directly");
-    expect(opening).toContain("directed and reviewed substantial implementation with Codex and AI agents");
-  });
-
-  it("teaches the logging lifecycle and separates AI suggestions from nutrition authority", () => {
-    const markup = renderFoodTracker();
-    const logging = section(markup, "food-logging", "food-insights");
-
-    expect(logging).toContain('class="food-log-lifecycle"');
     for (const copy of [
-      "FIND OR REUSE",
-      "Manual entry, catalog search, recent or reusable foods, and barcode lookup.",
-      "DESCRIBE OR PHOTOGRAPH",
-      "AI proposes foods and portions; it does not set trusted nutrition.",
-      "RECIPES + MIXED MEALS",
-      "REVIEW THE FOOD + PORTION",
-      "BACKEND SERVING RESOLUTION",
-      "SAVED SERVING + NUTRITION SNAPSHOT",
-      "History keeps the serving basis; unknown nutrition stays unknown.",
-      "A snapshot-backed serving edit recalculates from its stored basis",
-      "recipe and mixed-meal edits have different constraints",
-    ]) expect(logging).toContain(copy);
-    expect(logging).not.toContain("AI determines calories");
-    expect(logging).not.toContain("append-only");
-    expect(logging).not.toContain("immutable history");
+      "Simple tracking. Serious insight.",
+      "I started Food Tracker for my own gym and nutrition routine",
+      "I owned product direction, architecture, workflows, evaluation, and acceptance",
+      "I also coded and debugged parts of the product",
+      "Codex and AI agents implemented substantial product slices under my direction and review",
+      "Simple and Complex share one app, backend, and data model",
+    ]) expect(opening).toContain(copy);
+    expect(opening).not.toContain("I built every part");
+    expect(opening).not.toContain("AI built the product");
   });
 
-  it("labels the authentic meal-review capture as unsaved product evidence", () => {
+  it("uses only the unsaved AI meal-review screen as direct product evidence", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
-    const insights = section(markup, "food-insights", "food-search");
+    const captures = [...markup.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
 
-    expect(logging).toContain('/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png');
-    expect(logging).toContain("COMPLEX MODE / ENTRY CHOICES");
-    expect(logging).toContain("This single entry sheet exposes search, text and photo suggestions, the library, recipes, mixed meals, and barcode scan.");
+    expect(captures).toHaveLength(1);
     expect(logging).toContain('/media/case-studies/food-tracker/phase-24/ai-meal-review.png');
-    expect(logging).toContain("MEAL REVIEW / UNSAVED EXAMPLE");
-    expect(logging).toContain("Review before saving");
-    expect(logging).toContain("not saved");
-    expect(logging).toContain("Earlier product interface / pre-redesign baseline");
-    expect(logging.indexOf("food-log-complex-clean.png")).toBeLessThan(logging.indexOf("ai-meal-review.png"));
-    expect(logging).not.toContain("PHASE 24");
-    expect(insights).not.toContain("PHASE 24");
-    expect(insights).not.toContain("trend-configuration.png");
-    expect(insights).not.toContain("insights-week-current.png");
-    expect(insights).not.toContain("trend-detail-calories-unknown.png");
+    expect(logging).toContain("368×800 iPhone QA capture from the pre-redesign baseline");
+    expect(logging).toContain("The meal was reviewed but not saved; this is interaction evidence, not a populated user outcome");
+    expect(logging).not.toContain("food-log-complex-clean.png");
+    expect(markup).not.toContain("search-banana-results.png");
+    expect(markup).not.toContain("trend-configuration.png");
+    expect(markup).not.toContain("trend-detail-calories-unknown.png");
   });
 
-  it("shows the verified mobile, API, provider, and authoritative-data relationships", () => {
+  it("shows the many logging starts converging on one human-reviewed serving and snapshot contract", () => {
+    const markup = renderFoodTracker();
+    const logging = section(markup, "food-logging", "food-architecture");
+    const loggingCopy = storyText(logging);
+
+    expect(logging).toContain('class="food-log-transaction"');
+    for (const copy of [
+      "SEARCH + REUSE",
+      "BARCODE",
+      "DESCRIBE OR PHOTOGRAPH",
+      "RECIPES + MIXED MEALS",
+      "Review, edit, or remove proposed rows before saving.",
+      "Shared backend serving resolution applies the chosen amount and unit.",
+      "The saved log keeps a nutrition snapshot for its historical meaning.",
+      "Unknown remains unknown; it is not filled with zero.",
+      "The log can still be edited or deleted.",
+      "A labeled, editable low-trust estimate can be requested for an unresolved text row; it does not become trusted catalog food.",
+    ]) expect(loggingCopy).toContain(copy);
+    expect(loggingCopy).not.toContain("AI determines authoritative nutrition");
+    expect(loggingCopy).not.toContain("append-only");
+    expect(loggingCopy).not.toContain("immutable food logs");
+  });
+
+  it("teaches the source-to-catalog-to-snapshot data architecture", () => {
     const markup = renderFoodTracker();
     const architecture = section(markup, "food-architecture", "food-insights");
+    const architectureCopy = storyText(architecture);
 
+    expect(architecture).toContain('class="food-data-contract"');
     for (const copy of [
-      "React Native + Expo",
-      "Express + TypeScript API",
-      "Prisma",
-      "PostgreSQL",
       "Open Food Facts",
+      "packaged foods and barcode lookup",
       "USDA FoodData Central",
-      "Canadian Nutrient File 2026",
+      "generic-food candidates",
+      "CNF 2026",
       "Ciqual 2025",
       "CoFID 2021",
-      "source provenance",
-      "serving and nutrition snapshots",
-      "Unknown is not zero",
-      "AI suggests intent or portions; trusted food data and backend rules govern nutrition.",
-    ]) expect(architecture).toContain(copy);
-    expect(architecture).toContain('class="food-system-map"');
-    expect(architecture).not.toContain("Pinecone is the nutrition source");
+      "versioned bulk datasets",
+      "Source identity and release stay attached to normalized records",
+      "Express + TypeScript API",
+      "PostgreSQL food and nutrient catalog",
+      "serving resolver",
+      "food + source provenance",
+      "basis quantity + unit",
+      "requested serving",
+      "resolution + multiplier",
+      "nutrient basis + overrides",
+      "12,363 active foods",
+      "277,341 nutrient rows",
+      "catalog scale, not users or impact",
+    ]) expect(architectureCopy).toContain(copy);
+    expect(architectureCopy).toContain("React Native + Expo");
+    expect(architectureCopy).toContain("shared TypeScript + Zod contracts");
+    expect(architectureCopy).not.toContain("live APIs for every national dataset lookup");
   });
 
-  it("explains insight eligibility and coverage without inventing a populated trend", () => {
+  it("separates logging-day eligibility from nutrient coverage and explains the two presentation depths", () => {
     const markup = renderFoodTracker();
     const insights = section(markup, "food-insights", "food-search");
+    const insightsCopy = storyText(insights);
 
-    expect(insights).toContain('class="food-insights-model"');
-    expect(insights).toContain("LOGGING DAY");
-    expect(insights).toContain("COMPLETE");
-    expect(insights).toContain("PARTIAL");
-    expect(insights).toContain("UNLOGGED");
-    expect(insights).toContain("METRIC COVERAGE");
-    expect(insights).toContain("RECORDED");
-    expect(insights).toContain("UNKNOWN");
-    expect(insights).toContain("Analytics and recommendation facts are deterministic.");
-    expect(insights).toContain("Keep routine use focused");
-    expect(insights).toContain("Core progress, curated views, and recommendations");
-    expect(insights).toContain("Explore more nutrients, ranges, comparisons, coverage controls, and saved views");
-    expect(insights).toContain("same saved facts");
-    expect(insights).not.toContain("Return to a chosen analysis without changing the underlying log");
-    expect(insights).not.toContain("0 days");
-    expect(insights).not.toContain("0 logged days");
+    expect(insights).toContain('class="food-insight-path"');
+    for (const copy of [
+      "Food logs · weight logs · goals · local tracking day",
+      "COMPLETE · PARTIAL · UNLOGGED",
+      "RECORDED · PARTIAL · UNKNOWN",
+      "A logged day can still have an unknown nutrient.",
+      "SIMPLE / CURATED DAILY READ",
+      "Calories · macros · weight · hydration · logging consistency",
+      "COMPLEX / DEEPER EXPLORATION",
+      "More nutrients · comparisons · coverage controls · custom ranges · saved views",
+      "Analytics and recommendation facts are deterministic backend facts",
+      "AI does not fill missing values or decide recommendations",
+    ]) expect(insightsCopy).toContain(copy);
+    expect(insightsCopy).not.toContain("return to a chosen analysis without changing the underlying log");
+    expect(insightsCopy).not.toContain("populated account report");
   });
 
-  it("keeps hybrid retrieval and its offline development/holdout results distinct", () => {
+  it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {
     const markup = renderFoodTracker();
-    const retrieval = section(markup, "food-search", "food-evaluation");
+    const search = section(markup, "food-search", "food-validation");
+    const searchCopy = storyText(search);
 
-    expect(retrieval).toContain('class="food-retrieval-flow"');
-    expect(retrieval).toContain("DETERMINISTIC");
-    expect(retrieval).toContain("FUZZY");
-    expect(retrieval).toContain("SEMANTIC CANDIDATES");
-    expect(retrieval).toContain("Pinecone supplies candidates only");
-    expect(retrieval).toContain("Rules decide final rank");
-    expect(retrieval).toContain("semantic retrieval added substantial latency for little benchmark recovery");
-    expect(retrieval).not.toContain("31/40");
-    expect(retrieval).not.toContain("32/40");
+    expect(search).toContain('class="food-retrieval-evidence"');
+    for (const copy of [
+      "Exact / structured",
+      "Fuzzy retrieval",
+      "Recover close text when the typed name is imperfect",
+      "Semantic candidates",
+      "Pinecone expands the candidate set; it is a derived index.",
+      "Pinecone expands the candidate set; it is a derived index.",
+      "Deterministic, domain-aware ranking",
+      "A person selects the food before shared serving resolution",
+      "DEVELOPMENT",
+      "80 queries",
+      "HOLDOUT",
+      "40 queries",
+      "40/80",
+      "71/80",
+      "72/80",
+      "25/40",
+      "27/40",
+      "28/40",
+      "Semantic retrieval added substantial latency for little benchmark recovery",
+      "Fuzzy retrieval drove most of the measured gain",
+      "Offline ranking evidence, not live-user outcomes",
+    ]) expect(searchCopy).toContain(copy);
+    expect(searchCopy).not.toContain("31/40");
+    expect(searchCopy).not.toContain("32/40");
+    expect(searchCopy).not.toContain("semantic retrieval is faster");
+    expect(searchCopy).not.toContain("Pinecone is nutrition authority");
   });
 
-  it("separates the development and holdout benchmark and keeps its three ranking cutoffs", () => {
-    const markup = renderFoodTracker();
-    const evaluation = section(markup, "food-evaluation", "food-validation");
-
-    for (const result of ["40/80", "71/80", "72/80", "25/40", "27/40", "28/40"]) {
-      expect(evaluation).toContain(result);
-    }
-    expect(evaluation).toContain("DEVELOPMENT · 80 QUERIES");
-    expect(evaluation).toContain("HOLDOUT · 40 QUERIES");
-    expect(evaluation).toContain("Offline search relevance, not live-user outcomes");
-    expect(evaluation).not.toContain("fuzzy-only recovery");
-  });
-
-  it("ends with separate relevance, index-completeness, identity, and release checks", () => {
+  it("ends on distinct quality, data-isolation, runtime, and release gates", () => {
     const markup = renderFoodTracker();
     const ending = section(markup, "food-validation");
+    const endingCopy = storyText(ending);
 
+    expect(ending).toContain('class="food-evidence-gates"');
     for (const copy of [
-      "RELEVANCE",
-      "INDEX COMPLETENESS",
-      "DATA SCOPE + RELEASE",
-      "Code tests passed while search relevance was still poor.",
-      "A pagination bug left the search index partial or stale.",
-      "Firebase identities map to app-owned user IDs; protected API routes derive record ownership on the server.",
-      "The repository records validated Railway staging and a standalone iOS install.",
-      "Paid Apple distribution remains deferred, and Android standalone validation is incomplete.",
-      "The pinned repository records validated Railway staging and a free-Xcode standalone iOS install, not a public launch.",
-    ]) expect(ending).toContain(copy);
-    expect(ending).not.toContain("15,000 users");
-    expect(ending).not.toContain("live adoption");
-  });
-
-  it("uses native technical figures and avoids weak or duplicate Phase 24 captures", () => {
-    const markup = renderFoodTracker();
-
-    expect(markup).toContain('class="food-log-lifecycle"');
-    expect(markup).toContain('class="food-system-map"');
-    expect(markup).toContain('class="food-insights-model"');
-    expect(markup).toContain('class="food-retrieval-flow"');
-    expect(markup).toContain('class="food-benchmark"');
-    expect(markup).not.toContain("search-banana-results.png");
-    expect(markup).not.toContain("food-serving-preview-banana.png");
-    expect(markup).not.toContain("insights-week-current.png");
-    expect(markup).not.toContain("trend-detail-calories-unknown.png");
+      "Correct code can still rank the wrong food.",
+      "A relevant rank can still come from a partial index.",
+      "A pagination bug once left the derived search index partial or stale.",
+      "Firebase identifies the caller; the API derives the app-owned UUID and scopes data server-side.",
+      "Railway staging and a standalone iOS installation were validated.",
+      "This is not evidence of a public launch.",
+      "Paid Apple distribution and Android standalone validation remain incomplete.",
+      "Photo candidate adjudication and some manual checks remain untested; no claim of exhaustive image-path validation.",
+      "I learned to ask what the evidence proves, then validate the ranking, index, and actual runtime separately.",
+    ]) expect(endingCopy).toContain(copy);
+    expect(endingCopy).not.toContain("15,000 users");
+    expect(endingCopy).not.toContain("publicly launched");
   });
 });

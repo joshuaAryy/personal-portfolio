@@ -6,11 +6,10 @@ import "./food-visuals.css";
 const foodChapters = [
   { id: "overview", label: "PRODUCT" },
   { id: "logging", label: "LOGGING" },
-  { id: "architecture", label: "SYSTEM" },
+  { id: "architecture", label: "DATA" },
   { id: "insights", label: "INSIGHTS" },
-  { id: "search", label: "RETRIEVAL" },
-  { id: "evaluation", label: "EVALUATION" },
-  { id: "validation", label: "VALIDATION" },
+  { id: "search", label: "SEARCH + EVAL" },
+  { id: "validation", label: "RELEASE" },
 ] as const;
 
 type FoodChapterId = (typeof foodChapters)[number]["id"];
@@ -19,348 +18,376 @@ const evaluationSets = [
   {
     name: "DEVELOPMENT",
     queries: 80,
-    baseline: { top1: 40, top3: 40, top5: 40 },
-    hybrid: { top1: 71, top3: 72, top5: 72 },
+    legacy: [40, 40, 40],
+    hybrid: [71, 72, 72],
   },
   {
     name: "HOLDOUT",
     queries: 40,
-    baseline: { top1: 25, top3: 25, top5: 25 },
-    hybrid: { top1: 27, top3: 28, top5: 28 },
+    legacy: [25, 25, 25],
+    hybrid: [27, 28, 28],
   },
 ] as const;
 
-function FoodLogLifecycle() {
+function FoodProductPath() {
   return (
-    <figure className="food-log-lifecycle" aria-labelledby="food-log-lifecycle-title">
-      <div className="food-log-lifecycle__sources" aria-label="Ways to start a food log">
-        <article>
-          <span className="food-figure__index">01 / INPUT</span>
-          <h3>FIND OR REUSE</h3>
-          <p>Manual entry, catalog search, recent or reusable foods, and barcode lookup.</p>
-        </article>
-        <article className="food-log-lifecycle__source--suggested">
-          <span className="food-figure__index">02 / SUGGESTION</span>
-          <h3>DESCRIBE OR PHOTOGRAPH</h3>
-          <p>AI proposes foods and portions; it does not set trusted nutrition.</p>
-        </article>
-        <article>
-          <span className="food-figure__index">03 / COMBINE</span>
-          <h3>RECIPES + MIXED MEALS</h3>
-          <p>Bundle ingredients while retaining a saved basis for the meal.</p>
-        </article>
+    <figure className="food-product-path" aria-labelledby="food-product-path-title">
+      <div className="food-product-path__stage">
+        <span>01 / START</span>
+        <strong>Make logging easy to repeat</strong>
+        <p>Find, reuse, scan, describe, photograph, or combine food.</p>
       </div>
-
-      <div className="food-log-lifecycle__join" aria-hidden="true">
-        <span>DIFFERENT STARTS · SHARED RULES</span>
+      <span className="food-product-path__arrow" aria-hidden="true">→</span>
+      <div className="food-product-path__stage food-product-path__stage--resolve">
+        <span>02 / RESOLVE</span>
+        <strong>Keep the meaning dependable</strong>
+        <p>A person reviews the food and portion; shared backend rules resolve it.</p>
       </div>
-
-      <ol className="food-log-lifecycle__stages" aria-label="Shared food logging lifecycle">
-        <li>
-          <span className="food-figure__index">REVIEW</span>
-          <strong>REVIEW THE FOOD + PORTION</strong>
-          <p>Select, adjust, or exclude uncertain rows before saving.</p>
-        </li>
-        <li>
-          <span className="food-figure__index">RESOLVE</span>
-          <strong>BACKEND SERVING RESOLUTION</strong>
-          <p>Shared rules apply the chosen amount and unit to trusted food data.</p>
-        </li>
-        <li className="food-log-lifecycle__stage--saved">
-          <span className="food-figure__index">PERSIST</span>
-          <strong>SAVED SERVING + NUTRITION SNAPSHOT</strong>
-          <p>History keeps the serving basis; unknown nutrition stays unknown.</p>
-        </li>
-      </ol>
-
-      <p className="food-log-lifecycle__history">
-        <strong>History remains editable.</strong> Entries can be edited or removed. A snapshot-backed serving edit recalculates from its stored basis; recipe and mixed-meal edits have different constraints.
-      </p>
-      <figcaption id="food-log-lifecycle-title">
-        Food logging lifecycle · an explanatory system figure, not a product screenshot.
+      <span className="food-product-path__arrow" aria-hidden="true">→</span>
+      <div className="food-product-path__stage food-product-path__stage--history">
+        <span>03 / RETURN</span>
+        <strong>Make a longer view possible</strong>
+        <p>Snapshot-backed logs support progress, analysis, and recommendations.</p>
+      </div>
+      <figcaption id="food-product-path-title">
+        Product contract · lower-friction entry, a trustworthy record, and useful insight.
       </figcaption>
     </figure>
   );
 }
 
-function FoodLoggingEvidence() {
+function FoodLogTransaction() {
   return (
-    <figure className="food-app-evidence" aria-labelledby="food-logging-evidence-title">
-      <div className="food-app-evidence__screens">
-        <div className="food-app-evidence__sequence" aria-label="Authentic Complex-mode entry and meal-review screens">
-          <article className="food-app-evidence__screen food-app-evidence__screen--entry">
-            <span className="food-figure__index">COMPLEX MODE / ENTRY CHOICES</span>
-            <img
-              src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
-              alt="Complex-mode Food Tracker logging sheet with food search, Describe meal, Photo logging, Food Library, Recipes, Mixed meal, and barcode scan choices."
-              loading="lazy"
-            />
-            <p>This single entry sheet exposes search, text and photo suggestions, the library, recipes, mixed meals, and barcode scan.</p>
-          </article>
-          <span className="food-app-evidence__sequence-bridge" aria-hidden="true"><i>→</i></span>
-          <article className="food-app-evidence__screen food-app-evidence__screen--review">
-            <span className="food-figure__index">MEAL REVIEW / UNSAVED EXAMPLE</span>
-            <img
-              src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
-              alt="Food Tracker meal-review screen with proposed foods, serving controls, a provisional nutrition preview, and a Log selected action."
-              loading="lazy"
-            />
-            <p>Review before saving: choose the foods and portions that belong in the log. This example meal was not saved during capture.</p>
-          </article>
-        </div>
-        <div className="food-app-evidence__context">
-          <p className="food-section-label">THE HUMAN CHECKPOINT</p>
-          <h3>An interpretation stays a proposal until the person reviews it.</h3>
-          <p>
-            Text or photo assistance can help identify likely foods and quantities. It does not silently write trusted nutrition into the log: the selected food and serving still pass through shared backend rules.
-          </p>
-          <p className="food-app-evidence__source-note">Earlier product interface / pre-redesign baseline</p>
-        </div>
+    <figure className="food-log-transaction" aria-labelledby="food-log-transaction-title">
+      <div className="food-log-transaction__capture">
+        <p className="food-figure__index">PRODUCT EVIDENCE / COMPLEX MODE</p>
+        <img
+          src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
+          alt="A Food Tracker meal-review screen with proposed food rows, editable servings, a provisional nutrition preview, and a Log selected action."
+        />
+        <p className="food-log-transaction__capture-note">
+          368×800 iPhone QA capture from the pre-redesign baseline. The meal was reviewed but not saved; this is interaction evidence, not a populated user outcome.
+        </p>
       </div>
-      <figcaption id="food-logging-evidence-title">
-        Product evidence · an authentic entry screen followed by an unsaved review state. Neither image presents a completed meal log.
+
+      <div className="food-log-transaction__flow">
+        <div className="food-log-transaction__entries">
+          <div>
+            <span>DIRECT</span>
+            <strong>SEARCH + REUSE</strong>
+            <p>Manual, catalog, recent, saved, and reusable foods.</p>
+          </div>
+          <div>
+            <span>IDENTITY</span>
+            <strong>BARCODE</strong>
+            <p>Packaged-food lookup through Open Food Facts.</p>
+          </div>
+          <div className="food-log-transaction__entry--suggested">
+            <span>INTERPRET</span>
+            <strong>DESCRIBE OR PHOTOGRAPH</strong>
+            <p>AI suggests food and quantity; it does not set trusted nutrition.</p>
+          </div>
+          <div>
+            <span>COMBINE</span>
+            <strong>RECIPES + MIXED MEALS</strong>
+            <p>Reusable ingredients enter the same logging domain.</p>
+          </div>
+        </div>
+
+        <div className="food-log-transaction__checkpoint">
+          <span className="food-figure__index">HUMAN CHECKPOINT</span>
+          <strong>Review, edit, or remove proposed rows before saving.</strong>
+          <p>Choose the food and serving that belong in the log; uncertain rows do not bypass review.</p>
+        </div>
+
+        <ol className="food-log-transaction__commit" aria-label="Shared save path">
+          <li>
+            <span>01 / APPLY</span>
+            <strong>Serving resolver</strong>
+            <p>Shared backend serving resolution applies the chosen amount and unit.</p>
+          </li>
+          <li>
+            <span>02 / KEEP</span>
+            <strong>Nutrition snapshot</strong>
+            <p>The saved log keeps a nutrition snapshot for its historical meaning.</p>
+          </li>
+          <li className="food-log-transaction__unknown">
+            <span>03 / PRESERVE</span>
+            <strong>Known stays known</strong>
+            <p>Unknown remains unknown; it is not filled with zero.</p>
+          </li>
+        </ol>
+
+        <p className="food-log-transaction__editable">
+          <strong>The log can still be edited or deleted.</strong> Snapshot-backed serving changes recalculate from the stored basis; recipe and mixed-meal edits have different constraints.
+        </p>
+
+        <p className="food-log-transaction__fallback">
+          <span>BOUNDED FALLBACK</span>
+          A labeled, editable low-trust estimate can be requested for an unresolved text row; it does not become trusted catalog food.
+        </p>
+      </div>
+
+      <figcaption id="food-log-transaction-title">
+        Many entry routes converge on review, authoritative serving resolution, and a snapshot-backed log.
       </figcaption>
     </figure>
   );
 }
 
-function FoodSystemMap() {
+function FoodDataContract() {
   return (
-    <figure className="food-system-map" aria-labelledby="food-system-map-title">
-      <div className="food-system-map__heading">
-        <span className="food-figure__index">ONE PRODUCT · THREE TRUST BOUNDARIES</span>
-        <p>Food sources enter through adapters. The API owns the rules. The database keeps the record used later.</p>
+    <figure className="food-data-contract" aria-labelledby="food-data-contract-title">
+      <div className="food-data-contract__sources">
+        <section className="food-data-contract__source-group">
+          <p className="food-figure__index">LOOKUP CANDIDATES</p>
+          <div>
+            <strong>Open Food Facts</strong>
+            <span>packaged foods and barcode lookup</span>
+          </div>
+          <div>
+            <strong>USDA FoodData Central</strong>
+            <span>generic-food candidates</span>
+          </div>
+        </section>
+        <section className="food-data-contract__source-group food-data-contract__source-group--datasets">
+          <p className="food-figure__index">PINNED COMPOSITION DATA</p>
+          <div className="food-data-contract__dataset-names">
+            <strong>CNF 2026</strong>
+            <strong>Ciqual 2025</strong>
+            <strong>CoFID 2021</strong>
+          </div>
+          <span>versioned bulk datasets · normalized on import</span>
+        </section>
       </div>
 
-      <div className="food-system-map__catalogs" aria-label="Food-data source families">
-        <article>
-          <span className="food-figure__index">LOOKUP SOURCES</span>
-          <h3>Packaged + generic foods</h3>
-          <p><strong>Open Food Facts</strong> supports packaged/barcode lookup; <strong>USDA FoodData Central</strong> supplies generic-food candidates.</p>
-        </article>
-        <article>
-          <span className="food-figure__index">VERSIONED REFERENCE DATA</span>
-          <h3>CNF · Ciqual · CoFID</h3>
-          <p>Canadian Nutrient File 2026, Ciqual 2025, and CoFID 2021 are imported through pinned dataset definitions.</p>
-        </article>
+      <div className="food-data-contract__down" aria-hidden="true">↓</div>
+
+      <div className="food-data-contract__normalization">
+        <span className="food-figure__index">ADAPTER + NORMALIZE</span>
+        <strong>Map names, nutrient keys, units, servings, and provenance into one domain model.</strong>
+        <p>Source identity and release stay attached to normalized records; missing nutrient values stay absent.</p>
       </div>
 
-      <div className="food-system-map__normalization" aria-label="Provider records are normalized before storage">
-        <span className="food-system-map__connector" aria-hidden="true">↓</span>
-        <div>
-          <span className="food-figure__index">NORMALIZE + KEEP PROVENANCE</span>
-          <strong>Provider-specific names, nutrient labels, and units map into one canonical food model.</strong>
-          <p>Source provenance and dataset release stay attached to imported records; unavailable nutrients remain unknown.</p>
-        </div>
-        <span className="food-system-map__connector" aria-hidden="true">↓</span>
-      </div>
+      <div className="food-data-contract__down" aria-hidden="true">↓</div>
 
-      <div className="food-system-map__runtime" aria-label="Mobile app, API, and persisted data relationship">
-        <article className="food-system-map__mobile">
+      <div className="food-data-contract__runtime">
+        <div className="food-data-contract__client">
           <span className="food-figure__index">PRESENTATION</span>
-          <h3>React Native + Expo</h3>
-          <p>Meal entry, review, History, and Simple/Complex Insights.</p>
-        </article>
-        <div className="food-system-map__link">
-          <span>reviewed requests</span>
-          <strong aria-hidden="true">↔</strong>
-          <span>resolved logs + insight facts</span>
+          <strong>React Native + Expo</strong>
+          <span>Simple and Complex</span>
         </div>
-        <article className="food-system-map__api">
-          <span className="food-figure__index">RULES + AUTHORITY</span>
-          <h3>Express + TypeScript API</h3>
-          <p>Zod validates shared contracts; Prisma access applies user scope, serving resolution, deterministic nutrition, analytics, and recommendations.</p>
-        </article>
-        <div className="food-system-map__link food-system-map__link--data">
-          <span>persist</span>
-          <strong aria-hidden="true">↔</strong>
-          <span>trusted records</span>
+        <div className="food-data-contract__api">
+          <span className="food-figure__index">SHARED RULES</span>
+          <strong>Express + TypeScript API</strong>
+          <span>shared TypeScript + Zod contracts · Prisma data access · serving resolver</span>
         </div>
-        <article className="food-system-map__database">
-          <span className="food-figure__index">CANONICAL RECORD</span>
-          <h3>PostgreSQL</h3>
-          <p>Food and nutrient data, source provenance, recipes, and user logs with serving and nutrition snapshots.</p>
-        </article>
+        <div className="food-data-contract__database">
+          <span className="food-figure__index">CANONICAL CATALOG</span>
+          <strong>PostgreSQL food and nutrient catalog</strong>
+          <span>normalized records · serving options · source provenance</span>
+        </div>
       </div>
 
-      <p className="food-system-map__ai-boundary">
-        <strong>AI suggests intent or portions; trusted food data and backend rules govern nutrition.</strong>
-        <span>Search indexes can return candidates, but neither a model nor Pinecone becomes nutrition authority. Unknown is not zero.</span>
-      </p>
-      <figcaption id="food-system-map-title">
-        Food system map · mobile presentation, API authority, and app-owned nutrition/history records.
+      <div className="food-data-contract__down food-data-contract__down--snapshot" aria-hidden="true">↓</div>
+
+      <div className="food-data-contract__snapshot">
+        <div className="food-data-contract__snapshot-heading">
+          <span className="food-figure__index">ON SAVE / FOODLOGSERVINGSNAPSHOT</span>
+          <strong>A choice becomes a historical basis.</strong>
+        </div>
+        <div className="food-data-contract__snapshot-fields" aria-label="Snapshot fields shown as categories, not an exact API payload">
+          <span>food + source provenance</span>
+          <span>basis quantity + unit</span>
+          <span>requested serving</span>
+          <span>resolution + multiplier</span>
+          <span>nutrient basis + overrides</span>
+        </div>
+        <p>Later catalog changes do not silently rewrite what an earlier serving meant. Users may still edit or remove a log.</p>
+      </div>
+
+      <div className="food-data-contract__scale" aria-label="Reference catalog scale, not a user impact metric">
+        <div><strong>12,363</strong><span>active foods</span></div>
+        <b aria-hidden="true">×</b>
+        <div><strong>277,341</strong><span>nutrient rows</span></div>
+        <p>Reference catalog scale, not users or impact.</p>
+      </div>
+
+      <figcaption id="food-data-contract-title">
+        Trusted-data architecture · adapters feed a normalized catalog; the API resolves servings before snapshot-backed history is saved.
       </figcaption>
     </figure>
   );
 }
 
-function FoodInsightsModel() {
+function FoodInsightPath() {
   return (
-    <figure className="food-insights-model" aria-labelledby="food-insights-model-title">
-      <div className="food-insights-model__inputs">
-        <span className="food-figure__index">INPUTS WITH DIFFERENT GRAINS</span>
+    <figure className="food-insight-path" aria-labelledby="food-insight-path-title">
+      <div className="food-insight-path__inputs">
+        <span className="food-figure__index">FACTS IN SCOPE</span>
         <strong>Food logs · weight logs · goals · local tracking day</strong>
-        <p>Each report starts from saved product records and the question's date range.</p>
+        <p>Reports start from persisted records and a date range, not model-filled gaps.</p>
       </div>
 
-      <div className="food-insights-model__connector" aria-hidden="true"><span>derive facts, then check coverage</span></div>
-
-      <div className="food-insights-model__state-model">
-        <div className="food-insights-model__state-heading">
-          <span className="food-figure__index">TWO QUESTIONS, KEPT SEPARATE</span>
-          <p>A day can be partly logged while a particular nutrient is still unknown.</p>
-        </div>
-        <div className="food-insights-model__state-row">
-          <strong>LOGGING DAY</strong>
-          <div><span>COMPLETE</span><span>PARTIAL</span><span>UNLOGGED</span></div>
-          <p>Was the day eligible for this analysis?</p>
-        </div>
-        <div className="food-insights-model__state-row food-insights-model__state-row--coverage">
-          <strong>METRIC COVERAGE</strong>
-          <div><span>RECORDED</span><span>PARTIAL</span><span>UNKNOWN</span></div>
-          <p>What does the source data actually contain?</p>
-        </div>
-      </div>
-
-      <div className="food-insights-model__connector" aria-hidden="true"><span>same saved facts · different presentation depth</span></div>
-
-      <div className="food-insights-model__modes">
-        <section className="food-insights-model__simple">
-          <span className="food-figure__index">SIMPLE</span>
-          <h3>Keep routine use focused</h3>
-          <p>Core progress, curated views, and recommendations support a quick daily read.</p>
-        </section>
-        <section className="food-insights-model__complex">
-          <span className="food-figure__index">COMPLEX</span>
-          <h3>Open the analysis</h3>
-          <p>Explore more nutrients, ranges, comparisons, coverage controls, and saved views.</p>
-        </section>
-      </div>
-
-      <p className="food-insights-model__authority">Analytics and recommendation facts are deterministic. Missing values remain missing; AI does not fill gaps or decide the recommendation.</p>
-      <figcaption id="food-insights-model-title">
-        Insights state model · a native explanatory figure; status labels are categories, not a populated account report.
-      </figcaption>
-    </figure>
-  );
-}
-
-function FoodRetrievalFlow() {
-  return (
-    <figure className="food-retrieval-flow" aria-labelledby="food-retrieval-title">
-      <div className="food-retrieval-flow__query">
-        <span className="food-figure__index">START</span>
-        <strong>ONE FOOD QUERY</strong>
-      </div>
-      <div className="food-retrieval-flow__sources" aria-label="Candidate generation paths">
-        <article>
-          <span className="food-figure__index">MATCH</span>
-          <strong>DETERMINISTIC</strong>
-          <p>Direct and structured matches</p>
-        </article>
-        <article>
-          <span className="food-figure__index">RECOVER</span>
-          <strong>FUZZY</strong>
-          <p>Near-text candidates</p>
-        </article>
-        <article className="food-retrieval-flow__semantic">
-          <span className="food-figure__index">EXPAND</span>
-          <strong>SEMANTIC CANDIDATES</strong>
-          <p>Pinecone supplies candidates only.</p>
-        </article>
-      </div>
-      <div className="food-retrieval-flow__rank">
-        <span className="food-figure__index">COMBINE + ORDER</span>
-        <strong>CANDIDATE UNION</strong>
-        <span className="food-retrieval-flow__arrow" aria-hidden="true">→</span>
-        <strong>DETERMINISTIC RANK</strong>
-        <p>Rules decide final rank; a person selects the food before serving resolution.</p>
-      </div>
-      <div className="food-retrieval-flow__tradeoff">
-        <span>SEARCH TRADE-OFF</span>
-        <p>In my evaluation notes, semantic retrieval added substantial latency for little benchmark recovery.</p>
-      </div>
-      <figcaption id="food-retrieval-title">
-        Retrieval flow · broad candidate generation, deterministic final ordering.
-      </figcaption>
-    </figure>
-  );
-}
-
-function FoodBenchmark() {
-  return (
-    <figure className="food-benchmark" aria-labelledby="food-benchmark-title">
-      <div className="food-benchmark__heading">
-        <div>
-          <span className="food-figure__index">OFFLINE SEARCH EVALUATION</span>
-          <h3 id="food-benchmark-title">Did the intended food reach the top?</h3>
-        </div>
-        <p>Top-1 / Top-3 / Top-5 · correct food within the first 1, 3, or 5 results.</p>
-      </div>
-      <div className="food-benchmark__sets">
-        {evaluationSets.map((set) => (
-          <section className="food-benchmark__set" key={set.name} aria-label={`${set.name} query set`}>
-            <h4>{set.name} · {set.queries} QUERIES</h4>
-            <div className="food-benchmark__row">
-              <span>LEGACY</span>
-              <div className="food-benchmark__track" aria-hidden="true">
-                <i style={{ width: `${(set.baseline.top1 / set.queries) * 100}%` }} />
-              </div>
-              <strong>{set.baseline.top1}/{set.queries}</strong>
-            </div>
-            <div className="food-benchmark__row food-benchmark__row--hybrid">
-              <span>FULL HYBRID</span>
-              <div className="food-benchmark__track" aria-hidden="true">
-                <i style={{ width: `${(set.hybrid.top1 / set.queries) * 100}%` }} />
-              </div>
-              <strong>{set.hybrid.top1}/{set.queries}</strong>
-            </div>
-            <p className="food-benchmark__secondary">
-              <span>TOP-3</span>{set.baseline.top3}/{set.queries} → {set.hybrid.top3}/{set.queries}
-              <span>TOP-5</span>{set.baseline.top5}/{set.queries} → {set.hybrid.top5}/{set.queries}
-            </p>
+      <div className="food-insight-path__question">
+        <span className="food-figure__index">TWO DIFFERENT QUESTIONS</span>
+        <div className="food-insight-path__states">
+          <section>
+            <span>LOGGING-DAY ELIGIBILITY</span>
+            <strong>COMPLETE · PARTIAL · UNLOGGED</strong>
+            <p>Was this day eligible for the selected analysis?</p>
           </section>
-        ))}
+          <section className="food-insight-path__coverage">
+            <span>METRIC COVERAGE</span>
+            <strong>RECORDED · PARTIAL · UNKNOWN</strong>
+            <p>Which values are actually present in the saved nutrition basis?</p>
+          </section>
+        </div>
+        <p className="food-insight-path__separation">A logged day can still have an unknown nutrient.</p>
       </div>
-      <figcaption>
-        Offline search relevance, not live-user outcomes. Development improved sharply; the separate holdout moved modestly.
+
+      <div className="food-insight-path__rule">
+        <span className="food-figure__index">DETERMINISTIC DOMAIN</span>
+        <strong>Calculate metrics + recommendations from logs, goals, and coverage rules.</strong>
+        <p>Analytics and recommendation facts are deterministic backend facts. AI does not fill missing values or decide recommendations.</p>
+      </div>
+
+      <div className="food-insight-path__presentations">
+        <section className="food-insight-path__simple">
+          <span>SIMPLE / CURATED DAILY READ</span>
+          <strong>Calories · macros · weight · hydration · logging consistency</strong>
+          <p>Quick progress, a focused set of views, and deterministic recommendations.</p>
+        </section>
+        <section className="food-insight-path__complex">
+          <span>COMPLEX / DEEPER EXPLORATION</span>
+          <strong>More nutrients · comparisons · coverage controls · custom ranges · saved views</strong>
+          <p>Deeper reporting on the same app, history, API, and data model.</p>
+        </section>
+      </div>
+
+      <figcaption id="food-insight-path-title">
+        Insights model · one backend, multiple presentation depths, and missingness visible at both day and nutrient level.
       </figcaption>
     </figure>
   );
 }
 
-function FoodValidationBoundary() {
+function FoodRetrievalEvidence() {
   return (
-    <div className="food-validation-boundary">
-      <article>
-        <span className="food-figure__index">01 / QUALITY</span>
-        <h3>RELEVANCE</h3>
-        <p>Code tests passed while search relevance was still poor. I made offline query evaluation a separate gate from code correctness.</p>
-      </article>
-      <article>
-        <span className="food-figure__index">02 / INDEX</span>
-        <h3>INDEX COMPLETENESS</h3>
-        <p>A pagination bug left the search index partial or stale. I checked completeness separately from ranking quality.</p>
-      </article>
-      <article>
-        <span className="food-figure__index">03 / RUNTIME</span>
-        <h3>DATA SCOPE + RELEASE</h3>
-        <p>Firebase identities map to app-owned user IDs; protected API routes derive record ownership on the server. The repository records validated Railway staging and a standalone iOS install. Paid Apple distribution remains deferred, and Android standalone validation is incomplete.</p>
-      </article>
-    </div>
+    <figure className="food-retrieval-evidence" aria-labelledby="food-retrieval-evidence-title">
+      <div className="food-retrieval-evidence__querytypes">
+        <div className="food-retrieval-evidence__query">
+          <span className="food-figure__index">ILLUSTRATIVE QUERY TYPE</span>
+          <strong>Exact / structured</strong>
+          <p>Direct identity and provider-backed matches.</p>
+        </div>
+        <div className="food-retrieval-evidence__query food-retrieval-evidence__query--fuzzy">
+          <span className="food-figure__index">MISSPELLING / NEAR NAME</span>
+          <strong>Fuzzy retrieval</strong>
+          <p>Recover close text when the typed name is imperfect.</p>
+        </div>
+        <div className="food-retrieval-evidence__query food-retrieval-evidence__query--semantic">
+          <span className="food-figure__index">INTENT / DESCRIPTION</span>
+          <strong>Semantic candidates</strong>
+          <p>Pinecone expands the candidate set; it is a derived index.</p>
+        </div>
+      </div>
+
+      <div className="food-retrieval-evidence__merge">
+        <span aria-hidden="true">↓</span>
+        <div>
+          <span className="food-figure__index">MERGE CANDIDATES</span>
+          <strong>Deterministic, domain-aware ranking</strong>
+          <p>Evaluate identity, form, source, nutrition, and serving usability. A person selects the food before shared serving resolution.</p>
+        </div>
+        <aside>PostgreSQL remains the source of food and nutrition truth.</aside>
+      </div>
+
+      <div className="food-retrieval-evidence__results">
+        <div className="food-retrieval-evidence__result-heading">
+          <div>
+            <span className="food-figure__index">OFFLINE SEARCH EVALUATION</span>
+            <h3>Did the intended food reach the top?</h3>
+          </div>
+          <p>Top-1 · Top-3 · Top-5 = correct food within the first 1, 3, or 5 results.</p>
+        </div>
+
+        <div className="food-retrieval-evidence__sets">
+          {evaluationSets.map((set) => (
+            <section className="food-retrieval-evidence__set" key={set.name} aria-label={`${set.name} query results`}>
+              <header>
+                <strong>{set.name}</strong>
+                <span>{set.queries} queries</span>
+              </header>
+              <div className="food-retrieval-evidence__column-headings" aria-hidden="true">
+                <span>METHOD</span><span>TOP-1</span><span>TOP-3</span><span>TOP-5</span>
+              </div>
+              {[{ label: "Legacy", values: set.legacy }, { label: "Full hybrid", values: set.hybrid }].map((row) => (
+                <div className="food-retrieval-evidence__metric-row" key={row.label}>
+                  <strong>{row.label}</strong>
+                  {row.values.map((value, index) => (
+                    <span className={row.label === "Full hybrid" ? "food-retrieval-evidence__gain" : undefined} key={`${row.label}-${index}`}>
+                      {value}/{set.queries}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </section>
+          ))}
+        </div>
+
+        <div className="food-retrieval-evidence__finding">
+          <strong>Evaluation changed the design.</strong>
+          <p>Fuzzy retrieval drove most of the measured gain. Semantic retrieval added substantial latency for little benchmark recovery, so the richer model path stayed bounded.</p>
+        </div>
+      </div>
+
+      <figcaption id="food-retrieval-evidence-title">
+        Hybrid retrieval · candidate breadth feeds a deterministic ranker. Offline ranking evidence, not live-user outcomes; the fuzzy-only miss-recovery count is omitted because the records conflict.
+      </figcaption>
+    </figure>
   );
 }
 
-function FoodBuildLoop() {
+function FoodEvidenceGates() {
   return (
-    <div className="food-build-loop" aria-label="Joshua's recurring product and implementation workflow">
-      <p className="food-section-label">HOW I STEERED THE WORK</p>
-      <ol>
-        <li><span>01</span><strong>Frame a product decision</strong><p>Turn a broad need into one bounded behavior and its constraints.</p></li>
-        <li><span>02</span><strong>Set acceptance evidence</strong><p>Specify what tests, comparisons, or runtime states can prove it.</p></li>
-        <li><span>03</span><strong>Delegate + integrate</strong><p>Use Codex/agents for substantial implementation, then inspect the actual output.</p></li>
-        <li><span>04</span><strong>Revise from results</strong><p>Change direction when evaluation or a real failure contradicts the assumption.</p></li>
-      </ol>
+    <div className="food-evidence-gates">
+      <div className="food-evidence-gates__checks">
+        <article>
+          <span>01 / RELEVANCE</span>
+          <h3>Correct code can still rank the wrong food.</h3>
+          <p>Search tests passed while retrieval quality was poor; offline query evidence became a separate gate.</p>
+        </article>
+        <article>
+          <span>02 / COMPLETENESS</span>
+          <h3>A relevant rank can still come from a partial index.</h3>
+          <p>A pagination bug once left the derived search index partial or stale. Index completeness needed its own check.</p>
+        </article>
+        <article>
+          <span>03 / RUNTIME + OWNERSHIP</span>
+          <h3>Validate the running product and its data boundary.</h3>
+          <p>Firebase identifies the caller; the API derives the app-owned UUID and scopes data server-side.</p>
+        </article>
+      </div>
+
+      <div className="food-evidence-gates__release">
+        <div className="food-evidence-gates__runtime">
+          <span className="food-figure__index">PINNED PROJECT RECORD</span>
+          <strong>Railway staging and a standalone iOS installation were validated.</strong>
+          <p>This is not evidence of a public launch. Paid Apple distribution and Android standalone validation remain incomplete.</p>
+        </div>
+        <div className="food-evidence-gates__limit">
+          <span className="food-figure__index">EVIDENCE LIMIT</span>
+          <strong>Some photo checks remain open.</strong>
+          <p>Photo candidate adjudication and some manual checks remain untested; no claim of exhaustive image-path validation.</p>
+        </div>
+      </div>
+
+      <blockquote className="food-evidence-gates__lesson">
+        <span>WHAT CHANGED IN MY PRACTICE</span>
+        <p>I learned to ask what the evidence proves, then validate the ranking, index, and actual runtime separately.</p>
+        <footer>A passing test, a complete index, and a useful product are three different claims.</footer>
+      </blockquote>
     </div>
   );
 }
@@ -434,112 +461,76 @@ export default function FoodTrackerCaseStudy() {
       </nav>
 
       <article className="food-story-content food-story-content--rewrite">
-        <section className="food-section food-rewrite__hero" id="food-overview">
+        <section className="food-section food-rewrite__hero" id="food-overview" aria-labelledby="food-overview-title">
           <div className="food-rewrite__hero-copy">
             <p className="food-rewrite__brand">
               <img src={projectIdentities["food-tracker"].mark} alt="" />
               <span>
                 <strong>FOOD TRACKER</strong>
-                <span>PRODUCT · CODE · ARCHITECTURE · EVALUATION</span>
+                <span>PRODUCT · SYSTEM · EVALUATION</span>
               </span>
             </p>
-            <h1>Simple food logs.<br />Trusted nutrition.</h1>
+            <h1 id="food-overview-title">Simple tracking.<br />Serious insight.</h1>
             <p className="food-rewrite__lead">
-              I started Food Tracker for my own gym and nutrition routine: logging had to stay easy to repeat while the record still supported serious insight.
+              I started Food Tracker for my own gym and nutrition routine: make daily logging easy to repeat, then keep the record dependable enough to support a longer view.
             </p>
             <p className="food-rewrite__ownership">
-              I set product direction and architecture, shaped workflows and evaluation, and coded and debugged parts of the product directly. I also directed and reviewed substantial implementation with Codex and AI agents.
+              I owned product direction, architecture, workflows, evaluation, and acceptance. I also coded and debugged parts of the product; Codex and AI agents implemented substantial product slices under my direction and review.
             </p>
           </div>
-
-          <aside className="food-rewrite__product-promise" aria-label="Product direction">
-            <span className="food-figure__index">THE PRODUCT CHALLENGE</span>
-            <h2>Make the daily log quick. Make its meaning dependable.</h2>
-            <p>
-              A match is only useful when its serving and nutrition resolve into a record people can revisit.
-            </p>
-            <div className="food-rewrite__shared-product">
+          <aside className="food-rewrite__promise" aria-label="The Food Tracker product path">
+            <p className="food-figure__index">THE PRODUCT PATH</p>
+            <FoodProductPath />
+            <p className="food-rewrite__shared-product">
               <strong>Simple and Complex share one app, backend, and data model.</strong>
               <span>One product, with room to choose how much detail to see.</span>
-            </div>
+            </p>
           </aside>
         </section>
 
         <section className="food-section food-rewrite__chapter" id="food-logging" aria-labelledby="food-logging-title">
           <header className="food-rewrite__section-heading">
-            <p className="food-section-label">01 / DAILY USE</p>
-            <h2 id="food-logging-title">Several entry routes. One trustworthy log.</h2>
-            <p>
-              I shaped the workflow so different ways to start a meal converge on shared review and serving rules instead of duplicating nutrition math in each screen.
-            </p>
+            <p className="food-section-label">01 / THE DAILY LOG</p>
+            <h2 id="food-logging-title">Many ways to begin. One reviewed record.</h2>
+            <p>Manual entry, catalog search, reuse, barcode, text and photo suggestions, recipes, and mixed meals are different starts. Their serving math should converge on the same backend rules.</p>
           </header>
-          <FoodLoggingEvidence />
-          <FoodLogLifecycle />
+          <FoodLogTransaction />
         </section>
 
-        <section className="food-section food-rewrite__chapter" id="food-architecture" aria-labelledby="food-architecture-title">
+        <section className="food-section food-rewrite__chapter food-rewrite__data" id="food-architecture" aria-labelledby="food-architecture-title">
           <header className="food-rewrite__section-heading food-rewrite__section-heading--wide">
-            <p className="food-section-label">02 / TRUSTED DATA + SYSTEM</p>
-            <h2 id="food-architecture-title">Let one data foundation serve every way of logging.</h2>
-            <p>
-              Food Tracker brings packaged, generic, and versioned composition data into a shared model. The mobile app handles the interaction; the API resolves trusted nutrition and keeps history tied to what was logged.
-            </p>
+            <p className="food-section-label">02 / THE DATA CONTRACT</p>
+            <h2 id="food-architecture-title">The chosen amount is part of the nutrition.</h2>
+            <p>Provider values, serving conversions, and logged history cannot be treated as interchangeable. I shaped the data path so provenance survives normalization and the serving calculation is stored with the event.</p>
           </header>
-          <FoodSystemMap />
+          <FoodDataContract />
         </section>
 
-        <section className="food-section food-rewrite__chapter" id="food-insights" aria-labelledby="food-insights-title">
+        <section className="food-section food-rewrite__chapter food-rewrite__insights" id="food-insights" aria-labelledby="food-insights-title">
           <header className="food-rewrite__section-heading">
-            <p className="food-section-label">03 / AFTER THE LOG</p>
-            <h2 id="food-insights-title">Turn saved days into useful patterns, without smoothing over missing data.</h2>
-            <p>
-              Logs can support daily progress, nutrition reports, comparisons, and reviewable recommendations. Coverage and day eligibility shape what a report can say; Simple and Complex present the same product at different depths.
-            </p>
+            <p className="food-section-label">03 / FROM LOG TO INSIGHT</p>
+            <h2 id="food-insights-title">Show useful patterns without inventing completeness.</h2>
+            <p>The same product supports a focused everyday read and deeper exploration. The difficult part was deciding when a day or a nutrient contains enough evidence to say something.</p>
           </header>
-          <FoodInsightsModel />
+          <FoodInsightPath />
         </section>
 
         <section className="food-section food-rewrite__chapter food-rewrite__retrieval" id="food-search" aria-labelledby="food-search-title">
           <header className="food-rewrite__section-heading food-rewrite__section-heading--wide">
-            <p className="food-section-label">04 / FOOD RETRIEVAL</p>
-            <h2 id="food-search-title">Search broadly. Keep the final ranking explainable.</h2>
-            <p>
-              An everyday log depends on finding the intended food, but “more AI” was not a ranking strategy. Deterministic, fuzzy, and semantic paths each addressed different candidate gaps.
-            </p>
+            <p className="food-section-label">04 / SEARCH AS A PRODUCT DECISION</p>
+            <h2 id="food-search-title">Use more than one path to find food; keep the decision explainable.</h2>
+            <p>Deterministic matching, typo recovery, and semantic candidates address different gaps. The evaluation showed that the most sophisticated route was not automatically the most useful.</p>
           </header>
-          <FoodRetrievalFlow />
-        </section>
-
-        <section className="food-section food-rewrite__chapter food-rewrite__evaluation" id="food-evaluation" aria-labelledby="food-evaluation-title">
-          <header className="food-rewrite__section-heading food-rewrite__section-heading--wide">
-            <p className="food-section-label">05 / EVALUATION CHANGED THE DESIGN</p>
-            <h2 id="food-evaluation-title">The development gain was real; the holdout stayed modest.</h2>
-            <p>
-              I defined a 120-query offline benchmark after correctness tests passed while relevance was still poor. Keeping 80 development queries separate from 40 holdout queries made the improvement and its limits visible.
-            </p>
-          </header>
-          <FoodBenchmark />
-          <p className="food-rewrite__evaluation-note">
-            Most of the measured development improvement came from fuzzy retrieval. Semantic retrieval added substantial latency for little benchmark recovery, so I did not treat a more complex retrieval stack as automatically better.
-          </p>
+          <FoodRetrievalEvidence />
         </section>
 
         <section className="food-section food-rewrite__chapter food-rewrite__ending" id="food-validation" aria-labelledby="food-validation-title">
           <header className="food-rewrite__section-heading">
-            <p className="food-section-label">06 / VALIDATION + OWNERSHIP</p>
-            <h2 id="food-validation-title">Test the ranking, the index, and the release boundary as different problems.</h2>
-            <p>
-              A working endpoint could still return a stale index, and a passing test suite could still miss the food someone meant. Each failure needed its own evidence and correction.
-            </p>
+            <p className="food-section-label">05 / VALIDATION + RELEASE BOUNDARY</p>
+            <h2 id="food-validation-title">A passing test, a complete index, and a useful product are different claims.</h2>
+            <p>Search correctness, index completeness, account isolation, and real runtime behavior needed separate evidence. A green check in one layer could not stand in for the rest.</p>
           </header>
-          <FoodValidationBoundary />
-          <FoodBuildLoop />
-          <p className="food-rewrite__closing">
-            Food Tracker brings the everyday act and its longer view together: flexible meal entry, a reviewed food and serving, a saved nutrition basis, and analysis that keeps uncertainty visible.
-          </p>
-          <p className="food-rewrite__release-note">
-            The pinned repository records validated Railway staging and a free-Xcode standalone iOS install, not a public launch. Paid Apple distribution and Android standalone validation remain outside that completed boundary.
-          </p>
+          <FoodEvidenceGates />
         </section>
       </article>
     </>

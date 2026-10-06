@@ -11,7 +11,6 @@ const sectionTops: Record<string, number> = {
   "food-architecture": -350,
   "food-insights": -300,
   "food-search": -200,
-  "food-evaluation": -100,
   "food-validation": 0,
 };
 
@@ -83,8 +82,8 @@ describe("Food Tracker chapter scrollspy at story end", () => {
         flushFrames();
       });
 
-      const retrievalLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "RETRIEVAL");
-      const validationLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "VALIDATION");
+      const retrievalLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "SEARCH + EVAL");
+      const validationLink = [...main.querySelectorAll("a")].find((link) => link.textContent === "RELEASE");
       expect(validationLink?.getAttribute("href")).toBe("#food-validation");
       expect(validationLink?.getAttribute("aria-current")).toBe("location");
 
