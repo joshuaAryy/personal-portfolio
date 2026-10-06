@@ -8,6 +8,7 @@ const crestChapters = [
   { id: "system", label: "TRANSACTION FLOW" },
   { id: "architecture", label: "SYSTEM MAP" },
   { id: "policy", label: "POLICY RETRIEVAL" },
+  { id: "preapproval", label: "PREAPPROVAL" },
   { id: "team", label: "OWNERSHIP" },
   { id: "takeaway", label: "LESSON" },
 ] as const;
@@ -16,23 +17,23 @@ type CrestChapterId = (typeof crestChapters)[number]["id"];
 const crestArchitectureTracks = [
   {
     id: "workspace",
-    label: "CHALLENGE WORKSPACE",
+    label: "CHALLENGE WORKSPACE · SAMPLE DATA",
     title: "Request review",
     stages: [
-      ["Vercel frontend", "Workspace + request context"],
-      ["Configured rules", "Budgets, thresholds, policy checks"],
-      ["Mock review queue", "History + budget context"],
-      ["Human decision", "Approve / Deny recorded locally"],
+      ["Transaction set", "Bundled challenge data"],
+      ["Configured rules", "Budgets · category caps · thresholds"],
+      ["Rule checks + cues", "Policy checks and anomaly heuristics"],
+      ["Review workspace", "Context for a human reviewer"],
     ],
   },
   {
     id: "finance",
-    label: "FINANCE Q&A · PARALLEL PATH",
+    label: "FINANCE Q&A · PARALLEL IMPLEMENTATION",
     title: "Transaction-backed answers",
     stages: [
       ["MongoDB Atlas", "transactions_clean"],
-      ["FastAPI /api/ask", "Compact deterministic summary"],
-      ["Gemini", "Answer + chart data"],
+      ["FastAPI /api/ask", "Compact transaction summary"],
+      ["Gemini", "Answer text + chart data"],
     ],
   },
   {
@@ -56,9 +57,10 @@ function CrestArchitectureMap() {
         <p className="food-section-label">SYSTEM MAP · DIFFERENT PATHS, CLEAR BOUNDARIES</p>
         <h2>One workspace. More than one technical path.</h2>
         <p>
-          The challenge workspace, transaction Q&amp;A route, and policy-PDF
-          retrieval scripts solve related review problems through separate
-          implementations.
+          The challenge review workspace, Finance Q&amp;A, and policy-PDF
+          retrieval solve related problems through separate implementations.
+          The repository shows one Mongo-backed Q&amp;A path and a separate
+          browser path over bundled data.
         </p>
       </header>
       <figure className="crest-architecture__figure" aria-label="Crest system architecture">
@@ -96,11 +98,13 @@ function CrestArchitectureMap() {
         </figcaption>
       </figure>
       <p className="crest-architecture__source-note">
-        These are separate implementation paths; repository evidence does not
-        establish one production deployment topology. Vercel and Vultr describe
-        owner-reported deployment context. Joshua’s documented focus included
-        backend/data workflows, the Policy Compliance Engine, rule-based
-        signals, policy retrieval, and part of preapproval.
+        Finance Q&amp;A answers and reporting views are workspace capabilities
+        distinct from policy-PDF search. Ownership and the path behind the
+        demonstrated Q&amp;A capture are not established. The policy-PDF lane is
+        a standalone script prototype, not a verified live endpoint or
+        connected review workflow.
+        Repository evidence does not establish one production topology;
+        Vercel and Vultr are owner-reported hosting context.
       </p>
     </section>
   );
@@ -290,6 +294,9 @@ export default function CrestCaseStudy() {
               for preapproval; a person reviews the context and decides what
               happens next.
             </p>
+            <p className="crest-hero__context">
+              FOUR-PERSON TEAM · MPC HACKS 2026 · BRIM FINANCIAL CHALLENGE
+            </p>
           </div>
 
           <div className="crest-demo-media">
@@ -339,14 +346,15 @@ export default function CrestCaseStudy() {
           <div className="crest-system__story">
             <h2>One transaction. Two sources. Human review.</h2>
             <p>
-              Transactions move through deterministic finance and policy checks.
-              Rule-based signals and retrieved policy context support review;
-              people retain decision authority.
+              A transaction can be checked against configured rules while
+              policy text supplies a second kind of context. The PDF retrieval
+              work was a separate script prototype; a live connection to this
+              review flow was not verified.
             </p>
           </div>
           <figure className="crest-evidence-map" aria-labelledby="crest-evidence-map-caption">
             <figcaption className="crest-evidence-map__sr-only" id="crest-evidence-map-caption">
-              A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.
+              Conceptual review boundary: a sample transaction branches to deterministic configured rules and to a separate policy-PDF retrieval prototype, whose retrieved passages Gemini interprets. A human reviewer decides.
             </figcaption>
             <svg className="crest-evidence-map__connectors" viewBox="0 0 1432 230" preserveAspectRatio="none" aria-hidden="true">
               <defs>
@@ -374,15 +382,14 @@ export default function CrestCaseStudy() {
             </div>
             <div className="crest-evidence-map__node crest-evidence-map__request">
               <div className="crest-evidence-map__node-head">
-                <span className="crest-evidence-map__eyebrow">SAMPLE REQUEST</span>
+                <span className="crest-evidence-map__eyebrow">SAMPLE TRANSACTION</span>
                 <svg viewBox="0 0 20 22" aria-hidden="true">
                   <path d="M4 2.5h12v17l-6-4-6 4z" />
                   <path d="M7 7h6M7 10h6" />
                 </svg>
               </div>
-              <h3>Conference registration</h3>
-              <strong className="crest-evidence-map__amount">$1,200</strong>
-              <span className="crest-evidence-map__category">TRAVEL &amp; EVENTS</span>
+              <h3>Transaction context</h3>
+              <span className="crest-evidence-map__category">CHALLENGE DATA</span>
             </div>
             <div className="crest-evidence-map__node crest-evidence-map__signals">
               <span className="crest-evidence-map__eyebrow">DETERMINISTIC SIGNALS</span>
@@ -403,7 +410,7 @@ export default function CrestCaseStudy() {
                 </svg>
                 <h3>Relevant passages</h3>
               </div>
-              <p>Matched to the request</p>
+              <p>Retrieved by the standalone script prototype</p>
             </div>
             <div className="crest-evidence-map__node crest-evidence-map__interpretation">
               <span className="crest-evidence-map__eyebrow">POLICY INTERPRETATION</span>
@@ -429,25 +436,31 @@ export default function CrestCaseStudy() {
                 <span>APPROVE</span><span>DENY</span>
               </div>
             </div>
-          </figure>          <figure className="crest-finance-workflow" aria-labelledby="crest-finance-workflow-title">
-            <figcaption id="crest-finance-workflow-title">
-              <span>FINANCE Q&amp;A + REPORTING</span>
+          </figure>
+          <figure className="crest-split-cue" aria-labelledby="crest-split-cue-title">
+            <figcaption className="crest-split-cue__intro" id="crest-split-cue-title">
+              <p className="crest-split-cue__eyebrow">RULE-BASED REVIEW CUE</p>
+              <strong>A group can reveal what one charge does not.</strong>
+              <p>Same employee + merchant + day. Each charge stays below the configured threshold; the grouped total reaches it.</p>
             </figcaption>
-            <div className="crest-finance-workflow__paths">
-              <div>
-                <span>FINANCE QUESTION</span>
-                <i aria-hidden="true">{"\u2192"}</i>
-                <span>FINANCE Q&amp;A ANSWER</span>
+            <div className="crest-split-cue__visual" aria-label="Illustrative threshold comparison without transaction values">
+              <div className="crest-split-cue__grouping">
+                <span>EMPLOYEE</span><b>+</b><span>MERCHANT</span><b>+</b><span>DAY</span>
               </div>
-              <div>
-                <span>REPORTING NEED</span>
-                <i aria-hidden="true">{"\u2192"}</i>
-                <span>REPORT VIEW</span>
+              <div className="crest-split-cue__charges">
+                <div className="crest-split-cue__charge">
+                  <span>CHARGE A</span><i aria-hidden="true" /><strong>Below threshold</strong>
+                </div>
+                <div className="crest-split-cue__charge">
+                  <span>CHARGE B</span><i aria-hidden="true" /><strong>Below threshold</strong>
+                </div>
+                <div className="crest-split-cue__sum">
+                  <span>GROUPED TOTAL</span><i aria-hidden="true" /><strong>Reaches threshold</strong>
+                </div>
               </div>
+              <p className="crest-split-cue__legend">Dashed marker = configured threshold · bars are illustrative, not transaction amounts</p>
             </div>
-            <p className="crest-finance-workflow__boundary">
-              Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.
-            </p>
+            <p className="crest-split-cue__boundary">Illustrative rule only: the result is a review cue, not proof of intent or misconduct. No sample transaction amounts are shown.</p>
           </figure>
         </section>
 
@@ -483,22 +496,59 @@ export default function CrestCaseStudy() {
             <div className="crest-policy-evidence" role="list" aria-label="Policy and human-review boundaries">
               <article className="crest-policy-evidence__card" role="listitem">
                 <span className="crest-policy-evidence__label">RETRIEVED POLICY CONTEXT</span>
-                <h3>Gemini interpreted the top retrieved passages.</h3>
-                <p>Grounded context supported review; it did not detect or decide.</p>
+                <h3>Gemini interprets retrieved passages.</h3>
+                <p>The scripts return source context and ask the model not to invent policy rules.</p>
               </article>
               <span className="crest-policy-evidence__connector" aria-hidden="true">+</span>
               <article className="crest-policy-evidence__card crest-policy-evidence__card--rules" role="listitem">
-                <span className="crest-policy-evidence__label">DETERMINISTIC RULES + SIGNALS</span>
-                <h3>Finance and policy rules remained authoritative.</h3>
-                <p>Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.</p>
-              </article>
-              <span className="crest-policy-evidence__connector crest-policy-evidence__connector--decision" aria-hidden="true">→</span>
-              <article className="crest-policy-evidence__card" role="listitem">
-                <span className="crest-policy-evidence__label">HUMAN REVIEW</span>
-                <h3>Sample queue uses budget + employee history.</h3>
-                <p>Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.</p>
+                <span className="crest-policy-evidence__label">DECISION AUTHORITY</span>
+                <h3>Deterministic finance and policy rules remain authoritative.</h3>
+                <p>PDF retrieval supplies context only; no live integration or automated policy decision was verified.</p>
               </article>
             </div>
+          </figure>
+        </section>
+
+        <section className="crest-section crest-preapproval" id="crest-preapproval">
+          <header className="crest-preapproval__story">
+            <p className="food-section-label">MOCK PREAPPROVAL · HUMAN DECISION</p>
+            <h2>Context can recommend. A person decides.</h2>
+            <p>
+              The sample queue combines a request template with budget and
+              employee-history context. It can show a Gemini recommendation or
+              a template fallback for the reviewer.
+            </p>
+          </header>
+          <figure className="crest-preapproval__figure" aria-labelledby="crest-preapproval-caption">
+            <figcaption id="crest-preapproval-caption">
+              Prototype sequence · sample requests, local decisions
+            </figcaption>
+            <ol className="crest-preapproval__flow">
+              <li>
+                <span>01 · QUEUE</span>
+                <strong>Sample request templates</strong>
+                <small>Mock entries, not live employee requests</small>
+              </li>
+              <li>
+                <span>02 · CONTEXT</span>
+                <strong>Budget + employee history</strong>
+                <small>Department, remaining budget, prior spend</small>
+              </li>
+              <li>
+                <span>03 · SUPPORT</span>
+                <strong>Gemini recommendation or template fallback</strong>
+                <small>Recommendation supports the reviewer</small>
+              </li>
+              <li className="crest-preapproval__human-step">
+                <span>04 · DECISION</span>
+                <strong>A person chooses Approve or Deny</strong>
+                <small>Recorded locally in the prototype</small>
+              </li>
+            </ol>
+            <p className="crest-preapproval__boundary">
+              This is a mock queue and local decision history, not a live request
+              feed or external approval service.
+            </p>
           </figure>
         </section>
 
@@ -506,9 +556,14 @@ export default function CrestCaseStudy() {
           <div className="crest-team__story">
             <p className="food-section-label">TECHNICAL OWNERSHIP</p>
             <h2>I built backend workflows for human review.</h2>
+            <p className="crest-team__collaboration">A four-person team built Crest for the Brim Financial Challenge at MPC Hacks 2026.</p>
             <p>
               I built Policy Compliance Engine workflows, deterministic anomaly
               signals, policy retrieval, and part of preapproval.
+            </p>
+            <p className="crest-team__boundary">
+              I did not own the initial MongoDB setup, primary frontend, or main
+              Gemini integration.
             </p>
           </div>
           <div className="crest-team__ownership">

@@ -28,8 +28,8 @@ describe("Crest technical case study", () => {
     expect(architecture).toContain("Vultr");
     expect(architecture).toContain("STANDALONE NODE.JS SCRIPTS");
     expect(architecture).toContain("policy_chunks");
-    expect(architecture).toContain("separate implementation paths");
-    expect(architecture).toContain("does not establish one production deployment topology");
+    expect(architecture).toContain("separate implementations");
+    expect(architecture).toContain("does not establish one production topology");
   });
 
   it("establishes the transaction workflow and decision boundary", () => {
@@ -39,7 +39,8 @@ describe("Crest technical case study", () => {
     expect(markup).toContain("One transaction. Two sources. Human review.");
     expect(markup).toContain("DETERMINISTIC SIGNALS");
     expect(markup).toContain("Deterministic rules");
-    expect(markup).toContain("retrieved policy context support review");
+    expect(markup).toContain("policy text supplies a second kind of context");
+    expect(markup).toContain("a live connection to this review flow was not verified");
     expect(markup).toContain("HUMAN REVIEW");
     expect(markup).toContain("A reviewer weighs the context");
   });
@@ -84,18 +85,14 @@ describe("Crest technical case study", () => {
     expect(markup).toContain("GROUNDED PROMPT");
     expect(markup).toContain("standalone prototype");
     expect(markup).toContain("a live endpoint or deployed workflow was not verified");
-    expect(markup).toContain("Gemini interpreted the top retrieved passages.");
-    expect(markup).toContain("Finance and policy rules remained authoritative.");
-    expect(markup).toContain("Sample queue uses budget + employee history.");
-    expect(markup).toContain("Gemini recommendation or template fallback");
-    expect(markup).toContain("human approve/deny is recorded locally in the prototype");
+    expect(markup).toContain("Gemini interprets retrieved passages.");
+    expect(markup).toContain("Deterministic finance and policy rules remain authoritative.");
     expect(markup).not.toContain("automated financial outcome");
     expect(policyFigure).toContain('class="crest-policy-evidence"');
     expect(policyFigure).toContain('class="crest-policy-divider"');
-    expect(evidenceMarkup.indexOf("Gemini interpreted the top retrieved passages.")).toBeLessThan(evidenceMarkup.indexOf(">+</span>"));
-    expect(evidenceMarkup.indexOf(">+</span>")).toBeLessThan(evidenceMarkup.indexOf("DETERMINISTIC RULES + SIGNALS"));
-    expect(evidenceMarkup.indexOf("Finance and policy rules remained authoritative.")).toBeLessThan(evidenceMarkup.indexOf(">→</span>"));
-    expect(evidenceMarkup.indexOf(">→</span>")).toBeLessThan(evidenceMarkup.indexOf("Sample queue uses budget + employee history."));
+    expect(evidenceMarkup.indexOf("Gemini interprets retrieved passages.")).toBeLessThan(evidenceMarkup.indexOf(">+</span>"));
+    expect(evidenceMarkup.indexOf(">+</span>")).toBeLessThan(evidenceMarkup.indexOf("DECISION AUTHORITY"));
+    expect(evidenceMarkup).not.toContain("preapproval");
   });
 
   it("keeps anomaly signals rule-based instead of describing a fraud model", () => {
@@ -107,23 +104,71 @@ describe("Crest technical case study", () => {
 
   it("keeps the split cue, Finance Q&A boundary, and close lesson within their scopes", () => {
     const markup = renderCrest();
-    const financeStart = markup.indexOf('<figure class="crest-finance-workflow"');
-    const financeEnd = markup.indexOf("</figure>", financeStart);
-    const financeWorkflow = markup.slice(financeStart, financeEnd);
+    const architectureStart = markup.indexOf('<section class="crest-section crest-architecture"');
+    const architectureEnd = markup.indexOf("</section>", architectureStart);
+    const architecture = markup.slice(architectureStart, architectureEnd);
     const policyStart = markup.indexOf('<section class="crest-section crest-policy"');
     const policyEnd = markup.indexOf("</section>", policyStart);
     const policySection = markup.slice(policyStart, policyEnd);
-    const ruleCardStart = policySection.indexOf('class="crest-policy-evidence__card crest-policy-evidence__card--rules"');
-    const ruleCardEnd = policySection.indexOf("</article>", ruleCardStart);
-    const ruleCard = policySection.slice(ruleCardStart, ruleCardEnd);
+    const splitStart = markup.indexOf('<figure class="crest-split-cue"');
+    const splitEnd = markup.indexOf("</figure>", splitStart);
+    const splitCue = markup.slice(splitStart, splitEnd);
     const takeawayStart = markup.indexOf('<section class="crest-section crest-takeaway"');
     const takeawayEnd = markup.indexOf("</section>", takeawayStart);
     const takeaway = markup.slice(takeawayStart, takeawayEnd);
 
-    expect(financeWorkflow).toContain("Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.");
-    expect(financeWorkflow).not.toContain("Joshua built");
-    expect(ruleCard).toContain("Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.");
-    expect(ruleCard).not.toContain("fraud detection");
+    expect(architecture).toContain("FINANCE Q&amp;A · PARALLEL IMPLEMENTATION");
+    expect(architecture).toContain("transactions_clean");
+    expect(architecture).toContain("Answer text + chart data");
+    expect(architecture).toContain("Finance Q&amp;A answers and reporting views are workspace capabilities");
+    expect(architecture).toContain("policy-PDF lane is a standalone script prototype");
+    expect(architecture).not.toContain("Joshua built");
+    expect(splitCue).toContain("review cue");
+    expect(splitCue).not.toContain("fraud detection");
     expect(takeaway).toContain("The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review.");
+  });
+
+  it("shows the split-transaction heuristic as a review cue with no invented values", () => {
+    const markup = renderCrest();
+    const cueStart = markup.indexOf('class="crest-split-cue"');
+    const cueEnd = markup.indexOf("</figure>", cueStart);
+    const cue = markup.slice(cueStart, cueEnd);
+
+    expect(cue.toLowerCase()).toContain("same employee + merchant + day");
+    expect(cue).toContain("Each charge stays below the configured threshold");
+    expect(cue).toContain("the grouped total reaches it");
+    expect(cue).toContain("review cue");
+    expect(cue).not.toMatch(/\$\s?\d/);
+    expect(cue).not.toContain("fraud");
+  });
+
+  it("gives the mock preapproval queue its own human-reviewed sequence", () => {
+    const markup = renderCrest();
+    const start = markup.indexOf('<section class="crest-section crest-preapproval"');
+    const end = markup.indexOf("</section>", start);
+    const preapproval = markup.slice(start, end);
+
+    expect(markup).toContain('href="#crest-preapproval"');
+    expect(preapproval).toContain("Sample request templates");
+    expect(preapproval).toContain("Budget + employee history");
+    expect(preapproval).toContain("Gemini recommendation or template fallback");
+    expect(preapproval).toContain("A person chooses Approve or Deny");
+    expect(preapproval).toContain("Recorded locally");
+    expect(preapproval).toContain("not live employee requests");
+    expect(preapproval).toContain("not a live request feed or external approval service");
+  });
+
+  it("names the four-person challenge team and keeps Joshua's ownership bounded", () => {
+    const markup = renderCrest();
+    const teamStart = markup.indexOf('<section class="crest-section crest-team"');
+    const teamEnd = markup.indexOf("</section>", teamStart);
+    const team = markup.slice(teamStart, teamEnd);
+
+    expect(team).toContain("four-person team");
+    expect(team).toContain("I built Policy Compliance Engine workflows");
+    expect(team).toContain("part of preapproval");
+    expect(team).not.toContain("I built the frontend");
+    expect(team).toContain("3RD PLACE");
+    expect(team).toContain("BRIM FINANCIAL CHALLENGE");
   });
 });

@@ -630,6 +630,7 @@
 
 .crest-evidence-map__route--teal {
   stroke: #54aaa8;
+  stroke-dasharray: 5 5;
 }
 
 .crest-evidence-map__junction--gold {
@@ -873,6 +874,416 @@
   grid-column: auto;
   width: min(100%, 820px);
   margin: 0 0 0 auto;
+}
+
+.crest-hero__context {
+  margin: 18px 0 0;
+  color: #d2ae63;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.6;
+}
+
+.crest-evidence-map__request {
+  height: 132px;
+}
+
+.crest-split-cue {
+  display: grid;
+  grid-template-columns: minmax(230px, .62fr) minmax(0, 1.38fr);
+  align-items: center;
+  gap: 22px clamp(24px, 4vw, 54px);
+  margin: 0;
+  padding: 23px 26px 20px;
+  border: 1px solid #344b51;
+  border-left: 2px solid #c79b45;
+  background: linear-gradient(115deg, rgba(199, 155, 69, .075), transparent 54%), #0c1e24;
+}
+
+.crest-split-cue__intro {
+  display: block;
+  margin: 0;
+}
+
+.crest-split-cue__eyebrow {
+  margin: 0 0 11px;
+  color: #d2ae63;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: .09em;
+}
+
+.crest-split-cue__intro strong {
+  display: block;
+  margin: 0 0 9px;
+  color: #f0ebde;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.crest-split-cue__intro > p:last-child {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.crest-split-cue__visual {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+
+.crest-split-cue__grouping {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  padding: 9px 12px;
+  border: 1px solid #344b51;
+  color: #d7dfd9;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .06em;
+}
+
+.crest-split-cue__grouping b {
+  color: #d2ae63;
+  font-size: 13px;
+}
+
+.crest-split-cue__charges {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.crest-split-cue__charge,
+.crest-split-cue__sum {
+  min-width: 0;
+  padding: 11px 12px;
+  border: 1px solid #31474b;
+  background: #10242a;
+}
+
+.crest-split-cue__charge > span,
+.crest-split-cue__sum > span {
+  display: block;
+  margin-bottom: 10px;
+  color: #a9b5ba;
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: .08em;
+}
+
+.crest-split-cue__charge i,
+.crest-split-cue__sum i {
+  position: relative;
+  display: block;
+  height: 8px;
+  margin-bottom: 9px;
+  overflow: hidden;
+  background: #09181d;
+}
+
+.crest-split-cue__charge i::before,
+.crest-split-cue__sum i::before {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 39%;
+  background: #c79b45;
+  content: "";
+}
+
+.crest-split-cue__charge i::after,
+.crest-split-cue__sum i::after {
+  position: absolute;
+  top: -2px;
+  right: 22%;
+  height: 12px;
+  border-left: 1px dashed #91a5a6;
+  content: "";
+}
+
+.crest-split-cue__sum {
+  border-color: #5a5033;
+  background: #1a2928;
+}
+
+.crest-split-cue__sum i::before {
+  width: 78%;
+  background: #59b6aa;
+}
+
+.crest-split-cue__charge strong,
+.crest-split-cue__sum strong {
+  display: block;
+  color: #e8e9df;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+.crest-split-cue__sum strong {
+  color: #8bd0c4;
+}
+
+.crest-split-cue__legend {
+  margin: 0;
+  color: #83979b;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 8px;
+  line-height: 1.4;
+}
+
+.crest-split-cue__boundary {
+  grid-column: 1 / -1;
+  margin: -7px 0 0;
+  color: #849a9e;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.crest-preapproval {
+  grid-template-columns: minmax(230px, .62fr) minmax(0, 1.38fr);
+  align-items: start;
+  gap: clamp(25px, 4.5vw, 64px);
+  padding-top: 20px;
+  padding-bottom: 48px;
+}
+
+.crest-preapproval__story {
+  max-width: 460px;
+  padding-top: 10px;
+}
+
+.crest-preapproval__story h2 {
+  margin: 0 0 16px;
+  color: #f0ebde;
+  font-size: clamp(28px, 2.4vw, 38px);
+  letter-spacing: -.025em;
+  line-height: 1.12;
+}
+
+.crest-preapproval__story > p:last-child {
+  margin: 0;
+  color: #a9b5ba;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.crest-preapproval__figure {
+  min-width: 0;
+  margin: 0;
+  padding: 20px;
+  border: 1px solid #31484e;
+  background:
+    radial-gradient(ellipse at 88% 0%, rgba(58, 130, 126, .15), transparent 38%),
+    #0b1d23;
+}
+
+.crest-preapproval__figure > figcaption {
+  margin: 0 0 15px;
+  color: #73d1cf;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.crest-preapproval__flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: none;
+}
+
+.crest-preapproval__flow li {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  min-height: 168px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 14px 12px;
+  border: 1px solid #31484e;
+  border-top: 2px solid #c79b45;
+  background: rgba(17, 39, 44, .83);
+}
+
+.crest-preapproval__flow li + li::before {
+  position: absolute;
+  top: 50%;
+  left: -12px;
+  z-index: 1;
+  color: #d2ae63;
+  content: "→";
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+}
+
+.crest-preapproval__flow li > span {
+  margin-bottom: 17px;
+  color: #d2ae63;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.4;
+}
+
+.crest-preapproval__flow strong {
+  color: #e8e9df;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.crest-preapproval__flow small {
+  margin-top: auto;
+  padding-top: 13px;
+  color: #9fadae;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.crest-preapproval__flow .crest-preapproval__human-step {
+  border-top-color: #56bdbc;
+  background: #10292d;
+}
+
+.crest-preapproval__human-step > span {
+  color: #73d1cf;
+}
+
+.crest-preapproval__boundary {
+  margin: 15px 0 0;
+  color: #82979b;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.crest-team__collaboration {
+  margin: -8px 0 17px;
+  color: #d2ae63;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.crest-team__boundary {
+  max-width: 48ch;
+  margin: 16px 0 0;
+  color: #83979b;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.crest-policy-evidence {
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  max-width: 1100px;
+}
+
+.crest-policy-evidence__card--rules h3 {
+  font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  .crest-preapproval {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+
+  .crest-preapproval__story {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 760px) {
+  .crest-split-cue {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    padding: 17px 16px;
+  }
+
+  .crest-split-cue__charges {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .crest-split-cue__charge,
+  .crest-split-cue__sum {
+    display: grid;
+    grid-template-columns: 72px minmax(50px, .7fr) minmax(100px, 1fr);
+    align-items: center;
+    gap: 10px;
+    padding: 9px 10px;
+  }
+
+  .crest-split-cue__charge > span,
+  .crest-split-cue__sum > span,
+  .crest-split-cue__charge i,
+  .crest-split-cue__sum i {
+    margin: 0;
+  }
+
+  .crest-preapproval__figure {
+    padding: 15px;
+  }
+
+  .crest-preapproval__flow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .crest-preapproval__flow li {
+    min-height: 137px;
+  }
+
+  .crest-preapproval__flow li + li::before {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .crest-split-cue__grouping {
+    gap: 7px;
+    padding: 8px 5px;
+    font-size: 8px;
+  }
+
+  .crest-split-cue__charge,
+  .crest-split-cue__sum {
+    grid-template-columns: 65px minmax(36px, .6fr) minmax(92px, 1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .crest-split-cue__charge strong,
+  .crest-split-cue__sum strong {
+    font-size: 9px;
+  }
+
+  .crest-preapproval__flow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .crest-preapproval__flow li {
+    min-height: 96px;
+  }
+
+  .crest-preapproval__flow li > span {
+    margin-bottom: 10px;
+  }
+
+  .crest-preapproval__flow small {
+    margin-top: 8px;
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 1320px) {
