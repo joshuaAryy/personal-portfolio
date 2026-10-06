@@ -53,7 +53,9 @@ describe("Projects lobby", () => {
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(environmentRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.68\)[^;]*rgba\(1, 8, 13, 0\.18\)/s);
+    expect(environmentRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.28\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
+    expect(environmentRule).toContain("background-position: center top");
+    expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 38%/);
     expect(environmentRule).not.toContain("party-background.png");
   });
 
@@ -87,6 +89,24 @@ describe("Projects lobby", () => {
     expect(crest?.querySelector<HTMLImageElement>(".league-banner__mark")?.getAttribute("src")).toBe(
       "/media/profile/profile-crest-emblem.png",
     );
+  });
+
+  it("leads the Hackathons lobby with its completed Crest build and opens its case study", () => {
+    const view = renderProjectsLobby("hackathons");
+    const cards = [...view.querySelectorAll<HTMLButtonElement>(".league-banner")];
+
+    expect(cards.map((card) => card.getAttribute("aria-label"))).toEqual([
+      "Select Crest",
+      "Select Joshua Aryeetey",
+      "Select Coming Soon",
+    ]);
+    expect(cards[0]?.getAttribute("aria-pressed")).toBe("true");
+    expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/projects");
+
+    const openStory = view.querySelector<HTMLAnchorElement>(".league-lobby__primary-action");
+    expect(openStory?.getAttribute("href")).toBe("/projects/crest");
+    click(openStory!);
+    expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/projects/crest");
   });
 
   it("provides a Home link beside every category identity", () => {

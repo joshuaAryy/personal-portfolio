@@ -55,7 +55,8 @@ describe("HomeExplore", () => {
     const homeRule = css.match(/\.main\.main--home-explore\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(homeRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(homeRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.68\)[^;]*rgba\(1, 8, 13, 0\.18\)/s);
+    expect(homeRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.32\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
+    expect(homeRule).toContain("background-position: center top");
     expect(homeRule).not.toContain("home-mode-environment.png");
   });
 

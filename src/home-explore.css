@@ -4,9 +4,9 @@
   color: #eee4cb;
   background-color: #071823;
   background-image:
-    linear-gradient(180deg, rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%),
+    linear-gradient(180deg, rgba(1, 8, 13, 0.32) 0%, rgba(1, 8, 13, 0.1) 36%, rgba(1, 7, 11, 0.28) 100%),
     url("/media/lobby/party-background-original.jpg");
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   isolation: isolate;
 }
@@ -266,6 +266,8 @@
   grid-row: 4;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: max-content max-content;
+  align-content: start;
   align-items: start;
   min-height: 0;
   width: min(calc(100% - 40px), 540px);
@@ -288,7 +290,6 @@
 
 .home-explore__selection-copy > p:last-child {
   width: min(400px, 100%);
-  min-height: 82px;
   margin: 0;
   color: #e0ddd5;
   font-size: 15px;

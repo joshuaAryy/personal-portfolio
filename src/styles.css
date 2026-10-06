@@ -1136,6 +1136,10 @@ a:focus-visible {
   gap: 16px;
 }
 
+.client--home-shell .rail-link--status {
+  min-height: 54px;
+}
+
 .client--home-shell .rail-link--status > span:last-child,
 .client--resume-shell .rail-link--status > span:last-child {
   display: grid;
@@ -1567,15 +1571,6 @@ a:focus-visible {
 }
 .view-source:hover {
   background: #0b5265;
-}
-.main--profile {
-  background-color: #05070a;
-  background-image:
-    linear-gradient(180deg, rgba(3, 8, 14, 0.5), rgba(3, 8, 14, 0.34) 54%, rgba(3, 8, 14, 0.56)),
-    url("/media/opening/gameflow-background.jpg");
-  background-position: center, center 42%;
-  background-size: cover, cover;
-  background-repeat: no-repeat, no-repeat;
 }
 .profile-layout {
   display: grid;
@@ -6084,32 +6079,15 @@ a:focus-visible {
   margin-left: 8px;
   padding: clamp(88px, 18.7vh, 202px) 0 48px;
   border-right: 1px solid #c79b4533;
-  background:
-    radial-gradient(ellipse at 36% 22%, #82639a38 0, transparent 33%),
-    radial-gradient(ellipse at 74% 69%, #39736a31 0, transparent 36%),
-    linear-gradient(180deg, #151323 0%, #111820 53%, #0a1718 100%);
+  background-color: rgba(14, 6, 23, 0.16);
+  background-image: url("/media/profile/trials-of-twilight-banner.png");
+  background-repeat: no-repeat;
+  background-position: center -203px;
+  background-size: 493px 1201px;
 }
 .journey-identity:before,
 .journey-identity:after {
-  content: "";
-  position: absolute;
-  pointer-events: none;
-}
-.journey-identity:before {
-  inset: 0;
-  opacity: 0.42;
-  background:
-    linear-gradient(112deg, transparent 0 35%, #b3a1ce12 35.2% 35.5%, transparent 35.7%),
-    linear-gradient(72deg, transparent 0 63%, #8ab3a117 63.2% 63.5%, transparent 63.7%),
-    repeating-linear-gradient(160deg, transparent 0 38px, #d5c69d0c 39px, transparent 40px 78px);
-}
-.journey-identity:after {
-  inset: auto -90px 19% 22px;
-  height: 260px;
-  border-top: 1px solid #c5ae7130;
-  border-radius: 50%;
-  transform: rotate(-20deg);
-  box-shadow: 0 -18px 0 -17px #c5ae7120, 0 -42px 0 -41px #c5ae7115;
+  display: none;
 }
 .journey-identity__portrait {
   position: relative;
@@ -6813,6 +6791,8 @@ a:focus-visible {
     padding: 24px 18px;
     border-right: 0;
     border-bottom: 1px solid #c79b4533;
+    background-position: center -92px;
+    background-size: auto 620px;
   }
   .journey-identity__portrait {
     flex: 0 0 72px;
@@ -6901,6 +6881,11 @@ a:focus-visible {
 }
 
 @media (max-width: 480px) {
+  .journey-identity {
+    background-position: center -70px;
+    background-size: auto 500px;
+  }
+
   .journey-identity__credentials {
     grid-template-columns: minmax(0, 1fr) 54px;
     gap: 6px;

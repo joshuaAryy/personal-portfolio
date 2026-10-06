@@ -138,16 +138,6 @@ const experienceItems: LobbyItem[] = [
 
 const hackathonItems: LobbyItem[] = [
   {
-    id: "next-hackathon",
-    name: "Coming Soon",
-    subtitle: "Next hackathon build",
-    role: "NEXT EVENT · TBD",
-    detail: "Event details TBD",
-    roles: [],
-    placeholder: true,
-  },
-  ownerItem,
-  {
     id: "crest-hackathon",
     name: "Crest",
     subtitle: "MPC Hacks · 2026",
@@ -161,6 +151,16 @@ const hackathonItems: LobbyItem[] = [
     detail: "4,235 demo/dev transactions",
     supportingDetail: "Policy engine · anomaly rules",
     roles: ["software", "ai", "data", "research"],
+  },
+  ownerItem,
+  {
+    id: "next-hackathon",
+    name: "Coming Soon",
+    subtitle: "Next hackathon build",
+    role: "NEXT EVENT · TBD",
+    detail: "Event details TBD",
+    roles: [],
+    placeholder: true,
   },
 ];
 const educationItems: LobbyItem[] = [

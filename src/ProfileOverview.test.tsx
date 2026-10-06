@@ -117,15 +117,19 @@ describe("Profile Overview", () => {
     const signalRule = cssBlock(profileCss, ".profile-signal-grid");
     const tabletRule = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1858px)");
     const tabletOverview = cssBlock(tabletRule, ".main--profile .profile-overview");
+    const tabletSignals = cssBlock(tabletRule, ".profile-signal-grid");
     const narrowRule = cssBlock(profileCss, "@media (max-width: 900px)");
     const narrowOverview = cssBlock(narrowRule, ".main--profile .profile-overview");
     const heroBottom = (cssPixels(enclosureRule, "top") ?? 0) + (cssPixels(enclosureRule, "height") ?? 0);
     const signalTop = cssPixels(signalRule, "top") ?? 0;
     const signalBottom = signalTop + (cssPixels(signalRule, "height") ?? 0);
     const overviewHeight = cssPixels(overviewRule, "height") ?? 0;
+    const tabletSignalBottom = (cssPixels(tabletSignals, "top") ?? 0) + (cssPixels(tabletSignals, "height") ?? 0);
+    const tabletOverviewHeight = cssPixels(tabletOverview, "height") ?? 0;
 
     expect(signalTop).toBeGreaterThanOrEqual(heroBottom + 24);
     expect(overviewHeight).toBeGreaterThanOrEqual(signalBottom + 24);
+    expect(tabletOverviewHeight).toBeGreaterThanOrEqual(tabletSignalBottom + 24);
     expect(tabletOverview).toContain("margin-top: 135px");
     expect(tabletOverview).toContain("transform: scale(.7)");
     expect(narrowOverview).toContain("flex-direction: column");
@@ -139,7 +143,7 @@ describe("Profile Overview", () => {
 
     expect(shellRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(shellRule).toContain("linear-gradient(180deg,");
-    expect(shellRule).toContain("background-position: center, center 50%");
+    expect(shellRule).toContain("background-position: center, center top");
     expect(shellRule).toContain("background-size: cover, cover");
     expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });
