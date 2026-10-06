@@ -70,6 +70,10 @@ describe("League client shell", () => {
     expect(circleTop).toBeGreaterThanOrEqual(viewY);
     expect(circleRight).toBeLessThanOrEqual(viewX + viewWidth);
     expect(circleBottom).toBeLessThanOrEqual(viewY + viewHeight);
+    expect(circleLeft - viewX).toBeGreaterThan(1.5);
+    expect(circleTop - viewY).toBeGreaterThan(1.5);
+    expect(viewX + viewWidth - circleRight).toBeGreaterThan(1.5);
+    expect(viewY + viewHeight - circleBottom).toBeGreaterThan(1.5);
     expect(circleLeft).toBeGreaterThanOrEqual(clipX);
     expect(circleTop).toBeGreaterThanOrEqual(clipY);
     expect(circleRight).toBeLessThanOrEqual(clipRight);
