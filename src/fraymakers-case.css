@@ -46,19 +46,20 @@
 .fray-case__config-copy > .fray-case__eyebrow { grid-column: 1 / -1; }
 .fray-case__config-copy h2 { grid-column: 1; margin-bottom: 0; }
 .fray-case__config-copy > p:not(.fray-case__eyebrow) { grid-column: 2; align-self: end; }
-.fray-case__workflow-path { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .88fr) 24px minmax(0, .72fr) 24px minmax(0, 1.55fr); align-items: stretch; gap: 9px; margin-top: 7px; }
+.fray-case__workflow-path { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, .82fr) 20px minmax(0, .78fr) 20px minmax(0, .8fr) 20px minmax(0, 1.42fr); align-items: stretch; gap: 8px; margin-top: 7px; }
 .fray-case__workflow-stage { display: flex; flex-direction: column; min-width: 0; padding: 17px 18px; border-top: 2px solid var(--fray-cyan); background: linear-gradient(155deg, rgba(18, 47, 57, .76), rgba(9, 23, 32, .6)); }
+.fray-case__workflow-stage--configuration { border-top-color: var(--fray-gold); }
 .fray-case__workflow-stage--association { border-top-color: #9cb5ba; }
 .fray-case__workflow-stage--render { border-top-color: var(--fray-gold); }
 .fray-case__workflow-kicker { color: var(--fray-cyan); font-size: 9px; font-weight: 700; letter-spacing: .12em; line-height: 1.4; }
+.fray-case__workflow-stage--configuration .fray-case__workflow-kicker { color: var(--fray-gold); }
 .fray-case__workflow-stage--association .fray-case__workflow-kicker { color: #c1d0d0; }
 .fray-case__workflow-stage--render .fray-case__workflow-kicker { color: var(--fray-gold); }
 .fray-case__workflow-stage > strong { margin-top: 12px; color: #e8e5dc; font-size: clamp(16px, 1.5vw, 20px); font-weight: 500; line-height: 1.22; }
 .fray-case__workflow-fields, .fray-case__workflow-assets { display: flex; flex-wrap: wrap; gap: 6px; margin: 13px 0 0 !important; padding: 0; list-style: none; }
 .fray-case__workflow-fields li, .fray-case__workflow-assets li { padding: 5px 7px; border: 1px solid rgba(148, 178, 183, .24); color: #c0d0cf; font-size: 10px; line-height: 1.3; }
-.fray-case__workflow-override { display: grid; gap: 5px; margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(148, 178, 183, .2); }
-.fray-case__workflow-override > span { color: var(--fray-gold); font-size: 8px; font-weight: 700; letter-spacing: .1em; }
-.fray-case__workflow-override > strong { color: #e8e5dc; font-size: 13px; font-weight: 500; line-height: 1.35; }
+.fray-case__workflow-config-scopes { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; padding-top: 16px; }
+.fray-case__workflow-config-scopes > span { padding: 6px 8px; border: 1px solid rgba(211, 180, 111, .36); color: #d3c49d; font-size: 9px; font-weight: 700; letter-spacing: .1em; line-height: 1.3; }
 .fray-case__recording-map { display: grid; grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr); align-items: center; gap: 5px; margin-top: auto; padding-top: 18px; }
 .fray-case__recording-map > span { display: grid; place-items: center; min-height: 52px; border: 1px solid #385962; background: rgba(6, 19, 26, .55); color: #d5e2de; font-size: 10px; font-weight: 700; letter-spacing: .1em; }
 .fray-case__recording-map > b { color: var(--fray-gold); font-size: 18px; font-weight: 400; text-align: center; }
@@ -109,9 +110,11 @@
 @media (max-width: 1100px) {
   .fray-case__intro { grid-template-columns: minmax(0, .8fr) minmax(440px, 1.2fr); gap: 28px; }
   .fray-case__config-copy { grid-template-columns: minmax(0, 1.1fr) minmax(230px, .8fr); column-gap: 28px; }
-  .fray-case__workflow-path { grid-template-columns: minmax(0, .88fr) 18px minmax(0, .72fr) 18px minmax(0, 1.55fr); gap: 6px; }
+  .fray-case__workflow-path { grid-template-columns: minmax(0, 1fr); gap: 6px; }
   .fray-case__workflow-stage { padding: 14px 12px; }
   .fray-case__workflow-stage > strong { font-size: 16px; }
+  .fray-case__workflow-config-scopes { margin-top: 11px; padding-top: 0; }
+  .fray-case__workflow-link { height: 16px; transform: rotate(90deg); }
   .fray-case__render-sequence { grid-template-columns: minmax(0, 1fr) 13px minmax(0, 1fr) 13px minmax(0, 1fr); gap: 3px; }
   .fray-case__render-sequence > span { padding: 8px 6px; }
   .fray-case__render-sequence > span > strong { font-size: 11px; }
@@ -140,7 +143,7 @@
   .fray-case__workflow-stage > strong { margin-top: 9px; font-size: 18px; }
   .fray-case__workflow-fields, .fray-case__workflow-assets { gap: 6px; margin-top: 10px !important; }
   .fray-case__workflow-fields li, .fray-case__workflow-assets li { font-size: 11px; }
-  .fray-case__workflow-override { margin-top: 13px; padding-top: 10px; }
+  .fray-case__workflow-config-scopes { margin-top: 11px; padding-top: 0; }
   .fray-case__recording-map { margin-top: 13px; padding-top: 0; }
   .fray-case__render-sequence { grid-template-columns: minmax(0, 1fr); gap: 5px; margin-top: 12px; padding-top: 0; }
   .fray-case__render-sequence > span { grid-template-columns: minmax(0, 1fr) auto; align-items: baseline; padding: 9px 10px; }

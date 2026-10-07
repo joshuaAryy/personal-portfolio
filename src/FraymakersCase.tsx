@@ -143,26 +143,30 @@ export default function FraymakersCase() {
             <p>Match identity and event-specific choices had to stay attached to the right recording before the selected assets reached the renderer.</p>
           </div>
           <figure className="fray-case__workflow-path" aria-labelledby="fraymakers-workflow-caption">
-            <div className="fray-case__workflow-stage fray-case__workflow-stage--metadata" role="group" aria-label="Tournament and match metadata with event or match overrides">
+            <div className="fray-case__workflow-stage fray-case__workflow-stage--metadata" role="group" aria-label="Tournament and match metadata">
               <span className="fray-case__workflow-kicker">01 / MATCH METADATA</span>
               <strong>Tournament + match metadata</strong>
               <ul className="fray-case__workflow-fields">
                 <li>Player + set</li><li>Character + costume</li><li>Assist</li>
               </ul>
-              <div className="fray-case__workflow-override">
-                <span>CONFIGURATION</span>
-                <strong>Event / match YAML overrides</strong>
+            </div>
+            <span className="fray-case__workflow-link" aria-hidden="true">→</span>
+            <div className="fray-case__workflow-stage fray-case__workflow-stage--configuration" role="group" aria-label="YAML configuration overrides at event or match scope">
+              <span className="fray-case__workflow-kicker">02 / YAML CONFIG</span>
+              <strong>Event / match YAML overrides</strong>
+              <div className="fray-case__workflow-config-scopes" aria-label="Override scopes">
+                <span>EVENT</span><span>MATCH</span>
               </div>
             </div>
             <span className="fray-case__workflow-link" aria-hidden="true">→</span>
             <div className="fray-case__workflow-stage fray-case__workflow-stage--association" role="group" aria-label="Match and video association">
-              <span className="fray-case__workflow-kicker">02 / VIDEO MAPPING</span>
+              <span className="fray-case__workflow-kicker">03 / VIDEO MAPPING</span>
               <strong>Match ↔ recording association</strong>
               <div className="fray-case__recording-map"><span>MATCH</span><b aria-hidden="true">↔</b><span>VOD</span></div>
             </div>
             <span className="fray-case__workflow-link" aria-hidden="true">→</span>
             <div className="fray-case__workflow-stage fray-case__workflow-stage--render" role="group" aria-label="Selected media assets pass through thumbnail.js and node-canvas into a 1280 by 720 PNG">
-              <span className="fray-case__workflow-kicker">03 / ASSETS + RENDER</span>
+              <span className="fray-case__workflow-kicker">04 / ASSETS + RENDER</span>
               <strong>Selected media assets</strong>
               <ul className="fray-case__workflow-assets">
                 <li>Stage + background</li><li>Character / sprite art</li><li>Costume + assist</li><li>Foreground + logos</li><li>Names + set labels</li>

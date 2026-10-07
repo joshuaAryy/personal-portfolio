@@ -31,6 +31,11 @@ describe("Fraymakers technical case study", () => {
     const markup = render();
     const workflow = markup.slice(markup.indexOf('id="fraymakers-configuration"'), markup.indexOf('id="fraymakers-composition"'));
     expect(workflow).toContain('class="fray-case__workflow-path"');
+    expect(workflow.match(/fray-case__workflow-stage--configuration/g)).toHaveLength(1);
+    expect(workflow.match(/fray-case__workflow-stage--metadata/g)).toHaveLength(1);
+    expect(workflow.match(/fray-case__workflow-stage--association/g)).toHaveLength(1);
+    expect(workflow.indexOf('fray-case__workflow-stage--metadata')).toBeLessThan(workflow.indexOf('fray-case__workflow-stage--configuration'));
+    expect(workflow.indexOf('fray-case__workflow-stage--configuration')).toBeLessThan(workflow.indexOf('fray-case__workflow-stage--association'));
     expect(workflow).toContain("Tournament + match metadata");
     expect(workflow).toContain("Event / match YAML overrides");
     expect(workflow).toContain("Match ↔ recording association");
