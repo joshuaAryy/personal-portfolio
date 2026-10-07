@@ -3,46 +3,13 @@ import { Link } from "react-router-dom";
 import "./fraymakers-case.css";
 
 const chapters = [
-  { id: "pipeline", label: "PIPELINE" },
-  { id: "configuration", label: "CONFIG" },
-  { id: "composition", label: "COMPOSITION" },
+  { id: "pipeline", label: "OUTPUT" },
+  { id: "configuration", label: "WORKFLOW" },
+  { id: "composition", label: "IMPLEMENTATION" },
   { id: "outcome", label: "OUTCOME" },
 ] as const;
 
 type ChapterId = (typeof chapters)[number]["id"];
-
-const pipeline = [
-  {
-    number: "01",
-    labels: ["MATCH + TOURNAMENT"],
-    title: "A match in its event",
-    detail: "Tournament results, player names, and set information identify the matchup.",
-  },
-  {
-    number: "02",
-    labels: ["MATCH DETAILS", "YAML / CONFIG"],
-    title: "Resolve match-specific choices",
-    detail: "Names and aliases, set labels, characters, costumes, and assists vary by event and match.",
-  },
-  {
-    number: "03",
-    labels: ["VIDEO ASSOCIATION"],
-    title: "Find its recording",
-    detail: "Match information identifies the corresponding tournament VOD.",
-  },
-  {
-    number: "04",
-    labels: ["ASSET RESOLUTION", "THUMBNAIL.JS · NODE-CANVAS"],
-    title: "Render at 1280 × 720",
-    detail: "The renderer composes the selected art and labels into a 16:9 PNG.",
-  },
-  {
-    number: "05",
-    labels: ["REAL FRAYMAKERS VODS"],
-    title: "The frame in use",
-    detail: "Generated thumbnails were used on real Fraymakers VODs.",
-  },
-] as const;
 
 export default function FraymakersCase() {
   const [activeChapter, setActiveChapter] = useState<ChapterId>("pipeline");
@@ -122,138 +89,113 @@ export default function FraymakersCase() {
           <div className="fray-case__intro-copy">
             <p className="fray-case__eyebrow">FRAYMAKERS / UPLOADASSISTANT</p>
             <h1 id="fraymakers-title">A tournament match,<br />carried into its own frame.</h1>
-            <p className="fray-case__dek">A match record, game art, and player labels become a 1280 × 720 frame for its associated VOD.</p>
-            <p className="fray-case__intro-detail">I built <code>thumbnail.js</code>, composing match-specific art and labels into a frame for its associated VOD.</p>
+            <p className="fray-case__dek">I built <code>thumbnail.js</code> to turn match-specific art and labels into a 1280 × 720 PNG for its associated VOD.</p>
+            <p className="fray-case__intro-detail">My brother created the broader foundation, CLI, Challonge integration, and much of the early API groundwork. I joined later to build <code>thumbnail.js</code> and work on YAML/configuration, thumbnail generation and integration, and part of the YouTube API path.</p>
           </div>
-          <figure className="fray-case__hero-system" role="img" aria-label="Ordered conceptual pipeline: match and tournament context, match details and YAML config, video association, asset resolution, thumbnail.js rendering, then a 1280 by 720 PNG for VOD use">
-            <div className="fray-case__hero-system-head"><span>ORDERED THUMBNAIL PIPELINE</span><span>16:9 / 1280 × 720</span></div>
-            <div className="fray-case__hero-system-flow">
-              <div className="fray-case__hero-system-inputs" aria-hidden="true">
-                <span>01 / MATCH + TOURNAMENT</span>
-                <span>02 / MATCH DETAILS + YAML</span>
-                <span>03 / VIDEO ASSOCIATION</span>
-                <span>04 / ASSET RESOLUTION</span>
-              </div>
-              <span className="fray-case__hero-system-arrow" aria-hidden="true">→</span>
-              <div className="fray-case__hero-system-renderer" aria-hidden="true">
-                <strong>thumbnail.js</strong>
-                <span>NODE-CANVAS</span>
-              </div>
-              <span className="fray-case__hero-system-arrow" aria-hidden="true">→</span>
-              <div className="fray-case__hero-system-output" aria-hidden="true">
-                <span className="fray-case__hero-player fray-case__hero-player--one">P1</span>
-                <span className="fray-case__hero-versus">VS</span>
-                <span className="fray-case__hero-player fray-case__hero-player--two">P2</span>
-                <span className="fray-case__hero-system-output-label">PNG / VOD FRAME</span>
-              </div>
-            </div>
-            <figcaption>Conceptual system view; this is not recovered project art or a generated thumbnail.</figcaption>
+          <figure className="fray-case__hero-figure" aria-labelledby="fraymakers-hero-caption">
+            <div className="fray-case__hero-topline"><span>THUMBNAIL COMPOSITION SCHEMATIC</span><span>16:9 · 1280 × 720</span></div>
+            <svg viewBox="0 0 1280 720" role="img" aria-labelledby="fraymakers-hero-title fraymakers-hero-description">
+              <title id="fraymakers-hero-title">Thumbnail composition schematic</title>
+              <desc id="fraymakers-hero-description">A conceptual 16:9 layout with a background, opposing abstract player-art shapes, supporting art, name regions, and set-label regions. It does not depict an authentic generated thumbnail.</desc>
+              <defs>
+                <linearGradient id="fray-bg" x2="1" y2="1"><stop stopColor="#153744"/><stop offset=".5" stopColor="#0b1d28"/><stop offset="1" stopColor="#302c22"/></linearGradient>
+                <pattern id="fray-lines" width="72" height="72" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)"><path d="M0 0V72" stroke="#91b6b4" strokeOpacity=".1" strokeWidth="2"/></pattern>
+                <linearGradient id="fray-p1" x2="1" y2="1"><stop stopColor="#63ced0"/><stop offset="1" stopColor="#267681"/></linearGradient>
+                <linearGradient id="fray-p2" x2="0" y2="1"><stop stopColor="#e4c16f"/><stop offset="1" stopColor="#9d663f"/></linearGradient>
+                <filter id="fray-shadow" x="-.3" y="-.3" width="1.6" height="1.7"><feGaussianBlur stdDeviation="18"/></filter>
+              </defs>
+              <rect width="1280" height="720" fill="url(#fray-bg)"/>
+              <rect width="1280" height="720" fill="url(#fray-lines)"/>
+              <circle cx="634" cy="340" r="250" fill="#57c6cb" fillOpacity=".13" filter="url(#fray-shadow)"/>
+              <path d="M0 530 215 420l175 87 177-136 210 137 174-67 329 155v124H0Z" fill="#091923" fillOpacity=".75"/>
+              <path d="M0 560 203 454l167 85 186-131 206 132 167-71 351 161" fill="none" stroke="#82b8ba" strokeOpacity=".32" strokeWidth="4"/>
+              <rect x="38" y="38" width="1204" height="644" rx="12" fill="none" stroke="#e2d6b8" strokeOpacity=".55" strokeWidth="2"/>
+              <rect x="76" y="76" width="260" height="70" rx="5" fill="#07151d" fillOpacity=".8" stroke="#8ba9a8" strokeOpacity=".65"/>
+              <path d="M98 111h34m-17-17v34" stroke="#d6b76b" strokeWidth="5" strokeLinecap="round"/>
+              <path d="M145 100h168M145 121h103" stroke="#adc4c1" strokeOpacity=".55" strokeWidth="7" strokeLinecap="round"/>
+              <rect x="919" y="76" width="285" height="70" rx="5" fill="#07151d" fillOpacity=".8" stroke="#8ba9a8" strokeOpacity=".65"/>
+              <path d="M947 101h214M947 122h149" stroke="#d7c89e" strokeOpacity=".72" strokeWidth="7" strokeLinecap="round"/>
+              <path d="M275 535 303 302l123-102 154 62 76 164-48 159H320Z" fill="#030b10" fillOpacity=".45" transform="translate(14 20)"/>
+              <path d="M275 535 303 302l123-102 154 62 76 164-48 159H320Z" fill="url(#fray-p1)" stroke="#a8eeee" strokeOpacity=".8" strokeWidth="5"/>
+              <path d="M360 318 414 244l70 20 39 61-45 31-40-23-50 53Z" fill="#daf1e5" fillOpacity=".84"/>
+              <path d="M1005 535 977 302l-123-102-154 62-76 164 48 159h188Z" fill="#030b10" fillOpacity=".45" transform="translate(-14 20)"/>
+              <path d="M1005 535 977 302l-123-102-154 62-76 164 48 159h188Z" fill="url(#fray-p2)" stroke="#f1dca5" strokeOpacity=".83" strokeWidth="5"/>
+              <path d="m920 318-54-74-70 20-39 61 45 31 40-23 50 53Z" fill="#f2e4ca" fillOpacity=".86"/>
+              <path d="m506 407 78-69 76 14 68 70-63 76H566Z" fill="#0c202a" stroke="#e7c66e" strokeWidth="4"/>
+              <path d="M609 396h26m-13-13v26" stroke="#e7c66e" strokeWidth="5" strokeLinecap="round"/>
+              <rect x="84" y="586" width="440" height="62" rx="4" fill="#06131a" fillOpacity=".9" stroke="#66c7ca" strokeOpacity=".8"/>
+              <path d="M108 608h334M108 627h205" stroke="#cee6df" strokeOpacity=".65" strokeWidth="7" strokeLinecap="round"/>
+              <rect x="756" y="586" width="440" height="62" rx="4" fill="#06131a" fillOpacity=".9" stroke="#d6b76b" strokeOpacity=".8"/>
+              <path d="M780 608h334M780 627h205" stroke="#e9dfc8" strokeOpacity=".65" strokeWidth="7" strokeLinecap="round"/>
+            </svg>
+            <ul className="fray-case__hero-key" aria-label="Schematic regions">
+              <li>Background &amp; stage art</li><li>Player character &amp; costume art</li><li>Supporting assets</li><li>Player names &amp; set labels</li>
+            </ul>
+            <div className="fray-case__hero-tools" aria-label="Renderer tools"><span>RENDERER</span><code>thumbnail.js</code><span>CANVAS</span><strong>node-canvas</strong></div>
+            <figcaption id="fraymakers-hero-caption">Schematic only; this is not an authentic generated thumbnail.</figcaption>
           </figure>
         </header>
 
         <section className="fray-case__pipeline" id="fraymakers-pipeline" aria-labelledby="fraymakers-pipeline-title">
           <div className="fray-case__section-head">
-            <div><p className="fray-case__eyebrow">01 / THE WHOLE WORKFLOW</p><h2 id="fraymakers-pipeline-title">Keep the match, the recording,<br />and the thumbnail together.</h2></div>
-            <p className="fray-case__section-intro">Follow the match from its tournament context to the recording, selected assets, rendered image, and real VOD use.</p>
+            <div><p className="fray-case__eyebrow">01 / THE OUTPUT</p><h2 id="fraymakers-pipeline-title">A frame shaped<br />around the matchup.</h2></div>
+            <p className="fray-case__section-intro">node-canvas brought together player art, background and supporting assets, names, and set labels on a fixed 1280 × 720 canvas.</p>
           </div>
-          <figure className="fray-case__pipeline-figure" aria-labelledby="fraymakers-pipeline-caption">
-            <ol className="fray-case__stages">
-              {pipeline.map((stage) => (
-                <li className="fray-case__stage" key={stage.number}>
-                  <span className="fray-case__stage-number">{stage.number}</span>
-                  <div className="fray-case__stage-labels">
-                    {stage.labels.map((label) => <span className="fray-case__stage-label" key={label}>{label}</span>)}
-                  </div>
-                  <h3>{stage.title}</h3>
-                  <p>{stage.detail}</p>
-                </li>
-              ))}
-            </ol>
-            <aside className="fray-case__upload-prototype" aria-label="Unfinished YouTube upload path">
-              <span className="fray-case__upload-prototype-connector" aria-hidden="true">→</span>
-              <div>
-                <span className="fray-case__upload-prototype-label">NEXT STEP / PROTOTYPE</span>
-                <strong>YouTube Data API v3 / OAuth</strong>
-                <p>Automatic upload was not completed.</p>
-              </div>
-            </aside>
-            <figcaption id="fraymakers-pipeline-caption">The generated image was used on real tournament VODs; publishing it automatically remained prototype work.</figcaption>
-          </figure>
         </section>
 
         <section className="fray-case__configuration" id="fraymakers-configuration" aria-labelledby="fraymakers-configuration-title">
-          <figure className="fray-case__input-figure" aria-labelledby="fraymakers-input-caption">
-            <div className="fray-case__input-head"><span>YAML / CONFIG</span><strong>Match-specific choices</strong></div>
-            <dl className="fray-case__input-register">
-              <div><dt>PLAYER CONTEXT</dt><dd>Names and aliases<span>Labels and identities attached to the matchup.</span></dd></div>
-              <div><dt>GAME ART</dt><dd>Character and costume choices<span>Sprites and assists selected for each side.</span></dd></div>
-              <div><dt>MATCH TEXT</dt><dd>Event and set labels<span>Context that connects a match to its recording.</span></dd></div>
-              <div><dt>PRESENTATION</dt><dd>Logos, stage, and foreground<span>Visual material combined with player art and text.</span></dd></div>
-            </dl>
-            <figcaption id="fraymakers-input-caption">Conceptual input categories, rather than a YAML example; exact YAML keys, values, defaults, and asset order are not established.</figcaption>
-          </figure>
           <div className="fray-case__config-copy">
-            <p className="fray-case__eyebrow">02 / MATCH-SPECIFIC INPUTS</p>
-            <h2 id="fraymakers-configuration-title">One render path.<br />Choices change by match.</h2>
-            <p>Two sets at the same tournament could need different names, characters, costumes, and assists. Event and match overrides carried match-specific choices into thumbnail generation.</p>
+            <p className="fray-case__eyebrow">02 / MATCH TO COMPOSITION</p>
+            <h2 id="fraymakers-configuration-title">Choices travel with<br />the recording.</h2>
+            <p>Tournament and match information, with event or match overrides, supplied the choices for a matchup. Those choices were associated with its recording; selected labels and art then passed into the renderer.</p>
+            <p>The categories below are conceptual, not a recovered YAML example. Exact keys and override behavior are not established.</p>
           </div>
+          <figure className="fray-case__workflow-figure" aria-labelledby="fraymakers-workflow-caption">
+            <div className="fray-case__workflow-node fray-case__workflow-node--inputs">
+              <span className="fray-case__workflow-kicker">MATCH CONTEXT</span>
+              <strong>Tournament + match information</strong>
+              <ul><li>Player and set labels</li><li>Character, costume, assist</li><li>Event or match overrides</li></ul>
+            </div>
+            <span className="fray-case__workflow-link" aria-hidden="true">→</span>
+            <div className="fray-case__workflow-node fray-case__workflow-node--recording">
+              <span className="fray-case__workflow-kicker">ASSOCIATION</span>
+              <strong>Match choices paired with its recording</strong>
+              <div className="fray-case__recording-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><i>VOD</i></div>
+            </div>
+            <span className="fray-case__workflow-link" aria-hidden="true">→</span>
+            <div className="fray-case__workflow-node fray-case__workflow-node--handoff">
+              <span className="fray-case__workflow-kicker">RENDER INPUTS</span>
+              <strong>Selected labels + art</strong>
+              <ul className="fray-case__handoff-assets"><li>Player art</li><li>Background &amp; support</li><li>Names &amp; set labels</li></ul>
+              <span className="fray-case__handoff-chip">thumbnail.js</span>
+            </div>
+            <figcaption id="fraymakers-workflow-caption">Conceptual relationship: match context and configuration inform the choices carried into a recording’s thumbnail.</figcaption>
+          </figure>
         </section>
 
         <section className="fray-case__composition" id="fraymakers-composition" aria-labelledby="fraymakers-composition-title">
           <div className="fray-case__section-head">
-            <div><p className="fray-case__eyebrow">03 / INSIDE THUMBNAIL.JS</p><h2 id="fraymakers-composition-title">A fixed canvas.<br />A changing matchup.</h2></div>
-            <p className="fray-case__section-intro">node-canvas combined stage/background art, character sprites, alternate costumes, assists, logos, foreground elements, fonts, player names, and set labels into a 1280 × 720 image.</p>
+            <div><p className="fray-case__eyebrow">03 / IMPLEMENTATION DETAILS</p><h2 id="fraymakers-composition-title">A consistent canvas.<br />Variable inputs.</h2></div>
+            <p className="fray-case__section-intro">The renderer had to make two sides read as opponents while working within real asset and text constraints.</p>
           </div>
-          <figure className="fray-case__composition-figure" aria-labelledby="fraymakers-composition-caption">
-            <div className="fray-case__composition-topline"><span>COMPOSITION SCHEMATIC</span><span>1280 × 720 / 16:9</span></div>
-            <svg viewBox="0 0 1280 720" role="img" aria-labelledby="fraymakers-schematic-title fraymakers-schematic-description">
-              <title id="fraymakers-schematic-title">Conceptual thumbnail canvas and its asset regions</title>
-              <desc id="fraymakers-schematic-description">A 16 by 9 frame contains stage and background art, two character and costume areas, assists, logos, player names, set labels, and foreground elements. Player two art is mirrored toward the matchup. Boxes are explanatory regions rather than source artwork or verified placement coordinates.</desc>
-              <defs><pattern id="fray-grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#57c6cb" strokeOpacity=".08" /></pattern></defs>
-              <rect width="1280" height="720" fill="#0b1d28" /><rect width="1280" height="720" fill="url(#fray-grid)" />
-              <rect x="35" y="35" width="1210" height="650" fill="none" stroke="#57717b" />
-              <text x="60" y="79" className="fray-svg-muted">STAGE / BACKGROUND ART</text>
-              <rect x="65" y="108" width="225" height="56" className="fray-svg-zone" /><text x="86" y="144" className="fray-svg-small">TOURNAMENT LOGO</text>
-              <rect x="960" y="108" width="250" height="56" className="fray-svg-zone" /><text x="986" y="144" className="fray-svg-small">SET / ROUND LABEL</text>
-              <rect x="135" y="202" width="430" height="304" className="fray-svg-zone fray-svg-zone--character" />
-              <rect x="715" y="202" width="430" height="304" className="fray-svg-zone fray-svg-zone--character" />
-              <text x="166" y="243" className="fray-svg-label">P1 · CHARACTER / COSTUME</text>
-              <text x="746" y="243" className="fray-svg-label">P2 · CHARACTER / COSTUME</text>
-              <path d="M260 450V306H348L408 362 348 418H312V450Z" fill="#57c6cb" fillOpacity=".17" stroke="#57c6cb" strokeWidth="3" />
-              <g transform="translate(1280 0) scale(-1 1)"><path d="M260 450V306H348L408 362 348 418H312V450Z" fill="#d6b76b" fillOpacity=".17" stroke="#d6b76b" strokeWidth="3" /></g>
-              <path d="M490 361H595M586 351 597 361 586 371M790 361H685M694 351 683 361 694 371" fill="none" stroke="#b7d0d0" strokeWidth="3" />
-              <text x="620" y="353" className="fray-svg-vs">VS</text>
-              <text x="797" y="484" className="fray-svg-gold">P2 ART MIRRORED</text>
-              <rect x="65" y="401" width="165" height="63" className="fray-svg-zone" /><text x="89" y="441" className="fray-svg-small">ASSIST / LOGO</text>
-              <rect x="1050" y="401" width="165" height="63" className="fray-svg-zone" /><text x="1074" y="441" className="fray-svg-small">ASSIST / LOGO</text>
-              <rect x="135" y="532" width="430" height="66" className="fray-svg-zone" /><text x="240" y="575" className="fray-svg-label">PLAYER ONE NAME</text>
-              <rect x="715" y="532" width="430" height="66" className="fray-svg-zone" /><text x="820" y="575" className="fray-svg-label">PLAYER TWO NAME</text>
-              <path d="M60 632H1220" stroke="#d6b76b" strokeOpacity=".5" /><text x="465" y="666" className="fray-svg-muted">FOREGROUND ELEMENTS</text>
-            </svg>
-            <div className="fray-case__mobile-composition" role="img" aria-label="Simplified composition for narrow screens">
-              <span className="fray-case__mobile-background">Stage / background + logos</span>
-              <div className="fray-case__mobile-players">
-                <div><strong>P1 art →</strong><span>character / costume</span><small>assist</small></div>
-                <div><strong>← P2 art</strong><span>character / costume</span><small>mirrored · assist</small></div>
-              </div>
-              <span className="fray-case__mobile-text">Names / set labels / foreground</span>
-            </div>
-            <figcaption id="fraymakers-composition-caption">Native explanatory drawing, using schematic asset regions. It is not a recovered thumbnail; exact placement and layer ordering are not established.</figcaption>
-          </figure>
-          <p className="fray-case__ownership-note">My brother started the broader project and built its foundation, earlier CLI/workflow, and much of the Challonge integration and API groundwork. I joined later and built <code>thumbnail.js</code>, with additional work on YAML/configuration, thumbnail generation and integration, and part of the YouTube API path.</p>
-          <div className="fray-case__constraints">
-            <div className="fray-case__constraints-intro"><span className="fray-case__eyebrow">THE RENDERER’S REAL CONSTRAINTS</span><p>Consistent dimensions did not mean identical inputs. These owner-reported cases shaped the thumbnail path.</p></div>
-            <dl className="fray-case__constraint-list">
-              <div><dt><span>01</span>P2 mirroring</dt><dd><strong>Both players face the matchup</strong><p>Player-two character art was mirrored so the two sides read as opponents in the same frame.</p></dd></div>
-              <div><dt><span>02</span>Aliases</dt><dd><strong>Alternate names, corresponding art</strong><p>The path handled alternate player and character names in the match context.</p></dd></div>
-              <div><dt><span>03</span>Long names</dt><dd><strong>Variable text, fixed frame</strong><p>Player names varied in length while the output stayed 1280 × 720. The renderer handled that constraint; a specific truncation or font-sizing strategy is not established here.</p></dd></div>
-              <div><dt><span>04</span>Missing assets and configuration</dt><dd><strong>Each matchup has its own available inputs</strong><p>The renderer accounted for missing art; configuration supplied match-specific choices. The exact fallback behavior for absent assets or configuration values is not established here.</p></dd></div>
-            </dl>
+          <div className="fray-case__mirror-row">
+            <figure className="fray-case__mirror-figure" aria-labelledby="fraymakers-mirror-caption">
+              <div className="fray-case__mirror-side"><span>PLAYER 1 ART</span><svg viewBox="0 0 180 120" role="img" aria-label="Abstract character art facing toward the center"><path d="M40 105 48 51l34-29 42 17 24 47-15 19H57Z" fill="#51bdc2"/><path d="m73 50 20-22 23 9 10 18-17 11-15-8-17 17Z" fill="#d8eee0"/></svg><small>Original orientation</small></div>
+              <div className="fray-case__mirror-center" aria-hidden="true"><span>VS</span><i>matchup</i></div>
+              <div className="fray-case__mirror-side fray-case__mirror-side--p2"><span>PLAYER 2 ART</span><svg viewBox="0 0 180 120" role="img" aria-label="Mirrored abstract character art facing toward the center"><path d="M40 105 48 51l34-29 42 17 24 47-15 19H57Z" fill="#dbb563"/><path d="m73 50 20-22 23 9 10 18-17 11-15-8-17 17Z" fill="#f1dfbd"/></svg><small>Mirrored toward P1</small></div>
+              <figcaption id="fraymakers-mirror-caption">Small schematic comparison of P2 art mirrored toward the opposing player; it does not depict a real character or output.</figcaption>
+            </figure>
+            <ul className="fray-case__constraints">
+              <li><strong>Aliases</strong><span>Alternate player and character names were part of the inputs.</span></li>
+              <li><strong>Long names</strong><span>Variable text had to fit a fixed-size canvas; the specific text-fit strategy is unknown.</span></li>
+              <li><strong>Missing assets</strong><span>Availability was a constraint; exact fallback behavior is unknown.</span></li>
+            </ul>
           </div>
         </section>
 
         <footer className="fray-case__outcome" id="fraymakers-outcome" aria-labelledby="fraymakers-outcome-title">
-          <div className="fray-case__outcome-copy"><p className="fray-case__eyebrow">04 / WHERE THE WORK LANDED</p><h2 id="fraymakers-outcome-title">The frame made it<br />to real VODs.</h2><p>The generated thumbnails were used on real Fraymakers VODs, connecting the completed thumbnail workflow to tournament recordings.</p></div>
+          <div className="fray-case__outcome-copy"><p className="fray-case__eyebrow">04 / WHERE THE WORK LANDED</p><h2 id="fraymakers-outcome-title">Generated frames<br />used on real VODs.</h2><p>The thumbnail generator produced 1280 × 720 PNGs that were used on Fraymakers VODs. YouTube authentication and integration were prototyped; automatic upload was unfinished.</p></div>
+          <div className="fray-case__outcome-status" aria-label="YouTube integration status"><span>YOUTUBE DATA API / OAUTH</span><strong>Prototype</strong><small>Automatic upload unfinished</small></div>
         </footer>
       </article>
     </>

@@ -84,7 +84,7 @@ describe("Fraymakers chapter scrollspy", () => {
 
       const activeLabels = () => [...main.querySelectorAll(".fraymakers-nav__chapters a[aria-current='location']")]
         .map((link) => link.textContent?.trim());
-      expect(activeLabels()).toEqual(["PIPELINE"]);
+      expect(activeLabels()).toEqual(["OUTPUT"]);
 
       sectionTops["fraymakers-pipeline"] = -100;
       sectionTops["fraymakers-configuration"] = -10;
@@ -93,13 +93,13 @@ describe("Fraymakers chapter scrollspy", () => {
         (mainScrolls ? main : window).dispatchEvent(new Event("scroll"));
         flushFrames();
       });
-      expect(activeLabels()).toEqual(["COMPOSITION"]);
+      expect(activeLabels()).toEqual(["IMPLEMENTATION"]);
 
       const yamlLink = [...main.querySelectorAll(".fraymakers-nav__chapters a")]
-        .find((link) => link.textContent?.trim() === "CONFIG");
+        .find((link) => link.textContent?.trim() === "WORKFLOW");
       expect(yamlLink?.getAttribute("href")).toBe("#fraymakers-configuration");
       act(() => yamlLink?.dispatchEvent(new MouseEvent("click", { bubbles: true })));
-      expect(activeLabels()).toEqual(["CONFIG"]);
+      expect(activeLabels()).toEqual(["WORKFLOW"]);
 
       act(() => {
         if (mainScrolls) main.scrollTop = 900;
@@ -107,7 +107,7 @@ describe("Fraymakers chapter scrollspy", () => {
         (mainScrolls ? main : window).dispatchEvent(new Event("scroll"));
         flushFrames();
       });
-      expect(activeLabels()).toEqual(["CONFIG"]);
+      expect(activeLabels()).toEqual(["WORKFLOW"]);
 
       act(() => {
         window.dispatchEvent(new WheelEvent("wheel"));
