@@ -145,6 +145,8 @@ function FoodLoggingGlyph({ kind }: { kind: (typeof foodLoggingRoutes)[number]["
 function FoodLogTransaction() {
   const [activeRoute, setActiveRoute] = useState<FoodLoggingRouteId>("search-reuse");
   const selectedRoute = foodLoggingRoutes.find((route) => route.id === activeRoute)!;
+  const isSearchRoute = activeRoute === "search-reuse";
+  const isDescribeRoute = activeRoute === "describe-photo";
 
   return (
     <div className="food-log-transaction food-log-transaction--editorial" data-active-method={activeRoute}>
@@ -181,22 +183,42 @@ function FoodLogTransaction() {
       </section>
 
       <div className="food-log-transaction__screens" role="group" aria-label="Phase 24 interaction captures">
-        <figure className="food-log-transaction__screen" data-screen="entry">
-          <img
-            src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
-            alt="Phase 24 clean logging sheet with a food search field and visible Describe meal, Photo logging, Food Library, Recipes, Mixed meal, and Scan barcode entry options. No food has been saved."
-          />
-          <figcaption>Entry sheet · direct ways to find, reuse, combine, or describe food.</figcaption>
-        </figure>
-        <figure className="food-log-transaction__screen" data-screen="review">
-          <img
-            src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
-            alt="Phase 24 Describe meal review for eggs and toast with editable serving amounts, a provisional nutrition preview, and Log selected action. The meal is unsaved."
-          />
-          <figcaption>The Describe-meal review is unsaved; it is interaction evidence, not a populated user outcome.</figcaption>
-        </figure>
+        {isSearchRoute ? (
+          <>
+            <figure className="food-log-transaction__screen" data-screen="search-results">
+              <img
+                src="/media/case-studies/food-tracker/phase-24/search-banana-results.png"
+                alt="Phase 24 search results for banana showing candidate foods and a Save food action. This is a pre-redesign candidate-selection capture, not a saved food log."
+              />
+              <figcaption>Phase 24 search results · candidate selection only; pre-redesign evidence.</figcaption>
+            </figure>
+            <figure className="food-log-transaction__screen" data-screen="serving-preview">
+              <img
+                src="/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png"
+                alt="Phase 24 serving preview for banana with amount and unit choices before saving. This pre-redesign capture is not a completed log."
+              />
+              <figcaption>Phase 24 serving preview · amount and unit before save; pre-redesign evidence.</figcaption>
+            </figure>
+          </>
+        ) : isDescribeRoute ? (
+          <figure className="food-log-transaction__screen" data-screen="review">
+            <img
+              src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
+              alt="Phase 24 Describe meal review for eggs and toast with editable serving amounts, a provisional nutrition preview, and Log selected action. The meal is unsaved."
+            />
+            <figcaption>The Describe-meal review is unsaved interaction evidence, not a populated user outcome.</figcaption>
+          </figure>
+        ) : (
+          <figure className="food-log-transaction__screen" data-screen="entry-options">
+            <img
+              src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
+              alt="Phase 24 clean logging sheet with a food search field and visible Describe meal, Photo logging, Food Library, Recipes, Mixed meal, and Scan barcode entry options. No food has been saved."
+            />
+            <figcaption>Phase 24 entry options only · this capture does not show a completed scan, recipe, mixed meal, or manual save.</figcaption>
+          </figure>
+        )}
       </div>
-      <p className="food-log-transaction__source-note">368×800 iOS simulator captures from the pre-redesign baseline. Both show interaction states, not saved user history.</p>
+      <p className="food-log-transaction__source-note">368×800 iOS simulator captures from the pre-redesign baseline. They show interaction states, not saved user history; unsupported route states remain conceptual.</p>
 
       <div className="food-log-transaction__checkpoint">
         <span className="food-figure__index">HUMAN CHECKPOINT</span>
@@ -309,6 +331,32 @@ function FoodSystemMap() {
         <p>Simple and Complex share one mobile app, API, catalog, serving rules, and saved history; they change how much a person sees.</p>
       </header>
 
+      <div className="food-system-map__overview" role="group" aria-label="Conceptual Food Tracker architecture">
+        <div className="food-system-map__overview-layers">
+          <section className="food-system-map__overview-layer food-system-map__overview-layer--app">
+            <span>01 / MOBILE PRODUCT</span>
+            <strong>React Native + Expo</strong>
+            <p>Simple + Complex; people search, review, log, and read Insights in one app.</p>
+          </section>
+          <span className="food-system-map__overview-link" aria-hidden="true">→</span>
+          <section className="food-system-map__overview-layer food-system-map__overview-layer--api">
+            <span>02 / SHARED RULES</span>
+            <strong>Express + TypeScript API</strong>
+            <p>Shared TypeScript + Zod contracts and serving resolver; deterministic retrieval + analytics and server-owned resource scope.</p>
+          </section>
+          <span className="food-system-map__overview-link" aria-hidden="true">→</span>
+          <section className="food-system-map__overview-layer food-system-map__overview-layer--data">
+            <span>03 / PERSISTED DATA</span>
+            <strong>PostgreSQL</strong>
+            <p>Food catalog, nutrient + serving data, food logs, and historical log snapshots.</p>
+          </section>
+        </div>
+        <div className="food-system-map__overview-boundaries">
+          <p><strong>SEARCH CANDIDATES</strong><span>Pinecone expands semantic candidates; deterministic API ranking makes the final order.</span></p>
+          <p><strong>AI SUGGESTIONS</strong><span>Gemini suggests food + quantity; a person reviews before shared rules save a record.</span></p>
+        </div>
+      </div>
+
       <div className="food-system-map__path-selector" role="group" aria-label="Food Tracker system paths">
         {foodSystemPaths.map((path) => (
           <button
@@ -378,47 +426,38 @@ function FoodDataContract() {
 
       <div className="food-data-contract__down" aria-hidden="true">↓</div>
 
-      <div className="food-data-contract__normalization">
-        <span className="food-figure__index">ADAPTER + NORMALIZE</span>
-        <strong>One canonical food and nutrient model.</strong>
-        <p>Adapters map names, nutrient keys, units, and servings while keeping source identity and release attached. Missing nutrient values stay absent.</p>
-      </div>
-
-      <div className="food-data-contract__down" aria-hidden="true">↓</div>
-
-      <div className="food-data-contract__runtime">
-        <div className="food-data-contract__client">
-          <span className="food-figure__index">PRESENTATION</span>
-          <strong>React Native + Expo</strong>
-          <span>Simple and Complex</span>
+      <div className="food-data-contract__model" role="group" aria-label="Conceptual model, not an exact database schema">
+        <header className="food-data-contract__model-heading">
+          <span className="food-figure__index">CONCEPTUAL MODEL · NOT AN EXACT DATABASE SCHEMA</span>
+          <strong>Keep reusable identity, nutrition basis, and saved history distinct.</strong>
+        </header>
+        <div className="food-data-contract__model-columns">
+          <section className="food-data-contract__model-card food-data-contract__model-card--identity">
+            <span>01 / REUSABLE FOOD IDENTITY</span>
+            <strong>Reusable food identity</strong>
+            <p>Food item identity is reusable catalog data: name, source, brand, or barcode.</p>
+          </section>
+          <span className="food-data-contract__model-link" aria-hidden="true">+</span>
+          <section className="food-data-contract__model-card food-data-contract__model-card--nutrition">
+            <span>02 / NUTRIENTS + SERVING BASIS</span>
+            <strong>Normalized nutrients + serving options</strong>
+            <p>Nutrient values and serving options retain source and units; missing values stay absent.</p>
+          </section>
+          <span className="food-data-contract__model-link food-data-contract__model-link--save" aria-hidden="true">→</span>
+          <section className="food-data-contract__model-card food-data-contract__model-card--snapshot">
+            <span>03 / HISTORICAL LOG SNAPSHOT</span>
+            <strong>Historical serving snapshot</strong>
+            <p>Each saved serving keeps its source and resolved basis at that time; the user confirms the food and amount before save.</p>
+            <div className="food-data-contract__snapshot-fields" aria-label="Snapshot fields shown as categories, not an exact API payload">
+              <span>food + source provenance</span>
+              <span>basis quantity + unit</span>
+              <span>requested serving</span>
+              <span>resolution + multiplier</span>
+              <span>nutrient basis + overrides</span>
+            </div>
+          </section>
         </div>
-        <div className="food-data-contract__api">
-          <span className="food-figure__index">SHARED RULES</span>
-          <strong>Express + TypeScript API</strong>
-          <span>shared TypeScript + Zod contracts · Prisma data access · serving resolver</span>
-        </div>
-        <div className="food-data-contract__database">
-          <span className="food-figure__index">CANONICAL CATALOG</span>
-          <strong>PostgreSQL food and nutrient catalog</strong>
-          <span>normalized records · serving options · source provenance</span>
-        </div>
-      </div>
-
-      <div className="food-data-contract__down food-data-contract__down--snapshot" aria-hidden="true">↓</div>
-
-      <div className="food-data-contract__snapshot">
-        <div className="food-data-contract__snapshot-heading">
-          <span className="food-figure__index">ON SAVE / FOODLOGSERVINGSNAPSHOT</span>
-          <strong>Each saved serving keeps its source and resolved basis.</strong>
-        </div>
-        <div className="food-data-contract__snapshot-fields" aria-label="Snapshot fields shown as categories, not an exact API payload">
-          <span>food + source provenance</span>
-          <span>basis quantity + unit</span>
-          <span>requested serving</span>
-          <span>resolution + multiplier</span>
-          <span>nutrient basis + overrides</span>
-        </div>
-        <p>Later catalog changes do not silently rewrite what an earlier serving meant. Users may still edit or remove a log.</p>
+        <p className="food-data-contract__model-note">Adapters retain source identity and dataset release. Recipes and mixed meals compose foods; they are not a separate nutrition authority. Later catalog changes do not silently rewrite an earlier serving, and users may still edit or remove a log.</p>
       </div>
 
       <div className="food-data-contract__scale" aria-label="Reference catalog scale, not a user impact metric">
@@ -429,7 +468,7 @@ function FoodDataContract() {
       </div>
 
       <figcaption id="food-data-contract-title">
-        Trusted-data architecture · adapters feed a normalized catalog; the API resolves servings before snapshot-backed history is saved.
+        Trusted-data model · versioned sources feed reusable food and nutrient data; a confirmed serving carries its basis into historical log data.
       </figcaption>
     </figure>
   );
@@ -502,7 +541,7 @@ function FoodInsightPath() {
         </section>
       </div>
 
-      <div className="food-insight-path__evidence">
+      <div className="food-insight-path__evidence food-insight-path__evidence--readable">
         <img
           src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png"
           alt="Phase 24 calorie trend detail with an Unknown value, no recorded calories for the selected period, and a coverage summary. It is an unsaved pre-redesign QA state."
@@ -608,48 +647,6 @@ function FoodRetrievalEvidence() {
 
       <figcaption id="food-retrieval-evidence-title">
         Hybrid retrieval · candidate breadth feeds a deterministic ranker. Offline ranking evidence, not live-user outcomes; the fuzzy-only miss-recovery count is omitted because the records conflict.
-      </figcaption>
-    </figure>
-  );
-}
-
-function FoodSecurityBoundary() {
-  return (
-    <figure
-      className="food-security-boundary"
-      aria-label="Verified identity becomes a server-owned data scope"
-    >
-      <header className="food-security-boundary__header">
-        <span className="food-figure__index">ACCOUNT / RESOURCE BOUNDARY</span>
-        <h3>Verify the caller. Derive the data scope.</h3>
-        <p>Authentication identifies the caller; authorization scopes each resource.</p>
-      </header>
-
-      <ol className="food-security-boundary__path">
-        <li>
-          <span>01 / IDENTITY</span>
-          <strong>Firebase ID token</strong>
-          <p>The signed-in client presents its identity to the API.</p>
-        </li>
-        <li>
-          <span>02 / VERIFY + MAP</span>
-          <strong>Map UID to app-owned UUID</strong>
-          <p>The API verifies the token, then resolves the application identity.</p>
-        </li>
-        <li>
-          <span>03 / AUTHORIZE</span>
-          <strong>Scope each resource query</strong>
-          <p>Ownership comes from verified identity; the client does not choose the owner ID.</p>
-        </li>
-      </ol>
-
-      <div className="food-security-boundary__signout">
-        <span className="food-figure__index">SIGN OUT</span>
-        <strong>Clear user-specific local state.</strong>
-      </div>
-
-      <figcaption>
-        Source boundary · the inspected Phase 24 code verifies the caller and derives an app-owned scope. This is implementation evidence, not a claim that every provider or native path was released.
       </figcaption>
     </figure>
   );
@@ -837,7 +834,6 @@ export default function FoodTrackerCaseStudy() {
             <h2 id="food-validation-title">A passing test, a complete index, and a useful product are different claims.</h2>
             <p>Search correctness, index completeness, account isolation, and real runtime behavior needed separate evidence. A green check in one layer could not stand in for the rest.</p>
           </header>
-          <FoodSecurityBoundary />
           <FoodEvidenceGates />
         </section>
       </article>

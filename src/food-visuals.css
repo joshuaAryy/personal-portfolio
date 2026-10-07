@@ -3669,3 +3669,345 @@
     font-size: 13px;
   }
 }
+
+/* Food architecture: one at-a-glance system, then a focused path and data model. */
+.food-system-map__overview {
+  margin: 0 0 clamp(22px, 3vw, 34px);
+  padding: clamp(18px, 2.5vw, 28px);
+  border: 1px solid rgba(148, 178, 183, .24);
+  background: rgba(3, 13, 18, .56);
+}
+
+.food-system-map__overview-layers {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1.12fr) 28px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 9px;
+}
+
+.food-system-map__overview-layer {
+  min-width: 0;
+  padding: 17px 18px;
+  border: 1px solid rgba(148, 178, 183, .2);
+  border-top: 3px solid #82969a;
+  background: #0b171d;
+}
+
+.food-system-map__overview-layer--api {
+  border-top-color: var(--food-teal);
+}
+
+.food-system-map__overview-layer--data {
+  border-top-color: var(--food-gold);
+}
+
+.food-system-map__overview-layer > span {
+  color: var(--food-dim);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: .065em;
+}
+
+.food-system-map__overview-layer > strong {
+  display: block;
+  margin-top: 10px;
+  color: var(--food-ink);
+  font-size: clamp(16px, 1.7vw, 21px);
+  line-height: 1.25;
+}
+
+.food-system-map__overview-layer > p {
+  margin: 8px 0 0;
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.food-system-map__overview-link {
+  align-self: center;
+  color: var(--food-teal);
+  font-size: 24px;
+  line-height: 1;
+  text-align: center;
+}
+
+.food-system-map__overview-boundaries {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-top: 10px;
+  border: 1px solid rgba(148, 178, 183, .18);
+  background: rgba(148, 178, 183, .18);
+}
+
+.food-system-map__overview-boundaries > p {
+  display: grid;
+  grid-template-columns: minmax(104px, .42fr) minmax(0, 1fr);
+  gap: 10px;
+  margin: 0;
+  padding: 12px 14px;
+  background: #0a171d;
+}
+
+.food-system-map__overview-boundaries strong {
+  color: var(--food-gold);
+  font-size: 10px;
+  letter-spacing: .055em;
+  line-height: 1.45;
+}
+
+.food-system-map__overview-boundaries span {
+  color: #c2cecc;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* The data figure separates reusable identity, nutrition basis, and saved history. */
+.food-data-contract__model {
+  width: min(100%, 1130px);
+  margin: 0 auto;
+}
+
+.food-data-contract__model-heading {
+  margin: 0 0 13px;
+}
+
+.food-data-contract__model-heading > strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--food-ink);
+  font-size: clamp(19px, 2vw, 25px);
+  line-height: 1.25;
+}
+
+.food-data-contract__model-columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 24px minmax(0, 1fr) 32px minmax(0, 1.18fr);
+  align-items: stretch;
+  gap: 8px;
+}
+
+.food-data-contract__model-card {
+  min-width: 0;
+  padding: clamp(15px, 1.8vw, 21px);
+  border: 1px solid rgba(148, 178, 183, .23);
+  border-top: 3px solid #82969a;
+  background: rgba(5, 17, 22, .78);
+}
+
+.food-data-contract__model-card--nutrition {
+  border-top-color: var(--food-teal);
+}
+
+.food-data-contract__model-card--snapshot {
+  border-top-color: var(--food-gold);
+}
+
+.food-data-contract__model-card > span {
+  color: var(--food-dim);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: .055em;
+  line-height: 1.4;
+}
+
+.food-data-contract__model-card > strong {
+  display: block;
+  margin-top: 11px;
+  color: var(--food-ink);
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.25;
+}
+
+.food-data-contract__model-card > p {
+  margin: 8px 0 0;
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.food-data-contract__model-link {
+  align-self: center;
+  color: var(--food-teal);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.food-data-contract__model-link--save {
+  color: var(--food-gold);
+  font-size: 24px;
+}
+
+.food-data-contract__model-card--snapshot .food-data-contract__snapshot-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 13px;
+}
+
+.food-data-contract__model-card--snapshot .food-data-contract__snapshot-fields span {
+  padding: 7px 8px;
+  border: 1px solid rgba(148, 178, 183, .18);
+  color: #c2cecc;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.food-data-contract__model-note {
+  max-width: 900px;
+  margin: 13px 0 0;
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* Selected Phase 24 capture: show both steps in Search & Reuse, only relevant states elsewhere. */
+.food-log-transaction__screens {
+  display: grid;
+  grid-area: screens;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(12px, 1.5vw, 19px);
+  width: 100%;
+  min-width: 0;
+}
+
+.food-log-transaction__screen {
+  display: none;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+.food-log-transaction[data-active-method="search-reuse"] [data-screen="search-results"],
+.food-log-transaction[data-active-method="search-reuse"] [data-screen="serving-preview"],
+.food-log-transaction[data-active-method="describe-photo"] [data-screen="review"],
+.food-log-transaction[data-active-method="barcode"] [data-screen="entry-options"],
+.food-log-transaction[data-active-method="recipes-mixed"] [data-screen="entry-options"],
+.food-log-transaction[data-active-method="manual"] [data-screen="entry-options"] {
+  display: block;
+}
+
+.food-log-transaction__screen[data-screen="entry-options"] {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 368px);
+}
+
+.food-log-transaction__screen img {
+  display: block;
+  width: 100%;
+  max-width: 368px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid #53646a;
+  border-radius: 12px;
+  background: #f6f6f4;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, .24);
+}
+
+.food-log-transaction__screen figcaption {
+  margin-top: 9px;
+  color: #d4c38f;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+/* Keep the unknown-state screenshot large enough to read on narrow screens. */
+.food-insight-path__evidence--readable {
+  grid-template-columns: minmax(250px, .72fr) minmax(0, 1fr);
+  align-items: start;
+  gap: clamp(22px, 3.5vw, 42px);
+  padding: clamp(20px, 3vw, 34px);
+}
+
+.food-insight-path__evidence--readable img {
+  width: min(100%, 368px);
+  max-height: none;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.food-insight-path__evidence--readable .food-insight-path__evidence-caption {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.food-insight-path__states section > span,
+.food-insight-path__measure-list li > span {
+  font-size: 11px;
+}
+
+@media (max-width: 900px) {
+  .food-system-map__overview-layers {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 6px;
+  }
+
+  .food-system-map__overview-link {
+    transform: rotate(90deg);
+  }
+
+  .food-data-contract__model-columns {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .food-data-contract__model-link {
+    transform: rotate(90deg);
+  }
+
+  .food-data-contract__model-link--save {
+    transform: rotate(90deg);
+  }
+
+  .food-insight-path__evidence--readable {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .food-insight-path__evidence--readable img {
+    width: min(100%, 368px);
+    justify-self: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .food-system-map__overview {
+    padding: 14px;
+  }
+
+  .food-system-map__overview-layer {
+    padding: 14px;
+  }
+
+  .food-system-map__overview-boundaries {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .food-data-contract__model-card {
+    padding: 14px;
+  }
+
+  .food-data-contract__model-card--snapshot .food-data-contract__snapshot-fields span {
+    font-size: 11px;
+  }
+
+  .food-log-transaction__screens {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .food-log-transaction__screen[data-screen="search-results"],
+  .food-log-transaction__screen[data-screen="serving-preview"] {
+    width: min(100%, 300px);
+    justify-self: center;
+  }
+
+  .food-insight-path__evidence--readable {
+    padding: 18px 14px;
+  }
+
+  .food-insight-path__evidence--readable img {
+    width: min(100%, 368px);
+  }
+}

@@ -79,7 +79,7 @@ describe("Food Tracker product story", () => {
     expect(markup).not.toContain("Make a longer view possible");
   });
 
-  it("uses distinct Phase 24 logging and unknown-trend states without redundant banana screens", () => {
+  it("uses authentic Search and serving captures, and labels pre-redesign evidence", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
@@ -90,14 +90,15 @@ describe("Food Tracker product story", () => {
     expect(captures).toHaveLength(3);
     expect(loggingCaptures).toHaveLength(2);
     expect(insightCaptures).toHaveLength(1);
-    expect(logging).toContain("food-log-complex-clean.png");
-    expect(logging).toContain('/media/case-studies/food-tracker/phase-24/ai-meal-review.png');
+    expect(logging).toContain("search-banana-results.png");
+    expect(logging).toContain("food-serving-preview-banana.png");
+    expect(logging).not.toContain("food-log-complex-clean.png");
+    expect(logging).not.toContain("ai-meal-review.png");
+    expect(logging).toContain("Phase 24 search results");
+    expect(logging).toContain("Phase 24 serving preview");
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
-    expect(logging).toContain("The Describe-meal review is unsaved; it is interaction evidence, not a populated user outcome");
     expect(insights).toContain("trend-detail-calories-unknown.png");
     expect(insights).toContain("Unknown is shown explicitly; this is not a populated trend or personal result");
-    expect(markup).not.toContain("food-serving-preview-banana.png");
-    expect(markup).not.toContain("search-banana-results.png");
     expect(markup).not.toContain("trend-configuration.png");
     expect(markup).not.toContain("insights-week-current.png");
   });
@@ -147,6 +148,11 @@ describe("Food Tracker product story", () => {
         { number: "02", label: "SUGGEST", text: "Gemini suggests food + quantity" },
         { number: "03", label: "HUMAN CHECK", text: "Review or edit proposed rows" },
       ]);
+      expect(container.querySelector('[data-screen="review"] img')?.getAttribute("src"))
+        .toContain("ai-meal-review.png");
+      expect(container.querySelector('[data-screen="review"] figcaption')?.textContent)
+        .toContain("unsaved interaction evidence");
+      expect(container.querySelector('[data-screen="search-results"]')).toBeNull();
 
       const barcodeButton = [...(routeGroup?.querySelectorAll("button") ?? [])].find((button) =>
         button.textContent?.includes("Barcode"),
@@ -167,6 +173,11 @@ describe("Food Tracker product story", () => {
         { number: "02", label: "LOOKUP", text: "Open Food Facts candidate" },
         { number: "03", label: "HUMAN CHECK", text: "Confirm the match + serving" },
       ]);
+      expect(container.querySelector('[data-screen="entry-options"] img')?.getAttribute("src"))
+        .toContain("food-log-complex-clean.png");
+      expect(container.querySelector('[data-screen="entry-options"] figcaption')?.textContent)
+        .toContain("entry options only");
+      expect(container.querySelector('[data-screen="search-results"]')).toBeNull();
     } finally {
       await act(async () => root.unmount());
       container.remove();
@@ -199,13 +210,16 @@ describe("Food Tracker product story", () => {
     expect(loggingCopy).not.toContain("immutable food logs");
   });
 
-  it("teaches the source-to-catalog-to-snapshot data architecture", () => {
+  it("teaches app, API, catalog, and historical serving relationships", () => {
     const markup = renderFoodTracker();
     const architecture = section(markup, "food-architecture", "food-insights");
     const architectureCopy = storyText(architecture);
 
     expect(architecture).toContain('class="food-data-contract"');
-    expect(architecture).toContain('class="food-data-contract__normalization"');
+    expect(architecture).toContain('class="food-system-map__overview"');
+    expect(architecture).toContain('aria-label="Conceptual Food Tracker architecture"');
+    expect(architecture).toContain('class="food-data-contract__model"');
+    expect(architecture).toContain("CONCEPTUAL MODEL");
     for (const copy of [
       "Open Food Facts",
       "packaged foods and barcode lookup",
@@ -215,10 +229,13 @@ describe("Food Tracker product story", () => {
       "Ciqual 2025",
       "CoFID 2021",
       "versioned bulk datasets",
-      "keeping source identity and release attached",
-      "Express + TypeScript API",
-      "PostgreSQL food and nutrient catalog",
-      "serving resolver",
+      "Adapters retain source identity and dataset release.",
+      "Reusable food identity",
+      "Normalized nutrients + serving options",
+      "Historical serving snapshot",
+      "Food item identity is reusable catalog data:",
+      "Nutrient values and serving options retain source and units",
+      "Recipes and mixed meals compose foods; they are not a separate nutrition authority.",
       "food + source provenance",
       "basis quantity + unit",
       "requested serving",
@@ -229,8 +246,9 @@ describe("Food Tracker product story", () => {
       "catalog scale, not users or impact",
     ]) expect(architectureCopy).toContain(copy);
     expect(architectureCopy).toContain("React Native + Expo");
-    expect(architectureCopy).toContain("shared TypeScript + Zod contracts");
-    expect(architectureCopy).toContain("One canonical food and nutrient model");
+    expect(architectureCopy).toContain("Express + TypeScript API");
+    expect(architectureCopy).toContain("PostgreSQL");
+    expect(architectureCopy).toContain("Shared TypeScript + Zod contracts");
     expect(architectureCopy).toContain("Each saved serving keeps its source and resolved basis");
     expect(architectureCopy).not.toContain("live APIs for every national dataset lookup");
   });
@@ -244,6 +262,7 @@ describe("Food Tracker product story", () => {
 
     expect(mapStart).toBeGreaterThanOrEqual(0);
     expect(dataStart).toBeGreaterThan(mapStart);
+    expect(architecture).toContain('aria-label="Conceptual Food Tracker architecture"');
     expect(architecture).toContain('aria-label="Food Tracker system paths"');
     expect(architecture).toContain('class="food-system-map__trace food-system-map__trace--4"');
     for (const copy of [
@@ -316,7 +335,7 @@ describe("Food Tracker product story", () => {
     const insightsCopy = storyText(insights);
 
     expect(insights).toContain('class="food-insight-path"');
-    expect(insights).toContain('class="food-insight-path__evidence"');
+    expect(insights).toContain('class="food-insight-path__evidence food-insight-path__evidence--readable"');
     expect(insights).toContain('class="food-insight-path__analysis"');
     expect(insights).toContain('class="food-insight-path__presentations-heading"');
     expect(insights).toContain("food-insight-path__view-daily");
@@ -410,23 +429,17 @@ describe("Food Tracker product story", () => {
     expect(endingCopy).not.toContain("publicly launched");
   });
 
-  it("teaches the identity-to-resource-scope security boundary", () => {
+  it("keeps one compact verified runtime and ownership proof", () => {
     const markup = renderFoodTracker();
     const ending = section(markup, "food-validation");
     const endingCopy = storyText(ending);
 
-    expect(ending).toContain('class="food-security-boundary"');
-    expect(ending).toContain('aria-label="Verified identity becomes a server-owned data scope"');
+    expect(ending).not.toContain('class="food-security-boundary"');
+    expect(ending).toContain('class="food-evidence-gates__checks"');
     for (const copy of [
-      "Firebase ID token",
-      "API verifies the token",
-      "Map UID to app-owned UUID",
-      "the client does not choose the owner ID.",
-      "Scope each resource query",
-      "SIGN OUT",
-      "Clear user-specific local state.",
-      "Authentication identifies the caller; authorization scopes each resource.",
-      "This is implementation evidence, not a claim that every provider or native path was released.",
+      "03 / RUNTIME + OWNERSHIP",
+      "Firebase identifies the caller; the API derives the app-owned UUID and scopes data server-side.",
+      "This is not evidence of a public launch.",
     ]) expect(endingCopy).toContain(copy);
     expect(endingCopy).not.toContain("every route is secure");
     expect(endingCopy).not.toContain("publicly launched");
