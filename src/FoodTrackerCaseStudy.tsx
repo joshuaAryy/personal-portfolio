@@ -69,6 +69,7 @@ const foodLoggingRoutes = [
       { label: "CONFIRM", text: "Check the serving" },
     ],
     icon: "search",
+    visual: null,
   },
   {
     id: "barcode",
@@ -82,6 +83,7 @@ const foodLoggingRoutes = [
       { label: "HUMAN CHECK", text: "Confirm the match + serving" },
     ],
     icon: "barcode",
+    visual: "barcode",
   },
   {
     id: "describe-photo",
@@ -95,6 +97,7 @@ const foodLoggingRoutes = [
       { label: "HUMAN CHECK", text: "Review or edit proposed rows" },
     ],
     icon: "intent",
+    visual: null,
   },
   {
     id: "recipes-mixed",
@@ -108,6 +111,7 @@ const foodLoggingRoutes = [
       { label: "PORTION", text: "Set the amounts" },
     ],
     icon: "combine",
+    visual: "recipes",
   },
   {
     id: "manual",
@@ -121,6 +125,7 @@ const foodLoggingRoutes = [
       { label: "PORTION", text: "Choose the serving basis" },
     ],
     icon: "manual",
+    visual: "manual",
   },
 ] as const;
 
@@ -140,6 +145,94 @@ function FoodLoggingGlyph({ kind }: { kind: (typeof foodLoggingRoutes)[number]["
     return <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="M6 7h20M6 13h20M6 19h14M6 25h14" /><path d="M24 19v8m-4-4h8" /></svg>;
   }
   return <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><path d="m7 22 12-12 5 5-12 12H7v-5Z" /><path d="m17 12 5 5M6 27h20" /></svg>;
+}
+
+type FoodLoggingMicrovisualKind = Exclude<(typeof foodLoggingRoutes)[number]["visual"], null>;
+
+const foodLoggingMicrovisualCopy = {
+  barcode: {
+    accessibleName: "Conceptual barcode lookup path",
+    caption: "Conceptual path · not a completed scan; the Phase 24 capture shows entry options only.",
+  },
+  recipes: {
+    accessibleName: "Conceptual recipe and mixed-meal composition path",
+    caption: "Conceptual path · not a completed recipe or mixed meal; the Phase 24 capture shows entry options only.",
+  },
+  manual: {
+    accessibleName: "Conceptual manual-entry path",
+    caption: "Conceptual path · not a saved manual food; the Phase 24 capture shows entry options only.",
+  },
+} as const;
+
+function FoodLoggingRouteMicrovisual({ kind }: { kind: FoodLoggingMicrovisualKind }) {
+  const copy = foodLoggingMicrovisualCopy[kind];
+
+  return (
+    <figure
+      className={`food-log-route-visual food-log-route-visual--${kind}`}
+      data-conceptual-flow={kind}
+      aria-label={copy.accessibleName}
+    >
+      {kind === "barcode" ? (
+        <div className="food-log-route-visual__barcode-flow">
+          <div className="food-log-route-visual__barcode-node food-log-route-visual__barcode-input">
+            <span>INPUT</span>
+            <svg viewBox="0 0 90 28" aria-hidden="true" focusable="false">
+              <path d="M4 3v22M9 3v22M15 3v22M22 3v22M28 3v22M32 3v22M41 3v22M47 3v22M54 3v22M59 3v22M68 3v22M73 3v22M81 3v22M86 3v22" />
+            </svg>
+            <strong>PRODUCT CODE</strong>
+          </div>
+          <span className="food-log-route-visual__connector" aria-hidden="true">→</span>
+          <div className="food-log-route-visual__barcode-node food-log-route-visual__barcode-candidate">
+            <span>LOOKUP</span>
+            <strong>OPEN FOOD FACTS</strong>
+            <small>candidate record</small>
+          </div>
+          <span className="food-log-route-visual__connector" aria-hidden="true">→</span>
+          <div className="food-log-route-visual__barcode-node food-log-route-visual__barcode-review">
+            <span className="food-log-route-visual__review-mark" aria-hidden="true">✓</span>
+            <span>HUMAN CHECK</span>
+            <strong>MATCH + SERVING</strong>
+          </div>
+        </div>
+      ) : kind === "recipes" ? (
+        <div className="food-log-route-visual__recipe-flow">
+          <div className="food-log-route-visual__recipe-sources">
+            <span className="food-log-route-visual__visual-label">SOURCES</span>
+            <strong>SAVED FOODS</strong>
+            <strong>MANUAL ENTRY</strong>
+          </div>
+          <span className="food-log-route-visual__connector" aria-hidden="true">→</span>
+          <div className="food-log-route-visual__recipe-composition">
+            <span className="food-log-route-visual__visual-label">COMPOSE</span>
+            <div className="food-log-route-visual__recipe-layers" aria-hidden="true"><i /><i /><i /></div>
+            <strong>RECIPE OR MIXED MEAL</strong>
+          </div>
+          <span className="food-log-route-visual__connector" aria-hidden="true">→</span>
+          <div className="food-log-route-visual__recipe-serving">
+            <span className="food-log-route-visual__visual-label">PORTION</span>
+            <strong>SERVING BASIS</strong>
+            <small>resolve the amount</small>
+          </div>
+        </div>
+      ) : (
+        <div className="food-log-route-visual__manual-flow">
+          <div className="food-log-route-visual__manual-values">
+            <span className="food-log-route-visual__visual-label">KNOWN VALUES</span>
+            <div><strong>Entered</strong><small>retained</small></div>
+            <div className="food-log-route-visual__manual-unknown"><strong>Missing</strong><small>UNKNOWN STAYS UNKNOWN</small></div>
+          </div>
+          <span className="food-log-route-visual__connector" aria-hidden="true">→</span>
+          <div className="food-log-route-visual__manual-serving">
+            <span className="food-log-route-visual__visual-label">SERVING BASIS</span>
+            <strong>Choose amount + unit</strong>
+            <small>shared serving resolution</small>
+          </div>
+        </div>
+      )}
+      <figcaption>{copy.caption}</figcaption>
+    </figure>
+  );
 }
 
 function FoodLogTransaction() {
@@ -178,6 +271,7 @@ function FoodLogTransaction() {
               </li>
             ))}
           </ol>
+          {selectedRoute.visual && <FoodLoggingRouteMicrovisual kind={selectedRoute.visual} />}
           <p>{selectedRoute.detail}</p>
         </div>
       </section>

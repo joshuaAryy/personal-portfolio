@@ -186,6 +186,72 @@ describe("Food Tracker product story", () => {
     }
   });
 
+  it("reveals source-labeled conceptual diagrams for barcode, recipe, and manual routes", async () => {
+    const actGlobal = globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean };
+    const previousActEnvironment = actGlobal.IS_REACT_ACT_ENVIRONMENT;
+    actGlobal.IS_REACT_ACT_ENVIRONMENT = true;
+    const container = document.createElement("div");
+    document.body.append(container);
+    const root = createRoot(container);
+
+    try {
+      await act(async () => {
+        root.render(
+          <MemoryRouter>
+            <FoodTrackerCaseStudy />
+          </MemoryRouter>,
+        );
+      });
+
+      const routeGroup = container.querySelector('[aria-label="Food logging routes"]');
+      const routeCases = [
+        {
+          label: "Barcode",
+          id: "barcode",
+          accessibleName: "Conceptual barcode lookup path",
+          concepts: ["PRODUCT CODE", "OPEN FOOD FACTS", "MATCH + SERVING"],
+          caption: "not a completed scan",
+        },
+        {
+          label: "Recipes & mixed meals",
+          id: "recipes",
+          accessibleName: "Conceptual recipe and mixed-meal composition path",
+          concepts: ["SAVED FOODS", "MANUAL ENTRY", "RECIPE OR MIXED MEAL", "SERVING BASIS"],
+          caption: "not a completed recipe or mixed meal",
+        },
+        {
+          label: "Manual entry",
+          id: "manual",
+          accessibleName: "Conceptual manual-entry path",
+          concepts: ["KNOWN VALUES", "UNKNOWN STAYS UNKNOWN", "SERVING BASIS"],
+          caption: "not a saved manual food",
+        },
+      ];
+
+      for (const routeCase of routeCases) {
+        const button = [...(routeGroup?.querySelectorAll("button") ?? [])].find((candidate) =>
+          candidate.textContent?.includes(routeCase.label),
+        );
+        expect(button).not.toBeUndefined();
+        if (!button) continue;
+
+        await act(async () => button.click());
+        expect(button.getAttribute("aria-pressed")).toBe("true");
+
+        const figure = container.querySelector(`figure[data-conceptual-flow="${routeCase.id}"]`);
+        expect(figure?.getAttribute("aria-label")).toBe(routeCase.accessibleName);
+        expect(figure?.querySelector("figcaption")?.textContent).toContain("Conceptual path");
+        expect(figure?.querySelector("figcaption")?.textContent).toContain(routeCase.caption);
+        for (const concept of routeCase.concepts) expect(figure?.textContent).toContain(concept);
+      }
+    } finally {
+      await act(async () => root.unmount());
+      container.remove();
+      if (previousActEnvironment === undefined) delete actGlobal.IS_REACT_ACT_ENVIRONMENT;
+      else actGlobal.IS_REACT_ACT_ENVIRONMENT = previousActEnvironment;
+    }
+  });
+
   it("shows the many logging starts converging on one human-reviewed serving and snapshot contract", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");

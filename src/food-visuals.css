@@ -4011,3 +4011,208 @@
     width: min(100%, 368px);
   }
 }
+
+/* Method-specific conceptual routes support entry modes without implying completed captures. */
+.food-log-route-visual {
+  margin: 15px 0 11px;
+  padding: 12px;
+  border: 1px solid rgba(87, 198, 203, .34);
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(10, 30, 35, .94), rgba(11, 23, 29, .92));
+}
+
+.food-log-route-visual__barcode-flow,
+.food-log-route-visual__recipe-flow,
+.food-log-route-visual__manual-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 16px minmax(0, 1fr) 16px minmax(0, 1fr);
+  align-items: center;
+  gap: 6px;
+}
+
+.food-log-route-visual__barcode-node,
+.food-log-route-visual__recipe-sources,
+.food-log-route-visual__recipe-composition,
+.food-log-route-visual__recipe-serving,
+.food-log-route-visual__manual-values,
+.food-log-route-visual__manual-serving {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  min-height: 78px;
+  gap: 5px;
+  padding: 9px;
+  border: 1px solid rgba(148, 178, 183, .25);
+  background: rgba(5, 15, 20, .56);
+}
+
+.food-log-route-visual__barcode-node > span:first-child,
+.food-log-route-visual__visual-label {
+  color: var(--food-gold);
+  font-size: 9px;
+  font-weight: 760;
+  letter-spacing: .075em;
+  line-height: 1.25;
+}
+
+.food-log-route-visual__barcode-node > strong,
+.food-log-route-visual__recipe-flow strong,
+.food-log-route-visual__manual-flow strong {
+  color: var(--food-ink);
+  font-size: 11px;
+  font-weight: 720;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.food-log-route-visual__barcode-node > small,
+.food-log-route-visual__recipe-flow small,
+.food-log-route-visual__manual-flow small {
+  color: var(--food-muted);
+  font-size: 9px;
+  line-height: 1.3;
+}
+
+.food-log-route-visual__barcode-input svg {
+  display: block;
+  width: 100%;
+  max-width: 86px;
+  height: 23px;
+  fill: none;
+  stroke: var(--food-teal);
+  stroke-width: 2;
+}
+
+.food-log-route-visual__barcode-review {
+  border-color: rgba(87, 198, 203, .48);
+  background: rgba(30, 74, 77, .25);
+}
+
+.food-log-route-visual__barcode-review .food-log-route-visual__review-mark {
+  display: grid;
+  width: 20px;
+  height: 20px;
+  place-items: center;
+  border: 1px solid var(--food-teal);
+  border-radius: 50%;
+  color: var(--food-teal);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.food-log-route-visual__connector {
+  color: var(--food-teal);
+  font-size: 17px;
+  font-weight: 750;
+  text-align: center;
+}
+
+.food-log-route-visual__recipe-sources > strong,
+.food-log-route-visual__manual-values > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 4px;
+  padding: 4px 5px;
+  border-left: 2px solid var(--food-teal);
+  background: rgba(34, 87, 91, .2);
+  font-size: 9px;
+}
+
+.food-log-route-visual__recipe-layers {
+  display: grid;
+  gap: 3px;
+  padding: 2px 4px;
+}
+
+.food-log-route-visual__recipe-layers i {
+  display: block;
+  height: 4px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--food-teal), rgba(87, 198, 203, .2));
+}
+
+.food-log-route-visual__recipe-layers i:nth-child(2) {
+  width: 77%;
+}
+
+.food-log-route-visual__recipe-layers i:nth-child(3) {
+  width: 58%;
+}
+
+.food-log-route-visual__manual-flow {
+  grid-template-columns: minmax(0, 1.2fr) 16px minmax(0, 1fr);
+}
+
+.food-log-route-visual__manual-values > div {
+  align-items: center;
+  min-width: 0;
+}
+
+.food-log-route-visual__manual-values > div > strong {
+  font-size: 9px;
+}
+
+.food-log-route-visual__manual-values > div > small {
+  text-align: right;
+}
+
+.food-log-route-visual__manual-unknown {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr);
+  justify-content: start;
+  align-items: start;
+  gap: 3px;
+  border-left-color: var(--food-gold) !important;
+  background: rgba(227, 197, 126, .08) !important;
+}
+
+.food-log-route-visual__manual-unknown > strong,
+.food-log-route-visual__manual-unknown > small {
+  text-align: left;
+}
+
+.food-log-route-visual__manual-unknown > small {
+  color: var(--food-gold);
+  font-size: 8px;
+  font-weight: 760;
+  letter-spacing: .035em;
+}
+
+.food-log-route-visual figcaption {
+  margin-top: 8px;
+  color: var(--food-muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+@media (max-width: 600px) {
+  .food-log-route-visual {
+    padding: 10px;
+  }
+
+  .food-log-route-visual__barcode-flow,
+  .food-log-route-visual__recipe-flow,
+  .food-log-route-visual__manual-flow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 5px;
+  }
+
+  .food-log-route-visual__barcode-node,
+  .food-log-route-visual__recipe-sources,
+  .food-log-route-visual__recipe-composition,
+  .food-log-route-visual__recipe-serving,
+  .food-log-route-visual__manual-values,
+  .food-log-route-visual__manual-serving {
+    min-height: 0;
+    padding: 9px 10px;
+  }
+
+  .food-log-route-visual__connector {
+    transform: rotate(90deg);
+    line-height: 1;
+  }
+
+  .food-log-route-visual__barcode-input svg {
+    max-width: 112px;
+  }
+}
