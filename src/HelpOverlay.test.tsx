@@ -2,7 +2,7 @@
 import { act } from "react";
 import { createRoot } from "react-dom/client";
 import { MemoryRouter, useLocation } from "react-router-dom";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 
 Object.defineProperty(globalThis, "IS_REACT_ACT_ENVIRONMENT", {
@@ -12,6 +12,20 @@ Object.defineProperty(globalThis, "IS_REACT_ACT_ENVIRONMENT", {
 
 let host: HTMLDivElement | undefined;
 let root: ReturnType<typeof createRoot> | undefined;
+const originalInnerWidth = window.innerWidth;
+const originalMatchMedia = Object.getOwnPropertyDescriptor(window, "matchMedia");
+
+function setNarrowViewport() {
+  Object.defineProperty(window, "innerWidth", { configurable: true, value: 390 });
+  Object.defineProperty(window, "matchMedia", {
+    configurable: true,
+    value: vi.fn((query: string) => ({
+      matches: query === "(max-width: 900px)",
+      addEventListener: vi.fn(),
+      removeEventListener: vi.fn(),
+    })),
+  });
+}
 
 function CurrentPath() {
   const location = useLocation();
@@ -46,9 +60,29 @@ afterEach(() => {
   host = undefined;
   document.body.classList.remove("client-help-open");
   document.body.style.overflow = "";
+  Object.defineProperty(window, "innerWidth", { configurable: true, value: originalInnerWidth });
+  if (originalMatchMedia) Object.defineProperty(window, "matchMedia", originalMatchMedia);
+  else Reflect.deleteProperty(window, "matchMedia");
+  vi.restoreAllMocks();
 });
 
 describe("contextual Help overlay", () => {
+  it("focuses long-route content without scrolling the narrow header out of view", () => {
+    setNarrowViewport();
+    const focusCalls: Array<{ element: HTMLElement; options?: FocusOptions }> = [];
+    vi.spyOn(HTMLElement.prototype, "focus").mockImplementation(function (
+      this: HTMLElement,
+      options?: FocusOptions,
+    ) {
+      focusCalls.push({ element: this, options });
+    });
+
+    const view = renderApp("/projects");
+    const main = view.querySelector("main");
+
+    expect(focusCalls).toContainEqual({ element: main, options: { preventScroll: true } });
+  });
+
   it("keeps the current client screen underneath and closes back to it", () => {
     const view = renderApp("/projects");
     const trigger = view.querySelector(".rail-social-footer__help");
@@ -136,5 +170,42 @@ describe("contextual Help overlay", () => {
     expect(details).toContain("LinkedIn, GitHub, Email, and Resume");
     expect(details).toContain("top-left arrow returns Home");
     expect(details).toContain("Open Case Study");
+  });
+
+  it("describes narrow contact links in the page-end row", () => {
+    setNarrowViewport();
+
+    const lobby = renderApp("/projects");
+    const lobbyTrigger = lobby.querySelector(".header-help");
+    if (!lobbyTrigger) throw new Error("Header help trigger is missing");
+    click(lobbyTrigger);
+    const lobbyDetails = Array.from(lobby.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "").join(" ");
+    expect(lobbyDetails).toContain("contact row after the page content");
+    expect(lobbyDetails).not.toContain("in the client toolbar");
+  });
+
+  it("does not describe the hidden Activity rail on narrow Profile or Journey screens", () => {
+    setNarrowViewport();
+    const profile = renderApp("/profile");
+    const profileTrigger = profile.querySelector(".header-help");
+    if (!profileTrigger) throw new Error("Header help trigger is missing");
+    click(profileTrigger);
+    const profileDetails = Array.from(profile.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "").join(" ");
+    expect(profileDetails).not.toContain("Activity rail");
+
+    act(() => root?.unmount());
+    host?.remove();
+    root = undefined;
+    host = undefined;
+
+    const journey = renderApp("/profile/journey");
+    const journeyTrigger = journey.querySelector(".header-help");
+    if (!journeyTrigger) throw new Error("Header help trigger is missing");
+    click(journeyTrigger);
+    const journeyDetails = Array.from(journey.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "").join(" ");
+    expect(journeyDetails).not.toContain("Activity remain available");
   });
 });

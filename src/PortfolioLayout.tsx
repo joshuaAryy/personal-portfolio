@@ -403,11 +403,9 @@ export function Client({
 
     if (homeShell && window.innerWidth <= 900) {
       window.scrollTo(0, 0);
-      main.focus({ preventScroll: true });
-      return;
     }
 
-    main.focus();
+    main.focus({ preventScroll: true });
   }, [pathname, homeShell]);
 
   return (

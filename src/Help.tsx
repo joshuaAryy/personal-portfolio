@@ -54,12 +54,18 @@ function useRailVisible() {
   return railVisible;
 }
 
+function utilityLinksDetail(railVisible: boolean) {
+  return railVisible
+    ? "LinkedIn, GitHub, Email, and Resume are in the client toolbar."
+    : "LinkedIn, GitHub, Email, and Resume are in the contact row after the page content.";
+}
+
 function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   if (pathname === "/home" || pathname === "/") {
     return [
       {
         title: "Top-level links",
-        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar; narrow screens show them in the contact row. Resume opens Resume Found.",
+        detail: `${utilityLinksDetail(railVisible)} Resume opens Resume Found.`,
       },
       {
         title: "Mode navigation",
@@ -87,7 +93,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Top-level links",
-        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile.",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile.`,
       },
       {
         title: "Select an entry",
@@ -115,7 +121,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Top-level links",
-        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait returns here.",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait returns here.`,
       },
       {
         title: "Profile signals",
@@ -127,7 +133,9 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
       },
       {
         title: "Open a project",
-        detail: "Project links in the signal preview go directly to their case studies. The main navigation and Activity rail also lead to work.",
+        detail: railVisible
+          ? "Project links in the signal preview go directly to their case studies. The main navigation changes mode, and Activity links to project and experience stories."
+          : "Project links in the signal preview go directly to their case studies. The primary navigation changes portfolio mode.",
       },
     ];
   }
@@ -136,7 +144,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Top-level links",
-        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile Overview.",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile Overview.`,
       },
       {
         title: "Follow the story",
@@ -148,7 +156,9 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
       },
       {
         title: "Change sections",
-        detail: "Use the Profile tabs for Overview, Journey, Personal Highlights, and Demos. Primary navigation and Activity remain available.",
+        detail: railVisible
+          ? "Use the Profile tabs for Overview, Journey, Personal Highlights, and Demos. Primary navigation and Activity remain available."
+          : "Use the Profile tabs for Overview, Journey, Personal Highlights, and Demos. Primary navigation remains in the header; contact links follow the page content.",
       },
     ];
   }
@@ -157,7 +167,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Top-level links",
-        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile Overview.",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile Overview.`,
       },
       {
         title: "Choose a demo",
@@ -203,7 +213,9 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
       },
       {
         title: "Return to Resume Found",
-        detail: "Use Back to Resume Found to return to the previous resume screen. The top navigation and contact links remain available.",
+        detail: railVisible
+          ? "Use Back to Resume Found to return to the previous resume screen. Top navigation and contact links remain available."
+          : "Use Back to Resume Found to return to the previous resume screen. Top navigation remains in the header; contact links follow the page content.",
       },
     ];
   }
@@ -213,7 +225,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Top-level links",
-        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile.",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile.`,
       },
       {
         title: "Read the case study",
@@ -235,7 +247,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   }
 
   return [
-    { title: "Top-level links", detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile." },
+    { title: "Top-level links", detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile.` },
     { title: "Use the top navigation", detail: "Projects, Experience, Hackathons, and Education remain available from the client shell." },
     ...(railVisible
       ? [{
