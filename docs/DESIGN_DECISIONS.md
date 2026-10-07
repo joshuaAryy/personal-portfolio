@@ -73,6 +73,20 @@ Each of Food Tracker, Cho'Veigo, Crest, Fraymakers, Living in Silico, and Stush 
 
 The prior composition/mark freeze for Profile is superseded by the 2026-10-06 owner review. Preserve its left-led identity, static counts, working hover/focus, GitHub shortcut, and direct project navigation; the owner specifically reopens lower signal placement, horizontal trait spacing/proportions, authentic environment quality, and shared Food Tracker mark fitting. Prior 9fd23f9 browser evidence is historical, not whole-page acceptance. Live screen-reader interaction remains a separate manual check.
 
+## Strategic Sol decision - Profile responsiveness (2026-10-07)
+
+**DECISION:** Use a bounded, fit-aware intermediate transition into the approved left-led desktop composition. Do not treat moving the structural breakpoint from 1400px to 1440px as the complete fix; that relocates the abrupt reflow. The current Overview exceeds its available track by about 31px at 1400px, while the 1399-to-1400px switch moves the signals about 499px. A vertical nudge cannot resolve both issues.
+
+**PRESERVE:** The stable 1440px-and-wider composition, left-led identity relationship, signal overlays, Creative / Proactive / Execution traits, keyboard behavior, and established narrow layout.
+
+**CHANGE / PRIORITIES:** Replace the abrupt stacked-to-side-by-side handoff with a continuous bounded desktop transition. Establish horizontal clearance before raising Overview alongside identity; use restrained responsive sizing and spacing, then settle into the approved composition when it fits. Prioritize no overlap, no abrupt positional movement, legibility, and minimal responsive-only scope.
+
+**DECOMPOSITION:** Measure the fit range, implement the intermediate transition while retaining the stable wide endpoint, and replace the hard 1400px test assertion with continuity/fit expectations.
+
+**ACCEPTANCE:** Across the transition, the 1398–1401px captures show continuous placement; at each 1px step, identity, Overview, and neutral signal row move no more than 5px vertically or horizontally. No overlap, clipping, or horizontal overflow at sampled widths. Preserve the accepted 1440px relationship with only minor fit adjustments and the prior 1700/1858/1859/1920 behavior across tested heights. Traits remain readable/interactive and keyboard/narrow behavior is unchanged. If this requires substantial shrinking or broader redesign, return for a new decision.
+
+**Evidence:** Owner review calls for smooth continuity at 1440×900, 1920×1080, short-wide desktop, and the 1400–1858px regime. The current CSS switch is in `src/profile-overview.css` near lines 1215 and 1482; baseline test is `src/ProfileOverview.test.tsx` near lines 160–175. Before captures and measurements are in `%TEMP%/profile-1400-seam-before-2026-10-07/`.
+
 ## References and acceptance
 
 - Home structure: archive `69:37` and active root `2252:3445`.
