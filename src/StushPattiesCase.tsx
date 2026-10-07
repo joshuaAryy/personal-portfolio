@@ -53,6 +53,7 @@ function SourceParsingFigure() {
       className={`stush-source-map${hasEntered ? " is-visible" : ""}`}
       data-flow-entered={hasEntered ? "true" : "false"}
       aria-labelledby="stush-source-map-title"
+      onFocusCapture={replayFlow}
     >
       <header className="stush-figure-heading">
         <div>
@@ -145,7 +146,7 @@ function SourceException() {
         <p className="stush-kicker">A BOUNDED EXCEPTION</p>
         <h2 id="stush-source-exception-title">Keep the layout exception inside the reader.</h2>
         <p>
-          The Koyo export had an irregular layout that required a temporary position-and-cell reader. That reader mapped the input into the shared schema; common normalization then continued. The exception addressed how to read one source while preserving the common reporting contract.
+          One distributor's irregular workbook required a temporary position-and-cell parser. That parser mapped the input into the shared schema; common normalization then continued. The exception addressed how to read one source while preserving the common reporting contract.
         </p>
       </div>
 
@@ -185,14 +186,25 @@ export default function StushPattiesCase() {
         </div>
         <div className="stush-data-hero__summary">
           <p className="stush-data-hero__thesis">Turning distributor exports into a repeatable reporting handoff.</p>
-          <div className="stush-data-hero__support"><p>Different source files. One shared reporting path.</p><p>I contributed Python parsing and normalization, connecting irregular sales exports to shared business fields and a documented Power BI handoff.</p></div>
+          <div className="stush-data-hero__support">
+            <p>Two-person technical team: I built Python parsing and normalization that mapped irregular sales exports into shared reporting fields.</p>
+            <figure className="stush-hero-path" aria-label="Different source files. One shared reporting path. Conceptual route: irregular layouts pass through Python parsing into shared fields.">
+              <div className="stush-hero-path__steps">
+                <div><span>01 / INPUT</span><strong>Irregular layouts</strong></div>
+                <span aria-hidden="true">→</span>
+                <div><span>02 / TRANSFORM</span><strong>Python parsing</strong></div>
+                <span aria-hidden="true">→</span>
+                <div><span>03 / CONTRACT</span><strong>Shared fields</strong></div>
+              </div>
+              <figcaption>Illustrative steps only; the reporting rules and handoff follow below.</figcaption>
+            </figure>
+          </div>
         </div>
         <dl className="stush-engagement-strip" aria-label="Role and project details">
           <div><dt>ROLE</dt><dd>Software Engineering Intern</dd></div>
           <div><dt>FOCUS</dt><dd>Data Pipelines &amp; Automation</dd></div>
           <div><dt>PERIOD</dt><dd>Sep–Nov 2025</dd></div>
-          <div><dt>PROJECT</dt><dd>External client engagement</dd></div>
-          <div><dt>TEAM</dt><dd>Two-person technical team</dd></div>
+          <div><dt>TEAM / SETTING</dt><dd>External client engagement · two-person technical team</dd></div>
         </dl>
       </header>
 
@@ -206,21 +218,6 @@ export default function StushPattiesCase() {
 
       <SourceException />
 
-      <section className="stush-ownership" id="stush-role" aria-labelledby="stush-ownership-title">
-        <div className="stush-ownership__title">
-          <p className="stush-kicker">MY ROLE · SHARED DELIVERY</p>
-          <h2 id="stush-ownership-title">Parsing and requirements translation.</h2>
-        </div>
-        <div className="stush-ownership__details">
-          <p>
-            On a two-person technical team, I contributed Python parsing and normalization, shaped shared field rules with my partner, and took part in regular stakeholder conversations.
-          </p>
-          <p>
-            The work connected practical data rules to a documented handoff: a unified CSV, data dictionary, and quality report prepared for Power BI reporting.
-          </p>
-        </div>
-      </section>
-
       <section className="stush-brief" aria-labelledby="stush-brief-title">
         <div className="stush-brief__heading">
           <p className="stush-kicker">THE CLIENT PROBLEM</p>
@@ -228,10 +225,10 @@ export default function StushPattiesCase() {
         </div>
         <div className="stush-brief__body">
           <p>
-            Koyo, UNFI, and Dovre were the three distributor sources. CSV, XLSX, and XLSB appeared across their inputs, with different structures. There was no single file shape or field vocabulary to assume.
+            Three distributor report streams arrived in different layouts. CSV, XLSX, and XLSB appeared across the input set; no single file shape or field vocabulary could be assumed.
           </p>
           <p>
-            Through recurring stakeholder conversations, my partner and I translated the reporting need into practical data rules: align sales and units, retain case packs, and make reporting months consistent across the shared structure.
+            Through recurring stakeholder conversations, the two-person technical team translated the reporting need into practical data rules: align sales and units, retain case packs, and make reporting months consistent across the shared structure.
           </p>
         </div>
       </section>
