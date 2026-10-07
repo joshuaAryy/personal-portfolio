@@ -41,4 +41,3 @@ The latest owner direction keeps Journey and Crest locked against redesign; they
 3. Journey, Demos, Personal Highlights, and Education projects.
 4. Food Tracker and Cho’Veigo, then Crest and Fraymakers.
 5. Living in Silico and Stush Patties.
-
