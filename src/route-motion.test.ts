@@ -32,9 +32,9 @@ describe("route entry motion", () => {
     expect(routeMotion).toContain(".main--personal-highlights .personal-highlights__intro");
 
     expect(routeSources.fraymakers).toContain('className="fray-case__intro"');
-    expect(routeSources.fraymakers).toContain('className="fray-case__hero-system"');
+    expect(routeSources.fraymakers).toContain('className="fray-case__hero-figure"');
     expect(routeMotion).toContain(".main--fraymakers-case .fray-case__intro");
-    expect(routeMotion).toContain(".main--fraymakers-case .fray-case__hero-system");
+    expect(routeMotion).toContain(".main--fraymakers-case .fray-case__hero-figure");
 
     expect(routeSources.stush).toContain('className="stush-data-hero"');
     expect(routeMotion).toContain(".main--stush-case .stush-data-hero");
@@ -46,7 +46,7 @@ describe("route entry motion", () => {
       ".main--education-projects .education-projects__heading",
       ".main--personal-highlights .personal-highlights__intro",
       ".main--fraymakers-case .fray-case__intro",
-      ".main--fraymakers-case .fray-case__hero-system",
+      ".main--fraymakers-case .fray-case__hero-figure",
       ".main--stush-case .stush-data-hero",
     ].forEach((selector) => expect(reducedMotionRules).toContain(selector));
   });
