@@ -118,6 +118,18 @@ The prior composition/mark freeze for Profile is superseded by the 2026-10-06 ow
 
 **Evidence:** Current Preview neutral captures and measurements are under %TEMP%/fraymakers-preview-neutral-3517e46b-20261007/; source truth is in CASE_STUDY_CONTENT_SOURCE.md lines 65–71. The Sol contract is based on the 2026-10-07 owner direction and the current Fraymakers render, source 7c0ef8a.
 
+## Strategic Sol decision - Living in Silico information design (2026-10-07)
+
+**DECISION:** Keep the broad research progression, but change editorial hierarchy and visual roles: research opening → prepared experimental inputs → representation bridge → DeepMol sequence investigation → fragment/spatial investigation → REINVENT4 exploratory boundary → late learning reflection and research handoff. Keep the three investigations distinct but do not give them equal-sized route cards; each should use a visual form suited to its method.
+
+**PRESERVE:** Strong research opening and remit; role/focus/period/supervisor metadata; early data preparation; late learning reflection; separate source-safe approaches/outcomes; the distinctive Fragmenstein illustration; and an ending that connects learning to documented research materials.
+
+**CHANGE / PRIORITIES:** Make preparation teach experimental scope without a fictional numeric funnel or measured improvement. Treat representation as a bridge, not a tool inventory; Morgan features stay separate from the RNN. Show DeepMol's sequence mechanism and explain the owner-reported sample output with less prominence than the method; recorded settings must not imply proven output attribution. Give fragment work its own spatial investigation and preserve conceptual vs outcome boundaries. Keep REINVENT4 concise and bounded without an oversized empty status panel or invented failure cause. Resolve the closing reflection and research handoff into the research arc rather than a disconnected contribution inventory.
+
+**ACCEPTANCE:** A visitor distinguishes sequence generation, spatial fragment work, and the unfinished generative route; understands how preparation set testable scope; sees purpose, method, Joshua's work, and supported outcome for each route without tiny explanatory text; can read the figures on mobile; and leaves with the research learning/handoff. No figure implies snapshot → subset → 500 molecules, Morgan features → RNN, validated/novel/drug success, or completed REINVENT4 generation.
+
+**EVIDENCE / LIMIT:** Current code is `src/LivingInSilicoCase.tsx` and `src/living-in-silico-case.css`; factual constraints are in `CASE_STUDY_CONTENT_SOURCE.md` lines 73–81 and v2 reconciliation lines 81–95; the earlier editorial plan is `coverage-audit/RESEARCH_STORY_PLAN.md` lines 5–103. The screenshots in `docs/case-study-review/render-sync/2026-10-05-food-media-lis-qa/` show an older composition that differs from current code, so they are visual history rather than current render authority. Capture the current source before critique.
+
 ## References and acceptance
 
 - Home structure: archive `69:37` and active root `2252:3445`.
