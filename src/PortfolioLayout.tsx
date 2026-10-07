@@ -286,7 +286,7 @@ function Rail() {
           <>
             <img
               className="rail-availability__mark"
-              src="/media/lobby/client-j-mark.svg"
+              src={portfolioIdentity.mark}
               alt=""
               aria-hidden="true"
               data-node-id="I2356:611;137:2"

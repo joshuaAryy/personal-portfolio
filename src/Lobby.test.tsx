@@ -158,6 +158,25 @@ describe("Projects lobby", () => {
     expect(css).toMatch(/\.league-banner__mark--portrait\s*\{[^}]*border-radius:\s*50%[^}]*object-fit:\s*cover/s);
   });
 
+  it("contains the lobby portrait inside its square medallion", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const portraitRule = css.match(/\.league-banner__mark--portrait\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(portraitRule).toMatch(/position:\s*absolute/);
+    expect(portraitRule).toMatch(/inset:\s*0/);
+    expect(portraitRule).toMatch(/width:\s*100%/);
+    expect(portraitRule).toMatch(/height:\s*100%/);
+    expect(portraitRule).toMatch(/object-fit:\s*cover/);
+  });
+
+  it("starts the narrow lobby environment at the main content origin", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
+    const environmentRule = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(environmentRule).toMatch(/top:\s*0/);
+  });
+
   it("leaves the Projects owner's J medallion fitting unchanged", () => {
     const view = renderProjectsLobby("projects");
     const owner = view.querySelector('[aria-label="Select Joshua Aryeetey"]');

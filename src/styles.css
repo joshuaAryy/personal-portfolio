@@ -7009,3 +7009,18 @@ a:focus-visible {
   border-radius: 50%;
   object-fit: cover;
 }
+
+@media (max-width: 760px) {
+  .client--project-shell .header-account__portrait,
+  .client--project-shell .header-account__ring {
+    width: 42px;
+    height: 42px;
+  }
+
+  .client--project-shell .header-account__avatar {
+    top: 6px;
+    left: 6px;
+    width: 30px;
+    height: 30px;
+  }
+}

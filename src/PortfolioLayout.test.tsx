@@ -6,6 +6,7 @@ import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { portfolioIdentity } from "./data";
 import { Client } from "./PortfolioLayout";
 
 function renderClient(path = "/profile") {
@@ -105,6 +106,14 @@ describe("League client shell", () => {
     expect(markup).toContain('href="/resume"');
     expect(markup).toContain('href="https://github.com/joshuaAryy"');
     expect(markup).toContain('href="mailto:joshuaaryy@gmail.com"');
+  });
+
+  it("uses the canonical portfolio J in the project-shell Activity rail", () => {
+    const markup = renderClient("/projects/food-tracker");
+    const rail = markup.slice(markup.indexOf('<aside class="rail"'), markup.indexOf("</aside>") + 7);
+
+    expect(rail).toContain(`src="${portfolioIdentity.mark}"`);
+    expect(rail).not.toContain("/media/lobby/client-j-mark.svg");
   });
 
   it("gives Resume and Email distinct high emphasis in the utility row", () => {
@@ -295,6 +304,13 @@ describe("League client shell", () => {
 
     expect(helpButtonRule).toMatch(/min-width:\s*36px/);
     expect(helpButtonRule).toMatch(/flex:\s*0\s+0\s+36px/);
+  });
+
+  it("keeps the narrow project-shell avatar clear of the Help slot", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+
+    expect(css).toMatch(/\.client--project-shell \.header-account__portrait,\s*\.client--project-shell \.header-account__ring\s*\{[^}]*width:\s*42px;[^}]*height:\s*42px/s);
+    expect(css).toMatch(/\.client--project-shell \.header-account__avatar\s*\{[^}]*width:\s*30px;[^}]*height:\s*30px/s);
   });
 });
 

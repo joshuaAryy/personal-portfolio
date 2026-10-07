@@ -209,6 +209,8 @@
 }
 
 .league-banner__mark--portrait {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -603,7 +605,7 @@
   .league-lobby__environment {
     position: fixed;
     z-index: -1;
-    top: 68px;
+    top: 0;
     bottom: 0;
   }
 
