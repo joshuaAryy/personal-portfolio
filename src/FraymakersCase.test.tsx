@@ -27,19 +27,27 @@ describe("Fraymakers technical case study", () => {
     expect(hero).not.toContain("MATCH + TOURNAMENT");
   });
 
-  it("teaches the metadata, recording association, and renderer handoff once", () => {
+  it("shows one conceptual metadata-to-output path without inventing a YAML schema", () => {
     const markup = render();
     const workflow = markup.slice(markup.indexOf('id="fraymakers-configuration"'), markup.indexOf('id="fraymakers-composition"'));
-    expect(workflow).toContain("Tournament + match information");
-    expect(workflow).toContain("Event or match overrides");
-    expect(workflow).toContain("paired with its recording");
-    expect(workflow).toContain("Selected labels + art");
-    expect(workflow).toContain("Background &amp; support");
-    expect(workflow).toContain("Names &amp; set labels");
+    expect(workflow).toContain('class="fray-case__workflow-path"');
+    expect(workflow).toContain("Tournament + match metadata");
+    expect(workflow).toContain("Event / match YAML overrides");
+    expect(workflow).toContain("Match ↔ recording association");
+    expect(workflow).toContain("Selected media assets");
+    expect(workflow).toContain("Character / sprite art");
+    expect(workflow).toContain("Foreground + logos");
     expect(workflow).toContain("thumbnail.js");
-    expect(workflow).toContain("Exact keys and override behavior are not established.");
+    expect(workflow).toContain("node-canvas");
+    expect(workflow).toContain("1280 × 720 PNG");
+    expect(workflow).toContain("exact YAML keys and override behavior are not established");
+    expect(workflow.indexOf("Tournament + match metadata")).toBeLessThan(workflow.indexOf("Event / match YAML overrides"));
+    expect(workflow.indexOf("Event / match YAML overrides")).toBeLessThan(workflow.indexOf("Match ↔ recording association"));
+    expect(workflow.indexOf("Match ↔ recording association")).toBeLessThan(workflow.indexOf("Selected media assets"));
+    expect(workflow.indexOf("Selected media assets")).toBeLessThan(workflow.indexOf("thumbnail.js"));
+    expect(workflow.indexOf("thumbnail.js")).toBeLessThan(workflow.indexOf("1280 × 720 PNG"));
     expect(workflow).not.toContain("<pre");
-    expect(markup.match(/Conceptual relationship: match context and configuration inform/g)).toHaveLength(1);
+    expect(workflow).toContain("Conceptual sequence; exact YAML keys and override behavior are not established, and no fixed composition order is shown.");
     expect(markup).not.toContain("REAL FRAYMAKERS VODS");
   });
 
@@ -59,9 +67,15 @@ describe("Fraymakers technical case study", () => {
   it("closes once on real VOD use and states the unfinished YouTube boundary", () => {
     const markup = render();
     const close = markup.slice(markup.indexOf('id="fraymakers-outcome"'));
+    expect(close).toContain('class="fray-case__handoff-path"');
+    expect(close).toContain("Generated 1280 × 720 PNG");
     expect(close).toContain("used on Fraymakers VODs");
-    expect(close).toContain("YouTube authentication and integration were prototyped");
-    expect(close).toContain("automatic upload was unfinished");
+    expect(close).toContain("YouTube Data API / OAuth");
+    expect(close).toContain("Prototype only");
+    expect(close).toContain("Automatic upload unfinished");
+    expect(close).toContain("solid: VOD use");
+    expect(close).toContain("dashed: prototype path");
+    expect(close).not.toContain("<img");
     expect(markup.match(/Fraymakers VODs/g)).toHaveLength(1);
     expect(markup).not.toMatch(/automatically uploaded|hours saved|time saved/i);
   });

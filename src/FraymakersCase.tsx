@@ -140,29 +140,42 @@ export default function FraymakersCase() {
           <div className="fray-case__config-copy">
             <p className="fray-case__eyebrow">01 / MATCH TO COMPOSITION</p>
             <h2 id="fraymakers-configuration-title">Choices travel with<br />the recording.</h2>
-            <p>Tournament and match information, with event or match overrides, supplied the choices for a matchup. Those choices were associated with its recording; selected labels and art then passed into the renderer.</p>
-            <p>The categories below are conceptual, not a recovered YAML example. Exact keys and override behavior are not established.</p>
+            <p>Match identity and event-specific choices had to stay attached to the right recording before the selected assets reached the renderer.</p>
           </div>
-          <figure className="fray-case__workflow-figure" aria-labelledby="fraymakers-workflow-caption">
-            <div className="fray-case__workflow-node fray-case__workflow-node--inputs">
-              <span className="fray-case__workflow-kicker">MATCH CONTEXT</span>
-              <strong>Tournament + match information</strong>
-              <ul><li>Player and set labels</li><li>Character, costume, assist</li><li>Event or match overrides</li></ul>
+          <figure className="fray-case__workflow-path" aria-labelledby="fraymakers-workflow-caption">
+            <div className="fray-case__workflow-stage fray-case__workflow-stage--metadata" role="group" aria-label="Tournament and match metadata with event or match overrides">
+              <span className="fray-case__workflow-kicker">01 / MATCH METADATA</span>
+              <strong>Tournament + match metadata</strong>
+              <ul className="fray-case__workflow-fields">
+                <li>Player + set</li><li>Character + costume</li><li>Assist</li>
+              </ul>
+              <div className="fray-case__workflow-override">
+                <span>CONFIGURATION</span>
+                <strong>Event / match YAML overrides</strong>
+              </div>
             </div>
             <span className="fray-case__workflow-link" aria-hidden="true">→</span>
-            <div className="fray-case__workflow-node fray-case__workflow-node--recording">
-              <span className="fray-case__workflow-kicker">ASSOCIATION</span>
-              <strong>Match choices paired with its recording</strong>
-              <div className="fray-case__recording-mark" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><i>VOD</i></div>
+            <div className="fray-case__workflow-stage fray-case__workflow-stage--association" role="group" aria-label="Match and video association">
+              <span className="fray-case__workflow-kicker">02 / VIDEO MAPPING</span>
+              <strong>Match ↔ recording association</strong>
+              <div className="fray-case__recording-map"><span>MATCH</span><b aria-hidden="true">↔</b><span>VOD</span></div>
             </div>
             <span className="fray-case__workflow-link" aria-hidden="true">→</span>
-            <div className="fray-case__workflow-node fray-case__workflow-node--handoff">
-              <span className="fray-case__workflow-kicker">RENDER INPUTS</span>
-              <strong>Selected labels + art</strong>
-              <ul className="fray-case__handoff-assets"><li>Player art</li><li>Background &amp; support</li><li>Names &amp; set labels</li></ul>
-              <span className="fray-case__handoff-chip">thumbnail.js</span>
+            <div className="fray-case__workflow-stage fray-case__workflow-stage--render" role="group" aria-label="Selected media assets pass through thumbnail.js and node-canvas into a 1280 by 720 PNG">
+              <span className="fray-case__workflow-kicker">03 / ASSETS + RENDER</span>
+              <strong>Selected media assets</strong>
+              <ul className="fray-case__workflow-assets">
+                <li>Stage + background</li><li>Character / sprite art</li><li>Costume + assist</li><li>Foreground + logos</li><li>Names + set labels</li>
+              </ul>
+              <div className="fray-case__render-sequence">
+                <span><strong>thumbnail.js</strong><small>renderer</small></span>
+                <b aria-hidden="true">→</b>
+                <span><strong>node-canvas</strong><small>canvas</small></span>
+                <b aria-hidden="true">→</b>
+                <span className="fray-case__render-output"><strong>1280 × 720 PNG</strong><small>output</small></span>
+              </div>
             </div>
-            <figcaption id="fraymakers-workflow-caption">Conceptual relationship: match context and configuration inform the choices carried into a recording’s thumbnail.</figcaption>
+            <figcaption id="fraymakers-workflow-caption">Conceptual sequence; exact YAML keys and override behavior are not established, and no fixed composition order is shown.</figcaption>
           </figure>
         </section>
 
@@ -187,8 +200,21 @@ export default function FraymakersCase() {
         </section>
 
         <footer className="fray-case__outcome" id="fraymakers-outcome" aria-labelledby="fraymakers-outcome-title">
-          <div className="fray-case__outcome-copy"><p className="fray-case__eyebrow">03 / WHERE THE WORK LANDED</p><h2 id="fraymakers-outcome-title">Generated frames<br />used on real VODs.</h2><p>The thumbnail generator produced 1280 × 720 PNGs that were used on Fraymakers VODs. YouTube authentication and integration were prototyped; automatic upload was unfinished.</p></div>
-          <div className="fray-case__outcome-status" aria-label="YouTube integration status"><span>YOUTUBE DATA API / OAUTH</span><strong>Prototype</strong><small>Automatic upload unfinished</small></div>
+          <div className="fray-case__outcome-copy"><p className="fray-case__eyebrow">03 / WHERE THE WORK LANDED</p><h2 id="fraymakers-outcome-title">A render path that reached real VODs.</h2></div>
+          <figure className="fray-case__handoff-path" aria-labelledby="fraymakers-handoff-caption">
+            <div className="fray-case__handoff-file"><span>GENERATED OUTPUT</span><strong>Generated 1280 × 720 PNG</strong></div>
+            <div className="fray-case__handoff-routes">
+              <div className="fray-case__handoff-route fray-case__handoff-route--verified">
+                <span className="fray-case__handoff-link" aria-hidden="true"></span>
+                <div><span>DOCUMENTED USE</span><strong>used on Fraymakers VODs</strong></div>
+              </div>
+              <div className="fray-case__handoff-route fray-case__handoff-route--prototype">
+                <span className="fray-case__handoff-link" aria-hidden="true"></span>
+                <div><span>YouTube Data API / OAuth</span><strong>Prototype only</strong><small>Automatic upload unfinished</small></div>
+              </div>
+            </div>
+            <figcaption id="fraymakers-handoff-caption">solid: VOD use. dashed: prototype path; no automatic upload is shown as complete.</figcaption>
+          </figure>
         </footer>
       </article>
     </>
