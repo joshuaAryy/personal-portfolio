@@ -17,6 +17,18 @@ Detailed browser results and screenshots: `%TEMP%\immutable-preview-deploy-qa-20
 
 This is deployment and route smoke evidence, not a substitute for the owner's visual review or live screen-reader interaction.
 
+## Focused interaction/layout follow-up
+
+After the route smoke, Playwright waited 1.4 seconds for the mode and route-entry choreography to settle before capturing interactive states. The earlier 120–350ms captures were transitional and are not used as final evidence.
+
+- All four Home modes reveal their matching secondary content at desktop and narrow widths with opacity 1 and visible computed state. The detail begins immediately after the mode description; no horizontal overflow occurs. The selected mode, content group, and utility destinations match.
+- The shared desktop Activity rail uses canonical project/experience marks and keeps availability separate from activity. Its order is Food Tracker, Cho’Veigo, Crest, Fraymakers, then Living in Silico and Stush Patties. Header utility order is LinkedIn → GitHub → Email → Resume. Narrow layout hides the rail and preserves that utility order in the contact row.
+- All four lobbies use top-aligned environment art with a downward fade, centered category banner fields, and no width overflow. The owner portrait remains centered in desktop and narrow crops.
+- Resume Found keeps the mechanism → RESUME FOUND → VIEW RESUME → CLOSE hierarchy at both sizes.
+- Profile signals sit at y=706 on 1440×900 and short-wide 1440×480, and y=725 on 1920×1080. In short-wide view they are below the initial fold but remain reachable by native scrolling in `#main`; the row remains intact. No overlap or width overflow was observed.
+
+These checks found no mismatch and required no source edits. Captures, bounds, and computed styles are in `%TEMP%\preview-interaction-layout-audit-20261007\`.
+
 ## Changes in the bounded correction
 
 - Opening retains the C06/keyed-forge identity and staged assembly; the dial makes a deliberate clockwise turn over 2.65 seconds within the 3.8-second sequence. Skip and reduced-motion paths remain supported.
