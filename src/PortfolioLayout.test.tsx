@@ -159,15 +159,24 @@ describe("League client shell", () => {
     expect(css).toMatch(/\.client--home-shell \.header-client-tools\s*\{[^}]*margin-left:\s*auto/s);
   });
 
-  it("keeps Home Resume primary and Email clearly actionable in the narrow contact row", () => {
+  it("keeps Resume primary and Email clearly actionable across narrow contact rows", () => {
     const css = readFileSync("src/styles.css", "utf8");
+    const homeMarkup = renderClient("/home");
+    const projectMarkup = renderClient("/projects/food-tracker");
+    const mobileRowFor = (markup: string) => markup.slice(
+      markup.indexOf('<nav class="mobile-contact-row"'),
+      markup.indexOf("</nav>", markup.indexOf('<nav class="mobile-contact-row"')),
+    );
 
+    expect(mobileRowFor(homeMarkup)).toContain('class="rail-social-footer__email"');
+    expect(mobileRowFor(projectMarkup)).toContain('class="rail-social-footer__email"');
     expect(css).toMatch(
-      /\.client--home-shell \.mobile-contact-row > a\[href="\/resume"\]\s*\{[^}]*min-height:\s*44px[^}]*background:/s,
+      /\.mobile-contact-row > a\[href="\/resume"\]\s*\{[^}]*min-height:\s*44px[^}]*background:/s,
     );
     expect(css).toMatch(
-      /\.client--home-shell \.mobile-contact-row > a\.rail-social-footer__email\s*\{[^}]*width:\s*44px[^}]*height:\s*44px[^}]*border:/s,
+      /\.mobile-contact-row > a\.rail-social-footer__email\s*\{[^}]*width:\s*44px[^}]*height:\s*44px[^}]*border:/s,
     );
+    expect(css).not.toMatch(/\.client--home-shell \.mobile-contact-row > a(?:\[href="\/resume"\]|\.rail-social-footer__email)/);
   });
 
   it("does not hide the approved utility links on project shells", () => {

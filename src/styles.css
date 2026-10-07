@@ -2982,7 +2982,7 @@ a:focus-visible {
     outline: 1px solid #c79b45;
     outline-offset: 2px;
   }
-  .client--home-shell .mobile-contact-row > a[href="/resume"] {
+  .mobile-contact-row > a[href="/resume"] {
     min-height: 44px;
     padding: 0 18px;
     border: 1px solid rgba(226, 189, 103, 0.92);
@@ -2995,7 +2995,7 @@ a:focus-visible {
     letter-spacing: 0.06em;
     text-transform: uppercase;
   }
-  .client--home-shell .mobile-contact-row > a.rail-social-footer__email {
+  .mobile-contact-row > a.rail-social-footer__email {
     width: 44px;
     height: 44px;
     justify-content: center;

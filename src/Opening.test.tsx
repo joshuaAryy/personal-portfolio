@@ -70,25 +70,31 @@ describe("opening route choreography", () => {
     expect(markup).toContain('class="opening__seam opening__seam--upper"');
     expect(markup).toContain('class="opening__seam opening__seam--lower"');
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-seams.svg"');
-    expect(css).toMatch(/@keyframes opening-seam-upper\s*\{[\s\S]*?30%\s*\{[^}]*opacity:\s*0[\s\S]*?34%\s*\{[^}]*opacity:\s*\.95/);
-    expect(css).toMatch(/@keyframes opening-seam-lower\s*\{[\s\S]*?40%\s*\{[^}]*opacity:\s*0[\s\S]*?44%\s*\{[^}]*opacity:\s*\.95/);
-    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.65s\s+linear\s+both/s);
+    expect(css).toMatch(/\.opening__seam--upper\s*\{[^}]*opening-seam-ignite\s+\.42s\s+ease-out\s+1\.66s/s);
+    expect(css).toMatch(/\.opening__seam--lower\s*\{[^}]*opening-seam-ignite\s+\.42s\s+ease-out\s+1\.87s/s);
+    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.8s\s+linear\s+both/s);
     expect(css).toMatch(/@keyframes opening-forge-piece\s*\{[\s\S]*?100%\s*\{\s*opacity:\s*1;\s*transform:\s*translate\(0, 0\)/);
     expect(css).toMatch(/@keyframes opening-radial-arrive\s*\{[\s\S]*?75\.7%,\s*100%\s*\{[^}]*opacity:\s*\.2;\s*transform:\s*rotate\(0deg\) scale\(1\)/);
   });
 
-  it("keeps the orbit border still while the radial ticks spin quickly through a 3.5-second sequence", () => {
+  it("keeps the orbit border still while the radial ticks spin quickly through a 3.8-second sequence", () => {
     const css = readFileSync("src/opening.css", "utf8");
     const source = readFileSync("src/Opening.tsx", "utf8");
 
-    expect(source).toContain("const OPENING_DURATION_MS = 3_500;");
-    expect(css).toMatch(/\.opening__orbit-turn\s*\{[^}]*animation:\s*opening-tick-arrive\s+3\.5s\s+ease-out\s+both/s);
-    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.65s\s+linear\s+both/s);
-    expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+3\.5s/s);
+    expect(source).toContain("const OPENING_DURATION_MS = 3_800;");
+    expect(css).toMatch(/\.opening__treatment\s*\{[^}]*animation:\s*opening-scene-exit\s+3\.8s/s);
+    expect(css).toMatch(/\.opening__orbit-turn\s*\{[^}]*animation:\s*opening-tick-arrive\s+3\.8s\s+ease-out\s+both/s);
+    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.8s\s+linear\s+both/s);
+    expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(2520deg\)/);
+    expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+3\.8s/s);
     expect(css).toMatch(/repeating-conic-gradient\([\s\S]*transparent\s+0deg\s+3\.42deg,[\s\S]*rgb\(170\s+193\s+206\s*\/\s*16%\)[\s\S]*transparent\s+3\.72deg\s+4deg/s);
+    expect(css).toMatch(/\.opening__j-piece\s*\{[^}]*animation:\s*opening-forge-piece\s+1\.55s/s);
+    expect(css).toMatch(/\.opening__j-piece--shaft\s*\{[^}]*animation-delay:\s*\.1s/s);
+    expect(css).toMatch(/\.opening__j-piece--hook\s*\{[^}]*animation-delay:\s*\.2s/s);
     expect(css).toMatch(/\.opening__j-piece--cap\s*\{[^}]*animation-delay:\s*0s/s);
-    expect(css).toMatch(/\.opening__j-piece--shaft\s*\{[^}]*animation-delay:\s*\.07s/s);
-    expect(css).toMatch(/\.opening__j-piece--hook\s*\{[^}]*animation-delay:\s*\.15s/s);
+    expect(css).toMatch(/\.opening__seam--upper\s*\{[^}]*opening-seam-ignite\s+\.42s\s+ease-out\s+1\.66s/s);
+    expect(css).toMatch(/\.opening__seam--lower\s*\{[^}]*opening-seam-ignite\s+\.42s\s+ease-out\s+1\.87s/s);
+    expect(css).toMatch(/\.opening__j-material-highlight\s*\{[^}]*opening-material-highlight\s+\.58s\s+ease-in-out\s+1\.88s/s);
     expect(css).toMatch(/--forge-start-y:\s*-22px/);
     expect(css).toMatch(/--forge-start-y:\s*22px/);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { portfolioIdentity } from "./data";
 import "./opening.css";
 
-const OPENING_DURATION_MS = 3_500;
+const OPENING_DURATION_MS = 3_800;
 const REDUCED_HANDOFF_MS = 120;
 const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
