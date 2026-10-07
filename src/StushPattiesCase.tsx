@@ -13,6 +13,7 @@ const normalizationRules = [
 
 function SourceParsingFigure() {
   const figureRef = useRef<HTMLElement | null>(null);
+  const replayFrame = useRef<number | null>(null);
   const [hasEntered, setHasEntered] = useState(false);
 
   useEffect(() => {
@@ -21,20 +22,29 @@ function SourceParsingFigure() {
 
     if (typeof IntersectionObserver === "undefined") {
       setHasEntered(true);
-      return;
+      return () => {
+        if (replayFrame.current !== null) cancelAnimationFrame(replayFrame.current);
+      };
     }
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry) setHasEntered(entry.isIntersecting);
-    }, { threshold: 0.2 });
+    }, { threshold: 0.1 });
 
     observer.observe(figure);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (replayFrame.current !== null) cancelAnimationFrame(replayFrame.current);
+    };
   }, []);
 
-  const replayOnFocus = () => {
+  const replayFlow = () => {
+    if (replayFrame.current !== null) cancelAnimationFrame(replayFrame.current);
     setHasEntered(false);
-    requestAnimationFrame(() => setHasEntered(true));
+    replayFrame.current = requestAnimationFrame(() => {
+      replayFrame.current = null;
+      setHasEntered(true);
+    });
   };
 
   return (
@@ -43,21 +53,23 @@ function SourceParsingFigure() {
       className={`stush-source-map${hasEntered ? " is-visible" : ""}`}
       data-flow-entered={hasEntered ? "true" : "false"}
       aria-labelledby="stush-source-map-title"
-      onFocusCapture={replayOnFocus}
     >
       <header className="stush-figure-heading">
         <div>
           <p className="stush-kicker">REPORTING PIPELINE</p>
           <h3 id="stush-source-map-title">Different layouts. A shared field contract.</h3>
         </div>
-        <p>Each layout had its own reader. The shared rules carried the business meaning forward.</p>
+        <div className="stush-figure-heading__support">
+          <p>Read the layout first. Carry the business meaning through one common path.</p>
+          <button type="button" aria-controls="stush-reporting-flow" onClick={replayFlow}>Replay the path <span aria-hidden="true">↻</span></button>
+        </div>
       </header>
 
-      <div className="stush-transform" role="group" aria-label="Distributor exports flow through Python parsing, a canonical schema, normalization rules, and reporting outputs">
+      <div className="stush-transform" id="stush-reporting-flow" role="group" aria-label="Distributor exports flow through Python parsing, a canonical schema, normalization rules, and reporting outputs">
         <section className="stush-transform__sources" aria-labelledby="stush-transform-inputs-title">
-          <p className="stush-transform__eyebrow">DISTRIBUTOR INPUTS</p>
+          <p className="stush-transform__eyebrow"><b>01</b> DISTRIBUTOR INPUTS</p>
           <h4 id="stush-transform-inputs-title">Three report sources</h4>
-          <ul className="stush-transform__source-set" aria-label="Named distributor sources">
+          <ul className="stush-transform__source-set" aria-label="Conceptual labels for three distributor sources">
             {distributorSources.map((source) => <li key={source}>DISTRIBUTOR EXPORT {source}</li>)}
           </ul>
           <p className="stush-transform__layout-label">Different layout shapes</p>
@@ -75,19 +87,16 @@ function SourceParsingFigure() {
           <p className="stush-transform__formats">Formats across the input set: {formats.join(" · ")}</p>
         </section>
 
-        <span className="stush-transform__connector" aria-hidden="true">›</span>
-
         <section className="stush-transform__reader" aria-labelledby="stush-transform-reader-title">
-          <p className="stush-transform__eyebrow">PYTHON PARSING</p>
+          <p className="stush-transform__eyebrow"><b>02</b> PYTHON PARSING</p>
           <h4 id="stush-transform-reader-title">Parse before mapping</h4>
           <p>Python readers interpret each source layout before fields enter the shared model.</p>
-          <div className="stush-transform__reader-lines" aria-hidden="true"><i /><i /><i /></div>
+          <div className="stush-transform__reader-lines" aria-hidden="true"><span>[</span><div><i /><i /><i /></div><span>]</span></div>
+          <p className="stush-transform__reader-note">Layout-specific readers,<br />one destination.</p>
         </section>
 
-        <span className="stush-transform__connector" aria-hidden="true">›</span>
-
         <section className="stush-transform__schema" aria-labelledby="stush-transform-schema-title">
-          <p className="stush-transform__eyebrow">CANONICAL SCHEMA</p>
+          <p className="stush-transform__eyebrow"><b>03</b> CANONICAL SCHEMA</p>
           <h4 id="stush-transform-schema-title">Shared fields</h4>
           <ol aria-label="Shared business fields">
             {reportingFields.map((field) => (
@@ -96,10 +105,10 @@ function SourceParsingFigure() {
           </ol>
         </section>
 
-        <span className="stush-transform__connector" aria-hidden="true">›</span>
+        <div className="stush-transform__bridge"><span aria-hidden="true" /><p>The field contract gives the shared rules a common starting point.</p></div>
 
         <section className="stush-transform__normalization" aria-labelledby="stush-transform-rules-title">
-          <p className="stush-transform__eyebrow">NORMALIZATION RULES</p>
+          <p className="stush-transform__eyebrow"><b>04</b> NORMALIZATION RULES</p>
           <h4 id="stush-transform-rules-title">Apply common rules</h4>
           <ol aria-label="Business dimensions aligned for reporting">
             {normalizationRules.map(({ field, detail }, index) => (
@@ -110,17 +119,15 @@ function SourceParsingFigure() {
           </ol>
         </section>
 
-        <span className="stush-transform__connector" aria-hidden="true">›</span>
-
         <section className="stush-transform__outputs" aria-labelledby="stush-transform-output-title">
-          <p className="stush-transform__eyebrow">REPORTING HANDOFF</p>
-          <h4 id="stush-transform-output-title">Reporting handoff</h4>
+          <p className="stush-transform__eyebrow"><b>05</b> REPORTING HANDOFF</p>
+          <h4 id="stush-transform-output-title">Data with its documentation</h4>
           <ul>
             <li className="stush-transform__output"><i aria-hidden="true" />Standardized CSV</li>
             <li className="stush-transform__output"><i aria-hidden="true" />Data dictionary</li>
             <li className="stush-transform__output"><i aria-hidden="true" />Quality report</li>
           </ul>
-          <strong className="stush-transform__powerbi">Power BI handoff</strong>
+          <div className="stush-transform__destination"><span aria-hidden="true">→</span><strong className="stush-transform__powerbi">Power BI handoff</strong></div>
         </section>
       </div>
 
@@ -136,29 +143,30 @@ function SourceException() {
     <section className="stush-source-exception" id="stush-source-exception" aria-labelledby="stush-source-exception-title">
       <div className="stush-source-exception__intro">
         <p className="stush-kicker">A BOUNDED EXCEPTION</p>
-        <h2 id="stush-source-exception-title">One report needed a more explicit reader.</h2>
+        <h2 id="stush-source-exception-title">Keep the layout exception inside the reader.</h2>
         <p>
-          One distributor export had an irregular layout that required a temporary position-and-cell reader. That reader mapped the input into the shared schema; common normalization then continued. The exception contained one source-specific reading problem without creating a different reporting contract.
+          The Koyo export had an irregular layout that required a temporary position-and-cell reader. That reader mapped the input into the shared schema; common normalization then continued. The exception addressed how to read one source while preserving the common reporting contract.
         </p>
       </div>
 
       <figure className="stush-source-exception__route" aria-label="A source-specific position-and-cell path returns to shared normalization">
         <div className="stush-source-exception__stage">
-          <span>SHARED FIELD CONTRACT</span>
-          <strong>Sales · Units · Case pack · Reporting month</strong>
+          <span>ONE INPUT</span>
+          <strong>An irregular report layout</strong>
         </div>
         <div className="stush-source-exception__branch">
           <span className="stush-source-exception__branch-label">ONE SOURCE-SPECIFIC EXCEPTION · IRREGULAR LAYOUT</span>
           <span className="stush-source-exception__branch-line" aria-hidden="true" />
           <div className="stush-source-exception__stage stush-source-exception__stage--exception">
             <span>TEMPORARY POSITION + CELL PARSER</span>
-            <strong>Map this input back to the shared schema</strong>
+            <strong>Read this layout into the shared schema</strong>
           </div>
         </div>
         <span className="stush-source-exception__rejoin" aria-hidden="true">↘</span>
         <div className="stush-source-exception__stage stush-source-exception__stage--rejoin">
           <span>REJOIN THE COMMON PATH</span>
           <strong>Continue shared normalization rules</strong>
+          <p>Sales · Units · Case pack · Reporting month</p>
           <small>Same reporting fields and output contract</small>
         </div>
         <figcaption>One temporary source-specific reader; the input rejoins shared normalization. No client cell positions or records are shown.</figcaption>
@@ -176,8 +184,8 @@ export default function StushPattiesCase() {
           <h1 id="stush-title">Stush Patties</h1>
         </div>
         <div className="stush-data-hero__summary">
-          <p className="stush-data-hero__thesis">Different source files. One shared reporting path.</p>
-          <p>I contributed Python parsing and normalization for distributor sales exports.</p>
+          <p className="stush-data-hero__thesis">Turning distributor exports into a repeatable reporting handoff.</p>
+          <div className="stush-data-hero__support"><p>Different source files. One shared reporting path.</p><p>I contributed Python parsing and normalization, connecting irregular sales exports to shared business fields and a documented Power BI handoff.</p></div>
         </div>
         <dl className="stush-engagement-strip" aria-label="Role and project details">
           <div><dt>ROLE</dt><dd>Software Engineering Intern</dd></div>
@@ -191,7 +199,7 @@ export default function StushPattiesCase() {
       <section className="stush-ingestion" aria-labelledby="stush-ingestion-title">
         <div className="stush-section-intro">
           <p className="stush-kicker">FROM MESSY SOURCE TO A CONTRACT</p>
-          <h2 id="stush-ingestion-title">Parse each layout, then apply shared rules.</h2>
+          <h2 id="stush-ingestion-title">From source layout to reporting language.</h2>
         </div>
         <SourceParsingFigure />
       </section>
@@ -220,10 +228,10 @@ export default function StushPattiesCase() {
         </div>
         <div className="stush-brief__body">
           <p>
-            Distributor sales reports arrived in CSV, XLSX, and XLSB files with different structures. There was no single file shape or field vocabulary to assume.
+            Koyo, UNFI, and Dovre were the three distributor sources. CSV, XLSX, and XLSB appeared across their inputs, with different structures. There was no single file shape or field vocabulary to assume.
           </p>
           <p>
-            Through recurring stakeholder conversations, we translated the reporting need into a practical shared structure. A temporary position-and-cell parser handled one irregular export; the common normalization path continued afterward.
+            Through recurring stakeholder conversations, my partner and I translated the reporting need into practical data rules: align sales and units, retain case packs, and make reporting months consistent across the shared structure.
           </p>
         </div>
       </section>
@@ -232,6 +240,7 @@ export default function StushPattiesCase() {
         <div className="stush-close__heading">
           <p className="stush-kicker">WHAT THE WORK ESTABLISHED</p>
           <h2>A messy input problem became a documented, repeatable reporting path.</h2>
+          <p>The handoff included standardized CSV output, a data dictionary, and a quality report for Power BI reporting.</p>
         </div>
         <div className="stush-close__reflection">
           <span>THE ENGINEERING LESSON</span>

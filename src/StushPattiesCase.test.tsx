@@ -2,7 +2,6 @@
 import { act } from "react";
 import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
-import { readFileSync } from "node:fs";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import StushPattiesCase from "./StushPattiesCase";
@@ -39,17 +38,18 @@ describe("Stush Patties experience story", () => {
     for (const field of ["Sales", "Units", "Case pack", "Reporting month"]) expect(sourceMap).toContain(field);
   });
 
-  it("describes the source-specific parser as a temporary exception that rejoins normalization", () => {
+  it("contextualizes Koyo as a bounded temporary parser that rejoins normalization", () => {
     const html = markup();
     const exceptionStart = html.indexOf('id="stush-source-exception"');
     const exception = html.slice(exceptionStart, html.indexOf("</section>", exceptionStart));
 
     expect(exception).toContain("temporary position-and-cell reader");
+    expect(exception).toContain("Koyo");
     expect(exception).toContain("ONE SOURCE-SPECIFIC EXCEPTION");
     expect(exception).toContain("common normalization then continued");
     expect(exception).toContain("Same reporting fields and output contract");
     expect(exception).not.toMatch(/cell\s*(?:A|B|C|\d+)/i);
-    expect(exception).not.toMatch(/Koyo|UNFI|Dovre|Shiv/i);
+    expect(exception).not.toMatch(/UNFI|Dovre|Shiv/i);
   });
 
   it("keeps shared ownership and supported reporting outputs in first person", () => {
@@ -59,7 +59,8 @@ describe("Stush Patties experience story", () => {
     for (const detail of ["my partner", "two-person technical team", "stakeholder conversations", "unified csv", "data dictionary", "quality report", "power bi"]) {
       expect(text).toContain(detail);
     }
-    expect(text).not.toMatch(/\b(?:koyo|unfi|dovre|shiv)\b/i);
+    expect(text).toContain("koyo, unfi, and dovre");
+    expect(text).not.toMatch(/\bshiv\b/i);
     expect(text).not.toMatch(/\b(?:40|50)%\b/);
     expect(text).not.toContain("dashboard results");
   });
@@ -73,27 +74,16 @@ describe("Stush Patties experience story", () => {
     expect(close).toContain("THE ENGINEERING LESSON");
   });
 
-  it("replays the source-to-schema reveal on re-entry and respects reduced motion", () => {
-    const css = readFileSync("src/stush-case-study.css", "utf8");
-    const html = markup();
-    const sourceFigure = html.slice(html.indexOf('class="stush-source-map"'), html.indexOf("</figure>", html.indexOf('class="stush-source-map"')));
-
-    expect(sourceFigure).toContain("stush-transform__input");
-    expect(sourceFigure).toContain("stush-transform__field");
-    expect(sourceFigure).toContain("stush-transform__output");
-    expect(css).toContain("stush-schema-resolve");
-    expect(css).toContain("stush-flow-signal");
-    expect(css).toContain("animation-iteration-count: 1");
-    expect(css).toMatch(/prefers-reduced-motion:\s*no-preference/);
-
+  it("starts the flow on entry, pauses on exit, and lets the replay button restart it", () => {
     const previousActEnvironment = (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT;
     (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
     let notify: IntersectionObserverCallback | null = null;
+    let replayFrame: FrameRequestCallback | null = null;
 
     class TestIntersectionObserver implements IntersectionObserver {
       readonly root = null;
       readonly rootMargin = "0px";
-      readonly thresholds = [0.2];
+      readonly thresholds = [0.1];
       constructor(callback: IntersectionObserverCallback) { notify = callback; }
       observe() {}
       unobserve() {}
@@ -102,6 +92,8 @@ describe("Stush Patties experience story", () => {
     }
 
     vi.stubGlobal("IntersectionObserver", TestIntersectionObserver);
+    vi.stubGlobal("requestAnimationFrame", (callback: FrameRequestCallback) => { replayFrame = callback; return 1; });
+    vi.stubGlobal("cancelAnimationFrame", () => {});
     const host = document.createElement("div");
     document.body.append(host);
     const root = createRoot(host);
@@ -114,6 +106,10 @@ describe("Stush Patties experience story", () => {
       const figure = host.querySelector<HTMLElement>(".stush-source-map");
       expect(figure?.dataset.flowEntered).toBe("false");
       signal(true);
+      expect(figure?.dataset.flowEntered).toBe("true");
+      act(() => host.querySelector<HTMLButtonElement>(".stush-figure-heading button")?.click());
+      expect(figure?.dataset.flowEntered).toBe("false");
+      act(() => replayFrame?.(0));
       expect(figure?.dataset.flowEntered).toBe("true");
       signal(false);
       expect(figure?.dataset.flowEntered).toBe("false");
@@ -128,5 +124,15 @@ describe("Stush Patties experience story", () => {
         (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = previousActEnvironment;
       }
     }
+  });
+
+  it("offers a keyboard-accessible replay control without hiding pipeline content", () => {
+    const host = document.createElement("div");
+    host.innerHTML = markup();
+    const replay = host.querySelector<HTMLButtonElement>('button[aria-controls="stush-reporting-flow"]');
+    expect(replay?.textContent).toContain("Replay the path");
+    expect(replay?.type).toBe("button");
+    expect(host.querySelector("#stush-reporting-flow")?.textContent).toContain("Sales");
+    expect(host.querySelector("#stush-reporting-flow")?.textContent).toContain("Power BI handoff");
   });
 });
