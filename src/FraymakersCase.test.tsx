@@ -12,29 +12,38 @@ describe("Fraymakers technical case study", () => {
     const hero = markup.slice(markup.indexOf('id="fraymakers-intro"'), markup.indexOf('id="fraymakers-pipeline"'));
     expect(hero).toContain("A tournament match,");
     expect(hero).toContain("a 1280 × 720 frame for its associated VOD.");
-    expect(hero).toContain("aria-label=\"Conceptual 1280 by 720 Fraymakers thumbnail preview\"");
+    expect(hero).toContain("Ordered conceptual pipeline: match and tournament context, match details and YAML config, video association, asset resolution");
     expect(hero).toContain("thumbnail.js");
-    expect(hero).toContain("My brother started the broader project");
-    expect(hero).toContain("I joined later");
+    expect(hero).not.toContain("My brother started the broader project");
     expect(hero).not.toContain("CONTEXT</dt>");
     expect(hero).not.toContain("Shared project with my brother");
     expect(markup).not.toContain('class="fray-case__authorship"');
+    const heroInputs = ["01 / MATCH + TOURNAMENT", "02 / MATCH DETAILS + YAML", "03 / VIDEO ASSOCIATION", "04 / ASSET RESOLUTION", "NODE-CANVAS", "PNG / VOD FRAME"]
+      .map((label) => hero.indexOf(label));
+    expect(heroInputs).toEqual([...heroInputs].sort((a, b) => a - b));
     const css = readFileSync("src/fraymakers-case.css", "utf8");
     expect(css).not.toMatch(/\.fray-case__hero-player--two\s*\{[^}]*transform:\s*scaleX\(-1\)/s);
+    expect(css).toContain(".fray-case__hero-system-inputs span:not(:last-child)::after");
   });
 
   it("teaches the match-to-VOD workflow in a concise connected sequence", () => {
     const markup = render();
     const workflow = markup.slice(markup.indexOf('id="fraymakers-pipeline"'), markup.indexOf('id="fraymakers-composition"'));
-    const steps = ["MATCH + TOURNAMENT", "YAML / CONFIG", "VIDEO ASSOCIATION", "CHARACTERS + ASSETS", "NODE-CANVAS · 1280 × 720", "REAL FRAYMAKERS VODS"]
+    const steps = ["MATCH + TOURNAMENT", "MATCH DETAILS", "YAML / CONFIG", "VIDEO ASSOCIATION", "ASSET RESOLUTION", "THUMBNAIL.JS · NODE-CANVAS", "REAL FRAYMAKERS VODS"]
       .map((label) => workflow.indexOf(label));
     expect(steps.every((index) => index >= 0)).toBe(true);
     expect(steps).toEqual([...steps].sort((a, b) => a - b));
-    expect(workflow.match(/<li\b/g)).toHaveLength(4);
+    expect(workflow.match(/<li\b/g)).toHaveLength(5);
     expect(workflow).not.toContain("PLAYER METADATA");
     expect(workflow).not.toContain("Conceptual sequence of the supported workflow");
     expect(workflow).toContain('class="fray-case__upload-prototype"');
     expect(workflow).toContain("Automatic upload was not completed");
+  });
+
+  it("numbers the visible story sections in sequence", () => {
+    const markup = render();
+    const sections = [...markup.matchAll(/<p class="fray-case__eyebrow">(0[1-4]) \/[^<]*/g)].map(([, section]) => section);
+    expect(sections).toEqual(["01", "02", "03", "04"]);
   });
 
   it("explains YAML overrides without presenting an invented schema", () => {
@@ -77,6 +86,7 @@ describe("Fraymakers technical case study", () => {
   it("weaves subsystem authorship into the story and preserves the unfinished upload boundary", () => {
     const markup = render();
     expect(markup).toContain("I joined later and built <code>thumbnail.js</code>");
+    expect(markup).toContain('class="fray-case__ownership-note"');
     expect(markup).toContain("My brother started the broader project");
     expect(markup).toContain("CLI");
     expect(markup).toContain("Challonge integration");
