@@ -106,12 +106,24 @@ describe("approved resume flow", () => {
     expect(closeRule).toMatch(/font-size:\s*11px/);
   });
 
-  it("lifts the Resume Found action stack within its takeover composition", () => {
+  it("keeps the Resume Found mechanism and actions in a compact vertical order", () => {
+    const markup = renderRoute("/resume");
     const css = readFileSync("src/resume.css", "utf8");
-    const takeoverRule = css.match(/(?:^|\n)\.resume-found\s*\{([^}]*)\}/)?.[1] ?? "";
+    const stackRule = css.match(/(?:^|\n)\.resume-found\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(takeoverRule).toMatch(/transform:\s*translateY\(-clamp\(/);
-    expect(takeoverRule).toMatch(/translateY\(-clamp\(\d+px,\s*\d+(?:\.\d+)?vh,\s*\d+px\)\)/);
+    const order = [
+      markup.indexOf("resume-found__system"),
+      markup.indexOf("resume-found__title"),
+      markup.indexOf("resume-found__action"),
+      markup.indexOf("resume-found__close"),
+    ];
+
+    expect(order.every((index) => index >= 0)).toBe(true);
+    expect(order).toEqual([...order].sort((a, b) => a - b));
+    expect(stackRule).toMatch(/display:\s*flex/);
+    expect(stackRule).toMatch(/flex-direction:\s*column/);
+    expect(stackRule).toMatch(/align-items:\s*center/);
+    expect(stackRule).toMatch(/gap:\s*8px/);
   });
 
   it("uses only the approved v13 PDF for display, download, and fullscreen", () => {
