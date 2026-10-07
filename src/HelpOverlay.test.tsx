@@ -172,6 +172,39 @@ describe("contextual Help overlay", () => {
     expect(details).toContain("Open Case Study");
   });
 
+  it("explains how Education project briefs return to the academic lobby", () => {
+    const view = renderApp("/education/projects");
+    const trigger = view.querySelector(".header-help");
+    if (!trigger) throw new Error("Header help trigger is missing");
+    click(trigger);
+
+    const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "").join(" ");
+    const titles = Array.from(view.querySelectorAll(".client-help-overlay__steps h3"))
+      .map((node) => node.textContent);
+    expect(view.querySelector(".education-projects__back")?.textContent).toBe("Education");
+    expect(titles).toContain("Back to Education");
+    expect(details).toContain("Education link above the briefs");
+    expect(details).toContain("Activity");
+  });
+
+  it("explains Profile section tabs while browsing Personal Highlights", () => {
+    const view = renderApp("/profile/highlights");
+    const trigger = view.querySelector(".header-help");
+    if (!trigger) throw new Error("Header help trigger is missing");
+    click(trigger);
+
+    const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "").join(" ");
+    const titles = Array.from(view.querySelectorAll(".client-help-overlay__steps h3"))
+      .map((node) => node.textContent);
+    expect(view.querySelector('[aria-label="Profile sections"]')).not.toBeNull();
+    expect(titles).toContain("Profile navigation");
+    expect(details).toContain("Overview, Journey, Personal Highlights, and Demos");
+    expect(details.toLowerCase()).toContain("scroll through the gallery");
+    expect(details).toContain("Activity");
+  });
+
   it("describes narrow contact links in the page-end row", () => {
     setNarrowViewport();
 
@@ -184,6 +217,23 @@ describe("contextual Help overlay", () => {
     expect(lobbyDetails).toContain("contact row after the page content");
     expect(lobbyDetails).not.toContain("in the client toolbar");
   });
+
+  it.each(["/education/projects", "/profile/highlights"])(
+    "keeps narrow guidance accurate when the Activity rail is hidden on %s",
+    (path) => {
+      setNarrowViewport();
+      const view = renderApp(path);
+      const trigger = view.querySelector(".header-help");
+      if (!trigger) throw new Error("Header help trigger is missing");
+      click(trigger);
+
+      const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
+        .map((node) => node.textContent ?? "").join(" ");
+      expect(details).toContain("contact row after the page content");
+      expect(details.toLowerCase()).toContain("top navigation");
+      expect(details).not.toContain("Activity");
+    },
+  );
 
   it("does not describe the hidden Activity rail on narrow Profile or Journey screens", () => {
     setNarrowViewport();

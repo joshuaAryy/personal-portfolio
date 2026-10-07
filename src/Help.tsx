@@ -184,6 +184,29 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     ];
   }
 
+  if (pathname === "/profile/highlights") {
+    return [
+      {
+        title: "Top-level links",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile Overview.`,
+      },
+      {
+        title: "Browse the gallery",
+        detail: "Scroll through the gallery of Personal Highlights.",
+      },
+      {
+        title: "Profile navigation",
+        detail: "Use the Profile tabs to switch between Overview, Journey, Personal Highlights, and Demos.",
+      },
+      {
+        title: railVisible ? "Primary navigation and Activity" : "Primary navigation",
+        detail: railVisible
+          ? "Use the top navigation to change portfolio mode. Activity links to project and experience stories."
+          : "Use the top navigation to reach another portfolio mode.",
+      },
+    ];
+  }
+
   if (pathname === "/resume") {
     return [
       {
@@ -242,6 +265,29 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
         detail: railVisible
           ? "The Activity rail links to related work, while top navigation changes portfolio mode."
           : "Primary navigation changes portfolio mode. The profile portrait opens Profile.",
+      },
+    ];
+  }
+
+  if (pathname === "/education/projects") {
+    return [
+      {
+        title: "Top-level links",
+        detail: `${utilityLinksDetail(railVisible)} The profile portrait opens Profile.`,
+      },
+      {
+        title: "Read the capability briefs",
+        detail: "Scroll through the briefs to review selected academic work.",
+      },
+      {
+        title: "Back to Education",
+        detail: "Use the Education link above the briefs to return to the academic lobby.",
+      },
+      {
+        title: railVisible ? "Primary navigation and Activity" : "Primary navigation",
+        detail: railVisible
+          ? "Use the top navigation to change portfolio mode. Activity links to project and experience stories."
+          : "Use the top navigation to reach another portfolio mode.",
       },
     ];
   }
