@@ -29,6 +29,19 @@ After the route smoke, Playwright waited 1.4 seconds for the mode and route-entr
 
 These checks found no mismatch and required no source edits. Captures, bounds, and computed styles are in `%TEMP%\preview-interaction-layout-audit-20261007\`.
 
+## Keyboard and accessibility-tree follow-up
+
+The immutable Preview also passed the bounded Chrome keyboard/AX check:
+
+- Home mode arrows plus Home/End changed focus and `aria-pressed`; Enter navigated, and Back returned to the selected lobby.
+- Help opened a labelled modal dialog with focus inside; Escape closed it and restored focus to Help.
+- Resume Found opened a labelled modal over an inert background. Shift+Tab stayed within the modal; Escape and Close restored the opener; View Resume opened `/resume/viewer` with a titled PDF iframe.
+- Keyboard focus on each Profile signal updated its associated details panel; labels and `aria-controls` were present.
+- Food and Education accessibility-tree snapshots exposed expected banner, main, complementary, and navigation landmarks with meaningful page heading structure. Utility links had accessible names.
+- No browser, page, or request errors occurred in the exercised flows.
+
+Evidence: `%TEMP%\preview-keyboard-a11y-audit-20261007\`. This is automated browser, keyboard, and accessibility-tree evidence; a live screen-reader session remains a manual check.
+
 ## Changes in the bounded correction
 
 - Opening retains the C06/keyed-forge identity and staged assembly; the dial makes a deliberate clockwise turn over 2.65 seconds within the 3.8-second sequence. Skip and reduced-motion paths remain supported.
