@@ -124,6 +124,11 @@
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes profile-overview-resolve {
+  from { opacity: 0; translate: 0 9px; }
+  to { opacity: 1; translate: none; }
+}
+
 @keyframes client-card-appear {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -133,8 +138,11 @@
   animation: client-banner-descend 560ms cubic-bezier(.2, .78, .25, 1) both;
 }
 
-.main--profile .identity-panel,
 .main--profile .profile-overview {
+  animation: profile-overview-resolve 640ms ease-out 80ms both;
+}
+
+.main--profile .identity-panel {
   animation: client-detail-resolve 640ms ease-out 80ms both;
 }
 
@@ -202,7 +210,6 @@
 
   .main--profile .profile-nav,
   .main--profile .identity-panel,
-  .main--profile .profile-overview,
   .main--profile .profile-signal-grid,
   .main--journey .journey-identity,
   .main--journey .profile-nav,
@@ -219,6 +226,14 @@
     animation-delay: 0ms !important;
     animation-timing-function: ease-out;
     transform: none !important;
+    filter: none !important;
+  }
+
+  .main--profile .profile-overview {
+    animation-name: client-reduced-entry;
+    animation-duration: 100ms !important;
+    animation-delay: 0ms !important;
+    animation-timing-function: ease-out;
     filter: none !important;
   }
 

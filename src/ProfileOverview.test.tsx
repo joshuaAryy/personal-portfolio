@@ -164,6 +164,40 @@ describe("Profile Overview", () => {
     expect(profileCss).toContain("transform: scale(clamp(.7, calc(100vw / 1000px - .74), .76));");
     expect(profileCss).toContain("transform: scale(clamp(.76, calc((100vw / 100px) * .06 - .14), .88));");
     expect(profileCss).toContain("margin-top: clamp(49px, calc(697px - 35.1vw), 135px);");
+
+    const fitTransition = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1440px)");
+    expect(fitTransition).toContain("transform: scale(clamp(.69, calc(100vw / 4000px + .34), .7))");
+    expect(fitTransition).toContain("top: calc(848px - 20vw)");
+  });
+
+  it("keeps Profile route-entry motion from replacing the responsive Overview scale", () => {
+    const routeMotion = readFileSync("src/route-motion.css", "utf8");
+    const overviewMotion = cssBlock(routeMotion, ".main--profile .profile-overview");
+    const overviewKeyframes = cssBlock(routeMotion, "@keyframes profile-overview-resolve");
+
+    expect(overviewMotion).toContain("animation: profile-overview-resolve");
+    expect(overviewKeyframes).toContain("translate: 0 9px");
+    expect(overviewKeyframes).not.toContain("transform:");
+  });
+
+  it("keeps the responsive Overview scale when reduced motion is enabled", () => {
+    const routeMotion = readFileSync("src/route-motion.css", "utf8");
+    const reducedMotion = cssBlock(routeMotion, "@media (prefers-reduced-motion: reduce)");
+    const overviewRule = cssBlock(reducedMotion, ".main--profile .profile-overview");
+
+    expect(overviewRule).toContain("animation-name: client-reduced-entry");
+    expect(overviewRule).not.toContain("transform: none !important");
+  });
+
+  it("interpolates the Profile identity top offset into the wide desktop layout", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const wideTransition = cssBlock(profileCss, "@media (min-width: 1859px)");
+    const identityRule = cssBlock(wideTransition, ".main--profile .identity-panel");
+
+    expect(identityRule).toMatch(/(?:^|\n)\s*left:\s*clamp\(0px, calc\(377\.7px - 19\.672vw\), 12px\)/);
+    expect(identityRule).toMatch(/(?:^|\n)\s*top:\s*clamp\(0px, calc\(440\.64px - 22\.95vw\), 14px\)/);
+    expect(identityRule).not.toContain("margin-left:");
+    expect(identityRule).not.toContain("margin-top:");
   });
 
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {

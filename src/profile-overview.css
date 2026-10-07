@@ -1594,6 +1594,23 @@
   }
 }
 
+@media (min-width: 1400px) and (max-width: 1440px) {
+  .main--profile .profile-overview {
+    transform: scale(clamp(.69, calc(100vw / 4000px + .34), .7));
+  }
+
+  .profile-signal-grid {
+    top: calc(848px - 20vw);
+  }
+}
+
+@media (min-width: 1859px) and (max-width: 1920px) {
+  .main--profile .identity-panel {
+    left: clamp(0px, calc(377.7px - 19.672vw), 12px);
+    top: clamp(0px, calc(440.64px - 22.95vw), 14px);
+  }
+}
+
 /* Compact desktop keeps the identity left-led and lays out the Overview in its real column. */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .main--profile .profile-layout {
