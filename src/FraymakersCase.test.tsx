@@ -9,7 +9,7 @@ const render = () => renderToStaticMarkup(<MemoryRouter><FraymakersCase /></Memo
 describe("Fraymakers technical case study", () => {
   it("opens on Joshua's renderer and a visibly conceptual composition", () => {
     const markup = render();
-    const hero = markup.slice(markup.indexOf('id="fraymakers-intro"'), markup.indexOf('id="fraymakers-pipeline"'));
+    const hero = markup.slice(markup.indexOf('id="fraymakers-pipeline"'), markup.indexOf('id="fraymakers-configuration"'));
     expect(hero).toContain("I built <code>thumbnail.js</code>");
     expect(hero).toContain("<span>RENDERER</span><code>thumbnail.js</code><span>CANVAS</span><strong>node-canvas</strong>");
     expect(hero).toContain("1280 × 720 PNG");
@@ -78,8 +78,8 @@ describe("Fraymakers technical case study", () => {
 
   it("positions chapter targets below the desktop and mobile sticky rails", () => {
     const css = readFileSync("src/fraymakers-case.css", "utf8");
-    expect(css).toMatch(/\.fray-case > section\[id\],\s*\.fray-case > footer\[id\]\s*\{ scroll-margin-top: 68px; \}/s);
-    expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.fray-case > section\[id\], \.fray-case > footer\[id\] \{ scroll-margin-top: 94px; \}/s);
+    expect(css).toMatch(/\.fray-case > header\[id\], \.fray-case > section\[id\], \.fray-case > footer\[id\] \{ scroll-margin-top: 68px; \}/s);
+    expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.fray-case > header\[id\], \.fray-case > section\[id\], \.fray-case > footer\[id\] \{ scroll-margin-top: 94px; \}/s);
     expect(css).toContain("@media (max-width: 390px)");
   });
 });

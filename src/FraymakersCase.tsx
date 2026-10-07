@@ -85,7 +85,7 @@ export default function FraymakersCase() {
       </nav>
 
       <article className="fray-case" aria-labelledby="fraymakers-title">
-        <header className="fray-case__intro" id="fraymakers-intro">
+        <header className="fray-case__intro" id="fraymakers-pipeline">
           <div className="fray-case__intro-copy">
             <p className="fray-case__eyebrow">FRAYMAKERS / UPLOADASSISTANT</p>
             <h1 id="fraymakers-title">A tournament match,<br />carried into its own frame.</h1>
@@ -136,16 +136,9 @@ export default function FraymakersCase() {
           </figure>
         </header>
 
-        <section className="fray-case__pipeline" id="fraymakers-pipeline" aria-labelledby="fraymakers-pipeline-title">
-          <div className="fray-case__section-head">
-            <div><p className="fray-case__eyebrow">01 / THE OUTPUT</p><h2 id="fraymakers-pipeline-title">A frame shaped<br />around the matchup.</h2></div>
-            <p className="fray-case__section-intro">node-canvas brought together player art, background and supporting assets, names, and set labels on a fixed 1280 × 720 canvas.</p>
-          </div>
-        </section>
-
         <section className="fray-case__configuration" id="fraymakers-configuration" aria-labelledby="fraymakers-configuration-title">
           <div className="fray-case__config-copy">
-            <p className="fray-case__eyebrow">02 / MATCH TO COMPOSITION</p>
+            <p className="fray-case__eyebrow">01 / MATCH TO COMPOSITION</p>
             <h2 id="fraymakers-configuration-title">Choices travel with<br />the recording.</h2>
             <p>Tournament and match information, with event or match overrides, supplied the choices for a matchup. Those choices were associated with its recording; selected labels and art then passed into the renderer.</p>
             <p>The categories below are conceptual, not a recovered YAML example. Exact keys and override behavior are not established.</p>
@@ -175,7 +168,7 @@ export default function FraymakersCase() {
 
         <section className="fray-case__composition" id="fraymakers-composition" aria-labelledby="fraymakers-composition-title">
           <div className="fray-case__section-head">
-            <div><p className="fray-case__eyebrow">03 / IMPLEMENTATION DETAILS</p><h2 id="fraymakers-composition-title">A consistent canvas.<br />Variable inputs.</h2></div>
+            <div><p className="fray-case__eyebrow">02 / IMPLEMENTATION DETAILS</p><h2 id="fraymakers-composition-title">A consistent canvas.<br />Variable inputs.</h2></div>
             <p className="fray-case__section-intro">The renderer had to make two sides read as opponents while working within real asset and text constraints.</p>
           </div>
           <div className="fray-case__mirror-row">
@@ -194,7 +187,7 @@ export default function FraymakersCase() {
         </section>
 
         <footer className="fray-case__outcome" id="fraymakers-outcome" aria-labelledby="fraymakers-outcome-title">
-          <div className="fray-case__outcome-copy"><p className="fray-case__eyebrow">04 / WHERE THE WORK LANDED</p><h2 id="fraymakers-outcome-title">Generated frames<br />used on real VODs.</h2><p>The thumbnail generator produced 1280 × 720 PNGs that were used on Fraymakers VODs. YouTube authentication and integration were prototyped; automatic upload was unfinished.</p></div>
+          <div className="fray-case__outcome-copy"><p className="fray-case__eyebrow">03 / WHERE THE WORK LANDED</p><h2 id="fraymakers-outcome-title">Generated frames<br />used on real VODs.</h2><p>The thumbnail generator produced 1280 × 720 PNGs that were used on Fraymakers VODs. YouTube authentication and integration were prototyped; automatic upload was unfinished.</p></div>
           <div className="fray-case__outcome-status" aria-label="YouTube integration status"><span>YOUTUBE DATA API / OAUTH</span><strong>Prototype</strong><small>Automatic upload unfinished</small></div>
         </footer>
       </article>

@@ -6,6 +6,7 @@
 ## Narrative and figure changes
 
 - Opens on Joshua's `thumbnail.js` renderer and a large native SVG titled “Thumbnail composition schematic.” Abstract opposing art shapes and clearly separated label/supporting-art regions explain the output without resembling recovered project media. The adjacent caption states that it is not an authentic generated thumbnail.
+- Removes a standalone output chapter that repeated the opening's format and dimensions; the OUTPUT chapter link now returns to the opening. The narrative moves from opening to workflow, engineering, and outcome.
 - Places the brother's broader foundation, CLI, Challonge integration, and early API groundwork next to Joshua's renderer ownership in the opening copy.
 - Uses one conceptual workflow figure to show tournament/match information and event/match overrides informing choices associated with a recording, followed by selected labels and art reaching the renderer. It has no fabricated YAML example or implied override precedence.
 - Keeps the composition handoff connected to the opening schematic; adds a compact P1/P2 mirroring comparison and concise alias, long-name, and missing-asset constraints.
@@ -28,11 +29,13 @@ Evidence directory: `%TEMP%\fraymakers-output-first-candidate-20261007\`
 - `fraymakers-desktop-match-config.png`
 - `fraymakers-desktop-compositor.png`
 - `fraymakers-desktop-vod-outcome.png`
+- `fraymakers-desktop-output-anchor.png`
 - `fraymakers-narrow-first-fold.png`
 - `fraymakers-narrow-pipeline.png`
 - `fraymakers-narrow-match-config.png`
 - `fraymakers-narrow-compositor.png`
 - `fraymakers-narrow-vod-outcome.png`
+- `fraymakers-narrow-output-anchor.png`
 - `report.json` (viewport dimensions, figure captions, chapter navigation, and runtime errors)
 
 The figures are explanatory drawings. They do not document exact YAML keys, alias mappings, text-fit techniques, fallback behavior, or authentic generated output.
