@@ -16,7 +16,7 @@
 
 > **CURRENT OWNER INSTRUCTIONS + CURRENT DURABLE DOCS + CURRENT FIGMA/REPOSITORY STATE OVERRIDE HISTORICAL CHAT SUMMARIES.** Historical notes explain decisions; they do not supersede current truth. Recheck the facts below against live state before acting.
 
-**Current owner goal (2026-10-07):** the consolidated correction direction remains active. Current feature Preview: https://2ada7513.joshuaik2.pages.dev/, built from application source `8ac121a60a3b2c8bbfcaad0ea18b4e109c8af2d0`. This checkpoint changes Food Insights evidence only; earlier shell/case-study correction work remains in the source. Owner review remains open, as do the full Cho'Veigo demo and live screen-reader interaction. Preserve unrelated dirty/untracked history, keep J separate, and do not deploy production.
+**Current owner goal (2026-10-07):** the consolidated correction direction remains active. Current feature Preview: https://2ada7513.joshuaik2.pages.dev/, application source 8ac121a60a3b2c8bbfcaad0ea18b4e109c8af2d0. Latest Cho'Veigo media review confirms the full source is unsafe to redact reliably and no safe local demo state exists; a full demo awaits owner-supplied sanitized media. Live screen-reader interaction remains manual. Owner review remains open. Preserve unrelated dirty/untracked history, keep J separate, and do not deploy production.
 
 **Case-study status correction:** any older table row below saying a story was accepted, converged, or complete describes only its then-reviewed scope. The owner directly reviewed the current long-form pages and reopened all six for substantial narrative/layout work; use the consolidated brief for routing and acceptance.
 
