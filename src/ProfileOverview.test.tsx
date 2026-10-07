@@ -182,7 +182,7 @@ describe("Profile Overview", () => {
     expect(compactRules).toContain("profile-signal-grid");
     expect(compactRules).toContain("height: 914px");
     expect(compactRules).toContain("top: 392px");
-    expect(compactRules).toContain("height: 364px;\n    transform: none;");
+    expect(compactRules).toMatch(/height: 364px;\s*transform: none;/);
     expect(compactNeutral).toContain("display: block");
     expect(compactRules).toContain("HOVER A SIGNAL TO PREVIEW ITS DETAILS");
     expect(tabletRules).toContain("grid-template-columns: 370px minmax(0, 1fr)");
