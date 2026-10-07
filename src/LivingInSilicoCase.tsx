@@ -14,11 +14,10 @@ export default function LivingInSilicoCase() {
           <p className="living-eyebrow">LIVING IN SILICO · AI / ML RESEARCH INTERN · MARCH–JUNE 2025</p>
           <h1 id="living-title">A research question before a model choice.</h1>
           <p className="living-hero__lead">
-            In an unfamiliar computational chemistry and biomedical research
-            domain, I learned the molecular data first, then investigated
-            different ways to represent and explore it. The work was research:
-            prepare experiments, try distinct methods, and keep each conclusion
-            tied to what that method actually showed.
+            In computational chemistry and biomedical research, I asked how
+            molecular representations could shape generative-modeling routes.
+            I prepared separate experiment inputs, explored sequence and
+            fragment approaches, and documented what each method could support.
           </p>
           <div className="living-question">
             <p className="living-eyebrow">THE RESEARCH QUESTION</p>
@@ -47,7 +46,7 @@ export default function LivingInSilicoCase() {
         <div className="living-section-heading">
           <p className="living-eyebrow">DATA PREPARATION</p>
           <h2 id="living-data-title">Experimental scope starts with the records.</h2>
-          <p>I inspected molecular strings, checked which structures parsed, reviewed repeated rows, and prepared separate inputs for experiments. These choices defined what each test could examine; they do not show a measured performance gain.</p>
+          <p>The owner-reported snapshot distinguishes rows from unique SMILES, while some experiments used separate curated subsets. The available record describes data preparation but does not document row-level parsing or duplicate-review outcomes.</p>
         </div>
         <figure className="living-data-figure" aria-labelledby="living-data-caption">
           <div className="living-snapshot">
@@ -63,20 +62,29 @@ export default function LivingInSilicoCase() {
             <span>curated entries in some experiments</span>
             <p>Narrower working scopes; not a step-down count from the April snapshot.</p>
           </div>
-          <figcaption id="living-data-caption">The April 12 snapshot and the 400–600-entry sets for some experiments are different contexts, not steps in one numerical funnel. The counts do not establish a measured data-quality or model-performance gain.</figcaption>
+          <figcaption id="living-data-caption">The April 12 snapshot and the 400–600-entry subsets used in some experiments are separate contexts, not one numerical funnel.</figcaption>
         </figure>
         <figure className="living-prep-logic" aria-labelledby="living-prep-logic-title living-prep-logic-caption">
           <div className="living-prep-logic__heading">
-            <p className="living-eyebrow">PREPARATION DECISIONS · CONCEPTUAL LOGIC</p>
-            <h3 id="living-prep-logic-title">Choose inputs that fit the experiment.</h3>
-            <p>Before a method could answer a question, I had to understand what its input represented.</p>
+            <p className="living-eyebrow">RESEARCH QUESTIONS · CONCEPTUAL LOGIC</p>
+            <h3 id="living-prep-logic-title">Questions that shape a molecular-data investigation.</h3>
+            <p>These conceptual checks show what a researcher may need to establish before interpreting counts or defining an experiment input.</p>
           </div>
-          <div className="living-prep-logic__questions">
-            <div><span>01 / PARSEABILITY</span><strong>Check whether structures parse</strong><small>RDKit helped identify strings that did not parse as intended.</small></div>
-            <div><span>02 / DISTINCTNESS</span><strong>Review repeated rows against distinct strings</strong><small>More rows do not necessarily mean more distinct examples.</small></div>
-            <div><span>03 / EXPERIMENT SCOPE</span><strong>Choose a scope for a separate experiment</strong><small>Curated inputs shaped what that test could examine.</small></div>
+          <div className="living-prep-logic__questions" role="group" aria-label="Three research questions, without project row-level data">
+            <div>
+              <span className="living-prep-logic__index" aria-hidden="true">01</span>
+              <div><p className="living-eyebrow">PARSEABILITY</p><strong>Can a string be interpreted as intended?</strong><small>A scope question for molecular-string preparation.</small></div>
+            </div>
+            <div>
+              <span className="living-prep-logic__index" aria-hidden="true">02</span>
+              <div><p className="living-eyebrow">DISTINCTNESS</p><strong>What do rows and unique strings each describe?</strong><small>The counts refer to different views of the snapshot.</small></div>
+            </div>
+            <div>
+              <span className="living-prep-logic__index" aria-hidden="true">03</span>
+              <div><p className="living-eyebrow">EXPERIMENT SCOPE</p><strong>Which separate input would this test need?</strong><small>Input choice sets the scope of an experiment.</small></div>
+            </div>
           </div>
-          <figcaption id="living-prep-logic-caption">No project rows or counts are mapped between these steps. The figure explains preparation decisions, not a numerical funnel or a measured improvement.</figcaption>
+          <figcaption id="living-prep-logic-caption">Research-scope questions; no project row-level path, parse result, or performance change is shown.</figcaption>
         </figure>
       </section>
 
@@ -141,19 +149,19 @@ export default function LivingInSilicoCase() {
             <span className="living-deepmol-arrow" aria-hidden="true">→</span>
             <div className="living-deepmol-model"><span>SEQUENCE GENERATION</span><strong>RNN MolecularGenerator</strong><small>work across an ordered string</small></div>
             <span className="living-deepmol-arrow" aria-hidden="true">→</span>
-            <div className="living-deepmol-string-output"><span>OUTPUT TYPE</span><strong>Generated SMILES</strong><small>strings need separate chemical inspection</small></div>
+            <div className="living-deepmol-string-output"><span>OUTPUT TYPE</span><strong>Generated SMILES</strong></div>
             <p className="living-deepmol-inspection">Generated strings need separate chemical inspection; a string count alone does not establish molecular validity.</p>
           </div>
           <div className="living-deepmol-evidence">
             <div className="living-deepmol-contribution">
               <p className="living-eyebrow">JOSHUA’S EXPERIMENT WORK</p>
               <p>I prepared and loaded experiment inputs for DeepMol/RNN sequence work. ChemDraw and manual views helped me inspect molecular structures.</p>
-              <div className="living-deepmol-learning"><span>WHAT THIS ROUTE TAUGHT</span><p>Generated strings still need separate chemical inspection; an output count does not establish what those strings represent.</p></div>
+            <div className="living-deepmol-learning"><span>WHAT THIS ROUTE TAUGHT</span><p>A generated string is a representation to inspect, not evidence of a validated molecule.</p></div>
             </div>
             <div className="living-run-note">
               <p className="living-eyebrow">RECORDED RUN SETTINGS · SEPARATE NOTE</p>
               <div aria-label="Reported run settings: 10 epochs and batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
-              <small>Not linked to the owner-reported sample count.</small>
+              <small>Kept separate from the sample count.</small>
             </div>
             <div className="living-sample-output">
               <p className="living-eyebrow">OWNER-REPORTED COUNT</p>
@@ -161,7 +169,7 @@ export default function LivingInSilicoCase() {
               <small>Count only; no validity, uniqueness, or novelty claim.</small>
             </div>
           </div>
-          <figcaption id="living-deepmol-caption">The sequence map is conceptual and shows no project SMILES. Run settings and the owner-reported sample count are separate evidence; the count does not establish that those settings produced the samples or that a string was valid, distinct, or novel.</figcaption>
+          <figcaption id="living-deepmol-caption">The sequence map is conceptual and shows no project SMILES. The recorded run settings are separate from the owner-reported sample count.</figcaption>
         </figure>
       </section>
 
@@ -207,19 +215,13 @@ export default function LivingInSilicoCase() {
               </g>
               <text x="70" y="324">STRUCTURE</text><text x="340" y="324">SELECT FRAGMENTS</text><text x="622" y="324">ASK ABOUT FIT + SPACE</text><text x="884" y="324">EXPLORE A LINK</text>
             </svg>
-            <ol className="living-fragment-stages" aria-label="Conceptual fragment mechanism">
-              <li><span>01 / DECOMPOSITION</span><strong>Decompose structures</strong><small>Identify substructures that could be explored as fragments.</small></li>
-              <li><span>02 / SELECTION</span><strong>Select compatible fragments</strong><small>Consider which pieces might be useful to place together.</small></li>
-              <li><span>03 / SPATIAL FIT</span><strong>Explore spatial fit</strong><small>Reason about placement, compatibility and overlap.</small></li>
-              <li><span>04 / LINKING</span><strong>Investigate linking</strong><small>Explore fragment linking or recombination.</small></li>
-            </ol>
             <figcaption id="living-fragment-caption">Conceptual mechanism, reported separately from workflow success: the shapes are not experimental structures or outputs. This figure explains the questions involved, not a particular successful result.</figcaption>
           </figure>
           <aside className="living-fragment-notes">
-            <div><p className="living-eyebrow">WHY THIS ROUTE</p><p>Fragment work asks whether selected structural pieces can fit in space and be linked, a different question from generating across a SMILES sequence.</p></div>
-            <div><p className="living-eyebrow">JOSHUA’S EXPERIMENTS</p><p>I explored fragment selection, spatial compatibility and linking workflows with RDKit and Fragmenstein.</p></div>
+            <div><p className="living-eyebrow">INPUT + QUESTION</p><p>These workflows began with molecular structures, where a fragment’s placement is part of the design question. A SMILES sequence raises a different representation question.</p></div>
+            <div><p className="living-eyebrow">JOSHUA’S EXPERIMENTS</p><p>I explored fragment decomposition, spatial compatibility and linking workflows with RDKit and Fragmenstein.</p></div>
             <div className="living-fragment-outcome"><p className="living-eyebrow">REPORTED OUTCOME</p><strong>Some fragment-based workflows succeeded.</strong><p>No specific candidate result is identified here.</p></div>
-            <div><p className="living-eyebrow">WHAT THIS ROUTE TAUGHT</p><p>Spatial placement and compatibility made structural questions explicit; they were distinct from the sequence model’s string-generation question.</p></div>
+            <div><p className="living-eyebrow">WHAT THIS ROUTE TAUGHT</p><p>I learned to keep structural fit in spatial context and treat sequence generation as a separate research question.</p></div>
           </aside>
         </div>
       </section>
@@ -228,36 +230,53 @@ export default function LivingInSilicoCase() {
         <div className="living-reinvent-study__intro">
           <p className="living-eyebrow">ANOTHER GENERATIVE APPROACH · RESEARCHED + ATTEMPTED</p>
           <h2 id="living-reinvent-title">REINVENT4</h2>
-          <p>I researched and attempted REINVENT4 as another generative approach.</p>
+          <p>I explored REINVENT4 to compare a specialized generative platform with the DeepMol/RNN sequence route.</p>
         </div>
-        <p className="living-reinvent-outcome">It did not reach a completed generation within the available internship scope.</p>
+        <div>
+          <p className="living-reinvent-outcome">I researched and attempted the route, but did not reach successful generation before the internship ended.</p>
+          <p className="living-reinvent-learning"><span>WHAT THIS ATTEMPT ESTABLISHED</span>Without a completed generation, this investigation could not compare REINVENT4 outputs with the separate sequence route. Its evidence stops at the research and attempt.</p>
+        </div>
       </section>
 
       <section className="living-research-reflection" aria-labelledby="living-reflection-title">
         <div className="living-research-reflection__intro">
           <p className="living-eyebrow">LATE REFLECTION · WHAT THE METHODS ESTABLISHED</p>
           <h2 id="living-reflection-title">Different routes left different kinds of evidence.</h2>
-          <p>The work did not establish one validated molecular-generation workflow. It taught me to keep input preparation, representation, method and result in view together.</p>
+          <p>The internship began in an unfamiliar chemistry domain. Learning what SMILES, fingerprints, and fragments represent helped me ask what each method could show; the work did not establish one validated molecular-generation workflow.</p>
         </div>
-        <div className="living-route-synthesis" aria-label="Research route outcomes">
-          <div><span>DEEPMOL / RNN</span><strong>Reported string count</strong><small>A count does not establish molecular validity.</small></div>
-          <div><span>RDKit / FRAGMENSTEIN</span><strong>Some workflows succeeded</strong><small>No specific candidate result is identified here.</small></div>
-          <div><span>REINVENT4</span><strong>REINVENT4 remained exploratory</strong><small>No completed generation was reached.</small></div>
+        <div className="living-route-synthesis" aria-label="Evidence-type comparison, not a standardized benchmark">
+          <article className="living-route-synthesis__sequence">
+            <span>DEEPMOL / RNN</span>
+            <small className="living-route-synthesis__kind">OWNER-REPORTED OUTPUT COUNT</small>
+            <strong>500</strong>
+            <b>generated SMILES samples</b>
+            <p>Count only; no validity, uniqueness, or novelty claim.</p>
+          </article>
+          <article className="living-route-synthesis__fragments">
+            <span>RDKit / FRAGMENSTEIN</span>
+            <small className="living-route-synthesis__kind">WORKFLOW OUTCOME</small>
+            <strong>Some fragment workflows succeeded</strong>
+            <p>No specific candidate result is identified here.</p>
+          </article>
+          <article className="living-route-synthesis__reinvent">
+            <span>REINVENT4</span>
+            <small className="living-route-synthesis__kind">INTERNSHIP-SCOPE BOUNDARY</small>
+            <strong>No completed generation</strong>
+            <p>Researched and attempted; not completed within the available internship scope.</p>
+          </article>
         </div>
+        <p className="living-route-synthesis__caption">Evidence-type comparison, not scores from a standardized benchmark.</p>
       </section>
 
       <footer className="living-conclusion">
         <div className="living-conclusion__lesson">
           <p className="living-eyebrow">WHAT I CARRIED FORWARD</p>
           <h2>Start with what the data represents. End with what the evidence can support.</h2>
-          <p>Preparing inputs shaped the question; choosing a representation shaped the method; and each route left a different result. I carried forward the habit of keeping a conclusion inside the method and evidence that produced it.</p>
+          <p>Preparing inputs shaped the question; choosing a representation shaped the method; and each route left a different kind of evidence. I carried forward the habit of keeping a conclusion inside the method and evidence that produced it.</p>
         </div>
         <div className="living-conclusion__handoff">
-          <p className="living-eyebrow">RESEARCH HANDOFF</p>
-          <p className="living-conclusion__handoff-note">The documented materials leave a next researcher something to examine and continue:</p>
-          <strong>Research code</strong>
-          <strong>Experiment results and generated outputs</strong>
-          <strong>Written report and documentation</strong>
+          <p className="living-eyebrow">FOR A FUTURE COMPARISON</p>
+          <p className="living-conclusion__handoff-note">I would connect each route’s inputs, settings, and outputs in one inspectable record before comparing methods.</p>
         </div>
       </footer>
     </article>
