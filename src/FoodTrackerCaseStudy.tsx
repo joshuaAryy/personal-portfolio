@@ -63,6 +63,11 @@ const foodLoggingRoutes = [
     eyebrow: "CATALOG + HISTORY",
     title: "Find a catalog food or return to one you have saved.",
     detail: "Search the catalog, or choose a recent or reusable food; confirm its serving before it enters the log.",
+    steps: [
+      { label: "START", text: "Search, recent, or saved food" },
+      { label: "CHOOSE", text: "Select a candidate" },
+      { label: "CONFIRM", text: "Check the serving" },
+    ],
     icon: "search",
   },
   {
@@ -71,6 +76,11 @@ const foodLoggingRoutes = [
     eyebrow: "PACKAGED FOOD",
     title: "Use a barcode to reach a packaged-food candidate.",
     detail: "Open Food Facts supplies a lookup candidate. A person still confirms the match and serving.",
+    steps: [
+      { label: "SCAN", text: "Scan or enter a code" },
+      { label: "LOOKUP", text: "Open Food Facts candidate" },
+      { label: "HUMAN CHECK", text: "Confirm the match + serving" },
+    ],
     icon: "barcode",
   },
   {
@@ -79,6 +89,11 @@ const foodLoggingRoutes = [
     eyebrow: "BOUNDED INTERPRETATION",
     title: "Let AI interpret a request, then review its proposal.",
     detail: "Gemini suggests food and quantity; a person reviews the rows before saving.",
+    steps: [
+      { label: "TEXT OR PHOTO", text: "Text or photo request" },
+      { label: "SUGGEST", text: "Gemini suggests food + quantity" },
+      { label: "HUMAN CHECK", text: "Review or edit proposed rows" },
+    ],
     icon: "intent",
   },
   {
@@ -87,6 +102,11 @@ const foodLoggingRoutes = [
     eyebrow: "COMBINE FOODS",
     title: "Reuse trusted foods inside a recipe or mixed meal.",
     detail: "Recipes build from saved foods; mixed meals can combine trusted and manual entries in the same logging domain.",
+    steps: [
+      { label: "REUSE", text: "Choose saved foods" },
+      { label: "COMBINE", text: "Build a recipe or mixed meal" },
+      { label: "PORTION", text: "Set the amounts" },
+    ],
     icon: "combine",
   },
   {
@@ -95,6 +115,11 @@ const foodLoggingRoutes = [
     eyebrow: "DIRECT ENTRY",
     title: "Enter a manual food when a catalog match is not right.",
     detail: "Keep missing nutrition unknown instead of filling it with zero; serving resolution still follows the chosen basis.",
+    steps: [
+      { label: "ENTER", text: "Add a food + known values" },
+      { label: "PRESERVE", text: "Missing nutrition stays unknown" },
+      { label: "PORTION", text: "Choose the serving basis" },
+    ],
     icon: "manual",
   },
 ] as const;
@@ -143,6 +168,14 @@ function FoodLogTransaction() {
         <div className="food-log-transaction__method-detail" aria-live="polite" aria-atomic="true">
           <span>{selectedRoute.eyebrow}</span>
           <strong>{selectedRoute.title}</strong>
+          <ol className="food-log-transaction__method-steps" aria-label={`${selectedRoute.label} path`}>
+            {selectedRoute.steps.map((step, index) => (
+              <li key={step.label}>
+                <span aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <div><small>{step.label}</small><strong>{step.text}</strong></div>
+              </li>
+            ))}
+          </ol>
           <p>{selectedRoute.detail}</p>
         </div>
       </section>
@@ -201,68 +234,113 @@ function FoodLogTransaction() {
   );
 }
 
+const foodSystemPaths = [
+  {
+    id: "find-food",
+    label: "Find a food",
+    eyebrow: "RETRIEVAL PATH",
+    note: "Pinecone supplies semantic candidates; the API owns the deterministic final ranking.",
+    steps: [
+      { actor: "React Native + Expo", title: "Search, reuse, or scan", detail: "A person starts with a query, barcode, recent food, or saved food." },
+      { actor: "PostgreSQL + lookup sources", title: "Catalog + lookup candidates", detail: "PostgreSQL holds normalized foods from the CNF 2026, Ciqual 2025, and CoFID 2021 imports; Open Food Facts and USDA FoodData Central supply lookup candidates." },
+      { actor: "Express + TypeScript API", title: "Retrieve, then rank", detail: "Deterministic retrieval and fuzzy retrieval join semantic candidates from Pinecone; deterministic final ranking stays in the API." },
+      { actor: "Person", title: "Confirm food + serving", detail: "A candidate is reviewed before it becomes part of a log." },
+    ],
+  },
+  {
+    id: "save-serving",
+    label: "Save a serving",
+    eyebrow: "SAVE PATH",
+    note: "The saved record keeps the selected source and resolved serving basis for its historical meaning.",
+    steps: [
+      { actor: "Mobile app", title: "Choose a food + amount", detail: "The person confirms the food and the serving they want to log." },
+      { actor: "Express + TypeScript API", title: "Validate the shared contract", detail: "Shared TypeScript + Zod contracts and Prisma access keep the server-owned rules in one place." },
+      { actor: "Serving resolver", title: "Resolve the chosen unit", detail: "The backend applies the requested serving against the food's stored basis." },
+      { actor: "PostgreSQL", title: "Persist log + nutrition snapshot", detail: "The saved log retains its source and resolved basis." },
+    ],
+  },
+  {
+    id: "review-ai",
+    label: "Review an AI suggestion",
+    eyebrow: "BOUNDED INTERPRETATION PATH",
+    note: "Gemini suggests food and quantity from text or photo; it does not set trusted nutrition.",
+    steps: [
+      { actor: "Mobile app", title: "Text or photo request", detail: "A person describes a meal or selects a photo." },
+      { actor: "Gemini", title: "Suggest food + quantity", detail: "The model returns proposed rows for review." },
+      { actor: "Person", title: "Review, edit, or remove", detail: "A person decides which proposed rows and servings to keep." },
+      { actor: "API + PostgreSQL", title: "Resolve, then save", detail: "The normal serving and snapshot rules apply after review." },
+    ],
+  },
+  {
+    id: "read-insights",
+    label: "Read Insights",
+    eyebrow: "ANALYSIS PATH",
+    note: "Simple and Complex are views over the same app and data; analysis does not change the underlying food log.",
+    steps: [
+      { actor: "PostgreSQL", title: "Persisted logs + weight + goals", detail: "These saved records provide the analysis inputs." },
+      { actor: "Express + TypeScript API", title: "Deterministic analytics + recommendations", detail: "The server derives patterns and recommendations from saved logs and goals." },
+      { actor: "Mobile app", title: "Simple daily read / Complex exploration", detail: "A person chooses how much detail to see." },
+    ],
+  },
+  {
+    id: "protect-account",
+    label: "Protect account data",
+    eyebrow: "AUTH + RESOURCE SCOPE",
+    note: "The client cannot choose the owner identity for saved records.",
+    steps: [
+      { actor: "Authenticated caller", title: "Verify the caller", detail: "The server checks the request identity before resource access." },
+      { actor: "Express + TypeScript API", title: "Derive server-owned resource scope", detail: "The API determines whose records the request may access." },
+      { actor: "PostgreSQL", title: "Read or write within that scope", detail: "The server applies the derived scope to persisted resources." },
+    ],
+  },
+] as const;
+
+type FoodSystemPathId = (typeof foodSystemPaths)[number]["id"];
+
 function FoodSystemMap() {
+  const [activePath, setActivePath] = useState<FoodSystemPathId>("find-food");
+  const selectedPath = foodSystemPaths.find((path) => path.id === activePath)!;
+
   return (
-    <figure className="food-system-map" aria-labelledby="food-system-map-title">
+    <figure className="food-system-map" aria-labelledby="food-system-map-title" data-active-path={activePath}>
       <header className="food-system-map__heading">
-        <p className="food-figure__index">ONE PRODUCT · THREE CONNECTED LAYERS</p>
+        <p className="food-figure__index">FOLLOW A SYSTEM PATH</p>
         <h3 id="food-system-map-title">The mobile app, shared API rules, and nutrition record work as one system.</h3>
         <p>Simple and Complex share one mobile app, API, catalog, serving rules, and saved history; they change how much a person sees.</p>
       </header>
 
-      <div className="food-system-map__columns">
-        <section className="food-system-map__node food-system-map__node--client" aria-labelledby="food-system-map-client">
-          <p className="food-figure__index">01 / MOBILE CLIENT</p>
-          <h4 id="food-system-map-client">React Native + Expo</h4>
-          <p>Simple for a quick daily read; Complex for deeper exploration.</p>
-          <div className="food-system-map__node-detail">
-            <span>ENTRY + REVIEW</span>
-            <strong>Food requests and serving choices</strong>
-          </div>
-        </section>
-
-        <span className="food-system-map__connector" aria-hidden="true">→</span>
-
-        <section className="food-system-map__node food-system-map__node--api" aria-labelledby="food-system-map-api">
-          <p className="food-figure__index">02 / API + DOMAIN RULES</p>
-          <h4 id="food-system-map-api">Express + TypeScript API</h4>
-          <p>Shared Zod contracts · Prisma access · server-owned decisions.</p>
-          <ul className="food-system-map__rule-list">
-            <li><strong>Find</strong><span>Deterministic retrieval + fuzzy retrieval; Pinecone supplies semantic candidates for deterministic final ranking.</span></li>
-            <li><strong>Resolve</strong><span>Backend serving conversion and nutrition snapshots define the saved basis.</span></li>
-            <li><strong>Analyze</strong><span>Persisted logs, weight, and goals feed deterministic analytics and recommendations.</span></li>
-          </ul>
-        </section>
-
-        <span className="food-system-map__connector" aria-hidden="true">→</span>
-
-        <section className="food-system-map__node food-system-map__node--store" aria-labelledby="food-system-map-store">
-          <p className="food-figure__index">03 / PERSISTED SOURCE OF TRUTH</p>
-          <h4 id="food-system-map-store">PostgreSQL</h4>
-          <p>Normalized food and nutrient records, user logs, weight entries, and serving snapshots.</p>
-          <div className="food-system-map__node-detail">
-            <span>DERIVED SEARCH INDEX</span>
-            <strong>Pinecone supplies candidates; it is not nutrition truth or the final ranker.</strong>
-          </div>
-        </section>
+      <div className="food-system-map__path-selector" role="group" aria-label="Food Tracker system paths">
+        {foodSystemPaths.map((path) => (
+          <button
+            key={path.id}
+            type="button"
+            aria-pressed={activePath === path.id}
+            onClick={() => setActivePath(path.id)}
+          >
+            {path.label}
+          </button>
+        ))}
       </div>
 
-      <div className="food-system-map__boundaries">
-        <section className="food-system-map__boundary food-system-map__boundary--providers">
-          <p className="food-figure__index">FOOD SOURCES</p>
-          <strong>Open Food Facts + USDA FoodData Central</strong>
-          <span>Lookup candidates; CNF 2026, Ciqual 2025, and CoFID 2021 are versioned imports.</span>
-        </section>
-        <section className="food-system-map__boundary food-system-map__boundary--intent">
-          <p className="food-figure__index">BOUNDED AI INTERPRETATION</p>
-          <strong>Gemini interprets food intent and suggests food and quantity from text or photo.</strong>
-          <span>A person reviews suggestions; AI does not set trusted nutrition.</span>
-        </section>
-        <section className="food-system-map__boundary food-system-map__boundary--identity">
-          <p className="food-figure__index">AUTH + RESOURCE SCOPE</p>
-          <strong>Verify the caller, then derive a server-owned resource scope.</strong>
-          <span>The client cannot choose the owner identity for saved records.</span>
-        </section>
+      <div className="food-system-map__selected">
+        <p className="food-figure__index">{selectedPath.eyebrow}</p>
+        <ol
+          className={`food-system-map__trace food-system-map__trace--${selectedPath.steps.length}`}
+          aria-label={`${selectedPath.label} system flow`}
+          aria-live="polite"
+        >
+          {selectedPath.steps.map((step, index) => (
+            <li key={`${selectedPath.id}-${step.actor}`}>
+              <span className="food-system-map__step-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <div>
+                <small>{step.actor}</small>
+                <strong>{step.title}</strong>
+                <p>{step.detail}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
+        <p className="food-system-map__path-note">{selectedPath.note}</p>
       </div>
 
       <figcaption id="food-system-map-caption">

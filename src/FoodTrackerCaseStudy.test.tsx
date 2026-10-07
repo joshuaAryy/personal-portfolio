@@ -130,6 +130,35 @@ describe("Food Tracker product story", () => {
       expect(describeButton.getAttribute("aria-pressed")).toBe("true");
       expect(container.querySelector(".food-log-transaction__method-detail")?.textContent)
         .toContain("Gemini suggests food and quantity; a person reviews the rows before saving.");
+      expect([...container.querySelectorAll(".food-log-transaction__method-steps li")].map((step) => ({
+        number: step.querySelector("span")?.textContent,
+        label: step.querySelector("small")?.textContent,
+        text: step.querySelector("strong")?.textContent,
+      }))).toEqual([
+        { number: "01", label: "TEXT OR PHOTO", text: "Text or photo request" },
+        { number: "02", label: "SUGGEST", text: "Gemini suggests food + quantity" },
+        { number: "03", label: "HUMAN CHECK", text: "Review or edit proposed rows" },
+      ]);
+
+      const barcodeButton = [...(routeGroup?.querySelectorAll("button") ?? [])].find((button) =>
+        button.textContent?.includes("Barcode"),
+      );
+      expect(barcodeButton).not.toBeUndefined();
+      if (!barcodeButton) return;
+
+      await act(async () => {
+        barcodeButton.click();
+      });
+      expect(barcodeButton.getAttribute("aria-pressed")).toBe("true");
+      expect([...container.querySelectorAll(".food-log-transaction__method-steps li")].map((step) => ({
+        number: step.querySelector("span")?.textContent,
+        label: step.querySelector("small")?.textContent,
+        text: step.querySelector("strong")?.textContent,
+      }))).toEqual([
+        { number: "01", label: "SCAN", text: "Scan or enter a code" },
+        { number: "02", label: "LOOKUP", text: "Open Food Facts candidate" },
+        { number: "03", label: "HUMAN CHECK", text: "Confirm the match + serving" },
+      ]);
     } finally {
       await act(async () => root.unmount());
       container.remove();
@@ -198,7 +227,7 @@ describe("Food Tracker product story", () => {
     expect(architectureCopy).not.toContain("live APIs for every national dataset lookup");
   });
 
-  it("maps the full mobile-to-insight system before the focused nutrition data model", () => {
+  it("starts the system map with a visible retrieval path before the focused nutrition data model", () => {
     const markup = renderFoodTracker();
     const architecture = section(markup, "food-architecture", "food-insights");
     const mapStart = architecture.indexOf('class="food-system-map"');
@@ -207,11 +236,11 @@ describe("Food Tracker product story", () => {
 
     expect(mapStart).toBeGreaterThanOrEqual(0);
     expect(dataStart).toBeGreaterThan(mapStart);
+    expect(architecture).toContain('aria-label="Food Tracker system paths"');
+    expect(architecture).toContain('class="food-system-map__trace food-system-map__trace--4"');
     for (const copy of [
       "React Native + Expo",
       "Simple and Complex share one mobile app",
-      "Express + TypeScript API",
-      "Prisma",
       "PostgreSQL",
       "Open Food Facts",
       "USDA FoodData Central",
@@ -222,11 +251,55 @@ describe("Food Tracker product story", () => {
       "Fuzzy retrieval",
       "Pinecone supplies semantic candidates",
       "Deterministic final ranking",
-      "Gemini interprets food intent",
-      "does not set trusted nutrition",
-      "Deterministic analytics and recommendations",
-      "Verify the caller, then derive a server-owned resource scope",
     ]) expect(systemMap.toLowerCase()).toContain(copy.toLowerCase());
+  });
+
+  it("selects a legible architecture path for retrieval, save, AI review, insights, or account scope", async () => {
+    const actGlobal = globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean };
+    const previousActEnvironment = actGlobal.IS_REACT_ACT_ENVIRONMENT;
+    actGlobal.IS_REACT_ACT_ENVIRONMENT = true;
+    const container = document.createElement("div");
+    document.body.append(container);
+    const root = createRoot(container);
+
+    try {
+      await act(async () => {
+        root.render(
+          <MemoryRouter>
+            <FoodTrackerCaseStudy />
+          </MemoryRouter>,
+        );
+      });
+
+      const paths = container.querySelector('[aria-label="Food Tracker system paths"]');
+      expect(paths).not.toBeNull();
+      const choices = [
+        ["Find a food", ["Open Food Facts", "USDA FoodData Central", "Pinecone", "deterministic final ranking"]],
+        ["Save a serving", ["Express + TypeScript API", "serving resolver", "PostgreSQL", "nutrition snapshot"]],
+        ["Review an AI suggestion", ["Text or photo", "Gemini", "Person", "trusted nutrition"]],
+        ["Read Insights", ["persisted logs", "weight", "goals", "deterministic analytics", "Simple", "Complex"]],
+        ["Protect account data", ["Verify the caller", "server-owned resource scope", "PostgreSQL"]],
+      ] as const;
+
+      for (const [label, expected] of choices) {
+        const button = [...(paths?.querySelectorAll("button") ?? [])].find((item) => item.textContent?.includes(label));
+        expect(button).not.toBeUndefined();
+        if (!button) continue;
+
+        await act(async () => {
+          button.click();
+        });
+
+        expect(button.getAttribute("aria-pressed")).toBe("true");
+        const detail = container.querySelector(".food-system-map__selected")?.textContent?.replace(/\s+/g, " ").trim() ?? "";
+        for (const copy of expected) expect(detail.toLowerCase()).toContain(copy.toLowerCase());
+      }
+    } finally {
+      await act(async () => root.unmount());
+      container.remove();
+      if (previousActEnvironment === undefined) delete actGlobal.IS_REACT_ACT_ENVIRONMENT;
+      else actGlobal.IS_REACT_ACT_ENVIRONMENT = previousActEnvironment;
+    }
   });
 
   it("separates logging-day eligibility from nutrient coverage and explains the two presentation depths", () => {
