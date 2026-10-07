@@ -19,7 +19,9 @@ describe("Fraymakers technical case study", () => {
     expect(hero).toContain("Player character &amp; costume art");
     expect(hero).toContain("Supporting assets");
     expect(hero).toContain("Player names &amp; set labels");
-    expect(hero).toContain("My brother created the broader foundation");
+    expect(hero).toContain("My brother built the broader foundation, CLI, Challonge integration");
+    expect(hero).toContain("I joined later to build <code>thumbnail.js</code>");
+    expect(hero.indexOf("<figure")).toBeLessThan(hero.indexOf("class=\"fray-case__intro-detail\""));
     expect(hero).toContain('viewBox="0 0 1280 720"');
     expect(hero).not.toContain("Ordered conceptual pipeline");
     expect(hero).not.toContain("MATCH + TOURNAMENT");
@@ -67,7 +69,7 @@ describe("Fraymakers technical case study", () => {
   it("preserves ownership boundaries and the existing navigation anchors", () => {
     const markup = render();
     expect(markup).toContain("My brother");
-    expect(markup).toContain("created the broader foundation, CLI, Challonge integration");
+    expect(markup).toContain("built the broader foundation, CLI, Challonge integration");
     expect(markup).toContain("I joined later to build <code>thumbnail.js</code>");
     expect(markup).toContain("part of the YouTube API path");
     const links = [...markup.matchAll(/<a href="#(fraymakers-[^"]+)"/g)].map(([, id]) => id);
