@@ -1,27 +1,27 @@
 # Persistent Agent Registry
 
-The live agent tree and active scheduler below override every historical assignment snapshot in this file.
+The live collaboration tree and READY queue below override historical assignment snapshots in this file. Completed tasks do not retire domain lanes.
 
-**Repository reconciliation (2026-10-07):** `feat/portfolio-integration` and origin match at `ec00e7078fdbc61317394fdd6d876642fc4df92a`. This is the latest application source. The immutable Preview remains https://a4da5455.joshuaik2.pages.dev from source `0624352788af39536fe2dbb92aab413df41f5ae0` and predates current route motion, Living, Fraymakers, Education, and Food microvisual changes; it is a review checkpoint, not acceptance. Current source passes 27 test files / 213 tests and build. Production is untouched. Preserve the modified Pass76 capture and all untracked history/source artifacts.
+**Repository reconciliation (2026-10-07):** feat/portfolio-integration is at 3e054b1810fac8e57666ded3e6aa383a798a0175, two application commits ahead of origin e0eb040cd5c981a085a035737c05459625a1bf2c. The immutable Preview remains https://a4da5455.joshuaik2.pages.dev from source 0624352788af39536fe2dbb92aab413df41f5ae0; it is a historical review checkpoint, not acceptance. The integration worktree preserves one modified historical Pass76 capture and 603 untracked items; two global orchestration documents are also being reconciled. Stage only intentional files. Production is untouched. Build passed at this checkpoint; the full suite found one Opening source-vs-rendition assertion sensitive to Windows line endings, and Frontend is fixing the test normalization.
 
-**Current live collaboration tree (2026-10-07):** `/root/frontend_owner__luna_xhigh` is completing C06 Opening on an isolated older-base branch, then preparing a fresh current-base port. Current-port Chrome caught a 5.8px avatar/Help overlap on narrow Projects; Frontend is correcting it before review. The port also carries reviewed shell J/portrait/mobile-origin fixes and an Opening-only transparent J rendition, leaving the approved shared mark unchanged. `/root/product_coverage__luna_xhigh` integrated Food microvisuals at `ec00e70` and is reworking Stush in separate files. `/root/runtime_a11y_qa__luna_high__pass_a` completed route/Help/Activity and Food checks and is auditing current Fray visuals against owner feedback. No Sol is active. Preserve the modified Pass76 capture and all untracked material.
+**Live collaboration snapshot (2026-10-07):**
+- /root/frontend_owner__luna_xhigh completed the contextual Resume Found motion and is addressing the integration-only SVG newline assertion on its current-based branch. Its shell/C06 commits have been cherry-picked to the integration branch.
+- /root/product_coverage__luna_xhigh is reconciling and porting Stush to current source in an isolated worktree. Fray’s accepted Sol Decision Contract is its next READY follow-up; a separate builder could not be started because the agent-thread limit was full.
+- /root/mingo_strategic__sol61_medium__fray_visual completed one bounded Fray information-design decision and returned a Decision Contract. No Sol is active.
+- The previous Runtime QA handle completed the read-only Fray audit; it is not present in the latest live tree. Recreate or reuse a QA lane only when the integrated regression task is ready and capacity allows.
 
 ## Active scheduler snapshot - 2026-10-07
 
 | State | Lane | Work / dependency |
 |---|---|---|
-| PUSHED / VERIFIED | Route motion + Living | 97aceaeb is pushed. Living renders at 1440x900 and 390x844 without overflow/runtime errors or retired opening copy. SPA entry motion runs; reduced-motion resolves in 140ms. |
-| PUSHED / REVIEW | Fraymakers | 1a379b7 ports the ordered match-to-VOD story while preserving the stronger headline/compositor. Current-based desktop/narrow Chrome QA passed; story critic PASS. Authentic thumbnail/YAML files remain unavailable, so visuals are explicitly conceptual. |
-| PUSHED / REVIEW | Education | 9941d62 clarifies Dental, CMOS, and ALU capability briefs with evidence boundaries; focused 20-test set, Chrome desktop/narrow, full-suite/build/diff-check passed. Dental and CMOS remain evidence-pending. |
-| IN PROGRESS | Frontend Owner | C06 motion passes timing and desktop/narrow checks on its isolated branch; the first render exposed an opaque square, now corrected through an Opening-only transparent rendition. A fresh current-base port of Opening and shell fixes is underway. |
-| PUSHED / REVIEW | Food Tracker | `ec00e70` adds native conceptual diagrams for Barcode, Recipes/Mixed, and Manual. 27 files / 213 tests, build, keyboard selection, desktop/narrow Chrome, and diff-check pass. Captions separate conceptual paths from the Phase 24 entry-options capture. |
-| IN PROGRESS | Product Coverage | Stush first-fold and metadata rework; preserve the current early transformation and ending, remove collaborator/distributor names from public treatment, and add focus replay to the motion. Food and Stush files remain isolated. |
-| IN PROGRESS | Runtime QA | Read-only Chrome audit of current Fray presentation against latest owner feedback, including first fold, pipeline, config, composition, and outcome. Food/route/Help/Activity checks are complete; contextual Resume Found entry animation remains a READY frontend correction. |
+| IN PROGRESS | Frontend Owner | Test normalization for the Opening rendition across Windows LF/CRLF checkouts. Contextual Resume Found entry motion is committed on the agent branch and awaits integration/reverification. |
+| IN PROGRESS | Product Coverage | Reconcile preserved Stush work, then port/finish it on current source; Stush-specific files only. |
+| COMPLETE / CONTRACT READY | Sol strategic core | Fray: output-first opening, one transformation spread, brief outcome close. Product Coverage implements after Stush using the Decision Contract. |
+| REVIEW / QA (READY) | Runtime QA | Once the frontend test fix is integrated, run Chrome desktop/narrow regression on Opening, shell identities, Resume Found, and unaffected routes. |
+| READY | Product Coverage | Fray visual re-authoring after Stush; Food architecture/Insights and visual hierarchy; Living in Silico visual order/density. Scope one case study at a time. |
+| READY / RECONCILE | Media audit | Cho'Veigo demo source search remains open unless current evidence proves a safe authentic video already exists. Never fabricate or expose unsafe footage. |
 
-At each completion, inspect READY work and refill a free lane with the highest-value independent task. Keep the graph purposeful and non-redundant; this does not mean low parallel activity. Root owns routing, integration, browser orchestration, Git, and global state; domain owners receive substantial independent implementation. Reuse healthy handles and continue their domains while actionable tasks remain.
-
-**Strategic decision state:** No unresolved strategic question currently blocks execution. Owner direction settles the active Opening motion grammar and Stush story order; Frontend and Product are implementing them. If current Fray review exposes genuinely competing information-design directions, route a neutral packet to Sol. Feature-branch J remains C06; production fallback remains archive `159:2`.
-
+The live source and current task states take precedence over older rows below. When capacity frees, inspect dependencies and route the highest-value independent READY task; do not let task completion retire a domain owner. Keep scopes non-overlapping. Current owner locks remain Journey and Crest; feature-branch J uses C06 while production J approval remains separate.
 **Historical execution state (2026-10-06; superseded):** the owner-review Preview was `https://2724fdbc.joshuaik2.pages.dev/`, built from application source `ffc7580b8b57f90c7918af213e6b2ed68248942a` on `feat/portfolio-integration`. See [the historical Preview report](site-render-review/2026-10-06-consolidated-correction-preview/REPORT.md).
 
 > **Current owner direction:** the latest review controls. Preserve positive qualities without freezing whole pages; all six stories remain owner-review open. Journey and Crest are locked against redesign. Feature-branch J uses C06; production remains archive `159:2` pending owner selection.

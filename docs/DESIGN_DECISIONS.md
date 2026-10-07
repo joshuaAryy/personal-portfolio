@@ -118,6 +118,18 @@ The prior composition/mark freeze for Profile is superseded by the 2026-10-06 ow
 
 **Evidence:** Current Preview neutral captures and measurements are under %TEMP%/fraymakers-preview-neutral-3517e46b-20261007/; source truth is in CASE_STUDY_CONTENT_SOURCE.md lines 65–71. The Sol contract is based on the 2026-10-07 owner direction and the current Fraymakers render, source 7c0ef8a.
 
+## Strategic Sol decision - Fraymakers visual cadence (2026-10-07; supersedes the earlier Fray macro entry where they differ)
+
+**DECISION:** Use an output-first opening, one integrated transformation spread, a small engineering-detail beat, and a brief outcome close. Two substantial figures carry the story: a dominant composition schematic in the opening and one transformation view connecting match context/overrides to a recording and renderer inputs. Do not repeat a full pipeline or use a second conceptual VOD-result figure.
+
+**PRESERVE:** League-client identity; accurate brother/Joshua ownership; `thumbnail.js`, YAML/configuration, thumbnail generation/integration, some YouTube API work; node-canvas; 1280×720 PNG output; generated thumbnails used on real VODs; unfinished automatic upload. No authentic thumbnail, YAML, or matching VOD capture is currently available.
+
+**CHANGE / PRIORITIES:** Put Joshua's renderer and purpose in the opening. Label the 16:9 composition “Thumbnail composition schematic” and say it is illustrative, not recovered project art or an authentic output. Teach metadata and event/match overrides → recording association → selected labels/art passed to composition without invented YAML, precedence, aliases, fallback behavior, or outcomes. Show P2 mirroring with a small asymmetric comparison; keep aliases, long names, and missing assets as concise constraints. Close with real VOD use once and the YouTube prototype/unfinished automatic-upload boundary.
+
+**ACCEPTANCE:** A recruiter can explain Joshua's contribution and output from the opening; each figure teaches a distinct relationship; the full workflow is explained once; narrow labels remain readable; no graphic looks like recovered thumbnail/YAML/VOD evidence. Responsive visual QA can validate readability and factual qualification, but not output fidelity while authentic artifacts are unavailable.
+
+**EVIDENCE:** Current-source Chrome audit and captures are in `%TEMP%/fraymakers-ec00-owner-audit-20261007/`; current source was `e0eb040`. Source files are `src/FraymakersCase.tsx` and `src/fraymakers-case-study.css`; factual guardrails are in `CASE_STUDY_CONTENT_SOURCE.md`.
+
 ## Strategic Sol decision - Living in Silico information design (2026-10-07)
 
 **DECISION:** Keep the broad research progression, but change editorial hierarchy and visual roles: research opening → prepared experimental inputs → representation bridge → DeepMol sequence investigation → fragment/spatial investigation → REINVENT4 exploratory boundary → late learning reflection and research handoff. Keep the three investigations distinct but do not give them equal-sized route cards; each should use a visual form suited to its method.
