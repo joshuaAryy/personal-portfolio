@@ -1,16 +1,26 @@
 # Design Decisions
 
-## Shared route-entry motion — Sol strategic decision (2026-10-07)
+## Shared route-entry motion - Sol strategic decision (2026-10-07)
 
-**DECISION:** Accept the current shared route-entry grammar for continued portfolio work; the reviewed evidence establishes no material macro correction. This is directional acceptance, not owner approval.
+**DECISION: MODIFY.** Keep the shared scene-entry vocabulary, but current case-study motion is too unified to satisfy the owner's scene-entering/assembling direction. This supersedes the earlier no-macro-change Sol assessment.
 
-**PRESERVE:** Environment resolving, heading/banner entry, grouped identity/medallion arrival, supporting detail stagger, and case-study hero settling. Keep the current page compositions, narrow hierarchy, and reduced-motion path. Opening remains a separate decision.
+**PRESERVE:** Settled page layouts and content, stable shell/navigation/focus/scrolling, responsive stacking, restrained easing without bounce, and the lobby's environment -> banner -> medallion -> details relationship with limited card stagger. Keep C06 Opening as a separate choreography.
 
-**CHANGE:** None now. Keep the lobby’s denser staging subordinate to one coherent scene; do not expand independent animation targets.
+**CHANGE:** Use one route-entry clock with semantic groups rather than a whole-page fade that flattens their differences.
 
-**ACCEPTANCE:** Normal navigation should read as one scene assembling, with a main anchor before supporting detail, no prolonged blank state, and no competing movement. Narrow layouts preserve hierarchy. Reduced motion resolves promptly without animated displacement or stagger.
+- Shared environment begins immediately and resolves over about 450-600ms; keep the shell stable.
+- Lobby banner/frame starts at 60-120ms, identity/medallion at 160-220ms, and names/details at 240-300ms. Card intervals are about 40-60ms, with total stagger capped at 180ms. Settle within 850-1000ms.
+- Case-study frame/navigation establishes first; identity arrives at 80-140ms, headline at 180-240ms, summary/ownership at 260-320ms, and hero evidence at 340-400ms. Keep a product panel's internal content together. Settle within 900-1050ms.
+- Use small directional travel only (12-20px desktop, 6-10px narrow), with no overshoot. Preserve reading order on narrow screens; do not stagger hidden article sections or long card columns.
+- Reduced motion resolves readable content immediately with no blur, positional travel, or stagger; any opacity transition completes within 100ms.
 
-**REMAINING EVIDENCE:** Current source `006d0d3` has desktop/narrow sampled and settled Chrome stills plus computed timings in `%LOCALAPPDATA%/Temp/portfolio-runtime-qa-006d0d3-evidence/route-motion.json`. Still captures cannot prove perceived rhythm. Before owner motion acceptance, record continuous, timestamped Home → Projects → Profile → Fraymakers transitions, including revisiting a route, at desktop and narrow widths.
+**PRIORITIES:** Projects -> Food Tracker and other case heroes; then Home -> Projects and remaining lobbies; then Profile/Journey, Resume, and other major surfaces using the nearest semantic variant.
+
+**DECOMPOSITION:** Frontend owns the shared clock, semantic groups, lobby/case variants, route-entry replay, and reduced-motion override. Runtime QA captures continuous click-to-settle desktop/narrow recordings and checkpoints for both variants, another lobby, and Profile/Journey or Resume.
+
+**ACCEPTANCE:** Normal navigation visibly distinguishes environment/frame, identity, and content resolution without blank waiting, layout shift, overflow, or queued motion after rapid navigation. Case headline and evidence panel arrive at different moments; lobby banner settles before details. Both settle around one second. Narrow preserves the same hierarchy without excessive movement or delay. Reduced motion is immediately readable with no stagger/transform and no opacity delay beyond 100ms.
+
+**EVIDENCE:** Chrome 153 / Playwright 1.63 audit at 1440x900 and 390x844 on application source `1e74d2e`. Continuous clips, timestamps, screenshots, and `report.json` are in `%LOCALAPPDATA%/Temp/route-entry-visuals-1e74d2e-20261007/`. Home -> Projects showed staged assembly; Projects -> Food showed a unified fade/sharpen with 16px desktop / 9px narrow hero rise. This is source-specific QA, not owner acceptance.
 
 > **Controlling direction (owner review 2026-10-05):** [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) supersedes earlier partial prompts and conflicting decisions. All six case studies are OPEN for substantial narrative/visual re-authoring; previous accepted-breadth and no-comprehension-gap conclusions are invalidated. Preserve owner-positive qualities while reopening weak structures. The brief also controls Opening, environments, Home, lobbies, Resume Found, Profile, Journey header, Highlights, Demos playback, and shared Food Tracker identity fitting. J remains separate; archive stays production fallback.
 

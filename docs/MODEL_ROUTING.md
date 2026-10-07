@@ -54,15 +54,23 @@ No agent may constrain a stronger downstream agent on the judgment dimension tha
 
 ## Active scheduling and delegation
 
-Root Mingo is the project control plane, not the default implementation lane. Root may handle small glue work, coordination, integration, and global state. Substantial independently executable work should go to the relevant persistent domain owner or a bounded child so root can keep routing, reviewing, integrating, and maintaining continuity.
+Root Mingo is the persistent L2 control plane, not the default implementation path. Root owns the goal, dependency map, routing, worker lifecycle, cross-domain integration, Git/checkpoints, browser orchestration, and global state. Root may do small glue, coordination, or tightly coupled integration directly; substantial independently executable work belongs with the relevant domain owner or a bounded child.
 
-**Parallel scheduling is the default for independent READY work.** When two or more tasks have separate files/context and no unresolved dependency, route them concurrently. Keep QA validating an integrated batch while unrelated product or frontend work continues. Do not parallelize competing edits to the same files or work whose direction depends on an unresolved decision.
+Parallel execution is the default when work is independent. If two or more READY tasks can proceed without editing shared files, competing for fragile mutable state, or depending on an unresolved decision, route them concurrently. Keep unrelated implementation moving while QA reviews an integrated batch.
 
-Maintain a practical queue with READY, IN PROGRESS, BLOCKED, NEEDS STRATEGIC DECISION, NEEDS OWNER INPUT, REVIEW/QA, and COMPLETE states. When a task finishes or a worker becomes available, inspect the live tree and queue, accept/review the completed artifact, and refill that capacity with the highest-value non-conflicting READY task; do not wait for every lane to finish before refilling. A completed Frontend, Product, or QA task does not retire its domain; if another task in that domain is actionable, that is a concrete follow-up. Prefer reusing a healthy context-rich handle, including a completed handle through follow-up, when its domain still fits; create a new worker only for distinct context, isolation, or genuine concurrency.
+Use this active scheduler loop:
+1. Track tasks as READY, IN PROGRESS, BLOCKED, NEEDS STRATEGIC DECISION, NEEDS OWNER INPUT, REVIEW/QA, or COMPLETE.
+2. When a worker finishes or capacity becomes free, inspect the queue and live tree.
+3. Review its artifact, exclude blocked/dependent/conflicting tasks, and route the highest-value independent READY task.
+4. Reuse a healthy context-rich domain handle through follow-up when the domain still fits. A completed task does not retire an active domain; actionable work in that domain is a concrete next task.
+5. Keep ownership boundaries explicit so parallel work does not create competing edits.
 
-**“Keep the graph small” means purposeful and non-redundant, not low agent activity.** Avoid overlapping agents and vague assignments; do not reduce active parallelism merely to keep the visible tree short. Root must not absorb substantial implementation just because it can do it or because a worker finished. Domain owners receive independent implementation; root owns cross-domain routing, lifecycle, dependency tracking, integration, checkpoints, and durable global state. Root directly implements small glue, cross-cutting integration, or coordination where delegation adds friction without useful parallel value.
+Keep the graph purposeful, not inactive. "Keep the graph small" means avoid redundant or overlapping scopes; it does not mean avoid parallel work or minimize active agents. Several useful non-conflicting lanes are better than routing all implementation through root.
 
-Sol remains episodic but should be invoked at genuine high-leverage decision boundaries, not only emergencies. Routine implementation and operations remain with Luna pods.
+Root direct execution is the exception for implementation. Root handles small glue, cross-cutting coordination, and integration whose work is tightly coupled. Root should not absorb a substantial implementation merely because it can, because the task touches several files, or because dispatching takes a little coordination. Independent READY work should preferentially be routed to its persistent domain owner or executor.
+
+Sol is episodic, not emergency-only. Invoke the strategic core at a genuine high-leverage decision boundary: consequential ambiguity, major direction or decomposition, competing designs, cross-domain tradeoffs, priority choices, or acceptance criteria that would materially affect quality. Send a neutral decision packet with direct evidence; do not pre-solve Sol's judgment. Sol does not do polling, Git, routine implementation, browser mechanics, or repetitive QA. Independent Sol work may coexist when justified; do not invent questions to keep Sol active.
+
 
 ## Sol decision packet
 

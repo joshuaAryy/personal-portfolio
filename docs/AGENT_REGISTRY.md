@@ -1,45 +1,36 @@
 # Persistent Agent Registry
 
-The live collaboration tree and READY queue below override historical assignment snapshots. Completed tasks do not retire domain lanes. `Keep the graph small` means purposeful, non-overlapping scopes; it does not mean avoiding parallel work. When an agent finishes, refill available capacity from the highest-value independent READY task. Reuse a healthy context-rich domain handle through follow-up when available. Root Mingo owns routing, lifecycle, integration, Git, browser orchestration, and global state; root implementation is for small glue and coordination, not the default path.
+The live collaboration tree and READY queue below override historical assignment snapshots. Tasks finish; domains remain active while actionable work remains. "Keep the graph small" means purposeful, non-overlapping scopes, not low active parallelism. Root Mingo owns control, lifecycle, sequencing, integration, Git/checkpoints, browser orchestration, and global state. Independent READY work should be routed to reusable domain owners instead of serialized through root.
 
-**Repository reconciliation (2026-10-07):** the latest application source checkpoint is `24bff024eefd8c5296705620c555cf12058bb775`; local and origin parity was verified after pushing it. It includes the selective Living in Silico and Food Tracker visual updates, layered on the earlier verified `a328b86` source. The immutable Preview `https://8697bfef.joshuaik2.pages.dev/` remains source `b6995c1` and is not current. The working index is clean. Preserve the in-progress Opening edits, the modified historical Pass76 capture, and all untracked local artifacts; do not clean or bulk-stage them. Production is untouched.
+Repository reconciliation (2026-10-07): local and origin feat/portfolio-integration are both at 1e74d2e2669fccb03b45a799d9c478735381ec32. Latest committed application source is 24bff024eefd8c5296705620c555cf12058bb775; the commit above it is documentation-only. The shared integration worktree has uncommitted Opening source/tests/assets and coordination-document edits, plus the preserved modified Pass76 capture and the large existing untracked review/source collection. Do not reset, clean, overwrite, or bulk-stage them. No new Preview has been deployed; the current immutable Preview is older. Production is untouched.
 
-**Live collaboration snapshot (2026-10-07):**
-- Frontend Owner is implementing C06 Opening choreography in the integration worktree. Current uncommitted scope is `src/Opening.tsx`, `src/opening.css`, and `src/Opening.test.tsx`; the test-first red failure was confirmed before implementation. Sol's bounded contract calls for visible piece assembly, contact seam ignition, one brief gold sweep, peripheral motion settling before the J, and a roughly 3.5-second handoff. Frontend owns this batch; Chrome validation is queued with Runtime QA.
-- Food visual hierarchy was selectively integrated at `24bff02`; the focused suite passes 13/13 and current integration Chrome passes at 1440?1000 and 390?844. The native Insights model leads; the empty Phase 24 capture is a compact supporting inset with explicit pre-redesign provenance. Product Coverage completed a read-only Fray review on `a328b86` and is implementing its bounded visual-progression contract in an isolated branch. The original Food candidate commits remain isolated as research history; do not merge that branch wholesale.
-- Living in Silico candidate `81a2e754a1cbc0f4b06b8e2554260e4a8f55da61` was selectively integrated at `4d8de59` after Product/critic acceptance, 12/12 focused tests, and current integration Chrome checks at 1440x900 and 390x844. No overflow or asset/request errors were found. This is not owner acceptance or a Figma-parity claim. Its ChemDraw/manual-inspection context remains owner-reported from the V2 dossier.
-- Runtime QA found the active forest asset is 1055x1329 and upscaled/cropped substantially, especially on narrow long lobbies; no higher-resolution authentic local copy was found. It is now checking Stush transformation replay and has completed a current integration Living render; Opening validation follows when implementation is ready.
-- Current-source Chrome work has already verified Help/Education, route recordings, Home modes/utilities, lobby fades/marks/portrait, and Profile viewport continuity at desktop/narrow. Journey and Crest remain locked against redesign; Help is complete unless a concrete current-source gap appears. Route-motion recordings at `a328b86` are ready for owner review, not owner acceptance.
-- Education capability briefs are integrated at `b6eda36`; Dental, Bookstore, and CMOS remain evidence-pending, with ALU/FSM claims bounded to verified source. Home/lobby, Profile, and shared-identity fixes were verified on `a328b86` and should not be reimplemented without a current rendered discrepancy.
-- The latest bounded Sol decision was for Opening choreography; that Sol agent has exited. No Sol agent is currently active. Strategic escalation remains appropriate for a newly surfaced consequential information-architecture or visual-direction decision; it is not required for routine execution.
+Live collaboration snapshot (2026-10-07):
+- Frontend Owner completed the C06 Opening unit in the integration worktree. The reduced-motion path keeps the settled mark visible through handoff. Reported verification: focused 11/11, full suite 27 files / 219 tests, build, diff-check, desktop/narrow Chrome, normal playback around 3.53s, reduced-motion handoff around 150ms, Skip, no overflow/errors. Frontend has started the accepted route-entry motion implementation and will leave Opening files unchanged.
+- Product Coverage completed the isolated Fray correction at cf29e91ceca2c4f89949f6fd7fc94b1db48d82c0 on feat/fray-visual-progression; YAML/config is its own connected stage. Runtime QA is independently validating the exact candidate SHA. Product has reused its context and started an isolated Stush opening/story-order candidate.
+- Runtime QA is active on two non-conflicting batches: current uncommitted Opening in the integration worktree and Fray candidate cf29e91 in its isolated worktree. It will continue with route-motion captures when Frontend has an integrated checkpoint.
+- Sol's route-entry strategic decision was delivered and recorded as a contract; that specialist has exited. No Sol agent is currently active. Invoke Sol again only if new consequential ambiguity emerges; the accepted contract already directs current route-motion implementation.
 
 ## Active scheduler snapshot - 2026-10-07
 
 | State | Lane | Work / dependency |
 |---|---|---|
-| REVIEW CHECKPOINT READY | Immutable feature Preview | `b6995c1`; route/asset smoke checkpoint only, older than current app source. The broader goal remains active. |
-| IN PROGRESS | Frontend Owner | C06 Opening choreography in the shared integration worktree; current Opening files are uncommitted and must not be overwritten. |
-| IN PROGRESS | Product Coverage | Implement Fray visual progression in an isolated branch, with current-source desktop/narrow review; owner-directed story remains open. |
-| IN PROGRESS | Runtime QA | Stush transformation replay check; forest image-quality report is complete, Living integration render passed, Opening validation follows. |
-| COMPLETE / INTEGRATED | Food Tracker | `24bff02`; focused tests 13/13 and desktop/narrow Chrome route/Insights review passed. |
-| COMPLETE / INTEGRATED | Living in Silico | Selective candidate integration `4d8de59`; focused tests 12/12 and desktop/narrow Chrome route check passed. |
-| OWNER REVIEW READY | Route motion | Current-source desktop/narrow recordings exist at `a328b86`; grammar has a Sol decision contract, owner perception remains open. |
+| IN PROGRESS | Frontend Owner | Implement semantic route-entry motion under the recorded Sol contract; Opening remains untouched. |
+| IN PROGRESS | Product Coverage | Re-author Stush opening and story order in an isolated candidate; protect factual/privacy boundaries. |
+| IN PROGRESS | Runtime QA | Independently validate Opening behavior and Fray candidate cf29e91 at desktop/narrow. |
+| REVIEW / QA | Fray candidate | Exact candidate SHA cf29e91; integrate selectively after independent QA and source review. |
+| COMPLETE / INTEGRATED | Food Tracker | 24bff02; current local integration desktop/narrow QA passed; Food demo video remains unavailable. |
+| COMPLETE / INTEGRATED | Living in Silico | 4d8de59; focused tests and current local integration desktop/narrow route checks passed. |
+| READY | Environment fit | After route-motion batch, limit the authentic forest environment to an intentional scene/hero region and compare real crop at desktop/narrow. |
+| READY | Media search | Find an authentic privacy-safe Cho'Veigo demo exhaustively; report an exact blocker if none exists. Do not fabricate media. |
+| READY | Education and Help | Recheck capability-brief presentation and only concrete current-source Help gaps after higher-priority active batches. |
 | READY / LOW | Personal Highlights scenic image | Compare only if a clearly stronger authentic source exists; editorial structure stays locked. |
-| OPEN | Other owner items | Opening, global route motion, environment image quality, Food visual hierarchy/Insights, Fray presentation, Stush opening/order/replay, Education brief refinement, and Help deltas remain actionable only where current rendered evidence shows a gap. Journey and Crest stay locked against redesign. |
 
-The three available domain lanes remain active on independent work: Frontend owns Opening then the measured forest fit correction, Product owns Fray visual progression, and Runtime QA completed Stush and Food checks and is queued for Opening. Root integrated Living and Food and owns coordination, durable global state, and refilling any lane as it completes. Preserve the large untracked review/evidence collection; stage only intentional outputs.
+The current feature Preview remains https://8697bfef.joshuaik2.pages.dev/, source b6995c1, and is not current. A Preview is a review checkpoint, never completion of the persistent goal. Preserve all unrelated dirty/untracked artifacts; stage only intentional files. Journey and Crest remain locked against redesign. Feature-branch J uses C06; archive 159:2 remains the production fallback until owner approval.
 
-**Historical execution state (2026-10-06; superseded):** the owner-review Preview was `https://2724fdbc.joshuaik2.pages.dev/`, built from application source `ffc7580b8b57f90c7918af213e6b2ed68248942a` on `feat/portfolio-integration`. See [the historical Preview report](site-render-review/2026-10-06-consolidated-correction-preview/REPORT.md).
+Historical execution state (2026-10-06; superseded): the owner-review Preview was https://2724fdbc.joshuaik2.pages.dev/, built from application source ffc7580b8b57f90c7918af213e6b2ed68248942a on feat/portfolio-integration. See the historical Preview report at site-render-review/2026-10-06-consolidated-correction-preview/REPORT.md.
 
-> **Current owner direction:** the latest review controls. Preserve positive qualities without freezing whole pages; all six stories remain owner-review open. Journey and Crest are locked against redesign. Feature-branch J uses C06; production remains archive `159:2` pending owner selection.
+Current owner direction: the latest review controls. Preserve positive qualities without freezing whole pages; all six stories remain owner-review open. Journey and Crest are locked against redesign. Feature-branch J uses C06; production remains archive 159:2 pending owner selection.
 
-Historical lane records below preserve prior context; the live tree and scheduler snapshot above govern current availability. Project director: **Mingo** (`/root`), L2 Luna XHigh target. Active Figma file: `9zvk9iSRPKSsJ6llDJrQmA`. Working branch: `feat/portfolio-integration`.
-
-The live collaboration tree is the authority for handle availability. Completed specialist handles can be reactivated with `followup_task`; a listed handle is not necessarily currently working. Keep the graph purposeful and non-redundant; do not reduce useful active parallelism merely to keep the tree small. Preserve domain context across iterations.
-
-For cross-chat continuity, start with [SESSION_HANDOFF_2026-10-02.md](SESSION_HANDOFF_2026-10-02.md), then verify its branch, staging, Figma, browser, and agent state against current tools. The handoff is an index to durable truth, not a substitute for live reconciliation.
-
-Historical live-tree snapshot, 2026-10-03 (superseded by the architecture checkpoint above): the three reusable Luna handles are present but errored at the usage limit; no Sol agent is active. Existing J history remains as recorded below.
 
 ## Model routing and abstraction — see canonical policy
 

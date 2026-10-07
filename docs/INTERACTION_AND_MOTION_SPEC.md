@@ -4,15 +4,22 @@
 
 This is the active behavior contract. Use the file key and inspection date in [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md) to reach the live file. A named Figma frame records current appearance only to the extent noted in the status ledger; unresolved owner decisions below remain controlling. Owner-approved behavior overrides older authored reactions.
 
+## Shared route and screen entry
+
+The owner direction and current Sol contract are recorded in [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md#shared-route-entry-motion---sol-strategic-decision-2026-10-07). Route changes should read as the next League-client scene entering and assembling, not a generic page fade. Keep the shell stable and use one route-entry clock with semantic groups.
+
+For lobbies, environment resolves first, followed by banner/frame (60-120ms), identity/medallion (160-220ms), and names/details (240-300ms); cap total card stagger at 180ms and settle within 850-1000ms. For case studies, establish local navigation/frame first, then identity (80-140ms), headline (180-240ms), summary/ownership (260-320ms), and hero evidence (340-400ms); keep internal product-panel content together and settle within 900-1050ms. Use 12-20px desktop and 6-10px narrow travel without overshoot. Do not stagger hidden article content or the full long-form page.
+
+Reduced motion shows the readable composition without blur, travel, or stagger; any opacity transition finishes within 100ms. Opening/C06 remains separate. Validate actual click-to-settle motion at desktop and narrow sizes, including rapid navigation and route re-entry; still screenshots alone do not prove choreography.
+
 ## Opening and identity convergence
 
-- The 2026-10-06 owner direction supersedes the earlier two-second timing and archive-only review composition. The feature review uses an approximately 3.5-second sequence: the editable v8 J (`3325:191`) forms in authored stages as radial structures expand and sparse peripheral marks rotate/draw around the center, then settles with thin rings/loading treatment before Home. Keep the motion elegant; do not restore the rejected Hextech machine or copy the reference video's full runtime. This feature-review use does not promote v8 as the production identity; archive `159:2` remains the production fallback and Candidate 05 stays unintegrated.
-- Keep Skip visible. Reduced motion hands off near-instantly; if the system preference changes during Opening, update motion and handoff timing immediately. On Preview `977b240e`, installed Chrome measured the normal transition from navigation to `/home` at about 4.0s; Skip and reduced-motion handoff also reached `/home`. See [the current Preview report](site-render-review/2026-10-06-correction-preview/REPORT.md).
-- Current Figma references are active frame `2025:2`, motion notes `2025:84/88/125`, rings/loader `3580:2` and `3581:2`, and ticks `3617:14/21/28/35`. Older segmented nodes `2443:38/71/92/110` and phase wrappers `2443:132/137` are historical/superseded for the current Opening. The feature Opening uses editable v8 assets, while archive `159:2` remains the production fallback; J candidates remain separate from identity acceptance.
-- The 2026-10-05 local Opening report is historical for the earlier ~2s/archive composition. Current deployed route and motion smoke evidence is in [the 2026-10-06 Preview report](site-render-review/2026-10-06-correction-preview/REPORT.md); it does not replace owner visual review or a live screen-reader test.
-- Production uses archive mark `159:2` as the large identity fallback. Live Figma shows this 220px JPEG visibly soft at 456px and 460px; its 700px export is an upscale and the large-mark clarity gap is unresolved. Sonnet v8 `3325:191` is the strongest existing editable baseline; Sol 6.1 study `3482:3` / board `3482:2` is a directional owner-review candidate but still reads as a J in a badge. Keep archive in production until owner review; no candidate is accepted. The old Codex Pass16-80/`3364:2` lineage is rejected/closed as a branch only.
-- Treat the primary and small mark as optical sizes. Keep ring-free glyphs at 54/32/16px instead of forcing the full complex identity into every slot; render-check clarity at each size.
-- Avoid continuous extra spins, excessive flashes, or effects that compete with the J.
+- The 2026-10-07 owner direction supersedes the earlier v8 feature-opening treatment. The feature branch now targets Candidate 06 / keyed-forge: hero system 3679:2, optical family 3679:247 / 3679:311 / 3679:354, motion studies 3681:2 onward, and owner-review board 3682:2. Use authored forged-piece assembly, seam ignition, brief energy/material highlight, and a separate fast external radial tick field over an approximately 3.5-second sequence.
+- The opening has no LOADING label, progress bar, or fake loading semantics. Preserve Skip, a quick and readable reduced-motion handoff, and the identity-first purpose. The C06 radial interface belongs to the opening environment, not permanently around every static mark.
+- Use appropriate ring-free C06 optical glyphs for 54px, 32px, and 16px placements; do not scale the complex hero mark indiscriminately. Feature review use does not approve C06 for production. Archive 159:2 remains the production fallback until explicit owner selection.
+- Older v8/archive opening references, nodes 2025:2 / 2025:84 / 2025:88 / 2025:125 / 3580:2 / 3581:2 / 3617:14 / 3617:21 / 3617:28 / 3617:35 and segmented nodes 2443:38 / 2443:71 / 2443:92 / 2443:110 / 2443:132 / 2443:137, are historical where they conflict with current C06 direction.
+- Keep the identity layers swappable so future approved J artwork can replace C06 without rewriting the motion system. Validate normal playback, Skip, reduced motion, responsive layout, and final handoff in Chrome.
+
 
 ## Profile
 
