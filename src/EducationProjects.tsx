@@ -8,7 +8,7 @@ const ownerReportedProjects = [
     title: "Dental Clinic DBMS",
     status: ["CURRENT · IN PROGRESS", "EVIDENCE PENDING"],
     summary:
-      "The current course project is moving toward an Oracle relational database for connected clinic work. The broader system is still developing; the implemented schema slice is not yet verified against project files.",
+      "Owner-reported CPS510 work focuses on relational modeling, SQL queries, and integrity rules for a developing Oracle clinic database. Broader scope and implemented schema remain unverified in local project files.",
   },
   {
     kind: "OBJECT-ORIENTED SOFTWARE",
@@ -22,7 +22,7 @@ const ownerReportedProjects = [
     title: "Four-stage CMOS amplifier",
     status: ["EVIDENCE PENDING"],
     summary:
-      "Owner-reported four-stage MOSFET/CMOS amplifier design study focused on distributing gain, setting bias, and buffering a load. Exact topology and simulation values await artifact review.",
+      "Owner-reported four-stage MOSFET/CMOS amplifier study in KiCad/SPICE, balancing gain distribution, bias/current, load buffering, and headroom. Exact topology and simulation values await artifact review.",
   },
 ];
 
@@ -86,7 +86,7 @@ function AluSystemMap() {
           <div className="education-projects__flow-stage">
             <span>SEQUENCE</span>
             <strong>9-state Moore FSM</strong>
-            <small>advances on data high; otherwise holds</small>
+            <small>rising edge · data high advances; low holds</small>
           </div>
           <span className="education-projects__flow-arrow" aria-hidden="true">→</span>
           <div className="education-projects__flow-stage">
@@ -129,7 +129,7 @@ function AluSystemMap() {
       </div>
 
       <figcaption>
-        Source snapshot traced to the Quartus project and HDL. This map shows the implemented structure; it does not claim a passing simulation or board demonstration.
+        Source snapshot traced to the Quartus project and HDL.
       </figcaption>
     </figure>
   );
@@ -160,7 +160,7 @@ function VerifiedAluBrief() {
 
       <div className="education-projects__alu-close">
         <p><strong>Design distinction</strong> — the FSM sequences control; the ALU applies the selected operation; the output logic formats the result for two seven-segment displays.</p>
-        <p>The selected files establish the architecture and operation branches, not a verified simulation result or physical board demonstration.</p>
+        <p>The FSM HDL resets high to its first state; the top-level BDF port is named Resetn, so system-level polarity remains unresolved. Waveform files document simulation setup, not a verified passing trace or board demonstration.</p>
       </div>
     </article>
   );

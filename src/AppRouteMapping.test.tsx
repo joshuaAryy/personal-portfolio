@@ -99,12 +99,14 @@ describe("primary App route mapping", () => {
     expect(page).toContain('class="header-help"');
     expect(page).toContain("Selected capability briefs");
     expect(page).toContain("CPS510");
+    expect(page).toContain("relational modeling, SQL queries, and integrity rules");
+    expect(page).toContain("Broader scope and implemented schema remain unverified in local project files");
     expect(page).toContain("Java/Swing");
     expect(page).toContain("owner and customer workflows");
     expect(page).toContain("shared application state");
     expect(page).toContain("State/Singleton patterns");
     expect(page).toContain("four-stage MOSFET/CMOS amplifier");
-    expect(page).toContain("distributing gain, setting bias, and buffering a load");
+    expect(page).toContain("gain distribution, bias/current, load buffering, and headroom");
   });
 
   it("teaches the source-verified ALU and controller path without implying validation", () => {
@@ -119,7 +121,10 @@ describe("primary App route mapping", () => {
     expect(page).toContain("High result nibble");
     expect(page).toContain("Low result nibble");
     expect(page).toContain("seven-segment displays");
-    expect(page).toContain("advances on data high; otherwise holds");
+    expect(page).toContain("rising edge · data high advances; low holds");
+    expect(page).toContain("The FSM HDL resets high to its first state");
+    expect(page).toContain("the top-level BDF port is named Resetn, so system-level polarity remains unresolved");
+    expect(page).toContain("Waveform files document simulation setup, not a verified passing trace");
     expect(page).not.toMatch(/active-low reset|simulation passed|hardware demonstration|501305419/i);
     expect(page).not.toMatch(/assignment\s*3/i);
     expect(page).not.toContain("501305419");
