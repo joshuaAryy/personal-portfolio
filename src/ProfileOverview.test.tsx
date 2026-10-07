@@ -158,13 +158,33 @@ describe("Profile Overview", () => {
     expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });
 
+  it("interpolates the wide Overview scale and vertical anchor across desktop width thresholds", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+
+    expect(profileCss).toContain("transform: scale(clamp(.7, calc(100vw / 1000px - .74), .76));");
+    expect(profileCss).toContain("transform: scale(clamp(.76, calc((100vw / 100px) * .06 - .14), .88));");
+    expect(profileCss).toContain("margin-top: clamp(49px, calc(697px - 35.1vw), 135px);");
+  });
+
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const compactRules = cssBlock(profileCss, "@media (min-width: 1100px) and (max-width: 1399px)");
+    const compactNeutral = cssBlock(compactRules, ".profile-project-panel--neutral[hidden]");
     const tabletRules = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1858px)");
     const narrowRules = profileCss.split("@media (max-width: 900px)")[1] ?? "";
     const enclosureRule = narrowRules.match(/\.profile-project-panel__enclosure\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(profileCss).toContain("@media (min-width: 1400px) and (max-width: 1858px)");
+    expect(compactRules).toContain("grid-template-columns: 370px minmax(0, 1fr)");
+    expect(compactRules).toContain("transform: none");
+    expect(compactRules).toContain("grid-template-columns: repeat(2, minmax(0, 1fr))");
+    expect(compactRules).toContain("grid-template-rows: repeat(2, minmax(0, 1fr))");
+    expect(compactRules).toContain("profile-signal-grid");
+    expect(compactRules).toContain("height: 914px");
+    expect(compactRules).toContain("top: 392px");
+    expect(compactRules).toContain("height: 364px;\n    transform: none;");
+    expect(compactNeutral).toContain("display: block");
+    expect(compactRules).toContain("HOVER A SIGNAL TO PREVIEW ITS DETAILS");
     expect(tabletRules).toContain("grid-template-columns: 370px minmax(0, 1fr)");
     expect(tabletRules).toContain("grid-column: 1");
     expect(tabletRules).toContain("grid-column: 2");

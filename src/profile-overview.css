@@ -1575,3 +1575,170 @@
     top: calc(820px - 15.3vw);
   }
 }
+
+@media (min-width: 1400px) and (max-width: 1858px) {
+  .main--profile .profile-overview {
+    margin-top: clamp(49px, calc(697px - 35.1vw), 135px);
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) {
+  .main--profile .profile-overview {
+    transform: scale(clamp(.7, calc(100vw / 1000px - .74), .76));
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1858px) {
+  .main--profile .profile-overview {
+    transform: scale(clamp(.76, calc((100vw / 100px) * .06 - .14), .88));
+  }
+}
+
+/* Compact desktop keeps the identity left-led and lays out the Overview in its real column. */
+@media (min-width: 1100px) and (max-width: 1399px) {
+  .main--profile .profile-layout {
+    display: grid;
+    grid-template-columns: 370px minmax(0, 1fr);
+    align-items: start;
+    gap: 24px;
+    width: 100%;
+    height: auto;
+    min-height: 1000px;
+    padding: 14px 20px 38px;
+  }
+
+  .main--profile .identity-panel {
+    grid-column: 1;
+    width: 370px;
+    height: 998px;
+    min-height: 998px;
+    margin: 0;
+    transform: none;
+  }
+
+  .main--profile .profile-content {
+    grid-column: 2;
+    width: 100%;
+    height: auto;
+    min-width: 0;
+    margin: 30px 0 0;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .main--profile .profile-nav {
+    width: 100%;
+    margin-left: 0;
+    overflow-x: auto;
+  }
+
+  .main--profile .profile-overview {
+    position: relative;
+    top: auto;
+    left: auto;
+    display: block;
+    width: 100%;
+    height: 914px;
+    min-height: 0;
+    margin: 135px 0 0;
+    transform: none;
+  }
+
+  .profile-project-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 368px;
+  }
+
+  .profile-project-panel--neutral[hidden] {
+    display: block;
+    background: rgba(2, 3, 7, 0.38);
+  }
+
+  .profile-project-panel--neutral[hidden]::after {
+    content: "HOVER A SIGNAL TO PREVIEW ITS DETAILS";
+    position: absolute;
+    top: 164px;
+    left: 16px;
+    right: 16px;
+    color: rgba(235, 217, 176, 0.78);
+    font: 600 12px/18px Lato, Arial, sans-serif;
+    letter-spacing: 0.08em;
+    text-align: center;
+  }
+
+  .profile-project-panel--neutral[hidden] .profile-project-panel__enclosure,
+  .profile-project-panel--neutral[hidden] .profile-project-panel__divider {
+    opacity: 0.38;
+  }
+
+  .profile-project-panel__enclosure {
+    top: -5px;
+    left: -8px;
+    width: calc(100% + 16px);
+    max-width: none;
+    height: 364px;
+    transform: none;
+  }
+
+  .profile-project-panel h2 {
+    top: 18px;
+    left: 22px;
+    font-size: 23px;
+  }
+
+  .profile-project-panel__divider {
+    top: 68px;
+    left: 4%;
+    width: 92%;
+  }
+
+  .profile-project-grid {
+    top: 85px;
+    left: 4%;
+    width: 92%;
+    height: 267px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-project:nth-child(2) {
+    border-right: 0;
+  }
+
+  .profile-project:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(178, 145, 99, 0.28);
+  }
+
+  .profile-project__identity,
+  .profile-project--fraymakers .profile-project__identity,
+  .profile-project--choveigo .profile-project__identity {
+    margin-top: 20px;
+    gap: 8px;
+    font-size: clamp(15px, 1.35vw, 19px);
+  }
+
+  .profile-project__detail,
+  .profile-project--crest .profile-project__detail {
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .profile-signal-grid {
+    position: absolute;
+    top: 392px;
+    left: 0;
+    width: 100%;
+    height: 500px;
+    padding: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-signal:nth-child(2)::after {
+    display: none;
+  }
+}
