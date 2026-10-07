@@ -54,14 +54,23 @@
 }
 
 .main--lobby .league-banner {
-  animation: client-card-appear 520ms ease-out both;
+  --lobby-card-delay: 90ms;
+  animation: client-card-appear 520ms ease-out var(--lobby-card-delay) both;
 }
 
-.main--lobby .league-banner:nth-child(1) { animation-delay: 90ms; }
-.main--lobby .league-banner:nth-child(2) { animation-delay: 150ms; }
-.main--lobby .league-banner:nth-child(3) { animation-delay: 210ms; }
-.main--lobby .league-banner:nth-child(4) { animation-delay: 270ms; }
-.main--lobby .league-banner:nth-child(5) { animation-delay: 330ms; }
+.main--lobby .league-banner:nth-child(1) { --lobby-card-delay: 90ms; }
+.main--lobby .league-banner:nth-child(2) { --lobby-card-delay: 150ms; }
+.main--lobby .league-banner:nth-child(3) { --lobby-card-delay: 210ms; }
+.main--lobby .league-banner:nth-child(4) { --lobby-card-delay: 270ms; }
+.main--lobby .league-banner:nth-child(5) { --lobby-card-delay: 330ms; }
+
+.main--lobby .league-banner__medallion {
+  animation: client-mark-settle 460ms cubic-bezier(.2, .72, .24, 1) calc(var(--lobby-card-delay) + 45ms) both;
+}
+
+.main--lobby :is(.league-banner__name, .league-banner__subtitle, .league-banner__role, .league-banner__roles) {
+  animation: client-detail-resolve 400ms ease-out calc(var(--lobby-card-delay) + 155ms) both;
+}
 
 .main--lobby .league-lobby__balance-slots,
 .main--lobby .league-role-legend,
@@ -103,24 +112,30 @@
 .main--detail .resume-found__close { animation-delay: 210ms; }
 
 .main--detail .resume-viewer__header,
-.main--detail .education-projects__header,
-.main--detail .personal-highlights__opening,
-.main--detail .personal-highlights__hero {
+.main--education-projects .education-projects__heading,
+.main--personal-highlights .personal-highlights__intro {
   animation: client-banner-descend 560ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--fraymakers-case .fray-case__intro,
+.main--stush-case .stush-data-hero {
+  animation: client-banner-descend 620ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--fraymakers-case .fray-case__hero-system {
+  animation: client-mark-settle 600ms cubic-bezier(.2, .72, .24, 1) 90ms both;
 }
 
 .main--detail :is(
   .food-rewrite__hero,
   .crest-hero,
   .cho-story__hero,
-  .fray-case__hero,
-  .living-hero,
-  .stush-hero
+  .living-hero
 ) {
   animation: client-banner-descend 620ms cubic-bezier(.2, .78, .25, 1) both;
 }
 
-.main--detail .demo-stage {
+.main--demos .demo-stage {
   animation: client-mark-settle 600ms cubic-bezier(.2, .72, .24, 1) 90ms both;
 }
 
@@ -145,6 +160,8 @@
   .main--lobby .league-lobby__heading,
   .main--lobby .league-lobby__banners,
   .main--lobby .league-banner,
+  .main--lobby .league-banner__medallion,
+  .main--lobby :is(.league-banner__name, .league-banner__subtitle, .league-banner__role, .league-banner__roles),
   .main--lobby .league-lobby__balance-slots,
   .main--lobby .league-role-legend,
   .main--lobby .selected-tray,
@@ -160,11 +177,13 @@
   .main--detail .resume-found__action,
   .main--detail .resume-found__close,
   .main--detail .resume-viewer__header,
-  .main--detail .education-projects__header,
-  .main--detail .personal-highlights__opening,
-  .main--detail .personal-highlights__hero,
-  .main--detail :is(.food-rewrite__hero, .crest-hero, .cho-story__hero, .fray-case__hero, .living-hero, .stush-hero),
-  .main--detail .demo-stage {
+  .main--education-projects .education-projects__heading,
+  .main--personal-highlights .personal-highlights__intro,
+  .main--fraymakers-case .fray-case__intro,
+  .main--fraymakers-case .fray-case__hero-system,
+  .main--stush-case .stush-data-hero,
+  .main--detail :is(.food-rewrite__hero, .crest-hero, .cho-story__hero, .living-hero),
+  .main--demos .demo-stage {
     animation-name: client-reduced-entry;
     animation-duration: 140ms !important;
     animation-delay: 0ms !important;
