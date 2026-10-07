@@ -86,7 +86,7 @@ describe("primary App route mapping", () => {
 
   it("keeps the Education projects page to its four authorized project entries", () => {
     const page = renderRoute("/education/projects");
-    expect(page.match(/class="education-projects__item"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__item[^\"]*"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Bookstore Management System");
     expect(page).toContain("8-bit ALU + finite-state controller");
@@ -98,26 +98,39 @@ describe("primary App route mapping", () => {
     expect(page).toContain('aria-current="page"');
     expect(page).toContain('class="header-help"');
     expect(page).toContain("Selected capability briefs");
-    expect(page).toContain("current implementation distinct from planned scope");
-    expect(page).toContain("Silver and Gold customer status");
-    expect(page).toContain("a clocked FSM");
-    expect(page).toContain("source-follower output buffer");
+    expect(page).toContain("CPS510");
+    expect(page).toContain("Java/Swing");
+    expect(page).toContain("owner and customer workflows");
+    expect(page).toContain("shared application state");
+    expect(page).toContain("State/Singleton patterns");
+    expect(page).toContain("four-stage MOSFET/CMOS amplifier");
+    expect(page).toContain("distributing gain, setting bias, and buffering a load");
   });
 
-  it("keeps the ALU brief concise and avoids unverified implementation claims", () => {
+  it("teaches the source-verified ALU and controller path without implying validation", () => {
     const page = renderRoute("/education/projects");
-    expect(page).toContain("active-low reset input");
-    expect(page).toContain("hexadecimal displays");
-    expect(page).toContain("Waveform simulation was part of");
-    expect(page).not.toMatch(/VHDL|hardware demonstration|opcode branches/i);
+    expect(page).toContain("SOURCE-VERIFIED · LAB 6 PART 2 SNAPSHOT");
+    expect(page).toContain("9 opcode branches");
+    expect(page).toContain("9-state Moore FSM");
+    expect(page).toContain("input latches");
+    expect(page).toContain("modified_dec3to8");
+    expect(page).toContain("9 one-hot operation lines");
+    expect(page).toContain("clocked 8-bit ALU");
+    expect(page).toContain("High result nibble");
+    expect(page).toContain("Low result nibble");
+    expect(page).toContain("seven-segment displays");
+    expect(page).toContain("advances on data high; otherwise holds");
+    expect(page).not.toMatch(/active-low reset|simulation passed|hardware demonstration|501305419/i);
+    expect(page).not.toMatch(/assignment\s*3/i);
     expect(page).not.toContain("501305419");
-    expect(page).not.toContain("9 opcode branches");
   });
 
-  it("keeps the four selected capability areas equally structured", () => {
+  it("keeps owner-reported evidence boundaries distinct from the verified ALU source", () => {
     const page = renderRoute("/education/projects");
-    expect(page.match(/class="education-projects__learning"/g)).toHaveLength(4);
-    expect(page.match(/class="education-projects__tools"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__source-status"[^>]*>OWNER-REPORTED/g)).toHaveLength(3);
+    expect(page).toContain("EVIDENCE PENDING");
+    expect(page).toContain("Source snapshot traced to the Quartus project and HDL");
+    expect(page).not.toMatch(/What I learned|Methods and tools/i);
     expect(page).not.toMatch(/Dean|scholarship/i);
   });
 });
