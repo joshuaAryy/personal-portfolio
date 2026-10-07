@@ -46,8 +46,8 @@ export default function LivingInSilicoCase() {
       <section className="living-data" aria-labelledby="living-data-title">
         <div className="living-section-heading">
           <p className="living-eyebrow">DATA PREPARATION</p>
-          <h2 id="living-data-title">A row count is only the start of the data story.</h2>
-          <p>I inspected molecular strings, parsed and validated structures, handled invalid records and duplicates, then prepared narrower inputs for separate experiments. That work made the scope of each test clearer.</p>
+          <h2 id="living-data-title">Experimental scope starts with the records.</h2>
+          <p>I inspected molecular strings, checked which structures parsed, reviewed repeated rows, and prepared separate inputs for experiments. These choices defined what each test could examine; they do not show a measured performance gain.</p>
         </div>
         <figure className="living-data-figure" aria-labelledby="living-data-caption">
           <div className="living-snapshot">
@@ -56,7 +56,6 @@ export default function LivingInSilicoCase() {
               <div><strong>15,696</strong><span>rows</span></div>
               <div><strong>14,487</strong><span>unique SMILES</span></div>
             </div>
-            <p className="living-snapshot__difference"><strong>1,209</strong><span>rows beyond the unique-string count · arithmetic difference, not a removal tally</span></p>
           </div>
           <div className="living-curated">
             <p className="living-eyebrow">SEPARATE EXPERIMENT SETS</p>
@@ -64,62 +63,62 @@ export default function LivingInSilicoCase() {
             <span>curated entries in some experiments</span>
             <p>Narrower working scopes; not a step-down count from the April snapshot.</p>
           </div>
-          <figcaption id="living-data-caption">The April 12 counts are owner-reported; the 1,209 gap is arithmetic, not a logged number of removed rows. The 400–600-entry sets belong to separate experiments. These are different contexts, not linked counts or a measured data-quality or model-performance gain.</figcaption>
+          <figcaption id="living-data-caption">The April 12 snapshot and the 400–600-entry sets for some experiments are different contexts, not steps in one numerical funnel. The counts do not establish a measured data-quality or model-performance gain.</figcaption>
         </figure>
-        <figure className="living-data-prep" aria-labelledby="living-data-prep-title living-data-prep-caption">
-          <div className="living-data-prep__heading">
-            <p className="living-eyebrow">PREPARATION WORK · ACROSS EXPERIMENTS</p>
-            <h3 id="living-data-prep-title">Define what an experiment can examine.</h3>
-            <p>I reviewed molecular strings, checked structures, handled duplicates, and prepared inputs for separate experiments.</p>
+        <figure className="living-prep-logic" aria-labelledby="living-prep-logic-title living-prep-logic-caption">
+          <div className="living-prep-logic__heading">
+            <p className="living-eyebrow">PREPARATION DECISIONS · CONCEPTUAL LOGIC</p>
+            <h3 id="living-prep-logic-title">Choose inputs that fit the experiment.</h3>
+            <p>Before a method could answer a question, I had to understand what its input represented.</p>
           </div>
-          <ol className="living-data-prep__steps">
-            <li><span>01 / INSPECT</span><strong>Review molecular strings</strong><small>Understand the records before modeling.</small></li>
-            <li><span>02 / VALIDATE</span><strong>Parse structures with RDKit</strong><small>Identify strings that do not parse as intended.</small></li>
-            <li><span>03 / REVIEW DUPLICATES</span><strong>Compare rows and unique SMILES</strong><small>Repeated rows are not additional distinct inputs.</small></li>
-            <li><span>04 / CURATE</span><strong>Select experiment inputs</strong><small>Set the distinct, parseable scope each experiment can examine.</small></li>
-          </ol>
-          <figcaption id="living-data-prep-caption">Preparation changed which distinct, parseable inputs an experiment could examine. The available evidence does not quantify a data-quality or model-performance lift.</figcaption>
+          <div className="living-prep-logic__questions">
+            <div><span>01 / PARSEABILITY</span><strong>Check whether structures parse</strong><small>RDKit helped identify strings that did not parse as intended.</small></div>
+            <div><span>02 / DISTINCTNESS</span><strong>Review repeated rows against distinct strings</strong><small>More rows do not necessarily mean more distinct examples.</small></div>
+            <div><span>03 / EXPERIMENT SCOPE</span><strong>Choose a scope for a separate experiment</strong><small>Curated inputs shaped what that test could examine.</small></div>
+          </div>
+          <figcaption id="living-prep-logic-caption">No project rows or counts are mapped between these steps. The figure explains preparation decisions, not a numerical funnel or a measured improvement.</figcaption>
         </figure>
-        <aside className="living-data-reading">
-          <span>WHY THE PREPARATION MATTERED</span>
-          <p>Repeated rows are not additional distinct strings, and invalid strings cannot answer a molecular-model question as intended. Preparation shifted the test from “how many rows?” to “which distinct, parseable inputs will this experiment examine?” A narrower curated scope changed what I could examine; the available evidence does not quantify a quality or performance lift.</p>
-        </aside>
       </section>
 
       <section className="living-representation" aria-labelledby="living-representation-title">
         <div className="living-section-heading">
           <p className="living-eyebrow">REPRESENTATION</p>
-          <h2 id="living-representation-title">A sequence view and a feature view ask different things of a molecule.</h2>
-          <p>SMILES made molecular structure available as an ordered string. Morgan fingerprints described local structural features. I keep the feature lane separate from the RNN sequence path.</p>
+          <h2 id="living-representation-title">A string, a feature view, and a spatial question.</h2>
+          <p>The research explored distinct ways to examine molecular data: ordered SMILES for sequence generation, Morgan fingerprints as a separate feature view, and structure-aware fragment work. Each representation posed a different question.</p>
         </div>
         <figure className="living-representation-figure" aria-labelledby="living-representation-caption">
-          <div className="living-representation-lane living-representation-lane--sequence">
-            <span className="living-representation-lane__label">SEQUENCE VIEW</span>
-            <div className="living-representation-node"><small>MOLECULAR STRUCTURE</small><strong>Atoms + bonds</strong><em>connected chemical structure</em></div>
-            <span className="living-representation-arrow" aria-hidden="true">→</span>
-            <div className="living-representation-node living-representation-node--smiles"><small>TEXT REPRESENTATION</small><strong>SMILES</strong><em>ordered molecular string</em></div>
-            <span className="living-representation-arrow" aria-hidden="true">→</span>
-            <div className="living-representation-node living-representation-node--rnn"><small>SEQUENCE METHOD</small><strong>RNN</strong><em>works across string positions</em></div>
-          </div>
-          <div className="living-representation-lane living-representation-lane--features">
-            <span className="living-representation-lane__label">FEATURE VIEW · SEPARATE</span>
-            <div className="living-feature-origin"><strong>Structure</strong><span>RDKit representation work</span></div>
-            <span className="living-representation-arrow" aria-hidden="true">→</span>
-            <div className="living-fingerprint" role="img" aria-label="Conceptual 128-bit Morgan fingerprint layout; no project bit values shown">
-              <div className="living-fingerprint__cells" aria-hidden="true">{Array.from({ length: 128 }, (_, index) => <i key={index} />)}</div>
-              <strong>Morgan fingerprint</strong>
-              <span>radius 2 <b>·</b> 128 bits</span>
+          <div className="living-representation-bridge">
+            <div className="living-representation-origin">
+              <p className="living-eyebrow">ILLUSTRATIVE STRUCTURE</p>
+              <svg viewBox="0 0 180 112" role="img" aria-label="Abstract molecular structure symbol, not a project molecule">
+                <path d="M22 58 55 31l35 22 32-33 35 27m-102-16 6 43 40 18 23-42 33 27" />
+                <circle cx="22" cy="58" r="6" /><circle cx="55" cy="31" r="6" /><circle cx="90" cy="53" r="6" /><circle cx="122" cy="20" r="6" /><circle cx="157" cy="47" r="6" /><circle cx="61" cy="74" r="6" /><circle cx="101" cy="92" r="6" /><circle cx="124" cy="50" r="6" /><circle cx="157" cy="77" r="6" />
+              </svg>
+              <strong>An illustrative structure, three separate questions</strong>
+              <small>No experimental molecule or project output is shown.</small>
             </div>
-            <p className="living-feature-note">A structural feature representation; this lane does not feed the RNN diagram above.</p>
+            <div className="living-representation-views">
+              <article className="living-representation-view living-representation-view--sequence">
+                <span>SEQUENCE LENS</span>
+                <strong>Ordered SMILES sequence</strong>
+                <p>DeepMol/RNN explored generation from molecular strings.</p>
+                <small>Question: can a sequence model work across string positions?</small>
+              </article>
+              <article className="living-representation-view living-representation-view--features">
+                <span>FEATURE LENS · SEPARATE</span>
+                <strong>Morgan features · separate view</strong>
+                <p>RDKit Morgan fingerprints, radius 2 and 128 bits.</p>
+                <small>Question: how is structure represented as a feature vector?</small>
+              </article>
+              <article className="living-representation-view living-representation-view--fragments">
+                <span>STRUCTURE / SPACE · SEPARATE</span>
+                <strong>Fragment and spatial exploration</strong>
+                <p>RDKit/Fragmenstein work considered selection, placement and linking.</p>
+                <small>Question: can compatible pieces fit and connect?</small>
+              </article>
+            </div>
           </div>
-          <div className="living-representation-lane living-representation-lane--fragments">
-            <span className="living-representation-lane__label">FRAGMENT / SPATIAL VIEW / SEPARATE</span>
-            <div className="living-fragment-origin"><strong>Molecular structures</strong><span>Conceptual structure view</span></div>
-            <span className="living-representation-arrow" aria-hidden="true">&rarr;</span>
-            <div className="living-representation-node living-representation-node--fragment"><small>RDKit / FRAGMENSTEIN</small><strong>Fragments + spatial questions</strong><em>selection, compatibility, placement, linking</em></div>
-            <p className="living-feature-note">A separate structure-aware exploration, not an extension of either representation lane.</p>
-          </div>
-          <figcaption id="living-representation-caption">Three conceptual branches show separate questions: an SMILES sequence for the RNN, Morgan features (radius 2 / 128 bits), and fragment/spatial exploration. Morgan features do not feed the RNN. They are not one pipeline and do not describe one shared project molecule; no experimental molecule, string, or project bit values are shown.</figcaption>
+          <figcaption id="living-representation-caption">This is a conceptual bridge, not a project molecule or a unified pipeline. Morgan features do not feed the RNN; fragment/spatial work was a separate investigation.</figcaption>
         </figure>
       </section>
 
@@ -130,35 +129,40 @@ export default function LivingInSilicoCase() {
           <p>Because SMILES represents molecular information as an ordered string, I explored a sequence-generation route with DeepMol’s RNN MolecularGenerator.</p>
         </header>
         <figure className="living-deepmol-figure" aria-labelledby="living-deepmol-caption">
-          <div className="living-deepmol-flow" role="group" aria-label="DeepMol sequence-generation method">
-            <div className="living-deepmol-step living-deepmol-step--input"><span>EXPERIMENT DATA</span><strong>Curated SMILES</strong><small>prepared strings from a separate experiment subset</small></div>
+          <div className="living-deepmol-sequence-map" role="group" aria-label="Conceptual SMILES sequence through DeepMol CSVLoader and RNN MolecularGenerator to generated strings">
+            <div className="living-deepmol-sequence-input">
+              <span className="living-eyebrow">SEQUENCE INPUT · ILLUSTRATIVE</span>
+              <strong>SMILES strings</strong>
+              <div className="living-sequence-positions" role="img" aria-label="Ordered string positions; no project SMILES shown">{Array.from({ length: 9 }, (_, index) => <i key={index} />)}</div>
+              <small>Ordered positions, not a project string</small>
+            </div>
             <span className="living-deepmol-arrow" aria-hidden="true">→</span>
-            <div className="living-deepmol-step"><span>LOAD</span><strong>DeepMol CSVLoader</strong><small>read the prepared experiment table</small></div>
+            <div className="living-deepmol-loader"><span>LOAD TABLE</span><strong>DeepMol CSVLoader</strong><small>prepared experiment input</small></div>
             <span className="living-deepmol-arrow" aria-hidden="true">→</span>
-            <div className="living-deepmol-step living-deepmol-step--model"><span>SEQUENCE GENERATION</span><strong>RNN MolecularGenerator</strong><small>learn across ordered SMILES sequences</small></div>
+            <div className="living-deepmol-model"><span>SEQUENCE GENERATION</span><strong>RNN MolecularGenerator</strong><small>work across an ordered string</small></div>
+            <span className="living-deepmol-arrow" aria-hidden="true">→</span>
+            <div className="living-deepmol-string-output"><span>OUTPUT TYPE</span><strong>Generated SMILES</strong><small>strings need separate chemical inspection</small></div>
+            <p className="living-deepmol-inspection">Generated strings need separate chemical inspection; a string count alone does not establish molecular validity.</p>
           </div>
-          <div className="living-deepmol-lab">
+          <div className="living-deepmol-evidence">
             <div className="living-deepmol-contribution">
-              <p className="living-eyebrow">JOSHUA’S DATA AND EXPERIMENT WORK</p>
-              <p>I loaded and used the prepared experiment inputs for DeepMol/RNN sequence work. ChemDraw and manual views helped me inspect molecular structures.</p>
+              <p className="living-eyebrow">JOSHUA’S EXPERIMENT WORK</p>
+              <p>I prepared and loaded experiment inputs for DeepMol/RNN sequence work. ChemDraw and manual views helped me inspect molecular structures.</p>
+              <div className="living-deepmol-learning"><span>WHAT THIS ROUTE TAUGHT</span><p>Generated strings still need separate chemical inspection; an output count does not establish what those strings represent.</p></div>
             </div>
-            <div className="living-deepmol-evidence">
-              <div className="living-run-note">
-                <p className="living-eyebrow">RECORDED RUN SETTINGS</p>
-                <div aria-label="Reported run settings: 10 epochs and batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
-              </div>
-              <div className="living-sample-output">
-                <p className="living-eyebrow">SEPARATE OWNER-REPORTED OUTPUT</p>
-                <strong aria-label="500 generated SMILES samples">500</strong>
-                <span>generated SMILES samples</span>
-                <p className="living-sample-attribution">Attribution note: the owner account assigns the 500 samples to DeepMol/RNN. A dated May 2025 report attributes 500 samples and RDKit checking to REINVENT4; no surviving run or source resolves this conflict.</p>
-                <small>Count only · no validity, uniqueness, or novelty claim.</small>
-              </div>
+            <div className="living-run-note">
+              <p className="living-eyebrow">RECORDED RUN SETTINGS · SEPARATE NOTE</p>
+              <div aria-label="Reported run settings: 10 epochs and batch size 64"><strong>10</strong><span>epochs</span><strong>64</strong><span>batch size</span></div>
+              <small>Not linked to the owner-reported sample count.</small>
+            </div>
+            <div className="living-sample-output">
+              <p className="living-eyebrow">OWNER-REPORTED COUNT</p>
+              <p><strong aria-label="500 generated SMILES samples">500</strong><span>generated SMILES samples</span></p>
+              <small>Count only; no validity, uniqueness, or novelty claim.</small>
             </div>
           </div>
-          <figcaption id="living-deepmol-caption">The method path, recorded settings, and owner-reported 500-sample count are separate notes. This figure cannot establish that those settings produced the samples or that any sample was valid, distinct, novel, or viable.</figcaption>
+          <figcaption id="living-deepmol-caption">The sequence map is conceptual and shows no project SMILES. Run settings and the owner-reported sample count are separate evidence; the count does not establish that those settings produced the samples or that a string was valid, distinct, or novel.</figcaption>
         </figure>
-        <aside className="living-study-learning"><span>WHAT THIS ROUTE MADE VISIBLE</span><p>Generation produced strings. Whether a string represents a valid or useful molecule is a separate question from the output count.</p></aside>
       </section>
 
       <section className="living-fragment-study" aria-labelledby="living-fragment-title">
@@ -203,64 +207,54 @@ export default function LivingInSilicoCase() {
               </g>
               <text x="70" y="324">STRUCTURE</text><text x="340" y="324">SELECT FRAGMENTS</text><text x="622" y="324">ASK ABOUT FIT + SPACE</text><text x="884" y="324">EXPLORE A LINK</text>
             </svg>
-            <ol className="living-fragment-stages">
-              <li><span>01</span><strong>Decompose</strong><small>Structures into substructures.</small></li>
-              <li><span>02</span><strong>Select</strong><small>Consider compatible fragments.</small></li>
-              <li><span>03</span><strong>Place</strong><small>Explore spatial and overlap questions.</small></li>
-              <li><span>04</span><strong>Link</strong><small>Investigate linking or recombination.</small></li>
+            <ol className="living-fragment-stages" aria-label="Conceptual fragment mechanism">
+              <li><span>01 / DECOMPOSITION</span><strong>Decompose structures</strong><small>Identify substructures that could be explored as fragments.</small></li>
+              <li><span>02 / SELECTION</span><strong>Select compatible fragments</strong><small>Consider which pieces might be useful to place together.</small></li>
+              <li><span>03 / SPATIAL FIT</span><strong>Explore spatial fit</strong><small>Reason about placement, compatibility and overlap.</small></li>
+              <li><span>04 / LINKING</span><strong>Investigate linking</strong><small>Explore fragment linking or recombination.</small></li>
             </ol>
-            <div className="living-fragment-result"><p className="living-eyebrow">REPORTED OUTCOME</p><strong>Some fragment-based workflows succeeded.</strong><p>The available public evidence does not identify a particular candidate result to reproduce.</p></div>
-            <figcaption id="living-fragment-caption">Conceptual map of the reported work: decomposition, fragment selection, spatial reasoning, and linking. The shapes are not experimental structures or outputs, so this figure cannot identify a candidate molecule or a particular successful result.</figcaption>
+            <figcaption id="living-fragment-caption">Conceptual mechanism, reported separately from workflow success: the shapes are not experimental structures or outputs. This figure explains the questions involved, not a particular successful result.</figcaption>
           </figure>
           <aside className="living-fragment-notes">
-            <div><p className="living-eyebrow">JOSHUA’S WORK</p><p>I explored fragment selection, structural compatibility, spatial or overlap reasoning, and linking workflows with RDKit and Fragmenstein.</p></div>
-            <div><p className="living-eyebrow">WHAT I LEARNED</p><p>Working with structural pieces made placement and compatibility questions explicit; that is a different investigation from learning patterns in a SMILES sequence.</p></div>
+            <div><p className="living-eyebrow">WHY THIS ROUTE</p><p>Fragment work asks whether selected structural pieces can fit in space and be linked, a different question from generating across a SMILES sequence.</p></div>
+            <div><p className="living-eyebrow">JOSHUA’S EXPERIMENTS</p><p>I explored fragment selection, spatial compatibility and linking workflows with RDKit and Fragmenstein.</p></div>
+            <div className="living-fragment-outcome"><p className="living-eyebrow">REPORTED OUTCOME</p><strong>Some fragment-based workflows succeeded.</strong><p>No specific candidate result is identified here.</p></div>
+            <div><p className="living-eyebrow">WHAT THIS ROUTE TAUGHT</p><p>Spatial placement and compatibility made structural questions explicit; they were distinct from the sequence model’s string-generation question.</p></div>
           </aside>
         </div>
       </section>
 
       <section className="living-reinvent-study" aria-labelledby="living-reinvent-title">
         <div className="living-reinvent-study__intro">
-          <p className="living-eyebrow">ANOTHER GENERATIVE APPROACH</p>
-          <h2 id="living-reinvent-title">REINVENT4 stayed exploratory.</h2>
+          <p className="living-eyebrow">ANOTHER GENERATIVE APPROACH · RESEARCHED + ATTEMPTED</p>
+          <h2 id="living-reinvent-title">REINVENT4</h2>
           <p>I researched and attempted REINVENT4 as another generative approach.</p>
         </div>
-        <aside className="living-reinvent-status" aria-label="REINVENT4 researched and attempted, with no completed generation within internship scope">
-          <p className="living-eyebrow">SCOPE OUTCOME</p>
-          <strong>No completed generation within internship scope.</strong>
-          <p>The available evidence does not establish the input, configuration, or reason this route stopped.</p>
-        </aside>
+        <p className="living-reinvent-outcome">It did not reach a completed generation within the available internship scope.</p>
       </section>
 
-      <section className="living-field living-field--late" aria-labelledby="living-field-title">
-        <div className="living-field__copy">
-          <p className="living-eyebrow">LOOKING BACK · FIRST 1–2 WEEKS</p>
-          <h2 id="living-field-title">Before a model, learn the language of the data.</h2>
-          <p>
-            My first one to two weeks were a fast introduction to SMILES,
-            molecular representation, data preparation, papers, repositories,
-            and technical documentation. I moved between DeepMol, RDKit,
-            Fragmenstein, REINVENT4, and ChemDraw to understand enough of the
-            chemistry and software to ask better questions.
-          </p>
-          <p className="living-field__tools">SMILES <i>·</i> DeepMol <i>·</i> RDKit <i>·</i> Fragmenstein <i>·</i> REINVENT4 <i>·</i> ChemDraw</p>
+      <section className="living-research-reflection" aria-labelledby="living-reflection-title">
+        <div className="living-research-reflection__intro">
+          <p className="living-eyebrow">LATE REFLECTION · WHAT THE METHODS ESTABLISHED</p>
+          <h2 id="living-reflection-title">Different routes left different kinds of evidence.</h2>
+          <p>The work did not establish one validated molecular-generation workflow. It taught me to keep input preparation, representation, method and result in view together.</p>
         </div>
-        <aside className="living-learning-memory" aria-label="Personal learning memory">
-          <span className="living-learning-memory__time">3–4<small>AM</small></span>
-          <div><p className="living-eyebrow">A MOMENT I REMEMBER</p><h3>Following the question after hours.</h3></div>
-          <p>I stayed up before school watching and taking notes on a Stanford machine-learning lecture, thinking about how the ideas could connect to the research.</p>
-        </aside>
+        <div className="living-route-synthesis" aria-label="Research route outcomes">
+          <div><span>DEEPMOL / RNN</span><strong>Reported string count</strong><small>A count does not establish molecular validity.</small></div>
+          <div><span>RDKit / FRAGMENSTEIN</span><strong>Some workflows succeeded</strong><small>No specific candidate result is identified here.</small></div>
+          <div><span>REINVENT4</span><strong>REINVENT4 remained exploratory</strong><small>No completed generation was reached.</small></div>
+        </div>
       </section>
 
       <footer className="living-conclusion">
         <div className="living-conclusion__lesson">
-          <p className="living-eyebrow">WHAT RESEARCH LEFT ME WITH</p>
+          <p className="living-eyebrow">WHAT I CARRIED FORWARD</p>
           <h2>Start with what the data represents. End with what the evidence can support.</h2>
-          <p>A reported string count, some successful fragment workflows, and one unfinished route left different kinds of evidence. I carried forward the habit of keeping each conclusion inside the method and evidence that produced it.</p>
+          <p>Preparing inputs shaped the question; choosing a representation shaped the method; and each route left a different result. I carried forward the habit of keeping a conclusion inside the method and evidence that produced it.</p>
         </div>
         <div className="living-conclusion__handoff">
           <p className="living-eyebrow">RESEARCH HANDOFF</p>
-          <p className="living-conclusion__handoff-note">A mix of research materials carried the work forward:</p>
+          <p className="living-conclusion__handoff-note">The documented materials leave a next researcher something to examine and continue:</p>
           <strong>Research code</strong>
           <strong>Experiment results and generated outputs</strong>
           <strong>Written report and documentation</strong>
