@@ -2,6 +2,16 @@
 
 > **Controlling direction (owner review 2026-10-05):** [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md) supersedes earlier partial prompts and conflicting decisions. All six case studies are OPEN for substantial narrative/visual re-authoring; previous accepted-breadth and no-comprehension-gap conclusions are invalidated. Preserve owner-positive qualities while reopening weak structures. The brief also controls Opening, environments, Home, lobbies, Resume Found, Profile, Journey header, Highlights, Demos playback, and shared Food Tracker identity fitting. J remains separate; archive stays production fallback.
 
+## Food Tracker architecture, canonical nutrition, and Insights hierarchy — 2026-10-07
+
+**DECISION:** Keep these as three distinct visual scales connected by the saved-record story. Do not collapse them into one dense architecture graphic.
+
+**PRESERVE:** Keep the separate retrieval/evaluation chapter and benchmark; Expo → Express/TypeScript → Prisma/PostgreSQL; Firebase verification and server-derived user scope; Pinecone candidate generation followed by deterministic ranking; bounded Gemini proposal followed by human review; serving resolution and historical nutrition snapshots; deterministic Insights; Simple/Complex as presentations of the same product. Screenshots prove only the states they actually capture.
+
+**CHANGE / PRIORITIES:** (1) Put a connected overview within the first two or three major sections. Without interaction, show mobile/API/persistence, provider/catalog paths, candidate retrieval and deterministic ranking, Gemini proposals with human confirmation, the auth/resource boundary, and saved-record data returning to Insights. Keep technology names attached to responsibilities, not as a logo gallery. Remove any extra trace that only retells this map. (2) Give canonical nutrition the strongest technical figure: distinguish source types, normalized identity/nutrients/units/provenance, confirmed serving resolution, and the historical snapshot. Unknown remains unknown; later catalog changes do not silently rewrite saved nutrition. Keep catalog counts secondary. (3) Lead Insights with authentic Unknown/coverage evidence, distinguish day eligibility from nutrient coverage, and compactly show Simple/Complex views sharing the same deterministic analysis. Do not invent populated trend data.
+
+**ACCEPTANCE:** A visitor can identify system roles without clicking; each figure teaches a distinct relationship; the nutrition figure explains normalization and preserved meaning; Insights distinguishes unknown from zero; desktop and narrow layouts remain readable without shrinking the architecture; no visual implies fabricated UI/data, automatic AI saves, AI nutrition authority, deployment claims, or unsupported manual authorship.
+
 ## Prior owner-review decisions (historical; superseded where they conflict with the consolidated owner direction)
 
 The consolidated owner brief is [OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md](OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md). It supersedes older surface decisions where they conflict. Historical review results remain useful evidence, not current acceptance.

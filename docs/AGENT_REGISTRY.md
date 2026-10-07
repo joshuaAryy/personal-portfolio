@@ -2,25 +2,25 @@
 
 The live collaboration tree and READY queue below override historical assignment snapshots in this file. Completed tasks do not retire domain lanes.
 
-**Repository reconciliation (2026-10-07):** feat/portfolio-integration is at 0f7b3ce and five commits ahead of origin e0eb040. Current integrated application passes 27 test files / 218 tests and production build; diff-check passes. The latest immutable Preview remains https://a4da5455.joshuaik2.pages.dev from source 0624352788af39536fe2dbb92aab413df41f5ae0. The integration worktree preserves one modified historical Pass76 capture and 603 untracked items; stage only intentional files. Production is untouched.
+**Repository reconciliation (2026-10-07):** `feat/portfolio-integration` is at `c4bdab3a4801fbd77392e8cd45813de0193029d3`, matching origin. The full suite at `b6995c1` passed 27 files / 218 tests; the newer Stush change passes its focused 7 tests, `npm run build`, and `git diff --check`. Immutable feature Preview `https://8697bfef.joshuaik2.pages.dev/` is source `b6995c136bee4133fb1fc6190b790f9abc5c55a7`; Stush `c4bdab3` is not deployed yet. The integration worktree preserves one modified historical Pass76 capture and 899 untracked local items; stage only intentional files. Production is untouched.
 
 **Live collaboration snapshot (2026-10-07):**
 - Frontend Owner completed current-base shell identity/mobile framing, C06 Opening, contextual Resume Found entrance motion, and a CRLF/LF-robust SVG assertion. The four application commits are integrated at 8352f0c, 3e054b1, 2d1cab7, and 0f7b3ce; docs are at 5205196. Desktop/narrow Chrome and interaction evidence is in %LOCALAPPDATA%\Temp\shell-opening-current-ec00e70\ and %LOCALAPPDATA%\Temp\resume-takeover-entry-774de89\.
-- Product Coverage is active on Food architecture/Insights and visual-hierarchy work, based on current integrated source. Its verified Stush candidate f875f863 is isolated on feat/stush-reporting-current, based on e0eb040; it awaits current-base integration.
-- fray_visual_builder__luna_high__fray is active in a separate Fray worktree, applying the accepted Sol Decision Contract from a source branch based at 5205196.
-- Sol’s one Fray visual-story decision is complete and recorded in DESIGN_DECISIONS.md; no Sol is active.
-- Runtime QA’s previous Fray audit is at %TEMP%\fraymakers-ec00-owner-audit-20261007\ and applies to source e0eb040. A new QA child could not be started at the agent-thread limit, so root will perform browser orchestration on the integrated batch until a reusable QA slot is available.
+- Product Coverage is active on Food architecture/Insights hierarchy using the 2026-10-07 Sol decision contract. Stush candidate `f875f863` has been integrated as `c4bdab3` and its focused tests/build pass; current-source rendered QA remains queued.
+- Fray output-first candidate `9e027b8` passed its independent visual/story review except for one repeated output chapter; the builder is removing that redundancy before the critic's follow-up. The two substantive figures and narrow workflow were accepted.
+- Sol’s Fray visual-story decision and Food architecture/Insights decision are complete and recorded in `DESIGN_DECISIONS.md`; no Sol is currently active.
+- Runtime QA completed the immutable Preview source `b6995c1` at `https://8697bfef.joshuaik2.pages.dev/`: 13 routes × desktop/narrow (26 renders), all 200, no failed requests, broken images, console/page errors, or horizontal overflow. Evidence is in `%LOCALAPPDATA%\Temp\portfolio-preview-qa-b6995c1\`. QA has been refilled to validate current-source Stush `c4bdab3`.
 
 ## Active scheduler snapshot - 2026-10-07
 
 | State | Lane | Work / dependency |
 |---|---|---|
-| INTEGRATED / VERIFY | Frontend | Shared shell identity/mobile framing, C06 Opening, contextual Resume Found entrance; all 218 tests/build pass. Root is preparing the next feature checkpoint after current-source Chrome review. |
-| IN PROGRESS | Product Coverage | Food architecture and Insights visual hierarchy on current source. Stush f875f863 is ready to port and render; preserve its isolated branch. |
-| IN PROGRESS | Fray builder | Output-first hero composition, one transformation spread, small P2 mirroring detail, brief truthful close; follow the Sol contract and do not fabricate media. |
-| REVIEW / QA (ROOT) | Integrated source | Installed-Chrome desktop/narrow regression for Opening, Home/shared identities, all four lobbies, Resume Found, and owner-locked Journey/Crest. |
+| REVIEW CHECKPOINT READY | Immutable feature Preview | `b6995c1` passed 13 direct routes at 1365×900 and 390×844 in Chrome 153 / Playwright 1.63.0; 26 renders, no failed requests, errors, broken images, or overflow. This checkpoint does not complete the portfolio goal. |
+| IN PROGRESS | Product Coverage | Food system architecture, canonical nutrition, and Insights hierarchy per the Sol decision contract; keep retrieval/evaluation separate. |
+| IN PROGRESS | Fraymakers | Candidate `9e027b8` has desktop/narrow builder QA and passed independent review except for one repeated output chapter; builder is applying that bounded correction before critic re-review. |
+| INTEGRATED / QA | Stush Patties | `c4bdab3` concise identity + immediate transformation overview, privacy-safe source labels, and focus/re-entry motion; focused tests 7/7/build pass, QA is rendering current desktop/narrow source. |
 | READY / RECONCILE | Cho'Veigo media | Search for a safe authentic demo source remains open; never fabricate or expose unsafe footage. |
-| READY | Later case-study work | Living in Silico visual order/density, Education evidence-bound briefs, and contextual Help responsiveness remain in the global queue after higher-priority active work. |
+| READY | Other open domains | Living in Silico visual order/density, Education capability briefs, Help responsiveness, and shared shell/route-motion checks remain actionable. Route each when capacity frees, without reopening locked Journey/Crest direction. |
 
 At task completion, refill free capacity from independent READY work. Root owns routing, lifecycle, Git/checkpoints, cross-pod integration, browser orchestration, and global status; domain owners receive substantial independent implementation. “Keep the graph small” means non-redundant scopes, not low active parallelism. Current owner locks remain Journey and Crest; feature-branch J uses C06 while production J approval remains separate.
 **Historical execution state (2026-10-06; superseded):** the owner-review Preview was `https://2724fdbc.joshuaik2.pages.dev/`, built from application source `ffc7580b8b57f90c7918af213e6b2ed68248942a` on `feat/portfolio-integration`. See [the historical Preview report](site-render-review/2026-10-06-consolidated-correction-preview/REPORT.md).

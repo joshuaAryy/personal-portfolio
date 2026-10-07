@@ -1,6 +1,6 @@
 # Repository Operating Instructions
 
-> **Latest immutable feature Preview (Wrangler reconciliation, 2026-10-07):** `https://c67a89da.joshuaik2.pages.dev/` uses application source `fe4a4fd9783324ccf8d09ab92173cfd964c09a96`. A second, older feature Preview from `f2ae02f` is `https://023e9112.joshuaik2.pages.dev/`. The latest integrated application source on `feat/portfolio-integration` is `7c0ef8a`; later docs-only commits may advance the branch tip. Both Previews predate current app source. Do not treat either Preview as current or modify production.
+> **Latest immutable feature Preview (2026-10-07):** `https://8697bfef.joshuaik2.pages.dev/` uses application source `b6995c136bee4133fb1fc6190b790f9abc5c55a7`. The feature branch has since advanced to `c4bdab3a4801fbd77392e8cd45813de0193029d3` with the Stush story/motion update; it has not yet been deployed. Use immutable URLs for review comparisons. Do not modify production.
 
 > **Active owner direction (updated 2026-10-07):** the latest owner review supersedes conflicting older freeze decisions. Preserve owner-positive qualities, not whole pages. All six case studies remain open to substantive review; Journey and Crest are currently locked against redesign. Candidate 06 is the feature-branch J target, while archive `159:2` remains production fallback. Keep production untouched.
 
