@@ -290,6 +290,11 @@ export default function CrestCaseStudy() {
               for preapproval; a person reviews the context and decides what
               happens next.
             </p>
+            <p className="crest-hero__purpose" data-route-entry="summary">
+              My backend/data work covered Policy Compliance Engine workflows,
+              deterministic anomaly signals, policy retrieval, and part of
+              preapproval.
+            </p>
             <p className="crest-hero__context" data-route-entry="summary">
               FOUR-PERSON TEAM · MPC HACKS 2026 · BRIM FINANCIAL CHALLENGE
             </p>

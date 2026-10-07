@@ -55,6 +55,15 @@ describe("Cho’Veigo product story", () => {
     expect(evidence).toContain("Fit and Eligibility remain distinct outputs in the real product");
   });
 
+  it("surfaces deterministic Jobs evaluation and the separate Gemini Resume Studio path near the opening", () => {
+    const hero = storyText(chapter(renderCase(), "overview", "intake"));
+
+    expect(hero).toContain("JOBS · DETERMINISTIC");
+    expect(hero).toContain("Deterministic rules compare responsibilities with reviewed profile evidence for Fit, then check essential requirements for Eligibility.");
+    expect(hero).toContain("RESUME STUDIO · GEMINI");
+    expect(hero).toContain("Gemini classifies the role; constrained rewriting is checked against source evidence.");
+  });
+
   it("shows job feeds becoming persisted role context", () => {
     const intake = storyText(chapter(renderCase(), "intake", "evidence"));
 

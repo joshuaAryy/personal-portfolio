@@ -208,11 +208,23 @@ export default function StushPattiesCase() {
         </div>
         <div className="stush-brief__body">
           <p>
-            Three distributor report streams arrived in different layouts. CSV, XLSX, and XLSB appeared across the input set; no single file shape or field vocabulary could be assumed.
+            Stakeholder conversations clarified the need: consistent month-to-month reporting across different layouts.
           </p>
-          <p>
-            Through recurring stakeholder conversations, the two-person technical team translated the reporting need into practical data rules: align sales and units, retain case packs, and make reporting months consistent across the shared structure.
-          </p>
+          <div className="stush-brief__translation" role="group" aria-label="Stakeholder need translated into reporting rules">
+            <div className="stush-brief__need">
+              <span>STAKEHOLDER NEED</span>
+              <strong>Comparable monthly reporting</strong>
+            </div>
+            <span className="stush-brief__translation-arrow" aria-hidden="true">→</span>
+            <div className="stush-brief__rules">
+              <span>SHARED DATA RULES</span>
+              <ul aria-label="Rules carried through the shared contract">
+                <li>Sales + units</li>
+                <li>Case pack</li>
+                <li>Reporting month</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

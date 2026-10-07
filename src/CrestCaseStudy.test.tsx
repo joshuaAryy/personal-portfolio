@@ -11,6 +11,15 @@ const renderCrest = () =>
   );
 
 describe("Crest technical case study", () => {
+  it("surfaces Joshua's bounded backend and data contribution in the opening", () => {
+    const markup = renderCrest();
+    const heroStart = markup.indexOf('<section class="crest-section crest-hero"');
+    const heroEnd = markup.indexOf("</section>", heroStart);
+    const hero = markup.slice(heroStart, heroEnd);
+
+    expect(hero).toContain("My backend/data work covered Policy Compliance Engine workflows, deterministic anomaly signals, policy retrieval, and part of preapproval.");
+  });
+
   it("maps the workspace, Finance Q&A, and standalone policy-retrieval paths without merging them", () => {
     const markup = renderCrest();
     const start = markup.indexOf('<section class="crest-section crest-architecture"');

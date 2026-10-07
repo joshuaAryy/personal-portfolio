@@ -586,6 +586,39 @@ function FoodInsightPath() {
         </section>
       </div>
 
+      <div className="food-insight-path__captures" role="group" aria-label="Selected Phase 24 product captures">
+        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-config-title">
+          <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
+            <img
+              src="/media/case-studies/food-tracker/phase-24/trend-configuration.png"
+              alt="Phase 24 pre-redesign Trends configuration showing metric, comparison, date range, data coverage, aggregation, and visualization controls; it is not a populated trend."
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="food-insight-path__capture-copy">
+            <span className="food-figure__index">PHASE 24 · PRE-REDESIGN · TRENDS</span>
+            <strong id="food-insight-capture-config-title">Configuration evidence only; not a populated trend result.</strong>
+            <p>The capture shows available analysis controls, not current UI approval or a user outcome.</p>
+          </div>
+        </section>
+        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-plan-title">
+          <div className="food-insight-path__capture-screen food-insight-path__capture-screen--plan">
+            <img
+              src="/media/case-studies/food-tracker/phase-24/goal-plan.png"
+              alt="Phase 24 Goal plan capture for the existing QA profile showing a recommended starting plan and the note that recommendations are not promises."
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="food-insight-path__capture-copy">
+            <span className="food-figure__index">PHASE 24 · PRE-REDESIGN · GOAL PLAN</span>
+            <strong id="food-insight-capture-plan-title">Recommendations, not promises.</strong>
+            <p>One QA-profile recommendation capture; not a general result or outcome.</p>
+          </div>
+        </section>
+      </div>
+
       <div className="food-insight-path__evidence food-insight-path__evidence--inset" aria-label="Supporting pre-redesign screenshot evidence">
         <div className="food-insight-path__evidence-crop">
           <img

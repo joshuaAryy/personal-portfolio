@@ -55,9 +55,10 @@ function useRailVisible() {
 }
 
 function utilityLinksDetail(railVisible: boolean) {
-  return railVisible
-    ? "LinkedIn, GitHub, Email, and Resume are in the client toolbar."
-    : "LinkedIn, GitHub, Email, and Resume are in the contact row after the page content.";
+  const location = railVisible
+    ? "in the client toolbar"
+    : "in the contact row after the page content";
+  return `LinkedIn, GitHub, Email, and Resume are ${location}. LinkedIn and GitHub open in new tabs, Email starts a message, and Resume opens Resume Found.`;
 }
 
 function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
@@ -65,7 +66,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Top-level links",
-        detail: `${utilityLinksDetail(railVisible)} Resume opens Resume Found.`,
+        detail: utilityLinksDetail(railVisible),
       },
       {
         title: "Mode navigation",
@@ -179,7 +180,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
       },
       {
         title: "Food Tracker",
-        detail: "Its authentic demo video is pending. Use the Profile tabs to change sections.",
+        detail: "Food Tracker currently shows a static identity poster; its authentic demo video is pending. Use the Profile tabs to change sections.",
       },
     ];
   }
@@ -211,7 +212,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     return [
       {
         title: "Resume Found",
-        detail: "View Resume opens the document viewer. Close returns to the screen that opened Resume Found.",
+        detail: `${utilityLinksDetail(railVisible)} View Resume opens the document viewer. Close returns to the screen that opened Resume Found.`,
       },
       {
         title: "View or close",
@@ -232,7 +233,7 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
       },
       {
         title: "Resume actions",
-        detail: "Download PDF saves a copy. Open Fullscreen opens the PDF in a new tab.",
+        detail: `${utilityLinksDetail(railVisible)} Download PDF saves a copy. Open Fullscreen opens the PDF in a new tab.`,
       },
       {
         title: "Return to Resume Found",
@@ -244,7 +245,10 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   }
 
   if (pathname.startsWith("/projects/") || pathname.startsWith("/experience/")) {
-    const hasChapterNav = pathname === "/projects/choveigo" || pathname === "/projects/fraymakers";
+    const hasChapterNav =
+      pathname === "/projects/food-tracker" ||
+      pathname === "/projects/choveigo" ||
+      pathname === "/projects/fraymakers";
     return [
       {
         title: "Top-level links",

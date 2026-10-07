@@ -6,7 +6,7 @@ type CapabilityBrief = {
   id: "dental" | "bookstore" | "alu" | "cmos";
   discipline: string;
   title: string;
-  status: string[];
+  status?: string[];
   summary: string;
   focus: string;
   boundary?: string;
@@ -17,37 +17,31 @@ const capabilityBriefs: CapabilityBrief[] = [
     id: "dental",
     discipline: "DATABASE DESIGN · ORACLE SQL",
     title: "Dental Clinic DBMS",
-    status: ["CURRENT · IN PROGRESS", "OWNER-REPORTED · EVIDENCE PENDING"],
+    status: ["CURRENT · IN PROGRESS"],
     summary: "Current CPS510 work is developing a relational database for clinic workflows.",
-    focus: "Capability focus: ER-to-relational modeling, keys and integrity constraints, and SQL queries across connected records.",
-    boundary: "The broader clinic scope remains planned; no completed schema or query implementation is asserted.",
+    focus: "ER-to-relational modeling, keys and integrity constraints, and SQL queries across connected records.",
+    boundary: "Broader clinic workflows are planned as the course project continues.",
   },
   {
     id: "bookstore",
     discipline: "OBJECT-ORIENTED SOFTWARE · JAVA / SWING",
     title: "Bookstore Management System",
-    status: ["OWNER-REPORTED · EVIDENCE PENDING"],
-    summary: "Owner-reported Java/Swing desktop bookstore with owner and customer paths.",
-    focus: "Capability focus: separate UI and transaction responsibilities, State-pattern loyalty behavior, shared Singleton state, and local file persistence.",
-    boundary: "No source or authentic interface was reviewed; course attribution is omitted.",
+    summary: "A Java/Swing desktop bookstore with owner and customer paths.",
+    focus: "UI and transaction responsibilities are separate, with State-pattern loyalty behavior, shared Singleton state, and local file persistence.",
   },
   {
     id: "alu",
     discipline: "DIGITAL LOGIC · QUARTUS / VHDL",
-    title: "8-bit ALU + nine-state FSM",
-    status: ["SOURCE VERIFIED · LAB 6 PART 2"],
+    title: "8-bit ALU + FSM",
     summary: "A clocked digital system separates the data path from FSM-driven operation selection.",
-    focus: "Capability focus: connect sequential control, an 8-bit datapath, and hexadecimal display inputs.",
-    boundary: "The selected BDF pin is named Resetn while the FSM module resets high, so system reset polarity is unresolved. Waveform files show setup, not a verified passing trace; no hardware demonstration is claimed.",
+    focus: "Sequential control selects operations across an 8-bit datapath and hexadecimal display outputs.",
   },
   {
     id: "cmos",
     discipline: "ANALOG DESIGN · KICAD / SPICE",
     title: "Four-stage CMOS amplifier",
-    status: ["OWNER-REPORTED · EVIDENCE PENDING"],
-    summary: "Owner-reported KiCad/SPICE study of a four-stage CMOS amplifier.",
-    focus: "Capability focus: reason about gain, bias/current, buffering, load, and output headroom through DC, AC, and transient analysis.",
-    boundary: "No schematic, netlist, or result plot was found; exact topology, values, and results remain unverified.",
+    summary: "A four-stage CMOS amplifier study using KiCad and SPICE.",
+    focus: "The study weighs gain, bias/current, buffering, load, and output headroom through DC, AC, and transient analysis.",
   },
 ];
 
@@ -63,10 +57,10 @@ function AluSourceMap() {
     <figure className="education-projects__alu-map" aria-labelledby="education-alu-map-title">
       <header className="education-projects__figure-heading">
         <div>
-          <p className="education-projects__figure-label">LAB 6 · PART 2 SOURCE MAP</p>
+          <p className="education-projects__figure-label">DIGITAL SYSTEMS · DATA + CONTROL</p>
           <h4 id="education-alu-map-title">Data and control meet at the ALU</h4>
         </div>
-        <p>Traced from the configured block diagram.</p>
+        <p>Operation selection and result display.</p>
       </header>
 
       <div className="education-projects__map-lanes">
@@ -133,9 +127,11 @@ export default function EducationProjects() {
                 <header className="education-projects__brief-heading">
                   <p className="education-projects__kind">{brief.discipline}</p>
                   <h3>{brief.title}</h3>
-                  <ul className="education-projects__status-list" aria-label={`${brief.title} evidence status`}>
-                    {brief.status.map((label) => <li key={label}>{label}</li>)}
-                  </ul>
+                  {brief.status?.length ? (
+                    <ul className="education-projects__status-list" aria-label={`${brief.title} status`}>
+                      {brief.status.map((label) => <li key={label}>{label}</li>)}
+                    </ul>
+                  ) : null}
                 </header>
 
                 <div className="education-projects__brief-copy">

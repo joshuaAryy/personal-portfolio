@@ -159,6 +159,16 @@ export default function ChoViegoCase() {
             <p className="cho-story__hero-summary" data-route-entry="summary">
               Job discovery and resume tailoring meet in one workspace, but they answer different questions. First inspect the role. Then examine reviewed profile evidence. The person decides what comes next.
             </p>
+            <div className="cho-story__method-boundary" role="group" aria-label="Jobs evaluation and separate Resume Studio method">
+              <div>
+                <span>JOBS · DETERMINISTIC</span>
+                <p>Deterministic rules compare responsibilities with reviewed profile evidence for Fit, then check essential requirements for Eligibility.</p>
+              </div>
+              <div>
+                <span>RESUME STUDIO · GEMINI</span>
+                <p>Gemini classifies the role; constrained rewriting is checked against source evidence.</p>
+              </div>
+            </div>
             <div className="cho-story__ownership-rail" data-route-entry="summary">
               <span>TWO-PERSON PROJECT</span>
               <strong>Joshua Aryeetey <i aria-hidden="true">+</i> Shiv Arora</strong>

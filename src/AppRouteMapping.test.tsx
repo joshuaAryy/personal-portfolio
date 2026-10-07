@@ -89,10 +89,16 @@ describe("primary App route mapping", () => {
     expect(page.match(/class="education-projects__brief education-projects__brief--[^"]+"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Bookstore Management System");
-    expect(page).toContain("8-bit ALU + nine-state FSM");
+    expect(page).toContain("8-bit ALU + FSM");
     expect(page).toContain("Four-stage CMOS amplifier");
     expect(page).toContain("IN PROGRESS");
-    expect(page.match(/EVIDENCE PENDING/g)).toHaveLength(3);
+    expect(page).not.toContain("OWNER-REPORTED · EVIDENCE PENDING");
+    expect(page).not.toContain("SOURCE VERIFIED · LAB 6 PART 2");
+    expect(page).toContain("A Java/Swing desktop bookstore with owner and customer paths.");
+    expect(page).toContain("A four-stage CMOS amplifier study using KiCad and SPICE.");
+    expect(page).toContain("CURRENT · IN PROGRESS");
+    expect(page).not.toContain("Capability focus:");
+    expect(page).not.toContain("No source or authentic interface was reviewed");
     expect(page).not.toMatch(/Dean|scholarship/i);
     expect(page).toContain('class="top-nav top-nav--education-projects"');
     expect(page).toContain('aria-current="page"');
@@ -107,8 +113,9 @@ describe("primary App route mapping", () => {
   it("uses one source-traced ALU figure and text-led briefs for the other projects", () => {
     const page = renderRoute("/education/projects");
     expect(page.match(/class="education-projects__alu-map"/g)).toHaveLength(1);
-    expect(page).toContain("LAB 6 · PART 2 SOURCE MAP");
-    expect(page).toContain("Traced from the configured block diagram");
+    expect(page).toContain("DIGITAL SYSTEMS · DATA + CONTROL");
+    expect(page).toContain("Operation selection and result display.");
+    expect(page).not.toContain("LAB 6 · PART 2");
     expect(page).toContain("Two 8-bit inputs");
     expect(page).toContain("Input latches");
     expect(page).toContain("Nine-state FSM");
@@ -122,25 +129,31 @@ describe("primary App route mapping", () => {
     expect(page).toContain("ORACLE SQL");
     expect(page).toContain("integrity constraints");
     expect(page).toContain("SQL queries across connected records");
-    expect(page).toContain("broader clinic scope remains planned");
+    expect(page).toContain("Broader clinic workflows are planned as the course project continues.");
     expect(page).toContain("Java / Swing");
     expect(page).toContain("State-pattern loyalty behavior");
     expect(page).toContain("shared Singleton state");
     expect(page).toContain("local file persistence");
     expect(page).toContain("gain, bias/current, buffering, load, and output headroom");
+    expect(page).not.toContain("The selected BDF pin is named Resetn");
+    expect(page).not.toContain("Waveform files show setup");
+    expect(page).not.toContain("no hardware demonstration is claimed");
     expect(page).not.toMatch(/source-follower|3\.3 V|measured gain|fabricated hardware/i);
   });
 
-  it("qualifies incomplete scope and reset or waveform evidence", () => {
+  it("keeps owner context natural and excludes unsupported project claims", () => {
     const page = renderRoute("/education/projects");
-    expect(page).toContain("Owner-reported");
-    expect(page).toContain("EVIDENCE PENDING");
-    expect(page).toContain("no completed schema or query implementation is asserted");
-    expect(page).toContain("No source or authentic interface was reviewed");
-    expect(page).toContain("No schematic, netlist, or result plot was found");
-    expect(page).toContain("BDF pin is named Resetn");
-    expect(page).toContain("FSM module resets high");
-    expect(page).toContain("Waveform files show setup, not a verified passing trace");
+    expect(page).toContain("CURRENT · IN PROGRESS");
+    expect(page).toContain("Broader clinic workflows are planned as the course project continues.");
+    expect(page).toContain("A Java/Swing desktop bookstore with owner and customer paths.");
+    expect(page).toContain("A four-stage CMOS amplifier study using KiCad and SPICE.");
+    expect(page).not.toContain("OWNER-REPORTED · EVIDENCE PENDING");
+    expect(page).not.toContain("SOURCE VERIFIED · LAB 6 PART 2");
+    expect(page).not.toContain("No source or authentic interface was reviewed");
+    expect(page).not.toContain("No schematic, netlist, or result plot was found");
+    expect(page).not.toContain("BDF pin is named Resetn");
+    expect(page).not.toContain("FSM module resets high");
+    expect(page).not.toContain("Waveform files show setup, not a verified passing trace");
     expect(page).not.toContain("active-low reset");
     expect(page).not.toContain("9 opcode branches");
     expect(page).not.toContain("simulation passed");

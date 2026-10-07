@@ -117,6 +117,13 @@
 .stush-brief h2 { margin-top: 13px; }
 .stush-brief__body { display: grid; gap: 18px; padding-top: 25px; }
 .stush-brief__body p { color: var(--stush-muted); font-size: 15px; line-height: 1.7; }
+.stush-brief__translation { display: grid; grid-template-columns: minmax(0, .85fr) 34px minmax(0, 1.15fr); align-items: center; gap: 14px; padding: 17px 0; border-top: 1px solid var(--stush-rule); border-bottom: 1px solid var(--stush-rule); }
+.stush-brief__need, .stush-brief__rules { display: grid; align-content: start; gap: 9px; min-width: 0; }
+.stush-brief__need > span, .stush-brief__rules > span { color: var(--stush-amber); font-size: 10px; font-weight: 750; letter-spacing: .09em; line-height: 1.4; }
+.stush-brief__need > strong { color: #e9ece7; font-size: 19px; font-weight: 620; line-height: 1.35; }
+.stush-brief__translation-arrow { color: var(--stush-teal); font-size: 25px; text-align: center; }
+.stush-brief__rules ul { display: flex; flex-wrap: wrap; gap: 7px 14px; }
+.stush-brief__rules li { padding-bottom: 4px; border-bottom: 1px solid rgba(114, 201, 188, .42); color: #d6e2da; font-size: 13px; font-weight: 620; line-height: 1.4; }
 .stush-close { display: grid; grid-template-columns: minmax(0, 1fr) minmax(230px, .5fr); align-items: center; gap: 50px; padding: 58px 0 12px; }
 .stush-close h2 { margin-top: 13px; font-size: clamp(30px, 3.4vw, 44px); }
 .stush-close__heading > p:last-child { max-width: 690px; margin-top: 18px; color: var(--stush-muted); font-size: 15px; line-height: 1.7; }
@@ -189,6 +196,9 @@
   .stush-source-exception__intro h2 { font-size: 30px; }
   .stush-source-exception__intro > p:last-child, .stush-brief__body p { font-size: 15px; }
   .stush-brief__body { padding-top: 0; gap: 16px; }
+  .stush-brief__translation { grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 15px 0; }
+  .stush-brief__translation-arrow { justify-self: start; margin-left: 2px; transform: rotate(90deg); }
+  .stush-brief__rules ul { gap: 7px 12px; }
   .stush-close h2 { font-size: 32px; }
   .stush-close__reflection { max-width: 370px; }
 }

@@ -87,9 +87,9 @@ describe("Food Tracker product story", () => {
     const loggingCaptures = [...logging.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
     const insightCaptures = [...insights.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
 
-    expect(captures).toHaveLength(3);
+    expect(captures).toHaveLength(5);
     expect(loggingCaptures).toHaveLength(2);
-    expect(insightCaptures).toHaveLength(1);
+    expect(insightCaptures).toHaveLength(3);
     expect(logging).toContain("search-banana-results.png");
     expect(logging).toContain("food-serving-preview-banana.png");
     expect(logging).not.toContain("food-log-complex-clean.png");
@@ -99,7 +99,12 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
     expect(insights).toContain("trend-detail-calories-unknown.png");
     expect(insights).toContain("Captured state: Unknown, not zero.");
-    expect(markup).not.toContain("trend-configuration.png");
+    expect(insights).toContain("trend-configuration.png");
+    expect(insights).toContain("goal-plan.png");
+    expect(insights).toContain("Configuration evidence only; not a populated trend result.");
+    expect(insights).toContain("One QA-profile recommendation capture; not a general result or outcome.");
+    expect(insights).toContain("Recommendations, not promises.");
+    expect(markup).not.toContain("trends-overview.png");
     expect(markup).not.toContain("insights-week-current.png");
   });
 

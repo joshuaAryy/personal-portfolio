@@ -33,6 +33,19 @@ describe("Stush Patties experience story", () => {
     expect(html.indexOf('id="stush-role"')).toBe(-1);
   });
 
+  it("connects the reporting need to the shared rules without another text block", () => {
+    const html = markup();
+    const clientProblem = html.slice(html.indexOf('class="stush-brief"'), html.indexOf('class="stush-close"'));
+    const translation = clientProblem.slice(clientProblem.indexOf('class="stush-brief__translation"'));
+
+    expect(translation).toContain('role="group" aria-label="Stakeholder need translated into reporting rules"');
+    expect(translation).toContain("Comparable monthly reporting");
+    expect(translation).toContain("Sales + units");
+    expect(translation).toContain("Case pack");
+    expect(translation).toContain("Reporting month");
+    expect(html).not.toMatch(/Koyo|UNFI|Dovre/i);
+  });
+
   it("shows source A/B/C and formats across the input set without client data", () => {
     const html = markup();
     const sourceMap = html.slice(html.indexOf('class="stush-source-map"'), html.indexOf("</figure>", html.indexOf('class="stush-source-map"')));

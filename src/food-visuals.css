@@ -5775,3 +5775,80 @@
     font-size: 15px;
   }
 }
+
+/* Authentic Phase 24 Insights captures document controls and one recommendation state. */
+.food-insight-path__captures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 14px;
+  padding: clamp(16px, 2.4vw, 28px);
+  border-top: 1px solid var(--food-line);
+  background: rgba(0, 0, 0, .12);
+}
+
+.food-insight-path__capture {
+  display: grid;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(148, 178, 183, .23);
+  background: #0b171d;
+}
+
+.food-insight-path__capture-screen {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  overflow: visible;
+  background: #f5f5f2;
+}
+
+.food-insight-path__capture-screen > img {
+  display: block;
+  width: min(100%, 368px);
+  height: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+.food-insight-path__capture-copy {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 15px 16px 17px;
+}
+
+.food-insight-path__capture-copy > .food-figure__index {
+  color: var(--food-gold);
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.food-insight-path__capture-copy > strong {
+  color: var(--food-ink);
+  font-size: clamp(16px, 1.7vw, 20px);
+  line-height: 1.35;
+}
+
+.food-insight-path__capture-copy > p {
+  margin: 0;
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .food-insight-path__captures {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .food-insight-path__capture-copy {
+    padding: 14px;
+  }
+
+  .food-insight-path__capture-copy > .food-figure__index {
+    font-size: 10px;
+  }
+}

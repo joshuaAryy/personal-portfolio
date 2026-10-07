@@ -157,7 +157,7 @@ describe("contextual Help overlay", () => {
     ["/profile", ["Profile signals", "Profile navigation", "Open a project"]],
     ["/profile/journey", ["Follow the story", "Use the path", "Change sections"]],
     ["/profile/demos", ["Choose a demo", "Play Crest or Cho’Veigo", "Food Tracker"]],
-    ["/projects/food-tracker", ["Read the case study", "Move between stories"]],
+    ["/projects/food-tracker", ["Read the case study", "Case study navigation", "Move between stories"]],
     ["/projects/choveigo", ["Case study navigation"]],
     ["/resume", ["Resume Found", "View or close", "Escape"]],
     ["/resume/viewer", ["Resume viewer", "Resume actions", "Return to Resume Found"]],
@@ -181,9 +181,56 @@ describe("contextual Help overlay", () => {
     const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
       .map((node) => node.textContent ?? "").join(" ");
     expect(details).toContain("LinkedIn, GitHub, Email, and Resume");
+    expect(details).toContain("LinkedIn and GitHub open in new tabs");
+    expect(details).toContain("Email starts a message");
+    expect(details).toContain("Resume opens Resume Found");
     expect(details).toContain("top-left arrow returns Home");
     expect(details).toContain("Open Case Study");
   });
+
+  it("explains Food Tracker chapter navigation and active-scroll feedback", () => {
+    const view = renderApp("/projects/food-tracker");
+    const trigger = view.querySelector(".header-help");
+    if (!trigger) throw new Error("Header help trigger is missing");
+    click(trigger);
+
+    const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "")
+      .join(" ");
+    expect(details).toContain("chapter stops");
+    expect(details).toContain("active chapter follows your scroll position");
+  });
+
+  it("describes Food's static demo poster and pending video accurately", () => {
+    const view = renderApp("/profile/demos");
+    const trigger = view.querySelector(".header-help");
+    if (!trigger) throw new Error("Header help trigger is missing");
+    click(trigger);
+
+    const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
+      .map((node) => node.textContent ?? "")
+      .join(" ");
+    expect(details).toContain("Food Tracker currently shows a static identity poster");
+    expect(details).toContain("its authentic demo video is pending");
+    expect(details).toContain("press Play to start its video in the player");
+  });
+
+  it.each(["/resume", "/resume/viewer"])(
+    "explains shared utility actions on Resume routes (%s)",
+    (path) => {
+      const view = renderApp(path);
+      const trigger = view.querySelector(".header-help");
+      if (!trigger) throw new Error("Header help trigger is missing");
+      click(trigger);
+
+      const details = Array.from(view.querySelectorAll(".client-help-overlay__steps p"))
+        .map((node) => node.textContent ?? "")
+        .join(" ");
+      expect(details).toContain("LinkedIn and GitHub open in new tabs");
+      expect(details).toContain("Email starts a message");
+      expect(details).toContain("Resume opens Resume Found");
+    },
+  );
 
   it("explains how Education project briefs return to the academic lobby", () => {
     const view = renderApp("/education/projects");
@@ -228,6 +275,7 @@ describe("contextual Help overlay", () => {
     const lobbyDetails = Array.from(lobby.querySelectorAll(".client-help-overlay__steps p"))
       .map((node) => node.textContent ?? "").join(" ");
     expect(lobbyDetails).toContain("contact row after the page content");
+    expect(lobbyDetails).toContain("LinkedIn and GitHub open in new tabs");
     expect(lobbyDetails).not.toContain("in the client toolbar");
   });
 

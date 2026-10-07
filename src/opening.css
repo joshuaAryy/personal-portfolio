@@ -133,7 +133,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  animation: opening-tick-spin 2.8s linear both;
+  animation: opening-tick-spin 2.65s linear both;
 }
 
 .opening__orbit-ticks {
@@ -189,7 +189,6 @@
 
 .opening__j-piece {
   opacity: 1;
-  animation: opening-forge-piece 1.55s cubic-bezier(.2,.75,.25,1) both;
 }
 
 .opening__j-piece img {
@@ -217,36 +216,28 @@
 
 .opening__seam--upper {
   clip-path: inset(18% 25% 70% 49%);
-  animation: opening-seam-ignite .42s ease-out 1.66s both;
+  animation: opening-seam-ignite 240ms cubic-bezier(.22,.7,.3,1) 560ms both;
 }
 
 .opening__seam--lower {
   clip-path: inset(59% 25% 29% 49%);
-  animation: opening-seam-ignite .42s ease-out 1.87s both;
+  animation: opening-seam-ignite 240ms cubic-bezier(.22,.7,.3,1) 780ms both;
 }
 
 .opening__j-piece--cap {
-  --forge-start-x: 0px;
-  --forge-start-y: -22px;
-  --forge-mid-x: 0px;
-  --forge-mid-y: -9px;
-  animation-delay: 0s;
+  --forge-start-y: -1.1%;
+  animation: opening-c06-seat 440ms cubic-bezier(.22,.7,.3,1) 120ms both;
 }
 
 .opening__j-piece--shaft {
-  --forge-start-x: 10px;
-  --forge-start-y: 0px;
-  --forge-mid-x: 4px;
-  --forge-mid-y: 0px;
-  animation-delay: .1s;
+  opacity: 1;
+  transform: none;
+  animation: none;
 }
 
 .opening__j-piece--hook {
-  --forge-start-x: 0px;
-  --forge-start-y: 22px;
-  --forge-mid-x: 0px;
-  --forge-mid-y: 9px;
-  animation-delay: .2s;
+  --forge-start-y: 1.1%;
+  animation: opening-c06-seat 500ms cubic-bezier(.22,.7,.3,1) 280ms both;
 }
 
 .opening__j-material-highlight {
@@ -266,7 +257,7 @@
   mask-size: contain;
   mix-blend-mode: screen;
   pointer-events: none;
-  animation: opening-material-highlight .58s ease-in-out 1.88s both;
+  animation: opening-material-highlight 550ms cubic-bezier(.22,.7,.3,1) 1250ms both;
 }
 
 .opening__skip {
@@ -293,41 +284,40 @@
   color: #fff0c1;
 }
 
-@keyframes opening-forge-piece {
-  0%, 20% { opacity: .94; transform: translate(var(--forge-start-x), var(--forge-start-y)); }
-  60% { opacity: 1; transform: translate(var(--forge-mid-x), var(--forge-mid-y)); }
-  100% { opacity: 1; transform: translate(0, 0); }
+@keyframes opening-c06-seat {
+  from { transform: translateY(var(--forge-start-y)); }
+  to { transform: translateY(0); }
 }
 
 @keyframes opening-seam-ignite {
   0% { opacity: 0; }
-  32% { opacity: .95; }
-  54% { opacity: .52; }
-  100% { opacity: 0; }
+  30% { opacity: .9; }
+  64% { opacity: .52; }
+  100% { opacity: .72; }
 }
 
 @keyframes opening-material-highlight {
   0% { opacity: 0; transform: translateX(-34%); }
-  25% { opacity: .72; transform: translateX(-12%); }
-  62% { opacity: .48; transform: translateX(20%); }
+  40% { opacity: .2; transform: translateX(-3%); }
+  72% { opacity: .12; transform: translateX(20%); }
   100% { opacity: 0; transform: translateX(34%); }
 }
 
 @keyframes opening-tick-spin {
   0% { transform: rotate(0deg); }
-  100% { transform: rotate(2520deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @keyframes opening-tick-arrive {
   0% { opacity: 0; }
   8.6% { opacity: .8; }
-  75.7%, 100% { opacity: .68; }
+  69.7%, 100% { opacity: .68; }
 }
 
 @keyframes opening-ring-arrive {
   0% { opacity: 0; transform: translate(-50%, -50%) scale(.92); }
   8.6% { opacity: .78; transform: translate(-50%, -50%) scale(1); }
-  75.7%, 100% { opacity: .72; transform: translate(-50%, -50%) scale(1); }
+  69.7%, 100% { opacity: .72; transform: translate(-50%, -50%) scale(1); }
 }
 
 @keyframes opening-radial-arrive {
@@ -336,7 +326,7 @@
   30% { opacity: .42; transform: rotate(-2deg) scale(.99); }
   53% { opacity: .34; transform: rotate(3deg) scale(1); }
   65% { opacity: .23; transform: rotate(2deg) scale(1); }
-  75.7%, 100% { opacity: .2; transform: rotate(0deg) scale(1); }
+  69.7%, 100% { opacity: .2; transform: rotate(0deg) scale(1); }
 }
 
 @keyframes opening-peripheral-sweep {
@@ -344,13 +334,13 @@
   8.6% { opacity: .62; transform: rotate(-2deg) scale(.98); }
   32% { opacity: .45; transform: rotate(2deg) scale(1); }
   62% { opacity: .3; transform: rotate(4deg) scale(1.01); }
-  75.7%, 100% { opacity: .22; transform: rotate(0deg) scale(1); }
+  69.7%, 100% { opacity: .22; transform: rotate(0deg) scale(1); }
 }
 
 @keyframes opening-mark-arrive {
   0% { opacity: 0; transform: rotate(45deg) scale(.45); }
   8.6% { opacity: .74; transform: rotate(45deg) scale(1.08); }
-  75.7%, 100% { opacity: .64; transform: rotate(45deg) scale(1); }
+  69.7%, 100% { opacity: .64; transform: rotate(45deg) scale(1); }
 }
 
 @keyframes opening-scene-exit {

@@ -67,6 +67,8 @@ Use this active scheduler loop:
 
 Keep the graph purposeful, not inactive. "Keep the graph small" means avoid redundant or overlapping scopes; it does not mean avoid parallel work or minimize active agents. Several useful non-conflicting lanes are better than routing all implementation through root.
 
+Parallelism remains budget-aware: use roughly two meaningful build/research lanes for a bounded pass, and add Runtime QA when an integrated batch is ready to validate. This is a practical default, not a rigid cap. Do not fill every slot or invent work; when a task ends, refill only from the highest-value independent READY item. Preserve and report unfinished work when scope changes rather than silently discarding it.
+
 Root direct execution is the exception for implementation. Root handles small glue, cross-cutting coordination, and integration whose work is tightly coupled. Root should not absorb a substantial implementation merely because it can, because the task touches several files, or because dispatching takes a little coordination. Independent READY work should preferentially be routed to its persistent domain owner or executor.
 
 Sol is episodic, not emergency-only. Invoke the strategic core at a genuine high-leverage decision boundary: consequential ambiguity, major direction or decomposition, competing designs, cross-domain tradeoffs, priority choices, or acceptance criteria that would materially affect quality. Send a neutral decision packet with direct evidence; do not pre-solve Sol's judgment. Sol does not do polling, Git, routine implementation, browser mechanics, or repetitive QA. Independent Sol work may coexist when justified; do not invent questions to keep Sol active.

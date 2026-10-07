@@ -27,32 +27,34 @@ describe("Fraymakers technical case study", () => {
     expect(hero).not.toContain("MATCH + TOURNAMENT");
   });
 
-  it("shows one conceptual metadata-to-output path without inventing a YAML schema", () => {
+  it("connects match context to the thumbnail renderer and output without inventing schema or layer order", () => {
     const markup = render();
     const workflow = markup.slice(markup.indexOf('id="fraymakers-configuration"'), markup.indexOf('id="fraymakers-composition"'));
     expect(workflow).toContain('class="fray-case__workflow-path"');
-    expect(workflow.match(/fray-case__workflow-stage--configuration/g)).toHaveLength(1);
-    expect(workflow.match(/fray-case__workflow-stage--metadata/g)).toHaveLength(1);
-    expect(workflow.match(/fray-case__workflow-stage--association/g)).toHaveLength(1);
-    expect(workflow.indexOf('fray-case__workflow-stage--metadata')).toBeLessThan(workflow.indexOf('fray-case__workflow-stage--configuration'));
-    expect(workflow.indexOf('fray-case__workflow-stage--configuration')).toBeLessThan(workflow.indexOf('fray-case__workflow-stage--association'));
+    expect(workflow).toContain('class="fray-case__workflow-context"');
+    expect(workflow).toContain('class="fray-case__workflow-render"');
+    expect(workflow).toContain('class="fray-case__workflow-renderer"');
+    expect(workflow).toContain('class="fray-case__workflow-output"');
+    expect(workflow.indexOf("Tournament + match metadata")).toBeLessThan(workflow.indexOf("Event / match YAML overrides"));
+    expect(workflow.indexOf("Event / match YAML overrides")).toBeLessThan(workflow.indexOf("Match ↔ recording association"));
+    expect(workflow.indexOf("Match ↔ recording association")).toBeLessThan(workflow.indexOf("Selected media assets"));
+
+
+    expect(workflow.indexOf('class="fray-case__workflow-renderer"')).toBeLessThan(workflow.indexOf('class="fray-case__workflow-renderer-library"'));
+    expect(workflow.indexOf('class="fray-case__workflow-renderer-library"')).toBeLessThan(workflow.indexOf('class="fray-case__workflow-output"'));
     expect(workflow).toContain("Tournament + match metadata");
     expect(workflow).toContain("Event / match YAML overrides");
     expect(workflow).toContain("Match ↔ recording association");
     expect(workflow).toContain("Selected media assets");
     expect(workflow).toContain("Character / sprite art");
-    expect(workflow).toContain("Foreground + logos");
+    expect(workflow).toContain("Player + tournament logos");
+    expect(workflow).toContain("Foreground art");
     expect(workflow).toContain("thumbnail.js");
     expect(workflow).toContain("node-canvas");
     expect(workflow).toContain("1280 × 720 PNG");
-    expect(workflow).toContain("exact YAML keys and override behavior are not established");
-    expect(workflow.indexOf("Tournament + match metadata")).toBeLessThan(workflow.indexOf("Event / match YAML overrides"));
-    expect(workflow.indexOf("Event / match YAML overrides")).toBeLessThan(workflow.indexOf("Match ↔ recording association"));
-    expect(workflow.indexOf("Match ↔ recording association")).toBeLessThan(workflow.indexOf("Selected media assets"));
-    expect(workflow.indexOf("Selected media assets")).toBeLessThan(workflow.indexOf("thumbnail.js"));
-    expect(workflow.indexOf("thumbnail.js")).toBeLessThan(workflow.indexOf("1280 × 720 PNG"));
     expect(workflow).not.toContain("<pre");
-    expect(workflow).toContain("Conceptual sequence; exact YAML keys and override behavior are not established, and no fixed composition order is shown.");
+    expect(workflow).toContain("YAML keys and override behavior are not established");
+    expect(workflow).toContain("Asset categories are inputs; composition order is unverified.");
     expect(markup).not.toContain("REAL FRAYMAKERS VODS");
   });
 

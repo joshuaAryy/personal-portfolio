@@ -143,8 +143,9 @@ export default function FraymakersCase() {
             <p>Match identity and event-specific choices had to stay attached to the right recording before the selected assets reached the renderer.</p>
           </div>
           <figure className="fray-case__workflow-path" aria-labelledby="fraymakers-workflow-caption">
+            <div className="fray-case__workflow-context" role="group" aria-label="Tournament context, configuration, and match to recording association">
             <div className="fray-case__workflow-stage fray-case__workflow-stage--metadata" role="group" aria-label="Tournament and match metadata">
-              <span className="fray-case__workflow-kicker">01 / MATCH METADATA</span>
+              <span className="fray-case__workflow-kicker">MATCH METADATA</span>
               <strong>Tournament + match metadata</strong>
               <ul className="fray-case__workflow-fields">
                 <li>Player + set</li><li>Character + costume</li><li>Assist</li>
@@ -152,7 +153,7 @@ export default function FraymakersCase() {
             </div>
             <span className="fray-case__workflow-link" aria-hidden="true">→</span>
             <div className="fray-case__workflow-stage fray-case__workflow-stage--configuration" role="group" aria-label="YAML configuration overrides at event or match scope">
-              <span className="fray-case__workflow-kicker">02 / YAML CONFIG</span>
+              <span className="fray-case__workflow-kicker">EVENT / MATCH OVERRIDES</span>
               <strong>Event / match YAML overrides</strong>
               <div className="fray-case__workflow-config-scopes" aria-label="Override scopes">
                 <span>EVENT</span><span>MATCH</span>
@@ -160,26 +161,38 @@ export default function FraymakersCase() {
             </div>
             <span className="fray-case__workflow-link" aria-hidden="true">→</span>
             <div className="fray-case__workflow-stage fray-case__workflow-stage--association" role="group" aria-label="Match and video association">
-              <span className="fray-case__workflow-kicker">03 / VIDEO MAPPING</span>
+              <span className="fray-case__workflow-kicker">MATCH / VIDEO ASSOCIATION</span>
               <strong>Match ↔ recording association</strong>
               <div className="fray-case__recording-map"><span>MATCH</span><b aria-hidden="true">↔</b><span>VOD</span></div>
             </div>
-            <span className="fray-case__workflow-link" aria-hidden="true">→</span>
-            <div className="fray-case__workflow-stage fray-case__workflow-stage--render" role="group" aria-label="Selected media assets pass through thumbnail.js and node-canvas into a 1280 by 720 PNG">
-              <span className="fray-case__workflow-kicker">04 / ASSETS + RENDER</span>
-              <strong>Selected media assets</strong>
-              <ul className="fray-case__workflow-assets">
-                <li>Stage + background</li><li>Character / sprite art</li><li>Costume + assist</li><li>Foreground + logos</li><li>Names + set labels</li>
-              </ul>
-              <div className="fray-case__render-sequence">
-                <span><strong>thumbnail.js</strong><small>renderer</small></span>
-                <b aria-hidden="true">→</b>
-                <span><strong>node-canvas</strong><small>canvas</small></span>
-                <b aria-hidden="true">→</b>
-                <span className="fray-case__render-output"><strong>1280 × 720 PNG</strong><small>output</small></span>
+            </div>
+            <div className="fray-case__workflow-handoff" role="group" aria-label="Selected match context determines the assets prepared for rendering">
+              <span>SELECTED MATCH CONTEXT</span><i aria-hidden="true">↓</i><span>SELECTED ASSET SET</span>
+            </div>
+            <div className="fray-case__workflow-render" role="group" aria-label="Selected assets pass through thumbnail.js and node-canvas to a standard PNG output">
+              <div className="fray-case__workflow-assets-panel" role="group" aria-label="Selected media asset categories; no fixed layer order is implied">
+                <span className="fray-case__workflow-kicker">SELECTED INPUTS</span>
+                <strong>Selected media assets</strong>
+                <ul className="fray-case__workflow-assets">
+                  <li>Stage + background</li><li>Character / sprite art</li><li>Costume + assist</li><li>Player + tournament logos</li><li>Foreground art</li><li>Fonts + player names</li><li>Set labels</li>
+                </ul>
+                <p>These are available inputs, not a fixed composition order.</p>
+              </div>
+              <span className="fray-case__workflow-render-link" aria-hidden="true">→</span>
+              <div className="fray-case__workflow-renderer" role="group" aria-label="Joshua's thumbnail.js rendering subsystem">
+                <span className="fray-case__workflow-kicker">JOSHUA'S SUBSYSTEM</span>
+                <strong>thumbnail.js</strong>
+                <p>Uses node-canvas to compose selected match inputs for the VOD.</p>
+                <span className="fray-case__workflow-renderer-library">node-canvas</span>
+              </div>
+              <span className="fray-case__workflow-render-link" aria-hidden="true">→</span>
+              <div className="fray-case__workflow-output" role="group" aria-label="Generated thumbnail output, 1280 by 720 PNG">
+                <span className="fray-case__workflow-kicker">OUTPUT</span>
+                <div className="fray-case__workflow-output-frame" aria-hidden="true"><span>16:9</span></div>
+                <strong>1280 × 720 PNG</strong>
               </div>
             </div>
-            <figcaption id="fraymakers-workflow-caption">Conceptual sequence; exact YAML keys and override behavior are not established, and no fixed composition order is shown.</figcaption>
+            <figcaption id="fraymakers-workflow-caption">Conceptual path; exact YAML keys and override behavior are not established. Asset categories are inputs; composition order is unverified.</figcaption>
           </figure>
         </section>
 
