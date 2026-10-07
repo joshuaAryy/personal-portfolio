@@ -78,6 +78,22 @@ describe("approved resume flow", () => {
     );
   });
 
+  it("assembles only the contextual takeover with a short reduced-motion-safe entrance", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const takeoverRule = css.match(/(?:^|\n)\.resume-takeover\s*\{([^}]*)\}/)?.[1] ?? "";
+    const dialogRule = css.match(/(?:^|\n)\.resume-takeover__dialog\s*\{([^}]*)\}/)?.[1] ?? "";
+    const takeoverMotion = css.match(/@keyframes\s+resume-takeover-enter\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(takeoverRule).toMatch(/animation:\s*resume-takeover-backdrop-enter\s+260ms/);
+    expect(dialogRule).toMatch(/animation:\s*resume-takeover-enter\s+360ms/);
+    expect(css).toMatch(/@keyframes\s+resume-takeover-backdrop-enter\s*\{[^}]*opacity:\s*0/s);
+    expect(takeoverMotion).toMatch(/translateY\(6px\)/);
+    expect(takeoverMotion).toMatch(/scale\(\.99\)/);
+    expect(css).toMatch(
+      /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*\.resume-takeover,\s*\.resume-takeover__dialog\s*\{[^}]*animation:\s*none/s,
+    );
+  });
+
   it("keeps the Resume Found title white and the primary action larger than Close", () => {
     const css = readFileSync("src/resume.css", "utf8");
     const titleRule = css.match(/\.resume-found__title\s*\{([^}]*)\}/)?.[1] ?? "";
