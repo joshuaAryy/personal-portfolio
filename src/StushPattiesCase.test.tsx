@@ -23,7 +23,7 @@ describe("Stush Patties experience story", () => {
     expect(opening).toContain("I built Python parsing and normalization");
     expect(opening).not.toContain("stush-hero-path");
     expect(opening).not.toContain("Illustrative steps only");
-    expect(html).toContain('<section class="stush-ingestion" aria-label="From messy source to a contract">');
+    expect(html).toContain('<section class="stush-ingestion" data-route-entry="evidence" aria-label="From messy source to a contract">');
     expect(html).toContain('<h2 id="stush-source-map-title">Different layouts. A shared field contract.</h2>');
     expect(html).toContain("Different layouts. A shared field contract.");
     expect(html.match(/class="stush-source-map/g)).toHaveLength(1);
