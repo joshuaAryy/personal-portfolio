@@ -1,3 +1,4 @@
+import { useLayoutEffect, useRef } from "react";
 import { Navigate, Route, Routes, useLocation, useParams, type Location } from "react-router-dom";
 import { experience, projects } from "./data";
 import { Client } from "./PortfolioLayout";
@@ -53,6 +54,17 @@ export default function App() {
     !candidateBackground.pathname.startsWith("/resume")
       ? candidateBackground
       : undefined;
+  const renderedPathname = backgroundLocation?.pathname ?? location.pathname;
+  const previousRenderedPathname = useRef(renderedPathname);
+
+  useLayoutEffect(() => {
+    if (previousRenderedPathname.current === renderedPathname) return;
+
+    previousRenderedPathname.current = renderedPathname;
+    window.scrollTo(0, 0);
+    const main = document.querySelector<HTMLElement>("#main");
+    if (main) main.scrollTop = 0;
+  }, [renderedPathname]);
 
   return (
     <HelpExperienceProvider>
