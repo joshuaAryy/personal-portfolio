@@ -85,7 +85,7 @@ describe("opening route choreography", () => {
     expect(markup).toContain('/media/profile/j-candidate-06-opening.svg');
     expect(source).toContain("portfolioIdentity.mark");
     expect(source).not.toContain("j-candidate-06-settled.svg");
-    expect(settled).toBe(transparentIdentity);
+    expect(settled.replace(/\r\n/g, "\n")).toBe(transparentIdentity.replace(/\r\n/g, "\n"));
     expect(formation).toContain('id="seam-light"');
     expect(settled).toContain('id="seam-light"');
     expect(readFileSync("src/opening.css", "utf8")).toMatch(/mask-image:\s*var\(--opening-mark-source\)/);
