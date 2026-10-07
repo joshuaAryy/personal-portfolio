@@ -57,8 +57,8 @@ function SourceParsingFigure() {
     >
       <header className="stush-figure-heading">
         <div>
-          <p className="stush-kicker">REPORTING PIPELINE</p>
-          <h3 id="stush-source-map-title">Different layouts. A shared field contract.</h3>
+          <p className="stush-kicker">FROM MESSY SOURCE TO A CONTRACT</p>
+          <h2 id="stush-source-map-title">Different layouts. A shared field contract.</h2>
         </div>
         <div className="stush-figure-heading__support">
           <p>Read the layout first. Carry the business meaning through one common path.</p>
@@ -178,41 +178,24 @@ function SourceException() {
 
 export default function StushPattiesCase() {
   return (
-    <article className="stush-data-story" aria-labelledby="stush-title">
+    <article className="stush-data-story" data-route-entry="frame" aria-labelledby="stush-title">
       <header className="stush-data-hero" id="stush-opening">
-        <p className="stush-kicker" data-route-entry="frame">EXPERIENCE DETAIL</p>
+        <p className="stush-kicker" data-route-entry="identity">CLIENT DATA PIPELINE</p>
         <div className="stush-data-hero__title-row" data-route-entry="identity">
           <h1 id="stush-title" data-route-entry="headline">Stush Patties</h1>
         </div>
         <div className="stush-data-hero__summary">
-          <p className="stush-data-hero__thesis" data-route-entry="summary">Turning distributor exports into a repeatable reporting handoff.</p>
-          <div className="stush-data-hero__support" data-route-entry="summary">
-            <p>Two-person technical team: I built Python parsing and normalization that mapped irregular sales exports into shared reporting fields.</p>
-            <figure className="stush-hero-path" data-route-entry="evidence" aria-label="Different source files. One shared reporting path. Conceptual route: irregular layouts pass through Python parsing into shared fields.">
-              <div className="stush-hero-path__steps">
-                <div><span>01 / INPUT</span><strong>Irregular layouts</strong></div>
-                <span aria-hidden="true">→</span>
-                <div><span>02 / TRANSFORM</span><strong>Python parsing</strong></div>
-                <span aria-hidden="true">→</span>
-                <div><span>03 / CONTRACT</span><strong>Shared fields</strong></div>
-              </div>
-              <figcaption>Illustrative steps only; the reporting rules and handoff follow below.</figcaption>
-            </figure>
-          </div>
+          <p className="stush-data-hero__thesis" data-route-entry="summary">I built Python parsing and normalization to map irregular distributor reports into shared reporting fields.</p>
         </div>
         <dl className="stush-engagement-strip" aria-label="Role and project details">
           <div><dt>ROLE</dt><dd>Software Engineering Intern</dd></div>
           <div><dt>FOCUS</dt><dd>Data Pipelines &amp; Automation</dd></div>
           <div><dt>PERIOD</dt><dd>Sep–Nov 2025</dd></div>
-          <div><dt>TEAM / SETTING</dt><dd>External client engagement · two-person technical team</dd></div>
+          <div><dt>CLIENT / TEAM</dt><dd>External client · two-person technical team</dd></div>
         </dl>
       </header>
 
-      <section className="stush-ingestion" aria-labelledby="stush-ingestion-title">
-        <div className="stush-section-intro">
-          <p className="stush-kicker">FROM MESSY SOURCE TO A CONTRACT</p>
-          <h2 id="stush-ingestion-title">From source layout to reporting language.</h2>
-        </div>
+      <section className="stush-ingestion" data-route-entry="evidence" aria-label="From messy source to a contract">
         <SourceParsingFigure />
       </section>
 

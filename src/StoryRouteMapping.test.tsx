@@ -9,7 +9,7 @@ const storyRoutes = [
   ["Cho’Veigo", "/projects/choveigo", "A better match starts with the evidence."],
   ["Fraymakers", "/projects/fraymakers", "A tournament match,"],
   ["Living in Silico", "/experience/living-in-silico", "A research question before a model choice."],
-  ["Stush Patties", "/experience/stush-patties", "Different source files. One shared reporting path."],
+  ["Stush Patties", "/experience/stush-patties", "Different layouts. A shared field contract."],
 ] as const;
 
 function renderRoute(path: string) {

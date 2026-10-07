@@ -11,18 +11,22 @@ afterEach(() => vi.unstubAllGlobals());
 describe("Stush Patties experience story", () => {
   const markup = () => renderToStaticMarkup(<MemoryRouter><StushPattiesCase /></MemoryRouter>);
 
-  it("opens with concise context and an immediate transformation overview", () => {
+  it("opens with concise role and client context before the full transformation figure", () => {
     const html = markup();
     const opening = html.slice(0, html.indexOf('class="stush-ingestion"'));
 
-    for (const detail of ["Software Engineering Intern", "Data Pipelines &amp; Automation", "Sep–Nov 2025", "External client engagement", "Two-person technical team"]) {
+    for (const detail of ["Software Engineering Intern", "Data Pipelines &amp; Automation", "Sep–Nov 2025", "External client", "two-person technical team"]) {
       expect(opening).toContain(detail);
     }
     expect(opening.match(/<dt>/g)).toHaveLength(4);
-    expect(opening).toContain("stush-hero-path");
-    expect(opening).toContain("Python parsing");
-    expect(opening).toContain("Shared fields");
-    expect(opening).toContain("Different source files. One shared reporting path.");
+    expect(opening).toContain("CLIENT / TEAM");
+    expect(opening).toContain("I built Python parsing and normalization");
+    expect(opening).not.toContain("stush-hero-path");
+    expect(opening).not.toContain("Illustrative steps only");
+    expect(html).toContain('<section class="stush-ingestion" aria-label="From messy source to a contract">');
+    expect(html).toContain('<h2 id="stush-source-map-title">Different layouts. A shared field contract.</h2>');
+    expect(html).toContain("Different layouts. A shared field contract.");
+    expect(html.match(/class="stush-source-map/g)).toHaveLength(1);
     expect(opening).not.toContain("THE CLIENT PROBLEM");
     expect(html.indexOf("FROM MESSY SOURCE TO A CONTRACT")).toBeLessThan(html.indexOf("THE CLIENT PROBLEM"));
     expect(html.indexOf("THE CLIENT PROBLEM")).toBeLessThan(html.indexOf("WHAT THE WORK ESTABLISHED"));
