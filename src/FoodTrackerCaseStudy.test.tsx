@@ -98,7 +98,7 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("Phase 24 serving preview");
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
     expect(insights).toContain("trend-detail-calories-unknown.png");
-    expect(insights).toContain("Unknown is shown explicitly; this is not a populated trend or personal result");
+    expect(insights).toContain("Captured state: Unknown, not zero.");
     expect(markup).not.toContain("trend-configuration.png");
     expect(markup).not.toContain("insights-week-current.png");
   });
@@ -173,10 +173,8 @@ describe("Food Tracker product story", () => {
         { number: "02", label: "LOOKUP", text: "Open Food Facts candidate" },
         { number: "03", label: "HUMAN CHECK", text: "Confirm the match + serving" },
       ]);
-      expect(container.querySelector('[data-screen="entry-options"] img')?.getAttribute("src"))
-        .toContain("food-log-complex-clean.png");
-      expect(container.querySelector('[data-screen="entry-options"] figcaption')?.textContent)
-        .toContain("entry options only");
+      expect(container.querySelector('[data-screen="entry-options"]')).toBeNull();
+      expect(container.querySelector('figure[data-conceptual-flow="barcode"]')).not.toBeNull();
       expect(container.querySelector('[data-screen="search-results"]')).toBeNull();
     } finally {
       await act(async () => root.unmount());
@@ -242,6 +240,9 @@ describe("Food Tracker product story", () => {
         expect(figure?.getAttribute("aria-label")).toBe(routeCase.accessibleName);
         expect(figure?.querySelector("figcaption")?.textContent).toContain("Conceptual path");
         expect(figure?.querySelector("figcaption")?.textContent).toContain(routeCase.caption);
+        expect(container.querySelector(".food-log-transaction__screens")?.contains(figure ?? null)).toBe(true);
+        expect(container.querySelector(".food-log-transaction__method-detail figure[data-conceptual-flow]")).toBeNull();
+        expect(container.querySelector('[data-screen="entry-options"]')).toBeNull();
         for (const concept of routeCase.concepts) expect(figure?.textContent).toContain(concept);
       }
     } finally {
@@ -287,6 +288,7 @@ describe("Food Tracker product story", () => {
     expect(architecture).toContain('class="food-system-map__auth-boundary"');
     expect(architecture).toContain('class="food-system-map__flows"');
     expect(architecture).toContain('class="food-data-contract__normalized-record"');
+    expect(architecture).toContain('class="food-data-contract__unknown-state"');
     expect(architecture).toContain("CONCEPTUAL MODEL");
     for (const copy of [
       "Open Food Facts",
@@ -303,7 +305,8 @@ describe("Food Tracker product story", () => {
       "Keep the nutrition basis used at save.",
       "name, brand, or barcode",
       "nutrient values with aligned units",
-      "unknown stays absent, not zero",
+      "UNKNOWN",
+      "kept distinct from zero",
       "Recipes and mixed meals compose foods; they are not a separate nutrition authority.",
       "food + source provenance",
       "confirmed amount + unit",
@@ -361,14 +364,18 @@ describe("Food Tracker product story", () => {
     const insightsCopy = storyText(insights);
 
     expect(insights).toContain('class="food-insight-path"');
-    expect(insights).toContain('class="food-insight-path__evidence food-insight-path__evidence--readable"');
+    expect(insights).toContain('class="food-insight-path__evidence food-insight-path__evidence--inset"');
+    expect(insights).toContain('class="food-insight-path__evidence-crop"');
+    expect(insights).not.toContain('class="food-insight-path__capture-readout"');
     expect(insights).toContain('class="food-insight-path__shared-inputs"');
     expect(insights).toContain('class="food-insight-path__analysis"');
     expect(insights).toContain('class="food-insight-path__presentations-heading"');
     expect(insights).toContain("food-insight-path__view-daily");
     expect(insights).toContain("food-insight-path__view-range");
     expect(insights).toContain("trend-detail-calories-unknown.png");
-    expect(insights.indexOf("PHASE 24 / PRE-REDESIGN CAPTURE")).toBeLessThan(insights.indexOf("01 / KEEP TWO DATA QUESTIONS SEPARATE"));
+    expect(insights.indexOf('class="food-insight-path__shared-inputs"')).toBeLessThan(insights.indexOf('class="food-insight-path__analysis"'));
+    expect(insights.indexOf('class="food-insight-path__analysis"')).toBeLessThan(insights.indexOf('class="food-insight-path__presentations"'));
+    expect(insights.indexOf('class="food-insight-path__presentations"')).toBeLessThan(insights.indexOf("SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN"));
     expect(insights.indexOf("01 / KEEP TWO DATA QUESTIONS SEPARATE")).toBeLessThan(insights.indexOf("02 / CHOOSE A PRESENTATION"));
     for (const copy of [
       "Saved food logs + weight logs + goals",
@@ -387,8 +394,11 @@ describe("Food Tracker product story", () => {
       "AI does not fill missing values or decide recommendation facts",
       "Overview Nutrients Recommendations",
       "Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.",
-      "Unknown is shown explicitly; this is not a populated trend or personal result",
+      "Captured state: Unknown, not zero.",
+      "Captured screen state only; not a user outcome.",
     ]) expect(insightsCopy).toContain(copy);
+    expect(insightsCopy).not.toContain("0 eligible logged days");
+    expect(insightsCopy).not.toContain("30 unlogged");
     expect(insightsCopy).not.toContain("Food logs · weight logs · goals · local tracking day");
     expect(insightsCopy).not.toContain("return to a chosen analysis without changing the underlying log");
     expect(insightsCopy).not.toContain("populated account report");
@@ -403,17 +413,23 @@ describe("Food Tracker product story", () => {
 
     expect(search).toContain('class="food-retrieval-evidence"');
     expect(search).toContain("How does the app find the intended food reliably?");
+    expect(search).toContain('class="food-retrieval-pipeline"');
+    expect(search).toContain('aria-label="Exact, fuzzy, and semantic candidate routes converge on deterministic ranking before human confirmation and shared serving resolution."');
+    expect(search).toContain('class="food-retrieval-pipeline__lanes"');
+    expect(search).toContain('class="food-retrieval-pipeline__rank"');
+    expect(search).toContain('class="food-retrieval-pipeline__resolve"');
     expect(search).toContain('class="food-retrieval-evidence__top-one"');
     expect(search).toContain('role="img" aria-label="Top-1 offline ranking comparison');
     for (const copy of [
-      "Exact / structured",
+      "EXACT / STRUCTURED",
       "Fuzzy retrieval",
-      "Recover close text when the typed name is imperfect",
+      "Close text recovery when a name is imperfect",
       "Semantic candidates",
-      "Pinecone expands the candidate set; it is a derived index.",
-      "Pinecone expands the candidate set; it is a derived index.",
+      "Pinecone candidates only",
       "Deterministic, domain-aware ranking",
-      "A person selects the food before shared serving resolution",
+      "PERSON CONFIRMS FOOD",
+      "SHARED SERVING RESOLUTION",
+      "PostgreSQL remains the source of food and nutrition truth",
       "DEVELOPMENT",
       "80 queries",
       "HOLDOUT",

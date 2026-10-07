@@ -271,12 +271,11 @@ function FoodLogTransaction() {
               </li>
             ))}
           </ol>
-          {selectedRoute.visual && <FoodLoggingRouteMicrovisual kind={selectedRoute.visual} />}
           <p>{selectedRoute.detail}</p>
         </div>
       </section>
 
-      <div className="food-log-transaction__screens" role="group" aria-label="Phase 24 interaction captures">
+      <div className={`food-log-transaction__screens${selectedRoute.visual ? " food-log-transaction__screens--conceptual" : ""}`} role="group" aria-label={`${selectedRoute.label} visual explanation and source evidence`}>
         {isSearchRoute ? (
           <>
             <figure className="food-log-transaction__screen" data-screen="search-results">
@@ -302,17 +301,11 @@ function FoodLogTransaction() {
             />
             <figcaption>The Describe-meal review is unsaved interaction evidence, not a populated user outcome.</figcaption>
           </figure>
-        ) : (
-          <figure className="food-log-transaction__screen" data-screen="entry-options">
-            <img
-              src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
-              alt="Phase 24 clean logging sheet with a food search field and visible Describe meal, Photo logging, Food Library, Recipes, Mixed meal, and Scan barcode entry options. No food has been saved."
-            />
-            <figcaption>Phase 24 entry options only · this capture does not show a completed scan, recipe, mixed meal, or manual save.</figcaption>
-          </figure>
-        )}
+        ) : selectedRoute.visual ? (
+          <FoodLoggingRouteMicrovisual kind={selectedRoute.visual} />
+        ) : null}
       </div>
-      <p className="food-log-transaction__source-note">368×800 iOS simulator captures from the pre-redesign baseline. They show interaction states, not saved user history; unsupported route states remain conceptual.</p>
+      <p className="food-log-transaction__source-note">368&times;800 iOS simulator captures from the pre-redesign baseline. They show interaction states, not saved user history. Conceptual route maps explain documented behavior; they are not completed captures.</p>
 
       <div className="food-log-transaction__checkpoint">
         <span className="food-figure__index">HUMAN CHECKPOINT</span>
@@ -468,8 +461,12 @@ function FoodDataContract() {
             <ul>
               <li>nutrient values with aligned units</li>
               <li>serving options and basis quantity</li>
-              <li>unknown stays absent, not zero</li>
             </ul>
+            <div className="food-data-contract__unknown-state" aria-label="Unknown nutrition remains distinct from zero">
+              <span>VALUE STATUS</span>
+              <strong>UNKNOWN</strong>
+              <small>kept distinct from zero</small>
+            </div>
           </section>
         </div>
       </div>
@@ -513,19 +510,6 @@ function FoodDataContract() {
 function FoodInsightPath() {
   return (
     <figure className="food-insight-path" aria-labelledby="food-insight-path-title">
-      <div className="food-insight-path__evidence food-insight-path__evidence--readable">
-        <img
-          src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png"
-          alt="Phase 24 calorie trend detail with an Unknown value, no recorded calories for the selected period, and a coverage summary. It is an unsaved pre-redesign QA state."
-        />
-        <div className="food-insight-path__evidence-copy">
-          <span className="food-figure__index">PHASE 24 / PRE-REDESIGN CAPTURE</span>
-          <strong>Unknown is shown explicitly; this is not a populated trend or personal result.</strong>
-          <p>The selected period has no recorded calorie values. The screen keeps that gap visible instead of presenting a measured zero.</p>
-          <p className="food-insight-path__evidence-caption">Observed simulator state · no recorded values in this period · not a user outcome.</p>
-        </div>
-      </div>
-
       <div className="food-insight-path__shared-inputs" role="group" aria-label="Saved food logs, weight logs, and goals feed deterministic analysis and recommendations">
         <span className="food-figure__index">SAVED DATA → DETERMINISTIC ANALYSIS</span>
         <div className="food-insight-path__shared-flow">
@@ -583,6 +567,21 @@ function FoodInsightPath() {
         </section>
       </div>
 
+      <div className="food-insight-path__evidence food-insight-path__evidence--inset" aria-label="Supporting pre-redesign screenshot evidence">
+        <div className="food-insight-path__evidence-crop">
+          <img
+            src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png"
+            alt="Cropped Phase 24 pre-redesign Trends screen showing Unknown for calories, not a user outcome."
+          />
+        </div>
+        <div className="food-insight-path__evidence-copy">
+          <span className="food-figure__index">SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN</span>
+          <strong>Captured state: Unknown, not zero.</strong>
+          <p>The selected 30-day view has no recorded calorie values.</p>
+          <p className="food-insight-path__evidence-caption">Captured screen state only; not a user outcome.</p>
+        </div>
+      </div>
+
       <figcaption id="food-insight-path-title">
         Insights path · one saved data model supports a daily summary and deeper exploration; unknown values remain distinct from zero.
       </figcaption>
@@ -593,34 +592,40 @@ function FoodInsightPath() {
 function FoodRetrievalEvidence() {
   return (
     <figure className="food-retrieval-evidence" aria-labelledby="food-retrieval-evidence-title">
-      <div className="food-retrieval-evidence__querytypes">
-        <div className="food-retrieval-evidence__query">
-          <span className="food-figure__index">ILLUSTRATIVE QUERY TYPE</span>
-          <strong>Exact / structured</strong>
-          <p>Direct identity and provider-backed matches.</p>
+      <div className="food-retrieval-pipeline" aria-label="Exact, fuzzy, and semantic candidate routes converge on deterministic ranking before human confirmation and shared serving resolution.">
+        <div className="food-retrieval-pipeline__lanes" role="list" aria-label="Candidate retrieval paths">
+          <div className="food-retrieval-pipeline__lane food-retrieval-pipeline__lane--exact" role="listitem">
+            <span className="food-retrieval-pipeline__lane-index" aria-hidden="true">01</span>
+            <div><span>EXACT / STRUCTURED</span><strong>Identity or provider match</strong></div>
+          </div>
+          <div className="food-retrieval-pipeline__lane food-retrieval-pipeline__lane--fuzzy" role="listitem">
+            <span className="food-retrieval-pipeline__lane-index" aria-hidden="true">02</span>
+            <div><span>FUZZY RETRIEVAL</span><strong>Close text recovery when a name is imperfect</strong></div>
+          </div>
+          <div className="food-retrieval-pipeline__lane food-retrieval-pipeline__lane--semantic" role="listitem">
+            <span className="food-retrieval-pipeline__lane-index" aria-hidden="true">03</span>
+            <div><span>INTENT / DESCRIPTION</span><strong>Semantic candidates</strong><small>Pinecone candidates only</small></div>
+          </div>
         </div>
-        <div className="food-retrieval-evidence__query food-retrieval-evidence__query--fuzzy">
-          <span className="food-figure__index">MISSPELLING / NEAR NAME</span>
-          <strong>Fuzzy retrieval</strong>
-          <p>Recover close text when the typed name is imperfect.</p>
-        </div>
-        <div className="food-retrieval-evidence__query food-retrieval-evidence__query--semantic">
-          <span className="food-figure__index">INTENT / DESCRIPTION</span>
-          <strong>Semantic candidates</strong>
-          <p>Pinecone expands the candidate set; it is a derived index.</p>
-        </div>
-      </div>
-
-      <div className="food-retrieval-evidence__merge">
-        <span aria-hidden="true">↓</span>
-        <div>
-          <span className="food-figure__index">MERGE CANDIDATES</span>
+        <svg className="food-retrieval-pipeline__convergence" viewBox="0 0 1000 88" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M165 0 C165 42 500 34 500 70" />
+          <path d="M500 0 V70" />
+          <path d="M835 0 C835 42 500 34 500 70" />
+          <path d="M500 70 V87" />
+          <circle cx="500" cy="70" r="5" />
+        </svg>
+        <span className="food-retrieval-pipeline__mobile-join" aria-hidden="true">&darr;</span>
+        <section className="food-retrieval-pipeline__rank">
+          <span className="food-figure__index">ALL CANDIDATES</span>
           <strong>Deterministic, domain-aware ranking</strong>
-          <p>Evaluate identity, form, source, nutrition, and serving usability. A person selects the food before shared serving resolution.</p>
+          <ul aria-label="Ranking dimensions"><li>Identity</li><li>Form</li><li>Source</li><li>Nutrition</li><li>Serving usability</li></ul>
+          <p>The API computes the final rank; Pinecone supplies candidates, not rank or nutrition authority.</p>
+        </section>
+        <div className="food-retrieval-pipeline__resolve" aria-label="Ranked candidates are reviewed by a person before shared serving resolution">
+          <span>RANKED CANDIDATES</span><b aria-hidden="true">&rarr;</b><strong>PERSON CONFIRMS FOOD</strong><b aria-hidden="true">&rarr;</b><span>SHARED SERVING RESOLUTION</span>
         </div>
-        <aside>PostgreSQL remains the source of food and nutrition truth.</aside>
+        <p className="food-retrieval-pipeline__authority">PostgreSQL remains the source of food and nutrition truth.</p>
       </div>
-
       <div className="food-retrieval-evidence__results">
         <div className="food-retrieval-evidence__result-heading">
           <div>

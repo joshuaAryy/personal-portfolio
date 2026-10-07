@@ -4997,3 +4997,515 @@
     padding: 18px 15px;
   }
 }
+
+/* Current hierarchy pass: give conceptual routes, unknown coverage, and retrieval logic more room. */
+.food-log-transaction__screens--conceptual {
+  display: block;
+  align-self: stretch;
+  min-width: 0;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual {
+  display: flex;
+  min-height: 360px;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: clamp(22px, 3vw, 34px);
+  border-color: rgba(87, 198, 203, .48);
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(87, 198, 203, .1), transparent 52%),
+    linear-gradient(130deg, #0b191e, #0b171d 70%, #101c20);
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__barcode-flow,
+.food-log-transaction__screens--conceptual .food-log-route-visual__recipe-flow,
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-flow {
+  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-flow {
+  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr);
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__barcode-node,
+.food-log-transaction__screens--conceptual .food-log-route-visual__recipe-sources,
+.food-log-transaction__screens--conceptual .food-log-route-visual__recipe-composition,
+.food-log-transaction__screens--conceptual .food-log-route-visual__recipe-serving,
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-values,
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-serving {
+  min-height: 126px;
+  gap: 9px;
+  padding: 17px 14px;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__barcode-node > span:first-child,
+.food-log-transaction__screens--conceptual .food-log-route-visual__visual-label {
+  font-size: 11px;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__barcode-node > strong,
+.food-log-transaction__screens--conceptual .food-log-route-visual__recipe-flow strong,
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-flow strong {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__barcode-node > small,
+.food-log-transaction__screens--conceptual .food-log-route-visual__recipe-flow small,
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-flow small {
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-values > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__manual-unknown {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual__connector {
+  font-size: 23px;
+}
+
+.food-log-transaction__screens--conceptual .food-log-route-visual figcaption {
+  margin-top: 25px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.food-data-contract__unknown-state {
+  display: grid;
+  grid-template-columns: auto auto minmax(0, 1fr);
+  align-items: baseline;
+  gap: 8px 13px;
+  margin-top: 18px;
+  padding: 13px 15px;
+  border-left: 3px solid var(--food-gold);
+  background: linear-gradient(95deg, rgba(227, 197, 126, .12), rgba(227, 197, 126, .025));
+}
+
+.food-data-contract__unknown-state > span {
+  color: var(--food-gold);
+  font-size: 11px;
+  font-weight: 780;
+  letter-spacing: .07em;
+}
+
+.food-data-contract__unknown-state > strong {
+  color: var(--food-ink);
+  font-size: 21px;
+  letter-spacing: .02em;
+}
+
+.food-data-contract__unknown-state > small {
+  color: var(--food-muted);
+  font-size: 13px;
+}
+
+.food-data-contract__scale > div strong {
+  font-size: clamp(17px, 1.8vw, 21px);
+}
+
+.food-data-contract__scale > div span {
+  font-size: 12px;
+}
+
+.food-insight-path__capture-readout {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.food-insight-path__capture-readout > div {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  min-width: 0;
+  padding: 13px 14px;
+  border-left: 3px solid var(--food-teal);
+  background: rgba(87, 198, 203, .07);
+}
+
+.food-insight-path__capture-readout > div + div {
+  border-left-color: var(--food-gold);
+  background: rgba(227, 197, 126, .07);
+}
+
+.food-insight-path__capture-readout > div > span {
+  color: var(--food-dim);
+  font-size: 11px;
+  font-weight: 780;
+  letter-spacing: .055em;
+  line-height: 1.35;
+}
+
+.food-insight-path__capture-readout > div > strong {
+  color: var(--food-ink);
+  font-size: clamp(15px, 1.5vw, 18px);
+  line-height: 1.35;
+  font-variant-numeric: tabular-nums;
+}
+
+.food-retrieval-pipeline {
+  padding: clamp(20px, 3vw, 34px);
+  border-top: 1px solid rgba(148, 178, 183, .2);
+  border-bottom: 1px solid rgba(148, 178, 183, .2);
+  background: linear-gradient(110deg, rgba(12, 29, 34, .8), rgba(8, 20, 25, .48));
+}
+
+.food-retrieval-pipeline__lanes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid rgba(148, 178, 183, .22);
+  border-bottom: 1px solid rgba(148, 178, 183, .22);
+}
+
+.food-retrieval-pipeline__lane {
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr);
+  align-content: start;
+  gap: 4px 10px;
+  min-width: 0;
+  padding: 18px 16px;
+  border-left: 2px solid #84989b;
+}
+
+.food-retrieval-pipeline__lane + .food-retrieval-pipeline__lane {
+  border-left-color: var(--food-teal);
+}
+
+.food-retrieval-pipeline__lane--semantic {
+  border-left-color: var(--food-gold) !important;
+}
+
+.food-retrieval-pipeline__lane-index {
+  grid-row: span 2;
+  color: var(--food-dim);
+  font-size: 12px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+
+.food-retrieval-pipeline__lane > div > span {
+  color: var(--food-gold);
+  font-size: 11px;
+  font-weight: 780;
+  letter-spacing: .055em;
+  line-height: 1.4;
+}
+
+.food-retrieval-pipeline__lane > div > strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--food-ink);
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.food-retrieval-pipeline__lane > div > small {
+  display: block;
+  margin-top: 5px;
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.food-retrieval-pipeline__convergence {
+  display: block;
+  width: 100%;
+  height: 48px;
+  overflow: visible;
+}
+
+.food-retrieval-pipeline__convergence path {
+  fill: none;
+  stroke: rgba(87, 198, 203, .65);
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.food-retrieval-pipeline__convergence circle {
+  fill: var(--food-teal);
+}
+
+.food-retrieval-pipeline__mobile-join {
+  display: none;
+}
+
+.food-retrieval-pipeline__rank {
+  display: grid;
+  grid-template-columns: minmax(190px, .75fr) minmax(0, 1.25fr);
+  align-items: center;
+  gap: 9px 18px;
+  padding: 18px 20px;
+  border-left: 3px solid var(--food-teal);
+  background: rgba(87, 198, 203, .08);
+}
+
+.food-retrieval-pipeline__rank > .food-figure__index {
+  grid-column: 1 / -1;
+  font-size: 11px;
+}
+
+.food-retrieval-pipeline__rank > strong {
+  color: var(--food-ink);
+  font-size: clamp(17px, 1.9vw, 22px);
+  line-height: 1.3;
+}
+
+.food-retrieval-pipeline__rank > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.food-retrieval-pipeline__rank > ul > li {
+  padding: 6px 9px;
+  border: 1px solid rgba(148, 178, 183, .25);
+  color: #d7e1de;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.food-retrieval-pipeline__rank > p {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--food-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.food-retrieval-pipeline__resolve {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 13px;
+  padding: 13px 0 3px;
+}
+
+.food-retrieval-pipeline__resolve > span {
+  color: var(--food-dim);
+  font-size: 12px;
+  font-weight: 740;
+  line-height: 1.45;
+}
+
+.food-retrieval-pipeline__resolve > strong {
+  color: var(--food-ink);
+  font-size: 13px;
+  text-align: center;
+}
+
+.food-retrieval-pipeline__resolve > b {
+  color: var(--food-teal);
+  font-size: 18px;
+}
+
+.food-retrieval-pipeline__authority {
+  margin: 15px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(148, 178, 183, .15);
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.food-log-transaction__source-note,
+.food-log-transaction__editable,
+.food-log-transaction__fallback {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .food-log-transaction__screens--conceptual .food-log-route-visual {
+    min-height: 0;
+    padding: 20px 16px;
+  }
+
+  .food-log-transaction__screens--conceptual .food-log-route-visual__barcode-flow,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__recipe-flow,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__manual-flow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+  }
+
+  .food-log-transaction__screens--conceptual .food-log-route-visual__barcode-node,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__recipe-sources,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__recipe-composition,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__recipe-serving,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__manual-values,
+  .food-log-transaction__screens--conceptual .food-log-route-visual__manual-serving {
+    min-height: 0;
+    padding: 13px 14px;
+  }
+
+  .food-log-transaction__screens--conceptual .food-log-route-visual__connector {
+    transform: rotate(90deg);
+    line-height: 1;
+  }
+
+  .food-log-transaction__screens--conceptual .food-log-route-visual figcaption {
+    margin-top: 18px;
+  }
+
+  .food-data-contract__unknown-state {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .food-data-contract__unknown-state > small {
+    grid-column: 1 / -1;
+  }
+
+  .food-data-contract__scale > div strong {
+    font-size: 18px;
+  }
+
+  .food-insight-path__capture-readout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .food-retrieval-pipeline__lanes {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    border-top: 0;
+  }
+
+  .food-retrieval-pipeline__lane {
+    padding: 14px 12px;
+    border-top: 1px solid rgba(148, 178, 183, .16);
+  }
+
+  .food-retrieval-pipeline__lane-index {
+    grid-row: span 2;
+  }
+
+  .food-retrieval-pipeline__convergence {
+    display: none;
+  }
+
+  .food-retrieval-pipeline__mobile-join {
+    display: block;
+    width: 30px;
+    height: 36px;
+    margin: 0 auto;
+    color: var(--food-teal);
+    font-size: 25px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .food-retrieval-pipeline__rank {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .food-retrieval-pipeline__rank > .food-figure__index,
+  .food-retrieval-pipeline__rank > p {
+    grid-column: 1;
+  }
+
+  .food-retrieval-pipeline__rank > ul > li {
+    font-size: 12px;
+  }
+
+  .food-retrieval-pipeline__resolve {
+    flex-direction: column;
+    gap: 7px;
+    padding-top: 13px;
+  }
+
+  .food-retrieval-pipeline__resolve > b {
+    transform: rotate(90deg);
+  }
+}
+
+/* Phase 24 remains a compact receipt for the Unknown state, not a second lead figure. */
+.food-insight-path__evidence--inset {
+  grid-template-columns: minmax(0, 176px) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(14px, 2vw, 24px);
+  padding: 12px 18px;
+  border-top: 0;
+  border-bottom: 1px solid var(--food-line);
+}
+
+.food-insight-path__evidence-crop {
+  width: min(100%, 176px);
+  height: 132px;
+  overflow: hidden;
+  border: 1px solid #53646a;
+  border-radius: 8px;
+  background: #f6f6f4;
+}
+
+.food-insight-path__evidence--inset .food-insight-path__evidence-crop img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: cover;
+  object-position: 50% 32%;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.food-insight-path__evidence--inset .food-insight-path__evidence-copy > strong {
+  margin-top: 5px;
+  font-size: clamp(16px, 1.6vw, 20px);
+}
+
+.food-insight-path__evidence--inset .food-insight-path__evidence-copy > p {
+  margin-top: 6px;
+  font-size: 12px;
+}
+
+.food-insight-path__evidence--inset .food-insight-path__evidence-copy > .food-insight-path__evidence-caption {
+  margin-top: 7px;
+  padding-top: 6px;
+  font-size: 10px;
+}
+
+@media (max-width: 700px) {
+  .food-insight-path__evidence--inset {
+    grid-template-columns: minmax(0, 112px) minmax(0, 1fr);
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .food-insight-path__evidence-crop {
+    width: 112px;
+    height: 100px;
+  }
+
+  .food-insight-path__evidence--inset .food-insight-path__evidence-copy > .food-figure__index {
+    font-size: 9px;
+    line-height: 1.35;
+  }
+
+  .food-insight-path__evidence--inset .food-insight-path__evidence-copy > strong {
+    font-size: 15px;
+  }
+
+  .food-insight-path__evidence--inset .food-insight-path__evidence-copy > p {
+    font-size: 11px;
+  }
+
+  .food-insight-path__evidence--inset .food-insight-path__evidence-copy > .food-insight-path__evidence-caption {
+    font-size: 9px;
+  }
+}
