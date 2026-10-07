@@ -46,7 +46,7 @@ function FoodProductPath() {
       <span className="food-product-path__arrow" aria-hidden="true">→</span>
       <div className="food-product-path__stage food-product-path__stage--history">
         <span>03 / RETURN</span>
-        <strong>Make a longer view possible</strong>
+        <strong>Turn saved daily food data into useful views over time</strong>
         <p>Snapshot-backed logs support progress, analysis, and recommendations.</p>
       </div>
       <figcaption id="food-product-path-title">

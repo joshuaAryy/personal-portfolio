@@ -71,6 +71,14 @@ describe("Food Tracker product story", () => {
     expect(opening).not.toContain("AI built the product");
   });
 
+  it("frames the return on saved daily data as useful understanding over time", () => {
+    const markup = renderFoodTracker();
+
+    expect(markup).toContain("Turn saved daily food data into useful views over time");
+    expect(markup).toContain("Snapshot-backed logs support progress, analysis, and recommendations.");
+    expect(markup).not.toContain("Make a longer view possible");
+  });
+
   it("uses distinct Phase 24 logging and unknown-trend states without redundant banana screens", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
