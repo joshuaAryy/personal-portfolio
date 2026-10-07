@@ -1,8 +1,8 @@
 # Repository Operating Instructions
 
-> **Current baseline (2026-10-05):** pushed branch snapshot `7b4fc3a5198d8b848f9920c25e346c4439c51fba` is deployed to Cloudflare Pages Preview `https://2321d13e.joshuaik2.pages.dev/` on `feat/portfolio-integration`; production was not targeted. The application code last changed at `3f9c741247cff2994ea3df1adfaa280f4702a233`. The active correction goal is governed by `docs/OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md`.
+> **Current Preview (2026-10-07):** application source `f2ae02ff42ece819a59c39f8da2d1a7619524399` is deployed to immutable feature Preview `https://023e9112.joshuaik2.pages.dev/` on `feat/portfolio-integration`; production was not targeted. Current render evidence and remaining owner-review items are recorded in `docs/site-render-review/2026-10-07-feature-preview-f2ae02f/REPORT.md`.
 
-> **Active consolidated owner direction (2026-10-05):** `docs/OWNER_DIRECTION_2026-10-05_CONSOLIDATED.md` supersedes earlier partial prompts and conflicting freeze/acceptance decisions. All six case studies are OPEN for material story/layout re-authoring; prior breadth and critic-clearance conclusions are invalidated. Preserve positive qualities, not entire structures. Keep J separate and production untouched.
+> **Active owner direction (updated 2026-10-07):** the latest owner review supersedes conflicting older freeze decisions. Preserve owner-positive qualities, not whole pages. All six case studies remain open to substantive review; Journey and Crest are currently locked against redesign. Candidate 06 is the feature-branch J target, while archive `159:2` remains production fallback. Keep production untouched.
 
 ## Project direction
 
