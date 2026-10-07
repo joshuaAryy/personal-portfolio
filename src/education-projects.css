@@ -1,4 +1,4 @@
-.education-projects.education-projects--capability-briefs {
+﻿.education-projects.education-projects--capability-briefs {
   width: min(100%, 1160px);
   margin: 0 auto;
   color: #e9e5dc;
@@ -21,23 +21,23 @@
 }
 
 .education-projects--capability-briefs .education-projects__heading {
-  margin: clamp(30px, 4vw, 54px) 0 38px;
+  margin: clamp(28px, 3vw, 42px) 0 28px;
 }
 
 .education-projects__eyebrow,
 .education-projects__kind {
   margin: 0;
   color: #c7b782;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.13em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .education-projects--capability-briefs .education-projects__heading h1 {
-  margin: 10px 0 5px;
+  margin: 9px 0 5px;
   color: #f0e8da;
-  font-size: clamp(34px, 4.7vw, 52px);
+  font-size: clamp(34px, 4.1vw, 48px);
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.08;
@@ -55,256 +55,404 @@
   font-size: 12px;
 }
 
-.education-projects--capability-briefs .education-projects__list {
-  display: block;
-  width: 100%;
-  padding-bottom: 52px;
+.education-projects__overview {
+  padding: 15px 0 18px;
+  border-top: 1px solid #b9a46d4a;
+  border-bottom: 1px solid #b9a46d4a;
 }
 
+.education-projects__overview h2,
 .education-projects__section-title {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
   color: #e5dfd2;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
 }
 
-.education-projects__grid {
+.education-projects__overview ul {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-auto-rows: 1fr;
-  gap: 16px;
-}
-
-.education-projects__brief {
-  display: flex;
-  min-width: 0;
-  flex-direction: column;
-  padding: clamp(19px, 2vw, 25px);
-  border: 1px solid #b9a46d4a;
-  background:
-    radial-gradient(ellipse at 90% 0, #28404b50, transparent 21rem),
-    #0a161f;
-}
-
-.education-projects__brief-heading h3 {
-  margin: 7px 0 11px;
-  color: #f0e8da;
-  font-size: clamp(20px, 2vw, 25px);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
-.education-projects__status-list,
-.education-projects__tags,
-.education-projects__ideas {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.education-projects__overview li {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.education-projects__overview li span {
+  color: #8ea9ad;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.education-projects__overview li strong {
+  color: #e9e5dc;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.education-projects--capability-briefs .education-projects__list {
+  display: block;
+  padding: 27px 0 44px;
+}
+
+.education-projects__section-title {
+  margin-bottom: 0;
+}
+
+.education-projects__briefs {
+  margin-top: 12px;
+  border-top: 1px solid #7890994a;
+}
+
+.education-projects__brief {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.3fr);
+  gap: clamp(24px, 4vw, 54px);
+  padding: 23px 0 26px;
+  border-bottom: 1px solid #7890994a;
+}
+
+.education-projects__brief-heading h3 {
+  margin: 8px 0 10px;
+  color: #f0e8da;
+  font-size: clamp(22px, 2vw, 25px);
+  font-weight: 550;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
 }
 
 .education-projects__status-list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px 12px;
-  min-height: 15px;
-  margin-bottom: 12px;
-}
-
-.education-projects__status-list li {
-  color: #e1c97f;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.5;
-}
-
-.education-projects__figure {
-  margin: 0 0 14px;
-  padding: 12px 13px 13px;
-  border: 1px solid #78909945;
-  background: #07131a;
-}
-
-.education-projects__figure-label {
-  margin-bottom: 9px;
-  color: #91b0b5;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.education-projects__flow {
-  display: flex;
-  align-items: stretch;
-  gap: 7px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
-.education-projects__flow li {
-  position: relative;
-  display: flex;
-  flex: 1 1 0;
-  align-items: center;
+.education-projects__status-list li {
+  color: #e1c97f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.45;
+}
+
+.education-projects__brief-copy {
   min-width: 0;
-  min-height: 47px;
-  padding: 8px 9px;
-  border-left: 2px solid #4f8585;
-  background: #10242b;
-  color: #e7e8df;
-  font-size: 11px;
-  font-weight: 600;
-  line-height: 1.35;
-  overflow-wrap: anywhere;
 }
 
-.education-projects__flow li + li::before {
-  position: absolute;
-  left: -10px;
-  z-index: 1;
-  color: #d5bf7d;
-  content: "›";
+.education-projects__summary {
+  margin: 0 0 8px;
+  color: #e5e5d9;
   font-size: 16px;
-  line-height: 1;
+  font-weight: 550;
+  line-height: 1.45;
 }
 
-.education-projects__figure--bookstore .education-projects__flow li {
-  border-left-color: #ad9558;
-  background: #211f19;
-}
-
-.education-projects__figure--alu .education-projects__flow {
-  flex-direction: column;
-}
-
-.education-projects__figure--alu .education-projects__flow li {
-  min-height: 37px;
-  border-left-color: #ad9558;
-  background: #211f19;
-}
-
-.education-projects__figure--alu .education-projects__flow li + li::before {
-  content: none;
-}
-
-.education-projects__figure--cmos .education-projects__flow li {
-  border-left-color: #977f59;
-  background: #1e1d19;
-}
-
-.education-projects__ideas {
-  display: grid;
-  gap: 6px;
-  margin-bottom: 12px;
-}
-
-.education-projects__ideas li {
-  position: relative;
-  padding-left: 13px;
+.education-projects__focus {
+  margin: 0;
   color: #c7ced0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.education-projects__boundary {
+  margin: 10px 0 0;
+  padding-left: 12px;
+  border-left: 2px solid #b99d56;
+  color: #9eacb2;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.education-projects__brief--alu {
+  grid-template-areas:
+    "heading summary"
+    "heading focus"
+    "map map"
+    "boundary boundary";
+  align-items: start;
+}
+
+.education-projects__brief--alu .education-projects__brief-heading {
+  grid-area: heading;
+}
+
+.education-projects__brief--alu .education-projects__brief-copy {
+  display: contents;
+}
+
+.education-projects__brief--alu .education-projects__summary {
+  grid-area: summary;
+  max-width: 760px;
+}
+
+.education-projects__brief--alu .education-projects__focus {
+  grid-area: focus;
+  max-width: 760px;
+}
+
+.education-projects__alu-map {
+  grid-area: map;
+  margin: 20px 0 0;
+  padding: 20px;
+  border: 1px solid #78909957;
+  background:
+    linear-gradient(120deg, #0c2028 0%, #0a171f 100%);
+}
+
+.education-projects__figure-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 20px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #7890994a;
+}
+
+.education-projects__figure-heading h4 {
+  margin: 5px 0 0;
+  color: #f0e8da;
+  font-size: 20px;
+  font-weight: 550;
+  line-height: 1.25;
+}
+
+.education-projects__figure-heading > p {
+  max-width: 260px;
+  margin: 0;
+  color: #9eacb2;
   font-size: 12px;
   line-height: 1.45;
 }
 
-.education-projects__ideas li::before {
-  position: absolute;
-  left: 0;
-  color: #c7b782;
-  content: "·";
-  font-weight: 700;
-}
-
-.education-projects__caption {
-  margin: 0 0 12px;
-  color: #9eacb2;
-  font-size: 11px;
-  line-height: 1.5;
-}
-
-.education-projects__takeaway {
-  margin-top: auto;
-  padding-top: 12px;
-  border-top: 1px solid #c7b78235;
-}
-
-.education-projects__takeaway span {
-  display: block;
-  margin-bottom: 4px;
-  color: #d4bd79;
-  font-size: 8px;
-  font-weight: 700;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.education-projects__takeaway p {
+.education-projects__figure-label {
   margin: 0;
-  color: #e0dfd7;
+  color: #8ea9ad;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+}
+
+.education-projects__map-lanes {
+  display: grid;
+  gap: 16px;
+}
+
+.education-projects__map-lane {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  align-items: stretch;
+  gap: 14px;
+}
+
+.education-projects__map-lane h5 {
+  margin: 0;
+  padding-top: 11px;
+  color: #c7b782;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+}
+
+.education-projects__map-flow {
+  display: flex;
+  align-items: stretch;
+  gap: 22px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-projects__map-flow li {
+  position: relative;
+  display: grid;
+  flex: 1 1 0;
+  align-content: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 11px 13px;
+  border-left: 2px solid #4f8585;
+  background: #10242b;
+}
+
+.education-projects__map-flow li + li::before {
+  position: absolute;
+  top: 50%;
+  left: -19px;
+  color: #d5bf7d;
+  content: "→";
+  font-size: 16px;
+  transform: translateY(-50%);
+}
+
+.education-projects__map-flow li > span {
+  color: #91b0b5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.education-projects__map-flow li > strong {
+  color: #eee7d8;
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.education-projects__map-flow li > small {
+  color: #a9b5ba;
+  font-size: 11px;
+  line-height: 1.3;
+}
+
+.education-projects__map-core {
+  border-left-color: #d5bf7d !important;
+  background: #29271f !important;
+}
+
+.education-projects__map-feed {
+  flex: 1.25 1 0 !important;
+  border-left-color: #ad9558 !important;
+}
+
+.education-projects__alu-map figcaption {
+  margin-top: 16px;
+  padding-top: 13px;
+  border-top: 1px solid #7890994a;
+  color: #9eacb2;
   font-size: 12px;
   line-height: 1.5;
 }
 
-.education-projects__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: 12px;
+.education-projects__brief--alu .education-projects__boundary {
+  grid-area: boundary;
+  margin-top: 16px;
 }
 
-.education-projects__tags li {
-  padding: 4px 7px;
-  border: 1px solid #78909950;
-  color: #aab9bc;
-  font-size: 9px;
-  line-height: 1.35;
-}
-
-@media (max-width: 900px) {
-  .education-projects__grid {
-    gap: 12px;
+@media (max-width: 1000px) {
+  .education-projects__brief {
+    grid-template-columns: minmax(190px, 0.6fr) minmax(0, 1.4fr);
+    gap: 28px;
   }
 
-  .education-projects__flow {
-    flex-direction: column;
+  .education-projects__map-lane {
+    grid-template-columns: minmax(78px, 0.25fr) minmax(0, 1fr);
+    gap: 10px;
   }
 
-  .education-projects__flow li {
-    min-height: 36px;
+  .education-projects__map-flow {
+    gap: 16px;
   }
 
-  .education-projects__flow li + li::before {
-    top: -11px;
-    left: 8px;
-    content: "⌄";
-    font-size: 13px;
+  .education-projects__map-flow li {
+    padding: 10px;
   }
 }
 
 @media (max-width: 680px) {
   .education-projects--capability-briefs .education-projects__heading {
-    margin: 28px 0 28px;
+    margin: 24px 0 23px;
   }
 
-  .education-projects__grid {
-    grid-template-columns: minmax(0, 1fr);
-    grid-auto-rows: auto;
+  .education-projects__overview {
+    padding: 13px 0 15px;
+  }
+
+  .education-projects__overview ul {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 11px 15px;
+  }
+
+  .education-projects__list {
+    padding: 24px 0 36px;
   }
 
   .education-projects__brief {
-    padding: 19px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 11px;
+    padding: 21px 0 23px;
   }
 
-  .education-projects__figure--alu .education-projects__flow {
+  .education-projects__brief--alu {
+    grid-template-areas:
+      "heading"
+      "summary"
+      "focus"
+      "map"
+      "boundary";
+  }
+
+  .education-projects__brief-heading h3 {
+    font-size: 23px;
+  }
+
+  .education-projects__summary {
+    font-size: 15px;
+  }
+
+  .education-projects__focus {
+    font-size: 14px;
+  }
+
+  .education-projects__boundary {
+    font-size: 12px;
+  }
+
+  .education-projects__alu-map {
+    margin-top: 16px;
+    padding: 15px 12px;
+  }
+
+  .education-projects__figure-heading {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 14px;
   }
 
-  .education-projects__figure--alu .education-projects__flow li {
-    min-height: 50px;
+  .education-projects__figure-heading h4 {
+    font-size: 18px;
+  }
+
+  .education-projects__map-lane {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 7px;
+  }
+
+  .education-projects__map-lane h5 {
+    padding-top: 0;
+  }
+
+  .education-projects__map-flow {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .education-projects__map-flow li {
+    min-height: 58px;
+    padding: 11px 12px;
+  }
+
+  .education-projects__map-flow li + li::before {
+    top: -13px;
+    left: 14px;
+    content: "↓";
+    font-size: 14px;
   }
 }
