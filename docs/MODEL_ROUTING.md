@@ -60,6 +60,8 @@ When two or more actionable tasks have separate files/context and no unresolved 
 
 Maintain a practical queue with READY, IN PROGRESS, BLOCKED, NEEDS STRATEGIC DECISION, NEEDS OWNER INPUT, REVIEW/QA, and COMPLETE states. When a worker finishes, inspect the queue and refill useful capacity from the highest-value non-conflicting READY work. A completed Frontend, Product, or QA task does not retire that domain; if the domain still has actionable work, that is a concrete next assignment. Prefer follow-up to a healthy context-rich handle when the work fits its domain. Create a new worker only when a distinct context or parallel lane justifies it.
 
+**Scheduler loop:** refresh the live tree and dependency queue when a task completes or an agent becomes available; accept/review the completed artifact; then route the highest-value READY task that fits a free, non-conflicting lane. Keep QA on an integrated batch while independent implementation continues. Do not default to root implementation because a worker finished, and do not leave a suitable domain owner idle while independent READY work remains. Root directly implements only small glue, cross-cutting integration, or coordination work where delegation would add friction without parallel value.
+
 “Keep the graph small” means purposeful and non-redundant, not low agent activity. Several clearly scoped active lanes are preferable to routing independent implementation through root. Domain owners retain local coherence and acceptance; root owns cross-domain sequencing and integration.
 
 ## Sol decision packet

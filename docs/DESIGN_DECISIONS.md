@@ -87,6 +87,22 @@ The prior composition/mark freeze for Profile is superseded by the 2026-10-06 ow
 
 **Evidence:** Owner review calls for smooth continuity at 1440×900, 1920×1080, short-wide desktop, and the 1400–1858px regime. The current CSS switch is in `src/profile-overview.css` near lines 1215 and 1482; baseline test is `src/ProfileOverview.test.tsx` near lines 160–175. Before captures and measurements are in `%TEMP%/profile-1400-seam-before-2026-10-07/`.
 
+## Strategic Sol decision - Profile responsive strategy revised (2026-10-07)
+
+**This decision supersedes the earlier Profile transition contract immediately above.** Chrome measurement showed that fitting the fixed 1090px canvas beside the identity at 1200px would scale its 14px copy to about 7px; the current 1399-to-1400 switch also moves the Overview roughly 891px and the signals about 499px. A continuous scale-only transition is not viable.
+
+**DECISION:** Add a native compact intermediate composition for medium desktop widths. At 1200px, keep the identity left-led and reflow Overview content within the available right column. Share primary section anchors and a compatible height envelope with the wide composition. Treat viewport height as a scrolling constraint; short windows scroll naturally rather than repositioning or shrinking the composition.
+
+**PRESERVE:** Left-led identity, current overlays, horizontal Creative / Proactive / Execution traits, lower signal controls, content order, interactions, and the recognizable 1440px+ composition.
+
+**PRIORITIES:** Legibility and no overlap/clipping/overflow first; preserve the approved wide composition and interactions; keep identity, Overview, and signal-control anchors continuous; retain internal spatial relationships where room permits. The earlier <=5px-per-pixel criterion applies to these primary anchors across adjacent widths, not every internal card during reflow.
+
+**DECOMPOSITION:** Measure the available columns; prototype the compact layout at 1200px using native dimensions; match outer height/primary anchors to the wide mode near the handoff; verify boundary and short-height behavior. If continuity cannot be met without compromising legibility or materially changing the wide composition, return with that specific conflict.
+
+**ACCEPTANCE:** At 1200px, identity remains left-led and the Overview fits with readable text and usable controls. Around desktop breakpoints, primary anchors move no more than 5px per 1px width change and the 1399-to-1400 jump disappears. Reflow creates no huge empty stacked region. At 1440px and above, the approved layout remains recognizably stable. Changing height at fixed width does not relocate primary sections; shorter viewports scroll naturally. No overlap, clipping, horizontal overflow, hidden controls, or interaction changes.
+
+**Evidence:** Current-source Chrome captures and measurements are in `%TEMP%/profile-1400-seam-before-2026-10-07/` (`profile-1200x900.png`, `profile-1398x900.png`, `profile-1399x900.png`, `profile-1400x900.png`, `profile-1440x900.png`, and `results.json`). Source: `src/profile-overview.css` around 1215-1295 and 1483-1575; `src/ProfileOverview.test.tsx` around 177-190.
+
 ## References and acceptance
 
 - Home structure: archive `69:37` and active root `2252:3445`.
