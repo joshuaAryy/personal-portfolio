@@ -53,12 +53,19 @@ describe("HomeExplore", () => {
   it("uses the authentic forest scene with a lower crop under the top-origin fade", () => {
     const css = readFileSync("src/home-explore.css", "utf8");
     const homeRule = css.match(/\.main\.main--home-explore\s*\{([^}]*)\}/)?.[1] ?? "";
+    const environmentRule = css.match(/\.main\.main--home-explore::before\s*\{([^}]*)\}/)?.[1] ?? "";
     const previewGaps = [...css.matchAll(/\.home-explore__selection\s*\{[^}]*\bgap:\s*([^;]+);/gs)]
       .map((match) => match[1].trim());
 
-    expect(homeRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(homeRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.32\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
-    expect(homeRule).toContain("background-position: center top, center 64%");
+    expect(homeRule).not.toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(environmentRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.32\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
+    expect(environmentRule).toContain("background-position: center top, center 64%");
+    expect(environmentRule).toContain("position: sticky");
+    expect(environmentRule).toContain('content: ""');
+    expect(environmentRule).toContain("--forest-scene-height: calc(100vh - var(--client-header-height))");
+    expect(environmentRule).toContain("height: var(--forest-scene-height)");
+    expect(environmentRule).toContain("margin-bottom: calc(0px - var(--forest-scene-height))");
     expect(homeRule).not.toContain("home-mode-environment.png");
     expect(previewGaps.map(Number)).toEqual([0, 0, 0]);
   });

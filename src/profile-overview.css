@@ -1,12 +1,28 @@
 .main.main--profile {
   overflow: auto;
   background-color: #05070a;
+  background-image: none;
+  isolation: isolate;
+}
+
+.main.main--profile::before {
+  --profile-environment-height: calc(100vh - var(--client-header-height));
+
+  content: "";
+  position: sticky;
+  z-index: -1;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: var(--profile-environment-height);
+  margin-bottom: calc(0px - var(--profile-environment-height));
   background-image:
     linear-gradient(180deg, rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)),
     url("/media/lobby/party-background-original.jpg");
   background-position: center, center 58%;
   background-size: cover, cover;
   background-repeat: no-repeat, no-repeat;
+  pointer-events: none;
 }
 
 .main--profile .profile-layout {
@@ -888,6 +904,10 @@
 }
 
 @media (max-width: 900px) {
+  .main.main--profile::before {
+    top: var(--client-header-height);
+  }
+
   .main--profile .profile-layout {
     height: auto;
     min-height: 0;

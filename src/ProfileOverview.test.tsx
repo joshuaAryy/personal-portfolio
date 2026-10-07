@@ -149,12 +149,20 @@ describe("Profile Overview", () => {
   it("uses clear authentic League scenery and circular Experience badges", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const shellRule = profileCss.match(/\.main\.main--profile\s*\{([^}]*)\}/)?.[1] ?? "";
+    const environmentRule = profileCss.match(/\.main\.main--profile::before\s*\{([^}]*)\}/)?.[1] ?? "";
     const badgeRule = profileCss.match(/\.profile-experience__mark\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(shellRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(shellRule).toContain("linear-gradient(180deg,");
-    expect(shellRule).toContain("background-position: center, center 58%");
-    expect(shellRule).toContain("background-size: cover, cover");
+    expect(shellRule).not.toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(environmentRule).toContain("linear-gradient(180deg,");
+    expect(environmentRule).toContain("background-position: center, center 58%");
+    expect(environmentRule).toContain("background-size: cover");
+    expect(environmentRule).toContain("position: sticky");
+    expect(environmentRule).toContain('content: ""');
+    expect(environmentRule).toContain("--profile-environment-height: calc(100vh - var(--client-header-height))");
+    expect(environmentRule).toContain("height: var(--profile-environment-height)");
+    expect(environmentRule).toContain("margin-bottom: calc(0px - var(--profile-environment-height))");
+    expect(environmentRule).toContain("z-index: -1");
     expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });
 
