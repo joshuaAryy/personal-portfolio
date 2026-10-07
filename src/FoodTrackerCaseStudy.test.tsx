@@ -87,9 +87,9 @@ describe("Food Tracker product story", () => {
     const loggingCaptures = [...logging.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
     const insightCaptures = [...insights.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
 
-    expect(captures).toHaveLength(5);
+    expect(captures).toHaveLength(4);
     expect(loggingCaptures).toHaveLength(2);
-    expect(insightCaptures).toHaveLength(3);
+    expect(insightCaptures).toHaveLength(2);
     expect(logging).toContain("search-banana-results.png");
     expect(logging).toContain("food-serving-preview-banana.png");
     expect(logging).not.toContain("food-log-complex-clean.png");
@@ -97,11 +97,12 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("Phase 24 search results");
     expect(logging).toContain("Phase 24 serving preview");
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
-    expect(insights).toContain("trend-detail-calories-unknown.png");
-    expect(insights).toContain("Captured state: Unknown, not zero.");
-    expect(insights).toContain("trend-configuration.png");
+    expect(insights).toContain("insights-month-populated-sep08-oct07.png");
+    expect(insights).toContain("QA-A staging capture");
+    expect(insights).toContain("five logged days.");
+    expect(insights).not.toContain("trend-detail-calories-unknown.png");
+    expect(insights).not.toContain("trend-configuration.png");
     expect(insights).toContain("goal-plan.png");
-    expect(insights).toContain("Configuration evidence only; not a populated trend result.");
     expect(insights).toContain("One QA-profile recommendation capture; not a general result or outcome.");
     expect(insights).toContain("Recommendations, not promises.");
     expect(markup).not.toContain("trends-overview.png");
@@ -409,15 +410,15 @@ describe("Food Tracker product story", () => {
     const insightsCopy = storyText(insights);
 
     expect(insights).toContain('class="food-insight-path"');
-    expect(insights).toContain('class="food-insight-path__evidence food-insight-path__evidence--inset"');
-    expect(insights).toContain('class="food-insight-path__evidence-crop"');
+    expect(insights).not.toContain('class="food-insight-path__evidence food-insight-path__evidence--inset"');
+    expect(insights).not.toContain("trend-detail-calories-unknown.png");
     expect(insights).not.toContain('class="food-insight-path__capture-readout"');
     expect(insights).toContain('class="food-insight-path__shared-inputs"');
     expect(insights).toContain('class="food-insight-path__analysis"');
     expect(insights).toContain('class="food-insight-path__presentations-heading"');
     expect(insights).toContain("food-insight-path__view-daily");
     expect(insights).toContain("food-insight-path__view-range");
-    expect(insights).toContain("trend-detail-calories-unknown.png");
+    expect(insights).toContain("unknown values remain distinct from zero.");
     expect(insights.indexOf('class="food-insight-path__shared-inputs"')).toBeLessThan(insights.indexOf('class="food-insight-path__analysis"'));
     expect(insights.indexOf('class="food-insight-path__analysis"')).toBeLessThan(insights.indexOf('class="food-insight-path__presentations"'));
     expect(insights.indexOf('class="food-insight-path__presentations"')).toBeLessThan(insights.indexOf("SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN"));
@@ -439,8 +440,9 @@ describe("Food Tracker product story", () => {
       "AI does not fill missing values or decide recommendation facts",
       "Overview Nutrients Recommendations",
       "Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.",
-      "Captured state: Unknown, not zero.",
-      "Captured screen state only; not a user outcome.",
+      "unknown values remain distinct from zero.",
+      "QA-A staging capture",
+      "five logged days.",
     ]) expect(insightsCopy).toContain(copy);
     expect(insightsCopy).not.toContain("0 eligible logged days");
     expect(insightsCopy).not.toContain("30 unlogged");

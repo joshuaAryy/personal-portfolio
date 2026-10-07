@@ -587,19 +587,19 @@ function FoodInsightPath() {
       </div>
 
       <div className="food-insight-path__captures" role="group" aria-label="Selected Phase 24 product captures">
-        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-config-title">
+        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-month-title">
           <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
             <img
-              src="/media/case-studies/food-tracker/phase-24/trend-configuration.png"
-              alt="Phase 24 pre-redesign Trends configuration showing metric, comparison, date range, data coverage, aggregation, and visualization controls; it is not a populated trend."
+              src="/media/case-studies/food-tracker/phase-24/insights-month-populated-sep08-oct07.png"
+              alt="Phase 24 pre-redesign QA-A staging capture of Insights Month for Sep 8–Oct 7, with five logged days."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">PHASE 24 · PRE-REDESIGN · TRENDS</span>
-            <strong id="food-insight-capture-config-title">Configuration evidence only; not a populated trend result.</strong>
-            <p>The capture shows available analysis controls, not current UI approval or a user outcome.</p>
+            <span className="food-figure__index">SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN · QA-A staging capture · Complex mode</span>
+            <strong id="food-insight-capture-month-title">QA-A staging report · Sep 8–Oct 7 · five logged days.</strong>
+            <p>Existing fixture content; not a general outcome or current UI approval.</p>
           </div>
         </section>
         <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-plan-title">
@@ -617,21 +617,6 @@ function FoodInsightPath() {
             <p>One QA-profile recommendation capture; not a general result or outcome.</p>
           </div>
         </section>
-      </div>
-
-      <div className="food-insight-path__evidence food-insight-path__evidence--inset" aria-label="Supporting pre-redesign screenshot evidence">
-        <div className="food-insight-path__evidence-crop">
-          <img
-            src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png"
-            alt="Cropped Phase 24 pre-redesign Trends screen showing Unknown for calories, not a user outcome."
-          />
-        </div>
-        <div className="food-insight-path__evidence-copy">
-          <span className="food-figure__index">SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN</span>
-          <strong>Captured state: Unknown, not zero.</strong>
-          <p>The selected 30-day view has no recorded calorie values.</p>
-          <p className="food-insight-path__evidence-caption">Captured screen state only; not a user outcome.</p>
-        </div>
       </div>
 
       <figcaption id="food-insight-path-title">
