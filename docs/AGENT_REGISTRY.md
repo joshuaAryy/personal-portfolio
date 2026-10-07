@@ -2,26 +2,27 @@
 
 The live collaboration tree and READY queue below override historical assignment snapshots in this file. Completed tasks do not retire domain lanes.
 
-**Repository reconciliation (2026-10-07):** feat/portfolio-integration is at 3e054b1810fac8e57666ded3e6aa383a798a0175, two application commits ahead of origin e0eb040cd5c981a085a035737c05459625a1bf2c. The immutable Preview remains https://a4da5455.joshuaik2.pages.dev from source 0624352788af39536fe2dbb92aab413df41f5ae0; it is a historical review checkpoint, not acceptance. The integration worktree preserves one modified historical Pass76 capture and 603 untracked items; two global orchestration documents are also being reconciled. Stage only intentional files. Production is untouched. Build passed at this checkpoint; the full suite found one Opening source-vs-rendition assertion sensitive to Windows line endings, and Frontend is fixing the test normalization.
+**Repository reconciliation (2026-10-07):** feat/portfolio-integration is at 0f7b3ce and five commits ahead of origin e0eb040. Current integrated application passes 27 test files / 218 tests and production build; diff-check passes. The latest immutable Preview remains https://a4da5455.joshuaik2.pages.dev from source 0624352788af39536fe2dbb92aab413df41f5ae0. The integration worktree preserves one modified historical Pass76 capture and 603 untracked items; stage only intentional files. Production is untouched.
 
 **Live collaboration snapshot (2026-10-07):**
-- /root/frontend_owner__luna_xhigh completed the contextual Resume Found motion and is addressing the integration-only SVG newline assertion on its current-based branch. Its shell/C06 commits have been cherry-picked to the integration branch.
-- /root/product_coverage__luna_xhigh is reconciling and porting Stush to current source in an isolated worktree. Fray’s accepted Sol Decision Contract is its next READY follow-up; a separate builder could not be started because the agent-thread limit was full.
-- /root/mingo_strategic__sol61_medium__fray_visual completed one bounded Fray information-design decision and returned a Decision Contract. No Sol is active.
-- The previous Runtime QA handle completed the read-only Fray audit; it is not present in the latest live tree. Recreate or reuse a QA lane only when the integrated regression task is ready and capacity allows.
+- Frontend Owner completed current-base shell identity/mobile framing, C06 Opening, contextual Resume Found entrance motion, and a CRLF/LF-robust SVG assertion. The four application commits are integrated at 8352f0c, 3e054b1, 2d1cab7, and 0f7b3ce; docs are at 5205196. Desktop/narrow Chrome and interaction evidence is in %LOCALAPPDATA%\Temp\shell-opening-current-ec00e70\ and %LOCALAPPDATA%\Temp\resume-takeover-entry-774de89\.
+- Product Coverage is active on Food architecture/Insights and visual-hierarchy work, based on current integrated source. Its verified Stush candidate f875f863 is isolated on feat/stush-reporting-current, based on e0eb040; it awaits current-base integration.
+- fray_visual_builder__luna_high__fray is active in a separate Fray worktree, applying the accepted Sol Decision Contract from a source branch based at 5205196.
+- Sol’s one Fray visual-story decision is complete and recorded in DESIGN_DECISIONS.md; no Sol is active.
+- Runtime QA’s previous Fray audit is at %TEMP%\fraymakers-ec00-owner-audit-20261007\ and applies to source e0eb040. A new QA child could not be started at the agent-thread limit, so root will perform browser orchestration on the integrated batch until a reusable QA slot is available.
 
 ## Active scheduler snapshot - 2026-10-07
 
 | State | Lane | Work / dependency |
 |---|---|---|
-| IN PROGRESS | Frontend Owner | Test normalization for the Opening rendition across Windows LF/CRLF checkouts. Contextual Resume Found entry motion is committed on the agent branch and awaits integration/reverification. |
-| IN PROGRESS | Product Coverage | Reconcile preserved Stush work, then port/finish it on current source; Stush-specific files only. |
-| COMPLETE / CONTRACT READY | Sol strategic core | Fray: output-first opening, one transformation spread, brief outcome close. Product Coverage implements after Stush using the Decision Contract. |
-| REVIEW / QA (READY) | Runtime QA | Once the frontend test fix is integrated, run Chrome desktop/narrow regression on Opening, shell identities, Resume Found, and unaffected routes. |
-| READY | Product Coverage | Fray visual re-authoring after Stush; Food architecture/Insights and visual hierarchy; Living in Silico visual order/density. Scope one case study at a time. |
-| READY / RECONCILE | Media audit | Cho'Veigo demo source search remains open unless current evidence proves a safe authentic video already exists. Never fabricate or expose unsafe footage. |
+| INTEGRATED / VERIFY | Frontend | Shared shell identity/mobile framing, C06 Opening, contextual Resume Found entrance; all 218 tests/build pass. Root is preparing the next feature checkpoint after current-source Chrome review. |
+| IN PROGRESS | Product Coverage | Food architecture and Insights visual hierarchy on current source. Stush f875f863 is ready to port and render; preserve its isolated branch. |
+| IN PROGRESS | Fray builder | Output-first hero composition, one transformation spread, small P2 mirroring detail, brief truthful close; follow the Sol contract and do not fabricate media. |
+| REVIEW / QA (ROOT) | Integrated source | Installed-Chrome desktop/narrow regression for Opening, Home/shared identities, all four lobbies, Resume Found, and owner-locked Journey/Crest. |
+| READY / RECONCILE | Cho'Veigo media | Search for a safe authentic demo source remains open; never fabricate or expose unsafe footage. |
+| READY | Later case-study work | Living in Silico visual order/density, Education evidence-bound briefs, and contextual Help responsiveness remain in the global queue after higher-priority active work. |
 
-The live source and current task states take precedence over older rows below. When capacity frees, inspect dependencies and route the highest-value independent READY task; do not let task completion retire a domain owner. Keep scopes non-overlapping. Current owner locks remain Journey and Crest; feature-branch J uses C06 while production J approval remains separate.
+At task completion, refill free capacity from independent READY work. Root owns routing, lifecycle, Git/checkpoints, cross-pod integration, browser orchestration, and global status; domain owners receive substantial independent implementation. “Keep the graph small” means non-redundant scopes, not low active parallelism. Current owner locks remain Journey and Crest; feature-branch J uses C06 while production J approval remains separate.
 **Historical execution state (2026-10-06; superseded):** the owner-review Preview was `https://2724fdbc.joshuaik2.pages.dev/`, built from application source `ffc7580b8b57f90c7918af213e6b2ed68248942a` on `feat/portfolio-integration`. See [the historical Preview report](site-render-review/2026-10-06-consolidated-correction-preview/REPORT.md).
 
 > **Current owner direction:** the latest review controls. Preserve positive qualities without freezing whole pages; all six stories remain owner-review open. Journey and Crest are locked against redesign. Feature-branch J uses C06; production remains archive `159:2` pending owner selection.
