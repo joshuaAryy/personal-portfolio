@@ -1,12 +1,13 @@
 import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
+import { portfolioIdentity } from "./data";
 import "./opening.css";
 
-const OPENING_DURATION_MS = 4_000;
+const OPENING_DURATION_MS = 3_500;
 const REDUCED_HANDOFF_MS = 120;
 const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const C06_MARK_SOURCE = "/media/profile/j-candidate-06-settled.svg";
+const C06_MARK_SOURCE = "/media/opening/j-candidate-06-m54-opening.svg";
 const C06_FORMATION_SOURCE = "/media/profile/j-candidate-06-opening.svg";
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
@@ -119,6 +120,7 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
             <div
               className="opening__mark-motion"
               data-j-source="candidate-06-3679:247"
+              data-mark-source={portfolioIdentity.mark}
               style={{ "--opening-mark-source": `url("${C06_MARK_SOURCE}")` } as CSSProperties}
             >
               <img className="opening__j-echo" src={C06_MARK_SOURCE} alt="" draggable={false} />

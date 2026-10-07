@@ -35,7 +35,7 @@
   display: grid;
   place-items: center;
   overflow: hidden;
-  animation: opening-scene-exit 4s linear both;
+  animation: opening-scene-exit 3.5s linear both;
 }
 
 .opening__radial-field,
@@ -56,7 +56,7 @@
     rgb(170 193 206 / 16%) 3.54deg 3.67deg,
     transparent 3.72deg 4deg
   );
-  animation: opening-radial-arrive 4s ease-out both;
+  animation: opening-radial-arrive 3.5s ease-out both;
 }
 
 .opening__peripheral-lines {
@@ -66,7 +66,7 @@
     conic-gradient(from 0deg at 50% 50%, transparent 0deg 4deg, rgb(195 211 217 / 20%) 4.08deg 4.18deg, transparent 4.3deg 60deg);
   -webkit-mask: radial-gradient(ellipse at center, transparent 0 46%, #000 56% 78%, transparent 91%);
   mask: radial-gradient(ellipse at center, transparent 0 46%, #000 56% 78%, transparent 91%);
-  animation: opening-peripheral-sweep 4s ease-out both;
+  animation: opening-peripheral-sweep 3.5s ease-out both;
 }
 
 .opening__peripheral-mark {
@@ -79,7 +79,7 @@
   border: 1px solid rgb(198 170 112 / 67%);
   opacity: 0;
   transform: rotate(45deg) scale(.45);
-  animation: opening-mark-arrive 4s ease-out both;
+  animation: opening-mark-arrive 3.5s ease-out both;
 }
 
 .opening__peripheral-mark--northwest { --mark-x: 16%; --mark-y: 21%; animation-delay: .2s; }
@@ -109,7 +109,7 @@
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -50%) scale(.82);
-  animation: opening-ring-arrive 4s ease-out both;
+  animation: opening-ring-arrive 3.5s ease-out both;
 }
 
 .opening__ring--outer { width: 82%; animation-delay: .16s; }
@@ -126,7 +126,7 @@
   border-radius: 50%;
   opacity: 0;
   transform: translate(-50%, -50%);
-  animation: opening-tick-arrive 4s ease-out both;
+  animation: opening-tick-arrive 3.5s ease-out both;
 }
 
 .opening__orbit-spin {
@@ -191,17 +191,17 @@
 
 .opening__j-echo {
   opacity: 0;
-  animation: opening-identity-echo 4s ease-out both;
+  animation: opening-identity-echo 3.5s ease-out both;
 }
 
 .opening__j-base {
   opacity: 0;
-  animation: opening-settled-mark 4s ease-in-out both;
+  animation: opening-settled-mark 3.5s ease-in-out both;
 }
 
 .opening__j-piece {
   opacity: 0;
-  animation: opening-forge-piece 4s cubic-bezier(.2,.75,.25,1) both;
+  animation: opening-forge-piece 3.5s cubic-bezier(.2,.75,.25,1) both;
 }
 
 .opening__j-piece img {
@@ -250,7 +250,7 @@
   mask-size: contain;
   mix-blend-mode: screen;
   pointer-events: none;
-  animation: opening-material-highlight 4s ease-in-out both;
+  animation: opening-material-highlight 3.5s ease-in-out both;
 }
 
 .opening__skip {
