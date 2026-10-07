@@ -1,11 +1,13 @@
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
 import "./opening.css";
 
 const OPENING_DURATION_MS = 4_000;
 const REDUCED_HANDOFF_MS = 120;
+const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const C06_MARK_SOURCE = "/media/profile/j-candidate-06-opening.svg";
+const C06_MARK_SOURCE = "/media/profile/j-candidate-06-settled.svg";
+const C06_FORMATION_SOURCE = "/media/profile/j-candidate-06-opening.svg";
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
   const navigate = useNavigate();
@@ -38,12 +40,23 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
       navigate("/home", { replace: true });
     };
 
+    const beginNormalHandoff = () => {
+      if (completed.current) return;
+      setLeaving(true);
+      timers.current.push(window.setTimeout(goToHome, NORMAL_HANDOFF_MS));
+    };
+
     if (reducedMotion) {
       setLeaving(true);
       timers.current.push(window.setTimeout(goToHome, REDUCED_HANDOFF_MS));
     } else {
       setLeaving(false);
-      timers.current.push(window.setTimeout(goToHome, OPENING_DURATION_MS));
+      timers.current.push(
+        window.setTimeout(
+          beginNormalHandoff,
+          OPENING_DURATION_MS - NORMAL_HANDOFF_MS,
+        ),
+      );
     }
 
     return () => {
@@ -103,18 +116,23 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
                 </span>
               </span>
             </span>
-            <div className="opening__mark-motion" data-j-source="candidate-06-3679:247">
+            <div
+              className="opening__mark-motion"
+              data-j-source="candidate-06-3679:247"
+              style={{ "--opening-mark-source": `url("${C06_MARK_SOURCE}")` } as CSSProperties}
+            >
               <img className="opening__j-echo" src={C06_MARK_SOURCE} alt="" draggable={false} />
               <img className="opening__j-base" src={C06_MARK_SOURCE} alt="" draggable={false} />
               <span className="opening__j-piece opening__j-piece--cap" data-node-id="3679:267">
-                <img src={C06_MARK_SOURCE} alt="" draggable={false} />
+                <img src={C06_FORMATION_SOURCE} alt="" draggable={false} />
               </span>
               <span className="opening__j-piece opening__j-piece--shaft" data-node-id="3679:285">
-                <img src={C06_MARK_SOURCE} alt="" draggable={false} />
+                <img src={C06_FORMATION_SOURCE} alt="" draggable={false} />
               </span>
               <span className="opening__j-piece opening__j-piece--hook" data-node-id="3679:303">
-                <img src={C06_MARK_SOURCE} alt="" draggable={false} />
+                <img src={C06_FORMATION_SOURCE} alt="" draggable={false} />
               </span>
+              <span className="opening__j-material-highlight" aria-hidden="true" />
             </div>
           </div>
         </div>

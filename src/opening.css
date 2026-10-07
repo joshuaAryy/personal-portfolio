@@ -52,9 +52,9 @@
 .opening__radial-field {
   background: repeating-conic-gradient(
     from 0deg at 50% 50%,
-    transparent 0deg 1.72deg,
-    rgb(170 193 206 / 24%) 1.76deg 1.86deg,
-    transparent 1.92deg 2deg
+    transparent 0deg 3.42deg,
+    rgb(170 193 206 / 16%) 3.54deg 3.67deg,
+    transparent 3.72deg 4deg
   );
   animation: opening-radial-arrive 4s ease-out both;
 }
@@ -214,17 +214,43 @@
 
 .opening__j-piece--cap {
   clip-path: polygon(0 0, 100% 0, 100% 38%, 0 38%);
+  --forge-offset-x: 0px;
+  --forge-offset-y: -14px;
   animation-delay: .08s;
 }
 
 .opening__j-piece--shaft {
   clip-path: polygon(0 16%, 100% 16%, 100% 67%, 0 67%);
-  animation-delay: .18s;
+  --forge-offset-x: 5px;
+  --forge-offset-y: -8px;
+  animation-delay: .2s;
 }
 
 .opening__j-piece--hook {
   clip-path: polygon(0 53%, 100% 53%, 100% 100%, 0 100%);
-  animation-delay: .28s;
+  --forge-offset-x: 0px;
+  --forge-offset-y: 14px;
+  animation-delay: .32s;
+}
+
+.opening__j-material-highlight {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(108deg, transparent 35%, rgb(255 249 220 / 0%) 44%, rgb(255 242 192 / 74%) 50%, rgb(255 250 225 / 0%) 56%, transparent 66%);
+  filter: blur(1.5px);
+  opacity: 0;
+  transform: translateX(-34%);
+  -webkit-mask-image: var(--opening-mark-source);
+  mask-image: var(--opening-mark-source);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: opening-material-highlight 4s ease-in-out both;
 }
 
 .opening__skip {
@@ -263,16 +289,23 @@
   0%, 20% { opacity: 0; transform: scale(1.08); filter: none; }
   34% { opacity: .24; transform: scale(1.02); filter: none; }
   58% { opacity: .4; transform: scale(.96); filter: none; }
-  72% { opacity: .9; transform: scale(.88); filter: drop-shadow(0 0 18px rgb(46 206 255 / 70%)); }
-  80%, 94% { opacity: 1; transform: scale(.88); filter: drop-shadow(0 0 5px rgb(46 206 255 / 24%)); }
+  72% { opacity: .9; transform: scale(.88); filter: drop-shadow(0 0 9px rgb(224 178 86 / 42%)); }
+  80%, 94% { opacity: 1; transform: scale(.88); filter: drop-shadow(0 0 4px rgb(224 178 86 / 22%)); }
   100% { opacity: 0; transform: scale(.88); filter: none; }
 }
 
 @keyframes opening-forge-piece {
-  0%, 21% { opacity: 0; transform: translate(0, -15px) scale(.97); filter: none; }
-  34% { opacity: .8; transform: translate(0, -4px) scale(.99); filter: drop-shadow(0 0 11px rgb(51 195 239 / 48%)); }
-  48%, 64% { opacity: 1; transform: translate(0, 0) scale(1); filter: drop-shadow(0 0 7px rgb(53 197 240 / 39%)); }
+  0%, 21% { opacity: 0; transform: translate(var(--forge-offset-x), var(--forge-offset-y)) scale(.97); filter: none; }
+  34% { opacity: .8; transform: translate(0, -4px) scale(.99); filter: drop-shadow(0 0 8px rgb(230 190 108 / 34%)); }
+  48%, 64% { opacity: 1; transform: translate(0, 0) scale(1); filter: drop-shadow(0 0 5px rgb(230 190 108 / 26%)); }
   76%, 100% { opacity: 0; transform: translate(0, 0) scale(1); filter: none; }
+}
+
+@keyframes opening-material-highlight {
+  0%, 66% { opacity: 0; transform: translateX(-34%); }
+  70% { opacity: .8; transform: translateX(-12%); }
+  78% { opacity: .54; transform: translateX(20%); }
+  83%, 100% { opacity: 0; transform: translateX(34%); }
 }
 
 @keyframes opening-tick-spin {
@@ -318,7 +351,7 @@
 }
 
 @keyframes opening-scene-exit {
-  0%, 92% { opacity: 1; }
+  0%, 96% { opacity: 1; }
   100% { opacity: 0; }
 }
 
@@ -337,7 +370,8 @@
 .opening--reduced .opening__orbit-turn,
 .opening--reduced .opening__orbit-spin,
 .opening--reduced .opening__j-echo,
-.opening--reduced .opening__j-piece {
+.opening--reduced .opening__j-piece,
+.opening--reduced .opening__j-material-highlight {
   animation: none;
 }
 
@@ -347,7 +381,8 @@
 .opening--reduced .opening__ring { opacity: .82; transform: translate(-50%, -50%); }
 .opening--reduced .opening__orbit-turn { opacity: .78; transform: translate(-50%, -50%); }
 .opening--reduced .opening__j-echo,
-.opening--reduced .opening__j-piece { opacity: 0; }
+.opening--reduced .opening__j-piece,
+.opening--reduced .opening__j-material-highlight { opacity: 0; }
 .opening--reduced .opening__j-base { opacity: 1; transform: none; filter: none; animation: none; }
 .opening-route--leaving .opening { opacity: 0; transition: opacity 100ms ease; }
 
