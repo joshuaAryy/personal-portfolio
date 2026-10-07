@@ -276,15 +276,17 @@ describe("Food Tracker product story", () => {
     expect(loggingCopy).not.toContain("immutable food logs");
   });
 
-  it("teaches app, API, catalog, and historical serving relationships", () => {
+  it("teaches verified app, API, provider, and historical serving relationships", () => {
     const markup = renderFoodTracker();
     const architecture = section(markup, "food-architecture", "food-insights");
     const architectureCopy = storyText(architecture);
 
     expect(architecture).toContain('class="food-data-contract"');
-    expect(architecture).toContain('class="food-system-map__overview"');
-    expect(architecture).toContain('aria-label="Conceptual Food Tracker architecture"');
-    expect(architecture).toContain('class="food-data-contract__model"');
+    expect(architecture).toContain('class="food-system-map__core"');
+    expect(architecture).toContain('aria-label="Food Tracker implementation architecture"');
+    expect(architecture).toContain('class="food-system-map__auth-boundary"');
+    expect(architecture).toContain('class="food-system-map__flows"');
+    expect(architecture).toContain('class="food-data-contract__normalized-record"');
     expect(architecture).toContain("CONCEPTUAL MODEL");
     for (const copy of [
       "Open Food Facts",
@@ -295,104 +297,62 @@ describe("Food Tracker product story", () => {
       "Ciqual 2025",
       "CoFID 2021",
       "versioned bulk datasets",
-      "Adapters retain source identity and dataset release.",
+      "provider identity and dataset release",
       "Reusable food identity",
-      "Normalized nutrients + serving options",
-      "Historical serving snapshot",
-      "Food item identity is reusable catalog data:",
-      "Nutrient values and serving options retain source and units",
+      "Normalized nutrients, units, and serving options",
+      "Keep the nutrition basis used at save.",
+      "name, brand, or barcode",
+      "nutrient values with aligned units",
+      "unknown stays absent, not zero",
       "Recipes and mixed meals compose foods; they are not a separate nutrition authority.",
       "food + source provenance",
-      "basis quantity + unit",
-      "requested serving",
-      "resolution + multiplier",
-      "nutrient basis + overrides",
+      "confirmed amount + unit",
+      "resolved basis + multiplier",
+      "nutrient basis at save",
       "12,363 active foods",
       "277,341 nutrient rows",
-      "catalog scale, not users or impact",
+      "Reference data scale, not users or impact.",
     ]) expect(architectureCopy).toContain(copy);
     expect(architectureCopy).toContain("React Native + Expo");
     expect(architectureCopy).toContain("Express + TypeScript API");
+    expect(architectureCopy).toContain("Prisma");
     expect(architectureCopy).toContain("PostgreSQL");
     expect(architectureCopy).toContain("Shared TypeScript + Zod contracts");
-    expect(architectureCopy).toContain("Each saved serving keeps its source and resolved basis");
+    expect(architectureCopy).toContain("Firebase");
+    expect(architectureCopy).toContain("API-derived resource scope");
+    expect(architectureCopy).toContain("Pinecone returns semantic candidates only");
+    expect(architectureCopy).toContain("the API ranks deterministically");
+    expect(architectureCopy).toContain("Gemini proposes food and quantity");
+    expect(architectureCopy).toContain("Human review");
+    expect(architectureCopy).toContain("deterministic analytics and recommendations");
+    expect(architectureCopy).toContain("Simple and Complex change presentation depth");
+    expect(architectureCopy).toContain("not deployment status");
     expect(architectureCopy).not.toContain("live APIs for every national dataset lookup");
   });
 
-  it("starts the system map with a visible retrieval path before the focused nutrition data model", () => {
+  it("shows the complete architecture in the default view without a second interactive trace", () => {
     const markup = renderFoodTracker();
     const architecture = section(markup, "food-architecture", "food-insights");
-    const mapStart = architecture.indexOf('class="food-system-map"');
-    const dataStart = architecture.indexOf('class="food-data-contract"');
-    const systemMap = storyText(architecture.slice(mapStart, dataStart));
+    const systemMap = storyText(architecture.slice(architecture.indexOf('class="food-system-map"'), architecture.indexOf('class="food-data-contract"')));
 
-    expect(mapStart).toBeGreaterThanOrEqual(0);
-    expect(dataStart).toBeGreaterThan(mapStart);
-    expect(architecture).toContain('aria-label="Conceptual Food Tracker architecture"');
-    expect(architecture).toContain('aria-label="Food Tracker system paths"');
-    expect(architecture).toContain('class="food-system-map__trace food-system-map__trace--4"');
-    for (const copy of [
-      "React Native + Expo",
-      "Simple and Complex share one mobile app",
-      "PostgreSQL",
-      "Open Food Facts",
-      "USDA FoodData Central",
-      "CNF 2026",
-      "Ciqual 2025",
-      "CoFID 2021",
-      "Deterministic retrieval",
-      "Fuzzy retrieval",
-      "Pinecone supplies semantic candidates",
-      "Deterministic final ranking",
-    ]) expect(systemMap.toLowerCase()).toContain(copy.toLowerCase());
-  });
-
-  it("selects a legible architecture path for retrieval, save, AI review, insights, or account scope", async () => {
-    const actGlobal = globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean };
-    const previousActEnvironment = actGlobal.IS_REACT_ACT_ENVIRONMENT;
-    actGlobal.IS_REACT_ACT_ENVIRONMENT = true;
-    const container = document.createElement("div");
-    document.body.append(container);
-    const root = createRoot(container);
-
-    try {
-      await act(async () => {
-        root.render(
-          <MemoryRouter>
-            <FoodTrackerCaseStudy />
-          </MemoryRouter>,
-        );
-      });
-
-      const paths = container.querySelector('[aria-label="Food Tracker system paths"]');
-      expect(paths).not.toBeNull();
-      const choices = [
-        ["Find a food", ["Open Food Facts", "USDA FoodData Central", "Pinecone", "deterministic final ranking"]],
-        ["Save a serving", ["Express + TypeScript API", "serving resolver", "PostgreSQL", "nutrition snapshot"]],
-        ["Review an AI suggestion", ["Text or photo", "Gemini", "Person", "trusted nutrition"]],
-        ["Read Insights", ["persisted logs", "weight", "goals", "deterministic analytics", "Simple", "Complex"]],
-        ["Protect account data", ["Verify the caller", "server-owned resource scope", "PostgreSQL"]],
-      ] as const;
-
-      for (const [label, expected] of choices) {
-        const button = [...(paths?.querySelectorAll("button") ?? [])].find((item) => item.textContent?.includes(label));
-        expect(button).not.toBeUndefined();
-        if (!button) continue;
-
-        await act(async () => {
-          button.click();
-        });
-
-        expect(button.getAttribute("aria-pressed")).toBe("true");
-        const detail = container.querySelector(".food-system-map__selected")?.textContent?.replace(/\s+/g, " ").trim() ?? "";
-        for (const copy of expected) expect(detail.toLowerCase()).toContain(copy.toLowerCase());
-      }
-    } finally {
-      await act(async () => root.unmount());
-      container.remove();
-      if (previousActEnvironment === undefined) delete actGlobal.IS_REACT_ACT_ENVIRONMENT;
-      else actGlobal.IS_REACT_ACT_ENVIRONMENT = previousActEnvironment;
-    }
+    expect(systemMap).toContain("React Native + Expo");
+    expect(systemMap).toContain("Express + TypeScript API");
+    expect(systemMap).toContain("Prisma");
+    expect(systemMap).toContain("PostgreSQL");
+    expect(systemMap).toContain("Firebase");
+    expect(systemMap).toContain("Open Food Facts");
+    expect(systemMap).toContain("USDA FoodData Central");
+    expect(systemMap).toContain("CNF 2026");
+    expect(systemMap).toContain("Ciqual 2025");
+    expect(systemMap).toContain("CoFID 2021");
+    expect(systemMap).toContain("Pinecone returns semantic candidates only");
+    expect(systemMap).toContain("Gemini proposes food and quantity");
+    expect(systemMap).toContain("Human review");
+    expect(systemMap).toContain("deterministic analytics and recommendations");
+    expect(systemMap).toContain("Simple and Complex");
+    expect(architecture).not.toContain('aria-label="Food Tracker system paths"');
+    expect(architecture).not.toContain("food-system-map__path-selector");
+    expect(architecture).not.toContain("food-system-map__selected");
   });
 
   it("separates logging-day eligibility from nutrient coverage and explains the two presentation depths", () => {
@@ -402,38 +362,38 @@ describe("Food Tracker product story", () => {
 
     expect(insights).toContain('class="food-insight-path"');
     expect(insights).toContain('class="food-insight-path__evidence food-insight-path__evidence--readable"');
+    expect(insights).toContain('class="food-insight-path__shared-inputs"');
     expect(insights).toContain('class="food-insight-path__analysis"');
     expect(insights).toContain('class="food-insight-path__presentations-heading"');
     expect(insights).toContain("food-insight-path__view-daily");
     expect(insights).toContain("food-insight-path__view-range");
     expect(insights).toContain("trend-detail-calories-unknown.png");
-    expect(insights.indexOf("01 / CHECK THE DATA")).toBeLessThan(insights.indexOf("02 / CHOOSE A VIEW"));
+    expect(insights.indexOf("PHASE 24 / PRE-REDESIGN CAPTURE")).toBeLessThan(insights.indexOf("01 / KEEP TWO DATA QUESTIONS SEPARATE"));
+    expect(insights.indexOf("01 / KEEP TWO DATA QUESTIONS SEPARATE")).toBeLessThan(insights.indexOf("02 / CHOOSE A PRESENTATION"));
     for (const copy of [
-      "Food logs",
-      "Weight logs",
-      "Goals",
-      "Local tracking day",
-      "A selected range changes the analysis; the underlying food log stays unchanged.",
-      "COMPLETE · PARTIAL · UNLOGGED",
-      "RECORDED · PARTIAL · UNKNOWN",
-      "A logged day can still have an unknown nutrient.",
+      "Saved food logs + weight logs + goals",
+      "Deterministic analysis + recommendations",
+      "range selection changes the analysis view, not the saved log.",
+      "Complete Partial Unlogged",
+      "Recorded Partial Unknown",
+      "A day may count toward analysis while an individual nutrient remains unknown.",
       "SIMPLE / CURATED DAILY READ",
       "Calories + macros",
       "Weight + hydration",
       "Logging consistency",
-      "Recommendations use saved logs and goals.",
+      "Daily overview and deterministic recommendations use saved records and goals.",
       "COMPLEX / DEEPER EXPLORATION",
-      "More nutrients, custom ranges, comparisons, coverage controls, saved views, and deterministic forecasts",
-      "Analytics and recommendation facts are deterministic backend facts",
-      "AI does not fill missing values or decide recommendations",
-      "Simple overview and recommendations",
-      "Complex tabs: Overview, Nutrients, and Recommendations",
-      "Trend views include calories, macros, weight, hydration, and logging consistency",
+      "Custom ranges, comparisons, coverage controls, saved views, and deterministic forecasts use recorded data.",
+      "AI does not fill missing values or decide recommendation facts",
+      "Overview Nutrients Recommendations",
+      "Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.",
       "Unknown is shown explicitly; this is not a populated trend or personal result",
     ]) expect(insightsCopy).toContain(copy);
     expect(insightsCopy).not.toContain("Food logs · weight logs · goals · local tracking day");
     expect(insightsCopy).not.toContain("return to a chosen analysis without changing the underlying log");
     expect(insightsCopy).not.toContain("populated account report");
+    expect(insightsCopy).not.toContain("1,850 calories");
+    expect(insightsCopy).not.toContain("measured trend");
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {

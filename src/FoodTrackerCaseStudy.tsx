@@ -350,143 +350,70 @@ function FoodLogTransaction() {
   );
 }
 
-const foodSystemPaths = [
-  {
-    id: "find-food",
-    label: "Find a food",
-    eyebrow: "RETRIEVAL PATH",
-    note: "Pinecone supplies semantic candidates; the API owns the deterministic final ranking.",
-    steps: [
-      { actor: "React Native + Expo", title: "Search, reuse, or scan", detail: "A person starts with a query, barcode, recent food, or saved food." },
-      { actor: "PostgreSQL + lookup sources", title: "Catalog + lookup candidates", detail: "PostgreSQL holds normalized foods from the CNF 2026, Ciqual 2025, and CoFID 2021 imports; Open Food Facts and USDA FoodData Central supply lookup candidates." },
-      { actor: "Express + TypeScript API", title: "Retrieve, then rank", detail: "Deterministic retrieval and fuzzy retrieval join semantic candidates from Pinecone; deterministic final ranking stays in the API." },
-      { actor: "Person", title: "Confirm food + serving", detail: "A candidate is reviewed before it becomes part of a log." },
-    ],
-  },
-  {
-    id: "save-serving",
-    label: "Save a serving",
-    eyebrow: "SAVE PATH",
-    note: "The saved record keeps the selected source and resolved serving basis for its historical meaning.",
-    steps: [
-      { actor: "Mobile app", title: "Choose a food + amount", detail: "The person confirms the food and the serving they want to log." },
-      { actor: "Express + TypeScript API", title: "Validate the shared contract", detail: "Shared TypeScript + Zod contracts and Prisma access keep the server-owned rules in one place." },
-      { actor: "Serving resolver", title: "Resolve the chosen unit", detail: "The backend applies the requested serving against the food's stored basis." },
-      { actor: "PostgreSQL", title: "Persist log + nutrition snapshot", detail: "The saved log retains its source and resolved basis." },
-    ],
-  },
-  {
-    id: "review-ai",
-    label: "Review an AI suggestion",
-    eyebrow: "BOUNDED INTERPRETATION PATH",
-    note: "Gemini suggests food and quantity from text or photo; it does not set trusted nutrition.",
-    steps: [
-      { actor: "Mobile app", title: "Text or photo request", detail: "A person describes a meal or selects a photo." },
-      { actor: "Gemini", title: "Suggest food + quantity", detail: "The model returns proposed rows for review." },
-      { actor: "Person", title: "Review, edit, or remove", detail: "A person decides which proposed rows and servings to keep." },
-      { actor: "API + PostgreSQL", title: "Resolve, then save", detail: "The normal serving and snapshot rules apply after review." },
-    ],
-  },
-  {
-    id: "read-insights",
-    label: "Read Insights",
-    eyebrow: "ANALYSIS PATH",
-    note: "Simple and Complex are views over the same app and data; analysis does not change the underlying food log.",
-    steps: [
-      { actor: "PostgreSQL", title: "Persisted logs + weight + goals", detail: "These saved records provide the analysis inputs." },
-      { actor: "Express + TypeScript API", title: "Deterministic analytics + recommendations", detail: "The server derives patterns and recommendations from saved logs and goals." },
-      { actor: "Mobile app", title: "Simple daily read / Complex exploration", detail: "A person chooses how much detail to see." },
-    ],
-  },
-  {
-    id: "protect-account",
-    label: "Protect account data",
-    eyebrow: "AUTH + RESOURCE SCOPE",
-    note: "The client cannot choose the owner identity for saved records.",
-    steps: [
-      { actor: "Authenticated caller", title: "Verify the caller", detail: "The server checks the request identity before resource access." },
-      { actor: "Express + TypeScript API", title: "Derive server-owned resource scope", detail: "The API determines whose records the request may access." },
-      { actor: "PostgreSQL", title: "Read or write within that scope", detail: "The server applies the derived scope to persisted resources." },
-    ],
-  },
-] as const;
-
-type FoodSystemPathId = (typeof foodSystemPaths)[number]["id"];
-
 function FoodSystemMap() {
-  const [activePath, setActivePath] = useState<FoodSystemPathId>("find-food");
-  const selectedPath = foodSystemPaths.find((path) => path.id === activePath)!;
-
   return (
-    <figure className="food-system-map" aria-labelledby="food-system-map-title" data-active-path={activePath}>
+    <figure className="food-system-map" aria-labelledby="food-system-map-title">
       <header className="food-system-map__heading">
-        <p className="food-figure__index">FOLLOW A SYSTEM PATH</p>
-        <h3 id="food-system-map-title">The mobile app, shared API rules, and nutrition record work as one system.</h3>
-        <p>Simple and Complex share one mobile app, API, catalog, serving rules, and saved history; they change how much a person sees.</p>
+        <p className="food-figure__index">IMPLEMENTATION MAP · NOT A RELEASE DIAGRAM</p>
+        <h3 id="food-system-map-title">One mobile product, shared data and rules.</h3>
+        <p>Follow lookup, interpretation, and analysis through shared rules to the persisted records.</p>
       </header>
 
-      <div className="food-system-map__overview" role="group" aria-label="Conceptual Food Tracker architecture">
-        <div className="food-system-map__overview-layers">
-          <section className="food-system-map__overview-layer food-system-map__overview-layer--app">
-            <span>01 / MOBILE PRODUCT</span>
+      <div className="food-system-map__auth-boundary" aria-label="Authentication and server-owned resource boundary">
+        <span>AUTHENTICATED REQUEST · SOURCE IMPLEMENTATION</span>
+        <strong>Firebase UID → app-owned UUID → API-derived resource scope</strong>
+        <p>The client does not choose whose records it reads or writes; this describes inspected source, not deployment status.</p>
+      </div>
+
+      <div className="food-system-map__core" role="group" aria-label="Food Tracker implementation architecture">
+        <div className="food-system-map__core-layers">
+          <section className="food-system-map__core-layer food-system-map__core-layer--app">
+            <span>01 / MOBILE EXPERIENCE</span>
             <strong>React Native + Expo</strong>
-            <p>Simple + Complex; people search, review, log, and read Insights in one app.</p>
+            <p>One app for entry, human review, saved history, and Simple or Complex views.</p>
           </section>
-          <span className="food-system-map__overview-link" aria-hidden="true">→</span>
-          <section className="food-system-map__overview-layer food-system-map__overview-layer--api">
-            <span>02 / SHARED RULES</span>
+          <span className="food-system-map__core-link" aria-hidden="true">→</span>
+          <section className="food-system-map__core-layer food-system-map__core-layer--api">
+            <span>02 / API + DOMAIN RULES</span>
             <strong>Express + TypeScript API</strong>
-            <p>Shared TypeScript + Zod contracts and serving resolver; deterministic retrieval + analytics and server-owned resource scope.</p>
+            <p>Shared TypeScript + Zod contracts; Prisma access; serving, ranking, analytics, and ownership rules.</p>
           </section>
-          <span className="food-system-map__overview-link" aria-hidden="true">→</span>
-          <section className="food-system-map__overview-layer food-system-map__overview-layer--data">
-            <span>03 / PERSISTED DATA</span>
-            <strong>PostgreSQL</strong>
-            <p>Food catalog, nutrient + serving data, food logs, and historical log snapshots.</p>
+          <span className="food-system-map__core-link" aria-hidden="true">→</span>
+          <section className="food-system-map__core-layer food-system-map__core-layer--store">
+            <span>03 / PERSISTED RECORDS</span>
+            <strong>Prisma → PostgreSQL</strong>
+            <p>Food and nutrient records, serving basis, food and weight logs, and saved snapshots.</p>
           </section>
-        </div>
-        <div className="food-system-map__overview-boundaries">
-          <p><strong>SEARCH CANDIDATES</strong><span>Pinecone expands semantic candidates; deterministic API ranking makes the final order.</span></p>
-          <p><strong>AI SUGGESTIONS</strong><span>Gemini suggests food + quantity; a person reviews before shared rules save a record.</span></p>
         </div>
       </div>
 
-      <div className="food-system-map__path-selector" role="group" aria-label="Food Tracker system paths">
-        {foodSystemPaths.map((path) => (
-          <button
-            key={path.id}
-            type="button"
-            aria-pressed={activePath === path.id}
-            onClick={() => setActivePath(path.id)}
-          >
-            {path.label}
-          </button>
-        ))}
-      </div>
-
-      <div className="food-system-map__selected">
-        <p className="food-figure__index">{selectedPath.eyebrow}</p>
-        <ol
-          className={`food-system-map__trace food-system-map__trace--${selectedPath.steps.length}`}
-          aria-label={`${selectedPath.label} system flow`}
-          aria-live="polite"
-        >
-          {selectedPath.steps.map((step, index) => (
-            <li key={`${selectedPath.id}-${step.actor}`}>
-              <span className="food-system-map__step-number" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-              <div>
-                <small>{step.actor}</small>
-                <strong>{step.title}</strong>
-                <p>{step.detail}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-        <p className="food-system-map__path-note">{selectedPath.note}</p>
+      <div className="food-system-map__flows" role="group" aria-label="Connected lookup, interpretation, and Insights paths">
+        <section className="food-system-map__flow food-system-map__flow--find">
+          <span className="food-figure__index">FIND + RESOLVE</span>
+          <strong>Different food sources meet one serving rule.</strong>
+          <div className="food-system-map__flow-content">
+            <p><b>Lookup candidates</b> Open Food Facts (packaged/barcode) and USDA FoodData Central (generic food).</p>
+            <p><b>Versioned imports</b> CNF 2026, Ciqual 2025, and CoFID 2021 feed normalized PostgreSQL records.</p>
+            <p><b>Retrieval</b> Pinecone returns semantic candidates only; the API ranks deterministically, then a person confirms food and serving.</p>
+          </div>
+        </section>
+        <section className="food-system-map__flow food-system-map__flow--interpret">
+          <span className="food-figure__index">INTERPRET + REVIEW</span>
+          <strong>AI proposes; a person decides what enters the log.</strong>
+          <div className="food-system-map__flow-chain" aria-label="Text or photo to suggestion to human review to shared serving rules">
+            <span>Text or photo</span><b aria-hidden="true">→</b><span>Gemini proposal</span><b aria-hidden="true">→</b><span>Human review</span><b aria-hidden="true">→</b><span>Shared serving rules</span>
+          </div>
+          <p>Gemini proposes food and quantity; it does not determine trusted nutrition or save without review.</p>
+        </section>
+        <section className="food-system-map__flow food-system-map__flow--insights">
+          <span className="food-figure__index">READ SAVED HISTORY</span>
+          <strong>Deterministic analysis returns to the same product.</strong>
+          <p>Saved food logs, weight, and goals feed deterministic analytics and recommendations; Simple and Complex change presentation depth, not the backend.</p>
+        </section>
       </div>
 
       <figcaption id="food-system-map-caption">
-        System map · entry routes and bounded interpretation pass through shared API rules; saved records ground both history and analysis.
+        System boundary, provider paths, candidate retrieval, human-reviewed interpretation, and saved-record Insights are shown as one source-backed system.
       </figcaption>
     </figure>
   );
@@ -520,49 +447,64 @@ function FoodDataContract() {
 
       <div className="food-data-contract__down" aria-hidden="true">↓</div>
 
-      <div className="food-data-contract__model" role="group" aria-label="Conceptual model, not an exact database schema">
-        <header className="food-data-contract__model-heading">
-          <span className="food-figure__index">CONCEPTUAL MODEL · NOT AN EXACT DATABASE SCHEMA</span>
-          <strong>Keep reusable identity, nutrition basis, and saved history distinct.</strong>
+      <div className="food-data-contract__normalized-record" role="group" aria-label="Conceptual normalized food record, not an exact database schema">
+        <header className="food-data-contract__record-heading">
+          <span className="food-figure__index">APP-OWNED CANONICAL FOOD RECORD · CONCEPTUAL MODEL</span>
+          <strong id="food-data-contract-title">Normalize the source once; keep identity, nutrients, and serving basis related but distinct.</strong>
+          <p>Adapters preserve provider identity and dataset release while aligning nutrient units and serving metadata.</p>
         </header>
-        <div className="food-data-contract__model-columns">
-          <section className="food-data-contract__model-card food-data-contract__model-card--identity">
-            <span>01 / REUSABLE FOOD IDENTITY</span>
+        <div className="food-data-contract__record-columns">
+          <section className="food-data-contract__record-card food-data-contract__record-card--identity">
+            <span>IDENTITY + PROVENANCE</span>
             <strong>Reusable food identity</strong>
-            <p>Food item identity is reusable catalog data: name, source, brand, or barcode.</p>
+            <ul>
+              <li>name, brand, or barcode</li>
+              <li>provider and dataset release</li>
+            </ul>
           </section>
-          <span className="food-data-contract__model-link" aria-hidden="true">+</span>
-          <section className="food-data-contract__model-card food-data-contract__model-card--nutrition">
-            <span>02 / NUTRIENTS + SERVING BASIS</span>
-            <strong>Normalized nutrients + serving options</strong>
-            <p>Nutrient values and serving options retain source and units; missing values stay absent.</p>
-          </section>
-          <span className="food-data-contract__model-link food-data-contract__model-link--save" aria-hidden="true">→</span>
-          <section className="food-data-contract__model-card food-data-contract__model-card--snapshot">
-            <span>03 / HISTORICAL LOG SNAPSHOT</span>
-            <strong>Historical serving snapshot</strong>
-            <p>Each saved serving keeps its source and resolved basis at that time; the user confirms the food and amount before save.</p>
-            <div className="food-data-contract__snapshot-fields" aria-label="Snapshot fields shown as categories, not an exact API payload">
-              <span>food + source provenance</span>
-              <span>basis quantity + unit</span>
-              <span>requested serving</span>
-              <span>resolution + multiplier</span>
-              <span>nutrient basis + overrides</span>
-            </div>
+          <section className="food-data-contract__record-card food-data-contract__record-card--nutrition">
+            <span>NUTRIENTS + SERVING BASIS</span>
+            <strong>Normalized nutrients, units, and serving options</strong>
+            <ul>
+              <li>nutrient values with aligned units</li>
+              <li>serving options and basis quantity</li>
+              <li>unknown stays absent, not zero</li>
+            </ul>
           </section>
         </div>
-        <p className="food-data-contract__model-note">Adapters retain source identity and dataset release. Recipes and mixed meals compose foods; they are not a separate nutrition authority. Later catalog changes do not silently rewrite an earlier serving, and users may still edit or remove a log.</p>
+      </div>
+
+      <div className="food-data-contract__save-flow" aria-label="Human-confirmed serving becomes a historical nutrition snapshot">
+        <section className="food-data-contract__confirmed-serving">
+          <span className="food-figure__index">PERSON CONFIRMS</span>
+          <strong>Food + amount</strong>
+          <p>The shared backend resolver applies the requested serving to the stored basis.</p>
+        </section>
+        <span className="food-data-contract__save-link" aria-hidden="true">→</span>
+        <section className="food-data-contract__snapshot">
+          <div className="food-data-contract__snapshot-heading">
+            <span>HISTORICAL FOOD LOG SNAPSHOT</span>
+            <strong>Keep the nutrition basis used at save.</strong>
+          </div>
+          <div className="food-data-contract__snapshot-fields" aria-label="Snapshot categories, not an exact database payload">
+            <span>food + source provenance</span>
+            <span>confirmed amount + unit</span>
+            <span>resolved basis + multiplier</span>
+            <span>nutrient basis at save</span>
+          </div>
+          <p>Later catalog changes do not silently rewrite this basis; user-scoped edits and deletion remain possible.</p>
+        </section>
       </div>
 
       <div className="food-data-contract__scale" aria-label="Reference catalog scale, not a user impact metric">
         <div><strong>12,363</strong><span>active foods</span></div>
         <b aria-hidden="true">×</b>
         <div><strong>277,341</strong><span>nutrient rows</span></div>
-        <p>Reference catalog scale, not users or impact.</p>
+        <p>Reference data scale, not users or impact.</p>
       </div>
 
-      <figcaption id="food-data-contract-title">
-        Trusted-data model · versioned sources feed reusable food and nutrient data; a confirmed serving carries its basis into historical log data.
+      <figcaption>
+        Source examples and field categories are illustrative. Recipes and mixed meals compose foods; they are not a separate nutrition authority.
       </figcaption>
     </figure>
   );
@@ -571,85 +513,78 @@ function FoodDataContract() {
 function FoodInsightPath() {
   return (
     <figure className="food-insight-path" aria-labelledby="food-insight-path-title">
-      <div className="food-insight-path__inputs">
-        <span className="food-figure__index">START WITH PERSISTED RECORDS</span>
-        <strong>One saved history supports both a daily read and longer analysis.</strong>
-        <ul aria-label="Persisted inputs to Insights">
-          <li>Food logs</li>
-          <li>Weight logs</li>
-          <li>Goals</li>
-          <li>Local tracking day</li>
-        </ul>
-        <p>A selected range changes the analysis; the underlying food log stays unchanged.</p>
-      </div>
-
-      <div className="food-insight-path__analysis">
-        <header className="food-insight-path__analysis-heading">
-          <span className="food-figure__index">01 / CHECK THE DATA</span>
-          <strong>Day eligibility and nutrient coverage are separate checks.</strong>
-        </header>
-        <div className="food-insight-path__states">
-          <section className="food-insight-path__day">
-            <span>DAY ELIGIBILITY</span>
-            <strong>COMPLETE · PARTIAL · UNLOGGED</strong>
-            <p>Does this day count toward the selected analysis?</p>
-          </section>
-          <section className="food-insight-path__coverage">
-            <span>NUTRIENT COVERAGE</span>
-            <strong>RECORDED · PARTIAL · UNKNOWN</strong>
-            <p>Are nutrient values present in the saved food basis?</p>
-          </section>
-        </div>
-        <p className="food-insight-path__separation">A logged day can still have an unknown nutrient.</p>
-        <div className="food-insight-path__rule">
-          <span className="food-figure__index">DETERMINISTIC DOMAIN</span>
-          <strong>Saved foods, weight, and goals feed daily calculations and recommendations.</strong>
-          <p>Analytics and recommendation facts are deterministic backend facts. AI does not fill missing values or decide recommendations.</p>
-        </div>
-      </div>
-
-      <div className="food-insight-path__presentations">
-        <header className="food-insight-path__presentations-heading">
-          <span className="food-figure__index">02 / CHOOSE A VIEW</span>
-          <strong>One saved record. Two levels of detail.</strong>
-        </header>
-        <section className="food-insight-path__simple food-insight-path__view-daily">
-          <span>SIMPLE / CURATED DAILY READ</span>
-          <strong>Simple overview and recommendations</strong>
-          <ul className="food-insight-path__measure-list" aria-label="Simple daily view">
-            <li><span>INTAKE</span><strong>Calories + macros</strong></li>
-            <li><span>BODY + WATER</span><strong>Weight + hydration</strong></li>
-            <li><span>HABIT</span><strong>Logging consistency</strong></li>
-          </ul>
-          <p>Recommendations use saved logs and goals.</p>
-        </section>
-        <section className="food-insight-path__complex food-insight-path__view-range">
-          <span>COMPLEX / DEEPER EXPLORATION</span>
-          <strong>Complex tabs: Overview, Nutrients, and Recommendations</strong>
-          <ul className="food-insight-path__tab-list" aria-label="Complex views">
-            <li>Overview</li><li>Nutrients</li><li>Recommendations</li>
-          </ul>
-          <p>Trend views include calories, macros, weight, hydration, and logging consistency.</p>
-          <p className="food-insight-path__range-note">More nutrients, custom ranges, comparisons, coverage controls, saved views, and deterministic forecasts from recorded data.</p>
-          <p className="food-insight-path__forecast">Forecasts are calculations, not promised outcomes.</p>
-        </section>
-      </div>
-
       <div className="food-insight-path__evidence food-insight-path__evidence--readable">
         <img
           src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-unknown.png"
           alt="Phase 24 calorie trend detail with an Unknown value, no recorded calories for the selected period, and a coverage summary. It is an unsaved pre-redesign QA state."
         />
         <div className="food-insight-path__evidence-copy">
-          <span className="food-figure__index">PHASE 24 / OBSERVED STATE</span>
+          <span className="food-figure__index">PHASE 24 / PRE-REDESIGN CAPTURE</span>
           <strong>Unknown is shown explicitly; this is not a populated trend or personal result.</strong>
           <p>The selected period has no recorded calorie values. The screen keeps that gap visible instead of presenting a measured zero.</p>
-          <p className="food-insight-path__evidence-caption">Pre-redesign simulator capture · no recorded values in this period · not a user outcome.</p>
+          <p className="food-insight-path__evidence-caption">Observed simulator state · no recorded values in this period · not a user outcome.</p>
         </div>
       </div>
 
+      <div className="food-insight-path__shared-inputs" role="group" aria-label="Saved food logs, weight logs, and goals feed deterministic analysis and recommendations">
+        <span className="food-figure__index">SAVED DATA → DETERMINISTIC ANALYSIS</span>
+        <div className="food-insight-path__shared-flow">
+          <strong>Saved food logs + weight logs + goals</strong>
+          <span aria-hidden="true">→</span>
+          <strong>Deterministic analysis + recommendations</strong>
+        </div>
+        <p>Local tracking-day and nutrient-coverage rules show what the records support; range selection changes the analysis view, not the saved log. AI does not fill missing values or decide recommendation facts.</p>
+      </div>
+
+      <div className="food-insight-path__analysis">
+        <header className="food-insight-path__analysis-heading">
+          <span className="food-figure__index">01 / KEEP TWO DATA QUESTIONS SEPARATE</span>
+          <strong>Day eligibility and nutrient coverage are separate checks.</strong>
+        </header>
+        <div className="food-insight-path__states">
+          <section className="food-insight-path__day">
+            <span>DAY ELIGIBILITY</span>
+            <strong>Does this day count in the selected analysis?</strong>
+            <ul aria-label="Logging day states"><li>Complete</li><li>Partial</li><li>Unlogged</li></ul>
+          </section>
+          <section className="food-insight-path__coverage">
+            <span>NUTRIENT COVERAGE</span>
+            <strong>What nutrient values are actually present?</strong>
+            <ul aria-label="Nutrient coverage states"><li>Recorded</li><li>Partial</li><li>Unknown</li></ul>
+          </section>
+        </div>
+        <p className="food-insight-path__separation">A day may count toward analysis while an individual nutrient remains unknown.</p>
+      </div>
+
+      <div className="food-insight-path__presentations">
+        <header className="food-insight-path__presentations-heading">
+          <span className="food-figure__index">02 / CHOOSE A PRESENTATION</span>
+          <strong>One product, shared analysis; two levels of detail.</strong>
+        </header>
+        <section className="food-insight-path__simple food-insight-path__view-daily">
+          <span>SIMPLE / CURATED DAILY READ</span>
+          <strong>Simple</strong>
+          <ul className="food-insight-path__measure-list" aria-label="Simple daily view">
+            <li><span>INTAKE</span><strong>Calories + macros</strong></li>
+            <li><span>BODY + WATER</span><strong>Weight + hydration</strong></li>
+            <li><span>HABIT</span><strong>Logging consistency</strong></li>
+          </ul>
+          <p>Daily overview and deterministic recommendations use saved records and goals.</p>
+        </section>
+        <section className="food-insight-path__complex food-insight-path__view-range">
+          <span>COMPLEX / DEEPER EXPLORATION</span>
+          <strong>Complex</strong>
+          <ul className="food-insight-path__tab-list" aria-label="Complex views">
+            <li>Overview</li><li>Nutrients</li><li>Recommendations</li>
+          </ul>
+          <p>Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.</p>
+          <p className="food-insight-path__range-note">Custom ranges, comparisons, coverage controls, saved views, and deterministic forecasts use recorded data.</p>
+          <p className="food-insight-path__forecast">Forecasts are calculations, not promised outcomes.</p>
+        </section>
+      </div>
+
       <figcaption id="food-insight-path-title">
-        Insights path · saved records become a daily view, then a range-based analysis; day eligibility and nutrient coverage remain separate.
+        Insights path · one saved data model supports a daily summary and deeper exploration; unknown values remain distinct from zero.
       </figcaption>
     </figure>
   );
