@@ -52,6 +52,16 @@ reviewable execution justifies them.
 
 No agent may constrain a stronger downstream agent on the judgment dimension that agent was invoked to resolve. If the hard problem is strategic direction, Luna sends Sol a neutral decision packet; it does not prescribe Sol's diagnosis or solution. When direction is settled, a parent can give an executor exact states, timing, constraints, and acceptance checks.
 
+## Active scheduling and delegation
+
+Root Mingo is the project control plane, not the default implementation lane. Root may handle small glue work, coordination, integration, and global state. Substantial independently executable work should go to the relevant persistent domain owner or a bounded child so root can keep routing, reviewing, integrating, and maintaining continuity.
+
+When two or more actionable tasks have separate files/context and no unresolved dependency, run them concurrently. Keep QA validating an integrated batch while unrelated product or frontend work continues. Do not parallelize competing edits to the same files or work whose direction depends on an unresolved decision.
+
+Maintain a practical queue with READY, IN PROGRESS, BLOCKED, NEEDS STRATEGIC DECISION, NEEDS OWNER INPUT, REVIEW/QA, and COMPLETE states. When a worker finishes, inspect the queue and refill useful capacity from the highest-value non-conflicting READY work. A completed Frontend, Product, or QA task does not retire that domain; if the domain still has actionable work, that is a concrete next assignment. Prefer follow-up to a healthy context-rich handle when the work fits its domain. Create a new worker only when a distinct context or parallel lane justifies it.
+
+“Keep the graph small” means purposeful and non-redundant, not low agent activity. Several clearly scoped active lanes are preferable to routing independent implementation through root. Domain owners retain local coherence and acceptance; root owns cross-domain sequencing and integration.
+
 ## Sol decision packet
 
 Include only what Sol needs to reason independently, but preserve raw high-value evidence alongside the compact state summary. Link or attach exact Figma nodes, relevant rendered captures, source documents/files, current implementation state, and useful measurements. Do not send the whole project or only Luna's compressed interpretation.
@@ -75,7 +85,7 @@ Packet fields:
 8. **OPEN QUESTION** — the exact decision Sol owns.
 9. **REQUIRED OUTPUT** — normally Decision, Preserve, Change, Priorities, Decomposition, and Acceptance Criteria.
 
-Sol returns a compact strategic decision contract. Luna records the decision as project state and routes execution; settled strategy should not be repeatedly re-escalated. Sol does not poll, monitor, run Git, maintain routine documentation, operate browser validation, implement, or decide ordinary next actions.
+Sol returns a compact strategic decision contract. Luna records the decision as project state and routes execution; settled strategy should not be repeatedly re-escalated. Invoke Sol when meaningful high-leverage ambiguity exists, including consequential information architecture, major page decomposition, motion/design direction, prioritization, cross-domain tradeoffs, and acceptance boundaries. Sol is not emergency-only. Sol does not poll, monitor, run Git, maintain routine documentation, operate browser validation, implement ordinary settled work, or decide routine next commands.
 
 ## Pod contracts
 
@@ -112,8 +122,8 @@ Keep source/evidence research local to the pod that needs it. Communicate across
 
 The J route is exceptional and remains separate from ordinary frontend invention. **Current feature-branch target (owner direction, 2026-10-07):** Candidate 06 / keyed-forge, hero system `3679:2`, optical family `3679:247`, `3679:311`, and `3679:354`, motion studies `3681:2` onward, review board `3682:2`. The React feature branch uses C06 and its optical variants for prominent and small identity placements; this is a feature-review direction, not production approval. Production remains archive `159:2` until the owner explicitly selects a replacement. Preserve v8, C05, C02, C01, and earlier work in Figma as historical comparison evidence. Do not let the J lane block other pods.
 
-Do not impose a project-wide one-Sol-at-a-time restriction: independent, non-conflicting specialist lanes may coexist when their scopes justify it, and the J lane must not block portfolio work. Mingo still owns routing and avoids duplicate or overlapping edits. Sol agents do not recursively spawn other Sol agents. Astra is off; use it only with explicit owner approval after a meaningful Sol attempt leaves an unusually difficult, tightly bounded issue.
+Do not impose a project-wide one-Sol-at-a-time restriction: independent, non-conflicting strategic or specialist lanes may coexist when their scopes justify it, and the J lane must not block portfolio work. Mingo still owns routing and avoids duplicate or overlapping edits. Sol agents do not recursively spawn other Sol agents. Astra is off; use it only with explicit owner approval after a meaningful Sol attempt leaves an unusually difficult, tightly bounded issue.
 
 ## Current migration checkpoint
 
-The architecture migration is complete. The owner explicitly resumed portfolio execution; the earlier pause is superseded. Continue under the Luna control-plane / episodic Sol strategic-core split defined above. Check the live agent tree and registry before routing; completed Luna pods may be reactivated for a concrete next task, but do not redo completed work or overwrite preserved artifacts. Current branch, Preview, queue, and pending owner decisions live in `IMPLEMENTATION_STATUS.md`, `RENDER_VALIDATION_QUEUE.md`, and `SESSION_HANDOFF_2026-10-02.md`.
+The architecture migration is complete. The owner explicitly resumed portfolio execution; the earlier pause is superseded. Continue under the Luna control-plane / episodic Sol strategic-core split defined above. Check the live agent tree and registry before routing; re-use healthy completed domain handles when their domain remains active. When capacity is free, refill it from non-conflicting READY work. Do not redo completed work or overwrite preserved artifacts. Current branch, Preview, active queue, and pending owner decisions live in `IMPLEMENTATION_STATUS.md`, `AGENT_REGISTRY.md`, `RENDER_VALIDATION_QUEUE.md`, and `SESSION_HANDOFF_2026-10-02.md`.
