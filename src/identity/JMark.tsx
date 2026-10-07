@@ -15,12 +15,9 @@ export default function JMark({
   "aria-label": label,
   ...props
 }: JMarkProps) {
-  const monochrome = variant === "monochrome";
-  const source = monochrome
-    ? "/media/profile/open-portfolio-j-ringless-16px.svg"
-    : "/media/profile/open-portfolio-j-archive-source.jpg";
-  const viewBox = monochrome ? "0 0 16 16" : "0 0 220 220";
-  const sourceSize = monochrome ? 16 : 220;
+  const source = variant === "monochrome"
+    ? "/media/profile/j-candidate-06-xs16.svg"
+    : "/media/profile/j-candidate-06-m54.svg";
   const accessibility = {
     "aria-hidden": decorative ? true : undefined,
     role: decorative ? undefined : "img",
@@ -33,7 +30,7 @@ export default function JMark({
       {...props}
       {...accessibility}
       className={className}
-      viewBox={viewBox}
+      viewBox="0 0 468 468"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -42,8 +39,8 @@ export default function JMark({
         href={source}
         x="0"
         y="0"
-        width={sourceSize}
-        height={sourceSize}
+        width={468}
+        height={468}
         preserveAspectRatio="xMidYMid meet"
       />
     </svg>

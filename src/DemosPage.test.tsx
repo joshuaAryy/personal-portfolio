@@ -107,7 +107,7 @@ describe("Demos media browser", () => {
     expect(host.querySelector(".demo-player__play")).not.toBeNull();
   });
 
-  it("keeps Cho’Veigo as its approved static capture without a video affordance", () => {
+  it("plays the privacy-cropped Cho’Veigo recommendations excerpt in the player", () => {
     const button = select("CHO’VEIGO");
 
     expect(button.getAttribute("aria-pressed")).toBe("true");
@@ -115,13 +115,26 @@ describe("Demos media browser", () => {
       "/media/demos-rail-choveigo.svg",
     );
     expect(host.querySelector<HTMLImageElement>(".demo-player__still")?.src).toContain(
-      "/media/choveigo-recommendations.png",
+      "/media/demos/choveigo-recommendations-poster.png",
     );
     expect(host.querySelector(".demo-player__still")?.getAttribute("alt")).toBe(
-      "Cho’Veigo recommendations interface capture",
+      "Cho’Veigo recommendations showing a role, Fit, Eligibility, and evidence gaps",
     );
     expect(host.querySelector(".demo-title")?.textContent).toBe("CHO’VEIGO");
-    expect(host.querySelector(".demo-player__play")).toBeNull();
+    const playButton = host.querySelector<HTMLButtonElement>(".demo-player__play");
+    expect(playButton?.getAttribute("aria-label")).toBe("Play Cho’Veigo recommendations demo");
     expect(host.querySelector("iframe")).toBeNull();
+
+    act(() => playButton?.dispatchEvent(new MouseEvent("click", { bubbles: true })));
+
+    const player = host.querySelector<HTMLVideoElement>("video.demo-player__video");
+    expect(player?.getAttribute("src")).toBe("/media/demos/choveigo-recommendations.webm");
+    expect(player?.getAttribute("title")).toBe("Cho’Veigo recommendations demo");
+    expect(player?.hasAttribute("autoplay")).toBe(true);
+    expect(player?.hasAttribute("muted")).toBe(true);
+    expect(host.querySelector(".demo-player__play")).toBeNull();
+
+    select("CREST");
+    expect(host.querySelector("video")).toBeNull();
   });
 });

@@ -24,8 +24,8 @@ const demoOptions = [
   {
     key: "choveigo",
     label: "CHO’VEIGO",
-    image: "/media/choveigo-recommendations.png",
-    imageAlt: "Cho’Veigo recommendations interface capture",
+    image: "/media/demos/choveigo-recommendations-poster.png",
+    imageAlt: "Cho’Veigo recommendations showing a role, Fit, Eligibility, and evidence gaps",
     mark: projectIdentities.choveigo.mark,
     rail: "/media/demos-rail-choveigo.svg",
   },
@@ -39,7 +39,9 @@ const crestEmbedUrl =
 export default function DemosPage() {
   const [selected, setSelected] = useState<DemoKey>("food");
   const [crestIsPlaying, setCrestIsPlaying] = useState(false);
+  const [choIsPlaying, setChoIsPlaying] = useState(false);
   const crestVideoRef = useRef<HTMLIFrameElement>(null);
+  const choVideoRef = useRef<HTMLVideoElement>(null);
   const current = demoOptions.find((item) => item.key === selected)!;
 
   useEffect(() => {
@@ -48,9 +50,16 @@ export default function DemosPage() {
     }
   }, [crestIsPlaying, selected]);
 
+  useEffect(() => {
+    if (selected === "choveigo" && choIsPlaying) {
+      choVideoRef.current?.focus({ preventScroll: true });
+    }
+  }, [choIsPlaying, selected]);
+
   function selectDemo(key: DemoKey) {
     setSelected(key);
     setCrestIsPlaying(false);
+    setChoIsPlaying(false);
   }
 
   return (
@@ -95,6 +104,20 @@ export default function DemosPage() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 loading="lazy"
+                />
+            ) : selected === "choveigo" && choIsPlaying ? (
+              <video
+                ref={choVideoRef}
+                className="demo-player__video"
+                src="/media/demos/choveigo-recommendations.webm"
+                title="Cho’Veigo recommendations demo"
+                controls
+                autoPlay
+                muted
+                playsInline
+                preload="metadata"
+                poster={current.image}
+                tabIndex={0}
               />
             ) : (
               <>
@@ -131,6 +154,16 @@ export default function DemosPage() {
                       <span className="demo-player__play-icon" aria-hidden="true" />
                     </button>
                   </>
+                )}
+                {selected === "choveigo" && (
+                  <button
+                    className="demo-player__play"
+                    type="button"
+                    onClick={() => setChoIsPlaying(true)}
+                    aria-label="Play Cho’Veigo recommendations demo"
+                  >
+                    <span className="demo-player__play-icon" aria-hidden="true" />
+                  </button>
                 )}
               </>
             )}

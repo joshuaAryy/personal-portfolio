@@ -7,9 +7,9 @@ const storyRoutes = [
   ["Food Tracker", "/projects/food-tracker", "Simple tracking."],
   ["Crest", "/projects/crest", "<h1>Crest</h1>"],
   ["Cho’Veigo", "/projects/choveigo", "A better match starts with the evidence."],
-  ["Fraymakers", "/projects/fraymakers", "TOURNAMENT CONTEXT"],
-  ["Living in Silico", "/experience/living-in-silico", "Molecules need representation before generation."],
-  ["Stush Patties", "/experience/stush-patties", "A business goal came before a clean data specification."],
+  ["Fraymakers", "/projects/fraymakers", "A tournament match,"],
+  ["Living in Silico", "/experience/living-in-silico", "A research question before a model choice."],
+  ["Stush Patties", "/experience/stush-patties", "Different source files. One shared reporting path."],
 ] as const;
 
 function renderRoute(path: string) {

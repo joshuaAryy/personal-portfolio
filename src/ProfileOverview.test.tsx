@@ -127,6 +127,8 @@ describe("Profile Overview", () => {
     const overviewHeight = cssPixels(overviewRule, "height") ?? 0;
     const tabletSignalBottom = (cssPixels(tabletSignals, "top") ?? 0) + (cssPixels(tabletSignals, "height") ?? 0);
     const tabletOverviewHeight = cssPixels(tabletOverview, "height") ?? 0;
+    const shortWideOverview = cssBlock(shortWideRule, ".main--profile .profile-overview");
+    const shortWideSignals = cssBlock(shortWideRule, ".profile-signal-grid");
 
     expect(signalTop).toBeGreaterThanOrEqual(heroBottom + 24);
     expect(overviewRule).toContain("top: 115px");
@@ -137,7 +139,9 @@ describe("Profile Overview", () => {
     expect(tabletOverview).toContain("height: 914px");
     expect(tabletSignals).toContain("top: 560px");
     expect(tabletSignals).toContain("height: 250px");
-    expect(shortWideRule).toContain("margin-top: clamp(0px, calc(100vh - 1000px), 135px)");
+    expect(shortWideOverview).toContain("margin-top: clamp(49px, calc(649px - 32.3vw), 100px)");
+    expect(shortWideOverview).toContain("transform: scale(.88)");
+    expect(shortWideSignals).toContain("top: calc(820px - 15.3vw)");
     expect(narrowOverview).toContain("flex-direction: column");
     expect(narrowOverview).toContain("gap: 24px");
   });
@@ -149,7 +153,7 @@ describe("Profile Overview", () => {
 
     expect(shellRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(shellRule).toContain("linear-gradient(180deg,");
-    expect(shellRule).toContain("background-position: center, center top");
+    expect(shellRule).toContain("background-position: center, center 58%");
     expect(shellRule).toContain("background-size: cover, cover");
     expect.soft(badgeRule).toMatch(/border-radius:\s*50%/);
   });

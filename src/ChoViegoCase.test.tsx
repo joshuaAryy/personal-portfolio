@@ -39,15 +39,20 @@ describe("Cho’Veigo product story", () => {
     expect(resolveActiveChapter({ overview: -10, intake: 20 }, 30, true)).toBe("outcome");
   });
 
-  it("opens on the owner-cleared Recommendations still without a media warning", () => {
+  it("opens with the privacy-cropped Recommendations video and keeps its still with the evidence story", () => {
     const hero = chapter(renderCase(), "overview", "intake");
+    const evidence = chapter(renderCase(), "evidence", "decisions");
 
     expect(hero).toContain("A better match starts with the evidence.");
-    expect(hero).toContain("/media/choveigo-recommendations.png");
-    expect(hero).toContain("AUTHENTIC PRODUCT VIEW");
-    expect(hero).toContain("Owner-cleared Recommendations still");
-    expect(hero).not.toContain("privacy-safe walkthrough");
-    expect(hero).not.toContain("<video");
+    expect(hero).toContain('src="/media/demos/choveigo-recommendations.webm"');
+    expect(hero).toContain('poster="/media/demos/choveigo-recommendations-poster.png"');
+    expect(hero).toContain('title="Cho’Veigo recommendations demo"');
+    expect(hero).toContain("controls");
+    expect(hero).toContain('aria-describedby="cho-recommendations-caption"');
+    expect(hero).toContain("PLAYABLE EXCERPT");
+    expect(hero).toContain("TAILOR THE RESUME IN STUDIO");
+    expect(evidence).toContain('src="/media/choveigo-recommendations.png"');
+    expect(evidence).toContain("Fit and Eligibility remain distinct outputs in the real product");
   });
 
   it("shows job feeds becoming persisted role context", () => {

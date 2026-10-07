@@ -31,7 +31,7 @@ const primaryRoutes = [
   ["profile demos", "/profile/demos", "data-node-id=\"1316:131\">FOOD TRACKER</h1>"],
   ["personal highlights", "/profile/highlights", '<h1 id="personal-highlights-title">The rest of the story.</h1>'],
   ["resume found", "/resume", 'id="resume-found-title" class="resume-found__title"'],
-  ["resume viewer", "/resume/viewer", "APPROVED GENERAL RESUME"],
+  ["resume viewer", "/resume/viewer", "Download PDF"],
 ] as const;
 
 describe("primary App route mapping", () => {
@@ -89,7 +89,7 @@ describe("primary App route mapping", () => {
     expect(page.match(/class="education-projects__item"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Bookstore Management System");
-    expect(page).toContain("Quartus/VHDL 8-bit ALU and nine-state FSM lab project");
+    expect(page).toContain("8-bit ALU + finite-state controller");
     expect(page).toContain("Four-stage CMOS amplifier");
     expect(page).toContain("IN PROGRESS");
     expect(page.match(/EVIDENCE PENDING/g)).toHaveLength(3);
@@ -97,18 +97,27 @@ describe("primary App route mapping", () => {
     expect(page).toContain('class="top-nav top-nav--education-projects"');
     expect(page).toContain('aria-current="page"');
     expect(page).toContain('class="header-help"');
-    expect(page).toContain("<code>data_in</code> is high");
+    expect(page).toContain("Selected capability briefs");
+    expect(page).toContain("current implementation distinct from planned scope");
+    expect(page).toContain("Silver and Gold customer status");
+    expect(page).toContain("a clocked FSM");
+    expect(page).toContain("source-follower output buffer");
   });
 
-  it("shows the traced Lab 6 part 2 data, control, and display paths accessibly", () => {
+  it("keeps the ALU brief concise and avoids unverified implementation claims", () => {
     const page = renderRoute("/education/projects");
-    expect(page).toContain('aria-label="Lab 6 part 2 system map"');
-    expect(page).toContain("Two latch1 input registers");
-    expect(page).toContain("nine-state FSM");
-    expect(page).toContain("one-hot opcode decoder");
-    expect(page).toContain("R1 and R2");
-    expect(page).toContain("seven-segment decoders");
-    expect(page).toContain("does not claim a hardware demonstration");
+    expect(page).toContain("active-low reset input");
+    expect(page).toContain("hexadecimal displays");
+    expect(page).toContain("Waveform simulation was part of");
+    expect(page).not.toMatch(/VHDL|hardware demonstration|opcode branches/i);
     expect(page).not.toContain("501305419");
+    expect(page).not.toContain("9 opcode branches");
+  });
+
+  it("keeps the four selected capability areas equally structured", () => {
+    const page = renderRoute("/education/projects");
+    expect(page.match(/class="education-projects__learning"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__tools"/g)).toHaveLength(4);
+    expect(page).not.toMatch(/Dean|scholarship/i);
   });
 });

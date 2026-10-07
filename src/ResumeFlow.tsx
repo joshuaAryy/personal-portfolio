@@ -164,7 +164,6 @@ export function ResumeViewer() {
           <Link className="resume-viewer__back" to="/resume" state={location.state}>
             <span aria-hidden="true">‹</span> Back to Resume Found
           </Link>
-          <p className="resume-viewer__eyebrow">APPROVED GENERAL RESUME · VERSION 13</p>
           <h1 id="resume-viewer-title">Resume</h1>
         </div>
         <div
@@ -195,7 +194,7 @@ export function ResumeViewer() {
         <iframe
           className="resume-viewer__pdf"
           src={resumePdfUrl}
-          title="Joshua Aryeetey’s approved general resume, version 13"
+          title="Joshua Aryeetey’s resume"
         />
       </div>
       <p className="resume-viewer__fallback">

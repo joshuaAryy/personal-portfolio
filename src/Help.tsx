@@ -58,22 +58,26 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   if (pathname === "/home" || pathname === "/") {
     return [
       {
-        title: "Navigation",
-        detail: "Choose a mode to move between Projects, Experience, Hackathons, or Education.",
+        title: "Top-level links",
+        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar; narrow screens show them in the contact row. Resume opens Resume Found.",
       },
-      ...(railVisible
-        ? [{
-            title: "Party / Activity Rail",
-            detail: "Your current focus sits above the active and completed party list.",
-          }]
-        : []),
+      {
+        title: "Mode navigation",
+        detail: "Projects, Experience, Hackathons, and Education are the primary destinations. The profile portrait opens Profile.",
+      },
+      {
+        title: railVisible ? "Activity rail" : "Back and Confirm",
+        detail: railVisible
+          ? "Use Activity to jump to a project or experience. The current focus sits above the lists."
+          : "Back returns to the previous portfolio screen when available.",
+      },
       {
         title: "Preview a mode",
-        detail: "Selecting a mode previews its description and focus areas. Use the arrows to compare destinations.",
+        detail: "Choose a mode to preview its description and focus areas. Left and Right arrows compare modes; Home and End jump to the first or last.",
       },
       {
-        title: "Open the Selection",
-        detail: "Confirm or press Enter to open the selected item in its lobby. Close or press Esc to dismiss Help.",
+        title: "Confirm or go Back",
+        detail: "Confirm or press Enter to open the selected lobby. The Back control returns to the previous portfolio screen when available.",
       },
     ];
   }
@@ -82,23 +86,69 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
     const isEducation = pathname === "/education";
     return [
       {
+        title: "Top-level links",
+        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile.",
+      },
+      {
         title: "Select an entry",
-        detail: "Choose a banner to focus its details in the tray below.",
+        detail: "Choose a banner to focus that project, role, or academic entry in the tray below.",
       },
       ...(isEducation
-          ? [{
-            title: "Review details",
-            detail: "The tray updates to show academic information for the selected entry.",
+        ? [{
+            title: "Review the tray",
+            detail: "The tray updates with academic details. The top-left arrow returns Home; the primary navigation changes mode.",
           }]
         : [{
-            title: "Use the tray",
-            detail: "Use its action, when present, to open the story or Profile. A source icon opens the verified repository when one exists.",
+            title: "Confirm the selection",
+            detail: "The top-left arrow returns Home. Choose Open Case Study for a project, Open Profile for the owner card, or the labeled action for another story. A source link opens the repository when provided.",
           }]),
       {
-        title: "Move around",
+        title: railVisible ? "Primary navigation and Activity" : "Primary navigation",
         detail: railVisible
-          ? "Use the upper navigation or activity rail to open another area. Your account portrait opens Profile."
-          : "Use the upper navigation to open another area. Your account portrait opens Profile.",
+          ? "Use the top navigation or Activity rail to reach another area or story. The profile portrait opens Profile."
+          : "Use the top navigation to reach another mode. The profile portrait opens Profile.",
+      },
+    ];
+  }
+
+  if (pathname === "/profile") {
+    return [
+      {
+        title: "Top-level links",
+        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait returns here.",
+      },
+      {
+        title: "Profile signals",
+        detail: "Hover a signal or move keyboard focus to it to preview its details. The preview panel updates as you move between signals.",
+      },
+      {
+        title: "Profile navigation",
+        detail: "Use Overview, Journey, Personal Highlights, and Demos to change Profile sections.",
+      },
+      {
+        title: "Open a project",
+        detail: "Project links in the signal preview go directly to their case studies. The main navigation and Activity rail also lead to work.",
+      },
+    ];
+  }
+
+  if (pathname === "/profile/journey") {
+    return [
+      {
+        title: "Top-level links",
+        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile Overview.",
+      },
+      {
+        title: "Follow the story",
+        detail: "Scroll naturally through the Journey; the current chapter updates as you move down the page.",
+      },
+      {
+        title: "Use the path",
+        detail: "The sticky chapter path jumps to Origin, TMU, Living in Silico, Stush Patties, or Summer 2026. You can also keep scrolling.",
+      },
+      {
+        title: "Change sections",
+        detail: "Use the Profile tabs for Overview, Journey, Personal Highlights, and Demos. Primary navigation and Activity remain available.",
       },
     ];
   }
@@ -106,35 +156,91 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   if (pathname === "/profile/demos") {
     return [
       {
+        title: "Top-level links",
+        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile Overview.",
+      },
+      {
         title: "Choose a demo",
-        detail: "View Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.",
+        detail: "Use the selector to switch between Food Tracker, Crest, and Cho’Veigo.",
       },
       {
-        title: "Play Crest",
-        detail: "Crest is the only playable entry. Use Play to start its in-client video.",
+        title: "Play Crest or Cho’Veigo",
+        detail: "Select either project and press Play to start its video in the player.",
       },
       {
-        title: "Change sections",
+        title: "Food Tracker",
+        detail: "Its authentic demo video is pending. Use the Profile tabs to change sections.",
+      },
+    ];
+  }
+
+  if (pathname === "/resume") {
+    return [
+      {
+        title: "Resume Found",
+        detail: "View Resume opens the document viewer. Close returns to the screen that opened Resume Found.",
+      },
+      {
+        title: "View or close",
+        detail: "Choose View Resume to continue, or use Close to return to the previous portfolio screen.",
+      },
+      {
+        title: "Escape",
+        detail: "Press Escape to close Resume Found and return to the previous screen.",
+      },
+    ];
+  }
+
+  if (pathname === "/resume/viewer") {
+    return [
+      {
+        title: "Resume viewer",
+        detail: "The resume appears in the document frame when the browser can display the PDF.",
+      },
+      {
+        title: "Resume actions",
+        detail: "Download PDF saves a copy. Open Fullscreen opens the PDF in a new tab.",
+      },
+      {
+        title: "Return to Resume Found",
+        detail: "Use Back to Resume Found to return to the previous resume screen. The top navigation and contact links remain available.",
+      },
+    ];
+  }
+
+  if (pathname.startsWith("/projects/") || pathname.startsWith("/experience/")) {
+    const hasChapterNav = pathname === "/projects/choveigo" || pathname === "/projects/fraymakers";
+    return [
+      {
+        title: "Top-level links",
+        detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile.",
+      },
+      {
+        title: "Read the case study",
+        detail: "Scroll through the story from its opening to the outcome. Use the visible back link or primary navigation to return to the project or experience list.",
+      },
+      ...(hasChapterNav
+        ? [{
+            title: "Case study navigation",
+            detail: "Use the chapter stops to jump between sections; the active chapter follows your scroll position.",
+          }]
+        : []),
+      {
+        title: railVisible ? "Move between stories" : "Use the client links",
         detail: railVisible
-          ? "Use the upper navigation, Profile tabs, or activity rail to continue."
-          : "Use the upper navigation or Profile tabs to continue.",
+          ? "The Activity rail links to related work, while top navigation changes portfolio mode."
+          : "Primary navigation changes portfolio mode. The profile portrait opens Profile.",
       },
     ];
   }
 
   return [
-    {
-      title: "Use the top navigation",
-      detail: "Projects, Experience, Hackathons, and Education remain available from the client shell.",
-    },
-    {
-      title: "Open Profile",
-      detail: "The account portrait at the top right is the canonical Profile entry.",
-    },
+    { title: "Top-level links", detail: "LinkedIn, GitHub, Email, and Resume are in the client toolbar. The profile portrait opens Profile." },
+    { title: "Use the top navigation", detail: "Projects, Experience, Hackathons, and Education remain available from the client shell." },
     ...(railVisible
       ? [{
-          title: "Use the activity rail",
-          detail: "The right rail links to current work and client utilities.",
+          title: "Use the Activity rail",
+          detail: "The rail links to current focus, projects, and experience stories.",
         }]
       : []),
   ];
@@ -194,14 +300,22 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
             }
             const first = items[0];
             const last = items[items.length - 1];
-            if (event.shiftKey && document.activeElement === first) {
+            const activeIndex = items.indexOf(document.activeElement as HTMLElement);
+            if (activeIndex < 0) {
+              event.preventDefault();
+              (event.shiftKey ? last : first).focus();
+            } else if (event.shiftKey && activeIndex === 0) {
               event.preventDefault();
               last.focus();
-            } else if (!event.shiftKey && document.activeElement === last) {
+            } else if (!event.shiftKey && activeIndex === items.length - 1) {
               event.preventDefault();
               first.focus();
             }
           }
+        }}
+        onBlurCapture={(event) => {
+          if (event.relatedTarget instanceof Node && event.currentTarget.contains(event.relatedTarget)) return;
+          closeRef.current?.focus();
         }}
       >
         {isHome ? (

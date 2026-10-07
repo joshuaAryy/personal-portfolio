@@ -66,6 +66,9 @@
 .cho-story__capture-bar > strong { color: var(--cho-ink); font-size: 13px; font-weight: 600; }
 .cho-story__capture-bar .cho-story__capture-state { color: #c1ab6d; text-align: right; }
 .cho-story__recommendations > img { display: block; width: 100%; height: auto; background: #d8d8d8; }
+.cho-story__recommendations > video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #000; color-scheme: dark; }
+.cho-story__recommendations > video:focus-visible { outline: 2px solid var(--cho-gold); outline-offset: -4px; }
+.cho-story__recommendations--evidence { max-width: 1080px; margin: clamp(26px, 4vw, 52px) auto 0; }
 .cho-story__recommendations > figcaption { padding: 10px 14px 12px; color: var(--cho-dim); font-size: 10px; line-height: 1.4; }
 
 .cho-story__hero-route {

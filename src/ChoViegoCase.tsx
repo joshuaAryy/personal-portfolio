@@ -170,22 +170,25 @@ export default function ChoViegoCase() {
             <div className="cho-story__capture-bar">
               <span>AUTHENTIC PRODUCT VIEW</span>
               <strong>Recommendations</strong>
-              <span className="cho-story__capture-state">OWNER-CLEARED STILL</span>
+              <span className="cho-story__capture-state">PLAYABLE EXCERPT</span>
             </div>
-            <img
-              src="/media/choveigo-recommendations.png"
-              alt="Cho’Veigo Recommendations view with job roles, fit evidence, and skills to strengthen"
-              width="864"
-              height="486"
-              decoding="async"
-              fetchPriority="high"
+            <video
+              className="cho-story__hero-video"
+              src="/media/demos/choveigo-recommendations.webm"
+              title="Cho’Veigo recommendations demo"
+              poster="/media/demos/choveigo-recommendations-poster.png"
+              aria-describedby="cho-recommendations-caption"
+              controls
+              muted
+              playsInline
+              preload="none"
             />
             <figcaption id="cho-recommendations-caption">
-              Owner-cleared Recommendations still. Roles and evidence appear together for inspection.
+              A short capture follows Recommendations into role exploration; Fit and Eligibility remain visible beside the role.
             </figcaption>
           </figure>
           <div className="cho-story__hero-route" aria-label="Product sequence">
-            <span>FIND A ROLE</span><i aria-hidden="true">→</i><span>REVIEW THE EVIDENCE</span><i aria-hidden="true">→</i><span>CHOOSE WHAT TO DO NEXT</span>
+            <span>FIND A ROLE</span><i aria-hidden="true">→</i><span>REVIEW THE EVIDENCE</span><i aria-hidden="true">→</i><span>TAILOR THE RESUME IN STUDIO</span>
           </div>
         </section>
 
@@ -210,6 +213,23 @@ export default function ChoViegoCase() {
             <p>Titles and familiar technologies help describe a role; they do not prove the work. The Jobs path retrieves reviewed profile evidence for the role, including transferable experience, and keeps visible gaps visible.</p>
           </header>
           <EvidenceMapFigure />
+          <figure className="cho-story__recommendations cho-story__recommendations--evidence" aria-labelledby="cho-recommendation-evidence-caption">
+            <div className="cho-story__capture-bar">
+              <span>AUTHENTIC PRODUCT STATE</span>
+              <strong>Fit beside Eligibility</strong>
+              <span className="cho-story__capture-state">RECOMMENDATIONS</span>
+            </div>
+            <img
+              src="/media/choveigo-recommendations.png"
+              alt="Cho’Veigo Recommendations with a role, an Excellent Fit label, Unknown Eligibility, and evidence gaps"
+              width="864"
+              height="486"
+              decoding="async"
+            />
+            <figcaption id="cho-recommendation-evidence-caption">
+              Fit and Eligibility remain distinct outputs in the real product; evidence gaps stay visible for a person to review.
+            </figcaption>
+          </figure>
           <div className="cho-story__keyword-shift">
             <div className="cho-story__keyword-story">
               <p className="cho-story__eyebrow">A DESIGN CHANGE</p>

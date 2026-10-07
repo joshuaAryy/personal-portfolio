@@ -3,6 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { experience, experienceIdentities, portfolioIdentity, projectIdentities } from "./data";
 import { experienceStoryPaths, projectCasePaths, railProjects } from "./project-route-paths";
 import { useHelpOverlay } from "./Help";
+import "./route-motion.css";
 
 const headerUtilityLinks = [
   { label: "LinkedIn", href: "https://ca.linkedin.com/in/joshua-ary", external: true },
@@ -130,11 +131,11 @@ function Header() {
         <picture className="brand-glyph-frame">
           <source
             media="(max-width: 760px)"
-            srcSet="/media/profile/open-portfolio-j-small-32.svg"
+            srcSet={portfolioIdentity.mark32}
           />
           <img
             className="brand-glyph"
-            src="/media/profile/open-portfolio-j-small-54.svg"
+            src={portfolioIdentity.mark}
             alt=""
             aria-hidden="true"
             data-node-id="3289:157"
@@ -251,76 +252,6 @@ const projectRailMarks: Record<string, string | undefined> = Object.fromEntries(
   Object.entries(projectIdentities).map(([slug, identity]) => [slug, identity.mark]),
 );
 
-const activityArt = {
-  "food-tracker": {
-    src: projectIdentities["food-tracker"].mark,
-    size: 34,
-    frameSize: 34,
-    nodeId: "I2356:611;95:51",
-  },
-  choveigo: {
-    src: projectIdentities.choveigo.mark,
-    size: 54,
-    frameSize: 38,
-    nodeId: "I2356:611;95:11",
-  },
-  "living-in-silico": {
-    src: "/media/lobby/activity-art/activity-living-in-silico.svg",
-    size: 54,
-    frameSize: 38,
-    nodeId: "I2356:611;95:25",
-  },
-  "stush-patties": {
-    src: "/media/lobby/activity-art/activity-stush-patties.svg",
-    size: 54,
-    frameSize: 38,
-    nodeId: "I2356:611;95:37",
-  },
-  crest: {
-    src: projectIdentities.crest.mark,
-    size: 54,
-    frameSize: 38,
-    nodeId: "I2356:611;95:44",
-  },
-} as const;
-
-type ActivityArtId = keyof typeof activityArt;
-
-function RailActivityArt({ activity }: { activity: ActivityArtId }) {
-  const art = activityArt[activity];
-  const focusSize = art.frameSize === 34;
-  return (
-    <span
-      className={`rail-avatar rail-avatar--activity${focusSize ? " rail-avatar--activity-focus" : ""}`}
-      aria-hidden="true"
-      data-node-id={art.nodeId}
-    >
-      <img src={art.src} alt="" width={art.size} height={art.size} />
-    </span>
-  );
-}
-
-function PortfolioActivityArt() {
-  return (
-    <span className="rail-avatar rail-avatar--activity rail-avatar--activity-portfolio" aria-hidden="true" data-node-id="I2356:611;95:18">
-      <img
-        src="/media/lobby/activity-art/activity-portfolio-ring.svg"
-        alt=""
-        width={38}
-        height={38}
-        data-node-id="I2356:611;95:19"
-      />
-      <img
-        src={portfolioIdentity.mark}
-        alt=""
-        width={38}
-        height={38}
-        data-node-id="I2356:611;95:20"
-      />
-    </span>
-  );
-}
-
 function RailIdentity({ src, className = "" }: { src?: string; className?: string }) {
   return (
     <span className={["rail-avatar", className].filter(Boolean).join(" ")} aria-hidden="true">
@@ -332,10 +263,7 @@ function RailIdentity({ src, className = "" }: { src?: string; className?: strin
 function Rail() {
   const { pathname } = useLocation();
   const helpOverlay = useHelpOverlay();
-  const isHome = pathname === "/" || pathname === "/home";
   const isProjectShell = usesProjectDetailShell(pathname);
-  const isResumeShell = pathname.startsWith("/resume");
-  const isPortfolioSummary = isHome || isResumeShell;
   const focus = pathname.startsWith("/experience")
     ? {
         name: "Living in Silico",
@@ -353,19 +281,8 @@ function Rail() {
           };
   return (
     <aside className="rail" aria-label="Portfolio index">
-      <div className={`rail-availability${isPortfolioSummary ? " rail-availability--focus" : ""}${isProjectShell ? " rail-availability--opportunities" : ""}`}>
-        {isPortfolioSummary ? (
-          <>
-            <strong className="rail-availability__eyebrow">CURRENT FOCUS</strong>
-            <Link className="rail-availability__focus-link" to={projectCasePaths["food-tracker"]}>
-              <RailActivityArt activity="food-tracker" />
-              <span>
-                <strong>Food Tracker</strong>
-                <small>IN DEVELOPMENT</small>
-              </span>
-            </Link>
-          </>
-        ) : isProjectShell ? (
+      <div className={`rail-availability${isProjectShell ? " rail-availability--opportunities" : ""}`}>
+        {isProjectShell ? (
           <>
             <img
               className="rail-availability__mark"
@@ -384,7 +301,7 @@ function Rail() {
         <span className="rail-availability__mark-frame" aria-hidden="true">
           <img
             className="rail-availability__mark-image"
-            src="/media/profile/open-portfolio-j-small-48.svg"
+            src={portfolioIdentity.mark}
             alt=""
             data-node-id="3317:4"
           />
@@ -410,82 +327,45 @@ function Rail() {
           </span>
         </h2>
         <p className="rail-context">GENERAL {"\u00b7"} PORTFOLIO</p>
-        {isPortfolioSummary ? (
-          <>
-            <div className="rail-group rail-group--activity-status rail-group--activity-status-development">
-              <h3>IN DEVELOPMENT (2)</h3>
-              <Link className="rail-link rail-link--status" to={projectCasePaths.choveigo}>
-                <RailActivityArt activity="choveigo" />
-                <span><span>{railProjects.find((item) => item.slug === "choveigo")?.name}</span><small>IN DEVELOPMENT</small></span>
+        <>
+          <div className="rail-group">
+            <h3>CURRENT FOCUS</h3>
+            <Link className="rail-link rail-link--focus" to={focus.path}>
+              <RailIdentity src={focus.src} />
+              <span>{focus.name}</span>
+            </Link>
+          </div>
+          <div className="rail-group">
+            <h3>PROJECTS (4)</h3>
+            {railProjects.map((item) => (
+              <Link className="rail-link" key={item.slug} to={projectCasePaths[item.slug]}>
+                <RailIdentity src={projectRailMarks[item.slug]} />
+                <span>{item.name}</span>
               </Link>
-              <Link className="rail-link rail-link--status" to="/home">
-                <PortfolioActivityArt />
-                <span><span>Portfolio</span><small>IN DEVELOPMENT</small></span>
-              </Link>
-            </div>
-            <div className="rail-group rail-group--activity-status rail-group--activity-status-completed">
-              <h3>COMPLETED (3)</h3>
-              <Link className="rail-link rail-link--status" to={experienceStoryPaths["living-in-silico"]}>
-                <RailActivityArt activity="living-in-silico" />
-                <span><span>Living in Silico</span><small>COMPLETED</small></span>
-              </Link>
-              <Link className="rail-link rail-link--status" to={experienceStoryPaths["stush-patties"]}>
-                <RailActivityArt activity="stush-patties" />
-                <span><span>Stush Patties</span><small>COMPLETED</small></span>
-              </Link>
-              <Link className="rail-link rail-link--status" to={projectCasePaths.crest}>
-                <RailActivityArt activity="crest" />
-                <span><span>Crest</span><small>{"3RD PLACE \u00b7 COMPLETED"}</small></span>
-              </Link>
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="rail-group">
-              <h3>CURRENT FOCUS</h3>
-              <Link className="rail-link rail-link--focus" to={focus.path}>
-                <RailIdentity src={focus.src} />
-                <span>{focus.name}</span>
-              </Link>
-            </div>
-            <div className="rail-group">
-              <h3>PROJECTS (4)</h3>
-              {railProjects.map((item) => (
-                <Link className="rail-link" key={item.slug} to={projectCasePaths[item.slug]}>
-                  <RailIdentity src={projectRailMarks[item.slug]} />
+            ))}
+          </div>
+          <div className="rail-group">
+            <h3>EXPERIENCE (2)</h3>
+            {experience.map((item) => {
+              const storyPath = experienceStoryPaths[item.slug];
+              const content = (
+                <>
+                  <RailIdentity src={experienceIdentities[item.slug].mark} />
                   <span>{item.name}</span>
+                </>
+              );
+              return storyPath ? (
+                <Link className="rail-link" key={item.slug} to={storyPath}>
+                  {content}
                 </Link>
-              ))}
-            </div>
-            <div className="rail-group">
-              <h3>EXPERIENCE (2)</h3>
-              {experience.map((item) => {
-                const storyPath = experienceStoryPaths[item.slug];
-                const content = (
-                  <>
-                    <RailIdentity
-                      src={
-                        item.slug === "living-in-silico"
-                          ? experienceIdentities["living-in-silico"].mark
-                          : experienceIdentities["stush-patties"].mark
-                      }
-                    />
-                    <span>{item.name}</span>
-                  </>
-                );
-                return storyPath ? (
-                  <Link className="rail-link" key={item.slug} to={storyPath}>
-                    {content}
-                  </Link>
-                ) : (
-                  <div className="rail-item" key={item.slug}>
-                    {content}
-                  </div>
-                );
-              })}
-            </div>
-          </>
-        )}
+              ) : (
+                <div className="rail-item" key={item.slug}>
+                  {content}
+                </div>
+              );
+            })}
+          </div>
+        </>
       </div>
       <footer className="rail-social-footer" aria-label="Social and support links">
         <ContactLinks />
@@ -538,6 +418,7 @@ export function Client({
       <Header />
       <div className="client-body">
         <main
+          key={pathname}
           id="main"
           ref={mainRef}
           tabIndex={-1}

@@ -50,14 +50,17 @@ afterEach(() => {
 });
 
 describe("HomeExplore", () => {
-  it("uses the authentic forest scene with a top-origin fade", () => {
+  it("uses the authentic forest scene with a lower crop under the top-origin fade", () => {
     const css = readFileSync("src/home-explore.css", "utf8");
     const homeRule = css.match(/\.main\.main--home-explore\s*\{([^}]*)\}/)?.[1] ?? "";
+    const previewGaps = [...css.matchAll(/\.home-explore__selection\s*\{[^}]*\bgap:\s*([^;]+);/gs)]
+      .map((match) => match[1].trim());
 
     expect(homeRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(homeRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.32\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
-    expect(homeRule).toContain("background-position: center top");
+    expect(homeRule).toContain("background-position: center top, center 64%");
     expect(homeRule).not.toContain("home-mode-environment.png");
+    expect(previewGaps.map(Number)).toEqual([0, 0, 0]);
   });
 
   it("offers all four destinations", () => {
@@ -132,9 +135,9 @@ describe("HomeExplore", () => {
     );
     const mobileRules = css.slice(css.indexOf("@media (max-width: 760px)"));
 
-    expect(selection).toMatch(/gap:\s*6px/);
-    expect(tabletRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*6px/s);
-    expect(mobileRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*6px/s);
+    expect(selection).toMatch(/gap:\s*0(?:px)?/);
+    expect(tabletRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*0(?:px)?/s);
+    expect(mobileRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*0(?:px)?/s);
   });
 
   it("previews verified experience, hackathon, and education details when selected", () => {

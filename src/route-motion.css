@@ -1,0 +1,178 @@
+/* Route changes arrive like client scenes assembling, with the same restrained timing. */
+.main > :first-child {
+  animation: client-scene-focus 560ms cubic-bezier(.2, .72, .24, 1) both;
+}
+
+@keyframes client-scene-focus {
+  from { opacity: 0; filter: blur(2px) saturate(.78); }
+  to { opacity: 1; filter: none; }
+}
+
+@keyframes client-banner-descend {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes client-mark-settle {
+  from { opacity: 0; transform: translateY(16px); filter: brightness(.76); }
+  72% { opacity: 1; filter: brightness(1.12); }
+  to { opacity: 1; transform: translateY(0); filter: brightness(1); }
+}
+
+@keyframes client-detail-resolve {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes client-card-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.main--home-explore .home-explore__heading {
+  animation: client-banner-descend 540ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--home-explore .home-explore__modes {
+  animation: client-mark-settle 600ms cubic-bezier(.2, .72, .24, 1) 90ms both;
+}
+
+.main--home-explore .home-explore__selection {
+  animation: client-detail-resolve 480ms ease-out 180ms both;
+}
+
+.main--lobby .league-lobby__environment {
+  animation: client-scene-focus 760ms ease-out both;
+}
+
+.main--lobby .league-lobby__heading {
+  animation: client-banner-descend 620ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--lobby .league-lobby__banners {
+  animation: client-card-appear 480ms ease-out 70ms both;
+}
+
+.main--lobby .league-banner {
+  animation: client-card-appear 520ms ease-out both;
+}
+
+.main--lobby .league-banner:nth-child(1) { animation-delay: 90ms; }
+.main--lobby .league-banner:nth-child(2) { animation-delay: 150ms; }
+.main--lobby .league-banner:nth-child(3) { animation-delay: 210ms; }
+.main--lobby .league-banner:nth-child(4) { animation-delay: 270ms; }
+.main--lobby .league-banner:nth-child(5) { animation-delay: 330ms; }
+
+.main--lobby .league-lobby__balance-slots,
+.main--lobby .league-role-legend,
+.main--lobby .selected-tray,
+.main--lobby .league-lobby__hint {
+  animation: client-detail-resolve 460ms ease-out 250ms both;
+}
+
+.main--profile .profile-nav {
+  animation: client-banner-descend 560ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--profile .identity-panel,
+.main--profile .profile-overview {
+  animation: client-scene-focus 640ms ease-out 80ms both;
+}
+
+.main--profile .profile-signal-grid {
+  animation: client-detail-resolve 520ms ease-out 190ms both;
+}
+
+.main--journey .journey-identity {
+  animation: client-scene-focus 620ms ease-out both;
+}
+
+.main--journey .profile-nav {
+  animation: client-detail-resolve 520ms ease-out 130ms both;
+}
+
+.main--detail .resume-found__system,
+.main--detail .resume-found__title,
+.main--detail .resume-found__action,
+.main--detail .resume-found__close {
+  animation: client-detail-resolve 480ms ease-out both;
+}
+
+.main--detail .resume-found__title { animation-delay: 80ms; }
+.main--detail .resume-found__action { animation-delay: 150ms; }
+.main--detail .resume-found__close { animation-delay: 210ms; }
+
+.main--detail .resume-viewer__header,
+.main--detail .education-projects__header,
+.main--detail .personal-highlights__opening,
+.main--detail .personal-highlights__hero {
+  animation: client-banner-descend 560ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--detail :is(
+  .food-rewrite__hero,
+  .crest-hero,
+  .cho-story__hero,
+  .fray-case__hero,
+  .living-hero,
+  .stush-hero
+) {
+  animation: client-banner-descend 620ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--detail .demo-stage {
+  animation: client-mark-settle 600ms cubic-bezier(.2, .72, .24, 1) 90ms both;
+}
+
+@media (max-width: 760px) {
+  @keyframes client-banner-descend {
+    from { opacity: 0; transform: translateY(-9px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes client-mark-settle {
+    from { opacity: 0; transform: translateY(9px); filter: brightness(.82); }
+    to { opacity: 1; transform: translateY(0); filter: brightness(1); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main > :first-child,
+  .main--home-explore .home-explore__heading,
+  .main--home-explore .home-explore__modes,
+  .main--home-explore .home-explore__selection,
+  .main--lobby .league-lobby__environment,
+  .main--lobby .league-lobby__heading,
+  .main--lobby .league-lobby__banners,
+  .main--lobby .league-banner,
+  .main--lobby .league-lobby__balance-slots,
+  .main--lobby .league-role-legend,
+  .main--lobby .selected-tray,
+  .main--lobby .league-lobby__hint,
+  .main--profile .profile-nav,
+  .main--profile .identity-panel,
+  .main--profile .profile-overview,
+  .main--profile .profile-signal-grid,
+  .main--journey .journey-identity,
+  .main--journey .profile-nav,
+  .main--detail .resume-found__system,
+  .main--detail .resume-found__title,
+  .main--detail .resume-found__action,
+  .main--detail .resume-found__close,
+  .main--detail .resume-viewer__header,
+  .main--detail .education-projects__header,
+  .main--detail .personal-highlights__opening,
+  .main--detail .personal-highlights__hero,
+  .main--detail :is(.food-rewrite__hero, .crest-hero, .cho-story__hero, .fray-case__hero, .living-hero, .stush-hero),
+  .main--detail .demo-stage {
+    animation-name: client-reduced-entry;
+    animation-duration: 140ms !important;
+    animation-delay: 0ms !important;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes client-reduced-entry {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+}

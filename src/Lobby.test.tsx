@@ -48,13 +48,13 @@ afterEach(() => {
 });
 
 describe("Projects lobby", () => {
-  it("uses the authentic forest scene with a top-origin fade", () => {
+  it("uses the authentic forest scene with a lower crop under the top-origin fade", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(environmentRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.28\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
-    expect(environmentRule).toContain("background-position: center top");
+    expect(environmentRule).toContain("background-position: center top, center 60%");
     expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 38%/);
     expect(environmentRule).not.toContain("party-background.png");
   });

@@ -6,7 +6,7 @@
   background-image:
     linear-gradient(180deg, rgba(1, 8, 13, 0.32) 0%, rgba(1, 8, 13, 0.1) 36%, rgba(1, 7, 11, 0.28) 100%),
     url("/media/lobby/party-background-original.jpg");
-  background-position: center top;
+  background-position: center top, center 64%;
   background-size: cover;
   isolation: isolate;
 }
@@ -274,7 +274,7 @@
   max-width: 540px;
   justify-self: start;
   margin-left: clamp(18px, 5vw, 70px);
-  gap: 6px;
+  gap: 0;
   padding: 18px 20px 20px;
 }
 
@@ -619,7 +619,7 @@
   }
 
   .home-explore__selection {
-    gap: 6px;
+    gap: 0;
     width: min(calc(100% - 36px), 540px);
     max-width: 540px;
     padding-right: 4px;
@@ -720,7 +720,7 @@
     flex-direction: column;
     align-items: flex-start;
     width: min(620px, 88%);
-    gap: 6px;
+    gap: 0;
     padding: 14px 8px 12px;
   }
 

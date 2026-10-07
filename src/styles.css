@@ -98,15 +98,14 @@ a:focus-visible {
   padding: 0 18px;
 }
 .brand-glyph {
-  /* Ringed J is only used in 39px+ shell contexts. */
   width: 54px;
   height: 54px;
   border: 0;
   border-radius: 0;
   display: block;
   color: var(--gold);
-  clip-path: circle(42.1296% at 50% 50%);
-  object-fit: fill;
+  object-fit: contain;
+  mix-blend-mode: screen;
 }
 .brand strong {
   height: 46px;
@@ -425,7 +424,7 @@ a:focus-visible {
   flex: none;
   align-items: center;
   gap: clamp(7px, 0.8vw, 15px);
-  margin-left: clamp(20px, 1.6vw, 32px);
+  margin-left: auto;
   padding-left: clamp(14px, 1.1vw, 22px);
   border-left: 1px solid rgba(199, 155, 69, 0.42);
 }
@@ -469,7 +468,7 @@ a:focus-visible {
   align-items: flex-start;
   justify-content: flex-start;
   gap: 16px;
-  margin: 0 0 0 auto;
+  margin: 0 0 0 clamp(18px, 2vw, 36px);
   padding: 0 10px 0 clamp(15px, 1.04vw, 20px);
 }
 .header-account {
@@ -690,53 +689,6 @@ a:focus-visible {
   width: 26px;
   height: 26px;
   object-fit: contain;
-}
-.rail-avatar--activity {
-  display: block;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
-  overflow: visible;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-}
-.rail-avatar--activity img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 54px;
-  height: 54px;
-  max-width: none;
-  transform: translate(-50%, -50%);
-}
-.rail-avatar--activity-focus {
-  width: 34px;
-  height: 34px;
-  flex-basis: 34px;
-}
-.rail-avatar--activity-focus img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
-}
-.rail-avatar--activity-portfolio {
-  display: block;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 38px;
-  overflow: hidden;
-  border: 0;
-  border-radius: 20px;
-  background: #031317;
-}
-.rail-avatar--activity-portfolio img {
-  position: absolute;
-  inset: 0;
-  width: 38px;
-  height: 38px;
-  max-width: none;
-  transform: none;
 }
 .rail-group a:hover > span:last-child,
 .rail-group a:focus-visible > span:last-child {
@@ -1031,57 +983,6 @@ a:focus-visible {
   content: "◇";
 }
 
-.client--home-shell .rail-context,
-.client--resume-shell .rail-context {
-  display: none;
-}
-
-.client--home-shell .rail-availability--focus,
-.client--resume-shell .rail-availability--focus {
-  height: 132px;
-  min-height: 132px;
-  flex: 0 0 132px;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-  gap: 6px;
-  padding: 12px 20px;
-}
-
-.rail-availability__eyebrow {
-  color: #f1e8c9;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-
-.rail-availability__focus-link {
-  display: flex;
-  min-width: 0;
-  align-items: center;
-  gap: 8px;
-  color: #f3f0df;
-}
-
-.rail-availability__focus-link > span:last-child {
-  display: grid;
-  min-width: 0;
-  gap: 3px;
-}
-
-.rail-availability__focus-link > span:last-child strong {
-  font-size: 11px;
-  line-height: 14px;
-}
-
-.rail-availability__focus-link > span:last-child small {
-  margin: 0;
-  color: #9de0ba;
-  font-size: 7px;
-  letter-spacing: 0.05em;
-  line-height: 10px;
-}
-
 .rail-availability--opportunities {
   height: 78px;
   min-height: 78px;
@@ -1115,63 +1016,6 @@ a:focus-visible {
   font-size: 8px;
   line-height: 11px;
   white-space: nowrap;
-}
-
-.client--home-shell .rail-group--activity-status,
-.client--resume-shell .rail-group--activity-status {
-  padding: 5px 14px 0;
-}
-
-.client--home-shell .rail-group--activity-status h3,
-.client--resume-shell .rail-group--activity-status h3 {
-  margin-bottom: 2px;
-  color: #e2e8e7;
-  font-size: 8px;
-  letter-spacing: 0.03em;
-}
-
-.client--home-shell .rail-link--status,
-.client--resume-shell .rail-link--status {
-  min-height: 62px;
-  gap: 16px;
-}
-
-.client--home-shell .rail-link--status > span:last-child,
-.client--resume-shell .rail-link--status > span:last-child {
-  display: grid;
-  min-width: 0;
-  gap: 3px;
-}
-
-.client--home-shell .rail-link--status > span:last-child > span,
-.client--resume-shell .rail-link--status > span:last-child > span {
-  overflow: hidden;
-  color: #eee7d9;
-  font-size: 10px;
-  line-height: 12px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.client--home-shell .rail-link--status small,
-.client--resume-shell .rail-link--status small {
-  overflow: hidden;
-  color: #8fc6af;
-  font-size: 7px;
-  letter-spacing: 0.03em;
-  line-height: 9px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.client--home-shell .rail-group--activity-status-completed .rail-link--status small,
-.client--resume-shell .rail-group--activity-status-completed .rail-link--status small {
-  color: #9aa7a1;
-}
-
-.client--home-shell .rail-group--activity-status-completed .rail-link--status:last-child small,
-.client--resume-shell .rail-group--activity-status-completed .rail-link--status:last-child small {
-  color: #d5b65e;
 }
 
 @media (max-width: 1180px) {
@@ -1919,8 +1763,7 @@ a:focus-visible {
 }
 .education-projects__back::before { content: "← "; }
 .education-projects__heading { margin: 58px 0 48px; }
-.education-projects__eyebrow,
-.education-projects__status {
+.education-projects__eyebrow {
   color: #c7b782;
   font-size: 10px;
   font-weight: 700;
@@ -1940,141 +1783,127 @@ a:focus-visible {
   color: #bcc3c7;
 }
 .education-projects__expected { font-size: 12px; }
+.education-projects__intro {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: #d0d1cd;
+  font-size: 15px;
+  line-height: 1.7;
+}
 .education-projects__list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1px;
-  border-top: 1px solid #c7b78255;
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+  gap: 16px;
 }
 .education-projects__item {
-  min-height: 120px;
-  padding: 24px 20px 22px 0;
-  border-bottom: 1px solid #c7b78255;
-}
-.education-projects__item h2 {
-  margin: 0;
-  color: #e9e5dc;
-  font-size: 17px;
-  font-weight: 500;
-}
-.education-projects__status { margin: 14px 0 0; font-size: 9px; }
-.education-projects__technical {
-  margin-top: 36px;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
   padding: 24px;
   border: 1px solid #c7b78255;
-  background: #081620;
+  background: linear-gradient(145deg, #0b1b25, #08131c 74%);
 }
-.education-projects__technical h2 {
-  margin: 0 0 22px;
-  color: #f0e8da;
-  font-family: Cinzel, Georgia, serif;
-  font-size: 19px;
-  font-weight: 400;
-}
-.education-projects__technical-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 32px;
-}
-.education-projects__component h3 {
-  margin: 0 0 8px;
-  color: #c7b782;
-  font-size: 11px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-.education-projects__component p,
-.education-projects__source-note {
-  margin: 0;
-  color: #bcc3c7;
-  font-size: 13px;
-  line-height: 1.65;
-}
-.education-system-map {
-  display: grid;
-  grid-template-columns: minmax(0, 1.12fr) 22px minmax(180px, 0.8fr) 22px minmax(0, 1fr);
+.education-projects__item-topline {
+  display: flex;
   align-items: center;
   gap: 12px;
-  margin: 0 0 26px;
+  margin-bottom: 18px;
 }
-.education-system-map__stage,
-.education-system-map__sources {
+.education-projects__number {
   display: grid;
-  gap: 10px;
-}
-.education-system-map__node {
-  min-width: 0;
-  padding: 15px;
-  border: 1px solid #c7b78245;
-  background: #07121b;
-}
-.education-system-map__node > span {
-  display: block;
-  margin-bottom: 8px;
-  color: #c7b782;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-.education-system-map__node strong {
-  display: block;
-  color: #eee8dc;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  place-items: center;
+  border: 1px solid #c7b78277;
+  border-radius: 50%;
+  color: #e4d3a0;
+  font-family: Georgia, serif;
   font-size: 13px;
-  font-weight: 600;
-  line-height: 1.45;
 }
-.education-system-map__node p {
-  margin: 6px 0 0;
-  color: #abb7bd;
-  font-size: 11px;
-  line-height: 1.5;
-}
-.education-system-map__arrow {
+.education-projects__kind {
   color: #c7b782;
-  font-size: 22px;
-  text-align: center;
-}
-.education-system-map figcaption {
-  grid-column: 1 / -1;
-  color: #929fa7;
-  font-size: 11px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   line-height: 1.5;
+  text-transform: uppercase;
 }
-.education-projects__operation-list {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.education-projects__item h2 {
+  margin: 0 0 12px;
+  color: #f0e8da;
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(18px, 1.6vw, 22px);
+  font-weight: 500;
+  line-height: 1.35;
+}
+.education-projects__status-list,
+.education-projects__tools {
+  display: flex;
+  flex-wrap: wrap;
   gap: 7px;
-  margin: 0;
+  margin: 0 0 15px;
   padding: 0;
   list-style: none;
 }
-.education-projects__operation-list li {
-  padding: 8px 9px;
+.education-projects__status {
+  color: #e1c97f;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.education-projects__status + .education-projects__status::before {
+  content: "·";
+  margin: 0 7px 0 0;
+  color: #77858a;
+}
+.education-projects__summary,
+.education-projects__detail,
+.education-projects__learning p {
+  margin: 0;
+  color: #c4cbd0;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.education-projects__summary {
+  color: #e1e1dc;
+  font-size: 14px;
+}
+.education-projects__detail {
+  margin-top: 10px;
+}
+.education-projects__learning {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid #c7b78235;
+}
+.education-projects__learning > span {
+  display: block;
+  margin-bottom: 5px;
+  color: #c7b782;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.education-projects__tools {
+  gap: 6px;
+  margin: auto 0 0;
+  padding-top: 18px;
+}
+.education-projects__tools li {
+  padding: 5px 8px;
   border: 1px solid #c7b78235;
-  color: #c6cdd0;
-  font-size: 11px;
+  color: #aeb9bd;
+  font-size: 10px;
   line-height: 1.4;
 }
-.education-projects__technical code {
-  color: #e9e5dc;
-  font-size: 0.94em;
-}
-.education-projects__source-note {
-  margin-top: 20px;
-  padding-top: 16px;
-  border-top: 1px solid #c7b78235;
-  font-size: 12px;
-}
-@media (max-width: 600px) {
+@media (max-width: 760px) {
   .education-projects__heading { margin: 38px 0 32px; }
-  .education-projects__list { grid-template-columns: 1fr; }
-  .education-projects__item { min-height: 86px; }
-  .education-projects__technical { padding: 18px; }
-  .education-projects__technical-grid { grid-template-columns: 1fr; gap: 20px; }
-  .education-system-map { grid-template-columns: 1fr; gap: 8px; }
-  .education-system-map__sources { grid-template-columns: 1fr; }
-  .education-system-map__arrow { transform: rotate(90deg); line-height: 1; }
-  .education-projects__operation-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .education-projects__list { grid-template-columns: 1fr; grid-auto-rows: auto; }
+  .education-projects__item { padding: 21px; }
 }
 .main--food-case {
   padding: 0;
@@ -7061,37 +6890,6 @@ a:focus-visible {
     margin-left: -30px;
   }
 
-  .client--resume-shell .rail-availability--focus {
-    height: 128px;
-    min-height: 128px;
-    flex: 0 0 128px;
-    justify-content: flex-start;
-    gap: 8px;
-    padding: 15px 23px 10px;
-  }
-
-  .client--resume-shell .rail-availability__eyebrow {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.04em;
-  }
-
-  .client--resume-shell .rail-availability__focus-link {
-    gap: 8px;
-  }
-
-  .client--resume-shell .rail-availability__focus-link > span:last-child strong {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: 14px;
-    line-height: 17px;
-  }
-
-  .client--resume-shell .rail-availability__focus-link > span:last-child small {
-    font-size: 9px;
-    line-height: 11px;
-  }
-
   .client--resume-shell .rail-content .rail-heading {
     padding-right: 23px;
     padding-left: 23px;
@@ -7103,40 +6901,6 @@ a:focus-visible {
   .client--resume-shell .rail-heading__tools {
     gap: 22px;
     margin-right: 12px;
-  }
-
-  .client--resume-shell .rail-group--activity-status {
-    margin-right: -18px;
-    margin-left: -18px;
-    padding: 8px 23px 9px;
-  }
-
-  .client--resume-shell .rail-group--activity-status h3 {
-    margin-bottom: 14px;
-    font-family: "Cinzel", Georgia, serif;
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 0.03em;
-  }
-
-  .client--resume-shell .rail-group--activity-status-completed h3 {
-    margin-bottom: 12px;
-  }
-
-  .client--resume-shell .rail-link--status {
-    min-height: 54px;
-    gap: 16px;
-  }
-
-  .client--resume-shell .rail-link--status > span:last-child > span {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: 13px;
-    line-height: 16px;
-  }
-
-  .client--resume-shell .rail-link--status small {
-    font-size: 9px;
-    line-height: 11px;
   }
 
   .client--resume-shell .rail-avatar:not(.rail-avatar--activity) {
@@ -7165,7 +6929,7 @@ a:focus-visible {
     top: -5px;
     height: 66px;
     gap: 0;
-    margin-left: clamp(22px, 1.8vw, 36px);
+    margin-left: auto;
     padding-left: 0;
     border-left: 0;
     align-items: stretch;

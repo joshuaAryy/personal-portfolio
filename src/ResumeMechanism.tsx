@@ -12,9 +12,9 @@ export default function ResumeMechanism() {
         <div className="resume-mechanism__j" data-node-id="2984:484">
           <img
             className="resume-mechanism__j-image"
-            data-node-id="159:2"
-            src="/media/profile/open-portfolio-j-archive-source-700.png"
-            alt="Joshua's archive-led J mark"
+            data-node-id="3679:247"
+            src="/media/profile/j-candidate-06-m54.svg"
+            alt="Joshua's portfolio J mark"
             width="460"
             height="460"
           />

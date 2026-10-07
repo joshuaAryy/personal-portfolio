@@ -83,7 +83,7 @@ describe("League client shell", () => {
   it("uses the optical-size header J and makes the top-right account the Profile entry", () => {
     const markup = renderClient();
 
-    expect(markup).toContain('/media/profile/open-portfolio-j-small-54.svg');
+    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
     expect(markup).toContain('href="/profile"');
     expect(markup).toContain('aria-label="Open profile"');
     expect(markup).toContain('/media/profile/topbar-account-ring.png');
@@ -147,7 +147,7 @@ describe("League client shell", () => {
       "/resume",
     ]);
     expect(css).toMatch(/\.header-client-tools\s*\{[^}]*padding-left:\s*clamp\(14px,[^}]*border-left:\s*1px solid/s);
-    expect(css).toMatch(/\.client--home-shell \.header-client-tools\s*\{[^}]*margin-left:\s*clamp\(22px,/s);
+    expect(css).toMatch(/\.client--home-shell \.header-client-tools\s*\{[^}]*margin-left:\s*auto/s);
   });
 
   it("keeps Home Resume primary and Email clearly actionable in the narrow contact row", () => {
@@ -168,21 +168,29 @@ describe("League client shell", () => {
     );
   });
 
-  it("keeps the rail compact, uses approved marks, and omits hidden draft labels", () => {
+  it("uses the same canonical project and experience rail on Home without development labels", () => {
     const markup = renderClient();
     const activityMarkup = renderClient("/home");
 
     expect(markup).toContain('data-node-id="3317:4"');
-    expect(markup).toContain('/media/profile/open-portfolio-j-small-48.svg');
+    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
-    expect(activityMarkup).toContain('class="rail-avatar rail-avatar--activity rail-avatar--activity-focus" aria-hidden="true" data-node-id="I2356:611;95:51">');
-    expect(activityMarkup).toContain('src="/media/profile/food-tracker-mark.svg" alt="" width="34" height="34"');
-    expect(activityMarkup).toContain('src="/media/lobby/activity-art/activity-living-in-silico.svg" alt="" width="54" height="54"');
-    expect(activityMarkup).toContain('src="/media/lobby/activity-art/activity-stush-patties.svg" alt="" width="54" height="54"');
+    expect(activityMarkup).toContain("PROJECTS (4)");
+    expect(activityMarkup).toContain("EXPERIENCE (2)");
+    expect(activityMarkup).toContain('/media/profile/food-tracker-mark.svg');
+    expect(activityMarkup).toContain('/media/profile/choveigo-mark.svg');
+    expect(activityMarkup).toContain('/media/profile/profile-crest-emblem.png');
+    expect(activityMarkup).toContain('/media/profile/fraymakers-logo.png');
+    expect(activityMarkup).toContain('/media/profile/living-in-silico-logo.png');
+    expect(activityMarkup).toContain('/media/profile/stush-patties-logo.png');
+    expect(activityMarkup).toContain("GENERAL · PORTFOLIO");
+    expect(activityMarkup).not.toContain("IN DEVELOPMENT");
+    expect(activityMarkup).not.toContain("COMPLETED (3)");
+    expect(activityMarkup).not.toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
-    expect(markup).toContain('/media/profile/open-portfolio-j-small-54.svg');
+    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
     expect(markup).not.toContain('/media/lobby/activity-art/activity-food-tracker.svg');
     expect(markup).not.toContain('/media/lobby/activity-art/activity-crest.svg');
@@ -197,30 +205,33 @@ describe("League client shell", () => {
     expect(markup).not.toContain("VIEW SOURCE REPOSITORY");
   });
 
-  it("uses the canonical J mark in the Portfolio Activity medallion", () => {
-    const markup = renderClient("/home");
-    const portfolioStart = markup.indexOf('class="rail-avatar rail-avatar--activity rail-avatar--activity-portfolio"');
-    const portfolioEnd = markup.indexOf("</span>", portfolioStart);
-    const portfolioMark = markup.slice(portfolioStart, portfolioEnd);
-    const headerMark = markup.match(/class="brand-glyph" src="([^"]+)"/)?.[1];
-    const activityMark = portfolioMark.match(/src="([^"]+)" alt="" width="38" height="38" data-node-id="I2356:611;95:20"/)?.[1];
+  it("uses the shared project and experience Activity rail on Resume routes", () => {
+    const markup = renderClient("/resume/viewer");
 
-    expect(portfolioMark).toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
-    expect(activityMark).toBe(headerMark);
-    expect(portfolioMark).not.toContain(">J</span>");
-    expect(readFileSync("src/styles.css", "utf8")).toMatch(
-      /\.rail-avatar--activity-portfolio img\s*\{[^}]*transform:\s*none/s,
-    );
+    expect(markup).toContain("PROJECTS (4)");
+    expect(markup).toContain("EXPERIENCE (2)");
+    expect(markup).not.toContain("IN DEVELOPMENT (2)");
+    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
+    expect(markup).toContain('/media/profile/living-in-silico-logo.png');
+    expect(markup).toContain('/media/profile/stush-patties-logo.png');
   });
 
-  it("gives Home and Resume Activity rows the Figma breathing room", () => {
+  it("uses the canonical J in the shared rail header instead of a duplicate Portfolio row", () => {
+    const markup = renderClient("/home");
+    const railMark = markup.match(/class="rail-availability__mark-image" src="([^"]+)"/)?.[1];
+
+    expect(railMark).toBe('/media/profile/j-candidate-06-m54.svg');
+    expect(markup).not.toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
+  });
+
+  it("keeps shared Home and Resume Activity rows readable without status-only styling", () => {
     const css = readFileSync("src/styles.css", "utf8");
 
-    expect(css).toMatch(
-      /\.client--home-shell \.rail-link--status,\s*\.client--resume-shell \.rail-link--status\s*\{[^}]*min-height:\s*62px/s,
-    );
+    expect(css).toMatch(/\.rail-link,\s*\.rail-item\s*\{[^}]*min-height:\s*50px/s);
+    expect(css).not.toMatch(/\.client--home-shell \.rail-link--status/);
+    expect(css).not.toMatch(/\.client--resume-shell \.rail-link--status/);
     expect(css).not.toMatch(
-      /\.client--home-shell \.rail-link--status\s*\{[^}]*min-height:\s*54px/s,
+      /\.client--home-shell \.rail-group--activity-status/,
     );
   });
 
