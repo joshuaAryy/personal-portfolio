@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -61,14 +62,33 @@ describe("Living in Silico research story", () => {
     expect(data).toContain("400–600");
     expect(data).toContain("1,209");
     expect(data).toContain("VALIDATE");
-    expect(data).toContain("DEDUPLICATE");
-    expect(data).toContain("invalid strings");
+    expect(data).toContain("REVIEW DUPLICATES");
+    expect(data).toContain("do not parse as intended");
     expect(data).toContain("which distinct, parseable inputs will this experiment examine?");
     expect(data).toContain("not a removal tally");
     expect(data).toContain("separate experiments");
     expect(data).toContain("does not quantify a quality or performance lift");
     expect(data).not.toContain("15,696 → 500");
     expect(data).not.toContain("15,696 rows became 500");
+  });
+
+  it("teaches preparation operations in a readable figure separate from the counts", () => {
+    const markup = renderLivingRoute();
+    const data = markup.match(/<section class="living-data"[\s\S]*?<\/section>/)?.[0] ?? "";
+    const preparation = data.match(/<figure class="living-data-prep"[\s\S]*?<\/figure>/)?.[0] ?? "";
+    const css = readFileSync("src/living-in-silico-case.css", "utf8");
+
+    expect(preparation).toContain("01 / INSPECT");
+    expect(preparation).toContain("02 / VALIDATE");
+    expect(preparation).toContain("RDKit");
+    expect(preparation).toContain("03 / REVIEW DUPLICATES");
+    expect(preparation).toContain("04 / CURATE");
+    expect(preparation).toContain("distinct, parseable scope each experiment can examine");
+    expect(preparation).not.toContain("15,696");
+    expect(preparation).not.toContain("400");
+    expect(css).toMatch(/\.living-data-prep__steps > li > strong\s*\{[^}]*font-size:\s*16px/s);
+    expect(css).toMatch(/\.living-data-prep__steps > li > small\s*\{[^}]*font-size:\s*13px/s);
+    expect(css).toMatch(/@media \(max-width: 700px\)[\s\S]*?\.living-data-prep__steps > li > small\s*\{[^}]*font-size:\s*13px/s);
   });
 
   it("shows Morgan as a feature view beside, not inside, the RNN sequence path", () => {
@@ -81,8 +101,10 @@ describe("Living in Silico research story", () => {
     expect(representation).toContain("128 bits");
     expect(representation).toContain("FEATURE VIEW · SEPARATE");
     expect(representation).toContain("does not feed the RNN");
-    expect(representation).toContain("does not show Morgan features feeding the RNN");
+    expect(representation).toContain("Morgan features do not feed the RNN");
     expect(representation).toContain("no experimental molecule");
+    expect(representation).toContain("FRAGMENT / SPATIAL VIEW");
+    expect(representation).toContain("They are not one pipeline and do not describe one shared project molecule");
     expect(deepmol).toContain("DeepMol CSVLoader");
     expect(deepmol).toContain("RNN MolecularGenerator");
     expect(deepmol).toContain("SMILES sequence");
@@ -99,6 +121,11 @@ describe("Living in Silico research story", () => {
     expect(deepmol).toContain("SEPARATE OWNER-REPORTED OUTPUT");
     expect(deepmol).toContain("no validity, uniqueness, or novelty claim");
     expect(deepmol).toContain("cannot establish that those settings produced the samples");
+    expect(deepmol).toContain("A dated May 2025 report attributes 500 samples and RDKit checking to REINVENT4");
+    expect(deepmol).toContain("no surviving run or source resolves this conflict");
+    expect(deepmol).toContain("I loaded and used the prepared experiment inputs");
+    expect(deepmol).not.toContain("Clean strings; use RDKit to parse and validate structures");
+    expect(deepmol).not.toContain("Handle invalid strings, review duplicates, and prepare experiment data");
     expect(deepmol).not.toContain("500 valid");
     expect(deepmol).not.toContain("500 unique");
     expect(deepmol).not.toContain("500 novel");
@@ -108,7 +135,7 @@ describe("Living in Silico research story", () => {
   it("explains fragment work as a separate spatial question with only supported outcomes", () => {
     const markup = renderLivingRoute();
     const fragments = markup.match(/<section class="living-fragment-study"[\s\S]*?<\/section>/)?.[0] ?? "";
-    const fragmentFigure = fragments.match(/<svg class="living-fragment-map"[\s\S]*?<\/svg>/)?.[0] ?? "";
+    const fragmentFigure = fragments.match(/<figure class="living-fragment-figure"[\s\S]*?<\/figure>/)?.[0] ?? "";
 
     expect(fragments).toContain("with RDKit and Fragmenstein");
     expect(fragments).toContain("compatible fragments");
@@ -119,6 +146,7 @@ describe("Living in Silico research story", () => {
     expect(fragments).toContain("cannot identify a candidate molecule or a particular successful result");
     expect(fragmentFigure).toContain("Fragment compatibility, spatial reasoning, and linking");
     expect(fragmentFigure).toContain("shapes are not molecular data or an experimental result");
+    expect(fragmentFigure).toContain("Some fragment-based workflows succeeded");
     expect(fragments).not.toContain("KNN");
   });
 
@@ -127,11 +155,13 @@ describe("Living in Silico research story", () => {
     const reinvent = markup.match(/<section class="living-reinvent-study"[\s\S]*?<\/section>/)?.[0] ?? "";
 
     expect(reinvent).toContain("researched and attempted REINVENT4 as another generative approach");
-    expect(reinvent).toContain("did not reach a completed generation within the available internship scope");
     expect(reinvent).toContain("REINVENT4 stayed exploratory.");
-    expect(reinvent).toContain("does not show the setup, explain why the work stopped, or represent a molecular output");
+    expect(reinvent).toContain("SCOPE OUTCOME");
+    expect(reinvent).toContain("No completed generation within internship scope");
+    expect(reinvent).not.toContain("living-reinvent-track");
+    expect(reinvent).not.toContain("does not show the setup, explain why the work stopped, or represent a molecular output");
     expect(reinvent).not.toContain("failed");
-    expect(reinvent).not.toContain("configuration");
+    expect(reinvent).toContain("does not establish the input, configuration, or reason this route stopped");
     expect(reinvent).not.toContain("May 2025 report");
   });
 
@@ -142,10 +172,11 @@ describe("Living in Silico research story", () => {
     expect(markup).toContain("Research code");
     expect(markup).toContain("Experiment results and generated outputs");
     expect(markup).toContain("Written report and documentation");
+    expect(markup).toContain("A reported string count, some successful fragment workflows, and one unfinished route left different kinds of evidence.");
+    expect(markup).toContain("each conclusion inside the method and evidence that produced it");
     expect(markup).not.toContain("Three routes gave me three different kinds of evidence.");
     expect(markup).not.toContain("ROUTE ONE");
     expect(markup).not.toContain("ROUTE TWO");
     expect(markup).not.toContain("ROUTE THREE");
-    expect(markup).not.toContain("May 2025 report");
   });
 });

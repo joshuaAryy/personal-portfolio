@@ -64,16 +64,21 @@ export default function LivingInSilicoCase() {
             <span>curated entries in some experiments</span>
             <p>Narrower working scopes; not a step-down count from the April snapshot.</p>
           </div>
-          <div className="living-data-prep">
-            <p className="living-eyebrow">REPORTED DATA-PREPARATION WORK</p>
-            <div className="living-data-prep__steps">
-              <div><span>INSPECT</span><strong>Load and review strings</strong><small>Understand the molecular data before modeling.</small></div>
-              <div><span>VALIDATE</span><strong>Parse with RDKit</strong><small>Identify invalid strings and structures.</small></div>
-              <div><span>DEDUPLICATE</span><strong>Handle repeated entries</strong><small>Distinguish rows from unique SMILES.</small></div>
-              <div><span>CURATE</span><strong>Prepare experiment inputs</strong><small>Use narrower sets for separate experiments.</small></div>
-            </div>
+          <figcaption id="living-data-caption">The April 12 counts are owner-reported; the 1,209 gap is arithmetic, not a logged number of removed rows. The 400–600-entry sets belong to separate experiments. These are different contexts, not linked counts or a measured data-quality or model-performance gain.</figcaption>
+        </figure>
+        <figure className="living-data-prep" aria-labelledby="living-data-prep-title living-data-prep-caption">
+          <div className="living-data-prep__heading">
+            <p className="living-eyebrow">PREPARATION WORK · ACROSS EXPERIMENTS</p>
+            <h3 id="living-data-prep-title">Define what an experiment can examine.</h3>
+            <p>I reviewed molecular strings, checked structures, handled duplicates, and prepared inputs for separate experiments.</p>
           </div>
-          <figcaption id="living-data-caption">The April 12 counts are owner-reported; the 1,209 gap is arithmetic, not a logged number of removed rows. The 400–600-entry sets belong to separate experiments. This summary cannot establish a measured data-quality or model-performance gain.</figcaption>
+          <ol className="living-data-prep__steps">
+            <li><span>01 / INSPECT</span><strong>Review molecular strings</strong><small>Understand the records before modeling.</small></li>
+            <li><span>02 / VALIDATE</span><strong>Parse structures with RDKit</strong><small>Identify strings that do not parse as intended.</small></li>
+            <li><span>03 / REVIEW DUPLICATES</span><strong>Compare rows and unique SMILES</strong><small>Repeated rows are not additional distinct inputs.</small></li>
+            <li><span>04 / CURATE</span><strong>Select experiment inputs</strong><small>Set the distinct, parseable scope each experiment can examine.</small></li>
+          </ol>
+          <figcaption id="living-data-prep-caption">Preparation changed which distinct, parseable inputs an experiment could examine. The available evidence does not quantify a data-quality or model-performance lift.</figcaption>
         </figure>
         <aside className="living-data-reading">
           <span>WHY THE PREPARATION MATTERED</span>
@@ -107,7 +112,14 @@ export default function LivingInSilicoCase() {
             </div>
             <p className="living-feature-note">A structural feature representation; this lane does not feed the RNN diagram above.</p>
           </div>
-          <figcaption id="living-representation-caption">This explanatory map shows the reported sequence and Morgan-feature views, including the recorded radius and bit size. It contains no experimental molecule, SMILES string, or project bit values, and it does not show Morgan features feeding the RNN.</figcaption>
+          <div className="living-representation-lane living-representation-lane--fragments">
+            <span className="living-representation-lane__label">FRAGMENT / SPATIAL VIEW / SEPARATE</span>
+            <div className="living-fragment-origin"><strong>Molecular structures</strong><span>Conceptual structure view</span></div>
+            <span className="living-representation-arrow" aria-hidden="true">&rarr;</span>
+            <div className="living-representation-node living-representation-node--fragment"><small>RDKit / FRAGMENSTEIN</small><strong>Fragments + spatial questions</strong><em>selection, compatibility, placement, linking</em></div>
+            <p className="living-feature-note">A separate structure-aware exploration, not an extension of either representation lane.</p>
+          </div>
+          <figcaption id="living-representation-caption">Three conceptual branches show separate questions: an SMILES sequence for the RNN, Morgan features (radius 2 / 128 bits), and fragment/spatial exploration. Morgan features do not feed the RNN. They are not one pipeline and do not describe one shared project molecule; no experimental molecule, string, or project bit values are shown.</figcaption>
         </figure>
       </section>
 
@@ -128,12 +140,7 @@ export default function LivingInSilicoCase() {
           <div className="living-deepmol-lab">
             <div className="living-deepmol-contribution">
               <p className="living-eyebrow">JOSHUA’S DATA AND EXPERIMENT WORK</p>
-              <ol>
-                <li><span>01</span><p>Load and inspect SMILES data.</p></li>
-                <li><span>02</span><p>Clean strings; use RDKit to parse and validate structures.</p></li>
-                <li><span>03</span><p>Handle invalid strings, review duplicates, and prepare experiment data.</p></li>
-              </ol>
-              <small>I also used ChemDraw and manual views to inspect molecular structures.</small>
+              <p>I loaded and used the prepared experiment inputs for DeepMol/RNN sequence work. ChemDraw and manual views helped me inspect molecular structures.</p>
             </div>
             <div className="living-deepmol-evidence">
               <div className="living-run-note">
@@ -144,6 +151,7 @@ export default function LivingInSilicoCase() {
                 <p className="living-eyebrow">SEPARATE OWNER-REPORTED OUTPUT</p>
                 <strong aria-label="500 generated SMILES samples">500</strong>
                 <span>generated SMILES samples</span>
+                <p className="living-sample-attribution">Attribution note: the owner account assigns the 500 samples to DeepMol/RNN. A dated May 2025 report attributes 500 samples and RDKit checking to REINVENT4; no surviving run or source resolves this conflict.</p>
                 <small>Count only · no validity, uniqueness, or novelty claim.</small>
               </div>
             </div>
@@ -201,11 +209,11 @@ export default function LivingInSilicoCase() {
               <li><span>03</span><strong>Place</strong><small>Explore spatial and overlap questions.</small></li>
               <li><span>04</span><strong>Link</strong><small>Investigate linking or recombination.</small></li>
             </ol>
+            <div className="living-fragment-result"><p className="living-eyebrow">REPORTED OUTCOME</p><strong>Some fragment-based workflows succeeded.</strong><p>The available public evidence does not identify a particular candidate result to reproduce.</p></div>
             <figcaption id="living-fragment-caption">Conceptual map of the reported work: decomposition, fragment selection, spatial reasoning, and linking. The shapes are not experimental structures or outputs, so this figure cannot identify a candidate molecule or a particular successful result.</figcaption>
           </figure>
           <aside className="living-fragment-notes">
             <div><p className="living-eyebrow">JOSHUA’S WORK</p><p>I explored fragment selection, structural compatibility, spatial or overlap reasoning, and linking workflows with RDKit and Fragmenstein.</p></div>
-            <div className="living-fragment-outcome"><p className="living-eyebrow">WHAT THE WORK ESTABLISHED</p><strong>Some fragment-based workflows succeeded.</strong><p>The available public evidence does not identify a particular candidate result to reproduce.</p></div>
             <div><p className="living-eyebrow">WHAT I LEARNED</p><p>Working with structural pieces made placement and compatibility questions explicit; that is a different investigation from learning patterns in a SMILES sequence.</p></div>
           </aside>
         </div>
@@ -215,19 +223,13 @@ export default function LivingInSilicoCase() {
         <div className="living-reinvent-study__intro">
           <p className="living-eyebrow">ANOTHER GENERATIVE APPROACH</p>
           <h2 id="living-reinvent-title">REINVENT4 stayed exploratory.</h2>
-          <p>I researched and attempted REINVENT4 as another generative approach. It did not reach a completed generation within the available internship scope.</p>
-          <p className="living-reinvent-study__learning">I learned to distinguish an investigated method from a completed, demonstrated workflow.</p>
+          <p>I researched and attempted REINVENT4 as another generative approach.</p>
         </div>
-        <figure className="living-reinvent-figure" aria-labelledby="living-reinvent-caption">
-          <div className="living-reinvent-track" role="img" aria-label="REINVENT4 was researched and attempted, then reached the internship scope boundary without a completed generation">
-            <div className="living-reinvent-marker"><span>RESEARCH</span><strong>Read into the approach</strong></div>
-            <i aria-hidden="true" />
-            <div className="living-reinvent-marker living-reinvent-marker--attempt"><span>ATTEMPT</span><strong>Investigated in the internship</strong></div>
-            <i aria-hidden="true" />
-            <div className="living-reinvent-boundary"><span>SCOPE BOUNDARY</span><strong>No completed generation in scope</strong></div>
-          </div>
-          <figcaption id="living-reinvent-caption">This records a researched and attempted route with no completed generation in scope. It does not show the setup, explain why the work stopped, or represent a molecular output.</figcaption>
-        </figure>
+        <aside className="living-reinvent-status" aria-label="REINVENT4 researched and attempted, with no completed generation within internship scope">
+          <p className="living-eyebrow">SCOPE OUTCOME</p>
+          <strong>No completed generation within internship scope.</strong>
+          <p>The available evidence does not establish the input, configuration, or reason this route stopped.</p>
+        </aside>
       </section>
 
       <section className="living-field living-field--late" aria-labelledby="living-field-title">
@@ -254,7 +256,7 @@ export default function LivingInSilicoCase() {
         <div className="living-conclusion__lesson">
           <p className="living-eyebrow">WHAT RESEARCH LEFT ME WITH</p>
           <h2>Start with what the data represents. End with what the evidence can support.</h2>
-          <p>This was not a standardized benchmark between finished systems. I left with a stronger habit of defining a method question, checking its inputs, and keeping the conclusion inside the work that was actually completed.</p>
+          <p>A reported string count, some successful fragment workflows, and one unfinished route left different kinds of evidence. I carried forward the habit of keeping each conclusion inside the method and evidence that produced it.</p>
         </div>
         <div className="living-conclusion__handoff">
           <p className="living-eyebrow">RESEARCH HANDOFF</p>
