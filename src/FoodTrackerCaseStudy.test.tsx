@@ -283,10 +283,10 @@ describe("Food Tracker product story", () => {
     const architectureCopy = storyText(architecture);
 
     expect(architecture).toContain('class="food-data-contract"');
-    expect(architecture).toContain('class="food-system-map__core"');
-    expect(architecture).toContain('aria-label="Food Tracker implementation architecture"');
-    expect(architecture).toContain('class="food-system-map__auth-boundary"');
-    expect(architecture).toContain('class="food-system-map__flows"');
+    expect(architecture).toContain('class="food-system-map__spine"');
+    expect(architecture).toContain('aria-label="Shared architecture anchors"');
+    expect(architecture).toContain('class="food-system-map__identity-note"');
+    expect(architecture).toContain('class="food-system-map__paths"');
     expect(architecture).toContain('class="food-data-contract__normalized-record"');
     expect(architecture).toContain('class="food-data-contract__unknown-state"');
     expect(architecture).toContain("CONCEPTUAL MODEL");
@@ -327,10 +327,31 @@ describe("Food Tracker product story", () => {
     expect(architectureCopy).toContain("the API ranks deterministically");
     expect(architectureCopy).toContain("Gemini proposes food and quantity");
     expect(architectureCopy).toContain("Human review");
-    expect(architectureCopy).toContain("deterministic analytics and recommendations");
-    expect(architectureCopy).toContain("Simple and Complex change presentation depth");
+    expect(architectureCopy).toContain("Deterministic analysis + recommendations");
+    expect(architectureCopy).toContain("Simple + Complex views");
+    expect(architectureCopy).toContain("change presentation depth over the same deterministic analysis and backend");
     expect(architectureCopy).toContain("not deployment status");
     expect(architectureCopy).not.toContain("live APIs for every national dataset lookup");
+  });
+
+  it("uses one shared architecture spine for three connected product paths", () => {
+    const markup = renderFoodTracker();
+    const architecture = section(markup, "food-architecture", "food-insights");
+    const map = architecture.slice(architecture.indexOf('class="food-system-map"'), architecture.indexOf('class="food-data-contract"'));
+
+    expect(map).toContain('class="food-system-map__canvas"');
+    expect((map.match(/class="food-system-map__anchor food-system-map__anchor--mobile"/g) ?? []).length).toBe(1);
+    expect((map.match(/class="food-system-map__anchor food-system-map__anchor--api"/g) ?? []).length).toBe(1);
+    expect((map.match(/class="food-system-map__anchor food-system-map__anchor--persistence"/g) ?? []).length).toBe(1);
+    expect((map.match(/class="food-system-map__path-lane(?:\s|")/g) ?? []).length).toBe(3);
+    expect(map).toContain('data-path="find-resolve"');
+    expect(map).toContain('data-path="interpret-review"');
+    expect(map).toContain('data-path="read-history"');
+    expect(map).toContain("CNF 2026");
+    expect(map).toContain("Pinecone returns semantic candidates only");
+    expect(map).toContain("Gemini proposes food and quantity");
+    expect(map).toContain("API-derived resource scope");
+    expect(map).not.toContain('class="food-system-map__flow-route');
   });
 
   it("shows the complete architecture in the default view without a second interactive trace", () => {
@@ -351,11 +372,30 @@ describe("Food Tracker product story", () => {
     expect(systemMap).toContain("Pinecone returns semantic candidates only");
     expect(systemMap).toContain("Gemini proposes food and quantity");
     expect(systemMap).toContain("Human review");
-    expect(systemMap).toContain("deterministic analytics and recommendations");
-    expect(systemMap).toContain("Simple and Complex");
+    expect(systemMap).toContain("Deterministic analysis + recommendations");
+    expect(systemMap).toContain("Simple + Complex");
     expect(architecture).not.toContain('aria-label="Food Tracker system paths"');
     expect(architecture).not.toContain("food-system-map__path-selector");
     expect(architecture).not.toContain("food-system-map__selected");
+  });
+
+  it("connects each product path to the mobile, API, and persisted-record layers", () => {
+    const markup = renderFoodTracker();
+    const architecture = section(markup, "food-architecture", "food-insights");
+    const systemMapMarkup = architecture.slice(architecture.indexOf('class="food-system-map"'), architecture.indexOf('class="food-data-contract"'));
+    const findPath = systemMapMarkup.slice(systemMapMarkup.indexOf('data-path="find-resolve"'), systemMapMarkup.indexOf('data-path="interpret-review"'));
+    const interpretPath = systemMapMarkup.slice(systemMapMarkup.indexOf('data-path="interpret-review"'), systemMapMarkup.indexOf('data-path="read-history"'));
+    const historyPath = systemMapMarkup.slice(systemMapMarkup.indexOf('data-path="read-history"'));
+
+    expect((systemMapMarkup.match(/class="food-system-map__path-lane/g) ?? []).length).toBe(3);
+    expect(storyText(findPath)).toContain("Search or reuse a food; confirm its serving.");
+    expect(storyText(findPath)).toContain("Open Food Facts supports packaged and barcode lookup");
+    expect(storyText(findPath)).toContain("Pinecone returns semantic candidates only; the API ranks deterministically.");
+    expect(storyText(interpretPath)).toContain("Gemini proposes food and quantity");
+    expect(storyText(interpretPath)).toContain("Nothing saves before human review.");
+    expect(storyText(interpretPath)).toContain("food log + historical nutrition snapshot");
+    expect(storyText(historyPath)).toContain("Deterministic analysis + recommendations.");
+    expect(storyText(historyPath)).toContain("Simple and Complex change presentation depth over the same deterministic analysis and backend");
   });
 
   it("separates logging-day eligibility from nutrient coverage and explains the two presentation depths", () => {
@@ -422,7 +462,7 @@ describe("Food Tracker product story", () => {
     expect(search).toContain('role="img" aria-label="Top-1 offline ranking comparison');
     for (const copy of [
       "EXACT / STRUCTURED",
-      "Fuzzy retrieval",
+      "FUZZY RETRIEVAL",
       "Close text recovery when a name is imperfect",
       "Semantic candidates",
       "Pinecone candidates only",
@@ -440,8 +480,8 @@ describe("Food Tracker product story", () => {
       "25/40",
       "27/40",
       "28/40",
-      "Semantic retrieval added substantial latency for little benchmark recovery",
-      "Fuzzy retrieval drove most of the measured gain",
+      "They also report that semantic retrieval added substantial latency for little benchmark recovery",
+      "Project and evaluation notes attribute most of the measured gain to fuzzy retrieval.",
       "Offline ranking evidence, not live-user outcomes",
     ]) expect(searchCopy).toContain(copy);
     expect(searchCopy).not.toContain("31/40");

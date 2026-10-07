@@ -348,70 +348,89 @@ function FoodSystemMap() {
     <figure className="food-system-map" aria-labelledby="food-system-map-title">
       <header className="food-system-map__heading">
         <p className="food-figure__index">IMPLEMENTATION MAP · NOT A RELEASE DIAGRAM</p>
-        <h3 id="food-system-map-title">One mobile product, shared data and rules.</h3>
-        <p>Follow lookup, interpretation, and analysis through shared rules to the persisted records.</p>
+        <h3 id="food-system-map-title">One product, shared rules, three connected paths.</h3>
+        <p>Food lookup, reviewed interpretation, and saved-history Insights use the same app, API, and persistence anchors.</p>
       </header>
 
-      <div className="food-system-map__auth-boundary" aria-label="Authentication and server-owned resource boundary">
-        <span>AUTHENTICATED REQUEST · SOURCE IMPLEMENTATION</span>
-        <strong>Firebase UID → app-owned UUID → API-derived resource scope</strong>
-        <p>The client does not choose whose records it reads or writes; this describes inspected source, not deployment status.</p>
-      </div>
-
-      <div className="food-system-map__core" role="group" aria-label="Food Tracker implementation architecture">
-        <div className="food-system-map__core-layers">
-          <section className="food-system-map__core-layer food-system-map__core-layer--app">
-            <span>01 / MOBILE EXPERIENCE</span>
+      <div className="food-system-map__canvas" role="group" aria-label="One shared mobile, API, and persistence architecture with three product paths">
+        <div className="food-system-map__spine" role="group" aria-label="Shared architecture anchors">
+          <section className="food-system-map__anchor food-system-map__anchor--mobile" role="group" aria-label="Mobile app architecture anchor">
+            <span>01 / MOBILE APP</span>
             <strong>React Native + Expo</strong>
-            <p>One app for entry, human review, saved history, and Simple or Complex views.</p>
+            <p>Food entry, human review, saved history, and Simple + Complex views.</p>
           </section>
-          <span className="food-system-map__core-link" aria-hidden="true">→</span>
-          <section className="food-system-map__core-layer food-system-map__core-layer--api">
+          <span className="food-system-map__spine-link" aria-hidden="true">→</span>
+          <section className="food-system-map__anchor food-system-map__anchor--api" role="group" aria-label="API and domain-rule architecture anchor">
             <span>02 / API + DOMAIN RULES</span>
             <strong>Express + TypeScript API</strong>
-            <p>Shared TypeScript + Zod contracts; Prisma access; serving, ranking, analytics, and ownership rules.</p>
+            <p>Shared TypeScript + Zod contracts; serving, ranking, analytics, and ownership rules.</p>
           </section>
-          <span className="food-system-map__core-link" aria-hidden="true">→</span>
-          <section className="food-system-map__core-layer food-system-map__core-layer--store">
+          <span className="food-system-map__spine-link" aria-hidden="true">→</span>
+          <section className="food-system-map__anchor food-system-map__anchor--persistence" role="group" aria-label="Persistence architecture anchor">
             <span>03 / PERSISTED RECORDS</span>
             <strong>Prisma → PostgreSQL</strong>
-            <p>Food and nutrient records, serving basis, food and weight logs, and saved snapshots.</p>
+            <p>Food catalog, food and weight logs, and historical nutrition snapshots.</p>
+          </section>
+        </div>
+
+        <p className="food-system-map__identity-note">
+          <span>IDENTITY + RESOURCE SCOPE · SOURCE IMPLEMENTATION</span>
+          <strong>Firebase UID → app-owned UUID → API-derived resource scope</strong>
+          <em>Caller identity scopes reads and writes through the API; this describes inspected source, not deployment status.</em>
+        </p>
+
+        <div className="food-system-map__paths" role="group" aria-label="Three paths through the shared architecture anchors">
+          <section className="food-system-map__path-lane" data-path="find-resolve" aria-labelledby="food-system-map-find-title">
+            <div className="food-system-map__path-heading">
+              <span>PATH 01</span>
+              <h4 id="food-system-map-find-title">FIND + RESOLVE</h4>
+            </div>
+            <div className="food-system-map__path-route" role="group" aria-label="Search and confirmation pass through provider lookup and API resolution to saved records">
+              <span className="food-system-map__path-step">Search or reuse a food; confirm its serving.</span>
+              <i aria-hidden="true">→</i>
+              <span className="food-system-map__path-step">Provider and imported candidates; deterministic API resolution.</span>
+              <i aria-hidden="true">→</i>
+              <span className="food-system-map__path-step">Resolved food identity, nutrient record, and serving basis.</span>
+            </div>
+            <p className="food-system-map__path-note"><b>Lookup + retrieval.</b> Open Food Facts supports packaged and barcode lookup; USDA FoodData Central supplies generic-food lookup. CNF 2026, Ciqual 2025, and CoFID 2021 are versioned imports. Pinecone returns semantic candidates only; the API ranks deterministically.</p>
+          </section>
+
+          <section className="food-system-map__path-lane food-system-map__path-lane--interpret" data-path="interpret-review" aria-labelledby="food-system-map-interpret-title">
+            <div className="food-system-map__path-heading">
+              <span>PATH 02</span>
+              <h4 id="food-system-map-interpret-title">INTERPRET + REVIEW</h4>
+            </div>
+            <div className="food-system-map__path-route" role="group" aria-label="A text or photo request is interpreted, reviewed, then saved as a food log and snapshot">
+              <span className="food-system-map__path-step">Text or photo request; Human review of the proposed rows.</span>
+              <i aria-hidden="true">→</i>
+              <span className="food-system-map__path-step">Gemini proposes food and quantity; shared catalog and serving rules resolve the choice.</span>
+              <i aria-hidden="true">→</i>
+              <span className="food-system-map__path-step">After confirmation: food log + historical nutrition snapshot.</span>
+            </div>
+            <p className="food-system-map__path-note"><b>Human checkpoint.</b> Gemini interprets intent; catalog nutrition and shared serving conversion remain authoritative. Nothing saves before human review.</p>
+          </section>
+
+          <section className="food-system-map__path-lane food-system-map__path-lane--history" data-path="read-history" aria-labelledby="food-system-map-history-title">
+            <div className="food-system-map__path-heading">
+              <span>PATH 03 · RETURNS FROM STORAGE</span>
+              <h4 id="food-system-map-history-title">READ SAVED HISTORY</h4>
+            </div>
+            <div className="food-system-map__path-route food-system-map__path-route--return" role="group" aria-label="Saved records flow through deterministic analysis back to Simple and Complex views">
+              <span className="food-system-map__path-step">Simple + Complex presentations.</span>
+              <i aria-hidden="true">←</i>
+              <span className="food-system-map__path-step">Deterministic analysis + recommendations.</span>
+              <i aria-hidden="true">←</i>
+              <span className="food-system-map__path-step">Saved food and weight logs, goals, and snapshots.</span>
+            </div>
+            <p className="food-system-map__path-note"><b>Shared product.</b> Simple and Complex change presentation depth over the same deterministic analysis and backend; historical nutrition stays tied to values saved with a log.</p>
           </section>
         </div>
       </div>
 
-      <div className="food-system-map__flows" role="group" aria-label="Connected lookup, interpretation, and Insights paths">
-        <section className="food-system-map__flow food-system-map__flow--find">
-          <span className="food-figure__index">FIND + RESOLVE</span>
-          <strong>Different food sources meet one serving rule.</strong>
-          <div className="food-system-map__flow-content">
-            <p><b>Lookup candidates</b> Open Food Facts (packaged/barcode) and USDA FoodData Central (generic food).</p>
-            <p><b>Versioned imports</b> CNF 2026, Ciqual 2025, and CoFID 2021 feed normalized PostgreSQL records.</p>
-            <p><b>Retrieval</b> Pinecone returns semantic candidates only; the API ranks deterministically, then a person confirms food and serving.</p>
-          </div>
-        </section>
-        <section className="food-system-map__flow food-system-map__flow--interpret">
-          <span className="food-figure__index">INTERPRET + REVIEW</span>
-          <strong>AI proposes; a person decides what enters the log.</strong>
-          <div className="food-system-map__flow-chain" aria-label="Text or photo to suggestion to human review to shared serving rules">
-            <span>Text or photo</span><b aria-hidden="true">→</b><span>Gemini proposal</span><b aria-hidden="true">→</b><span>Human review</span><b aria-hidden="true">→</b><span>Shared serving rules</span>
-          </div>
-          <p>Gemini proposes food and quantity; it does not determine trusted nutrition or save without review.</p>
-        </section>
-        <section className="food-system-map__flow food-system-map__flow--insights">
-          <span className="food-figure__index">READ SAVED HISTORY</span>
-          <strong>Deterministic analysis returns to the same product.</strong>
-          <p>Saved food logs, weight, and goals feed deterministic analytics and recommendations; Simple and Complex change presentation depth, not the backend.</p>
-        </section>
-      </div>
-
-      <figcaption id="food-system-map-caption">
-        System boundary, provider paths, candidate retrieval, human-reviewed interpretation, and saved-record Insights are shown as one source-backed system.
-      </figcaption>
+      <figcaption id="food-system-map-caption">The shared anchors appear once; each lane shows a source-backed product path. This is an implementation relationship map, not a deployment diagram.</figcaption>
     </figure>
   );
 }
-
 function FoodDataContract() {
   return (
     <figure className="food-data-contract" aria-labelledby="food-data-contract-title">
@@ -675,7 +694,7 @@ function FoodRetrievalEvidence() {
 
         <div className="food-retrieval-evidence__finding">
           <strong>Evaluation changed the design.</strong>
-          <p>Fuzzy retrieval drove most of the measured gain. Project notes report: Semantic retrieval added substantial latency for little benchmark recovery; no latency number is asserted here, so the richer model path stayed bounded.</p>
+          <p>Project and evaluation notes attribute most of the measured gain to fuzzy retrieval. They also report that semantic retrieval added substantial latency for little benchmark recovery; no latency number is asserted here, so the richer model path stayed bounded.</p>
         </div>
       </div>
 
