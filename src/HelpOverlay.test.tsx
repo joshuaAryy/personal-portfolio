@@ -2,6 +2,7 @@
 import { act } from "react";
 import { createRoot } from "react-dom/client";
 import { MemoryRouter, useLocation } from "react-router-dom";
+import { readFileSync } from "node:fs";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 
@@ -67,6 +68,18 @@ afterEach(() => {
 });
 
 describe("contextual Help overlay", () => {
+  it("keeps non-Home desktop guidance inside the viewport with scrollable overflow", () => {
+    const stylesheet = readFileSync("src/utility.css", "utf8");
+    const desktopDialogRule = stylesheet.match(
+      /\.client-help-overlay__dialog:not\(\.client-help-overlay__dialog--home\)\s*\{([^}]*)\}/s,
+    )?.[1] ?? "";
+
+    expect(desktopDialogRule).toMatch(/top:\s*auto;/);
+    expect(desktopDialogRule).toMatch(/bottom:\s*16px;/);
+    expect(desktopDialogRule).toMatch(/max-height:\s*min\(calc\(100vh - 32px\),\s*720px\);/);
+    expect(desktopDialogRule).toMatch(/overflow-y:\s*auto;/);
+  });
+
   it("focuses long-route content without scrolling the narrow header out of view", () => {
     setNarrowViewport();
     const focusCalls: Array<{ element: HTMLElement; options?: FocusOptions }> = [];

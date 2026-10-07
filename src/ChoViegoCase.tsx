@@ -130,7 +130,7 @@ export default function ChoViegoCase() {
 
   return (
     <>
-      <nav className="choveigo-case-nav" aria-label="Cho’Veigo case study">
+      <nav className="choveigo-case-nav" data-route-entry="frame" aria-label="Cho’Veigo case study">
         <div className="choveigo-case-nav__chapters">
           {chapters.map((chapter) => (
             <a
@@ -153,20 +153,20 @@ export default function ChoViegoCase() {
       <article className="choveigo-story-content cho-story">
         <section className="cho-story__hero" id="choveigo-overview" aria-labelledby="choveigo-title">
           <div className="cho-story__hero-copy">
-            <p className="cho-story__eyebrow">JOB DISCOVERY · EVIDENCE · RESUME TAILORING</p>
-            <h1 id="choveigo-title">Cho’Veigo</h1>
-            <p className="cho-story__hero-deck">A better match starts with the evidence.</p>
-            <p className="cho-story__hero-summary">
+            <p className="cho-story__eyebrow" data-route-entry="identity">JOB DISCOVERY · EVIDENCE · RESUME TAILORING</p>
+            <h1 id="choveigo-title" data-route-entry="headline">Cho’Veigo</h1>
+            <p className="cho-story__hero-deck" data-route-entry="summary">A better match starts with the evidence.</p>
+            <p className="cho-story__hero-summary" data-route-entry="summary">
               Job discovery and resume tailoring meet in one workspace, but they answer different questions. First inspect the role. Then examine reviewed profile evidence. The person decides what comes next.
             </p>
-            <div className="cho-story__ownership-rail">
+            <div className="cho-story__ownership-rail" data-route-entry="summary">
               <span>TWO-PERSON PROJECT</span>
               <strong>Joshua Aryeetey <i aria-hidden="true">+</i> Shiv Arora</strong>
               <p>Joshua led Jobs-side work and shared product direction, behavior review, and matching evaluation.</p>
             </div>
           </div>
 
-          <figure className="cho-story__recommendations" aria-labelledby="cho-recommendations-caption">
+          <figure className="cho-story__recommendations" data-route-entry="evidence" aria-labelledby="cho-recommendations-caption">
             <div className="cho-story__capture-bar">
               <span>AUTHENTIC PRODUCT VIEW</span>
               <strong>Recommendations</strong>

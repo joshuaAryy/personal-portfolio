@@ -180,15 +180,15 @@ export default function StushPattiesCase() {
   return (
     <article className="stush-data-story" aria-labelledby="stush-title">
       <header className="stush-data-hero" id="stush-opening">
-        <p className="stush-kicker">EXPERIENCE DETAIL</p>
-        <div className="stush-data-hero__title-row">
-          <h1 id="stush-title">Stush Patties</h1>
+        <p className="stush-kicker" data-route-entry="frame">EXPERIENCE DETAIL</p>
+        <div className="stush-data-hero__title-row" data-route-entry="identity">
+          <h1 id="stush-title" data-route-entry="headline">Stush Patties</h1>
         </div>
         <div className="stush-data-hero__summary">
-          <p className="stush-data-hero__thesis">Turning distributor exports into a repeatable reporting handoff.</p>
-          <div className="stush-data-hero__support">
+          <p className="stush-data-hero__thesis" data-route-entry="summary">Turning distributor exports into a repeatable reporting handoff.</p>
+          <div className="stush-data-hero__support" data-route-entry="summary">
             <p>Two-person technical team: I built Python parsing and normalization that mapped irregular sales exports into shared reporting fields.</p>
-            <figure className="stush-hero-path" aria-label="Different source files. One shared reporting path. Conceptual route: irregular layouts pass through Python parsing into shared fields.">
+            <figure className="stush-hero-path" data-route-entry="evidence" aria-label="Different source files. One shared reporting path. Conceptual route: irregular layouts pass through Python parsing into shared fields.">
               <div className="stush-hero-path__steps">
                 <div><span>01 / INPUT</span><strong>Irregular layouts</strong></div>
                 <span aria-hidden="true">→</span>

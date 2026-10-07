@@ -7,8 +7,8 @@ const OPENING_DURATION_MS = 3_500;
 const REDUCED_HANDOFF_MS = 120;
 const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const C06_MARK_SOURCE = "/media/opening/j-candidate-06-m54-opening.svg";
-const C06_FORMATION_SOURCE = "/media/profile/j-candidate-06-opening.svg";
+const C06_UNLIT_SOURCE = "/media/opening/j-candidate-06-opening-unlit.svg";
+const C06_SEAMS_SOURCE = "/media/opening/j-candidate-06-opening-seams.svg";
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
     };
 
     if (reducedMotion) {
-      setLeaving(true);
+      setLeaving(false);
       timers.current.push(window.setTimeout(goToHome, REDUCED_HANDOFF_MS));
     } else {
       setLeaving(false);
@@ -121,18 +121,22 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
               className="opening__mark-motion"
               data-j-source="candidate-06-3679:247"
               data-mark-source={portfolioIdentity.mark}
-              style={{ "--opening-mark-source": `url("${C06_MARK_SOURCE}")` } as CSSProperties}
+              style={{ "--opening-mark-source": `url("${C06_UNLIT_SOURCE}")` } as CSSProperties}
             >
-              <img className="opening__j-echo" src={C06_MARK_SOURCE} alt="" draggable={false} />
-              <img className="opening__j-base" src={C06_MARK_SOURCE} alt="" draggable={false} />
               <span className="opening__j-piece opening__j-piece--cap" data-node-id="3679:267">
-                <img src={C06_FORMATION_SOURCE} alt="" draggable={false} />
+                <img src="/media/opening/j-candidate-06-opening-cap.svg" alt="" draggable={false} />
               </span>
               <span className="opening__j-piece opening__j-piece--shaft" data-node-id="3679:285">
-                <img src={C06_FORMATION_SOURCE} alt="" draggable={false} />
+                <img src="/media/opening/j-candidate-06-opening-shaft.svg" alt="" draggable={false} />
               </span>
               <span className="opening__j-piece opening__j-piece--hook" data-node-id="3679:303">
-                <img src={C06_FORMATION_SOURCE} alt="" draggable={false} />
+                <img src="/media/opening/j-candidate-06-opening-hook.svg" alt="" draggable={false} />
+              </span>
+              <span className="opening__seam opening__seam--upper" aria-hidden="true">
+                <img src={C06_SEAMS_SOURCE} alt="" draggable={false} />
+              </span>
+              <span className="opening__seam opening__seam--lower" aria-hidden="true">
+                <img src={C06_SEAMS_SOURCE} alt="" draggable={false} />
               </span>
               <span className="opening__j-material-highlight" aria-hidden="true" />
             </div>

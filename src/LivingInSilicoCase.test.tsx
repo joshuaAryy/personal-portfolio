@@ -81,7 +81,7 @@ describe("Living in Silico research story", () => {
 
   it("opens with the research question and Joshua's actual contribution", () => {
     const markup = renderLivingRoute();
-    const heroLead = markup.match(/<p class="living-hero__lead">[\s\S]*?<\/p>/)?.[0] ?? "";
+    const heroLead = markup.match(/<p class="living-hero__lead"(?:\s[^>]*)?>[\s\S]*?<\/p>/)?.[0] ?? "";
     const reflection = markup.match(/<section class="living-research-reflection"[\s\S]*?<\/section>/)?.[0] ?? "";
 
     expect(markup).toContain("A research question before a model choice.");

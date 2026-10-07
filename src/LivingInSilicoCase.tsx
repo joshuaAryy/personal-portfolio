@@ -4,16 +4,16 @@ import "./living-in-silico-case.css";
 export default function LivingInSilicoCase() {
   return (
     <article className="living-story" aria-labelledby="living-title">
-      <nav className="living-nav" aria-label="Experience navigation">
+      <nav className="living-nav" data-route-entry="frame" aria-label="Experience navigation">
         <Link to="/experience">‹ EXPERIENCE</Link>
         <span>RESEARCH NOTES / GENERATIVE MOLECULAR MODELING</span>
       </nav>
 
       <header className="living-hero" id="living-hero">
         <div className="living-hero__main">
-          <p className="living-eyebrow">LIVING IN SILICO · AI / ML RESEARCH INTERN · MARCH–JUNE 2025</p>
-          <h1 id="living-title">A research question before a model choice.</h1>
-          <p className="living-hero__lead">
+          <p className="living-eyebrow" data-route-entry="identity">LIVING IN SILICO · AI / ML RESEARCH INTERN · MARCH–JUNE 2025</p>
+          <h1 id="living-title" data-route-entry="headline">A research question before a model choice.</h1>
+          <p className="living-hero__lead" data-route-entry="summary">
             In computational chemistry and biomedical research, I asked how
             molecular representations could shape generative-modeling routes.
             I prepared separate experiment inputs, explored sequence and
@@ -24,7 +24,7 @@ export default function LivingInSilicoCase() {
             <p>How might molecular data be represented and explored through generative modeling?</p>
           </div>
         </div>
-        <aside className="living-hero__meta" aria-label="Internship details">
+        <aside className="living-hero__meta" data-route-entry="summary" aria-label="Internship details">
           <dl className="living-hero-meta">
             <div><dt>ROLE</dt><dd>AI/ML Research Intern</dd></div>
             <div><dt>FOCUS</dt><dd>Generative Molecular Modeling</dd></div>
@@ -32,7 +32,7 @@ export default function LivingInSilicoCase() {
             <div><dt>SUPERVISOR</dt><dd>Sohail Mahmood</dd></div>
           </dl>
         </aside>
-        <section className="living-remit" aria-labelledby="living-remit-title">
+        <section className="living-remit" data-route-entry="evidence" aria-labelledby="living-remit-title">
           <p className="living-eyebrow" id="living-remit-title">MY WORK IN THE INTERNSHIP</p>
           <div className="living-remit__items">
             <div><span>01</span><p>Inspect, clean, and prepare molecular strings for experiments.</p></div>

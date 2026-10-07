@@ -240,7 +240,7 @@ const modeIcons: Record<LobbyMode, string> = {
 function ModeHeading({ mode }: { mode: LobbyMode }) {
   const copy = copyByMode[mode];
   return (
-    <div className="league-lobby__heading">
+    <div className="league-lobby__heading" data-route-entry="banner">
       <Link className="league-lobby__home" to="/home" aria-label="Back to portfolio home" title="Back to portfolio home">
         <span aria-hidden="true">←</span>
       </Link>
@@ -283,13 +283,14 @@ function LobbyCard({
         selected ? "league-banner--selected" : "",
         item.owner ? "league-banner--owner" : "",
       ].filter(Boolean).join(" ")}
+      data-route-entry="banner"
       aria-label={`Select ${item.name}`}
       aria-describedby={instructionId}
       aria-pressed={selected}
       onClick={onSelect}
     >
       <img className="league-banner__art" src="/media/lobby/banner-art.svg" alt="" aria-hidden="true" />
-      <span className={`league-banner__medallion ${medallionFit}`}>
+      <span className={`league-banner__medallion ${medallionFit}`} data-route-entry="identity">
         {mode === "projects" && (
           <img className="league-banner__frame" src="/media/lobby/project-medallion-frame.png" alt="" aria-hidden="true" />
         )}
@@ -299,11 +300,11 @@ function LobbyCard({
           <img className={`league-banner__mark ${markFit}`} src={mark} alt={item.markAlt ?? ""} />
         ) : null}
       </span>
-      <strong className="league-banner__name">{item.name}</strong>
-      <span className="league-banner__subtitle">{item.subtitle}</span>
-      <span className="league-banner__role">{item.role}</span>
+      <strong className="league-banner__name" data-route-entry="details">{item.name}</strong>
+      <span className="league-banner__subtitle" data-route-entry="details">{item.subtitle}</span>
+      <span className="league-banner__role" data-route-entry="details">{item.role}</span>
       {roleMarks.length > 0 && (
-        <span className="league-banner__roles">
+        <span className="league-banner__roles" data-route-entry="details">
           {roleMarks.slice(0, 2).map((mark) => (
             <img key={mark.label} src={mark.src} alt={mark.label} title={mark.label} />
           ))}
@@ -362,7 +363,7 @@ function SelectedTray({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
 
   return (
     <>
-      <section className={selectedTrayClassName} aria-label={`Selected ${copy.itemLabel}`}>
+      <section className={selectedTrayClassName} data-route-entry="details" aria-label={`Selected ${copy.itemLabel}`}>
         <img className="league-selected__art" src="/media/lobby/collapsible-tray.png" alt="" aria-hidden="true" />
         <div className="league-selected__main">
           <h2>{(item.selectedTitle ?? item.name).toUpperCase()}</h2>
@@ -405,7 +406,7 @@ function RoleLegend({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
       { label: "SOFTWARE SPECIALIZATION", src: "/media/lobby/academic-software-specialization.svg" },
     ];
     return (
-      <div className="league-role-legend league-role-legend--education" role="group" aria-label="Academic highlights">
+        <div className="league-role-legend league-role-legend--education" data-route-entry="details" role="group" aria-label="Academic highlights">
         <strong>ACADEMIC HIGHLIGHTS</strong>
         {highlights.map((highlight) => (
           <span className="league-role-legend__item" key={highlight.label}>
@@ -423,7 +424,7 @@ function RoleLegend({ item, mode }: { item: LobbyItem; mode: LobbyMode }) {
   if (!roles.length) return null;
   const title = mode === "hackathons" ? "HACKATHON ROLES" : mode === "experience" ? "EXPERIENCE ROLES" : "PROJECT ROLES";
   return (
-    <div className={`league-role-legend${mode === "projects" ? " league-role-legend--projects" : ""}`}>
+    <div className={`league-role-legend${mode === "projects" ? " league-role-legend--projects" : ""}`} data-route-entry="details">
       <strong>{title}</strong>
       {roles.map((role) => (
         <span className="league-role-legend__item" key={role}>
@@ -448,7 +449,7 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
   return (
     <Client pageClass="main--lobby">
       <section className={`league-lobby league-lobby--${mode}`} aria-label={`${mode} lobby`}>
-        <div className="league-lobby__environment" aria-hidden="true" />
+        <div className="league-lobby__environment" data-route-entry="environment" aria-hidden="true" />
         <ModeHeading mode={mode} />
         {mode !== "projects" && (
           <div className="league-lobby__balance-slots" aria-hidden="true">
@@ -472,7 +473,7 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
         </div>
         <RoleLegend item={selected} mode={mode} />
         <SelectedTray item={selected} mode={mode} />
-        <p className="league-lobby__hint">
+        <p className="league-lobby__hint" data-route-entry="details">
           {mode === "education"
             ? "Select an entry to review its academic details below."
             : "Select an entry, then use the action in its tray to open the story."}

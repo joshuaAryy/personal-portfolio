@@ -134,14 +134,16 @@ describe("opening route behavior", () => {
     expect(document.activeElement).toBe(main);
   });
 
-  it("uses the 120 ms reduced-motion handoff", () => {
+  it("keeps the settled mark visible through the 120 ms reduced-motion handoff", () => {
     renderOpeningRoute(true);
 
     act(() => vi.advanceTimersByTime(0));
-    expect(host.querySelector(".opening-route--leaving")).not.toBeNull();
+    expect(host.querySelector(".opening--reduced")).not.toBeNull();
+    expect(host.querySelector(".opening-route--leaving")).toBeNull();
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
 
     act(() => vi.advanceTimersByTime(119));
+    expect(host.querySelector(".opening--reduced")).not.toBeNull();
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
 
     act(() => vi.advanceTimersByTime(1));

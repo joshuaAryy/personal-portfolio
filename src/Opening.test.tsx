@@ -1,11 +1,17 @@
 import { renderToStaticMarkup } from "react-dom/server";
 import { readFileSync } from "node:fs";
 import { MemoryRouter } from "react-router-dom";
+import { act } from "react";
+import { Window } from "happy-dom";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import App from "./App";
 import { portfolioIdentity } from "./data";
 
-afterEach(() => vi.unstubAllGlobals());
+afterEach(() => {
+  vi.unstubAllGlobals();
+  vi.restoreAllMocks();
+  vi.useRealTimers();
+});
 
 function renderOpeningRoute(reducedMotion = false) {
   vi.stubGlobal("window", {
@@ -37,7 +43,9 @@ describe("opening route choreography", () => {
     expect(markup).toContain('class="opening__j-piece opening__j-piece--cap"');
     expect(markup).toContain('class="opening__j-piece opening__j-piece--shaft"');
     expect(markup).toContain('class="opening__j-piece opening__j-piece--hook"');
-    expect(markup).toContain('/media/profile/j-candidate-06-opening.svg');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-cap.svg"');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-shaft.svg"');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-hook.svg"');
     expect(markup).toContain('class="opening__orbit-spin"');
     expect(markup.match(/class="opening__orbit-tick(?: opening__orbit-tick--major)?"/g)).toHaveLength(180);
     expect(markup).toContain('class="opening__radial-field"');
@@ -51,20 +59,38 @@ describe("opening route choreography", () => {
     expect(openingMark).not.toContain('fill="#02050A"');
   });
 
+  it("keeps C06 pieces and seams separate until the joints seat, then holds the settled mark", () => {
+    const markup = renderOpeningRoute();
+    const css = readFileSync("src/opening.css", "utf8");
+
+    expect(markup).not.toContain('class="opening__j-echo"');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-cap.svg"');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-shaft.svg"');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-hook.svg"');
+    expect(markup).toContain('class="opening__seam opening__seam--upper"');
+    expect(markup).toContain('class="opening__seam opening__seam--lower"');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-seams.svg"');
+    expect(css).toMatch(/@keyframes opening-seam-upper\s*\{[\s\S]*?30%\s*\{[^}]*opacity:\s*0[\s\S]*?34%\s*\{[^}]*opacity:\s*\.95/);
+    expect(css).toMatch(/@keyframes opening-seam-lower\s*\{[\s\S]*?40%\s*\{[^}]*opacity:\s*0[\s\S]*?44%\s*\{[^}]*opacity:\s*\.95/);
+    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.65s\s+linear\s+both/s);
+    expect(css).toMatch(/@keyframes opening-forge-piece\s*\{[\s\S]*?100%\s*\{\s*opacity:\s*1;\s*transform:\s*translate\(0, 0\)/);
+    expect(css).toMatch(/@keyframes opening-radial-arrive\s*\{[\s\S]*?75\.7%,\s*100%\s*\{[^}]*opacity:\s*\.2;\s*transform:\s*rotate\(0deg\) scale\(1\)/);
+  });
+
   it("keeps the orbit border still while the radial ticks spin quickly through a 3.5-second sequence", () => {
     const css = readFileSync("src/opening.css", "utf8");
     const source = readFileSync("src/Opening.tsx", "utf8");
 
     expect(source).toContain("const OPENING_DURATION_MS = 3_500;");
     expect(css).toMatch(/\.opening__orbit-turn\s*\{[^}]*animation:\s*opening-tick-arrive\s+3\.5s\s+ease-out\s+both/s);
-    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+\.62s\s+linear\s+\.36s\s+infinite/s);
+    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.65s\s+linear\s+both/s);
     expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+3\.5s/s);
     expect(css).toMatch(/repeating-conic-gradient\([\s\S]*transparent\s+0deg\s+3\.42deg,[\s\S]*rgb\(170\s+193\s+206\s*\/\s*16%\)[\s\S]*transparent\s+3\.72deg\s+4deg/s);
-    expect(css).toMatch(/\.opening__j-piece--cap\s*\{[^}]*animation-delay:\s*\.08s/s);
-    expect(css).toMatch(/\.opening__j-piece--shaft\s*\{[^}]*animation-delay:\s*\.2s/s);
-    expect(css).toMatch(/\.opening__j-piece--hook\s*\{[^}]*animation-delay:\s*\.32s/s);
-    expect(css).toMatch(/--forge-offset-y:\s*-14px/);
-    expect(css).toMatch(/--forge-offset-y:\s*14px/);
+    expect(css).toMatch(/\.opening__j-piece--cap\s*\{[^}]*animation-delay:\s*0s/s);
+    expect(css).toMatch(/\.opening__j-piece--shaft\s*\{[^}]*animation-delay:\s*\.07s/s);
+    expect(css).toMatch(/\.opening__j-piece--hook\s*\{[^}]*animation-delay:\s*\.15s/s);
+    expect(css).toMatch(/--forge-start-y:\s*-22px/);
+    expect(css).toMatch(/--forge-start-y:\s*22px/);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
     expect(css).toMatch(/\.opening--reduced\s+\.opening__j-piece,[\s\S]*?\.opening--reduced\s+\.opening__j-material-highlight\s*\{\s*animation:\s*none/s);
     expect(css).not.toMatch(/opening__loading|opening__progress/);
@@ -81,8 +107,9 @@ describe("opening route choreography", () => {
       .replace(/<g id="background">[\s\S]*?<\/g>/, "");
 
     expect(markup).toContain('class="opening__j-material-highlight"');
-    expect(markup).toContain('src="/media/opening/j-candidate-06-m54-opening.svg"');
-    expect(markup).toContain('/media/profile/j-candidate-06-opening.svg');
+    expect(markup).toContain('/media/opening/j-candidate-06-opening-unlit.svg');
+    expect(markup).toContain('/media/opening/j-candidate-06-opening-seams.svg');
+    expect(markup).toContain('src="/media/opening/j-candidate-06-opening-cap.svg"');
     expect(source).toContain("portfolioIdentity.mark");
     expect(source).not.toContain("j-candidate-06-settled.svg");
     expect(settled.replace(/\r\n/g, "\n")).toBe(transparentIdentity.replace(/\r\n/g, "\n"));
@@ -97,11 +124,63 @@ describe("opening route choreography", () => {
 
     expect(markup).toContain('class="opening-route opening-route--reduced"');
     expect(markup).toContain('class="opening opening--reduced"');
-    expect(css).toMatch(/\.opening--reduced\s+\.opening__j-base\s*\{[^}]*opacity:\s*1/s);
+    expect(css).toMatch(/\.opening--reduced\s+\.opening__j-piece\s*\{[^}]*opacity:\s*1/);
     const reducedRules = css.slice(css.indexOf(".opening--reduced .opening__treatment"));
     expect(reducedRules).toContain(".opening--reduced .opening__orbit-turn");
     expect(reducedRules).toContain(".opening--reduced .opening__orbit-spin");
     expect(reducedRules).toContain(".opening--reduced .opening__peripheral-lines");
     expect(reducedRules).toMatch(/animation:\s*none/);
+  });
+
+  it("keeps the resolved C06 visible during the reduced-motion handoff", async () => {
+    vi.useFakeTimers();
+    const testWindow = new Window({ url: "http://localhost/" });
+    Object.defineProperty(testWindow, "matchMedia", {
+      configurable: true,
+      value: () => ({ matches: true }),
+    });
+    Object.defineProperty(testWindow, "setTimeout", {
+      configurable: true,
+      value: globalThis.setTimeout.bind(globalThis),
+    });
+    Object.defineProperty(testWindow, "clearTimeout", {
+      configurable: true,
+      value: globalThis.clearTimeout.bind(globalThis),
+    });
+    vi.stubGlobal("window", testWindow);
+    vi.stubGlobal("document", testWindow.document);
+    vi.stubGlobal("navigator", testWindow.navigator);
+    vi.stubGlobal("HTMLElement", testWindow.HTMLElement);
+    vi.stubGlobal("Element", testWindow.Element);
+    vi.stubGlobal("Node", testWindow.Node);
+    vi.stubGlobal("IS_REACT_ACT_ENVIRONMENT", true);
+    const { createRoot } = await import("react-dom/client");
+    const container = testWindow.document.createElement("div");
+    testWindow.document.body.appendChild(container);
+    const root = createRoot(container as unknown as Element);
+
+    await act(async () => {
+      root.render(
+        <MemoryRouter initialEntries={["/"]}>
+          <App />
+        </MemoryRouter>,
+      );
+    });
+
+    expect(container.querySelector(".opening--reduced")).not.toBeNull();
+    expect(container.querySelector(".opening-route--leaving")).toBeNull();
+
+    await act(async () => {
+      vi.advanceTimersByTime(119);
+    });
+    expect(container.querySelector(".opening--reduced")).not.toBeNull();
+
+    await act(async () => {
+      vi.advanceTimersByTime(1);
+    });
+    expect(container.querySelector(".opening")).toBeNull();
+
+    await act(async () => root.unmount());
+    testWindow.close();
   });
 });

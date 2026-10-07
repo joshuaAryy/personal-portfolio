@@ -170,6 +170,13 @@
   box-shadow: 0 18px 54px rgba(0, 0, 0, 0.46), inset 0 0 0 1px rgba(210, 173, 87, 0.11);
 }
 
+.client-help-overlay__dialog:not(.client-help-overlay__dialog--home) {
+  top: auto;
+  bottom: 16px;
+  max-height: min(calc(100vh - 32px), 720px);
+  overflow-y: auto;
+}
+
 .client-help-overlay__dialog--home {
   top: clamp(142px, calc(100vh - 630px), 44.3vh);
   right: clamp(280px, calc(16.67vw + 70px), 430px);
@@ -747,6 +754,11 @@
     overflow-x: hidden;
     gap: 10px;
     padding: 13px 13px 10px;
+  }
+
+  .client-help-overlay__dialog:not(.client-help-overlay__dialog--home) {
+    bottom: 12px;
+    max-height: min(calc(100vh - 24px), 640px);
   }
 
   .client-help-overlay__dialog--home {

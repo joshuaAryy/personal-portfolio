@@ -100,7 +100,7 @@ function HomeExploreContent() {
 
   return (
     <section className="home-explore" aria-labelledby="home-explore-title">
-      <header className="home-explore__heading">
+      <header className="home-explore__heading" data-route-entry="banner">
         <div>
           <p className="home-explore__eyebrow">Portfolio client / Home</p>
           <h1 id="home-explore-title">Select a portfolio mode</h1>
@@ -109,6 +109,7 @@ function HomeExploreContent() {
 
       <div
         className="home-explore__modes"
+        data-route-entry="identity"
         role="group"
         aria-label="Portfolio modes"
         aria-describedby="home-explore-keyboard-help"
@@ -154,7 +155,7 @@ function HomeExploreContent() {
         })}
       </div>
 
-      <section className="home-explore__selection" aria-live="polite">
+      <section className="home-explore__selection" data-route-entry="details" aria-live="polite">
         <div className="home-explore__selection-copy">
           <h2>{selected.label}</h2>
           <p className="home-explore__instruction">Choose a mode, then Confirm to continue.</p>

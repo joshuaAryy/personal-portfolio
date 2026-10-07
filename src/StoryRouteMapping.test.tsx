@@ -5,7 +5,7 @@ import App from "./App";
 
 const storyRoutes = [
   ["Food Tracker", "/projects/food-tracker", "Simple tracking."],
-  ["Crest", "/projects/crest", "<h1>Crest</h1>"],
+  ["Crest", "/projects/crest", /<h1(?:\s[^>]*)?>Crest<\/h1>/],
   ["Cho’Veigo", "/projects/choveigo", "A better match starts with the evidence."],
   ["Fraymakers", "/projects/fraymakers", "A tournament match,"],
   ["Living in Silico", "/experience/living-in-silico", "A research question before a model choice."],
@@ -22,7 +22,9 @@ function renderRoute(path: string) {
 
 describe("implemented story route mapping", () => {
   it.each(storyRoutes)("renders the %s story at %s", (_story, path, marker) => {
-    expect(renderRoute(path)).toContain(marker);
+    const markup = renderRoute(path);
+    if (marker instanceof RegExp) expect(markup).toMatch(marker);
+    else expect(markup).toContain(marker);
   });
 });
 

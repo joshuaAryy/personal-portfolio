@@ -71,7 +71,7 @@ export default function FraymakersCase() {
 
   return (
     <>
-      <nav className="fraymakers-nav" aria-label="Fraymakers case study">
+      <nav className="fraymakers-nav" data-route-entry="frame" aria-label="Fraymakers case study">
         <div className="fraymakers-nav__chapters">
           {chapters.map((chapter) => (
             <a href={`#fraymakers-${chapter.id}`} aria-current={activeChapter === chapter.id ? "location" : undefined} key={chapter.id}
@@ -87,11 +87,11 @@ export default function FraymakersCase() {
       <article className="fray-case" aria-labelledby="fraymakers-title">
         <header className="fray-case__intro" id="fraymakers-pipeline">
           <div className="fray-case__intro-copy">
-            <p className="fray-case__eyebrow">FRAYMAKERS / UPLOADASSISTANT</p>
-            <h1 id="fraymakers-title">A tournament match,<br />carried into its own frame.</h1>
-            <p className="fray-case__dek">I built <code>thumbnail.js</code> to turn match-specific art and labels into a 1280 × 720 PNG for its associated VOD.</p>
+            <p className="fray-case__eyebrow" data-route-entry="identity">FRAYMAKERS / UPLOADASSISTANT</p>
+            <h1 id="fraymakers-title" data-route-entry="headline">A tournament match,<br />carried into its own frame.</h1>
+            <p className="fray-case__dek" data-route-entry="summary">I built <code>thumbnail.js</code> to turn match-specific art and labels into a 1280 × 720 PNG for its associated VOD.</p>
           </div>
-          <figure className="fray-case__hero-figure" aria-labelledby="fraymakers-hero-caption">
+          <figure className="fray-case__hero-figure" data-route-entry="evidence" aria-labelledby="fraymakers-hero-caption">
             <div className="fray-case__hero-topline"><span>THUMBNAIL COMPOSITION SCHEMATIC</span><span>16:9 · 1280 × 720</span></div>
             <svg viewBox="0 0 1280 720" role="img" aria-labelledby="fraymakers-hero-title fraymakers-hero-description">
               <title id="fraymakers-hero-title">Thumbnail composition schematic</title>
@@ -133,7 +133,7 @@ export default function FraymakersCase() {
             <div className="fray-case__hero-tools" aria-label="Renderer tools"><span>RENDERER</span><code>thumbnail.js</code><span>CANVAS</span><strong>node-canvas</strong></div>
             <figcaption id="fraymakers-hero-caption">Schematic only; this is not an authentic generated thumbnail.</figcaption>
           </figure>
-          <p className="fray-case__intro-detail">My brother built the broader foundation, CLI, Challonge integration, and much of the early API groundwork; I joined later to build <code>thumbnail.js</code> and work on YAML/configuration, generation/integration, and part of the YouTube API path.</p>
+          <p className="fray-case__intro-detail" data-route-entry="summary">My brother built the broader foundation, CLI, Challonge integration, and much of the early API groundwork; I joined later to build <code>thumbnail.js</code> and work on YAML/configuration, generation/integration, and part of the YouTube API path.</p>
         </header>
 
         <section className="fray-case__configuration" id="fraymakers-configuration" aria-labelledby="fraymakers-configuration-title">

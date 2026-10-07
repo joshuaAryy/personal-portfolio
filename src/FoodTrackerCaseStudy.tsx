@@ -780,7 +780,7 @@ export default function FoodTrackerCaseStudy() {
 
   return (
     <>
-      <nav className="food-case-nav" aria-label="Food Tracker case study">
+      <nav className="food-case-nav" data-route-entry="frame" aria-label="Food Tracker case study">
         <div className="food-case-nav__chapters">
           {foodChapters.map((chapter) => (
             <a
@@ -800,22 +800,22 @@ export default function FoodTrackerCaseStudy() {
       <article className="food-story-content food-story-content--rewrite">
         <section className="food-section food-rewrite__hero" id="food-overview" aria-labelledby="food-overview-title">
           <div className="food-rewrite__hero-copy">
-            <p className="food-rewrite__brand">
+            <p className="food-rewrite__brand" data-route-entry="identity">
               <img src={projectIdentities["food-tracker"].mark} alt="" />
               <span>
                 <strong>FOOD TRACKER</strong>
                 <span>PRODUCT · SYSTEM · EVALUATION</span>
               </span>
             </p>
-            <h1 id="food-overview-title">Simple tracking.<br />Serious insight.</h1>
-            <p className="food-rewrite__lead">
+            <h1 id="food-overview-title" data-route-entry="headline">Simple tracking.<br />Serious insight.</h1>
+            <p className="food-rewrite__lead" data-route-entry="summary">
               I started Food Tracker for my own gym and nutrition routine: make daily logging easy to repeat, then keep the record dependable enough to support a longer view.
             </p>
-            <p className="food-rewrite__ownership">
+            <p className="food-rewrite__ownership" data-route-entry="summary">
               I owned product direction, architecture, workflows, evaluation, and acceptance. I also coded and debugged parts of the product; Codex and AI agents implemented substantial product slices under my direction and review.
             </p>
           </div>
-          <aside className="food-rewrite__promise" aria-label="The Food Tracker product path">
+          <aside className="food-rewrite__promise" data-route-entry="evidence" aria-label="The Food Tracker product path">
             <p className="food-figure__index">THE PRODUCT PATH</p>
             <FoodProductPath />
             <p className="food-rewrite__shared-product">

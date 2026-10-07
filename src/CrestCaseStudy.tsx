@@ -234,7 +234,7 @@ export default function CrestCaseStudy() {
 
   return (
     <>
-      <nav className="crest-case-nav" aria-label="Crest case study">
+      <nav className="crest-case-nav" data-route-entry="frame" aria-label="Crest case study">
         <div className="crest-case-nav__chapters">
           {crestChapters.map((chapter) => (
             <a
@@ -270,32 +270,32 @@ export default function CrestCaseStudy() {
       <article className="crest-story-content">
         <section className="crest-section crest-hero" id="crest-overview">
           <div className="crest-hero__opening">
-            <div className="crest-hero__identity">
+            <div className="crest-hero__identity" data-route-entry="identity">
               <div className="crest-hero__emblem" role="img" aria-label="Crest">
                 <img src={projectIdentities.crest.mark} alt="" aria-hidden="true" />
                 <span>CREST</span>
               </div>
               <div>
-                <p className="crest-project-label">EXPENSE INTELLIGENCE / REVIEW WORKFLOW</p>
-                <h1>Crest</h1>
+              <p className="crest-project-label">EXPENSE INTELLIGENCE / REVIEW WORKFLOW</p>
+              <h1 data-route-entry="headline">Crest</h1>
               </div>
             </div>
-            <p className="crest-hero__intro">
+            <p className="crest-hero__intro" data-route-entry="summary">
               Crest is an expense intelligence workspace for reviewing requests
               with budget, spend history and policy context.
             </p>
             <div className="crest-hero__rule" aria-hidden="true" />
-            <p className="crest-hero__purpose">
+            <p className="crest-hero__purpose" data-route-entry="summary">
               It helps finance teams spot unusual patterns and prepare requests
               for preapproval; a person reviews the context and decides what
               happens next.
             </p>
-            <p className="crest-hero__context">
+            <p className="crest-hero__context" data-route-entry="summary">
               FOUR-PERSON TEAM · MPC HACKS 2026 · BRIM FINANCIAL CHALLENGE
             </p>
           </div>
 
-          <div className="crest-demo-media">
+          <div className="crest-demo-media" data-route-entry="evidence">
             <figure className="crest-demo-figure" aria-labelledby="crest-demo-caption">
               {crestDemoIsPlaying ? (
                 <iframe
