@@ -84,9 +84,9 @@ describe("primary App route mapping", () => {
     expect(page).toContain('class="journey-identity__frame" src="/media/profile/portrait-medallion.png"');
   });
 
-  it("keeps the Education projects page to its four authorized project entries", () => {
+  it("presents four concise Education capability briefs with their evidence states", () => {
     const page = renderRoute("/education/projects");
-    expect(page.match(/class="education-projects__item[^\"]*"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__brief education-projects__brief--[^"]+"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Bookstore Management System");
     expect(page).toContain("8-bit ALU + finite-state controller");
@@ -98,44 +98,32 @@ describe("primary App route mapping", () => {
     expect(page).toContain('aria-current="page"');
     expect(page).toContain('class="header-help"');
     expect(page).toContain("Selected capability briefs");
-    expect(page).toContain("CPS510");
-    expect(page).toContain("relational modeling, SQL queries, and integrity rules");
-    expect(page).toContain("Broader scope and implemented schema remain unverified in local project files");
-    expect(page).toContain("Java/Swing");
-    expect(page).toContain("owner and customer workflows");
-    expect(page).toContain("shared application state");
-    expect(page).toContain("State/Singleton patterns");
-    expect(page).toContain("four-stage MOSFET/CMOS amplifier");
-    expect(page).toContain("gain distribution, bias/current, load buffering, and headroom");
+    expect(page).toContain("Software Specialization");
+    expect(page).toContain("Expected 2028");
   });
 
-  it("teaches the source-verified ALU and controller path without implying validation", () => {
+  it("gives each capability a native figure, engineering ideas, and a takeaway", () => {
     const page = renderRoute("/education/projects");
-    expect(page).toContain("SOURCE-VERIFIED · LAB 6 PART 2 SNAPSHOT");
-    expect(page).toContain("9 opcode branches");
-    expect(page).toContain("9-state Moore FSM");
-    expect(page).toContain("input latches");
-    expect(page).toContain("modified_dec3to8");
-    expect(page).toContain("9 one-hot operation lines");
-    expect(page).toContain("clocked 8-bit ALU");
-    expect(page).toContain("High result nibble");
-    expect(page).toContain("Low result nibble");
-    expect(page).toContain("seven-segment displays");
-    expect(page).toContain("rising edge · data high advances; low holds");
-    expect(page).toContain("The FSM HDL resets high to its first state");
-    expect(page).toContain("the top-level BDF port is named Resetn, so system-level polarity remains unresolved");
-    expect(page).toContain("Waveform files document simulation setup, not a verified passing trace");
-    expect(page).not.toMatch(/active-low reset|simulation passed|hardware demonstration|501305419/i);
-    expect(page).not.toMatch(/assignment\s*3/i);
-    expect(page).not.toContain("501305419");
+    expect(page.match(/aria-label="Engineering concept flow"/g)).toHaveLength(4);
+    expect(page.match(/aria-label="Engineering ideas"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__takeaway"/g)).toHaveLength(4);
+    expect(page).toContain("Oracle SQL");
+    expect(page).toContain("with joins, grouping, and views");
+    expect(page).toContain("Java / Swing");
+    expect(page).toContain("State pattern");
+    expect(page).toContain("combinational arithmetic/logic");
+    expect(page).toContain("source-follower buffer");
+    expect(page).toContain("DC · AC · transient");
   });
 
-  it("keeps owner-reported evidence boundaries distinct from the verified ALU source", () => {
+  it("qualifies incomplete scope and reset or waveform evidence", () => {
     const page = renderRoute("/education/projects");
-    expect(page.match(/class="education-projects__source-status"[^>]*>OWNER-REPORTED/g)).toHaveLength(3);
-    expect(page).toContain("EVIDENCE PENDING");
-    expect(page).toContain("Source snapshot traced to the Quartus project and HDL");
-    expect(page).not.toMatch(/What I learned|Methods and tools/i);
+    expect(page).toContain("Planned scope includes patients, dentists, appointments, procedures, billing, and inventory");
+    expect(page).toContain("These are project goals, not a claim that each area is implemented");
+    expect(page).toContain("active-low-labeled reset pin (Resetn)");
+    expect(page).toContain("FSM module resets high");
+    expect(page).toContain("available files show setup, not a verified passing trace");
+    expect(page).not.toMatch(/9 opcode branches|simulation passed|fabricated|measured lab performance/i);
     expect(page).not.toMatch(/Dean|scholarship/i);
   });
 });
