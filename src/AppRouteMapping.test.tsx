@@ -93,6 +93,9 @@ describe("primary App route mapping", () => {
     expect(page.match(/class="education-projects__tools"/g)).toHaveLength(4);
     expect(css).toMatch(/\.education-projects__briefs--cards\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/s);
     expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.education-projects__briefs--cards\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s);
+    expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.main--education-projects\s*\{[^}]*width:\s*100%/s);
+    expect(css).toMatch(/\.education-projects\.education-projects--capability-briefs\s*\{[^}]*width:\s*min\(100%,\s*calc\(100vw - 32px\)\)/s);
+    expect(css).toMatch(/\.education-projects--capability-briefs \.education-projects__heading h1\s*\{[^}]*overflow-wrap:\s*anywhere/s);
     expect(page.match(/class="education-projects__brief education-projects__brief--[^"]+"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Bookstore Management System");

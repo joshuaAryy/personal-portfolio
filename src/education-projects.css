@@ -187,8 +187,52 @@
 }
 
 @media (max-width: 760px) {
+  .main--education-projects {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-x: hidden;
+  }
+
+  .education-projects.education-projects--capability-briefs,
+  .education-projects__list,
+  .education-projects__briefs,
+  .education-projects__brief {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .education-projects.education-projects--capability-briefs {
+    width: min(100%, calc(100vw - 32px));
+  }
+
   .education-projects--capability-briefs .education-projects__heading {
     margin: 24px 0 28px;
+  }
+
+  .education-projects--capability-briefs .education-projects__heading h1 {
+    max-width: 100%;
+    font-size: clamp(28px, 8vw, 34px);
+    overflow-wrap: anywhere;
+  }
+
+  .education-projects__brief-meta,
+  .education-projects__brief-heading,
+  .education-projects__brief-copy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .education-projects__kind,
+  .education-projects__brief-heading h3,
+  .education-projects__summary,
+  .education-projects__focus,
+  .education-projects__learning {
+    overflow-wrap: anywhere;
   }
 
   .education-projects__brief {
