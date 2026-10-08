@@ -169,6 +169,9 @@ export default function ChoViegoCase() {
                 <p>Gemini classifies the role; constrained rewriting is checked against source evidence.</p>
               </div>
             </div>
+            <p className="cho-story__chapter-note cho-story__stack">
+              <strong>STACK / METHOD</strong> Python · FastAPI API · Streamlit MVP · SQLite persistence · Gemini (Resume Studio only)
+            </p>
             <div className="cho-story__ownership-rail" data-route-entry="summary">
               <span>TWO-PERSON PROJECT</span>
               <strong>Joshua Aryeetey <i aria-hidden="true">+</i> Shiv Arora</strong>
@@ -176,25 +179,26 @@ export default function ChoViegoCase() {
             </div>
           </div>
 
-          <figure className="cho-story__recommendations" data-route-entry="evidence" aria-labelledby="cho-recommendations-caption">
+          <figure className="cho-story__recommendations" data-route-entry="evidence" aria-labelledby="cho-full-demo-caption">
             <div className="cho-story__capture-bar">
               <span>AUTHENTIC PRODUCT VIEW</span>
-              <strong>Recommendations</strong>
-              <span className="cho-story__capture-state">PLAYABLE EXCERPT</span>
+              <strong>Full product demo</strong>
+              <span className="cho-story__capture-state">FULL DEMO · 112.638 SECONDS</span>
             </div>
             <video
               className="cho-story__hero-video"
-              src="/media/demos/choveigo-recommendations.webm"
-              title="Cho’Veigo recommendations demo"
+              src="/media/demos/choveigo-full-demo-redacted.webm"
+              title="Cho’Veigo full product demo, 112.638 seconds"
+              aria-label="Cho’Veigo full product demo, 112.638 seconds"
               poster="/media/demos/choveigo-recommendations-poster.png"
-              aria-describedby="cho-recommendations-caption"
+              aria-describedby="cho-full-demo-caption"
               controls
               muted
               playsInline
               preload="none"
             />
-            <figcaption id="cho-recommendations-caption">
-              A short capture follows Recommendations into role exploration; Fit and Eligibility remain visible beside the role.
+            <figcaption id="cho-full-demo-caption">
+              Full redacted Cho’Veigo product demo · 112.638 seconds. Supporting clip: <a href="/media/demos/choveigo-recommendations.webm" target="_blank" rel="noreferrer">short Recommendations excerpt · 4.94 seconds</a>.
             </figcaption>
           </figure>
           <div className="cho-story__hero-route" aria-label="Product sequence">

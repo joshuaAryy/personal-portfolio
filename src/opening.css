@@ -177,111 +177,334 @@
   transform: translate(-50%, -50%);
 }
 
-.opening__j-backing {
+.opening__hero-art {
   position: absolute;
   inset: 0;
-  display: block;
-  background-image: var(--opening-mark-source);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  opacity: 0;
-  pointer-events: none;
-  animation: opening-c06-settled-reveal 100ms linear 840ms both;
+  container-type: size;
 }
 
-.opening__j-piece {
+.opening__hero-part { display: contents; }
+
+.opening__hero-shadow {
   position: absolute;
-  inset: 0;
+  inset: 11.32% 25.43% 12.35% 25.83%;
+  display: block;
+}
+
+.opening__hero-shadow img {
+  position: absolute;
+  inset: -3.92% -6.14%;
   display: block;
   width: 100%;
   height: 100%;
-  mix-blend-mode: normal;
-  user-select: none;
-  opacity: .82;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  animation: opening-c06-piece-handoff 100ms linear 840ms both;
 }
 
-.opening__j-piece img {
+.opening__hero-gold {
+  position: absolute;
+  display: block;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.opening__hero-gold img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   object-fit: fill;
-  mix-blend-mode: normal;
 }
 
-.opening__j-piece--cap {
-  -webkit-mask-image: url("/media/opening/j-candidate-06-opening-cap.svg");
-  mask-image: url("/media/opening/j-candidate-06-opening-cap.svg");
-  transform: translateY(-2.5%);
-  animation:
-    opening-c06-cap-seat 340ms cubic-bezier(.22, .7, .3, 1) 160ms both,
-    opening-c06-piece-handoff 100ms linear 840ms both;
+.opening__hero-gold--deep-cap {
+  inset: 10.58% 25.75% 13.09% 25.51%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg");
+  -webkit-mask-size: 111.26cqw 41.795cqw;
+  mask-size: 111.26cqw 41.795cqw;
+  -webkit-mask-position: -29.93cqw -14.85cqw;
+  mask-position: -29.93cqw -14.85cqw;
 }
 
-.opening__j-piece--shaft {
-  -webkit-mask-image: url("/media/opening/j-candidate-06-opening-shaft.svg");
-  mask-image: url("/media/opening/j-candidate-06-opening-shaft.svg");
+.opening__hero-gold--mid-cap {
+  inset: 9.87% 26.13% 13.8% 25.12%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg");
+  -webkit-mask-size: 111.26cqw 41.795cqw;
+  mask-size: 111.26cqw 41.795cqw;
+  -webkit-mask-position: -29.55cqw -14.145cqw;
+  mask-position: -29.55cqw -14.145cqw;
 }
 
-.opening__j-piece--hook {
-  -webkit-mask-image: url("/media/opening/j-candidate-06-opening-hook.svg");
-  mask-image: url("/media/opening/j-candidate-06-opening-hook.svg");
-  transform: translateY(2.5%);
-  animation:
-    opening-c06-hook-seat 380ms cubic-bezier(.22, .7, .3, 1) 400ms both,
-    opening-c06-piece-handoff 100ms linear 840ms both;
+.opening__hero-gold--face-cap,
+.opening__hero-gold--bevel-cap,
+.opening__hero-gold--edge-cap {
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg");
+  -webkit-mask-size: 111.26cqw 41.795cqw;
+  mask-size: 111.26cqw 41.795cqw;
+  -webkit-mask-position: -29.183cqw -13.462cqw;
+  mask-position: -29.183cqw -13.462cqw;
 }
 
-.opening__seam {
+.opening__hero-gold--detail-cap {
+  inset: 9.19% 26.5% 14.32% 24.76%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg"), url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-cap.svg"), url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-size: 111.26cqw 41.795cqw, 100% 100%;
+  mask-size: 111.26cqw 41.795cqw, 100% 100%;
+  -webkit-mask-position: -29.183cqw -13.462cqw, 0 0;
+  mask-position: -29.183cqw -13.462cqw, 0 0;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.opening__hero-gold--deep-shaft {
+  inset: 10.58% 25.75% 13.09% 25.51%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg");
+  -webkit-mask-size: 111.111cqw 53.782cqw;
+  mask-size: 111.111cqw 53.782cqw;
+  -webkit-mask-position: -29.63cqw .512cqw;
+  mask-position: -29.63cqw .512cqw;
+}
+
+.opening__hero-gold--mid-shaft {
+  inset: 9.87% 26.13% 13.8% 25.12%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg");
+  -webkit-mask-size: 111.111cqw 53.782cqw;
+  mask-size: 111.111cqw 53.782cqw;
+  -webkit-mask-position: -29.246cqw 1.218cqw;
+  mask-position: -29.246cqw 1.218cqw;
+}
+
+.opening__hero-gold--face-shaft,
+.opening__hero-gold--bevel-shaft,
+.opening__hero-gold--edge-shaft {
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg");
+  -webkit-mask-size: 111.111cqw 53.782cqw;
+  mask-size: 111.111cqw 53.782cqw;
+  -webkit-mask-position: -28.883cqw 1.901cqw;
+  mask-position: -28.883cqw 1.901cqw;
+}
+
+.opening__hero-gold--detail-shaft {
+  inset: 9.19% 26.5% 14.32% 24.76%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg"), url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-shaft.svg"), url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-size: 111.111cqw 53.782cqw, 100% 100%;
+  mask-size: 111.111cqw 53.782cqw, 100% 100%;
+  -webkit-mask-position: -28.883cqw 1.901cqw, 0 0;
+  mask-position: -28.883cqw 1.901cqw, 0 0;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.opening__hero-gold--deep-hook {
+  inset: 10.58% 25.75% 13.09% 25.51%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg");
+  -webkit-mask-size: 111.26cqw 58.504cqw;
+  mask-size: 111.26cqw 58.504cqw;
+  -webkit-mask-position: -29.78cqw 42.03cqw;
+  mask-position: -29.78cqw 42.03cqw;
+}
+
+.opening__hero-gold--mid-hook {
+  inset: 9.87% 26.13% 13.8% 25.12%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg");
+  -webkit-mask-size: 111.26cqw 58.504cqw;
+  mask-size: 111.26cqw 58.504cqw;
+  -webkit-mask-position: -29.4cqw 42.735cqw;
+  mask-position: -29.4cqw 42.735cqw;
+}
+
+.opening__hero-gold--face-hook,
+.opening__hero-gold--bevel-hook,
+.opening__hero-gold--edge-hook {
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg");
+  -webkit-mask-size: 111.26cqw 58.504cqw;
+  mask-size: 111.26cqw 58.504cqw;
+  -webkit-mask-position: -29.032cqw 43.418cqw;
+  mask-position: -29.032cqw 43.418cqw;
+}
+
+.opening__hero-gold--detail-hook {
+  inset: 9.19% 26.5% 14.32% 24.76%;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg"), url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/extr-deep-hook.svg"), url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  -webkit-mask-repeat: no-repeat, no-repeat;
+  mask-repeat: no-repeat, no-repeat;
+  -webkit-mask-size: 111.26cqw 58.504cqw, 100% 100%;
+  mask-size: 111.26cqw 58.504cqw, 100% 100%;
+  -webkit-mask-position: -29.032cqw 43.418cqw, 0 0;
+  mask-position: -29.032cqw 43.418cqw, 0 0;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}
+
+.opening__hero-gold-image-inset--detail,
+.opening__hero-gold-image-inset--edge {
+  position: absolute;
+}
+
+.opening__hero-gold-image-inset--detail { inset: -.42% -1.41% -2.79% -1%; }
+.opening__hero-gold-image-inset--edge { inset: -.19% -.71% -.18% -.29%; }
+
+.opening__hero-gold-image-inset--detail img,
+.opening__hero-gold-image-inset--edge img {
   position: absolute;
   inset: 0;
-  display: block;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.opening__seam img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: fill;
 }
 
-.opening__seam--upper {
-  clip-path: inset(18% 25% 70% 49%);
-  animation: opening-seam-pulse 160ms ease-out 500ms both;
-}
-
-.opening__seam--lower {
-  clip-path: inset(59% 25% 29% 49%);
-  animation: opening-seam-pulse 160ms ease-out 780ms both;
-}
-
-.opening__j-material-highlight {
+.opening__hero-seam {
   position: absolute;
   inset: 0;
-  background: linear-gradient(108deg, transparent 35%, rgb(255 249 220 / 0%) 44%, rgb(255 242 192 / 74%) 50%, rgb(255 250 225 / 0%) 56%, transparent 66%);
+  display: block;
+  opacity: .58;
+  pointer-events: none;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 48.744cqw 76.33cqw;
+  mask-size: 48.744cqw 76.33cqw;
+  -webkit-mask-position: 24.76cqw 9.19cqw;
+  mask-position: 24.76cqw 9.19cqw;
+}
+
+.opening__hero-seam-art {
+  position: absolute;
+  inset: 9.49% -7.07% 33.53% -4.51%;
+}
+
+.opening__hero-seam-art img {
+  position: absolute;
+  inset: -1.26% -1.3% -3.43% -1.04%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.opening__hero-seam--upper {
+  clip-path: inset(0 0 60% 0);
+}
+
+.opening__hero-seam--lower {
+  clip-path: inset(50% 0 0 0);
+}
+
+.opening__hero-seam-energy {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 48.744cqw 76.33cqw;
+  mask-size: 48.744cqw 76.33cqw;
+  -webkit-mask-position: 24.76cqw 9.19cqw;
+  mask-position: 24.76cqw 9.19cqw;
+}
+
+.opening__hero-seam-energy--upper {
+  clip-path: inset(0 0 60% 0);
+  animation: opening-joint-energy 240ms ease-out 180ms both;
+}
+
+.opening__hero-seam-energy--lower {
+  clip-path: inset(50% 0 0 0);
+  animation: opening-joint-energy 280ms ease-out 340ms both;
+}
+
+.opening__hero-light-exits {
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: .75;
+  pointer-events: none;
+}
+
+.opening__hero-light-exits-art {
+  position: absolute;
+  inset: 18.73% 29.14% 33.48% 51.05%;
+}
+
+.opening__hero-light-exits-art img {
+  position: absolute;
+  inset: -1.6% -4.53%;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.opening__hero-light-exits--upper {
+  clip-path: inset(0 0 60% 0);
+  animation: opening-light-exit-reveal 240ms ease-out 180ms both;
+}
+
+.opening__hero-light-exits--lower {
+  clip-path: inset(50% 0 0 0);
+  animation: opening-light-exit-reveal 280ms ease-out 340ms both;
+}
+
+.opening__hero-conduit {
+  position: absolute;
+  inset: 26.92% 45.92% 23.96% 33.76%;
+  display: block;
+  opacity: .42;
+  pointer-events: none;
+  animation: opening-conduit-reveal 280ms ease-out 340ms both;
+}
+
+.opening__hero-conduit-image {
+  position: absolute;
+  inset: -.44% -1.79% -3.05% -1.68%;
+}
+
+.opening__hero-conduit img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.opening__hero-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(108deg, transparent 35%, rgb(255 249 220 / 0%) 44%, rgb(255 242 192 / 70%) 50%, rgb(255 250 225 / 0%) 56%, transparent 66%);
   background-size: 200% 100%;
   background-position: 0% 50%;
   opacity: 0;
-  -webkit-mask-image: var(--opening-mark-source);
-  mask-image: var(--opening-mark-source);
+  -webkit-mask-image: url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
+  mask-image: url("/assets/j-c06-keyed-forge/detail-cap-mask.svg");
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-size: contain;
-  mask-size: contain;
+  -webkit-mask-size: 48.744cqw 76.33cqw;
+  mask-size: 48.744cqw 76.33cqw;
+  -webkit-mask-position: 24.76cqw 9.19cqw;
+  mask-position: 24.76cqw 9.19cqw;
   mix-blend-mode: screen;
   pointer-events: none;
-  animation: opening-material-sheen 400ms linear 1080ms both;
+  animation: opening-material-sheen 410ms ease-in-out 420ms both;
 }
 
 .opening__skip {
@@ -308,35 +531,28 @@
   color: #fff0c1;
 }
 
-@keyframes opening-c06-cap-seat {
-  0% { transform: translateY(-2.5%); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes opening-c06-hook-seat {
-  0% { transform: translateY(2.5%); }
-  100% { transform: translateY(0); }
-}
-
-@keyframes opening-c06-piece-handoff {
-  0% { opacity: .82; }
+@keyframes opening-joint-energy {
+  0% { opacity: 0; }
+  65% { opacity: .42; }
   100% { opacity: 0; }
 }
 
-@keyframes opening-c06-settled-reveal {
+@keyframes opening-light-exit-reveal {
   0% { opacity: 0; }
-  100% { opacity: 1; }
+  65% { opacity: 1; }
+  100% { opacity: .75; }
 }
 
-@keyframes opening-seam-pulse {
+@keyframes opening-conduit-reveal {
   0% { opacity: 0; }
-  31% { opacity: .18; }
-  100% { opacity: 0; }
+  100% { opacity: .42; }
 }
 
 @keyframes opening-material-sheen {
   0% { opacity: 0; background-position: 0% 50%; }
-  45% { opacity: .08; background-position: 58% 50%; }
+  20% { opacity: .08; background-position: 25% 50%; }
+  52% { opacity: .08; background-position: 76% 50%; }
+  83% { opacity: .04; background-position: 100% 50%; }
   100% { opacity: 0; background-position: 100% 50%; }
 }
 
@@ -394,10 +610,12 @@
 .opening--reduced .opening__ring,
 .opening--reduced .opening__orbit-turn,
 .opening--reduced .opening__orbit-spin,
-.opening--reduced .opening__j-piece,
-.opening--reduced .opening__j-piece img,
-.opening--reduced .opening__seam,
-.opening--reduced .opening__j-material-highlight {
+.opening--reduced .opening__hero-gold,
+.opening--reduced .opening__hero-seam,
+.opening--reduced .opening__hero-seam-energy,
+.opening--reduced .opening__hero-light-exits,
+.opening--reduced .opening__hero-conduit,
+.opening--reduced .opening__hero-sheen {
   animation: none;
 }
 
@@ -406,11 +624,12 @@
 .opening--reduced .opening__peripheral-mark { opacity: 0; transform: none; }
 .opening--reduced .opening__ring { opacity: 0; transform: translate(-50%, -50%); }
 .opening--reduced .opening__orbit-turn { opacity: 0; transform: translate(-50%, -50%); }
-.opening--reduced .opening__j-backing { animation: none; opacity: 1; }
-.opening--reduced .opening__j-piece { opacity: 0; transform: none; filter: none; }
-.opening--reduced .opening__j-piece img { opacity: 0; transform: none; }
-.opening--reduced .opening__seam { opacity: 0; }
-.opening--reduced .opening__j-material-highlight { opacity: 0; }
+.opening--reduced .opening__hero-gold { opacity: 1; }
+.opening--reduced .opening__hero-seam { opacity: .58; }
+.opening--reduced .opening__hero-seam-energy { opacity: 0; }
+.opening--reduced .opening__hero-light-exits { opacity: .75; }
+.opening--reduced .opening__hero-conduit { opacity: .42; }
+.opening--reduced .opening__hero-sheen { opacity: 0; }
 .opening-route--leaving .opening { opacity: 0; }
 .opening-route--leaving .opening__underlay { filter: brightness(1) saturate(1) blur(0); }
 

@@ -5821,7 +5821,7 @@
   background: #0b171d;
 }
 
-.food-insight-path__capture--configuration {
+.food-insight-path__capture--trend-detail {
   grid-column: 1 / -1;
   grid-template-columns: minmax(0, 368px) minmax(0, 1fr);
   align-items: center;
@@ -5880,7 +5880,7 @@
     padding: 14px;
   }
 
-  .food-insight-path__capture--configuration {
+  .food-insight-path__capture--trend-detail {
     grid-column: auto;
     grid-template-columns: minmax(0, 1fr);
   }

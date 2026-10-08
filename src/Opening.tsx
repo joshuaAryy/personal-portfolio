@@ -1,15 +1,100 @@
-import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { useNavigate } from "react-router-dom";
-import { portfolioIdentity } from "./data";
 import "./opening.css";
 
 const OPENING_DURATION_MS = 3_000;
 const REDUCED_HANDOFF_MS = 120;
 const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const C06_SETTLED_SOURCE = "/media/opening/j-candidate-06-m54-opening.svg";
-const C06_ASSEMBLY_SOURCE = "/media/opening/j-candidate-06-m54-assembly.svg";
-const C06_SEAMS_SOURCE = "/media/opening/j-candidate-06-opening-seams.svg";
+const C06_ASSET_ROOT = "/assets/j-c06-keyed-forge/";
+
+function C06Layer({
+  className,
+  src,
+  nodeId,
+  imageClassName,
+  nestedImage = false,
+}: {
+  className: string;
+  src: string;
+  nodeId: string;
+  imageClassName?: string;
+  nestedImage?: boolean;
+}) {
+  return (
+    <span className={className} data-node-id={nodeId} aria-hidden="true">
+      {nestedImage ? (
+        <span className={imageClassName}>
+          <img src={`${C06_ASSET_ROOT}${src}`} alt="" draggable={false} />
+        </span>
+      ) : (
+        <img src={`${C06_ASSET_ROOT}${src}`} alt="" draggable={false} />
+      )}
+    </span>
+  );
+}
+
+function C06HeroArt() {
+  return (
+    <div className="opening__hero-art" data-node-id="3679:2" aria-hidden="true">
+      <span className="opening__hero-shadow" data-node-id="3679:6">
+        <img src={`${C06_ASSET_ROOT}shadow.svg`} alt="" draggable={false} />
+      </span>
+
+      <div className="opening__hero-part" data-node-id="3679:76">
+        <C06Layer className="opening__hero-gold opening__hero-gold--deep-cap" src="extr-deep-cap-face.svg" nodeId="3679:9" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--mid-cap" src="extr-mid-cap.svg" nodeId="3679:10" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--face-cap" src="face-cap.svg" nodeId="3679:11" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--detail-cap" src="detail-cap.svg" nodeId="3679:12" imageClassName="opening__hero-gold-image-inset--detail" nestedImage />
+        <C06Layer className="opening__hero-gold opening__hero-gold--bevel-cap" src="bevel-cap.svg" nodeId="3679:72" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--edge-cap" src="edge-light-cap.svg" nodeId="3679:73" imageClassName="opening__hero-gold-image-inset--edge" nestedImage />
+      </div>
+
+      <div className="opening__hero-part" data-node-id="3679:145">
+        <C06Layer className="opening__hero-gold opening__hero-gold--deep-shaft" src="extr-deep-cap-face.svg" nodeId="3679:78" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--mid-shaft" src="extr-mid-cap.svg" nodeId="3679:79" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--face-shaft" src="face-cap.svg" nodeId="3679:80" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--detail-shaft" src="detail-cap.svg" nodeId="3679:81" imageClassName="opening__hero-gold-image-inset--detail" nestedImage />
+        <C06Layer className="opening__hero-gold opening__hero-gold--bevel-shaft" src="bevel-cap.svg" nodeId="3679:141" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--edge-shaft" src="edge-light-cap.svg" nodeId="3679:142" imageClassName="opening__hero-gold-image-inset--edge" nestedImage />
+      </div>
+
+      <div className="opening__hero-part" data-node-id="3679:214">
+        <C06Layer className="opening__hero-gold opening__hero-gold--deep-hook" src="extr-deep-cap-face.svg" nodeId="3679:147" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--mid-hook" src="extr-mid-cap.svg" nodeId="3679:148" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--face-hook" src="face-cap.svg" nodeId="3679:149" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--detail-hook" src="detail-cap.svg" nodeId="3679:150" imageClassName="opening__hero-gold-image-inset--detail" nestedImage />
+        <C06Layer className="opening__hero-gold opening__hero-gold--bevel-hook" src="bevel-cap.svg" nodeId="3679:210" />
+        <C06Layer className="opening__hero-gold opening__hero-gold--edge-hook" src="edge-light-cap.svg" nodeId="3679:211" imageClassName="opening__hero-gold-image-inset--edge" nestedImage />
+      </div>
+
+      <span className="opening__hero-seam opening__hero-seam--upper" data-node-id="3679:215" aria-hidden="true">
+        <span className="opening__hero-seam-art">
+          <img src={`${C06_ASSET_ROOT}seam-light.svg`} alt="" draggable={false} />
+        </span>
+      </span>
+      <span className="opening__hero-seam opening__hero-seam--lower" data-node-id="3679:215" aria-hidden="true">
+        <span className="opening__hero-seam-art">
+          <img src={`${C06_ASSET_ROOT}seam-light.svg`} alt="" draggable={false} />
+        </span>
+      </span>
+      <C06Layer className="opening__hero-seam-energy opening__hero-seam-energy--upper" src="seam-energy.svg" nodeId="3679:215" imageClassName="opening__hero-seam-art" nestedImage />
+      <C06Layer className="opening__hero-seam-energy opening__hero-seam-energy--lower" src="seam-energy.svg" nodeId="3679:215" imageClassName="opening__hero-seam-art" nestedImage />
+      <span className="opening__hero-light-exits opening__hero-light-exits--upper" data-node-id="3679:233" aria-hidden="true">
+        <span className="opening__hero-light-exits-art">
+          <img src={`${C06_ASSET_ROOT}light-exits.svg`} alt="" draggable={false} />
+        </span>
+      </span>
+      <span className="opening__hero-light-exits opening__hero-light-exits--lower" data-node-id="3679:233" aria-hidden="true">
+        <span className="opening__hero-light-exits-art">
+          <img src={`${C06_ASSET_ROOT}light-exits.svg`} alt="" draggable={false} />
+        </span>
+      </span>
+      <C06Layer className="opening__hero-conduit" src="conduit.svg" nodeId="3679:242" imageClassName="opening__hero-conduit-image" nestedImage />
+      <span className="opening__hero-sheen" aria-hidden="true" />
+    </div>
+  );
+}
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
   const navigate = useNavigate();
@@ -120,27 +205,9 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
             </span>
             <div
               className="opening__mark-motion"
-              data-j-source="candidate-06-3679:247"
-              data-mark-source={portfolioIdentity.mark}
-              style={{ "--opening-mark-source": `url("${C06_SETTLED_SOURCE}")` } as CSSProperties}
+              data-j-source="candidate-06-3679:2"
             >
-              <span className="opening__j-backing" aria-hidden="true" />
-              <span className="opening__j-piece opening__j-piece--cap" data-node-id="3679:267">
-                <img src={C06_ASSEMBLY_SOURCE} alt="" draggable={false} />
-              </span>
-              <span className="opening__j-piece opening__j-piece--shaft" data-node-id="3679:285">
-                <img src={C06_ASSEMBLY_SOURCE} alt="" draggable={false} />
-              </span>
-              <span className="opening__j-piece opening__j-piece--hook" data-node-id="3679:303">
-                <img src={C06_ASSEMBLY_SOURCE} alt="" draggable={false} />
-              </span>
-              <span className="opening__seam opening__seam--upper" aria-hidden="true">
-                <img src={C06_SEAMS_SOURCE} alt="" draggable={false} />
-              </span>
-              <span className="opening__seam opening__seam--lower" aria-hidden="true">
-                <img src={C06_SEAMS_SOURCE} alt="" draggable={false} />
-              </span>
-              <span className="opening__j-material-highlight" aria-hidden="true" />
+              <C06HeroArt />
             </div>
           </div>
         </div>

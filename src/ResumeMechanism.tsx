@@ -9,7 +9,6 @@ export default function ResumeMechanism() {
         />
       </div>
       <div className="resume-mechanism__j-medallion">
-        <span className="resume-mechanism__orb-energy" aria-hidden="true" />
         <div className="resume-mechanism__j" data-node-id="2984:484">
           <img
             className="resume-mechanism__j-image"
@@ -30,6 +29,7 @@ export default function ResumeMechanism() {
         width="530"
         height="530"
       />
+      <span className="resume-mechanism__orb-energy" aria-hidden="true" />
     </div>
   );
 }

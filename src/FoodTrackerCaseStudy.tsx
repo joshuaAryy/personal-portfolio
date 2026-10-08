@@ -608,19 +608,19 @@ function FoodInsightPath() {
             <p>One QA-profile recommendation capture; not a general result or outcome.</p>
           </div>
         </section>
-        <section className="food-insight-path__capture food-insight-path__capture--configuration" aria-labelledby="food-insight-capture-configuration-title">
-          <div className="food-insight-path__capture-screen food-insight-path__capture-screen--settings">
+        <section className="food-insight-path__capture food-insight-path__capture--trend-detail" aria-labelledby="food-insight-capture-trend-title">
+          <div className="food-insight-path__capture-screen">
             <img
-              src="/media/case-studies/food-tracker/phase-24/trend-configuration.png"
-              alt="Canonical Phase 24 Configure trend screen with controls for primary metric, comparison, date range, data coverage, aggregation, visualization, target, and forecast."
+              src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-populated.png"
+              alt="Phase 24 pre-redesign QA-A staging capture of a 30-day Calories trend for Sep 8 to Oct 7. It shows a 1,013 kcal average across five recorded days and leaves historical gaps visible."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">CANONICAL PRODUCT STATE · PHASE 24 / PRE-REDESIGN · COMPLEX MODE</span>
-            <strong id="food-insight-capture-configuration-title">Trend views have explicit analysis controls.</strong>
-            <p>The canonical trend-configuration capture exposes metric, comparison, range, coverage, aggregation, visualization, target, and forecast choices before a trend is read.</p>
+            <span className="food-figure__index">SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN · QA-A STAGING CAPTURE · COMPLEX MODE</span>
+            <strong id="food-insight-capture-trend-title">Calories trend · Sep 8 to Oct 7 · five recorded days.</strong>
+            <p>1,013 kcal is the recorded average for this QA-A fixture, not a general outcome; historical gaps remain visible.</p>
           </div>
         </section>
       </div>

@@ -1,0 +1,22 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="534.416" height="279.206" viewBox="0 0 534.416 279.206" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="seam-energy">
+<g id="spill-A" opacity="0.45" filter="url(#filter3_f_0_23)">
+<path d="M7.2074 140.352L288.507 70.3516L313.207 76.4516L337.807 58.0516L527.207 10.8516" stroke-width="10" stroke="#27B6E8"/>
+</g>
+<g id="spill-B" opacity="0.45" filter="url(#filter9_f_0_23)">
+<path d="M273.207 268.352L289.807 264.252L313.207 246.752L336.507 252.652L527.207 205.152" stroke-width="10" stroke="#27B6E8"/>
+</g>
+</g>
+<defs>
+<filter id="filter3_f_0_23" x="-1.19209e-07" y="0" width="534.416" height="151.204" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_0_23"/>
+</filter>
+<filter id="filter9_f_0_23" x="266.008" y="194.3" width="268.407" height="84.9059" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="3" result="effect1_foregroundBlur_0_23"/>
+</filter>
+</defs>
+</svg>

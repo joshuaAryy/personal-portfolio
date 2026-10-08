@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="256.126" height="385.221" viewBox="0 0 256.126 385.221" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="shadow">
+<g id="J-ground-shadow" opacity="0.65" filter="url(#filter0_f_0_106)">
+<path d="M44.1257 19C88.1257 18 148.126 16.5 242.126 14C236.126 20 227.126 26 224.126 34L222.126 39C222.126 111 221.126 191 219.126 257C218.126 321 182.126 371 120.126 371C68.1257 373 18.1257 362 14.1257 315C12.1257 289 34.1257 268 70.1257 258C58.1257 271 57.1257 297 70.1257 314C85.1257 330 114.126 330 135.126 320C143.126 314 146.126 304 146.126 293C145.126 251 147.126 211 146.126 171C145.126 131 146.126 99 145.126 75C145.126 65 140.126 59 132.126 56C103.126 47 74.1257 35 48.1257 23C45.1257 21 44.1257 20 44.1257 19Z" fill="black"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_106" x="-1.68923e-08" y="0" width="256.126" height="385.221" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="7" result="effect1_foregroundBlur_0_106"/>
+</filter>
+</defs>
+</svg>

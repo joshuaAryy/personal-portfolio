@@ -39,25 +39,33 @@ describe("Cho’Veigo product story", () => {
     expect(resolveActiveChapter({ overview: -10, intake: 20 }, 30, true)).toBe("outcome");
   });
 
-  it("opens with the privacy-cropped Recommendations video and keeps its still with the evidence story", () => {
+  it("opens with the full Cho’Veigo demo and labels the short Recommendations clip as an excerpt", () => {
     const hero = chapter(renderCase(), "overview", "intake");
     const evidence = chapter(renderCase(), "evidence", "decisions");
 
     expect(hero).toContain("A better match starts with the evidence.");
-    expect(hero).toContain('src="/media/demos/choveigo-recommendations.webm"');
+    expect(hero).toContain('src="/media/demos/choveigo-full-demo-redacted.webm"');
     expect(hero).toContain('poster="/media/demos/choveigo-recommendations-poster.png"');
-    expect(hero).toContain('title="Cho’Veigo recommendations demo"');
+    expect(hero).toContain('title="Cho’Veigo full product demo, 112.638 seconds"');
+    expect(hero).toContain('aria-label="Cho’Veigo full product demo, 112.638 seconds"');
     expect(hero).toContain("controls");
-    expect(hero).toContain('aria-describedby="cho-recommendations-caption"');
-    expect(hero).toContain("PLAYABLE EXCERPT");
+    expect(hero).toContain('aria-describedby="cho-full-demo-caption"');
+    expect(hero).toContain("FULL DEMO · 112.638 SECONDS");
+    expect(hero).toContain('href="/media/demos/choveigo-recommendations.webm"');
+    expect(hero).toContain("short Recommendations excerpt · 4.94 seconds");
     expect(hero).toContain("TAILOR THE RESUME IN STUDIO");
     expect(evidence).toContain('src="/media/choveigo-recommendations.png"');
     expect(evidence).toContain("Fit and Eligibility remain distinct outputs in the real product");
   });
 
   it("surfaces deterministic Jobs evaluation and the separate Gemini Resume Studio path near the opening", () => {
-    const hero = storyText(chapter(renderCase(), "overview", "intake"));
+    const heroMarkup = chapter(renderCase(), "overview", "intake");
+    const hero = storyText(heroMarkup);
 
+    expect(heroMarkup).toContain('class="cho-story__chapter-note cho-story__stack"');
+    for (const technology of ["Python", "FastAPI API", "Streamlit MVP", "SQLite persistence", "Gemini (Resume Studio only)"]) {
+      expect(hero).toContain(technology);
+    }
     expect(hero).toContain("JOBS · DETERMINISTIC");
     expect(hero).toContain("Deterministic rules compare responsibilities with reviewed profile evidence for Fit, then check essential requirements for Eligibility.");
     expect(hero).toContain("RESUME STUDIO · GEMINI");

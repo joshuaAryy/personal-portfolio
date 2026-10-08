@@ -33,7 +33,7 @@ const demoOptions = [
 
 type DemoKey = (typeof demoOptions)[number]["key"];
 
-const choExcerptAccessibleName = "Cho’Veigo short Recommendations excerpt";
+const choFullDemoAccessibleName = "Cho’Veigo full product demo, 112.638 seconds";
 
 const crestEmbedUrl =
   "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1";
@@ -97,7 +97,7 @@ export default function DemosPage() {
           className="demo-stage"
           aria-label={
             selected === "choveigo"
-              ? choExcerptAccessibleName
+              ? choFullDemoAccessibleName
               : `${current.label} demo`
           }
         >
@@ -118,8 +118,10 @@ export default function DemosPage() {
               <video
                 ref={choVideoRef}
                 className="demo-player__video"
-                src="/media/demos/choveigo-recommendations.webm"
-                title={choExcerptAccessibleName}
+                src="/media/demos/choveigo-full-demo-redacted.webm"
+                title={choFullDemoAccessibleName}
+                aria-label={choFullDemoAccessibleName}
+                aria-describedby="cho-full-demo-caption"
                 controls
                 autoPlay
                 muted
@@ -169,7 +171,7 @@ export default function DemosPage() {
                     className="demo-player__play"
                     type="button"
                     onClick={() => setChoIsPlaying(true)}
-                    aria-label={`Play ${choExcerptAccessibleName}`}
+                    aria-label={`Play ${choFullDemoAccessibleName}`}
                   >
                     <span className="demo-player__play-icon" aria-hidden="true" />
                   </button>
@@ -181,9 +183,21 @@ export default function DemosPage() {
             {current.label}
           </h1>
           {selected === "choveigo" && (
-            <p className="demo-excerpt-note">
-              SHORT RECOMMENDATIONS EXCERPT · 4.94 SECONDS
-            </p>
+            <>
+              <p className="demo-excerpt-note" id="cho-full-demo-caption">
+                FULL PRODUCT DEMO · 112.638 SECONDS
+              </p>
+              <p className="demo-excerpt-note">
+                <a
+                  className="demo-excerpt-support"
+                  href="/media/demos/choveigo-recommendations.webm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  SHORT RECOMMENDATIONS EXCERPT · 4.94 SECONDS
+                </a>
+              </p>
+            </>
           )}
         </section>
       </div>

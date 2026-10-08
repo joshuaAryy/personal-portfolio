@@ -92,19 +92,17 @@ export default function FraymakersCase() {
             <p className="fray-case__dek" data-route-entry="summary">I built <code>thumbnail.js</code> to turn match-specific art and labels into a 1280 × 720 PNG for its associated VOD.</p>
           </div>
           <figure className="fray-case__hero-figure" data-route-entry="evidence" aria-labelledby="fraymakers-hero-caption">
-            <div className="fray-case__hero-topline"><span>THUMBNAIL.JS OUTPUT</span><span>16:9 · 1280 × 720 PNG</span></div>
-            <div className="fray-case__hero-frame" role="img" aria-label="Illustrative 16:9 thumbnail composition. It names source-art and text regions but is not a generated thumbnail or verified render order.">
-              <div className="fray-case__hero-zone fray-case__hero-zone--stage">STAGE + BACKGROUND ART</div>
+            <div className="fray-case__hero-topline"><span>ILLUSTRATIVE COMPOSITION</span><span>16:9</span></div>
+            <div className="fray-case__hero-frame" role="img" style={{ gridTemplateRows: "minmax(0, 1fr) auto" }} aria-label="Simplified conceptual 16:9 matchup over a shared art field, with player placements and one match-label cue. Other source inputs included logos and assists; this is not a generated thumbnail or fixed layout.">
               <div className="fray-case__hero-matchup">
-                <div className="fray-case__hero-zone fray-case__hero-zone--player"><strong>PLAYER 1</strong><span>CHARACTER + COSTUME</span></div>
+                <div className="fray-case__hero-zone fray-case__hero-zone--player"><strong>PLAYER 1</strong></div>
                 <span className="fray-case__hero-versus" aria-hidden="true">VS</span>
-                <div className="fray-case__hero-zone fray-case__hero-zone--player fray-case__hero-zone--p2"><strong>PLAYER 2</strong><span>CHARACTER + COSTUME</span></div>
+                <div className="fray-case__hero-zone fray-case__hero-zone--player fray-case__hero-zone--p2"><strong>PLAYER 2</strong></div>
               </div>
-              <div className="fray-case__hero-zone fray-case__hero-zone--support">LOGOS + ASSISTS + FOREGROUND ART</div>
-              <div className="fray-case__hero-zone fray-case__hero-zone--labels">PLAYER NAMES + SET LABELS</div>
+              <div className="fray-case__hero-zone fray-case__hero-zone--labels">STAGE / PLAYER ART · MATCH LABELS</div>
             </div>
             <div className="fray-case__hero-render"><code>thumbnail.js</code><span>node-canvas</span><b aria-hidden="true">→</b><strong>1280 × 720 PNG</strong></div>
-            <figcaption id="fraymakers-hero-caption">Illustrative content zones only; not a real thumbnail or fixed render order.</figcaption>
+            <figcaption id="fraymakers-hero-caption">Simplified conceptual composition; source art, logos, assists, and labels were inputs, but this is not generated artwork or a verified placement order.</figcaption>
           </figure>
           <p className="fray-case__intro-detail" data-route-entry="summary">My brother built the broader foundation, CLI, Challonge integration, and much of the early API groundwork; I joined later to build <code>thumbnail.js</code> and work on YAML/configuration, generation/integration, and part of the YouTube API path.</p>
         </header>

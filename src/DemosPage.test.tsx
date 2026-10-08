@@ -107,7 +107,7 @@ describe("Demos media browser", () => {
     expect(host.querySelector(".demo-player__play")).not.toBeNull();
   });
 
-  it("discloses the Cho’Veigo clip as a short Recommendations excerpt", () => {
+  it("plays the full Cho’Veigo demo and offers the short Recommendations excerpt as support", () => {
     const button = select("CHO’VEIGO");
 
     expect(button.getAttribute("aria-pressed")).toBe("true");
@@ -122,22 +122,26 @@ describe("Demos media browser", () => {
     );
     expect(host.querySelector(".demo-title")?.textContent).toBe("CHO’VEIGO");
     expect(host.querySelector(".demo-excerpt-note")?.textContent?.trim()).toBe(
-      "SHORT RECOMMENDATIONS EXCERPT · 4.94 SECONDS",
+      "FULL PRODUCT DEMO · 112.638 SECONDS",
     );
     expect(host.querySelector(".demo-stage")?.getAttribute("aria-label")).toBe(
-      "Cho’Veigo short Recommendations excerpt",
+      "Cho’Veigo full product demo, 112.638 seconds",
     );
+    const excerptLink = host.querySelector<HTMLAnchorElement>(".demo-excerpt-support");
+    expect(excerptLink?.getAttribute("href")).toBe("/media/demos/choveigo-recommendations.webm");
+    expect(excerptLink?.textContent?.trim()).toBe("SHORT RECOMMENDATIONS EXCERPT · 4.94 SECONDS");
     const playButton = host.querySelector<HTMLButtonElement>(".demo-player__play");
     expect(playButton?.getAttribute("aria-label")).toBe(
-      "Play Cho’Veigo short Recommendations excerpt",
+      "Play Cho’Veigo full product demo, 112.638 seconds",
     );
     expect(host.querySelector("iframe")).toBeNull();
 
     act(() => playButton?.dispatchEvent(new MouseEvent("click", { bubbles: true })));
 
     const player = host.querySelector<HTMLVideoElement>("video.demo-player__video");
-    expect(player?.getAttribute("src")).toBe("/media/demos/choveigo-recommendations.webm");
-    expect(player?.getAttribute("title")).toBe("Cho’Veigo short Recommendations excerpt");
+    expect(player?.getAttribute("src")).toBe("/media/demos/choveigo-full-demo-redacted.webm");
+    expect(player?.getAttribute("title")).toBe("Cho’Veigo full product demo, 112.638 seconds");
+    expect(player?.hasAttribute("controls")).toBe(true);
     expect(player?.hasAttribute("autoplay")).toBe(true);
     expect(player?.hasAttribute("muted")).toBe(true);
     expect(host.querySelector(".demo-player__play")).toBeNull();

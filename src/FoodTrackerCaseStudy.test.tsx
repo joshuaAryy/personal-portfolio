@@ -96,7 +96,7 @@ describe("Food Tracker product story", () => {
     expect(markup).not.toContain("Make a longer view possible");
   });
 
-  it("uses distinct canonical logging and Insights captures with accurate evidence labels", () => {
+  it("uses distinct authentic logging and Insights captures with accurate evidence labels", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
@@ -114,12 +114,16 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("not retrieval-quality evidence");
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
     expect(insights).toContain("insights-month-populated-sep08-oct07.png");
-    expect(insights).toContain("trend-configuration.png");
+    expect(insights).toContain("trend-detail-calories-populated.png");
+    expect(insights).not.toContain("trend-configuration.png");
     expect(insights).toContain("QA-A staging capture");
     expect(insights).toContain("five logged days.");
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
     expect(insights).toContain("goal-plan.png");
-    expect(insights).toContain("canonical trend-configuration capture");
+    expect(insights).toContain("1,013 kcal is the recorded average for this QA-A fixture, not a general outcome; historical gaps remain visible.");
+    expect(insights).toContain("Sep 8 to Oct 7 · five recorded days.");
+    expect(insights).toContain("historical gaps remain visible");
+    expect(insights).not.toContain("canonical trend-configuration capture");
     expect(insights).toContain("One QA-profile recommendation capture; not a general result or outcome.");
     expect(insights).toContain("Recommendations, not promises.");
     expect(markup).not.toContain("trends-overview.png");
