@@ -1,4 +1,4 @@
-﻿# Cho’Veigo full demo media record
+# Cho’Veigo full demo media record
 
 - **Purpose:** Full authentic in-page demo on the Demos screen and Cho’Veigo case-study hero.
 - **Private source:** Owner-provided `viego_demo_final_with_music.mp4`; SHA-256 `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801`; 112.638333 seconds, 1920×1080, with audio. The original remains outside the repository.
@@ -18,6 +18,6 @@ The mask labels identify obscured document areas without replacing the underlyin
 
 ## Playback verification
 
-A prior local installed-Chrome check on the earlier derivative confirmed full-duration play, pause, and seek through 112.65s. The current derivative was decoded end-to-end and visually inspected at 22, 23, 26, 30, 32, 33, 63, 64, 72, 82, 88, 94, 96, 97, and 112.4 seconds. Final local and deployed-Preview playback checks of this exact file remain part of the integration check.
+A prior local installed-Chrome check on the earlier derivative confirmed full-duration play, pause, and seek through 112.65s. The current derivative was decoded end-to-end and visually inspected at 22, 23, 26, 30, 32, 33, 63, 64, 72, 82, 88, 94, 96, 97, and 112.4 seconds. The final local and deployed-Preview checks passed for this exact derivative: Chrome loaded its 112.65-second metadata, played, paused, and sought successfully to 23 seconds and 111 seconds. The deployed server supports byte-range responses, and the deployed asset hash matches the local derivative. This verifies playback, not final owner release/privacy approval.
 
 The 4.94-second Recommendations clip remains intact as optional supporting evidence; it is not presented as the complete demo.
