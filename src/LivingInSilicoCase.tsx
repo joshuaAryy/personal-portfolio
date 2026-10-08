@@ -31,6 +31,10 @@ export default function LivingInSilicoCase() {
             <div><dt>PERIOD</dt><dd>March–June 2025</dd></div>
             <div><dt>SUPERVISOR</dt><dd>Sohail Mahmood</dd></div>
           </dl>
+          <div className="living-hero-methods">
+            <p className="living-eyebrow">METHODS</p>
+            <p className="living-hero-methods__copy">DeepMol/RNN sequence work · RDKit/Fragmenstein fragment work · REINVENT4 research/attempt</p>
+          </div>
         </aside>
         <section className="living-remit" data-route-entry="evidence" aria-labelledby="living-remit-title">
           <p className="living-eyebrow" id="living-remit-title">MY WORK IN THE INTERNSHIP</p>

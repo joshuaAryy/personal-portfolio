@@ -110,6 +110,25 @@
   line-height: 1.62;
 }
 
+.food-rewrite__stack {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 5px 12px;
+  margin: 15px 0 0;
+  padding-top: 11px;
+  border-top: 1px solid var(--food-line);
+  color: var(--food-muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.food-rewrite__stack strong {
+  color: var(--food-teal);
+  font-size: 9px;
+  letter-spacing: .14em;
+}
+
 .food-rewrite__promise {
   min-width: 0;
   padding: 24px 26px 20px;

@@ -94,8 +94,8 @@ describe("primary App route mapping", () => {
     expect(page).toContain("IN PROGRESS");
     expect(page).not.toContain("OWNER-REPORTED · EVIDENCE PENDING");
     expect(page).not.toContain("SOURCE VERIFIED · LAB 6 PART 2");
-    expect(page).toContain("A Java/Swing desktop bookstore with owner and customer paths.");
-    expect(page).toContain("A four-stage CMOS amplifier study using KiCad and SPICE.");
+    expect(page).toContain("A desktop bookstore with distinct owner and customer workflows.");
+    expect(page).toContain("A four-stage MOSFET amplifier design study.");
     expect(page).toContain("CURRENT · IN PROGRESS");
     expect(page).not.toContain("Capability focus:");
     expect(page).not.toContain("No source or authentic interface was reviewed");
@@ -103,50 +103,31 @@ describe("primary App route mapping", () => {
     expect(page).toContain('class="top-nav top-nav--education-projects"');
     expect(page).toContain('aria-current="page"');
     expect(page).toContain('class="header-help"');
-    expect(page).toContain("Four engineering domains");
+    expect(page).not.toContain("Four engineering domains");
+    expect(page).not.toContain('class="education-projects__overview"');
+    expect(page).not.toContain('class="education-projects__alu-map"');
+    expect(page).toContain("QUARTUS / VHDL");
     expect(page).toContain("Selected work");
-    expect(page.indexOf("Four engineering domains")).toBeLessThan(page.indexOf("Selected work"));
     expect(page).toContain("Software Specialization");
     expect(page).toContain("Expected 2028");
   });
 
-  it("uses one source-traced ALU figure and text-led briefs for the other projects", () => {
+  it("keeps the ALU as a concise capability brief without source-map minutiae", () => {
     const page = renderRoute("/education/projects");
-    expect(page.match(/class="education-projects__alu-map"/g)).toHaveLength(1);
-    expect(page).toContain("DIGITAL SYSTEMS · DATA + CONTROL");
-    expect(page).toContain("Operation selection and result display.");
-    expect(page).not.toContain("LAB 6 · PART 2");
-    expect(page).toContain("Two 8-bit inputs");
-    expect(page).toContain("Input latches");
-    expect(page).toContain("Nine-state FSM");
-    expect(page).toContain("State decoder");
-    expect(page).toContain("OP[15..0]");
-    expect(page).toContain("R1 / R2 · two 4-bit outputs");
-    expect(page).toContain("Seven-segment inputs");
-    expect(page).not.toContain("Engineering concept flow");
-    expect(page).not.toContain("education-projects__takeaway");
-    expect(page).not.toContain("education-projects__tags");
-    expect(page).toContain("ORACLE SQL");
-    expect(page).toContain("integrity constraints");
-    expect(page).toContain("SQL queries across connected records");
-    expect(page).toContain("Broader clinic workflows are planned as the course project continues.");
-    expect(page).toContain("Java / Swing");
-    expect(page).toContain("State-pattern loyalty behavior");
-    expect(page).toContain("shared Singleton state");
-    expect(page).toContain("local file persistence");
-    expect(page).toContain("gain, bias/current, buffering, load, and output headroom");
-    expect(page).not.toContain("The selected BDF pin is named Resetn");
-    expect(page).not.toContain("Waveform files show setup");
-    expect(page).not.toContain("no hardware demonstration is claimed");
-    expect(page).not.toMatch(/source-follower|3\.3 V|measured gain|fabricated hardware/i);
+    expect(page).toContain("8-bit ALU + FSM");
+    expect(page).toContain("QUARTUS / VHDL");
+    expect(page).toContain("finite-state control");
+    expect(page).toContain("Waveform simulation in Quartus");
+    expect(page).not.toContain("OP[15..0]");
+    expect(page).not.toContain("Nine-state FSM");
+    expect(page).not.toContain("Input latches");
   });
-
   it("keeps owner context natural and excludes unsupported project claims", () => {
     const page = renderRoute("/education/projects");
     expect(page).toContain("CURRENT · IN PROGRESS");
     expect(page).toContain("Broader clinic workflows are planned as the course project continues.");
-    expect(page).toContain("A Java/Swing desktop bookstore with owner and customer paths.");
-    expect(page).toContain("A four-stage CMOS amplifier study using KiCad and SPICE.");
+    expect(page).toContain("A desktop bookstore with distinct owner and customer workflows.");
+    expect(page).toContain("A four-stage MOSFET amplifier design study.");
     expect(page).not.toContain("OWNER-REPORTED · EVIDENCE PENDING");
     expect(page).not.toContain("SOURCE VERIFIED · LAB 6 PART 2");
     expect(page).not.toContain("No source or authentic interface was reviewed");

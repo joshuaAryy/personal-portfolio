@@ -176,6 +176,7 @@
 
 .resume-found__title {
   position: relative;
+  top: calc(-8.45vh);
   z-index: 1;
   margin: 0;
   color: #fff;
@@ -253,8 +254,8 @@
 .resume-found__action {
   z-index: 3;
   position: relative;
+  top: calc(-10.2vh);
   left: auto;
-  top: auto;
   width: min(320px, calc(100vw - 64px));
   aspect-ratio: 212 / 70;
   height: auto;
@@ -322,6 +323,7 @@
 
 .resume-found__close {
   position: relative;
+  top: calc(-10.72vh);
   z-index: 4;
   margin-top: 0;
   min-width: 104px;

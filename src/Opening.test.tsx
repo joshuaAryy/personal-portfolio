@@ -59,51 +59,59 @@ describe("opening route choreography", () => {
     expect(openingMark).not.toContain('fill="#02050A"');
   });
 
-  it("seats only the cap and hook with bounded motion before each seam ignites", () => {
+  it("seats contained cap and hook overlays over a complete C06 backing", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");
+    const backingRule = css.match(/\.opening__j-backing\s*\{([^}]*)\}/)?.[1] ?? "";
     const capRule = css.match(/\.opening__j-piece--cap\s*\{([^}]*)\}/)?.[1] ?? "";
     const shaftRule = css.match(/\.opening__j-piece--shaft\s*\{([^}]*)\}/)?.[1] ?? "";
-    const hookRule = css.match(/\.opening__j-piece--hook\s*\{([^}]*)\}/)?.[1] ?? "";
+    const capImageRule = css.match(/\.opening__j-piece--cap img\s*\{([^}]*)\}/)?.[1] ?? "";
+    const hookImageRule = css.match(/\.opening__j-piece--hook img\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(markup).not.toContain('class="opening__j-echo"');
+    expect(markup).toContain('class="opening__j-backing"');
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-cap.svg"');
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-shaft.svg"');
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-hook.svg"');
+    expect(backingRule).toMatch(/background-image:\s*var\(--opening-mark-source\)/);
+    expect(backingRule).toMatch(/opacity:\s*1;[\s\S]*animation:\s*none/);
     expect(markup).toContain('class="opening__seam opening__seam--upper"');
     expect(markup).toContain('class="opening__seam opening__seam--lower"');
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-seams.svg"');
-    expect(capRule).toMatch(/animation:\s*opening-c06-seat\s+440ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+120ms\s+both/);
-    expect(capRule).toMatch(/--forge-start-y:\s*-1\.1%/);
+    expect(capRule).toMatch(/mask-image:\s*url\("\/media\/opening\/j-candidate-06-opening-cap\.svg"\)/);
+    expect(css).toContain('mask-image: url("/media/opening/j-candidate-06-opening-hook.svg")');
+    expect(capImageRule).toMatch(/animation:\s*opening-c06-seat\s+440ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+160ms\s+both/);
+    expect(capImageRule).toMatch(/--forge-start-y:\s*-\.45%/);
     expect(shaftRule).toMatch(/animation:\s*none/);
     expect(shaftRule).toMatch(/transform:\s*none/);
     expect(shaftRule).toMatch(/opacity:\s*1/);
-    expect(hookRule).toMatch(/animation:\s*opening-c06-seat\s+500ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+280ms\s+both/);
-    expect(hookRule).toMatch(/--forge-start-y:\s*1\.1%/);
+    expect(hookImageRule).toMatch(/animation:\s*opening-c06-seat\s+520ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+300ms\s+both/);
+    expect(hookImageRule).toMatch(/--forge-start-y:\s*\.45%/);
     expect(css).toMatch(/@keyframes opening-c06-seat\s*\{[\s\S]*?from\s*\{\s*transform:\s*translateY\(var\(--forge-start-y\)\);\s*\}\s*to\s*\{\s*transform:\s*translateY\(0\);\s*\}/);
-    expect(css).toMatch(/\.opening__seam--upper\s*\{[^}]*opening-seam-ignite\s+240ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+560ms\s+both/s);
-    expect(css).toMatch(/\.opening__seam--lower\s*\{[^}]*opening-seam-ignite\s+240ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+780ms\s+both/s);
-    expect(css).toMatch(/@keyframes opening-seam-ignite\s*\{[\s\S]*?100%\s*\{\s*opacity:\s*\.72\s*;\s*\}/);
+    expect(css).toMatch(/\.opening__seam--upper\s*\{[^}]*opening-seam-ignite\s+180ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+600ms\s+both/s);
+    expect(css).toMatch(/\.opening__seam--lower\s*\{[^}]*opening-seam-ignite\s+180ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+820ms\s+both/s);
+    expect(css).toMatch(/@keyframes opening-seam-ignite\s*\{\s*from\s*\{\s*opacity:\s*0\s*;\s*\}\s*to\s*\{\s*opacity:\s*\.72\s*;\s*\}/);
     expect(css).toMatch(/@keyframes opening-radial-arrive\s*\{[\s\S]*?69\.7%,\s*100%\s*\{[^}]*opacity:\s*\.2;\s*transform:\s*rotate\(0deg\) scale\(1\)/);
   });
 
-  it("slows the radial dial independently and holds the settled C06 before handoff", () => {
+  it("keeps the C06 settled through a short hold and a unified three-second handoff", () => {
     const css = readFileSync("src/opening.css", "utf8");
     const source = readFileSync("src/Opening.tsx", "utf8");
 
-    expect(source).toContain("const OPENING_DURATION_MS = 3_800;");
-    expect(css).toMatch(/\.opening__treatment\s*\{[^}]*animation:\s*opening-scene-exit\s+3\.8s/s);
-    expect(css).toMatch(/\.opening__orbit-turn\s*\{[^}]*animation:\s*opening-tick-arrive\s+3\.8s\s+ease-out\s+both/s);
-    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+4\.8s\s+linear\s+both/s);
-    expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(360deg\)/);
-    expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+3\.8s/s);
+    expect(source).toContain("const OPENING_DURATION_MS = 3_000;");
+    expect(css).toMatch(/\.opening\s*\{[^}]*transition:\s*opacity 160ms ease/s);
+    expect(css).toMatch(/\.opening-route--leaving \.opening\s*\{[^}]*opacity:\s*0/s);
+    expect(css).toMatch(/\.opening__underlay\s*\{[^}]*transition:\s*filter 160ms ease/s);
+    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin 2\.84s cubic-bezier\(\.25,\s*\.1,\s*\.25,\s*1\) 1 both/s);
+    expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(18deg\)/);
+    expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+2\.84s/s);
     expect(css).toMatch(/repeating-conic-gradient\([\s\S]*transparent\s+0deg\s+3\.42deg,[\s\S]*rgb\(170\s+193\s+206\s*\/\s*16%\)[\s\S]*transparent\s+3\.72deg\s+4deg/s);
-    expect(css).toMatch(/\.opening__j-piece--cap\s*\{[^}]*--forge-start-y:\s*-1\.1%/s);
-    expect(css).toMatch(/\.opening__j-piece--hook\s*\{[^}]*--forge-start-y:\s*1\.1%/s);
-    expect(css).toMatch(/\.opening__j-material-highlight\s*\{[^}]*opening-material-highlight\s+550ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+1250ms\s+both/s);
-    expect(css).toMatch(/@keyframes opening-material-highlight\s*\{[\s\S]*?40%\s*\{\s*opacity:\s*\.2/s);
+    expect(css).toMatch(/\.opening__j-material-highlight\s*\{[^}]*opening-material-highlight\s+420ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+1120ms\s+both/s);
+    expect(css).toMatch(/@keyframes opening-material-highlight\s*\{[\s\S]*?100%\s*\{\s*opacity:\s*0\s*;/);
+    expect(css).not.toMatch(/\.opening__treatment\s*\{[^}]*animation:/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-backing\s*\{[^}]*animation:\s*none/s);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
-    expect(css).toMatch(/\.opening--reduced\s+\.opening__j-piece,[\s\S]*?\.opening--reduced\s+\.opening__j-material-highlight\s*\{\s*animation:\s*none/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-piece img,[\s\S]*?\.opening--reduced \.opening__j-material-highlight\s*\{\s*animation:\s*none/s);
     expect(css).not.toMatch(/opening__loading|opening__progress/);
   });
 
@@ -118,15 +126,18 @@ describe("opening route choreography", () => {
       .replace(/<g id="background">[\s\S]*?<\/g>/, "");
 
     expect(markup).toContain('class="opening__j-material-highlight"');
-    expect(markup).toContain('/media/opening/j-candidate-06-opening-unlit.svg');
+    expect(markup).toContain('/media/opening/j-candidate-06-m54-opening.svg');
+    expect(markup).not.toContain('/media/opening/j-candidate-06-opening-unlit.svg');
     expect(markup).toContain('/media/opening/j-candidate-06-opening-seams.svg');
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-cap.svg"');
     expect(source).toContain("portfolioIdentity.mark");
+    expect(source).toContain('const C06_SETTLED_SOURCE = "/media/opening/j-candidate-06-m54-opening.svg";');
     expect(source).not.toContain("j-candidate-06-settled.svg");
     expect(settled.replace(/\r\n/g, "\n")).toBe(transparentIdentity.replace(/\r\n/g, "\n"));
     expect(formation).toContain('id="seam-light"');
     expect(settled).toContain('id="seam-light"');
     expect(readFileSync("src/opening.css", "utf8")).toMatch(/mask-image:\s*var\(--opening-mark-source\)/);
+    expect(readFileSync("src/opening.css", "utf8")).toMatch(/\.opening__j-backing\s*\{[^}]*opacity:\s*1;[^}]*animation:\s*none;/s);
   });
 
   it("renders a resolved C06 mark with motion disabled for reduced motion", () => {

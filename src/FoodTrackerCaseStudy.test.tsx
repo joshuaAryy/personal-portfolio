@@ -31,6 +31,14 @@ function storyText(markup: string) {
 }
 
 describe("Food Tracker product story", () => {
+  it("shows the verified product stack beside the opening story", () => {
+    const markup = renderFoodTracker();
+    const hero = section(markup, "food-overview", "food-logging");
+
+    expect(hero).toContain('class="food-rewrite__stack"');
+    expect(hero).toContain("React Native/Expo · Express/TypeScript · Prisma/PostgreSQL");
+  });
+
   it("moves from the product promise through logging, data, insights, retrieval, and release", () => {
     const markup = renderFoodTracker();
     const sections = [

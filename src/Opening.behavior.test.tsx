@@ -111,10 +111,10 @@ describe("opening route behavior", () => {
     expect(host.querySelector('[aria-label="Current route"]')?.textContent).toBe("/home");
   });
 
-  it("starts the normal handoff at 3.8 seconds and focuses Home / Explore", () => {
+  it("starts the normal handoff at 2.84 seconds and focuses Home / Explore at three seconds", () => {
     renderOpeningRoute();
 
-    act(() => vi.advanceTimersByTime(3639));
+    act(() => vi.advanceTimersByTime(2839));
     expect(host.querySelector(".opening--leaving")).toBeNull();
     expect(host.querySelector(".opening__underlay #main")).not.toBeNull();
     expect(host.querySelector(".opening__underlay")?.getAttribute("aria-hidden")).toBe("true");

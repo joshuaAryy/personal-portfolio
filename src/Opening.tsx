@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { portfolioIdentity } from "./data";
 import "./opening.css";
 
-const OPENING_DURATION_MS = 3_800;
+const OPENING_DURATION_MS = 3_000;
 const REDUCED_HANDOFF_MS = 120;
 const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
-const C06_UNLIT_SOURCE = "/media/opening/j-candidate-06-opening-unlit.svg";
+const C06_SETTLED_SOURCE = "/media/opening/j-candidate-06-m54-opening.svg";
 const C06_SEAMS_SOURCE = "/media/opening/j-candidate-06-opening-seams.svg";
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
@@ -121,8 +121,9 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
               className="opening__mark-motion"
               data-j-source="candidate-06-3679:247"
               data-mark-source={portfolioIdentity.mark}
-              style={{ "--opening-mark-source": `url("${C06_UNLIT_SOURCE}")` } as CSSProperties}
+              style={{ "--opening-mark-source": `url("${C06_SETTLED_SOURCE}")` } as CSSProperties}
             >
+              <span className="opening__j-backing" aria-hidden="true" />
               <span className="opening__j-piece opening__j-piece--cap" data-node-id="3679:267">
                 <img src="/media/opening/j-candidate-06-opening-cap.svg" alt="" draggable={false} />
               </span>

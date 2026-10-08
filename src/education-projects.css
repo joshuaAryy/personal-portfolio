@@ -1,4 +1,4 @@
-﻿.education-projects.education-projects--capability-briefs {
+.education-projects.education-projects--capability-briefs {
   width: min(100%, 1160px);
   margin: 0 auto;
   color: #e9e5dc;
@@ -21,7 +21,7 @@
 }
 
 .education-projects--capability-briefs .education-projects__heading {
-  margin: clamp(28px, 3vw, 42px) 0 28px;
+  margin: clamp(28px, 3vw, 42px) 0 34px;
 }
 
 .education-projects__eyebrow,
@@ -55,13 +55,11 @@
   font-size: 12px;
 }
 
-.education-projects__overview {
-  padding: 15px 0 18px;
-  border-top: 1px solid #b9a46d4a;
-  border-bottom: 1px solid #b9a46d4a;
+.education-projects--capability-briefs .education-projects__list {
+  display: block;
+  padding: 0 0 44px;
 }
 
-.education-projects__overview h2,
 .education-projects__section-title {
   margin: 0 0 12px;
   color: #e5dfd2;
@@ -71,76 +69,30 @@
   text-transform: uppercase;
 }
 
-.education-projects__overview ul {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.education-projects__overview li {
-  display: grid;
-  gap: 4px;
-  min-width: 0;
-}
-
-.education-projects__overview li span {
-  color: #8ea9ad;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
-.education-projects__overview li strong {
-  color: #e9e5dc;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.35;
-}
-
-.education-projects--capability-briefs .education-projects__list {
-  display: block;
-  padding: 27px 0 44px;
-}
-
-.education-projects__section-title {
-  margin-bottom: 0;
-}
-
 .education-projects__briefs {
-  margin-top: 12px;
   border-top: 1px solid #7890994a;
 }
 
 .education-projects__brief {
   display: grid;
-  grid-template-columns: minmax(230px, 0.7fr) minmax(0, 1.3fr);
+  grid-template-columns: minmax(220px, 0.65fr) minmax(0, 1.35fr);
+  align-items: start;
   gap: clamp(24px, 4vw, 54px);
-  padding: 23px 0 26px;
+  padding: 22px 0 24px;
   border-bottom: 1px solid #7890994a;
 }
 
 .education-projects__brief-heading h3 {
-  margin: 8px 0 10px;
+  margin: 8px 0 0;
   color: #f0e8da;
-  font-size: clamp(22px, 2vw, 25px);
+  font-size: clamp(21px, 2vw, 25px);
   font-weight: 550;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
 
-.education-projects__status-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px 12px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.education-projects__status-list li {
+.education-projects__status {
+  margin: 9px 0 0;
   color: #e1c97f;
   font-size: 10px;
   font-weight: 700;
@@ -153,7 +105,7 @@
 }
 
 .education-projects__summary {
-  margin: 0 0 8px;
+  margin: 0 0 7px;
   color: #e5e5d9;
   font-size: 16px;
   font-weight: 550;
@@ -168,238 +120,21 @@
 }
 
 .education-projects__boundary {
-  margin: 10px 0 0;
-  padding-left: 12px;
-  border-left: 2px solid #b99d56;
+  margin: 9px 0 0;
   color: #9eacb2;
   font-size: 12px;
   line-height: 1.5;
 }
 
-.education-projects__brief--alu {
-  grid-template-areas:
-    "heading summary"
-    "heading focus"
-    "map map"
-    "boundary boundary";
-  align-items: start;
-}
-
-.education-projects__brief--alu .education-projects__brief-heading {
-  grid-area: heading;
-}
-
-.education-projects__brief--alu .education-projects__brief-copy {
-  display: contents;
-}
-
-.education-projects__brief--alu .education-projects__summary {
-  grid-area: summary;
-  max-width: 760px;
-}
-
-.education-projects__brief--alu .education-projects__focus {
-  grid-area: focus;
-  max-width: 760px;
-}
-
-.education-projects__alu-map {
-  grid-area: map;
-  margin: 20px 0 0;
-  padding: 20px;
-  border: 1px solid #78909957;
-  background:
-    linear-gradient(120deg, #0c2028 0%, #0a171f 100%);
-}
-
-.education-projects__figure-heading {
-  display: flex;
-  align-items: end;
-  justify-content: space-between;
-  gap: 24px;
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #7890994a;
-}
-
-.education-projects__figure-heading h4 {
-  margin: 5px 0 0;
-  color: #f0e8da;
-  font-size: 20px;
-  font-weight: 550;
-  line-height: 1.25;
-}
-
-.education-projects__figure-heading > p {
-  max-width: 260px;
-  margin: 0;
-  color: #9eacb2;
-  font-size: 12px;
-  line-height: 1.45;
-}
-
-.education-projects__figure-label {
-  margin: 0;
-  color: #8ea9ad;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-}
-
-.education-projects__map-lanes {
-  display: grid;
-  gap: 16px;
-}
-
-.education-projects__map-lane {
-  display: grid;
-  grid-template-columns: 110px minmax(0, 1fr);
-  align-items: stretch;
-  gap: 14px;
-}
-
-.education-projects__map-lane h5 {
-  margin: 0;
-  padding-top: 11px;
-  color: #c7b782;
-  font-size: 10px;
-  font-weight: 700;
-  letter-spacing: 0.11em;
-}
-
-.education-projects__map-flow {
-  display: flex;
-  align-items: stretch;
-  gap: 22px;
-  min-width: 0;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.education-projects__map-flow li {
-  position: relative;
-  display: grid;
-  flex: 1 1 0;
-  align-content: center;
-  gap: 5px;
-  min-width: 0;
-  min-height: 76px;
-  padding: 11px 13px;
-  border-left: 2px solid #4f8585;
-  background: #10242b;
-}
-
-.education-projects__map-flow li + li::before {
-  position: absolute;
-  top: 50%;
-  left: -19px;
-  color: #d5bf7d;
-  content: "→";
-  font-size: 16px;
-  transform: translateY(-50%);
-}
-
-.education-projects__map-flow li > span {
-  color: #91b0b5;
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-}
-
-.education-projects__map-flow li > strong {
-  color: #eee7d8;
-  font-size: 13px;
-  font-weight: 650;
-  line-height: 1.3;
-  overflow-wrap: anywhere;
-}
-
-.education-projects__map-flow li > small {
-  color: #a9b5ba;
-  font-size: 11px;
-  line-height: 1.3;
-}
-
-.education-projects__map-core {
-  border-left-color: #d5bf7d !important;
-  background: #29271f !important;
-}
-
-.education-projects__map-feed {
-  flex: 1.25 1 0 !important;
-  border-left-color: #ad9558 !important;
-}
-
-.education-projects__alu-map figcaption {
-  margin-top: 16px;
-  padding-top: 13px;
-  border-top: 1px solid #7890994a;
-  color: #9eacb2;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.education-projects__brief--alu .education-projects__boundary {
-  grid-area: boundary;
-  margin-top: 16px;
-}
-
-@media (max-width: 1000px) {
-  .education-projects__brief {
-    grid-template-columns: minmax(190px, 0.6fr) minmax(0, 1.4fr);
-    gap: 28px;
-  }
-
-  .education-projects__map-lane {
-    grid-template-columns: minmax(78px, 0.25fr) minmax(0, 1fr);
-    gap: 10px;
-  }
-
-  .education-projects__map-flow {
-    gap: 16px;
-  }
-
-  .education-projects__map-flow li {
-    padding: 10px;
-  }
-}
-
-@media (max-width: 680px) {
+@media (max-width: 760px) {
   .education-projects--capability-briefs .education-projects__heading {
-    margin: 24px 0 23px;
-  }
-
-  .education-projects__overview {
-    padding: 13px 0 15px;
-  }
-
-  .education-projects__overview ul {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 11px 15px;
-  }
-
-  .education-projects__list {
-    padding: 24px 0 36px;
+    margin: 24px 0 28px;
   }
 
   .education-projects__brief {
     grid-template-columns: minmax(0, 1fr);
-    gap: 11px;
-    padding: 21px 0 23px;
-  }
-
-  .education-projects__brief--alu {
-    grid-template-areas:
-      "heading"
-      "summary"
-      "focus"
-      "map"
-      "boundary";
-  }
-
-  .education-projects__brief-heading h3 {
-    font-size: 23px;
+    gap: 9px;
+    padding: 19px 0 21px;
   }
 
   .education-projects__summary {
@@ -407,52 +142,6 @@
   }
 
   .education-projects__focus {
-    font-size: 14px;
-  }
-
-  .education-projects__boundary {
-    font-size: 12px;
-  }
-
-  .education-projects__alu-map {
-    margin-top: 16px;
-    padding: 15px 12px;
-  }
-
-  .education-projects__figure-heading {
-    display: grid;
-    gap: 8px;
-    margin-bottom: 14px;
-  }
-
-  .education-projects__figure-heading h4 {
-    font-size: 18px;
-  }
-
-  .education-projects__map-lane {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 7px;
-  }
-
-  .education-projects__map-lane h5 {
-    padding-top: 0;
-  }
-
-  .education-projects__map-flow {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 16px;
-  }
-
-  .education-projects__map-flow li {
-    min-height: 58px;
-    padding: 11px 12px;
-  }
-
-  .education-projects__map-flow li + li::before {
-    top: -13px;
-    left: 14px;
-    content: "↓";
     font-size: 14px;
   }
 }

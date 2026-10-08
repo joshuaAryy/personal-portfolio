@@ -13,6 +13,14 @@ function renderLivingRoute() {
 }
 
 describe("Living in Silico research story", () => {
+  it("shows the three researched method routes beside the opening metadata", () => {
+    const markup = renderLivingRoute();
+    const metadata = markup.match(/<aside class="living-hero__meta"[\s\S]*?<\/aside>/)?.[0] ?? "";
+
+    expect(metadata).toContain('class="living-hero-methods"');
+    expect(metadata).toContain("DeepMol/RNN sequence work · RDKit/Fragmenstein fragment work · REINVENT4 research/attempt");
+  });
+
   it("makes preparation scope and representation choices legible without implying one data funnel", () => {
     const markup = renderLivingRoute();
     const data = markup.match(/<section class="living-data"[\s\S]*?<\/section>/)?.[0] ?? "";

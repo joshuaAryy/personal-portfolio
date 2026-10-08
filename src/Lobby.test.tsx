@@ -48,13 +48,13 @@ afterEach(() => {
 });
 
 describe("Projects lobby", () => {
-  it("uses the authentic forest scene with a lower crop under the top-origin fade", () => {
+  it("anchors the authentic forest scene at the top under the downward fade", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(environmentRule).toMatch(/linear-gradient\(180deg,[^;]*rgba\(1, 8, 13, 0\.28\)[^;]*rgba\(1, 8, 13, 0\.1\)/s);
-    expect(environmentRule).toContain("background-position: center top, center 60%");
+    expect(environmentRule).toContain("background-position: center top, center top");
     expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 38%/);
     expect(environmentRule).not.toContain("party-background.png");
   });
@@ -71,7 +71,11 @@ describe("Projects lobby", () => {
     const mobileCategoryBanners = mobileRules.match(
       /\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{[^}]*left:\s*0[^}]*right:\s*0[^}]*width:\s*100%[^}]*transform:\s*none[^}]*\}/s,
     )?.[0] ?? "";
+    const mobileFlowRule = mobileRules.match(
+      /\.league-lobby__heading,\s*\.league-lobby__banners,[\s\S]*?\.league-lobby__hint\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
 
+    expect(categoryBanners).toMatch(/top:\s*2px/);
     expect(categoryBanners).toMatch(/left:\s*50%/);
     expect(categoryBanners).toMatch(/width:\s*min\(68%,\s*680px\)/);
     expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
@@ -81,6 +85,9 @@ describe("Projects lobby", () => {
     expect(mobileCategoryBanners).toMatch(/right:\s*0/);
     expect(mobileCategoryBanners).toMatch(/width:\s*100%/);
     expect(mobileCategoryBanners).toMatch(/transform:\s*none/);
+    expect(mobileCategoryBanners).toMatch(/top:\s*auto/);
+    expect(mobileFlowRule).toMatch(/position:\s*relative/);
+    expect(mobileFlowRule).toMatch(/inset:\s*auto/);
   });
 
   it("uses real project marks and keeps selection separate from opening a story", () => {

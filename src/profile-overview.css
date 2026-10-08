@@ -1620,7 +1620,7 @@
   }
 
   .profile-signal-grid {
-    top: calc(848px - 20vw);
+    top: calc(848px - 20vw + 16px);
   }
 }
 

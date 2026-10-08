@@ -126,6 +126,18 @@ describe("approved resume flow", () => {
     expect(stackRule).toMatch(/gap:\s*8px/);
   });
 
+  it("seats the Resume Found title and actions in the lower ring slots", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const titleRule = css.match(/\.resume-found__title\s*\{([^}]*)\}/)?.[1] ?? "";
+    const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
+    const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(titleRule).toContain("top: calc(-8.45vh)");
+    expect(actionRule).toContain("top: calc(-10.2vh)");
+    expect(actionRule).not.toContain("top: auto");
+    expect(closeRule).toContain("top: calc(-10.72vh)");
+  });
+
   it("uses only the approved v13 PDF for display, download, and fullscreen", () => {
     const markup = renderRoute("/resume/viewer");
 

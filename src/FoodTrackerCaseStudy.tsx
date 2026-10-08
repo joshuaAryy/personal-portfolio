@@ -857,6 +857,10 @@ export default function FoodTrackerCaseStudy() {
             <p className="food-rewrite__ownership" data-route-entry="summary">
               I owned product direction, architecture, workflows, evaluation, and acceptance. I also coded and debugged parts of the product; Codex and AI agents implemented substantial product slices under my direction and review.
             </p>
+            <p className="food-rewrite__stack">
+              <strong>STACK</strong>
+              <span>React Native/Expo · Express/TypeScript · Prisma/PostgreSQL</span>
+            </p>
           </div>
           <aside className="food-rewrite__promise" data-route-entry="evidence" aria-label="The Food Tracker product path">
             <p className="food-figure__index">THE PRODUCT PATH</p>
