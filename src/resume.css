@@ -216,7 +216,7 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 81%;
+  top: 84.1%;
   left: 50%;
   display: flex;
   width: 240px;
@@ -300,7 +300,7 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 86%;
+  top: 88.9%;
   left: 50%;
   width: min(212px, 40cqw);
   aspect-ratio: 212 / 70;
@@ -369,7 +369,7 @@
 
 .resume-found__close {
   position: absolute;
-  top: 105.5%;
+  top: 109.4%;
   left: 50%;
   z-index: 4;
   width: 112px;

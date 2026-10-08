@@ -145,9 +145,6 @@ function SourceException() {
       <div className="stush-source-exception__intro">
         <p className="stush-kicker">A BOUNDED EXCEPTION</p>
         <h2 id="stush-source-exception-title">One layout exception rejoined the shared path.</h2>
-        <p>
-          A temporary position-and-cell reader mapped one irregular workbook into the shared schema. Common normalization then continued.
-        </p>
       </div>
 
       <figure className="stush-source-exception__route" aria-label="A source-specific position-and-cell path returns to shared normalization">
@@ -207,9 +204,6 @@ export default function StushPattiesCase() {
           <h2 id="stush-brief-title">Different layouts made month-to-month reporting difficult.</h2>
         </div>
         <div className="stush-brief__body">
-          <p>
-            Stakeholders needed consistent monthly reporting across source formats.
-          </p>
           <div className="stush-brief__translation" role="group" aria-label="Stakeholder need translated into reporting rules">
             <div className="stush-brief__need">
               <span>STAKEHOLDER NEED</span>
