@@ -36,4 +36,3 @@ This is a scoped smoke check, not a complete visual acceptance review of every r
 - Food Tracker has no authentic demo video yet.
 - Live screen-reader interaction remains a manual follow-up.
 - Owner review of this immutable Preview is pending.
-
