@@ -79,10 +79,11 @@ describe("Projects lobby", () => {
     )?.[1] ?? "";
 
     expect(categoryBanners).toMatch(/top:\s*2px/);
-    expect(categoryBanners).toMatch(/left:\s*50%/);
-    expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
+    expect(categoryBanners).toMatch(/left:\s*calc\(50% - 1\.0416667vw\)/);
+    expect(categoryBanners).toMatch(/width:\s*min\(42\.1875vw,\s*810px\)/);
     expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
     expect(categoryEnvironment).toMatch(/mask-image:\s*none/);
+    expect(categoryEnvironment).toMatch(/background-image:\s*linear-gradient\(rgba\(0,\s*5,\s*7,\s*0\.34\),\s*rgba\(0,\s*5,\s*7,\s*0\.34\)\),\s*url\("\/media\/lobby\/party-background-original\.jpg"\)/s);
     expect(view.querySelector(".league-lobby__banner-fade")).not.toBeNull();
     expect(view.innerHTML.indexOf("league-lobby__banner-fade")).toBeGreaterThan(view.innerHTML.indexOf("league-lobby__banners"));
     expect(bannerFade).toMatch(/position:\s*absolute/);
@@ -90,6 +91,10 @@ describe("Projects lobby", () => {
     expect(bannerGroup).toMatch(/z-index:\s*1/);
     expect(bannerFade).toMatch(/top:\s*0/);
     expect(bannerFade).toMatch(/width:\s*min\(1500px,\s*100%\)/);
+    const categoryFade = css.match(
+      /@media \(min-width: 901px\)[\s\S]*?\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__banner-fade\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+    expect(categoryFade).toMatch(/width:\s*min\(78\.125vw,\s*1500px,\s*100%\)/);
     expect(bannerFade).toMatch(/height:\s*210px/);
     expect(bannerFade).toContain("rgba(2, 5, 8, .99) 0%");
     expect(bannerFade).toContain("rgba(2, 5, 8, .82) 28%");
@@ -103,6 +108,38 @@ describe("Projects lobby", () => {
     expect(mobileCategoryBanners).toMatch(/top:\s*auto/);
     expect(mobileFlowRule).toMatch(/position:\s*relative/);
     expect(mobileFlowRule).toMatch(/inset:\s*auto/);
+  });
+
+  it("adds the Figma bottom scene shade across all four lobbies without changing narrow flow", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const shadeRule = css.match(/\.league-lobby__bottom-shade\s*\{([^}]*)\}/)?.[1] ?? "";
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
+    const mobileShadeRule = mobileRules.match(/\.league-lobby__bottom-shade\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(shadeRule).toMatch(/position:\s*absolute/);
+    expect(shadeRule).toMatch(/z-index:\s*0/);
+    expect(shadeRule).toMatch(/bottom:\s*0/);
+    expect(shadeRule).toMatch(/left:\s*0/);
+    expect(shadeRule).toMatch(/width:\s*min\(1560px,\s*100%\)/);
+    expect(shadeRule).toMatch(/height:\s*180px/);
+    expect(shadeRule).toMatch(/background-color:\s*rgba\(1,\s*4,\s*6,\s*0\.36\)/);
+    expect(shadeRule).toMatch(/pointer-events:\s*none/);
+    expect(mobileShadeRule).toMatch(/display:\s*none/);
+
+    for (const mode of ["projects", "experience", "hackathons", "education"] as const) {
+      const view = renderProjectsLobby(mode);
+      expect(view.querySelector(".league-lobby__bottom-shade"), `${mode} shade`).not.toBeNull();
+      expect(view.innerHTML.indexOf("league-lobby__bottom-shade")).toBeGreaterThan(
+        view.innerHTML.indexOf("league-lobby__environment"),
+      );
+      expect(view.innerHTML.indexOf("league-lobby__bottom-shade")).toBeLessThan(
+        view.innerHTML.indexOf("league-lobby__heading"),
+      );
+      act(() => root?.unmount());
+      host?.remove();
+      root = undefined;
+      host = undefined;
+    }
   });
 
   it("uses real project marks and keeps selection separate from opening a story", () => {

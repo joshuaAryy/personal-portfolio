@@ -6,7 +6,7 @@ import { act } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { portfolioIdentity } from "./data";
+import { experienceIdentities, portfolioIdentity, projectIdentities } from "./data";
 import { Client } from "./PortfolioLayout";
 
 function renderClient(path = "/profile") {
@@ -227,6 +227,7 @@ describe("League client shell", () => {
     expect(markup).toContain("PROJECTS (4)");
     expect(markup).toContain("EXPERIENCE (2)");
     expect(markup).not.toContain("IN DEVELOPMENT (2)");
+    expect(markup).not.toContain('/media/lobby/activity-art/');
     expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
@@ -247,13 +248,19 @@ describe("League client shell", () => {
     expect(markup).toContain("Crest");
     expect(markup).not.toContain("PROJECTS (4)");
     expect(markup).not.toContain("EXPERIENCE (2)");
-    expect(markup).not.toContain('/media/lobby/activity-art/');
     expect(markup.match(/>Food Tracker</g)).toHaveLength(1);
     expect(markup).toContain(`src="${portfolioIdentity.mark}"`);
-    expect(markup).toContain('src="/media/profile/choveigo-mark.svg"');
-    expect(markup).toContain('src="/media/profile/profile-crest-emblem.png"');
-    expect(markup).toContain('src="/media/profile/living-in-silico-logo.png"');
-    expect(markup).toContain('src="/media/profile/stush-patties-logo.png"');
+    expect(markup).toContain(`src="${projectIdentities["food-tracker"].mark}"`);
+    expect(markup).toContain(`src="${projectIdentities.choveigo.mark}"`);
+    expect(markup).toContain('src="/media/lobby/activity-art/activity-portfolio-ring.svg"');
+    expect(markup).toContain(`src="${experienceIdentities["living-in-silico"].mark}"`);
+    expect(markup).toContain(`src="${experienceIdentities["stush-patties"].mark}"`);
+    expect(markup).toContain(`src="${projectIdentities.crest.mark}"`);
+    expect(markup).not.toContain("activity-choveigo.svg");
+    expect(markup).not.toContain("activity-living-in-silico.svg");
+    expect(markup).not.toContain("activity-stush-patties.svg");
+    expect(markup).not.toContain("activity-crest.svg");
+    expect(markup).toContain('data-node-id="I2356:611;95:18"');
   });
 
   it("keeps the Home lifecycle rail scoped away from Resume and other routes", () => {
@@ -268,9 +275,11 @@ describe("League client shell", () => {
     expect(css).not.toMatch(/\.client--resume-shell \.rail-group--activity-status/);
     expect(resume).toContain("PROJECTS (4)");
     expect(resume).toContain("EXPERIENCE (2)");
+    expect(resume).not.toContain('/media/lobby/activity-art/');
     expect(resume).not.toContain("IN DEVELOPMENT (2)");
     expect(experiencePage).toContain("PROJECTS (4)");
     expect(experiencePage).toContain("EXPERIENCE (2)");
+    expect(experiencePage).not.toContain('/media/lobby/activity-art/');
     expect(experiencePage).not.toContain("IN DEVELOPMENT (2)");
   });
 

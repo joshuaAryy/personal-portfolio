@@ -45,6 +45,8 @@ describe("opening route choreography", () => {
     expect(css).toContain('/assets/j-c06-keyed-forge/extr-deep-cap.svg');
     expect(css).toContain('/assets/j-c06-keyed-forge/extr-deep-shaft.svg');
     expect(css).toContain('/assets/j-c06-keyed-forge/extr-deep-hook.svg');
+    expect(markup).toContain('class="opening__hero-backing"');
+    expect(markup).toContain('src="/assets/j-c06-keyed-forge/face-cap.svg"');
     expect(markup).toContain('/assets/j-c06-keyed-forge/face-cap.svg');
     expect(markup).toContain('/assets/j-c06-keyed-forge/detail-cap.svg');
     expect(markup).toContain('/assets/j-c06-keyed-forge/bevel-cap.svg');
@@ -62,6 +64,7 @@ describe("opening route choreography", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");
     const rules = css.match(/[^{}]+\{[^{}]*\}/g) ?? [];
+    const backingRule = css.match(/\.opening__hero-backing\s*\{([^}]*)\}/)?.[1] ?? "";
     const goldRules = rules
       .filter((rule) => {
         const selector = rule.slice(0, rule.indexOf("{"));
@@ -70,6 +73,9 @@ describe("opening route choreography", () => {
       .join("\n");
 
     expect(css).toMatch(/\.opening__hero-art\s*\{[^}]*container-type:\s*size/);
+    expect(backingRule).toMatch(/inset:\s*9\.19%\s+26\.5%\s+14\.48%\s+24\.76%/);
+    expect(backingRule).toMatch(/z-index:\s*0/);
+    expect(backingRule).not.toMatch(/animation\s*:|opacity\s*:|transform\s*:/);
     expect(goldRules).not.toMatch(/animation\s*:|opacity\s*:|transform\s*:/);
     expect(css).not.toMatch(/@keyframes\s+opening-c06-(?:cap|hook|piece|settled)/);
     expect(markup).toContain('class="opening__hero-seam opening__hero-seam--upper"');

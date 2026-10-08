@@ -132,6 +132,9 @@ describe("Profile Overview", () => {
     const fitWidthRule = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1440px)");
     const fitWidthOverview = cssBlock(fitWidthRule, ".main--profile .profile-overview");
     const fitWidthSignals = cssBlock(fitWidthRule, ".profile-signal-grid");
+    const wideDesktopRule = cssBlock(profileCss, "@media (min-width: 1859px) and (max-width: 1920px)");
+    const wideDesktopSignals = cssBlock(wideDesktopRule, ".profile-signal-grid");
+    const shortDesktopRule = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1858px) and (max-height: 820px)");
 
     expect(signalTop).toBe(535);
     expect(signalRule).toContain("height: 280px");
@@ -148,7 +151,9 @@ describe("Profile Overview", () => {
     expect(shortWideOverview).toContain("transform: scale(.88)");
     expect(shortWideSignals).toContain("top: calc(870px - 15.3vw)");
     expect(fitWidthOverview).toContain("height: 954px");
-    expect(fitWidthSignals).toContain("top: calc(919px - 20vw + 52px)");
+    expect(fitWidthSignals).toContain("top: calc(770px - 15vw)");
+    expect(wideDesktopSignals).toContain("top: 523px");
+    expect(shortDesktopRule).toContain(".profile-signal-grid {\n    top: 260px;");
     expect(narrowOverview).toContain("flex-direction: column");
     expect(narrowOverview).toContain("gap: 24px");
   });
@@ -182,7 +187,7 @@ describe("Profile Overview", () => {
 
     const fitTransition = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1440px)");
     expect(fitTransition).toContain("transform: scale(clamp(.69, calc(100vw / 4000px + .34), .7))");
-    expect(fitTransition).toContain("top: calc(919px - 20vw + 52px)");
+    expect(fitTransition).toContain("top: calc(770px - 15vw)");
   });
 
   it("keeps Profile route-entry motion from replacing the responsive Overview scale", () => {

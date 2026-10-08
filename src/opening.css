@@ -199,6 +199,23 @@
   height: 100%;
 }
 
+.opening__hero-backing {
+  position: absolute;
+  z-index: 0;
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  display: block;
+  pointer-events: none;
+}
+
+.opening__hero-backing img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
 .opening__hero-gold {
   position: absolute;
   display: block;

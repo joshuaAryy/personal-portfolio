@@ -40,6 +40,9 @@ function C06HeroArt() {
       <span className="opening__hero-shadow" data-node-id="3679:6">
         <img src={`${C06_ASSET_ROOT}shadow.svg`} alt="" draggable={false} />
       </span>
+      <span className="opening__hero-backing">
+        <img src={`${C06_ASSET_ROOT}face-cap.svg`} alt="" draggable={false} />
+      </span>
 
       <div className="opening__hero-part" data-node-id="3679:76">
         <C06Layer className="opening__hero-gold opening__hero-gold--deep-cap" src="extr-deep-cap-face.svg" nodeId="3679:9" />

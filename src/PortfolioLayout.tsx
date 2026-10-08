@@ -252,6 +252,27 @@ const projectRailMarks: Record<string, string | undefined> = Object.fromEntries(
   Object.entries(projectIdentities).map(([slug, identity]) => [slug, identity.mark]),
 );
 
+function PortfolioActivityArt() {
+  return (
+    <span className="rail-avatar rail-avatar--activity rail-avatar--activity-portfolio" aria-hidden="true" data-node-id="I2356:611;95:18">
+      <img
+        src="/media/lobby/activity-art/activity-portfolio-ring.svg"
+        alt=""
+        width={38}
+        height={38}
+        data-node-id="I2356:611;95:19"
+      />
+      <img
+        src={portfolioIdentity.mark}
+        alt=""
+        width={38}
+        height={38}
+        data-node-id="I2356:611;95:20"
+      />
+    </span>
+  );
+}
+
 function RailIdentity({ src, className = "" }: { src?: string; className?: string }) {
   return (
     <span className={["rail-avatar", className].filter(Boolean).join(" ")} aria-hidden="true">
@@ -287,7 +308,7 @@ function Rail() {
           <>
             <strong className="rail-availability__eyebrow">CURRENT FOCUS</strong>
             <Link className="rail-availability__focus-link" to={projectCasePaths["food-tracker"]}>
-              <RailIdentity src={projectRailMarks["food-tracker"]} />
+              <RailIdentity src={projectIdentities["food-tracker"].mark} />
               <span>
                 <strong>Food Tracker</strong>
                 <small>IN DEVELOPMENT</small>
@@ -344,14 +365,14 @@ function Rail() {
             <div className="rail-group rail-group--activity-status rail-group--activity-status-development">
               <h3>IN DEVELOPMENT (2)</h3>
               <Link className="rail-link rail-link--status" to={projectCasePaths.choveigo}>
-                <RailIdentity src={projectIdentities.choveigo.mark} className="rail-avatar--home-status" />
+                <RailIdentity src={projectIdentities.choveigo.mark} />
                 <span>
                   <span>{railProjects.find((item) => item.slug === "choveigo")?.name}</span>
                   <small>IN DEVELOPMENT</small>
                 </span>
               </Link>
               <Link className="rail-link rail-link--status" to="/home">
-                <RailIdentity src={portfolioIdentity.mark} className="rail-avatar--home-status" />
+                <PortfolioActivityArt />
                 <span>
                   <span>Portfolio</span>
                   <small>IN DEVELOPMENT</small>
@@ -361,21 +382,21 @@ function Rail() {
             <div className="rail-group rail-group--activity-status rail-group--activity-status-completed">
               <h3>COMPLETED (3)</h3>
               <Link className="rail-link rail-link--status" to={experienceStoryPaths["living-in-silico"]}>
-                <RailIdentity src={experienceIdentities["living-in-silico"].mark} className="rail-avatar--home-status" />
+                <RailIdentity src={experienceIdentities["living-in-silico"].mark} />
                 <span>
                   <span>Living in Silico</span>
                   <small>COMPLETED</small>
                 </span>
               </Link>
               <Link className="rail-link rail-link--status" to={experienceStoryPaths["stush-patties"]}>
-                <RailIdentity src={experienceIdentities["stush-patties"].mark} className="rail-avatar--home-status" />
+                <RailIdentity src={experienceIdentities["stush-patties"].mark} />
                 <span>
                   <span>Stush Patties</span>
                   <small>COMPLETED</small>
                 </span>
               </Link>
               <Link className="rail-link rail-link--status" to={projectCasePaths.crest}>
-                <RailIdentity src={projectIdentities.crest.mark} className="rail-avatar--home-status" />
+                <RailIdentity src={projectIdentities.crest.mark} />
                 <span>
                   <span>Crest</span>
                   <small>3RD PLACE · COMPLETED</small>
