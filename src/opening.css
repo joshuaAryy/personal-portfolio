@@ -133,7 +133,7 @@
   position: absolute;
   inset: 0;
   border-radius: inherit;
-  animation: opening-tick-spin 2.65s linear both;
+  animation: opening-tick-spin 4.8s linear both;
 }
 
 .opening__orbit-ticks {

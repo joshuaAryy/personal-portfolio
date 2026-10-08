@@ -94,7 +94,7 @@ describe("opening route choreography", () => {
     expect(source).toContain("const OPENING_DURATION_MS = 3_800;");
     expect(css).toMatch(/\.opening__treatment\s*\{[^}]*animation:\s*opening-scene-exit\s+3\.8s/s);
     expect(css).toMatch(/\.opening__orbit-turn\s*\{[^}]*animation:\s*opening-tick-arrive\s+3\.8s\s+ease-out\s+both/s);
-    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+2\.65s\s+linear\s+both/s);
+    expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin\s+4\.8s\s+linear\s+both/s);
     expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(360deg\)/);
     expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+3\.8s/s);
     expect(css).toMatch(/repeating-conic-gradient\([\s\S]*transparent\s+0deg\s+3\.42deg,[\s\S]*rgb\(170\s+193\s+206\s*\/\s*16%\)[\s\S]*transparent\s+3\.72deg\s+4deg/s);
