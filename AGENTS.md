@@ -1,12 +1,12 @@
 # Repository Operating Instructions
 
-> **Latest immutable feature Preview (2026-10-07):** `https://8697bfef.joshuaik2.pages.dev/` uses application source `b6995c136bee4133fb1fc6190b790f9abc5c55a7`. The feature branch has since advanced to `c4bdab3a4801fbd77392e8cd45813de0193029d3` with the Stush story/motion update; it has not yet been deployed. Use immutable URLs for review comparisons. Do not modify production.
+> **Latest immutable feature Preview (2026-10-07):** `https://2ada7513.joshuaik2.pages.dev/` uses application source `8ac121a60a3b2c8bbfcaad0ea18b4e109c8af2d0`. `feat/portfolio-integration` is at documentation checkpoint `1d3e26e1395b9073f691f1d5b4e98f8bcc589a48`; the application source is unchanged from the Preview. Deployed desktop/narrow route and interaction checks passed. This is a review checkpoint, not goal completion. Do not modify production.
 
-> **Active owner direction (updated 2026-10-07):** the latest owner review supersedes conflicting older freeze decisions. Preserve owner-positive qualities, not whole pages. All six case studies remain open to substantive review; Journey and Crest are currently locked against redesign. Candidate 06 is the feature-branch J target, while archive `159:2` remains production fallback. Keep production untouched.
+> **Active owner direction (bounded convergence pass, 2026-10-07):** preserve owner-positive implementations and fix only explicit remaining issues. Home composition, Journey, Crest, Personal Highlights structure, Living in Silico's broad direction, Profile structure/overlays, and Resume Viewer architecture are locked absent a concrete regression. Food, Stush, and Education received bounded corrections; Cho'Veigo's full demo remains open pending safe authentic media. Candidate 06 is the feature-branch J target; archive `159:2` remains the production fallback. Keep production untouched.
 
 ## Project direction
 
-Mingo is the project director. Mingo may execute directly while coordinating the persistent specialist lanes, and owns cross-surface priorities, owner direction, source reconciliation, acceptance, and documentation sync.
+Mingo is the Luna control plane and owns cross-surface state, sequencing, routing, lifecycle, integration, and documentation. Route substantial independent implementation through the relevant domain owner or executor; root work is for small glue, coordination, and tightly coupled integration. Use the episodic Sol strategic core only at consequential judgment boundaries, following [MODEL_ROUTING.md](docs/MODEL_ROUTING.md).
 
 ## Session continuity and model routing
 
@@ -14,7 +14,7 @@ Mingo is the project director. Mingo may execute directly while coordinating the
 
 **Authority order:** current owner instructions, current durable project documents, and current Figma/repository state override historical chat summaries. Historical context explains decisions; it never overrides current truth. The canonical continuation checkpoint is [docs/SESSION_HANDOFF_2026-10-02.md](docs/SESSION_HANDOFF_2026-10-02.md); verify its branch, staging, browser, and agent facts against live state before acting.
 
-The prior Sol director instruction is historical and superseded by the model-routing policy above. The earlier J instruction to hold Candidate 02 is superseded by the owner's 2026-10-05 direction. Candidate 02 `3606:459` on board `3606:2` is now a directional/unapproved review candidate; archive `159:2` stays in production pending owner choice. Astra remains off without explicit owner approval.
+The prior Sol director instruction is historical and superseded by the model-routing policy above. The earlier J instruction to hold Candidate 02 is superseded. Current feature review uses Candidate 06 / keyed-forge (`3679:2`, review board `3682:2`); this does not approve a production change. Archive `159:2` remains the production fallback until the owner selects a replacement. Astra remains off without explicit owner approval.
 
 ## Convergence and implementation
 
@@ -32,9 +32,9 @@ The prior Sol director instruction is historical and superseded by the model-rou
 
 ## Bounded identity and asset work
 
-- Frontend implementation is continuous. Use archive `159:2` as the production fallback; the owner currently prefers v8 `3325:191` as the editable site baseline where technically appropriate, without declaring it final. No identity exploration gates mature React work. Final visual acceptance follows render -> compare -> critique -> correct -> owner review. CLI Playwright/installed Chrome produces real rendered evidence; do not retry desktop built-in Browser discovery. The current deployed baseline is source snapshot `7b4fc3a` at `https://2321d13e.joshuaik2.pages.dev/`; see the implementation status and render queue. Route-specific renders cover the queue; do not repeat a completed pass without a new discrepancy. Capability proof does not establish visual parity or owner acceptance. See current owner direction and the render queue.
-- Cho’Veigo’s existing product-specific match-path mark remains selected for supported 26px+ uses. Shared identity rendering is not frozen: Food Tracker mark containment is reopened across Activity, Home/lobbies, Profile, Demos, case-study navigation, and other uses. J remains a separate owner-review lane.
-- Resume Found preserves the originating page as a dimmed/inert takeover underlay; keep routing, focus, Escape, Close, and View Resume behavior. The visual hierarchy is reopened: circular mechanism/J, white RESUME FOUND, League-shaped VIEW RESUME, smaller rectangular CLOSE.
+- Frontend implementation is continuous. Use archive `159:2` as the production fallback; the feature branch uses C06 for review, not production promotion. No identity exploration gates mature React work. Final visual acceptance follows render -> compare -> critique -> correct -> owner review. CLI Playwright/installed Chrome produces real rendered evidence; do not retry desktop built-in Browser discovery. The current immutable Preview is `https://2ada7513.joshuaik2.pages.dev/`, application source `8ac121a60a3b2c8bbfcaad0ea18b4e109c8af2d0`; it passed deployed desktop/narrow route and interaction checks. See the current report and render queue. Do not repeat a completed pass without a new discrepancy. Capability proof does not establish owner acceptance.
+- Cho’Veigo’s existing product-specific match-path mark remains selected for supported 26px+ uses. The shared identity source and Food Tracker mark containment are integrated and Preview-verified across the audited surfaces; preserve them absent a concrete regression. J remains a separate owner-review lane.
+- Resume Found preserves the originating page as a dimmed/inert takeover underlay; keep routing, focus, Escape, Close, and View Resume behavior. The C06 mechanism and corrected RESUME FOUND → VIEW RESUME → CLOSE stack are integrated and Preview-verified; preserve them absent a concrete regression.
 
 ## Durable direction and documentation
 
@@ -43,4 +43,4 @@ The prior Sol director instruction is historical and superseded by the model-rou
 - After a meaningful Figma or owner-direction change, update the relevant durable documents, then commit and push documentation to `feat/portfolio-integration` without waiting for website implementation. Do not make commits for transient micro-adjustments.
 - Preserve strong work and allocate iteration to identified gaps; do not redesign a surface to demonstrate activity.
 - Preserve unrelated working-tree changes and stage only files relevant to the intended commit.
-- Do not run tests or builds unless the owner asks for verification.
+- Follow the current explicit owner validation scope. The latest bounded correction pass requested focused checks during iteration and full tests, build, diff-check, desktop/narrow Chrome, and relevant motion/media checks at the final coherent checkpoint; avoid repeating the full stack after every micro-edit.
