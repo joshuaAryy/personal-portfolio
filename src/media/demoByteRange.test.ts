@@ -1,10 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { onRequestGet } from "../../functions/media/demos/choveigo-full-demo-redacted.webm.ts";
+import { onRequestGet } from "../../functions/media/demos/choveigo-full-demo-redacted.mp4.ts";
 
 const assetBytes = new Uint8Array([10, 20, 30, 40, 50, 60]);
 
 function request(range?: string) {
-  return new Request("https://portfolio.example/media/demos/choveigo-full-demo-redacted.webm", {
+  return new Request("https://portfolio.example/media/demos/choveigo-full-demo-redacted.mp4", {
     headers: range ? { Range: range } : undefined,
   });
 }
@@ -18,7 +18,7 @@ function context(incoming: Request) {
           new Response(assetBytes, {
             headers: {
               "Content-Length": String(assetBytes.length),
-              "Content-Type": "video/webm",
+              "Content-Type": "video/mp4",
               ETag: '"demo-v1"',
             },
           }),

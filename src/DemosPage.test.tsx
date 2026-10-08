@@ -139,7 +139,7 @@ describe("Demos media browser", () => {
     act(() => playButton?.dispatchEvent(new MouseEvent("click", { bubbles: true })));
 
     const player = host.querySelector<HTMLVideoElement>("video.demo-player__video");
-    expect(player?.getAttribute("src")).toBe("/media/demos/choveigo-full-demo-redacted.webm");
+    expect(player?.getAttribute("src")).toBe("/media/demos/choveigo-full-demo-redacted.mp4");
     expect(player?.getAttribute("title")).toBe("Cho’Veigo full product demo, 112.638 seconds");
     expect(player?.hasAttribute("controls")).toBe(true);
     expect(player?.hasAttribute("autoplay")).toBe(true);

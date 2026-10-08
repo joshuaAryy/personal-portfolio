@@ -90,16 +90,16 @@ describe("approved resume flow", () => {
     expect(markup.indexOf('class="resume-mechanism__frame"')).toBeLessThan(
       markup.indexOf('class="resume-mechanism__orb-energy"'),
     );
-    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-sweep\s+1400ms\s+cubic-bezier\(\.25,\s*\.1,\s*\.25,\s*1\)\s+1\s+both/);
+    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-sweep\s+2100ms\s+cubic-bezier\(\.25,\s*\.1,\s*\.25,\s*1\)\s+1\s+both/);
     expect(energyRule).toMatch(/z-index:\s*3/);
-    expect(energyRule).toMatch(/top:\s*50%;[^}]*left:\s*50%;[^}]*width:\s*46%;[^}]*height:\s*46%/s);
+    expect(energyRule).toMatch(/top:\s*50%;[^}]*left:\s*50%;[^}]*width:\s*70%;[^}]*height:\s*70%/s);
     expect(energyRule).toMatch(/translate:\s*-50%\s+-50%/);
     expect(energyRule).toMatch(/conic-gradient\(\s*from 0deg/);
     expect(energyRule).toMatch(/mask:\s*radial-gradient\(circle closest-side,\s*transparent 76%,\s*#000 80%,\s*#000 88%,\s*transparent 94%\)/);
     expect(energyRule).toMatch(/mix-blend-mode:\s*screen/);
     expect(energyRule).toMatch(/pointer-events:\s*none/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?18%\s*\{[^}]*opacity:\s*\.42;[\s\S]*?52%\s*\{[^}]*opacity:\s*\.38;/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?100%\s*\{[^}]*opacity:\s*0;[^}]*transform:\s*rotate\(240deg\)/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?12%\s*\{[^}]*opacity:\s*\.3;[\s\S]*?52%\s*\{[^}]*opacity:\s*\.26;/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?100%\s*\{[^}]*opacity:\s*0;[^}]*transform:\s*rotate\(270deg\)/);
     expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*animation:\s*none/s);
   });
 
@@ -141,15 +141,15 @@ describe("approved resume flow", () => {
     expect(markup).toMatch(/class="resume-found__composition"[\s\S]*class="resume-found__system"[\s\S]*class="resume-found__title"[\s\S]*resume-found__action[\s\S]*class="resume-found__close"/);
     expect(compositionRule).toMatch(/position:\s*relative/);
     expect(compositionRule).toMatch(/width:\s*min\(530px,\s*49vh,\s*calc\(100vw - 32px\)\)/);
-    expect(titleRule).toMatch(/top:\s*84%/);
+    expect(titleRule).toMatch(/top:\s*81%/);
     expect(titleRule).toMatch(/height:\s*clamp\(18px,\s*4\.53cqw,\s*24px\)/);
     expect(titleRule).toMatch(/font-size:\s*clamp\(13px,\s*2\.83cqw,\s*15px\)/);
     expect(titleRule).toMatch(/line-height:\s*clamp\(18px,\s*3\.77cqw,\s*20px\)/);
     expect(titleRule).toMatch(/color:\s*#f0e6d2/i);
-    expect(actionRule).toMatch(/top:\s*89%/);
+    expect(actionRule).toMatch(/top:\s*86%/);
     expect(actionRule).toMatch(/width:\s*min\(212px,\s*40cqw\)/);
     expect(actionRule).toMatch(/aspect-ratio:\s*212\s*\/\s*70/);
-    expect(closeRule).toMatch(/top:\s*109\.2%/);
+    expect(closeRule).toMatch(/top:\s*105\.5%/);
     expect(closeRule).toMatch(/width:\s*112px/);
     expect(closeRule).toMatch(/height:\s*38px/);
     expect(closeRule).toMatch(/font-size:\s*11px/);
@@ -181,10 +181,10 @@ describe("approved resume flow", () => {
     const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
     const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(titleRule).toMatch(/top:\s*84%/);
-    expect(actionRule).toMatch(/top:\s*89%/);
+    expect(titleRule).toMatch(/top:\s*81%/);
+    expect(actionRule).toMatch(/top:\s*86%/);
     expect(actionRule).toMatch(/width:\s*min\(212px,\s*40cqw\)/);
-    expect(closeRule).toMatch(/top:\s*109\.2%/);
+    expect(closeRule).toMatch(/top:\s*105\.5%/);
   });
 
   it("centers Resume Found controls independently of the route-entry transform", () => {

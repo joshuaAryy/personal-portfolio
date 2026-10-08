@@ -186,7 +186,7 @@ describe("League client shell", () => {
     );
   });
 
-  it("keeps the generic canonical project and experience rail off Home", () => {
+  it("uses the shared canonical project and experience rail on profile routes", () => {
     const markup = renderClient();
 
     expect(markup).toContain('data-node-id="3317:4"');
@@ -233,54 +233,58 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
   });
 
-  it("restores Home's lifecycle Activity groups with canonical current identity marks", () => {
+  it("uses the shared canonical Activity rail on Home with canonical marks and links", () => {
     const markup = renderClient("/home");
+    const railStart = markup.indexOf('<aside class="rail"');
+    const railEnd = markup.indexOf("</aside>", railStart) + "</aside>".length;
+    const rail = markup.slice(railStart, railEnd);
 
-    expect(markup).toContain('class="rail-availability rail-availability--focus"');
-    expect(markup).toContain("CURRENT FOCUS");
-    expect(markup).toContain("IN DEVELOPMENT (2)");
-    expect(markup).toContain("COMPLETED (3)");
-    expect(markup).toContain("Food Tracker");
-    expect(markup).toContain("Cho’Veigo");
-    expect(markup).toContain("Portfolio");
-    expect(markup).toContain("Living in Silico");
-    expect(markup).toContain("Stush Patties");
-    expect(markup).toContain("Crest");
-    expect(markup).not.toContain("PROJECTS (4)");
-    expect(markup).not.toContain("EXPERIENCE (2)");
-    expect(markup.match(/>Food Tracker</g)).toHaveLength(1);
-    expect(markup).toContain(`src="${portfolioIdentity.mark}"`);
-    expect(markup).toContain(`src="${projectIdentities["food-tracker"].mark}"`);
-    expect(markup).toContain(`src="${projectIdentities.choveigo.mark}"`);
-    expect(markup).toContain('src="/media/lobby/activity-art/activity-portfolio-ring.svg"');
-    expect(markup).toContain(`src="${experienceIdentities["living-in-silico"].mark}"`);
-    expect(markup).toContain(`src="${experienceIdentities["stush-patties"].mark}"`);
-    expect(markup).toContain(`src="${projectIdentities.crest.mark}"`);
-    expect(markup).not.toContain("activity-choveigo.svg");
-    expect(markup).not.toContain("activity-living-in-silico.svg");
-    expect(markup).not.toContain("activity-stush-patties.svg");
-    expect(markup).not.toContain("activity-crest.svg");
-    expect(markup).toContain('data-node-id="I2356:611;95:18"');
+    expect(rail).toContain('class="rail-availability"');
+    expect(rail).toContain('data-node-id="3317:4"');
+    expect(rail).toContain('class="rail-party"');
+    expect(rail).toContain("CURRENT FOCUS");
+    expect(rail).toContain("PROJECTS (4)");
+    expect(rail).toContain("EXPERIENCE (2)");
+    expect(rail).toContain("Food Tracker");
+    expect(rail).toContain("Cho’Veigo");
+    expect(rail).toContain("Living in Silico");
+    expect(rail).toContain("Stush Patties");
+    expect(rail).toContain("Crest");
+    expect(rail).not.toContain("IN DEVELOPMENT");
+    expect(rail).not.toContain("COMPLETED");
+    expect(rail).not.toContain(">Portfolio<");
+    expect(rail).toContain('href="/projects/food-tracker"');
+    expect(rail).toContain('href="/projects/choveigo"');
+    expect(rail).toContain('href="/experience/living-in-silico"');
+    expect(rail).toContain(`src="${portfolioIdentity.mark}"`);
+    expect(rail).toContain(`src="${projectIdentities["food-tracker"].mark}"`);
+    expect(rail).toContain(`src="${projectIdentities.choveigo.mark}"`);
+    expect(rail).toContain(`src="${experienceIdentities["living-in-silico"].mark}"`);
+    expect(rail).toContain(`src="${experienceIdentities["stush-patties"].mark}"`);
+    expect(rail).toContain(`src="${projectIdentities.crest.mark}"`);
+    expect(rail).not.toContain("/media/lobby/activity-art/");
+    expect(rail).not.toContain('data-node-id="I2356:611;95:18"');
   });
 
-  it("keeps the Home lifecycle rail scoped away from Resume and other routes", () => {
+  it("keeps Home, Resume, and interior routes on the same canonical Activity structure", () => {
     const css = readFileSync("src/styles.css", "utf8");
+    const home = renderClient("/home");
     const resume = renderClient("/resume/viewer");
     const experiencePage = renderClient("/experience");
 
     expect(css).toMatch(/\.rail-link,\s*\.rail-item\s*\{[^}]*min-height:\s*50px/s);
-    expect(css).not.toMatch(/\.client--resume-shell \.rail-link--status/);
-    expect(css).toMatch(/\.client--home-shell \.rail-availability--focus/);
-    expect(css).toMatch(/\.client--home-shell \.rail-group--activity-status/);
-    expect(css).not.toMatch(/\.client--resume-shell \.rail-group--activity-status/);
-    expect(resume).toContain("PROJECTS (4)");
-    expect(resume).toContain("EXPERIENCE (2)");
-    expect(resume).not.toContain('/media/lobby/activity-art/');
-    expect(resume).not.toContain("IN DEVELOPMENT (2)");
-    expect(experiencePage).toContain("PROJECTS (4)");
-    expect(experiencePage).toContain("EXPERIENCE (2)");
-    expect(experiencePage).not.toContain('/media/lobby/activity-art/');
-    expect(experiencePage).not.toContain("IN DEVELOPMENT (2)");
+    expect(css).not.toMatch(/\.client--home-shell \.rail-(?:availability--focus|group--activity-status|link--status|avatar--activity)/);
+    for (const markup of [home, resume, experiencePage]) {
+      const railStart = markup.indexOf('<aside class="rail"');
+      const railEnd = markup.indexOf("</aside>", railStart) + "</aside>".length;
+      const rail = markup.slice(railStart, railEnd);
+
+      expect(rail).toContain("PROJECTS (4)");
+      expect(rail).toContain("EXPERIENCE (2)");
+      expect(rail).not.toContain("IN DEVELOPMENT");
+      expect(rail).not.toContain("COMPLETED");
+      expect(rail).not.toContain("/media/lobby/activity-art/");
+    }
   });
 
   it("places the three contact destinations after page content for the narrow shell", () => {

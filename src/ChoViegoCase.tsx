@@ -187,7 +187,7 @@ export default function ChoViegoCase() {
             </div>
             <video
               className="cho-story__hero-video"
-              src="/media/demos/choveigo-full-demo-redacted.webm"
+              src="/media/demos/choveigo-full-demo-redacted.mp4"
               title="Cho’Veigo full product demo, 112.638 seconds"
               aria-label="Cho’Veigo full product demo, 112.638 seconds"
               poster="/media/demos/choveigo-recommendations-poster.png"

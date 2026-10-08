@@ -252,27 +252,6 @@ const projectRailMarks: Record<string, string | undefined> = Object.fromEntries(
   Object.entries(projectIdentities).map(([slug, identity]) => [slug, identity.mark]),
 );
 
-function PortfolioActivityArt() {
-  return (
-    <span className="rail-avatar rail-avatar--activity rail-avatar--activity-portfolio" aria-hidden="true" data-node-id="I2356:611;95:18">
-      <img
-        src="/media/lobby/activity-art/activity-portfolio-ring.svg"
-        alt=""
-        width={38}
-        height={38}
-        data-node-id="I2356:611;95:19"
-      />
-      <img
-        src={portfolioIdentity.mark}
-        alt=""
-        width={38}
-        height={38}
-        data-node-id="I2356:611;95:20"
-      />
-    </span>
-  );
-}
-
 function RailIdentity({ src, className = "" }: { src?: string; className?: string }) {
   return (
     <span className={["rail-avatar", className].filter(Boolean).join(" ")} aria-hidden="true">
@@ -284,7 +263,6 @@ function RailIdentity({ src, className = "" }: { src?: string; className?: strin
 function Rail() {
   const { pathname } = useLocation();
   const helpOverlay = useHelpOverlay();
-  const isHomeShell = pathname === "/" || pathname === "/home";
   const isProjectShell = usesProjectDetailShell(pathname);
   const focus = pathname.startsWith("/experience")
     ? {
@@ -303,19 +281,8 @@ function Rail() {
           };
   return (
     <aside className="rail" aria-label="Portfolio index">
-      <div className={`rail-availability${isHomeShell ? " rail-availability--focus" : ""}${isProjectShell ? " rail-availability--opportunities" : ""}`}>
-        {isHomeShell ? (
-          <>
-            <strong className="rail-availability__eyebrow">CURRENT FOCUS</strong>
-            <Link className="rail-availability__focus-link" to={projectCasePaths["food-tracker"]}>
-              <RailIdentity src={projectIdentities["food-tracker"].mark} />
-              <span>
-                <strong>Food Tracker</strong>
-                <small>IN DEVELOPMENT</small>
-              </span>
-            </Link>
-          </>
-        ) : isProjectShell ? (
+      <div className={`rail-availability${isProjectShell ? " rail-availability--opportunities" : ""}`}>
+        {isProjectShell ? (
           <>
             <img
               className="rail-availability__mark"
@@ -360,51 +327,6 @@ function Rail() {
           </span>
         </h2>
         <p className="rail-context">GENERAL {"\u00b7"} PORTFOLIO</p>
-        {isHomeShell ? (
-          <>
-            <div className="rail-group rail-group--activity-status rail-group--activity-status-development">
-              <h3>IN DEVELOPMENT (2)</h3>
-              <Link className="rail-link rail-link--status" to={projectCasePaths.choveigo}>
-                <RailIdentity src={projectIdentities.choveigo.mark} />
-                <span>
-                  <span>{railProjects.find((item) => item.slug === "choveigo")?.name}</span>
-                  <small>IN DEVELOPMENT</small>
-                </span>
-              </Link>
-              <Link className="rail-link rail-link--status" to="/home">
-                <PortfolioActivityArt />
-                <span>
-                  <span>Portfolio</span>
-                  <small>IN DEVELOPMENT</small>
-                </span>
-              </Link>
-            </div>
-            <div className="rail-group rail-group--activity-status rail-group--activity-status-completed">
-              <h3>COMPLETED (3)</h3>
-              <Link className="rail-link rail-link--status" to={experienceStoryPaths["living-in-silico"]}>
-                <RailIdentity src={experienceIdentities["living-in-silico"].mark} />
-                <span>
-                  <span>Living in Silico</span>
-                  <small>COMPLETED</small>
-                </span>
-              </Link>
-              <Link className="rail-link rail-link--status" to={experienceStoryPaths["stush-patties"]}>
-                <RailIdentity src={experienceIdentities["stush-patties"].mark} />
-                <span>
-                  <span>Stush Patties</span>
-                  <small>COMPLETED</small>
-                </span>
-              </Link>
-              <Link className="rail-link rail-link--status" to={projectCasePaths.crest}>
-                <RailIdentity src={projectIdentities.crest.mark} />
-                <span>
-                  <span>Crest</span>
-                  <small>3RD PLACE · COMPLETED</small>
-                </span>
-              </Link>
-            </div>
-          </>
-        ) : (
         <>
           <div className="rail-group">
             <h3>CURRENT FOCUS</h3>
@@ -444,7 +366,6 @@ function Rail() {
             })}
           </div>
         </>
-        )}
       </div>
       <footer className="rail-social-footer" aria-label="Social and support links">
         <ContactLinks />
