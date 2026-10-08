@@ -3881,7 +3881,7 @@
   line-height: 1.5;
 }
 
-/* Show the canonical entry menu at reading size; use only relevant states elsewhere. */
+/* Show the canonical search result at reading size; use only relevant states elsewhere. */
 .food-log-transaction__screens {
   display: grid;
   grid-area: screens;
@@ -3903,7 +3903,7 @@
   grid-template-columns: minmax(0, 1fr);
 }
 
-.food-log-transaction[data-active-method="search-reuse"] [data-screen="logging-menu"],
+.food-log-transaction[data-active-method="search-reuse"] [data-screen="search-results"],
 .food-log-transaction[data-active-method="describe-photo"] [data-screen="review"],
 .food-log-transaction[data-active-method="barcode"] [data-screen="entry-options"],
 .food-log-transaction[data-active-method="recipes-mixed"] [data-screen="entry-options"],
@@ -3917,7 +3917,7 @@
   width: min(100%, 368px);
 }
 
-.food-log-transaction__screen[data-screen="logging-menu"] {
+.food-log-transaction__screen[data-screen="search-results"] {
   justify-self: center;
   width: min(100%, 368px);
 }
@@ -4024,7 +4024,7 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .food-log-transaction__screen[data-screen="logging-menu"] {
+  .food-log-transaction__screen[data-screen="search-results"] {
     width: min(100%, 300px);
     justify-self: center;
   }

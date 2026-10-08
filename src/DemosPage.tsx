@@ -33,6 +33,8 @@ const demoOptions = [
 
 type DemoKey = (typeof demoOptions)[number]["key"];
 
+const choExcerptAccessibleName = "Cho’Veigo short Recommendations excerpt";
+
 const crestEmbedUrl =
   "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1";
 
@@ -91,7 +93,14 @@ export default function DemosPage() {
           aria-hidden="true"
         />
 
-        <section className="demo-stage" aria-label={`${current.label} demo`}>
+        <section
+          className="demo-stage"
+          aria-label={
+            selected === "choveigo"
+              ? choExcerptAccessibleName
+              : `${current.label} demo`
+          }
+        >
           <div className={`demo-player demo-player--${selected}`}>
             {selected === "crest" && crestIsPlaying ? (
               <iframe
@@ -110,7 +119,7 @@ export default function DemosPage() {
                 ref={choVideoRef}
                 className="demo-player__video"
                 src="/media/demos/choveigo-recommendations.webm"
-                title="Cho’Veigo recommendations demo"
+                title={choExcerptAccessibleName}
                 controls
                 autoPlay
                 muted
@@ -160,7 +169,7 @@ export default function DemosPage() {
                     className="demo-player__play"
                     type="button"
                     onClick={() => setChoIsPlaying(true)}
-                    aria-label="Play Cho’Veigo recommendations demo"
+                    aria-label={`Play ${choExcerptAccessibleName}`}
                   >
                     <span className="demo-player__play-icon" aria-hidden="true" />
                   </button>
@@ -171,6 +180,11 @@ export default function DemosPage() {
           <h1 className="demo-title" data-node-id="1316:131">
             {current.label}
           </h1>
+          {selected === "choveigo" && (
+            <p className="demo-excerpt-note">
+              SHORT RECOMMENDATIONS EXCERPT · 4.94 SECONDS
+            </p>
+          )}
         </section>
       </div>
     </Client>

@@ -300,6 +300,14 @@
   white-space: nowrap;
 }
 
+#root .main.main--demos .demo-excerpt-note {
+  margin: 4px 0 0;
+  color: #b8a567;
+  font: 600 10px/1.4 Inter, Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
 #root .main.main--demos .demo-title::before,
 #root .main.main--demos .demo-title::after {
   min-width: 24px;

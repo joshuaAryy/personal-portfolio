@@ -98,11 +98,11 @@ describe("Food Tracker product story", () => {
     expect(captures).toHaveLength(4);
     expect(loggingCaptures).toHaveLength(1);
     expect(insightCaptures).toHaveLength(3);
-    expect(logging).toContain("food-log-complex-clean.png");
-    expect(logging).not.toContain("search-banana-results.png");
+    expect(logging).toContain("search-banana-results.png");
+    expect(logging).not.toContain("food-log-complex-clean.png");
     expect(logging).not.toContain("food-serving-preview-banana.png");
     expect(logging).not.toContain("ai-meal-review.png");
-    expect(logging).toContain("Complex-mode logging menu");
+    expect(logging).toContain("not retrieval-quality evidence");
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
     expect(insights).toContain("insights-month-populated-sep08-oct07.png");
     expect(insights).toContain("trend-configuration.png");

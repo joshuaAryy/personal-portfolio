@@ -277,12 +277,12 @@ function FoodLogTransaction() {
 
       <div className={`food-log-transaction__screens${selectedRoute.visual ? " food-log-transaction__screens--conceptual" : ""}`} role="group" aria-label={`${selectedRoute.label} visual explanation and source evidence`}>
         {isSearchRoute ? (
-          <figure className="food-log-transaction__screen" data-screen="logging-menu">
+          <figure className="food-log-transaction__screen" data-screen="search-results">
             <img
-              src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
-              alt="Phase 24 Complex-mode logging menu showing search, meal description, photo logging, Food Library, recipes, mixed meals, and barcode options. No food log is saved."
+              src="/media/case-studies/food-tracker/phase-24/search-banana-results.png"
+              alt="Phase 24 pre-redesign Search foods capture for a banana query, showing a generic match per 100 g and additional results; it does not establish retrieval quality."
             />
-            <figcaption>Canonical Complex-mode logging menu · several distinct ways to begin, shown in a clean baseline state.</figcaption>
+            <figcaption>Canonical Search foods capture · pre-redesign baseline · banana query with a generic match, not retrieval-quality evidence.</figcaption>
           </figure>
         ) : isDescribeRoute ? (
           <figure className="food-log-transaction__screen" data-screen="review">
