@@ -1,6 +1,6 @@
 # Repository Operating Instructions
 
-> **Latest immutable feature Preview (2026-10-07):** `https://2ada7513.joshuaik2.pages.dev/` uses application source `8ac121a60a3b2c8bbfcaad0ea18b4e109c8af2d0`. `feat/portfolio-integration` is at documentation checkpoint `1d3e26e1395b9073f691f1d5b4e98f8bcc589a48`; the application source is unchanged from the Preview. Deployed desktop/narrow route and interaction checks passed. This is a review checkpoint, not goal completion. Do not modify production.
+> **Latest immutable feature Preview (2026-10-07):** `https://2ada7513.joshuaik2.pages.dev/` uses application source `8ac121a60a3b2c8bbfcaad0ea18b4e109c8af2d0`. The feature branch has since advanced with documentation-only checkpoints; the application source is unchanged from the Preview. Deployed desktop/narrow route and interaction checks passed. This is a review checkpoint, not goal completion. Do not modify production.
 
 > **Active owner direction (bounded convergence pass, 2026-10-07):** preserve owner-positive implementations and fix only explicit remaining issues. Home composition, Journey, Crest, Personal Highlights structure, Living in Silico's broad direction, Profile structure/overlays, and Resume Viewer architecture are locked absent a concrete regression. Food, Stush, and Education received bounded corrections; Cho'Veigo's full demo remains open pending safe authentic media. Candidate 06 is the feature-branch J target; archive `159:2` remains the production fallback. Keep production untouched.
 
