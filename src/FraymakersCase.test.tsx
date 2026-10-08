@@ -7,22 +7,27 @@ import FraymakersCase from "./FraymakersCase";
 const render = () => renderToStaticMarkup(<MemoryRouter><FraymakersCase /></MemoryRouter>);
 
 describe("Fraymakers technical case study", () => {
-  it("opens on Joshua's renderer and a visibly conceptual composition", () => {
+  it("opens with the 16:9 output, Joshua's renderer, and a simple composition map", () => {
     const markup = render();
     const hero = markup.slice(markup.indexOf('id="fraymakers-pipeline"'), markup.indexOf('id="fraymakers-configuration"'));
     expect(hero).toContain("I built <code>thumbnail.js</code>");
-    expect(hero).toContain("<span>RENDERER</span><code>thumbnail.js</code><span>CANVAS</span><strong>node-canvas</strong>");
+    expect(hero).toContain("thumbnail.js");
+    expect(hero).toContain("node-canvas");
     expect(hero).toContain("1280 × 720 PNG");
-    expect(hero).toContain("Thumbnail composition schematic");
-    expect(hero).toContain("Schematic only; this is not an authentic generated thumbnail.");
-    expect(hero).toContain("Background &amp; stage art");
-    expect(hero).toContain("Player character &amp; costume art");
-    expect(hero).toContain("Supporting assets");
-    expect(hero).toContain("Player names &amp; set labels");
+    expect(hero).toContain('class="fray-case__hero-frame"');
+    expect(hero).toContain("STAGE + BACKGROUND ART");
+    expect(hero).toContain("PLAYER 1");
+    expect(hero).toContain("PLAYER 2");
+    expect(hero).toContain("CHARACTER + COSTUME");
+    expect(hero).toContain("LOGOS + ASSISTS + FOREGROUND ART");
+    expect(hero).toContain("PLAYER NAMES + SET LABELS");
+    expect(hero).toContain("Illustrative content zones only; not a real thumbnail or fixed render order.");
     expect(hero).toContain("My brother built the broader foundation, CLI, Challonge integration");
     expect(hero).toContain("I joined later to build <code>thumbnail.js</code>");
     expect(hero.indexOf("<figure")).toBeLessThan(hero.indexOf("class=\"fray-case__intro-detail\""));
-    expect(hero).toContain('viewBox="0 0 1280 720"');
+    expect(hero).not.toContain("<svg");
+    expect(hero).not.toContain("fray-case__hero-key");
+    expect(hero).not.toContain("fray-case__hero-tools");
     expect(hero).not.toContain("Ordered conceptual pipeline");
     expect(hero).not.toContain("MATCH + TOURNAMENT");
   });
@@ -106,11 +111,12 @@ describe("Fraymakers technical case study", () => {
     expect(css).toContain("@media (max-width: 390px)");
   });
 
-  it("keeps the hero schematic legend legible in two columns at 390px", () => {
+  it("keeps the simplified 16:9 composition labels readable at 390px", () => {
     const css = readFileSync("src/fraymakers-case.css", "utf8");
     const narrow = css.match(/@media \(max-width: 390px\) \{([\s\S]*?)\n\}/)?.[1] ?? "";
 
-    expect(narrow).toMatch(/\.fray-case__hero-key \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
-    expect(css).toContain(".fray-case__hero-key li { gap: 6px; font-size: 11px; }");
+    expect(css).toContain(".fray-case__hero-frame");
+    expect(narrow).toMatch(/\.fray-case__hero-zone[^}]*font-size:\s*10px/s);
+    expect(narrow).toMatch(/\.fray-case__hero-matchup\s*\{[\s\S]*?grid-template-columns:/);
   });
 });

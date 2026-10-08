@@ -115,41 +115,43 @@ export function ResumeFound() {
 
   return (
     <section className="resume-found" aria-labelledby="resume-found-title">
-      <div className="resume-found__system">
-        <ResumeMechanism />
+      <div className="resume-found__composition">
+        <div className="resume-found__system">
+          <ResumeMechanism />
+        </div>
+        <h1 id="resume-found-title" className="resume-found__title">Resume Found</h1>
+        <Link
+          className="resume-action resume-action--primary resume-found__action"
+          to="/resume/viewer"
+          state={location.state}
+        >
+          <img
+            className="resume-found__action-plate resume-found__action-plate--default"
+            src="/media/resume/communitydragon/9.22-ready-check/button-accept-default.png"
+            alt=""
+            aria-hidden="true"
+            width="212"
+            height="70"
+          />
+          <img
+            className="resume-found__action-plate resume-found__action-plate--hover"
+            src="/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png"
+            alt=""
+            aria-hidden="true"
+            width="212"
+            height="70"
+          />
+          <span>View Resume</span>
+        </Link>
+        <button
+          className="resume-found__close"
+          type="button"
+          onClick={closeResume}
+          aria-keyshortcuts="Escape"
+        >
+          CLOSE
+        </button>
       </div>
-      <h1 id="resume-found-title" className="resume-found__title">Resume Found</h1>
-      <Link
-        className="resume-action resume-action--primary resume-found__action"
-        to="/resume/viewer"
-        state={location.state}
-      >
-        <img
-          className="resume-found__action-plate resume-found__action-plate--default"
-          src="/media/resume/communitydragon/9.22-ready-check/button-accept-default.png"
-          alt=""
-          aria-hidden="true"
-          width="212"
-          height="70"
-        />
-        <img
-          className="resume-found__action-plate resume-found__action-plate--hover"
-          src="/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png"
-          alt=""
-          aria-hidden="true"
-          width="212"
-          height="70"
-        />
-        <span>View Resume</span>
-      </Link>
-      <button
-        className="resume-found__close"
-        type="button"
-        onClick={closeResume}
-        aria-keyshortcuts="Escape"
-      >
-        CLOSE
-      </button>
     </section>
   );
 }

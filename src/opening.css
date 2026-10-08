@@ -185,9 +185,9 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
-  animation: none;
+  animation: opening-c06-settled-reveal 100ms linear 840ms both;
 }
 
 .opening__j-piece {
@@ -198,50 +198,45 @@
   height: 100%;
   mix-blend-mode: normal;
   user-select: none;
-}
-
-.opening__j-piece {
-  opacity: 1;
-}
-
-.opening__j-piece img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  mix-blend-mode: normal;
-}
-
-.opening__j-piece--cap,
-.opening__j-piece--hook {
+  opacity: .82;
   -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
   -webkit-mask-position: center;
   mask-position: center;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
+  animation: opening-c06-piece-handoff 100ms linear 840ms both;
+}
+
+.opening__j-piece img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  mix-blend-mode: normal;
 }
 
 .opening__j-piece--cap {
   -webkit-mask-image: url("/media/opening/j-candidate-06-opening-cap.svg");
   mask-image: url("/media/opening/j-candidate-06-opening-cap.svg");
+  transform: translateY(-2.5%);
+  animation:
+    opening-c06-cap-seat 340ms cubic-bezier(.22, .7, .3, 1) 160ms both,
+    opening-c06-piece-handoff 100ms linear 840ms both;
+}
+
+.opening__j-piece--shaft {
+  -webkit-mask-image: url("/media/opening/j-candidate-06-opening-shaft.svg");
+  mask-image: url("/media/opening/j-candidate-06-opening-shaft.svg");
 }
 
 .opening__j-piece--hook {
   -webkit-mask-image: url("/media/opening/j-candidate-06-opening-hook.svg");
   mask-image: url("/media/opening/j-candidate-06-opening-hook.svg");
-}
-
-.opening__j-piece--cap img {
-  opacity: 0;
-  transform: none;
-  animation: opening-c06-cap-light 320ms ease-out 160ms both;
-}
-
-.opening__j-piece--hook img {
-  opacity: 0;
-  transform: none;
-  animation: opening-c06-hook-light 360ms ease-out 400ms both;
+  transform: translateY(2.5%);
+  animation:
+    opening-c06-hook-seat 380ms cubic-bezier(.22, .7, .3, 1) 400ms both,
+    opening-c06-piece-handoff 100ms linear 840ms both;
 }
 
 .opening__seam {
@@ -267,12 +262,6 @@
 .opening__seam--lower {
   clip-path: inset(59% 25% 29% 49%);
   animation: opening-seam-pulse 160ms ease-out 780ms both;
-}
-
-.opening__j-piece--shaft {
-  opacity: 0;
-  transform: none;
-  animation: none;
 }
 
 .opening__j-material-highlight {
@@ -319,16 +308,24 @@
   color: #fff0c1;
 }
 
-@keyframes opening-c06-cap-light {
-  0% { opacity: 0; }
-  44% { opacity: .06; }
+@keyframes opening-c06-cap-seat {
+  0% { transform: translateY(-2.5%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes opening-c06-hook-seat {
+  0% { transform: translateY(2.5%); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes opening-c06-piece-handoff {
+  0% { opacity: .82; }
   100% { opacity: 0; }
 }
 
-@keyframes opening-c06-hook-light {
+@keyframes opening-c06-settled-reveal {
   0% { opacity: 0; }
-  44% { opacity: .06; }
-  100% { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 @keyframes opening-seam-pulse {
@@ -404,11 +401,11 @@
   animation: none;
 }
 
-.opening--reduced .opening__radial-field { opacity: .16; transform: none; }
-.opening--reduced .opening__peripheral-lines { opacity: .2; transform: none; }
-.opening--reduced .opening__peripheral-mark { opacity: .48; transform: rotate(45deg); }
-.opening--reduced .opening__ring { opacity: .82; transform: translate(-50%, -50%); }
-.opening--reduced .opening__orbit-turn { opacity: .78; transform: translate(-50%, -50%); }
+.opening--reduced .opening__radial-field { opacity: 0; transform: none; }
+.opening--reduced .opening__peripheral-lines { opacity: 0; transform: none; }
+.opening--reduced .opening__peripheral-mark { opacity: 0; transform: none; }
+.opening--reduced .opening__ring { opacity: 0; transform: translate(-50%, -50%); }
+.opening--reduced .opening__orbit-turn { opacity: 0; transform: translate(-50%, -50%); }
 .opening--reduced .opening__j-backing { animation: none; opacity: 1; }
 .opening--reduced .opening__j-piece { opacity: 0; transform: none; filter: none; }
 .opening--reduced .opening__j-piece img { opacity: 0; transform: none; }

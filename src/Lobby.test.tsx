@@ -59,17 +59,17 @@ describe("Projects lobby", () => {
     expect(environmentRule).not.toContain("party-background.png");
   });
 
-  it("narrows and centers non-Projects banners and fades their environment from the top", () => {
+  it("keeps the shared Figma banner fade over scenery but beneath cards and preserves the responsive flow", () => {
     const css = readFileSync("src/lobby.css", "utf8");
+    const view = renderProjectsLobby("experience");
     const categoryBanners = css.match(
       /\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/,
     )?.[1] ?? "";
     const categoryEnvironment = css.match(
       /\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment\s*\{([^}]*)\}/,
     )?.[1] ?? "";
-    const categoryFade = css.match(
-      /\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment::after\s*\{([^}]*)\}/,
-    )?.[1] ?? "";
+    const bannerFade = css.match(/\.league-lobby__banner-fade\s*\{([^}]*)\}/)?.[1] ?? "";
+    const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
     const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
     const mobileCategoryBanners = mobileRules.match(
       /\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{[^}]*left:\s*0[^}]*right:\s*0[^}]*width:\s*100%[^}]*transform:\s*none[^}]*\}/s,
@@ -83,11 +83,19 @@ describe("Projects lobby", () => {
     expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
     expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
     expect(categoryEnvironment).toMatch(/mask-image:\s*none/);
-    expect(categoryFade).toMatch(/height:\s*210px/);
-    expect(categoryFade).toContain("rgba(2, 5, 8, .99) 0%");
-    expect(categoryFade).toContain("rgba(2, 5, 8, .82) 28%");
-    expect(categoryFade).toContain("rgba(2, 5, 8, .36) 62%");
-    expect(categoryFade).toContain("transparent 100%");
+    expect(view.querySelector(".league-lobby__banner-fade")).not.toBeNull();
+    expect(view.innerHTML.indexOf("league-lobby__banner-fade")).toBeGreaterThan(view.innerHTML.indexOf("league-lobby__banners"));
+    expect(bannerFade).toMatch(/position:\s*absolute/);
+    expect(bannerFade).toMatch(/z-index:\s*0/);
+    expect(bannerGroup).toMatch(/z-index:\s*1/);
+    expect(bannerFade).toMatch(/top:\s*0/);
+    expect(bannerFade).toMatch(/width:\s*min\(1500px,\s*100%\)/);
+    expect(bannerFade).toMatch(/height:\s*210px/);
+    expect(bannerFade).toContain("rgba(2, 5, 8, .99) 0%");
+    expect(bannerFade).toContain("rgba(2, 5, 8, .82) 28%");
+    expect(bannerFade).toContain("rgba(2, 5, 8, .36) 62%");
+    expect(bannerFade).toContain("transparent 100%");
+    expect(bannerFade).toMatch(/pointer-events:\s*none/);
     expect(mobileCategoryBanners).toMatch(/left:\s*0/);
     expect(mobileCategoryBanners).toMatch(/right:\s*0/);
     expect(mobileCategoryBanners).toMatch(/width:\s*100%/);

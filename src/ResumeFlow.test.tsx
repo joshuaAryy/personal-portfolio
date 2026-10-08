@@ -78,6 +78,22 @@ describe("approved resume flow", () => {
     );
   });
 
+  it("plays one restrained orb-energy sweep and disables it for reduced motion", () => {
+    const markup = renderRoute("/resume");
+    const css = readFileSync("src/resume.css", "utf8");
+    const energyRule = css.match(/\.resume-mechanism__orb-energy\s*\{([^}]*)\}/)?.[1] ?? "";
+    const reducedMotion = css.match(
+      /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*?\.resume-mechanism__orb-energy\s*\{[^}]*\}/,
+    )?.[0] ?? "";
+
+    expect(markup).toContain('class="resume-mechanism__orb-energy" aria-hidden="true"');
+    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-sweep\s+1400ms\s+ease-out\s+1\s+both/);
+    expect(energyRule).toMatch(/z-index:\s*2/);
+    expect(energyRule).toMatch(/mix-blend-mode:\s*screen/);
+    expect(energyRule).toMatch(/pointer-events:\s*none/);
+    expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*animation:\s*none/s);
+  });
+
   it("assembles only the contextual takeover with a short reduced-motion-safe entrance", () => {
     const css = readFileSync("src/resume.css", "utf8");
     const takeoverRule = css.match(/(?:^|\n)\.resume-takeover\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -94,15 +110,38 @@ describe("approved resume flow", () => {
     );
   });
 
-  it("keeps the Resume Found title white and the primary action larger than Close", () => {
+  it("centers the takeover within the shell content and restores a full-width center on narrow screens", () => {
     const css = readFileSync("src/resume.css", "utf8");
+    const takeoverFound = css.match(/\.resume-takeover \.resume-found\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(takeoverFound).toMatch(/justify-content:\s*flex-start/);
+    expect(takeoverFound).toMatch(/padding-top:\s*max\(24px,\s*18\.9vh\)/);
+    expect(takeoverFound).toMatch(/padding-right:\s*calc\(24px \+ clamp\(220px, 16\.67vw, 320px\)\)/);
+    expect(css).toMatch(/@media\s*\(max-width:\s*900px\)[\s\S]*?\.resume-takeover \.resume-found\s*\{[^}]*padding-right:\s*24px/s);
+    expect(css).toMatch(/@media\s*\(max-width:\s*650px\)[\s\S]*?\.resume-takeover \.resume-found\s*\{[^}]*padding-right:\s*16px/s);
+  });
+
+  it("fits the Resume Found title, accept plate, and Close into one lower-ring composition", () => {
+    const markup = renderRoute("/resume");
+    const css = readFileSync("src/resume.css", "utf8");
+    const compositionRule = css.match(/\.resume-found__composition\s*\{([^}]*)\}/)?.[1] ?? "";
     const titleRule = css.match(/\.resume-found__title\s*\{([^}]*)\}/)?.[1] ?? "";
     const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
     const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(titleRule).toMatch(/color:\s*#fff(?:fff)?\b/i);
-    expect(actionRule).toMatch(/font-size:\s*clamp\(12px,/);
-    expect(actionRule).toMatch(/font-size:\s*clamp\(12px,\s*\d+(?:\.\d+)?cqw,\s*14px\)/);
+    expect(markup).toMatch(/class="resume-found__composition"[\s\S]*class="resume-found__system"[\s\S]*class="resume-found__title"[\s\S]*resume-found__action[\s\S]*class="resume-found__close"/);
+    expect(compositionRule).toMatch(/position:\s*relative/);
+    expect(compositionRule).toMatch(/width:\s*min\(530px,\s*49vh,\s*calc\(100vw - 32px\)\)/);
+    expect(titleRule).toMatch(/top:\s*82\.5%/);
+    expect(titleRule).toMatch(/font-size:\s*clamp\(13px,\s*2\.83cqw,\s*15px\)/);
+    expect(titleRule).toMatch(/line-height:\s*20px/);
+    expect(titleRule).toMatch(/color:\s*#f0e6d2/i);
+    expect(actionRule).toMatch(/top:\s*91%/);
+    expect(actionRule).toMatch(/width:\s*min\(212px,\s*40cqw\)/);
+    expect(actionRule).toMatch(/aspect-ratio:\s*212\s*\/\s*70/);
+    expect(closeRule).toMatch(/top:\s*109\.2%/);
+    expect(closeRule).toMatch(/width:\s*112px/);
+    expect(closeRule).toMatch(/height:\s*38px/);
     expect(closeRule).toMatch(/font-size:\s*11px/);
   });
 
@@ -123,19 +162,29 @@ describe("approved resume flow", () => {
     expect(stackRule).toMatch(/display:\s*flex/);
     expect(stackRule).toMatch(/flex-direction:\s*column/);
     expect(stackRule).toMatch(/align-items:\s*center/);
-    expect(stackRule).toMatch(/gap:\s*8px/);
+    expect(markup).toContain('class="resume-found__composition"');
   });
 
-  it("seats the Resume Found title and actions in the lower ring slots", () => {
+  it("positions the fitted title, primary plate, and Close in their authored ring slots", () => {
     const css = readFileSync("src/resume.css", "utf8");
     const titleRule = css.match(/\.resume-found__title\s*\{([^}]*)\}/)?.[1] ?? "";
     const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
     const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(titleRule).toContain("top: calc(-8.45vh)");
-    expect(actionRule).toContain("top: calc(-10.2vh)");
-    expect(actionRule).not.toContain("top: auto");
-    expect(closeRule).toContain("top: calc(-10.72vh)");
+    expect(titleRule).toMatch(/top:\s*82\.5%/);
+    expect(actionRule).toMatch(/top:\s*91%/);
+    expect(closeRule).toMatch(/top:\s*109\.2%/);
+  });
+
+  it("centers Resume Found controls independently of the route-entry transform", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const titleRule = css.match(/\.resume-found__title\s*\{([^}]*)\}/)?.[1] ?? "";
+    const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
+    const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(titleRule).toMatch(/translate:\s*-50%\s+0/);
+    expect(actionRule).toMatch(/translate:\s*-50%\s+0/);
+    expect(closeRule).toMatch(/translate:\s*-50%\s+0/);
   });
 
   it("uses only the approved v13 PDF for display, download, and fullscreen", () => {

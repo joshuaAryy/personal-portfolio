@@ -8,6 +8,7 @@ const REDUCED_HANDOFF_MS = 120;
 const NORMAL_HANDOFF_MS = 160;
 const REDUCED_MOTION_QUERY = "(prefers-reduced-motion: reduce)";
 const C06_SETTLED_SOURCE = "/media/opening/j-candidate-06-m54-opening.svg";
+const C06_ASSEMBLY_SOURCE = "/media/opening/j-candidate-06-m54-assembly.svg";
 const C06_SEAMS_SOURCE = "/media/opening/j-candidate-06-opening-seams.svg";
 
 export default function Opening({ underlay }: { underlay: ReactNode }) {
@@ -125,13 +126,13 @@ export default function Opening({ underlay }: { underlay: ReactNode }) {
             >
               <span className="opening__j-backing" aria-hidden="true" />
               <span className="opening__j-piece opening__j-piece--cap" data-node-id="3679:267">
-                <img src="/media/opening/j-candidate-06-opening-cap.svg" alt="" draggable={false} />
+                <img src={C06_ASSEMBLY_SOURCE} alt="" draggable={false} />
               </span>
               <span className="opening__j-piece opening__j-piece--shaft" data-node-id="3679:285">
-                <img src="/media/opening/j-candidate-06-opening-shaft.svg" alt="" draggable={false} />
+                <img src={C06_ASSEMBLY_SOURCE} alt="" draggable={false} />
               </span>
               <span className="opening__j-piece opening__j-piece--hook" data-node-id="3679:303">
-                <img src="/media/opening/j-candidate-06-opening-hook.svg" alt="" draggable={false} />
+                <img src={C06_ASSEMBLY_SOURCE} alt="" draggable={false} />
               </span>
               <span className="opening__seam opening__seam--upper" aria-hidden="true">
                 <img src={C06_SEAMS_SOURCE} alt="" draggable={false} />

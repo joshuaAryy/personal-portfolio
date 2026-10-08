@@ -144,9 +144,9 @@ function SourceException() {
     <section className="stush-source-exception" id="stush-source-exception" aria-labelledby="stush-source-exception-title">
       <div className="stush-source-exception__intro">
         <p className="stush-kicker">A BOUNDED EXCEPTION</p>
-        <h2 id="stush-source-exception-title">Keep the layout exception inside the reader.</h2>
+        <h2 id="stush-source-exception-title">One layout exception rejoined the shared path.</h2>
         <p>
-          One distributor's irregular workbook required a temporary position-and-cell parser. That parser mapped the input into the shared schema; common normalization then continued. The exception addressed how to read one source while preserving the common reporting contract.
+          A temporary position-and-cell reader mapped one irregular workbook into the shared schema. Common normalization then continued.
         </p>
       </div>
 
@@ -204,11 +204,11 @@ export default function StushPattiesCase() {
       <section className="stush-brief" aria-labelledby="stush-brief-title">
         <div className="stush-brief__heading">
           <p className="stush-kicker">THE CLIENT PROBLEM</p>
-          <h2 id="stush-brief-title">Separate sales files made repeatable reporting difficult.</h2>
+          <h2 id="stush-brief-title">Different layouts made month-to-month reporting difficult.</h2>
         </div>
         <div className="stush-brief__body">
           <p>
-            Stakeholder conversations clarified the need: consistent month-to-month reporting across different layouts.
+            Stakeholders needed consistent monthly reporting across source formats.
           </p>
           <div className="stush-brief__translation" role="group" aria-label="Stakeholder need translated into reporting rules">
             <div className="stush-brief__need">
@@ -231,12 +231,12 @@ export default function StushPattiesCase() {
       <footer className="stush-close" id="stush-reflection">
         <div className="stush-close__heading">
           <p className="stush-kicker">WHAT THE WORK ESTABLISHED</p>
-          <h2>A messy input problem became a documented, repeatable reporting path.</h2>
-          <p>The handoff included standardized CSV output, a data dictionary, and a quality report for Power BI reporting.</p>
+          <h2>One documented path from exports to reporting.</h2>
+          <p>Standardized CSV, data dictionary, and quality report for Power BI.</p>
         </div>
         <div className="stush-close__reflection">
           <span>THE ENGINEERING LESSON</span>
-          <p>Normalize the business meaning. Keep the irregular source exception bounded.</p>
+          <p>Keep the common contract stable; bound the source-specific exception.</p>
         </div>
       </footer>
     </article>

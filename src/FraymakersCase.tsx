@@ -92,46 +92,19 @@ export default function FraymakersCase() {
             <p className="fray-case__dek" data-route-entry="summary">I built <code>thumbnail.js</code> to turn match-specific art and labels into a 1280 × 720 PNG for its associated VOD.</p>
           </div>
           <figure className="fray-case__hero-figure" data-route-entry="evidence" aria-labelledby="fraymakers-hero-caption">
-            <div className="fray-case__hero-topline"><span>THUMBNAIL COMPOSITION SCHEMATIC</span><span>16:9 · 1280 × 720</span></div>
-            <svg viewBox="0 0 1280 720" role="img" aria-labelledby="fraymakers-hero-title fraymakers-hero-description">
-              <title id="fraymakers-hero-title">Thumbnail composition schematic</title>
-              <desc id="fraymakers-hero-description">A conceptual 16:9 layout with a background, opposing abstract player-art shapes, supporting art, name regions, and set-label regions. It does not depict an authentic generated thumbnail.</desc>
-              <defs>
-                <linearGradient id="fray-bg" x2="1" y2="1"><stop stopColor="#153744"/><stop offset=".5" stopColor="#0b1d28"/><stop offset="1" stopColor="#302c22"/></linearGradient>
-                <pattern id="fray-lines" width="72" height="72" patternUnits="userSpaceOnUse" patternTransform="skewX(-20)"><path d="M0 0V72" stroke="#91b6b4" strokeOpacity=".1" strokeWidth="2"/></pattern>
-                <linearGradient id="fray-p1" x2="1" y2="1"><stop stopColor="#63ced0"/><stop offset="1" stopColor="#267681"/></linearGradient>
-                <linearGradient id="fray-p2" x2="0" y2="1"><stop stopColor="#e4c16f"/><stop offset="1" stopColor="#9d663f"/></linearGradient>
-                <filter id="fray-shadow" x="-.3" y="-.3" width="1.6" height="1.7"><feGaussianBlur stdDeviation="18"/></filter>
-              </defs>
-              <rect width="1280" height="720" fill="url(#fray-bg)"/>
-              <rect width="1280" height="720" fill="url(#fray-lines)"/>
-              <circle cx="634" cy="340" r="250" fill="#57c6cb" fillOpacity=".13" filter="url(#fray-shadow)"/>
-              <path d="M0 530 215 420l175 87 177-136 210 137 174-67 329 155v124H0Z" fill="#091923" fillOpacity=".75"/>
-              <path d="M0 560 203 454l167 85 186-131 206 132 167-71 351 161" fill="none" stroke="#82b8ba" strokeOpacity=".32" strokeWidth="4"/>
-              <rect x="38" y="38" width="1204" height="644" rx="12" fill="none" stroke="#e2d6b8" strokeOpacity=".55" strokeWidth="2"/>
-              <rect x="76" y="76" width="260" height="70" rx="5" fill="#07151d" fillOpacity=".8" stroke="#8ba9a8" strokeOpacity=".65"/>
-              <path d="M98 111h34m-17-17v34" stroke="#d6b76b" strokeWidth="5" strokeLinecap="round"/>
-              <path d="M145 100h168M145 121h103" stroke="#adc4c1" strokeOpacity=".55" strokeWidth="7" strokeLinecap="round"/>
-              <rect x="919" y="76" width="285" height="70" rx="5" fill="#07151d" fillOpacity=".8" stroke="#8ba9a8" strokeOpacity=".65"/>
-              <path d="M947 101h214M947 122h149" stroke="#d7c89e" strokeOpacity=".72" strokeWidth="7" strokeLinecap="round"/>
-              <path d="M275 535 303 302l123-102 154 62 76 164-48 159H320Z" fill="#030b10" fillOpacity=".45" transform="translate(14 20)"/>
-              <path d="M275 535 303 302l123-102 154 62 76 164-48 159H320Z" fill="url(#fray-p1)" stroke="#a8eeee" strokeOpacity=".8" strokeWidth="5"/>
-              <path d="M360 318 414 244l70 20 39 61-45 31-40-23-50 53Z" fill="#daf1e5" fillOpacity=".84"/>
-              <path d="M1005 535 977 302l-123-102-154 62-76 164 48 159h188Z" fill="#030b10" fillOpacity=".45" transform="translate(-14 20)"/>
-              <path d="M1005 535 977 302l-123-102-154 62-76 164 48 159h188Z" fill="url(#fray-p2)" stroke="#f1dca5" strokeOpacity=".83" strokeWidth="5"/>
-              <path d="m920 318-54-74-70 20-39 61 45 31 40-23 50 53Z" fill="#f2e4ca" fillOpacity=".86"/>
-              <path d="m506 407 78-69 76 14 68 70-63 76H566Z" fill="#0c202a" stroke="#e7c66e" strokeWidth="4"/>
-              <path d="M609 396h26m-13-13v26" stroke="#e7c66e" strokeWidth="5" strokeLinecap="round"/>
-              <rect x="84" y="586" width="440" height="62" rx="4" fill="#06131a" fillOpacity=".9" stroke="#66c7ca" strokeOpacity=".8"/>
-              <path d="M108 608h334M108 627h205" stroke="#cee6df" strokeOpacity=".65" strokeWidth="7" strokeLinecap="round"/>
-              <rect x="756" y="586" width="440" height="62" rx="4" fill="#06131a" fillOpacity=".9" stroke="#d6b76b" strokeOpacity=".8"/>
-              <path d="M780 608h334M780 627h205" stroke="#e9dfc8" strokeOpacity=".65" strokeWidth="7" strokeLinecap="round"/>
-            </svg>
-            <ul className="fray-case__hero-key" aria-label="Schematic regions">
-              <li>Background &amp; stage art</li><li>Player character &amp; costume art</li><li>Supporting assets</li><li>Player names &amp; set labels</li>
-            </ul>
-            <div className="fray-case__hero-tools" aria-label="Renderer tools"><span>RENDERER</span><code>thumbnail.js</code><span>CANVAS</span><strong>node-canvas</strong></div>
-            <figcaption id="fraymakers-hero-caption">Schematic only; this is not an authentic generated thumbnail.</figcaption>
+            <div className="fray-case__hero-topline"><span>THUMBNAIL.JS OUTPUT</span><span>16:9 · 1280 × 720 PNG</span></div>
+            <div className="fray-case__hero-frame" role="img" aria-label="Illustrative 16:9 thumbnail composition. It names source-art and text regions but is not a generated thumbnail or verified render order.">
+              <div className="fray-case__hero-zone fray-case__hero-zone--stage">STAGE + BACKGROUND ART</div>
+              <div className="fray-case__hero-matchup">
+                <div className="fray-case__hero-zone fray-case__hero-zone--player"><strong>PLAYER 1</strong><span>CHARACTER + COSTUME</span></div>
+                <span className="fray-case__hero-versus" aria-hidden="true">VS</span>
+                <div className="fray-case__hero-zone fray-case__hero-zone--player fray-case__hero-zone--p2"><strong>PLAYER 2</strong><span>CHARACTER + COSTUME</span></div>
+              </div>
+              <div className="fray-case__hero-zone fray-case__hero-zone--support">LOGOS + ASSISTS + FOREGROUND ART</div>
+              <div className="fray-case__hero-zone fray-case__hero-zone--labels">PLAYER NAMES + SET LABELS</div>
+            </div>
+            <div className="fray-case__hero-render"><code>thumbnail.js</code><span>node-canvas</span><b aria-hidden="true">→</b><strong>1280 × 720 PNG</strong></div>
+            <figcaption id="fraymakers-hero-caption">Illustrative content zones only; not a real thumbnail or fixed render order.</figcaption>
           </figure>
           <p className="fray-case__intro-detail" data-route-entry="summary">My brother built the broader foundation, CLI, Challonge integration, and much of the early API groundwork; I joined later to build <code>thumbnail.js</code> and work on YAML/configuration, generation/integration, and part of the YouTube API path.</p>
         </header>

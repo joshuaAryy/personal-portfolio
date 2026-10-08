@@ -478,6 +478,7 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
             ? "Select an entry to review its academic details below."
             : "Select an entry, then use the action in its tray to open the story."}
         </p>
+        <div className="league-lobby__banner-fade" aria-hidden="true" />
       </section>
     </Client>
   );

@@ -252,6 +252,8 @@ describe("League client shell", () => {
     expect(markup).toContain(`src="${portfolioIdentity.mark}"`);
     expect(markup).toContain('src="/media/profile/choveigo-mark.svg"');
     expect(markup).toContain('src="/media/profile/profile-crest-emblem.png"');
+    expect(markup).toContain('src="/media/profile/living-in-silico-logo.png"');
+    expect(markup).toContain('src="/media/profile/stush-patties-logo.png"');
   });
 
   it("keeps the Home lifecycle rail scoped away from Resume and other routes", () => {

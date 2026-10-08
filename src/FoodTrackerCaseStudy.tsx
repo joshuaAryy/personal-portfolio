@@ -675,7 +675,7 @@ function FoodRetrievalEvidence() {
             <span className="food-figure__index">OFFLINE SEARCH EVALUATION</span>
             <h3>How does the app find the intended food reliably?</h3>
           </div>
-          <p>Top-1 · Top-3 · Top-5 = correct food within the first 1, 3, or 5 results.</p>
+          <p>Top-1 means the intended food ranks first; Top-3 means it appears in the first three results. Development (80 queries) and holdout (40 queries) compare the legacy baseline with the full hybrid system offline.</p>
         </div>
 
         <div className="food-retrieval-evidence__sets">
@@ -718,7 +718,7 @@ function FoodRetrievalEvidence() {
 
         <div className="food-retrieval-evidence__finding">
           <strong>Evaluation changed the design.</strong>
-          <p>Project and evaluation notes attribute most of the measured gain to fuzzy retrieval. They also report that semantic retrieval added substantial latency for little benchmark recovery; no latency number is asserted here, so the richer model path stayed bounded.</p>
+          <p>Project notes report that semantic retrieval added latency for little benchmark recovery. The table compares the legacy path with the full hybrid system; it does not isolate a fuzzy-only gain.</p>
         </div>
       </div>
 
@@ -855,11 +855,12 @@ export default function FoodTrackerCaseStudy() {
               I started Food Tracker for my own gym and nutrition routine: make daily logging easy to repeat, then keep the record dependable enough to support a longer view.
             </p>
             <p className="food-rewrite__ownership" data-route-entry="summary">
-              I owned product direction, architecture, workflows, evaluation, and acceptance. I also coded and debugged parts of the product; Codex and AI agents implemented substantial product slices under my direction and review.
+              I led product direction, architecture, workflows, evaluation, and acceptance; I also wrote and debugged application code. I coordinated an advanced agentic workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review.
             </p>
             <p className="food-rewrite__stack">
               <strong>STACK</strong>
-              <span>React Native/Expo · Express/TypeScript · Prisma/PostgreSQL</span>
+              <span>React Native · Expo Router · TypeScript · Express/Node · Prisma/PostgreSQL · Firebase Auth</span>
+              <span>Railway staging · Pinecone candidate search only</span>
             </p>
           </div>
           <aside className="food-rewrite__promise" data-route-entry="evidence" aria-label="The Food Tracker product path">

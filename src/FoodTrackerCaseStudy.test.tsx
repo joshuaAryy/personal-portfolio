@@ -36,7 +36,16 @@ describe("Food Tracker product story", () => {
     const hero = section(markup, "food-overview", "food-logging");
 
     expect(hero).toContain('class="food-rewrite__stack"');
-    expect(hero).toContain("React Native/Expo · Express/TypeScript · Prisma/PostgreSQL");
+    for (const tech of [
+      "React Native",
+      "Expo Router",
+      "TypeScript",
+      "Express/Node",
+      "Prisma/PostgreSQL",
+      "Firebase Auth",
+      "Railway staging",
+      "Pinecone candidate search only",
+    ]) expect(hero).toContain(tech);
   });
 
   it("moves from the product promise through logging, data, insights, retrieval, and release", () => {
@@ -70,9 +79,9 @@ describe("Food Tracker product story", () => {
     for (const copy of [
       "Simple tracking. Serious insight.",
       "I started Food Tracker for my own gym and nutrition routine",
-      "I owned product direction, architecture, workflows, evaluation, and acceptance",
-      "I also coded and debugged parts of the product",
-      "Codex and AI agents implemented substantial product slices under my direction and review",
+      "I led product direction, architecture, workflows, evaluation, and acceptance",
+      "I also wrote and debugged application code",
+      "I coordinated an advanced agentic workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review",
       "Simple and Complex share one app, backend, and data model",
     ]) expect(opening).toContain(copy);
     expect(opening).not.toContain("I built every part");
@@ -475,6 +484,8 @@ describe("Food Tracker product story", () => {
     expect(search).toContain('class="food-retrieval-pipeline__resolve"');
     expect(search).toContain('class="food-retrieval-evidence__top-one"');
     expect(search).toContain('role="img" aria-label="Top-1 offline ranking comparison');
+    expect(search).toContain("Top-1 means the intended food ranks first; Top-3 means it appears in the first three results.");
+    expect(search).toContain("Development (80 queries) and holdout (40 queries) compare the legacy baseline with the full hybrid system offline.");
     for (const copy of [
       "EXACT / STRUCTURED",
       "FUZZY RETRIEVAL",
@@ -495,8 +506,8 @@ describe("Food Tracker product story", () => {
       "25/40",
       "27/40",
       "28/40",
-      "They also report that semantic retrieval added substantial latency for little benchmark recovery",
-      "Project and evaluation notes attribute most of the measured gain to fuzzy retrieval.",
+      "Project notes report that semantic retrieval added latency for little benchmark recovery",
+      "The table compares the legacy path with the full hybrid system; it does not isolate a fuzzy-only gain.",
       "Offline ranking evidence, not live-user outcomes",
     ]) expect(searchCopy).toContain(copy);
     expect(searchCopy).not.toContain("31/40");

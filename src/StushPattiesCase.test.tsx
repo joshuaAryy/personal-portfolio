@@ -66,20 +66,33 @@ describe("Stush Patties experience story", () => {
     const exceptionStart = html.indexOf('id="stush-source-exception"');
     const exception = html.slice(exceptionStart, html.indexOf("</section>", exceptionStart));
 
-    expect(exception).toContain("temporary position-and-cell parser");
-    expect(exception).toContain("irregular workbook required a temporary");
+    expect(exception).toContain("TEMPORARY POSITION + CELL PARSER");
+    expect(exception).toContain("A temporary position-and-cell reader mapped one irregular workbook into the shared schema");
     expect(exception).toContain("ONE SOURCE-SPECIFIC EXCEPTION");
-    expect(exception).toContain("common normalization then continued");
+    expect(exception).toContain("Common normalization then continued.");
     expect(exception).toContain("Same reporting fields and output contract");
     expect(exception).not.toMatch(/cell\s*(?:A|B|C|\d+)/i);
     expect(exception).not.toMatch(/Koyo|UNFI|Dovre|Shiv/i);
+  });
+
+  it("keeps the later client problem concise and the established ending specific", () => {
+    const html = markup();
+    const clientProblem = html.slice(html.indexOf('class="stush-brief"'), html.indexOf('class="stush-close"'));
+    const close = html.slice(html.indexOf('class="stush-close"'));
+
+    expect(clientProblem).toContain("Different layouts made month-to-month reporting difficult.");
+    expect(clientProblem).toContain("Stakeholders needed consistent monthly reporting across source formats.");
+    expect(close).toContain("One documented path from exports to reporting.");
+    expect(close).toContain("Standardized CSV, data dictionary, and quality report for Power BI.");
+    expect(close).toContain("Keep the common contract stable; bound the source-specific exception.");
+    expect(clientProblem + close).not.toMatch(/Koyo|UNFI|Dovre|Shiv/i);
   });
 
   it("keeps team ownership and supported reporting outputs without personal names", () => {
     const html = markup();
     const text = html.toLowerCase();
 
-    for (const detail of ["two-person technical team", "stakeholder conversations", "python parsing and normalization", "standardized csv", "data dictionary", "quality report", "power bi"]) {
+    for (const detail of ["two-person technical team", "stakeholders needed consistent monthly reporting", "python parsing and normalization", "standardized csv", "data dictionary", "quality report", "power bi"]) {
       expect(text).toContain(detail);
     }
     expect(text).not.toMatch(/\b(?:koyo|unfi|dovre|shiv|arora)\b/i);
@@ -92,7 +105,7 @@ describe("Stush Patties experience story", () => {
     const close = html.slice(html.indexOf('class="stush-close"'));
 
     expect(close).toContain("WHAT THE WORK ESTABLISHED");
-    expect(close).toContain("A messy input problem became a documented, repeatable reporting path.");
+    expect(close).toContain("One documented path from exports to reporting.");
     expect(close).toContain("THE ENGINEERING LESSON");
   });
 

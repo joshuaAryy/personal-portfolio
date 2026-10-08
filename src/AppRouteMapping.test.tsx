@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, describe, expect, it, vi } from "vitest";
@@ -84,8 +85,14 @@ describe("primary App route mapping", () => {
     expect(page).toContain('class="journey-identity__frame" src="/media/profile/portrait-medallion.png"');
   });
 
-  it("presents four concise Education capability briefs with their evidence states", () => {
+  it("presents four concise Education capability briefs as responsive cards", () => {
     const page = renderRoute("/education/projects");
+    const css = readFileSync("src/education-projects.css", "utf8");
+    expect(page).toContain('class="education-projects__briefs education-projects__briefs--cards"');
+    expect(page.match(/class="education-projects__learning"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__tools"/g)).toHaveLength(4);
+    expect(css).toMatch(/\.education-projects__briefs--cards\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/s);
+    expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.education-projects__briefs--cards\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s);
     expect(page.match(/class="education-projects__brief education-projects__brief--[^"]+"/g)).toHaveLength(4);
     expect(page).toContain("Dental Clinic DBMS");
     expect(page).toContain("Bookstore Management System");

@@ -601,10 +601,10 @@
 
 .profile-signal-grid {
   position: absolute;
-  top: 485px;
+  top: 535px;
   left: 0;
   width: 1090px;
-  height: 330px;
+  height: 280px;
   margin: 0;
   padding: 0 0 0 20px;
   display: grid;
@@ -1568,7 +1568,7 @@
 
   .profile-signal-grid {
     position: absolute;
-    top: 560px;
+    top: 610px;
     left: 0;
     width: 1090px;
     height: 250px;
@@ -1592,7 +1592,7 @@
   }
 
   .profile-signal-grid {
-    top: calc(820px - 15.3vw);
+    top: calc(870px - 15.3vw);
   }
 }
 
@@ -1616,11 +1616,12 @@
 
 @media (min-width: 1400px) and (max-width: 1440px) {
   .main--profile .profile-overview {
+    height: 954px;
     transform: scale(clamp(.69, calc(100vw / 4000px + .34), .7));
   }
 
   .profile-signal-grid {
-    top: calc(848px - 20vw + 52px);
+    top: calc(919px - 20vw + 52px);
   }
 }
 
