@@ -593,19 +593,19 @@ function FoodInsightPath() {
             <p>Existing fixture content; not a general outcome or current UI approval.</p>
           </div>
         </section>
-        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-plan-title">
-          <div className="food-insight-path__capture-screen food-insight-path__capture-screen--plan">
+        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-macro-title">
+          <div className="food-insight-path__capture-screen">
             <img
-              src="/media/case-studies/food-tracker/phase-24/goal-plan.png"
-              alt="Phase 24 Goal plan capture for the existing QA profile showing a recommended starting plan and the note that recommendations are not promises."
+              src="/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png"
+              alt="Phase 24 populated QA-A staging capture of the 30-day Macro Composition view for Sep 8 to Oct 7, showing a fixture-specific average and a 21/56/23 percent protein-carbohydrate-fat split with daily macro mix."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">PHASE 24 · PRE-REDESIGN · GOAL PLAN</span>
-            <strong id="food-insight-capture-plan-title">Recommendations, not promises.</strong>
-            <p>One QA-profile recommendation capture; not a general result or outcome.</p>
+            <span className="food-figure__index">SUPPORTING EVIDENCE - PHASE 24 / PRE-REDESIGN - QA-A STAGING CAPTURE - COMPLEX MODE</span>
+            <strong id="food-insight-capture-macro-title">Macro composition - 30-day view - Sep 8 to Oct 7 - five recorded days.</strong>
+            <p>Shows 21% protein, 56% carbohydrates, and 23% fat; 1,013 kcal is specific to this QA-A fixture, not a general outcome.</p>
           </div>
         </section>
         <section className="food-insight-path__capture food-insight-path__capture--trend-detail" aria-labelledby="food-insight-capture-trend-title">
@@ -855,11 +855,11 @@ export default function FoodTrackerCaseStudy() {
               I started Food Tracker for my own gym and nutrition routine: make daily logging easy to repeat, then keep the record dependable enough to support a longer view.
             </p>
             <p className="food-rewrite__ownership" data-route-entry="summary">
-              I led product direction, architecture, workflows, evaluation, and acceptance; I also wrote and debugged application code. I coordinated an advanced agentic workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review.
+              I led product direction, architecture, workflows, evaluation, and acceptance; I also wrote and debugged application code. I directed an advanced Codex/agent workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review.
             </p>
             <p className="food-rewrite__stack">
               <strong>STACK</strong>
-              <span>React Native · Expo Router · TypeScript · Express/Node · Prisma/PostgreSQL · Firebase Auth</span>
+              <span>React Native · Expo / Expo Router · TypeScript · Express/Node · Prisma/PostgreSQL · Firebase Auth</span>
               <span>Railway staging · Pinecone candidate search only</span>
             </p>
           </div>

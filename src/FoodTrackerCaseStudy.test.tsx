@@ -46,6 +46,7 @@ describe("Food Tracker product story", () => {
       "Railway staging",
       "Pinecone candidate search only",
     ]) expect(hero).toContain(tech);
+    expect(hero).toContain("React Native · Expo / Expo Router · TypeScript");
   });
 
   it("moves from the product promise through logging, data, insights, retrieval, and release", () => {
@@ -81,7 +82,7 @@ describe("Food Tracker product story", () => {
       "I started Food Tracker for my own gym and nutrition routine",
       "I led product direction, architecture, workflows, evaluation, and acceptance",
       "I also wrote and debugged application code",
-      "I coordinated an advanced agentic workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review",
+      "I directed an advanced Codex/agent workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review",
       "Simple and Complex share one app, backend, and data model",
     ]) expect(opening).toContain(copy);
     expect(opening).not.toContain("I built every part");
@@ -119,13 +120,15 @@ describe("Food Tracker product story", () => {
     expect(insights).toContain("QA-A staging capture");
     expect(insights).toContain("five logged days.");
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
-    expect(insights).toContain("goal-plan.png");
+    expect(insights).toContain("trend-detail-macro-composition-populated.png");
+    expect(insights).not.toContain("goal-plan.png");
     expect(insights).toContain("1,013 kcal is the recorded average for this QA-A fixture, not a general outcome; historical gaps remain visible.");
     expect(insights).toContain("Sep 8 to Oct 7 · five recorded days.");
     expect(insights).toContain("historical gaps remain visible");
     expect(insights).not.toContain("canonical trend-configuration capture");
-    expect(insights).toContain("One QA-profile recommendation capture; not a general result or outcome.");
-    expect(insights).toContain("Recommendations, not promises.");
+    expect(insights).toContain("Macro composition");
+    expect(insights).toContain("30-day view");
+    expect(insights).toContain("Shows 21% protein, 56% carbohydrates, and 23% fat; 1,013 kcal is specific to this QA-A fixture, not a general outcome.");
     expect(markup).not.toContain("trends-overview.png");
     expect(markup).not.toContain("insights-week-current.png");
   });

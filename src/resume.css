@@ -161,14 +161,18 @@
   height: 70%;
   border-radius: 50%;
   background: conic-gradient(
-    from 0deg,
-    rgb(76 224 232 / 58%) 0deg,
-    rgb(76 224 232 / 24%) 24deg,
-    transparent 64deg,
+    from -4deg,
+    transparent 0deg 220deg,
+    rgb(76 224 232 / 5%) 236deg,
+    rgb(76 224 232 / 24%) 260deg,
+    rgb(76 224 232 / 58%) 288deg,
+    rgb(76 224 232 / 82%) 310deg,
+    rgb(76 224 232 / 56%) 332deg,
+    rgb(76 224 232 / 12%) 354deg,
     transparent 360deg
   );
-  filter: blur(3px);
-  mask: radial-gradient(circle closest-side, transparent 76%, #000 80%, #000 88%, transparent 94%);
+  filter: drop-shadow(0 0 4px rgb(76 224 232 / 28%));
+  mask: radial-gradient(circle closest-side, transparent 86%, #000 89%, #000 95%, transparent 99%);
   mix-blend-mode: screen;
   opacity: 0;
   pointer-events: none;
@@ -634,23 +638,23 @@
 @keyframes resume-orb-energy-sweep {
   0% {
     opacity: 0;
-    transform: rotate(0deg);
+    transform: rotate(90deg);
   }
-  12% {
-    opacity: .3;
-    transform: rotate(32deg);
+  8% {
+    opacity: .48;
+    transform: rotate(98deg);
   }
-  52% {
-    opacity: .26;
-    transform: rotate(140deg);
+  76% {
+    opacity: .52;
+    transform: rotate(166deg);
   }
-  82% {
-    opacity: .12;
-    transform: rotate(221deg);
+  92% {
+    opacity: .32;
+    transform: rotate(182deg);
   }
   100% {
     opacity: 0;
-    transform: rotate(270deg);
+    transform: rotate(190deg);
   }
 }
 

@@ -231,6 +231,30 @@ describe("Profile Overview", () => {
     expect(signalRule).toMatch(/top:\s*clamp\(610px, calc\(100vh - 470px\), 800px\)/);
   });
 
+  it("uses the added lower band only on tall 1500–1599px desktop viewports", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const veryTallRules = cssBlock(
+      profileCss,
+      "@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px)",
+    );
+    const signalRule = cssBlock(veryTallRules, ".profile-signal-grid");
+
+    expect(signalRule).toContain("top: calc(100vh - 349px)");
+    expect(profileCss).toContain("@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px)");
+  });
+
+  it("keeps the 1600–1699px signal row fully visible on short-wide desktop heights", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const shortWideRules = cssBlock(
+      profileCss,
+      "@media (min-width: 1600px) and (max-width: 1699px) and (min-height: 821px) and (max-height: 1079px)",
+    );
+    const signalRule = cssBlock(shortWideRules, ".profile-signal-grid");
+
+    expect(signalRule).toContain("top: calc(121.9512vh - 675.4px)");
+    expect(profileCss).toContain("@media (min-width: 1600px) and (max-width: 1699px) and (min-height: 821px) and (max-height: 1079px)");
+  });
+
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const compactRules = cssBlock(profileCss, "@media (min-width: 1100px) and (max-width: 1399px)");

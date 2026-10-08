@@ -78,7 +78,7 @@ describe("approved resume flow", () => {
     );
   });
 
-  it("plays one restrained orb-energy sweep and disables it for reduced motion", () => {
+  it("sweeps one clear cyan arc around the orb and settles it for reduced motion", () => {
     const markup = renderRoute("/resume");
     const css = readFileSync("src/resume.css", "utf8");
     const energyRule = css.match(/\.resume-mechanism__orb-energy\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -94,13 +94,17 @@ describe("approved resume flow", () => {
     expect(energyRule).toMatch(/z-index:\s*3/);
     expect(energyRule).toMatch(/top:\s*50%;[^}]*left:\s*50%;[^}]*width:\s*70%;[^}]*height:\s*70%/s);
     expect(energyRule).toMatch(/translate:\s*-50%\s+-50%/);
-    expect(energyRule).toMatch(/conic-gradient\(\s*from 0deg/);
-    expect(energyRule).toMatch(/mask:\s*radial-gradient\(circle closest-side,\s*transparent 76%,\s*#000 80%,\s*#000 88%,\s*transparent 94%\)/);
+    expect(energyRule).toMatch(/conic-gradient\(\s*from -4deg,[\s\S]*rgb\(76 224 232 \/ 82%\) 310deg[\s\S]*transparent 360deg/);
+    expect(energyRule).toMatch(/mask:\s*radial-gradient\(circle closest-side,\s*transparent 86%,\s*#000 89%,\s*#000 95%,\s*transparent 99%\)/);
+    expect(energyRule).toMatch(/filter:\s*drop-shadow\(0 0 4px rgb\(76 224 232 \/ 28%\)\)/);
+    expect(energyRule).not.toContain("blur(");
     expect(energyRule).toMatch(/mix-blend-mode:\s*screen/);
     expect(energyRule).toMatch(/pointer-events:\s*none/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?12%\s*\{[^}]*opacity:\s*\.3;[\s\S]*?52%\s*\{[^}]*opacity:\s*\.26;/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?100%\s*\{[^}]*opacity:\s*0;[^}]*transform:\s*rotate\(270deg\)/);
-    expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*animation:\s*none/s);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep\s*\{[^}]*0%\s*\{[^}]*transform:\s*rotate\(90deg\)/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?76%\s*\{[^}]*opacity:\s*\.52;[^}]*transform:\s*rotate\(166deg\)/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?92%\s*\{[^}]*opacity:\s*\.32;[^}]*transform:\s*rotate\(182deg\)/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?100%\s*\{[^}]*opacity:\s*0;[^}]*transform:\s*rotate\(190deg\)/);
+    expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*display:\s*none;[^}]*animation:\s*none/s);
   });
 
   it("assembles only the contextual takeover with a short reduced-motion-safe entrance", () => {
