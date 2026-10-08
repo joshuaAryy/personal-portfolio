@@ -42,4 +42,13 @@ The `qa` subfolder contains the 43-check route, asset, motion, interaction, and 
 
 Full Vitest result: 27 files, 243 tests passed. Happy DOM emitted abort/network teardown messages while disposing test iframes; these were non-failing teardown output. Production build passed. `git diff --check` passed.
 
-The next feature Preview is still required before this becomes an owner-review checkpoint. Production remains untouched.
+## Immutable Preview checkpoint
+
+- **Preview:** https://6e522824.joshuaik2.pages.dev
+- **Application source:** `ff108be9df052cc4fd2c1e33f2eef3e078241f30` on `feat/portfolio-integration` (Cloudflare deployment metadata reports `ff108be`).
+- The deployed JS and CSS were downloaded and SHA-256 checked against the local build; both matched.
+- All 18 primary routes and case-study routes returned HTTP 200.
+- Education was inspected in installed Chrome at 1920×1080 and at an emulated 390×844 viewport. The four cards remain a two-by-two desktop grid and become a readable single column on narrow screens; document width matches the viewport and all 14 page images loaded.
+- The earlier raw `--window-size=390` capture was not a valid narrow viewport in this environment: Chrome's effective `innerWidth` remained 764px while the screenshot was cropped to 390px. The final narrow comparison uses Chrome DevTools device-metric emulation and reflects an actual 390px CSS viewport.
+
+This is a **REVIEW CHECKPOINT READY**, not overall portfolio completion or production approval. Production remains untouched.
