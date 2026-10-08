@@ -220,6 +220,17 @@ describe("Profile Overview", () => {
     expect(identityRule).not.toContain("margin-top:");
   });
 
+  it("moves the four signal groups into the lower band on tall desktop viewports", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const tallDesktopRules = cssBlock(
+      profileCss,
+      "@media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1080px)",
+    );
+    const signalRule = cssBlock(tallDesktopRules, ".profile-signal-grid");
+
+    expect(signalRule).toMatch(/top:\s*clamp\(610px, calc\(100vh - 470px\), 800px\)/);
+  });
+
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const compactRules = cssBlock(profileCss, "@media (min-width: 1100px) and (max-width: 1399px)");

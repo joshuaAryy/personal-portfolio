@@ -1790,3 +1790,10 @@
     top: 260px;
   }
 }
+
+/* The owner-reviewed tall desktop frame has room to place the signal row lower. */
+@media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1080px) {
+  .profile-signal-grid {
+    top: clamp(610px, calc(100vh - 470px), 800px);
+  }
+}
