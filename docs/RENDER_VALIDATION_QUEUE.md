@@ -1,5 +1,9 @@
 # Browser Render Validation Queue
 
+**Current checkpoint (2026-10-08; supersedes older current-source summaries below):** immutable feature Preview https://a369201b.joshuaik2.pages.dev/, application source `19b08d0bf914c699dd04e67bf2a06747eccae6da`. Deployed HTML, JS, and CSS exactly match the clean source build. Installed Chrome/Playwright checked Opening/Home handoff, Education projects, Food Tracker, and Living in Silico at 1440×900 and 390×844; Resume Found opened at desktop. Checked routes had no errors, broken visible images, or horizontal overflow. Full suite: 237 tests; build and diff check pass. See the [2026-10-08 report](site-render-review/2026-10-08-bounded-correction/REPORT.md). Production was not targeted. This is an owner-review checkpoint, not completion.
+
+Older queue rows below describe their explicitly dated/source-scoped evidence and are not a claim that every route was revalidated in this latest smoke. Owner review, a privacy-safe full Cho’Veigo demo, and live screen-reader interaction remain open.
+
 Latest immutable feature Preview: https://ce0980b0.joshuaik2.pages.dev/, application source `8e9023b84fe08b000aa9e96d6276b3285953266f`. Deployed Chrome/Playwright verified exact JS/CSS byte-match, 17 routes at 1440×900 and 390×844, and four interactions without runtime/request/image/overflow failures. Previous Preview `https://2ada7513.joshuaik2.pages.dev/` remains for comparison. See [the current Preview report](site-render-review/2026-10-07-current-preview-8e9023b/REPORT.md). Production is untouched.
 
 Current branch/source (2026-10-07): application source `8e9023b84fe08b000aa9e96d6276b3285953266f` is pushed to `feat/portfolio-integration`; it was local/origin HEAD at verification. Three tracked edits and 602 unrelated untracked artifacts remain preserved and excluded from the clean build. Historical Preview source `601f90c` is an ancestor; current deployment source is `8e9023b`. Production is untouched.
