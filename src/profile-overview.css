@@ -601,7 +601,7 @@
 
 .profile-signal-grid {
   position: absolute;
-  top: 470px;
+  top: 485px;
   left: 0;
   width: 1090px;
   height: 330px;
@@ -1620,7 +1620,7 @@
   }
 
   .profile-signal-grid {
-    top: calc(848px - 20vw + 16px);
+    top: calc(848px - 20vw + 52px);
   }
 }
 

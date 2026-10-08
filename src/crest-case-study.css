@@ -80,6 +80,21 @@
   font-size: 14px;
 }
 
+.crest-hero__tech-context {
+  max-width: 62ch;
+  margin: 12px 0 0;
+  color: #b1bec2;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.crest-hero__tech-context strong {
+  color: #73c8d1;
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+}
+
 .crest-demo-media {
   min-width: 0;
 }

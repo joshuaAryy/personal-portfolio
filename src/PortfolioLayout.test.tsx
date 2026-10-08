@@ -186,25 +186,23 @@ describe("League client shell", () => {
     );
   });
 
-  it("uses the same canonical project and experience rail on Home without development labels", () => {
+  it("keeps the generic canonical project and experience rail off Home", () => {
     const markup = renderClient();
-    const activityMarkup = renderClient("/home");
 
     expect(markup).toContain('data-node-id="3317:4"');
     expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
-    expect(activityMarkup).toContain("PROJECTS (4)");
-    expect(activityMarkup).toContain("EXPERIENCE (2)");
-    expect(activityMarkup).toContain('/media/profile/food-tracker-mark.svg');
-    expect(activityMarkup).toContain('/media/profile/choveigo-mark.svg');
-    expect(activityMarkup).toContain('/media/profile/profile-crest-emblem.png');
-    expect(activityMarkup).toContain('/media/profile/fraymakers-logo.png');
-    expect(activityMarkup).toContain('/media/profile/living-in-silico-logo.png');
-    expect(activityMarkup).toContain('/media/profile/stush-patties-logo.png');
-    expect(activityMarkup).toContain("GENERAL · PORTFOLIO");
-    expect(activityMarkup).not.toContain("IN DEVELOPMENT");
-    expect(activityMarkup).not.toContain("COMPLETED (3)");
-    expect(activityMarkup).not.toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
+    expect(markup).toContain("PROJECTS (4)");
+    expect(markup).toContain("EXPERIENCE (2)");
+    expect(markup).toContain('/media/profile/choveigo-mark.svg');
+    expect(markup).toContain('/media/profile/profile-crest-emblem.png');
+    expect(markup).toContain('/media/profile/fraymakers-logo.png');
+    expect(markup).toContain('/media/profile/living-in-silico-logo.png');
+    expect(markup).toContain('/media/profile/stush-patties-logo.png');
+    expect(markup).toContain("GENERAL · PORTFOLIO");
+    expect(markup).not.toContain("IN DEVELOPMENT (2)");
+    expect(markup).not.toContain("COMPLETED (3)");
+    expect(markup).not.toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
@@ -234,23 +232,44 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
   });
 
-  it("uses the canonical J in the shared rail header instead of a duplicate Portfolio row", () => {
+  it("restores Home's lifecycle Activity groups with canonical current identity marks", () => {
     const markup = renderClient("/home");
-    const railMark = markup.match(/class="rail-availability__mark-image" src="([^"]+)"/)?.[1];
 
-    expect(railMark).toBe('/media/profile/j-candidate-06-m54.svg');
-    expect(markup).not.toContain('/media/lobby/activity-art/activity-portfolio-ring.svg');
+    expect(markup).toContain('class="rail-availability rail-availability--focus"');
+    expect(markup).toContain("CURRENT FOCUS");
+    expect(markup).toContain("IN DEVELOPMENT (2)");
+    expect(markup).toContain("COMPLETED (3)");
+    expect(markup).toContain("Food Tracker");
+    expect(markup).toContain("Cho’Veigo");
+    expect(markup).toContain("Portfolio");
+    expect(markup).toContain("Living in Silico");
+    expect(markup).toContain("Stush Patties");
+    expect(markup).toContain("Crest");
+    expect(markup).not.toContain("PROJECTS (4)");
+    expect(markup).not.toContain("EXPERIENCE (2)");
+    expect(markup).not.toContain('/media/lobby/activity-art/');
+    expect(markup.match(/>Food Tracker</g)).toHaveLength(1);
+    expect(markup).toContain(`src="${portfolioIdentity.mark}"`);
+    expect(markup).toContain('src="/media/profile/choveigo-mark.svg"');
+    expect(markup).toContain('src="/media/profile/profile-crest-emblem.png"');
   });
 
-  it("keeps shared Home and Resume Activity rows readable without status-only styling", () => {
+  it("keeps the Home lifecycle rail scoped away from Resume and other routes", () => {
     const css = readFileSync("src/styles.css", "utf8");
+    const resume = renderClient("/resume/viewer");
+    const experiencePage = renderClient("/experience");
 
     expect(css).toMatch(/\.rail-link,\s*\.rail-item\s*\{[^}]*min-height:\s*50px/s);
-    expect(css).not.toMatch(/\.client--home-shell \.rail-link--status/);
     expect(css).not.toMatch(/\.client--resume-shell \.rail-link--status/);
-    expect(css).not.toMatch(
-      /\.client--home-shell \.rail-group--activity-status/,
-    );
+    expect(css).toMatch(/\.client--home-shell \.rail-availability--focus/);
+    expect(css).toMatch(/\.client--home-shell \.rail-group--activity-status/);
+    expect(css).not.toMatch(/\.client--resume-shell \.rail-group--activity-status/);
+    expect(resume).toContain("PROJECTS (4)");
+    expect(resume).toContain("EXPERIENCE (2)");
+    expect(resume).not.toContain("IN DEVELOPMENT (2)");
+    expect(experiencePage).toContain("PROJECTS (4)");
+    expect(experiencePage).toContain("EXPERIENCE (2)");
+    expect(experiencePage).not.toContain("IN DEVELOPMENT (2)");
   });
 
   it("places the three contact destinations after page content for the narrow shell", () => {

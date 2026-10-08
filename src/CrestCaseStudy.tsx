@@ -295,6 +295,11 @@ export default function CrestCaseStudy() {
               deterministic anomaly signals, policy retrieval, and part of
               preapproval.
             </p>
+            <p className="crest-hero__tech-context" data-route-entry="summary">
+              <strong>TECH CONTEXT · </strong>
+              Python/FastAPI transaction Q&amp;A over Mongo-backed data with Gemini responses;
+              separate Node.js policy-PDF retrieval scripts.
+            </p>
             <p className="crest-hero__context" data-route-entry="summary">
               FOUR-PERSON TEAM · MPC HACKS 2026 · BRIM FINANCIAL CHALLENGE
             </p>

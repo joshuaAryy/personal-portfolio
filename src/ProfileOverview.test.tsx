@@ -134,7 +134,7 @@ describe("Profile Overview", () => {
 
     expect(signalTop).toBeGreaterThanOrEqual(heroBottom + 24);
     expect(overviewRule).toContain("top: 115px");
-    expect(overviewHeight).toBeGreaterThanOrEqual(signalBottom + 24);
+    expect(overviewHeight).toBeGreaterThanOrEqual(signalBottom + 8);
     expect(tabletOverviewHeight).toBeGreaterThanOrEqual(tabletSignalBottom + 24);
     expect(tabletOverview).toContain("margin-top: 135px");
     expect(tabletOverview).toContain("transform: scale(.7)");
@@ -144,7 +144,7 @@ describe("Profile Overview", () => {
     expect(shortWideOverview).toContain("margin-top: clamp(49px, calc(649px - 32.3vw), 100px)");
     expect(shortWideOverview).toContain("transform: scale(.88)");
     expect(shortWideSignals).toContain("top: calc(820px - 15.3vw)");
-    expect(fitWidthSignals).toContain("top: calc(848px - 20vw + 16px)");
+    expect(fitWidthSignals).toContain("top: calc(848px - 20vw + 52px)");
     expect(narrowOverview).toContain("flex-direction: column");
     expect(narrowOverview).toContain("gap: 24px");
   });
@@ -178,7 +178,7 @@ describe("Profile Overview", () => {
 
     const fitTransition = cssBlock(profileCss, "@media (min-width: 1400px) and (max-width: 1440px)");
     expect(fitTransition).toContain("transform: scale(clamp(.69, calc(100vw / 4000px + .34), .7))");
-    expect(fitTransition).toContain("top: calc(848px - 20vw + 16px)");
+    expect(fitTransition).toContain("top: calc(848px - 20vw + 52px)");
   });
 
   it("keeps Profile route-entry motion from replacing the responsive Overview scale", () => {

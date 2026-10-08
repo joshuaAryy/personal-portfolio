@@ -18,6 +18,7 @@ describe("Crest technical case study", () => {
     const hero = markup.slice(heroStart, heroEnd);
 
     expect(hero).toContain("My backend/data work covered Policy Compliance Engine workflows, deterministic anomaly signals, policy retrieval, and part of preapproval.");
+    expect(hero).toContain("Python/FastAPI transaction Q&amp;A over Mongo-backed data with Gemini responses; separate Node.js policy-PDF retrieval scripts.");
   });
 
   it("maps the workspace, Finance Q&A, and standalone policy-retrieval paths without merging them", () => {

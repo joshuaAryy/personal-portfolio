@@ -669,6 +669,21 @@
   }
 }
 
+@media (min-width: 761px) and (max-width: 1500px) {
+  .home-explore {
+    grid-template-rows: 35px 285px 20px minmax(410px, auto) auto;
+  }
+
+  .home-explore__confirm-area {
+    position: relative;
+    grid-row: 5;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin: 12px auto 8px;
+  }
+}
+
 @media (max-width: 760px) {
   .home-explore {
     min-height: 100%;

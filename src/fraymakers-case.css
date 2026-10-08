@@ -179,7 +179,7 @@
 @media (max-width: 390px) {
   .fray-case { padding-right: 17px; padding-left: 17px; }
   .fray-case__hero-topline { font-size: 7px; letter-spacing: .08em; }
-  .fray-case__hero-key { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .fray-case__hero-key { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 8px; }
   .fray-case__hero-tools { gap: 7px; padding-right: 3px; padding-left: 3px; }
   .fray-case__handoff-path { grid-template-columns: minmax(0, 106px) minmax(0, 1fr); gap: 10px; padding: 11px; }
   .fray-case__handoff-file { padding: 9px; }

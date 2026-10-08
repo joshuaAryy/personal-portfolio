@@ -59,7 +59,7 @@ describe("opening route choreography", () => {
     expect(openingMark).not.toContain('fill="#02050A"');
   });
 
-  it("seats contained cap and hook overlays over a complete C06 backing", () => {
+  it("keeps the complete authored C06 fixed while brief light passes remain inside it", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");
     const backingRule = css.match(/\.opening__j-backing\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -80,17 +80,19 @@ describe("opening route choreography", () => {
     expect(markup).toContain('src="/media/opening/j-candidate-06-opening-seams.svg"');
     expect(capRule).toMatch(/mask-image:\s*url\("\/media\/opening\/j-candidate-06-opening-cap\.svg"\)/);
     expect(css).toContain('mask-image: url("/media/opening/j-candidate-06-opening-hook.svg")');
-    expect(capImageRule).toMatch(/animation:\s*opening-c06-seat\s+440ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+160ms\s+both/);
-    expect(capImageRule).toMatch(/--forge-start-y:\s*-\.45%/);
+    expect(capImageRule).toMatch(/animation:\s*opening-c06-cap-light\s+320ms\s+ease-out\s+160ms\s+both/);
+    expect(capImageRule).toMatch(/transform:\s*none/);
     expect(shaftRule).toMatch(/animation:\s*none/);
     expect(shaftRule).toMatch(/transform:\s*none/);
-    expect(shaftRule).toMatch(/opacity:\s*1/);
-    expect(hookImageRule).toMatch(/animation:\s*opening-c06-seat\s+520ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+300ms\s+both/);
-    expect(hookImageRule).toMatch(/--forge-start-y:\s*\.45%/);
-    expect(css).toMatch(/@keyframes opening-c06-seat\s*\{[\s\S]*?from\s*\{\s*transform:\s*translateY\(var\(--forge-start-y\)\);\s*\}\s*to\s*\{\s*transform:\s*translateY\(0\);\s*\}/);
-    expect(css).toMatch(/\.opening__seam--upper\s*\{[^}]*opening-seam-ignite\s+180ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+600ms\s+both/s);
-    expect(css).toMatch(/\.opening__seam--lower\s*\{[^}]*opening-seam-ignite\s+180ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+820ms\s+both/s);
-    expect(css).toMatch(/@keyframes opening-seam-ignite\s*\{\s*from\s*\{\s*opacity:\s*0\s*;\s*\}\s*to\s*\{\s*opacity:\s*\.72\s*;\s*\}/);
+    expect(shaftRule).toMatch(/opacity:\s*0/);
+    expect(hookImageRule).toMatch(/animation:\s*opening-c06-hook-light\s+360ms\s+ease-out\s+400ms\s+both/);
+    expect(hookImageRule).toMatch(/transform:\s*none/);
+    expect(css).not.toContain("opening-c06-seat");
+    expect(css).toMatch(/@keyframes opening-c06-cap-light\s*\{[\s\S]*?0%\s*\{[^}]*opacity:\s*0[\s\S]*?44%\s*\{[^}]*opacity:\s*\.06[\s\S]*?100%\s*\{[^}]*opacity:\s*0/);
+    expect(css).toMatch(/@keyframes opening-c06-hook-light\s*\{[\s\S]*?0%\s*\{[^}]*opacity:\s*0[\s\S]*?44%\s*\{[^}]*opacity:\s*\.06[\s\S]*?100%\s*\{[^}]*opacity:\s*0/);
+    expect(css).toMatch(/\.opening__seam--upper\s*\{[^}]*opening-seam-pulse\s+160ms\s+ease-out\s+500ms\s+both/s);
+    expect(css).toMatch(/\.opening__seam--lower\s*\{[^}]*opening-seam-pulse\s+160ms\s+ease-out\s+780ms\s+both/s);
+    expect(css).toMatch(/@keyframes opening-seam-pulse\s*\{[\s\S]*?31%\s*\{\s*opacity:\s*\.18\s*;\s*\}[\s\S]*?100%\s*\{\s*opacity:\s*0\s*;\s*\}/);
     expect(css).toMatch(/@keyframes opening-radial-arrive\s*\{[\s\S]*?69\.7%,\s*100%\s*\{[^}]*opacity:\s*\.2;\s*transform:\s*rotate\(0deg\) scale\(1\)/);
   });
 
@@ -103,15 +105,17 @@ describe("opening route choreography", () => {
     expect(css).toMatch(/\.opening-route--leaving \.opening\s*\{[^}]*opacity:\s*0/s);
     expect(css).toMatch(/\.opening__underlay\s*\{[^}]*transition:\s*filter 160ms ease/s);
     expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin 2\.84s cubic-bezier\(\.25,\s*\.1,\s*\.25,\s*1\) 1 both/s);
-    expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(18deg\)/);
+    expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(9deg\)/);
     expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation:\s*opening-radial-arrive\s+2\.84s/s);
     expect(css).toMatch(/repeating-conic-gradient\([\s\S]*transparent\s+0deg\s+3\.42deg,[\s\S]*rgb\(170\s+193\s+206\s*\/\s*16%\)[\s\S]*transparent\s+3\.72deg\s+4deg/s);
-    expect(css).toMatch(/\.opening__j-material-highlight\s*\{[^}]*opening-material-highlight\s+420ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+1120ms\s+both/s);
-    expect(css).toMatch(/@keyframes opening-material-highlight\s*\{[\s\S]*?100%\s*\{\s*opacity:\s*0\s*;/);
+    expect(css).toMatch(/\.opening__j-material-highlight\s*\{[^}]*opening-material-sheen\s+400ms\s+linear\s+1080ms\s+both/s);
+    expect(css).toMatch(/@keyframes opening-material-sheen\s*\{[\s\S]*?45%\s*\{[^}]*opacity:\s*\.08[\s\S]*?100%\s*\{\s*opacity:\s*0[\s\S]*?background-position:\s*100%\s+50%/);
     expect(css).not.toMatch(/\.opening__treatment\s*\{[^}]*animation:/s);
     expect(css).toMatch(/\.opening--reduced \.opening__j-backing\s*\{[^}]*animation:\s*none/s);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
     expect(css).toMatch(/\.opening--reduced \.opening__j-piece img,[\s\S]*?\.opening--reduced \.opening__j-material-highlight\s*\{\s*animation:\s*none/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-piece\s*\{[^}]*opacity:\s*0/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__seam\s*\{[^}]*opacity:\s*0/s);
     expect(css).not.toMatch(/opening__loading|opening__progress/);
   });
 
@@ -146,7 +150,7 @@ describe("opening route choreography", () => {
 
     expect(markup).toContain('class="opening-route opening-route--reduced"');
     expect(markup).toContain('class="opening opening--reduced"');
-    expect(css).toMatch(/\.opening--reduced\s+\.opening__j-piece\s*\{[^}]*opacity:\s*1/);
+    expect(css).toMatch(/\.opening--reduced\s+\.opening__j-piece\s*\{[^}]*opacity:\s*0/);
     const reducedRules = css.slice(css.indexOf(".opening--reduced .opening__treatment"));
     expect(reducedRules).toContain(".opening--reduced .opening__orbit-turn");
     expect(reducedRules).toContain(".opening--reduced .opening__orbit-spin");

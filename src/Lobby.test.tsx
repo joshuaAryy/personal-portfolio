@@ -67,6 +67,9 @@ describe("Projects lobby", () => {
     const categoryEnvironment = css.match(
       /\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment\s*\{([^}]*)\}/,
     )?.[1] ?? "";
+    const categoryFade = css.match(
+      /\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment::after\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
     const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
     const mobileCategoryBanners = mobileRules.match(
       /\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{[^}]*left:\s*0[^}]*right:\s*0[^}]*width:\s*100%[^}]*transform:\s*none[^}]*\}/s,
@@ -77,10 +80,14 @@ describe("Projects lobby", () => {
 
     expect(categoryBanners).toMatch(/top:\s*2px/);
     expect(categoryBanners).toMatch(/left:\s*50%/);
-    expect(categoryBanners).toMatch(/width:\s*min\(68%,\s*680px\)/);
+    expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
     expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
-    expect(categoryEnvironment).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 18%/);
-    expect(categoryEnvironment).toMatch(/transparent 88%/);
+    expect(categoryEnvironment).toMatch(/mask-image:\s*none/);
+    expect(categoryFade).toMatch(/height:\s*210px/);
+    expect(categoryFade).toContain("rgba(2, 5, 8, .99) 0%");
+    expect(categoryFade).toContain("rgba(2, 5, 8, .82) 28%");
+    expect(categoryFade).toContain("rgba(2, 5, 8, .36) 62%");
+    expect(categoryFade).toContain("transparent 100%");
     expect(mobileCategoryBanners).toMatch(/left:\s*0/);
     expect(mobileCategoryBanners).toMatch(/right:\s*0/);
     expect(mobileCategoryBanners).toMatch(/width:\s*100%/);

@@ -690,6 +690,88 @@ a:focus-visible {
   height: 26px;
   object-fit: contain;
 }
+.client--home-shell .rail-availability--focus {
+  height: 132px;
+  min-height: 132px;
+  flex: 0 0 132px;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 22px;
+  white-space: nowrap;
+}
+.client--home-shell .rail-availability__eyebrow {
+  color: #e6c56f;
+  font-size: 9px;
+  letter-spacing: .08em;
+}
+.client--home-shell .rail-availability__focus-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f1e7d3;
+  text-decoration: none;
+}
+.client--home-shell .rail-availability__focus-link > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+.client--home-shell .rail-availability__focus-link small {
+  margin: 0;
+  color: #b8e3bb;
+  font-size: 8px;
+}
+.client--home-shell .rail-group--activity-status {
+  padding: 5px 14px 0;
+}
+.client--home-shell .rail-group--activity-status h3 {
+  margin-bottom: 2px;
+  color: #e2e8e7;
+  font-size: 8px;
+  letter-spacing: .03em;
+}
+.client--home-shell .rail-link--status {
+  min-height: 54px;
+  gap: 14px;
+}
+.client--home-shell .rail-link--status > span:last-child {
+  display: grid;
+  min-width: 0;
+  gap: 3px;
+}
+.client--home-shell .rail-link--status > span:last-child > span {
+  overflow: hidden;
+  color: #eee7d9;
+  font-size: 10px;
+  line-height: 12px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.client--home-shell .rail-link--status small {
+  overflow: hidden;
+  color: #8fc6af;
+  font-size: 7px;
+  letter-spacing: .03em;
+  line-height: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.client--home-shell .rail-group--activity-status-completed .rail-link--status small {
+  color: #9aa7a1;
+}
+.client--home-shell .rail-group--activity-status-completed .rail-link--status:last-child small {
+  color: #d5b65e;
+}
+.client--home-shell .rail-avatar--home-status {
+  width: 38px;
+  height: 38px;
+  flex-basis: 38px;
+}
+.client--home-shell .rail-avatar--home-status img {
+  width: 30px;
+  height: 30px;
+}
 .rail-group a:hover > span:last-child,
 .rail-group a:focus-visible > span:last-child {
   color: #f4e6c3;

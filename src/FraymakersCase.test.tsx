@@ -105,4 +105,12 @@ describe("Fraymakers technical case study", () => {
     expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.fray-case > header\[id\], \.fray-case > section\[id\], \.fray-case > footer\[id\] \{ scroll-margin-top: 94px; \}/s);
     expect(css).toContain("@media (max-width: 390px)");
   });
+
+  it("keeps the hero schematic legend legible in two columns at 390px", () => {
+    const css = readFileSync("src/fraymakers-case.css", "utf8");
+    const narrow = css.match(/@media \(max-width: 390px\) \{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(narrow).toMatch(/\.fray-case__hero-key \{ grid-template-columns: repeat\(2, minmax\(0, 1fr\)\);/);
+    expect(css).toContain(".fray-case__hero-key li { gap: 6px; font-size: 11px; }");
+  });
 });

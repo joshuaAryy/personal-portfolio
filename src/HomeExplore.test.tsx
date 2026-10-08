@@ -147,6 +147,16 @@ describe("HomeExplore", () => {
     expect(mobileRules).toMatch(/\.home-explore__selection\s*\{[^}]*gap:\s*0(?:px)?/s);
   });
 
+  it("flows secondary details before Confirm on medium desktop layouts", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const responsiveRules = css.match(
+      /@media \(min-width: 761px\) and \(max-width: 1500px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(responsiveRules).toMatch(/\.home-explore\s*\{[^}]*grid-template-rows:\s*35px 285px 20px minmax\(410px, auto\) auto/s);
+    expect(responsiveRules).toMatch(/\.home-explore__confirm-area\s*\{[^}]*position:\s*relative[^}]*grid-row:\s*5/s);
+  });
+
   it("previews verified experience, hackathon, and education details when selected", () => {
     const view = renderHomeExplore();
     const selection = view.querySelector(".home-explore__selection");
