@@ -277,22 +277,13 @@ function FoodLogTransaction() {
 
       <div className={`food-log-transaction__screens${selectedRoute.visual ? " food-log-transaction__screens--conceptual" : ""}`} role="group" aria-label={`${selectedRoute.label} visual explanation and source evidence`}>
         {isSearchRoute ? (
-          <>
-            <figure className="food-log-transaction__screen" data-screen="search-results">
-              <img
-                src="/media/case-studies/food-tracker/phase-24/search-banana-results.png"
-                alt="Phase 24 search results for banana showing candidate foods and a Save food action. This is a pre-redesign candidate-selection capture, not a saved food log."
-              />
-              <figcaption>Phase 24 search results · candidate selection only; pre-redesign evidence.</figcaption>
-            </figure>
-            <figure className="food-log-transaction__screen" data-screen="serving-preview">
-              <img
-                src="/media/case-studies/food-tracker/phase-24/food-serving-preview-banana.png"
-                alt="Phase 24 serving preview for banana with amount and unit choices before saving. This pre-redesign capture is not a completed log."
-              />
-              <figcaption>Phase 24 serving preview · amount and unit before save; pre-redesign evidence.</figcaption>
-            </figure>
-          </>
+          <figure className="food-log-transaction__screen" data-screen="logging-menu">
+            <img
+              src="/media/case-studies/food-tracker/phase-24/food-log-complex-clean.png"
+              alt="Phase 24 Complex-mode logging menu showing search, meal description, photo logging, Food Library, recipes, mixed meals, and barcode options. No food log is saved."
+            />
+            <figcaption>Canonical Complex-mode logging menu · several distinct ways to begin, shown in a clean baseline state.</figcaption>
+          </figure>
         ) : isDescribeRoute ? (
           <figure className="food-log-transaction__screen" data-screen="review">
             <img
@@ -615,6 +606,21 @@ function FoodInsightPath() {
             <span className="food-figure__index">PHASE 24 · PRE-REDESIGN · GOAL PLAN</span>
             <strong id="food-insight-capture-plan-title">Recommendations, not promises.</strong>
             <p>One QA-profile recommendation capture; not a general result or outcome.</p>
+          </div>
+        </section>
+        <section className="food-insight-path__capture food-insight-path__capture--configuration" aria-labelledby="food-insight-capture-configuration-title">
+          <div className="food-insight-path__capture-screen food-insight-path__capture-screen--settings">
+            <img
+              src="/media/case-studies/food-tracker/phase-24/trend-configuration.png"
+              alt="Canonical Phase 24 Configure trend screen with controls for primary metric, comparison, date range, data coverage, aggregation, visualization, target, and forecast."
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="food-insight-path__capture-copy">
+            <span className="food-figure__index">CANONICAL PRODUCT STATE · PHASE 24 / PRE-REDESIGN · COMPLEX MODE</span>
+            <strong id="food-insight-capture-configuration-title">Trend views have explicit analysis controls.</strong>
+            <p>The canonical trend-configuration capture exposes metric, comparison, range, coverage, aggregation, visualization, target, and forecast choices before a trend is read.</p>
           </div>
         </section>
       </div>

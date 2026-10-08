@@ -3862,7 +3862,7 @@
   line-height: 1.5;
 }
 
-/* Selected Phase 24 capture: show both steps in Search & Reuse, only relevant states elsewhere. */
+/* Show the canonical entry menu at reading size; use only relevant states elsewhere. */
 .food-log-transaction__screens {
   display: grid;
   grid-area: screens;
@@ -3880,8 +3880,11 @@
   margin: 0;
 }
 
-.food-log-transaction[data-active-method="search-reuse"] [data-screen="search-results"],
-.food-log-transaction[data-active-method="search-reuse"] [data-screen="serving-preview"],
+.food-log-transaction[data-active-method="search-reuse"] .food-log-transaction__screens {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.food-log-transaction[data-active-method="search-reuse"] [data-screen="logging-menu"],
 .food-log-transaction[data-active-method="describe-photo"] [data-screen="review"],
 .food-log-transaction[data-active-method="barcode"] [data-screen="entry-options"],
 .food-log-transaction[data-active-method="recipes-mixed"] [data-screen="entry-options"],
@@ -3891,6 +3894,11 @@
 
 .food-log-transaction__screen[data-screen="entry-options"] {
   grid-column: 1 / -1;
+  justify-self: center;
+  width: min(100%, 368px);
+}
+
+.food-log-transaction__screen[data-screen="logging-menu"] {
   justify-self: center;
   width: min(100%, 368px);
 }
@@ -3997,8 +4005,7 @@
     grid-template-columns: minmax(0, 1fr);
   }
 
-  .food-log-transaction__screen[data-screen="search-results"],
-  .food-log-transaction__screen[data-screen="serving-preview"] {
+  .food-log-transaction__screen[data-screen="logging-menu"] {
     width: min(100%, 300px);
     justify-self: center;
   }
@@ -5795,6 +5802,12 @@
   background: #0b171d;
 }
 
+.food-insight-path__capture--configuration {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 368px) minmax(0, 1fr);
+  align-items: center;
+}
+
 .food-insight-path__capture-screen {
   display: flex;
   justify-content: center;
@@ -5846,6 +5859,11 @@
 
   .food-insight-path__capture-copy {
     padding: 14px;
+  }
+
+  .food-insight-path__capture--configuration {
+    grid-column: auto;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .food-insight-path__capture-copy > .food-figure__index {

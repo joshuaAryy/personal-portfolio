@@ -79,7 +79,7 @@ describe("Food Tracker product story", () => {
     expect(markup).not.toContain("Make a longer view possible");
   });
 
-  it("uses authentic Search and serving captures, and labels pre-redesign evidence", () => {
+  it("uses distinct canonical logging and Insights captures with accurate evidence labels", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
@@ -88,21 +88,21 @@ describe("Food Tracker product story", () => {
     const insightCaptures = [...insights.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
 
     expect(captures).toHaveLength(4);
-    expect(loggingCaptures).toHaveLength(2);
-    expect(insightCaptures).toHaveLength(2);
-    expect(logging).toContain("search-banana-results.png");
-    expect(logging).toContain("food-serving-preview-banana.png");
-    expect(logging).not.toContain("food-log-complex-clean.png");
+    expect(loggingCaptures).toHaveLength(1);
+    expect(insightCaptures).toHaveLength(3);
+    expect(logging).toContain("food-log-complex-clean.png");
+    expect(logging).not.toContain("search-banana-results.png");
+    expect(logging).not.toContain("food-serving-preview-banana.png");
     expect(logging).not.toContain("ai-meal-review.png");
-    expect(logging).toContain("Phase 24 search results");
-    expect(logging).toContain("Phase 24 serving preview");
+    expect(logging).toContain("Complex-mode logging menu");
     expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
     expect(insights).toContain("insights-month-populated-sep08-oct07.png");
+    expect(insights).toContain("trend-configuration.png");
     expect(insights).toContain("QA-A staging capture");
     expect(insights).toContain("five logged days.");
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
-    expect(insights).not.toContain("trend-configuration.png");
     expect(insights).toContain("goal-plan.png");
+    expect(insights).toContain("canonical trend-configuration capture");
     expect(insights).toContain("One QA-profile recommendation capture; not a general result or outcome.");
     expect(insights).toContain("Recommendations, not promises.");
     expect(markup).not.toContain("trends-overview.png");
