@@ -17,6 +17,7 @@ function renderProfile() {
 }
 
 function cssBlock(source: string, selector: string) {
+  source = source.replace(/\r\n/g, "\n");
   const selectorStart = source.indexOf(selector);
   if (selectorStart < 0) return "";
 
