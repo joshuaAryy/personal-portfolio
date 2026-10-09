@@ -47,38 +47,38 @@ afterEach(() => {
   host = undefined;
 });
 
-describe("Projects lobby", () => {
-  it("restores the historical layered environment and centered lobby banners", () => {
+describe("lobby banner environment", () => {
+  it("keeps Projects unchanged and gives the other categories the shared top-origin downward fade", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
-    const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
     const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
+    const categoryEnvironment = css.match(/\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
     const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
+    const mobileCategoryBanners = mobileRules.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{[^}]*left:\s*0[^}]*\}/s)?.[0] ?? "";
     const mobileEnvironment = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(environmentRule).toMatch(/background-position:\s*center top/);
-    expect(environmentRule).toMatch(/linear-gradient\(180deg,\s*rgba\(1, 8, 13, 0\.68\) 0%,\s*rgba\(1, 8, 13, 0\.18\) 36%,\s*rgba\(1, 7, 11, 0\.38\) 100%\)/);
-    expect(environmentRule).toMatch(/-webkit-mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
     expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
-    expect(environmentRule).not.toMatch(/filter:\s*blur/);
-    expect(bannerGroup).toMatch(/top:\s*9%/);
-    expect(bannerGroup).toMatch(/right:\s*6%/);
-    expect(bannerGroup).toMatch(/bottom:\s*29%/);
-    expect(bannerGroup).toMatch(/left:\s*6%/);
-    expect(categoryBanners).not.toMatch(/top:\s*2px|width:\s*min\(42\.1875vw|transform:\s*translateX/);
-    expect(categoryBanners).toMatch(/right:\s*12%/);
-    expect(categoryBanners).toMatch(/left:\s*12%/);
+    expect(categoryEnvironment).toBe("");
+    expect(css).not.toContain("league-lobby__environment::after");
+    expect(categoryBanners).toMatch(/top:\s*2px/);
+    expect(categoryBanners).toMatch(/left:\s*50%/);
+    expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
+    expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
     expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,/);
-    expect(categoryBanners).toMatch(/gap:\s*clamp\(18px,\s*3vw,\s*46px\)/);
-    expect(css).not.toContain("league-lobby__banner-fade");
-    expect(css).not.toContain("league-lobby__bottom-shade");
+    expect(mobileCategoryBanners).toMatch(/left:\s*0/);
+    expect(mobileCategoryBanners).toMatch(/right:\s*0/);
+    expect(mobileCategoryBanners).toMatch(/width:\s*100%/);
+    expect(mobileCategoryBanners).toMatch(/transform:\s*none/);
     expect(mobileEnvironment).toMatch(/top:\s*68px/);
 
     for (const mode of ["projects", "experience", "hackathons", "education"] as const) {
       const view = renderProjectsLobby(mode);
-      expect(view.querySelector(".league-lobby__banner-fade"), `${mode} fade`).toBeNull();
-      expect(view.querySelector(".league-lobby__bottom-shade"), `${mode} shade`).toBeNull();
+      const lobby = view.querySelector(`.league-lobby--${mode}`);
+      const bannerGroup = view.querySelector(".league-lobby__banners");
+      expect(lobby, `${mode} lobby`).not.toBeNull();
+      expect(bannerGroup?.classList.contains("league-lobby__banners--projects"), `${mode} banner modifier`).toBe(mode === "projects");
       act(() => root?.unmount());
       host?.remove();
       root = undefined;
