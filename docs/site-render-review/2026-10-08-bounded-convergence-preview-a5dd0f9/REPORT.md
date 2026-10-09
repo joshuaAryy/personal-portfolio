@@ -68,7 +68,7 @@ Preview frame: `%TEMP%\portfolio-preview-owner-captures-3a91576f\opening-c06-350
 - `npm test -- --run`: **28 files, 252 tests passed**. Happy DOM prints iframe/PDF fetch-abort messages during teardown; Vitest exits successfully with all tests passing.
 - `npm run build`: passed (`tsc -b` and Vite production build).
 - `git diff --check`: passed before the application source commit; it is rerun after this report/status update.
-- Installed Chrome checked **19 direct application routes at 1440×900 and 390×844 (38 route/viewport checks)**. Each remained on its requested route and rendered a `main`; there were no HTTP errors, broken images, or horizontal document overflow.
+- Installed Chrome checked **19 direct application routes at 1440×900 and 390×844 (38 route/viewport checks)**. Each remained on its requested route and rendered a `main`; there were no JavaScript exceptions, console errors, failed non-aborted requests, HTTP errors, broken images, or horizontal document overflow.
 - Cloudflare's deployment record reports Preview / `feat/portfolio-integration` / source `a5dd0f9`. Preview HTML references `/assets/index--TIQVTWN.js` and `/assets/index-DolBei6W.css`.
 - Deployed JavaScript: **499,441 bytes**, SHA-256 `F7C565C98AC4EFCBF6857C4C2E09689F441E386E3F0A29E87815B9A367E75B04`; identical to the local build.
 - Deployed CSS: **476,777 bytes**, SHA-256 `DB38F186EB19B9CC557A520C922419395E1E3D8DA8535AAF68768797F18246BD`; identical to the local build.
