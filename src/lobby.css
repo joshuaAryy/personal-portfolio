@@ -102,13 +102,10 @@
 }
 
 .league-lobby__banners:not(.league-lobby__banners--projects) {
-  top: 2px;
-  right: auto;
-  left: 50%;
-  width: min(52%, 810px);
-  transform: translateX(-50%);
+  right: 12%;
+  left: 12%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 36px);
+  gap: clamp(18px, 3vw, 46px);
 }
 
 .league-lobby__balance-slots {
@@ -633,11 +630,8 @@
   }
 
   .league-lobby__banners:not(.league-lobby__banners--projects) {
-    top: auto;
     left: 0;
     right: 0;
-    width: 100%;
-    transform: none;
   }
 
   .league-banner {

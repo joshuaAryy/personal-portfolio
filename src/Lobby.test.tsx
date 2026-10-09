@@ -48,29 +48,30 @@ afterEach(() => {
 });
 
 describe("lobby banner environment", () => {
-  it("keeps Projects unchanged and gives the other categories the shared top-origin downward fade", () => {
+  it("restores the pre-top-origin banner composition across every lobby", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+    const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
     const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
-    const categoryEnvironment = css.match(/\.league-lobby:not\(\.league-lobby--projects\) \.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
     const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
-    const mobileCategoryBanners = mobileRules.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{[^}]*left:\s*0[^}]*\}/s)?.[0] ?? "";
+    const mobileRulesForGroup = mobileRules.match(/\.league-lobby__heading,\s*\.league-lobby__banners,\s*\.league-role-legend,\s*\.league-selected,\s*\.league-lobby__primary-action,\s*\.league-lobby__hint\s*\{([^}]*)\}/)?.[1] ?? "";
     const mobileEnvironment = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
     expect(environmentRule).toMatch(/background-position:\s*center top/);
     expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
-    expect(categoryEnvironment).toBe("");
-    expect(css).not.toContain("league-lobby__environment::after");
-    expect(categoryBanners).toMatch(/top:\s*2px/);
-    expect(categoryBanners).toMatch(/left:\s*50%/);
-    expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
-    expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
+    expect(bannerGroup).toMatch(/top:\s*9%/);
+    expect(bannerGroup).toMatch(/right:\s*6%/);
+    expect(bannerGroup).toMatch(/bottom:\s*29%/);
+    expect(bannerGroup).toMatch(/left:\s*6%/);
+    expect(categoryBanners).toMatch(/right:\s*12%/);
+    expect(categoryBanners).toMatch(/left:\s*12%/);
     expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,/);
-    expect(mobileCategoryBanners).toMatch(/left:\s*0/);
-    expect(mobileCategoryBanners).toMatch(/right:\s*0/);
-    expect(mobileCategoryBanners).toMatch(/width:\s*100%/);
-    expect(mobileCategoryBanners).toMatch(/transform:\s*none/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(18px,\s*3vw,\s*46px\)/);
+    expect(mobileRulesForGroup).toMatch(/position:\s*relative/);
+    expect(mobileRulesForGroup).toMatch(/inset:\s*auto/);
+    expect(mobileRulesForGroup).toMatch(/width:\s*100%/);
+    expect(mobileRules).toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{\s*left:\s*0;\s*right:\s*0;/);
     expect(mobileEnvironment).toMatch(/top:\s*68px/);
 
     for (const mode of ["projects", "experience", "hackathons", "education"] as const) {
