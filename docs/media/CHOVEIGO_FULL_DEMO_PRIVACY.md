@@ -2,15 +2,15 @@
 
 ## Current owner release decision — 2026-10-09
 
-The owner explicitly authorized publishing the **original recording unchanged**, including the identified third-party profile/resume material. The recovered file at `C:\Users\samue\Downloads\viego_demo_final_with_music.mp4` was verified against the owner's supplied SHA-256: `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801` (32,915,943 bytes). Two repository chunks concatenate byte-for-byte to the same SHA and size; the Pages media function serves the original without transcoding, cropping, masking, or audio changes. This release decision supersedes the publication hold described in the historical notes below. Deployed playback remains to be verified at the next feature Preview.
+The owner explicitly authorized publishing the **original recording unchanged**, including the identified third-party profile/resume material. The recovered file at `C:\Users\samue\Downloads\viego_demo_final_with_music.mp4` was verified against the owner's supplied SHA-256: `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801` (32,915,943 bytes). Two repository chunks concatenate byte-for-byte to the same SHA and size; the Pages media function serves the original without transcoding, cropping, masking, or audio changes. This release decision supersedes the publication hold described in the historical notes below. Deployed playback is verified on immutable Preview `https://ded1d441.joshuaik2.pages.dev/`: both placements report 112.638333 seconds at 1920×1080 with audio, and play, pause, and seek pass.
 
 - **Purpose:** Full in-page demo on the Demos screen and Cho'Veigo case-study hero.
 - **Private source:** Owner-provided `viego_demo_final_with_music.mp4`; SHA-256 `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801`; 112.638333 seconds, 1920x1080, with audio. The original remains outside the repository.
 - **Redacted candidate:** `public/media/demos/choveigo-full-demo-redacted.mp4`; SHA-256 `9C1BDE2F810A4F3173993DE4C03FA5C11A51D413CB94F23D85BF74CA460CABCB`; 6,935,798 bytes, 1280x720, H.264/AAC, 112.65 seconds. It preserves the full sequence, audio, and full-frame composition without cropping.
 
-## Privacy treatment
+## Historical redacted candidate notes
 
-The derivative retains the established burned masks over the source prompt/upload toast (0-13.5s), profile identifier and imported resume filename (13.5-23s), personal profile/career content (23-42s), profile name during resume selection (58-71s), private editor and resume panes (70-96s), generated letter body (103-105s), and personalized cover-letter card (105-112.65s).
+The following describes the preserved redacted derivative only; it is historical and not used in the current public player. The derivative retains the established burned masks over the source prompt/upload toast (0-13.5s), profile identifier and imported resume filename (13.5-23s), personal profile/career content (23-42s), profile name during resume selection (58-71s), private editor and resume panes (70-96s), generated letter body (103-105s), and personalized cover-letter card (105-112.65s).
 
 Earlier frame review added targeted masks: the full personal profile content area at 23-32s (output coordinates x=290, y=50, w=990, h=580); an exposed profile/resume strip at 64-96s (x=240, y=40, w=80, h=595) and the right resume preview (x=610, y=40, w=670, h=660); and personalized letter text from 104s to the end (x=288, y=40, w=940, h=620). Existing masks over profile details and center resume/editor content remain in place.
 
