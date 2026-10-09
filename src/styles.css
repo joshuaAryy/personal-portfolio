@@ -690,6 +690,13 @@ a:focus-visible {
   height: 26px;
   object-fit: contain;
 }
+.rail-avatar img[src="/media/profile/living-in-silico-logo.png"],
+.rail-avatar img[src="/media/profile/stush-patties-logo.png"] {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .rail-group a:hover > span:last-child,
 .rail-group a:focus-visible > span:last-child {
   color: #f4e6c3;

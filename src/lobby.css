@@ -488,6 +488,18 @@
   }
 }
 
+@media (min-width: 1800px) {
+  .league-lobby__environment {
+    top: calc(82px - var(--client-header-height));
+    right: auto;
+    width: min(81.25vw, 1560px, 100%);
+  }
+
+  .league-lobby__banner-fade {
+    top: calc(82px - var(--client-header-height));
+  }
+}
+
 .league-selected--hackathons .league-selected__main > p:not(.league-selected__award) {
   color: #8f999c;
   line-height: normal;

@@ -44,7 +44,7 @@ function C06HeroArt() {
         <img src={`${C06_ASSET_ROOT}face-cap.svg`} alt="" draggable={false} />
       </span>
 
-      <div className="opening__hero-part" data-node-id="3679:76">
+      <div className="opening__hero-part opening__hero-part--cap" data-node-id="3679:76">
         <C06Layer className="opening__hero-gold opening__hero-gold--deep-cap" src="extr-deep-cap-face.svg" nodeId="3679:9" />
         <C06Layer className="opening__hero-gold opening__hero-gold--mid-cap" src="extr-mid-cap.svg" nodeId="3679:10" />
         <C06Layer className="opening__hero-gold opening__hero-gold--face-cap" src="face-cap.svg" nodeId="3679:11" />
@@ -53,7 +53,7 @@ function C06HeroArt() {
         <C06Layer className="opening__hero-gold opening__hero-gold--edge-cap" src="edge-light-cap.svg" nodeId="3679:73" imageClassName="opening__hero-gold-image-inset--edge" nestedImage />
       </div>
 
-      <div className="opening__hero-part" data-node-id="3679:145">
+      <div className="opening__hero-part opening__hero-part--shaft" data-node-id="3679:145">
         <C06Layer className="opening__hero-gold opening__hero-gold--deep-shaft" src="extr-deep-cap-face.svg" nodeId="3679:78" />
         <C06Layer className="opening__hero-gold opening__hero-gold--mid-shaft" src="extr-mid-cap.svg" nodeId="3679:79" />
         <C06Layer className="opening__hero-gold opening__hero-gold--face-shaft" src="face-cap.svg" nodeId="3679:80" />
@@ -62,7 +62,7 @@ function C06HeroArt() {
         <C06Layer className="opening__hero-gold opening__hero-gold--edge-shaft" src="edge-light-cap.svg" nodeId="3679:142" imageClassName="opening__hero-gold-image-inset--edge" nestedImage />
       </div>
 
-      <div className="opening__hero-part" data-node-id="3679:214">
+      <div className="opening__hero-part opening__hero-part--hook" data-node-id="3679:214">
         <C06Layer className="opening__hero-gold opening__hero-gold--deep-hook" src="extr-deep-cap-face.svg" nodeId="3679:147" />
         <C06Layer className="opening__hero-gold opening__hero-gold--mid-hook" src="extr-mid-cap.svg" nodeId="3679:148" />
         <C06Layer className="opening__hero-gold opening__hero-gold--face-hook" src="face-cap.svg" nodeId="3679:149" />

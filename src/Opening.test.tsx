@@ -60,11 +60,15 @@ describe("opening route choreography", () => {
     expect(markup).not.toMatch(/LOADING|progress|open-portfolio-j-archive-source|j-sonnet-v8/);
   });
 
-  it("keeps the gold silhouette registered while revealing authored cyan joints", () => {
+  it("seats the cap and hook over a complete subdued C06 backing", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");
     const rules = css.match(/[^{}]+\{[^{}]*\}/g) ?? [];
+    const partRule = css.match(/\.opening__hero-part\s*\{([^}]*)\}/)?.[1] ?? "";
     const backingRule = css.match(/\.opening__hero-backing\s*\{([^}]*)\}/)?.[1] ?? "";
+    const capRule = css.match(/\.opening__hero-part--cap\s*\{([^}]*)\}/)?.[1] ?? "";
+    const shaftRule = css.match(/\.opening__hero-part--shaft\s*\{([^}]*)\}/)?.[1] ?? "";
+    const hookRule = css.match(/\.opening__hero-part--hook\s*\{([^}]*)\}/)?.[1] ?? "";
     const goldRules = rules
       .filter((rule) => {
         const selector = rule.slice(0, rule.indexOf("{"));
@@ -73,11 +77,27 @@ describe("opening route choreography", () => {
       .join("\n");
 
     expect(css).toMatch(/\.opening__hero-art\s*\{[^}]*container-type:\s*size/);
+    expect(markup).toContain('class="opening__hero-part opening__hero-part--cap"');
+    expect(markup).toContain('class="opening__hero-part opening__hero-part--shaft"');
+    expect(markup).toContain('class="opening__hero-part opening__hero-part--hook"');
+    expect(markup.indexOf('class="opening__hero-backing"')).toBeLessThan(markup.indexOf('class="opening__hero-part opening__hero-part--cap"'));
+    expect(css).toMatch(/\.opening__hero-part\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0/);
+    expect(partRule).not.toMatch(/animation\s*:|transform\s*:|opacity\s*:/);
     expect(backingRule).toMatch(/inset:\s*9\.19%\s+26\.5%\s+14\.48%\s+24\.76%/);
     expect(backingRule).toMatch(/z-index:\s*0/);
-    expect(backingRule).not.toMatch(/animation\s*:|opacity\s*:|transform\s*:/);
+    expect(backingRule).toMatch(/opacity:\s*\.64/);
+    expect(backingRule).toMatch(/animation:\s*opening-c06-backing-settle\s+580ms\s+linear\s+both/);
+    expect(backingRule).not.toMatch(/transform\s*:/);
+    expect(capRule).toMatch(/animation:\s*opening-c06-cap-seat\s+300ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+160ms\s+both/);
+    expect(hookRule).toMatch(/animation:\s*opening-c06-hook-seat\s+300ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+280ms\s+both/);
+    expect(capRule + hookRule).not.toMatch(/opacity\s*:|rotate\(|scale\(/);
+    expect(shaftRule).toBe("");
     expect(goldRules).not.toMatch(/animation\s*:|opacity\s*:|transform\s*:/);
-    expect(css).not.toMatch(/@keyframes\s+opening-c06-(?:cap|hook|piece|settled)/);
+    expect(css).toMatch(/@keyframes\s+opening-c06-cap-seat\s*\{\s*0%\s*\{\s*transform:\s*translateY\(-3px\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*translateY\(0\)\s*;/);
+    expect(css).toMatch(/@keyframes\s+opening-c06-hook-seat\s*\{\s*0%\s*\{\s*transform:\s*translateY\(3px\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*translateY\(0\)\s*;/);
+    expect(css).toMatch(/@keyframes\s+opening-c06-backing-settle\s*\{\s*0%,\s*82\.76%\s*\{\s*opacity:\s*\.64\s*;\s*\}\s*100%\s*\{\s*opacity:\s*0\s*;/);
+    expect(css).toMatch(/\.opening--reduced \.opening__hero-part\s*\{[^}]*animation:\s*none;[^}]*transform:\s*none/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__hero-backing\s*\{[^}]*animation:\s*none;[^}]*opacity:\s*0/s);
     expect(markup).toContain('class="opening__hero-seam opening__hero-seam--upper"');
     expect(markup).toContain('class="opening__hero-seam opening__hero-seam--lower"');
     expect(markup).toContain('/assets/j-c06-keyed-forge/seam-light.svg');

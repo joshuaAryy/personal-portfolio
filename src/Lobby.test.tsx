@@ -110,6 +110,24 @@ describe("Projects lobby", () => {
     expect(mobileFlowRule).toMatch(/inset:\s*auto/);
   });
 
+  it("aligns the wide-desktop scene layers to the Figma frame without moving lobby content", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const wideDesktopRules = css.match(
+      /@media \(min-width:\s*1800px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+    const environmentRule = wideDesktopRules.match(
+      /\.league-lobby__environment\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+    const fadeRule = wideDesktopRules.match(
+      /\.league-lobby__banner-fade\s*\{([^}]*)\}/,
+    )?.[1] ?? "";
+
+    expect(environmentRule).toMatch(/top:\s*calc\(82px - var\(--client-header-height\)\)/);
+    expect(environmentRule).toMatch(/width:\s*min\(81\.25vw,\s*1560px,\s*100%\)/);
+    expect(fadeRule).toMatch(/top:\s*calc\(82px - var\(--client-header-height\)\)/);
+    expect(wideDesktopRules).not.toMatch(/\.league-lobby__(?:heading|banners)\s*\{/);
+  });
+
   it("adds the Figma bottom scene shade across all four lobbies without changing narrow flow", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const shadeRule = css.match(/\.league-lobby__bottom-shade\s*\{([^}]*)\}/)?.[1] ?? "";

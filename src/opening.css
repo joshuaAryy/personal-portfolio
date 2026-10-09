@@ -183,7 +183,19 @@
   container-type: size;
 }
 
-.opening__hero-part { display: contents; }
+.opening__hero-part {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.opening__hero-part--cap {
+  animation: opening-c06-cap-seat 300ms cubic-bezier(.22, .7, .3, 1) 160ms both;
+}
+
+.opening__hero-part--hook {
+  animation: opening-c06-hook-seat 300ms cubic-bezier(.22, .7, .3, 1) 280ms both;
+}
 
 .opening__hero-shadow {
   position: absolute;
@@ -204,6 +216,8 @@
   z-index: 0;
   inset: 9.19% 26.5% 14.48% 24.76%;
   display: block;
+  opacity: .64;
+  animation: opening-c06-backing-settle 580ms linear both;
   pointer-events: none;
 }
 
@@ -554,6 +568,21 @@
   100% { opacity: 0; }
 }
 
+@keyframes opening-c06-cap-seat {
+  0% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes opening-c06-hook-seat {
+  0% { transform: translateY(3px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes opening-c06-backing-settle {
+  0%, 82.76% { opacity: .64; }
+  100% { opacity: 0; }
+}
+
 @keyframes opening-light-exit-reveal {
   0% { opacity: 0; }
   65% { opacity: 1; }
@@ -634,6 +663,16 @@
 .opening--reduced .opening__hero-conduit,
 .opening--reduced .opening__hero-sheen {
   animation: none;
+}
+
+.opening--reduced .opening__hero-part {
+  animation: none;
+  transform: none;
+}
+
+.opening--reduced .opening__hero-backing {
+  animation: none;
+  opacity: 0;
 }
 
 .opening--reduced .opening__radial-field { opacity: 0; transform: none; }

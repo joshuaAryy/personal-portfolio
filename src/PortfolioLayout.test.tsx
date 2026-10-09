@@ -287,6 +287,22 @@ describe("League client shell", () => {
     }
   });
 
+  it("crops only the canonical Living in Silico and Stush Patties rail marks to the circular frame", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const cropRule = css.match(/\.rail-avatar img\[src="([^"]+)"\],\s*\.rail-avatar img\[src="([^"]+)"\]\s*\{([^}]*)\}/s);
+    const defaultRule = css.match(/\.rail-avatar img\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(cropRule?.[1]).toBe(experienceIdentities["living-in-silico"].mark);
+    expect(cropRule?.[2]).toBe(experienceIdentities["stush-patties"].mark);
+    expect(cropRule?.[3]).toMatch(/width:\s*100%/);
+    expect(cropRule?.[3]).toMatch(/height:\s*100%/);
+    expect(cropRule?.[3]).toMatch(/border-radius:\s*50%/);
+    expect(cropRule?.[3]).toMatch(/object-fit:\s*cover/);
+    expect(defaultRule).toMatch(/width:\s*26px/);
+    expect(defaultRule).toMatch(/height:\s*26px/);
+    expect(defaultRule).toMatch(/object-fit:\s*contain/);
+  });
+
   it("places the three contact destinations after page content for the narrow shell", () => {
     const markup = renderClient("/projects");
     const mainEnd = markup.indexOf("</main>");
