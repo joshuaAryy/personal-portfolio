@@ -231,16 +231,16 @@ describe("Profile Overview", () => {
     expect(signalRule).toMatch(/top:\s*clamp\(610px, calc\(100vh - 470px\), 800px\)/);
   });
 
-  it("uses the added lower band only on tall 1500–1599px desktop viewports", () => {
+  it("keeps the tall desktop signal row in the shared lower band", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
-    const veryTallRules = cssBlock(
+    const tallDesktopRules = cssBlock(
       profileCss,
-      "@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px)",
+      "@media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1080px)",
     );
-    const signalRule = cssBlock(veryTallRules, ".profile-signal-grid");
+    const signalRule = cssBlock(tallDesktopRules, ".profile-signal-grid");
 
-    expect(signalRule).toContain("top: calc(100vh - 349px)");
-    expect(profileCss).toContain("@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px)");
+    expect(signalRule).toMatch(/top:\s*clamp\(610px, calc\(100vh - 470px\), 800px\)/);
+    expect(profileCss).not.toContain("@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px)");
   });
 
   it("keeps the 1600–1699px signal row fully visible on short-wide desktop heights", () => {
@@ -253,6 +253,20 @@ describe("Profile Overview", () => {
 
     expect(signalRule).toContain("top: calc(121.9512vh - 675.4px)");
     expect(profileCss).toContain("@media (min-width: 1600px) and (max-width: 1699px) and (min-height: 821px) and (max-height: 1079px)");
+  });
+
+  it("extends the 1920px signal row with height while preserving the 1080px placement", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const wideDesktopRule = cssBlock(profileCss, "@media (min-width: 1859px) and (max-width: 1920px)");
+    const tallWideRule = cssBlock(
+      profileCss,
+      "@media (min-width: 1859px) and (max-width: 1920px) and (min-height: 821px)",
+    );
+    const wideSignals = cssBlock(wideDesktopRule, ".profile-signal-grid");
+    const tallWideSignals = cssBlock(tallWideRule, ".profile-signal-grid");
+
+    expect(wideSignals).toContain("top: 523px");
+    expect(tallWideSignals).toContain("top: calc(100vh - 557px)");
   });
 
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {
@@ -312,5 +326,32 @@ describe("Profile Overview", () => {
 
     expect(enclosureBottom).toBeGreaterThanOrEqual(gridBottom);
     expect(enclosureBottom).toBeLessThanOrEqual(panelHeight);
+  });
+
+  it("anchors a narrow signal detail to visible content and reserves room before the sibling row", () => {
+    const profileSource = readFileSync("src/ProfileOverview.tsx", "utf8");
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const narrowPlacement = profileSource.match(/if \(window\.innerWidth <= 900\) \{([\s\S]*?)\n\s*return;/)?.[1] ?? "";
+    const narrowRules = cssBlock(profileCss, "@media (max-width: 900px)");
+    const signalGrid = cssBlock(narrowRules, ".profile-signal-grid");
+
+    expect(narrowPlacement).toContain(".profile-signal__value");
+    expect(narrowPlacement).toContain("lowerRowTop");
+    expect(narrowPlacement).toContain("--profile-mobile-panel-gap");
+    expect(signalGrid).toContain("grid-auto-rows: 235px");
+    expect(signalGrid).toContain("row-gap: var(--profile-mobile-panel-gap, 0px)");
+  });
+
+  it("ends the tall desktop environment with a short fade just below the signal band", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const tallEnvironment = cssBlock(
+      profileCss,
+      "@media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1280px)",
+    );
+    const environmentRule = cssBlock(tallEnvironment, ".main.main--profile::before");
+
+    expect(environmentRule).toContain("calc(100vh - var(--client-header-height) - 100px)");
+    expect(environmentRule).toContain("calc(100% - 88px)");
+    expect(environmentRule).toContain("#05070a 100%");
   });
 });

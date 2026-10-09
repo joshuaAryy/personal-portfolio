@@ -5929,11 +5929,11 @@
 
 .food-log-transaction__route-family > span {
   display: block;
-  margin-bottom: 7px;
+  margin-bottom: 9px;
   color: var(--food-gold);
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 780;
-  letter-spacing: .08em;
+  letter-spacing: .07em;
 }
 
 .food-insight-path__captures {
@@ -5955,14 +5955,14 @@
 }
 
 .food-insight-path__capture-screen {
-  min-height: 410px;
+  min-height: 360px;
   align-items: center;
   padding: 10px;
 }
 
 .food-insight-path__capture-screen > img {
   width: auto;
-  height: min(410px, 46vw);
+  height: min(360px, 41vw);
   max-width: 100%;
 }
 

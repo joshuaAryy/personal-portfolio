@@ -658,9 +658,9 @@ function FoodInsightPath() {
 function FoodRetrievalEvidence() {
   return (
     <figure className="food-retrieval-evidence" aria-labelledby="food-retrieval-evidence-title">
-      <div className="food-retrieval-pipeline" aria-label="A food query can produce exact, fuzzy, and semantic candidates; the API ranks candidates before the person confirms one and shared serving resolution.">
+      <div className="food-retrieval-pipeline" aria-label="The app normalizes a search query, gathers available food candidates, removes duplicates, and ranks them before the person confirms one and shared serving resolution.">
         <section className="food-retrieval-pipeline__query" aria-label="A person's food search intent enters candidate retrieval">
-          <span className="food-figure__index">ONE SEARCH INTENT</span>
+          <span className="food-figure__index">NORMALIZE SEARCH QUERY</span>
           <strong>Which food does the person mean?</strong>
           <p>The search returns food candidates for the person to inspect.</p>
         </section>
@@ -693,10 +693,10 @@ function FoodRetrievalEvidence() {
         </svg>
         <span className="food-retrieval-pipeline__mobile-join" aria-hidden="true">&darr;</span>
         <section className="food-retrieval-pipeline__rank">
-          <span className="food-figure__index">ALL CANDIDATES</span>
+          <span className="food-figure__index">MERGED CANDIDATES</span>
           <strong>Deterministic, domain-aware ranking</strong>
           <ul aria-label="Ranking dimensions"><li>Identity</li><li>Form</li><li>Source</li><li>Nutrition</li><li>Serving usability</li></ul>
-          <p>The API computes the final rank; Pinecone supplies candidates, not rank or nutrition authority.</p>
+          <p>Duplicate food records are removed before the API computes the final rank. Pinecone supplies candidates, not rank or nutrition authority.</p>
         </section>
         <div className="food-retrieval-pipeline__resolve" aria-label="Ranked candidates are reviewed by a person before shared serving resolution">
           <span>ORDERED FOOD CHOICES</span><b aria-hidden="true">&rarr;</b><strong>PERSON CONFIRMS FOOD</strong><b aria-hidden="true">&rarr;</b><span>SHARED SERVING RESOLUTION</span>
@@ -714,8 +714,8 @@ function FoodRetrievalEvidence() {
         </div>
 
         <div className="food-retrieval-evidence__comparison" role="group" aria-label="What the offline comparison measures">
-          <div><strong>Legacy</strong><span>The earlier retrieval baseline in the project benchmark.</span></div>
-          <div><strong>Full hybrid</strong><span>Deterministic and fuzzy retrieval with semantic candidates, followed by deterministic ranking.</span></div>
+          <div><strong>Legacy search</strong><span>Earlier direct text/barcode matching on a narrower active catalog.</span></div>
+          <div><strong>Full hybrid</strong><span>Keeps direct matching, broadens the catalog, and adds fuzzy-name and semantic candidates before deterministic ranking.</span></div>
           <p>The comparison is the earlier baseline versus the complete hybrid path; it does not isolate the contribution of one route or predict live-user results.</p>
         </div>
 

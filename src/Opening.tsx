@@ -17,35 +17,65 @@ const OPENING_V8_MARK_ASSETS = {
   edgeLight: "/media/opening/j-sonnet-v8/j-edge-light.svg",
 } as const;
 
-function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAssetError: () => void }) {
+function V8LayerSet({ onAssetError, isPiece = false }: { onAssetError: () => void; isPiece?: boolean }) {
+  const deepNode = isPiece ? {} : { "data-node-id": "3325:336" };
+  const midNode = isPiece ? {} : { "data-node-id": "3325:337" };
+  const faceNode = isPiece ? {} : { "data-node-id": "3325:338" };
+  const detailNode = isPiece ? {} : { "data-node-id": "3325:342" };
+  const detailArtNode = isPiece ? {} : { "data-node-id": "3325:343" };
+  const bevelNode = isPiece ? {} : { "data-node-id": "3325:411" };
+  const edgeNode = isPiece ? {} : { "data-node-id": "3325:412" };
+
   return (
-    unavailable ? (
-      <img className="opening__archive-mark" src={OPENING_ARCHIVE_FALLBACK_SOURCE} alt="" draggable={false} />
-    ) : (
-      <div className="opening__j-mark" data-node-id="3325:335">
-        <span className="opening__j-layer opening__j-layer--deep" data-node-id="3325:336">
-          <img src={OPENING_V8_MARK_ASSETS.deepExtrusion} alt="" draggable={false} onError={onAssetError} />
+    <>
+      <span className="opening__j-layer opening__j-layer--deep" {...deepNode}>
+        <img src={OPENING_V8_MARK_ASSETS.deepExtrusion} alt="" draggable={false} onError={onAssetError} />
+      </span>
+      <span className="opening__j-layer opening__j-layer--mid" {...midNode}>
+        <img src={OPENING_V8_MARK_ASSETS.midExtrusion} alt="" draggable={false} onError={onAssetError} />
+      </span>
+      <span className="opening__j-layer opening__j-layer--face" {...faceNode}>
+        <img src={OPENING_V8_MARK_ASSETS.face} alt="" draggable={false} onError={onAssetError} />
+      </span>
+      <span className="opening__j-detail" {...detailNode}>
+        <img className="opening__j-detail-mask-probe" src={OPENING_V8_MARK_ASSETS.detailMask} alt="" draggable={false} onError={onAssetError} />
+        <img className="opening__j-detail-art" {...detailArtNode} src={OPENING_V8_MARK_ASSETS.detail} alt="" draggable={false} onError={onAssetError} />
+      </span>
+      <span className="opening__j-layer opening__j-layer--bevel" {...bevelNode}>
+        <img src={OPENING_V8_MARK_ASSETS.bevel} alt="" draggable={false} onError={onAssetError} />
+      </span>
+      <span className="opening__j-layer opening__j-layer--edge" {...edgeNode}>
+        <span className="opening__j-edge-light-art">
+          <img src={OPENING_V8_MARK_ASSETS.edgeLight} alt="" draggable={false} onError={onAssetError} />
         </span>
-        <span className="opening__j-layer opening__j-layer--mid" data-node-id="3325:337">
-          <img src={OPENING_V8_MARK_ASSETS.midExtrusion} alt="" draggable={false} onError={onAssetError} />
-        </span>
-        <span className="opening__j-layer opening__j-layer--face" data-node-id="3325:338">
-          <img src={OPENING_V8_MARK_ASSETS.face} alt="" draggable={false} onError={onAssetError} />
-        </span>
-        <span className="opening__j-detail" data-node-id="3325:342">
-          <img className="opening__j-detail-mask-probe" src={OPENING_V8_MARK_ASSETS.detailMask} alt="" draggable={false} onError={onAssetError} />
-          <img className="opening__j-detail-art" data-node-id="3325:343" src={OPENING_V8_MARK_ASSETS.detail} alt="" draggable={false} onError={onAssetError} />
-        </span>
-        <span className="opening__j-layer opening__j-layer--bevel" data-node-id="3325:411">
-          <img src={OPENING_V8_MARK_ASSETS.bevel} alt="" draggable={false} onError={onAssetError} />
-        </span>
-        <span className="opening__j-layer opening__j-layer--edge" data-node-id="3325:412">
-          <span className="opening__j-edge-light-art">
-            <img src={OPENING_V8_MARK_ASSETS.edgeLight} alt="" draggable={false} onError={onAssetError} />
+      </span>
+    </>
+  );
+}
+
+function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAssetError: () => void }) {
+  if (unavailable) {
+    return <img className="opening__archive-mark" src={OPENING_ARCHIVE_FALLBACK_SOURCE} alt="" draggable={false} />;
+  }
+
+  return (
+    <div className="opening__j-mark" data-node-id="3325:335">
+      <div className="opening__j-settled" data-j-layer-set="sonnet-v8-approved">
+        <V8LayerSet onAssetError={onAssetError} />
+      </div>
+      {(["cap", "shaft", "hook"] as const).map((piece) => (
+        <span className={`opening__j-piece opening__j-piece--${piece}`} data-j-piece={piece} key={piece}>
+          <span className="opening__j-piece-art">
+            <V8LayerSet onAssetError={onAssetError} isPiece />
           </span>
         </span>
-      </div>
-    )
+      ))}
+      <span className="opening__j-lock" aria-hidden="true">
+        <span className="opening__j-lock-seam opening__j-lock-seam--cap" />
+        <span className="opening__j-lock-seam opening__j-lock-seam--hook" />
+      </span>
+      <span className="opening__j-sheen" aria-hidden="true" />
+    </div>
   );
 }
 

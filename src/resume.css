@@ -8,6 +8,12 @@
   color: #fff0c1;
 }
 
+@property --resume-orb-fill {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
 .main--resume-found {
   position: relative;
   isolation: isolate;
@@ -49,7 +55,7 @@
 .resume-takeover .resume-found {
   min-height: 100dvh;
   justify-content: flex-start;
-  padding-top: max(24px, 18.9vh);
+  padding-top: max(24px, min(18.9vh, calc(100vh - var(--resume-found-composition-size) - 100px)));
   padding-right: calc(24px + clamp(220px, 16.67vw, 320px));
 }
 
@@ -59,6 +65,7 @@
 }
 
 .resume-found {
+  --resume-found-composition-size: min(530px, max(0px, calc(100vw - 32px)), max(0px, calc(100vh - 123px)));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -72,7 +79,7 @@
 .resume-found__composition {
   position: relative;
   flex: none;
-  width: min(530px, 49vh, calc(100vw - 32px));
+  width: var(--resume-found-composition-size);
   aspect-ratio: 1 / 1;
   container-type: inline-size;
 }
@@ -153,6 +160,7 @@
 }
 
 .resume-mechanism__orb-energy {
+  --resume-orb-fill: 0deg;
   position: absolute;
   z-index: 3;
   top: 50%;
@@ -162,16 +170,16 @@
   border-radius: 50%;
   background: conic-gradient(
     from -90deg,
-    rgb(76 224 232 / 68%) 0deg var(--resume-orb-fill),
-    transparent var(--resume-orb-fill) 360deg
+    rgba(76, 224, 232, .68) 0deg calc(var(--resume-orb-fill) - 8deg),
+    #bafffb calc(var(--resume-orb-fill) - 2deg) var(--resume-orb-fill),
+    rgba(76, 224, 232, .06) var(--resume-orb-fill) 360deg
   );
-  filter: drop-shadow(0 0 5px rgb(76 224 232 / 42%));
+  filter: drop-shadow(0 0 0 transparent);
   mask: radial-gradient(circle closest-side, transparent 86%, #000 89%, #000 95%, transparent 99%);
-  mix-blend-mode: screen;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   translate: -50% -50%;
-  animation: resume-orb-energy-fill 1150ms cubic-bezier(.22, .7, .3, 1) 260ms 1 forwards;
+  animation: resume-orb-energy-fill 1150ms linear 260ms 1 both;
 }
 
 .resume-mechanism__j {
@@ -232,11 +240,11 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 80.4%;
+  top: 83.96%;
   left: 50%;
   display: flex;
-  width: min(240px, 44cqw);
-  height: clamp(18px, 4.53cqw, 24px);
+  width: min(240px, 45.3cqw);
+  height: min(24px, 4.53cqw);
   align-items: center;
   justify-content: center;
   margin: 0;
@@ -246,7 +254,7 @@
   font-size: clamp(13px, 2.83cqw, 15px);
   font-weight: 700;
   letter-spacing: 0.5px;
-  line-height: clamp(18px, 3.77cqw, 20px);
+  line-height: min(20px, 3.77cqw);
   text-transform: uppercase;
   text-shadow: 0 1px 6px rgb(0 0 0 / 48%);
 }
@@ -316,9 +324,9 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 85.7%;
+  top: 88.87%;
   left: 50%;
-  width: min(176px, 34cqw);
+  width: min(212px, 40cqw);
   aspect-ratio: 212 / 70;
   height: auto;
   display: flex;
@@ -385,11 +393,11 @@
 
 .resume-found__close {
   position: absolute;
-  top: 96.5%;
+  top: calc(88.87% + min(70px, 13.21cqw) + 2px);
   left: 50%;
   z-index: 4;
   width: min(94px, 18cqw);
-  height: clamp(18px, 4cqw, 22px);
+  height: clamp(18px, 3.77cqw, 20px);
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -612,8 +620,8 @@
 
   .resume-mechanism__orb-energy {
     --resume-orb-fill: 360deg;
+    opacity: .86;
     animation: none;
-    opacity: 1;
   }
 
   .resume-found__action-plate--hover {
@@ -652,20 +660,16 @@
   }
 }
 
-@property --resume-orb-fill {
-  syntax: "<angle>";
-  inherits: false;
-  initial-value: 0deg;
-}
-
 @keyframes resume-orb-energy-fill {
   0% {
     --resume-orb-fill: 0deg;
-    opacity: .5;
+    opacity: 0;
+    filter: drop-shadow(0 0 0 transparent);
   }
   100% {
     --resume-orb-fill: 360deg;
-    opacity: 1;
+    opacity: .86;
+    filter: drop-shadow(0 0 7px rgba(76, 224, 232, .56));
   }
 }
 

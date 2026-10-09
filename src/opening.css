@@ -729,15 +729,23 @@
   display: block;
 }
 
+.opening__j-settled,
+.opening__j-piece {
+  --forge-delay: 0ms;
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.opening__j-settled {
+  animation: opening-j-settled-material 5s cubic-bezier(.24, .65, .2, 1) 1 both;
+}
+
 .opening__j-layer {
   position: absolute;
   display: block;
   max-width: none;
-  animation-duration: 5s;
-  animation-delay: 0s;
-  animation-timing-function: cubic-bezier(.2, .68, .18, 1);
-  animation-iteration-count: 1;
-  animation-fill-mode: both;
+  animation: none;
 }
 
 .opening__j-layer > img,
@@ -751,20 +759,14 @@
 
 .opening__j-layer--deep {
   inset: 10.68% 25.64% 12.99% 25.61%;
-  animation-duration: 5s;
-  animation-name: opening-j-deep-assemble;
 }
 
 .opening__j-layer--mid {
   inset: 9.94% 26.07% 13.73% 25.19%;
-  animation-duration: 5s;
-  animation-name: opening-j-mid-assemble;
 }
 
 .opening__j-layer--face {
   inset: 9.19% 26.5% 14.48% 24.76%;
-  animation-duration: 5s;
-  animation-name: opening-j-face-assemble;
 }
 
 .opening__j-detail {
@@ -781,17 +783,135 @@
   mask-repeat: no-repeat;
   -webkit-mask-size: 100% 100%;
   mask-size: 100% 100%;
-  animation: opening-j-detail-assemble 5s cubic-bezier(.2, .68, .18, 1) 1 both;
+  animation: none;
 }
 
 .opening__j-layer--bevel {
   inset: 9.19% 26.5% 14.48% 24.76%;
-  animation-name: opening-j-bevel-assemble;
 }
 
 .opening__j-layer--edge {
   inset: 9.19% 26.5% 14.48% 24.76%;
-  animation-name: opening-j-edge-assemble;
+}
+
+.opening__j-piece {
+  --approach-delay: 800ms;
+  --forge-offset-x: 0%;
+  --forge-offset-y: 0%;
+  position: absolute;
+  inset: 0;
+  display: block;
+  opacity: 0;
+  pointer-events: none;
+  animation: opening-j-piece-visibility 5s linear 1 both;
+}
+
+.opening__j-piece-art {
+  position: absolute;
+  inset: 0;
+  display: block;
+  clip-path: inset(0);
+  transform: translate(var(--forge-offset-x), var(--forge-offset-y));
+  transform-origin: 50% 50%;
+  animation: opening-j-piece-approach calc(1650ms - var(--approach-delay)) cubic-bezier(.18, .8, .22, 1) var(--approach-delay) 1 both;
+}
+
+.opening__j-piece--cap {
+  --forge-offset-y: -3%;
+}
+
+.opening__j-piece--cap .opening__j-piece-art {
+  clip-path: polygon(0 0, 100% 0, 100% 37%, 0 45%);
+}
+
+.opening__j-piece--shaft {
+  --approach-delay: 880ms;
+  --forge-offset-x: 3%;
+  --forge-offset-y: -.75%;
+}
+
+.opening__j-piece--shaft .opening__j-piece-art {
+  clip-path: polygon(0 31%, 100% 24%, 100% 80%, 0 77%);
+}
+
+.opening__j-piece--hook {
+  --approach-delay: 960ms;
+  --forge-offset-y: 3%;
+}
+
+.opening__j-piece--hook .opening__j-piece-art {
+  clip-path: polygon(0 73%, 100% 76%, 100% 100%, 0 100%);
+}
+
+.opening__j-piece .opening__j-layer--deep {
+  animation: opening-v8-material-reveal 420ms ease-out 550ms 1 both;
+}
+
+.opening__j-piece .opening__j-layer--mid {
+  animation: opening-v8-material-reveal 420ms ease-out 650ms 1 both;
+}
+
+.opening__j-piece .opening__j-layer--face {
+  animation: opening-v8-material-reveal 400ms ease-out 800ms 1 both;
+}
+
+.opening__j-piece .opening__j-detail {
+  animation: opening-v8-material-reveal 350ms ease-out 950ms 1 both;
+}
+
+.opening__j-piece .opening__j-layer--bevel {
+  animation: opening-v8-material-reveal 300ms ease-out 1200ms 1 both;
+}
+
+.opening__j-piece .opening__j-layer--edge {
+  animation: opening-v8-material-reveal 300ms ease-out 1350ms 1 both;
+}
+
+.opening__j-lock {
+  position: absolute;
+  z-index: 7;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  animation: opening-j-seam-lock 350ms ease-out 1650ms 1 both;
+}
+
+.opening__j-lock-seam {
+  position: absolute;
+  left: 50%;
+  width: 6.5%;
+  height: 1.3%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgb(114 255 235 / 96%), transparent);
+  box-shadow: 0 0 7px 1px rgb(63 245 221 / 48%);
+  filter: blur(.6px);
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.opening__j-lock-seam--cap { top: 31%; }
+.opening__j-lock-seam--hook { top: 74%; width: 5%; }
+
+.opening__j-sheen {
+  animation: opening-j-sheen-sweep 800ms ease-in-out 2750ms 1 both;
+}
+
+.opening__j-mark {
+  animation: opening-j-cyan-pulse 750ms ease-in-out 2000ms 1 both;
+}
+
+.opening__j-sheen {
+  position: absolute;
+  z-index: 8;
+  inset: 9.19% 26.5% 14.48% 24.76%;
+  background: linear-gradient(108deg, transparent 35%, rgb(255 249 220 / 0%) 44%, rgb(255 242 192 / 70%) 50%, rgb(255 250 225 / 0%) 56%, transparent 66%);
+  filter: blur(1px);
+  opacity: 0;
+  -webkit-mask: url("/media/opening/j-sonnet-v8/j-face.svg") center / 100% 100% no-repeat;
+  mask: url("/media/opening/j-sonnet-v8/j-face.svg") center / 100% 100% no-repeat;
+  pointer-events: none;
+  transform: translateX(-34%);
+  animation: opening-j-sheen-sweep 5s ease-in-out 1 both;
 }
 
 .opening__j-detail-mask-probe {
@@ -825,55 +945,57 @@
 }
 
 @keyframes opening-mark-sequence {
-  0%, 9% { opacity: 1; transform: scale(1.12); }
-  14%, 19% { opacity: 0; transform: scale(.82); }
-  22% { opacity: 0; transform: scale(.76); }
-  25%, 94% { opacity: 1; transform: scale(.76); }
+  0%, 6% { opacity: 1; transform: scale(1.12); }
+  10% { opacity: 0; transform: scale(.84); }
+  10.4% { opacity: .55; transform: scale(.8); }
+  11% { opacity: 1; transform: scale(.76); }
+  16%, 94% { opacity: 1; transform: scale(.76); }
   100% { opacity: 0; transform: scale(.76); }
 }
 
-@keyframes opening-j-deep-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 28% { opacity: 0; clip-path: inset(80% 0 0); }
-  30%, 94% { opacity: 1; clip-path: inset(0); }
-  100% { opacity: 0; }
+@keyframes opening-j-settled-material {
+  0%, 6% { opacity: 1; filter: none; }
+  10%, 77% { opacity: 0; filter: none; }
+  78% { opacity: 0; filter: none; }
+  80%, 94% { opacity: 1; filter: none; }
+  100% { opacity: 0; filter: none; }
 }
 
-@keyframes opening-j-mid-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 27% { opacity: 0; clip-path: inset(0 100% 0 0); }
-  28% { opacity: .16; clip-path: inset(0 82% 0 0); }
-  30% { opacity: .72; clip-path: inset(0 24% 0 0); }
-  32%, 94% { opacity: 1; clip-path: inset(0); }
-  100% { opacity: 0; }
+@keyframes opening-j-piece-visibility {
+  0%, 10% { opacity: 0; }
+  10.4% { opacity: .55; }
+  11%, 16% { opacity: 1; }
+  33%, 77% { opacity: 1; }
+  78% { opacity: 1; }
+  80%, 100% { opacity: 0; }
 }
 
-@keyframes opening-j-face-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 41% { opacity: 0; clip-path: inset(100% 0 0); }
-  43%, 94% { opacity: 1; clip-path: inset(0); }
-  100% { opacity: 0; }
+@keyframes opening-j-piece-approach {
+  from { transform: translate(var(--forge-offset-x), var(--forge-offset-y)); }
+  to { transform: translate(0, 0); }
 }
 
-@keyframes opening-j-detail-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 48% { opacity: 0; clip-path: inset(42%); }
-  51%, 94% { opacity: 1; clip-path: inset(0); }
-  100% { opacity: 0; }
+@keyframes opening-v8-material-reveal {
+  from { opacity: .56; filter: brightness(.88); }
+  to { opacity: 1; filter: none; }
 }
 
-@keyframes opening-j-bevel-assemble {
-  0%, 17% { opacity: 1; clip-path: inset(0); }
-  19%, 56% { opacity: 0; clip-path: inset(0 0 0 100%); }
-  59%, 94% { opacity: 1; clip-path: inset(0); }
-  100% { opacity: 0; }
+@keyframes opening-j-seam-lock {
+  0% { opacity: 0; }
+  38% { opacity: .86; }
+  100% { opacity: .18; }
 }
 
-@keyframes opening-j-edge-assemble {
-  0%, 17% { opacity: 1; }
-  19%, 63% { opacity: 0; }
-  66%, 94% { opacity: 1; }
-  100% { opacity: 0; }
+@keyframes opening-j-cyan-pulse {
+  0%, 100% { filter: none; }
+  52% { filter: drop-shadow(0 0 7px rgb(12 222 206 / 31%)); }
+}
+
+@keyframes opening-j-sheen-sweep {
+  0% { opacity: 0; transform: translateX(-34%); }
+  36% { opacity: .62; transform: translateX(-9%); }
+  68% { opacity: .28; transform: translateX(13%); }
+  100% { opacity: 0; transform: translateX(34%); }
 }
 
 @keyframes opening-tick-spin {
@@ -886,6 +1008,25 @@
   animation: none;
   opacity: 1;
   clip-path: none;
+  transform: none;
+}
+
+.opening--reduced .opening__j-settled {
+  animation: none;
+  opacity: 1;
+  filter: none;
+}
+
+.opening--reduced .opening__j-mark {
+  animation: none;
+  filter: none;
+}
+
+.opening--reduced .opening__j-piece,
+.opening--reduced .opening__j-sheen {
+  animation: none;
+  opacity: 0;
+  filter: none;
   transform: none;
 }
 

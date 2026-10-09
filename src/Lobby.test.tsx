@@ -48,7 +48,7 @@ afterEach(() => {
 });
 
 describe("Projects lobby", () => {
-  it("restores the centered, pre-top-origin lobby banner composition", () => {
+  it("restores the historical layered environment and centered lobby banners", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
     const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -57,8 +57,11 @@ describe("Projects lobby", () => {
     const mobileEnvironment = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(environmentRule).toMatch(/background-position:\s*center(?:\s+center)?/);
-    expect(environmentRule).not.toMatch(/mask-image|filter:\s*blur/);
+    expect(environmentRule).toMatch(/background-position:\s*center top/);
+    expect(environmentRule).toMatch(/linear-gradient\(180deg,\s*rgba\(1, 8, 13, 0\.68\) 0%,\s*rgba\(1, 8, 13, 0\.18\) 36%,\s*rgba\(1, 7, 11, 0\.38\) 100%\)/);
+    expect(environmentRule).toMatch(/-webkit-mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
+    expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
+    expect(environmentRule).not.toMatch(/filter:\s*blur/);
     expect(bannerGroup).toMatch(/top:\s*9%/);
     expect(bannerGroup).toMatch(/right:\s*6%/);
     expect(bannerGroup).toMatch(/bottom:\s*29%/);

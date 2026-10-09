@@ -406,6 +406,7 @@ export default function ProfileOverview({
     const content = contentRef.current;
     const panel = panelRef.current;
     if (!overview || !content || !panel) return;
+    const signalGrid = overview.querySelector<HTMLElement>(".profile-signal-grid");
 
     const clearPosition = () => {
       panel.style.removeProperty("top");
@@ -414,6 +415,7 @@ export default function ProfileOverview({
       panel.style.removeProperty("position");
       panel.style.removeProperty("--profile-panel-attachment-x");
       overview.style.removeProperty("height");
+      signalGrid?.style.removeProperty("--profile-mobile-panel-gap");
     };
 
     if (!displayedSignal) {
@@ -467,14 +469,34 @@ export default function ProfileOverview({
       const navBottom = content.querySelector<HTMLElement>(".profile-nav")?.getBoundingClientRect().bottom ?? contentRect.top;
       const panelHeight = (panel.offsetHeight || 330) * scale;
       if (window.innerWidth <= 900) {
-        // On narrow screens, the details sit just below their trigger. Extend
-        // the scene to contain the positioned panel, then scroll the pair
-        // together if the panel would otherwise fall below the viewport.
-        const below = signalRect.bottom + 12;
+        // Keep the panel close to the visible icon/label/count. The signal
+        // cell is taller than its actual content, so anchoring to the cell
+        // leaves an unhelpful visual gap on narrow screens.
+        const contentParts = Array.from(signal.querySelectorAll<HTMLElement>(
+          ".profile-signal__emblem, .profile-signal__label, .profile-signal__value",
+        )).map((part) => part.getBoundingClientRect()).filter((rect) => rect.width > 0 && rect.height > 0);
+        const visibleContentBottom = contentParts.length
+          ? Math.max(...contentParts.map((rect) => rect.bottom))
+          : signalRect.bottom;
+        const below = visibleContentBottom + 12;
         const panelTop = (below - overviewRect.top) / scale;
         panel.style.top = `${panelTop}px`;
-        const panelBottom = panelTop + panelHeight / scale;
-        overview.style.height = `${Math.max(overview.offsetHeight, panelBottom + 12)}px`;
+
+        const signalCells = signalGrid
+          ? Array.from(signalGrid.querySelectorAll<HTMLElement>("[data-profile-signal]"))
+          : [];
+        const selectedIndex = signalCells.indexOf(signal);
+        let mobilePanelGap = 0;
+        if (selectedIndex >= 0 && selectedIndex < 2 && signalGrid && signalCells[2]) {
+          const lowerRowTop = signalCells[2].getBoundingClientRect().top;
+          mobilePanelGap = Math.max(0, below + panelHeight + 12 - lowerRowTop) / scale;
+        }
+        signalGrid?.style.setProperty("--profile-mobile-panel-gap", `${mobilePanelGap}px`);
+
+        const panelBottom = below + panelHeight;
+        const gridBottom = signalGrid?.getBoundingClientRect().bottom ?? overviewRect.bottom;
+        const contentBottom = Math.max(panelBottom + 12, gridBottom);
+        overview.style.height = `${Math.max(overview.offsetHeight, (contentBottom - overviewRect.top) / scale)}px`;
         window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
           const panelRect = panel.getBoundingClientRect();
           if (panelRect.bottom > window.innerHeight - 12) window.scrollBy(0, panelRect.bottom - (window.innerHeight - 12));

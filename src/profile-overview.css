@@ -1083,6 +1083,8 @@
     min-height: 470px;
     padding: 0;
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 235px;
+    row-gap: var(--profile-mobile-panel-gap, 0px);
   }
 
   .profile-signal {
@@ -1663,6 +1665,12 @@
   }
 }
 
+@media (min-width: 1859px) and (max-width: 1920px) and (min-height: 821px) {
+  .profile-signal-grid {
+    top: calc(100vh - 557px);
+  }
+}
+
 /* Compact desktop keeps the identity left-led and lays out the Overview in its real column. */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .main--profile .profile-layout {
@@ -1818,16 +1826,23 @@
   }
 }
 
-/* The owner-reviewed tall desktop frame has room to place the signal row lower. */
+/* Keep the signal row inside a height-responsive lower band on tall desktops. */
 @media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1080px) {
   .profile-signal-grid {
     top: clamp(610px, calc(100vh - 470px), 800px);
   }
 }
 
-@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px) {
-  .profile-signal-grid {
-    top: calc(100vh - 349px);
+@media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1280px) {
+  .main.main--profile::before {
+    --profile-environment-height: calc(100vh - var(--client-header-height) - 100px);
+    background-image:
+      linear-gradient(180deg, rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)),
+      linear-gradient(180deg, transparent calc(100% - 88px), #05070a 100%),
+      url("/media/lobby/party-background-original.jpg");
+    background-position: center, center, center 58%;
+    background-size: cover, cover, cover;
+    background-repeat: no-repeat, no-repeat, no-repeat;
   }
 }
 

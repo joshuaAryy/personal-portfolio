@@ -522,7 +522,7 @@ describe("Food Tracker product story", () => {
     expect(search).toContain('class="food-retrieval-evidence"');
     expect(search).toContain("How does the app find the intended food reliably?");
     expect(search).toContain('class="food-retrieval-pipeline"');
-    expect(search).toContain('aria-label="A food query can produce exact, fuzzy, and semantic candidates; the API ranks candidates before the person confirms one and shared serving resolution."');
+    expect(search).toContain('aria-label="The app normalizes a search query, gathers available food candidates, removes duplicates, and ranks them before the person confirms one and shared serving resolution."');
     expect(search).toContain('class="food-retrieval-pipeline__lanes"');
     expect(search).toContain('class="food-retrieval-pipeline__rank"');
     expect(search).toContain('class="food-retrieval-pipeline__resolve"');
@@ -530,13 +530,15 @@ describe("Food Tracker product story", () => {
     expect(search).toContain('class="food-retrieval-evidence__top-one"');
     expect(search).toContain('role="img" aria-label="Top-1 offline ranking comparison');
     expect(search).toContain("Top-1 means the intended food ranks first; Top-3 means it appears in the first three results.");
-    expect(search).toContain("The earlier retrieval baseline in the project benchmark.");
-    expect(search).toContain("Deterministic and fuzzy retrieval with semantic candidates, followed by deterministic ranking.");
+    expect(search).toContain("Earlier direct text/barcode matching on a narrower active catalog.");
+    expect(search).toContain("Keeps direct matching, broadens the catalog, and adds fuzzy-name and semantic candidates before deterministic ranking.");
+    expect(search).toContain("NORMALIZE SEARCH QUERY");
+    expect(search).toContain("MERGED CANDIDATES");
     expect(search).toContain("Development uses 80 queries; the separate holdout uses 40");
     expect(search).toContain("Each score counts queries where the intended food appears within that result depth");
     expect(search).toContain("The comparison is the earlier baseline versus the complete hybrid path; it does not isolate the contribution of one route or predict live-user results.");
     expect(search).toContain('class="food-retrieval-pipeline__query"');
-    expect(search).toContain("ONE SEARCH INTENT");
+    expect(search).toContain("Duplicate food records are removed before the API computes the final rank.");
     expect(search).toContain("ORDERED FOOD CHOICES");
     for (const copy of [
       "EXACT / STRUCTURED",

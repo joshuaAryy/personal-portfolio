@@ -33,7 +33,7 @@ describe("opening route choreography", () => {
     expect(markup).toContain('aria-label="Skip to Home"');
   });
 
-  it("renders the editable Sonnet v8 J layers and historical reveal structure", () => {
+  it("renders the approved v8 layer family in settled and cap/shaft/hook assembly states", () => {
     const markup = renderOpeningRoute();
     const source = readFileSync("src/Opening.tsx", "utf8");
     const css = readFileSync("src/opening.css", "utf8");
@@ -53,11 +53,63 @@ describe("opening route choreography", () => {
     expect(markup).toContain('class="opening__radial-field"');
     expect(markup).toContain('class="opening__peripheral-lines"');
     expect(markup).not.toMatch(/LOADING|progress|open-portfolio-j-archive-source/);
-    for (const [phase, reveal] of [["deep", 30], ["mid", 32], ["face", 43], ["detail", 51], ["bevel", 59], ["edge", 66]] as const) {
-      expect(css).toContain(`opening-j-${phase}-assemble`);
-      expect(css).toContain(`${reveal}%, 94%`);
+    expect(markup).toContain('class="opening__j-settled" data-j-layer-set="sonnet-v8-approved"');
+    for (const piece of ["cap", "shaft", "hook"]) {
+      expect(markup).toContain(`class="opening__j-piece opening__j-piece--${piece}" data-j-piece="${piece}"`);
     }
-    expect(css).toContain("28% { opacity: .16; clip-path: inset(0 82% 0 0); }");
+    expect(markup.match(/data-j-piece="(?:cap|shaft|hook)"/g)).toHaveLength(3);
+    expect(css).toContain("@keyframes opening-j-settled-material");
+    expect(css).toContain("@keyframes opening-j-piece-approach");
+    expect(css).toContain("@keyframes opening-j-sheen-sweep");
+  });
+
+  it("moves the clipped v8 material pieces into one unchanged settled silhouette", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const settled = css.slice(css.indexOf("@keyframes opening-j-settled-material"), css.indexOf("@keyframes opening-j-piece-approach"));
+    const assembly = css.slice(css.indexOf("@keyframes opening-j-piece-approach"), css.indexOf("@keyframes opening-v8-material-reveal"));
+
+    expect(css).toContain("clip-path: polygon(0 0, 100% 0, 100% 37%, 0 45%);");
+    expect(css).toContain("clip-path: polygon(0 31%, 100% 24%, 100% 80%, 0 77%);");
+    expect(css).toContain("clip-path: polygon(0 73%, 100% 76%, 100% 100%, 0 100%);");
+    expect(css).toContain("--approach-delay: 880ms;");
+    expect(css).toContain("--approach-delay: 960ms;");
+    expect(assembly).toContain("from { transform: translate(var(--forge-offset-x), var(--forge-offset-y)); }");
+    expect(css).toContain("opening-j-piece-approach calc(1650ms - var(--approach-delay)) cubic-bezier(.18, .8, .22, 1)");
+    expect(assembly).toContain("to { transform: translate(0, 0); }");
+    expect(settled).toContain("80%, 94% { opacity: 1; filter: none; }");
+    expect(settled).not.toContain("transform:");
+  });
+
+  it("follows the Sol assembly phases with scaled travel and staggered v8 material reveals", () => {
+    const markup = renderOpeningRoute();
+    const css = readFileSync("src/opening.css", "utf8");
+
+    expect(markup).toContain('class="opening__j-lock"');
+    expect(markup).toContain('class="opening__j-sheen"');
+    expect(css).toContain("--approach-delay: 800ms;");
+    expect(css).toContain("--approach-delay: 880ms;");
+    expect(css).toContain("--approach-delay: 960ms;");
+    expect(css).toContain("--forge-offset-y: -3%;");
+    expect(css).toContain("--forge-offset-x: 3%;");
+    expect(css).toContain("calc(1650ms - var(--approach-delay))");
+    expect(css).toContain("opening-j-piece-visibility 5s");
+    expect(css).toContain("opening-v8-material-reveal 420ms ease-out 550ms");
+    expect(css).toContain("opening-v8-material-reveal 420ms ease-out 650ms");
+    expect(css).toContain("opening-v8-material-reveal 400ms ease-out 800ms");
+    expect(css).toContain("opening-v8-material-reveal 350ms ease-out 950ms");
+    expect(css).toContain("opening-v8-material-reveal 300ms ease-out 1200ms");
+    expect(css).toContain("opening-v8-material-reveal 300ms ease-out 1350ms");
+    expect(css).toContain("opening-j-seam-lock 350ms ease-out 1650ms");
+    expect(css).toContain("opening-j-cyan-pulse 750ms ease-in-out 2000ms");
+    expect(css).toContain("opening-j-sheen-sweep 800ms ease-in-out 2750ms");
+    expect(css).toContain("opening-j-settled-material 5s cubic-bezier(.24, .65, .2, 1) 1 both");
+    expect(css).toContain("78% { opacity: 0; filter: none; }");
+    expect(css).toContain("80%, 94% { opacity: 1; filter: none; }");
+    expect(css).toContain("0%, 6% { opacity: 1; transform: scale(1.12); }");
+    expect(css).toContain("10% { opacity: 0; transform: scale(.84); }");
+    expect(css).toContain("11% { opacity: 1; transform: scale(.76); }");
+    expect(css).toContain("11%, 16% { opacity: 1; }");
+    expect(css).toContain("from { opacity: .56; filter: brightness(.88); }");
   });
 
   it("keeps the historical J layers independent and immediately complete for reduced motion", () => {
@@ -72,6 +124,9 @@ describe("opening route choreography", () => {
     expect(markup).toContain('class="opening__j-detail"');
     expect(css).toMatch(/\.opening--reduced \.opening__j-layer,[\s\S]*?\.opening--reduced \.opening__j-detail\s*\{[^}]*animation:\s*none/s);
     expect(css).toMatch(/\.opening--reduced \.opening__j-layer,[\s\S]*?\.opening--reduced \.opening__j-detail\s*\{[^}]*opacity:\s*1/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-settled\s*\{[^}]*animation:\s*none;[^}]*opacity:\s*1/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-mark\s*\{[^}]*animation:\s*none/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-piece,[\s\S]*?\.opening--reduced \.opening__j-sheen\s*\{[^}]*opacity:\s*0/s);
   });
   it("shows one complete visible tick revolution during the five-second choreography", () => {
     const css = readFileSync("src/opening.css", "utf8");
@@ -84,9 +139,8 @@ describe("opening route choreography", () => {
     expect(css).toMatch(/\.opening__orbit-spin\s*\{[^}]*animation:\s*opening-tick-spin 3\.2s linear 600ms 1 both/s);
     expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(360deg\)/);
     expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation-duration:\s*5s/s);
-    expect(css).toMatch(/\.opening__j-layer\s*\{[^}]*animation-duration:\s*5s/s);
-    expect(css).toMatch(/\.opening__j-layer--deep\s*\{[^}]*animation-name:\s*opening-j-deep-assemble/s);
-    expect(css).toMatch(/\.opening__j-detail\s*\{[^}]*opening-j-detail-assemble 5s/s);
+    expect(css).toMatch(/\.opening__j-settled\s*\{[^}]*opening-j-settled-material 5s/s);
+    expect(css).toMatch(/\.opening__j-piece-art\s*\{[^}]*opening-j-piece-approach calc\(1650ms - var\(--approach-delay\)\)/s);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
     expect(css).not.toMatch(/opening__loading|opening__progress/);
   });
