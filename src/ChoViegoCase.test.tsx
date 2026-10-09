@@ -44,11 +44,12 @@ describe("Cho’Veigo product story", () => {
     const evidence = chapter(renderCase(), "evidence", "decisions");
 
     expect(hero).toContain("A better match starts with the evidence.");
-    expect(hero).toContain('src="/media/demos/choveigo-full-demo-redacted.mp4"');
+    expect(hero).toContain('src="/media/demos/choveigo-full-demo.mp4"');
     expect(hero).toContain('poster="/media/demos/choveigo-recommendations-poster.png"');
     expect(hero).toContain('title="Cho’Veigo full product demo, 112.638 seconds"');
     expect(hero).toContain('aria-label="Cho’Veigo full product demo, 112.638 seconds"');
     expect(hero).toContain("controls");
+    expect(hero).not.toContain("muted");
     expect(hero).toContain('aria-describedby="cho-full-demo-caption"');
     expect(hero).toContain("FULL DEMO · 112.638 SECONDS");
     expect(hero).toContain('href="/media/demos/choveigo-recommendations.webm"');

@@ -131,6 +131,15 @@ const foodLoggingRoutes = [
 
 type FoodLoggingRouteId = (typeof foodLoggingRoutes)[number]["id"];
 
+const foodLoggingFamilies: ReadonlyArray<{
+  label: string;
+  routeIds: readonly FoodLoggingRouteId[];
+}> = [
+  { label: "FIND + REUSE", routeIds: ["search-reuse", "barcode"] },
+  { label: "DESCRIBE + REVIEW", routeIds: ["describe-photo"] },
+  { label: "COMBINE + ENTER", routeIds: ["recipes-mixed", "manual"] },
+];
+
 function FoodLoggingGlyph({ kind }: { kind: (typeof foodLoggingRoutes)[number]["icon"] }) {
   if (kind === "search") {
     return <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="13" cy="13" r="7" /><path d="m18 18 8 8" /></svg>;
@@ -152,15 +161,15 @@ type FoodLoggingMicrovisualKind = Exclude<(typeof foodLoggingRoutes)[number]["vi
 const foodLoggingMicrovisualCopy = {
   barcode: {
     accessibleName: "Conceptual barcode lookup path",
-    caption: "Conceptual path · not a completed scan; the Phase 24 capture shows entry options only.",
+    caption: "Conceptual path · a code lookup returns a candidate for human confirmation.",
   },
   recipes: {
     accessibleName: "Conceptual recipe and mixed-meal composition path",
-    caption: "Conceptual path · not a completed recipe or mixed meal; the Phase 24 capture shows entry options only.",
+    caption: "Conceptual path · compose saved or manual foods, then resolve a serving.",
   },
   manual: {
     accessibleName: "Conceptual manual-entry path",
-    caption: "Conceptual path · not a saved manual food; the Phase 24 capture shows entry options only.",
+    caption: "Conceptual path · preserve known values and leave missing nutrition unknown.",
   },
 } as const;
 
@@ -246,19 +255,31 @@ function FoodLogTransaction() {
       <section className="food-log-transaction__route-panel" aria-labelledby="food-log-routes-title">
         <p className="food-figure__index">CHOOSE A WAY TO START</p>
         <h3 id="food-log-routes-title">Different inputs. The same reviewed log.</h3>
-        <div className="food-log-transaction__route-grid" role="group" aria-label="Food logging routes">
-          {foodLoggingRoutes.map((route) => (
-            <button
-              className="food-log-transaction__route"
-              type="button"
-              aria-pressed={activeRoute === route.id}
-              key={route.id}
-              onClick={() => setActiveRoute(route.id)}
-            >
-              <FoodLoggingGlyph kind={route.icon} />
-              <span>{route.label}</span>
-            </button>
-          ))}
+        <div className="food-log-transaction__route-families" role="group" aria-label="Three ways to build a food log">
+          <div className="food-log-transaction__route-family-list" role="group" aria-label="Food logging routes">
+            {foodLoggingFamilies.map((family) => (
+              <section className="food-log-transaction__route-family" role="group" aria-label={family.label} key={family.label}>
+                <span>{family.label}</span>
+                <div className="food-log-transaction__route-grid">
+                  {family.routeIds.map((routeId) => {
+                    const route = foodLoggingRoutes.find((candidate) => candidate.id === routeId)!;
+                    return (
+                      <button
+                        className="food-log-transaction__route"
+                        type="button"
+                        aria-pressed={activeRoute === route.id}
+                        key={route.id}
+                        onClick={() => setActiveRoute(route.id)}
+                      >
+                        <FoodLoggingGlyph kind={route.icon} />
+                        <span>{route.label}</span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </section>
+            ))}
+          </div>
         </div>
         <div className="food-log-transaction__method-detail" aria-live="polite" aria-atomic="true">
           <span>{selectedRoute.eyebrow}</span>
@@ -280,15 +301,15 @@ function FoodLogTransaction() {
           <figure className="food-log-transaction__screen" data-screen="search-results">
             <img
               src="/media/case-studies/food-tracker/phase-24/search-banana-results.png"
-              alt="Phase 24 pre-redesign Search foods capture for a banana query, showing a generic match per 100 g and additional results; it does not establish retrieval quality."
+              alt="Food search results for a banana query, with a generic match per 100 grams and additional candidates."
             />
-            <figcaption>Canonical Search foods capture · pre-redesign baseline · banana query with a generic match, not retrieval-quality evidence.</figcaption>
+            <figcaption>Search results · choose a food candidate, then review its serving. This screen illustrates selection, not benchmark evidence.</figcaption>
           </figure>
         ) : isDescribeRoute ? (
           <figure className="food-log-transaction__screen" data-screen="review">
             <img
               src="/media/case-studies/food-tracker/phase-24/ai-meal-review.png"
-              alt="Phase 24 Describe meal review for eggs and toast with editable serving amounts, a provisional nutrition preview, and Log selected action. The meal is unsaved."
+              alt="Meal description review with editable serving amounts, a provisional nutrition preview, and a Log action. The meal is not saved yet."
             />
             <figcaption>The Describe-meal review is unsaved interaction evidence, not a populated user outcome.</figcaption>
           </figure>
@@ -296,7 +317,7 @@ function FoodLogTransaction() {
           <FoodLoggingRouteMicrovisual kind={selectedRoute.visual} />
         ) : null}
       </div>
-      <p className="food-log-transaction__source-note">368&times;800 iOS simulator captures from the pre-redesign baseline. They show interaction states, not saved user history. Conceptual route maps explain documented behavior; they are not completed captures.</p>
+      <p className="food-log-transaction__source-note">Interface captures show interaction states, not saved user outcomes. Conceptual route maps explain documented behavior; they are not completed captures.</p>
 
       <div className="food-log-transaction__checkpoint">
         <span className="food-figure__index">HUMAN CHECKPOINT</span>
@@ -504,6 +525,7 @@ function FoodDataContract() {
       </div>
 
       <div className="food-data-contract__scale" aria-label="Reference catalog scale, not a user impact metric">
+        <span className="food-data-contract__scale-heading">REFERENCE CATALOG SNAPSHOT</span>
         <div><strong>12,363</strong><span>active foods</span></div>
         <b aria-hidden="true">×</b>
         <div><strong>277,341</strong><span>nutrient rows</span></div>
@@ -577,50 +599,51 @@ function FoodInsightPath() {
         </section>
       </div>
 
-      <div className="food-insight-path__captures" role="group" aria-label="Selected Phase 24 product captures">
+      <div className="food-insight-path__captures" role="group" aria-label="Insights interface views">
+        <p className="food-insight-path__capture-context">App interface examples shown with sample data.</p>
         <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-month-title">
           <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
             <img
               src="/media/case-studies/food-tracker/phase-24/insights-month-populated-sep08-oct07.png"
-              alt="Phase 24 pre-redesign QA-A staging capture of Insights Month for Sep 8–Oct 7, with five logged days."
+              alt="Monthly Insights overview with a logging-consistency summary and energy-balance section."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN · QA-A staging capture · Complex mode</span>
-            <strong id="food-insight-capture-month-title">QA-A staging report · Sep 8–Oct 7 · five logged days.</strong>
-            <p>Existing fixture content; not a general outcome or current UI approval.</p>
+            <span className="food-figure__index">INSIGHTS / MONTH</span>
+            <strong id="food-insight-capture-month-title">Monthly overview</strong>
+            <p>Daily logging contributes to an overview of progress and coverage.</p>
           </div>
         </section>
         <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-macro-title">
           <div className="food-insight-path__capture-screen">
             <img
               src="/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png"
-              alt="Phase 24 populated QA-A staging capture of the 30-day Macro Composition view for Sep 8 to Oct 7, showing a fixture-specific average and a 21/56/23 percent protein-carbohydrate-fat split with daily macro mix."
+              alt="Macro composition view with a nutrient balance graphic and daily comparison chart."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">SUPPORTING EVIDENCE - PHASE 24 / PRE-REDESIGN - QA-A STAGING CAPTURE - COMPLEX MODE</span>
-            <strong id="food-insight-capture-macro-title">Macro composition - 30-day view - Sep 8 to Oct 7 - five recorded days.</strong>
-            <p>Shows 21% protein, 56% carbohydrates, and 23% fat; 1,013 kcal is specific to this QA-A fixture, not a general outcome.</p>
+            <span className="food-figure__index">TRENDS / MACRO COMPOSITION</span>
+            <strong id="food-insight-capture-macro-title">Macro composition</strong>
+            <p>Compare the recorded mix across a selected range and day by day.</p>
           </div>
         </section>
         <section className="food-insight-path__capture food-insight-path__capture--trend-detail" aria-labelledby="food-insight-capture-trend-title">
           <div className="food-insight-path__capture-screen">
             <img
               src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-populated.png"
-              alt="Phase 24 pre-redesign QA-A staging capture of a 30-day Calories trend for Sep 8 to Oct 7. It shows a 1,013 kcal average across five recorded days and leaves historical gaps visible."
+              alt="Calorie trend view with a selected range and visible gaps in recorded history."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN · QA-A STAGING CAPTURE · COMPLEX MODE</span>
-            <strong id="food-insight-capture-trend-title">Calories trend · Sep 8 to Oct 7 · five recorded days.</strong>
-            <p>1,013 kcal is the recorded average for this QA-A fixture, not a general outcome; historical gaps remain visible.</p>
+            <span className="food-figure__index">TRENDS / CALORIES</span>
+            <strong id="food-insight-capture-trend-title">Calorie trend</strong>
+            <p>Selected ranges make gaps in recorded history visible.</p>
           </div>
         </section>
       </div>
@@ -635,7 +658,18 @@ function FoodInsightPath() {
 function FoodRetrievalEvidence() {
   return (
     <figure className="food-retrieval-evidence" aria-labelledby="food-retrieval-evidence-title">
-      <div className="food-retrieval-pipeline" aria-label="Exact, fuzzy, and semantic candidate routes converge on deterministic ranking before human confirmation and shared serving resolution.">
+      <div className="food-retrieval-pipeline" aria-label="A food query can produce exact, fuzzy, and semantic candidates; the API ranks candidates before the person confirms one and shared serving resolution.">
+        <section className="food-retrieval-pipeline__query" aria-label="A person's food search intent enters candidate retrieval">
+          <span className="food-figure__index">ONE SEARCH INTENT</span>
+          <strong>Which food does the person mean?</strong>
+          <p>The search returns food candidates for the person to inspect.</p>
+        </section>
+        <span className="food-retrieval-pipeline__mobile-query-arrow" aria-hidden="true">↓</span>
+        <svg className="food-retrieval-pipeline__input" viewBox="0 0 1000 48" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path d="M500 0 V12 C500 28 165 21 165 48" />
+          <path d="M500 0 V48" />
+          <path d="M500 12 C500 28 835 21 835 48" />
+        </svg>
         <div className="food-retrieval-pipeline__lanes" role="list" aria-label="Candidate retrieval paths">
           <div className="food-retrieval-pipeline__lane food-retrieval-pipeline__lane--exact" role="listitem">
             <span className="food-retrieval-pipeline__lane-index" aria-hidden="true">01</span>
@@ -665,9 +699,10 @@ function FoodRetrievalEvidence() {
           <p>The API computes the final rank; Pinecone supplies candidates, not rank or nutrition authority.</p>
         </section>
         <div className="food-retrieval-pipeline__resolve" aria-label="Ranked candidates are reviewed by a person before shared serving resolution">
-          <span>RANKED CANDIDATES</span><b aria-hidden="true">&rarr;</b><strong>PERSON CONFIRMS FOOD</strong><b aria-hidden="true">&rarr;</b><span>SHARED SERVING RESOLUTION</span>
+          <span>ORDERED FOOD CHOICES</span><b aria-hidden="true">&rarr;</b><strong>PERSON CONFIRMS FOOD</strong><b aria-hidden="true">&rarr;</b><span>SHARED SERVING RESOLUTION</span>
         </div>
         <p className="food-retrieval-pipeline__authority">PostgreSQL remains the source of food and nutrition truth.</p>
+        <p className="food-retrieval-pipeline__scope-note">The lanes show candidate strategies in the hybrid system; they do not imply every provider is contacted for every query.</p>
       </div>
       <div className="food-retrieval-evidence__results">
         <div className="food-retrieval-evidence__result-heading">
@@ -675,7 +710,13 @@ function FoodRetrievalEvidence() {
             <span className="food-figure__index">OFFLINE SEARCH EVALUATION</span>
             <h3>How does the app find the intended food reliably?</h3>
           </div>
-          <p>Top-1 means the intended food ranks first; Top-3 means it appears in the first three results. Development (80 queries) and holdout (40 queries) compare the legacy baseline with the full hybrid system offline.</p>
+          <p>Top-1 means the intended food ranks first; Top-3 means it appears in the first three results. Each score counts queries where the intended food appears within that result depth. Development uses 80 queries; the separate holdout uses 40.</p>
+        </div>
+
+        <div className="food-retrieval-evidence__comparison" role="group" aria-label="What the offline comparison measures">
+          <div><strong>Legacy</strong><span>The earlier retrieval baseline in the project benchmark.</span></div>
+          <div><strong>Full hybrid</strong><span>Deterministic and fuzzy retrieval with semantic candidates, followed by deterministic ranking.</span></div>
+          <p>The comparison is the earlier baseline versus the complete hybrid path; it does not isolate the contribution of one route or predict live-user results.</p>
         </div>
 
         <div className="food-retrieval-evidence__sets">
@@ -718,7 +759,8 @@ function FoodRetrievalEvidence() {
 
         <div className="food-retrieval-evidence__finding">
           <strong>Evaluation changed the design.</strong>
-          <p>Project notes report that semantic retrieval added latency for little benchmark recovery. The table compares the legacy path with the full hybrid system; it does not isolate a fuzzy-only gain.</p>
+          <p>Top-1 moved from 40/80 to 71/80 in development and from 25/40 to 27/40 in holdout. The stronger gain on the development set was smaller on the separate holdout; the comparison does not identify which retrieval route caused the change.</p>
+          <p>Project notes report that semantic retrieval added latency for little benchmark recovery. The benchmark compares complete paths; it does not isolate a fuzzy-only gain.</p>
         </div>
       </div>
 
@@ -857,11 +899,12 @@ export default function FoodTrackerCaseStudy() {
             <p className="food-rewrite__ownership" data-route-entry="summary">
               I led product direction, architecture, workflows, evaluation, and acceptance; I also wrote and debugged application code. I directed an advanced Codex/agent workflow: scoped specifications, agent-assisted implementation, regression checks, evaluation, and independent review.
             </p>
-            <p className="food-rewrite__stack">
-              <strong>STACK</strong>
-              <span>React Native · Expo / Expo Router · TypeScript · Express/Node · Prisma/PostgreSQL · Firebase Auth</span>
-              <span>Railway staging · Pinecone candidate search only</span>
-            </p>
+            <dl className="food-rewrite__stack" aria-label="Food Tracker tools and methods">
+              <div><dt>MOBILE</dt><dd>React Native · Expo / Expo Router · TypeScript</dd></div>
+              <div><dt>API / DATA</dt><dd>Express/Node · Prisma/PostgreSQL</dd></div>
+              <div><dt>IDENTITY / STAGING</dt><dd>Firebase Auth · Railway staging</dd></div>
+              <div><dt>SEARCH / AI</dt><dd>Pinecone candidate search only · Gemini-assisted food and quantity suggestions</dd></div>
+            </dl>
           </div>
           <aside className="food-rewrite__promise" data-route-entry="evidence" aria-label="The Food Tracker product path">
             <p className="food-figure__index">THE PRODUCT PATH</p>

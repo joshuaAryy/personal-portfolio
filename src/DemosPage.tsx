@@ -118,13 +118,12 @@ export default function DemosPage() {
               <video
                 ref={choVideoRef}
                 className="demo-player__video"
-                src="/media/demos/choveigo-full-demo-redacted.mp4"
+                src="/media/demos/choveigo-full-demo.mp4"
                 title={choFullDemoAccessibleName}
                 aria-label={choFullDemoAccessibleName}
                 aria-describedby="cho-full-demo-caption"
                 controls
                 autoPlay
-                muted
                 playsInline
                 preload="metadata"
                 poster={current.image}

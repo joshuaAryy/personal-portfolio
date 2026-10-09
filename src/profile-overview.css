@@ -1199,6 +1199,17 @@
 
 /* Profile signal overlays ? static counts, reversible detail states */
 .profile-project-panel { z-index: 2; }
+.profile-project-panel__enclosure--mobile { display: none; }
+.profile-project-panel:not([hidden])::after {
+  position: absolute;
+  top: calc(100% - 1px);
+  left: var(--profile-panel-attachment-x, 12%);
+  width: 1px;
+  height: 13px;
+  background: linear-gradient(180deg, rgb(195 153 78 / 78%), rgb(195 153 78 / 0%));
+  content: "";
+  pointer-events: none;
+}
 .profile-signal-grid { z-index: 1; }
 .profile-signal { cursor: default; }
 .profile-signal--selected .profile-signal__label,
@@ -1210,6 +1221,22 @@
   z-index: 2;
   outline: 2px solid #e2bd67;
   outline-offset: -4px;
+}
+
+@media (max-width: 900px) {
+  .profile-project-panel__enclosure:not(.profile-project-panel__enclosure--mobile) {
+    display: none;
+  }
+
+  .profile-project-panel__enclosure--mobile {
+    display: block;
+  }
+
+  .profile-project-panel:not([hidden])::after {
+    top: auto;
+    bottom: calc(100% - 1px);
+    background: linear-gradient(0deg, rgb(195 153 78 / 78%), rgb(195 153 78 / 0%));
+  }
 }
 .profile-hackathon-feature__challenge {
   margin-top: 8px;

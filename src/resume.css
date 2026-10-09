@@ -161,45 +161,61 @@
   height: 70%;
   border-radius: 50%;
   background: conic-gradient(
-    from -4deg,
-    transparent 0deg 220deg,
-    rgb(76 224 232 / 5%) 236deg,
-    rgb(76 224 232 / 24%) 260deg,
-    rgb(76 224 232 / 58%) 288deg,
-    rgb(76 224 232 / 82%) 310deg,
-    rgb(76 224 232 / 56%) 332deg,
-    rgb(76 224 232 / 12%) 354deg,
-    transparent 360deg
+    from -90deg,
+    rgb(76 224 232 / 68%) 0deg var(--resume-orb-fill),
+    transparent var(--resume-orb-fill) 360deg
   );
-  filter: drop-shadow(0 0 4px rgb(76 224 232 / 28%));
+  filter: drop-shadow(0 0 5px rgb(76 224 232 / 42%));
   mask: radial-gradient(circle closest-side, transparent 86%, #000 89%, #000 95%, transparent 99%);
   mix-blend-mode: screen;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
   translate: -50% -50%;
-  transform: rotate(0deg);
-  transform-origin: center;
-  animation: resume-orb-energy-sweep 2100ms cubic-bezier(.25, .1, .25, 1) 1 both;
+  animation: resume-orb-energy-fill 1150ms cubic-bezier(.22, .7, .3, 1) 260ms 1 forwards;
 }
 
 .resume-mechanism__j {
-  position: relative;
+  position: absolute;
   z-index: 1;
+  inset: 0;
   display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  border-radius: 50%;
-  clip-path: circle(48% at 50% 50%);
+  overflow: visible;
 }
 
-.resume-mechanism__j-image {
+.resume-mechanism__j-layer {
+  position: absolute;
+  display: block;
+  max-width: none;
+}
+
+.resume-mechanism__j-layer img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  mix-blend-mode: screen;
-  user-select: none;
+  max-width: none;
+}
+
+.resume-mechanism__j-layer--deep { inset: 10.68% 25.64% 12.99% 25.61%; }
+.resume-mechanism__j-layer--mid { inset: 9.94% 26.07% 13.73% 25.19%; }
+.resume-mechanism__j-layer--face,
+.resume-mechanism__j-layer--bevel,
+.resume-mechanism__j-layer--edge,
+.resume-mechanism__j-layer--detail { inset: 9.19% 26.5% 14.48% 24.76%; }
+
+.resume-mechanism__j-layer--detail img {
+  position: absolute;
+  inset: -0.42% -1.41% -2.79% -1%;
+  width: 102.41%;
+  height: 103.21%;
+  -webkit-mask: url("/media/opening/j-sonnet-v8/j-detail-mask.svg") center / 100% 100% no-repeat;
+  mask: url("/media/opening/j-sonnet-v8/j-detail-mask.svg") center / 100% 100% no-repeat;
+}
+
+.resume-mechanism__j-layer--edge img {
+  position: absolute;
+  inset: -0.19% -0.71% -0.18% -0.29%;
+  width: 101%;
+  height: 100.37%;
 }
 
 .resume-mechanism__frame {
@@ -216,10 +232,10 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 84.1%;
+  top: 80.4%;
   left: 50%;
   display: flex;
-  width: 240px;
+  width: min(240px, 44cqw);
   height: clamp(18px, 4.53cqw, 24px);
   align-items: center;
   justify-content: center;
@@ -300,9 +316,9 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 88.9%;
+  top: 85.7%;
   left: 50%;
-  width: min(212px, 40cqw);
+  width: min(176px, 34cqw);
   aspect-ratio: 212 / 70;
   height: auto;
   display: flex;
@@ -369,11 +385,11 @@
 
 .resume-found__close {
   position: absolute;
-  top: 109.4%;
+  top: 96.5%;
   left: 50%;
   z-index: 4;
-  width: 112px;
-  height: 38px;
+  width: min(94px, 18cqw);
+  height: clamp(18px, 4cqw, 22px);
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -381,7 +397,7 @@
   border: 1px solid rgba(199, 155, 69, .68);
   background: rgba(4, 13, 20, .72);
   color: #f0e6d2;
-  font-size: 11px;
+  font-size: clamp(9px, 2.1cqw, 11px);
   line-height: 18px;
   letter-spacing: .13em;
 }
@@ -595,8 +611,9 @@
   }
 
   .resume-mechanism__orb-energy {
-    display: none;
+    --resume-orb-fill: 360deg;
     animation: none;
+    opacity: 1;
   }
 
   .resume-found__action-plate--hover {
@@ -635,26 +652,20 @@
   }
 }
 
-@keyframes resume-orb-energy-sweep {
+@property --resume-orb-fill {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes resume-orb-energy-fill {
   0% {
-    opacity: 0;
-    transform: rotate(90deg);
-  }
-  8% {
-    opacity: .48;
-    transform: rotate(98deg);
-  }
-  76% {
-    opacity: .52;
-    transform: rotate(166deg);
-  }
-  92% {
-    opacity: .32;
-    transform: rotate(182deg);
+    --resume-orb-fill: 0deg;
+    opacity: .5;
   }
   100% {
-    opacity: 0;
-    transform: rotate(190deg);
+    --resume-orb-fill: 360deg;
+    opacity: 1;
   }
 }
 

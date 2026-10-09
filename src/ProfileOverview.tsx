@@ -1,4 +1,4 @@
-import { useState, type ReactNode } from "react";
+import { useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from "react";
 import { Link } from "react-router-dom";
 import { experienceIdentities, projectIdentities, type Project } from "./data";
 import ProfileNav from "./ProfileNav";
@@ -317,15 +317,18 @@ function ProfileSignalPanel({
   signal,
   projects,
   projectCasePaths,
+  panelRef,
 }: {
   signal: ProfileSignalId | null;
   projects: Project[];
   projectCasePaths: Record<string, string>;
+  panelRef: RefObject<HTMLElement | null>;
 }) {
   const title = signal?.toUpperCase();
   return (
-    <section id="profile-signal-preview-panel" className={`profile-project-panel${signal ? ` profile-project-panel--${signal}` : " profile-project-panel--neutral"}`} aria-label={title ? `${title} details` : "Profile signal details"} hidden={!signal}>
+    <section ref={panelRef} id="profile-signal-preview-panel" className={`profile-project-panel${signal ? ` profile-project-panel--${signal}` : " profile-project-panel--neutral"}`} aria-label={title ? `${title} details` : "Profile signal details"} hidden={!signal}>
       <img className="profile-project-panel__enclosure" src="/media/profile/profile-enclosure.svg" alt="" aria-hidden="true" />
+      <img className="profile-project-panel__enclosure profile-project-panel__enclosure--mobile" src="/media/profile/profile-enclosure-mobile.svg" alt="" aria-hidden="true" />
       {title && <h2 id="profile-panel-heading">{title}</h2>}
       <img className="profile-project-panel__divider" src="/media/profile/profile-title-divider.png" alt="" aria-hidden="true" />
 
@@ -394,6 +397,111 @@ export default function ProfileOverview({
   const [hoveredSignal, setHoveredSignal] = useState<ProfileSignalId | null>(null);
   const [focusedSignal, setFocusedSignal] = useState<ProfileSignalId | null>(null);
   const displayedSignal = hoveredSignal ?? focusedSignal;
+  const overviewRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const overview = overviewRef.current;
+    const content = contentRef.current;
+    const panel = panelRef.current;
+    if (!overview || !content || !panel) return;
+
+    const clearPosition = () => {
+      panel.style.removeProperty("top");
+      panel.style.removeProperty("left");
+      panel.style.removeProperty("width");
+      panel.style.removeProperty("position");
+      panel.style.removeProperty("--profile-panel-attachment-x");
+      overview.style.removeProperty("height");
+    };
+
+    if (!displayedSignal) {
+      clearPosition();
+      return;
+    }
+
+    // On narrow screens the panel is normally part of the stacked document
+    // flow. Pull it out before measuring so it can sit beside the signal that
+    // opened it instead of pushing the trigger hundreds of pixels away.
+    panel.style.position = "absolute";
+    panel.style.top = "0px";
+    panel.style.left = "0px";
+
+    const positionPanel = () => {
+      const signal = overview.querySelector<HTMLElement>(`[data-profile-signal="${displayedSignal}"]`);
+      if (!signal) return;
+
+      const overviewRect = overview.getBoundingClientRect();
+      const contentRect = content.getBoundingClientRect();
+      const signalRect = signal.getBoundingClientRect();
+      const overviewWidth = overview.offsetWidth;
+      const scale = overviewWidth > 0 ? overviewRect.width / overviewWidth : 0;
+      if (!scale) return;
+
+      const railRect = document.querySelector<HTMLElement>(".rail")?.getBoundingClientRect();
+      const hasVisibleRail = Boolean(railRect && railRect.width > 0 && railRect.height > 0);
+      const leftEdge = Math.max(overviewRect.left, contentRect.left + 8);
+      const rightEdge = Math.min(
+        overviewRect.right,
+        contentRect.right,
+        hasVisibleRail ? railRect!.left - 12 : window.innerWidth - 12,
+        window.innerWidth - 12,
+      );
+      const availableWidth = Math.max(0, (rightEdge - leftEdge) / scale);
+      const panelWidth = Math.min(panel.offsetWidth || overviewWidth, availableWidth);
+      if (!panelWidth) return;
+
+      panel.style.position = "absolute";
+      panel.style.width = `${panelWidth}px`;
+      const leftMin = (leftEdge - overviewRect.left) / scale;
+      const leftMax = Math.max(leftMin, (rightEdge - overviewRect.left) / scale - panelWidth);
+      const signalCenter = (signalRect.left + signalRect.width / 2 - overviewRect.left) / scale;
+      const left = Math.max(leftMin, Math.min(leftMax, signalCenter - panelWidth / 2));
+      panel.style.left = `${left}px`;
+      panel.style.setProperty(
+        "--profile-panel-attachment-x",
+        `${Math.max(4, Math.min(96, ((signalCenter - left) / panelWidth) * 100))}%`,
+      );
+
+      const navBottom = content.querySelector<HTMLElement>(".profile-nav")?.getBoundingClientRect().bottom ?? contentRect.top;
+      const panelHeight = (panel.offsetHeight || 330) * scale;
+      if (window.innerWidth <= 900) {
+        // On narrow screens, the details sit just below their trigger. Extend
+        // the scene to contain the positioned panel, then scroll the pair
+        // together if the panel would otherwise fall below the viewport.
+        const below = signalRect.bottom + 12;
+        const panelTop = (below - overviewRect.top) / scale;
+        panel.style.top = `${panelTop}px`;
+        const panelBottom = panelTop + panelHeight / scale;
+        overview.style.height = `${Math.max(overview.offsetHeight, panelBottom + 12)}px`;
+        window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+          const panelRect = panel.getBoundingClientRect();
+          if (panelRect.bottom > window.innerHeight - 12) window.scrollBy(0, panelRect.bottom - (window.innerHeight - 12));
+          else if (panelRect.top < 12) window.scrollBy(0, panelRect.top - 12);
+        }));
+        return;
+      }
+      const minTop = Math.max(contentRect.top, navBottom + 12, 112);
+      const maxTop = Math.max(minTop, window.innerHeight - panelHeight - 12);
+      const above = signalRect.top - panelHeight - 12;
+      const below = signalRect.bottom + 12;
+      const top = above >= minTop && above <= maxTop
+        ? above
+        : below + panelHeight <= window.innerHeight - 12
+          ? below
+          : Math.max(minTop, Math.min(maxTop, above));
+      panel.style.top = `${(top - overviewRect.top) / scale}px`;
+    };
+
+    positionPanel();
+    window.addEventListener("resize", positionPanel);
+    return () => {
+      window.removeEventListener("resize", positionPanel);
+      clearPosition();
+    };
+  }, [displayedSignal]);
+
   return (
     <div className="profile-layout">
       <aside className="identity-panel" aria-label="Joshua Aryeetey profile">
@@ -436,9 +544,10 @@ export default function ProfileOverview({
         </ul>
       </aside>
 
-      <div className="profile-content">
+      <div className="profile-content" ref={contentRef}>
         <ProfileNav />
         <div
+          ref={overviewRef}
           className="profile-overview"
           onMouseLeave={() => setHoveredSignal(null)}
           onBlurCapture={(event) => {
@@ -447,6 +556,7 @@ export default function ProfileOverview({
           }}
         >
           <ProfileSignalPanel
+            panelRef={panelRef}
             signal={displayedSignal}
             projects={projects}
             projectCasePaths={projectCasePaths}
@@ -463,6 +573,7 @@ export default function ProfileOverview({
                 role="group"
                 tabIndex={0}
                 key={signal.id}
+                data-profile-signal={signal.id}
                 aria-controls="profile-signal-preview-panel"
                 aria-label={`${signal.label}, ${signal.value}. Focus to preview ${signal.label.toLowerCase()} details.`}
                 onMouseEnter={() => setHoveredSignal(signal.id)}

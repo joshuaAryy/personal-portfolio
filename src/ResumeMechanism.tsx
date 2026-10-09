@@ -9,15 +9,25 @@ export default function ResumeMechanism() {
         />
       </div>
       <div className="resume-mechanism__j-medallion">
-        <div className="resume-mechanism__j" data-node-id="2984:484">
-          <img
-            className="resume-mechanism__j-image"
-            data-node-id="3679:247"
-            src="/media/profile/j-candidate-06-m54.svg"
-            alt="Joshua's portfolio J mark"
-            width="460"
-            height="460"
-          />
+        <div className="resume-mechanism__j" data-node-id="3325:335" role="img" aria-label="Joshua's portfolio J mark">
+          <span className="resume-mechanism__j-layer resume-mechanism__j-layer--deep" aria-hidden="true">
+            <img src="/media/opening/j-sonnet-v8/j-extrusion-deep.svg" alt="" />
+          </span>
+          <span className="resume-mechanism__j-layer resume-mechanism__j-layer--mid" aria-hidden="true">
+            <img src="/media/opening/j-sonnet-v8/j-extrusion-mid.svg" alt="" />
+          </span>
+          <span className="resume-mechanism__j-layer resume-mechanism__j-layer--face" aria-hidden="true">
+            <img src="/media/opening/j-sonnet-v8/j-face.svg" alt="" />
+          </span>
+          <span className="resume-mechanism__j-layer resume-mechanism__j-layer--detail" aria-hidden="true">
+            <img src="/media/opening/j-sonnet-v8/j-detail.svg" alt="" />
+          </span>
+          <span className="resume-mechanism__j-layer resume-mechanism__j-layer--bevel" aria-hidden="true">
+            <img src="/media/opening/j-sonnet-v8/j-bevel.svg" alt="" />
+          </span>
+          <span className="resume-mechanism__j-layer resume-mechanism__j-layer--edge" aria-hidden="true">
+            <img src="/media/opening/j-sonnet-v8/j-edge-light.svg" alt="" />
+          </span>
         </div>
       </div>
       <img

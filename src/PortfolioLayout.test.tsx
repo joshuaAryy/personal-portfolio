@@ -116,6 +116,17 @@ describe("League client shell", () => {
     expect(rail).not.toContain("/media/lobby/client-j-mark.svg");
   });
 
+  it("links the Activity footer X control to the owner's verified profile", () => {
+    const markup = renderClient("/home");
+    const railStart = markup.indexOf('<aside class="rail"');
+    const railEnd = markup.indexOf("</aside>", railStart) + "</aside>".length;
+    const rail = markup.slice(railStart, railEnd);
+
+    expect(rail).toContain('href="https://x.com/Cartizionplane"');
+    expect(rail).toContain('aria-label="X profile (opens in a new tab)"');
+    expect(rail).not.toContain('<span aria-hidden="true">X</span>');
+  });
+
   it("gives Resume and Email distinct high emphasis in the utility row", () => {
     const markup = renderClient("/home");
     const utilityNavigation = markup.slice(
@@ -152,6 +163,7 @@ describe("League client shell", () => {
     expect(mobileHrefs).toEqual([
       "https://ca.linkedin.com/in/joshua-ary",
       "https://github.com/joshuaAryy",
+      "https://x.com/Cartizionplane",
       "mailto:joshuaaryy@gmail.com",
       "/resume",
     ]);
@@ -303,7 +315,7 @@ describe("League client shell", () => {
     expect(defaultRule).toMatch(/object-fit:\s*contain/);
   });
 
-  it("places the three contact destinations after page content for the narrow shell", () => {
+  it("places social, contact, and resume destinations after page content for the narrow shell", () => {
     const markup = renderClient("/projects");
     const mainEnd = markup.indexOf("</main>");
     const contactStart = markup.indexOf('<nav class="mobile-contact-row" aria-label="Contact links">');
@@ -319,10 +331,11 @@ describe("League client shell", () => {
     expect(contactMarkup).toContain('aria-label="LinkedIn (opens in a new tab)"');
     expect(contactMarkup).toContain('href="mailto:joshuaaryy@gmail.com"');
     expect(contactMarkup).toContain('aria-label="Email Joshua"');
+    expect(contactMarkup).toContain('href="https://x.com/Cartizionplane"');
+    expect(contactMarkup).toContain('aria-label="X profile (opens in a new tab)"');
     expect(contactMarkup).toContain('href="/resume"');
     expect(contactMarkup).toContain(">Resume</a>");
     expect(contactMarkup).not.toContain("Help");
-    expect(contactMarkup).not.toContain(">X<");
   });
 
   it("matches Home Figma by keeping Resume out of the main destination navigation", () => {

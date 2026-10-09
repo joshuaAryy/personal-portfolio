@@ -31,22 +31,27 @@ function storyText(markup: string) {
 }
 
 describe("Food Tracker product story", () => {
-  it("shows the verified product stack beside the opening story", () => {
+  it("shows the verified product stack in scannable, bounded method groups", () => {
     const markup = renderFoodTracker();
     const hero = section(markup, "food-overview", "food-logging");
 
-    expect(hero).toContain('class="food-rewrite__stack"');
+    expect(hero).toContain('class="food-rewrite__stack" aria-label="Food Tracker tools and methods"');
     for (const tech of [
+      "MOBILE",
       "React Native",
+      "Expo",
       "Expo Router",
       "TypeScript",
+      "API / DATA",
       "Express/Node",
       "Prisma/PostgreSQL",
+      "IDENTITY / STAGING",
       "Firebase Auth",
       "Railway staging",
+      "SEARCH / AI",
       "Pinecone candidate search only",
+      "Gemini-assisted food and quantity suggestions",
     ]) expect(hero).toContain(tech);
-    expect(hero).toContain("React Native · Expo / Expo Router · TypeScript");
   });
 
   it("moves from the product promise through logging, data, insights, retrieval, and release", () => {
@@ -97,7 +102,7 @@ describe("Food Tracker product story", () => {
     expect(markup).not.toContain("Make a longer view possible");
   });
 
-  it("uses distinct authentic logging and Insights captures with accurate evidence labels", () => {
+  it("uses authentic captures with concise public labels and sample-data context", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
@@ -112,25 +117,54 @@ describe("Food Tracker product story", () => {
     expect(logging).not.toContain("food-log-complex-clean.png");
     expect(logging).not.toContain("food-serving-preview-banana.png");
     expect(logging).not.toContain("ai-meal-review.png");
-    expect(logging).toContain("not retrieval-quality evidence");
-    expect(logging).toContain("368×800 iOS simulator captures from the pre-redesign baseline");
+    expect(logging).toContain("Search results");
+    expect(logging).toContain("not benchmark evidence");
+    expect(logging).toContain("Interface captures show interaction states, not saved user outcomes.");
+    expect(logging).not.toContain("Phase 24");
+    expect(logging).not.toContain("pre-redesign");
     expect(insights).toContain("insights-month-populated-sep08-oct07.png");
     expect(insights).toContain("trend-detail-calories-populated.png");
     expect(insights).not.toContain("trend-configuration.png");
-    expect(insights).toContain("QA-A staging capture");
-    expect(insights).toContain("five logged days.");
+    expect(insights).toContain("Monthly overview");
+    expect(insights).toContain("Macro composition");
+    expect(insights).toContain("Calorie trend");
+    expect(insights).toContain("App interface examples shown with sample data.");
+    expect(insights).not.toContain("Phase 24");
+    expect(insights).not.toContain("pre-redesign");
+    expect(insights).not.toContain("QA-A");
+    expect(insights).not.toContain("fixture");
+    expect(insights).not.toContain("Sep 8");
+    expect(insights).not.toContain("Oct 7");
+    expect(insights).not.toContain("five logged days");
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
     expect(insights).toContain("trend-detail-macro-composition-populated.png");
     expect(insights).not.toContain("goal-plan.png");
-    expect(insights).toContain("1,013 kcal is the recorded average for this QA-A fixture, not a general outcome; historical gaps remain visible.");
-    expect(insights).toContain("Sep 8 to Oct 7 · five recorded days.");
-    expect(insights).toContain("historical gaps remain visible");
+    expect(insights).toContain("gaps in recorded history visible");
     expect(insights).not.toContain("canonical trend-configuration capture");
     expect(insights).toContain("Macro composition");
-    expect(insights).toContain("30-day view");
-    expect(insights).toContain("Shows 21% protein, 56% carbohydrates, and 23% fat; 1,013 kcal is specific to this QA-A fixture, not a general outcome.");
+    expect(insights).not.toContain("1,013 kcal");
+    expect(insights).not.toContain("21% protein");
+    expect(insights).not.toContain("56% carbohydrates");
+    expect(insights).not.toContain("23% fat");
     expect(markup).not.toContain("trends-overview.png");
     expect(markup).not.toContain("insights-week-current.png");
+  });
+
+  it("groups the five logging starts into three understandable paths with one reviewed destination", () => {
+    const markup = renderFoodTracker();
+    const logging = section(markup, "food-logging", "food-architecture");
+
+    expect(logging).toContain('aria-label="Three ways to build a food log"');
+    expect(logging).toContain("FIND + REUSE");
+    expect(logging).toContain("DESCRIBE + REVIEW");
+    expect(logging).toContain("COMBINE + ENTER");
+    expect(logging).toContain("Different inputs. The same reviewed log.");
+    expect(logging).toContain('aria-label="Shared save path"');
+    expect(logging).toContain("Search &amp; reuse");
+    expect(logging).toContain("Barcode");
+    expect(logging).toContain("Describe or photo");
+    expect(logging).toContain("Recipes &amp; mixed meals");
+    expect(logging).toContain("Manual entry");
   });
 
   it("shows selectable, labeled entry methods and changes the live explanation", async () => {
@@ -238,21 +272,21 @@ describe("Food Tracker product story", () => {
           id: "barcode",
           accessibleName: "Conceptual barcode lookup path",
           concepts: ["PRODUCT CODE", "OPEN FOOD FACTS", "MATCH + SERVING"],
-          caption: "not a completed scan",
+          caption: "human confirmation",
         },
         {
           label: "Recipes & mixed meals",
           id: "recipes",
           accessibleName: "Conceptual recipe and mixed-meal composition path",
           concepts: ["SAVED FOODS", "MANUAL ENTRY", "RECIPE OR MIXED MEAL", "SERVING BASIS"],
-          caption: "not a completed recipe or mixed meal",
+          caption: "compose saved or manual foods",
         },
         {
           label: "Manual entry",
           id: "manual",
           accessibleName: "Conceptual manual-entry path",
           concepts: ["KNOWN VALUES", "UNKNOWN STAYS UNKNOWN", "SERVING BASIS"],
-          caption: "not a saved manual food",
+          caption: "leave missing nutrition unknown",
         },
       ];
 
@@ -344,6 +378,7 @@ describe("Food Tracker product story", () => {
       "nutrient basis at save",
       "12,363 active foods",
       "277,341 nutrient rows",
+      "REFERENCE CATALOG SNAPSHOT",
       "Reference data scale, not users or impact.",
     ]) expect(architectureCopy).toContain(copy);
     expect(architectureCopy).toContain("React Native + Expo");
@@ -445,7 +480,7 @@ describe("Food Tracker product story", () => {
     expect(insights).toContain("unknown values remain distinct from zero.");
     expect(insights.indexOf('class="food-insight-path__shared-inputs"')).toBeLessThan(insights.indexOf('class="food-insight-path__analysis"'));
     expect(insights.indexOf('class="food-insight-path__analysis"')).toBeLessThan(insights.indexOf('class="food-insight-path__presentations"'));
-    expect(insights.indexOf('class="food-insight-path__presentations"')).toBeLessThan(insights.indexOf("SUPPORTING EVIDENCE · PHASE 24 / PRE-REDESIGN"));
+    expect(insights.indexOf('class="food-insight-path__presentations"')).toBeLessThan(insights.indexOf('class="food-insight-path__captures"'));
     expect(insights.indexOf("01 / KEEP TWO DATA QUESTIONS SEPARATE")).toBeLessThan(insights.indexOf("02 / CHOOSE A PRESENTATION"));
     for (const copy of [
       "Saved food logs + weight logs + goals",
@@ -465,8 +500,7 @@ describe("Food Tracker product story", () => {
       "Overview Nutrients Recommendations",
       "Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.",
       "unknown values remain distinct from zero.",
-      "QA-A staging capture",
-      "five logged days.",
+      "App interface examples shown with sample data.",
     ]) expect(insightsCopy).toContain(copy);
     expect(insightsCopy).not.toContain("0 eligible logged days");
     expect(insightsCopy).not.toContain("30 unlogged");
@@ -475,6 +509,9 @@ describe("Food Tracker product story", () => {
     expect(insightsCopy).not.toContain("populated account report");
     expect(insightsCopy).not.toContain("1,850 calories");
     expect(insightsCopy).not.toContain("measured trend");
+    expect(insightsCopy).not.toContain("QA-A");
+    expect(insightsCopy).not.toContain("pre-redesign");
+    expect(insightsCopy).not.toContain("1,013 kcal");
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {
@@ -485,14 +522,22 @@ describe("Food Tracker product story", () => {
     expect(search).toContain('class="food-retrieval-evidence"');
     expect(search).toContain("How does the app find the intended food reliably?");
     expect(search).toContain('class="food-retrieval-pipeline"');
-    expect(search).toContain('aria-label="Exact, fuzzy, and semantic candidate routes converge on deterministic ranking before human confirmation and shared serving resolution."');
+    expect(search).toContain('aria-label="A food query can produce exact, fuzzy, and semantic candidates; the API ranks candidates before the person confirms one and shared serving resolution."');
     expect(search).toContain('class="food-retrieval-pipeline__lanes"');
     expect(search).toContain('class="food-retrieval-pipeline__rank"');
     expect(search).toContain('class="food-retrieval-pipeline__resolve"');
+    expect(search).toContain("The lanes show candidate strategies in the hybrid system; they do not imply every provider is contacted for every query.");
     expect(search).toContain('class="food-retrieval-evidence__top-one"');
     expect(search).toContain('role="img" aria-label="Top-1 offline ranking comparison');
     expect(search).toContain("Top-1 means the intended food ranks first; Top-3 means it appears in the first three results.");
-    expect(search).toContain("Development (80 queries) and holdout (40 queries) compare the legacy baseline with the full hybrid system offline.");
+    expect(search).toContain("The earlier retrieval baseline in the project benchmark.");
+    expect(search).toContain("Deterministic and fuzzy retrieval with semantic candidates, followed by deterministic ranking.");
+    expect(search).toContain("Development uses 80 queries; the separate holdout uses 40");
+    expect(search).toContain("Each score counts queries where the intended food appears within that result depth");
+    expect(search).toContain("The comparison is the earlier baseline versus the complete hybrid path; it does not isolate the contribution of one route or predict live-user results.");
+    expect(search).toContain('class="food-retrieval-pipeline__query"');
+    expect(search).toContain("ONE SEARCH INTENT");
+    expect(search).toContain("ORDERED FOOD CHOICES");
     for (const copy of [
       "EXACT / STRUCTURED",
       "FUZZY RETRIEVAL",
@@ -514,7 +559,7 @@ describe("Food Tracker product story", () => {
       "27/40",
       "28/40",
       "Project notes report that semantic retrieval added latency for little benchmark recovery",
-      "The table compares the legacy path with the full hybrid system; it does not isolate a fuzzy-only gain.",
+      "The benchmark compares complete paths; it does not isolate a fuzzy-only gain.",
       "Offline ranking evidence, not live-user outcomes",
     ]) expect(searchCopy).toContain(copy);
     expect(searchCopy).not.toContain("31/40");

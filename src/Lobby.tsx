@@ -450,7 +450,6 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
     <Client pageClass="main--lobby">
       <section className={`league-lobby league-lobby--${mode}`} aria-label={`${mode} lobby`}>
         <div className="league-lobby__environment" data-route-entry="environment" aria-hidden="true" />
-        <div className="league-lobby__bottom-shade" aria-hidden="true" />
         <ModeHeading mode={mode} />
         {mode !== "projects" && (
           <div className="league-lobby__balance-slots" aria-hidden="true">
@@ -479,7 +478,6 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
             ? "Select an entry to review its academic details below."
             : "Select an entry, then use the action in its tray to open the story."}
         </p>
-        <div className="league-lobby__banner-fade" aria-hidden="true" />
       </section>
     </Client>
   );

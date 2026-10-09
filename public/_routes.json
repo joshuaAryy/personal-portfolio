@@ -1,5 +1,8 @@
 {
   "version": 1,
-  "include": ["/media/demos/choveigo-full-demo-redacted.mp4"],
+  "include": [
+    "/media/demos/choveigo-full-demo-redacted.mp4",
+    "/media/demos/choveigo-full-demo.mp4"
+  ],
   "exclude": []
 }

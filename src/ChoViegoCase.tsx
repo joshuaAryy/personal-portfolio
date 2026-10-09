@@ -187,18 +187,17 @@ export default function ChoViegoCase() {
             </div>
             <video
               className="cho-story__hero-video"
-              src="/media/demos/choveigo-full-demo-redacted.mp4"
+              src="/media/demos/choveigo-full-demo.mp4"
               title="Cho’Veigo full product demo, 112.638 seconds"
               aria-label="Cho’Veigo full product demo, 112.638 seconds"
               poster="/media/demos/choveigo-recommendations-poster.png"
               aria-describedby="cho-full-demo-caption"
               controls
-              muted
               playsInline
               preload="none"
             />
             <figcaption id="cho-full-demo-caption">
-              Full redacted Cho’Veigo product demo · 112.638 seconds. Supporting clip: <a href="/media/demos/choveigo-recommendations.webm" target="_blank" rel="noreferrer">short Recommendations excerpt · 4.94 seconds</a>.
+              Original full Cho’Veigo product demo · 112.638 seconds. Supporting clip: <a href="/media/demos/choveigo-recommendations.webm" target="_blank" rel="noreferrer">short Recommendations excerpt · 4.94 seconds</a>.
             </figcaption>
           </figure>
           <div className="cho-story__hero-route" aria-label="Product sequence">

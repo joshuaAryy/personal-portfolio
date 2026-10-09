@@ -48,7 +48,8 @@ describe("approved resume flow", () => {
     expect(markup).not.toContain("PORTFOLIO UTILITY");
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png"');
     expect(markup).toContain('class="resume-mechanism__j"');
-    expect(markup).toContain('src="/media/profile/j-candidate-06-m54.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-face.svg"');
+    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-extrusion-mid.svg"');
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/button-accept-default.png"');
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png"');
     expect(markup).not.toContain("A concise view of experience");
@@ -78,7 +79,7 @@ describe("approved resume flow", () => {
     );
   });
 
-  it("sweeps one clear cyan arc around the orb and settles it for reduced motion", () => {
+  it("fills the middle orb channel with cyan and leaves it illuminated", () => {
     const markup = renderRoute("/resume");
     const css = readFileSync("src/resume.css", "utf8");
     const energyRule = css.match(/\.resume-mechanism__orb-energy\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -90,21 +91,20 @@ describe("approved resume flow", () => {
     expect(markup.indexOf('class="resume-mechanism__frame"')).toBeLessThan(
       markup.indexOf('class="resume-mechanism__orb-energy"'),
     );
-    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-sweep\s+2100ms\s+cubic-bezier\(\.25,\s*\.1,\s*\.25,\s*1\)\s+1\s+both/);
+    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-fill\s+1150ms\s+cubic-bezier\(\.22,\s*\.7,\s*\.3,\s*1\)\s+260ms\s+1\s+forwards/);
     expect(energyRule).toMatch(/z-index:\s*3/);
     expect(energyRule).toMatch(/top:\s*50%;[^}]*left:\s*50%;[^}]*width:\s*70%;[^}]*height:\s*70%/s);
     expect(energyRule).toMatch(/translate:\s*-50%\s+-50%/);
-    expect(energyRule).toMatch(/conic-gradient\(\s*from -4deg,[\s\S]*rgb\(76 224 232 \/ 82%\) 310deg[\s\S]*transparent 360deg/);
+    expect(energyRule).toContain("from -90deg");
+    expect(energyRule).toContain("transparent var(--resume-orb-fill) 360deg");
     expect(energyRule).toMatch(/mask:\s*radial-gradient\(circle closest-side,\s*transparent 86%,\s*#000 89%,\s*#000 95%,\s*transparent 99%\)/);
-    expect(energyRule).toMatch(/filter:\s*drop-shadow\(0 0 4px rgb\(76 224 232 \/ 28%\)\)/);
+    expect(energyRule).toMatch(/filter:\s*drop-shadow\(0 0 5px rgb\(76 224 232 \/ 42%\)\)/);
     expect(energyRule).not.toContain("blur(");
     expect(energyRule).toMatch(/mix-blend-mode:\s*screen/);
     expect(energyRule).toMatch(/pointer-events:\s*none/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep\s*\{[^}]*0%\s*\{[^}]*transform:\s*rotate\(90deg\)/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?76%\s*\{[^}]*opacity:\s*\.52;[^}]*transform:\s*rotate\(166deg\)/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?92%\s*\{[^}]*opacity:\s*\.32;[^}]*transform:\s*rotate\(182deg\)/);
-    expect(css).toMatch(/@keyframes\s+resume-orb-energy-sweep[\s\S]*?100%\s*\{[^}]*opacity:\s*0;[^}]*transform:\s*rotate\(190deg\)/);
-    expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*display:\s*none;[^}]*animation:\s*none/s);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-fill\s*\{[^}]*0%\s*\{[^}]*--resume-orb-fill:\s*0deg/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-energy-fill[\s\S]*?100%\s*\{[^}]*--resume-orb-fill:\s*360deg;[^}]*opacity:\s*1/s);
+    expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*--resume-orb-fill:\s*360deg;[^}]*animation:\s*none/s);
   });
 
   it("assembles only the contextual takeover with a short reduced-motion-safe entrance", () => {
@@ -145,18 +145,18 @@ describe("approved resume flow", () => {
     expect(markup).toMatch(/class="resume-found__composition"[\s\S]*class="resume-found__system"[\s\S]*class="resume-found__title"[\s\S]*resume-found__action[\s\S]*class="resume-found__close"/);
     expect(compositionRule).toMatch(/position:\s*relative/);
     expect(compositionRule).toMatch(/width:\s*min\(530px,\s*49vh,\s*calc\(100vw - 32px\)\)/);
-    expect(titleRule).toMatch(/top:\s*84\.1%/);
+    expect(titleRule).toMatch(/top:\s*80\.4%/);
     expect(titleRule).toMatch(/height:\s*clamp\(18px,\s*4\.53cqw,\s*24px\)/);
     expect(titleRule).toMatch(/font-size:\s*clamp\(13px,\s*2\.83cqw,\s*15px\)/);
     expect(titleRule).toMatch(/line-height:\s*clamp\(18px,\s*3\.77cqw,\s*20px\)/);
     expect(titleRule).toMatch(/color:\s*#f0e6d2/i);
-    expect(actionRule).toMatch(/top:\s*88\.9%/);
-    expect(actionRule).toMatch(/width:\s*min\(212px,\s*40cqw\)/);
+    expect(actionRule).toMatch(/top:\s*85\.7%/);
+    expect(actionRule).toMatch(/width:\s*min\(176px,\s*34cqw\)/);
     expect(actionRule).toMatch(/aspect-ratio:\s*212\s*\/\s*70/);
-    expect(closeRule).toMatch(/top:\s*109\.4%/);
-    expect(closeRule).toMatch(/width:\s*112px/);
-    expect(closeRule).toMatch(/height:\s*38px/);
-    expect(closeRule).toMatch(/font-size:\s*11px/);
+    expect(closeRule).toMatch(/top:\s*96\.5%/);
+    expect(closeRule).toMatch(/width:\s*min\(94px,\s*18cqw\)/);
+    expect(closeRule).toMatch(/height:\s*clamp\(18px,\s*4cqw,\s*22px\)/);
+    expect(closeRule).toMatch(/font-size:\s*clamp\(9px,\s*2\.1cqw,\s*11px\)/);
   });
 
   it("keeps the Resume Found mechanism and actions in a compact vertical order", () => {
@@ -185,10 +185,10 @@ describe("approved resume flow", () => {
     const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
     const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(titleRule).toMatch(/top:\s*84\.1%/);
-    expect(actionRule).toMatch(/top:\s*88\.9%/);
-    expect(actionRule).toMatch(/width:\s*min\(212px,\s*40cqw\)/);
-    expect(closeRule).toMatch(/top:\s*109\.4%/);
+    expect(titleRule).toMatch(/top:\s*80\.4%/);
+    expect(actionRule).toMatch(/top:\s*85\.7%/);
+    expect(actionRule).toMatch(/width:\s*min\(176px,\s*34cqw\)/);
+    expect(closeRule).toMatch(/top:\s*96\.5%/);
   });
 
   it("centers Resume Found controls independently of the route-entry transform", () => {

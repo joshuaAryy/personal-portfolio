@@ -23,6 +23,7 @@ function ContactLinks() {
     <>
       <a href="https://ca.linkedin.com/in/joshua-ary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a>
       <a href="https://github.com/joshuaAryy" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)">GitHub</a>
+      <a href="https://x.com/Cartizionplane" target="_blank" rel="noopener noreferrer" aria-label="X profile (opens in a new tab)">X</a>
       <a className="rail-social-footer__email" href="mailto:joshuaaryy@gmail.com" aria-label="Email Joshua">✉</a>
     </>
   );
@@ -369,7 +370,6 @@ function Rail() {
       </div>
       <footer className="rail-social-footer" aria-label="Social and support links">
         <ContactLinks />
-        <span aria-hidden="true">X</span>
         {helpOverlay ? (
           <button className="rail-social-footer__help" type="button" onClick={helpOverlay.openHelp}>
             Help

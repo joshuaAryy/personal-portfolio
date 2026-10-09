@@ -1,5 +1,9 @@
 # Cho'Veigo full demo media record
 
+## Current owner release decision — 2026-10-09
+
+The owner explicitly authorized publishing the **original recording unchanged**, including the identified third-party profile/resume material. The recovered file at `C:\Users\samue\Downloads\viego_demo_final_with_music.mp4` was verified against the owner's supplied SHA-256: `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801` (32,915,943 bytes). Two repository chunks concatenate byte-for-byte to the same SHA and size; the Pages media function serves the original without transcoding, cropping, masking, or audio changes. This release decision supersedes the publication hold described in the historical notes below. Deployed playback remains to be verified at the next feature Preview.
+
 - **Purpose:** Full in-page demo on the Demos screen and Cho'Veigo case-study hero.
 - **Private source:** Owner-provided `viego_demo_final_with_music.mp4`; SHA-256 `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801`; 112.638333 seconds, 1920x1080, with audio. The original remains outside the repository.
 - **Redacted candidate:** `public/media/demos/choveigo-full-demo-redacted.mp4`; SHA-256 `9C1BDE2F810A4F3173993DE4C03FA5C11A51D413CB94F23D85BF74CA460CABCB`; 6,935,798 bytes, 1280x720, H.264/AAC, 112.65 seconds. It preserves the full sequence, audio, and full-frame composition without cropping.
@@ -18,4 +22,4 @@ The 1920x1080 source is scaled to a 1280x720 full-frame view; no crop is used. T
 
 Installed Chrome 153 loaded finite MP4 metadata (112.65s, 1280x720) and a seekable range of [0, 112.65]. Seeking to 0, 56.325, 111.9, and 112.5 seconds succeeded. Playback from 112.5 seconds ended at 112.65 seconds, and the AAC audio track was enabled and live. Decoded-frame checks around the new mask interval confirmed coverage from the first visible transition frame through the last transition frame. Comparison captures are in `%TEMP%\cho-full-demo-release-audit-20261008\final-frame-by-frame-before-after.png` and `final-native-speed-before-after.png`.
 
-The MP4 has not yet been deployed, so deployed playback and final owner privacy/release approval remain open. The 4.94-second Recommendations excerpt remains as separate supporting evidence, not as the full demo.
+The notes above describe the prior redacted candidate and its local playback checks. That derivative is retained as historical material and is not the current primary demo. The 4.94-second Recommendations excerpt remains separate supporting evidence, not the full demo.
