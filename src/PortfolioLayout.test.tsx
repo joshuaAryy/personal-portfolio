@@ -299,12 +299,13 @@ describe("League client shell", () => {
     }
   });
 
-  it("keeps the Activity list independently scrollable above its fixed footer on short desktop screens", () => {
+  it("fits the complete Activity list above its fixed footer on short desktop screens", () => {
     const css = readFileSync("src/styles.css", "utf8");
     const shortDesktopRule = css.match(/@media\s*\(min-width:\s*901px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/);
 
-    expect(shortDesktopRule?.[1]).toMatch(/\.rail-content\s*\{[^}]*overflow-y:\s*auto/s);
-    expect(shortDesktopRule?.[1]).toMatch(/overscroll-behavior:\s*contain/);
+    expect(shortDesktopRule?.[1]).toMatch(/\.rail-content\s*\{[^}]*overflow-y:\s*hidden/s);
+    expect(shortDesktopRule?.[1]).toMatch(/\.rail-group\s+\.rail-link,\s*\.rail-group\s+\.rail-item\s*\{[^}]*min-height:\s*38px/s);
+    expect(shortDesktopRule?.[1]).toMatch(/\.rail-group\s*\{[^}]*padding:\s*4px\s+18px\s+2px/s);
     expect(shortDesktopRule?.[1]).not.toMatch(/\.rail-social-footer\s*\{/);
   });
 
