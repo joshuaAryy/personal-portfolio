@@ -81,6 +81,18 @@ Temporary Chrome captures were retained outside the repository; no large screens
 - **Known responsive detail:** At 1920×768 the Activity rail uses an internal scroll to access its last two entries; at 375×667 Profile uses natural vertical scrolling and its signal row is vertically tight but usable.
 - **Live screen-reader attempt:** Windows Narrator is installed. On 2026-10-10, the computer-use runtime timed out twice while capturing its window (`FrameArrived timed out`, then `window capture timed out`). The Narrator process launched for this check could not be stopped through PowerShell (`Access is denied`). No live screen-reader pass is claimed. The manual accessibility review remains unverified; close Narrator locally if it is still speaking or visible.
 
+### Remaining live screen-reader check
+
+The automated accessibility and keyboard checks do not replace a live screen-reader interaction. When a screen-reader operator is available, verify the deployed Preview at desktop and narrow sizes with Narrator or NVDA:
+
+1. Navigate the Home landmarks and heading order; confirm the four mode controls announce useful names and selected state, and that LinkedIn, GitHub, Email, Resume, Activity, Confirm, Back, and Help are named and reachable.
+2. Open each category and use Help. Confirm the numbered spotlights correspond to the spoken instructions and that dismissal restores focus to Help.
+3. On Profile Overview, focus Projects, Experience, Hackathon, and Academics one at a time. Confirm each signal name/count is announced, its associated panel is discoverable, and focus can enter and leave the panel without dismissal or loss.
+4. Open Resume Found from Home and from a lobby. Confirm it is announced as a dialog with a useful name, the underlay is unavailable while open, focus begins inside and wraps within the dialog, Escape and Close restore focus to the opener, and View Resume opens the viewer with an announced heading.
+5. Check case-study navigation and native video/PDF controls with the screen reader, including pause/play and seek labels. Repeat the Home, Profile, and dialog checks at 390px width.
+
+Record the screen reader/version, browser, viewport, announcements or failures, and whether focus restoration works. This remains an owner/operator manual check; no automated result is being represented as completion.
+
 ## Deployment
 
 Deployed with `npm run deploy`, which invokes `wrangler pages deploy dist --project-name joshuaik2 --branch feat/portfolio-integration`. Immutable Preview: <https://c7b3f4c5.joshuaik2.pages.dev/>. Application source commit: `5f6fc30443ad2d0177ee3c7299a50e1a318168f9` on `feat/portfolio-integration`. Wrangler confirmed the feature branch and source `5f6fc30`. The generated JS and CSS were fetched from the Preview and SHA-256 matched local `dist`: JS `838F6372D98483096D8C266CB74B01021B3358F6154BD364C5AA3EB29D9034FD`; CSS `9DA6C9A74E3A6EA20CC5B5B8597B554FE0F8C74E3AB237D834DDFF18F70434D1`.
