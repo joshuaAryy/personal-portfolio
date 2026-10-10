@@ -65,7 +65,8 @@ Temporary Chrome captures were retained outside the repository; no large screens
 - Production build: passed (`tsc -b && vite build`). Vite reports the existing main JavaScript bundle at 509.15 kB, slightly above its 500 kB advisory threshold.
 - `git diff --check`: passed after code changes.
 - Installed Chrome/Playwright QA: 18 route families checked with no HTTP errors, failed requests, broken decoded images, or horizontal overflow. Home/Profile desktop matrix was 1366×768, 1440×720, 1440×900, 1536×864, 1920×768, 1920×1080; narrow was 375×667 and 390×844. Profile trigger panels, Help, Education, lobbies, Food, Resume keyboard actions, reduced motion, video playback/seeking/audio, and Opening timing/revolution were checked.
-- **Known responsive detail:** At 1920×768 the Activity rail uses an internal scroll to access its last two entries; at 375×667 Profile uses natural vertical scrolling and its signal row is vertically tight but usable. Live screen-reader interaction remains a manual follow-up.
+- **Known responsive detail:** At 1920×768 the Activity rail uses an internal scroll to access its last two entries; at 375×667 Profile uses natural vertical scrolling and its signal row is vertically tight but usable.
+- **Live screen-reader attempt:** Windows Narrator is installed. On 2026-10-10, the computer-use runtime timed out twice while capturing its window (`FrameArrived timed out`, then `window capture timed out`). The Narrator process launched for this check could not be stopped through PowerShell (`Access is denied`). No live screen-reader pass is claimed. The manual accessibility review remains unverified; close Narrator locally if it is still speaking or visible.
 
 ## Deployment
 
@@ -75,4 +76,4 @@ Deployed Chrome checked direct routes at desktop and narrow sizes: no HTTP 400+,
 
 ## Acceptance state
 
-This is a review checkpoint, not completion. Owner approval is pending. The requested Sonnet identity-specialist result remains blocked by model availability; all independent corrections above proceeded without it. Live screen-reader interaction remains a manual follow-up.
+This is a review checkpoint, not completion. Owner approval is pending. The requested Sonnet identity-specialist result remains blocked by model availability; all independent corrections above proceeded without it. Live screen-reader interaction remains unverified after the documented computer-use failure.
