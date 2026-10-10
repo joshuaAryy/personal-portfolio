@@ -123,7 +123,14 @@ describe("contextual Help overlay", () => {
     expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/home");
     expect(view.querySelector('[role="dialog"][aria-modal="true"]')).not.toBeNull();
     expect(view.querySelector("main.main--home-explore h1")?.textContent).toBe("Select a portfolio mode");
-    expect(view.querySelectorAll('[class*="spotlight--home-"]')).toHaveLength(4);
+    const homeSpotlights = Array.from(view.querySelectorAll<HTMLElement>('[class*="spotlight--home-"]'));
+    expect(homeSpotlights).toHaveLength(5);
+    expect(homeSpotlights.map((spotlight) => spotlight.dataset.helpNumber)).toEqual(["01", "02", "03", "04", "05"]);
+    expect(homeSpotlights[0].classList.contains("client-help-overlay__spotlight--home-utilities")).toBe(true);
+    expect(
+      Array.from(view.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"))
+        .map((spotlight) => spotlight.dataset.helpNumber),
+    ).toEqual(["01", "02", "03", "04", "05"]);
     expect(
       Array.from(view.querySelectorAll(".client-help-overlay__steps h3")).map((node) => node.textContent),
     ).toEqual(["Top-level links", "Mode navigation", "Activity rail", "Preview a mode", "Confirm or go Back"]);
@@ -137,12 +144,14 @@ describe("contextual Help overlay", () => {
     Object.defineProperty(window, "innerHeight", { configurable: true, value: 768 });
     const view = renderApp("/home");
     const bounds = [
+      { left: 850, top: 12, width: 360, height: 68 },
       { left: 120, top: 96, width: 880, height: 190 },
       { left: 1050, top: 110, width: 210, height: 560 },
       { left: 90, top: 310, width: 510, height: 330 },
       { left: 540, top: 650, width: 300, height: 78 },
     ];
     const targets = [
+      ".header-client-tools",
       ".home-explore__modes",
       ".rail",
       ".home-explore__selection",
@@ -168,6 +177,7 @@ describe("contextual Help overlay", () => {
     const spotlights = Array.from(view.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
     expect(spotlights.map((spotlight) => [spotlight.style.left, spotlight.style.top, spotlight.style.width, spotlight.style.height]))
       .toEqual([
+        ["842px", "4px", "376px", "84px"],
         ["112px", "88px", "896px", "206px"],
         ["1042px", "102px", "226px", "576px"],
         ["82px", "302px", "526px", "346px"],
@@ -175,6 +185,35 @@ describe("contextual Help overlay", () => {
       ]);
     Object.defineProperty(window, "innerWidth", { configurable: true, value: viewportWidth });
     Object.defineProperty(window, "innerHeight", { configurable: true, value: viewportHeight });
+  });
+
+  it("frames lobby actions with numbers that match their guidance targets", () => {
+    const view = renderApp("/projects");
+    click(view.querySelector(".header-help")!);
+    const frames = Array.from(view.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
+    expect(frames.map((frame) => [frame.dataset.helpNumber, frame.dataset.helpSelector])).toEqual([
+      ["01", ".header-client-tools"],
+      ["02", ".league-lobby__banners"],
+      ["03", ".league-selected"],
+      ["04", ".top-nav"],
+      ["04", ".rail"],
+    ]);
+    expect(view.querySelector('[data-help-target="screen"]')).toBeNull();
+  });
+
+  it.each([
+    ["/profile", [["01", ".header-client-tools"], ["02", ".profile-signal-grid"], ["03", ".profile-nav"], ["04", ".top-nav"], ["04", ".rail"]]],
+    ["/profile/journey", [["01", ".header-client-tools"], ["02", ".journey-page"], ["03", ".journey-locator"], ["04", ".profile-nav"], ["04", ".top-nav"], ["04", ".rail"]]],
+    ["/profile/demos", [["01", ".header-client-tools"], ["02", ".demo-selector"], ["03", ".demo-stage"], ["04", ".demo-stage"], ["04", ".profile-nav"]]],
+    ["/profile/highlights", [["01", ".header-client-tools"], ["02", ".personal-highlights"], ["03", ".profile-nav"], ["04", ".top-nav"], ["04", ".rail"]]],
+    ["/projects/food-tracker", [["01", ".header-client-tools"], ["02", ".main h1"], ["03", ".food-case-nav__chapters"], ["04", ".top-nav"], ["04", ".rail"]]],
+    ["/education/projects", [["01", ".header-client-tools"], ["02", ".education-projects__list"], ["03", ".education-projects__back"], ["04", ".top-nav"], ["04", ".rail"]]],
+  ])("uses contextual target-bound help markers on %s", (route, expected) => {
+    const view = renderApp(route);
+    click(view.querySelector(".header-help")!);
+    const frames = Array.from(view.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
+    expect(frames.map((frame) => [frame.dataset.helpNumber, frame.dataset.helpSelector])).toEqual(expected);
+    expect(view.querySelector('[data-help-target="screen"]')).toBeNull();
   });
 
   it("returns focus to the Help trigger and traps Tab within the dialog", () => {

@@ -103,6 +103,19 @@
   box-shadow: 0 0 0 1px rgba(4, 12, 22, 0.5), inset 0 0 24px rgba(19, 184, 210, 0.055);
   pointer-events: none;
 }
+.client-help-overlay__spotlight::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 2px 5px;
+  border: 1px solid rgba(36, 207, 222, 0.92);
+  background: rgba(3, 16, 25, 0.96);
+  color: #9af4f4;
+  content: attr(data-help-number);
+  font: 700 9px/1.2 "League Spartan", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 8px rgba(36, 207, 222, 0.55);
+}
 .client-help-overlay__spotlight[hidden] { display: none; }
 
 .client-help-overlay__dialog {

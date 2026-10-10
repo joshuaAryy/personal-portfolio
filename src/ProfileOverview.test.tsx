@@ -42,6 +42,26 @@ function cssPixels(rule: string, property: string) {
 }
 
 describe("Profile Overview", () => {
+  it("keeps fractional desktop width overflow from creating an inner horizontal scrollbar", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const mainRule = cssBlock(profileCss, ".main.main--profile");
+
+    expect(mainRule).toContain("overflow-x: hidden");
+    expect(mainRule).toContain("overflow-y: auto");
+  });
+
+  it("fits the full identity rail and Overview within supported desktop heights", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const fitRule = profileCss.match(
+      /@media\s*\(min-width:\s*901px\)\s*and\s*\(max-height:\s*1080px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(fitRule).toMatch(/\.main--profile \.profile-layout\s*\{[^}]*height:\s*calc\(100vh - var\(--client-header-height\)\)[^}]*min-height:\s*calc\(100vh - var\(--client-header-height\)\)/s);
+    expect(fitRule).toMatch(/\.main--profile \.identity-panel\s*\{[^}]*height:\s*100%[^}]*min-height:\s*0/s);
+    expect(fitRule).toMatch(/\.main\.main--profile\s*\{[^}]*overflow-y:\s*hidden/s);
+    expect(fitRule).toMatch(/\.main--profile \.profile-layout\s*\{[^}]*overflow:\s*clip/s);
+  });
+
   it("keeps project details out of the initial neutral panel", () => {
     const markup = renderProfile();
 
@@ -268,6 +288,39 @@ describe("Profile Overview", () => {
 
     expect(wideSignals).toContain("top: 523px");
     expect(tallWideSignals).toContain("top: calc(100vh - 557px)");
+  });
+
+  it("fits the signal row into 768px-high ultrawide desktop screens", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const shortWideRules = cssBlock(
+      profileCss,
+      "@media (min-width: 1859px) and (max-width: 1920px) and (max-height: 820px)",
+    );
+    const signalRule = cssBlock(shortWideRules, ".profile-signal-grid");
+
+    expect(signalRule).toMatch(/top:\s*calc\(100vh\s*-\s*\d+px\)/);
+  });
+
+  it("moves the signal row into view on 1500–1599px desktop screens below 1080px tall", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const mediumWideRules = cssBlock(
+      profileCss,
+      "@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 821px) and (max-height: 1079px)",
+    );
+    const signalRule = cssBlock(mediumWideRules, ".profile-signal-grid");
+
+    expect(signalRule).toContain("top: calc(100vh - 450px)");
+  });
+
+  it("keeps the Hackathon mark clear of its MPC Hacks event label at compact desktop size", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const projectRule = profileCss.match(/(?:^|\n)\.profile-hackathon-feature__project\s*\{([^}]*)\}/)?.[1] ?? "";
+    const markRule = profileCss.match(/(?:^|\n)\.profile-hackathon-feature__project img\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(projectRule).toMatch(/padding:\s*0\s+50px\s+0\s+110px/);
+    expect(markRule).toMatch(/left:\s*58px/);
+    expect(markRule).toMatch(/width:\s*40px/);
+    expect(markRule).toMatch(/height:\s*30px/);
   });
 
   it("reflows the Profile panel before the split becomes clipped or too small and contains its narrow enclosure", () => {

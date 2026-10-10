@@ -169,6 +169,29 @@ describe("HomeExplore", () => {
     expect(shortDesktop).toMatch(/\.home-explore__confirm-area\s*\{[^}]*margin:\s*0\s+auto\s+8px/s);
   });
 
+  it("keeps Confirm inside the first view on medium-height desktop screens", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const compactMediumDesktop = css.match(
+      /@media\s*\(min-width:\s*761px\)\s*and\s*\(max-width:\s*1500px\)\s*and\s*\(min-height:\s*821px\)\s*and\s*\(max-height:\s*920px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(compactMediumDesktop).toMatch(/\.home-explore\s*\{[^}]*grid-template-rows:/s);
+    expect(compactMediumDesktop).toMatch(/\.home-explore__confirm-area\s*\{[^}]*margin:\s*8px auto 8px/s);
+  });
+
+  it("fits the Home modes and preview into short wide desktop viewports", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const compactWide = css.match(
+      /@media\s*\(min-width:\s*1501px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(compactWide).toMatch(/grid-template-rows:\s*35px\s+200px\s+6px\s+minmax\(300px,\s*1fr\)/);
+    expect(compactWide).toMatch(/\.home-explore__modes\s*\{[^}]*height:\s*200px/s);
+    const wideRule = css.match(/@media\s*\(min-width:\s*1501px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    expect(wideRule).toMatch(/\.main\.main--home-explore\s*\{[^}]*overflow-y:\s*hidden/s);
+    expect(wideRule).toMatch(/\.home-explore\s*\{[^}]*overflow:\s*clip/s);
+  });
+
   it("previews verified experience, hackathon, and education details when selected", () => {
     const view = renderHomeExplore();
     const selection = view.querySelector(".home-explore__selection");

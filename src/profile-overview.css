@@ -1,5 +1,6 @@
 .main.main--profile {
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   background-color: #05070a;
   background-image: none;
   isolation: isolate;
@@ -778,7 +779,7 @@
 
 .profile-hackathon-feature__project img {
   position: absolute;
-  left: 100px;
+  left: 58px;
   width: 40px;
   height: 30px;
   object-fit: contain;
@@ -1671,6 +1672,18 @@
   }
 }
 
+@media (min-width: 1859px) and (max-width: 1920px) and (max-height: 820px) {
+  .profile-signal-grid {
+    top: calc(100vh - 565px);
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 821px) and (max-height: 1079px) {
+  .profile-signal-grid {
+    top: calc(100vh - 450px);
+  }
+}
+
 /* Compact desktop keeps the identity left-led and lays out the Overview in its real column. */
 @media (min-width: 1100px) and (max-width: 1399px) {
   .main--profile .profile-layout {
@@ -1903,5 +1916,70 @@
     margin-top: 8px;
     font-size: 24px;
     line-height: 30px;
+  }
+}
+
+/* Fit the complete desktop Profile scene to the viewport without forcing a
+   second vertical scroll. Narrow layouts keep their natural document flow. */
+@media (min-width: 901px) and (max-height: 1080px) {
+  .main.main--profile {
+    overflow-y: hidden;
+  }
+
+  .main--profile .profile-layout {
+    height: calc(100vh - var(--client-header-height));
+    min-height: calc(100vh - var(--client-header-height));
+    overflow: clip;
+    padding-bottom: 0;
+  }
+
+  .main--profile .identity-panel {
+    height: 100%;
+    min-height: 0;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1399px) and (max-height: 820px) {
+  .main--profile .profile-layout {
+    padding-bottom: 0;
+  }
+
+  .main--profile .identity-panel {
+    transform: scale(.84);
+    transform-origin: top left;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1858px) and (max-height: 1080px) {
+  .main--profile .profile-layout {
+    padding: 14px 20px 0;
+  }
+
+  .main--profile .profile-content {
+    height: calc(100% - 40px);
+    margin: 30px 0 10px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1499px) and (max-height: 820px) {
+  .main--profile .profile-overview {
+    height: 560px;
+  }
+}
+
+@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 821px) and (max-height: 1079px) {
+  .main--profile .profile-overview {
+    height: 708px;
+  }
+}
+
+@media (min-width: 1859px) and (max-width: 1920px) and (max-height: 1080px) {
+  .main--profile .profile-content {
+    height: calc(100% - 40px);
+    margin: 30px 0 10px;
+  }
+
+  .main--profile .profile-overview {
+    height: calc(100vh - var(--client-header-height) - 145px);
   }
 }

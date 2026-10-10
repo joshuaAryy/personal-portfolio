@@ -240,7 +240,7 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 80.5%;
+  top: 79.8%;
   left: 50%;
   display: flex;
   width: min(240px, 45.3cqw);
@@ -324,9 +324,9 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 85%;
+  top: 84.8%;
   left: 50%;
-  width: min(180px, 34cqw);
+  width: min(150px, 28.3cqw);
   aspect-ratio: 180 / 52;
   height: auto;
   display: flex;
@@ -340,7 +340,7 @@
   clip-path: none;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(10px, 2.25cqw, 12px);
+  font-size: clamp(9px, 2.1cqw, 11px);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -393,7 +393,7 @@
 
 .resume-found__close {
   position: absolute;
-  top: 96%;
+  top: 93%;
   left: 50%;
   z-index: 4;
   width: min(94px, 18cqw);

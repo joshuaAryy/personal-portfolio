@@ -6125,3 +6125,124 @@
     grid-column: 1;
   }
 }
+
+/* Insights evidence groups one lead trend with three related supporting views. */
+.food-insight-path__captures[data-gallery="insights-evidence"] {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+  padding: clamp(14px, 2vw, 22px);
+  border-top: 1px solid rgba(148, 178, 183, .2);
+  background:
+    linear-gradient(125deg, rgba(87, 198, 203, .045), transparent 55%),
+    rgba(0, 0, 0, .12);
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-context {
+  grid-column: 1 / -1;
+  padding: 0 2px 2px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture {
+  min-width: 0;
+  align-content: start;
+  border: 1px solid rgba(148, 178, 183, .2);
+  background: rgba(8, 18, 23, .74);
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead {
+  grid-column: span 6;
+  grid-template-columns: minmax(174px, 1.05fr) minmax(0, .95fr);
+  align-items: center;
+  border-top: 2px solid rgba(227, 197, 126, .58);
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--supporting {
+  grid-column: span 6;
+  grid-template-columns: minmax(174px, 1.05fr) minmax(0, .95fr);
+  align-items: center;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen {
+  min-height: 0;
+  height: auto;
+  align-items: center;
+  padding: 12px 10px;
+  background: #e9ebe7;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen > img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
+  max-height: 318px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
+  gap: 7px;
+  padding: 14px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy > .food-figure__index {
+  color: var(--food-gold);
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy > strong {
+  font-size: clamp(15px, 1.35vw, 18px);
+  line-height: 1.3;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy > p {
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+@media (max-width: 960px) {
+  .food-insight-path__captures[data-gallery="insights-evidence"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead {
+    grid-column: 1 / -1;
+    grid-template-columns: minmax(150px, .7fr) minmax(0, 1.3fr);
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--supporting {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 600px) {
+  .food-insight-path__captures[data-gallery="insights-evidence"] {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+    padding: 12px;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--supporting {
+    grid-column: 1;
+    grid-template-columns: minmax(116px, .72fr) minmax(0, 1.28fr);
+    align-items: center;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen {
+    padding: 8px;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
+    max-height: 220px;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
+    padding: 12px;
+  }
+}

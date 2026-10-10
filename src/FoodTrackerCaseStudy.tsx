@@ -599,24 +599,29 @@ function FoodInsightPath() {
         </section>
       </div>
 
-      <div className="food-insight-path__captures" role="group" aria-label="Insights interface views">
-        <p className="food-insight-path__capture-context">App interface examples shown with sample data.</p>
-        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-month-title">
+      <div
+        className="food-insight-path__captures"
+        data-gallery="insights-evidence"
+        role="group"
+        aria-label="Food Tracker analytics design studies and one app-interface capture"
+      >
+        <p className="food-insight-path__capture-context">Three Figma design studies use illustrative data; the Macro composition image is an app capture with sample data.</p>
+        <section className="food-insight-path__capture food-insight-path__capture--lead" aria-labelledby="food-insight-capture-calorie-title">
           <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
             <img
-              src="/media/case-studies/food-tracker/phase-24/insights-month-populated-sep08-oct07.png"
-              alt="Monthly Insights overview with a logging-consistency summary and energy-balance section."
+              src="/media/case-studies/food-tracker/insights/calorie-trend-design-study.png"
+              alt="Figma design study of a calorie trend chart with daily totals, a trend line, and a target band."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">INSIGHTS / MONTH</span>
-            <strong id="food-insight-capture-month-title">Monthly overview</strong>
-            <p>Daily logging contributes to an overview of progress and coverage.</p>
+            <span className="food-figure__index">FIGMA DESIGN STUDY · ILLUSTRATIVE DATA</span>
+            <strong id="food-insight-capture-calorie-title">Calorie trend</strong>
+            <p>Daily totals sit alongside a target band, a smoothed trend, and selected-day detail.</p>
           </div>
         </section>
-        <section className="food-insight-path__capture" aria-labelledby="food-insight-capture-macro-title">
+        <section className="food-insight-path__capture food-insight-path__capture--supporting" aria-labelledby="food-insight-capture-macro-title">
           <div className="food-insight-path__capture-screen">
             <img
               src="/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png"
@@ -626,24 +631,39 @@ function FoodInsightPath() {
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">TRENDS / MACRO COMPOSITION</span>
+            <span className="food-figure__index">APP CAPTURE · SAMPLE DATA</span>
             <strong id="food-insight-capture-macro-title">Macro composition</strong>
-            <p>Compare the recorded mix across a selected range and day by day.</p>
+            <p>Authentic app-interface evidence; the displayed sample values are not user outcomes.</p>
           </div>
         </section>
-        <section className="food-insight-path__capture food-insight-path__capture--trend-detail" aria-labelledby="food-insight-capture-trend-title">
+        <section className="food-insight-path__capture food-insight-path__capture--supporting" aria-labelledby="food-insight-capture-fiber-title">
           <div className="food-insight-path__capture-screen">
             <img
-              src="/media/case-studies/food-tracker/phase-24/trend-detail-calories-populated.png"
-              alt="Calorie trend view with a selected range and visible gaps in recorded history."
+              src="/media/case-studies/food-tracker/insights/fiber-trend-design-study.png"
+              alt="Figma design study of a fiber trend chart with daily totals and a target band."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">TRENDS / CALORIES</span>
-            <strong id="food-insight-capture-trend-title">Calorie trend</strong>
-            <p>Selected ranges make gaps in recorded history visible.</p>
+            <span className="food-figure__index">FIGMA DESIGN STUDY · ILLUSTRATIVE DATA</span>
+            <strong id="food-insight-capture-fiber-title">Fiber trend</strong>
+            <p>A nutrient view pairs daily totals with progress toward a goal.</p>
+          </div>
+        </section>
+        <section className="food-insight-path__capture food-insight-path__capture--supporting" aria-labelledby="food-insight-capture-consistency-title">
+          <div className="food-insight-path__capture-screen">
+            <img
+              src="/media/case-studies/food-tracker/insights/daily-completeness-design-study.png"
+              alt="Figma design study of a daily completeness grid distinguishing complete, partial, and unlogged days."
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div className="food-insight-path__capture-copy">
+            <span className="food-figure__index">FIGMA DESIGN STUDY · ILLUSTRATIVE DATA</span>
+            <strong id="food-insight-capture-consistency-title">Daily completeness</strong>
+            <p>A grid distinguishes complete, partial, and unlogged days.</p>
           </div>
         </section>
       </div>

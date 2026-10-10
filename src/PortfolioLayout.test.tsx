@@ -299,6 +299,15 @@ describe("League client shell", () => {
     }
   });
 
+  it("keeps the Activity list independently scrollable above its fixed footer on short desktop screens", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    const shortDesktopRule = css.match(/@media\s*\(min-width:\s*901px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/);
+
+    expect(shortDesktopRule?.[1]).toMatch(/\.rail-content\s*\{[^}]*overflow-y:\s*auto/s);
+    expect(shortDesktopRule?.[1]).toMatch(/overscroll-behavior:\s*contain/);
+    expect(shortDesktopRule?.[1]).not.toMatch(/\.rail-social-footer\s*\{/);
+  });
+
   it("crops only the canonical Living in Silico and Stush Patties rail marks to the circular frame", () => {
     const css = readFileSync("src/styles.css", "utf8");
     const cropRule = css.match(/\.rail-avatar img\[src="([^"]+)"\],\s*\.rail-avatar img\[src="([^"]+)"\]\s*\{([^}]*)\}/s);

@@ -24,11 +24,117 @@ type HelpStep = { title: string; detail: string };
 
 const railHiddenQuery = "(max-width: 900px)";
 const homeSpotlightTargets: Record<string, string> = {
+  utilities: ".header-client-tools",
   navigation: ".home-explore__modes",
+  back: ".home-explore__back",
   rail: ".rail",
   focus: ".home-explore__selection",
   confirm: ".home-explore__confirm-area",
 };
+const homeSpotlightNumbers: Record<string, string> = {
+  utilities: "01",
+  navigation: "02",
+  back: "03",
+  rail: "03",
+  focus: "04",
+  confirm: "05",
+};
+
+type HelpSpotlight = { key: string; selector: string; number: string };
+
+function contextualSpotlights(pathname: string, railVisible: boolean): HelpSpotlight[] {
+  const utilities = railVisible ? ".header-client-tools" : ".mobile-contact-row";
+  const shell = [
+    { key: "primary-navigation", selector: ".top-nav", number: "04" },
+    ...(railVisible ? [{ key: "activity", selector: ".rail", number: "04" }] : []),
+  ];
+  if (["/projects", "/experience", "/hackathons", "/education"].includes(pathname)) {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "entries", selector: ".league-lobby__banners", number: "02" },
+      { key: "selection", selector: ".league-selected", number: "03" },
+      ...shell,
+    ];
+  }
+  if (pathname === "/profile") {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "signals", selector: ".profile-signal-grid", number: "02" },
+      { key: "profile-navigation", selector: ".profile-nav", number: "03" },
+      ...shell,
+    ];
+  }
+  if (pathname === "/profile/journey") {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "journey", selector: ".journey-page", number: "02" },
+      { key: "journey-path", selector: ".journey-locator", number: "03" },
+      { key: "profile-navigation", selector: ".profile-nav", number: "04" },
+      ...shell.map((item) => ({ ...item, number: "04" })),
+    ];
+  }
+  if (pathname === "/profile/demos") {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "demo-selector", selector: ".demo-selector", number: "02" },
+      { key: "demo-player", selector: ".demo-stage", number: "03" },
+      { key: "food-demo", selector: ".demo-stage", number: "04" },
+      { key: "profile-navigation", selector: ".profile-nav", number: "04" },
+    ];
+  }
+  if (pathname === "/profile/highlights") {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "gallery", selector: ".personal-highlights", number: "02" },
+      { key: "profile-navigation", selector: ".profile-nav", number: "03" },
+      ...shell.map((item) => ({ ...item, number: "04" })),
+    ];
+  }
+  if (pathname === "/resume") {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "resume", selector: ".resume-found", number: "01" },
+      { key: "resume-view", selector: ".resume-found__action", number: "02" },
+      { key: "resume-close", selector: ".resume-found__close", number: "02" },
+    ];
+  }
+  if (pathname === "/resume/viewer") {
+    return [
+      { key: "resume-document", selector: ".resume-viewer__frame", number: "01" },
+      { key: "resume-actions", selector: ".resume-viewer__actions", number: "02" },
+      { key: "utilities", selector: utilities, number: "02" },
+      { key: "resume-back", selector: ".resume-viewer__back", number: "03" },
+    ];
+  }
+  if (pathname.startsWith("/projects/") || pathname.startsWith("/experience/")) {
+    const chapterSelector = documentSelectorForChapterNav(pathname);
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "story-opening", selector: ".main h1", number: "02" },
+      ...(chapterSelector ? [{ key: "chapters", selector: chapterSelector, number: "03" }] : []),
+      ...shell.map((item) => ({ ...item, number: chapterSelector ? "04" : "03" })),
+    ];
+  }
+  if (pathname === "/education/projects") {
+    return [
+      { key: "utilities", selector: utilities, number: "01" },
+      { key: "education-briefs", selector: ".education-projects__list", number: "02" },
+      { key: "education-back", selector: ".education-projects__back", number: "03" },
+      ...shell.map((item) => ({ ...item, number: "04" })),
+    ];
+  }
+  return [
+    { key: "utilities", selector: utilities, number: "01" },
+    ...shell.map((item) => ({ ...item, number: "02" })),
+  ];
+}
+
+function documentSelectorForChapterNav(pathname: string) {
+  if (pathname === "/projects/food-tracker") return ".food-case-nav__chapters";
+  if (pathname === "/projects/choveigo") return ".choveigo-case-nav__chapters";
+  if (pathname === "/projects/fraymakers") return ".fraymakers-nav__chapters";
+  return null;
+}
 
 function useRailVisible() {
   const [railVisible, setRailVisible] = useState(() => {
@@ -326,8 +432,9 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     location.pathname,
   );
   const homeHighlights = isHome
-    ? ["navigation", ...(railVisible ? ["rail"] : []), "focus", "confirm"]
+    ? ["utilities", "navigation", ...(railVisible ? ["rail"] : ["back"]), "focus", "confirm"]
     : [];
+  const contextualHighlights = isHome ? [] : contextualSpotlights(location.pathname, railVisible);
 
   useLayoutEffect(() => {
     const frames = Array.from(document.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
@@ -336,7 +443,9 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     const measureTargets = () => {
       frames.forEach((frame) => {
         const key = frame.dataset.helpTarget ?? "screen";
-        const selector = isHome ? homeSpotlightTargets[key] : ".client .client-body > .main";
+        const selector = isHome
+          ? key === "utilities" && !railVisible ? ".mobile-contact-row" : homeSpotlightTargets[key]
+          : frame.dataset.helpSelector;
         const target = selector ? document.querySelector<HTMLElement>(selector) : null;
         if (!target) {
           frame.hidden = true;
@@ -363,7 +472,9 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measureTargets);
     frames.forEach((frame) => {
       const key = frame.dataset.helpTarget ?? "screen";
-      const selector = isHome ? homeSpotlightTargets[key] : ".client .client-body > .main";
+      const selector = isHome
+        ? key === "utilities" && !railVisible ? ".mobile-contact-row" : homeSpotlightTargets[key]
+        : frame.dataset.helpSelector;
       const target = selector ? document.querySelector<HTMLElement>(selector) : null;
       if (target) observer?.observe(target);
     });
@@ -382,18 +493,23 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
           homeHighlights.map((target) => (
           <div
             className={`client-help-overlay__spotlight client-help-overlay__spotlight--home-${target}`}
-              data-help-target={target}
+            data-help-target={target}
+            data-help-selector={target === "utilities" && !railVisible ? ".mobile-contact-row" : homeSpotlightTargets[target]}
+            data-help-number={homeSpotlightNumbers[target]}
             key={target}
             aria-hidden="true"
           />
         ))
-      ) : (
+      ) : contextualHighlights.map((spotlight) => (
         <div
-          className={`client-help-overlay__spotlight${isLobby ? " client-help-overlay__spotlight--lobby" : ""}`}
-          data-help-target="screen"
+          className={`client-help-overlay__spotlight client-help-overlay__spotlight--${spotlight.key}${isLobby ? " client-help-overlay__spotlight--lobby" : ""}`}
+          data-help-target={spotlight.key}
+          data-help-selector={spotlight.selector}
+          data-help-number={spotlight.number}
+          key={`${spotlight.key}-${spotlight.number}`}
           aria-hidden="true"
         />
-      )}
+      ))}
       <section
         ref={dialogRef}
         className={`client-help-overlay__dialog${isHome ? " client-help-overlay__dialog--home" : ""}`}

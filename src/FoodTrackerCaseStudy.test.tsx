@@ -106,13 +106,13 @@ describe("Food Tracker product story", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
     const insights = section(markup, "food-insights", "food-search");
-    const captures = [...markup.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
+    const captures = [...markup.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\//g)];
     const loggingCaptures = [...logging.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
-    const insightCaptures = [...insights.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
+    const insightCaptures = [...insights.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\//g)];
 
-    expect(captures).toHaveLength(4);
+    expect(captures).toHaveLength(5);
     expect(loggingCaptures).toHaveLength(1);
-    expect(insightCaptures).toHaveLength(3);
+    expect(insightCaptures).toHaveLength(4);
     expect(logging).toContain("search-banana-results.png");
     expect(logging).not.toContain("food-log-complex-clean.png");
     expect(logging).not.toContain("food-serving-preview-banana.png");
@@ -122,13 +122,19 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("Interface captures show interaction states, not saved user outcomes.");
     expect(logging).not.toContain("Phase 24");
     expect(logging).not.toContain("pre-redesign");
-    expect(insights).toContain("insights-month-populated-sep08-oct07.png");
-    expect(insights).toContain("trend-detail-calories-populated.png");
+    expect(insights).toContain("insights/calorie-trend-design-study.png");
+    expect(insights).toContain("insights/fiber-trend-design-study.png");
+    expect(insights).toContain("insights/daily-completeness-design-study.png");
+    expect(insights).not.toContain("insights-month-populated-sep08-oct07.png");
+    expect(insights).not.toContain("trend-detail-calories-populated.png");
     expect(insights).not.toContain("trend-configuration.png");
-    expect(insights).toContain("Monthly overview");
     expect(insights).toContain("Macro composition");
     expect(insights).toContain("Calorie trend");
-    expect(insights).toContain("App interface examples shown with sample data.");
+    expect(insights).toContain("Fiber trend");
+    expect(insights).toContain("Daily completeness");
+    expect(insights).toContain("Three Figma design studies use illustrative data");
+    expect(insights).toContain("APP CAPTURE · SAMPLE DATA");
+    expect(insights).toContain("FIGMA DESIGN STUDY · ILLUSTRATIVE DATA");
     expect(insights).not.toContain("Phase 24");
     expect(insights).not.toContain("pre-redesign");
     expect(insights).not.toContain("QA-A");
@@ -139,7 +145,7 @@ describe("Food Tracker product story", () => {
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
     expect(insights).toContain("trend-detail-macro-composition-populated.png");
     expect(insights).not.toContain("goal-plan.png");
-    expect(insights).toContain("gaps in recorded history visible");
+    expect(insights).toContain("selected-day detail");
     expect(insights).not.toContain("canonical trend-configuration capture");
     expect(insights).toContain("Macro composition");
     expect(insights).not.toContain("1,013 kcal");
@@ -500,7 +506,7 @@ describe("Food Tracker product story", () => {
       "Overview Nutrients Recommendations",
       "Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.",
       "unknown values remain distinct from zero.",
-      "App interface examples shown with sample data.",
+      "Three Figma design studies use illustrative data",
     ]) expect(insightsCopy).toContain(copy);
     expect(insightsCopy).not.toContain("0 eligible logged days");
     expect(insightsCopy).not.toContain("30 unlogged");
@@ -512,6 +518,22 @@ describe("Food Tracker product story", () => {
     expect(insightsCopy).not.toContain("QA-A");
     expect(insightsCopy).not.toContain("pre-redesign");
     expect(insightsCopy).not.toContain("1,013 kcal");
+  });
+
+  it("groups Insights evidence as one lead view with three supporting captures", () => {
+    const markup = renderFoodTracker();
+    const insights = section(markup, "food-insights", "food-search");
+    const captures = insights.slice(insights.indexOf('class="food-insight-path__captures"'));
+
+    expect(captures).toContain('data-gallery="insights-evidence"');
+    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--lead"');
+    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--supporting"');
+    expect((captures.match(/food-insight-path__capture--supporting/g) ?? []).length).toBe(3);
+    expect(captures).toContain("Calorie trend");
+    expect(captures).toContain("Macro composition");
+    expect(captures).toContain("Fiber trend");
+    expect(captures).toContain("Daily completeness");
+    expect(captures).toContain("Three Figma design studies use illustrative data");
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {
