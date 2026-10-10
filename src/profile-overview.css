@@ -1851,3 +1851,57 @@
     top: calc(121.9512vh - 675.4px);
   }
 }
+
+/* Keep the four overview signals visible on short desktop screens without
+   stretching the scene into a second, mostly empty viewport. */
+@media (min-width: 1100px) and (max-width: 1399px) and (max-height: 820px) {
+  .main--profile .profile-overview {
+    height: 560px;
+    margin-top: 12px;
+  }
+
+  .profile-project-panel {
+    height: 340px;
+  }
+
+  .profile-project-panel--neutral[hidden]::after {
+    top: 150px;
+  }
+
+  .profile-project-panel__enclosure {
+    height: 336px;
+  }
+
+  .profile-project-grid {
+    top: 80px;
+    height: 250px;
+  }
+
+  .profile-signal-grid {
+    top: 353px;
+    height: 200px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: 1fr;
+  }
+
+  .profile-signal {
+    min-width: 0;
+  }
+
+  .profile-signal__emblem {
+    width: min(96px, 78%);
+    height: auto;
+    aspect-ratio: 1;
+    margin-top: 0;
+  }
+
+  .profile-signal__label {
+    width: min(132px, 94%);
+  }
+
+  .profile-signal__value {
+    margin-top: 8px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+}

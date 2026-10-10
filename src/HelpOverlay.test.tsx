@@ -130,6 +130,53 @@ describe("contextual Help overlay", () => {
     expect(view.querySelector('[role="dialog"] h2')?.textContent).toBe("Home controls");
   });
 
+  it("places Home guide frames around the live controls instead of fixed viewport guesses", () => {
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 1280 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 768 });
+    const view = renderApp("/home");
+    const bounds = [
+      { left: 120, top: 96, width: 880, height: 190 },
+      { left: 1050, top: 110, width: 210, height: 560 },
+      { left: 90, top: 310, width: 510, height: 330 },
+      { left: 540, top: 650, width: 300, height: 78 },
+    ];
+    const targets = [
+      ".home-explore__modes",
+      ".rail",
+      ".home-explore__selection",
+      ".home-explore__confirm-area",
+    ];
+
+    targets.forEach((selector, index) => {
+      const element = view.querySelector<HTMLElement>(selector);
+      if (!element) throw new Error(`Missing Help target: ${selector}`);
+      const rect = bounds[index];
+      element.getBoundingClientRect = () => ({
+        ...rect,
+        right: rect.left + rect.width,
+        bottom: rect.top + rect.height,
+        x: rect.left,
+        y: rect.top,
+        toJSON: () => ({}),
+      } as DOMRect);
+    });
+
+    click(view.querySelector(".header-help")!);
+
+    const spotlights = Array.from(view.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
+    expect(spotlights.map((spotlight) => [spotlight.style.left, spotlight.style.top, spotlight.style.width, spotlight.style.height]))
+      .toEqual([
+        ["112px", "88px", "896px", "206px"],
+        ["1042px", "102px", "226px", "576px"],
+        ["82px", "302px", "526px", "346px"],
+        ["532px", "642px", "316px", "94px"],
+      ]);
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: viewportWidth });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: viewportHeight });
+  });
+
   it("returns focus to the Help trigger and traps Tab within the dialog", () => {
     const view = renderApp("/projects");
     const trigger = view.querySelector<HTMLButtonElement>(".rail-social-footer__help");

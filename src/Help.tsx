@@ -23,6 +23,12 @@ export function useHelpOverlay() {
 type HelpStep = { title: string; detail: string };
 
 const railHiddenQuery = "(max-width: 900px)";
+const homeSpotlightTargets: Record<string, string> = {
+  navigation: ".home-explore__modes",
+  rail: ".rail",
+  focus: ".home-explore__selection",
+  confirm: ".home-explore__confirm-area",
+};
 
 function useRailVisible() {
   const [railVisible, setRailVisible] = useState(() => {
@@ -323,13 +329,60 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     ? ["navigation", ...(railVisible ? ["rail"] : []), "focus", "confirm"]
     : [];
 
+  useLayoutEffect(() => {
+    const frames = Array.from(document.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
+    if (!frames.length) return;
+
+    const measureTargets = () => {
+      frames.forEach((frame) => {
+        const key = frame.dataset.helpTarget ?? "screen";
+        const selector = isHome ? homeSpotlightTargets[key] : ".client .client-body > .main";
+        const target = selector ? document.querySelector<HTMLElement>(selector) : null;
+        if (!target) {
+          frame.hidden = true;
+          return;
+        }
+
+        const bounds = target.getBoundingClientRect();
+        const inset = key === "screen" ? 12 : 8;
+        const left = Math.max(0, bounds.left - inset);
+        const top = Math.max(0, bounds.top - inset);
+        const right = Math.min(window.innerWidth, bounds.right + inset);
+        const bottom = Math.min(window.innerHeight, bounds.bottom + inset);
+        frame.hidden = right <= left || bottom <= top;
+        frame.style.left = `${left}px`;
+        frame.style.top = `${top}px`;
+        frame.style.width = `${Math.max(0, right - left)}px`;
+        frame.style.height = `${Math.max(0, bottom - top)}px`;
+      });
+    };
+
+    measureTargets();
+    window.addEventListener("resize", measureTargets);
+    document.addEventListener("scroll", measureTargets, true);
+    const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measureTargets);
+    frames.forEach((frame) => {
+      const key = frame.dataset.helpTarget ?? "screen";
+      const selector = isHome ? homeSpotlightTargets[key] : ".client .client-body > .main";
+      const target = selector ? document.querySelector<HTMLElement>(selector) : null;
+      if (target) observer?.observe(target);
+    });
+
+    return () => {
+      window.removeEventListener("resize", measureTargets);
+      document.removeEventListener("scroll", measureTargets, true);
+      observer?.disconnect();
+    };
+  }, [isHome, isLobby, railVisible]);
+
   return (
     <div className="client-help-overlay">
       <div className="client-help-overlay__scrim" aria-hidden="true" />
       {isHome ? (
-        homeHighlights.map((target) => (
+          homeHighlights.map((target) => (
           <div
             className={`client-help-overlay__spotlight client-help-overlay__spotlight--home-${target}`}
+              data-help-target={target}
             key={target}
             aria-hidden="true"
           />
@@ -337,6 +390,7 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
       ) : (
         <div
           className={`client-help-overlay__spotlight${isLobby ? " client-help-overlay__spotlight--lobby" : ""}`}
+          data-help-target="screen"
           aria-hidden="true"
         />
       )}

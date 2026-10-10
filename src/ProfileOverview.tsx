@@ -518,8 +518,10 @@ export default function ProfileOverview({
 
     positionPanel();
     window.addEventListener("resize", positionPanel);
+    window.addEventListener("scroll", positionPanel, true);
     return () => {
       window.removeEventListener("resize", positionPanel);
+      window.removeEventListener("scroll", positionPanel, true);
       clearPosition();
     };
   }, [displayedSignal]);

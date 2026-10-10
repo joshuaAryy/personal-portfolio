@@ -99,57 +99,11 @@
 .client-help-overlay__spotlight {
   position: absolute;
   z-index: 1;
-  top: 108px;
-  left: 26px;
-  width: calc(83.33vw - 52px);
-  height: calc(100vh - 142px);
   border: 1px solid rgba(36, 207, 222, 0.92);
   box-shadow: 0 0 0 1px rgba(4, 12, 22, 0.5), inset 0 0 24px rgba(19, 184, 210, 0.055);
   pointer-events: none;
 }
-
-.client-help-overlay__spotlight--home-navigation {
-  top: 19vh;
-  left: 8.33vw;
-  width: 70.4vw;
-  height: 26.4vh;
-}
-
-.client-help-overlay__spotlight--home-rail {
-  top: 20.56vh;
-  right: 0;
-  left: auto;
-  width: 16.67vw;
-  height: 35.75vh;
-}
-
-.client-help-overlay__spotlight--home-focus {
-  top: 47.22vh;
-  left: 1.3vw;
-  width: min(22.92vw, 360px);
-  height: min(39.82vh, 430px);
-}
-
-.client-help-overlay__spotlight--home-confirm {
-  top: 83.8vh;
-  left: 32.55vw;
-  width: 18.23vw;
-  height: 11.11vh;
-}
-
-/* Home rail focus, measured against Figma 2298:3474 at 1920×1080. */
-@media (min-width: 1920px) {
-  .client-help-overlay__spotlight--home-rail {
-    top: 21.94vh;
-    width: min(16.77vw, 322px);
-    height: min(35.37vh, 382px);
-  }
-}
-
-.client-help-overlay__spotlight--lobby {
-  top: 172px;
-  height: min(480px, calc(100vh - 410px));
-}
+.client-help-overlay__spotlight[hidden] { display: none; }
 
 .client-help-overlay__dialog {
   position: absolute;
@@ -706,43 +660,6 @@
 }
 
 @media (max-width: 620px) {
-  .client-help-overlay__spotlight {
-    top: 100px;
-    left: 12px;
-    width: calc(100vw - 24px);
-    height: min(360px, calc(100vh - 160px));
-  }
-
-  .client-help-overlay__spotlight--home-navigation {
-    top: 19vh;
-    left: 12px;
-    width: calc(100vw - 24px);
-    height: 39vh;
-  }
-
-  .client-help-overlay__spotlight--home-rail {
-    display: none;
-  }
-
-  .client-help-overlay__spotlight--home-focus {
-    top: 60vh;
-    left: 12px;
-    width: min(88vw, 620px);
-    height: 16vh;
-  }
-
-  .client-help-overlay__spotlight--home-confirm {
-    top: 77vh;
-    left: 25vw;
-    width: 50vw;
-    height: 12vh;
-  }
-
-  .client-help-overlay__spotlight--lobby {
-    top: 132px;
-    height: 310px;
-  }
-
   .client-help-overlay__dialog {
     top: auto;
     right: 12px;

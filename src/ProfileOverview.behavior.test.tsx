@@ -1,5 +1,6 @@
 // @vitest-environment happy-dom
 import { act } from "react";
+import { readFileSync } from "node:fs";
 import { createRoot, type Root } from "react-dom/client";
 import { MemoryRouter } from "react-router-dom";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
@@ -37,6 +38,47 @@ afterEach(() => {
 });
 
 describe("Profile signal previews", () => {
+  it("repositions an open signal panel when the viewport is scrolled", () => {
+    renderProfile();
+    const overview = host.querySelector<HTMLElement>(".profile-overview")!;
+    const content = host.querySelector<HTMLElement>(".profile-content")!;
+    const panel = host.querySelector<HTMLElement>(".profile-project-panel")!;
+    const signal = host.querySelector<HTMLElement>('[data-profile-signal="projects"]')!;
+    const nav = host.querySelector<HTMLElement>(".profile-nav")!;
+    let scrolled = false;
+
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 1440 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 768 });
+    Object.defineProperty(overview, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetHeight", { configurable: true, value: 330 });
+    overview.getBoundingClientRect = () => ({ left: 100, top: scrolled ? -350 : 0, right: 800, bottom: scrolled ? 650 : 1000, width: 700, height: 1000, x: 100, y: scrolled ? -350 : 0, toJSON: () => ({}) } as DOMRect);
+    content.getBoundingClientRect = () => ({ left: 100, top: scrolled ? -320 : 30, right: 800, bottom: 800, width: 700, height: 770, x: 100, y: scrolled ? -320 : 30, toJSON: () => ({}) } as DOMRect);
+    nav.getBoundingClientRect = () => ({ left: 100, top: scrolled ? -320 : 30, right: 800, bottom: scrolled ? -270 : 80, width: 700, height: 50, x: 100, y: scrolled ? -320 : 30, toJSON: () => ({}) } as DOMRect);
+    signal.getBoundingClientRect = () => ({ left: 250, top: scrolled ? 250 : 640, right: 400, bottom: scrolled ? 310 : 700, width: 150, height: 60, x: 250, y: scrolled ? 250 : 640, toJSON: () => ({}) } as DOMRect);
+
+    act(() => signal.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+    const initialTop = panel.style.top;
+
+    scrolled = true;
+    act(() => window.dispatchEvent(new Event("scroll")));
+
+    expect(panel.style.top).not.toBe(initialTop);
+    expect(Number.parseFloat(panel.style.top)).toBeGreaterThan(800);
+  });
+
+  it("uses a compact four-column signal band for short desktop viewports", () => {
+    const css = readFileSync("src/profile-overview.css", "utf8");
+    const shortDesktop = css.match(
+      /@media\s*\(min-width:\s*1100px\)\s*and\s*\(max-width:\s*1399px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(shortDesktop).toMatch(/\.main--profile\s+\.profile-overview\s*\{[^}]*margin-top:\s*\d+px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-panel\s*\{[^}]*height:\s*340px/s);
+    expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*353px;[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
+    expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*grid-template-rows:\s*1fr/s);
+  });
+
   it("shows details only while a signal is hovered and clears to a neutral panel", () => {
     renderProfile();
     const projectsSignal = host.querySelector<HTMLElement>(".profile-signal");

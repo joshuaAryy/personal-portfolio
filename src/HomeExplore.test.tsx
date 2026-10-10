@@ -157,6 +157,18 @@ describe("HomeExplore", () => {
     expect(responsiveRules).toMatch(/\.home-explore__confirm-area\s*\{[^}]*position:\s*relative[^}]*grid-row:\s*5/s);
   });
 
+  it("uses a tighter content stack to keep Confirm in view on short desktop screens", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const shortDesktop = css.match(
+      /@media\s*\(min-width:\s*761px\)\s*and\s*\(max-width:\s*1500px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(shortDesktop).toMatch(/grid-template-rows:\s*35px\s+200px\s+6px\s+minmax\(300px,\s*auto\)\s+auto/);
+    expect(shortDesktop).toMatch(/\.home-explore__modes\s*\{[^}]*height:\s*200px/s);
+    expect(shortDesktop).toMatch(/\.home-explore__build-grid\s*>\s*span\s*\{[^}]*min-height:\s*34px/s);
+    expect(shortDesktop).toMatch(/\.home-explore__confirm-area\s*\{[^}]*margin:\s*0\s+auto\s+8px/s);
+  });
+
   it("previews verified experience, hackathon, and education details when selected", () => {
     const view = renderHomeExplore();
     const selection = view.querySelector(".home-explore__selection");

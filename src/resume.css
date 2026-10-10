@@ -240,7 +240,7 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 83.96%;
+  top: 80.5%;
   left: 50%;
   display: flex;
   width: min(240px, 45.3cqw);
@@ -324,10 +324,10 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 88.87%;
+  top: 85%;
   left: 50%;
-  width: min(212px, 40cqw);
-  aspect-ratio: 212 / 70;
+  width: min(180px, 34cqw);
+  aspect-ratio: 180 / 52;
   height: auto;
   display: flex;
   align-items: center;
@@ -340,7 +340,7 @@
   clip-path: none;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(11px, 2.64cqw, 14px);
+  font-size: clamp(10px, 2.25cqw, 12px);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -393,11 +393,11 @@
 
 .resume-found__close {
   position: absolute;
-  top: calc(88.87% + min(70px, 13.21cqw) + 2px);
+  top: 96%;
   left: 50%;
   z-index: 4;
   width: min(94px, 18cqw);
-  height: clamp(18px, 3.77cqw, 20px);
+  height: clamp(16px, 3.4cqw, 18px);
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -405,8 +405,8 @@
   border: 1px solid rgba(199, 155, 69, .68);
   background: rgba(4, 13, 20, .72);
   color: #f0e6d2;
-  font-size: clamp(9px, 2.1cqw, 11px);
-  line-height: 18px;
+  font-size: clamp(8px, 1.9cqw, 10px);
+  line-height: 1;
   letter-spacing: .13em;
 }
 
