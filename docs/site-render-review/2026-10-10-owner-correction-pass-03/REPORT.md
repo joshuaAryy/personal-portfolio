@@ -4,11 +4,14 @@
 
 **Feature branch target:** `feat/portfolio-integration`
 **Isolated work branch:** `codex/owner-correction-pass-03`
-**Remote feature tip at reconciliation:** `0559795cd2f31270b720c0513c11cffdbec102c4`
+**Remote feature tip at initial reconciliation:** `0559795cd2f31270b720c0513c11cffdbec102c4`
 **Application baseline:** `f94334872f3d849c60ec670eca4512f3cb69739`
 **Previous immutable Preview:** <https://21b9ff43.joshuaik2.pages.dev/>
-**Application source deployed:** `5f6fc30443ad2d0177ee3c7299a50e1a318168f9`
-**New immutable feature Preview:** <https://c7b3f4c5.joshuaik2.pages.dev/>
+**Previous application source:** `5f6fc30443ad2d0177ee3c7299a50e1a318168f9`
+**Previous immutable feature Preview:** <https://c7b3f4c5.joshuaik2.pages.dev/>
+**Current application source deployed:** `6a297d0bf5812863ec6eeae73882d4005295c9ac`
+**Current immutable feature Preview:** <https://343f7910.joshuaik2.pages.dev/>
+**Current remote feature tip:** `6a297d0bf5812863ec6eeae73882d4005295c9ac`
 **Production:** untouched.
 
 ## Owner-reference reconciliation follow-up (2026-10-10)
@@ -22,7 +25,7 @@ The six October 10 owner photographs were compared with matching current local a
 - Resume local and Preview geometry matches. The current stack is `J → RESUME FOUND → VIEW RESUME → CLOSE`, with a completed cyan middle ring. The Figma layer geometry and owner’s current-composition photo show that same order, while the latest written correction asks to move View Resume higher and place Close in the current blue-plate region. That action placement remains the only owner decision requested; no speculative layout change was made.
 - Food Tracker needs no further imagery edit for this bounded pass: the existing authentic macro capture and three clearly labeled illustrative Figma studies remain the verified composition. No internal capture identifiers were added to public captions.
 
-Because the current immutable Preview already serves the reconciled application source and no code change resulted from this comparison, it was not redeployed under a duplicate URL. The current review target remains <https://c7b3f4c5.joshuaik2.pages.dev/> at application source `5f6fc30443ad2d0177ee3c7299a50e1a318168f9`. The requested Sonnet J lane remains unavailable in this runtime; the existing J assets were not replaced.
+After that review, a concrete short-wide Activity rail defect was fixed and deployed as a new immutable Preview. The current review target is <https://343f7910.joshuaik2.pages.dev/> at application source `6a297d0bf5812863ec6eeae73882d4005295c9ac`. The requested Sonnet J lane remains unavailable in this runtime; the existing J assets were not replaced.
 
 ## Reconciliation and preservation
 
@@ -38,7 +41,7 @@ Owner references were found under `C:\Users\samue\Downloads\portfolio-owner-refe
 - The desktop Profile scene now fits without document or inner-main scrolling at the tested heights; all four signal groups remain reachable. Each signal's overlay is trigger-anchored, with approximately 8–12px trigger-to-panel spacing at 1366×768. Panels remained below the header and clear of the Activity rail. Hover and keyboard-focus openings were checked.
 - Resume Found keeps the originating screen dimmed/inert beneath the overlay. After independent QA caught the title/action order reversed, the positions were corrected to **J → RESUME FOUND → VIEW RESUME → CLOSE**. The View Resume label fits its cyan plate and Close sits at the base of the ring. The middle cyan ring progresses from empty through partial to a full persistent state; reduced motion displays it full immediately.
 - Help now highlights contextual, visible targets with route-specific numbered markers. QA checked 13 route families; visible markers resolved to the corresponding Help guidance.
-- At 1920×768, the Activity rail list is independently scrollable above its fixed footer. Living in Silico and Stush Patties are reachable after an 85px internal rail scroll; the 1920×1080 layout is unchanged. In the short-wide initial position, the bottom entries are partly behind the fixed footer, so scrolling inside the rail is required. This is the only remaining responsive caveat from the local QA sweep.
+- At the previous application source, 1920×768 required an 85px internal rail scroll and 1440×720 had clipped entries. Commit `6a297d0` compacts the desktop Activity rail only at short viewport heights. The complete list now fits without internal scrolling or clipping at 1920×768 (464px content), 1440×720 (443px), and 1366×768 (492px); 1920×1080 remains pixel-identical. All seven entries and marks remain visible above the fixed footer. Narrow Home continues to use natural document scrolling.
 
 ### Identity, lobbies, and preserved surfaces
 
@@ -70,7 +73,7 @@ Temporary Chrome captures were retained outside the repository; no large screens
 - Opening motion samples: `%TEMP%\portfolio-pass03\opening-keyframes\01-start.png` through `06-final-settled.png`; `metrics.json` records 89.99°, 179.998°, 269.991°, and the completed revolution.
 - Lobby comparison: current `%TEMP%\portfolio-pass03\lobbies-current\`; historical before/after captures `%TEMP%\portfolio-pass02-lobby-restore\`.
 - Food gallery: before `%TEMP%\portfolio-pass03\before\food-insights-desktop.png` and `food-insights-narrow.png`; after `%TEMP%\portfolio-pass03\food-layout-after-final\desktop.png` and `narrow.png`.
-- Short-wide Activity rail: `%TEMP%\portfolio-pass03\rail-shortwide\` and `%TEMP%\portfolio-pass03\qa-final\activity-shortwide-live\`, including Home/Experience top and scrolled captures at 1920×768 and tall-screen controls.
+- Short-wide Activity rail: local before/after captures in `%TEMP%\portfolio-oct10-residual\` and `%TEMP%\portfolio-pass03\qa-final\activity-shortwide-live\`; deployed Preview captures in `%TEMP%\portfolio-pass03\qa-final\preview-343f7910-activity\` for Home/Experience at 1920×768, 1440×720, 1366×768, 1920×1080, and Home at 390×844.
 
 ## Verification
 
@@ -78,7 +81,8 @@ Temporary Chrome captures were retained outside the repository; no large screens
 - Production build: passed (`tsc -b && vite build`). Vite reports the existing main JavaScript bundle at 509.15 kB, slightly above its 500 kB advisory threshold.
 - `git diff --check`: passed after code changes.
 - Installed Chrome/Playwright QA: 18 route families checked with no HTTP errors, failed requests, broken decoded images, or horizontal overflow. Home/Profile desktop matrix was 1366×768, 1440×720, 1440×900, 1536×864, 1920×768, 1920×1080; narrow was 375×667 and 390×844. Profile trigger panels, Help, Education, lobbies, Food, Resume keyboard actions, reduced motion, video playback/seeking/audio, and Opening timing/revolution were checked.
-- **Known responsive detail:** At 1920×768 the Activity rail uses an internal scroll to access its last two entries; at 375×667 Profile uses natural vertical scrolling and its signal row is vertically tight but usable.
+- **Deployed Preview verification (2026-10-10, source `6a297d0`):** Wrangler lists deployment `343f7910-b93e-4a13-8b94-3c4c15f3533f` as a Preview on branch `feat/portfolio-integration`. Deployed JS (509,151 bytes, SHA-256 `838F6372D98483096D8C266CB74B01021B3358F6154BD364C5AA3EB29D9034FD`) and CSS (494,453 bytes, SHA-256 `674109ADFE7421CB3489AE204E797B1B62B8BD9DC5EFF087A7FD8134DE37ECF0`) match local `dist` byte-for-byte. Home and Experience at the four desktop sizes show all seven named links, 34×34px marks, and 11px labels; rail scroll height equals client height and attempted scrolling leaves `scrollTop` at 0. Narrow Home at 390×844 has natural vertical scrolling, no horizontal overflow, and Confirm is reachable after 111px scroll. No broken images, HTTP/request failures, or console errors were observed.
+- The short-wide Activity rail clipping caveat is fixed. At 375×667 Profile still uses natural vertical scrolling and its signal row is vertically tight but usable.
 - **Live screen-reader attempt:** Windows Narrator is installed. On 2026-10-10, the computer-use runtime timed out twice while capturing its window (`FrameArrived timed out`, then `window capture timed out`). The Narrator process launched for this check could not be stopped through PowerShell (`Access is denied`). No live screen-reader pass is claimed. The manual accessibility review remains unverified; close Narrator locally if it is still speaking or visible.
 
 ### Remaining live screen-reader check
