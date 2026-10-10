@@ -11,6 +11,19 @@
 **New immutable feature Preview:** <https://c7b3f4c5.joshuaik2.pages.dev/>
 **Production:** untouched.
 
+## Owner-reference reconciliation follow-up (2026-10-10)
+
+The six October 10 owner photographs were compared with matching current local and deployed Preview renders. No residual Home, Profile, lobby, or Help correction was justified, so application code was left unchanged. The capture set is in `%TEMP%\portfolio-oct10-residual`.
+
+- Home 1920×1080 local and Preview captures are pixel-identical. At 1440×900, the document remains 900px high and Confirm is visible at y=819–892 without page scrolling.
+- Profile 1920×1080 keeps the four-signal row together at y=779–1058. All four hover panels were captured. Their connector anchors align to their respective signal centers; the panels remain below the header and clear of the Activity rail. Captures: `profile-{projects,experience,hackathon,academics}-1920x1080.png`.
+- The lobbies match the preserved historical centered banner treatment in current Chrome. No new top-origin or fade experiment was introduced.
+- Help markers align to current target bounds in Home, Profile, lobbies, case studies, Education, and Resume. The current X destination remains `https://x.com/Cartizionplane`.
+- Resume local and Preview geometry matches. The current stack is `J → RESUME FOUND → VIEW RESUME → CLOSE`, with a completed cyan middle ring. The Figma layer geometry and owner’s current-composition photo show that same order, while the latest written correction asks to move View Resume higher and place Close in the current blue-plate region. That action placement remains the only owner decision requested; no speculative layout change was made.
+- Food Tracker needs no further imagery edit for this bounded pass: the existing authentic macro capture and three clearly labeled illustrative Figma studies remain the verified composition. No internal capture identifiers were added to public captions.
+
+Because the current immutable Preview already serves the reconciled application source and no code change resulted from this comparison, it was not redeployed under a duplicate URL. The current review target remains <https://c7b3f4c5.joshuaik2.pages.dev/> at application source `5f6fc30443ad2d0177ee3c7299a50e1a318168f9`. The requested Sonnet J lane remains unavailable in this runtime; the existing J assets were not replaced.
+
 ## Reconciliation and preservation
 
 The isolated worktree began at the current `origin/feat/portfolio-integration` tip `0559795cd2f31270b720c0513c11cffdbec102c4`. The app source at that checkpoint was `f943348`; later branch commits were documentation-only. Work was made on `codex/owner-correction-pass-03` without resetting or cleaning any worktree. Other worktrees and historical design candidates were left untouched. The generated `.wrangler/` directory remains untracked and is intentionally excluded from staging.
