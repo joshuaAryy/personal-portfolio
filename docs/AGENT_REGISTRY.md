@@ -1,5 +1,14 @@
 # Persistent Agent Registry
 
+## Live Pass 03 scheduler (2026-10-10)
+
+Mingo owns integration and the persistent goal. Frontend, Product, and Runtime QA passes are complete. Immutable Preview `c7b3f4c5` from application source `5f6fc30443ad2d0177ee3c7299a50e1a318168f9` is pushed to `feat/portfolio-integration`; deployed JS/CSS hashes, direct routes, Resume, and original Cho’Veigo media were verified. No production deployment occurred. Current QA evidence and remaining issues are recorded in [the Pass 03 report](site-render-review/2026-10-10-owner-correction-pass-03/REPORT.md).
+
+- **J identity specialist:** BLOCKED — the requested Sonnet model is not available in this runtime. V8/previous assets remain preserved; no replacement identity was created. This did not block independent corrections.
+- **Frontend Owner:** COMPLETE / reusable; bounded Resume geometry and short-wide Activity rail corrections were delivered with captures and regression tests.
+- **Product Coverage:** COMPLETE / reusable; Food Insights gallery uses one app capture and three accurately labeled Figma design studies.
+- **Runtime QA:** COMPLETE / local and deployed audit; the last two short-wide Activity entries require an internal rail scroll, and live screen-reader interaction remains manual.
+
 The live collaboration tree and READY queue below override historical assignment snapshots. Tasks finish; domains remain active while actionable work remains. "Keep the graph small" means purposeful, non-overlapping scopes, not low active parallelism. Root Mingo owns control, lifecycle, sequencing, integration, Git/checkpoints, browser orchestration, and global state. Independent READY work should be routed to reusable domain owners instead of serialized through root.
 
 Current live reconciliation (2026-10-09): application source 38e50e44e29eb2334df3be88c393c9e5808b8ed0 is pushed to origin/feat/portfolio-integration and deployed at immutable feature Preview https://fa9e24d0.joshuaik2.pages.dev/. The clean exact-source snapshot passes 264 tests across 30 files and builds successfully; deployed JS/CSS hashes match. Installed Chrome checked 14 canonical routes at desktop and narrow sizes, Opening motion/Skip/reduced motion, all Profile overlays, Resume ring and keyboard actions, settled category banners, canonical Activity identities, Food visuals, and full original Cho'Veigo playback. No page, asset, HTTP, console, or overflow failures were found. A few media request-failure callbacks were logged after seeking/context teardown without reasons; playback, audio decode, seeking, and Range requests succeeded. The original video SHA is recorded in the pass report at site-render-review/2026-10-09-owner-correction-pass-02/REPORT.md. This is a review checkpoint, not goal completion. Production remains untouched.

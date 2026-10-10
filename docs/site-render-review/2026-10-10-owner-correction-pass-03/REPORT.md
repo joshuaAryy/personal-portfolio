@@ -1,12 +1,14 @@
 # Owner Correction Pass 03 — Review Record
 
-**Status:** implementation and local visual/runtime QA complete; immutable feature Preview deployment pending. Owner approval remains pending. The persistent portfolio goal remains active.
+**Status:** REVIEW CHECKPOINT READY / OWNER APPROVAL PENDING. The deployed Preview is immutable; the persistent portfolio goal remains active.
 
 **Feature branch target:** `feat/portfolio-integration`
 **Isolated work branch:** `codex/owner-correction-pass-03`
 **Remote feature tip at reconciliation:** `0559795cd2f31270b720c0513c11cffdbec102c4`
 **Application baseline:** `f94334872f3d849c60ec670eca4512f3cb69739`
 **Previous immutable Preview:** <https://21b9ff43.joshuaik2.pages.dev/>
+**Application source deployed:** `5f6fc30443ad2d0177ee3c7299a50e1a318168f9`
+**New immutable feature Preview:** <https://c7b3f4c5.joshuaik2.pages.dev/>
 **Production:** untouched.
 
 ## Reconciliation and preservation
@@ -23,7 +25,7 @@ Owner references were found under `C:\Users\samue\Downloads\portfolio-owner-refe
 - The desktop Profile scene now fits without document or inner-main scrolling at the tested heights; all four signal groups remain reachable. Each signal's overlay is trigger-anchored, with approximately 8–12px trigger-to-panel spacing at 1366×768. Panels remained below the header and clear of the Activity rail. Hover and keyboard-focus openings were checked.
 - Resume Found keeps the originating screen dimmed/inert beneath the overlay. After independent QA caught the title/action order reversed, the positions were corrected to **J → RESUME FOUND → VIEW RESUME → CLOSE**. The View Resume label fits its cyan plate and Close sits at the base of the ring. The middle cyan ring progresses from empty through partial to a full persistent state; reduced motion displays it full immediately.
 - Help now highlights contextual, visible targets with route-specific numbered markers. QA checked 13 route families; visible markers resolved to the corresponding Help guidance.
-- At 1920×768, the Activity rail list is independently scrollable above its fixed footer. Living in Silico and Stush Patties are reachable after an 85px internal rail scroll; the 1920×1080 layout is unchanged. In the short-wide initial position, the bottom entries are partly behind the fixed footer, so scrolling inside the rail is required.
+- At 1920×768, the Activity rail list is independently scrollable above its fixed footer. Living in Silico and Stush Patties are reachable after an 85px internal rail scroll; the 1920×1080 layout is unchanged. In the short-wide initial position, the bottom entries are partly behind the fixed footer, so scrolling inside the rail is required. This is the only remaining responsive caveat from the local QA sweep.
 
 ### Identity, lobbies, and preserved surfaces
 
@@ -67,8 +69,10 @@ Temporary Chrome captures were retained outside the repository; no large screens
 
 ## Deployment
 
-Feature Preview deploy and deployed-source verification are pending. No production environment or production deployment was targeted. Update this section and the durable status docs with the immutable URL and application source SHA after deployment.
+Deployed with `npm run deploy`, which invokes `wrangler pages deploy dist --project-name joshuaik2 --branch feat/portfolio-integration`. Immutable Preview: <https://c7b3f4c5.joshuaik2.pages.dev/>. Application source commit: `5f6fc30443ad2d0177ee3c7299a50e1a318168f9` on `feat/portfolio-integration`. Wrangler confirmed the feature branch and source `5f6fc30`. The generated JS and CSS were fetched from the Preview and SHA-256 matched local `dist`: JS `838F6372D98483096D8C266CB74B01021B3358F6154BD364C5AA3EB29D9034FD`; CSS `9DA6C9A74E3A6EA20CC5B5B8597B554FE0F8C74E3AB237D834DDFF18F70434D1`.
+
+Deployed Chrome checked direct routes at desktop and narrow sizes: no HTTP 400+, broken images, browser exceptions, or horizontal overflow. Resume Found retained its inert underlay, title/action order, focus trap, Escape/focus restoration, Close, and Viewer/PDF navigation. The unchanged Cho’Veigo video was verified in both Demos and case-study placements: 112.638333 seconds, audio track present, native controls, pause/play/seek, and HEAD 200 / Range 206. The deployed video ETag matches the authorized original SHA-256. The deploy command explicitly targeted `feat/portfolio-integration`; production was not targeted.
 
 ## Acceptance state
 
-This is a review checkpoint, not completion. Owner approval is pending. The requested Sonnet identity-specialist result remains blocked by model availability; all independent corrections above proceeded without it.
+This is a review checkpoint, not completion. Owner approval is pending. The requested Sonnet identity-specialist result remains blocked by model availability; all independent corrections above proceeded without it. Live screen-reader interaction remains a manual follow-up.
