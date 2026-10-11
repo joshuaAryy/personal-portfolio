@@ -155,15 +155,29 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(css).toMatch(/\.opening__j-pulse-spark-art\s*\{[^}]*clip-path:\s*ellipse\(/s);
   });
 
-  it("holds authored cyan joints through the activation pose before clearing for sheen", () => {
+  it("keeps the authored join energy legible through activation and clears it before sheen", () => {
     const css = readFileSync("src/opening.css", "utf8");
     const seam = css.match(/@keyframes opening-j-seam-art\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const conduit = css.match(/@keyframes opening-j-conduit-art\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const lightExits = css.match(/@keyframes opening-j-light-exits\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
-    expect(seam).toContain("68% { opacity: 1; }");
+    expect(seam).toContain("60% { opacity: .7; }");
+    expect(seam).toContain("72% { opacity: .1; }");
     expect(seam).toContain("78%, 100% { opacity: 0; }");
-    expect(conduit).toContain("68% { opacity: .92; }");
-    expect(conduit).toContain("70%, 100% { opacity: 0; }");
+    expect(conduit).toContain("61% { opacity: 1; }");
+    expect(conduit).toContain("72% { opacity: .35; }");
+    expect(conduit).toContain("78%, 100% { opacity: 0; }");
+    expect(lightExits).toContain("51.6% { opacity: 1;");
+    expect(lightExits).toContain("60% { opacity: .7;");
+    expect(lightExits).toContain("70%, 100% { opacity: 0;");
+  });
+
+  it("carries the authored activation spark along its joint path before fading", () => {
+    const source = readFileSync("src/Opening.tsx", "utf8");
+
+    expect(source).toMatch(/<animateMotion\s+dur="0\.80s"\s+begin="2\.58s"[\s\S]*?calcMode="linear"/);
+    expect(source).toContain('values="1;1;0"');
+    expect(source).toContain('keyTimes="0;0.87;1"');
   });
 
   it("preserves the five-second scene, full visible tick revolution, Skip and Home handoff", () => {

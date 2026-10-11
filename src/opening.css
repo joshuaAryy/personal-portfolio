@@ -1133,52 +1133,52 @@
   31% { opacity: .3; }
   49% { opacity: .5; }
   51.6% { opacity: 1; }
-  68% { opacity: 1; }
-  76% { opacity: .1; }
+  60% { opacity: .7; }
+  72% { opacity: .1; }
   78%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-conduit-art {
-  0%, 29% { opacity: 0; }
-  40% { opacity: .55; }
-  51.6% { opacity: .92; }
-  68% { opacity: .92; }
-  70%, 100% { opacity: 0; }
+  0%, 51.5% { opacity: 0; }
+  51.6% { opacity: .15; }
+  61% { opacity: 1; }
+  72% { opacity: .35; }
+  78%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-light-exits {
-  0%, 49% { opacity: 0; transform: scale(.82); }
-  54% { opacity: .82; transform: scale(1); }
-  59% { opacity: .9; transform: scale(1.025); }
-  65%, 100% { opacity: 0; transform: scale(1.1); }
+  0%, 50% { opacity: 0; transform: scale(.82); }
+  51.6% { opacity: 1; transform: scale(1); }
+  60% { opacity: .7; transform: scale(1.025); }
+  70%, 100% { opacity: 0; transform: scale(1.1); }
 }
 
 @keyframes opening-j-conduit-stem-flow {
-  0%, 50% { opacity: 0; stroke-dashoffset: 100; }
-  51% { opacity: .95; stroke-dashoffset: 100; }
-  57% { opacity: 1; stroke-dashoffset: -14; }
-  58%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 51.5% { opacity: 0; stroke-dashoffset: 100; }
+  51.6% { opacity: .95; stroke-dashoffset: 100; }
+  67.6% { opacity: .85; stroke-dashoffset: -14; }
+  70%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-conduit-hook-flow {
-  0%, 52% { opacity: 0; stroke-dashoffset: 100; }
+  0%, 52.5% { opacity: 0; stroke-dashoffset: 100; }
   53% { opacity: .95; stroke-dashoffset: 100; }
-  59% { opacity: 1; stroke-dashoffset: -14; }
-  60%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  69% { opacity: .85; stroke-dashoffset: -14; }
+  71%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-seam-crown-flow {
-  0%, 49% { opacity: 0; stroke-dashoffset: 100; }
-  50% { opacity: 1; stroke-dashoffset: 100; }
-  56% { opacity: 1; stroke-dashoffset: -14; }
-  57%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 51.5% { opacity: 0; stroke-dashoffset: 100; }
+  51.6% { opacity: 1; stroke-dashoffset: 100; }
+  67.6% { opacity: .9; stroke-dashoffset: -14; }
+  70%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-seam-hook-flow {
-  0%, 51% { opacity: 0; stroke-dashoffset: 100; }
-  52% { opacity: 1; stroke-dashoffset: 100; }
-  58% { opacity: 1; stroke-dashoffset: -14; }
-  59%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 52.5% { opacity: 0; stroke-dashoffset: 100; }
+  53% { opacity: 1; stroke-dashoffset: 100; }
+  69% { opacity: .9; stroke-dashoffset: -14; }
+  71%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-single-sheen {

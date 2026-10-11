@@ -169,7 +169,7 @@ function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAss
       <svg className="opening__j-pulse-spark" viewBox="0 0 468 468" aria-hidden="true" data-node-id="3712:712" data-j-layer="pulse-spark">
           <image className="opening__j-pulse-spark-art" href={OPENING_V8_ASSETS.pulseSpark} x="-19" y="-13" width="38" height="26">
             <animateMotion
-              dur="0.92s"
+              dur="0.80s"
               begin="2.58s"
               fill="freeze"
               calcMode="linear"
@@ -180,8 +180,8 @@ function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAss
               dur="0.92s"
               begin="2.58s"
               fill="freeze"
-              values="0;1;0"
-              keyTimes="0;0.16;1"
+              values="1;1;0"
+              keyTimes="0;0.87;1"
             />
           </image>
       </svg>

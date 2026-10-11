@@ -12,20 +12,22 @@ describe("Sonnet V8 identity review and sheen", () => {
     expect(css).toMatch(/\.opening__j-sheen-band\s*\{[^}]*background:\s*linear-gradient\(\s*90deg,/s);
   });
 
-  it("compares the two accepted static J treatments and keeps State 05 motion-only", () => {
+  it("compares both accepted static uses and isolates an authored subtle-joint review candidate", () => {
     const board = readFileSync("docs/j-source-review/pass03/logo-comparison.html", "utf8");
 
     expect(board).toContain('data-candidate="settled-lockup"');
     expect(board).toContain('data-candidate="standalone-j"');
-    expect(board).not.toContain('data-candidate="lockup-joint-energy"');
+    expect(board).toContain('data-candidate="settled-lockup-subtle-authored-joints"');
+    expect(board).toContain('src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg"');
+    expect(board).toContain('opacity: .28');
+    expect(board).toContain("remains an isolated comparison candidate");
     expect(board).toContain('src="captures/figma-storyboard-2026-10-11/state-3714-2092.png"');
-    expect(board).toContain("Opening pose only");
-    expect(board).not.toContain("settled J with subtle joint energy");
+    expect(board).toContain("State 05 · transient motion pose");
     expect(board).toContain("/media/identity/sonnet-v8/figma/canonical-j.png");
     expect(board).toContain("54px · desktop Portfolio header");
     expect(board).toContain("48px · main Activity identity");
     expect(board).toContain("40px · opportunity rail identity");
-    expect(board).toContain("Feature implementation");
-    expect(board).toContain("Variant 02 (settled J with painted seam marks) is rejected and excluded");
+    expect(board).toContain("Current recommendation");
+    expect(board).toContain("painted-slash construction remains excluded");
   });
 });
