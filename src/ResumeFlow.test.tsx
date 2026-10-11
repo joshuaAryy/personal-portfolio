@@ -101,7 +101,11 @@ describe("approved resume flow", () => {
     expect(energyRule).toMatch(/calc\(var\(--resume-orb-fill\)\s*-\s*8deg\)/);
     expect(energyRule).toMatch(/#bafffb\s+calc\(var\(--resume-orb-fill\)\s*-\s*2deg\)\s+var\(--resume-orb-fill\)/i);
     expect(css).toMatch(/@property\s+--resume-orb-fill\s*\{[^}]*syntax:\s*"<angle>";[^}]*inherits:\s*false;[^}]*initial-value:\s*0deg/s);
-    expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 90\.5%,\s*#000 91\.5%,\s*#000 96%,\s*transparent 98%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
+    // The wider inner edge fills the owner-approved ~18–22px channel at the 530px reference scale.
+    expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.72\) 0deg/);
+    expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.18\) var\(--resume-orb-fill\) var\(--resume-orb-max-fill\)/);
+    expect(energyRule).toMatch(/repeating-linear-gradient\([\s\S]*?rgb\(219 255 255 \/ 4%\)/);
+    expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 85\.5%,\s*#000 87\.5%,\s*#000 96%,\s*transparent 98%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
     expect(energyRule).toMatch(/mask-composite:\s*intersect/);
     expect(energyRule).toMatch(/--resume-orb-max-fill:\s*306deg/);
     expect(energyRule).toMatch(/filter:\s*none/);

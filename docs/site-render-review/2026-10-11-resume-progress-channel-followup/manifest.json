@@ -1,0 +1,610 @@
+{
+  "browser": "154.0.8037.98",
+  "route": "http://127.0.0.1:5176/resume",
+  "currentSource": "local Vite worktree; paired before uses inline override of previous mask/material",
+  "states": [
+    {
+      "tag": "before-desktop-beginning-1440x900",
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "energy": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "36deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.22) 36deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      }
+    },
+    {
+      "tag": "before-desktop-partial-1440x900",
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "energy": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "153deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.22) 153deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      }
+    },
+    {
+      "tag": "before-desktop-full-1440x900",
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "energy": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "306deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.22) 306deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      }
+    },
+    {
+      "tag": "after-desktop-beginning-1440x900",
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "energy": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "36deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.18) 36deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      }
+    },
+    {
+      "tag": "after-desktop-partial-1440x900",
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "energy": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "153deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.18) 153deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      }
+    },
+    {
+      "tag": "after-desktop-full-1440x900",
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600
+      },
+      "energy": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "306deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 1440,
+        "h": 900,
+        "scrollWidth": 1440,
+        "scrollHeight": 900
+      }
+    },
+    {
+      "tag": "before-narrow-beginning-390x844",
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "36deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.22) 36deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 905
+      }
+    },
+    {
+      "tag": "before-narrow-partial-390x844",
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "153deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.22) 153deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 905
+      }
+    },
+    {
+      "tag": "before-narrow-full-390x844",
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "306deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.22) 306deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 905
+      }
+    },
+    {
+      "tag": "after-narrow-beginning-390x844",
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "36deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.18) 36deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 905
+      }
+    },
+    {
+      "tag": "after-narrow-partial-390x844",
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "153deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.18) 153deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 905
+      }
+    },
+    {
+      "tag": "after-narrow-full-390x844",
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "306deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 905
+      }
+    },
+    {
+      "tag": "before-small-beginning-320x740",
+      "composition": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "energy": {
+        "x": 33.9,
+        "y": 278.9,
+        "width": 252.1,
+        "height": 252.1
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "36deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.22) 36deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 320,
+        "h": 740,
+        "scrollWidth": 320,
+        "scrollHeight": 853
+      }
+    },
+    {
+      "tag": "before-small-partial-320x740",
+      "composition": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "energy": {
+        "x": 33.9,
+        "y": 278.9,
+        "width": 252.1,
+        "height": 252.1
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "153deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.22) 153deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 320,
+        "h": 740,
+        "scrollWidth": 320,
+        "scrollHeight": 853
+      }
+    },
+    {
+      "tag": "before-small-full-320x740",
+      "composition": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "energy": {
+        "x": 33.9,
+        "y": 278.9,
+        "width": 252.1,
+        "height": 252.1
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "306deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.38) 0deg, rgba(28, 184, 214, 0.38) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.22) 306deg, rgba(28, 184, 214, 0.22) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.12) 0px, rgba(219, 255, 255, 0.12) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 320,
+        "h": 740,
+        "scrollWidth": 320,
+        "scrollHeight": 853
+      }
+    },
+    {
+      "tag": "after-small-beginning-320x740",
+      "composition": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "energy": {
+        "x": 33.9,
+        "y": 278.9,
+        "width": 252.1,
+        "height": 252.1
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "36deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.18) 36deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 320,
+        "h": 740,
+        "scrollWidth": 320,
+        "scrollHeight": 853
+      }
+    },
+    {
+      "tag": "after-small-partial-320x740",
+      "composition": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "energy": {
+        "x": 33.9,
+        "y": 278.9,
+        "width": 252.1,
+        "height": 252.1
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "153deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.18) 153deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 320,
+        "h": 740,
+        "scrollWidth": 320,
+        "scrollHeight": 853
+      }
+    },
+    {
+      "tag": "after-small-full-320x740",
+      "composition": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 261,
+        "width": 288,
+        "height": 288
+      },
+      "energy": {
+        "x": 33.9,
+        "y": 278.9,
+        "width": 252.1,
+        "height": 252.1
+      },
+      "computed": {
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+        "fill": "306deg",
+        "opacity": "0.86",
+        "background": "conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg), repeating-linear-gradient(105deg, rgba(219, 255, 255, 0.04) 0px, rgba(219, 255, 255, 0.04) 2px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0) 7px)"
+      },
+      "viewport": {
+        "w": 320,
+        "h": 740,
+        "scrollWidth": 320,
+        "scrollHeight": 853
+      }
+    }
+  ],
+  "reducedMotion": {
+    "opacity": "0.86",
+    "animation": "none",
+    "fill": "306deg",
+    "energy": {
+      "w": 313.421875,
+      "h": 313.421875
+    }
+  }
+}
