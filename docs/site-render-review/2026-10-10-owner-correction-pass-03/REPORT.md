@@ -109,3 +109,38 @@ Deployed Chrome checked direct routes at desktop and narrow sizes: no HTTP 400+,
 ## Acceptance state
 
 This is a review checkpoint, not completion. Owner approval is pending. The requested Sonnet identity-specialist result remains blocked by model availability; all independent corrections above proceeded without it. Live screen-reader interaction remains unverified after the documented computer-use failure.
+
+## Bounded follow-up — compact Home and narrow Help (2026-10-11)
+
+This follow-up is limited to a short desktop viewport regression on Home and the narrow Home Help experience. It preserves the rest of the previously reviewed site.
+
+### Changes
+
+- **Home 1440×720:** the Hackathons and Education previews now fit above the fixed bottom controls. The bounded rule tightens the existing selected-mode badges/grid and Confirm margin only for widths 761–1500px and heights up to 740px. Projects and Experience retain their existing layout. All four modes are visible with Confirm hit-testable and no main-region/document scrolling.
+- **Narrow Help:** at widths up to 620px on Home, Help presents five sequential, nonmodal coachmarks with a single numbered active target. The guide can be moved through with Previous/Next/Done/Close, the user can focus the highlighted target directly, and Escape from that target returns focus to the current guide heading. The active target is associated with its current instruction while preserving and restoring existing `aria-describedby` and temporary `tabindex` values. Target navigation closes Help normally; closing the guide restores the opening Help control and the prior scroll position. Reduced-motion uses immediate scrolling and no animation.
+- **Scope preserved:** no change to J/Opening, Resume Found geometry, Profile composition, lobby banners, case-study narratives, Journey, or the original Cho’Veigo media. The Sonnet-owned J work remains blocked because Sonnet is not available in this runtime; no Codex-authored substitute was made.
+
+### Before/after evidence
+
+Temporary Chrome captures are outside the repository:
+
+- Same-size 1440×720 before captures: `%TEMP%\portfolio-pass03-current-audit\home-1440x720-hackathons.png` and `home-1440x720-education.png`. They show the internal scrollbar and the Confirm control cut off at the bottom.
+- Same-size local after captures: `%TEMP%\portfolio-pass03-current-audit\after\home-hackathons-1440x720.png` and `home-education-1440x720.png`. Confirm now ends at y≈718–719. No scrollbar or clipping is visible.
+- Deployed after captures: `%TEMP%\portfolio-pass03-current-audit\preview-3a0bef13\home-1440x720-hackathons.png` and `home-1440x720-education.png`.
+- Narrow guide captures: `%TEMP%\portfolio-pass03-current-audit\preview-3a0bef13\help-narrow-1.png` through `help-narrow-5.png`; local step and backtracking/revisit captures are under `qa-final\`.
+
+The screenshots were visually inspected at matched dimensions. At 1440×720, Hackathons Confirm measured x=415,y=652,w=370,h=68 (bottom 719.98); Education measured x=415,y=653.5,w=370,h=66.45 (bottom 719.98). The main content area was 637/637px with `scrollTop=0`; the document remained exactly 1440×720. The baseline screenshots show content clipped at the viewport edge with an inner scrollbar.
+
+At 390×844, all five Help targets and guide cards were visible. Next→Previous→Next restored the Back marker after its smooth scroll settled; the highlighted Back button measured 48×48px and its marker 64×64px. Focus Target followed by Enter on the Confirm step activated the selected `/projects` destination and closed Help. Close and Escape restored the Help trigger and `scrollY=0`. The Confirm button itself (not its containing wrapper) has the current instruction in `aria-describedby`; a regression assertion covers that association and its cleanup. Reduced-motion animation/transition duration was 0s.
+
+### Verification and deployment
+
+- Full suite: **290 tests passed across 30 files**. Focused Help/Home tests: **52 passed** after adding the active Confirm-button association assertion. Happy DOM prints non-fatal iframe/PDF fetch-abort diagnostics during teardown; test processes exit successfully.
+- `npm run typecheck` passed. `npm run deploy` completed `tsc -b && vite build` successfully. Vite retains the existing main JavaScript chunk advisory: 515.85 kB exceeds its 500 kB threshold. `git diff --check` passed.
+- Installed Chrome QA checked all four Home modes at 1440×720; Projects at 1366×768 and 1920×768; all five narrow Help steps at 390×844; target activation, focus/ARIA restoration, Escape/Close, reduced motion, and desktop Help at 1440×900. No console/request failures or horizontal overflow were found.
+- Code commit `7f1aeb7e0915903aea1690200ce399c00076afb3` was pushed fast-forward to `feat/portfolio-integration`. Immutable feature Preview: <https://3a0bef13.joshuaik2.pages.dev/>. Wrangler deployment `3a0bef13-4f94-4a3f-8640-00efa60e0589` identifies Environment `Preview`, Branch `feat/portfolio-integration`, Source `7f1aeb7`.
+- Deployed JS (`/assets/index-DiupFtP0.js`, 515,853 bytes, SHA-256 `74203483a7b5e368e5416526aa6e49e7295eb5466d00fd2db5ea905361754a04`) and CSS (`/assets/index-MF0rFH_X.css`, 497,037 bytes, SHA-256 `e1734adcfb447e54b9ce28a9357336d6031cb8b1b23b2522bad932d9e6b3a93a`) match local `dist` byte-for-byte. `/`, `/home`, and `/education/projects` returned HTTP 200. No production deployment occurred.
+
+### Current acceptance state
+
+**IMPLEMENTED + VISUALLY VERIFIED:** short-height Home fit and narrow Home Help coachmark/target associations. **PRESERVED:** owner-positive surfaces and the unchanged authorized full Cho’Veigo recording. **BLOCKED — MODEL AVAILABILITY:** Sonnet-only J identity specialist; the existing J remains unchanged. **OWNER DECISION OPEN:** precise Resume Found action placement because written direction conflicts with the referenced Figma geometry/current-composition image. **MANUAL CHECK OPEN:** live screen-reader interaction; keyboard and automated accessibility checks do not substitute for it. Overall owner approval remains pending and the persistent portfolio goal remains active.
