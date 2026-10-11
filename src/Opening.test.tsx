@@ -43,11 +43,14 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(markup).toContain('data-node-id="3712:371"');
     expect(css).toContain("opening-initial-lockup-clear");
     expect(css).toMatch(/opening-j-fragment-opacity 5s linear 1 both/);
-    expect(css).toMatch(/opening-j-crown-approach 1\.90s cubic-bezier\(\.22, \.70, \.20, 1\) 650ms 1 both/);
-    expect(css).toMatch(/opening-j-shaft-approach 1\.82s cubic-bezier\(\.22, \.70, \.20, 1\) 700ms 1 both/);
+    expect(css).toMatch(/opening-j-crown-approach 1\.93s cubic-bezier\(\.22, \.70, \.20, 1\) 650ms 1 both/);
+    expect(css).toMatch(/opening-j-shaft-approach 1\.88s cubic-bezier\(\.22, \.70, \.20, 1\) 700ms 1 both/);
     expect(css).toMatch(/opening-j-hook-approach 1\.86s cubic-bezier\(\.22, \.70, \.20, 1\) 720ms 1 both/);
-    expect(css).toMatch(/@keyframes opening-j-fragment-opacity[\s\S]*?8%\s*\{\s*opacity:\s*0;[\s\S]*?13%\s*\{\s*opacity:\s*\.72;[\s\S]*?51\.6%, 54\.8%\s*\{\s*opacity:\s*1;[\s\S]*?55\.2%, 100%\s*\{\s*opacity:\s*0;/);
-    expect(css).toMatch(/@keyframes opening-j-fused-reveal\s*\{[\s\S]*?0%, 51\.6%\s*\{\s*opacity:\s*0;\s*\}[\s\S]*?54\.8%, 100%\s*\{\s*opacity:\s*1;/);
+    expect(css).toMatch(/@keyframes opening-j-crown-approach[\s\S]*?37\.3%\s*\{\s*transform:\s*translate\(-\.45%, -\.35%\) rotate\(-\.35deg\);/);
+    expect(css).toMatch(/@keyframes opening-j-shaft-approach[\s\S]*?35\.6%\s*\{\s*transform:\s*translate\(\.2%, \.15%\) rotate\(\.1deg\);/);
+    expect(css).toMatch(/@keyframes opening-j-hook-approach[\s\S]*?34\.9%\s*\{\s*transform:\s*translate\(-\.4%, \.35%\) rotate\(\.3deg\);/);
+    expect(css).toMatch(/@keyframes opening-j-fragment-opacity[\s\S]*?8%\s*\{\s*opacity:\s*0;[\s\S]*?13%\s*\{\s*opacity:\s*\.72;[\s\S]*?51\.6%, 64%\s*\{\s*opacity:\s*1;[\s\S]*?72%, 100%\s*\{\s*opacity:\s*0;/);
+    expect(css).toMatch(/@keyframes opening-j-fused-reveal\s*\{[\s\S]*?0%, 64%\s*\{\s*opacity:\s*0;\s*\}[\s\S]*?72%, 100%\s*\{\s*opacity:\s*1;/);
     expect(css).not.toContain("opening-j-fragment-appear");
     expect(source).not.toContain("assembly-crown.svg");
     expect(source).not.toContain("assembly-shaft.svg");
@@ -161,12 +164,12 @@ describe("Sonnet V8 Opening fidelity", () => {
     const conduit = css.match(/@keyframes opening-j-conduit-art\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const lightExits = css.match(/@keyframes opening-j-light-exits\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
-    expect(seam).toContain("60% { opacity: .7; }");
-    expect(seam).toContain("72% { opacity: .1; }");
-    expect(seam).toContain("78%, 100% { opacity: 0; }");
-    expect(conduit).toContain("61% { opacity: 1; }");
-    expect(conduit).toContain("72% { opacity: .35; }");
-    expect(conduit).toContain("78%, 100% { opacity: 0; }");
+    expect(seam).toContain("62% { opacity: 1; }");
+    expect(seam).toContain("68% { opacity: .75; }");
+    expect(seam).toContain("74%, 100% { opacity: 0; }");
+    expect(conduit).toContain("61%, 64% { opacity: 1; }");
+    expect(conduit).toContain("69% { opacity: .45; }");
+    expect(conduit).toContain("72%, 100% { opacity: 0; }");
     expect(lightExits).toContain("51.6% { opacity: 1;");
     expect(lightExits).toContain("60% { opacity: .7;");
     expect(lightExits).toContain("70%, 100% { opacity: 0;");
@@ -213,13 +216,14 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(data).not.toContain("j-candidate-06");
   });
 
-  it("keeps the static identity board to approved marks and shows segmented State 05 only as motion", () => {
+  it("compares the owner-requested subtle joint treatment without installing it as a live identity", () => {
     const board = readFileSync("docs/j-source-review/pass03/logo-comparison.html", "utf8");
 
     expect(board).toContain('data-candidate="settled-lockup"');
     expect(board).toContain('data-candidate="standalone-j"');
-    expect(board).not.toContain('data-candidate="settled-lockup-subtle-authored-joints"');
-    expect(board).not.toContain('class="joint-energy"');
+    expect(board).toContain('data-candidate="settled-lockup-subtle-authored-joints"');
+    expect(board).toContain('src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg"');
+    expect(board).toContain("review-only · no live identity callsite");
     expect(board).toContain('src="captures/figma-storyboard-2026-10-11/state-3714-2092.png"');
     expect(board).toContain("State 05 · transient motion pose only");
   });

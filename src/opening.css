@@ -831,13 +831,13 @@
 .opening__j-piece--crown {
   transform: translate(-13.2479%, -11.1111%) rotate(-12deg);
   transform-origin: 52.35% 16.03%;
-  animation: opening-j-crown-approach 1.90s cubic-bezier(.22, .70, .20, 1) 650ms 1 both;
+  animation: opening-j-crown-approach 1.93s cubic-bezier(.22, .70, .20, 1) 650ms 1 both;
 }
 
 .opening__j-piece--shaft {
   transform: translate(6.4103%, 8.1197%) rotate(5deg);
   transform-origin: 60.90% 43.80%;
-  animation: opening-j-shaft-approach 1.82s cubic-bezier(.22, .70, .20, 1) 700ms 1 both;
+  animation: opening-j-shaft-approach 1.88s cubic-bezier(.22, .70, .20, 1) 700ms 1 both;
 }
 
 .opening__j-piece--hook {
@@ -1066,34 +1066,42 @@
   13% { opacity: .72; }
   19.2% { opacity: .86; }
   27.4% { opacity: .96; }
-  51.6%, 54.8% { opacity: 1; }
-  55.2%, 100% { opacity: 0; }
+  51.6%, 64% { opacity: 1; }
+  68% { opacity: .52; }
+  72%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-crown-approach {
   from { transform: translate(-13.2479%, -11.1111%) rotate(-12deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
-  16.3% { transform: translate(-7.265%, -5.7692%) rotate(-6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
-  37.9% { transform: translate(-2.1368%, -1.7094%) rotate(-1.6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  16.1% { transform: translate(-7.265%, -5.7692%) rotate(-6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  37.3% { transform: translate(-.45%, -.35%) rotate(-.35deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  64% { transform: translate(-.2%, -.12%) rotate(-.15deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  86% { transform: translate(-.04%, -.03%) rotate(-.03deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
   to { transform: none; }
 }
 
 @keyframes opening-j-shaft-approach {
   from { transform: translate(6.4103%, 8.1197%) rotate(5deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
-  14.3% { transform: translate(2.9915%, 3.8462%) rotate(2deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
-  36.8% { transform: translate(.8547%, 1.0684%) rotate(.6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  13.8% { transform: translate(2.9915%, 3.8462%) rotate(2deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  35.6% { transform: translate(.2%, .15%) rotate(.1deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  64% { transform: translate(.1%, .07%) rotate(.06deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  86% { transform: translate(.02%, .01%) rotate(.01deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
   to { transform: none; }
 }
 
 @keyframes opening-j-hook-approach {
   from { transform: translate(-14.9573%, 14.1026%) rotate(15deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
   12.9% { transform: translate(-8.1197%, 8.1197%) rotate(8deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
-  34.9% { transform: translate(-2.5641%, 2.3504%) rotate(2.2deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  34.9% { transform: translate(-.4%, .35%) rotate(.3deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  64% { transform: translate(-.18%, .15%) rotate(.15deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  86% { transform: translate(-.03%, .02%) rotate(.02deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
   to { transform: none; }
 }
 
 @keyframes opening-j-fused-reveal {
-  0%, 51.6% { opacity: 0; }
-  54.8%, 100% { opacity: 1; }
+  0%, 64% { opacity: 0; }
+  68% { opacity: .48; }
+  72%, 100% { opacity: 1; }
 }
 
 @keyframes opening-v8-ring-arrive {
@@ -1131,19 +1139,21 @@
 @keyframes opening-j-seam-art {
   0%, 27.4% { opacity: 0; }
   31% { opacity: .3; }
-  49% { opacity: .5; }
-  51.6% { opacity: 1; }
-  60% { opacity: .7; }
+  49% { opacity: .55; }
+  51.6% { opacity: .9; }
+  58%, 62% { opacity: 1; }
+  68% { opacity: .75; }
   72% { opacity: .1; }
-  78%, 100% { opacity: 0; }
+  74%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-conduit-art {
   0%, 51.5% { opacity: 0; }
   51.6% { opacity: .15; }
-  61% { opacity: 1; }
-  72% { opacity: .35; }
-  78%, 100% { opacity: 0; }
+  55.4% { opacity: .42; }
+  61%, 64% { opacity: 1; }
+  69% { opacity: .45; }
+  72%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-light-exits {
