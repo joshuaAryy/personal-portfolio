@@ -1,0 +1,62 @@
+{
+  "1440x900": {
+    "title": "J identity placement review",
+    "viewportWidth": 1440,
+    "viewportHeight": 900,
+    "documentWidth": 1425,
+    "documentHeight": 1555,
+    "candidates": [
+      {
+        "id": "settled-lockup",
+        "bounds": {
+          "x": 42,
+          "y": 236.171875,
+          "width": 663.5,
+          "height": 782.71875
+        }
+      },
+      {
+        "id": "standalone-j",
+        "bounds": {
+          "x": 719.5,
+          "y": 236.171875,
+          "width": 663.5,
+          "height": 839.71875
+        }
+      }
+    ],
+    "columns": "663.5px 663.5px",
+    "brokenImages": [],
+    "state05": "http://127.0.0.1:5176/docs/j-source-review/pass03/captures/figma-storyboard-2026-10-11/state-3714-2092.png"
+  },
+  "390x844": {
+    "title": "J identity placement review",
+    "viewportWidth": 390,
+    "viewportHeight": 844,
+    "documentWidth": 390,
+    "documentHeight": 2698,
+    "candidates": [
+      {
+        "id": "settled-lockup",
+        "bounds": {
+          "x": 11,
+          "y": 415.03125,
+          "width": 368,
+          "height": 785.5
+        }
+      },
+      {
+        "id": "standalone-j",
+        "bounds": {
+          "x": 11,
+          "y": 1214.53125,
+          "width": 368,
+          "height": 876.6875
+        }
+      }
+    ],
+    "columns": "368px",
+    "brokenImages": [],
+    "state05": "http://127.0.0.1:5176/docs/j-source-review/pass03/captures/figma-storyboard-2026-10-11/state-3714-2092.png"
+  }
+}

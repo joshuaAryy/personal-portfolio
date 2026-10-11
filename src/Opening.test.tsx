@@ -196,6 +196,7 @@ describe("Sonnet V8 Opening fidelity", () => {
 
   it("uses the accepted large V8 lockup and compact optical glyphs for shared identity", () => {
     const data = readFileSync("src/data.ts", "utf8");
+    const layout = readFileSync("src/PortfolioLayout.tsx", "utf8");
     const markup = renderToStaticMarkup(
       <MemoryRouter initialEntries={["/home"]}>
         <App />
@@ -207,7 +208,20 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(data).toContain('mark16: "/media/identity/sonnet-v8/figma-export/optical-16.png"');
     expect(markup).toContain('/media/identity/sonnet-v8/figma-export/canonical-lockup.png');
     expect(markup).toContain('/media/identity/sonnet-v8/figma-export/optical-32.png');
+    expect(layout).toMatch(/media="\(max-width: 760px\)"\s+srcSet=\{portfolioIdentity\.mark32\}/);
+    expect(layout).toMatch(/className="rail-availability__mark-image"\s+src=\{portfolioIdentity\.mark\}/);
     expect(data).not.toContain("j-candidate-06");
+  });
+
+  it("keeps the static identity board to approved marks and shows segmented State 05 only as motion", () => {
+    const board = readFileSync("docs/j-source-review/pass03/logo-comparison.html", "utf8");
+
+    expect(board).toContain('data-candidate="settled-lockup"');
+    expect(board).toContain('data-candidate="standalone-j"');
+    expect(board).not.toContain('data-candidate="settled-lockup-subtle-authored-joints"');
+    expect(board).not.toContain('class="joint-energy"');
+    expect(board).toContain('src="captures/figma-storyboard-2026-10-11/state-3714-2092.png"');
+    expect(board).toContain("State 05 · transient motion pose only");
   });
 
   it("settles immediately for reduced motion and keeps the short Home handoff", async () => {

@@ -1660,29 +1660,38 @@
     "path": "/home"
   },
   "identity": {
-    "1440x1200": {
-      "title": "J identity placement review",
+    "permanentVariants": [
+      "settled-lockup",
+      "standalone-j"
+    ],
+    "rejectedPermanentVariant": "settled-lockup-subtle-authored-joints",
+    "transientMotionOnly": "Figma State 05 segmented J, state-3714-2092.png",
+    "supersededThreeCandidateCapturePreserved": "identity-comparison-1440x1200-full.png",
+    "currentCaptureSet": "../owner-identity-audit-2026-10-11/",
+    "currentMetrics": "../owner-identity-audit-2026-10-11/logo-comparison-2-approved-browser-metrics.json",
+    "1440x900": {
+      "title": "J identity · owner-directed placement review",
       "candidates": [
         "settled-lockup",
-        "standalone-j",
-        "settled-lockup-subtle-authored-joints"
+        "standalone-j"
       ],
-      "columns": "442.656px 442.672px 442.656px",
+      "columns": "663.5px 663.5px",
       "brokenImages": [],
-      "scrollWidth": 1440,
-      "viewportWidth": 1440
+      "documentWidth": 1425,
+      "documentHeight": 1555,
+      "screenshot": "../owner-identity-audit-2026-10-11/logo-comparison-2-approved-full.png"
     },
     "390x844": {
-      "title": "J identity placement review",
+      "title": "J identity · owner-directed placement review",
       "candidates": [
         "settled-lockup",
-        "standalone-j",
-        "settled-lockup-subtle-authored-joints"
+        "standalone-j"
       ],
       "columns": "368px",
       "brokenImages": [],
-      "scrollWidth": 390,
-      "viewportWidth": 390
+      "documentWidth": 390,
+      "documentHeight": 2698,
+      "screenshot": "../owner-identity-audit-2026-10-11/logo-comparison-2-approved-390x-full.png"
     }
   },
   "errors": [],
