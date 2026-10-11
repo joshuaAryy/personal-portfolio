@@ -24,6 +24,17 @@ function renderOpeningRoute(reducedMotion = false) {
 }
 
 describe("Sonnet V8 Opening fidelity", () => {
+  it("holds the physical fragments through activation, then fills their joints before hiding them", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const fragments = css.match(/@keyframes opening-j-fragment-opacity\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const fused = css.match(/@keyframes opening-j-fused-reveal\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(fragments).toContain("51.6%, 67.2% { opacity: 1;");
+    expect(fused).toContain("0%, 64% { opacity: 0;");
+    expect(fused).toContain("67.2%, 100% { opacity: 1;");
+    expect(fragments).toContain("72%, 100% { opacity: 0;");
+  });
+
   it("crossfades the initial settled identity into three continuously moving Figma fragments", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");
@@ -49,8 +60,6 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(css).toMatch(/@keyframes opening-j-crown-approach[\s\S]*?37\.3%\s*\{\s*transform:\s*translate\(-\.45%, -\.35%\) rotate\(-\.35deg\);/);
     expect(css).toMatch(/@keyframes opening-j-shaft-approach[\s\S]*?35\.6%\s*\{\s*transform:\s*translate\(\.2%, \.15%\) rotate\(\.1deg\);/);
     expect(css).toMatch(/@keyframes opening-j-hook-approach[\s\S]*?34\.9%\s*\{\s*transform:\s*translate\(-\.4%, \.35%\) rotate\(\.3deg\);/);
-    expect(css).toMatch(/@keyframes opening-j-fragment-opacity\s*\{[\s\S]*?51\.6%\s*\{\s*opacity:\s*1;[\s\S]*?53\.2%\s*\{\s*opacity:\s*\.5;[\s\S]*?54\.8%, 100%\s*\{\s*opacity:\s*0;/);
-    expect(css).toMatch(/@keyframes opening-j-fused-reveal\s*\{[\s\S]*?0%, 51\.6%\s*\{\s*opacity:\s*0;\s*\}[\s\S]*?53\.2%\s*\{\s*opacity:\s*\.5;[\s\S]*?54\.8%, 100%\s*\{\s*opacity:\s*1;/);
     expect(css).not.toContain("opening-j-fragment-appear");
     expect(source).not.toContain("assembly-crown.svg");
     expect(source).not.toContain("assembly-shaft.svg");
