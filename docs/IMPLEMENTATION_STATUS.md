@@ -1,6 +1,16 @@
 # Implementation Status
 
-## Current immutable feature review checkpoint — historical lobby composition restore (2026-10-11)
+## Current owner review checkpoint — J identity / Opening reconciliation (2026-10-11)
+
+**Feature branch:** `feat/portfolio-integration`. **Application source:** `894f6c952f3de73fe9b559b1e685e7dcf63e8432`. **Current immutable Preview:** https://5c88927f.joshuaik2.pages.dev/ (deployed application source `894f6c9`). The reconciled source also contains the historical lobby restore from `554b0cb`. The worktree/remote feature tip was `4ee24cb1adaeab43a7f6384aae18de84c4973367` when this status was updated. Production was not targeted; the persistent goal remains active.
+
+The current application source already implements the owner-directed Sonnet V8 motion: continuous crown/shaft/hook fragments, joint activation, portal/ring persistence, sheen, five-second opening, one visible clockwise tick revolution from 600–3,800ms, Skip, reduced motion, and Home handoff. The stale `.opening__j-orb` selector cited in the pasted review does not exist in this current implementation. Fresh installed-Chrome evidence and seven-pose comparison are recorded in [the J motion record](j-source-review/pass03/MOTION_IMPLEMENTATION.md) and [Opening fidelity captures](site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/).
+
+Owner static-identity decisions are recorded as: Variant 01 (settled J + V8 orb) for prominent identity placements, Variant 03 (standalone optical J) for compact placements, and Variant 02 (painted seam overlay) rejected. The active [comparison board](j-source-review/pass03/logo-comparison.html) now shows only the approved permanent variants plus authentic segmented State 05 as an Opening-only transient pose. The narrow update changes no application source; the existing Preview remains the correct runtime review target. Cyan seam intensity versus the isolated Figma pose remains an owner visual judgment, not a verified runtime failure.
+
+**Verification for this status update:** current-source desktop/narrow captures, seven pose samples, a complete Chrome recording through Home, and runtime error/asset reports are preserved by the motion record. The latest local code recorded Home at approximately 6.05 seconds after the five-second Opening, with no browser/request errors. Current Preview JS/CSS were previously verified byte-for-byte against source `894f6c9`. This remains a review checkpoint, not completion.
+
+## Previous immutable feature checkpoint — historical lobby composition restore (2026-10-11)
 
 **Branch:** `feat/portfolio-integration`. **Application source:** `554b0cbe4910a6d68c777db5a1c0d72f025b8225`. **Immutable feature Preview:** https://10160afa.joshuaik2.pages.dev/ (Cloudflare deployment `10160afa-2e26-4e5a-8334-c8c01c5f015c`, Environment `Preview`, Branch `feat/portfolio-integration`, Source `554b0cb`). Production was not targeted; the persistent portfolio goal remains active.
 
