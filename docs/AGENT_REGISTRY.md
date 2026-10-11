@@ -1,5 +1,14 @@
 # Persistent Agent Registry
 
+## Latest live state — Resume progress channel follow-up (2026-10-11)
+
+The feature branch `feat/portfolio-integration` points to application source `a757ade8dd306c893976f35f71e6e96d247f792a`, deployed as immutable Preview https://7e03e139.joshuaik2.pages.dev/ (Cloudflare deployment `7e03e139-f5e5-49e4-a44a-781aaff576f2`, Preview environment, feature branch). Wrangler leaves the deployment Source field blank for this direct CLI upload; the exact deployed JS/CSS hashes match the clean build exported from the application commit. This follow-up only widens/clarifies the bounded persistent cyan channel in Resume Found; earlier lobby/header/identity corrections remain in the Preview. Owner Beginning/Completed references were compared with 36°/153°/306° captures; the “Beginning” still is a later partial phase, not reversed motion. Chrome and full test/build verification are recorded in [the deployed QA report](site-render-review/2026-10-11-resume-progress-channel-followup/deployed-qa-7e03e139/qa-report.md). No production deployment occurred. Goal remains active and owner review is open.
+
+- **Frontend Owner:** bounded Resume channel implementation and owner-frame timing comparison complete; reusable for the next frontend task.
+- **Runtime QA:** deployed Preview route/assets/modal validation complete; reusable for future checkpoints.
+- **Product Coverage:** recent evidence audit complete without reopening owner-approved stories.
+- No strategic Sol decision was needed. Preserve all unrelated dirty/untracked J/Opening material and historical candidates.
+
 ## Current live state — bounded lobby and Resume identity correction (2026-10-11)
 
 The feature branch `feat/portfolio-integration` contains application source `17057f9efedc3139f70a3ece6cc09217578acdef`, deployed as immutable Preview https://5d314ec5.joshuaik2.pages.dev/ (Cloudflare deployment `5d314ec5-a913-4ce2-94d5-5264223ef9d5`, Preview environment, feature branch). The local managed correction worktree is on `codex/owner-correction-pass-03`; the source commit is already pushed to the feature branch. This pass leaves the persistent portfolio goal active and the owner-review gate open. Production was not targeted.

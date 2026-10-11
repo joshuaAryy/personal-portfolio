@@ -1,5 +1,13 @@
 # Implementation Status
 
+## Latest review checkpoint — bounded Resume channel correction (2026-10-11)
+
+**Feature branch:** `feat/portfolio-integration`. **Application source:** `a757ade8dd306c893976f35f71e6e96d247f792a`. **Immutable feature Preview:** https://7e03e139.joshuaik2.pages.dev/ (Cloudflare deployment `7e03e139-f5e5-49e4-a44a-781aaff576f2`, Environment `Preview`, Branch `feat/portfolio-integration`). Cloudflare's CLI deployment record has an empty Source field; the app source is verified by building a clean export from the exact commit and matching the deployed JS and CSS bytes to that build. Production was not targeted; the persistent goal remains active.
+
+Since Preview `5d314ec5` / application source `17057f9`, this bounded follow-up changes only the Resume Found middle channel: its inner mask edge widens to show the intended annular band, the completed cyan is more visible, the unfilled remainder is subdued, and its texture is softened. The 306° sweep, 54° lower plate opening, gold rails, one-shot completion, and reduced-motion final state remain. The owner Beginning still corresponds to a later sample than 36°; the 153° capture is the closest phase match, and the owner's Completed still matches 306°.
+
+Fresh clean-export verification: **305 tests across 31 files passed**; Happy-DOM prints iframe/PDF fetch-abort teardown traces despite exit 0. `npm run build` succeeds with the existing ~519 kB JS chunk advisory, and `git diff --check` passes. Deployed JS `index-BqIsdlMs.js` SHA-256 is `E5C576FEC09126EDA6C80C6C9F906D0591F08CF8D1AA10A80BADD366F91F8506`; CSS `index-S2AwvkKz.css` SHA-256 is `62E0C6A1AFDE34D061A2F9A5CEFFDDAA4C07583CD17A206133E3AC9007A01266`. Both exactly match the clean export and return HTTP 200. Installed Chrome verified Home and `/resume` at 1440×900 and 390×844, no overflow/broken images/runtime errors, bounded completed fill, modal focus cycle, Escape/Close restoration, and View Resume navigation. Captures and details are in [the Resume progress follow-up](site-render-review/2026-10-11-resume-progress-channel-followup/README.md) and [deployed QA report](site-render-review/2026-10-11-resume-progress-channel-followup/deployed-qa-7e03e139/qa-report.md). This is a review checkpoint, not owner acceptance or portfolio completion.
+
 ## Current bounded visual-correction checkpoint (2026-10-11)
 
 **Feature branch:** `feat/portfolio-integration`. **Application source:** `17057f9efedc3139f70a3ece6cc09217578acdef`. **Immutable feature Preview:** https://5d314ec5.joshuaik2.pages.dev/ (Cloudflare deployment `5d314ec5-a913-4ce2-94d5-5264223ef9d5`, Environment `Preview`, Branch `feat/portfolio-integration`, Source `17057f9`). Production was not targeted; the persistent portfolio goal remains active.

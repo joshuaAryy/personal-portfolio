@@ -1,5 +1,15 @@
 # Owner correction review checkpoint — 2026-10-11
 
+## Latest immutable follow-up
+
+- Feature branch application source: `a757ade8dd306c893976f35f71e6e96d247f792a`
+- Preview: [7e03e139](https://7e03e139.joshuaik2.pages.dev/)
+- Cloudflare deployment: `7e03e139-f5e5-49e4-a44a-781aaff576f2`, Environment `Preview`, Branch `feat/portfolio-integration`. Wrangler's direct-upload Source field is empty; the exact JS/CSS hashes match the clean build made from the application commit.
+- Delta from the preceding `5d314ec5` Preview: bounded Resume Found progress-channel width/material refinement only. The previously recorded lobby, shared header/J identity, Projects portrait, and Resume Viewer corrections remain included.
+- Full suite: 305 tests / 31 files pass; production build succeeds with the existing large-chunk advisory; `git diff --check` passes. Deployed desktop/narrow Chrome checks confirm the channel stays within the gold rails, the lower opening remains clear, and modal keyboard/navigation behavior works.
+- Current captures and the owner-screenshot phase comparison are in [the follow-up evidence](../2026-10-11-resume-progress-channel-followup/); deployed route/browser details are in [the new QA report](../2026-10-11-resume-progress-channel-followup/deployed-qa-7e03e139/qa-report.md).
+- Owner review remains open. Production was not targeted.
+
 ## Deployed source
 
 - Branch: `feat/portfolio-integration`

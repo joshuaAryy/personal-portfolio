@@ -1,0 +1,98 @@
+{
+  "desktop-home": {
+    "status": 200,
+    "path": "/home",
+    "h1": "Select a portfolio mode",
+    "dialog": false,
+    "d": [
+      1440,
+      1440
+    ],
+    "main": [
+      1200,
+      1200
+    ],
+    "imgs": []
+  },
+  "desktop-resume": {
+    "status": 200,
+    "path": "/resume",
+    "h1": "Resume Found",
+    "dialog": false,
+    "d": [
+      1440,
+      1440
+    ],
+    "main": [
+      1200,
+      1200
+    ],
+    "imgs": []
+  },
+  "modal": {
+    "path": "/resume",
+    "dialog": "<div class=\"resume-takeover__dialog\" role=\"dialog\" aria-modal=\"true\" aria-labelledby=\"resume-found-title\" tabindex=\"-1\"><section c",
+    "buttons": [
+      "View Resume",
+      "CLOSE"
+    ],
+    "underlay": {
+      "selector": ".app-route-underlay",
+      "inert": true,
+      "inertAttr": true,
+      "ariaHidden": "true",
+      "ariaHiddenAttr": true
+    },
+    "main": {
+      "inert": false,
+      "ariaHidden": null,
+      "parentClass": "client-body"
+    }
+  },
+  "tab1": "View Resume",
+  "tab2": "CLOSE",
+  "tab3": "View Resume",
+  "escape": {
+    "path": "/home",
+    "focus": "Resume"
+  },
+  "close": {
+    "path": "/home",
+    "focus": "Resume"
+  },
+  "view": {
+    "path": "/resume/viewer"
+  },
+  "narrow-home": {
+    "status": 200,
+    "path": "/home",
+    "h1": "Select a portfolio mode",
+    "dialog": false,
+    "d": [
+      390,
+      390
+    ],
+    "main": [
+      390,
+      390
+    ],
+    "imgs": []
+  },
+  "narrow-resume": {
+    "status": 200,
+    "path": "/resume",
+    "h1": "Resume Found",
+    "dialog": false,
+    "d": [
+      390,
+      390
+    ],
+    "main": [
+      390,
+      390
+    ],
+    "imgs": []
+  },
+  "errors": [],
+  "failed": []
+}

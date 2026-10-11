@@ -1,5 +1,11 @@
 # Resume Found progress channel follow-up
 
+## Owner-frame timing reconciliation
+
+The supplied owner “Beginning” still is later in the same fill sequence than the 36° beginning capture: its visible upper-left leading edge is closest to the 153° partial capture (roughly 135–145° visually; exact elapsed time cannot be established from the still). The completed owner still matches the 306° endpoint. The channel starts at the lower-left gold-rail endpoint and advances clockwise; it finishes at the lower-right endpoint while preserving the 54° plate opening. No orientation change was warranted.
+
+The integrated feature Preview is [7e03e139](https://7e03e139.joshuaik2.pages.dev/); exact bundle and deployed Chrome results are in [deployed QA](deployed-qa-7e03e139/qa-report.md).
+
 Compared the owner’s beginning and completed progress references with the current-source local Chrome render. The existing 306° arc and 54° lower opening already terminate at the plate endpoints; the previous channel was too thin and dim, with a more noticeable diagonal texture than the owner’s completed example.
 
 The scoped correction widens the radial mask inward while preserving its outer edge and lower opening, raises the completed cyan fill, and softens the diagonal texture. The unfilled remainder stays subdued while the leading edge advances; after the 306° endpoint the band remains illuminated. Gold rails remain visible at both channel edges, and no cyan enters the trapezoid plate. The one-shot fill/reduced-motion behavior is unchanged.
