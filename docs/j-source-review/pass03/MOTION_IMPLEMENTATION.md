@@ -74,3 +74,11 @@ Runtime evidence:
 - Reduced-motion capture: `opening-reduced-settled-1920x1080.png`; the final J+orb appears immediately, the transient bloom is absent, and the tick animation is disabled.
 
 The comparison and browser checks establish implementation/render fidelity only. The owner still needs to review the real feature Preview before any permanent identity choice; production archive `159:2` remains unchanged.
+
+## Opacity-layer fidelity follow-up — 2026-10-11
+
+The full natural Chrome recording exposed a seam-animation opacity issue that was not obvious in the older sampled captures: an animated opacity on the shared `.opening__j-lock` wrapper multiplied the authored seam-light and conduit child opacities. The wrapper now remains at opacity 1; each authored child retains its own keyframed opacity. This keeps the joint activation visible without changing the five-second scene, 360° tick turn, J transforms, or handoff. A focused regression test covers this opacity ownership.
+
+The updated [seven-state comparison](opening-seven-state-comparison.html) uses seven new centered crops from Chrome samples at the authored runtime times 650, 960, 1,370, 2,580, 3,100, 3,800, and 4,100ms. [`qa-opening-corrected-keyposes/report.json`](../../site-render-review/2026-10-11-opening-fidelity/qa-opening-corrected-keyposes/report.json) records sampled transforms/opacities, loaded assets, and errors. The [current full Chrome recording](../../site-render-review/2026-10-11-opening-fidelity/qa-opacity-layer-fix/opening-opacity-fix-full-handoff-1920x1080.webm) runs through the Home handoff; adjacent natural frames were inspected across activation, sheen, and settle. The short vertical material sheen also appears in Figma State 06 and clears to the seamless State 07 lockup.
+
+Desktop samples show no clipping or silhouette jump. The natural recording shows continuous approach, lock, activation, sheen, and final hold. The 1440×720 and 390×844 placement captures remain in the preceding Chrome run; this source patch changes only seam-layer opacity, not mark sizing or responsive positioning. Skip and reduced-motion logic are unchanged; reduced motion still hides transient join effects and exposes the final lockup immediately. Static identity variants remain owner-directed as above, with final Preview acceptance open.

@@ -102,6 +102,13 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(css).toContain("opening-j-single-sheen");
   });
 
+  it("lets the authored joint and conduit layers control their own activation opacity", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+
+    expect(css).toMatch(/\.opening__j-lock\s*\{[^}]*opacity:\s*1;[^}]*\}/s);
+    expect(css).not.toMatch(/\.opening__j-lock\s*\{[^}]*animation:\s*opening-j-seam-lock/s);
+  });
+
   it("preserves the five-second scene, full visible tick revolution, Skip and Home handoff", () => {
     const source = readFileSync("src/Opening.tsx", "utf8");
     const css = readFileSync("src/opening.css", "utf8");
