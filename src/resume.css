@@ -191,40 +191,12 @@
   overflow: visible;
 }
 
-.resume-mechanism__j-layer {
+.resume-mechanism__j img {
   position: absolute;
-  display: block;
-  max-width: none;
-}
-
-.resume-mechanism__j-layer img {
-  display: block;
+  inset: 0;
   width: 100%;
   height: 100%;
-  max-width: none;
-}
-
-.resume-mechanism__j-layer--deep { inset: 10.68% 25.64% 12.99% 25.61%; }
-.resume-mechanism__j-layer--mid { inset: 9.94% 26.07% 13.73% 25.19%; }
-.resume-mechanism__j-layer--face,
-.resume-mechanism__j-layer--bevel,
-.resume-mechanism__j-layer--edge,
-.resume-mechanism__j-layer--detail { inset: 9.19% 26.5% 14.48% 24.76%; }
-
-.resume-mechanism__j-layer--detail img {
-  position: absolute;
-  inset: -0.42% -1.41% -2.79% -1%;
-  width: 102.41%;
-  height: 103.21%;
-  -webkit-mask: url("/media/opening/j-sonnet-v8/j-detail-mask.svg") center / 100% 100% no-repeat;
-  mask: url("/media/opening/j-sonnet-v8/j-detail-mask.svg") center / 100% 100% no-repeat;
-}
-
-.resume-mechanism__j-layer--edge img {
-  position: absolute;
-  inset: -0.19% -0.71% -0.18% -0.29%;
-  width: 101%;
-  height: 100.37%;
+  object-fit: contain;
 }
 
 .resume-mechanism__frame {

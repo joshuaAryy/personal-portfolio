@@ -1,78 +1,71 @@
-# Sonnet V8 J assembly and identity comparison
+# Sonnet V8 J identity and Opening implementation
 
-**Implementation status:** integrated in the current Pass 03 worktree; owner review remains open. The static mark comparison is review material only and does not promote a permanent site identity.
+**Status:** implemented and browser-visual-reviewed on the feature branch; owner acceptance remains open.
 
-## Source and implementation
+## Source of truth
 
-- **Editable identity:** Figma Sonnet V8, `3325:191`, with the layered mark at `3325:335` and component layers `3325:336–343`, `3325:411–412`.
-- **Seven-state motion storyboard:** file `9zvk9iSRPKSsJ6llDJrQmA`; authored key poses at `3681:2`, `3681:248`, `3681:503`, `3681:774`, `3681:1065`, and `3681:1383`. The settled V8 pose remains the static endpoint. These are key poses, not sequential full-frame images.
-- **Figma motion layers used:** seam light `3681:990`, light exits `3681:1005`, conduit `3681:1014`, pulse glow `3681:1063`, and pulse core `3681:1064`. Their source SVGs are retained under `public/media/opening/j-sonnet-motion-v8/figma-motion/`.
-- **Implementation:** `src/Opening.tsx` layers the authentic V8 material with editable crown, shaft, and hook SVGs on a common 468×468 canvas. `src/opening.css` interpolates between the Figma poses with CSS transforms, opacity, SVG mask/gradient effects, and vector dash motion. No state-image swapping, sprite sheet, or animation dependency was introduced.
-- **Seam treatment:** the Figma seam-light export includes long light rails beyond the letter. The portfolio applies the original layer through the V8 J-face mask so the rails do not read as stray beams outside the identity. The flowing highlight follows the short authored crown and hook joint paths; the Figma conduit and light-exit layers supply the surrounding energy.
+Figma file `9zvk9iSRPKSsJ6llDJrQmA` supplies the editable artwork and motion references:
 
-## Motion contract
+- Seven-state storyboard: `3713:4`, with key poses `3714:2`, `3714:530`, `3714:1058`, `3714:1575`, `3714:2092`, `3714:2609`, and `3714:3126`.
+- Layered 468×468 rig: `3712:2`.
+- Canonical J + orb: `3735:2`; canonical standalone J: `3735:516`.
+- Motion specification: `3737:2`; export and no-jump notes: `3737:37`.
 
-Normal Opening duration is **5,000ms**. The 180 radial ticks complete one clockwise revolution from **600ms to 3,800ms** while the Opening scene remains visible. The approved scene, Skip control, and Home handoff are unchanged.
+The seven states are key poses for one continuous animation. Runtime pieces are clipped views of the same transparent canonical J artwork; they are not seven swapped images.
 
-| Stage | Time | Treatment |
+## Owner decisions for static use
+
+- **Variant 01 — settled J + V8 orb:** accepted provisionally for the portfolio header and larger identity placements.
+- **Variant 03 — seamless standalone J:** accepted for compact Activity row and very small identity use, with the authored optical variants.
+- **Variant 02 — settled J with a painted seam overlay:** rejected. It remains excluded from permanent identity usage.
+- Resume Found uses the standalone J inside its existing mechanism and does not add another orb ring.
+
+The comparison board at `logo-comparison.html` remains review material. The placements are still subject to the owner’s final visual review in the site.
+
+## Runtime implementation
+
+`src/Opening.tsx` composes the initial lockup, shared-source crown/shaft/hook fragments, V8 portal, gold orb ring, contact shadow, Figma seam/conduit layers, activation bloom, travelling spark, and sheen. `src/opening.css` animates their individual transforms and appearances without a motion dependency or frame-swapped sprite sequence.
+
+The former `orb-ring-2x.png` and `j-contact-shadow-2x.png` exports were opaque white-backed images, which caused rectangular plates over the mark in Chrome. The original Figma SVG layers are preserved. Their matching transparent runtime PNGs were rasterized from those SVGs in installed Chrome at 3× to preserve the authored vector geometry, gradients, noise, and blur while retaining alpha:
+
+- `public/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png` (1057×1057)
+- `public/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png` (792×1180)
+
+The portal remains the original Figma export clipped to its circular boundary. The activation bloom is additive and sits beneath the J; it is separate from the persistent portal, ring, and contact shadow.
+
+## Motion timeline
+
+Normal scene duration is **5,000ms**. The opening background, outer mechanism, Skip behavior, reduced-motion behavior, and Home handoff are preserved. The radial ticks complete one visible clockwise revolution from **600ms to 3,800ms**.
+
+| Stage | Time | Runtime treatment |
 |---|---:|---|
-| Dormant fragments | 0–760ms | Crown, shaft, and hook are visible at the authored Figma dormant opacities: `.30`, `.38`, `.30`. Each keeps its final material detail. |
-| Approach | 760–2,240ms | Pieces move independently with staggered starts at 760/860/960ms. Each uses a continuous 1,280ms cubic-bezier transform, passes through its intermediate key pose at 64%, and reaches its exact lock offset. The fragment opacity brightens with the motion instead of hiding the first pose. |
-| Mechanical lock | 2,040–2,240ms | The hook is the final piece to seat. The settled V8 layers begin their crossfade only after the hook arrives, avoiding an early complete silhouette under the fragments. |
-| Cyan activation | 2,240–2,850ms | The orb illuminates; the masked Figma seam/conduit art comes up; short cyan vector highlights travel along the crown and hook joints, followed by the stem and lower-hook conduit paths. Figma light exits and the central pulse glow/core activate briefly. |
-| Fused J | 2,350–3,150ms | The complete layered V8 J resolves under the joined fragments. The seam/light layers fade out while the material silhouette stays aligned. |
-| Material sheen | 3,100–4,050ms | A restrained masked highlight crosses the assembled face once. |
-| Settled hold | 3,800–5,000ms | The completed J remains clean and centered through the Home handoff. |
+| Initial lockup / dormant formation | 0–675ms | The canonical J+orb appears first. Its lockup fades as the same-material fragments emerge in their separated poses. |
+| Approach | 650–2,580ms | Crown, shaft, and hook begin at 650/700/720ms, pass through the Figma approach and alignment key poses near 960ms and 1,370ms, and reach exact identity at 2,550/2,520/2,580ms. Easing is `cubic-bezier(.22,.70,.20,1)` with no bounce. |
+| Mechanical lock | 2,450–2,580ms | Authored joint seams brighten as the final hook seats. The three pieces remain fully visible through the lock. |
+| Cyan activation / orb emergence | 2,580–3,900ms | Seam, conduit, light-exit, pulse, and modest bloom effects activate over the joined geometry. The blue portal becomes fully visible by about 3,350ms and remains behind the J and gold ring. |
+| Fused-J transition | 2,580–2,760ms | The canonical fused J crossfades beneath the fragments. Fragments disappear only after the fused artwork reaches full opacity. |
+| Material sheen | 3,450–4,000ms | A single restrained highlight sweeps across the fused J. |
+| Settled hold / Home handoff | 4,100–5,000ms | The complete canonical J+orb stays together through the scene’s fade to Home. |
 
-The vector highlight uses the original joint coordinates with a short dash that advances from one end of each joint path to the other. The dormant, approach, lock, light, and fused poses are continuous CSS/vector states; there is no seven-image crossfade.
+## Verification record
 
-## Browser evidence
+Installed-Chrome captures and the uninterrupted recording are under `docs/site-render-review/2026-10-11-opening-fidelity/qa-orb-joint-fixed/rerun-final/`. The corrected orb ring and contact shadow use alpha-preserving PNG exports; the earlier opaque-backed assets and their failed capture remain preserved as historical evidence and are not used by the runtime.
 
-All evidence was captured with installed Chrome through Playwright against the current Vite worktree at **1920×1080**, plus a narrow **390×844** activation state:
+The seven authored Figma key poses are paired with matching runtime captures in [`opening-seven-state-comparison.html`](opening-seven-state-comparison.html). The comparison uses original storyboard exports at 700×620 and centered runtime crops at 720×640. Actual runtime timestamps were 650.5ms, 1000.8ms, 1417.9ms, 2585.5ms, 3102.6ms, 3803.2ms, and 4153.6ms; the small offsets from requested times are recorded in `viewport-keypose-report.json`.
 
-- [Full Opening browser recording](captures/opening-full-browser-sequence-1920x1080.webm) — includes the complete 5s opening and Home handoff.
-- [Dormant fragments](captures/opening-start-dormant-1920x1080.png)
-- [Approach pose](captures/opening-quarter-approach-1920x1080.png)
-- [Mechanical lock](captures/opening-lock-1920x1080.png)
-- [Cyan activation](captures/opening-cyan-joint-activation-1920x1080.png)
-- [Pulse flow](captures/opening-pulse-flow-1920x1080.png)
-- [Fused-J transition](captures/opening-fused-j-transition-1920x1080.png)
-- [Material sheen](captures/opening-material-sheen-1920x1080.png)
-- [Settled hold](captures/opening-final-settle-1920x1080.png)
-- [Narrow activation](captures/opening-mobile-activation-390x844.png)
+Visual inspection confirms:
 
-The radial dial was also sampled at exact active-animation checkpoints in installed Chrome. The tick layer stayed visible (`opacity: 1`) at every sample, with its 3.2s active interval running from 600ms through 3,800ms:
+- The dormant pose shows the three original gold pieces separated around the orb, and the approach/alignment poses keep those pieces visually distinct.
+- The cyan joint outline appears at the seated crown and hook seams; the moving conduit effects follow those authored joints rather than washing over the whole mark.
+- The V8 portal/plasma and gold ring become fully visible by the settled phase and remain behind the fused J through the Home handoff. The fixed Chrome capture shows no opaque rectangular backing.
+- The sheen reads as a short vertical material highlight across the joined J, then clears before the settled hold. The final shape and portal/ring relationship are consistent with the canonical lockup.
 
-| Tick rotation | Animation time | Browser frame |
-|---:|---:|---|
-| 0° | 600ms | [start](captures/opening-radial-0deg.png) |
-| 90° | 1,400ms | [quarter turn](captures/opening-radial-90deg.png) |
-| 180° | 2,200ms | [half turn](captures/opening-radial-180deg.png) |
-| 270° | 3,000ms | [three-quarter turn](captures/opening-radial-270deg.png) |
-| 360° | 3,800ms | [full turn](captures/opening-radial-360deg.png) |
+Runtime evidence:
 
-The captured computed transforms correspond to 0°, 90°, 180°, 270°, and 360° respectively; all five samples report opacity 1 and the browser reported no page or request errors. The full recording remains the evidence for continuous playback; the paused samples provide exact visual checkpoints.
+- Full 1920×1080 sequence through Home: `opening-final-uninterrupted-1920x1080.webm`; Home appeared about 5.64s after the opening frame. `rerun-report.json` records the final `/home` route, loaded images, and no page, console, failed-request, or HTTP errors.
+- The tick field completed its one clockwise turn at 3800ms, with the capture observing 358.5° at 3904ms and 360° at 3921ms while the Opening remained visible.
+- 1440×720 settled capture: `viewport-1440x720-settled-4p1s.png`; the mark remained in bounds and Skip remained visible.
+- 390×844 dormant, approach, and settled captures: `viewport-390x844-*.png`; no overflow or browser/request errors were reported.
+- Reduced-motion capture: `opening-reduced-settled-1920x1080.png`; the final J+orb appears immediately, the transient bloom is absent, and the tick animation is disabled.
 
-The sampled browser frames show the fragments remaining visible at entry, independent approach, completed hook lock, cyan joint activation, crossfade to the fused mark, and final settle. No broken image, failed request, page error, or horizontal overflow appeared in the recorded desktop or narrow checks. Skip navigated directly to `/home`. Under `prefers-reduced-motion: reduce`, the settled J was present at opacity 1 and the pieces were hidden before the short Home handoff.
-
-The current recording and sampled states are implementation evidence, not owner acceptance. The owner should still judge the character of the assembly and select any permanent static logo treatment.
-
-## Permanent-logo comparison — review only
-
-[Open the three-variant comparison board](logo-comparison.html). It uses the V8 artwork and actual portfolio-style backgrounds, with samples at header 82px desktop / 42px narrow, Activity 48px identity / 26px row, 16px compact check, and a large presentation scale. The 16px optical glyph is identified separately as a Figma reference, not substituted into a candidate.
-
-| Placement | Current recommendation | Reason |
-|---|---|---|
-| Large identity / presentation | **Variant 02 — settled J + orb + subtle joint glow**, as a review candidate | The cyan detail adds a restrained forged finish at a scale where the joins can still be read. Variant 01 remains the calmer fallback if the tint is too active against a particular surface. |
-| Header 82px / 42px | **Variant 01 — settled J + V8 orb** | The portal provides the V8 atmosphere while the J remains the primary read. The subtle joint overlay is not needed for navigation-sized branding. |
-| Activity identity 48px | **Variant 01 — settled J + V8 orb** | The orb still reads at this size and remains visually consistent with the header. |
-| Activity row 26px and 16px compact mark | **Variant 03 — ring-free settled J**, using the existing optical glyph at 16px | Removing the orb protects the J silhouette inside the small rail enclosure. |
-
-These are placement recommendations, not an approval to change the permanent brand. The three static options and all archived J candidates remain preserved for owner comparison.
-
-## Verification
-
-- Focused `src/Opening.test.tsx`: **13 passed**.
-- Installed Chrome: desktop full sequence recorded, sampled stages inspected, and Skip/reduced-motion/narrow behavior exercised.
-- Asset report: all 16 J/orb/motion images loaded; zero failed requests or page errors; 390px viewport had `scrollWidth === 390`.
-- Overall portfolio goal and owner identity approval remain open.
+The comparison and browser checks establish implementation/render fidelity only. The owner still needs to review the real feature Preview before any permanent identity choice; production archive `159:2` remains unchanged.

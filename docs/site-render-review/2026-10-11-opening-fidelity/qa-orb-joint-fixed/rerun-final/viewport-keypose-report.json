@@ -1,0 +1,1938 @@
+{
+  "sourceUrl": "http://127.0.0.1:5176/",
+  "video": {
+    "file": "C:\\Users\\samue\\OneDrive\\Desktop\\personal portfolio\\production-portfolio\\.worktrees\\owner-correction-pass-03\\docs\\site-render-review\\2026-10-11-opening-fidelity\\qa-orb-joint-fixed\\rerun-final\\opening-accepted-v8-full-through-home-1920x1080.webm",
+    "elapsedToHomeWallMs": 5890,
+    "pathAtEnd": "/home",
+    "runMetrics": {
+      "first": 383,
+      "home": 5639,
+      "samples": [
+        {
+          "elapsedMs": 0,
+          "angle": 0,
+          "unwrapped": 0,
+          "tickProgress": 0,
+          "tickCurrentMs": 0,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 185,
+          "angle": 0,
+          "unwrapped": 0,
+          "tickProgress": 0,
+          "tickCurrentMs": 0,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 554,
+          "angle": 0,
+          "unwrapped": 0,
+          "tickProgress": 0,
+          "tickCurrentMs": 433.63000000065654,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 589.9,
+          "angle": 0,
+          "unwrapped": 0,
+          "tickProgress": 0,
+          "tickCurrentMs": 467.13000000065665,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 1791.5,
+          "angle": 120.16461913155706,
+          "unwrapped": 120.2,
+          "tickProgress": 0.3337906250002051,
+          "tickCurrentMs": 1668.1300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 1924.8,
+          "angle": 135.17214526204998,
+          "unwrapped": 135.2,
+          "tickProgress": 0.3754781250002051,
+          "tickCurrentMs": 1801.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 1945.6,
+          "angle": 137.05086285638458,
+          "unwrapped": 137.1,
+          "tickProgress": 0.38069687500020516,
+          "tickCurrentMs": 1818.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 1963.3,
+          "angle": 138.92959733874898,
+          "unwrapped": 138.9,
+          "tickProgress": 0.3859156250002052,
+          "tickCurrentMs": 1834.9300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 1974.6,
+          "angle": 140.80838083201093,
+          "unwrapped": 140.8,
+          "tickProgress": 0.3911343750002051,
+          "tickCurrentMs": 1851.6300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 1995.6,
+          "angle": 142.69836302001102,
+          "unwrapped": 142.7,
+          "tickProgress": 0.39638437500020507,
+          "tickCurrentMs": 1868.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2003,
+          "angle": 144.55461008140645,
+          "unwrapped": 144.6,
+          "tickProgress": 0.40154062500020515,
+          "tickCurrentMs": 1884.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2025.3,
+          "angle": 146.44460871328863,
+          "unwrapped": 146.4,
+          "tickProgress": 0.40679062500020513,
+          "tickCurrentMs": 1901.7300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2036.3,
+          "angle": 148.31209622713249,
+          "unwrapped": 148.3,
+          "tickProgress": 0.4119781250002051,
+          "tickCurrentMs": 1918.3300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2053.2,
+          "angle": 150.19087440032206,
+          "unwrapped": 150.2,
+          "tickProgress": 0.41719687500020514,
+          "tickCurrentMs": 1935.0300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2069.8,
+          "angle": 152.06962703788167,
+          "unwrapped": 152.1,
+          "tickProgress": 0.4224156250002052,
+          "tickCurrentMs": 1951.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2086.4,
+          "angle": 153.94837260976442,
+          "unwrapped": 153.9,
+          "tickProgress": 0.4276343750002051,
+          "tickCurrentMs": 1968.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2103.2,
+          "angle": 155.82713208923713,
+          "unwrapped": 155.8,
+          "tickProgress": 0.4328531250002052,
+          "tickCurrentMs": 1985.1300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2119.7,
+          "angle": 157.70589849432963,
+          "unwrapped": 157.7,
+          "tickProgress": 0.43807187500020506,
+          "tickCurrentMs": 2001.8300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2136.5,
+          "angle": 159.58459242672018,
+          "unwrapped": 159.6,
+          "tickProgress": 0.4432906250002051,
+          "tickCurrentMs": 2018.5300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2153.2,
+          "angle": 161.46337005233522,
+          "unwrapped": 161.5,
+          "tickProgress": 0.44850937500020516,
+          "tickCurrentMs": 2035.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2174.2,
+          "angle": 163.3308900567862,
+          "unwrapped": 163.3,
+          "tickProgress": 0.45369687500020517,
+          "tickCurrentMs": 2051.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2186.5,
+          "angle": 165.2096396219265,
+          "unwrapped": 165.2,
+          "tickProgress": 0.4589156250002052,
+          "tickCurrentMs": 2068.530000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2203.2,
+          "angle": 167.07714003456897,
+          "unwrapped": 167.1,
+          "tickProgress": 0.4641031250002052,
+          "tickCurrentMs": 2085.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2219.7,
+          "angle": 168.94460049414613,
+          "unwrapped": 168.9,
+          "tickProgress": 0.4692906250002052,
+          "tickCurrentMs": 2101.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2236.6,
+          "angle": 170.83460575755498,
+          "unwrapped": 170.8,
+          "tickProgress": 0.47454062500020516,
+          "tickCurrentMs": 2118.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2253.5,
+          "angle": 172.7246419424414,
+          "unwrapped": 172.7,
+          "tickProgress": 0.47979062500020514,
+          "tickCurrentMs": 2135.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2269.9,
+          "angle": 174.58087350637516,
+          "unwrapped": 174.6,
+          "tickProgress": 0.48494687500020517,
+          "tickCurrentMs": 2151.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2290.7,
+          "angle": 176.4596258949764,
+          "unwrapped": 176.5,
+          "tickProgress": 0.4901656250002051,
+          "tickCurrentMs": 2168.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2303.1,
+          "angle": 178.33837365518252,
+          "unwrapped": 178.3,
+          "tickProgress": 0.49538437500020516,
+          "tickCurrentMs": 2185.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2319.9,
+          "angle": 180.20587497121792,
+          "unwrapped": 180.2,
+          "tickProgress": 0.5005718750002051,
+          "tickCurrentMs": 2201.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2336.7,
+          "angle": 182.09587722970733,
+          "unwrapped": 182.1,
+          "tickProgress": 0.505821875000205,
+          "tickCurrentMs": 2218.6300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2358.6,
+          "angle": 183.97462619186692,
+          "unwrapped": 184,
+          "tickProgress": 0.5110406250002051,
+          "tickCurrentMs": 2235.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2369.9,
+          "angle": 185.84214144484542,
+          "unwrapped": 185.8,
+          "tickProgress": 0.5162281250002051,
+          "tickCurrentMs": 2251.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2386.8,
+          "angle": 187.73213597687962,
+          "unwrapped": 187.7,
+          "tickProgress": 0.5214781250002051,
+          "tickCurrentMs": 2268.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2408.8,
+          "angle": 189.65586232753105,
+          "unwrapped": 189.7,
+          "tickProgress": 0.5268218750002052,
+          "tickCurrentMs": 2285.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2420.1,
+          "angle": 191.4895951754078,
+          "unwrapped": 191.5,
+          "tickProgress": 0.5319156250002051,
+          "tickCurrentMs": 2302.1300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2436.7,
+          "angle": 193.34588775345068,
+          "unwrapped": 193.3,
+          "tickProgress": 0.5370718750002051,
+          "tickCurrentMs": 2318.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2453.2,
+          "angle": 195.22462596516186,
+          "unwrapped": 195.2,
+          "tickProgress": 0.5422906250002052,
+          "tickCurrentMs": 2335.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2470.4,
+          "angle": 197.11460813328327,
+          "unwrapped": 197.1,
+          "tickProgress": 0.5475406250002052,
+          "tickCurrentMs": 2352.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2486.9,
+          "angle": 198.98211829504427,
+          "unwrapped": 199,
+          "tickProgress": 0.5527281250002051,
+          "tickCurrentMs": 2368.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2503.5,
+          "angle": 200.86087290458192,
+          "unwrapped": 200.9,
+          "tickProgress": 0.5579468750002051,
+          "tickCurrentMs": 2385.430000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2519.9,
+          "angle": 202.71713115612644,
+          "unwrapped": 202.7,
+          "tickProgress": 0.5631031250002051,
+          "tickCurrentMs": 2401.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2536.8,
+          "angle": 204.60714046308652,
+          "unwrapped": 204.6,
+          "tickProgress": 0.5683531250002051,
+          "tickCurrentMs": 2418.730000000656,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2553.5,
+          "angle": 206.48587465671758,
+          "unwrapped": 206.5,
+          "tickProgress": 0.5735718750002051,
+          "tickCurrentMs": 2435.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2570.2,
+          "angle": 208.37587952204257,
+          "unwrapped": 208.4,
+          "tickProgress": 0.5788218750002051,
+          "tickCurrentMs": 2452.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2586.7,
+          "angle": 210.23209177361002,
+          "unwrapped": 210.2,
+          "tickProgress": 0.5839781250002052,
+          "tickCurrentMs": 2468.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2603.6,
+          "angle": 212.13338506012005,
+          "unwrapped": 212.1,
+          "tickProgress": 0.5892593750002051,
+          "tickCurrentMs": 2485.6300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2620.1,
+          "angle": 213.98962986111056,
+          "unwrapped": 214,
+          "tickProgress": 0.5944156250002051,
+          "tickCurrentMs": 2502.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2636.7,
+          "angle": 215.86837348353217,
+          "unwrapped": 215.9,
+          "tickProgress": 0.5996343750002051,
+          "tickCurrentMs": 2518.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2658.6,
+          "angle": 217.73587661402553,
+          "unwrapped": 217.7,
+          "tickProgress": 0.6048218750002051,
+          "tickCurrentMs": 2535.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2682,
+          "angle": 219.62589078569542,
+          "unwrapped": 219.6,
+          "tickProgress": 0.6100718750002051,
+          "tickCurrentMs": 2552.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2687.6,
+          "angle": 221.504655089954,
+          "unwrapped": 221.5,
+          "tickProgress": 0.6152906250002051,
+          "tickCurrentMs": 2568.930000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2711.2,
+          "angle": 223.39461546189503,
+          "unwrapped": 223.4,
+          "tickProgress": 0.6205406250002051,
+          "tickCurrentMs": 2585.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2739.4,
+          "angle": 227.12963454311432,
+          "unwrapped": 227.1,
+          "tickProgress": 0.6309156250002051,
+          "tickCurrentMs": 2618.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2764.3,
+          "angle": 229.00834461253564,
+          "unwrapped": 229,
+          "tickProgress": 0.6361343750002052,
+          "tickCurrentMs": 2635.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2786.9,
+          "angle": 232.765905009507,
+          "unwrapped": 232.8,
+          "tickProgress": 0.6465718750002051,
+          "tickCurrentMs": 2669.0300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2803.5,
+          "angle": 234.64464032975746,
+          "unwrapped": 234.6,
+          "tickProgress": 0.6517906250002051,
+          "tickCurrentMs": 2685.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2820.3,
+          "angle": 236.51211383843736,
+          "unwrapped": 236.5,
+          "tickProgress": 0.6569781250002051,
+          "tickCurrentMs": 2702.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2848.4,
+          "angle": 238.39083867495484,
+          "unwrapped": 238.4,
+          "tickProgress": 0.6621968750002051,
+          "tickCurrentMs": 2719.0300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2866.2,
+          "angle": 240.26963762077546,
+          "unwrapped": 240.3,
+          "tickProgress": 0.6674156250002051,
+          "tickCurrentMs": 2735.7300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2888.3,
+          "angle": 244.02709185501885,
+          "unwrapped": 244,
+          "tickProgress": 0.6778531250002051,
+          "tickCurrentMs": 2769.1300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2903.8,
+          "angle": 245.8946329664304,
+          "unwrapped": 245.9,
+          "tickProgress": 0.683040625000205,
+          "tickCurrentMs": 2785.730000000656,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2921.5,
+          "angle": 247.78463348771726,
+          "unwrapped": 247.8,
+          "tickProgress": 0.6882906250002052,
+          "tickCurrentMs": 2802.530000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2947.4,
+          "angle": 249.6633811593967,
+          "unwrapped": 249.7,
+          "tickProgress": 0.693509375000205,
+          "tickCurrentMs": 2819.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2967,
+          "angle": 251.53086155525506,
+          "unwrapped": 251.5,
+          "tickProgress": 0.698696875000205,
+          "tickCurrentMs": 2835.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 2984.1,
+          "angle": 253.39834240021776,
+          "unwrapped": 253.4,
+          "tickProgress": 0.7038843750002051,
+          "tickCurrentMs": 2852.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3008.4,
+          "angle": 257.1671229018833,
+          "unwrapped": 257.2,
+          "tickProgress": 0.7143531250002051,
+          "tickCurrentMs": 2885.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3024.4,
+          "angle": 259.04587747562994,
+          "unwrapped": 259,
+          "tickProgress": 0.7195718750002051,
+          "tickCurrentMs": 2902.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3039.5,
+          "angle": 260.9133530056097,
+          "unwrapped": 260.9,
+          "tickProgress": 0.7247593750002052,
+          "tickCurrentMs": 2919.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3055.7,
+          "angle": 262.79209853318963,
+          "unwrapped": 262.8,
+          "tickProgress": 0.7299781250002052,
+          "tickCurrentMs": 2935.930000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3071.7,
+          "angle": 264.6596247046464,
+          "unwrapped": 264.7,
+          "tickProgress": 0.7351656250002051,
+          "tickCurrentMs": 2952.530000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3088.1,
+          "angle": 266.53837368683,
+          "unwrapped": 266.5,
+          "tickProgress": 0.740384375000205,
+          "tickCurrentMs": 2969.230000000656,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3105,
+          "angle": 268.40587736070165,
+          "unwrapped": 268.4,
+          "tickProgress": 0.7455718750002052,
+          "tickCurrentMs": 2985.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3121.7,
+          "angle": 270.29587490289924,
+          "unwrapped": 270.3,
+          "tickProgress": 0.7508218750002051,
+          "tickCurrentMs": 3002.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3138,
+          "angle": 272.1633729308002,
+          "unwrapped": 272.2,
+          "tickProgress": 0.7560093750002052,
+          "tickCurrentMs": 3019.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3155.1,
+          "angle": 274.06462389335456,
+          "unwrapped": 274.1,
+          "tickProgress": 0.7612906250002052,
+          "tickCurrentMs": 3036.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3171.9,
+          "angle": 275.92088033591676,
+          "unwrapped": 275.9,
+          "tickProgress": 0.7664468750002051,
+          "tickCurrentMs": 3052.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3189,
+          "angle": 277.7996178950502,
+          "unwrapped": 277.8,
+          "tickProgress": 0.7716656250002052,
+          "tickCurrentMs": 3069.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3205,
+          "angle": 279.6671373735808,
+          "unwrapped": 279.7,
+          "tickProgress": 0.7768531250002051,
+          "tickCurrentMs": 3085.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3221.8,
+          "angle": 281.54584608824496,
+          "unwrapped": 281.5,
+          "tickProgress": 0.782071875000205,
+          "tickCurrentMs": 3102.6300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3237.9,
+          "angle": 283.424629212437,
+          "unwrapped": 283.4,
+          "tickProgress": 0.7872906250002051,
+          "tickCurrentMs": 3119.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3254.8,
+          "angle": 285.3033804558395,
+          "unwrapped": 285.3,
+          "tickProgress": 0.7925093750002051,
+          "tickCurrentMs": 3136.030000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3271.6,
+          "angle": 287.1821171620496,
+          "unwrapped": 287.2,
+          "tickProgress": 0.7977281250002051,
+          "tickCurrentMs": 3152.730000000656,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3288.4,
+          "angle": 289.0609016485304,
+          "unwrapped": 289.1,
+          "tickProgress": 0.8029468750002051,
+          "tickCurrentMs": 3169.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3304.9,
+          "angle": 290.93961563332476,
+          "unwrapped": 290.9,
+          "tickProgress": 0.8081656250002052,
+          "tickCurrentMs": 3186.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3322.3,
+          "angle": 292.8408774613764,
+          "unwrapped": 292.8,
+          "tickProgress": 0.8134468750002051,
+          "tickCurrentMs": 3203.0300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3338.6,
+          "angle": 294.69710315587275,
+          "unwrapped": 294.7,
+          "tickProgress": 0.8186031250002052,
+          "tickCurrentMs": 3219.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3355.1,
+          "angle": 296.56461557860064,
+          "unwrapped": 296.6,
+          "tickProgress": 0.8237906250002051,
+          "tickCurrentMs": 3236.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3371.5,
+          "angle": 298.4433820419329,
+          "unwrapped": 298.4,
+          "tickProgress": 0.8290093750002051,
+          "tickCurrentMs": 3252.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3388.2,
+          "angle": 300.3108441546247,
+          "unwrapped": 300.3,
+          "tickProgress": 0.8341968750002051,
+          "tickCurrentMs": 3269.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3404.9,
+          "angle": 302.18961218423107,
+          "unwrapped": 302.2,
+          "tickProgress": 0.8394156250002052,
+          "tickCurrentMs": 3286.1300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3421.5,
+          "angle": 304.0683710461643,
+          "unwrapped": 304.1,
+          "tickProgress": 0.8446343750002051,
+          "tickCurrentMs": 3302.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3438.1,
+          "angle": 305.9358658233261,
+          "unwrapped": 305.9,
+          "tickProgress": 0.8498218750002051,
+          "tickCurrentMs": 3319.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3454.9,
+          "angle": 307.8258877115419,
+          "unwrapped": 307.8,
+          "tickProgress": 0.8550718750002051,
+          "tickCurrentMs": 3336.230000000656,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3471.9,
+          "angle": 309.693396635351,
+          "unwrapped": 309.7,
+          "tickProgress": 0.8602593750002052,
+          "tickCurrentMs": 3352.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3488.3,
+          "angle": 311.5721115236946,
+          "unwrapped": 311.6,
+          "tickProgress": 0.865478125000205,
+          "tickCurrentMs": 3369.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3504.9,
+          "angle": 313.4396443044063,
+          "unwrapped": 313.4,
+          "tickProgress": 0.8706656250002051,
+          "tickCurrentMs": 3386.1300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3521.7,
+          "angle": 315.3296256650062,
+          "unwrapped": 315.3,
+          "tickProgress": 0.875915625000205,
+          "tickCurrentMs": 3402.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3538.2,
+          "angle": 317.1971390099103,
+          "unwrapped": 317.2,
+          "tickProgress": 0.8811031250002052,
+          "tickCurrentMs": 3419.530000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3555.2,
+          "angle": 319.08709756458387,
+          "unwrapped": 319.1,
+          "tickProgress": 0.8863531250002051,
+          "tickCurrentMs": 3436.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3571.6,
+          "angle": 320.95459740677916,
+          "unwrapped": 321,
+          "tickProgress": 0.8915406250002051,
+          "tickCurrentMs": 3452.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3589.7,
+          "angle": 322.833377647835,
+          "unwrapped": 322.8,
+          "tickProgress": 0.8967593750002052,
+          "tickCurrentMs": 3469.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3616.5,
+          "angle": 324.70086877457385,
+          "unwrapped": 324.7,
+          "tickProgress": 0.9019468750002052,
+          "tickCurrentMs": 3486.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3633.8,
+          "angle": 326.57960352174416,
+          "unwrapped": 326.6,
+          "tickProgress": 0.907165625000205,
+          "tickCurrentMs": 3502.9300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3637.4,
+          "angle": 328.45835794543495,
+          "unwrapped": 328.5,
+          "tickProgress": 0.9123843750002051,
+          "tickCurrentMs": 3519.6300000006568,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3654.5,
+          "angle": 330.3371012544978,
+          "unwrapped": 330.3,
+          "tickProgress": 0.9176031250002051,
+          "tickCurrentMs": 3536.3300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3671.1,
+          "angle": 332.21584684431906,
+          "unwrapped": 332.2,
+          "tickProgress": 0.9228218750002052,
+          "tickCurrentMs": 3553.030000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3687.9,
+          "angle": 334.10586259085716,
+          "unwrapped": 334.1,
+          "tickProgress": 0.9280718750002052,
+          "tickCurrentMs": 3569.830000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3704.2,
+          "angle": 335.97337299574804,
+          "unwrapped": 336,
+          "tickProgress": 0.9332593750002051,
+          "tickCurrentMs": 3586.4300000006565,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3721,
+          "angle": 337.85214305413893,
+          "unwrapped": 337.9,
+          "tickProgress": 0.9384781250002051,
+          "tickCurrentMs": 3603.1300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3737.7,
+          "angle": 339.7308907104533,
+          "unwrapped": 339.7,
+          "tickProgress": 0.9436968750002052,
+          "tickCurrentMs": 3619.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3755.7,
+          "angle": 341.60960460912247,
+          "unwrapped": 341.6,
+          "tickProgress": 0.9489156250002052,
+          "tickCurrentMs": 3636.530000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3771.3,
+          "angle": 343.47712752342454,
+          "unwrapped": 343.5,
+          "tickProgress": 0.954103125000205,
+          "tickCurrentMs": 3653.1300000006563,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3787.8,
+          "angle": 345.35585310905054,
+          "unwrapped": 345.4,
+          "tickProgress": 0.959321875000205,
+          "tickCurrentMs": 3669.8300000006566,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3804.7,
+          "angle": 347.2346328533378,
+          "unwrapped": 347.2,
+          "tickProgress": 0.9645406250002051,
+          "tickCurrentMs": 3686.530000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3821.3,
+          "angle": 349.1133887655865,
+          "unwrapped": 349.1,
+          "tickProgress": 0.9697593750002051,
+          "tickCurrentMs": 3703.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3837.9,
+          "angle": 350.99213875055415,
+          "unwrapped": 351,
+          "tickProgress": 0.9749781250002052,
+          "tickCurrentMs": 3719.930000000657,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3854.4,
+          "angle": 352.8596119373676,
+          "unwrapped": 352.9,
+          "tickProgress": 0.9801656250002051,
+          "tickCurrentMs": 3736.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3871,
+          "angle": 354.7383709297833,
+          "unwrapped": 354.7,
+          "tickProgress": 0.9853843750002051,
+          "tickCurrentMs": 3753.2300000006567,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3887.8,
+          "angle": 356.605876221614,
+          "unwrapped": 356.6,
+          "tickProgress": 0.9905718750002049,
+          "tickCurrentMs": 3769.830000000656,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3904.4,
+          "angle": 358.48462458654393,
+          "unwrapped": 358.5,
+          "tickProgress": 0.995790625000205,
+          "tickCurrentMs": 3786.5300000006564,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3921.3,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3937.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3954.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3971.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 3987.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4004.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4021.2,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4037.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4054.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4071.2,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4088.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4104.5,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4121.3,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4138,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4154.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4171.3,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4188,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4204.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4221.5,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4239.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4254.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4271.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4288,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4304.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4321.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4338.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4354.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4371.3,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4388.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4404.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4421.3,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4438.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4454.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4471.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4488.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4504.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4521.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4538,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4554.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4571.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4588.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4604.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4621.5,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4638.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4654.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4671.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4688.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4704.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4721.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4738.2,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4755.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4771.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4788.2,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4804.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4821.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4838.3,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4855,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4871.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4888.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4905,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4921.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4938.5,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4955.1,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4971.7,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 4988.5,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5005.2,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5021.9,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5038.4,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5055.2,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5072,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5088.5,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5105.6,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5134,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        },
+        {
+          "elapsedMs": 5178.8,
+          "angle": 0,
+          "unwrapped": 360,
+          "tickProgress": 1,
+          "tickCurrentMs": 3800.0000000000005,
+          "openingVisible": true
+        }
+      ],
+      "lastUnwrapped": 0,
+      "unwrapped": 360
+    },
+    "visibleTickRotationDegrees": 360,
+    "tickRotationTimeline": [
+      {
+        "elapsedMs": 0,
+        "angle": 0,
+        "unwrapped": 0,
+        "tickProgress": 0,
+        "tickCurrentMs": 0,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 185,
+        "angle": 0,
+        "unwrapped": 0,
+        "tickProgress": 0,
+        "tickCurrentMs": 0,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 554,
+        "angle": 0,
+        "unwrapped": 0,
+        "tickProgress": 0,
+        "tickCurrentMs": 433.63000000065654,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 589.9,
+        "angle": 0,
+        "unwrapped": 0,
+        "tickProgress": 0,
+        "tickCurrentMs": 467.13000000065665,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 2303.1,
+        "angle": 178.33837365518252,
+        "unwrapped": 178.3,
+        "tickProgress": 0.49538437500020516,
+        "tickCurrentMs": 2185.2300000006567,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 2319.9,
+        "angle": 180.20587497121792,
+        "unwrapped": 180.2,
+        "tickProgress": 0.5005718750002051,
+        "tickCurrentMs": 2201.8300000006566,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 2336.7,
+        "angle": 182.09587722970733,
+        "unwrapped": 182.1,
+        "tickProgress": 0.505821875000205,
+        "tickCurrentMs": 2218.6300000006563,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 3105,
+        "angle": 268.40587736070165,
+        "unwrapped": 268.4,
+        "tickProgress": 0.7455718750002052,
+        "tickCurrentMs": 2985.8300000006566,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 3121.7,
+        "angle": 270.29587490289924,
+        "unwrapped": 270.3,
+        "tickProgress": 0.7508218750002051,
+        "tickCurrentMs": 3002.6300000006568,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 3138,
+        "angle": 272.1633729308002,
+        "unwrapped": 272.2,
+        "tickProgress": 0.7560093750002052,
+        "tickCurrentMs": 3019.2300000006567,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 3904.4,
+        "angle": 358.48462458654393,
+        "unwrapped": 358.5,
+        "tickProgress": 0.995790625000205,
+        "tickCurrentMs": 3786.5300000006564,
+        "openingVisible": true
+      },
+      {
+        "elapsedMs": 3921.3,
+        "angle": 0,
+        "unwrapped": 360,
+        "tickProgress": 1,
+        "tickCurrentMs": 3800.0000000000005,
+        "openingVisible": true
+      }
+    ]
+  },
+  "keyposes": [
+    {
+      "requestedMs": 650,
+      "route": "/",
+      "markTimelineMs": 650.5,
+      "tickTimelineMs": 650.5299999996788,
+      "tickProgress": 0.015790624999899618,
+      "mark": {
+        "x": 752.2,
+        "y": 332.2,
+        "w": 415.6,
+        "h": 415.6
+      },
+      "tickAngle": 5.7,
+      "orbOpacity": "0",
+      "ringOpacity": "0.378422",
+      "settledOpacity": "0",
+      "overflow": false,
+      "file": "runtime-keypose-0p65s-1920x1080.png"
+    },
+    {
+      "requestedMs": 960,
+      "route": "/",
+      "markTimelineMs": 1000.8,
+      "tickTimelineMs": 1000.8299999996785,
+      "tickProgress": 0.12525937499989956,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "tickAngle": 45.1,
+      "orbOpacity": "0.0629461",
+      "ringOpacity": "0.519917",
+      "settledOpacity": "0",
+      "overflow": false,
+      "file": "runtime-keypose-0p96s-1920x1080.png"
+    },
+    {
+      "requestedMs": 1370,
+      "route": "/",
+      "markTimelineMs": 1417.9,
+      "tickTimelineMs": 1417.9299999996786,
+      "tickProgress": 0.25560312499989957,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "tickAngle": 92,
+      "orbOpacity": "0.186734",
+      "ringOpacity": "0.705942",
+      "settledOpacity": "0",
+      "overflow": false,
+      "file": "runtime-keypose-1p37s-1920x1080.png"
+    },
+    {
+      "requestedMs": 2580,
+      "route": "/",
+      "markTimelineMs": 2585.5,
+      "tickTimelineMs": 2585.5299999996787,
+      "tickProgress": 0.6204781249998995,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "tickAngle": 223.4,
+      "orbOpacity": "0.354668",
+      "ringOpacity": "0.851975",
+      "settledOpacity": "0.0345625",
+      "overflow": false,
+      "file": "runtime-keypose-2p58s-1920x1080.png"
+    },
+    {
+      "requestedMs": 3100,
+      "route": "/",
+      "markTimelineMs": 3102.6,
+      "tickTimelineMs": 3102.6299999996786,
+      "tickProgress": 0.7820718749998995,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "tickAngle": 281.5,
+      "orbOpacity": "0.791181",
+      "ringOpacity": "1",
+      "settledOpacity": "1",
+      "overflow": false,
+      "file": "runtime-keypose-3p10s-1920x1080.png"
+    },
+    {
+      "requestedMs": 3800,
+      "route": "/",
+      "markTimelineMs": 3803.2,
+      "tickTimelineMs": 3800.0000000000005,
+      "tickProgress": 1,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "tickAngle": 0,
+      "orbOpacity": "1",
+      "ringOpacity": "1",
+      "settledOpacity": "1",
+      "overflow": false,
+      "file": "runtime-keypose-3p80s-1920x1080.png"
+    },
+    {
+      "requestedMs": 4100,
+      "route": "/",
+      "markTimelineMs": 4153.6,
+      "tickTimelineMs": 3800.0000000000005,
+      "tickProgress": 1,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "tickAngle": 0,
+      "orbOpacity": "1",
+      "ringOpacity": "1",
+      "settledOpacity": "1",
+      "overflow": false,
+      "file": "runtime-keypose-4p10s-1920x1080.png"
+    }
+  ],
+  "wide1440x720": {
+    "shots": [
+      {
+        "file": "viewport-1440x720-settled-4p1s.png",
+        "path": "/",
+        "opening": true,
+        "timelineMs": 4103.5,
+        "mark": {
+          "x": 557.5,
+          "y": 197.5,
+          "w": 325,
+          "h": 325
+        },
+        "skip": {
+          "x": 1287.9,
+          "y": 657,
+          "w": 106,
+          "h": 40
+        },
+        "viewport": {
+          "w": 1440,
+          "h": 720,
+          "sw": 1440,
+          "sh": 720
+        }
+      }
+    ],
+    "audit": {
+      "console": [],
+      "page": [],
+      "failed": [],
+      "bad": []
+    }
+  },
+  "narrow390x844": {
+    "shots": [
+      {
+        "file": "viewport-390x844-dormant-0p65s.png",
+        "path": "/",
+        "opening": true,
+        "timelineMs": 650.5,
+        "mark": {
+          "x": 68.3,
+          "y": 295.3,
+          "w": 253.4,
+          "h": 253.4
+        },
+        "skip": {
+          "x": 266,
+          "y": 777,
+          "w": 106,
+          "h": 40
+        },
+        "viewport": {
+          "w": 390,
+          "h": 844,
+          "sw": 390,
+          "sh": 844
+        }
+      },
+      {
+        "file": "viewport-390x844-approach-1p37s.png",
+        "path": "/",
+        "opening": true,
+        "timelineMs": 1384.4,
+        "mark": {
+          "x": 80.3,
+          "y": 307.3,
+          "w": 229.4,
+          "h": 229.4
+        },
+        "skip": {
+          "x": 266,
+          "y": 777,
+          "w": 106,
+          "h": 40
+        },
+        "viewport": {
+          "w": 390,
+          "h": 844,
+          "sw": 390,
+          "sh": 844
+        }
+      },
+      {
+        "file": "viewport-390x844-settled-4p1s.png",
+        "path": "/",
+        "opening": true,
+        "timelineMs": 4103.4,
+        "mark": {
+          "x": 80.3,
+          "y": 307.3,
+          "w": 229.4,
+          "h": 229.4
+        },
+        "skip": {
+          "x": 266,
+          "y": 777,
+          "w": 106,
+          "h": 40
+        },
+        "viewport": {
+          "w": 390,
+          "h": 844,
+          "sw": 390,
+          "sh": 844
+        }
+      }
+    ],
+    "audit": {
+      "console": [],
+      "page": [],
+      "failed": [],
+      "bad": []
+    }
+  },
+  "normalAudit": {
+    "console": [],
+    "page": [],
+    "failed": [],
+    "bad": []
+  },
+  "keyposeAudit": {
+    "console": [],
+    "page": [],
+    "failed": [],
+    "bad": []
+  }
+}

@@ -81,10 +81,11 @@ describe("League client shell", () => {
     expect(circleBottom).toBeLessThanOrEqual(clipBottom);
   });
 
-  it("uses the optical-size header J and makes the top-right account the Profile entry", () => {
+  it("uses the owner-approved V8 header lockup and makes the top-right account the Profile entry", () => {
     const markup = renderClient();
 
-    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
+    expect(markup).toContain('/media/identity/sonnet-v8/figma-export/canonical-lockup.png');
+    expect(markup).toContain('srcSet="/media/identity/sonnet-v8/figma-export/optical-32.png"');
     expect(markup).toContain('href="/profile"');
     expect(markup).toContain('aria-label="Open profile"');
     expect(markup).toContain('/media/profile/topbar-account-ring.png');
@@ -203,7 +204,7 @@ describe("League client shell", () => {
     const markup = renderClient();
 
     expect(markup).toContain('data-node-id="3317:4"');
-    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
+    expect(markup).toContain('/media/identity/sonnet-v8/figma-export/canonical-lockup.png');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
     expect(markup).toContain("PROJECTS (4)");
     expect(markup).toContain("EXPERIENCE (2)");
@@ -219,7 +220,7 @@ describe("League client shell", () => {
     expect(markup).toContain('/media/profile/profile-crest-emblem.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
-    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
+    expect(markup).toContain('/media/identity/sonnet-v8/figma-export/canonical-lockup.png');
     expect(markup).toContain('/media/profile/food-tracker-mark.svg');
     expect(markup).not.toContain('/media/lobby/activity-art/activity-food-tracker.svg');
     expect(markup).not.toContain('/media/lobby/activity-art/activity-crest.svg');
@@ -241,7 +242,7 @@ describe("League client shell", () => {
     expect(markup).toContain("EXPERIENCE (2)");
     expect(markup).not.toContain("IN DEVELOPMENT (2)");
     expect(markup).not.toContain('/media/lobby/activity-art/');
-    expect(markup).toContain('/media/profile/j-candidate-06-m54.svg');
+    expect(markup).toContain('/media/identity/sonnet-v8/figma-export/canonical-lockup.png');
     expect(markup).toContain('/media/profile/living-in-silico-logo.png');
     expect(markup).toContain('/media/profile/stush-patties-logo.png');
   });

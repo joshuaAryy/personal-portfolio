@@ -48,8 +48,8 @@ describe("approved resume flow", () => {
     expect(markup).not.toContain("PORTFOLIO UTILITY");
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png"');
     expect(markup).toContain('class="resume-mechanism__j"');
-    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-face.svg"');
-    expect(markup).toContain('src="/media/opening/j-sonnet-v8/j-extrusion-mid.svg"');
+    expect(markup).toContain('data-node-id="3735:516"');
+    expect(markup).toContain('src="/media/identity/sonnet-v8/figma/canonical-j.png"');
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/button-accept-default.png"');
     expect(markup).toContain('src="/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png"');
     expect(markup).not.toContain("A concise view of experience");

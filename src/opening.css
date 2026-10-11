@@ -694,11 +694,8 @@
   .opening__skip::before { transition: none; }
 }
 
-/* Historical Sonnet v8 assembly: independent editable material layers. */
-.opening__radial-field {
-  animation-duration: 5s;
-}
-
+/* Sonnet V8: shared-source fragments, Figma-proportioned orb, and fused lockup. */
+.opening__radial-field,
 .opening__peripheral-lines,
 .opening__peripheral-mark,
 .opening__ring,
@@ -713,8 +710,6 @@
 .opening__mark-motion {
   position: absolute;
   inset: 0;
-  right: 0;
-  bottom: 0;
   width: auto;
   height: auto;
   aspect-ratio: auto;
@@ -727,6 +722,57 @@
   position: absolute;
   inset: 5%;
   display: block;
+  isolation: isolate;
+}
+
+.opening__j-assembly {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+
+.opening__j-assembly {
+  z-index: 1;
+  opacity: 1;
+}
+
+.opening__orb-layer {
+  position: absolute;
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+
+.opening__orb-layer--portal {
+  z-index: 1;
+  left: 18.59%;
+  top: 15.81%;
+  width: 66.67%;
+  height: 66.67%;
+  border-radius: 50%;
+  object-fit: cover;
+  opacity: 0;
+  animation: opening-v8-portal-arrive 5s linear 1 both;
+}
+
+.opening__orb-layer--ring {
+  z-index: 3;
+  left: 14.29%;
+  top: 11.52%;
+  width: 75.26%;
+  height: 75.26%;
+  opacity: 0;
+  animation: opening-v8-ring-arrive 5s linear 1 both;
+}
+
+.opening__orb-layer--contact-shadow {
+  z-index: 4;
+  left: 21.77%;
+  top: 6.62%;
+  width: 56.44%;
+  height: 84.02%;
+  opacity: 0;
+  animation: opening-v8-contact-arrive 5s linear 1 both;
 }
 
 .opening__j-settled,
@@ -736,170 +782,92 @@
   display: block;
 }
 
-.opening__j-settled { z-index: 1; }
-
 .opening__j-settled {
-  animation: opening-j-settled-material 5s cubic-bezier(.24, .65, .2, 1) 1 both;
+  z-index: 5;
+  opacity: 0;
+  animation: opening-j-fused-reveal 5s linear 1 both;
 }
 
-.opening__j-layer {
+.opening__j-initial-lockup {
   position: absolute;
-  display: block;
-  max-width: none;
-  animation: none;
-}
-
-.opening__j-layer > img,
-.opening__j-detail-art,
-.opening__j-edge-light-art > img {
+  z-index: 8;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
   max-width: none;
-}
-
-.opening__j-layer--deep {
-  inset: 10.68% 25.64% 12.99% 25.61%;
-}
-
-.opening__j-layer--mid {
-  inset: 9.94% 26.07% 13.73% 25.19%;
-}
-
-.opening__j-layer--face {
-  inset: 9.19% 26.5% 14.48% 24.76%;
-}
-
-.opening__j-detail {
-  position: absolute;
-  inset: 9.19% 26.5% 14.32% 24.76%;
-  display: block;
-  max-width: none;
-  overflow: visible;
-  -webkit-mask-image: url("/media/opening/j-sonnet-v8/j-detail-mask.svg");
-  mask-image: url("/media/opening/j-sonnet-v8/j-detail-mask.svg");
-  -webkit-mask-position: center;
-  mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  animation: none;
-}
-
-.opening__j-layer--bevel {
-  inset: 9.19% 26.5% 14.48% 24.76%;
-}
-
-.opening__j-layer--edge {
-  inset: 9.19% 26.5% 14.48% 24.76%;
+  object-fit: contain;
+  opacity: 1;
+  pointer-events: none;
+  user-select: none;
+  animation: opening-initial-lockup-clear 5s linear 1 both;
 }
 
 .opening__j-piece {
-  --approach-delay: 820ms;
-  --dormant-opacity: .3;
-  --approach-opacity: .62;
-  --forge-intermediate-x: 0%;
-  --forge-intermediate-y: 0%;
-  --forge-lock-x: 0%;
-  --forge-lock-y: 0%;
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  display: block;
-  opacity: 1;
-  pointer-events: none;
-  animation: opening-j-piece-exit 5s linear 1 both;
-}
-
-.opening__j-piece-art {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  transform: translate(0, 0);
+  z-index: 6;
   transform-origin: 50% 50%;
-  animation: opening-j-piece-assembly 1.28s cubic-bezier(.18, .8, .22, 1) var(--approach-delay) 1 both;
+  pointer-events: none;
+  will-change: transform;
 }
 
-/* The exported fragments retain their full 468px dormant-pose canvas. These are
-   applied deltas: state 2 movement first, then the inverse dormant offset to seat. */
-.opening__j-piece--cap {
-  --approach-delay: 760ms;
-  --dormant-opacity: .3;
-  --approach-opacity: .62;
-  --forge-intermediate-x: 3.85%;
-  --forge-intermediate-y: 3.42%;
-  --forge-lock-x: 6.41%;
-  --forge-lock-y: 8.12%;
+.opening__j-piece--crown {
+  transform: translate(-13.2479%, -11.1111%) rotate(-12deg);
+  transform-origin: 52.35% 16.03%;
+  animation: opening-j-crown-approach 1.90s cubic-bezier(.22, .70, .20, 1) 650ms 1 both;
 }
 
 .opening__j-piece--shaft {
-  --approach-delay: 860ms;
-  --dormant-opacity: .38;
-  --approach-opacity: .78;
-  --forge-intermediate-x: -3.21%;
-  --forge-intermediate-y: .85%;
-  --forge-lock-x: -4.27%;
-  --forge-lock-y: 1.28%;
+  transform: translate(6.4103%, 8.1197%) rotate(5deg);
+  transform-origin: 60.90% 43.80%;
+  animation: opening-j-shaft-approach 1.82s cubic-bezier(.22, .70, .20, 1) 700ms 1 both;
 }
 
 .opening__j-piece--hook {
-  --approach-delay: 960ms;
-  --dormant-opacity: .3;
-  --approach-opacity: .62;
-  --forge-intermediate-x: 5.98%;
-  --forge-intermediate-y: -5.13%;
-  --forge-lock-x: 9.4%;
-  --forge-lock-y: -9.83%;
+  transform: translate(-14.9573%, 14.1026%) rotate(15deg);
+  transform-origin: 43.80% 73.72%;
+  animation: opening-j-hook-approach 1.86s cubic-bezier(.22, .70, .20, 1) 720ms 1 both;
 }
 
-.opening__j-orb {
-  position: absolute;
-  z-index: 0;
-  inset: -13%;
-  display: block;
-  overflow: hidden;
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-  animation: opening-j-orb-energy 5s ease-out 1 both;
-}
-
-.opening__j-orb img {
+.opening__j-piece-art,
+.opening__j-settled > img {
   display: block;
   width: 100%;
   height: 100%;
   max-width: none;
+  pointer-events: none;
+  user-select: none;
 }
 
-.opening__j-mark {
-  isolation: isolate;
-  animation: opening-j-cyan-activation 5s ease-out 1 both;
+.opening__j-piece-art {
+  opacity: 0;
+  animation: opening-j-fragment-opacity 5s linear 1 both;
 }
-.opening__j-mark > .opening__j-settled,
-.opening__j-mark > .opening__j-piece { isolation: isolate; }
 
-.opening__j-settled { position: absolute; z-index: 1; }
-
-.opening__j-piece--cap .opening__j-piece-art,
-.opening__j-piece--shaft .opening__j-piece-art,
-.opening__j-piece--hook .opening__j-piece-art {
-  animation-name: opening-j-piece-assembly;
+.opening__j-activation-bloom {
+  position: absolute;
+  z-index: 2;
+  left: 10.04%;
+  top: 7.26%;
+  display: block;
+  width: 83.76%;
+  height: 83.76%;
+  max-width: none;
+  opacity: 0;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  animation: opening-v8-activation-bloom 5s ease-out 1 both;
 }
 
 .opening__j-lock {
   position: absolute;
-  z-index: 7;
+  z-index: 9;
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  animation: opening-j-seam-lock 5s ease-out 1 both;
+  animation: opening-j-seam-lock 5s linear 1 both;
 }
 
-.opening__j-lock > img,
 .opening__j-seam-light,
 .opening__j-conduit,
 .opening__j-seam-pulse {
@@ -909,21 +877,13 @@
   pointer-events: none;
 }
 
-.opening__j-lock > img { width: 100%; height: 100%; }
-
 .opening__j-seam-light {
-  inset: 0;
   z-index: 2;
-  -webkit-mask-image: url("/media/opening/j-sonnet-v8/j-face.svg");
-  mask-image: url("/media/opening/j-sonnet-v8/j-face.svg");
-  -webkit-mask-size: 48.72% 76.28%;
-  mask-size: 48.72% 76.28%;
-  -webkit-mask-position: 48.3% 38.7%;
-  mask-position: 48.3% 38.7%;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+  inset: 0;
+  -webkit-mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat;
+  mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat;
   opacity: 0;
-  animation: opening-j-seam-art 5s ease-out 1 both;
+  animation: opening-j-seam-art 5s linear 1 both;
 }
 
 .opening__j-seam-light > img {
@@ -938,12 +898,12 @@
 
 .opening__j-conduit {
   z-index: 1;
-  left: 32.1%;
-  top: 25.42%;
-  width: 23.63%;
-  height: 52.75%;
+  left: 33.76%;
+  top: 26.92%;
+  width: 20.32%;
+  height: 49.12%;
   opacity: 0;
-  animation: opening-j-conduit-art 5s ease-out 1 both;
+  animation: opening-j-conduit-art 5s linear 1 both;
 }
 
 .opening__j-conduit > img { display: block; width: 100%; height: 100%; }
@@ -978,7 +938,6 @@
 
 .opening__j-conduit-pulse-path { stroke-width: 2.8; }
 .opening__j-seam-pulse-path { stroke-width: 2.2; }
-
 .opening__j-conduit-pulse-path--stem { animation: opening-j-conduit-stem-flow 5s linear 1 both; }
 .opening__j-conduit-pulse-path--hook { animation: opening-j-conduit-hook-flow 5s linear 1 both; }
 .opening__j-seam-pulse-path--crown { animation: opening-j-seam-crown-flow 5s linear 1 both; }
@@ -986,64 +945,52 @@
 
 .opening__j-light-exits {
   z-index: 4;
-  left: 50.15%;
-  top: 17.97%;
-  width: 21.61% !important;
-  height: 49.32% !important;
+  left: 51.05%;
+  top: 18.74%;
+  width: 19.81% !important;
+  height: 47.80% !important;
   opacity: 0;
   animation: opening-j-light-exits 5s ease-out 1 both;
 }
 
-.opening__j-pulse-glow {
-  z-index: 5;
-  left: 49.19%;
-  top: 39.15%;
-  width: 9.74% !important;
-  height: 7.16% !important;
-  opacity: 0;
-  animation: opening-j-pulse-glow 5s ease-out 1 both;
+.opening__j-pulse-spark {
+  position: absolute;
+  z-index: 11;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
-.opening__j-pulse-core {
-  z-index: 6;
-  left: 53.27%;
-  top: 41.95%;
-  width: 1.59% !important;
-  height: 1.58% !important;
+.opening__j-pulse-spark image {
   opacity: 0;
-  animation: opening-j-pulse-core 5s ease-out 1 both;
 }
 
 .opening__j-sheen {
   position: absolute;
-  z-index: 8;
-  inset: 9.19% 26.5% 14.48% 24.76%;
-  background: linear-gradient(108deg, transparent 35%, rgb(255 249 220 / 0%) 44%, rgb(255 242 192 / 70%) 50%, rgb(255 250 225 / 0%) 56%, transparent 66%);
-  filter: blur(1px);
+  z-index: 10;
+  inset: 0;
+  overflow: hidden;
   opacity: 0;
-  -webkit-mask: url("/media/opening/j-sonnet-v8/j-face.svg") center / 100% 100% no-repeat;
-  mask: url("/media/opening/j-sonnet-v8/j-face.svg") center / 100% 100% no-repeat;
+  -webkit-mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat;
+  mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat;
+  mix-blend-mode: overlay;
   pointer-events: none;
-  transform: translateX(-34%);
+  transform: translateX(-36.32%);
   animation: opening-j-single-sheen 5s linear 1 both;
 }
 
-.opening__j-detail-mask-probe {
+.opening__j-sheen > img {
   position: absolute;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.opening__j-detail-art {
-  position: absolute;
-  inset: -0.42% -1.41% -2.79% -1%;
-}
-
-.opening__j-edge-light-art {
-  position: absolute;
-  inset: -0.19% -0.71% -0.18% -0.29%;
+  left: 41.88%;
+  top: 6.41%;
+  display: block;
+  width: 17.09%;
+  height: 83.33%;
+  max-width: none;
+  object-fit: fill;
 }
 
 .opening__archive-mark {
@@ -1059,134 +1006,158 @@
 }
 
 @keyframes opening-mark-sequence {
-  0%, 6% { opacity: 1; transform: scale(1.12); }
-  10% { opacity: 0; transform: scale(.84); }
-  10.4% { opacity: .55; transform: scale(.8); }
-  11% { opacity: 1; transform: scale(.76); }
-  16%, 94% { opacity: 1; transform: scale(.76); }
-  100% { opacity: 0; transform: scale(.76); }
+  0% { opacity: 1; transform: scale(1.12); }
+  8% { opacity: 1; transform: scale(1.02); }
+  13% { opacity: 1; transform: scale(.84); }
+  18%, 100% { opacity: 1; transform: scale(.76); }
 }
 
-@keyframes opening-j-settled-material {
-  /* The hook's 960ms delay + 1.28s approach seats at 2240ms (44.8%).
-     Keep the fused material hidden until that last mechanical lock completes. */
-  0%, 44.8% { opacity: 0; filter: none; }
-  47% { opacity: .08; filter: none; }
-  56% { opacity: .68; filter: none; }
-  63% { opacity: 1; filter: none; }
-  94% { opacity: 1; filter: none; }
-  100% { opacity: 0; filter: none; }
+@keyframes opening-initial-lockup-clear {
+  0%, 5% { opacity: 1; }
+  8% { opacity: .78; }
+  10.5% { opacity: .28; }
+  13.5%, 100% { opacity: 0; }
 }
 
-@keyframes opening-j-piece-exit {
-  0%, 47% { opacity: 1; }
-  56% { opacity: .72; }
-  63% { opacity: 0; }
-  100% { opacity: 0; }
+@keyframes opening-j-fragment-opacity {
+  0%, 8% { opacity: 0; }
+  13% { opacity: .72; }
+  19.2% { opacity: .86; }
+  27.4% { opacity: .96; }
+  51.6%, 54.8% { opacity: 1; }
+  55.2%, 100% { opacity: 0; }
 }
 
-@keyframes opening-j-piece-assembly {
-  0% { opacity: var(--dormant-opacity); transform: translate(0, 0); filter: brightness(.78); }
-  64% { opacity: var(--approach-opacity); transform: translate(var(--forge-intermediate-x), var(--forge-intermediate-y)); filter: brightness(.92); }
-  100% { opacity: 1; transform: translate(var(--forge-lock-x), var(--forge-lock-y)); filter: none; }
+@keyframes opening-j-crown-approach {
+  from { transform: translate(-13.2479%, -11.1111%) rotate(-12deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  16.3% { transform: translate(-7.265%, -5.7692%) rotate(-6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  37.9% { transform: translate(-2.1368%, -1.7094%) rotate(-1.6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  to { transform: none; }
 }
 
-@keyframes opening-j-orb-energy {
-  0%, 44.8% { opacity: 0; transform: scale(.78); filter: brightness(.72); }
-  47% { opacity: .12; transform: scale(.9); filter: brightness(.94); }
-  52% { opacity: .4; transform: scale(1.01); filter: brightness(1.14); }
-  57% { opacity: .36; transform: scale(1.03); filter: brightness(1.16); }
-  64% { opacity: .08; transform: scale(1.06); filter: brightness(1.06); }
-  68%, 100% { opacity: 0; transform: scale(1.08); filter: brightness(1); }
+@keyframes opening-j-shaft-approach {
+  from { transform: translate(6.4103%, 8.1197%) rotate(5deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  14.3% { transform: translate(2.9915%, 3.8462%) rotate(2deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  36.8% { transform: translate(.8547%, 1.0684%) rotate(.6deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  to { transform: none; }
 }
 
-@keyframes opening-j-cyan-activation {
-  0%, 44.8% { filter: none; }
-  47% { filter: drop-shadow(0 0 4px rgb(17 215 227 / 26%)); }
-  52% { filter: drop-shadow(0 0 8px rgb(17 215 227 / 48%)); }
-  58% { filter: drop-shadow(0 0 4px rgb(17 215 227 / 18%)); }
-  64%, 100% { filter: none; }
+@keyframes opening-j-hook-approach {
+  from { transform: translate(-14.9573%, 14.1026%) rotate(15deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  12.9% { transform: translate(-8.1197%, 8.1197%) rotate(8deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  34.9% { transform: translate(-2.5641%, 2.3504%) rotate(2.2deg); animation-timing-function: cubic-bezier(.22, .70, .20, 1); }
+  to { transform: none; }
+}
+
+@keyframes opening-j-fused-reveal {
+  0%, 51.6% { opacity: 0; }
+  54.8%, 100% { opacity: 1; }
+}
+
+@keyframes opening-v8-ring-arrive {
+  0%, 7.9% { opacity: 0; }
+  8% { opacity: .28; }
+  19.2% { opacity: .5; transform: scale(.98); }
+  27.4% { opacity: .7; transform: scale(1); }
+  51.6% { opacity: .85; transform: scale(1); }
+  60%, 100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes opening-v8-portal-arrive {
+  0%, 15% { opacity: 0; }
+  19.2% { opacity: .05; }
+  27.4% { opacity: .18; }
+  51.6% { opacity: .35; }
+  67%, 100% { opacity: 1; }
+}
+
+@keyframes opening-v8-contact-arrive {
+  0%, 8% { opacity: 0; }
+  19.2% { opacity: .15; }
+  27.4% { opacity: .6; }
+  51.6%, 100% { opacity: 1; }
+}
+
+@keyframes opening-v8-activation-bloom {
+  0%, 51.6% { opacity: 0; }
+  63% { opacity: .42; }
+  74% { opacity: .12; }
+  80%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-seam-lock {
-  0%, 44.8% { opacity: 0; }
-  46% { opacity: .98; }
-  51% { opacity: .94; }
-  56% { opacity: .88; }
-  63% { opacity: .42; }
-  68%, 100% { opacity: 0; }
+  0%, 27.4% { opacity: 0; }
+  31% { opacity: .3; }
+  49% { opacity: .54; }
+  51.6% { opacity: 1; }
+  60% { opacity: .7; }
+  72% { opacity: .1; }
+  78%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-seam-art {
-  0%, 44.8% { opacity: 0; }
-  47% { opacity: .16; }
-  52%, 56% { opacity: .22; }
-  63% { opacity: .08; }
-  68%, 100% { opacity: 0; }
+  0%, 27.4% { opacity: 0; }
+  31% { opacity: .3; }
+  49% { opacity: .5; }
+  51.6% { opacity: 1; }
+  60% { opacity: .7; }
+  72% { opacity: .1; }
+  78%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-conduit-art {
-  0%, 44.8% { opacity: 0; }
-  48% { opacity: .56; }
-  53% { opacity: .92; }
+  0%, 29% { opacity: 0; }
+  40% { opacity: .55; }
+  51.6% { opacity: .92; }
   58% { opacity: .7; }
-  66%, 100% { opacity: 0; }
+  70%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-light-exits {
-  0%, 45% { opacity: 0; transform: scale(.82); }
-  49% { opacity: .82; transform: scale(1); }
-  54% { opacity: .9; transform: scale(1.025); }
-  62%, 100% { opacity: 0; transform: scale(1.1); }
-}
-
-@keyframes opening-j-pulse-glow {
-  0%, 46% { opacity: 0; transform: scale(.72); }
-  50% { opacity: .92; transform: scale(1); }
-  54% { opacity: .65; transform: scale(1.08); }
-  60%, 100% { opacity: 0; transform: scale(1.18); }
-}
-
-@keyframes opening-j-pulse-core {
-  0%, 48% { opacity: 0; transform: scale(.6); }
-  51% { opacity: 1; transform: scale(1); }
-  55% { opacity: .72; transform: scale(1.12); }
-  60%, 100% { opacity: 0; transform: scale(1.2); }
+  0%, 49% { opacity: 0; transform: scale(.82); }
+  54% { opacity: .82; transform: scale(1); }
+  59% { opacity: .9; transform: scale(1.025); }
+  65%, 100% { opacity: 0; transform: scale(1.1); }
 }
 
 @keyframes opening-j-conduit-stem-flow {
-  0%, 47% { opacity: 0; stroke-dashoffset: 100; }
-  48% { opacity: .95; stroke-dashoffset: 100; }
-  53% { opacity: 1; stroke-dashoffset: -14; }
-  54%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 50% { opacity: 0; stroke-dashoffset: 100; }
+  51% { opacity: .95; stroke-dashoffset: 100; }
+  57% { opacity: 1; stroke-dashoffset: -14; }
+  58%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-conduit-hook-flow {
-  0%, 49% { opacity: 0; stroke-dashoffset: 100; }
-  50% { opacity: .95; stroke-dashoffset: 100; }
-  55% { opacity: 1; stroke-dashoffset: -14; }
-  56%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 52% { opacity: 0; stroke-dashoffset: 100; }
+  53% { opacity: .95; stroke-dashoffset: 100; }
+  59% { opacity: 1; stroke-dashoffset: -14; }
+  60%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-seam-crown-flow {
-  0%, 45.5% { opacity: 0; stroke-dashoffset: 100; }
-  46.5% { opacity: 1; stroke-dashoffset: 100; }
-  52.5% { opacity: 1; stroke-dashoffset: -14; }
-  53.5%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 49% { opacity: 0; stroke-dashoffset: 100; }
+  50% { opacity: 1; stroke-dashoffset: 100; }
+  56% { opacity: 1; stroke-dashoffset: -14; }
+  57%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-seam-hook-flow {
-  0%, 47.5% { opacity: 0; stroke-dashoffset: 100; }
-  48.5% { opacity: 1; stroke-dashoffset: 100; }
-  54.5% { opacity: 1; stroke-dashoffset: -14; }
-  55.5%, 100% { opacity: 0; stroke-dashoffset: -14; }
+  0%, 51% { opacity: 0; stroke-dashoffset: 100; }
+  52% { opacity: 1; stroke-dashoffset: 100; }
+  58% { opacity: 1; stroke-dashoffset: -14; }
+  59%, 100% { opacity: 0; stroke-dashoffset: -14; }
 }
 
 @keyframes opening-j-single-sheen {
-  0%, 62% { opacity: 0; transform: translateX(-34%); }
-  67% { opacity: .55; transform: translateX(-8%); }
-  74% { opacity: .22; transform: translateX(18%); }
-  81%, 100% { opacity: 0; transform: translateX(34%); }
+  0%, 69% { opacity: 0; transform: translateX(-36.32%); }
+  74% { opacity: .9; transform: translateX(0); }
+  80%, 100% { opacity: 0; transform: translateX(40.6%); }
+}
+
+@keyframes opening-j-spark-lifecycle {
+  0%, 51.6% { opacity: 0; }
+  53% { opacity: 1; }
+  70%, 100% { opacity: 0; }
 }
 
 @keyframes opening-tick-spin {
@@ -1194,37 +1165,17 @@
   100% { transform: rotate(360deg); }
 }
 
-.opening--reduced .opening__j-layer,
-.opening--reduced .opening__j-detail {
-  animation: none;
-  opacity: 1;
-  clip-path: none;
-  transform: none;
-}
+.opening--reduced .opening__mark-motion { animation: none; opacity: 1; transform: none; }
+.opening--reduced .opening__j-assembly { animation: none; opacity: 1; }
+.opening--reduced .opening__j-initial-lockup { animation: none; opacity: 0; }
+.opening--reduced .opening__j-piece { animation: none; opacity: 0; transform: none; }
+.opening--reduced .opening__j-settled { animation: none; opacity: 1; }
+.opening--reduced .opening__j-lock { animation: none; opacity: 0; }
+.opening--reduced .opening__j-sheen,
+.opening--reduced .opening__j-activation-bloom,
+.opening--reduced .opening__j-pulse-spark { animation: none; opacity: 0; }
+.opening--reduced .opening__orb-layer { animation: none; opacity: 1; transform: none; }
 
-.opening--reduced .opening__j-settled {
-  animation: none;
-  opacity: 1;
-  filter: none;
-}
-
-.opening--reduced .opening__j-mark {
-  animation: none;
-  filter: none;
-}
-
-.opening--reduced .opening__j-piece,
-.opening--reduced .opening__j-orb,
-.opening--reduced .opening__j-lock,
-.opening--reduced .opening__j-sheen {
-  animation: none;
-  opacity: 0;
-  filter: none;
-  transform: none;
-}
-
-.opening--reduced .opening__mark-motion {
-  animation: none;
-  opacity: 1;
-  transform: none;
+@media (max-width: 640px) {
+  .opening__mechanism { width: min(86vw, 62svh, 460px); }
 }

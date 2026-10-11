@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sonnet V8 opening · seven-state comparison</title>
+    <style>
+      :root { color-scheme: dark; font: 14px/1.55 Inter, "Segoe UI", sans-serif; background: #0b1015; color: #e7e2d6; }
+      * { box-sizing: border-box; }
+      body { margin: 0 auto; padding: 26px clamp(12px, 2.5vw, 36px) 44px; max-width: 1560px; }
+      h1, h2, p { margin: 0; }
+      h1 { font: 600 clamp(24px, 3vw, 36px)/1.15 Georgia, serif; }
+      h2 { color: #f0d383; font: 600 16px/1.3 Georgia, serif; }
+      .intro { display: flex; justify-content: space-between; align-items: start; gap: 20px; margin-bottom: 18px; }
+      .intro p { max-width: 980px; margin-top: 8px; color: #b9c5cb; }
+      .badge { padding: 7px 10px; border: 1px solid #bd9145; color: #e8c879; font: 700 10px/1 Arial, sans-serif; letter-spacing: .12em; white-space: nowrap; }
+      .note { padding: 12px 14px; margin-bottom: 20px; border-left: 3px solid #65c6dc; background: #14232c; color: #c5d1d6; font-size: 12px; }
+      .note a, .full-video { color: #83daf0; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .pose { overflow: hidden; border: 1px solid #34424b; background: #111a22; }
+      .pose header { padding: 12px 13px; }
+      .pose header p { margin-top: 4px; color: #aab8c0; font-size: 11px; }
+      .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #36434c; }
+      .cell { min-width: 0; background: #080d12; }
+      .cell h3 { margin: 0; padding: 6px 9px; color: #9baab2; font: 700 9px/1.2 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+      .cell img { display: block; width: 100%; aspect-ratio: 700 / 620; object-fit: cover; background: #020509; }
+      .full { margin-top: 20px; padding: 14px 16px; border: 1px solid #34424b; background: #101820; color: #bfccd1; font-size: 12px; }
+      .full strong { color: white; }
+      .full p + p { margin-top: 6px; }
+      @media (max-width: 750px) {
+        .intro { flex-direction: column; }
+        .grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 460px) {
+        body { padding-inline: 8px; }
+        .pair { grid-template-columns: 1fr; }
+        .cell img { aspect-ratio: 700 / 420; object-fit: contain; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="intro">
+      <div>
+        <h1>Sonnet V8 J assembly · seven-state comparison</h1>
+        <p>Each row pairs one authored Figma key pose with the corresponding frame from the real 1920×1080 Chrome run. The opening source remains the approved dark radial environment; these comparison crops focus on the central mark and its surrounding mechanism.</p>
+      </div>
+      <span class="badge">FEATURE REVIEW · OWNER ACCEPTANCE OPEN</span>
+    </header>
+    <aside class="note"><strong>Comparison method:</strong> runtime crops are centered 720×640 regions from the full Chrome captures so the V8 mark is shown at a scale comparable to the Figma storyboard artboard. The authored storyboard files are shown unmodified. Runtime labels use actual measured keypose times from `viewport-keypose-report.json`; capture latency explains small differences from requested timestamps. <a href="../../site-render-review/2026-10-11-opening-fidelity/qa-orb-joint-fixed/rerun-final/opening-final-uninterrupted-1920x1080.webm">Open the uninterrupted browser recording through the Home handoff</a>.</aside>
+    <main class="grid">
+      <article class="pose">
+        <header><h2>01 · Broken / Dormant</h2><p>Figma `3714:2` · Chrome capture at 0.651s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2.png" alt="Figma State 01 broken J parts around the dormant orb" /></div><div class="cell"><h3>Runtime · 0.651s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-2-runtime-crop.png" alt="Chrome Opening at 0.651 seconds" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>02 · Approach</h2><p>Figma `3714:530` · Chrome capture at 1.001s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-530.png" alt="Figma State 02, crown and hook approaching the shaft" /></div><div class="cell"><h3>Runtime · 1.001s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-530-runtime-crop.png" alt="Chrome Opening at 1.001 seconds" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>03 · Alignment</h2><p>Figma `3714:1058` · Chrome capture at 1.418s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1058.png" alt="Figma State 03, keyed joint alignment" /></div><div class="cell"><h3>Runtime · 1.418s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-1058-runtime-crop.png" alt="Chrome Opening at 1.418 seconds" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>04 · Mechanical lock</h2><p>Figma `3714:1575` · Chrome capture at 2.586s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1575.png" alt="Figma State 04, physical joint lock" /></div><div class="cell"><h3>Runtime · 2.586s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-1575-runtime-crop.png" alt="Chrome Opening at 2.586 seconds" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>05 · Cyan activation / pulse</h2><p>Figma `3714:2092` · Chrome capture at 3.103s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2092.png" alt="Figma State 05, cyan seam and conduit activation" /></div><div class="cell"><h3>Runtime · 3.103s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-2092-runtime-crop.png" alt="Chrome Opening at 3.103 seconds" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>06 · Material sheen</h2><p>Figma `3714:2609` · Chrome capture at 3.803s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2609.png" alt="Figma State 06, material sheen moving across the fused J" /></div><div class="cell"><h3>Runtime · 3.803s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-2609-runtime-crop.png" alt="Chrome Opening at 3.803 seconds" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>07 · Settled identity</h2><p>Figma `3714:3126` · Chrome capture at 4.154s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-3126.png" alt="Figma State 07, complete settled J and V8 orb" /></div><div class="cell"><h3>Runtime · 4.154s</h3><img src="captures/opening-seven-state-comparison-2026-10-11/3714-3126-runtime-crop.png" alt="Chrome Opening at 4.154 seconds" /></div></div>
+      </article>
+    </main>
+    <section class="full">
+      <p><strong>Chrome review findings:</strong> the three fragments remain recognizable through approach; the authored seam position lights after seating; the blue portal/plasma, gold ring, and contact relationship build behind the J and remain together at settle. No square matte was visible in the corrected activation frame. The final identity remains present as the opening fades into Home. The full screen record, 1440×720 capture, 390×844 captures, and reduced-motion final frame are retained beside the QA report.</p>
+      <p>Source evidence: Figma storyboard `3713:4`, editable rig `3712:2`, canonical exports `3735:2` and `3735:516`, and implementation notes `3737:2` / `3737:37`.</p>
+    </section>
+  </body>
+</html>

@@ -19,10 +19,10 @@ export const experienceIdentities = {
   "stush-patties": { mark: "/media/profile/stush-patties-logo.png", alt: "Stush Patties logo" },
 } as const;
 export const portfolioIdentity = {
-  mark: "/media/profile/j-candidate-06-m54.svg",
-  mark32: "/media/profile/j-candidate-06-s32.svg",
-  mark16: "/media/profile/j-candidate-06-xs16.svg",
-  alt: "Portfolio J mark",
+  mark: "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+  mark32: "/media/identity/sonnet-v8/figma-export/optical-32.png",
+  mark16: "/media/identity/sonnet-v8/figma-export/optical-16.png",
+  alt: "Portfolio J identity",
 } as const;
 export const projects: Project[] = [
   {
