@@ -169,6 +169,17 @@ describe("HomeExplore", () => {
     expect(shortDesktop).toMatch(/\.home-explore__confirm-area\s*\{[^}]*margin:\s*0\s+auto\s+8px/s);
   });
 
+  it("keeps dense mode previews and Confirm within a 720px desktop viewport", () => {
+    const css = readFileSync("src/home-explore.css", "utf8");
+    const veryShortDesktop = css.match(
+      /@media\s*\(min-width:\s*761px\)\s*and\s*\(max-width:\s*1500px\)\s*and\s*\(max-height:\s*740px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(veryShortDesktop).toMatch(/\.home-explore__preview-work\s+span\s*\{[^}]*min-height:\s*32px/s);
+    expect(veryShortDesktop).toMatch(/\.home-explore__build-grid\s*>\s*span\s*\{[^}]*min-height:\s*30px/s);
+    expect(veryShortDesktop).toMatch(/\.home-explore__confirm-area\s*\{[^}]*margin:\s*4px\s+auto\s+0/s);
+  });
+
   it("keeps Confirm inside the first view on medium-height desktop screens", () => {
     const css = readFileSync("src/home-explore.css", "utf8");
     const compactMediumDesktop = css.match(

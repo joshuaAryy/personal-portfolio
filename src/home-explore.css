@@ -949,6 +949,30 @@
   }
 }
 
+@media (min-width: 761px) and (max-width: 1500px) and (max-height: 740px) {
+  .home-explore__preview--hackathons {
+    gap: 6px;
+  }
+
+  .home-explore__preview-work span {
+    min-height: 32px;
+    padding: 3px 8px;
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .home-explore__build-grid > span {
+    min-height: 30px;
+    padding: 3px 8px;
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .home-explore__confirm-area {
+    margin: 4px auto 0;
+  }
+}
+
 @media (min-width: 761px) and (max-width: 1500px) and (min-height: 821px) and (max-height: 920px) {
   .home-explore {
     grid-template-rows: 35px 285px 10px minmax(390px, auto) auto;

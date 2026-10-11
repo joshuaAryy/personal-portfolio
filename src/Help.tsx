@@ -166,6 +166,35 @@ function useRailVisible() {
   return railVisible;
 }
 
+function useNarrowViewport() {
+  const [narrow, setNarrow] = useState(() =>
+    typeof window !== "undefined" && (window.visualViewport?.width ?? window.innerWidth) <= 620,
+  );
+
+  useEffect(() => {
+    const sync = () => setNarrow((window.visualViewport?.width ?? window.innerWidth) <= 620);
+    const viewport = window.visualViewport;
+    window.addEventListener("resize", sync);
+    viewport?.addEventListener("resize", sync);
+    return () => {
+      window.removeEventListener("resize", sync);
+      viewport?.removeEventListener("resize", sync);
+    };
+  }, []);
+
+  return narrow;
+}
+
+function narrowHomeSteps(railVisible: boolean) {
+  return [
+    { key: "utilities", selector: railVisible ? ".header-client-tools" : ".mobile-contact-row", title: "Top-level links", detail: utilityLinksDetail(railVisible) },
+    { key: "navigation", selector: ".home-explore__modes", title: "Mode navigation", detail: "Projects, Experience, Hackathons, and Education are the main destinations. The profile portrait opens Profile." },
+    { key: "back", selector: ".home-explore__back", title: "Back", detail: "Back returns to the previous portfolio screen when one is available." },
+    { key: "focus", selector: ".home-explore__selection", title: "Preview a mode", detail: "Choose a mode to preview its description and focus areas. Left and Right arrows compare modes; Home and End jump to the first or last." },
+    { key: "confirm", selector: ".home-explore__confirm", title: "Confirm", detail: "Confirm or press Enter to open the selected lobby." },
+  ];
+}
+
 function utilityLinksDetail(railVisible: boolean) {
   const location = railVisible
     ? "in the client toolbar"
@@ -420,18 +449,61 @@ function stepsFor(pathname: string, railVisible: boolean): HelpStep[] {
   ];
 }
 
-function HelpOverlay({ onClose }: { onClose: () => void }) {
+type ScrollPosition = { element: HTMLElement; top: number; left: number };
+
+function captureHomeCoachmarkScroll(): { x: number; y: number; elements: ScrollPosition[] } {
+  const selectors = narrowHomeSteps(false).map((step) => step.selector);
+  const elements = new Set<HTMLElement>();
+  for (const selector of selectors) {
+    let element = document.querySelector<HTMLElement>(selector);
+    while (element) {
+      if (element.scrollHeight > element.clientHeight + 1 || element.scrollWidth > element.clientWidth + 1) {
+        elements.add(element);
+      }
+      element = element.parentElement;
+    }
+  }
+  const scrollingElement = document.scrollingElement;
+  if (scrollingElement instanceof HTMLElement) elements.add(scrollingElement);
+  return {
+    x: window.scrollX,
+    y: window.scrollY,
+    elements: Array.from(elements, (element) => ({ element, top: element.scrollTop, left: element.scrollLeft })),
+  };
+}
+
+function restoreHomeCoachmarkScroll(snapshot: { x: number; y: number; elements: ScrollPosition[] }) {
+  snapshot.elements.forEach(({ element, top, left }) => {
+    if (!element.isConnected) return;
+    element.scrollTop = top;
+    element.scrollLeft = left;
+  });
+  window.scrollTo({ left: snapshot.x, top: snapshot.y, behavior: "instant" });
+}
+
+function HelpOverlay({ onClose }: { onClose: (restoreFocus?: boolean) => void }) {
   const location = useLocation();
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
   const dialogRef = useRef<HTMLElement>(null);
+  const coachmarkTitleRef = useRef<HTMLHeadingElement>(null);
+  const coachmarkScrollRef = useRef<ReturnType<typeof captureHomeCoachmarkScroll> | null>(null);
+  const [coachmarkPosition, setCoachmarkPosition] = useState({ left: 12, top: 110 });
+  const [homeStepIndex, setHomeStepIndex] = useState(0);
+  const restoreCoachmarkScroll = useRef(true);
   const railVisible = useRailVisible();
+  const narrowViewport = useNarrowViewport();
   const steps = stepsFor(location.pathname, railVisible);
   const isHome = location.pathname === "/home" || location.pathname === "/";
+  const isNarrowHomeCoachmark = isHome && narrowViewport;
+  const coachmarkSteps = narrowHomeSteps(railVisible);
+  const activeCoachmarkStep = coachmarkSteps[homeStepIndex];
   const isLobby = ["/projects", "/experience", "/hackathons", "/education"].includes(
     location.pathname,
   );
-  const homeHighlights = isHome
+  const homeHighlights = isNarrowHomeCoachmark
+    ? [activeCoachmarkStep.key]
+    : isHome
     ? ["utilities", "navigation", ...(railVisible ? ["rail"] : ["back"]), "focus", "confirm"]
     : [];
   const contextualHighlights = isHome ? [] : contextualSpotlights(location.pathname, railVisible);
@@ -440,10 +512,16 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     const frames = Array.from(document.querySelectorAll<HTMLElement>(".client-help-overlay__spotlight"));
     if (!frames.length) return;
 
+    if (isNarrowHomeCoachmark && !coachmarkScrollRef.current) {
+      coachmarkScrollRef.current = captureHomeCoachmarkScroll();
+    }
+
     const measureTargets = () => {
       frames.forEach((frame) => {
         const key = frame.dataset.helpTarget ?? "screen";
-        const selector = isHome
+        const selector = isNarrowHomeCoachmark
+          ? activeCoachmarkStep.selector
+          : isHome
           ? key === "utilities" && !railVisible ? ".mobile-contact-row" : homeSpotlightTargets[key]
           : frame.dataset.helpSelector;
         const target = selector ? document.querySelector<HTMLElement>(selector) : null;
@@ -454,25 +532,109 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
 
         const bounds = target.getBoundingClientRect();
         const inset = key === "screen" ? 12 : 8;
-        const left = Math.max(0, bounds.left - inset);
-        const top = Math.max(0, bounds.top - inset);
-        const right = Math.min(window.innerWidth, bounds.right + inset);
-        const bottom = Math.min(window.innerHeight, bounds.bottom + inset);
-        frame.hidden = right <= left || bottom <= top;
+        const visual = isNarrowHomeCoachmark ? window.visualViewport : null;
+        const viewportLeft = visual?.offsetLeft ?? 0;
+        const viewportTop = visual?.offsetTop ?? 0;
+        const viewportRight = viewportLeft + (visual?.width ?? window.innerWidth);
+        const viewportBottom = viewportTop + (visual?.height ?? window.innerHeight);
+        const fullyVisible = bounds.left >= viewportLeft
+          && bounds.top >= viewportTop
+          && bounds.right <= viewportRight
+          && bounds.bottom <= viewportBottom;
+        const left = Math.max(viewportLeft + 4, bounds.left - inset);
+        const top = Math.max(viewportTop + 4, bounds.top - inset);
+        const right = Math.min(viewportRight - 4, bounds.right + inset);
+        const bottom = Math.min(viewportBottom - 4, bounds.bottom + inset);
+        frame.hidden = right <= left || bottom <= top || (isNarrowHomeCoachmark && !fullyVisible);
         frame.style.left = `${left}px`;
         frame.style.top = `${top}px`;
         frame.style.width = `${Math.max(0, right - left)}px`;
         frame.style.height = `${Math.max(0, bottom - top)}px`;
+
+        if (isNarrowHomeCoachmark && !frame.hidden) {
+          const dialogBounds = dialogRef.current?.getBoundingClientRect();
+          const dialogWidth = dialogBounds?.width ?? Math.min(340, viewportRight - viewportLeft - 24);
+          const dialogHeight = dialogBounds?.height ?? 200;
+          const gap = 14;
+          const belowTop = bounds.bottom + gap;
+          const aboveTop = bounds.top - dialogHeight - gap;
+          const fitsBelow = belowTop + dialogHeight <= viewportBottom - 12;
+          const fitsAbove = aboveTop >= viewportTop + 12;
+          const desiredTop = fitsBelow ? belowTop : fitsAbove ? aboveTop :
+            bounds.top - dialogHeight - gap;
+          const positionedTop = Math.min(
+            viewportBottom - dialogHeight - 12,
+            Math.max(viewportTop + 12, desiredTop),
+          );
+          const desiredLeft = bounds.left + bounds.width / 2 - dialogWidth / 2;
+          const positionedLeft = Math.min(
+            viewportRight - dialogWidth - 12,
+            Math.max(viewportLeft + 12, desiredLeft),
+          );
+          setCoachmarkPosition((current) =>
+            current.left === positionedLeft && current.top === positionedTop
+              ? current
+              : { left: positionedLeft, top: positionedTop },
+          );
+        }
       });
     };
 
+    const ensureTargetVisible = () => {
+      if (!isNarrowHomeCoachmark) return;
+      const target = document.querySelector<HTMLElement>(activeCoachmarkStep.selector);
+      if (!target) return;
+      const bounds = target.getBoundingClientRect();
+      const visual = window.visualViewport;
+      const viewportLeft = visual?.offsetLeft ?? 0;
+      const viewportTop = visual?.offsetTop ?? 0;
+      const viewportRight = viewportLeft + (visual?.width ?? window.innerWidth);
+      const viewportBottom = viewportTop + (visual?.height ?? window.innerHeight);
+      const visible = bounds.left >= viewportLeft
+        && bounds.top >= viewportTop
+        && bounds.right <= viewportRight
+        && bounds.bottom <= viewportBottom;
+      if (!visible) {
+        const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+        target.scrollIntoView?.({ block: "center", inline: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+      }
+      requestAnimationFrame(measureTargets);
+    };
+
     measureTargets();
-    window.addEventListener("resize", measureTargets);
+    if (isNarrowHomeCoachmark) ensureTargetVisible();
+    window.addEventListener("resize", isNarrowHomeCoachmark ? ensureTargetVisible : measureTargets);
     document.addEventListener("scroll", measureTargets, true);
+    window.visualViewport?.addEventListener("resize", ensureTargetVisible);
+    window.visualViewport?.addEventListener("scroll", measureTargets);
     const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(measureTargets);
+    const activatedTarget = isNarrowHomeCoachmark
+      ? document.querySelector<HTMLElement>(activeCoachmarkStep.selector)
+      : null;
+    const selectionObserver = isNarrowHomeCoachmark && activeCoachmarkStep.key === "focus"
+      && typeof MutationObserver !== "undefined"
+      ? new MutationObserver(measureTargets)
+      : null;
+    if (activatedTarget && selectionObserver) {
+      selectionObserver.observe(activatedTarget, {
+        attributes: true,
+        childList: true,
+        characterData: true,
+        subtree: true,
+      });
+    }
+    const closeOnNavigation = () => {
+      restoreCoachmarkScroll.current = false;
+      onClose(false);
+    };
+    if (activatedTarget && ["utilities", "back", "confirm"].includes(activeCoachmarkStep.key)) {
+      activatedTarget.addEventListener("click", closeOnNavigation, true);
+    }
     frames.forEach((frame) => {
       const key = frame.dataset.helpTarget ?? "screen";
-      const selector = isHome
+      const selector = isNarrowHomeCoachmark
+        ? activeCoachmarkStep.selector
+        : isHome
         ? key === "utilities" && !railVisible ? ".mobile-contact-row" : homeSpotlightTargets[key]
         : frame.dataset.helpSelector;
       const target = selector ? document.querySelector<HTMLElement>(selector) : null;
@@ -480,14 +642,71 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
     });
 
     return () => {
-      window.removeEventListener("resize", measureTargets);
+      window.removeEventListener("resize", isNarrowHomeCoachmark ? ensureTargetVisible : measureTargets);
       document.removeEventListener("scroll", measureTargets, true);
+      window.visualViewport?.removeEventListener("resize", ensureTargetVisible);
+      window.visualViewport?.removeEventListener("scroll", measureTargets);
       observer?.disconnect();
+      selectionObserver?.disconnect();
+      activatedTarget?.removeEventListener("click", closeOnNavigation, true);
     };
-  }, [isHome, isLobby, railVisible]);
+  }, [isHome, isNarrowHomeCoachmark, isLobby, railVisible, activeCoachmarkStep, onClose]);
+
+  useLayoutEffect(() => {
+    if (!isNarrowHomeCoachmark) return;
+    coachmarkTitleRef.current?.focus({ preventScroll: true });
+  }, [homeStepIndex, isNarrowHomeCoachmark]);
+
+  useLayoutEffect(() => {
+    if (!isNarrowHomeCoachmark) return;
+    const target = document.querySelector<HTMLElement>(activeCoachmarkStep.selector);
+    if (!target) return;
+    const originalDescription = target.getAttribute("aria-describedby");
+    const originalTabIndex = target.getAttribute("tabindex");
+    const detailId = `${titleId}-detail`;
+    const describedBy = new Set((originalDescription ?? "").split(/\s+/).filter(Boolean));
+    describedBy.add(detailId);
+    const appliedDescription = Array.from(describedBy).join(" ");
+    target.setAttribute("aria-describedby", appliedDescription);
+    if (!target.matches("a[href], button, input, select, textarea, [tabindex]")) {
+      target.setAttribute("tabindex", "-1");
+    }
+
+    const returnToGuide = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || document.activeElement !== target) return;
+      event.preventDefault();
+      event.stopPropagation();
+      coachmarkTitleRef.current?.focus({ preventScroll: true });
+    };
+    document.addEventListener("keydown", returnToGuide, true);
+
+    return () => {
+      document.removeEventListener("keydown", returnToGuide, true);
+      if (target.getAttribute("aria-describedby") === appliedDescription) {
+        if (originalDescription === null) target.removeAttribute("aria-describedby");
+        else target.setAttribute("aria-describedby", originalDescription);
+      }
+      if (originalTabIndex === null && target.getAttribute("tabindex") === "-1") {
+        target.removeAttribute("tabindex");
+      }
+    };
+  }, [activeCoachmarkStep.selector, isNarrowHomeCoachmark, titleId]);
+
+  useLayoutEffect(() => {
+    if (!isNarrowHomeCoachmark || coachmarkScrollRef.current) return;
+    coachmarkScrollRef.current = captureHomeCoachmarkScroll();
+  }, [isNarrowHomeCoachmark]);
+
+  useLayoutEffect(() => () => {
+    if (restoreCoachmarkScroll.current && coachmarkScrollRef.current) {
+      restoreHomeCoachmarkScroll(coachmarkScrollRef.current);
+    }
+    restoreCoachmarkScroll.current = true;
+    coachmarkScrollRef.current = null;
+  }, [isNarrowHomeCoachmark]);
 
   return (
-    <div className="client-help-overlay">
+    <div className={`client-help-overlay${isNarrowHomeCoachmark ? " client-help-overlay--coachmark" : ""}`}>
       <div className="client-help-overlay__scrim" aria-hidden="true" />
       {isHome ? (
           homeHighlights.map((target) => (
@@ -512,16 +731,17 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
       ))}
       <section
         ref={dialogRef}
-        className={`client-help-overlay__dialog${isHome ? " client-help-overlay__dialog--home" : ""}`}
+        className={`client-help-overlay__dialog${isHome ? " client-help-overlay__dialog--home" : ""}${isNarrowHomeCoachmark ? " client-help-coachmark" : ""}`}
         role="dialog"
-        aria-modal="true"
+        aria-modal={isNarrowHomeCoachmark ? undefined : "true"}
         aria-labelledby={titleId}
+        style={isNarrowHomeCoachmark ? { left: `${coachmarkPosition.left}px`, top: `${coachmarkPosition.top}px` } : undefined}
         onKeyDown={(event) => {
           if (event.key === "Escape") {
             event.preventDefault();
             onClose();
           }
-          if (event.key === "Tab") {
+          if (!isNarrowHomeCoachmark && event.key === "Tab") {
             const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
               'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
             );
@@ -546,18 +766,63 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
           }
         }}
         onBlurCapture={(event) => {
+          if (isNarrowHomeCoachmark) return;
           if (event.relatedTarget instanceof Node && event.currentTarget.contains(event.relatedTarget)) return;
           closeRef.current?.focus();
         }}
       >
-        {isHome ? (
+        {isNarrowHomeCoachmark ? (
+          <>
+            <header className="client-help-coachmark__header">
+              <p className="client-help-coachmark__count" aria-live="polite" aria-atomic="true">
+                {homeStepIndex + 1} of {coachmarkSteps.length}
+              </p>
+              <button ref={closeRef} className="client-help-overlay__close" type="button" onClick={() => onClose()}>
+                Close <kbd>Esc</kbd>
+              </button>
+            </header>
+            <h2 ref={coachmarkTitleRef} id={titleId} className="client-help-coachmark__title" tabIndex={-1}>
+              {activeCoachmarkStep.title}
+            </h2>
+            <p id={`${titleId}-detail`} className="client-help-coachmark__detail">{activeCoachmarkStep.detail}</p>
+            <div className="client-help-coachmark__actions">
+              <button
+                className="client-help-coachmark__previous"
+                type="button"
+                disabled={homeStepIndex === 0}
+                onClick={() => setHomeStepIndex((index) => Math.max(0, index - 1))}
+              >
+                Previous
+              </button>
+              <button
+                className="client-help-coachmark__focus-target"
+                type="button"
+                onClick={() => {
+                  const target = document.querySelector<HTMLElement>(activeCoachmarkStep.selector);
+                  target?.focus({ preventScroll: true });
+                }}
+              >
+                Focus target <span aria-hidden="true">· Esc returns</span>
+              </button>
+              <button
+                className="client-help-coachmark__next"
+                type="button"
+                onClick={() => homeStepIndex === coachmarkSteps.length - 1
+                  ? onClose()
+                  : setHomeStepIndex((index) => Math.min(coachmarkSteps.length - 1, index + 1))}
+              >
+                {homeStepIndex === coachmarkSteps.length - 1 ? "Done" : "Next"}
+              </button>
+            </div>
+          </>
+        ) : isHome ? (
           <>
             <h2 id={titleId} className="client-help-overlay__sr-only">Home controls</h2>
             <button
               ref={closeRef}
               className="client-help-overlay__close client-help-overlay__close--floating"
               type="button"
-              onClick={onClose}
+              onClick={() => onClose()}
             >
               Close <kbd>Esc</kbd>
             </button>
@@ -572,23 +837,25 @@ function HelpOverlay({ onClose }: { onClose: () => void }) {
               ref={closeRef}
               className="client-help-overlay__close"
               type="button"
-              onClick={onClose}
+              onClick={() => onClose()}
             >
               Close <kbd>Esc</kbd>
             </button>
           </header>
         )}
-        <ol className={`client-help-overlay__steps${isHome ? " client-help-overlay__steps--home" : ""}`}>
-          {steps.map((step, index) => (
-            <li key={step.title}>
-              <span className="client-help-overlay__step-number">0{index + 1}</span>
-              <div>
-                <h3>{step.title}</h3>
-                <p>{step.detail}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
+        {!isNarrowHomeCoachmark && (
+          <ol className={`client-help-overlay__steps${isHome ? " client-help-overlay__steps--home" : ""}`}>
+            {steps.map((step, index) => (
+              <li key={step.title}>
+                <span className="client-help-overlay__step-number">0{index + 1}</span>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.detail}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        )}
         {!isHome && (
           <p className="client-help-overlay__footnote">
             The current screen stays open underneath this guide.
@@ -603,12 +870,26 @@ export function HelpExperienceProvider({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
-  const closeHelp = useCallback(() => setOpen(false), []);
-  const context = useMemo(() => ({ openHelp: () => setOpen(true) }), []);
+  const narrowViewport = useNarrowViewport();
+  const restoreFocusOnClose = useRef(true);
+  const restoreFocusTarget = useRef<HTMLElement | null>(null);
+  const closeHelp = useCallback((restoreFocus = true) => {
+    restoreFocusOnClose.current = restoreFocus;
+    setOpen(false);
+  }, []);
+  const context = useMemo(() => ({
+    openHelp: () => {
+      restoreFocusTarget.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      restoreFocusOnClose.current = true;
+      setOpen(true);
+    },
+  }), []);
 
   useEffect(() => {
     const state = location.state as { openHelp?: boolean } | null;
     if (!state?.openHelp) return;
+    restoreFocusTarget.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    restoreFocusOnClose.current = true;
     setOpen(true);
     navigate(location.pathname + location.search + location.hash, {
       replace: true,
@@ -619,7 +900,18 @@ export function HelpExperienceProvider({ children }: { children: ReactNode }) {
   useLayoutEffect(() => {
     if (!open) return;
     const client = document.querySelector<HTMLElement>(".client");
-    const active = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const active = restoreFocusTarget.current
+      ?? (document.activeElement instanceof HTMLElement ? document.activeElement : null);
+    const isNarrowHomeCoachmark = narrowViewport && ["/home", "/"].includes(location.pathname);
+    if (isNarrowHomeCoachmark) {
+      document.body.classList.add("client-help-coachmark-open");
+      return () => {
+        document.body.classList.remove("client-help-coachmark-open");
+        if (restoreFocusOnClose.current) active?.focus();
+        restoreFocusOnClose.current = true;
+        restoreFocusTarget.current = null;
+      };
+    }
     const previousAriaHidden = client ? client.getAttribute("aria-hidden") : null;
     const wasInert = client?.hasAttribute("inert") ?? false;
     document.querySelector<HTMLButtonElement>(".client-help-overlay__close")?.focus();
@@ -644,9 +936,11 @@ export function HelpExperienceProvider({ children }: { children: ReactNode }) {
         else client.setAttribute("aria-hidden", previousAriaHidden);
         if (!wasInert) client.removeAttribute("inert");
       }
-      active?.focus();
+      if (restoreFocusOnClose.current) active?.focus();
+      restoreFocusOnClose.current = true;
+      restoreFocusTarget.current = null;
     };
-  }, [open, closeHelp]);
+  }, [open, closeHelp, narrowViewport, location.pathname]);
 
   return (
     <HelpOverlayContext.Provider value={context}>

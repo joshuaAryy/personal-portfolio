@@ -21,7 +21,7 @@ function setNarrowViewport() {
   Object.defineProperty(window, "matchMedia", {
     configurable: true,
     value: vi.fn((query: string) => ({
-      matches: query === "(max-width: 900px)",
+      matches: query === "(max-width: 900px)" || query === "(max-width: 620px)",
       addEventListener: vi.fn(),
       removeEventListener: vi.fn(),
     })),
@@ -135,6 +135,140 @@ describe("contextual Help overlay", () => {
       Array.from(view.querySelectorAll(".client-help-overlay__steps h3")).map((node) => node.textContent),
     ).toEqual(["Top-level links", "Mode navigation", "Activity rail", "Preview a mode", "Confirm or go Back"]);
     expect(view.querySelector('[role="dialog"] h2')?.textContent).toBe("Home controls");
+  });
+
+  it("uses a nonmodal sequential coachmark for narrow Home Help", () => {
+    setNarrowViewport();
+    const view = renderApp("/home");
+    const trigger = view.querySelector<HTMLButtonElement>(".header-help");
+    if (!trigger) throw new Error("Home Help trigger is missing");
+    trigger.focus();
+    click(trigger);
+
+    const overlay = view.querySelector<HTMLElement>(".client-help-overlay--coachmark");
+    expect(overlay).not.toBeNull();
+    expect(view.querySelector('[role="dialog"][aria-modal="true"]')).toBeNull();
+    expect(view.querySelector(".client")?.hasAttribute("inert")).toBe(false);
+    expect(view.querySelectorAll(".client-help-overlay__spotlight")).toHaveLength(1);
+    expect(view.querySelector(".client-help-overlay__steps")).toBeNull();
+    expect(view.querySelector(".client-help-coachmark__count")?.textContent).toBe("1 of 5");
+    expect(document.body.classList.contains("client-help-coachmark-open")).toBe(true);
+    expect(view.querySelector("[data-help-target='utilities']")?.getAttribute("data-help-number")).toBe("01");
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    expect(view.querySelector(".client-help-coachmark__count")?.textContent).toBe("2 of 5");
+    expect(view.querySelector("[data-help-target='navigation']")).not.toBeNull();
+    expect(document.activeElement).toBe(view.querySelector(".client-help-coachmark__title"));
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    expect(view.querySelector(".client-help-coachmark__title")?.textContent).toBe("Back");
+    expect(view.querySelector("[data-help-target='back']")).not.toBeNull();
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    expect(view.querySelector(".client-help-coachmark__title")?.textContent).toBe("Preview a mode");
+    expect(view.querySelector("[data-help-target='focus']")).not.toBeNull();
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    expect(view.querySelector(".client-help-coachmark__count")?.textContent).toBe("5 of 5");
+    expect(view.querySelector(".client-help-coachmark__title")?.textContent).toBe("Confirm");
+    expect(view.querySelector("[data-help-target='confirm']")).not.toBeNull();
+    expect(view.querySelector(".client-help-coachmark__next")?.textContent).toContain("Done");
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    expect(view.querySelector(".client-help-overlay")).toBeNull();
+    expect(document.body.classList.contains("client-help-coachmark-open")).toBe(false);
+    expect(document.activeElement).toBe(trigger);
+    expect(document.body.style.overflow).toBe("");
+  });
+
+  it("associates the active target with its step and restores existing description attributes", () => {
+    setNarrowViewport();
+    const view = renderApp("/home");
+    const utilities = view.querySelector<HTMLElement>(".mobile-contact-row");
+    const navigation = view.querySelector<HTMLElement>(".home-explore__modes");
+    if (!utilities || !navigation) throw new Error("Narrow Home Help targets are missing");
+    utilities.setAttribute("aria-describedby", "existing-utilities-help");
+    navigation.setAttribute("aria-describedby", "existing-navigation-help");
+
+    click(view.querySelector(".header-help")!);
+
+    const detail = view.querySelector<HTMLElement>(".client-help-coachmark__detail");
+    const activeUtilitiesDescription = utilities.getAttribute("aria-describedby")?.split(/\s+/) ?? [];
+    expect(activeUtilitiesDescription).toContain("existing-utilities-help");
+    expect(activeUtilitiesDescription).toContain(detail?.id);
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    expect(utilities.getAttribute("aria-describedby")).toBe("existing-utilities-help");
+    expect(navigation.getAttribute("aria-describedby")?.split(/\s+/)).toContain(detail?.id);
+
+    click(view.querySelector(".client-help-coachmark__next")!);
+    click(view.querySelector(".client-help-coachmark__next")!);
+    click(view.querySelector(".client-help-coachmark__next")!);
+    const confirm = view.querySelector<HTMLElement>(".home-explore__confirm");
+    expect(confirm?.getAttribute("aria-describedby")?.split(/\s+/)).toContain(detail?.id);
+
+    click(view.querySelector(".client-help-overlay__close")!);
+    expect(navigation.getAttribute("aria-describedby")).toBe("existing-navigation-help");
+    expect(confirm?.hasAttribute("aria-describedby")).toBe(false);
+  });
+
+  it("lets keyboard users visit the highlighted target and return to the guide with Escape", () => {
+    setNarrowViewport();
+    const view = renderApp("/home");
+    click(view.querySelector(".header-help")!);
+
+    const focusTarget = view.querySelector<HTMLButtonElement>(".client-help-coachmark__focus-target");
+    const target = view.querySelector<HTMLElement>(".mobile-contact-row");
+    const title = view.querySelector<HTMLElement>(".client-help-coachmark__title");
+    if (!focusTarget || !target || !title) throw new Error("Coachmark keyboard controls are missing");
+    click(focusTarget);
+    expect(document.activeElement).toBe(target);
+    expect(view.querySelector(".client-help-overlay")).not.toBeNull();
+
+    act(() => {
+      document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true, cancelable: true }));
+    });
+    expect(document.activeElement).toBe(title);
+    expect(view.querySelector(".client-help-overlay")).not.toBeNull();
+    expect(view.querySelector(".client-help-coachmark__next")).not.toBeNull();
+  });
+
+  it("lets the active narrow Home target navigate through the coachmark", () => {
+    setNarrowViewport();
+    const view = renderApp("/home");
+    click(view.querySelector(".header-help")!);
+
+    for (let index = 0; index < 4; index += 1) {
+      click(view.querySelector(".client-help-coachmark__next")!);
+    }
+    expect(view.querySelector("[data-help-target='confirm']")).not.toBeNull();
+    expect(view.querySelector(".client")?.hasAttribute("inert")).toBe(false);
+
+    click(view.querySelector(".home-explore__confirm")!);
+
+    expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/projects");
+    expect(view.querySelector(".client-help-overlay")).toBeNull();
+  });
+
+  it("closes narrow Home Help on Escape and restores the invoking control", () => {
+    setNarrowViewport();
+    const scrollTo = vi.spyOn(window, "scrollTo").mockImplementation(() => {});
+    const view = renderApp("/home");
+    const trigger = view.querySelector<HTMLButtonElement>(".header-help");
+    if (!trigger) throw new Error("Home Help trigger is missing");
+    trigger.focus();
+    click(trigger);
+
+    const dialog = view.querySelector<HTMLElement>(".client-help-coachmark");
+    if (!dialog) throw new Error("Narrow Home coachmark is missing");
+    act(() => {
+      dialog.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true, cancelable: true }));
+    });
+
+    expect(view.querySelector(".client-help-overlay")).toBeNull();
+    expect(document.activeElement).toBe(trigger);
+    expect(document.body.classList.contains("client-help-coachmark-open")).toBe(false);
+    expect(scrollTo).toHaveBeenCalledWith(expect.objectContaining({ behavior: "instant" }));
   });
 
   it("places Home guide frames around the live controls instead of fixed viewport guesses", () => {
