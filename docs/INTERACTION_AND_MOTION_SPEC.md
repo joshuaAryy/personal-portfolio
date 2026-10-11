@@ -4,6 +4,14 @@
 
 This is the active behavior contract. Use the file key and inspection date in [FIGMA_NODE_MAP.md](FIGMA_NODE_MAP.md) to reach the live file. A named Figma frame records current appearance only to the extent noted in the status ledger; unresolved owner decisions below remain controlling. Owner-approved behavior overrides older authored reactions.
 
+## Pass 03 owner clarification (2026-10-11)
+
+This current contract supersedes the C06 Opening-only direction in the historical section below. Use Sonnet's existing editable seven-pose V8 storyboard and layered Figma rig as the visual source; empty motion-documentation sections do not block implementation. The seven poses are key poses, not sequential full-frame assets. Animate actual crown/shaft/hook vector layers continuously, with overlap and easing that preserve the assembled silhouette; activate cyan along real joint channels when each connection locks, illuminate the V8 orb, crossfade to the fused J without a silhouette pop, then run one restrained material sheen. Preserve the approved 5s overall Opening, one visible 360° tick turn (600–3,800ms), background, Skip, reduced-motion behavior, and Home handoff. Technical timing and evidence are recorded in [`MOTION_IMPLEMENTATION.md`](j-source-review/pass03/MOTION_IMPLEMENTATION.md).
+
+Permanent J selection is still owner-gated. [`logo-comparison.html`](j-source-review/pass03/logo-comparison.html) compares settled J + orb, settled J + orb + subtle cyan joint glow, and settled standalone J at actual header, Activity, and large identity sizes. It recommends the orb lockup for roomy identities and the ring-free optical J for compact placements; this is a recommendation for review, not permission to alter the permanent shared mark.
+
+Resume Found uses one layered mechanism rather than four independent stacked items: center the J in its inner scene, place `RESUME FOUND` in the inner central zone below/overlapping the lower J area, fill and retain cyan only in the bounded middle circular channel, place `VIEW RESUME` inside its attached lower trapezoid plate, and attach `CLOSE` to the lower portion of the outer gold ring. Reduced motion starts with the middle channel fully illuminated. Preserve focus trapping/restoration, Escape, both actions, and return to the originating route.
+
 ## Shared route and screen entry
 
 The owner direction and current Sol contract are recorded in [DESIGN_DECISIONS.md](DESIGN_DECISIONS.md#shared-route-entry-motion---sol-strategic-decision-2026-10-07). Route changes should read as the next League-client scene entering and assembling, not a generic page fade. Keep the shell stable and use one route-entry clock with semantic groups.
@@ -12,7 +20,7 @@ For lobbies, environment resolves first, followed by banner/frame (60-120ms), id
 
 Reduced motion shows the readable composition without blur, travel, or stagger; any opacity transition finishes within 100ms. Opening/C06 remains separate. Validate actual click-to-settle motion at desktop and narrow sizes, including rapid navigation and route re-entry; still screenshots alone do not prove choreography.
 
-## Opening and identity convergence
+## Historical Opening direction (C06; superseded by the 2026-10-11 contract above)
 
 - The 2026-10-07 owner direction supersedes the earlier v8 feature-opening treatment. The feature branch now targets Candidate 06 / keyed-forge: hero system 3679:2, optical family 3679:247 / 3679:311 / 3679:354, motion studies 3681:2 onward, and owner-review board 3682:2. Use authored forged-piece assembly, seam ignition, brief energy/material highlight, and a separate fast external radial tick field over an approximately 3.5-second sequence.
 - The opening has no LOADING label, progress bar, or fake loading semantics. Preserve Skip, a quick and readable reduced-motion handoff, and the identity-first purpose. The C06 radial interface belongs to the opening environment, not permanently around every static mark.

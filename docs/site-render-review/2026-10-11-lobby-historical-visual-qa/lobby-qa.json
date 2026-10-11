@@ -1,0 +1,2034 @@
+{
+  "routes": [
+    {
+      "status": 200,
+      "name": "projects",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/projects",
+      "title": "PROJECTS · FEATURED",
+      "doc": [
+        1920,
+        1080
+      ],
+      "main": {
+        "scrollWidth": 1560,
+        "scrollHeight": 998,
+        "clientWidth": 1560,
+        "clientHeight": 998
+      },
+      "env": {
+        "x": 0,
+        "y": 82,
+        "w": 1560,
+        "h": 998,
+        "right": 1560,
+        "bottom": 1080,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 30,
+        "y": 99.8,
+        "w": 271.3,
+        "h": 33,
+        "right": 301.3,
+        "bottom": 132.8,
+        "display": "flex",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 107,
+        "y": 84,
+        "w": 1346,
+        "h": 710.1,
+        "right": 1453,
+        "bottom": 794.1,
+        "display": "grid",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 107,
+        "y": 83.8,
+        "w": 246,
+        "h": 710.1,
+        "right": 353,
+        "bottom": 793.9,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 1081.1,
+        "y": 818.4,
+        "w": 421.2,
+        "h": 220,
+        "right": 1502.3,
+        "bottom": 1038.4,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "OPEN CASE STUDY↗",
+        "href": "/projects/food-tracker",
+        "rect": {
+          "x": 1101.09375,
+          "y": 908.3670654296875,
+          "w": 99.3125,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 30,
+          "y": 101.331298828125,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/profile/project-signal.svg",
+          "loaded": true,
+          "w": 120,
+          "h": 120,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "loaded": true,
+          "w": 4241,
+          "h": 1650,
+          "alt": "Fraymakers official wordmark"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "DATA"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "loaded": true,
+          "w": 310,
+          "h": 230,
+          "alt": "Crest project mark"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "DATA"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-owner-j.svg",
+          "loaded": true,
+          "w": 90,
+          "h": 90,
+          "alt": "Portfolio J medallion"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "loaded": true,
+          "w": 40,
+          "h": 40,
+          "alt": "Food Tracker approved project mark"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "MOBILE"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "loaded": true,
+          "w": 150,
+          "h": 150,
+          "alt": "Cho’Veigo match-path mark"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "loaded": true,
+          "w": 40,
+          "h": 40,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "experience",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/experience",
+      "title": "EXPERIENCE",
+      "doc": [
+        1920,
+        1080
+      ],
+      "main": {
+        "scrollWidth": 1600,
+        "scrollHeight": 970,
+        "clientWidth": 1600,
+        "clientHeight": 970
+      },
+      "env": {
+        "x": 0,
+        "y": 110,
+        "w": 1600,
+        "h": 970,
+        "right": 1600,
+        "bottom": 1080,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 30,
+        "y": 128,
+        "w": 293.9,
+        "h": 33,
+        "right": 323.9,
+        "bottom": 161,
+        "display": "flex",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 395,
+        "y": 197.3,
+        "w": 810,
+        "h": 601.4,
+        "right": 1205,
+        "bottom": 798.7,
+        "display": "grid",
+        "position": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -405, 0)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 395,
+        "y": 195.3,
+        "w": 246,
+        "h": 601.4,
+        "right": 641,
+        "bottom": 796.7,
+        "display": "flex",
+        "position": "relative",
+        "transform": "matrix(1, 0, 0, 1, 0, -2)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 1108.8,
+        "y": 858.5,
+        "w": 432,
+        "h": 180,
+        "right": 1540.8,
+        "bottom": 1038.5,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "VIEW EXPERIENCE↗",
+        "href": "/experience/living-in-silico",
+        "rect": {
+          "x": 1128.8125,
+          "y": 930.5025024414062,
+          "w": 98.25,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 30,
+          "y": 129.46202087402344,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "loaded": true,
+          "w": 120,
+          "h": 120,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "loaded": true,
+          "w": 96,
+          "h": 96,
+          "alt": "Living in Silico logo"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "loaded": true,
+          "w": 160,
+          "h": 200,
+          "alt": "Joshua Aryeetey portrait"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "loaded": true,
+          "w": 96,
+          "h": 96,
+          "alt": "Stush Patties logo"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "DATA"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "loaded": true,
+          "w": 96,
+          "h": 96,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "hackathons",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/hackathons",
+      "title": "HACKATHONS",
+      "doc": [
+        1920,
+        1080
+      ],
+      "main": {
+        "scrollWidth": 1600,
+        "scrollHeight": 970,
+        "clientWidth": 1600,
+        "clientHeight": 970
+      },
+      "env": {
+        "x": 0,
+        "y": 110,
+        "w": 1600,
+        "h": 970,
+        "right": 1600,
+        "bottom": 1080,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 30,
+        "y": 128,
+        "w": 289.1,
+        "h": 33,
+        "right": 319.1,
+        "bottom": 160.9,
+        "display": "flex",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 395,
+        "y": 197.3,
+        "w": 810,
+        "h": 601.4,
+        "right": 1205,
+        "bottom": 798.7,
+        "display": "grid",
+        "position": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -405, 0)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 395,
+        "y": 195.3,
+        "w": 246,
+        "h": 601.4,
+        "right": 641,
+        "bottom": 796.7,
+        "display": "flex",
+        "position": "relative",
+        "transform": "matrix(1, 0, 0, 1, 0, -2)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 1108.8,
+        "y": 858.8,
+        "w": 432,
+        "h": 180,
+        "right": 1540.8,
+        "bottom": 1038.8,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "VIEW HACKATHON↗",
+        "href": "/projects/crest",
+        "rect": {
+          "x": 1128.8125,
+          "y": 954.3631591796875,
+          "w": 98.578125,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 30,
+          "y": 129.44154357910156,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/lobby/hackathon-trophy.svg",
+          "loaded": true,
+          "w": 31,
+          "h": 31,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "loaded": true,
+          "w": 310,
+          "h": 230,
+          "alt": "Crest project mark"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "loaded": true,
+          "w": 160,
+          "h": 200,
+          "alt": "Joshua Aryeetey portrait"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "loaded": true,
+          "w": 310,
+          "h": 230,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "education",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "path": "/education",
+      "title": "EDUCATION",
+      "doc": [
+        1920,
+        1080
+      ],
+      "main": {
+        "scrollWidth": 1600,
+        "scrollHeight": 970,
+        "clientWidth": 1600,
+        "clientHeight": 970
+      },
+      "env": {
+        "x": 0,
+        "y": 110,
+        "w": 1600,
+        "h": 970,
+        "right": 1600,
+        "bottom": 1080,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 30,
+        "y": 128,
+        "w": 259.7,
+        "h": 33,
+        "right": 289.7,
+        "bottom": 160.9,
+        "display": "flex",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 395,
+        "y": 197.3,
+        "w": 810,
+        "h": 601.4,
+        "right": 1205,
+        "bottom": 798.7,
+        "display": "grid",
+        "position": "absolute",
+        "transform": "matrix(1, 0, 0, 1, -405, 0)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 395,
+        "y": 197.3,
+        "w": 246,
+        "h": 601.4,
+        "right": 641,
+        "bottom": 798.7,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 1108.8,
+        "y": 858.8,
+        "w": 432,
+        "h": 180,
+        "right": 1540.8,
+        "bottom": 1038.8,
+        "display": "block",
+        "position": "absolute",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "VIEW EDUCATION↗",
+        "href": "/education/projects",
+        "rect": {
+          "x": 1128.8125,
+          "y": 957.766845703125,
+          "w": 94.4375,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 30,
+          "y": 129.4417724609375,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": "Computer Engineering degree emblem"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "loaded": true,
+          "w": 160,
+          "h": 200,
+          "alt": "Joshua Aryeetey portrait"
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "loaded": true,
+          "w": 22,
+          "h": 22,
+          "alt": "SOFTWARE SPECIALIZATION"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": "Current coursework emblem"
+        },
+        {
+          "src": "/media/lobby/academic-expected-2028.svg",
+          "loaded": true,
+          "w": 22,
+          "h": 22,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "loaded": true,
+          "w": 22,
+          "h": 22,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "projects",
+      "viewport": [
+        390,
+        844
+      ],
+      "path": "/projects",
+      "title": "PROJECTS · FEATURED",
+      "doc": [
+        390,
+        3526
+      ],
+      "main": {
+        "scrollWidth": 390,
+        "scrollHeight": 3395,
+        "clientWidth": 390,
+        "clientHeight": 3395
+      },
+      "env": {
+        "x": 0,
+        "y": 68,
+        "w": 390,
+        "h": 776,
+        "right": 390,
+        "bottom": 844,
+        "display": "block",
+        "position": "fixed",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "w": 364,
+        "h": 48,
+        "right": 377,
+        "bottom": 138,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 2798,
+        "right": 377,
+        "bottom": 2952,
+        "display": "grid",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 72,
+        "y": 154,
+        "w": 246,
+        "h": 550,
+        "right": 318,
+        "bottom": 704,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 13,
+        "y": 3069.2,
+        "w": 364,
+        "h": 220,
+        "right": 377,
+        "bottom": 3289.2,
+        "display": "block",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "OPEN CASE STUDY↗",
+        "href": "/projects/food-tracker",
+        "rect": {
+          "x": 35,
+          "y": 3159.2333984375,
+          "w": 99.3125,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 13,
+          "y": 98.99920654296875,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/profile/project-signal.svg",
+          "loaded": true,
+          "w": 120,
+          "h": 120,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "loaded": true,
+          "w": 4241,
+          "h": 1650,
+          "alt": "Fraymakers official wordmark"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "DATA"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "loaded": true,
+          "w": 310,
+          "h": 230,
+          "alt": "Crest project mark"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "DATA"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-owner-j.svg",
+          "loaded": true,
+          "w": 90,
+          "h": 90,
+          "alt": "Portfolio J medallion"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "loaded": true,
+          "w": 40,
+          "h": 40,
+          "alt": "Food Tracker approved project mark"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "MOBILE"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "loaded": true,
+          "w": 160,
+          "h": 160,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "loaded": true,
+          "w": 150,
+          "h": 150,
+          "alt": "Cho’Veigo match-path mark"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "loaded": true,
+          "w": 40,
+          "h": 40,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "experience",
+      "viewport": [
+        390,
+        844
+      ],
+      "path": "/experience",
+      "title": "EXPERIENCE",
+      "doc": [
+        390,
+        2362
+      ],
+      "main": {
+        "scrollWidth": 390,
+        "scrollHeight": 2231,
+        "clientWidth": 390,
+        "clientHeight": 2231
+      },
+      "env": {
+        "x": 0,
+        "y": 68,
+        "w": 390,
+        "h": 776,
+        "right": 390,
+        "bottom": 844,
+        "display": "block",
+        "position": "fixed",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "w": 364,
+        "h": 48,
+        "right": 377,
+        "bottom": 138,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 1674,
+        "right": 377,
+        "bottom": 1828,
+        "display": "grid",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 72,
+        "y": 152,
+        "w": 246,
+        "h": 550,
+        "right": 318,
+        "bottom": 702,
+        "display": "flex",
+        "position": "relative",
+        "transform": "matrix(1, 0, 0, 1, 0, -2)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 13,
+        "y": 1946,
+        "w": 364,
+        "h": 180,
+        "right": 377,
+        "bottom": 2126,
+        "display": "block",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "VIEW EXPERIENCE↗",
+        "href": "/experience/living-in-silico",
+        "rect": {
+          "x": 35,
+          "y": 2018.014404296875,
+          "w": 98.25,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 13,
+          "y": 98.96464538574219,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "loaded": true,
+          "w": 120,
+          "h": 120,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "loaded": true,
+          "w": 96,
+          "h": 96,
+          "alt": "Living in Silico logo"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "loaded": true,
+          "w": 160,
+          "h": 200,
+          "alt": "Joshua Aryeetey portrait"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "loaded": true,
+          "w": 96,
+          "h": 96,
+          "alt": "Stush Patties logo"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "DATA"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "loaded": true,
+          "w": 96,
+          "h": 96,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "hackathons",
+      "viewport": [
+        390,
+        844
+      ],
+      "path": "/hackathons",
+      "title": "HACKATHONS",
+      "doc": [
+        390,
+        2362
+      ],
+      "main": {
+        "scrollWidth": 390,
+        "scrollHeight": 2231,
+        "clientWidth": 390,
+        "clientHeight": 2231
+      },
+      "env": {
+        "x": 0,
+        "y": 68,
+        "w": 390,
+        "h": 776,
+        "right": 390,
+        "bottom": 844,
+        "display": "block",
+        "position": "fixed",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "w": 364,
+        "h": 48,
+        "right": 377,
+        "bottom": 138,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 1674,
+        "right": 377,
+        "bottom": 1828,
+        "display": "grid",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 72,
+        "y": 152,
+        "w": 246,
+        "h": 550,
+        "right": 318,
+        "bottom": 702,
+        "display": "flex",
+        "position": "relative",
+        "transform": "matrix(1, 0, 0, 1, 0, -2)",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 13,
+        "y": 1945.8,
+        "w": 364,
+        "h": 180,
+        "right": 377,
+        "bottom": 2125.8,
+        "display": "block",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "VIEW HACKATHON↗",
+        "href": "/projects/crest",
+        "rect": {
+          "x": 35,
+          "y": 2041.402099609375,
+          "w": 98.578125,
+          "h": 12
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 13,
+          "y": 98.97853088378906,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/lobby/hackathon-trophy.svg",
+          "loaded": true,
+          "w": 31,
+          "h": 31,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "loaded": true,
+          "w": 310,
+          "h": 230,
+          "alt": "Crest project mark"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "AI"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "loaded": true,
+          "w": 160,
+          "h": 200,
+          "alt": "Joshua Aryeetey portrait"
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "SOFTWARE"
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": "RESEARCH"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "loaded": true,
+          "w": 34,
+          "h": 34,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "loaded": true,
+          "w": 310,
+          "h": 230,
+          "alt": ""
+        }
+      ]
+    },
+    {
+      "status": 200,
+      "name": "education",
+      "viewport": [
+        390,
+        844
+      ],
+      "path": "/education",
+      "title": "EDUCATION",
+      "doc": [
+        390,
+        2362
+      ],
+      "main": {
+        "scrollWidth": 390,
+        "scrollHeight": 2231,
+        "clientWidth": 390,
+        "clientHeight": 2231
+      },
+      "env": {
+        "x": 0,
+        "y": 68,
+        "w": 390,
+        "h": 776,
+        "right": 390,
+        "bottom": 844,
+        "display": "block",
+        "position": "fixed",
+        "transform": "none",
+        "backgroundImage": "linear-gradient(rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%), url(\"http://127.0.0.1:5174/media/lobby/party-background-original.jpg\")",
+        "backgroundPosition": "50% 0%, 50% 0%",
+        "backgroundSize": "cover, cover",
+        "mask": "linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 46%, rgba(0, 0, 0, 0.7) 78%, rgba(0, 0, 0, 0) 100%)"
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "w": 364,
+        "h": 48,
+        "right": 377,
+        "bottom": 138,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "banners": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 1674,
+        "right": 377,
+        "bottom": 1828,
+        "display": "grid",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "firstBanner": {
+        "x": 72,
+        "y": 154,
+        "w": 246,
+        "h": 550,
+        "right": 318,
+        "bottom": 704,
+        "display": "flex",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "selected": {
+        "x": 13,
+        "y": 1946,
+        "w": 364,
+        "h": 180,
+        "right": 377,
+        "bottom": 2126,
+        "display": "block",
+        "position": "relative",
+        "transform": "none",
+        "backgroundImage": "none",
+        "backgroundPosition": "0% 0%",
+        "backgroundSize": "auto",
+        "mask": "none"
+      },
+      "action": {
+        "text": "VIEW EDUCATION↗",
+        "href": "/education/projects",
+        "rect": {
+          "x": 35,
+          "y": 2045.0135498046875,
+          "w": 94.4375,
+          "h": 12.0001220703125
+        }
+      },
+      "back": {
+        "href": "/home",
+        "visible": true,
+        "rect": {
+          "x": 13,
+          "y": 98.96470642089844,
+          "w": 30,
+          "h": 30
+        }
+      },
+      "images": [
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": "Computer Engineering degree emblem"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "loaded": true,
+          "w": 160,
+          "h": 200,
+          "alt": "Joshua Aryeetey portrait"
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "loaded": true,
+          "w": 22,
+          "h": 22,
+          "alt": "SOFTWARE SPECIALIZATION"
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "loaded": true,
+          "w": 246,
+          "h": 716,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": "Current coursework emblem"
+        },
+        {
+          "src": "/media/lobby/academic-expected-2028.svg",
+          "loaded": true,
+          "w": 22,
+          "h": 22,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "loaded": true,
+          "w": 22,
+          "h": 22,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "loaded": true,
+          "w": 412,
+          "h": 190,
+          "alt": ""
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "loaded": true,
+          "w": 50,
+          "h": 50,
+          "alt": ""
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

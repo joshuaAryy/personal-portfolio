@@ -1,6 +1,20 @@
 # Implementation Status
 
-## Current Pass 03 checkpoint (2026-10-11 follow-up)
+## Current Pass 03 correction candidate (2026-10-11)
+
+**Repository branch:** `feat/portfolio-integration`; the current implementation is being assembled in isolated worktree branch `codex/owner-correction-pass-03`. **Current committed HEAD and `origin/feat/portfolio-integration`:** `13ac6277866ea7e26d71e7d18a11824df4732b18`. The worktree contains a bounded set of intentional uncommitted source and evidence changes; no Preview has yet been deployed from it. Previous immutable Preview `https://3a0bef13.joshuaik2.pages.dev/` remains available for comparison. Production remains untouched and the persistent goal remains active.
+
+The 2026-10-11 owner clarification makes the existing editable Sonnet V8 seven-pose storyboard/layered rig authoritative for Opening motion. Codex now composes its actual vector crown, shaft, and hook layers with continuous transforms, seam-channel activation, V8 orb illumination, fused-J settle, and material sheen. Normal Opening remains 5 seconds, including one visible 360° tick revolution from 600–3,800ms. The static permanent-logo alternatives are shown for owner review only in [the J comparison board](j-source-review/pass03/logo-comparison.html); the site-wide identity was not promoted from that board.
+
+Resume Found now follows the owner's explicit concentric-layer interpretation: J and title in the inner zone, completed cyan energy in the Figma-sized bounded middle channel, View Resume on the attached lower trapezoid, and Close attached to the outer ring base. Desktop, narrow, empty, partial, full, and reduced-motion browser captures are documented in [the Resume geometry comparison](site-render-review/2026-10-11-resume-found-concentric-check/owner-geometry-refresh/README.md). The static identity comparison and Opening motion details are in [the J comparison board](j-source-review/pass03/logo-comparison.html) and [the Opening implementation record](j-source-review/pass03/MOTION_IMPLEMENTATION.md).
+
+The owner-annotated Profile reference was reconciled against fresh installed-Chrome renders. At 1536×1360 the signal row sits about 160–185px lower than the annotated screenshot and the scenic lower band is reduced to about 200px; 1440×900, 1920×1080, and 1920×768 fit without desktop scrolling. The four trigger panels attach within 0.06px of their signal centers. No further Profile code change was justified; the current local render and previous Preview match at the compared dimensions. Captures and measurements are in [the Profile geometry review](site-render-review/2026-10-11-profile-geometry-refresh/README.md).
+
+**Verification state:** focused Opening tests had passed in the prior implementation run. Final full-suite/build/browser checks and a new feature Preview are still pending for this candidate; do not call this a review checkpoint yet.
+
+## Previous Pass 03 checkpoint (2026-10-11 follow-up; superseded by the correction candidate above)
+
+The checkpoint summary below describes the state before the current correction worktree. Its Preview remains an immutable comparison target, but its statements that Resume Found placement is an owner decision and the J lane is unavailable are superseded above.
 
 **Application source:** `7f1aeb7e0915903aea1690200ce399c00076afb3` on `feat/portfolio-integration`. **Immutable feature Preview:** https://3a0bef13.joshuaik2.pages.dev/. Wrangler deployment `3a0bef13-4f94-4a3f-8640-00efa60e0589` reports Environment `Preview`, Branch `feat/portfolio-integration`, Source `7f1aeb7`. Deployed JavaScript/CSS bytes match the build. Owner approval remains pending. This is a review checkpoint, not goal completion. Production was not targeted.
 

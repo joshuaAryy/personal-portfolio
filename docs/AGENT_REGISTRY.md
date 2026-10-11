@@ -1,6 +1,19 @@
 # Persistent Agent Registry
 
-## Live Pass 03 scheduler (2026-10-11)
+## Current Pass 03 scheduler (2026-10-11 owner clarification)
+
+Mingo is integrating the bounded correction candidate in worktree branch `codex/owner-correction-pass-03`. The current committed HEAD `13ac6277866ea7e26d71e7d18a11824df4732b18` matches `origin/feat/portfolio-integration`; the remaining correction set is uncommitted. The last immutable Preview remains `https://3a0bef13.joshuaik2.pages.dev/`; production has not been targeted.
+
+- **Opening / J:** The existing editable Sonnet V8 Figma storyboard and layers are available and authoritative. No new Sonnet work is requested or required. Codex implements the continuous vector-layer animation and owns runtime verification/documentation. The separate static logo board is review-only; no permanent identity promotion is authorized.
+- **Resume Found:** owner layer mapping is visually checked against Figma node `2407:340`. Its 464px cyan measuring circuit is clipped into the middle annulus; the title is inside the central scene, View Resume is on the attached lower plate, and Close is on the outer-ring base. Independent Runtime QA checked 0/169/360° fill, narrow layout, reduced motion, focus, Escape, Close, View Resume, inert underlay, and media loading. Durable evidence is in `site-render-review/2026-10-11-resume-found-concentric-check/owner-geometry-refresh/`.
+- **Profile:** current Chrome was reconciled against the owner annotations and far-above overlay screenshot. Four overlays attach to their triggers; desktop scene fits without scroll at the requested height matrix. The current source matches the preceding Preview at 1536×1360 and 1440×900, so no additional profile correction was made. Evidence: `site-render-review/2026-10-11-profile-geometry-refresh/`.
+- **Current root task:** the installed-Chrome lobby audit is complete. Its measured width difference was reconciled against the latest owner direction, which explicitly prefers the narrower non-Projects banners; the current 810px treatment remains unchanged. Finish the final integrated verification, commit only intentional Pass 03 files, push the feature branch, deploy a new immutable feature Preview, and verify that deployed revision and media.
+- **Execution capacity:** Frontend Owner and Product Coverage completed their bounded work. Runtime QA completed the Resume and four-lobby browser audit and is available for an independent deployed-Preview check. No extra implementation worker or Sol decision is needed for the current explicit scope.
+- **Open after checkpoint:** owner review of the new Preview, final permanent J selection, and live screen-reader interaction. These do not make the current implementation checkpoint equivalent to portfolio completion.
+
+## Previous live Pass 03 scheduler snapshot (2026-10-11; superseded)
+
+The scheduler state and blockers in this historical snapshot precede the latest owner clarification. In particular, the Sonnet-unavailable and Resume-placement-open entries below are no longer current.
 
 Mingo owns integration and the persistent goal. The bounded short-height Home and narrow Help correction is implemented and independently QA-verified. Current immutable Preview: `3a0bef13` from application source `7f1aeb7e0915903aea1690200ce399c00076afb3`, on `feat/portfolio-integration`; Wrangler confirms Preview environment/source and deployed JS/CSS match the local build. At 1440×720 all four Home modes keep Confirm visible without page or main-region scrolling; the narrow Home Help coachmark's five targets, keyboard activation, ARIA association, focus restoration, reduced motion, and desktop unchanged state were checked. No production deployment occurred. Evidence and acceptance gates are in [the Pass 03 report](site-render-review/2026-10-10-owner-correction-pass-03/REPORT.md).
 

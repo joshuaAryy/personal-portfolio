@@ -165,8 +165,9 @@
   z-index: 3;
   top: 50%;
   left: 50%;
-  width: 70%;
-  height: 70%;
+  /* Figma 2407:343's 464px measuring circuit surrounds 2407:344's 424px inner race. */
+  width: 87.55%;
+  height: 87.55%;
   border-radius: 50%;
   background: conic-gradient(
     from -90deg,
@@ -175,7 +176,7 @@
     rgba(76, 224, 232, .06) var(--resume-orb-fill) 360deg
   );
   filter: drop-shadow(0 0 0 transparent);
-  mask: radial-gradient(circle closest-side, transparent 86%, #000 89%, #000 95%, transparent 99%);
+  mask: radial-gradient(circle closest-side, transparent 90.5%, #000 91.5%, #000 96%, transparent 98%);
   opacity: 0;
   pointer-events: none;
   translate: -50% -50%;
@@ -240,7 +241,7 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 79.8%;
+  top: 73%;
   left: 50%;
   display: flex;
   width: min(240px, 45.3cqw);
@@ -324,10 +325,10 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 84.8%;
+  top: 85.5%;
   left: 50%;
-  width: min(150px, 28.3cqw);
-  aspect-ratio: 180 / 52;
+  width: min(170px, 32.1cqw);
+  aspect-ratio: 212 / 70;
   height: auto;
   display: flex;
   align-items: center;
@@ -393,11 +394,11 @@
 
 .resume-found__close {
   position: absolute;
-  top: 93%;
+  top: 97.8%;
   left: 50%;
   z-index: 4;
   width: min(94px, 18cqw);
-  height: clamp(16px, 3.4cqw, 18px);
+  height: clamp(12px, 2.8cqw, 15px);
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -621,6 +622,7 @@
   .resume-mechanism__orb-energy {
     --resume-orb-fill: 360deg;
     opacity: .86;
+    background: conic-gradient(from -90deg, rgba(76, 224, 232, .68) 0deg 360deg);
     animation: none;
   }
 

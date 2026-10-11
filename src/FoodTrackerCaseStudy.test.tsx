@@ -132,7 +132,7 @@ describe("Food Tracker product story", () => {
     expect(insights).toContain("Calorie trend");
     expect(insights).toContain("Fiber trend");
     expect(insights).toContain("Daily completeness");
-    expect(insights).toContain("Three Figma design studies use illustrative data");
+    expect(insights).toContain("Three Figma studies use illustrative data. Macro composition is an app capture with sample data.");
     expect(insights).toContain("APP CAPTURE · SAMPLE DATA");
     expect(insights).toContain("FIGMA DESIGN STUDY · ILLUSTRATIVE DATA");
     expect(insights).not.toContain("Phase 24");
@@ -156,6 +156,41 @@ describe("Food Tracker product story", () => {
     expect(markup).not.toContain("insights-week-current.png");
   });
 
+  it("keeps internal capture provenance and fixture values out of public media copy", () => {
+    const markup = renderFoodTracker();
+    const logging = section(markup, "food-logging", "food-architecture");
+    const insights = section(markup, "food-insights", "food-search");
+    const publicCopy = storyText(`${logging} ${insights}`).toLowerCase();
+
+    for (const internalLabel of [
+      "phase 24",
+      "phase 17.5",
+      "phase 15.5",
+      "qa-a",
+      "qa staging",
+      "pre-redesign",
+      "fixture",
+      "sep 8",
+      "oct 7",
+      "five logged days",
+    ]) expect(publicCopy).not.toContain(internalLabel);
+
+    for (const testValue of [
+      "1,013 kcal",
+      "2,184 kcal",
+      "21% protein",
+      "56% carbohydrates",
+      "23% fat",
+      "24% protein",
+      "49% carbohydrates",
+      "27% fat",
+    ]) expect(publicCopy).not.toContain(testValue);
+
+    expect(publicCopy).toContain("figma design study · illustrative data");
+    expect(publicCopy).toContain("app capture · sample data");
+    expect(publicCopy).toContain("not user outcomes");
+  });
+
   it("groups the five logging starts into three understandable paths with one reviewed destination", () => {
     const markup = renderFoodTracker();
     const logging = section(markup, "food-logging", "food-architecture");
@@ -164,6 +199,9 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("FIND + REUSE");
     expect(logging).toContain("DESCRIBE + REVIEW");
     expect(logging).toContain("COMBINE + ENTER");
+    expect(logging).toContain('data-route-family="find-reuse"');
+    expect(logging).toContain('data-route-family="describe-review"');
+    expect(logging).toContain('data-route-family="combine-enter"');
     expect(logging).toContain("Different inputs. The same reviewed log.");
     expect(logging).toContain('aria-label="Shared save path"');
     expect(logging).toContain("Search &amp; reuse");
@@ -506,7 +544,7 @@ describe("Food Tracker product story", () => {
       "Overview Nutrients Recommendations",
       "Explore nutrient, calorie, macro, weight, hydration, and consistency trends across selected ranges.",
       "unknown values remain distinct from zero.",
-      "Three Figma design studies use illustrative data",
+      "Figma studies use illustrative data",
     ]) expect(insightsCopy).toContain(copy);
     expect(insightsCopy).not.toContain("0 eligible logged days");
     expect(insightsCopy).not.toContain("30 unlogged");
@@ -520,20 +558,22 @@ describe("Food Tracker product story", () => {
     expect(insightsCopy).not.toContain("1,013 kcal");
   });
 
-  it("groups Insights evidence as one lead view with three supporting captures", () => {
+  it("separates the authentic app capture from three grouped Figma design studies", () => {
     const markup = renderFoodTracker();
     const insights = section(markup, "food-insights", "food-search");
     const captures = insights.slice(insights.indexOf('class="food-insight-path__captures"'));
 
     expect(captures).toContain('data-gallery="insights-evidence"');
-    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--lead"');
-    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--supporting"');
-    expect((captures.match(/food-insight-path__capture--supporting/g) ?? []).length).toBe(3);
+    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--lead" data-evidence-type="app-capture"');
+    expect(captures).toContain('class="food-insight-path__design-studies" role="group" aria-label="Three Figma design studies"');
+    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="figma-design-study"');
+    expect((captures.match(/data-evidence-type="figma-design-study"/g) ?? []).length).toBe(3);
+    expect(captures.indexOf('data-evidence-type="app-capture"')).toBeLessThan(captures.indexOf('aria-label="Three Figma design studies"'));
     expect(captures).toContain("Calorie trend");
     expect(captures).toContain("Macro composition");
     expect(captures).toContain("Fiber trend");
     expect(captures).toContain("Daily completeness");
-    expect(captures).toContain("Three Figma design studies use illustrative data");
+    expect(captures).toContain("Figma studies use illustrative data");
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {

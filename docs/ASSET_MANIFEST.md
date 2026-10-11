@@ -8,6 +8,8 @@ Repository boundary: a path under `public/` in this manifest does not by itself 
 
 Source path audit, 2026-10-07: current source references resolve in the working tree and Chrome route checks found no broken page assets. This branch adds the C06 optical J files and the privacy-cropped Cho’Veigo excerpt to runtime use; those files are included in the current feature checkpoint. This is an asset availability check, not a claim of publication clearance or visual acceptance.
 
+**Pass 03 owner clarification (2026-10-11):** the Opening now uses the existing Sonnet V8 editable artwork/layer system from Figma `3325:191`; Codex-authored runtime exports are grouped under `public/media/opening/j-sonnet-motion-v8/`. Source selection, continuous-piece animation, hashes, and timing are documented in [`MOTION_IMPLEMENTATION.md`](j-source-review/pass03/MOTION_IMPLEMENTATION.md). The C06 files remain preserved and the shared header/activity J component still points to the existing C06 optical family; the Opening change does not silently promote or replace the permanent site-wide J. The three V8 static lockups are comparison-only in [`logo-comparison.html`](j-source-review/pass03/logo-comparison.html). Owner selection remains open.
+
 ## Tracked media and historical local exports
 
 ### Profile project identity assets
@@ -18,7 +20,7 @@ Home direction: preserve the approved four-destination structure. The selected i
 
 Home and Resume Found use dedicated summary-rail Activity Art from shell `2356:611`, separate from the project identity marks shown in project lists and cards. React now uses these exact Figma exports for Food Tracker, Cho'Veigo, Living in Silico, Stush Patties, and Crest, plus the Portfolio's separate J-and-ring treatment. Keep the 54px SVGs in their authored 38px frames and the 50px Food Tracker SVG in its 34px frame; preserve intrinsic asset dimensions and allow the authored glow to extend outside each frame. Compare these source-aligned assets in the browser; this is not rendered acceptance.
 
-**Current feature-branch identity (owner direction, 2026-10-07):** `src/identity/JMark.tsx` now resolves the C06/keyed-forge asset family for feature review. The hero construction is Figma `3679:2`; optical variants are `3679:247`, `3679:311`, and `3679:354`; motion studies are under `3681:2`; review board `3682:2`. Production continues to use archive `159:2`; C06 is not production approval. The historical comparison notes below remain records of prior candidates, not current implementation instructions. The old Codex Pass16-80/`3364:2` lineage remains rejected as a design branch only. Keep ring-free small optical variants rather than scaling the hero.
+**Shared feature-branch identity (owner direction, 2026-10-07; Opening use superseded 2026-10-11):** `src/identity/JMark.tsx` and the portfolio data identity references still resolve the C06/keyed-forge optical family for static feature review (`3679:247`, `3679:311`, `3679:354`). The Opening now uses the existing V8 layered treatment documented above. Production continues to use archive `159:2`; neither C06 nor V8 has received permanent identity approval. The historical comparison notes below remain provenance, not current instructions. The old Codex Pass16-80/`3364:2` lineage remains rejected as a design branch only. Keep ring-free small optical variants rather than scaling hero artwork.
 
 | File | Use | Provenance and display status |
 |---|---|---|

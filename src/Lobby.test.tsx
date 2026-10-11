@@ -64,14 +64,21 @@ describe("lobby banner environment", () => {
     expect(bannerGroup).toMatch(/right:\s*6%/);
     expect(bannerGroup).toMatch(/bottom:\s*29%/);
     expect(bannerGroup).toMatch(/left:\s*6%/);
-    expect(categoryBanners).toMatch(/right:\s*12%/);
-    expect(categoryBanners).toMatch(/left:\s*12%/);
+    expect(categoryBanners).toMatch(/top:\s*9%/);
+    expect(categoryBanners).toMatch(/bottom:\s*29%/);
+    expect(categoryBanners).toMatch(/left:\s*50%/);
+    expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
+    expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
     expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,/);
-    expect(categoryBanners).toMatch(/gap:\s*clamp\(18px,\s*3vw,\s*46px\)/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(16px,\s*2\.5vw,\s*36px\)/);
+    const desktopBalanceSlots = css.match(/@media \(min-width: 901px\)\s*\{\s*\.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
+    expect(desktopBalanceSlots).toMatch(/top:\s*13\.5%/);
+    expect(desktopBalanceSlots).toMatch(/right:\s*calc\(50% - min\(26%,\s*405px\) - 94px\)/);
+    expect(desktopBalanceSlots).toMatch(/left:\s*calc\(50% - min\(26%,\s*405px\) - 94px\)/);
     expect(mobileRulesForGroup).toMatch(/position:\s*relative/);
     expect(mobileRulesForGroup).toMatch(/inset:\s*auto/);
     expect(mobileRulesForGroup).toMatch(/width:\s*100%/);
-    expect(mobileRules).toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{\s*left:\s*0;\s*right:\s*0;/);
+    expect(mobileRules).toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{\s*top:\s*auto;\s*left:\s*0;\s*right:\s*0;\s*width:\s*100%;\s*transform:\s*none;/);
     expect(mobileEnvironment).toMatch(/top:\s*68px/);
 
     for (const mode of ["projects", "experience", "hackathons", "education"] as const) {

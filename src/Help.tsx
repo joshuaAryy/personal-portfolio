@@ -78,7 +78,7 @@ function contextualSpotlights(pathname: string, railVisible: boolean): HelpSpotl
       { key: "utilities", selector: utilities, number: "01" },
       { key: "demo-selector", selector: ".demo-selector", number: "02" },
       { key: "demo-player", selector: ".demo-stage", number: "03" },
-      { key: "food-demo", selector: ".demo-stage", number: "04" },
+      { key: "food-demo", selector: '.demo-selector__button[data-node-id="1316:103"]', number: "04" },
       { key: "profile-navigation", selector: ".profile-nav", number: "04" },
     ];
   }

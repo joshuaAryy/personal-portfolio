@@ -1,0 +1,757 @@
+{
+  "viewport": [
+    1440,
+    900
+  ],
+  "states": {
+    "empty": {
+      "fill": "0deg",
+      "opacity": "0",
+      "background": "conic-gradient(from -90deg, rgba(76, 224, 232, 0.68) 0deg, rgba(76, 224, 232, 0.68) -8deg, rgb(186, 255, 251) -2deg, rgb(186, 255, 251) 0deg, rgba(76, 224, 232, 0.06) 0deg, rgba(76, 224, 232, 0.06) 360deg)",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)",
+      "mechanism": {
+        "x": 334.96875,
+        "y": 170.078125,
+        "width": 530,
+        "height": 530,
+        "right": 864.96875,
+        "bottom": 700.078125
+      },
+      "j": {
+        "x": 480.08831787109375,
+        "y": 315.19769287109375,
+        "width": 239.77899169921875,
+        "height": 239.77899169921875,
+        "right": 719.8673095703125,
+        "bottom": 554.9766845703125
+      },
+      "title": {
+        "x": 479.96875,
+        "y": 556.96875,
+        "width": 240,
+        "height": 24,
+        "right": 719.96875,
+        "bottom": 580.96875
+      },
+      "action": {
+        "x": 514.96875,
+        "y": 623.21875,
+        "width": 170,
+        "height": 56.125,
+        "right": 684.96875,
+        "bottom": 679.34375
+      },
+      "close": {
+        "x": 552.96875,
+        "y": 688.5145874023438,
+        "width": 94,
+        "height": 14.828125,
+        "right": 646.96875,
+        "bottom": 703.3427124023438
+      },
+      "assets": [
+        {
+          "src": "/media/profile/j-candidate-06-m54.svg",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "complete": true,
+          "naturalWidth": 1280,
+          "naturalHeight": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "complete": true,
+          "naturalWidth": 234,
+          "naturalHeight": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "complete": true,
+          "naturalWidth": 230,
+          "naturalHeight": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "complete": true,
+          "naturalWidth": 530,
+          "naturalHeight": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "complete": true,
+          "naturalWidth": 212,
+          "naturalHeight": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "complete": true,
+          "naturalWidth": 212,
+          "naturalHeight": 70
+        },
+        {
+          "src": "/media/profile/j-candidate-06-m54.svg",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        }
+      ]
+    },
+    "half": {
+      "fill": "180deg",
+      "opacity": "0.43",
+      "background": "conic-gradient(from -90deg, rgba(76, 224, 232, 0.68) 0deg, rgba(76, 224, 232, 0.68) 172deg, rgb(186, 255, 251) 178deg, rgb(186, 255, 251) 180deg, rgba(76, 224, 232, 0.06) 180deg, rgba(76, 224, 232, 0.06) 360deg)",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)",
+      "mechanism": {
+        "x": 334.96875,
+        "y": 170.078125,
+        "width": 530,
+        "height": 530,
+        "right": 864.96875,
+        "bottom": 700.078125
+      },
+      "j": {
+        "x": 480.0703125,
+        "y": 315.1796875,
+        "width": 239.796875,
+        "height": 239.796875,
+        "right": 719.8671875,
+        "bottom": 554.9765625
+      },
+      "title": {
+        "x": 479.96875,
+        "y": 556.96875,
+        "width": 240,
+        "height": 24,
+        "right": 719.96875,
+        "bottom": 580.96875
+      },
+      "action": {
+        "x": 514.96875,
+        "y": 623.21875,
+        "width": 170,
+        "height": 56.125,
+        "right": 684.96875,
+        "bottom": 679.34375
+      },
+      "close": {
+        "x": 552.96875,
+        "y": 688.40625,
+        "width": 94,
+        "height": 14.828125,
+        "right": 646.96875,
+        "bottom": 703.234375
+      },
+      "assets": [
+        {
+          "src": "/media/profile/j-candidate-06-m54.svg",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "complete": true,
+          "naturalWidth": 1280,
+          "naturalHeight": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "complete": true,
+          "naturalWidth": 234,
+          "naturalHeight": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "complete": true,
+          "naturalWidth": 230,
+          "naturalHeight": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "complete": true,
+          "naturalWidth": 530,
+          "naturalHeight": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "complete": true,
+          "naturalWidth": 212,
+          "naturalHeight": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "complete": true,
+          "naturalWidth": 212,
+          "naturalHeight": 70
+        },
+        {
+          "src": "/media/profile/j-candidate-06-m54.svg",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        }
+      ]
+    },
+    "settled": {
+      "fill": "360deg",
+      "opacity": "0.86",
+      "background": "conic-gradient(from -90deg, rgba(76, 224, 232, 0.68) 0deg, rgba(76, 224, 232, 0.68) 352deg, rgb(186, 255, 251) 358deg, rgb(186, 255, 251) 360deg, rgba(76, 224, 232, 0.06) 360deg, rgba(76, 224, 232, 0.06) 360deg)",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)",
+      "mechanism": {
+        "x": 334.96875,
+        "y": 170.078125,
+        "width": 530,
+        "height": 530,
+        "right": 864.96875,
+        "bottom": 700.078125
+      },
+      "j": {
+        "x": 480.0703125,
+        "y": 315.1796875,
+        "width": 239.796875,
+        "height": 239.796875,
+        "right": 719.8671875,
+        "bottom": 554.9765625
+      },
+      "title": {
+        "x": 479.96875,
+        "y": 556.96875,
+        "width": 240,
+        "height": 24,
+        "right": 719.96875,
+        "bottom": 580.96875
+      },
+      "action": {
+        "x": 514.96875,
+        "y": 623.21875,
+        "width": 170,
+        "height": 56.125,
+        "right": 684.96875,
+        "bottom": 679.34375
+      },
+      "close": {
+        "x": 552.96875,
+        "y": 688.40625,
+        "width": 94,
+        "height": 14.828125,
+        "right": 646.96875,
+        "bottom": 703.234375
+      },
+      "assets": [
+        {
+          "src": "/media/profile/j-candidate-06-m54.svg",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "complete": true,
+          "naturalWidth": 1280,
+          "naturalHeight": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "complete": true,
+          "naturalWidth": 234,
+          "naturalHeight": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "complete": true,
+          "naturalWidth": 228,
+          "naturalHeight": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "complete": true,
+          "naturalWidth": 230,
+          "naturalHeight": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "complete": true,
+          "naturalWidth": 530,
+          "naturalHeight": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "complete": true,
+          "naturalWidth": 212,
+          "naturalHeight": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "complete": true,
+          "naturalWidth": 212,
+          "naturalHeight": 70
+        },
+        {
+          "src": "/media/profile/j-candidate-06-m54.svg",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        }
+      ]
+    }
+  },
+  "narrow": {
+    "viewport": [
+      390,
+      844
+    ],
+    "document": [
+      390,
+      905
+    ],
+    "fill": "360deg",
+    "opacity": "0.86",
+    "mechanism": {
+      "x": 16,
+      "y": 159.515625,
+      "width": 358,
+      "height": 358,
+      "right": 374,
+      "bottom": 517.515625
+    },
+    "title": {
+      "x": 113.9140625,
+      "y": 420.84375,
+      "width": 162.171875,
+      "height": 16.203125,
+      "right": 276.0859375,
+      "bottom": 437.046875
+    },
+    "action": {
+      "x": 137.546875,
+      "y": 465.59375,
+      "width": 114.90625,
+      "height": 37.9375,
+      "right": 252.453125,
+      "bottom": 503.53125
+    },
+    "close": {
+      "x": 162.78125,
+      "y": 509.625,
+      "width": 64.4375,
+      "height": 12,
+      "right": 227.21875,
+      "bottom": 521.625
+    },
+    "assets": [
+      {
+        "src": "/media/profile/j-candidate-06-m54.svg",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/profile/topbar-account-ring.png",
+        "complete": true,
+        "naturalWidth": 160
+      },
+      {
+        "src": "/media/profile/topbar-avatar.png",
+        "complete": true,
+        "naturalWidth": 64
+      },
+      {
+        "src": "/media/opening/gameflow-background.jpg",
+        "complete": true,
+        "naturalWidth": 1280
+      },
+      {
+        "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+        "complete": true,
+        "naturalWidth": 228
+      },
+      {
+        "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+        "complete": true,
+        "naturalWidth": 228
+      },
+      {
+        "src": "/media/opening/j-sonnet-v8/j-face.svg",
+        "complete": true,
+        "naturalWidth": 228
+      },
+      {
+        "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+        "complete": true,
+        "naturalWidth": 234
+      },
+      {
+        "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+        "complete": true,
+        "naturalWidth": 228
+      },
+      {
+        "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+        "complete": true,
+        "naturalWidth": 230
+      },
+      {
+        "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+        "complete": true,
+        "naturalWidth": 530
+      },
+      {
+        "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+        "complete": true,
+        "naturalWidth": 212
+      },
+      {
+        "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+        "complete": true,
+        "naturalWidth": 212
+      },
+      {
+        "src": "/media/profile/j-candidate-06-m54.svg",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/lobby/activity-add.svg",
+        "complete": true,
+        "naturalWidth": 13
+      },
+      {
+        "src": "/media/lobby/activity-list.svg",
+        "complete": true,
+        "naturalWidth": 8
+      },
+      {
+        "src": "/media/lobby/activity-collapse.svg",
+        "complete": true,
+        "naturalWidth": 7
+      },
+      {
+        "src": "/media/profile/food-tracker-mark.svg",
+        "complete": true,
+        "naturalWidth": 40
+      },
+      {
+        "src": "/media/profile/food-tracker-mark.svg",
+        "complete": true,
+        "naturalWidth": 40
+      },
+      {
+        "src": "/media/profile/choveigo-mark.svg",
+        "complete": true,
+        "naturalWidth": 150
+      },
+      {
+        "src": "/media/profile/profile-crest-emblem.png",
+        "complete": true,
+        "naturalWidth": 310
+      },
+      {
+        "src": "/media/profile/fraymakers-logo.png",
+        "complete": true,
+        "naturalWidth": 4241
+      },
+      {
+        "src": "/media/profile/living-in-silico-logo.png",
+        "complete": true,
+        "naturalWidth": 96
+      },
+      {
+        "src": "/media/profile/stush-patties-logo.png",
+        "complete": true,
+        "naturalWidth": 96
+      }
+    ]
+  },
+  "reducedMotion": {
+    "fill": "360deg",
+    "opacity": "0.86",
+    "animation": "none",
+    "background": "conic-gradient(from -90deg, rgba(76, 224, 232, 0.68) 0deg, rgba(76, 224, 232, 0.68) 360deg)"
+  },
+  "errors": []
+}

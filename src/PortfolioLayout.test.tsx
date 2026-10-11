@@ -168,7 +168,8 @@ describe("League client shell", () => {
       "/resume",
     ]);
     expect(css).toMatch(/\.header-client-tools\s*\{[^}]*padding-left:\s*clamp\(14px,[^}]*border-left:\s*1px solid/s);
-    expect(css).toMatch(/\.client--home-shell \.header-client-tools\s*\{[^}]*margin-left:\s*auto/s);
+    expect(css).toMatch(/\.header-client-tools\s*\{[^}]*margin-left:\s*auto/s);
+    expect(css).not.toContain(".client--home-shell .header-client-tools");
   });
 
   it("keeps Resume primary and Email clearly actionable across narrow contact rows", () => {

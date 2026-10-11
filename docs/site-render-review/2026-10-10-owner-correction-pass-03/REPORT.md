@@ -1,6 +1,19 @@
 # Owner Correction Pass 03 — Review Record
 
-**Status:** REVIEW CHECKPOINT READY / OWNER APPROVAL PENDING. The deployed Preview is immutable; the persistent portfolio goal remains active.
+**Status:** CURRENT CORRECTION CANDIDATE IN PROGRESS. The prior Preview remains immutable; this worktree has not yet produced a new Preview. The persistent portfolio goal remains active.
+
+## Latest owner clarification and implementation follow-up (2026-10-11)
+
+This section is the current Pass 03 source of truth and supersedes the earlier owner-decision/model-availability notes farther down this historical review record.
+
+- **Current Git state:** the isolated branch is `codex/owner-correction-pass-03`; committed HEAD `13ac6277866ea7e26d71e7d18a11824df4732b18` matches `origin/feat/portfolio-integration`. The correction candidate contains further intentional, uncommitted source and evidence changes. The immutable Preview remains `https://3a0bef13.joshuaik2.pages.dev/` (application source `7f1aeb7e0915903aea1690200ce399c00076afb3`); no Preview has been cut from this candidate.
+- **Opening / J:** Sonnet's existing editable seven-pose V8 storyboard and layered Figma rig are the authoritative visual source. No additional Sonnet task is needed. Codex uses the actual crown, shaft, hook, orb, and seam artwork in `public/media/opening/j-sonnet-motion-v8/`; CSS transform keyposes continuously interpolate the three pieces, then masked SVG seam activation, the luminous V8 orb, fused-J settle, and one material sheen complete the assembly. The code does not swap seven full-state images. Timing remains 5,000ms overall; the external ticks complete one visible clockwise revolution from 600ms to 3,800ms. `docs/j-source-review/pass03/MOTION_IMPLEMENTATION.md` records the implementation and phase timing. The full Chrome recording is retained at `opening/opening-chrome-full-sequence-1920x1080.webm`.
+- **Permanent J:** `docs/j-source-review/pass03/logo-comparison.html` compares (1) settled J + V8 orb, (2) settled J + orb + subtle State 05 joint glow, and (3) settled ring-free J at the real header, Activity, and larger identity sizes. The board includes a placement recommendation. It is review-only: the shared application J was not promoted or changed by this comparison. Recommended use is the orb lockup where it has room, and the optically drawn ring-free J in compact row/favicon contexts; the owner retains the permanent-identity decision.
+- **Resume Found:** the owner clarified the mechanism as layered geometry: the J and `RESUME FOUND` occupy the inner scene, a persistent cyan fill stays within the Figma middle channel (`2407:343`, 464×464px inside the 530×530px mechanism), `VIEW RESUME` sits in the attached lower trapezoid, and `CLOSE` attaches to the outer gold ring. Current Chrome captures are at 1440×900 and 390×844; empty, half, full, and reduced-motion states are retained in `site-render-review/2026-10-11-resume-found-concentric-check/owner-geometry-refresh/`. The earlier instruction to move Close into the blue plate is superseded. Focus, Escape, Close, and View Resume are also under independent Runtime QA.
+- **Profile:** the supplied annotated screenshot and far-above-overlay problem capture were checked against fresh Chrome renders. At the owner's 1536×1360 viewport, the current signal row is 160–185px lower than the annotation and leaves roughly 200px of scenic lower background instead of the marked 315–380px band. All four open panels attach to their triggers. The current local source matches the previous Preview at 1536×1360 and 1440×900, so this pass made no additional Profile code change. The Profile matrix and overlay captures are in `site-render-review/2026-10-11-profile-geometry-refresh/`.
+- **Visual acceptance boundary:** the three-variant identity comparison board and actual Chrome Opening recording are retained in `j-source-review/pass03/`. Durable Opening frames show dormant, fragment approach, lock, cyan activation, fused transition, sheen, and final hold; exact radial samples show a visible full revolution while the scene is present. These establish implementation evidence, not owner approval. Resume screenshots and measurements are documented in the geometry-refresh README. No owner approval is implied by implementation verification.
+- **Owner motion references:** both locally supplied MP4s were opened and inspected in installed Chrome at their encoded playback cadence. `league opening.mp4` decodes as 1920×1080, 4.800s, with browser frame-callback spacing of 16.667ms (~60fps); it shows the League emblem resolving into a large circular tick/radial loading composition and then a restrained progress treatment. `half of ready check.mp4` decodes as 1920×1080, 12.971s, with 33.333ms callback spacing (~30fps); the ready-check has a dimmed client underlay, scenic orb, nested ring geometry, accept plate, lower decline control, and cyan energy advancing around the ring before the next client state. These are motion/design references only; no Riot video was copied into the portfolio. The portfolio adaptation retains the owner-directed identity animation and one-time bounded orb-channel completion without queue/progress semantics.
+- **Next queue:** finish durable status reconciliation, run final tests/build/diff checks, then create and verify a new immutable feature Preview. Production remains untouched. No strategic Sol decision is needed for the now-explicit owner direction.
 
 **Feature branch target:** `feat/portfolio-integration`
 **Isolated work branch:** `codex/owner-correction-pass-03`
@@ -9,12 +22,12 @@
 **Previous immutable Preview:** <https://21b9ff43.joshuaik2.pages.dev/>
 **Previous application source:** `5f6fc30443ad2d0177ee3c7299a50e1a318168f9`
 **Previous immutable feature Preview:** <https://c7b3f4c5.joshuaik2.pages.dev/>
-**Current application source deployed:** `6a297d0bf5812863ec6eeae73882d4005295c9ac`
-**Current immutable feature Preview:** <https://343f7910.joshuaik2.pages.dev/>
-**Current remote feature tip:** `6a297d0bf5812863ec6eeae73882d4005295c9ac`
+**Prior application source deployed before the latest correction:** `6a297d0bf5812863ec6eeae73882d4005295c9ac`
+**Prior immutable feature Preview:** <https://343f7910.joshuaik2.pages.dev/>
+**Remote feature tip at that deployment:** `6a297d0bf5812863ec6eeae73882d4005295c9ac`
 **Production:** untouched.
 
-## Owner-reference reconciliation follow-up (2026-10-10)
+## Owner-reference reconciliation follow-up (2026-10-10; historical snapshot)
 
 The six October 10 owner photographs were compared with matching current local and deployed Preview renders. No residual Home, Profile, lobby, or Help correction was justified, so application code was left unchanged. The capture set is in `%TEMP%\portfolio-oct10-residual`.
 
@@ -22,10 +35,10 @@ The six October 10 owner photographs were compared with matching current local a
 - Profile 1920×1080 keeps the four-signal row together at y=779–1058. All four hover panels were captured. Their connector anchors align to their respective signal centers; the panels remain below the header and clear of the Activity rail. Captures: `profile-{projects,experience,hackathon,academics}-1920x1080.png`.
 - The lobbies match the preserved historical centered banner treatment in current Chrome. No new top-origin or fade experiment was introduced.
 - Help markers align to current target bounds in Home, Profile, lobbies, case studies, Education, and Resume. The current X destination remains `https://x.com/Cartizionplane`.
-- Resume local and Preview geometry matches. The current stack is `J → RESUME FOUND → VIEW RESUME → CLOSE`, with a completed cyan middle ring. The Figma layer geometry and owner’s current-composition photo show that same order, while the latest written correction asks to move View Resume higher and place Close in the current blue-plate region. That action placement remains the only owner decision requested; no speculative layout change was made.
+- Resume local and Preview geometry matched in this snapshot. Its final action-placement status was later clarified by the owner; see the latest follow-up above.
 - Food Tracker needs no further imagery edit for this bounded pass: the existing authentic macro capture and three clearly labeled illustrative Figma studies remain the verified composition. No internal capture identifiers were added to public captions.
 
-After that review, a concrete short-wide Activity rail defect was fixed and deployed as a new immutable Preview. The current review target is <https://343f7910.joshuaik2.pages.dev/> at application source `6a297d0bf5812863ec6eeae73882d4005295c9ac`. The requested Sonnet J lane remains unavailable in this runtime; the existing J assets were not replaced.
+After that review, a concrete short-wide Activity rail defect was fixed and deployed as a new immutable Preview. At that historical checkpoint the review target was <https://343f7910.joshuaik2.pages.dev/> at application source `6a297d0bf5812863ec6eeae73882d4005295c9ac`. The requested Sonnet J lane remains unavailable in this runtime; the existing J assets were not replaced. The later Figma-layer implementation direction supersedes that status above.
 
 ## Reconciliation and preservation
 
@@ -49,7 +62,7 @@ Owner references were found under `C:\Users\samue\Downloads\portfolio-owner-refe
 - The centered historical banner composition from the preserved `6dcaf8e` visual state is retained across all four lobbies. Projects remains wider; Experience, Hackathons, and Education use the narrower centered composition. Desktop/narrow screenshots were compared with the preserved historical captures. The separate owner-mentioned SHA `8697bfef` does not resolve locally, so `6dcaf8e` is identified as the visual reference rather than asserted to be that exact commit.
 - Journey, Crest, Personal Highlights, Living in Silico, the broader Cho’Veigo case-study story, Education's four-card structure, and Home's overall composition were preserved.
 
-### Opening and identity specialist boundary
+### Opening and identity specialist boundary (historical snapshot; superseded 2026-10-11)
 
 - The existing Opening is 5.0 seconds overall; the radial tick field runs one complete visible 360° revolution over 3.2 seconds after a 600ms delay. It completes around 3.8 seconds, while the scene remains visible until about 4.84 seconds before the 160ms handoff fade. Skip/reduced-motion behavior was not changed.
 - Current Opening continues to use the editable historical V8 J baseline and existing three-piece motion. No new J design or animation rewrite was made: the owner requested a Sonnet-led identity specialist, but Sonnet is unavailable in the collaboration runtime. This lane remains blocked pending that model capability; no substitute design is presented as the specialist result.

@@ -6126,7 +6126,7 @@
   }
 }
 
-/* Insights evidence groups one lead trend with three related supporting views. */
+/* Distinguish the runtime capture from the three grouped Figma design studies. */
 .food-insight-path__captures[data-gallery="insights-evidence"] {
   grid-template-columns: repeat(12, minmax(0, 1fr));
   align-items: stretch;
@@ -6151,22 +6151,61 @@
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead {
-  grid-column: span 6;
-  grid-template-columns: minmax(174px, 1.05fr) minmax(0, .95fr);
-  align-items: center;
+  grid-column: span 4;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
+  border-top: 2px solid rgba(87, 198, 203, .72);
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies {
+  display: grid;
+  min-width: 0;
+  grid-column: span 8;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  align-items: stretch;
+  gap: 10px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies-heading {
+  display: flex;
+  grid-column: 1 / -1;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin: 0;
+  padding: 3px 2px 9px;
+  border-bottom: 1px solid rgba(227, 197, 126, .3);
+  color: var(--food-muted);
+  font-size: 11px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies-heading > .food-figure__index {
+  color: var(--food-gold);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: .08em;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--study {
+  grid-column: span 1;
+  grid-template-columns: minmax(0, 1fr);
+  align-content: start;
   border-top: 2px solid rgba(227, 197, 126, .58);
 }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--supporting {
-  grid-column: span 6;
-  grid-template-columns: minmax(174px, 1.05fr) minmax(0, .95fr);
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
   align-items: center;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen {
-  min-height: 0;
+  display: flex;
+  min-height: 238px;
   height: auto;
   align-items: center;
+  justify-content: center;
   padding: 12px 10px;
   background: #e9ebe7;
 }
@@ -6175,12 +6214,25 @@
   width: auto;
   height: auto;
   max-width: 100%;
-  max-height: 260px;
+  max-height: 218px;
   object-fit: contain;
+  object-position: center;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
-  max-height: 318px;
+  max-height: 350px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen {
+  min-height: 366px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen {
+  min-height: 204px;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen > img {
+  max-height: 224px;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
@@ -6211,11 +6263,20 @@
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead {
     grid-column: 1 / -1;
-    grid-template-columns: minmax(150px, .7fr) minmax(0, 1.3fr);
+    grid-template-columns: minmax(150px, .55fr) minmax(0, 1.45fr);
+    align-items: center;
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--supporting {
-    grid-column: span 1;
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies {
+    grid-column: 1 / -1;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen {
+    min-height: 292px;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
+    max-height: 276px;
   }
 }
 
@@ -6227,22 +6288,111 @@
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--supporting {
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--study {
     grid-column: 1;
-    grid-template-columns: minmax(116px, .72fr) minmax(0, 1.28fr);
+    grid-template-columns: minmax(132px, .9fr) minmax(0, 1.1fr);
     align-items: center;
   }
 
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies {
+    grid-column: 1;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 3px;
+    padding-bottom: 7px;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
+    grid-column: 1;
+    grid-template-columns: minmax(132px, .9fr) minmax(0, 1.1fr);
+  }
+
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen {
+    min-height: 0;
     padding: 8px;
   }
 
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--study .food-insight-path__capture-screen,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen {
+    min-height: 0;
+  }
+
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen > img,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
-    max-height: 220px;
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen > img {
+    max-height: 184px;
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
     padding: 12px;
+  }
+}
+
+/* Color and border cues let the three entry families scan as distinct routes. */
+.food-log-transaction__route-family {
+  --route-family-accent: var(--food-teal);
+  display: grid;
+  gap: 0;
+  padding: 10px 11px 11px;
+  border: 1px solid rgba(148, 178, 183, .2);
+  border-left: 2px solid var(--route-family-accent);
+  background: rgba(9, 23, 29, .55);
+}
+
+.food-log-transaction__route-family[data-route-family="find-reuse"] {
+  --route-family-accent: var(--food-teal);
+}
+
+.food-log-transaction__route-family[data-route-family="describe-review"] {
+  --route-family-accent: #c7a9f2;
+}
+
+.food-log-transaction__route-family[data-route-family="combine-enter"] {
+  --route-family-accent: var(--food-gold);
+}
+
+.food-log-transaction__route-family > span {
+  margin-bottom: 8px;
+  color: var(--route-family-accent);
+}
+
+.food-log-transaction__route-family[data-route-family="describe-review"] .food-log-transaction__route-grid {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.food-log-transaction__route-family .food-log-transaction__route {
+  border-top-color: color-mix(in srgb, var(--route-family-accent) 58%, transparent);
+}
+
+.food-log-transaction__route-family .food-log-transaction__route:hover,
+.food-log-transaction__route-family .food-log-transaction__route:focus-visible {
+  border-color: var(--route-family-accent);
+  background: color-mix(in srgb, var(--route-family-accent) 12%, #0d2026);
+}
+
+.food-log-transaction__route-family .food-log-transaction__route:focus-visible {
+  outline: 2px solid var(--route-family-accent);
+  outline-offset: 2px;
+}
+
+.food-log-transaction__route-family .food-log-transaction__route[aria-pressed="true"] {
+  border-color: var(--route-family-accent);
+  border-top-color: var(--route-family-accent);
+  background: color-mix(in srgb, var(--route-family-accent) 16%, #09151b);
+}
+
+.food-log-transaction__route-family .food-log-transaction__route svg {
+  stroke: var(--route-family-accent);
+}
+
+@media (max-width: 600px) {
+  .food-log-transaction__route-family {
+    padding: 9px 9px 10px;
   }
 }

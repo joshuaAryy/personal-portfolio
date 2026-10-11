@@ -1945,8 +1945,15 @@
   }
 
   .main--profile .identity-panel {
-    transform: scale(.84);
-    transform-origin: top left;
+    scale: .84;
+    transform-origin: top center;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) and (max-height: 820px) {
+  .main--profile .identity-panel {
+    scale: .84;
+    transform-origin: top center;
   }
 }
 

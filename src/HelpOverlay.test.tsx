@@ -338,7 +338,7 @@ describe("contextual Help overlay", () => {
   it.each([
     ["/profile", [["01", ".header-client-tools"], ["02", ".profile-signal-grid"], ["03", ".profile-nav"], ["04", ".top-nav"], ["04", ".rail"]]],
     ["/profile/journey", [["01", ".header-client-tools"], ["02", ".journey-page"], ["03", ".journey-locator"], ["04", ".profile-nav"], ["04", ".top-nav"], ["04", ".rail"]]],
-    ["/profile/demos", [["01", ".header-client-tools"], ["02", ".demo-selector"], ["03", ".demo-stage"], ["04", ".demo-stage"], ["04", ".profile-nav"]]],
+    ["/profile/demos", [["01", ".header-client-tools"], ["02", ".demo-selector"], ["03", ".demo-stage"], ["04", '.demo-selector__button[data-node-id="1316:103"]'], ["04", ".profile-nav"]]],
     ["/profile/highlights", [["01", ".header-client-tools"], ["02", ".personal-highlights"], ["03", ".profile-nav"], ["04", ".top-nav"], ["04", ".rail"]]],
     ["/projects/food-tracker", [["01", ".header-client-tools"], ["02", ".main h1"], ["03", ".food-case-nav__chapters"], ["04", ".top-nav"], ["04", ".rail"]]],
     ["/education/projects", [["01", ".header-client-tools"], ["02", ".education-projects__list"], ["03", ".education-projects__back"], ["04", ".top-nav"], ["04", ".rail"]]],

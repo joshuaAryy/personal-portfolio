@@ -62,6 +62,18 @@ describe("Profile Overview", () => {
     expect(fitRule).toMatch(/\.main--profile \.profile-layout\s*\{[^}]*overflow:\s*clip/s);
   });
 
+  it("scales the identity rail proportionally on short wide desktops so its traits stay visible", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const compactWideRule = cssBlock(
+      profileCss,
+      "@media (min-width: 1400px) and (max-width: 1920px) and (max-height: 820px)",
+    );
+    const identityRule = cssBlock(compactWideRule, ".main--profile .identity-panel");
+
+    expect(identityRule).toContain("scale: .84");
+    expect(identityRule).toContain("transform-origin: top center");
+  });
+
   it("keeps project details out of the initial neutral panel", () => {
     const markup = renderProfile();
 
