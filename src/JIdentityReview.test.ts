@@ -25,6 +25,7 @@ describe("Sonnet V8 identity review and sheen", () => {
     expect(board).toContain("54px · desktop Portfolio header");
     expect(board).toContain("48px · main Activity identity");
     expect(board).toContain("40px · opportunity rail identity");
-    expect(board).toContain("Permanent treatments");
+    expect(board).toContain("Feature implementation");
+    expect(board).toContain("Variant 02 (settled J with painted seam marks) is rejected and excluded");
   });
 });

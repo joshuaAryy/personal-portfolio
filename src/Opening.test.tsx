@@ -66,7 +66,7 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(markup).toContain('src="/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png"');
     expect(markup).toContain('src="/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png"');
     expect(css).toMatch(/\.opening__j-activation-bloom\s*\{[^}]*border-radius:\s*50%;[^}]*mix-blend-mode:\s*screen;/s);
-    expect(css).toMatch(/\.opening__j-pulse-spark\s*\{[^}]*mix-blend-mode:\s*screen;/s);
+    expect(css).toMatch(/\.opening__j-pulse-spark-art\s*\{[^}]*mix-blend-mode:\s*screen;/s);
     expect(source.indexOf('data-j-layer="portal-plasma-vignette"')).toBeLessThan(source.indexOf('data-j-layer="activation-bloom"'));
     expect(source.indexOf('data-j-layer="activation-bloom"')).toBeLessThan(source.indexOf('data-j-layer="gold-orb-ring"'));
     expect(source.indexOf('data-j-layer="gold-orb-ring"')).toBeLessThan(source.indexOf('data-j-layer="j-contact-shadow"'));
@@ -76,6 +76,32 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(css).toContain("opening-v8-activation-bloom");
     expect(source).not.toContain("pulse-glow.svg");
     expect(source).not.toContain("pulse-core.svg");
+  });
+
+  it("hands the assembled composition to the exact canonical lockup for the final hold", () => {
+    const markup = renderOpeningRoute();
+    const css = readFileSync("src/opening.css", "utf8");
+
+    expect(markup).toContain('data-j-layer="settled-canonical-lockup"');
+    expect(markup).toContain('src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png"');
+    expect(css).toMatch(/\.opening__j-final-lockup\s*\{[^}]*opening-v8-final-lockup 5s steps\(1, end\) 1 both/s);
+    expect(css).toMatch(/\.opening__j-assembly\s*\{[^}]*opening-v8-composite-handoff 5s steps\(1, end\) 1 both/s);
+    expect(css).toMatch(/@keyframes opening-v8-final-lockup[\s\S]*?0%, 81\.99%\s*\{\s*opacity:\s*0;\s*\}[\s\S]*?82%, 100%\s*\{\s*opacity:\s*1;/);
+    expect(css).toMatch(/@keyframes opening-v8-composite-handoff[\s\S]*?0%, 81\.99%\s*\{\s*opacity:\s*1;\s*\}[\s\S]*?82%, 100%\s*\{\s*opacity:\s*0;/);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-final-lockup\s*\{[^}]*animation:\s*none;[^}]*opacity:\s*1/s);
+    expect(css).toMatch(/\.opening--reduced \.opening__j-assembly\s*\{[^}]*animation:\s*none;[^}]*opacity:\s*0/s);
+  });
+
+  it("screen-composites the authored pulse artwork at the image layer to discard its dark export backing", () => {
+    const markup = renderOpeningRoute();
+    const css = readFileSync("src/opening.css", "utf8");
+    const pulseSpark = "/media/opening/j-sonnet-motion-v8/figma-motion/pulse-spark-alpha.png";
+
+    expect(markup).toContain('class="opening__j-pulse-spark-art"');
+    expect(markup).toContain(`href="${pulseSpark}"`);
+    expect(readFileSync(`public${pulseSpark}`)).toBeDefined();
+    expect(markup).not.toContain("pulse-spark-2x.png");
+    expect(css).toMatch(/\.opening__j-pulse-spark-art\s*\{[^}]*mix-blend-mode:\s*screen;/s);
   });
 
   it("renders the authored activation bloom without an opaque bitmap backing", () => {
@@ -126,7 +152,7 @@ describe("Sonnet V8 Opening fidelity", () => {
     const css = readFileSync("src/opening.css", "utf8");
 
     expect(css).toMatch(/\.opening__orb-layer--portal\s*\{[^}]*clip-path:\s*circle\(50% at 50% 50%\)/s);
-    expect(css).toMatch(/\.opening__j-pulse-spark image\s*\{[^}]*clip-path:\s*ellipse\(/s);
+    expect(css).toMatch(/\.opening__j-pulse-spark-art\s*\{[^}]*clip-path:\s*ellipse\(/s);
   });
 
   it("holds authored cyan joints through the activation pose before clearing for sheen", () => {

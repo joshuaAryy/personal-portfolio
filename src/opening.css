@@ -734,6 +734,7 @@
 .opening__j-assembly {
   z-index: 1;
   opacity: 1;
+  animation: opening-v8-composite-handoff 5s steps(1, end) 1 both;
 }
 
 .opening__orb-layer {
@@ -803,6 +804,21 @@
   pointer-events: none;
   user-select: none;
   animation: opening-initial-lockup-clear 5s linear 1 both;
+}
+
+.opening__j-final-lockup {
+  position: absolute;
+  z-index: 7;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  animation: opening-v8-final-lockup 5s steps(1, end) 1 both;
 }
 
 .opening__j-piece {
@@ -968,13 +984,13 @@
   width: 100%;
   height: 100%;
   overflow: visible;
-  mix-blend-mode: screen;
   pointer-events: none;
 }
 
-.opening__j-pulse-spark image {
+.opening__j-pulse-spark-art {
   opacity: 0;
   clip-path: ellipse(47% 42% at 50% 50%);
+  mix-blend-mode: screen;
 }
 
 .opening__j-sheen {
@@ -1033,6 +1049,16 @@
   8% { opacity: .78; }
   10.5% { opacity: .28; }
   13.5%, 100% { opacity: 0; }
+}
+
+@keyframes opening-v8-composite-handoff {
+  0%, 81.99% { opacity: 1; }
+  82%, 100% { opacity: 0; }
+}
+
+@keyframes opening-v8-final-lockup {
+  0%, 81.99% { opacity: 0; }
+  82%, 100% { opacity: 1; }
 }
 
 @keyframes opening-j-fragment-opacity {
@@ -1173,7 +1199,8 @@
 }
 
 .opening--reduced .opening__mark-motion { animation: none; opacity: 1; transform: none; }
-.opening--reduced .opening__j-assembly { animation: none; opacity: 1; }
+.opening--reduced .opening__j-assembly { animation: none; opacity: 0; }
+.opening--reduced .opening__j-final-lockup { animation: none; opacity: 1; }
 .opening--reduced .opening__j-initial-lockup { animation: none; opacity: 0; }
 .opening--reduced .opening__j-piece { animation: none; opacity: 0; transform: none; }
 .opening--reduced .opening__j-settled { animation: none; opacity: 1; }
