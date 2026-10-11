@@ -1,0 +1,591 @@
+{
+  "browser": "Google Chrome via Playwright channel=chrome",
+  "reducedMotion": {
+    "desktopVisual": {
+      "route": "/",
+      "openingVisible": true,
+      "reducedClass": true,
+      "finalJ": {
+        "animationName": "none",
+        "opacity": "1",
+        "transform": "none",
+        "rect": {
+          "x": 712.5,
+          "y": 292.5,
+          "width": 495,
+          "height": 495
+        }
+      },
+      "portal": {
+        "animationName": "none",
+        "opacity": "1",
+        "transform": "none",
+        "rect": {
+          "x": 804.515625,
+          "y": 370.75,
+          "width": 330.015625,
+          "height": 330.015625
+        }
+      },
+      "ring": {
+        "animationName": "none",
+        "opacity": "1",
+        "transform": "none",
+        "rect": {
+          "x": 783.234375,
+          "y": 349.515625,
+          "width": 372.53125,
+          "height": 372.53125
+        }
+      },
+      "tick": {
+        "animationName": "none",
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, -269.5, -269.5)",
+        "rect": {
+          "x": 690.5,
+          "y": 270.5,
+          "width": 539,
+          "height": 539
+        }
+      },
+      "radial": {
+        "animationName": "none",
+        "opacity": "0",
+        "transform": "none",
+        "rect": {
+          "x": -345.59375,
+          "y": -194.390625,
+          "width": 2611.1875,
+          "height": 1468.78125
+        }
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "loaded": true,
+          "width": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "loaded": true,
+          "width": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "loaded": true,
+          "width": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "loaded": true,
+          "width": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "loaded": true,
+          "width": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "loaded": true,
+          "width": 101
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      "captureHoldMs": 1500,
+      "handoffPath": "/home",
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    "narrowVisual": {
+      "route": "/",
+      "openingVisible": true,
+      "reducedClass": true,
+      "finalJ": {
+        "animationName": "none",
+        "opacity": "1",
+        "transform": "none",
+        "rect": {
+          "x": 44.0625,
+          "y": 271.0625,
+          "width": 301.859375,
+          "height": 301.859375
+        }
+      },
+      "portal": {
+        "animationName": "none",
+        "opacity": "1",
+        "transform": "none",
+        "rect": {
+          "x": 100.171875,
+          "y": 318.78125,
+          "width": 201.234375,
+          "height": 201.234375
+        }
+      },
+      "ring": {
+        "animationName": "none",
+        "opacity": "1",
+        "transform": "none",
+        "rect": {
+          "x": 87.1875,
+          "y": 305.828125,
+          "width": 227.171875,
+          "height": 227.171875
+        }
+      },
+      "tick": {
+        "animationName": "none",
+        "opacity": "0",
+        "transform": "matrix(1, 0, 0, 1, -164.336, -164.336)",
+        "rect": {
+          "x": 30.6484375,
+          "y": 257.6484375,
+          "width": 328.671875,
+          "height": 328.671875
+        }
+      },
+      "radial": {
+        "animationName": "none",
+        "opacity": "0",
+        "transform": "none",
+        "rect": {
+          "x": -70.1875,
+          "y": -151.90625,
+          "width": 530.375,
+          "height": 1147.8125
+        }
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "loaded": true,
+          "width": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "loaded": true,
+          "width": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "loaded": true,
+          "width": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "loaded": true,
+          "width": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "loaded": true,
+          "width": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "loaded": true,
+          "width": 101
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 844
+      },
+      "captureHoldMs": 1500,
+      "handoffPath": "/home",
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    "desktopNativeHandoff": {
+      "destination": "/home",
+      "openingDetached": true,
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  },
+  "skip": {
+    "destination": "/home",
+    "openingDetached": true,
+    "errors": {
+      "console": [],
+      "page": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "logoBoard": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 1500,
+        "scrollWidth": 1440,
+        "scrollHeight": 1538
+      },
+      "candidates": [
+        {
+          "id": "settled-lockup",
+          "rect": {
+            "x": 42,
+            "y": 236.171875,
+            "width": 671,
+            "height": 782.71875
+          }
+        },
+        {
+          "id": "standalone-j",
+          "rect": {
+            "x": 727,
+            "y": 236.171875,
+            "width": 671,
+            "height": 839.71875
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-16.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "captures/figma-storyboard-2026-10-11/state-3714-2092.png",
+          "loaded": true,
+          "width": 700,
+          "height": 620
+        }
+      ],
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    "narrow": {
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 2686
+      },
+      "candidates": [
+        {
+          "id": "settled-lockup",
+          "rect": {
+            "x": 11,
+            "y": 418.140625,
+            "width": 368,
+            "height": 785.5
+          }
+        },
+        {
+          "id": "standalone-j",
+          "rect": {
+            "x": 11,
+            "y": 1217.640625,
+            "width": 368,
+            "height": 876.6875
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-16.png",
+          "loaded": true,
+          "width": 468,
+          "height": 468
+        },
+        {
+          "src": "captures/figma-storyboard-2026-10-11/state-3714-2092.png",
+          "loaded": true,
+          "width": 700,
+          "height": 620
+        }
+      ],
+      "errors": {
+        "console": [],
+        "page": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  },
+  "sevenStateBoard": {
+    "viewport": {
+      "width": 1440,
+      "height": 1100,
+      "scrollWidth": 1440,
+      "scrollHeight": 2014
+    },
+    "rows": 7,
+    "images": [
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-2.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-650ms-720x640.png",
+        "loaded": true
+      },
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-530.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-960ms-720x640.png",
+        "loaded": true
+      },
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-1058.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-1370ms-720x640.png",
+        "loaded": true
+      },
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-1575.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-2580ms-720x640.png",
+        "loaded": true
+      },
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-2092.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-3100ms-720x640.png",
+        "loaded": true
+      },
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-2609.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-3720ms-720x640.png",
+        "loaded": true
+      },
+      {
+        "src": "captures/figma-storyboard-2026-10-11/state-3714-3126.png",
+        "loaded": true
+      },
+      {
+        "src": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-4100ms-720x640.png",
+        "loaded": true
+      }
+    ],
+    "videoLink": "../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/opening-full-1920x1080-through-home.webm",
+    "errors": {
+      "console": [],
+      "page": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  }
+}

@@ -12,7 +12,6 @@ const OPENING_V8_ASSETS = {
   orb: "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
   ring: "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
   contactShadow: "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
-  sheen: "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
   pulseSpark: "/media/opening/j-sonnet-motion-v8/figma-motion/pulse-spark-2x.png",
 } as const;
 const OPENING_V8_MOTION_ASSETS = {
@@ -156,7 +155,7 @@ function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAss
         <img className="opening__j-light-exits" data-node-id="3712:683" data-j-layer="light-exits" src={OPENING_V8_MOTION_ASSETS.lightExits} alt="" draggable={false} onError={onAssetError} />
       </span>
       <span className="opening__j-sheen" aria-hidden="true" data-node-id="3712:703" data-j-layer="material-sheen">
-        <img src={OPENING_V8_ASSETS.sheen} alt="" draggable={false} />
+        <span className="opening__j-sheen-band" data-sheen-geometry="figma-3737-2" />
       </span>
       <svg className="opening__j-pulse-spark" viewBox="0 0 468 468" aria-hidden="true" data-node-id="3712:712" data-j-layer="pulse-spark">
           <image href={OPENING_V8_ASSETS.pulseSpark} x="-19" y="-13" width="38" height="26">

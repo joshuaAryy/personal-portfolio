@@ -1,0 +1,98 @@
+{
+  "browser": "Google Chrome via Playwright channel=chrome",
+  "method": "Pause live CSS animation keyframes at its 600ms start and each quarter-turn timestamp; capture both the full viewport and a 760px center crop.",
+  "animation": {
+    "name": "opening-tick-spin",
+    "durationMs": 3200,
+    "delayMs": 600,
+    "rotationDeg": 360
+  },
+  "samples": [
+    {
+      "label": "000deg",
+      "time": 600,
+      "expected": 0,
+      "route": "/",
+      "openingOpacity": "1",
+      "angleModuloDeg": 0,
+      "tickOpacity": "0.748069",
+      "viewport": [
+        1920,
+        1080,
+        1920,
+        1080
+      ],
+      "physicalRotationDeg": 0
+    },
+    {
+      "label": "090deg",
+      "time": 1400,
+      "expected": 90,
+      "route": "/",
+      "openingOpacity": "1",
+      "angleModuloDeg": 90,
+      "tickOpacity": "0.713941",
+      "viewport": [
+        1920,
+        1080,
+        1920,
+        1080
+      ],
+      "physicalRotationDeg": 90
+    },
+    {
+      "label": "180deg",
+      "time": 2200,
+      "expected": 180,
+      "route": "/",
+      "openingOpacity": "1",
+      "angleModuloDeg": 180,
+      "tickOpacity": "0.694054",
+      "viewport": [
+        1920,
+        1080,
+        1920,
+        1080
+      ],
+      "physicalRotationDeg": 180
+    },
+    {
+      "label": "270deg",
+      "time": 3000,
+      "expected": 270,
+      "route": "/",
+      "openingOpacity": "1",
+      "angleModuloDeg": 270,
+      "tickOpacity": "0.681208",
+      "viewport": [
+        1920,
+        1080,
+        1920,
+        1080
+      ],
+      "physicalRotationDeg": 270
+    },
+    {
+      "label": "360deg",
+      "time": 3800,
+      "expected": 360,
+      "route": "/",
+      "openingOpacity": "1",
+      "angleModuloDeg": 0,
+      "tickOpacity": "0.68",
+      "viewport": [
+        1920,
+        1080,
+        1920,
+        1080
+      ],
+      "physicalRotationDeg": 360
+    }
+  ],
+  "errors": {
+    "console": [],
+    "page": [],
+    "failedRequests": [],
+    "badResponses": []
+  }
+}

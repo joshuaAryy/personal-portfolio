@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Opening tick field · one full revolution</title>
+    <style>
+      :root { color-scheme: dark; font: 15px/1.5 Inter, "Segoe UI", sans-serif; background: #090e13; color: #e7e2d6; }
+      * { box-sizing: border-box; }
+      body { max-width: 1700px; margin: 0 auto; padding: 28px clamp(12px, 2.5vw, 36px) 44px; }
+      h1, h2, p { margin: 0; }
+      h1 { font: 600 clamp(24px, 3vw, 36px)/1.15 Georgia, serif; }
+      header p { max-width: 900px; margin-top: 9px; color: #bdc8ce; }
+      .frames { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 22px; }
+      article { overflow: hidden; border: 1px solid #34424b; background: #101820; }
+      h2 { padding: 10px 12px; color: #f0d383; font: 600 15px/1.3 Georgia, serif; }
+      img { display: block; width: 100%; height: auto; background: #020508; }
+      article p { padding: 7px 12px; color: #9eafb8; font-size: 11px; }
+      footer { margin-top: 18px; color: #9eafb8; font-size: 12px; }
+      @media (min-width: 1150px) { .frames { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+      @media (max-width: 560px) { .frames { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Opening tick field · one full revolution</h1>
+      <p>These are paused Chrome renders of the live CSS tick animation at its start, quarter turns, and completion. The uninterrupted opening recording shows the same field rotating naturally while the scene remains visible.</p>
+    </header>
+    <main class="frames">
+      <article><h2>0° · 600ms</h2><img src="tick-center-000deg-600ms-760x760.png" alt="Opening mechanism and tick field at the start of the rotation" /><p><a href="tick-000deg-600ms-1920x1080.png">Full 1920×1080 frame</a></p></article>
+      <article><h2>90° · 1,400ms</h2><img src="tick-center-090deg-1400ms-760x760.png" alt="Opening mechanism and tick field after one quarter turn" /><p><a href="tick-090deg-1400ms-1920x1080.png">Full 1920×1080 frame</a></p></article>
+      <article><h2>180° · 2,200ms</h2><img src="tick-center-180deg-2200ms-760x760.png" alt="Opening mechanism and tick field after one half turn" /><p><a href="tick-180deg-2200ms-1920x1080.png">Full 1920×1080 frame</a></p></article>
+      <article><h2>270° · 3,000ms</h2><img src="tick-center-270deg-3000ms-760x760.png" alt="Opening mechanism and tick field after three quarters of a turn" /><p><a href="tick-270deg-3000ms-1920x1080.png">Full 1920×1080 frame</a></p></article>
+      <article><h2>360° · 3,800ms</h2><img src="tick-center-360deg-3800ms-760x760.png" alt="Opening mechanism and tick field after completing one full turn" /><p><a href="tick-360deg-3800ms-1920x1080.png">Full 1920×1080 frame</a></p></article>
+    </main>
+    <footer>The 360° frame returns to the starting orientation, so its appearance matches 0°; the separate timed positions, CSS animation metadata, and uninterrupted browser recording establish the clockwise revolution.</footer>
+  </body>
+</html>

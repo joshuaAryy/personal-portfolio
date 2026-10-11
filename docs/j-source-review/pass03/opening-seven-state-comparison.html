@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>Sonnet V8 opening · seven-state comparison</title>
     <style>
       :root { color-scheme: dark; font: 14px/1.55 Inter, "Segoe UI", sans-serif; background: #0b1015; color: #e7e2d6; }
@@ -46,40 +47,40 @@
       </div>
       <span class="badge">FEATURE REVIEW · OWNER ACCEPTANCE OPEN</span>
     </header>
-    <aside class="note"><strong>Comparison method:</strong> each runtime panel is a 720×640 center crop. State 02 uses a precise browser-controlled 960ms still; the other six frames were captured naturally during the uninterrupted five-second run. The authored storyboard files are shown unmodified. Actual capture times and screenshot polling offsets are recorded in the <a href="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/QA-REPORT.md">fresh QA report</a>. <a href="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/portal-correction-uninterrupted-1920x1080.webm">Open the fresh uninterrupted browser recording through the Home handoff</a>.</aside>
+    <aside class="note"><strong>Comparison method:</strong> each runtime panel is a 720×640 center crop. All seven runtime stills are controlled captures from the current implementation; State 06 uses the transparent Figma-shaped band in place of the former dark-backed sheen. The authored storyboard files are unmodified. Capture methods and browser checks are recorded in the <a href="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/owner-review-capture-report.json">current Chrome report</a>. <a href="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/opening-full-1920x1080-through-home.webm">Open the uninterrupted Chrome recording through the Home handoff</a>.</aside>
     <main class="grid">
       <article class="pose">
-        <header><h2>01 · Broken / Dormant</h2><p>Figma `3714:2` · runtime timeline 0.650s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2.png" alt="Figma State 01 broken J parts around the dormant orb" /></div><div class="cell"><h3>Runtime · 0.650s</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s1-dormant-0650ms.png" alt="Chrome Opening at the 650 millisecond dormant key pose" /></div></div>
+        <header><h2>01 · Broken / Dormant</h2><p>Figma `3714:2` · controlled runtime timeline at 0.650s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2.png" alt="Figma State 01 broken J parts around the dormant orb" /></div><div class="cell"><h3>Runtime · 0.650s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-650ms-720x640.png" alt="Chrome Opening at the 650 millisecond dormant key pose" /></div></div>
       </article>
       <article class="pose">
         <header><h2>02 · Approach</h2><p>Figma `3714:530` · runtime timeline 0.960s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-530.png" alt="Figma State 02, crown and hook approaching the shaft" /></div><div class="cell"><h3>Runtime · 0.960s controlled sample</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s2-approach-0960ms.png" alt="Chrome Opening at the controlled 960 millisecond approach key pose" /></div></div>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-530.png" alt="Figma State 02, crown and hook approaching the shaft" /></div><div class="cell"><h3>Runtime · 0.960s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-960ms-720x640.png" alt="Chrome Opening at the controlled 960 millisecond approach key pose" /></div></div>
       </article>
       <article class="pose">
         <header><h2>03 · Alignment</h2><p>Figma `3714:1058` · runtime timeline 1.370s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1058.png" alt="Figma State 03, keyed joint alignment" /></div><div class="cell"><h3>Runtime · 1.370s</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s3-alignment-1370ms.png" alt="Chrome Opening at the 1370 millisecond alignment key pose" /></div></div>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1058.png" alt="Figma State 03, keyed joint alignment" /></div><div class="cell"><h3>Runtime · 1.370s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-1370ms-720x640.png" alt="Chrome Opening at the 1370 millisecond alignment key pose" /></div></div>
       </article>
       <article class="pose">
         <header><h2>04 · Mechanical lock</h2><p>Figma `3714:1575` · runtime timeline 2.580s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1575.png" alt="Figma State 04, physical joint lock" /></div><div class="cell"><h3>Runtime · 2.580s</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s4-lock-2580ms.png" alt="Chrome Opening at the 2580 millisecond mechanical lock key pose" /></div></div>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1575.png" alt="Figma State 04, physical joint lock" /></div><div class="cell"><h3>Runtime · 2.580s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-2580ms-720x640.png" alt="Chrome Opening at the 2580 millisecond mechanical lock key pose" /></div></div>
       </article>
       <article class="pose">
         <header><h2>05 · Cyan activation / pulse</h2><p>Figma `3714:2092` · runtime timeline 3.100s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2092.png" alt="Figma State 05, cyan seam and conduit activation" /></div><div class="cell"><h3>Runtime · 3.100s</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s5-activation-3100ms.png" alt="Chrome Opening at the 3100 millisecond cyan activation key pose" /></div></div>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2092.png" alt="Figma State 05, cyan seam and conduit activation" /></div><div class="cell"><h3>Runtime · 3.100s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-3100ms-720x640.png" alt="Chrome Opening at the 3100 millisecond cyan activation key pose" /></div></div>
       </article>
       <article class="pose">
-        <header><h2>06 · Material sheen</h2><p>Figma `3714:2609` · natural runtime capture requested at 3.800s, measured at 3.720s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2609.png" alt="Figma State 06, material sheen moving across the fused J" /></div><div class="cell"><h3>Runtime · 3.720s measured</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s6-sheen-3720ms.png" alt="Chrome Opening at the measured 3720 millisecond sheen key pose" /></div></div>
+        <header><h2>06 · Material sheen</h2><p>Figma `3714:2609` · controlled runtime timeline at 3.720s after the sheen correction</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2609.png" alt="Figma State 06, material sheen moving across the fused J" /></div><div class="cell"><h3>Runtime · 3.720s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-3720ms-720x640.png" alt="Chrome Opening at 3720 milliseconds with the corrected transparent sheen band" /></div></div>
       </article>
       <article class="pose">
-        <header><h2>07 · Settled identity</h2><p>Figma `3714:3126` · natural runtime capture requested at 4.100s, measured at 4.354s</p></header>
-        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-3126.png" alt="Figma State 07, complete settled J and V8 orb" /></div><div class="cell"><h3>Runtime · 4.354s measured</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/final-j-fidelity-pass/center-crops/s7-settled-request-4100-captured-4354ms.png" alt="Chrome Opening at the measured 4354 millisecond settled key pose" /></div></div>
+        <header><h2>07 · Settled identity</h2><p>Figma `3714:3126` · controlled runtime timeline at 4.100s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-3126.png" alt="Figma State 07, complete settled J and V8 orb" /></div><div class="cell"><h3>Runtime · 4.100s controlled</h3><img src="../../site-render-review/2026-10-11-opening-fidelity/sonnet-v8-sheen-fix-final/center-4100ms-720x640.png" alt="Chrome Opening at the 4100 millisecond settled key pose" /></div></div>
       </article>
     </main>
     <section class="full">
-      <p><strong>Chrome review findings:</strong> the crown, shaft, and hook remain independently legible through approach, align and seat before the fused J takes over, then show the authored joint lighting while the V8 portal/plasma and gold ring build behind them. The material sheen is a short State 06 pass; State 07 settles to the seamless J + orb without a lasting seam. The seam-light/conduit children now control their own animation opacity; the wrapper stays at opacity 1 so it does not multiply and flatten their authored activation. The fresh full recording shows the same sequence through Home, with no clipping or browser/request errors.</p>
-      <p>Source evidence: Figma storyboard `3713:4`, editable rig `3712:2`, canonical exports `3735:2` and `3735:516`, and implementation notes `3737:2` / `3737:37`.</p>
+      <p><strong>Chrome review findings:</strong> the crown, shaft, and hook remain independently legible through approach, align and seat before the fused J takes over, then show the authored joint lighting while the V8 portal/plasma and gold ring build behind them. The material sheen is a short State 06 pass; State 07 settles to the seamless J + orb without a lasting seam. The seam-light/conduit children now control their own animation opacity; the wrapper stays at opacity 1 so it does not multiply and flatten their authored activation. All seven controlled key poses and the uninterrupted full recording use the same current sheen implementation.</p>
+      <p>Source evidence: Figma storyboard `3713:4`, editable rig `3712:2`, canonical exports `3735:2` and `3735:516`, and implementation notes `3737:2` / `3737:37`. The new runtime sheen is a transparent native band whose clip geometry follows the authored `M228 30 L276 30 L244 420 L196 420 Z` path; it replaces the dark-backed PNG in State 06 only.</p>
     </section>
   </body>
 </html>

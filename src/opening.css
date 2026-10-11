@@ -988,7 +988,7 @@
   animation: opening-j-single-sheen 5s linear 1 both;
 }
 
-.opening__j-sheen > img {
+.opening__j-sheen-band {
   position: absolute;
   left: 41.88%;
   top: 6.41%;
@@ -996,7 +996,14 @@
   width: 17.09%;
   height: 83.33%;
   max-width: none;
-  object-fit: fill;
+  clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(255 255 255 / 0%) 0%,
+    rgb(255 255 255 / 80%) 50%,
+    rgb(255 255 255 / 0%) 100%
+  );
+  pointer-events: none;
 }
 
 .opening__archive-mark {
