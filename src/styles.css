@@ -322,28 +322,6 @@ a:focus-visible {
 .client--project-shell .client-body {
   grid-template-columns: minmax(0, 1fr) clamp(220px, 18.75vw, 360px);
 }
-.client--project-shell .header-account-area {
-  width: 360px;
-  flex-basis: 360px;
-  padding-left: 68px;
-}
-.client--project-shell .header-account {
-  gap: 18px;
-}
-.client--project-shell .header-account__portrait {
-  width: 54px;
-  height: 54px;
-}
-.client--project-shell .header-account__ring {
-  display: none;
-}
-.client--project-shell .header-account__avatar {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-}
 .header {
   height: var(--client-header-height);
   padding: 0;
@@ -870,68 +848,7 @@ a:focus-visible {
   }
 }
 
-/* Route-specific shell treatments from the current Home, Projects, and Resume frames. */
-.client--project-shell .brand--project-shell {
-  width: 206px;
-  flex: 0 0 206px;
-  gap: 8px;
-  padding: 0 6px;
-}
-
-.client--project-shell .brand-glyph {
-  width: 54px;
-  height: 54px;
-}
-
-.client--project-shell .brand strong {
-  display: grid;
-  width: 132px;
-  min-width: 132px;
-  height: 46px;
-  align-items: center;
-  justify-items: center;
-  padding: 0;
-  border: 1px solid #7d5926;
-  background: #01070b;
-  font-family: "League Spartan", Arial, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0;
-}
-
-.client--project-shell .header-achievement {
-  display: none;
-}
-
-.client--resume-shell .brand--resume-shell {
-  width: 304px;
-  flex: 0 0 304px;
-  gap: 10px;
-  padding: 0 6px;
-}
-
-.client--resume-shell .brand-glyph {
-  width: 54px;
-  height: 54px;
-}
-
-.client--resume-shell .brand strong {
-  display: grid;
-  width: 228px;
-  min-width: 228px;
-  height: 63px;
-  align-items: center;
-  justify-items: center;
-  padding: 0 0 3px;
-  border: 0;
-  background: url("/media/profile/resume-client-plate.svg") center / 100% 100% no-repeat;
-  color: #e9dcc1;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-}
-
-.client--home-shell .header-achievement,
-.client--resume-shell .header-achievement {
+.client--home-shell .header-achievement {
   width: 145px;
   height: 72px;
   min-height: 72px;
@@ -943,15 +860,6 @@ a:focus-visible {
 }
 
 @media (min-width: 1600px) {
-  .client--resume-shell .header-achievement {
-    margin-left: 39px;
-  }
-
-  .client--project-shell .brand--project-shell {
-    gap: 14px;
-    padding-left: 14px;
-    padding-right: 14px;
-  }
 
   .client--case-detail-shell .top-nav a.header-resume {
     margin-left: min(22vw, 422px);
@@ -973,8 +881,7 @@ a:focus-visible {
   }
 }
 
-.client--home-shell .header-achievement span::before,
-.client--resume-shell .header-achievement span::before {
+.client--home-shell .header-achievement span::before {
   margin-right: 8px;
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -982,8 +889,7 @@ a:focus-visible {
   content: "◆";
 }
 
-.client--home-shell .header-achievement span,
-.client--resume-shell .header-achievement span {
+.client--home-shell .header-achievement span {
   display: flex;
   align-items: flex-start;
   border-bottom: 1px solid rgba(184, 133, 51, 0.45);
@@ -995,8 +901,7 @@ a:focus-visible {
   line-height: 20px;
 }
 
-.client--home-shell .header-achievement strong,
-.client--resume-shell .header-achievement strong {
+.client--home-shell .header-achievement strong {
   display: flex;
   align-items: flex-start;
   color: #f0e6d2;
@@ -1007,8 +912,7 @@ a:focus-visible {
   line-height: 20px;
 }
 
-.client--home-shell .header-achievement strong::before,
-.client--resume-shell .header-achievement strong::before {
+.client--home-shell .header-achievement strong::before {
   margin-right: 8px;
   font-family: Arial, sans-serif;
   font-size: 14px;
@@ -1049,73 +953,6 @@ a:focus-visible {
   font-size: 8px;
   line-height: 11px;
   white-space: nowrap;
-}
-
-@media (max-width: 1180px) {
-  .client--project-shell .header-account-area {
-    width: auto;
-    flex: 0 0 auto;
-    padding: 0;
-  }
-
-  .client--project-shell .brand--project-shell {
-    width: 182px;
-    flex-basis: 182px;
-  }
-
-  .client--project-shell .brand-glyph {
-    width: 46px;
-    height: 46px;
-  }
-
-  .client--project-shell .brand strong {
-    width: 120px;
-    min-width: 120px;
-    height: 42px;
-  }
-
-  .client--resume-shell .brand--resume-shell {
-    width: 268px;
-    flex-basis: 268px;
-  }
-
-  .client--resume-shell .brand-glyph {
-    width: 46px;
-    height: 46px;
-  }
-
-  .client--resume-shell .brand strong {
-    width: 205px;
-    min-width: 205px;
-    height: 57px;
-  }
-}
-
-@media (max-width: 760px) {
-  .client--project-shell .brand--project-shell {
-    width: 68px;
-    flex-basis: 68px;
-    justify-content: center;
-    padding: 0 12px;
-  }
-
-  .client--project-shell .brand strong,
-  .client--resume-shell .brand strong {
-    display: none;
-  }
-
-  .client--project-shell .brand-glyph,
-  .client--resume-shell .brand-glyph {
-    width: 42px;
-    height: 42px;
-  }
-
-  .client--resume-shell .brand--resume-shell {
-    width: 68px;
-    flex-basis: 68px;
-    justify-content: center;
-    padding: 0 12px;
-  }
 }
 
 @media (min-width: 1800px) and (min-height: 1000px) {
@@ -6843,85 +6680,8 @@ a:focus-visible {
   .fraymakers-nav { grid-template-columns: minmax(0,446px) 124px minmax(0,1fr); }
 }
 
-/* Resume Found shell, measured against Figma 2407:176 at 1920×1080. */
-.header-client-tool {
-  display: contents;
-}
-
+/* Resume rail sizing, measured against Figma 2407:176 at 1920×1080. */
 @media (min-width: 1565px) {
-  .client--resume-shell .brand--resume-shell {
-    position: relative;
-    width: 264px;
-    flex: 0 0 264px;
-    align-items: flex-start;
-    gap: 0;
-    padding: 0;
-  }
-
-  .client--resume-shell .brand-glyph {
-    position: absolute;
-    z-index: 2;
-    top: 2px;
-    left: 6px;
-    width: 82px;
-    height: 82px;
-  }
-
-  .client--resume-shell .brand strong {
-    position: absolute;
-    top: 16px;
-    left: 36px;
-    width: 228px;
-    min-width: 228px;
-    height: 63px;
-    padding: 0 0 0 34px;
-    font-size: 17px;
-    line-height: 23px;
-  }
-
-  .client--resume-shell .top-nav {
-    margin-left: 9px;
-  }
-
-  .client--resume-shell .top-nav a:not(.header-resume) {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: 14px;
-    letter-spacing: 0.03em;
-  }
-
-  .client--resume-shell .header-client-tools {
-    height: 70px;
-    gap: 0;
-    margin-left: clamp(22px, 1.8vw, 36px);
-    padding-left: 0;
-    border-left: 0;
-    align-items: stretch;
-  }
-
-  .client--resume-shell .header-client-tools .header-client-tool {
-    display: grid;
-    width: 68px;
-    height: 70px;
-    flex: 0 0 68px;
-    place-items: center;
-    border-left: 1px solid rgba(199, 155, 69, 0.68);
-  }
-
-  .client--resume-shell .header-client-tools .header-client-tool:last-child {
-    border-right: 1px solid rgba(199, 155, 69, 0.68);
-  }
-
-  .client--resume-shell .header-client-tools img {
-    width: 38px;
-    height: 38px;
-  }
-
-  .client--resume-shell .header-achievement {
-    position: relative;
-    z-index: 1;
-    top: -2px;
-    margin-left: -30px;
-  }
 
   .client--resume-shell .rail-content .rail-heading {
     padding-right: 23px;
@@ -6945,13 +6705,6 @@ a:focus-visible {
   .client--resume-shell .rail-avatar:not(.rail-avatar--activity) img {
     width: 30px;
     height: 30px;
-  }
-}
-
-@media (min-width: 1181px) and (max-width: 1234px) {
-  .client--resume-shell .header-client-tools,
-  .client--resume-shell .header-achievement {
-    display: none;
   }
 }
 
@@ -6995,27 +6748,3 @@ a:focus-visible {
 .header-client-tool:hover,
 .header-client-tool:focus-visible { color: #f0d58a; }
 .header-client-tool:focus-visible { outline: 1px solid #c79b45; outline-offset: 4px; }
-.client--project-shell .header-account__ring { display: block; }
-.client--project-shell .header-account__avatar {
-  top: 7.9%;
-  left: 7.9%;
-  width: 84.2%;
-  height: 84.2%;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-@media (max-width: 760px) {
-  .client--project-shell .header-account__portrait,
-  .client--project-shell .header-account__ring {
-    width: 42px;
-    height: 42px;
-  }
-
-  .client--project-shell .header-account__avatar {
-    top: 6px;
-    left: 6px;
-    width: 30px;
-    height: 30px;
-  }
-}

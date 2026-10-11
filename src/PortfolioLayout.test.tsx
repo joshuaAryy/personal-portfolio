@@ -36,6 +36,32 @@ afterEach(() => {
 });
 
 describe("League client shell", () => {
+  it("keeps Resume and Projects on the shared unboxed Portfolio header", () => {
+    const css = readFileSync("src/styles.css", "utf8");
+    for (const route of ["/resume/viewer", "/projects"]) {
+      const markup = renderClient(route);
+      expect(markup).toContain('src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png"');
+      expect(markup).toContain('<nav class="header-client-tools" aria-label="Contact and resume">');
+      expect(markup).toContain('class="header-client-tool header-client-tool--resume"');
+      expect(markup).not.toContain('class="brand brand--resume-shell"');
+      expect(markup).not.toContain('class="brand brand--project-shell"');
+    }
+    const brandStrongRules = [...css.matchAll(/\.brand\s+strong\s*\{([^}]*)\}/g)].map((match) => match[1]);
+    expect(brandStrongRules.some((rule) => /border:\s*0;/.test(rule) && /background:\s*transparent/.test(rule))).toBe(true);
+    expect(css).not.toMatch(/\.client--(?:project|resume)-shell\s+\.brand--(?:project|resume)-shell/);
+    expect(css).not.toMatch(/\.client--resume-shell\s+\.header-client-tools/);
+    const resumeCss = readFileSync("src/resume.css", "utf8");
+    expect(resumeCss).toMatch(/\.resume-viewer__actions\s*\{[^}]*flex-wrap:\s*wrap/s);
+    expect(resumeCss).toMatch(/\.resume-viewer__frame\s*\{[^}]*min-height:\s*min\(68vh,\s*820px\)/s);
+  });
+
+  it("keeps the prominent Activity lockup bright on its green rail", () => {
+    const css = readFileSync("src/optical-marks.css", "utf8");
+    const activityMark = css.match(/\.rail-availability__mark-image\s*\{([^}]*)\}/)?.[1] ?? "";
+    expect(activityMark).toMatch(/filter:\s*brightness\(1\.16\)/);
+    expect(activityMark).toMatch(/mix-blend-mode:\s*normal/);
+  });
+
   it("keeps the complete canonical Food mark inside its SVG and clip bounds", () => {
     const svg = readFileSync("public/media/profile/food-tracker-mark.svg", "utf8");
     const rootAttributes = svg.match(/^<svg\b([^>]*)>/)?.[1] ?? "";
@@ -390,11 +416,11 @@ describe("League client shell", () => {
     expect(helpButtonRule).toMatch(/flex:\s*0\s+0\s+36px/);
   });
 
-  it("keeps the narrow project-shell avatar clear of the Help slot", () => {
+  it("uses the standard shared header avatar treatment on project routes", () => {
     const css = readFileSync("src/styles.css", "utf8");
 
-    expect(css).toMatch(/\.client--project-shell \.header-account__portrait,\s*\.client--project-shell \.header-account__ring\s*\{[^}]*width:\s*42px;[^}]*height:\s*42px/s);
-    expect(css).toMatch(/\.client--project-shell \.header-account__avatar\s*\{[^}]*width:\s*30px;[^}]*height:\s*30px/s);
+    expect(renderClient("/projects/food-tracker")).toContain('<header class="header">');
+    expect(css).not.toMatch(/\.client--project-shell\s+\.header-account/);
   });
 });
 

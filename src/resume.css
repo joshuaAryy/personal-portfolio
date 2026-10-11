@@ -65,7 +65,7 @@
 }
 
 .resume-found {
-  --resume-found-composition-size: min(530px, max(0px, calc(100vw - 32px)), max(0px, calc(100vh - 123px)));
+  --resume-found-composition-size: min(600px, max(0px, calc(100vw - 32px)), max(0px, calc(100vh - 123px)));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,55 +140,52 @@
   filter: brightness(.66) saturate(.72);
 }
 
-.resume-mechanism__j-medallion {
+.resume-mechanism__j {
   position: absolute;
   z-index: 1;
   top: 50%;
   left: 50%;
-  display: grid;
-  width: 46%;
-  height: 46%;
+  display: block;
+  width: min(54%, 280px);
+  height: min(54%, 280px);
   aspect-ratio: 1 / 1;
-  place-items: center;
   overflow: hidden;
-  border: 2px solid #bd9145;
-  border-radius: 50%;
-  background: radial-gradient(circle at 50% 42%, #0d3850, #02080e 72%);
-  box-shadow: 0 0 0 5px rgb(1 7 12 / 88%), 0 0 16px rgb(0 0 0 / 55%);
   transform: translate(-50%, -50%);
   animation: resume-found-entry 620ms cubic-bezier(.2,.8,.2,1) 80ms both;
 }
 
 .resume-mechanism__orb-energy {
   --resume-orb-fill: 0deg;
+  --resume-orb-max-fill: 306deg;
   position: absolute;
-  z-index: 3;
+  z-index: 1;
   top: 50%;
   left: 50%;
-  /* Figma 2407:343's 464px measuring circuit surrounds 2407:344's 424px inner race. */
+  /* The 464px channel stops at the two open ends where the lower plate begins. */
   width: 87.55%;
   height: 87.55%;
   border-radius: 50%;
   background: conic-gradient(
-    from -90deg,
-    rgba(76, 224, 232, .68) 0deg calc(var(--resume-orb-fill) - 8deg),
+    from 207deg,
+    rgba(28, 184, 214, .38) 0deg calc(var(--resume-orb-fill) - 8deg),
     #bafffb calc(var(--resume-orb-fill) - 2deg) var(--resume-orb-fill),
-    rgba(76, 224, 232, .06) var(--resume-orb-fill) 360deg
+    rgba(28, 184, 214, .22) var(--resume-orb-fill) var(--resume-orb-max-fill),
+    transparent var(--resume-orb-max-fill) 360deg
+  ), repeating-linear-gradient(
+    105deg,
+    rgb(219 255 255 / 12%) 0 2px,
+    transparent 2px 7px
   );
-  filter: drop-shadow(0 0 0 transparent);
-  mask: radial-gradient(circle closest-side, transparent 90.5%, #000 91.5%, #000 96%, transparent 98%);
+  filter: none;
+  mask-image:
+    radial-gradient(circle closest-side, transparent 90.5%, #000 91.5%, #000 96%, transparent 98%),
+    conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
   opacity: 0;
   pointer-events: none;
   translate: -50% -50%;
   animation: resume-orb-energy-fill 1150ms linear 260ms 1 both;
-}
-
-.resume-mechanism__j {
-  position: absolute;
-  z-index: 1;
-  inset: 0;
-  display: block;
-  overflow: visible;
 }
 
 .resume-mechanism__j img {
@@ -216,18 +213,18 @@
   top: 73%;
   left: 50%;
   display: flex;
-  width: min(240px, 45.3cqw);
-  height: min(24px, 4.53cqw);
+  width: min(300px, 56.6cqw);
+  height: min(34px, 5.7cqw);
   align-items: center;
   justify-content: center;
   margin: 0;
   translate: -50% 0;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(13px, 2.83cqw, 15px);
+  font-size: clamp(16px, 3.3cqw, 20px);
   font-weight: 700;
   letter-spacing: 0.5px;
-  line-height: min(20px, 3.77cqw);
+  line-height: min(26px, 4.4cqw);
   text-transform: uppercase;
   text-shadow: 0 1px 6px rgb(0 0 0 / 48%);
 }
@@ -297,9 +294,9 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 85.5%;
+  top: 84.5%;
   left: 50%;
-  width: min(170px, 32.1cqw);
+  width: min(230px, 43.4cqw);
   aspect-ratio: 212 / 70;
   height: auto;
   display: flex;
@@ -313,7 +310,7 @@
   clip-path: none;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(9px, 2.1cqw, 11px);
+  font-size: clamp(12px, 2.4cqw, 15px);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -366,11 +363,11 @@
 
 .resume-found__close {
   position: absolute;
-  top: 97.8%;
+  top: 97%;
   left: 50%;
   z-index: 4;
-  width: min(94px, 18cqw);
-  height: clamp(12px, 2.8cqw, 15px);
+  width: min(132px, 24.9cqw);
+  height: clamp(22px, 4.2cqw, 28px);
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -378,7 +375,7 @@
   border: 1px solid rgba(199, 155, 69, .68);
   background: rgba(4, 13, 20, .72);
   color: #f0e6d2;
-  font-size: clamp(8px, 1.9cqw, 10px);
+  font-size: clamp(12px, 2.4cqw, 15px);
   line-height: 1;
   letter-spacing: .13em;
 }
@@ -539,11 +536,14 @@
 
   .resume-found {
     min-height: max(100%, calc(100vh - var(--client-header-height)));
+    justify-content: center;
+    padding-block: 0;
     padding-inline: 16px;
   }
 
   .resume-takeover .resume-found {
-    padding-right: 16px;
+    justify-content: center;
+    padding: 0 16px;
   }
 
   .main--resume-viewer {
@@ -587,14 +587,13 @@
   }
 
   .resume-mechanism__scene,
-  .resume-mechanism__j-medallion {
+  .resume-mechanism__j {
     animation: none;
   }
 
   .resume-mechanism__orb-energy {
-    --resume-orb-fill: 360deg;
+    --resume-orb-fill: 306deg;
     opacity: .86;
-    background: conic-gradient(from -90deg, rgba(76, 224, 232, .68) 0deg 360deg);
     animation: none;
   }
 
@@ -638,12 +637,10 @@
   0% {
     --resume-orb-fill: 0deg;
     opacity: 0;
-    filter: drop-shadow(0 0 0 transparent);
   }
   100% {
-    --resume-orb-fill: 360deg;
+    --resume-orb-fill: 306deg;
     opacity: .86;
-    filter: drop-shadow(0 0 7px rgba(76, 224, 232, .56));
   }
 }
 

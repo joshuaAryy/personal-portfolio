@@ -53,8 +53,6 @@ function Header() {
   const isEducationProjectsPage = pathname === "/education/projects";
   const topNavRef = useRef<HTMLElement>(null);
   const isHome = pathname === "/" || pathname === "/home";
-  const isProjectShell = usesProjectDetailShell(pathname);
-  const isResumeShell = pathname.startsWith("/resume");
   const section = pathname === "/" || pathname === "/home"
     ? "home"
     : pathname.startsWith("/experience")
@@ -123,9 +121,9 @@ function Header() {
   };
 
   return (
-    <header className={`header${isProjectShell ? " header--project-shell" : ""}${isResumeShell ? " header--resume-shell" : ""}`}>
+    <header className="header">
       <Link
-        className={`brand${isHome ? " brand--current" : ""}${isProjectShell ? " brand--project-shell" : ""}${isResumeShell ? " brand--resume-shell" : ""}`}
+        className={`brand${isHome ? " brand--current" : ""}`}
         to="/home"
         aria-label="Portfolio home"
       >

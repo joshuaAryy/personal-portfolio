@@ -8,10 +8,8 @@ export default function ResumeMechanism() {
           alt=""
         />
       </div>
-      <div className="resume-mechanism__j-medallion">
-        <div className="resume-mechanism__j" data-node-id="3735:516" role="img" aria-label="Joshua's portfolio J mark">
-          <img src="/media/identity/sonnet-v8/figma/canonical-j.png" alt="" aria-hidden="true" />
-        </div>
+      <div className="resume-mechanism__j" data-node-id="3735:516" role="img" aria-label="Joshua's portfolio J mark">
+        <img src="/media/identity/sonnet-v8/figma/canonical-j.png" alt="" aria-hidden="true" />
       </div>
       <img
         className="resume-mechanism__frame"

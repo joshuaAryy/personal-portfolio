@@ -48,7 +48,7 @@ afterEach(() => {
 });
 
 describe("lobby banner environment", () => {
-  it("restores the pre-top-origin category banner composition across every lobby", () => {
+  it("bounds and centers both lobby banner groups with coordinated spacing", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
     const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -58,24 +58,24 @@ describe("lobby banner environment", () => {
     const mobileEnvironment = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(environmentRule).toMatch(/background-position:\s*center top/);
+    expect(environmentRule).toMatch(/background-position:\s*center 60%/);
     expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
-    expect(bannerGroup).toMatch(/top:\s*9%/);
-    expect(bannerGroup).toMatch(/right:\s*6%/);
-    expect(bannerGroup).toMatch(/bottom:\s*29%/);
-    expect(bannerGroup).toMatch(/left:\s*6%/);
-    expect(categoryBanners).toMatch(/right:\s*12%/);
-    expect(categoryBanners).toMatch(/left:\s*12%/);
-    expect(categoryBanners).not.toMatch(/top:/);
-    expect(categoryBanners).not.toMatch(/bottom:/);
-    expect(categoryBanners).not.toMatch(/width:/);
-    expect(categoryBanners).not.toMatch(/transform:/);
-    expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,/);
-    expect(categoryBanners).toMatch(/gap:\s*clamp\(18px,\s*3vw,\s*46px\)/);
-    const balanceSlots = css.match(/\.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
-    expect(balanceSlots).toMatch(/top:\s*25\.5%/);
-    expect(balanceSlots).toMatch(/right:\s*4\.5%/);
-    expect(balanceSlots).toMatch(/left:\s*4\.5%/);
+    expect(bannerGroup).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-projects-group-max\)\)/);
+    expect(bannerGroup).toMatch(/left:\s*50%/);
+    expect(bannerGroup).toMatch(/transform:\s*translateX\(-50%\)/);
+    expect(categoryBanners).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-category-group-max\)\)/);
+    expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\([^)]*,\s*var\(--lobby-banner-gap-max\)\)/);
+    expect(css).not.toMatch(/@media\s*\(min-width:\s*1800px\)\s*and\s*\(min-height:\s*1000px\)\s*\{[^}]*\.league-lobby__banners--projects/);
+    const balanceSlots = [...css.matchAll(/\.league-lobby__balance-slots\s*\{([^}]*)\}/g)]
+      .map((match) => match[1])
+      .find((rule) => rule.includes("position: absolute")) ?? "";
+    expect(balanceSlots).toMatch(/top:\s*calc\(9% \+ min\(234px, calc\(18\.8679vw - 81\.13px\)\)\)/);
+    expect(balanceSlots).toMatch(/left:\s*50%/);
+    expect(balanceSlots).toMatch(/transform:\s*translate\(-50%, -50%\)/);
+    expect(balanceSlots).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-balance-span\)\)/);
+    const categorySlotRule = css.match(/\.league-lobby--experience \.league-lobby__balance-slots[\s\S]*?\{([^}]*)\}/)?.[1] ?? "";
+    expect(categorySlotRule).toMatch(/top:\s*calc\(9% \+ min\(191\.7px, calc\(27\.7778vw - 138\.89px\)\)\)/);
     expect(css).not.toMatch(/@media \(min-width: 901px\)\s*\{\s*\.league-lobby__balance-slots\s*\{/);
     expect(mobileRulesForGroup).toMatch(/position:\s*relative/);
     expect(mobileRulesForGroup).toMatch(/inset:\s*auto/);
@@ -96,22 +96,37 @@ describe("lobby banner environment", () => {
     }
   });
 
-  it("does not reapply the superseded top-origin fade or tall-screen banner override", () => {
+  it("uses one proportional banner size and preserves short-screen access to the full lobby", () => {
     const css = readFileSync("src/lobby.css", "utf8");
-    const baseCategoryBanner = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
-    const tallDesktop = css.slice(css.indexOf("@media (min-width: 1800px) and (min-height: 1000px)"));
+    const baseCategoryBanner = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(css).not.toMatch(/\.league-lobby--(?:experience|hackathons|education) \.league-lobby__environment::before/);
-    expect(baseCategoryBanner).toMatch(/right:\s*12%/);
-    expect(baseCategoryBanner).toMatch(/left:\s*12%/);
-    expect(tallDesktop).not.toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)/);
-    expect(tallDesktop).not.toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\) \.league-banner__medallion\s*\{[^}]*margin-top:\s*145px/);
+    expect(baseCategoryBanner).toMatch(/aspect-ratio:\s*var\(--lobby-banner-ratio\)/);
+    expect(css).toMatch(/\.main--lobby\s*\{[^}]*overflow-y:\s*auto/s);
+    expect(css).toMatch(/\.league-lobby\s*\{[^}]*height:\s*max\(100%,\s*760px\)/s);
+    expect(css).not.toMatch(/\.league-lobby\s*\{[^}]*overflow:\s*hidden;[^}]*min-height:\s*700px/s);
+    expect(css).not.toMatch(/@media\s*\(min-width:\s*1800px\)\s*and\s*\(min-height:\s*1000px\)\s*\{\s*\.league-lobby__banners--projects/);
   });
+
+  it("hides decorative balance slots on narrow screens so they cannot collide with the lobby heading", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
+    const mobileBalanceSlots = mobileRules.match(/\.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
+    const mobileBannerGrid = mobileRules.match(/\.league-lobby__banners,\s*\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(mobileBalanceSlots).toMatch(/display:\s*none/);
+    const desktopBalanceSlots = [...css.matchAll(/\.league-lobby__balance-slots\s*\{([^}]*)\}/g)]
+      .map((match) => match[1])
+      .find((rule) => rule.includes("position: absolute")) ?? "";
+    expect(desktopBalanceSlots).toMatch(/display:\s*flex/);
+    expect(mobileBannerGrid).toMatch(/aspect-ratio:\s*auto/);
+    expect(mobileBannerGrid).toMatch(/height:\s*auto/);
+  });
+
   it("uses real project marks and keeps selection separate from opening a story", () => {
     const view = renderProjectsLobby();
 
     expect(view.querySelectorAll(".league-banner")).toHaveLength(5);
-    expect(view.querySelector('img[src="/media/lobby/project-owner-j.svg"]')).not.toBeNull();
+    expect(view.querySelector('img[src="/media/lobby/project-owner-j.svg"]')).toBeNull();
     expect(view.querySelector('[aria-label="Current path"]')?.textContent).toBe("/projects");
 
     const fraymakers = view.querySelector('[aria-label="Select Fraymakers"]');
@@ -201,13 +216,28 @@ describe("lobby banner environment", () => {
     expect(environmentRule).toMatch(/top:\s*68px/);
   });
 
-  it("leaves the Projects owner's J medallion fitting unchanged", () => {
+  it("uses the same owner portrait in Projects and the other category lobbies", () => {
     const view = renderProjectsLobby("projects");
     const owner = view.querySelector('[aria-label="Select Joshua Aryeetey"]');
 
-    expect(owner?.querySelector(".league-banner__mark")?.getAttribute("src")).toBe("/media/lobby/project-owner-j.svg");
-    expect(owner?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--portrait")).toBe(false);
-    expect(owner?.querySelector(".league-banner__medallion")?.classList.contains("league-banner__medallion--fit-mark")).toBe(false);
+    expect(owner?.querySelector(".league-banner__mark")?.getAttribute("src")).toBe("/media/lobby/profile-portrait-source.jpg");
+    expect(owner?.querySelector(".league-banner__mark")?.classList.contains("league-banner__mark--portrait")).toBe(true);
+  });
+
+  it("keeps the portrait source and medallion treatment consistent in every owner banner", () => {
+    const expectedPortrait = "/media/lobby/profile-portrait-source.jpg";
+    for (const mode of ["projects", "experience", "hackathons", "education"] as const) {
+      const view = renderProjectsLobby(mode);
+      const owner = view.querySelector('[aria-label="Select Joshua Aryeetey"]');
+      const mark = owner?.querySelector<HTMLImageElement>(".league-banner__mark");
+
+      expect(mark?.getAttribute("src"), `${mode} portrait source`).toBe(expectedPortrait);
+      expect(mark?.classList.contains("league-banner__mark--portrait"), `${mode} portrait crop`).toBe(true);
+      act(() => root?.unmount());
+      host?.remove();
+      root = undefined;
+      host = undefined;
+    }
   });
 
   it("keeps Projects lobby medallion framing circular at desktop widths", () => {
@@ -251,11 +281,11 @@ describe("lobby banner environment", () => {
     expect(roleRule).toMatch(/position:\s*absolute/);
   });
 
-  it("adds inert circular plus slots around the three category lobby rows", () => {
+  it("adds inert circular plus slots around both centered lobby groups", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const slotRule = css.match(/\.league-lobby__balance-slot\s*\{([^}]*)\}/)?.[1];
 
-    for (const mode of ["experience", "hackathons", "education"] as const) {
+    for (const mode of ["projects", "experience", "hackathons", "education"] as const) {
       const view = renderProjectsLobby(mode);
       const slots = [...view.querySelectorAll(".league-lobby__balance-slot")];
       const slotGroup = view.querySelector<HTMLElement>(".league-lobby__balance-slots");
@@ -270,8 +300,6 @@ describe("lobby banner environment", () => {
       host = undefined;
     }
 
-    const projectsView = renderProjectsLobby("projects");
-    expect(projectsView.querySelectorAll(".league-lobby__balance-slot")).toHaveLength(0);
     expect(slotRule).toMatch(/aspect-ratio:\s*1\s*\/\s*1/);
     expect(slotRule).toMatch(/border-radius:\s*50%/);
   });

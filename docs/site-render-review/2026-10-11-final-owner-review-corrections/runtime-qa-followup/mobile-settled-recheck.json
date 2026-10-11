@@ -1,0 +1,274 @@
+{
+  "browser": "154.0.8037.98",
+  "rows": [
+    {
+      "tag": "projects",
+      "scroll": {
+        "mainClient": 3395,
+        "mainHeight": 3395,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "right": 377,
+        "bottom": 138,
+        "w": 364,
+        "h": 48
+      },
+      "balanceSlotDisplay": "grid",
+      "balanceSlot": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "bannerGroup": {
+        "x": 13,
+        "y": 154,
+        "right": 377,
+        "bottom": 2952,
+        "w": 364,
+        "h": 2798
+      },
+      "card": {
+        "x": 72,
+        "y": 154,
+        "right": 318,
+        "bottom": 704,
+        "w": 246,
+        "h": 550
+      },
+      "legend": {
+        "x": 13,
+        "y": 2980,
+        "right": 377,
+        "bottom": 3052,
+        "w": 364,
+        "h": 72
+      },
+      "role": {
+        "x": 151.3,
+        "y": 374.9,
+        "right": 238.6,
+        "bottom": 389.4,
+        "w": 87.3,
+        "h": 14.5
+      },
+      "roleIcons": {
+        "x": 155.5,
+        "y": 425.4,
+        "right": 234.5,
+        "bottom": 457.4,
+        "w": 79,
+        "h": 32
+      },
+      "roleGap": 36,
+      "roleAndIconsOverlap": false,
+      "legendOverlapsFirstCard": false
+    },
+    {
+      "tag": "experience",
+      "scroll": {
+        "mainClient": 2231,
+        "mainHeight": 2231,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "right": 377,
+        "bottom": 138,
+        "w": 364,
+        "h": 48
+      },
+      "balanceSlotDisplay": "grid",
+      "balanceSlot": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "bannerGroup": {
+        "x": 13,
+        "y": 154,
+        "right": 377,
+        "bottom": 1828,
+        "w": 364,
+        "h": 1674
+      },
+      "card": {
+        "x": 72,
+        "y": 152,
+        "right": 318,
+        "bottom": 702,
+        "w": 246,
+        "h": 550
+      },
+      "legend": {
+        "x": 13,
+        "y": 1856,
+        "right": 377,
+        "bottom": 1928,
+        "w": 364,
+        "h": 72
+      },
+      "role": {
+        "x": 159.3,
+        "y": 372.9,
+        "right": 230.7,
+        "bottom": 387.4,
+        "w": 71.5,
+        "h": 14.5
+      },
+      "roleIcons": {
+        "x": 155.5,
+        "y": 423.4,
+        "right": 234.5,
+        "bottom": 455.4,
+        "w": 79,
+        "h": 32
+      },
+      "roleGap": 36,
+      "roleAndIconsOverlap": false,
+      "legendOverlapsFirstCard": false
+    },
+    {
+      "tag": "hackathons",
+      "scroll": {
+        "mainClient": 2231,
+        "mainHeight": 2231,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "right": 377,
+        "bottom": 138,
+        "w": 364,
+        "h": 48
+      },
+      "balanceSlotDisplay": "grid",
+      "balanceSlot": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "bannerGroup": {
+        "x": 13,
+        "y": 154,
+        "right": 377,
+        "bottom": 1828,
+        "w": 364,
+        "h": 1674
+      },
+      "card": {
+        "x": 72,
+        "y": 152,
+        "right": 318,
+        "bottom": 702,
+        "w": 246,
+        "h": 550
+      },
+      "legend": {
+        "x": 13,
+        "y": 1856,
+        "right": 377,
+        "bottom": 1928,
+        "w": 364,
+        "h": 72
+      },
+      "role": {
+        "x": 123.3,
+        "y": 372.9,
+        "right": 266.7,
+        "bottom": 387.4,
+        "w": 143.4,
+        "h": 14.5
+      },
+      "roleIcons": {
+        "x": 155.5,
+        "y": 423.4,
+        "right": 234.5,
+        "bottom": 455.4,
+        "w": 79,
+        "h": 32
+      },
+      "roleGap": 36,
+      "roleAndIconsOverlap": false,
+      "legendOverlapsFirstCard": false
+    },
+    {
+      "tag": "education",
+      "scroll": {
+        "mainClient": 2231,
+        "mainHeight": 2231,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      "heading": {
+        "x": 13,
+        "y": 90,
+        "right": 377,
+        "bottom": 138,
+        "w": 364,
+        "h": 48
+      },
+      "balanceSlotDisplay": "grid",
+      "balanceSlot": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "w": 0,
+        "h": 0
+      },
+      "bannerGroup": {
+        "x": 13,
+        "y": 154,
+        "right": 377,
+        "bottom": 1828,
+        "w": 364,
+        "h": 1674
+      },
+      "card": {
+        "x": 72,
+        "y": 154,
+        "right": 318,
+        "bottom": 704,
+        "w": 246,
+        "h": 550
+      },
+      "legend": {
+        "x": 13,
+        "y": 1856,
+        "right": 377,
+        "bottom": 1928,
+        "w": 364,
+        "h": 72
+      },
+      "role": {
+        "x": 132.6,
+        "y": 374.9,
+        "right": 257.4,
+        "bottom": 389.4,
+        "w": 124.8,
+        "h": 14.5
+      },
+      "roleIcons": null,
+      "roleGap": null,
+      "roleAndIconsOverlap": false,
+      "legendOverlapsFirstCard": false
+    }
+  ]
+}

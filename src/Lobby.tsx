@@ -50,11 +50,7 @@ const ownerItem: LobbyItem = {
   owner: true,
 };
 
-const projectsOwnerItem: LobbyItem = {
-  ...ownerItem,
-  mark: "/media/lobby/project-owner-j.svg",
-  markAlt: "Portfolio J medallion",
-};
+const projectsOwnerItem = ownerItem;
 
 const projectItems: LobbyItem[] = [
   {
@@ -451,12 +447,10 @@ export default function Lobby({ mode }: { mode: LobbyMode }) {
       <section className={`league-lobby league-lobby--${mode}`} aria-label={`${mode} lobby`}>
         <div className="league-lobby__environment" data-route-entry="environment" aria-hidden="true" />
         <ModeHeading mode={mode} />
-        {mode !== "projects" && (
-          <div className="league-lobby__balance-slots" aria-hidden="true">
-            <span className="league-lobby__balance-slot league-lobby__balance-slot--left">+</span>
-            <span className="league-lobby__balance-slot league-lobby__balance-slot--right">+</span>
-          </div>
-        )}
+        <div className="league-lobby__balance-slots" aria-hidden="true">
+          <span className="league-lobby__balance-slot league-lobby__balance-slot--left">+</span>
+          <span className="league-lobby__balance-slot league-lobby__balance-slot--right">+</span>
+        </div>
         <div className={[
           "league-lobby__banners",
           isProjects ? "league-lobby__banners--projects" : "",
