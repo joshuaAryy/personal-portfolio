@@ -97,7 +97,7 @@ The editable motion specification at Figma `3737:2` sets portal/ring arrival mil
 
 ## Permanent-mark comparison and owner review
 
-The rejected settled-J-plus-painted-seam overlay has been removed from the comparison board. The board now juxtaposes only the accepted settled lockup and standalone J at actual display sizes, while the genuine segmented State 05 image remains an Opening-only pose. No permanent identity source or feature placement changed in this correction. The 48px Activity lockup remains reviewable in the live feature Preview; the production archive remains unchanged.
+The rejected settled-J-plus-painted-seam overlay has been removed from the comparison board. The board now juxtaposes only the accepted settled lockup and standalone J at actual display sizes, while the genuine segmented State 05 image remains an Opening-only pose. The [1440×1500 placement capture](captures/identity-variants-1440x1500.png) includes prominent and compact identity samples on the actual header and Activity backgrounds. No permanent identity source or feature placement changed in this correction. The 48px Activity lockup remains reviewable in the live feature Preview; the production archive remains unchanged.
 
 ## State 06 sheen fidelity correction — 2026-10-11
 
