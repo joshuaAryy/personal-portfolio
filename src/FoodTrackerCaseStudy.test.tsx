@@ -599,6 +599,7 @@ describe("Food Tracker product story", () => {
     expect(search).toContain("Development uses 80 queries; the separate holdout uses 40");
     expect(search).toContain("Each score counts queries where the intended food appears within that result depth");
     expect(search).toContain("The comparison is the earlier baseline versus the complete hybrid path; it does not isolate the contribution of one route or predict live-user results.");
+    expect(search.match(/<figcaption\b[^>]*>([\s\S]*?)<\/figcaption>/)?.[1]).not.toContain("records conflict");
     expect(search).toContain('class="food-retrieval-pipeline__query"');
     expect(search).toContain("Duplicate food records are removed before the API computes the final rank.");
     expect(search).toContain("ORDERED FOOD CHOICES");

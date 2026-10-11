@@ -792,7 +792,7 @@ function FoodRetrievalEvidence() {
       </div>
 
       <figcaption id="food-retrieval-evidence-title">
-        Hybrid retrieval · candidate breadth feeds a deterministic ranker. Offline ranking evidence, not live-user outcomes; the fuzzy-only miss-recovery count is omitted because the records conflict.
+        Hybrid retrieval · candidate breadth feeds a deterministic ranker. Offline ranking evidence, not live-user outcomes.
       </figcaption>
     </figure>
   );
