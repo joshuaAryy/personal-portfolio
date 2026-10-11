@@ -1,5 +1,13 @@
 # Implementation Status
 
+## Current bounded visual-correction checkpoint (2026-10-11)
+
+**Feature branch:** `feat/portfolio-integration`. **Application source:** `17057f9efedc3139f70a3ece6cc09217578acdef`. **Immutable feature Preview:** https://5d314ec5.joshuaik2.pages.dev/ (Cloudflare deployment `5d314ec5-a913-4ce2-94d5-5264223ef9d5`, Environment `Preview`, Branch `feat/portfolio-integration`, Source `17057f9`). Production was not targeted; the persistent portfolio goal remains active.
+
+This bounded correction restores the centered, capped lobby banner groups and symmetrical desktop balance controls, prevents narrow-screen control/header collisions, and lets the mobile Experience role legend follow the full card grid. Resume Found now uses the approved standalone Sonnet J without an extra J badge, a larger integrated mechanism and actions, and a cyan fill constrained to the middle annular channel that remains lit when complete. The Projects owner banner uses the shared owner portrait; the shared Resume Viewer and Projects header no longer use route-specific boxed Portfolio treatments. Activity/Header J brightness is aligned. Journey, case studies, Opening, and other owner-locked surfaces were not reopened.
+
+The source bundle was built from a clean export of the committed application source so preserved untracked J-study assets did not enter the final Preview. The deployed JavaScript and CSS SHA-256 values match that export; seven direct routes return HTTP 200 at desktop and narrow sizes. Full tests pass (**305 tests across 31 files**), `npm run build` succeeds (existing 519.12 kB chunk advisory), and `git diff --check` passes. Installed-Chrome viewport captures, deployed route/asset/overflow checks, Resume interaction and PDF validation, shared J comparison, and unchanged Cho’Veigo media verification are recorded in [the correction QA report](site-render-review/2026-10-11-final-owner-review-corrections/runtime-qa-followup/qa-report.md) and [the checkpoint ledger](site-render-review/2026-10-11-final-owner-review-corrections/REVIEW-CHECKPOINT.md). This is an owner-review checkpoint, not portfolio completion.
+
 ## Current owner review checkpoint — J identity / Opening reconciliation (2026-10-11)
 
 **Feature branch:** `feat/portfolio-integration`. **Application source:** `894f6c952f3de73fe9b559b1e685e7dcf63e8432`. **Current immutable Preview:** https://5c88927f.joshuaik2.pages.dev/ (deployed application source `894f6c9`). The reconciled source also contains the historical lobby restore from `554b0cb`. The worktree/remote feature tip was `4ee24cb1adaeab43a7f6384aae18de84c4973367` when this status was updated. Production was not targeted; the persistent goal remains active.

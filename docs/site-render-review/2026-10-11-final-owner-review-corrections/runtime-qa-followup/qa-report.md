@@ -1,6 +1,6 @@
 # Focused Runtime QA — 2026-10-11
 
-Scope: read-only Chrome/Playwright check of the frozen local worktree at `HEAD 3f72275` plus its current uncommitted frontend changes, served at `http://127.0.0.1:5176`. This is not an immutable Preview and does not imply owner acceptance.
+This report records three sequential checks: the initial local candidate at `3f72275`, a fresh local recheck after the narrow lobby correction, and the final immutable Preview from application source `17057f9`. The last section is the deployed checkpoint result; earlier observations are retained as history and superseded where the later recheck says so. This is implementation verification, not owner acceptance.
 
 ## Lobbies
 
@@ -17,7 +17,7 @@ Scope: read-only Chrome/Playwright check of the frozen local worktree at `HEAD 3
 
 ## Shared identity / assets
 
-- Header brand J and Activity availability J both use `/media/identity/sonnet-v8/figma-export/canonical-lockup.png`, opacity 1, no filter; the rendered marks appear consistent in Projects. The Projects owner portrait and all lobby banner marks loaded.
+- Header brand J and Activity availability J both use `/media/identity/sonnet-v8/figma-export/canonical-lockup.png`, opacity 1. On the current deployed Home, Header is 54×54 with `filter:none`/`mix-blend-mode:screen`; Activity is 48×48 with `filter:brightness(1.16)`/normal blend. The CSS differs, but the Chrome render shows comparable apparent brightness at their respective sizes. The Projects owner portrait and all lobby banner marks loaded.
 - No failed image loads, console errors, page errors, or failed requests occurred in the fresh 2560 and mobile lobby checks or Resume interaction/viewer checks.
 
 ## Evidence
@@ -38,3 +38,22 @@ Follow-up after the Frontend narrow-lobby fix; this supersedes the earlier mobil
 Desktop plus-placement regression check at 1920×1080 passed on Projects and Experience: plus-slot horizontal midpoint exactly matches the banner-group midpoint (0px delta); their vertical centers also match (Projects 405.8px, Experience 389px). No errors or broken banner images. Captures: `recheck-projects-1920x1080.png`, `recheck-experience-1920x1080.png`.
 
 Current result: the previously reported narrow header and Experience role/legend collisions are fixed in this local candidate. No source edits, commit, or deployment were performed during QA.
+
+## Immutable Preview verification — 2026-10-11
+
+Preview: https://5d314ec5.joshuaik2.pages.dev/
+Cloudflare Pages deployment: `5d314ec5-a913-4ce2-94d5-5264223ef9d5` · environment `Preview` · branch `feat/portfolio-integration` · Wrangler source prefix `17057f9`, matching local application HEAD `17057f9efedc3139f70a3ece6cc09217578acdef`.
+
+The deployed shell references `index-pOKBoEo_.js` and `index-B0vc_JMl.css`. Downloaded deployed bytes exactly match local clean `dist`: JS 519,121 bytes, SHA-256 `E5C576FEC09126EDA6C80C6C9F906D0591F08CF8D1AA10A80BADD366F91F8506`; CSS 501,937 bytes, SHA-256 `6794602F225EC759A41F456E778BB50DD685D35B1EE5B95C96000162C6617ECE`.
+
+Direct deployed routes `/home`, `/projects`, `/experience`, `/hackathons`, `/education`, `/resume`, and `/resume/viewer` all returned HTTP 200 at 1440×900 and 390×844. Settled scans found no failed image loads, failed requests, page/console errors, or horizontal document overflow. At 390px, the mode lobbies and case-project surfaces are vertically scrollable as intended; headings and controls remain within the 390px document width. Captures and route metrics: `%TEMP%\portfolio-preview-5d314ec5-final\` (`desktop-*.png`, `narrow-*.png`, `route-smoke-final.json`).
+
+Home→Resume Found opens a modal takeover at `/resume`; the dialog reports `aria-modal=true`. Tab cycles View Resume → Close → View Resume, confirming focus remains trapped. Escape and Close return to `/home` and restore focus to the triggering Resume link; View Resume reaches `/resume/viewer`. Resume Viewer exposes visible Download PDF and Open Fullscreen links to the same deployed PDF; the embedded PDF resource loads in desktop and narrow captures. Download was activated and produced `Joshua_Aryeetey_General_Resume_v13.pdf`; the Open Fullscreen link was activated (Chrome opened a PDF tab, but its popup URL was blank in this headless audit). The PDF endpoint returns HTTP 200 with `application/pdf`.
+
+J appearance correction: on Home, Header J uses the canonical lockup at 54×54 with computed `filter:none` and `mix-blend-mode:screen`; Activity J uses the same canonical asset at 48×48 with computed `filter:brightness(1.16)` and normal blend. The filters differ, but the rendered marks look comparably bright at their respective sizes; no obvious brightness mismatch is visible. Evidence: `%TEMP%\portfolio-preview-5d314ec5-final\j-identity-home-desktop.png`.
+
+Cho’Veigo full-media endpoint `/media/demos/choveigo-full-demo.mp4` responds `200`, `Content-Type: video/mp4`, length `32,915,943` bytes and ETag `"sha256-1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801"`, matching the owner-authorized original SHA-256. A byte-range request returned `206`, `Content-Range: bytes 0-1023/32915943`. Native Chrome metadata reports duration `112.638333s`, unmuted, volume 1, readyState 4; play/pause advanced currentTime without media error. This verifies the unchanged full original source, duration, audio-enabled player state, and range support. The browser reports `audioTracks` as unavailable (`null`), so track enumeration itself is not independently verified.
+
+Classification: routes, deployed bundle/source identity, assets/errors/overflow, Resume routing controls, canonical J source/apparent brightness, and full Cho’Veigo media identity/playback are verified in deployed Chrome. This is runtime QA, not owner acceptance.
+
+Resume ring/focus detail: the 1440×900 settled deployed screenshot shows the cyan middle channel illuminated within the gold outer circle, with no visible channel overrun. On the deployed modal, Tab sequence was View Resume → CLOSE → View Resume. Evidence: `%TEMP%\portfolio-preview-5d314ec5-final\resume-desktop-settled.png`.
