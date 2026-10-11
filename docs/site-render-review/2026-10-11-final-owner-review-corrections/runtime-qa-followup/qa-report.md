@@ -61,3 +61,7 @@ Resume ring/focus detail: the 1440×900 settled deployed screenshot shows the cy
 ## Cross-surface route regression sweep — 2026-10-11
 
 Installed Chrome checked the six long-form case studies plus Education projects, Profile, Journey, Personal Highlights, and Demos at 1440×900 and 390×844 (22 route/viewport checks). All returned HTTP 200. The sweep scrolled the actual nested `main` region on case-study pages so lazy-loaded media could decode. All visible images completed with nonzero dimensions; there were no failed requests, HTTP errors, console/page errors, pending visible images, or horizontal overflow. Full route metrics are in [case-route-smoke-2026-10-11.json](../case-route-smoke-2026-10-11.json).
+
+## Help and X utility regression check — 2026-10-11
+
+On Home, Projects, Profile, Food Tracker, and Resume Viewer at 1440×900 and 390×844, the installed-Chrome check opened all ten Help states. Desktop opened a modal guide; narrow Home opened its nonmodal coachmark, while the other narrow screens opened the modal guide. Each control fit within the viewport, utility guidance included LinkedIn, GitHub, Email, and Resume, and Escape closed the guide and restored focus to Help. The X action kept the verified `https://x.com/Cartizionplane` destination, opened a new tab, and used `noopener noreferrer`. No page or console errors occurred. This is a runtime/bounds check, not a new Help visual redesign.
