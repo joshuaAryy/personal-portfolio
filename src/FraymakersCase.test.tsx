@@ -22,11 +22,14 @@ describe("Fraymakers technical case study", () => {
     expect(hero).toContain("STAGE / PLAYER ART · MATCH LABELS");
     expect(hero).toContain("PLAYER 1");
     expect(hero).toContain("PLAYER 2");
+    const matchupMarkers = [...hero.matchAll(/class="fray-case__hero-marker fray-case__hero-marker--(p1|p2)" aria-hidden="true"/g)].map(([, side]) => side);
+    expect(matchupMarkers).toEqual(["p1", "p2"]);
+    expect(hero).toContain("Abstract player silhouettes face across the stage");
     expect(hero).not.toContain("CHARACTER + COSTUME");
     expect(hero).not.toContain("LOGOS + ASSISTS + FOREGROUND ART");
     expect(hero).not.toContain("PLAYER NAMES + SET LABELS");
     expect(hero).toContain("Simplified conceptual 16:9 matchup over a shared art field");
-    expect(hero).toContain("Simplified conceptual composition; source art, logos, assists, and labels were inputs");
+    expect(hero).toContain("Illustrative composition only: abstract silhouettes show opposing player positions across a shared field");
     expect(hero).toContain("My brother built the broader foundation, CLI, Challonge integration");
     expect(hero).toContain("I joined later to build <code>thumbnail.js</code>");
     expect(hero.indexOf("<figure")).toBeLessThan(hero.indexOf("class=\"fray-case__intro-detail\""));
@@ -123,5 +126,7 @@ describe("Fraymakers technical case study", () => {
     expect(css).toContain(".fray-case__hero-frame");
     expect(narrow).toMatch(/\.fray-case__hero-zone[^}]*font-size:\s*10px/s);
     expect(narrow).toMatch(/\.fray-case__hero-matchup\s*\{[\s\S]*?grid-template-columns:/);
+    expect(css).toContain(".fray-case__hero-marker");
+    expect(css).toContain(".fray-case__hero-matchup::after");
   });
 });
