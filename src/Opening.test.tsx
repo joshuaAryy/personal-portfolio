@@ -70,7 +70,7 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(source.indexOf('data-j-layer="portal-plasma-vignette"')).toBeLessThan(source.indexOf('data-j-layer="activation-bloom"'));
     expect(source.indexOf('data-j-layer="activation-bloom"')).toBeLessThan(source.indexOf('data-j-layer="gold-orb-ring"'));
     expect(source.indexOf('data-j-layer="gold-orb-ring"')).toBeLessThan(source.indexOf('data-j-layer="j-contact-shadow"'));
-    expect(css).toMatch(/@keyframes opening-v8-portal-arrive[\s\S]*?67%, 100%\s*\{\s*opacity:\s*1;/);
+    expect(css).toMatch(/@keyframes opening-v8-portal-arrive\s*\{\s*0%, 7\.9%\s*\{\s*opacity:\s*0;\s*\}\s*8%\s*\{\s*opacity:\s*\.28;\s*\}\s*19\.2%\s*\{\s*opacity:\s*\.5;\s*\}\s*27\.4%\s*\{\s*opacity:\s*\.7;\s*\}\s*51\.6%\s*\{\s*opacity:\s*\.85;\s*\}\s*60%, 100%\s*\{\s*opacity:\s*1;/);
     expect(css).toMatch(/@keyframes opening-v8-ring-arrive[\s\S]*?60%, 100%\s*\{\s*opacity:\s*1;/);
     expect(css).toMatch(/@keyframes opening-v8-contact-arrive[\s\S]*?51\.6%, 100%\s*\{\s*opacity:\s*1;/);
     expect(css).toContain("opening-v8-activation-bloom");

@@ -38,20 +38,22 @@
       .s32 { width: 32px; height: 32px; }
       .s26 { width: 26px; height: 26px; }
       .s16 { width: 16px; height: 16px; }
-      .small-row { display: flex; align-items: center; gap: 12px; margin-top: 11px; color: #bac5ca; font-size: 11px; }
+      .small-row { display: flex; align-items: center; gap: 12px; margin-top: 11px; padding: 5px 7px; color: #bac5ca; font-size: 11px; background: #02050a; }
       .small-row .disc { display: grid; width: 36px; height: 36px; place-items: center; border: 1px solid #867347; border-radius: 50%; background: #061017; }
       .recommendation { padding: 14px 16px; border-top: 1px solid #2a3841; color: #c0cbd0; font-size: 12px; }
       .recommendation strong { color: white; }
-      .transient { display: grid; grid-template-columns: 150px 1fr; gap: 15px; align-items: center; margin-top: 20px; padding: 13px; border: 1px solid #34424b; background: #101820; }
-      .transient img { display: block; width: 150px; aspect-ratio: 700 / 620; object-fit: cover; }
+      .transient { display: grid; grid-template-columns: minmax(180px, 36%) 1fr; gap: 15px; align-items: center; margin-top: 20px; padding: 13px; border: 1px solid #34424b; background: #101820; }
+      .transient img { display: block; width: 100%; max-height: 300px; aspect-ratio: 700 / 620; object-fit: contain; background: #020508; }
       .transient p { margin-top: 4px; color: #b8c4ca; font-size: 12px; }
       .footer { margin-top: 22px; padding-top: 13px; border-top: 1px solid #34424b; color: #aab8bf; font-size: 11px; }
       @media (max-width: 780px) {
         .intro { grid-template-columns: 1fr; }
         .badge { justify-self: start; }
-        .grid { grid-template-columns: 1fr; }
         .hero { min-height: 210px; }
         .hero img { width: 165px; height: 165px; }
+      }
+      @media (max-width: 560px) {
+        .grid { grid-template-columns: 1fr; }
       }
       @media (max-width: 420px) {
         body { padding: 18px 11px 30px; }
@@ -66,11 +68,11 @@
     <header class="intro">
       <div>
         <h1>J identity · owner-directed placement review</h1>
-        <p>Only the owner-approved V8 lockup and ring-free J are shown as permanent artwork. The State 05 image below is a temporary animation pose, not a third logo candidate. This board uses the current Figma exports on the actual header and Activity backgrounds at their implemented display sizes.</p>
+        <p>This review shows the two owner-approved permanent treatments: the settled V8 lockup and the ring-free J. The authentic segmented State 05 is shown separately as a transient opening pose, not as a static logo candidate. Examples use the real header and Activity backgrounds at their implemented display sizes.</p>
       </div>
       <span class="badge">FEATURE REVIEW · PRODUCTION ARCHIVE UNCHANGED</span>
     </header>
-    <aside class="decision"><strong>Current direction:</strong> use the settled J + V8 orb for prominent Portfolio identity; use the seamless J with the authored optical glyphs for compact placements. Keep both as one coherent V8 family. The owner has not approved a permanent production replacement.</aside>
+    <aside class="decision"><strong>Owner direction:</strong> use the settled J + V8 orb for prominent identity and the seamless J / authored optical glyphs for compact placements. State 05 remains a transient opening pose; its cyan light belongs on the actual segmented pieces, not painted over the seamless mark. Production archive `159:2` remains unchanged.</aside>
 
     <main class="grid">
       <article class="candidate">
@@ -117,10 +119,10 @@
       <img src="captures/figma-storyboard-2026-10-11/state-3714-2092.png" alt="Figma State 05, with the segmented J activated by cyan joint light" />
       <div>
         <h3>State 05 · transient motion pose only</h3>
-        <p>The genuine segmented geometry and cyan joint lighting belong to the opening animation. This is not the rejected painted-seam overlay, and it is not a permanent logo variant.</p>
+        <p>The full segmented State 05 geometry and cyan lighting are an Opening pose. This is separate from both permanent treatments: the joint light belongs on the actual separated piece geometry during activation, not painted over the seamless settled J.</p>
       </div>
     </aside>
 
-    <footer class="footer">Small-size files: `/media/identity/sonnet-v8/figma-export/optical-32.png` and `optical-16.png`. The source review board does not modify or promote the production archive J (`159:2`). The opening’s final J + orb and the compact standalone J remain feature-review implementations pending owner review.</footer>
+    <footer class="footer">Small-size files: `/media/identity/sonnet-v8/figma-export/optical-32.png` and `optical-16.png`. The source review board does not modify or promote the production archive J (`159:2`). Owner-accepted feature placements remain subject to review in the site Preview; production identity is unchanged.</footer>
   </body>
 </html>

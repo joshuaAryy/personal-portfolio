@@ -1,0 +1,2632 @@
+{
+  "candidate": {
+    "head": "476b4358f729a467715a28c51e3105ff2b448cbc",
+    "workingChanges": [
+      "M src/Opening.test.tsx",
+      " M src/opening.css"
+    ],
+    "url": "http://127.0.0.1:5176/"
+  },
+  "recording": {
+    "video": "portal-correction-uninterrupted-1920x1080.webm",
+    "wallCommitToHomeMs": 5844,
+    "firstOpeningToHomeMs": 5247.3,
+    "endPath": "/home",
+    "openingRemainedVisibleThroughFrames": true,
+    "run": {
+      "path": "/home",
+      "openingVisible": false,
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      "telemetry": {
+        "first": 369.29999999701977,
+        "home": 5616.600000008941,
+        "samples": [
+          {
+            "elapsedMs": 0,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 0,
+            "tickProgress": 0,
+            "tickCurrentMs": 0,
+            "portalOpacity": 0,
+            "ringOpacity": 0
+          },
+          {
+            "elapsedMs": 201.1,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 0,
+            "tickProgress": 0,
+            "tickCurrentMs": 0,
+            "portalOpacity": 0,
+            "ringOpacity": 0
+          },
+          {
+            "elapsedMs": 565.1,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 0,
+            "tickProgress": 0,
+            "tickCurrentMs": 450.2640000088606,
+            "portalOpacity": 0.299747,
+            "ringOpacity": 0.299747
+          },
+          {
+            "elapsedMs": 598.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 0,
+            "tickProgress": 0,
+            "tickCurrentMs": 483.86400000886067,
+            "portalOpacity": 0.312947,
+            "ringOpacity": 0.312947
+          },
+          {
+            "elapsedMs": 1852.9,
+            "tickAngle": 114.52094316382886,
+            "tickDegreesUnwrapped": 114.5,
+            "tickProgress": 0.3181137500027689,
+            "tickCurrentMs": 1617.9640000088607,
+            "portalOpacity": 0.730739,
+            "ringOpacity": 0.730739
+          },
+          {
+            "elapsedMs": 1855.6,
+            "tickAngle": 127.6609711401453,
+            "tickDegreesUnwrapped": 127.7,
+            "tickProgress": 0.3546137500027689,
+            "tickCurrentMs": 1734.7640000088606,
+            "portalOpacity": 0.745219,
+            "ringOpacity": 0.745219
+          },
+          {
+            "elapsedMs": 1866.1,
+            "tickAngle": 129.52842431815884,
+            "tickDegreesUnwrapped": 129.5,
+            "tickProgress": 0.3598012500027689,
+            "tickCurrentMs": 1751.3640000088606,
+            "portalOpacity": 0.747277,
+            "ringOpacity": 0.747277
+          },
+          {
+            "elapsedMs": 1882.3,
+            "tickAngle": 131.4297233429694,
+            "tickDegreesUnwrapped": 131.4,
+            "tickProgress": 0.36508250000276893,
+            "tickCurrentMs": 1768.2640000088606,
+            "portalOpacity": 0.749372,
+            "ringOpacity": 0.749372
+          },
+          {
+            "elapsedMs": 1899,
+            "tickAngle": 133.2972196014765,
+            "tickDegreesUnwrapped": 133.3,
+            "tickProgress": 0.37027000000276894,
+            "tickCurrentMs": 1784.8640000088608,
+            "portalOpacity": 0.751429,
+            "ringOpacity": 0.751429
+          },
+          {
+            "elapsedMs": 1915.7,
+            "tickAngle": 135.1646906727815,
+            "tickDegreesUnwrapped": 135.2,
+            "tickProgress": 0.3754575000027689,
+            "tickCurrentMs": 1801.4640000088607,
+            "portalOpacity": 0.753487,
+            "ringOpacity": 0.753487
+          },
+          {
+            "elapsedMs": 1932.5,
+            "tickAngle": 137.0546745553246,
+            "tickDegreesUnwrapped": 137.1,
+            "tickProgress": 0.3807075000027689,
+            "tickCurrentMs": 1818.2640000088606,
+            "portalOpacity": 0.75557,
+            "ringOpacity": 0.75557
+          },
+          {
+            "elapsedMs": 1950.8,
+            "tickAngle": 138.922207764417,
+            "tickDegreesUnwrapped": 138.9,
+            "tickProgress": 0.3858950000027689,
+            "tickCurrentMs": 1834.8640000088606,
+            "portalOpacity": 0.757628,
+            "ringOpacity": 0.757628
+          },
+          {
+            "elapsedMs": 1965.6,
+            "tickAngle": 140.80097129399508,
+            "tickDegreesUnwrapped": 140.8,
+            "tickProgress": 0.39111375000276893,
+            "tickCurrentMs": 1851.5640000088606,
+            "portalOpacity": 0.759698,
+            "ringOpacity": 0.759698
+          },
+          {
+            "elapsedMs": 1982.3,
+            "tickAngle": 142.69096035766944,
+            "tickDegreesUnwrapped": 142.7,
+            "tickProgress": 0.3963637500027689,
+            "tickCurrentMs": 1868.3640000088606,
+            "portalOpacity": 0.761781,
+            "ringOpacity": 0.761781
+          },
+          {
+            "elapsedMs": 2001.5,
+            "tickAngle": 144.5584399618187,
+            "tickDegreesUnwrapped": 144.6,
+            "tickProgress": 0.40155125000276887,
+            "tickCurrentMs": 1884.9640000088605,
+            "portalOpacity": 0.763839,
+            "ringOpacity": 0.763839
+          },
+          {
+            "elapsedMs": 2015.5,
+            "tickAngle": 146.43717174966662,
+            "tickDegreesUnwrapped": 146.4,
+            "tickProgress": 0.4067700000027689,
+            "tickCurrentMs": 1901.6640000088607,
+            "portalOpacity": 0.765909,
+            "ringOpacity": 0.765909
+          },
+          {
+            "elapsedMs": 2032.5,
+            "tickAngle": 148.3159286151365,
+            "tickDegreesUnwrapped": 148.3,
+            "tickProgress": 0.41198875000276886,
+            "tickCurrentMs": 1918.3640000088603,
+            "portalOpacity": 0.767979,
+            "ringOpacity": 0.767979
+          },
+          {
+            "elapsedMs": 2049.1,
+            "tickAngle": 150.1834337590721,
+            "tickDegreesUnwrapped": 150.2,
+            "tickProgress": 0.417176250002769,
+            "tickCurrentMs": 1934.964000008861,
+            "portalOpacity": 0.770037,
+            "ringOpacity": 0.770037
+          },
+          {
+            "elapsedMs": 2065.6,
+            "tickAngle": 152.06219529650002,
+            "tickDegreesUnwrapped": 152.1,
+            "tickProgress": 0.42239500000276886,
+            "tickCurrentMs": 1951.6640000088605,
+            "portalOpacity": 0.772107,
+            "ringOpacity": 0.772107
+          },
+          {
+            "elapsedMs": 2082.5,
+            "tickAngle": 153.94096727109013,
+            "tickDegreesUnwrapped": 153.9,
+            "tickProgress": 0.4276137500027689,
+            "tickCurrentMs": 1968.3640000088608,
+            "portalOpacity": 0.774177,
+            "ringOpacity": 0.774177
+          },
+          {
+            "elapsedMs": 2099.1,
+            "tickAngle": 155.8309541447626,
+            "tickDegreesUnwrapped": 155.8,
+            "tickProgress": 0.4328637500027689,
+            "tickCurrentMs": 1985.1640000088605,
+            "portalOpacity": 0.77626,
+            "ringOpacity": 0.77626
+          },
+          {
+            "elapsedMs": 2116,
+            "tickAngle": 157.6984501597094,
+            "tickDegreesUnwrapped": 157.7,
+            "tickProgress": 0.4380512500027689,
+            "tickCurrentMs": 2001.7640000088606,
+            "portalOpacity": 0.778318,
+            "ringOpacity": 0.778318
+          },
+          {
+            "elapsedMs": 2132.6,
+            "tickAngle": 159.57719572014753,
+            "tickDegreesUnwrapped": 159.6,
+            "tickProgress": 0.44327000000276895,
+            "tickCurrentMs": 2018.4640000088607,
+            "portalOpacity": 0.780388,
+            "ringOpacity": 0.780388
+          },
+          {
+            "elapsedMs": 2149.2,
+            "tickAngle": 161.46722925815334,
+            "tickDegreesUnwrapped": 161.5,
+            "tickProgress": 0.4485200000027689,
+            "tickCurrentMs": 2035.2640000088606,
+            "portalOpacity": 0.782471,
+            "ringOpacity": 0.782471
+          },
+          {
+            "elapsedMs": 2166,
+            "tickAngle": 163.33471515817996,
+            "tickDegreesUnwrapped": 163.3,
+            "tickProgress": 0.4537075000027689,
+            "tickCurrentMs": 2051.864000008861,
+            "portalOpacity": 0.784529,
+            "ringOpacity": 0.784529
+          },
+          {
+            "elapsedMs": 2182.7,
+            "tickAngle": 165.20217687441425,
+            "tickDegreesUnwrapped": 165.2,
+            "tickProgress": 0.4588950000027689,
+            "tickCurrentMs": 2068.4640000088607,
+            "portalOpacity": 0.786586,
+            "ringOpacity": 0.786586
+          },
+          {
+            "elapsedMs": 2200.5,
+            "tickAngle": 167.08096213663146,
+            "tickDegreesUnwrapped": 167.1,
+            "tickProgress": 0.46411375000276894,
+            "tickCurrentMs": 2085.1640000088605,
+            "portalOpacity": 0.788657,
+            "ringOpacity": 0.788657
+          },
+          {
+            "elapsedMs": 2216.1,
+            "tickAngle": 168.95972504163046,
+            "tickDegreesUnwrapped": 169,
+            "tickProgress": 0.4693325000027688,
+            "tickCurrentMs": 2101.8640000088603,
+            "portalOpacity": 0.790727,
+            "ringOpacity": 0.790727
+          },
+          {
+            "elapsedMs": 2232.7,
+            "tickAngle": 170.83843026363888,
+            "tickDegreesUnwrapped": 170.8,
+            "tickProgress": 0.4745512500027689,
+            "tickCurrentMs": 2118.5640000088606,
+            "portalOpacity": 0.792797,
+            "ringOpacity": 0.792797
+          },
+          {
+            "elapsedMs": 2249.4,
+            "tickAngle": 172.70593008600258,
+            "tickDegreesUnwrapped": 172.7,
+            "tickProgress": 0.4797387500027689,
+            "tickCurrentMs": 2135.1640000088605,
+            "portalOpacity": 0.794855,
+            "ringOpacity": 0.794855
+          },
+          {
+            "elapsedMs": 2265.9,
+            "tickAngle": 174.57345045114164,
+            "tickDegreesUnwrapped": 174.6,
+            "tickProgress": 0.48492625000276884,
+            "tickCurrentMs": 2151.7640000088604,
+            "portalOpacity": 0.796913,
+            "ringOpacity": 0.796913
+          },
+          {
+            "elapsedMs": 2282.6,
+            "tickAngle": 176.4634486625198,
+            "tickDegreesUnwrapped": 176.5,
+            "tickProgress": 0.4901762500027688,
+            "tickCurrentMs": 2168.5640000088606,
+            "portalOpacity": 0.798996,
+            "ringOpacity": 0.798996
+          },
+          {
+            "elapsedMs": 2299.3,
+            "tickAngle": 178.33095032806705,
+            "tickDegreesUnwrapped": 178.3,
+            "tickProgress": 0.49536375000276894,
+            "tickCurrentMs": 2185.164000008861,
+            "portalOpacity": 0.801053,
+            "ringOpacity": 0.801053
+          },
+          {
+            "elapsedMs": 2316.5,
+            "tickAngle": 180.20970021979937,
+            "tickDegreesUnwrapped": 180.2,
+            "tickProgress": 0.5005825000027688,
+            "tickCurrentMs": 2201.8640000088603,
+            "portalOpacity": 0.803124,
+            "ringOpacity": 0.803124
+          },
+          {
+            "elapsedMs": 2332.7,
+            "tickAngle": 182.0884519146217,
+            "tickDegreesUnwrapped": 182.1,
+            "tickProgress": 0.5058012500027689,
+            "tickCurrentMs": 2218.5640000088606,
+            "portalOpacity": 0.805194,
+            "ringOpacity": 0.805194
+          },
+          {
+            "elapsedMs": 2349.4,
+            "tickAngle": 183.9784527709682,
+            "tickDegreesUnwrapped": 184,
+            "tickProgress": 0.5110512500027689,
+            "tickCurrentMs": 2235.364000008861,
+            "portalOpacity": 0.807277,
+            "ringOpacity": 0.807277
+          },
+          {
+            "elapsedMs": 2366.1,
+            "tickAngle": 185.84594415101623,
+            "tickDegreesUnwrapped": 185.8,
+            "tickProgress": 0.5162387500027689,
+            "tickCurrentMs": 2251.9640000088607,
+            "portalOpacity": 0.809334,
+            "ringOpacity": 0.809334
+          },
+          {
+            "elapsedMs": 2382.8,
+            "tickAngle": 187.72468097183318,
+            "tickDegreesUnwrapped": 187.7,
+            "tickProgress": 0.5214575000027689,
+            "tickCurrentMs": 2268.6640000088605,
+            "portalOpacity": 0.811405,
+            "ringOpacity": 0.811405
+          },
+          {
+            "elapsedMs": 2399.5,
+            "tickAngle": 189.59222478026095,
+            "tickDegreesUnwrapped": 189.6,
+            "tickProgress": 0.5266450000027689,
+            "tickCurrentMs": 2285.264000008861,
+            "portalOpacity": 0.813462,
+            "ringOpacity": 0.813462
+          },
+          {
+            "elapsedMs": 2416.2,
+            "tickAngle": 191.48216769807996,
+            "tickDegreesUnwrapped": 191.5,
+            "tickProgress": 0.5318950000027689,
+            "tickCurrentMs": 2302.0640000088606,
+            "portalOpacity": 0.815545,
+            "ringOpacity": 0.815545
+          },
+          {
+            "elapsedMs": 2432.8,
+            "tickAngle": 193.33846667897407,
+            "tickDegreesUnwrapped": 193.3,
+            "tickProgress": 0.5370512500027689,
+            "tickCurrentMs": 2318.5640000088606,
+            "portalOpacity": 0.817591,
+            "ringOpacity": 0.817591
+          },
+          {
+            "elapsedMs": 2449.4,
+            "tickAngle": 195.22843503018137,
+            "tickDegreesUnwrapped": 195.2,
+            "tickProgress": 0.5423012500027689,
+            "tickCurrentMs": 2335.364000008861,
+            "portalOpacity": 0.819673,
+            "ringOpacity": 0.819673
+          },
+          {
+            "elapsedMs": 2465.9,
+            "tickAngle": 197.09595953235387,
+            "tickDegreesUnwrapped": 197.1,
+            "tickProgress": 0.5474887500027689,
+            "tickCurrentMs": 2351.9640000088607,
+            "portalOpacity": 0.821731,
+            "ringOpacity": 0.821731
+          },
+          {
+            "elapsedMs": 2482.7,
+            "tickAngle": 198.97472558455894,
+            "tickDegreesUnwrapped": 199,
+            "tickProgress": 0.5527075000027689,
+            "tickCurrentMs": 2368.664000008861,
+            "portalOpacity": 0.823801,
+            "ringOpacity": 0.823801
+          },
+          {
+            "elapsedMs": 2499.6,
+            "tickAngle": 200.8534560355318,
+            "tickDegreesUnwrapped": 200.9,
+            "tickProgress": 0.5579262500027689,
+            "tickCurrentMs": 2385.3640000088603,
+            "portalOpacity": 0.825872,
+            "ringOpacity": 0.825872
+          },
+          {
+            "elapsedMs": 2516.1,
+            "tickAngle": 202.72093035417413,
+            "tickDegreesUnwrapped": 202.7,
+            "tickProgress": 0.5631137500027689,
+            "tickCurrentMs": 2401.9640000088602,
+            "portalOpacity": 0.827929,
+            "ringOpacity": 0.827929
+          },
+          {
+            "elapsedMs": 2532.5,
+            "tickAngle": 204.61096225417458,
+            "tickDegreesUnwrapped": 204.6,
+            "tickProgress": 0.5683637500027688,
+            "tickCurrentMs": 2418.7640000088604,
+            "portalOpacity": 0.830012,
+            "ringOpacity": 0.830012
+          },
+          {
+            "elapsedMs": 2549.3,
+            "tickAngle": 206.48969261654221,
+            "tickDegreesUnwrapped": 206.5,
+            "tickProgress": 0.5735825000027689,
+            "tickCurrentMs": 2435.4640000088607,
+            "portalOpacity": 0.832082,
+            "ringOpacity": 0.832082
+          },
+          {
+            "elapsedMs": 2566.2,
+            "tickAngle": 208.3571907374829,
+            "tickDegreesUnwrapped": 208.4,
+            "tickProgress": 0.5787700000027688,
+            "tickCurrentMs": 2452.0640000088606,
+            "portalOpacity": 0.83414,
+            "ringOpacity": 0.83414
+          },
+          {
+            "elapsedMs": 2582.7,
+            "tickAngle": 210.23594381065007,
+            "tickDegreesUnwrapped": 210.2,
+            "tickProgress": 0.5839887500027688,
+            "tickCurrentMs": 2468.7640000088604,
+            "portalOpacity": 0.83621,
+            "ringOpacity": 0.83621
+          },
+          {
+            "elapsedMs": 2599.3,
+            "tickAngle": 212.10346767678732,
+            "tickDegreesUnwrapped": 212.1,
+            "tickProgress": 0.5891762500027689,
+            "tickCurrentMs": 2485.364000008861,
+            "portalOpacity": 0.838268,
+            "ringOpacity": 0.838268
+          },
+          {
+            "elapsedMs": 2616.2,
+            "tickAngle": 213.99345987154422,
+            "tickDegreesUnwrapped": 214,
+            "tickProgress": 0.5944262500027688,
+            "tickCurrentMs": 2502.1640000088605,
+            "portalOpacity": 0.840351,
+            "ringOpacity": 0.840351
+          },
+          {
+            "elapsedMs": 2632.8,
+            "tickAngle": 215.87219000200074,
+            "tickDegreesUnwrapped": 215.9,
+            "tickProgress": 0.5996450000027689,
+            "tickCurrentMs": 2518.864000008861,
+            "portalOpacity": 0.842421,
+            "ringOpacity": 0.842421
+          },
+          {
+            "elapsedMs": 2649.8,
+            "tickAngle": 217.73968079159746,
+            "tickDegreesUnwrapped": 217.7,
+            "tickProgress": 0.6048325000027689,
+            "tickCurrentMs": 2535.4640000088607,
+            "portalOpacity": 0.844479,
+            "ringOpacity": 0.844479
+          },
+          {
+            "elapsedMs": 2666.5,
+            "tickAngle": 219.62967619802595,
+            "tickDegreesUnwrapped": 219.6,
+            "tickProgress": 0.6100825000027689,
+            "tickCurrentMs": 2552.2640000088604,
+            "portalOpacity": 0.846562,
+            "ringOpacity": 0.846562
+          },
+          {
+            "elapsedMs": 2682.8,
+            "tickAngle": 221.49718469488144,
+            "tickDegreesUnwrapped": 221.5,
+            "tickProgress": 0.6152700000027689,
+            "tickCurrentMs": 2568.8640000088603,
+            "portalOpacity": 0.84862,
+            "ringOpacity": 0.84862
+          },
+          {
+            "elapsedMs": 2711.4,
+            "tickAngle": 223.37593096899462,
+            "tickDegreesUnwrapped": 223.4,
+            "tickProgress": 0.6204887500027689,
+            "tickCurrentMs": 2585.5640000088606,
+            "portalOpacity": 0.851987,
+            "ringOpacity": 0.851987
+          },
+          {
+            "elapsedMs": 2735.1,
+            "tickAngle": 227.13344627361653,
+            "tickDegreesUnwrapped": 227.1,
+            "tickProgress": 0.6309262500027688,
+            "tickCurrentMs": 2618.9640000088607,
+            "portalOpacity": 0.863916,
+            "ringOpacity": 0.863916
+          },
+          {
+            "elapsedMs": 2758.7,
+            "tickAngle": 229.0009118270223,
+            "tickDegreesUnwrapped": 229,
+            "tickProgress": 0.6361137500027688,
+            "tickCurrentMs": 2635.5640000088606,
+            "portalOpacity": 0.869844,
+            "ringOpacity": 0.869844
+          },
+          {
+            "elapsedMs": 2766.7,
+            "tickAngle": 230.89097472599556,
+            "tickDegreesUnwrapped": 230.9,
+            "tickProgress": 0.6413637500027688,
+            "tickCurrentMs": 2652.3640000088603,
+            "portalOpacity": 0.875844,
+            "ringOpacity": 0.875844
+          },
+          {
+            "elapsedMs": 2788.9,
+            "tickAngle": 232.7584220407997,
+            "tickDegreesUnwrapped": 232.8,
+            "tickProgress": 0.6465512500027689,
+            "tickCurrentMs": 2668.9640000088607,
+            "portalOpacity": 0.881773,
+            "ringOpacity": 0.881773
+          },
+          {
+            "elapsedMs": 2811.1,
+            "tickAngle": 234.6259442543945,
+            "tickDegreesUnwrapped": 234.6,
+            "tickProgress": 0.6517387500027689,
+            "tickCurrentMs": 2685.5640000088606,
+            "portalOpacity": 0.887701,
+            "ringOpacity": 0.887701
+          },
+          {
+            "elapsedMs": 2819,
+            "tickAngle": 236.51592787764042,
+            "tickDegreesUnwrapped": 236.5,
+            "tickProgress": 0.6569887500027689,
+            "tickCurrentMs": 2702.364000008861,
+            "portalOpacity": 0.893701,
+            "ringOpacity": 0.893701
+          },
+          {
+            "elapsedMs": 2844.7,
+            "tickAngle": 238.40596182133837,
+            "tickDegreesUnwrapped": 238.4,
+            "tickProgress": 0.6622387500027689,
+            "tickCurrentMs": 2719.1640000088605,
+            "portalOpacity": 0.899701,
+            "ringOpacity": 0.899701
+          },
+          {
+            "elapsedMs": 2866.8,
+            "tickAngle": 242.14095716359282,
+            "tickDegreesUnwrapped": 242.1,
+            "tickProgress": 0.6726137500027688,
+            "tickCurrentMs": 2752.3640000088603,
+            "portalOpacity": 0.911559,
+            "ringOpacity": 0.911559
+          },
+          {
+            "elapsedMs": 2889.5,
+            "tickAngle": 244.01971163739006,
+            "tickDegreesUnwrapped": 244,
+            "tickProgress": 0.6778325000027688,
+            "tickCurrentMs": 2769.0640000088606,
+            "portalOpacity": 0.917523,
+            "ringOpacity": 0.917523
+          },
+          {
+            "elapsedMs": 2899.9,
+            "tickAngle": 245.89845504152464,
+            "tickDegreesUnwrapped": 245.9,
+            "tickProgress": 0.6830512500027689,
+            "tickCurrentMs": 2785.764000008861,
+            "portalOpacity": 0.923487,
+            "ringOpacity": 0.923487
+          },
+          {
+            "elapsedMs": 2925.7,
+            "tickAngle": 247.76595006605913,
+            "tickDegreesUnwrapped": 247.8,
+            "tickProgress": 0.6882387500027689,
+            "tickCurrentMs": 2802.364000008861,
+            "portalOpacity": 0.929416,
+            "ringOpacity": 0.929416
+          },
+          {
+            "elapsedMs": 2933.8,
+            "tickAngle": 249.6446914236423,
+            "tickDegreesUnwrapped": 249.6,
+            "tickProgress": 0.6934575000027688,
+            "tickCurrentMs": 2819.0640000088606,
+            "portalOpacity": 0.93538,
+            "ringOpacity": 0.93538
+          },
+          {
+            "elapsedMs": 2958.1,
+            "tickAngle": 251.54595426359646,
+            "tickDegreesUnwrapped": 251.5,
+            "tickProgress": 0.6987387500027689,
+            "tickCurrentMs": 2835.9640000088607,
+            "portalOpacity": 0.941416,
+            "ringOpacity": 0.941416
+          },
+          {
+            "elapsedMs": 2974.4,
+            "tickAngle": 253.4021838759748,
+            "tickDegreesUnwrapped": 253.4,
+            "tickProgress": 0.703895000002769,
+            "tickCurrentMs": 2852.4640000088607,
+            "portalOpacity": 0.947309,
+            "ringOpacity": 0.947309
+          },
+          {
+            "elapsedMs": 2988.7,
+            "tickAngle": 255.28091932625358,
+            "tickDegreesUnwrapped": 255.3,
+            "tickProgress": 0.7091137500027689,
+            "tickCurrentMs": 2869.1640000088605,
+            "portalOpacity": 0.953273,
+            "ringOpacity": 0.953273
+          },
+          {
+            "elapsedMs": 3006.2,
+            "tickAngle": 257.15971490375364,
+            "tickDegreesUnwrapped": 257.2,
+            "tickProgress": 0.7143325000027689,
+            "tickCurrentMs": 2885.864000008861,
+            "portalOpacity": 0.959237,
+            "ringOpacity": 0.959237
+          },
+          {
+            "elapsedMs": 3029.8,
+            "tickAngle": 259.0272018702367,
+            "tickDegreesUnwrapped": 259,
+            "tickProgress": 0.7195200000027688,
+            "tickCurrentMs": 2902.4640000088607,
+            "portalOpacity": 0.965166,
+            "ringOpacity": 0.965166
+          },
+          {
+            "elapsedMs": 3040,
+            "tickAngle": 260.9171775581224,
+            "tickDegreesUnwrapped": 260.9,
+            "tickProgress": 0.7247700000027688,
+            "tickCurrentMs": 2919.2640000088604,
+            "portalOpacity": 0.971166,
+            "ringOpacity": 0.971166
+          },
+          {
+            "elapsedMs": 3063.1,
+            "tickAngle": 262.7734506985634,
+            "tickDegreesUnwrapped": 262.8,
+            "tickProgress": 0.7299262500027689,
+            "tickCurrentMs": 2935.764000008861,
+            "portalOpacity": 0.977059,
+            "ringOpacity": 0.977059
+          },
+          {
+            "elapsedMs": 3069.9,
+            "tickAngle": 264.6746986481317,
+            "tickDegreesUnwrapped": 264.7,
+            "tickProgress": 0.7352075000027688,
+            "tickCurrentMs": 2952.6640000088605,
+            "portalOpacity": 0.983094,
+            "ringOpacity": 0.983094
+          },
+          {
+            "elapsedMs": 3084,
+            "tickAngle": 266.530948926318,
+            "tickDegreesUnwrapped": 266.5,
+            "tickProgress": 0.7403637500027689,
+            "tickCurrentMs": 2969.1640000088605,
+            "portalOpacity": 0.988987,
+            "ringOpacity": 0.988987
+          },
+          {
+            "elapsedMs": 3107.1,
+            "tickAngle": 268.44344890173574,
+            "tickDegreesUnwrapped": 268.4,
+            "tickProgress": 0.7456762500027688,
+            "tickCurrentMs": 2986.1640000088605,
+            "portalOpacity": 0.995059,
+            "ringOpacity": 0.995059
+          },
+          {
+            "elapsedMs": 3117.5,
+            "tickAngle": 270.28845003938,
+            "tickDegreesUnwrapped": 270.3,
+            "tickProgress": 0.7508012500027689,
+            "tickCurrentMs": 3002.5640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3134.9,
+            "tickAngle": 272.1672018856059,
+            "tickDegreesUnwrapped": 272.2,
+            "tickProgress": 0.7560200000027689,
+            "tickCurrentMs": 3019.2640000088604,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3151.1,
+            "tickAngle": 274.0459504825996,
+            "tickDegreesUnwrapped": 274,
+            "tickProgress": 0.761238750002769,
+            "tickCurrentMs": 3035.9640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3167.7,
+            "tickAngle": 275.92468305817215,
+            "tickDegreesUnwrapped": 275.9,
+            "tickProgress": 0.7664575000027688,
+            "tickCurrentMs": 3052.6640000088605,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3190,
+            "tickAngle": 277.8034344115006,
+            "tickDegreesUnwrapped": 277.8,
+            "tickProgress": 0.7716762500027688,
+            "tickCurrentMs": 3069.364000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3201,
+            "tickAngle": 279.6709710307818,
+            "tickDegreesUnwrapped": 279.7,
+            "tickProgress": 0.7768637500027689,
+            "tickCurrentMs": 3085.9640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3217.9,
+            "tickAngle": 281.53841860354726,
+            "tickDegreesUnwrapped": 281.5,
+            "tickProgress": 0.7820512500027689,
+            "tickCurrentMs": 3102.5640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3235.2,
+            "tickAngle": 283.4284512087513,
+            "tickDegreesUnwrapped": 283.4,
+            "tickProgress": 0.7873012500027688,
+            "tickCurrentMs": 3119.3640000088603,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3251.1,
+            "tickAngle": 285.30718956166686,
+            "tickDegreesUnwrapped": 285.3,
+            "tickProgress": 0.7925200000027689,
+            "tickCurrentMs": 3136.0640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3267.7,
+            "tickAngle": 287.1859589530822,
+            "tickDegreesUnwrapped": 287.2,
+            "tickProgress": 0.797738750002769,
+            "tickCurrentMs": 3152.764000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3284.6,
+            "tickAngle": 289.0647250219266,
+            "tickDegreesUnwrapped": 289.1,
+            "tickProgress": 0.8029575000027689,
+            "tickCurrentMs": 3169.4640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3301.2,
+            "tickAngle": 290.93219878031346,
+            "tickDegreesUnwrapped": 290.9,
+            "tickProgress": 0.8081450000027688,
+            "tickCurrentMs": 3186.0640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3317.9,
+            "tickAngle": 292.8109643519678,
+            "tickDegreesUnwrapped": 292.8,
+            "tickProgress": 0.8133637500027688,
+            "tickCurrentMs": 3202.7640000088604,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3334.7,
+            "tickAngle": 294.6897200051224,
+            "tickDegreesUnwrapped": 294.7,
+            "tickProgress": 0.8185825000027689,
+            "tickCurrentMs": 3219.4640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3353.8,
+            "tickAngle": 296.5684590945735,
+            "tickDegreesUnwrapped": 296.6,
+            "tickProgress": 0.8238012500027688,
+            "tickCurrentMs": 3236.1640000088605,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3368.8,
+            "tickAngle": 298.43594683502334,
+            "tickDegreesUnwrapped": 298.4,
+            "tickProgress": 0.8289887500027688,
+            "tickCurrentMs": 3252.7640000088604,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3384.6,
+            "tickAngle": 300.3034741288532,
+            "tickDegreesUnwrapped": 300.3,
+            "tickProgress": 0.8341762500027688,
+            "tickCurrentMs": 3269.3640000088603,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3401.3,
+            "tickAngle": 302.19347486670034,
+            "tickDegreesUnwrapped": 302.2,
+            "tickProgress": 0.8394262500027689,
+            "tickCurrentMs": 3286.164000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3417.6,
+            "tickAngle": 304.06093422130124,
+            "tickDegreesUnwrapped": 304.1,
+            "tickProgress": 0.844613750002769,
+            "tickCurrentMs": 3302.764000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3434.7,
+            "tickAngle": 305.9396823375664,
+            "tickDegreesUnwrapped": 305.9,
+            "tickProgress": 0.8498325000027688,
+            "tickCurrentMs": 3319.4640000088602,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3451.1,
+            "tickAngle": 307.8184152789642,
+            "tickDegreesUnwrapped": 307.8,
+            "tickProgress": 0.8550512500027688,
+            "tickCurrentMs": 3336.1640000088605,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3472.6,
+            "tickAngle": 309.7084500583309,
+            "tickDegreesUnwrapped": 309.7,
+            "tickProgress": 0.8603012500027688,
+            "tickCurrentMs": 3352.9640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3485.1,
+            "tickAngle": 311.58720915352575,
+            "tickDegreesUnwrapped": 311.6,
+            "tickProgress": 0.8655200000027689,
+            "tickCurrentMs": 3369.6640000088605,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3501.4,
+            "tickAngle": 313.4772146590753,
+            "tickDegreesUnwrapped": 313.5,
+            "tickProgress": 0.8707700000027688,
+            "tickCurrentMs": 3386.4640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3517.8,
+            "tickAngle": 315.32221144868913,
+            "tickDegreesUnwrapped": 315.3,
+            "tickProgress": 0.8758950000027689,
+            "tickCurrentMs": 3402.864000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3534.7,
+            "tickAngle": 317.200950761809,
+            "tickDegreesUnwrapped": 317.2,
+            "tickProgress": 0.8811137500027689,
+            "tickCurrentMs": 3419.5640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3551.1,
+            "tickAngle": 319.09095684222314,
+            "tickDegreesUnwrapped": 319.1,
+            "tickProgress": 0.8863637500027689,
+            "tickCurrentMs": 3436.364000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3568,
+            "tickAngle": 320.96971100670453,
+            "tickDegreesUnwrapped": 321,
+            "tickProgress": 0.891582500002769,
+            "tickCurrentMs": 3453.0640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3584.5,
+            "tickAngle": 322.8484695118215,
+            "tickDegreesUnwrapped": 322.8,
+            "tickProgress": 0.8968012500027689,
+            "tickCurrentMs": 3469.7640000088604,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3613.9,
+            "tickAngle": 324.71595498818107,
+            "tickDegreesUnwrapped": 324.7,
+            "tickProgress": 0.9019887500027688,
+            "tickCurrentMs": 3486.3640000088603,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3634.9,
+            "tickAngle": 328.46219034434733,
+            "tickDegreesUnwrapped": 328.5,
+            "tickProgress": 0.912395000002769,
+            "tickCurrentMs": 3519.664000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3650.6,
+            "tickAngle": 330.3409246483061,
+            "tickDegreesUnwrapped": 330.3,
+            "tickProgress": 0.9176137500027688,
+            "tickCurrentMs": 3536.3640000088603,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3667.2,
+            "tickAngle": 332.2197162018311,
+            "tickDegreesUnwrapped": 332.2,
+            "tickProgress": 0.9228325000027688,
+            "tickCurrentMs": 3553.0640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3683.8,
+            "tickAngle": 334.09845732079674,
+            "tickDegreesUnwrapped": 334.1,
+            "tickProgress": 0.9280512500027689,
+            "tickCurrentMs": 3569.7640000088604,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3700.6,
+            "tickAngle": 335.9884287138401,
+            "tickDegreesUnwrapped": 336,
+            "tickProgress": 0.9333012500027689,
+            "tickCurrentMs": 3586.5640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3717.1,
+            "tickAngle": 337.84471645441397,
+            "tickDegreesUnwrapped": 337.8,
+            "tickProgress": 0.9384575000027687,
+            "tickCurrentMs": 3603.06400000886,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3733.8,
+            "tickAngle": 339.72344027827825,
+            "tickDegreesUnwrapped": 339.7,
+            "tickProgress": 0.9436762500027688,
+            "tickCurrentMs": 3619.7640000088604,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3750.6,
+            "tickAngle": 341.60217601964956,
+            "tickDegreesUnwrapped": 341.6,
+            "tickProgress": 0.9488950000027688,
+            "tickCurrentMs": 3636.4640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3767.2,
+            "tickAngle": 343.4697133136788,
+            "tickDegreesUnwrapped": 343.5,
+            "tickProgress": 0.954082500002769,
+            "tickCurrentMs": 3653.064000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3784.1,
+            "tickAngle": 345.3709449368836,
+            "tickDegreesUnwrapped": 345.4,
+            "tickProgress": 0.9593637500027689,
+            "tickCurrentMs": 3669.9640000088607,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3800.5,
+            "tickAngle": 347.22716900061556,
+            "tickDegreesUnwrapped": 347.2,
+            "tickProgress": 0.9645200000027688,
+            "tickCurrentMs": 3686.4640000088602,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3817.3,
+            "tickAngle": 349.1059726250644,
+            "tickDegreesUnwrapped": 349.1,
+            "tickProgress": 0.9697387500027689,
+            "tickCurrentMs": 3703.1640000088605,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3833.9,
+            "tickAngle": 350.98471592742936,
+            "tickDegreesUnwrapped": 351,
+            "tickProgress": 0.9749575000027689,
+            "tickCurrentMs": 3719.864000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3850.4,
+            "tickAngle": 352.8634779580548,
+            "tickDegreesUnwrapped": 352.9,
+            "tickProgress": 0.980176250002769,
+            "tickCurrentMs": 3736.564000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3867.2,
+            "tickAngle": 354.730947863889,
+            "tickDegreesUnwrapped": 354.7,
+            "tickProgress": 0.9853637500027688,
+            "tickCurrentMs": 3753.1640000088605,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3883.9,
+            "tickAngle": 356.60969899507654,
+            "tickDegreesUnwrapped": 356.6,
+            "tickProgress": 0.9905825000027688,
+            "tickCurrentMs": 3769.864000008861,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3900.8,
+            "tickAngle": 358.4884479089806,
+            "tickDegreesUnwrapped": 358.5,
+            "tickProgress": 0.9958012500027689,
+            "tickCurrentMs": 3786.5640000088606,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3917.4,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3933.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3950.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3967.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 3984.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4000.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4017.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4033.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4050.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4067.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4083.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4100.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4117.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4134,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4150.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4167.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4184,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4200.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4217.4,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4234.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4250.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4267.4,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4284.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4301.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4317.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4334.1,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4350.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4367.4,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4384,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4400.8,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4417.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4434.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4450.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4467.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4484.1,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4500.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4517.4,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4534.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4550.8,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4567.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4584.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4600.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4617.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4634.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4651.1,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4667.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4684.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4700.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4717.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4734.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4750.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4767.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4784.3,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4801,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4817.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4834.4,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4851,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4867.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4884.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4901.1,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4917.8,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4934.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4951.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4967.9,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 4984.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5001.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5018.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5034.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5051.2,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5068,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5084.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5102,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5118.6,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5145.5,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          },
+          {
+            "elapsedMs": 5181.7,
+            "tickAngle": 0,
+            "tickDegreesUnwrapped": 360,
+            "tickProgress": 1,
+            "tickCurrentMs": 3800.0000000000005,
+            "portalOpacity": 1,
+            "ringOpacity": 1
+          }
+        ],
+        "lastAngle": 0,
+        "unwrapped": 360
+      }
+    },
+    "initialImages": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ],
+    "audit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "phases": [
+    {
+      "requestedMs": 650,
+      "route": "/",
+      "opening": true,
+      "timeMs": 650.5,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "0",
+      "portalOpacity": "0.378405",
+      "ringOpacity": "0.378405",
+      "bloom": {
+        "opacity": "0",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-0p65s-1920x1080.png"
+    },
+    {
+      "requestedMs": 1370,
+      "route": "/",
+      "opening": true,
+      "timeMs": 1384.4,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "0",
+      "portalOpacity": "0.701783",
+      "ringOpacity": "0.701783",
+      "bloom": {
+        "opacity": "0",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-1p37s-1920x1080.png"
+    },
+    {
+      "requestedMs": 2580,
+      "route": "/",
+      "opening": true,
+      "timeMs": 2585.5,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "0.0342813",
+      "portalOpacity": "0.851959",
+      "ringOpacity": "0.851959",
+      "bloom": {
+        "opacity": "0.00683687",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-2p58s-1920x1080.png"
+    },
+    {
+      "requestedMs": 3100,
+      "route": "/",
+      "opening": true,
+      "timeMs": 3102.6,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "1",
+      "portalOpacity": "1",
+      "ringOpacity": "1",
+      "bloom": {
+        "opacity": "0.41497",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-3p10s-1920x1080.png"
+    },
+    {
+      "requestedMs": 3720,
+      "route": "/",
+      "opening": true,
+      "timeMs": 3736.5,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "1",
+      "portalOpacity": "1",
+      "ringOpacity": "1",
+      "bloom": {
+        "opacity": "0.0967825",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-3p72s-1920x1080.png"
+    },
+    {
+      "requestedMs": 4100,
+      "route": "/",
+      "opening": true,
+      "timeMs": 4353.7,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "1",
+      "portalOpacity": "1",
+      "ringOpacity": "1",
+      "bloom": {
+        "opacity": "0",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-4p10s-1920x1080.png"
+    },
+    {
+      "requestedMs": 4550,
+      "route": "/",
+      "opening": true,
+      "timeMs": 4837.4,
+      "pieceOpacities": [
+        null,
+        "1",
+        "1"
+      ],
+      "fusedOpacity": "1",
+      "portalOpacity": "1",
+      "ringOpacity": "1",
+      "bloom": {
+        "opacity": "0",
+        "radius": "50%"
+      },
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "phase-4p55s-1920x1080.png"
+    }
+  ],
+  "phaseAudit": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": []
+  },
+  "narrow": [
+    {
+      "file": "narrow-approach-390x844.png",
+      "route": "/",
+      "actualMs": 1384.5,
+      "opening": true,
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 844
+      },
+      "mark": {
+        "x": 80.3,
+        "y": 307.3,
+        "w": 229.4,
+        "h": 229.4
+      },
+      "skip": {
+        "x": 266,
+        "y": 777,
+        "w": 106,
+        "h": 40
+      },
+      "portalOpacity": "0.7018"
+    },
+    {
+      "file": "narrow-settled-390x844.png",
+      "route": "/",
+      "actualMs": 4103.6,
+      "opening": true,
+      "viewport": {
+        "w": 390,
+        "h": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 844
+      },
+      "mark": {
+        "x": 80.3,
+        "y": 307.3,
+        "w": 229.4,
+        "h": 229.4
+      },
+      "skip": {
+        "x": 266,
+        "y": 777,
+        "w": 106,
+        "h": 40
+      },
+      "portalOpacity": "1"
+    }
+  ],
+  "auditNarrow": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": []
+  },
+  "skip": {
+    "path": "/home",
+    "openingCount": 0,
+    "audit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "reducedMotion": {
+    "path": "/",
+    "className": "opening opening--reduced",
+    "jOpacity": "1",
+    "portalOpacity": "1",
+    "ringOpacity": "1",
+    "tickAnimation": "none",
+    "overflow": false,
+    "images": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ],
+    "audit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  }
+}

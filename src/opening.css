@@ -1070,11 +1070,12 @@
 }
 
 @keyframes opening-v8-portal-arrive {
-  0%, 15% { opacity: 0; }
-  19.2% { opacity: .05; }
-  27.4% { opacity: .18; }
-  51.6% { opacity: .35; }
-  67%, 100% { opacity: 1; }
+  0%, 7.9% { opacity: 0; }
+  8% { opacity: .28; }
+  19.2% { opacity: .5; }
+  27.4% { opacity: .7; }
+  51.6% { opacity: .85; }
+  60%, 100% { opacity: 1; }
 }
 
 @keyframes opening-v8-contact-arrive {
