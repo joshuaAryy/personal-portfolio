@@ -42,7 +42,7 @@ Current result: the previously reported narrow header and Experience role/legend
 ## Immutable Preview verification — 2026-10-11
 
 Preview: https://5d314ec5.joshuaik2.pages.dev/
-Cloudflare Pages deployment: `5d314ec5-a913-4ce2-94d5-5264223ef9d5` · environment `Preview` · branch `feat/portfolio-integration` · Wrangler source prefix `17057f9`, matching local application HEAD `17057f9efedc3139f70a3ece6cc09217578acdef`.
+Cloudflare Pages deployment: `5d314ec5-a913-4ce2-94d5-5264223ef9d5` · environment `Preview` · branch `feat/portfolio-integration` · Wrangler source prefix `17057f9`, matching application source commit `17057f9efedc3139f70a3ece6cc09217578acdef` (the branch later received documentation-only checkpoint commits; deployed app assets are unchanged).
 
 The deployed shell references `index-pOKBoEo_.js` and `index-B0vc_JMl.css`. Downloaded deployed bytes exactly match local clean `dist`: JS 519,121 bytes, SHA-256 `E5C576FEC09126EDA6C80C6C9F906D0591F08CF8D1AA10A80BADD366F91F8506`; CSS 501,937 bytes, SHA-256 `6794602F225EC759A41F456E778BB50DD685D35B1EE5B95C96000162C6617ECE`.
 
