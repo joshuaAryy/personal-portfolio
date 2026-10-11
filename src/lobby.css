@@ -102,14 +102,10 @@
 }
 
 .league-lobby__banners:not(.league-lobby__banners--projects) {
-  top: 9%;
-  right: auto;
-  bottom: 29%;
-  left: 50%;
-  width: min(52%, 810px);
-  transform: translateX(-50%);
+  right: 12%;
+  left: 12%;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(16px, 2.5vw, 36px);
+  gap: clamp(18px, 3vw, 46px);
 }
 
 .league-lobby__balance-slots {
@@ -136,14 +132,6 @@
   font-size: 28px;
   font-weight: 400;
   line-height: 1;
-}
-
-@media (min-width: 901px) {
-  .league-lobby__balance-slots {
-    top: 13.5%;
-    right: calc(50% - min(26%, 405px) - 94px);
-    left: calc(50% - min(26%, 405px) - 94px);
-  }
 }
 
 .league-banner {

@@ -48,7 +48,7 @@ afterEach(() => {
 });
 
 describe("lobby banner environment", () => {
-  it("restores the pre-top-origin banner composition across every lobby", () => {
+  it("restores the pre-top-origin category banner composition across every lobby", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
     const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -64,17 +64,19 @@ describe("lobby banner environment", () => {
     expect(bannerGroup).toMatch(/right:\s*6%/);
     expect(bannerGroup).toMatch(/bottom:\s*29%/);
     expect(bannerGroup).toMatch(/left:\s*6%/);
-    expect(categoryBanners).toMatch(/top:\s*9%/);
-    expect(categoryBanners).toMatch(/bottom:\s*29%/);
-    expect(categoryBanners).toMatch(/left:\s*50%/);
-    expect(categoryBanners).toMatch(/width:\s*min\(52%,\s*810px\)/);
-    expect(categoryBanners).toMatch(/transform:\s*translateX\(-50%\)/);
+    expect(categoryBanners).toMatch(/right:\s*12%/);
+    expect(categoryBanners).toMatch(/left:\s*12%/);
+    expect(categoryBanners).not.toMatch(/top:/);
+    expect(categoryBanners).not.toMatch(/bottom:/);
+    expect(categoryBanners).not.toMatch(/width:/);
+    expect(categoryBanners).not.toMatch(/transform:/);
     expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,/);
-    expect(categoryBanners).toMatch(/gap:\s*clamp\(16px,\s*2\.5vw,\s*36px\)/);
-    const desktopBalanceSlots = css.match(/@media \(min-width: 901px\)\s*\{\s*\.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
-    expect(desktopBalanceSlots).toMatch(/top:\s*13\.5%/);
-    expect(desktopBalanceSlots).toMatch(/right:\s*calc\(50% - min\(26%,\s*405px\) - 94px\)/);
-    expect(desktopBalanceSlots).toMatch(/left:\s*calc\(50% - min\(26%,\s*405px\) - 94px\)/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(18px,\s*3vw,\s*46px\)/);
+    const balanceSlots = css.match(/\.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
+    expect(balanceSlots).toMatch(/top:\s*25\.5%/);
+    expect(balanceSlots).toMatch(/right:\s*4\.5%/);
+    expect(balanceSlots).toMatch(/left:\s*4\.5%/);
+    expect(css).not.toMatch(/@media \(min-width: 901px\)\s*\{\s*\.league-lobby__balance-slots\s*\{/);
     expect(mobileRulesForGroup).toMatch(/position:\s*relative/);
     expect(mobileRulesForGroup).toMatch(/inset:\s*auto/);
     expect(mobileRulesForGroup).toMatch(/width:\s*100%/);
@@ -92,6 +94,18 @@ describe("lobby banner environment", () => {
       root = undefined;
       host = undefined;
     }
+  });
+
+  it("does not reapply the superseded top-origin fade or tall-screen banner override", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const baseCategoryBanner = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
+    const tallDesktop = css.slice(css.indexOf("@media (min-width: 1800px) and (min-height: 1000px)"));
+
+    expect(css).not.toMatch(/\.league-lobby--(?:experience|hackathons|education) \.league-lobby__environment::before/);
+    expect(baseCategoryBanner).toMatch(/right:\s*12%/);
+    expect(baseCategoryBanner).toMatch(/left:\s*12%/);
+    expect(tallDesktop).not.toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)/);
+    expect(tallDesktop).not.toMatch(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\) \.league-banner__medallion\s*\{[^}]*margin-top:\s*145px/);
   });
   it("uses real project marks and keeps selection separate from opening a story", () => {
     const view = renderProjectsLobby();
