@@ -12,16 +12,17 @@ describe("Sonnet V8 identity review and sheen", () => {
     expect(css).toMatch(/\.opening__j-sheen-band\s*\{[^}]*background:\s*linear-gradient\(\s*90deg,/s);
   });
 
-  it("compares only the two owner-approved static treatments and keeps State 05 motion-only", () => {
+  it("compares the two accepted identity treatments and an isolated subtle-joint review candidate", () => {
     const board = readFileSync("docs/j-source-review/pass03/logo-comparison.html", "utf8");
 
     expect(board).toContain('data-candidate="settled-lockup"');
+    expect(board).toContain('data-candidate="settled-lockup-cyan-joints"');
     expect(board).toContain('data-candidate="standalone-j"');
-    expect(board.match(/data-candidate=/g)).toHaveLength(2);
-    expect(board).not.toContain('data-candidate="settled-lockup-cyan-joints"');
-    expect(board).not.toContain('src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg"');
-    expect(board).not.toContain("Variant 02 · settled J + V8 orb with subtle cyan joints");
-    expect(board).toContain("Variant 02 · painted seam overlay is rejected");
+    expect(board.match(/data-candidate=/g)).toHaveLength(3);
+    expect(board).toContain('src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg"');
+    expect(board).toContain("State 05 joint-light layer at review-only low intensity");
+    expect(board).toContain("This is a comparison candidate, not an approved permanent mark.");
+    expect(board).toContain("Previously rejected: painting seam slashes over the settled J as a permanent logo.");
     expect(board).toContain('src="captures/figma-storyboard-2026-10-11/state-3714-2092.png"');
     expect(board).toContain("State 05 · transient motion pose only");
     expect(board).toContain("Crown, shaft, and hook are physically separated in this transient activation state");
@@ -33,7 +34,8 @@ describe("Sonnet V8 identity review and sheen", () => {
     expect(board).toContain("48px · main Activity identity");
     expect(board).toContain("40px · opportunity rail");
     expect(board).toContain("Review status:");
-    expect(board).toContain("Variant 02 · painted seam overlay is rejected and excluded from the current static comparison");
+    expect(board).toContain("not an approved permanent mark.");
+    expect(board).toContain("until the owner reviews Candidate B");
     expect(board).toContain('src="/media/identity/sonnet-v8/figma-export/optical-54.png"');
     expect(readFileSync("public/media/identity/sonnet-v8/figma-export/optical-54.png")).toBeDefined();
   });

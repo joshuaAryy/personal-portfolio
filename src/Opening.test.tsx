@@ -24,15 +24,15 @@ function renderOpeningRoute(reducedMotion = false) {
 }
 
 describe("Sonnet V8 Opening fidelity", () => {
-  it("holds the physical fragments through activation, then fills their joints before hiding them", () => {
+  it("crossfades the fragments into the fused J at the authored lock interval", () => {
     const css = readFileSync("src/opening.css", "utf8");
     const fragments = css.match(/@keyframes opening-j-fragment-opacity\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const fused = css.match(/@keyframes opening-j-fused-reveal\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
-    expect(fragments).toContain("51.6%, 67.2% { opacity: 1;");
-    expect(fused).toContain("0%, 64% { opacity: 0;");
-    expect(fused).toContain("67.2%, 100% { opacity: 1;");
-    expect(fragments).toContain("72%, 100% { opacity: 0;");
+    expect(fragments).toContain("51.6%, 54.8% { opacity: 1;");
+    expect(fragments).toContain("55.2%, 100% { opacity: 0;");
+    expect(fused).toContain("0%, 51.6% { opacity: 0;");
+    expect(fused).toContain("54.8%, 100% { opacity: 1;");
   });
 
   it("crossfades the initial settled identity into three continuously moving Figma fragments", () => {

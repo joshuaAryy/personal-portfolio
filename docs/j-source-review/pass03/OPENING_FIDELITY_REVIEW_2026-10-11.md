@@ -11,7 +11,7 @@ The existing editable Sonnet V8 rig and storyboard are authoritative for the fea
 - **Variant 02 — settled J with a painted seam overlay:** rejected. It is excluded from permanent placements.
 - **Production:** archive `159:2` remains untouched.
 
-The [identity comparison board](logo-comparison.html) presents the two accepted usage variants at the actual header, Activity, and compact sizes. The board separates permanent logo usage from the transient State 05 motion pose.
+The [identity comparison board](logo-comparison.html) presents the two accepted usage variants at the actual header, Activity, and compact sizes, plus a separate owner-requested subtle-joint candidate that has not been accepted. The board separates permanent logo usage from the transient State 05 motion pose.
 
 ## Opening choreography
 
@@ -31,6 +31,12 @@ The [seven-state comparison board](opening-seven-state-comparison.html) places e
 Installed Chrome inspection found the joint channels activate over the seated pieces, the portal and ring persist, and the fused J settles without an observed placement or texture jump. No page/console errors, failed requests, broken opening assets, or viewport clipping were recorded. Browser data is in `docs/site-render-review/2026-10-11-opening-fidelity/qa-orb-joint-fixed/rerun-final/`.
 
 The evidence establishes implementation and render fidelity only. Owner review of the new immutable feature Preview remains open. Production and prior J candidate history remain preserved.
+
+## Follow-up: authored fuse timing and static joint candidate — 2026-10-11
+
+The latest owner direction makes the Figma lock note controlling for the fragment/fused transition. Current source keeps the three fragments fully opaque through 2.74s, completes the canonical J reveal at 2.74s, and clears the fragments by 2.76s. Fresh installed-Chrome evidence at 2.58s, 2.66s, 2.74s, 2.76s, 4.09s, and 4.10s shows no discernible double silhouette or final-lockup pop. The full recording, capture report, and 1440×720/390×844 alignment captures are in [`pass05-fuse-timing`](../../site-render-review/2026-10-11-opening-fidelity/pass05-fuse-timing/). Focused tests, all 301 tests, build, and `git diff --check` pass; the build retains its existing chunk-size advisory. The updated motion record is in [`MOTION_IMPLEMENTATION.md`](MOTION_IMPLEMENTATION.md).
+
+The board also includes a review-only settled J + V8 orb with low-intensity authored State 05 joint-light artwork. It is distinct from the previously rejected painted-slash static treatment, has not changed any live logo placement, and awaits owner review. The board itself could not be refreshed in Chrome because the browser security policy rejected its local `file://` URL; that comparison is not claimed as visually verified. No other approved surface was changed.
 
 ## Resume Found geometry clarification
 

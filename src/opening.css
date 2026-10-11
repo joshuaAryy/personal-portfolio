@@ -1066,8 +1066,8 @@
   13% { opacity: .72; }
   19.2% { opacity: .86; }
   27.4% { opacity: .96; }
-  51.6%, 67.2% { opacity: 1; }
-  72%, 100% { opacity: 0; }
+  51.6%, 54.8% { opacity: 1; }
+  55.2%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-crown-approach {
@@ -1098,8 +1098,8 @@
 }
 
 @keyframes opening-j-fused-reveal {
-  0%, 64% { opacity: 0; }
-  67.2%, 100% { opacity: 1; }
+  0%, 51.6% { opacity: 0; }
+  54.8%, 100% { opacity: 1; }
 }
 
 @keyframes opening-v8-ring-arrive {
