@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>J identity comparison · review only</title>
+    <style>
+      :root { color-scheme: dark; font-family: Inter, "Segoe UI", sans-serif; }
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 26px; color: #e9e2d2; background: #10151b; }
+      h1, h2, p { margin: 0; }
+      h1 { font: 600 22px/1.2 Georgia, serif; letter-spacing: .04em; }
+      .intro { display: flex; align-items: start; justify-content: space-between; gap: 24px; margin-bottom: 18px; }
+      .intro-copy { max-width: 860px; }
+      .intro p { margin-top: 8px; color: #bac3c8; font-size: 12px; line-height: 1.55; }
+      .review-only { flex: none; padding: 7px 10px; border: 1px solid #bd9145; color: #e8c879; font: 600 10px/1 Arial, sans-serif; letter-spacing: .12em; }
+      .source-note { padding: 10px 12px; margin-bottom: 18px; border-left: 2px solid #71c7e4; background: #15232c; color: #c4d2d8; font-size: 11px; line-height: 1.5; }
+      .source-note strong { color: #edf1f0; }
+      .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; align-items: start; }
+      .candidate { min-width: 0; overflow: hidden; border: 1px solid #34414b; background: #121a22; }
+      .candidate h2 { padding: 12px 13px 5px; color: #f1d38b; font: 600 12px/1.35 Arial, sans-serif; letter-spacing: .04em; }
+      .source { padding: 0 13px 10px; color: #aab3b8; font-size: 10px; }
+      .large-stage { position: relative; display: grid; min-height: 270px; place-items: center; overflow: hidden; background: radial-gradient(ellipse 52% 58% at 50% 46%, rgb(22 35 45 / 55%), transparent 100%), radial-gradient(ellipse 95% 70% at 50% 100%, rgb(7 18 27 / 78%), transparent 75%), #01050a; }
+      .large-stage::after { position: absolute; inset: 0; border: 1px solid #ffffff0d; content: ""; pointer-events: none; }
+      .large-stage > img, .large-stage .mark-lockup { width: 244px; height: 244px; }
+      .mark-lockup { position: relative; display: block; flex: none; }
+      .mark-lockup > img { position: absolute; display: block; width: 100%; height: 100%; object-fit: contain; }
+      .mark-lockup > img.seam { inset: 0; width: 100%; height: 100%; object-fit: fill; mix-blend-mode: screen; opacity: .28; }
+      .context { border-top: 1px solid #27343e; padding: 10px 12px 12px; }
+      .context-label { margin-bottom: 8px; color: #a7b4bc; font: 600 9px/1.2 Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+      .samples { display: flex; align-items: end; gap: 14px; }
+      .sample { display: flex; min-width: 43px; flex-direction: column; align-items: center; gap: 5px; color: #aeb8be; font: 9px/1 Arial, sans-serif; }
+      .sample-surface { display: grid; place-items: center; }
+      .header-surface { min-height: 72px; padding: 9px 12px; background: #010305; }
+      .activity-identity-surface { min-height: 72px; padding: 9px 12px; border-top: 2px solid #78a83b; background: #06451d; }
+      .activity-row-surface { min-height: 51px; padding: 9px 12px; background: #02080d; }
+      .surface-title { margin-left: 10px; color: #cfc3a6; font: 600 9px/1.2 Georgia, serif; letter-spacing: .07em; }
+      .identity-surface { display: flex; align-items: center; }
+      .identity-surface .sample { flex: none; }
+      .header-surface .sample { flex-direction: row; align-items: center; gap: 10px; }
+      .activity-shell { overflow: hidden; border: 1px solid #28323a; background: #02080d; }
+      .activity-row-surface { display: flex; align-items: center; gap: 8px; color: #d7d2c8; font: 11px/1 Arial, sans-serif; }
+      .activity-row-surface .sample { flex: none; }
+      .activity-row-surface .circle { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid #8e7744; border-radius: 50%; }
+      .mark-82 { width: 82px; height: 82px; }
+      .mark-48 { width: 48px; height: 48px; }
+      .mark-42 { width: 42px; height: 42px; }
+      .mark-26 { width: 26px; height: 26px; }
+      .mark-16 { width: 16px; height: 16px; }
+      .small-caption { margin-top: 8px; color: #91a0a8; font: 9px/1.45 Arial, sans-serif; }
+      .recommendation { border-top: 1px solid #34414b; padding: 12px; color: #c4cdd2; font-size: 10px; line-height: 1.5; }
+      .recommendation strong { color: #e9e2d2; }
+      .placement-summary { margin-top: 14px; border: 1px solid #34414b; background: #121a22; }
+      .placement-summary h2 { padding: 12px 14px 8px; color: #f1d38b; font: 600 12px/1.3 Arial, sans-serif; letter-spacing: .04em; }
+      .placement-summary p { padding: 0 14px 12px; color: #bbc5ca; font-size: 10px; line-height: 1.5; }
+      .placement-summary table { width: 100%; border-collapse: collapse; font-size: 10px; line-height: 1.45; }
+      .placement-summary th, .placement-summary td { padding: 8px 14px; border-top: 1px solid #293641; text-align: left; vertical-align: top; }
+      .placement-summary th { width: 22%; color: #d6bd7e; font-weight: 600; }
+      .placement-summary td { color: #bbc5ca; }
+      .placement-summary strong { color: #edf1f0; }
+      .optical-reference { display: flex; align-items: center; gap: 9px; margin-top: 8px; padding: 7px 9px; border: 1px solid #3b4d59; background: #050709; color: #bac3c8; font-size: 9px; }
+      .optical-reference img { display: block; width: 16px; height: 16px; }
+      .footer-note { margin-top: 16px; padding-top: 12px; border-top: 1px solid #34414b; color: #aeb8be; font-size: 10px; line-height: 1.5; }
+      .footer-note strong { color: #e9e2d2; }
+      @media (max-width: 920px) {
+        body { padding: 13px; }
+        .intro { flex-direction: column; gap: 10px; }
+        .review-only { align-self: flex-start; }
+        .grid { grid-template-columns: 1fr; gap: 12px; }
+        .candidate { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+        .candidate h2, .candidate .source, .recommendation { grid-column: 1 / -1; }
+        .large-stage { min-height: 180px; }
+        .large-stage > img, .large-stage .mark-lockup { width: 164px; height: 164px; }
+      }
+      @media (max-width: 420px) {
+        .candidate { display: block; }
+        .context { padding: 8px; }
+        .samples { gap: 8px; }
+        .sample { min-width: 33px; }
+        .header-surface, .activity-identity-surface, .activity-row-surface { padding-left: 8px; padding-right: 8px; }
+        .large-stage { min-height: 168px; }
+        .large-stage > img, .large-stage .mark-lockup { width: 148px; height: 148px; }
+        .surface-title { margin-left: 7px; font-size: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="intro">
+      <div class="intro-copy">
+        <h1>J identity · visual comparison</h1>
+        <p>Three static V8 constructions from editable Figma layers: the settled J with its orb, the same settled J with a restrained State 05 joint glow, and the ring-free J. Each is shown on the portfolio's dark header, green Activity identity strip, dark Activity row, and a large atmospheric stage. The samples include the current 82px desktop and 42px mobile header sizes, 48px/26px Activity sizes, and a 16px compact-size check.</p>
+      </div>
+      <span class="review-only">REVIEW ONLY · NO PROMOTION</span>
+    </header>
+      <p class="source-note"><strong>Source treatment:</strong> Figma exports include full-frame fills and oversized black export-artboard rectangles. Review-folder copies remove only those full-frame backings so the genuine editable portal, ring, J material, authored glow, and seam artwork can sit on the actual portfolio backgrounds. The 16px optical glyph is shown separately as an existing Figma small-size reference, not silently substituted into these three variants.</p>
+    <main class="grid">
+      <article class="candidate">
+        <h2>01 · Settled J + V8 orb</h2>
+        <p class="source">Editable layers · Figma 3325:191 / 3325:335</p>
+        <div class="large-stage"><img src="board-assets/v8-orb-transparent.svg" alt="Settled gold J over the authored blue portal and circular ring" /></div>
+        <section class="context">
+          <p class="context-label">Header identity · #010305 client bar</p>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><img class="mark-82" src="board-assets/v8-orb-transparent.svg" alt="" /><span>82 px · desktop, 1920</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><img class="mark-42" src="board-assets/v8-orb-transparent.svg" alt="" /><span>42 px · mobile, 390</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><img class="mark-16" src="board-assets/v8-orb-transparent.svg" alt="" /><span>16 px · compact-size check</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <p class="small-caption">At 16px the orb and ring reduce the J's available area substantially.</p>
+        </section>
+        <section class="context">
+          <p class="context-label">Activity rail · identity and row mark</p>
+          <div class="activity-shell">
+            <div class="sample-surface activity-identity-surface identity-surface">
+              <span class="sample"><img class="mark-48" src="board-assets/v8-orb-transparent.svg" alt="" /><span>48 px · identity</span></span>
+            </div>
+            <div class="activity-row-surface"><span class="circle"><img class="mark-26" src="board-assets/v8-orb-transparent.svg" alt="" /></span><span>26 px · row</span><span class="sample"><img class="mark-16" src="board-assets/v8-orb-transparent.svg" alt="" /><span>16 px</span></span><span>Joshua · Portfolio</span></div>
+          </div>
+        </section>
+        <p class="recommendation"><strong>Placement read:</strong> use for large identity moments where the orb carries the intended V8 atmosphere. At 48px it remains recognizable; at 26px and 16px the ring competes with the letter.</p>
+      </article>
+      <article class="candidate">
+        <h2>02 · Settled J + orb + State 05 joint glow</h2>
+        <p class="source">Editable layers · Figma 3325:191 + settled V8 seam-glow layer</p>
+        <div class="large-stage"><span class="mark-lockup"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span></div>
+        <section class="context">
+          <p class="context-label">Header identity · #010305 client bar</p>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><span class="mark-lockup mark-82"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span><span>82 px · desktop, 1920</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><span class="mark-lockup mark-42"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span><span>42 px · mobile, 390</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><span class="mark-lockup mark-16"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span><span>16 px · compact-size check</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <p class="small-caption">The seam glow is authored construction detail; at 16px it is not separately legible.</p>
+        </section>
+        <section class="context">
+          <p class="context-label">Activity rail · identity and row mark</p>
+          <div class="activity-shell">
+            <div class="sample-surface activity-identity-surface identity-surface">
+              <span class="sample"><span class="mark-lockup mark-48"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span><span>48 px · identity</span></span>
+            </div>
+            <div class="activity-row-surface"><span class="circle"><span class="mark-lockup mark-26"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span></span><span>26 px · row</span><span class="sample"><span class="mark-lockup mark-16"><img src="board-assets/v8-orb-transparent.svg" alt="" /><img class="seam" src="board-assets/v8-joint-glow-transparent.svg" alt="" /></span><span>16 px</span></span><span>Joshua · Portfolio</span></div>
+          </div>
+        </section>
+        <p class="recommendation"><strong>Placement read:</strong> the glow adds a subtle large-scale finish but does not improve small-size recognition. Keep this as an optional large identity treatment, not a separate small glyph.</p>
+      </article>
+      <article class="candidate">
+        <h2>03 · Settled standalone J</h2>
+        <p class="source">Editable layer · Figma 3325:335 · ring-free J</p>
+        <div class="large-stage"><img src="board-assets/v8-j-transparent.svg" alt="Settled ring-free gold J" /></div>
+        <section class="context">
+          <p class="context-label">Header identity · #010305 client bar</p>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><img class="mark-82" src="board-assets/v8-j-transparent.svg" alt="" /><span>82 px · desktop, 1920</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><img class="mark-42" src="board-assets/v8-j-transparent.svg" alt="" /><span>42 px · mobile, 390</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="sample-surface header-surface identity-surface"><span class="sample"><img class="mark-16" src="board-assets/v8-j-transparent.svg" alt="" /><span>16 px · compact-size check</span></span><span class="surface-title">PORTFOLIO</span></div>
+          <div class="optical-reference"><img src="board-assets/v8-optical-16-transparent.svg" alt="" /><span>Figma 16px optical glyph · reference only, not promoted as this candidate</span></div>
+        </section>
+        <section class="context">
+          <p class="context-label">Activity rail · identity and row mark</p>
+          <div class="activity-shell">
+            <div class="sample-surface activity-identity-surface identity-surface">
+              <span class="sample"><img class="mark-48" src="board-assets/v8-j-transparent.svg" alt="" /><span>48 px · identity</span></span>
+            </div>
+            <div class="activity-row-surface"><span class="circle"><img class="mark-26" src="board-assets/v8-j-transparent.svg" alt="" /></span><span>26 px · row</span><span class="sample"><img class="mark-16" src="board-assets/v8-j-transparent.svg" alt="" /><span>16 px</span></span><span>Joshua · Portfolio</span></div>
+          </div>
+        </section>
+        <p class="recommendation"><strong>Placement read:</strong> the ring-free silhouette has the clearest small-size read and fits compact Activity placements best. Large use loses V8's portal atmosphere.</p>
+      </article>
+    </main>
+    <section class="placement-summary" aria-labelledby="placement-title">
+      <h2 id="placement-title">Placement recommendation · review only</h2>
+      <p>These recommendations balance the V8 atmosphere with recognition at the actual display sizes. They do not promote or replace the current production fallback; the owner retains the identity decision.</p>
+      <table>
+        <tbody>
+          <tr><th>Header · 82px / 42px</th><td><strong>Variant 01 · settled J + V8 orb.</strong> At both desktop and mobile header sizes, the portal still reads as atmosphere around a clear J and gives the client identity its strongest presence.</td></tr>
+          <tr><th>Activity identity · 48px</th><td><strong>Variant 01 · settled J + V8 orb.</strong> The ring and J remain distinguishable at this larger rail mark. Variant 02's extra seam glow is optional at presentation scale, but adds little clarity.</td></tr>
+          <tr><th>Activity row · 26px / compact · 16px</th><td><strong>Variant 03's ring-free J, using the existing optical glyph at 16px.</strong> Removing the orb preserves the letter silhouette inside the small enclosure. Keep the same V8 J material; use the authored small-size optical drawing instead of shrinking the hero artwork.</td></tr>
+          <tr><th>Large identity / presentation</th><td><strong>Variant 02 as a review recommendation.</strong> The subtle cyan joints give the assembled J a forged finish where the detail is large enough to read. Variant 01 remains the calmer choice for the header and larger orb placements where restraint matters; neither is promoted without owner approval.</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <p class="footer-note"><strong>Comparison boundary:</strong> all three remain unapproved options. The background-removal copies are in this review folder only; production/application J assets and the current site identity are untouched. Current header sizes are 82px desktop and 42px mobile; Activity uses a 48px identity mark and a 26px row mark inside a 34px medallion. The 16px samples are a compact-size stress test.</p>
+  </body>
+</html>

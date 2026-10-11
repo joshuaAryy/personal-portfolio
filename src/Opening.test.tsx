@@ -59,57 +59,138 @@ describe("opening route choreography", () => {
     }
     expect(markup.match(/data-j-piece="(?:cap|shaft|hook)"/g)).toHaveLength(3);
     expect(css).toContain("@keyframes opening-j-settled-material");
-    expect(css).toContain("@keyframes opening-j-piece-approach");
-    expect(css).toContain("@keyframes opening-j-sheen-sweep");
+    expect(css).toContain("@keyframes opening-j-piece-assembly");
+    expect(css).toContain("@keyframes opening-j-single-sheen");
   });
 
-  it("moves the clipped v8 material pieces into one unchanged settled silhouette", () => {
+  it("uses the authored dormant-to-lock piece geometry instead of slicing the settled logo", () => {
     const css = readFileSync("src/opening.css", "utf8");
-    const settled = css.slice(css.indexOf("@keyframes opening-j-settled-material"), css.indexOf("@keyframes opening-j-piece-approach"));
-    const assembly = css.slice(css.indexOf("@keyframes opening-j-piece-approach"), css.indexOf("@keyframes opening-v8-material-reveal"));
-
-    expect(css).toContain("clip-path: polygon(0 0, 100% 0, 100% 37%, 0 45%);");
-    expect(css).toContain("clip-path: polygon(0 31%, 100% 24%, 100% 80%, 0 77%);");
-    expect(css).toContain("clip-path: polygon(0 73%, 100% 76%, 100% 100%, 0 100%);");
-    expect(css).toContain("--approach-delay: 880ms;");
-    expect(css).toContain("--approach-delay: 960ms;");
-    expect(assembly).toContain("from { transform: translate(var(--forge-offset-x), var(--forge-offset-y)); }");
-    expect(css).toContain("opening-j-piece-approach calc(1650ms - var(--approach-delay)) cubic-bezier(.18, .8, .22, 1)");
-    expect(assembly).toContain("to { transform: translate(0, 0); }");
-    expect(settled).toContain("80%, 94% { opacity: 1; filter: none; }");
-    expect(settled).not.toContain("transform:");
+    expect(css).toContain("--forge-intermediate-x: 3.85%;");
+    expect(css).toContain("--forge-intermediate-y: 3.42%;");
+    expect(css).toContain("--forge-lock-x: 6.41%;");
+    expect(css).toContain("--forge-lock-y: 8.12%;");
+    expect(css).toContain("--forge-lock-x: -4.27%;");
+    expect(css).toContain("--forge-lock-y: 1.28%;");
+    expect(css).toContain("--forge-lock-x: 9.4%;");
+    expect(css).toContain("--forge-lock-y: -9.83%;");
+    expect(css).toContain("0% { opacity: var(--dormant-opacity); transform: translate(0, 0)");
+    expect(css).toContain("64% { opacity: var(--approach-opacity); transform: translate(var(--forge-intermediate-x), var(--forge-intermediate-y))");
+    expect(css).toContain("100% { opacity: 1; transform: translate(var(--forge-lock-x), var(--forge-lock-y))");
+    expect(css).not.toContain("clip-path: polygon(0 0, 100% 0, 100% 37%, 0 45%)");
   });
 
-  it("follows the Sol assembly phases with scaled travel and staggered v8 material reveals", () => {
+  it("follows dormant, approach, lock, cyan activation, sheen, and settled phases", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");
 
     expect(markup).toContain('class="opening__j-lock"');
     expect(markup).toContain('class="opening__j-sheen"');
-    expect(css).toContain("--approach-delay: 800ms;");
-    expect(css).toContain("--approach-delay: 880ms;");
+    expect(markup).toContain("opening-orb-activation.svg");
+    expect(markup).toContain("/figma-motion/seam-light.svg");
+    expect(markup).toContain("/figma-motion/conduit.svg");
+    expect(markup).toContain("/figma-motion/light-exits.svg");
+    expect(markup).toContain("/figma-motion/pulse-glow.svg");
+    expect(markup).toContain("/figma-motion/pulse-core.svg");
+    expect(css).toContain("--approach-delay: 760ms;");
+    expect(css).toContain("--approach-delay: 860ms;");
     expect(css).toContain("--approach-delay: 960ms;");
-    expect(css).toContain("--forge-offset-y: -3%;");
-    expect(css).toContain("--forge-offset-x: 3%;");
-    expect(css).toContain("calc(1650ms - var(--approach-delay))");
-    expect(css).toContain("opening-j-piece-visibility 5s");
-    expect(css).toContain("opening-v8-material-reveal 420ms ease-out 550ms");
-    expect(css).toContain("opening-v8-material-reveal 420ms ease-out 650ms");
-    expect(css).toContain("opening-v8-material-reveal 400ms ease-out 800ms");
-    expect(css).toContain("opening-v8-material-reveal 350ms ease-out 950ms");
-    expect(css).toContain("opening-v8-material-reveal 300ms ease-out 1200ms");
-    expect(css).toContain("opening-v8-material-reveal 300ms ease-out 1350ms");
-    expect(css).toContain("opening-j-seam-lock 350ms ease-out 1650ms");
-    expect(css).toContain("opening-j-cyan-pulse 750ms ease-in-out 2000ms");
-    expect(css).toContain("opening-j-sheen-sweep 800ms ease-in-out 2750ms");
+    expect(css).toContain("opening-j-piece-exit 5s");
+    expect(css).toContain("opening-j-piece-assembly 1.28s cubic-bezier(.18, .8, .22, 1)");
+    expect(css).toContain("opening-j-orb-energy 5s ease-out 1 both");
+    expect(css).toContain("opening-j-cyan-activation 5s ease-out 1 both");
+    expect(css).toContain("opening-j-seam-lock 5s ease-out 1 both");
+    expect(css).toContain("opening-j-single-sheen 5s linear 1 both");
     expect(css).toContain("opening-j-settled-material 5s cubic-bezier(.24, .65, .2, 1) 1 both");
-    expect(css).toContain("78% { opacity: 0; filter: none; }");
-    expect(css).toContain("80%, 94% { opacity: 1; filter: none; }");
+    expect(css).toContain("47% { opacity: .08; filter: none; }");
+    expect(css).toContain("56% { opacity: .68; filter: none; }");
+    expect(css).toContain("63% { opacity: 1; filter: none; }");
     expect(css).toContain("0%, 6% { opacity: 1; transform: scale(1.12); }");
     expect(css).toContain("10% { opacity: 0; transform: scale(.84); }");
     expect(css).toContain("11% { opacity: 1; transform: scale(.76); }");
-    expect(css).toContain("11%, 16% { opacity: 1; }");
-    expect(css).toContain("from { opacity: .56; filter: brightness(.88); }");
+    expect(css).toContain("68%, 100% { opacity: 0; }");
+    expect(css).toContain("0% { opacity: var(--dormant-opacity); transform: translate(0, 0); filter: brightness(.78); }");
+  });
+
+  it("shows the authored dormant fragments at the first visible Opening frame", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const pieceMotion = css.match(/\.opening__j-piece--cap\s*\{([^}]*)\}/s)?.[1] ?? "";
+    const shaftMotion = css.match(/\.opening__j-piece--shaft\s*\{([^}]*)\}/s)?.[1] ?? "";
+    const hookMotion = css.match(/\.opening__j-piece--hook\s*\{([^}]*)\}/s)?.[1] ?? "";
+    const assembly = css.match(/@keyframes opening-j-piece-assembly\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(pieceMotion).toContain("--dormant-opacity: .3;");
+    expect(shaftMotion).toContain("--dormant-opacity: .38;");
+    expect(hookMotion).toContain("--dormant-opacity: .3;");
+    expect(assembly).toContain("0% { opacity: var(--dormant-opacity);");
+    expect(assembly).toContain("64% { opacity: var(--approach-opacity);");
+    expect(assembly).toContain("100% { opacity: 1;");
+  });
+
+  it("uses the authored Figma joint, conduit, exits, and pulse layers", () => {
+    const markup = renderOpeningRoute();
+    const css = readFileSync("src/opening.css", "utf8");
+
+    for (const node of ["3681:990", "3681:1014", "3681:1005", "3681:1063", "3681:1064"]) {
+      expect(markup).toContain(`data-node-id="${node}"`);
+    }
+    expect(markup).toContain("opening__j-seam-pulse-path--crown");
+    expect(markup).toContain("opening__j-seam-pulse-path--hook");
+    expect(css).toContain("stroke-dasharray: 14 86;");
+    expect(css).toContain("opening-j-seam-crown-flow 5s linear 1 both");
+    expect(css).toContain("opening-j-seam-hook-flow 5s linear 1 both");
+    expect(css).toContain("@keyframes opening-j-conduit-stem-flow");
+    expect(css).not.toMatch(/\.opening__j-lock::before\s*\{/);
+    expect(css).not.toMatch(/\.opening__j-lock::after\s*\{/);
+  });
+
+  it("keeps the joined seam energized until the settled J takes over", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const seamArt = css.match(/@keyframes opening-j-seam-art\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const lock = css.match(/@keyframes opening-j-seam-lock\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(seamArt).toContain("0%, 44.8% { opacity: 0; }");
+    expect(seamArt).toContain("52%, 56% { opacity: .22; }");
+    expect(seamArt).toContain("68%, 100% { opacity: 0; }");
+    expect(lock).toContain("0%, 44.8% { opacity: 0; }");
+    expect(lock).toContain("46% { opacity: .98; }");
+    expect(lock).toContain("68%, 100% { opacity: 0; }");
+    expect(css).toContain("100% { transform: rotate(360deg); }");
+  });
+
+  it("assembles the exported V8 crown, shaft, and hook through continuous fitted motion", () => {
+    const markup = renderOpeningRoute();
+    const source = readFileSync("src/Opening.tsx", "utf8");
+    const css = readFileSync("src/opening.css", "utf8");
+
+    for (const piece of ["crown", "shaft", "hook"]) {
+      expect(markup).toContain(`/media/opening/j-sonnet-motion-v8/assembly-${piece}.svg`);
+    }
+    expect(markup).toContain('data-j-assembly="sonnet-v8-keyposes"');
+    expect(css).toContain("opening-j-piece-exit 5s");
+    expect(css).toContain("opening-j-cyan-activation 5s");
+    expect(css).toContain("opening-j-single-sheen 5s");
+    expect(css).toContain("--forge-lock-x");
+    expect(css).toContain("--forge-lock-y");
+    expect(css).not.toContain("clip-path: polygon(0 0, 100% 0, 100% 37%, 0 45%)");
+  });
+
+  it("keeps the activation orb transparent outside its circular artwork", () => {
+    const orbSource = readFileSync("public/media/opening/j-sonnet-motion-v8/v8-orb.svg", "utf8");
+    const orb = readFileSync("public/media/opening/j-sonnet-motion-v8/opening-orb-activation.svg", "utf8");
+    const seamSource = readFileSync("public/media/opening/j-sonnet-motion-v8/v8-seam-layer.svg", "utf8");
+    const seams = readFileSync("public/media/opening/j-sonnet-motion-v8/opening-j-seam-channels.svg", "utf8");
+    const css = readFileSync("src/opening.css", "utf8");
+    expect(orbSource).toContain('<rect width="312" height="312" fill="#F5F5F5"');
+    expect(seamSource).toContain('<rect width="229" height="358" fill="#F5F5F5"');
+    expect(orb).not.toContain('<rect width="312" height="312" fill="#F5F5F5"');
+    expect(orb).not.toContain('<rect width="1452" height="468" transform="translate(-1071 -74)" fill="black"');
+    expect(seams).not.toContain('<rect width="229" height="358" fill="#F5F5F5"');
+    expect(seams).not.toContain('<rect width="468" height="468" transform="translate(-115.874 -43)" fill="#03060A"');
+    expect(css).toMatch(/\.opening__j-orb\s*\{[^}]*overflow:\s*hidden;[^}]*border-radius:\s*50%;/s);
+    expect(css).toMatch(/\.opening__j-seam-light\s*\{[^}]*mask-image:\s*url\("\/media\/opening\/j-sonnet-v8\/j-face\.svg"\)/s);
+    expect(css).toContain(".opening__j-seam-light > img");
+    expect(css).toMatch(/\.opening__j-pulse-glow\s*\{[^}]*animation:\s*opening-j-pulse-glow 5s/s);
+    expect(css).toContain("@keyframes opening-j-seam-crown-flow");
   });
 
   it("keeps the historical J layers independent and immediately complete for reduced motion", () => {
@@ -140,7 +221,7 @@ describe("opening route choreography", () => {
     expect(css).toMatch(/@keyframes opening-tick-spin\s*\{\s*0%\s*\{\s*transform:\s*rotate\(0deg\)\s*;\s*\}\s*100%\s*\{\s*transform:\s*rotate\(360deg\)/);
     expect(css).toMatch(/\.opening__radial-field\s*\{[^}]*animation-duration:\s*5s/s);
     expect(css).toMatch(/\.opening__j-settled\s*\{[^}]*opening-j-settled-material 5s/s);
-    expect(css).toMatch(/\.opening__j-piece-art\s*\{[^}]*opening-j-piece-approach calc\(1650ms - var\(--approach-delay\)\)/s);
+    expect(css).toMatch(/\.opening__j-piece-art\s*\{[^}]*opening-j-piece-assembly 1\.28s/s);
     expect(css).toMatch(/prefers-reduced-motion:\s*reduce/);
     expect(css).not.toMatch(/opening__loading|opening__progress/);
   });

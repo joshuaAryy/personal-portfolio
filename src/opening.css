@@ -731,11 +731,12 @@
 
 .opening__j-settled,
 .opening__j-piece {
-  --forge-delay: 0ms;
   position: absolute;
   inset: 0;
   display: block;
 }
+
+.opening__j-settled { z-index: 1; }
 
 .opening__j-settled {
   animation: opening-j-settled-material 5s cubic-bezier(.24, .65, .2, 1) 1 both;
@@ -795,76 +796,98 @@
 }
 
 .opening__j-piece {
-  --approach-delay: 800ms;
-  --forge-offset-x: 0%;
-  --forge-offset-y: 0%;
+  --approach-delay: 820ms;
+  --dormant-opacity: .3;
+  --approach-opacity: .62;
+  --forge-intermediate-x: 0%;
+  --forge-intermediate-y: 0%;
+  --forge-lock-x: 0%;
+  --forge-lock-y: 0%;
   position: absolute;
   inset: 0;
+  z-index: 2;
   display: block;
-  opacity: 0;
+  opacity: 1;
   pointer-events: none;
-  animation: opening-j-piece-visibility 5s linear 1 both;
+  animation: opening-j-piece-exit 5s linear 1 both;
 }
 
 .opening__j-piece-art {
   position: absolute;
   inset: 0;
   display: block;
-  clip-path: inset(0);
-  transform: translate(var(--forge-offset-x), var(--forge-offset-y));
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  transform: translate(0, 0);
   transform-origin: 50% 50%;
-  animation: opening-j-piece-approach calc(1650ms - var(--approach-delay)) cubic-bezier(.18, .8, .22, 1) var(--approach-delay) 1 both;
+  animation: opening-j-piece-assembly 1.28s cubic-bezier(.18, .8, .22, 1) var(--approach-delay) 1 both;
 }
 
+/* The exported fragments retain their full 468px dormant-pose canvas. These are
+   applied deltas: state 2 movement first, then the inverse dormant offset to seat. */
 .opening__j-piece--cap {
-  --forge-offset-y: -3%;
-}
-
-.opening__j-piece--cap .opening__j-piece-art {
-  clip-path: polygon(0 0, 100% 0, 100% 37%, 0 45%);
+  --approach-delay: 760ms;
+  --dormant-opacity: .3;
+  --approach-opacity: .62;
+  --forge-intermediate-x: 3.85%;
+  --forge-intermediate-y: 3.42%;
+  --forge-lock-x: 6.41%;
+  --forge-lock-y: 8.12%;
 }
 
 .opening__j-piece--shaft {
-  --approach-delay: 880ms;
-  --forge-offset-x: 3%;
-  --forge-offset-y: -.75%;
-}
-
-.opening__j-piece--shaft .opening__j-piece-art {
-  clip-path: polygon(0 31%, 100% 24%, 100% 80%, 0 77%);
+  --approach-delay: 860ms;
+  --dormant-opacity: .38;
+  --approach-opacity: .78;
+  --forge-intermediate-x: -3.21%;
+  --forge-intermediate-y: .85%;
+  --forge-lock-x: -4.27%;
+  --forge-lock-y: 1.28%;
 }
 
 .opening__j-piece--hook {
   --approach-delay: 960ms;
-  --forge-offset-y: 3%;
+  --dormant-opacity: .3;
+  --approach-opacity: .62;
+  --forge-intermediate-x: 5.98%;
+  --forge-intermediate-y: -5.13%;
+  --forge-lock-x: 9.4%;
+  --forge-lock-y: -9.83%;
 }
 
+.opening__j-orb {
+  position: absolute;
+  z-index: 0;
+  inset: -13%;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  animation: opening-j-orb-energy 5s ease-out 1 both;
+}
+
+.opening__j-orb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+}
+
+.opening__j-mark {
+  isolation: isolate;
+  animation: opening-j-cyan-activation 5s ease-out 1 both;
+}
+.opening__j-mark > .opening__j-settled,
+.opening__j-mark > .opening__j-piece { isolation: isolate; }
+
+.opening__j-settled { position: absolute; z-index: 1; }
+
+.opening__j-piece--cap .opening__j-piece-art,
+.opening__j-piece--shaft .opening__j-piece-art,
 .opening__j-piece--hook .opening__j-piece-art {
-  clip-path: polygon(0 73%, 100% 76%, 100% 100%, 0 100%);
-}
-
-.opening__j-piece .opening__j-layer--deep {
-  animation: opening-v8-material-reveal 420ms ease-out 550ms 1 both;
-}
-
-.opening__j-piece .opening__j-layer--mid {
-  animation: opening-v8-material-reveal 420ms ease-out 650ms 1 both;
-}
-
-.opening__j-piece .opening__j-layer--face {
-  animation: opening-v8-material-reveal 400ms ease-out 800ms 1 both;
-}
-
-.opening__j-piece .opening__j-detail {
-  animation: opening-v8-material-reveal 350ms ease-out 950ms 1 both;
-}
-
-.opening__j-piece .opening__j-layer--bevel {
-  animation: opening-v8-material-reveal 300ms ease-out 1200ms 1 both;
-}
-
-.opening__j-piece .opening__j-layer--edge {
-  animation: opening-v8-material-reveal 300ms ease-out 1350ms 1 both;
+  animation-name: opening-j-piece-assembly;
 }
 
 .opening__j-lock {
@@ -873,31 +896,122 @@
   inset: 0;
   opacity: 0;
   pointer-events: none;
-  animation: opening-j-seam-lock 350ms ease-out 1650ms 1 both;
+  animation: opening-j-seam-lock 5s ease-out 1 both;
 }
 
-.opening__j-lock-seam {
+.opening__j-lock > img,
+.opening__j-seam-light,
+.opening__j-conduit,
+.opening__j-seam-pulse {
   position: absolute;
-  left: 50%;
-  width: 6.5%;
-  height: 1.3%;
-  border-radius: 999px;
-  background: linear-gradient(90deg, transparent, rgb(114 255 235 / 96%), transparent);
-  box-shadow: 0 0 7px 1px rgb(63 245 221 / 48%);
-  filter: blur(.6px);
-  transform: translateX(-50%);
+  display: block;
+  max-width: none;
+  pointer-events: none;
+}
+
+.opening__j-lock > img { width: 100%; height: 100%; }
+
+.opening__j-seam-light {
+  inset: 0;
+  z-index: 2;
+  -webkit-mask-image: url("/media/opening/j-sonnet-v8/j-face.svg");
+  mask-image: url("/media/opening/j-sonnet-v8/j-face.svg");
+  -webkit-mask-size: 48.72% 76.28%;
+  mask-size: 48.72% 76.28%;
+  -webkit-mask-position: 48.3% 38.7%;
+  mask-position: 48.3% 38.7%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
   opacity: 0;
+  animation: opening-j-seam-art 5s ease-out 1 both;
 }
 
-.opening__j-lock-seam--cap { top: 31%; }
-.opening__j-lock-seam--hook { top: 74%; width: 5%; }
-
-.opening__j-sheen {
-  animation: opening-j-sheen-sweep 800ms ease-in-out 2750ms 1 both;
+.opening__j-seam-light > img {
+  position: absolute;
+  left: -5.67%;
+  top: 8.77%;
+  width: 114.15%;
+  height: 59.66%;
+  max-width: none;
+  object-fit: fill;
 }
 
-.opening__j-mark {
-  animation: opening-j-cyan-pulse 750ms ease-in-out 2000ms 1 both;
+.opening__j-conduit {
+  z-index: 1;
+  left: 32.1%;
+  top: 25.42%;
+  width: 23.63%;
+  height: 52.75%;
+  opacity: 0;
+  animation: opening-j-conduit-art 5s ease-out 1 both;
+}
+
+.opening__j-conduit > img { display: block; width: 100%; height: 100%; }
+
+.opening__j-conduit-pulse {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.opening__j-seam-pulse {
+  z-index: 3;
+  left: -5.67%;
+  top: 8.77%;
+  width: 114.15%;
+  height: 59.66%;
+  overflow: visible;
+}
+
+.opening__j-conduit-pulse-path,
+.opening__j-seam-pulse-path {
+  fill: none;
+  stroke: #c5fbff;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 14 86;
+  stroke-dashoffset: 100;
+  filter: drop-shadow(0 0 3px rgb(45 229 255 / 96%));
+}
+
+.opening__j-conduit-pulse-path { stroke-width: 2.8; }
+.opening__j-seam-pulse-path { stroke-width: 2.2; }
+
+.opening__j-conduit-pulse-path--stem { animation: opening-j-conduit-stem-flow 5s linear 1 both; }
+.opening__j-conduit-pulse-path--hook { animation: opening-j-conduit-hook-flow 5s linear 1 both; }
+.opening__j-seam-pulse-path--crown { animation: opening-j-seam-crown-flow 5s linear 1 both; }
+.opening__j-seam-pulse-path--hook { animation: opening-j-seam-hook-flow 5s linear 1 both; }
+
+.opening__j-light-exits {
+  z-index: 4;
+  left: 50.15%;
+  top: 17.97%;
+  width: 21.61% !important;
+  height: 49.32% !important;
+  opacity: 0;
+  animation: opening-j-light-exits 5s ease-out 1 both;
+}
+
+.opening__j-pulse-glow {
+  z-index: 5;
+  left: 49.19%;
+  top: 39.15%;
+  width: 9.74% !important;
+  height: 7.16% !important;
+  opacity: 0;
+  animation: opening-j-pulse-glow 5s ease-out 1 both;
+}
+
+.opening__j-pulse-core {
+  z-index: 6;
+  left: 53.27%;
+  top: 41.95%;
+  width: 1.59% !important;
+  height: 1.58% !important;
+  opacity: 0;
+  animation: opening-j-pulse-core 5s ease-out 1 both;
 }
 
 .opening__j-sheen {
@@ -911,7 +1025,7 @@
   mask: url("/media/opening/j-sonnet-v8/j-face.svg") center / 100% 100% no-repeat;
   pointer-events: none;
   transform: translateX(-34%);
-  animation: opening-j-sheen-sweep 5s ease-in-out 1 both;
+  animation: opening-j-single-sheen 5s linear 1 both;
 }
 
 .opening__j-detail-mask-probe {
@@ -954,48 +1068,125 @@
 }
 
 @keyframes opening-j-settled-material {
-  0%, 6% { opacity: 1; filter: none; }
-  10%, 77% { opacity: 0; filter: none; }
-  78% { opacity: 0; filter: none; }
-  80%, 94% { opacity: 1; filter: none; }
+  /* The hook's 960ms delay + 1.28s approach seats at 2240ms (44.8%).
+     Keep the fused material hidden until that last mechanical lock completes. */
+  0%, 44.8% { opacity: 0; filter: none; }
+  47% { opacity: .08; filter: none; }
+  56% { opacity: .68; filter: none; }
+  63% { opacity: 1; filter: none; }
+  94% { opacity: 1; filter: none; }
   100% { opacity: 0; filter: none; }
 }
 
-@keyframes opening-j-piece-visibility {
-  0%, 10% { opacity: 0; }
-  10.4% { opacity: .55; }
-  11%, 16% { opacity: 1; }
-  33%, 77% { opacity: 1; }
-  78% { opacity: 1; }
-  80%, 100% { opacity: 0; }
+@keyframes opening-j-piece-exit {
+  0%, 47% { opacity: 1; }
+  56% { opacity: .72; }
+  63% { opacity: 0; }
+  100% { opacity: 0; }
 }
 
-@keyframes opening-j-piece-approach {
-  from { transform: translate(var(--forge-offset-x), var(--forge-offset-y)); }
-  to { transform: translate(0, 0); }
+@keyframes opening-j-piece-assembly {
+  0% { opacity: var(--dormant-opacity); transform: translate(0, 0); filter: brightness(.78); }
+  64% { opacity: var(--approach-opacity); transform: translate(var(--forge-intermediate-x), var(--forge-intermediate-y)); filter: brightness(.92); }
+  100% { opacity: 1; transform: translate(var(--forge-lock-x), var(--forge-lock-y)); filter: none; }
 }
 
-@keyframes opening-v8-material-reveal {
-  from { opacity: .56; filter: brightness(.88); }
-  to { opacity: 1; filter: none; }
+@keyframes opening-j-orb-energy {
+  0%, 44.8% { opacity: 0; transform: scale(.78); filter: brightness(.72); }
+  47% { opacity: .12; transform: scale(.9); filter: brightness(.94); }
+  52% { opacity: .4; transform: scale(1.01); filter: brightness(1.14); }
+  57% { opacity: .36; transform: scale(1.03); filter: brightness(1.16); }
+  64% { opacity: .08; transform: scale(1.06); filter: brightness(1.06); }
+  68%, 100% { opacity: 0; transform: scale(1.08); filter: brightness(1); }
+}
+
+@keyframes opening-j-cyan-activation {
+  0%, 44.8% { filter: none; }
+  47% { filter: drop-shadow(0 0 4px rgb(17 215 227 / 26%)); }
+  52% { filter: drop-shadow(0 0 8px rgb(17 215 227 / 48%)); }
+  58% { filter: drop-shadow(0 0 4px rgb(17 215 227 / 18%)); }
+  64%, 100% { filter: none; }
 }
 
 @keyframes opening-j-seam-lock {
-  0% { opacity: 0; }
-  38% { opacity: .86; }
-  100% { opacity: .18; }
+  0%, 44.8% { opacity: 0; }
+  46% { opacity: .98; }
+  51% { opacity: .94; }
+  56% { opacity: .88; }
+  63% { opacity: .42; }
+  68%, 100% { opacity: 0; }
 }
 
-@keyframes opening-j-cyan-pulse {
-  0%, 100% { filter: none; }
-  52% { filter: drop-shadow(0 0 7px rgb(12 222 206 / 31%)); }
+@keyframes opening-j-seam-art {
+  0%, 44.8% { opacity: 0; }
+  47% { opacity: .16; }
+  52%, 56% { opacity: .22; }
+  63% { opacity: .08; }
+  68%, 100% { opacity: 0; }
 }
 
-@keyframes opening-j-sheen-sweep {
-  0% { opacity: 0; transform: translateX(-34%); }
-  36% { opacity: .62; transform: translateX(-9%); }
-  68% { opacity: .28; transform: translateX(13%); }
-  100% { opacity: 0; transform: translateX(34%); }
+@keyframes opening-j-conduit-art {
+  0%, 44.8% { opacity: 0; }
+  48% { opacity: .56; }
+  53% { opacity: .92; }
+  58% { opacity: .7; }
+  66%, 100% { opacity: 0; }
+}
+
+@keyframes opening-j-light-exits {
+  0%, 45% { opacity: 0; transform: scale(.82); }
+  49% { opacity: .82; transform: scale(1); }
+  54% { opacity: .9; transform: scale(1.025); }
+  62%, 100% { opacity: 0; transform: scale(1.1); }
+}
+
+@keyframes opening-j-pulse-glow {
+  0%, 46% { opacity: 0; transform: scale(.72); }
+  50% { opacity: .92; transform: scale(1); }
+  54% { opacity: .65; transform: scale(1.08); }
+  60%, 100% { opacity: 0; transform: scale(1.18); }
+}
+
+@keyframes opening-j-pulse-core {
+  0%, 48% { opacity: 0; transform: scale(.6); }
+  51% { opacity: 1; transform: scale(1); }
+  55% { opacity: .72; transform: scale(1.12); }
+  60%, 100% { opacity: 0; transform: scale(1.2); }
+}
+
+@keyframes opening-j-conduit-stem-flow {
+  0%, 47% { opacity: 0; stroke-dashoffset: 100; }
+  48% { opacity: .95; stroke-dashoffset: 100; }
+  53% { opacity: 1; stroke-dashoffset: -14; }
+  54%, 100% { opacity: 0; stroke-dashoffset: -14; }
+}
+
+@keyframes opening-j-conduit-hook-flow {
+  0%, 49% { opacity: 0; stroke-dashoffset: 100; }
+  50% { opacity: .95; stroke-dashoffset: 100; }
+  55% { opacity: 1; stroke-dashoffset: -14; }
+  56%, 100% { opacity: 0; stroke-dashoffset: -14; }
+}
+
+@keyframes opening-j-seam-crown-flow {
+  0%, 45.5% { opacity: 0; stroke-dashoffset: 100; }
+  46.5% { opacity: 1; stroke-dashoffset: 100; }
+  52.5% { opacity: 1; stroke-dashoffset: -14; }
+  53.5%, 100% { opacity: 0; stroke-dashoffset: -14; }
+}
+
+@keyframes opening-j-seam-hook-flow {
+  0%, 47.5% { opacity: 0; stroke-dashoffset: 100; }
+  48.5% { opacity: 1; stroke-dashoffset: 100; }
+  54.5% { opacity: 1; stroke-dashoffset: -14; }
+  55.5%, 100% { opacity: 0; stroke-dashoffset: -14; }
+}
+
+@keyframes opening-j-single-sheen {
+  0%, 62% { opacity: 0; transform: translateX(-34%); }
+  67% { opacity: .55; transform: translateX(-8%); }
+  74% { opacity: .22; transform: translateX(18%); }
+  81%, 100% { opacity: 0; transform: translateX(34%); }
 }
 
 @keyframes opening-tick-spin {
@@ -1023,6 +1214,8 @@
 }
 
 .opening--reduced .opening__j-piece,
+.opening--reduced .opening__j-orb,
+.opening--reduced .opening__j-lock,
 .opening--reduced .opening__j-sheen {
   animation: none;
   opacity: 0;

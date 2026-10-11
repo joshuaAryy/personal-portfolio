@@ -16,35 +16,39 @@ const OPENING_V8_MARK_ASSETS = {
   bevel: "/media/opening/j-sonnet-v8/j-bevel.svg",
   edgeLight: "/media/opening/j-sonnet-v8/j-edge-light.svg",
 } as const;
+const OPENING_V8_ASSEMBLY_ASSETS = {
+  cap: "/media/opening/j-sonnet-motion-v8/assembly-crown.svg",
+  shaft: "/media/opening/j-sonnet-motion-v8/assembly-shaft.svg",
+  hook: "/media/opening/j-sonnet-motion-v8/assembly-hook.svg",
+} as const;
+const OPENING_V8_MOTION_ASSETS = {
+  seamLight: "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+  conduit: "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+  lightExits: "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+  pulseGlow: "/media/opening/j-sonnet-motion-v8/figma-motion/pulse-glow.svg",
+  pulseCore: "/media/opening/j-sonnet-motion-v8/figma-motion/pulse-core.svg",
+} as const;
 
-function V8LayerSet({ onAssetError, isPiece = false }: { onAssetError: () => void; isPiece?: boolean }) {
-  const deepNode = isPiece ? {} : { "data-node-id": "3325:336" };
-  const midNode = isPiece ? {} : { "data-node-id": "3325:337" };
-  const faceNode = isPiece ? {} : { "data-node-id": "3325:338" };
-  const detailNode = isPiece ? {} : { "data-node-id": "3325:342" };
-  const detailArtNode = isPiece ? {} : { "data-node-id": "3325:343" };
-  const bevelNode = isPiece ? {} : { "data-node-id": "3325:411" };
-  const edgeNode = isPiece ? {} : { "data-node-id": "3325:412" };
-
+function V8LayerSet({ onAssetError }: { onAssetError: () => void }) {
   return (
     <>
-      <span className="opening__j-layer opening__j-layer--deep" {...deepNode}>
+      <span className="opening__j-layer opening__j-layer--deep" data-node-id="3325:336">
         <img src={OPENING_V8_MARK_ASSETS.deepExtrusion} alt="" draggable={false} onError={onAssetError} />
       </span>
-      <span className="opening__j-layer opening__j-layer--mid" {...midNode}>
+      <span className="opening__j-layer opening__j-layer--mid" data-node-id="3325:337">
         <img src={OPENING_V8_MARK_ASSETS.midExtrusion} alt="" draggable={false} onError={onAssetError} />
       </span>
-      <span className="opening__j-layer opening__j-layer--face" {...faceNode}>
+      <span className="opening__j-layer opening__j-layer--face" data-node-id="3325:338">
         <img src={OPENING_V8_MARK_ASSETS.face} alt="" draggable={false} onError={onAssetError} />
       </span>
-      <span className="opening__j-detail" {...detailNode}>
+      <span className="opening__j-detail" data-node-id="3325:342">
         <img className="opening__j-detail-mask-probe" src={OPENING_V8_MARK_ASSETS.detailMask} alt="" draggable={false} onError={onAssetError} />
-        <img className="opening__j-detail-art" {...detailArtNode} src={OPENING_V8_MARK_ASSETS.detail} alt="" draggable={false} onError={onAssetError} />
+        <img className="opening__j-detail-art" data-node-id="3325:343" src={OPENING_V8_MARK_ASSETS.detail} alt="" draggable={false} onError={onAssetError} />
       </span>
-      <span className="opening__j-layer opening__j-layer--bevel" {...bevelNode}>
+      <span className="opening__j-layer opening__j-layer--bevel" data-node-id="3325:411">
         <img src={OPENING_V8_MARK_ASSETS.bevel} alt="" draggable={false} onError={onAssetError} />
       </span>
-      <span className="opening__j-layer opening__j-layer--edge" {...edgeNode}>
+      <span className="opening__j-layer opening__j-layer--edge" data-node-id="3325:412">
         <span className="opening__j-edge-light-art">
           <img src={OPENING_V8_MARK_ASSETS.edgeLight} alt="" draggable={false} onError={onAssetError} />
         </span>
@@ -59,20 +63,79 @@ function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAss
   }
 
   return (
-    <div className="opening__j-mark" data-node-id="3325:335">
+    <div className="opening__j-mark" data-node-id="3325:335" data-j-assembly="sonnet-v8-keyposes">
       <div className="opening__j-settled" data-j-layer-set="sonnet-v8-approved">
         <V8LayerSet onAssetError={onAssetError} />
       </div>
       {(["cap", "shaft", "hook"] as const).map((piece) => (
         <span className={`opening__j-piece opening__j-piece--${piece}`} data-j-piece={piece} key={piece}>
-          <span className="opening__j-piece-art">
-            <V8LayerSet onAssetError={onAssetError} isPiece />
-          </span>
+          <img
+            className="opening__j-piece-art"
+            src={OPENING_V8_ASSEMBLY_ASSETS[piece]}
+            alt=""
+            draggable={false}
+            onError={onAssetError}
+          />
         </span>
       ))}
+      <span className="opening__j-orb" aria-hidden="true">
+        <img src="/media/opening/j-sonnet-motion-v8/opening-orb-activation.svg" alt="" draggable={false} onError={onAssetError} />
+      </span>
       <span className="opening__j-lock" aria-hidden="true">
-        <span className="opening__j-lock-seam opening__j-lock-seam--cap" />
-        <span className="opening__j-lock-seam opening__j-lock-seam--hook" />
+        <span className="opening__j-seam-light" data-node-id="3681:990">
+          <img src={OPENING_V8_MOTION_ASSETS.seamLight} alt="" draggable={false} onError={onAssetError} />
+        </span>
+        <span className="opening__j-conduit" data-node-id="3681:1014">
+          <img src={OPENING_V8_MOTION_ASSETS.conduit} alt="" draggable={false} onError={onAssetError} />
+          <svg className="opening__j-conduit-pulse" viewBox="0 0 110.579 246.888" preserveAspectRatio="none" aria-hidden="true">
+            <path
+              className="opening__j-conduit-pulse-path opening__j-conduit-pulse-path--stem"
+              d="M102.4 7.00656C103 71.0066 103 131.007 102.6 173.007"
+              pathLength={100}
+            />
+            <path
+              className="opening__j-conduit-pulse-path opening__j-conduit-pulse-path--hook"
+              d="M8.80018 197.007C9.80018 211.007 14.8002 219.007 21.8002 224.007C36.8002 240.007 65.8002 240.007 86.8002 230.007"
+              pathLength={100}
+            />
+          </svg>
+        </span>
+        <svg className="opening__j-seam-pulse" viewBox="0 0 534.416 279.206" preserveAspectRatio="none" aria-hidden="true">
+          <path
+            className="opening__j-seam-pulse-path opening__j-seam-pulse-path--crown"
+            d="M288.507 70.3516L313.207 76.4516L337.807 58.0516"
+            pathLength={100}
+          />
+          <path
+            className="opening__j-seam-pulse-path opening__j-seam-pulse-path--hook"
+            d="M288.507 264.252L313.207 246.752L336.507 252.652"
+            pathLength={100}
+          />
+        </svg>
+        <img
+          className="opening__j-light-exits"
+          data-node-id="3681:1005"
+          src={OPENING_V8_MOTION_ASSETS.lightExits}
+          alt=""
+          draggable={false}
+          onError={onAssetError}
+        />
+        <img
+          className="opening__j-pulse-glow"
+          data-node-id="3681:1063"
+          src={OPENING_V8_MOTION_ASSETS.pulseGlow}
+          alt=""
+          draggable={false}
+          onError={onAssetError}
+        />
+        <img
+          className="opening__j-pulse-core"
+          data-node-id="3681:1064"
+          src={OPENING_V8_MOTION_ASSETS.pulseCore}
+          alt=""
+          draggable={false}
+          onError={onAssetError}
+        />
       </span>
       <span className="opening__j-sheen" aria-hidden="true" />
     </div>
