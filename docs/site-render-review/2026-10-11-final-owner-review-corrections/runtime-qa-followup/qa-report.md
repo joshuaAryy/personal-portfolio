@@ -57,3 +57,7 @@ Cho’Veigo full-media endpoint `/media/demos/choveigo-full-demo.mp4` responds `
 Classification: routes, deployed bundle/source identity, assets/errors/overflow, Resume routing controls, canonical J source/apparent brightness, and full Cho’Veigo media identity/playback are verified in deployed Chrome. This is runtime QA, not owner acceptance.
 
 Resume ring/focus detail: the 1440×900 settled deployed screenshot shows the cyan middle channel illuminated within the gold outer circle, with no visible channel overrun. On the deployed modal, Tab sequence was View Resume → CLOSE → View Resume. Evidence: `%TEMP%\portfolio-preview-5d314ec5-final\resume-desktop-settled.png`.
+
+## Cross-surface route regression sweep — 2026-10-11
+
+Installed Chrome checked the six long-form case studies plus Education projects, Profile, Journey, Personal Highlights, and Demos at 1440×900 and 390×844 (22 route/viewport checks). All returned HTTP 200. The sweep scrolled the actual nested `main` region on case-study pages so lazy-loaded media could decode. All visible images completed with nonzero dimensions; there were no failed requests, HTTP errors, console/page errors, pending visible images, or horizontal overflow. Full route metrics are in [case-route-smoke-2026-10-11.json](../case-route-smoke-2026-10-11.json).
