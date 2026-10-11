@@ -122,6 +122,24 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(css).not.toMatch(/\.opening__j-lock\s*\{[^}]*animation:\s*opening-j-seam-lock/s);
   });
 
+  it("clips opaque Figma portal and pulse exports to their authored round shapes", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+
+    expect(css).toMatch(/\.opening__orb-layer--portal\s*\{[^}]*clip-path:\s*circle\(50% at 50% 50%\)/s);
+    expect(css).toMatch(/\.opening__j-pulse-spark image\s*\{[^}]*clip-path:\s*ellipse\(/s);
+  });
+
+  it("holds authored cyan joints through the activation pose before clearing for sheen", () => {
+    const css = readFileSync("src/opening.css", "utf8");
+    const seam = css.match(/@keyframes opening-j-seam-art\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const conduit = css.match(/@keyframes opening-j-conduit-art\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(seam).toContain("68% { opacity: 1; }");
+    expect(seam).toContain("78%, 100% { opacity: 0; }");
+    expect(conduit).toContain("68% { opacity: .92; }");
+    expect(conduit).toContain("70%, 100% { opacity: 0; }");
+  });
+
   it("preserves the five-second scene, full visible tick revolution, Skip and Home handoff", () => {
     const source = readFileSync("src/Opening.tsx", "utf8");
     const css = readFileSync("src/opening.css", "utf8");

@@ -750,6 +750,8 @@
   width: 66.67%;
   height: 66.67%;
   border-radius: 50%;
+  -webkit-clip-path: circle(50% at 50% 50%);
+  clip-path: circle(50% at 50% 50%);
   object-fit: cover;
   opacity: 0;
   animation: opening-v8-portal-arrive 5s linear 1 both;
@@ -972,6 +974,7 @@
 
 .opening__j-pulse-spark image {
   opacity: 0;
+  clip-path: ellipse(47% 42% at 50% 50%);
 }
 
 .opening__j-sheen {
@@ -1104,8 +1107,8 @@
   31% { opacity: .3; }
   49% { opacity: .5; }
   51.6% { opacity: 1; }
-  60% { opacity: .7; }
-  72% { opacity: .1; }
+  68% { opacity: 1; }
+  76% { opacity: .1; }
   78%, 100% { opacity: 0; }
 }
 
@@ -1113,7 +1116,7 @@
   0%, 29% { opacity: 0; }
   40% { opacity: .55; }
   51.6% { opacity: .92; }
-  58% { opacity: .7; }
+  68% { opacity: .92; }
   70%, 100% { opacity: 0; }
 }
 
