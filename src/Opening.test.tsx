@@ -78,6 +78,19 @@ describe("Sonnet V8 Opening fidelity", () => {
     expect(source).not.toContain("pulse-core.svg");
   });
 
+  it("renders the authored activation bloom without an opaque bitmap backing", () => {
+    const markup = renderOpeningRoute();
+    const css = readFileSync("src/opening.css", "utf8");
+    const source = readFileSync("src/Opening.tsx", "utf8");
+
+    expect(markup).toContain('class="opening__j-activation-bloom"');
+    expect(markup).toContain('data-j-layer="activation-bloom"');
+    expect(markup).not.toContain("orb-activation-bloom-2x.png");
+    expect(source).not.toContain("activationBloom:");
+    expect(css).toMatch(/\.opening__j-activation-bloom\s*\{[^}]*background:\s*radial-gradient\(\s*circle,/s);
+    expect(css).toMatch(/\.opening__j-activation-bloom\s*\{[^}]*clip-path:\s*circle\(50%\s+at\s+center\)/s);
+  });
+
   it("maps seam, conduit, exits, sheen and travelling pulse to the editable Figma rig", () => {
     const markup = renderOpeningRoute();
     const css = readFileSync("src/opening.css", "utf8");

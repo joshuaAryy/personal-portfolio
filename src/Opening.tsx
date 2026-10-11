@@ -12,7 +12,6 @@ const OPENING_V8_ASSETS = {
   orb: "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
   ring: "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
   contactShadow: "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
-  activationBloom: "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
   sheen: "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
   pulseSpark: "/media/opening/j-sonnet-motion-v8/figma-motion/pulse-spark-2x.png",
 } as const;
@@ -68,14 +67,11 @@ function V8HeroMark({ unavailable, onAssetError }: { unavailable: boolean; onAss
           data-j-layer="portal-plasma-vignette"
           onError={onAssetError}
         />
-        <img
+        <span
           className="opening__j-activation-bloom"
           data-node-id="3712:698"
           data-j-layer="activation-bloom"
-          src={OPENING_V8_ASSETS.activationBloom}
-          alt=""
-          draggable={false}
-          onError={onAssetError}
+          aria-hidden="true"
         />
         <img
           className="opening__orb-layer opening__orb-layer--ring"
