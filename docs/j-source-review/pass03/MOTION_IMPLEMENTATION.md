@@ -41,6 +41,18 @@ All evidence was captured with installed Chrome through Playwright against the c
 - [Settled hold](captures/opening-final-settle-1920x1080.png)
 - [Narrow activation](captures/opening-mobile-activation-390x844.png)
 
+The radial dial was also sampled at exact active-animation checkpoints in installed Chrome. The tick layer stayed visible (`opacity: 1`) at every sample, with its 3.2s active interval running from 600ms through 3,800ms:
+
+| Tick rotation | Animation time | Browser frame |
+|---:|---:|---|
+| 0° | 600ms | [start](captures/opening-radial-0deg.png) |
+| 90° | 1,400ms | [quarter turn](captures/opening-radial-90deg.png) |
+| 180° | 2,200ms | [half turn](captures/opening-radial-180deg.png) |
+| 270° | 3,000ms | [three-quarter turn](captures/opening-radial-270deg.png) |
+| 360° | 3,800ms | [full turn](captures/opening-radial-360deg.png) |
+
+The captured computed transforms correspond to 0°, 90°, 180°, 270°, and 360° respectively; all five samples report opacity 1 and the browser reported no page or request errors. The full recording remains the evidence for continuous playback; the paused samples provide exact visual checkpoints.
+
 The sampled browser frames show the fragments remaining visible at entry, independent approach, completed hook lock, cyan joint activation, crossfade to the fused mark, and final settle. No broken image, failed request, page error, or horizontal overflow appeared in the recorded desktop or narrow checks. Skip navigated directly to `/home`. Under `prefers-reduced-motion: reduce`, the settled J was present at opacity 1 and the pieces were hidden before the short Home handoff.
 
 The current recording and sampled states are implementation evidence, not owner acceptance. The owner should still judge the character of the assembly and select any permanent static logo treatment.
