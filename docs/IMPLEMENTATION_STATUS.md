@@ -1,5 +1,15 @@
 # Implementation Status
 
+## Current immutable feature review checkpoint — Opening bloom correction (2026-10-11)
+
+**Application source:** `ddcefa60d0f1ca3ec695d33cbb292f00a87e9ffd` on `feat/portfolio-integration`. **Immutable feature Preview:** https://4309e215.joshuaik2.pages.dev/ (Cloudflare Pages deployment `4309e215-460a-4b4a-9457-c42f7e51fff3`, Environment `Preview`, Branch `feat/portfolio-integration`, Source `ddcefa6`). Production was not targeted. The persistent portfolio goal remains active.
+
+This bounded correction removes a square dark backing visible during the J activation bloom. Chrome comparison traced it to an opaque black-backed Figma-export bitmap; the bloom now uses a clipped CSS radial gradient with the same restrained cyan treatment and existing timing. The Sonnet V8 seven-state J motion, five-second Opening, full clockwise tick revolution, Skip, reduced-motion behavior, and Home handoff are unchanged. The matched before/after frames and full-sequence recording are in [Opening correction QA](site-render-review/2026-10-11-opening-fidelity/owner-correction-pass-04/QA-REPORT.md); the [motion record](j-source-review/pass03/MOTION_IMPLEMENTATION.md) documents the cause and implementation. The comparison board still presents Variant 01 for prominent placements and Variant 03 optical ring-free artwork for compact placements; Variant 02 remains rejected and owner review of the permanent identity is open.
+
+Verification: full tests passed **292 tests across 30 files**; `npm run build` succeeded with the existing Vite advisory for a 518.34 kB JavaScript chunk; `git diff --check` passed. The deployed bundle hashes match the build: JS `f548d1617868836b3a8dbbb227144a56046deedc956b6b48e9b63d8fe2fe26bb`, CSS `85f8f1ee0e5985fb2f70a9a3a28bdfd1e5e41e2e01a9db31c3fa0ab711b116b2`. Installed Chrome verified the deployed opening-to-Home handoff, 18 direct routes (all HTTP 200), and desktop/narrow Home at 1440×900 and 390×844. No browser/console/request errors, broken images, or horizontal overflow were found. The deployed screenshots are `site-render-review/2026-10-11-opening-fidelity/owner-correction-pass-04/deployed-preview-opening-3p1s-1920x1080.png`, `.../deployed-preview-home-1440x900.png`, and `.../deployed-preview-home-390x844.png`.
+
+This Preview is a review checkpoint, not overall goal completion. Other known portfolio requirements remain active; owner-positive surfaces were not reopened in this correction.
+
 ## Current Pass 03 immutable feature review checkpoint — J/Opening fidelity (2026-10-11)
 
 **Application source:** `5e3522176d5fc0459de0c1caec567e9abdf228bc`. **Feature branch:** `feat/portfolio-integration` (remote tip verified at the application source when this checkpoint was reconciled). The source worktree is `codex/owner-correction-pass-03`; its tracked application changes are committed and pushed. **Immutable Preview:** https://55f7245d.joshuaik2.pages.dev/ (Cloudflare Pages Preview, branch `feat/portfolio-integration`). The Preview is not production; production remains untouched. The persistent portfolio goal remains active.
