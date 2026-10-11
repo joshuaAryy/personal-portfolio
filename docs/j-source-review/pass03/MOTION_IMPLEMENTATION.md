@@ -13,6 +13,11 @@ Figma file `9zvk9iSRPKSsJ6llDJrQmA` supplies the editable artwork and motion ref
 
 The seven states are key poses for one continuous animation. Runtime pieces are clipped views of the same transparent canonical J artwork; they are not seven swapped images.
 
+## Figma timing source and runtime decisions
+
+The editable rig (`3712:2`) and written notes (`3737:2`, `3737:37`) were checked directly. Recursive Figma motion-context lookup returned no native animation tracks; the seven frames are visual key poses and the written per-piece/FX timing is a design recommendation, not a wired Figma prototype. Figma explicitly marks the 5-second runtime, 360° tick turn and exact handoff time as unverified assumptions. The owner separately approved the five-second website Opening and visible full tick revolution, so those remain runtime requirements rather than claims about Figma prototype timing.
+
+The website maps the written key poses to continuous CSS motion: S1 0.65s; S2 about 0.96s; S3 about 1.37s; lock 2.58s; fused J crossfade 2.58–2.74s; activation/pulse around 3.0–3.4s; sheen around 3.45–4.0s; settled hold from 4.1s. The full ring rotation runs from 0.6–3.8s as the owner-approved environment motion. Chrome evidence records actual render timestamps and the complete Home handoff. Any timing outside these approved runtime constraints should be judged against the authored state artwork and owner review, not attributed to an unwired Figma timeline.
 ## Owner decisions for static use
 
 - **Variant 01 — settled J + V8 orb:** accepted provisionally for the portfolio header and larger identity placements.
