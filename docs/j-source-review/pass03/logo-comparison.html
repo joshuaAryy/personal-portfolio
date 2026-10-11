@@ -20,14 +20,18 @@
       .candidate { min-width: 0; overflow: hidden; border: 1px solid #34424b; background: #111a22; }
       .candidate header { min-height: 104px; padding: 14px 15px 11px; }
       .candidate header p { margin-top: 5px; color: #aebdc5; font-size: 11px; }
+      .review-only { display: inline-block; margin-top: 7px; padding: 3px 6px; border: 1px solid #6b8d96; color: #b9e4eb; font: 700 9px/1.3 Arial, sans-serif; letter-spacing: .06em; text-transform: uppercase; }
       .hero { display: grid; min-height: 228px; place-items: center; overflow: hidden; background: radial-gradient(ellipse 48% 70% at 50% 55%, #182631 0%, #0b141b 70%, #080c10 100%); }
       .hero-mark { position: relative; width: 184px; height: 184px; }
       .hero-mark > img { display: block; width: 100%; height: 100%; object-fit: contain; }
-      .joint-energy { position: absolute; inset: 0; overflow: hidden; -webkit-mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat; mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat; opacity: .24; mix-blend-mode: screen; }
-      .joint-energy img { position: absolute; left: -5.67%; top: 8.77%; width: 114.15%; height: 59.66%; max-width: none; object-fit: fill; }
-      .small-lockup { position: relative; display: block; flex: none; }
-      .small-lockup > img:first-child { display: block; width: 100%; height: 100%; object-fit: contain; }
-      .small-lockup .joint-energy { opacity: .3; }
+      .joint-mark { position: relative; display: inline-block; flex: none; width: 54px; height: 54px; }
+      .joint-mark.s48 { width: 48px; height: 48px; }
+      .joint-mark.s40 { width: 40px; height: 40px; }
+      .joint-mark.s32 { width: 32px; height: 32px; }
+      .joint-mark.s16 { width: 16px; height: 16px; }
+      .joint-mark > img { display: block; width: 100%; height: 100%; object-fit: contain; }
+      .joint-energy { position: absolute; inset: 0; overflow: hidden; -webkit-mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat; mask: url("/media/identity/sonnet-v8/figma/canonical-j.png") center / 100% 100% no-repeat; pointer-events: none; }
+      .joint-energy img { position: absolute; left: -5.67%; top: 8.77%; width: 114.15%; height: 59.66%; object-fit: fill; opacity: .24; mix-blend-mode: screen; }
       .surface { padding: 12px 13px 13px; border-top: 1px solid #2a3841; }
       .surface h3 { margin-bottom: 7px; }
       .surface-band { min-height: 60px; display: flex; align-items: center; gap: 10px; padding: 6px 10px; margin-top: 6px; background: #020508; }
@@ -42,7 +46,6 @@
       .s16 { width: 16px; height: 16px; }
       .small-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 9px; padding: 7px; color: #bac5ca; font-size: 10px; background: #02050a; }
       .small-row img { display: block; flex: none; object-fit: contain; }
-      .review-only { display: inline-block; margin-top: 8px; color: #7edff2; font: 700 9px/1.3 Arial, sans-serif; letter-spacing: .08em; text-transform: uppercase; }
       .recommendation { min-height: 92px; padding: 12px 14px; border-top: 1px solid #2a3841; color: #c0cbd0; font-size: 11px; }
       .recommendation strong { color: white; }
       .transient { display: grid; grid-template-columns: minmax(180px, 30%) 1fr; gap: 15px; align-items: center; margin-top: 18px; padding: 13px; border: 1px solid #34424b; background: #101820; }
@@ -67,11 +70,11 @@
     <header class="intro">
       <div>
         <h1>J identity · owner-directed placement review</h1>
-        <p>Three treatments built from the settled Sonnet V8 Figma artwork. Each is shown at large scale and against the real Portfolio header and Activity surfaces. The cyan treatment reuses the authored State 05 seam-light layer at low opacity as a static comparison only.</p>
+        <p>Three treatments built from Sonnet V8’s settled artwork are compared at the Portfolio header and Activity identity sizes. The third option adds a restrained pass of the authored State 05 joint light over the seamless State 07 J; it is a review candidate, not a live identity.</p>
       </div>
       <span class="badge">FEATURE REVIEW · PRODUCTION ARCHIVE UNCHANGED</span>
     </header>
-    <aside class="decision"><strong>Review status:</strong> Variant 01 is the current settled J + V8 orb. Variant 02 is a review-only variation; it is not installed into a live identity callsite. Variant 03 is the settled standalone J. The production archive (`159:2`) remains preserved.</aside>
+    <aside class="decision"><strong>Review status:</strong> Variant 01 (settled J + V8 orb) remains the provisional prominent identity; Variant 03 (seamless standalone J) remains the provisional compact identity. Variant 02 is included only because the owner requested this new comparison. Its seam glow uses the genuine Figma State 05 layer; no live identity callsite changes. Production archive (`159:2`) remains preserved.</aside>
 
     <main class="grid">
       <article class="candidate" data-candidate="settled-lockup">
@@ -93,11 +96,11 @@
         <p class="recommendation"><strong>Placement read:</strong> strongest full-size client identity; the ring and portal carry the atmospheric language. Fine orb detail compresses at compact sizes.</p>
       </article>
 
-      <article class="candidate" data-candidate="settled-lockup-subtle-authored-joints">
+      <article class="candidate" data-candidate="settled-lockup-cyan-joints">
         <header>
-          <h2>Variant 02 · subtle authored cyan joints</h2>
-          <p>Settled lockup plus the genuine Figma State 05 seam layer, softly composited over the canonical J.</p>
-          <span class="review-only">review-only · no live identity callsite</span>
+          <h2>Variant 02 · settled J + V8 orb with subtle cyan joints</h2>
+          <p>State 07 canonical lockup with a low-intensity overlay from the authored State 05 seam-light layer. Comparison only; not approved for live use.</p>
+          <span class="review-only">review-only · comparison candidate · not installed in the live identity</span>
         </header>
         <div class="hero"><div class="hero-mark">
           <img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="Settled gold J over the V8 blue portal and gold circular ring" />
@@ -105,15 +108,15 @@
         </div></div>
         <section class="surface">
           <h3>Portfolio header · dark client surface</h3>
-          <div class="surface-band"><span class="small-lockup s54"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>54px · desktop header</span></div>
-          <div class="small-row"><span class="small-lockup s32"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>32px · compact-size comparison</span><span class="small-lockup s16"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>16px · optical stress check</span></div>
+          <div class="surface-band"><span class="joint-mark"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>54px · header-size comparison</span></div>
+          <div class="small-row"><span class="joint-mark s32"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>32px · compact-header stress check</span><span class="joint-mark s16"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>16px · favicon-scale stress check</span></div>
         </section>
         <section class="surface">
           <h3>Activity · actual rail backgrounds</h3>
-          <div class="surface-band green"><span class="small-lockup s48"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>48px · main Activity identity</span></div>
-          <div class="surface-band opportunities"><span class="small-lockup s40"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>40px · opportunity rail</span></div>
+          <div class="surface-band green"><span class="joint-mark s48"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>48px · main Activity identity</span></div>
+          <div class="surface-band opportunities"><span class="joint-mark s40"><img src="/media/identity/sonnet-v8/figma-export/canonical-lockup.png" alt="" /><span class="joint-energy" aria-hidden="true"><img src="/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg" alt="" /></span></span><span>40px · opportunity rail</span></div>
         </section>
-        <p class="recommendation"><strong>Placement read:</strong> cyan detail supports the activated V8 atmosphere at larger scale. At 40–54px the seams may read as small color noise; owner review should decide whether that added energy helps.</p>
+        <p class="recommendation"><strong>Placement read:</strong> preserves the orb atmosphere and introduces a restrained cyan cue at the authored joints. At compact sizes the added detail may read as color noise; keep it review-only until the owner compares it against the uninterrupted State 07 mark.</p>
       </article>
 
       <article class="candidate" data-candidate="standalone-j">
@@ -124,13 +127,13 @@
         <div class="hero"><div class="hero-mark"><img src="/media/identity/sonnet-v8/figma/canonical-j.png" alt="Settled seamless metallic gold J without the orb" /></div></div>
         <section class="surface">
           <h3>Portfolio header · dark client surface</h3>
-          <div class="surface-band"><img class="s54" src="/media/identity/sonnet-v8/figma/canonical-j.png" alt="" /><span>54px · ring-free large identity</span></div>
+          <div class="surface-band"><img class="s54" src="/media/identity/sonnet-v8/figma-export/optical-54.png" alt="" /><span>54px · large standalone comparison</span></div>
           <div class="small-row"><img class="s32" src="/media/identity/sonnet-v8/figma-export/optical-32.png" alt="" /><span>32px · current compact-header optical glyph</span><img class="s16" src="/media/identity/sonnet-v8/figma-export/optical-16.png" alt="" /><span>16px · authored optical glyph</span></div>
         </section>
         <section class="surface">
           <h3>Activity · actual rail backgrounds</h3>
-          <div class="surface-band green"><img class="s48" src="/media/identity/sonnet-v8/figma/canonical-j.png" alt="" /><span>48px · main Activity identity</span></div>
-          <div class="surface-band opportunities"><img class="s40" src="/media/identity/sonnet-v8/figma/canonical-j.png" alt="" /><span>40px · opportunity rail</span></div>
+          <div class="surface-band green"><img class="s48" src="/media/identity/sonnet-v8/figma-export/optical-32.png" alt="" /><span>48px · S optical glyph</span></div>
+          <div class="surface-band opportunities"><img class="s40" src="/media/identity/sonnet-v8/figma-export/optical-32.png" alt="" /><span>40px · S optical glyph</span></div>
         </section>
         <p class="recommendation"><strong>Placement read:</strong> preserves the cleanest uninterrupted silhouette and works best in compact contexts. At large size it gives up the portal atmosphere of the complete V8 lockup.</p>
       </article>
@@ -144,6 +147,6 @@
       </div>
     </aside>
 
-    <footer class="footer">Live identity callsites remain unchanged: Variant 01 is the desktop Portfolio header/larger identity source; authored optical Variant 03 is used for the compact header. The subtle cyan joint treatment above is review-only and not installed into a live identity callsite. Activity project and experience rows use their own canonical project identities, not a portfolio J. The production archive J (`159:2`) is preserved.</footer>
+    <footer class="footer"><strong>Current recommendation:</strong> retain Variant 01 for the large Portfolio identity and larger Activity placement; retain Variant 03’s optical glyph family for compact placements. Variant 02 is included for direct owner comparison and should not replace either live source without explicit review. Activity project and experience rows retain their project-specific canonical marks. Production archive J (`159:2`) is preserved.</footer>
   </body>
 </html>

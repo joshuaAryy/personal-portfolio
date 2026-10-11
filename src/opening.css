@@ -1066,9 +1066,9 @@
   13% { opacity: .72; }
   19.2% { opacity: .86; }
   27.4% { opacity: .96; }
-  51.6%, 64% { opacity: 1; }
-  68% { opacity: .52; }
-  72%, 100% { opacity: 0; }
+  51.6% { opacity: 1; }
+  53.2% { opacity: .5; }
+  54.8%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-crown-approach {
@@ -1099,9 +1099,9 @@
 }
 
 @keyframes opening-j-fused-reveal {
-  0%, 64% { opacity: 0; }
-  68% { opacity: .48; }
-  72%, 100% { opacity: 1; }
+  0%, 51.6% { opacity: 0; }
+  53.2% { opacity: .5; }
+  54.8%, 100% { opacity: 1; }
 }
 
 @keyframes opening-v8-ring-arrive {
@@ -1140,20 +1140,19 @@
   0%, 27.4% { opacity: 0; }
   31% { opacity: .3; }
   49% { opacity: .55; }
-  51.6% { opacity: .9; }
-  58%, 62% { opacity: 1; }
-  68% { opacity: .75; }
-  72% { opacity: .1; }
-  74%, 100% { opacity: 0; }
+  51.6% { opacity: 1; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+  60% { opacity: .7; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+  72% { opacity: .1; animation-timing-function: cubic-bezier(.2, .7, .2, 1); }
+  78%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-conduit-art {
   0%, 51.5% { opacity: 0; }
   51.6% { opacity: .15; }
   55.4% { opacity: .42; }
-  61%, 64% { opacity: 1; }
-  69% { opacity: .45; }
-  72%, 100% { opacity: 0; }
+  61% { opacity: 1; }
+  72% { opacity: .35; }
+  78%, 100% { opacity: 0; }
 }
 
 @keyframes opening-j-light-exits {
