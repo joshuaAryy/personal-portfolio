@@ -48,6 +48,25 @@ afterEach(() => {
 });
 
 describe("lobby banner environment", () => {
+  it("keeps non-Projects banners slender, centered, and tied to the historical scene framing", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+    const lobbyRule = css.match(/\.league-lobby\s*\{([^}]*)\}/)?.[1] ?? "";
+    const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*780px/);
+    expect(categoryBanners).not.toMatch(/top:\s*0/);
+    expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*1\.34/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(24px,\s*3vw,\s*var\(--lobby-banner-gap-max\)\)/);
+    expect(css).toMatch(/--lobby-category-banner-height:\s*calc\(min\(100cqw - 180px,\s*var\(--lobby-category-group-max\)\) \/ 1\.34\)/);
+    expect(css).toMatch(/\.league-lobby--experience,[\s\S]*?--lobby-balance-span:\s*1000px/);
+    expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?\.league-lobby--experience,[\s\S]*?min-height:\s*880px/);
+    expect(css).not.toMatch(/\.league-lobby--experience \.league-lobby__environment\s*\{/);
+    expect(css).toMatch(/\.league-lobby__environment\s*\{[^}]*background-position:\s*center 60%/s);
+    expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?background-position:\s*center 68%/);
+    expect(css).toMatch(/\.league-lobby__balance-slots\s*\{[^}]*top:[^}]*\}/s);
+  });
+
   it("bounds and centers both lobby banner groups with coordinated spacing", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
@@ -75,7 +94,7 @@ describe("lobby banner environment", () => {
     expect(balanceSlots).toMatch(/transform:\s*translate\(-50%, -50%\)/);
     expect(balanceSlots).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-balance-span\)\)/);
     const categorySlotRule = css.match(/\.league-lobby--experience \.league-lobby__balance-slots[\s\S]*?\{([^}]*)\}/)?.[1] ?? "";
-    expect(categorySlotRule).toMatch(/top:\s*calc\(9% \+ min\(191\.7px, calc\(27\.7778vw - 138\.89px\)\)\)/);
+    expect(categorySlotRule).toMatch(/top:\s*calc\(9% \+ var\(--lobby-category-banner-height\) \/ 2\)/);
     expect(css).not.toMatch(/@media \(min-width: 901px\)\s*\{\s*\.league-lobby__balance-slots\s*\{/);
     expect(mobileRulesForGroup).toMatch(/position:\s*relative/);
     expect(mobileRulesForGroup).toMatch(/inset:\s*auto/);

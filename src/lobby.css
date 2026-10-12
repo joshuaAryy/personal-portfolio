@@ -7,9 +7,11 @@
 
 .league-lobby {
   --lobby-projects-group-max: 1240px;
-  --lobby-category-group-max: 690px;
+  --lobby-category-group-max: 780px;
+  --lobby-category-banner-height: calc(min(100cqw - 180px, var(--lobby-category-group-max)) / 1.34);
   --lobby-banner-gap-max: 32px;
   --lobby-balance-span: 1400px;
+  container-type: inline-size;
   position: relative;
   isolation: isolate;
   width: 100%;
@@ -23,13 +25,7 @@
 .league-lobby--experience,
 .league-lobby--hackathons,
 .league-lobby--education {
-  --lobby-balance-span: 870px;
-}
-
-.league-lobby--experience .league-lobby__balance-slots,
-.league-lobby--hackathons .league-lobby__balance-slots,
-.league-lobby--education .league-lobby__balance-slots {
-  top: calc(9% + min(191.7px, calc(27.7778vw - 138.89px)));
+  --lobby-balance-span: 1000px;
 }
 
 .league-lobby__environment {
@@ -48,6 +44,12 @@
 @media (max-height: 760px) {
   .league-lobby {
     min-height: max(760px, calc(100vh - var(--client-header-height)));
+  }
+
+  .league-lobby--experience,
+  .league-lobby--hackathons,
+  .league-lobby--education {
+    min-height: 880px;
   }
 
   .league-lobby__environment {
@@ -130,11 +132,11 @@
 }
 
 .league-lobby__banners:not(.league-lobby__banners--projects) {
-  --lobby-banner-ratio: 1.8;
-  --lobby-banner-gap-max: 38px;
+  --lobby-banner-ratio: 1.34;
+  --lobby-banner-gap-max: 60px;
   width: min(calc(100% - 180px), var(--lobby-category-group-max));
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 2.2vw, var(--lobby-banner-gap-max));
+  gap: clamp(24px, 3vw, var(--lobby-banner-gap-max));
 }
 
 .league-lobby__balance-slots {
@@ -148,6 +150,12 @@
   justify-content: space-between;
   pointer-events: none;
   transform: translate(-50%, -50%);
+}
+
+.league-lobby--experience .league-lobby__balance-slots,
+.league-lobby--hackathons .league-lobby__balance-slots,
+.league-lobby--education .league-lobby__balance-slots {
+  top: calc(9% + var(--lobby-category-banner-height) / 2);
 }
 
 .league-lobby__balance-slot {

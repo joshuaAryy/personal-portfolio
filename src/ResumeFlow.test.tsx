@@ -97,7 +97,7 @@ describe("approved resume flow", () => {
     // Node 2407:344 defines the 424px inner gold race, so fill only that bounded annular channel.
     expect(energyRule).toMatch(/top:\s*50%;[^}]*left:\s*50%;[^}]*width:\s*87\.55%;[^}]*height:\s*87\.55%/s);
     expect(energyRule).toMatch(/translate:\s*-50%\s+-50%/);
-    expect(energyRule).toMatch(/background:\s*conic-gradient\([\s\S]*?from\s+207deg/s);
+    expect(energyRule).toMatch(/background:[\s\S]*?conic-gradient\([\s\S]*?from\s+207deg/s);
     expect(energyRule).toMatch(/opacity:\s*0/);
     expect(energyRule).toMatch(/--resume-orb-fill:\s*0deg/);
     expect(energyRule).toMatch(/calc\(var\(--resume-orb-fill\)\s*-\s*8deg\)/);
@@ -106,7 +106,9 @@ describe("approved resume flow", () => {
     // The wider inner edge fills the owner-approved ~18–22px channel at the 530px reference scale.
     expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.72\) 0deg/);
     expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.18\) var\(--resume-orb-fill\) var\(--resume-orb-max-fill\)/);
-    expect(energyRule).toMatch(/repeating-linear-gradient\([\s\S]*?rgb\(219 255 255 \/ 4%\)/);
+    expect(energyRule).toMatch(
+      /background:\s*linear-gradient\([\s\S]*?rgb\(219 255 255 \/ 24%\)[\s\S]*?repeating-linear-gradient\([\s\S]*?rgb\(110 238 247 \/ 12%\)[\s\S]*?conic-gradient\([\s\S]*?from 207deg/s,
+    );
     expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 85\.5%,\s*#000 87\.5%,\s*#000 96%,\s*transparent 98%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
     expect(energyRule).toMatch(/mask-composite:\s*intersect/);
     expect(energyRule).toMatch(/--resume-orb-max-fill:\s*306deg/);

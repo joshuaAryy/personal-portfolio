@@ -164,16 +164,21 @@
   width: 87.55%;
   height: 87.55%;
   border-radius: 50%;
-  background: conic-gradient(
+  background: linear-gradient(
+    108deg,
+    transparent 16%,
+    rgb(219 255 255 / 24%) 47%,
+    transparent 80%
+  ), repeating-linear-gradient(
+    105deg,
+    rgb(110 238 247 / 12%) 0 1px,
+    transparent 1px 8px
+  ), conic-gradient(
     from 207deg,
     rgba(28, 184, 214, .72) 0deg calc(var(--resume-orb-fill) - 8deg),
     #bafffb calc(var(--resume-orb-fill) - 2deg) var(--resume-orb-fill),
     rgba(28, 184, 214, .18) var(--resume-orb-fill) var(--resume-orb-max-fill),
     transparent var(--resume-orb-max-fill) 360deg
-  ), repeating-linear-gradient(
-    105deg,
-    rgb(219 255 255 / 4%) 0 2px,
-    transparent 2px 7px
   );
   filter: none;
   mask-image:
