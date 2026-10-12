@@ -1,5 +1,15 @@
 # Implementation Status
 
+## Latest immutable review Preview — Profile + Food gallery verification (2026-10-12)
+
+**Preview:** https://1b614940.joshuaik2.pages.dev/ (Cloudflare Pages Preview `1b614940-8f82-4266-aa71-82b80532e450`, branch `feat/portfolio-integration`, source `98290a7`). **Application source:** `98290a7cd8be461d6e6d029331f229ecc1cb0308`. Deployed JavaScript and CSS SHA-256 hashes match the local build. Production was not targeted; the persistent portfolio goal remains active.
+
+This checkpoint preserves the already-approved four-image Food Tracker Insights gallery and its enlarged aspect-preserving content. The new Profile tall-viewport correction aligns the four signal groups with the owner’s annotated band and ends the scenic background just below the identity banner. Home and lobby implementations were verified in the preceding current-state reconciliation and left unchanged.
+
+**Verification:** full suite **317 tests across 31 files passed**; `npm run build` passed with the existing Vite chunk-size advisory; `git diff --check` passed. Installed Chrome verified Food Tracker at 1440×900 and 390×844, and Profile at 1536×1360, 1920×1080, 1280×720, and 390×844. Routes and visible assets loaded without browser/request errors or horizontal overflow. See [the deployed Preview QA report](site-render-review/2026-10-12-preview-1b614940-qa/report.md) and its screenshot evidence.
+
+**Open items:** the tall Profile row matches the yellow target, but a dark page-background band remains below the scenic fade; disclose this during owner review rather than calling all lower whitespace resolved. No authentic Food Tracker demo video is available. Live screen-reader interaction remains a manual follow-up. This is a review checkpoint, not portfolio completion.
+
 ## Current immutable review Preview — Owner Correction Pass 07 (2026-10-12)
 
 **Preview:** https://26019162.joshuaik2.pages.dev/ (Cloudflare Pages Preview `26019162-6afc-49c5-988a-64355f943de1`, branch `feat/portfolio-integration`, source `5c7b0bc`). **Application source:** `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd`. Deployed JavaScript, CSS, and new gallery assets are byte-identical to the local build. Production was not targeted; the persistent portfolio goal remains active.
