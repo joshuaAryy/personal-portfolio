@@ -6314,86 +6314,56 @@
   }
 }
 
-/* Crop the broad image-panel margins around three source-proportioned analytics views. */
+/* Give the chart-bearing captures enough scale to read at normal page size. */
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast {
-  width: min(100%, 320px);
-  height: 550px;
-  min-height: 550px;
+  width: min(100%, 400px);
+  height: auto;
+  min-height: 0;
   justify-self: center;
-  padding: 8px;
+  padding: 0;
   overflow: hidden;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img,
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img {
-  width: auto;
+  width: min(100%, 368px);
   height: auto;
-  max-width: 100%;
-  max-height: 534px;
+  max-width: 368px;
+  max-height: none;
   object-fit: contain;
-  transform: scale(1.05);
-  transform-origin: center;
+  object-position: top center;
+  transform: none;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
-  width: min(100%, 380px);
-  height: 400px;
-  min-height: 400px;
+  width: min(100%, 420px);
+  height: auto;
+  min-height: 0;
   justify-self: center;
-  padding: 8px;
+  padding: 0;
   overflow: hidden;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
-  width: auto;
+  width: min(100%, 420px);
   height: auto;
-  max-width: 100%;
-  max-height: 384px;
+  max-width: 420px;
+  max-height: none;
   object-fit: contain;
-  transform: scale(1.05);
-  transform-origin: center;
+  object-position: top center;
+  transform: none;
 }
 
 @media (max-width: 600px) {
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast {
     width: 100%;
-    height: 350px;
-    min-height: 350px;
+    height: auto;
+    min-height: 0;
     padding: 0;
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img {
-    max-height: 334px;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro > img {
-    max-height: 334px;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
-    width: 100%;
-    height: 200px;
-    min-height: 200px;
-    padding: 0;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
-    max-height: 184px;
-  }
-}
-
-@media (max-width: 600px) {
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
     width: 100%;
     height: auto;
@@ -6413,5 +6383,11 @@
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro > img {
     max-height: none;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

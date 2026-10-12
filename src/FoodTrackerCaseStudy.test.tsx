@@ -1,6 +1,7 @@
 // @vitest-environment happy-dom
 import { act } from "react";
 import { createRoot } from "react-dom/client";
+import { readFileSync } from "node:fs";
 import { renderToStaticMarkup } from "react-dom/server";
 import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
@@ -29,6 +30,8 @@ function storyText(markup: string) {
     .replace(/\s+/g, " ")
     .trim();
 }
+
+const foodVisualStyles = readFileSync("src/food-visuals.css", "utf8");
 
 describe("Food Tracker product story", () => {
   it("shows the verified product stack in scannable, bounded method groups", () => {
@@ -589,6 +592,20 @@ describe("Food Tracker product story", () => {
     expect(captures).toContain("Daily completeness");
     expect(captures).toContain("recorded history through Today, a dotted seven-day forecast, and an uncertainty band");
     expect(captures).toContain("captured app screen are sample data, not user outcomes");
+  });
+
+  it("lets the three chart-bearing Insights visuals use their available display width", () => {
+    const gallerySizing = foodVisualStyles.slice(
+      foodVisualStyles.indexOf("/* Give the chart-bearing captures enough scale to read at normal page size. */"),
+    );
+
+    expect(gallerySizing).toContain("width: min(100%, 368px);");
+    expect(gallerySizing).toContain("max-width: 368px;");
+    expect(gallerySizing).toContain("width: min(100%, 420px);");
+    expect(gallerySizing).toContain("max-width: 420px;");
+    expect(gallerySizing).toContain("max-height: none;");
+    expect(gallerySizing).toContain("object-fit: contain;");
+    expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--lead \.food-insight-path__capture-screen--macro > img\s*\{\s*max-height: none;/);
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {
