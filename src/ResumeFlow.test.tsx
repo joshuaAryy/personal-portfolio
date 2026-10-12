@@ -58,6 +58,7 @@ describe("approved resume flow", () => {
   it("uses the canonical standalone J directly in the scenic field and animates entry", () => {
     const markup = renderRoute("/resume");
     const css = readFileSync("src/resume.css", "utf8");
+    const sceneRule = css.match(/\.resume-mechanism__scene\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(markup).toContain('class="resume-mechanism__scene"');
     expect(markup).toContain('class="resume-found__title">Resume Found</h1>');
@@ -68,6 +69,7 @@ describe("approved resume flow", () => {
     expect(css).toMatch(
       /\.resume-mechanism__scene\s*\{[^}]*aspect-ratio:\s*1\s*\/\s*1;[^}]*border-radius:\s*50%/s,
     );
+    expect(sceneRule).not.toMatch(/border:\s*1px\s+solid/);
     const exteriorGlow = css.match(/\.resume-found__system::before\s*\{([^}]*)\}/)?.[1] ?? "";
     expect(exteriorGlow).not.toContain("gameflow-background.jpg");
     expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*width:\s*min\(54%,\s*280px\)/s);
