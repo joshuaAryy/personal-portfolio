@@ -1,6 +1,15 @@
 # Persistent Agent Registry
 
-## Current live state — Owner Correction Pass 05 review checkpoint (2026-10-12)
+## Current live state — Owner Correction Pass 06 review checkpoint (2026-10-12)
+
+The latest feature application source is `f1fe1d49961d493a659ca53253cd6095b627334b` on `feat/portfolio-integration`. **Current immutable Preview:** https://d60277a8.joshuaik2.pages.dev/ (Environment Preview, branch `feat/portfolio-integration`, application source `f1fe1d4`). The deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent goal remains active.
+
+- **Pass 06:** Enlarged the three chart-bearing Food Tracker Insights visuals while preserving the approved four-card gallery; corrected all four Profile signal overlays for short desktops. At 1280×720, each panel clears the signal row by 12px. Existing desktop, narrow, and owner-approved surfaces were preserved.
+- **Verification:** 313 tests across 31 files passed; build and diff check passed. Eleven routes returned HTTP 200. Installed Chrome verified the deployed gallery at desktop/narrow and all Profile signals at 1280×720, with additional 1100×720 and 1399×720 checks. No browser/request errors or horizontal overflow. Details and capture locations are in [Pass 06 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-06-review.md).
+- **Open items:** owner review of Preview `d60277a8`; live screen-reader interaction remains manual; authentic Food Tracker demo video remains unavailable and must not be fabricated. The overall portfolio goal remains active.
+- Unrelated modified/untracked worktree materials and historical candidates remain preserved.
+
+## Previous live state — Owner Correction Pass 05 review checkpoint (2026-10-12)
 
 The latest feature application source is `42069c0261434c8ba4fab3d0a6ece7208d6d4512` on `feat/portfolio-integration`. **Current immutable Preview:** https://95fca4c1.joshuaik2.pages.dev/ (Cloudflare deployment `95fca4c1-b0dc-446f-ad39-6159700a9bb7`, Environment Preview, branch `feat/portfolio-integration`, source `42069c0`). Deployed JS/CSS match the local build. Production was not targeted; the persistent goal remains active.
 

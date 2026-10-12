@@ -1,6 +1,16 @@
 # Implementation Status
 
-## Current immutable review Preview — Owner Correction Pass 05 (2026-10-12)
+## Current immutable review Preview — Owner Correction Pass 06 (2026-10-12)
+
+**Preview:** https://d60277a8.joshuaik2.pages.dev/ (Cloudflare Pages Preview, branch `feat/portfolio-integration`). **Application source:** `f1fe1d49961d493a659ca53253cd6095b627334b`. The deployed JS/CSS hashes match the build from that source. Production was not targeted; the persistent portfolio goal remains active.
+
+Pass 06 increases the apparent size of the three chart-bearing Food Tracker Insights captures without changing the four-image gallery order, and corrects the short-desktop Profile overlay fit. The compact Profile overlay now clears the signal row by 12px at 1280×720 and remains fitted across 1100×720 and 1399×720; 1440×900 and 390×844 layouts were preserved.
+
+**Verification:** 313 tests across 31 files passed; `npm run build` passed with the existing Vite chunk-size advisory; `git diff --check` exited 0 with line-ending notices from two pre-existing modified review docs. Eleven routes returned HTTP 200. Installed Chrome verified the deployed gallery at 1440×900 and 390×844, all four Profile signals at 1280×720, and compact breakpoint edges at 1100×720 and 1399×720. No browser/request errors or horizontal overflow were found. See [Owner Correction Pass 06 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-06-review.md). This is a review checkpoint, not portfolio completion.
+
+**Open items:** owner review of this Preview; live screen-reader interaction remains a manual follow-up; no authentic Food Tracker demo video is available. Do not fabricate demo media.
+
+## Previous immutable review Preview — Owner Correction Pass 05 (2026-10-12)
 
 **Preview:** https://95fca4c1.joshuaik2.pages.dev/ (Cloudflare deployment `95fca4c1-b0dc-446f-ad39-6159700a9bb7`, Environment `Preview`, branch `feat/portfolio-integration`, deployment source `42069c0`). **Application source:** `42069c0261434c8ba4fab3d0a6ece7208d6d4512`. The deployed JS/CSS hashes match the local build. Production was not targeted; the persistent portfolio goal remains active.
 
