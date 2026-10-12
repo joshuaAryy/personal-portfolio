@@ -180,6 +180,18 @@ describe("approved resume flow", () => {
     expect(closeRule).toMatch(/font-size:\s*clamp\(12px,\s*2\.4cqw,\s*15px\)/);
   });
 
+  it("keeps the complete mechanism visible on short desktop viewports", () => {
+    const css = readFileSync("src/resume.css", "utf8");
+    const shortDesktop = css.match(
+      /@media\s*\(max-height:\s*760px\)\s*and\s*\(min-width:\s*651px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(shortDesktop).toMatch(
+      /\.resume-found\s*\{[^}]*--resume-found-composition-size:\s*min\(600px,[^}]*calc\(100vh - var\(--client-header-height\) - 64px\)/s,
+    );
+    expect(shortDesktop).toMatch(/\.resume-found\s*\{[^}]*padding-top:\s*24px/s);
+  });
+
   it("keeps all Resume Found layers inside one concentric mechanism composition", () => {
     const markup = renderRoute("/resume");
     const css = readFileSync("src/resume.css", "utf8");

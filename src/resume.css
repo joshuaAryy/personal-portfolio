@@ -648,6 +648,13 @@
   }
 }
 
+@media (max-height: 760px) and (min-width: 651px) {
+  .resume-found {
+    --resume-found-composition-size: min(600px, max(0px, calc(100vw - 32px)), max(0px, calc(100vh - var(--client-header-height) - 64px)));
+    padding-top: 24px;
+  }
+}
+
 @media (max-height: 700px) {
   .resume-found {
     padding-bottom: 16px;
