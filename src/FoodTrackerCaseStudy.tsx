@@ -648,7 +648,7 @@ function FoodInsightPath() {
               <p>A nutrient view pairs daily totals with progress toward a goal.</p>
             </div>
           </section>
-          <section className="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-consistency-title">
+          <section className="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--consistency" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-consistency-title">
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--consistency">
               <img
                 src="/media/case-studies/food-tracker/insights/daily-completeness-design-study.png"

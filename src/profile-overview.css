@@ -1874,7 +1874,7 @@
   }
 
   .profile-project-panel {
-    height: 340px;
+    height: 303px;
   }
 
   .profile-project-panel--neutral[hidden]::after {
@@ -1882,12 +1882,76 @@
   }
 
   .profile-project-panel__enclosure {
-    height: 336px;
+    height: 299px;
   }
 
   .profile-project-grid {
-    top: 80px;
-    height: 250px;
+    top: 75px;
+    height: 203px;
+  }
+
+  .profile-project:nth-child(n + 3) .profile-project__identity {
+    margin-top: 8px;
+  }
+
+  .profile-project:nth-child(n + 3) .profile-project__detail {
+    margin-top: 6px;
+    line-height: 14px;
+  }
+
+  .profile-experience-grid,
+  .profile-hackathon-feature,
+  .profile-academics-feature {
+    top: 75px;
+    height: 180px;
+  }
+
+  .profile-experience {
+    gap: 12px;
+    padding: 0 12px;
+  }
+
+  .profile-experience__mark {
+    flex-basis: 64px;
+    width: 64px;
+    height: 64px;
+  }
+
+  .profile-experience__copy {
+    gap: 5px;
+  }
+
+  .profile-experience__name {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .profile-hackathon-feature__result,
+  .profile-academics-feature > div:first-child {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .profile-hackathon-feature__project {
+    padding-right: 12px;
+    padding-left: 66px;
+  }
+
+  .profile-hackathon-feature__project img {
+    left: 12px;
+  }
+
+  .profile-academics-feature > div {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .profile-academics-feature > div:nth-child(2) {
+    padding-left: 20px;
+  }
+
+  .profile-academics-feature__program {
+    font-size: 22px;
   }
 
   .profile-signal-grid {

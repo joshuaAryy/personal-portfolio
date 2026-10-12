@@ -582,7 +582,8 @@ describe("Food Tracker product story", () => {
 
     expect(captures).toContain('data-gallery="insights-evidence"');
     expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--lead" data-evidence-type="app-capture"');
-    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="figma-design-study"');
+    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--fiber" data-evidence-type="figma-design-study"');
+    expect(captures).toContain('class="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--consistency" data-evidence-type="figma-design-study"');
     expect((captures.match(/data-evidence-type="figma-design-study"/g) ?? []).length).toBe(2);
     expect((captures.match(/data-evidence-type="owner-authored-design-reference"/g) ?? []).length).toBe(1);
     expect(captures).toContain('aria-label="Macro composition app screen and three analytics design references"');
@@ -594,18 +595,28 @@ describe("Food Tracker product story", () => {
     expect(captures).toContain("captured app screen are sample data, not user outcomes");
   });
 
-  it("lets the three chart-bearing Insights visuals use their available display width", () => {
+  it("lets the chart-bearing Insights visuals use their available display width on desktop and mobile", () => {
     const gallerySizing = foodVisualStyles.slice(
       foodVisualStyles.indexOf("/* Give the chart-bearing captures enough scale to read at normal page size. */"),
     );
 
-    expect(gallerySizing).toContain("width: min(100%, 368px);");
-    expect(gallerySizing).toContain("max-width: 368px;");
-    expect(gallerySizing).toContain("width: min(100%, 420px);");
-    expect(gallerySizing).toContain("max-width: 420px;");
+    const macroAndForecastRules = gallerySizing.slice(gallerySizing.indexOf("--macro > img,"));
+    expect(macroAndForecastRules).toContain("width: calc(100% + 12px);");
+    expect(macroAndForecastRules).toContain("max-width: none;");
+    expect(macroAndForecastRules).toContain("margin-left: -6px;");
+    expect(gallerySizing).toContain("width: min(100%, 460px);");
+    expect(gallerySizing).toContain("max-width: none;");
     expect(gallerySizing).toContain("max-height: none;");
     expect(gallerySizing).toContain("object-fit: contain;");
+    expect(gallerySizing).toContain("width: calc(100% + 12px);");
+    expect(gallerySizing).toContain("margin-left: -6px;");
+    expect(gallerySizing).toContain("flex: none;");
     expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--lead \.food-insight-path__capture-screen--macro > img\s*\{\s*max-height: none;/);
+
+    const narrowGallery = gallerySizing.slice(gallerySizing.indexOf("@media (max-width: 600px)"));
+    expect(narrowGallery).toContain(".food-insight-path__capture--consistency {");
+    expect(narrowGallery).toContain("grid-template-columns: minmax(0, 1fr);");
+    expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--consistency \.food-insight-path__capture-screen--consistency > img\s*\{[^}]*max-height: none;/);
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {

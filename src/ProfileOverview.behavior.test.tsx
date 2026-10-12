@@ -74,7 +74,14 @@ describe("Profile signal previews", () => {
     )?.[1] ?? "";
 
     expect(shortDesktop).toMatch(/\.main--profile\s+\.profile-overview\s*\{[^}]*margin-top:\s*\d+px/s);
-    expect(shortDesktop).toMatch(/\.profile-project-panel\s*\{[^}]*height:\s*340px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-panel\s*\{[^}]*height:\s*303px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-panel__enclosure\s*\{[^}]*height:\s*299px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-grid\s*\{[^}]*top:\s*75px;[^}]*height:\s*203px/s);
+    expect(shortDesktop).toMatch(/\.profile-project:nth-child\(n\s*\+\s*3\)\s+\.profile-project__identity\s*\{[^}]*margin-top:\s*8px/s);
+    expect(shortDesktop).toMatch(/\.profile-project:nth-child\(n\s*\+\s*3\)\s+\.profile-project__detail\s*\{[^}]*margin-top:\s*6px;[^}]*line-height:\s*14px/s);
+    expect(shortDesktop).toMatch(/\.profile-experience-grid,\s*\.profile-hackathon-feature,\s*\.profile-academics-feature\s*\{[^}]*top:\s*75px;[^}]*height:\s*180px/s);
+    expect(shortDesktop).toMatch(/\.profile-experience\s*\{[^}]*gap:\s*12px;[^}]*padding:\s*0\s+12px/s);
+    expect(shortDesktop).toMatch(/\.profile-academics-feature\s*>\s*div\s*\{[^}]*padding-left:\s*16px/s);
     expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(250px,\s*calc\(100vh\s*-\s*406px\),\s*353px\);[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
     expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*grid-template-rows:\s*1fr/s);
   });
