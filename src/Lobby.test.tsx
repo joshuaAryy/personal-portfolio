@@ -117,10 +117,12 @@ describe("lobby banner environment", () => {
 
   it("uses one proportional banner size and preserves short-screen access to the full lobby", () => {
     const css = readFileSync("src/lobby.css", "utf8");
+    const shellCss = readFileSync("src/styles.css", "utf8");
     const baseCategoryBanner = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(baseCategoryBanner).toMatch(/aspect-ratio:\s*var\(--lobby-banner-ratio\)/);
     expect(css).toMatch(/\.main--lobby\s*\{[^}]*overflow-y:\s*auto/s);
+    expect(shellCss).toMatch(/@media\s*\(max-height:\s*760px\)\s*and\s*\(min-width:\s*901px\)\s*\{[^}]*\.main--lobby\s*\{[^}]*overflow-y:\s*auto/s);
     expect(css).toMatch(/\.league-lobby\s*\{[^}]*height:\s*max\(100%,\s*760px\)/s);
     expect(css).not.toMatch(/\.league-lobby\s*\{[^}]*overflow:\s*hidden;[^}]*min-height:\s*700px/s);
     expect(css).not.toMatch(/@media\s*\(min-width:\s*1800px\)\s*and\s*\(min-height:\s*1000px\)\s*\{\s*\.league-lobby__banners--projects/);

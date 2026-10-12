@@ -182,7 +182,7 @@
   );
   filter: none;
   mask-image:
-    radial-gradient(circle closest-side, transparent 78.5%, #000 80.5%, #000 85.5%, transparent 87.5%),
+    radial-gradient(circle closest-side, transparent 80.5%, #000 81.5%, #000 85%, transparent 86%),
     conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;

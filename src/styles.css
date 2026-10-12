@@ -972,6 +972,12 @@ a:focus-visible {
 .main--lobby {
   overflow: hidden;
 }
+@media (max-height: 760px) and (min-width: 901px) {
+  .main--lobby {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
 .lobby-scene {
   position: relative;
   min-height: 100%;

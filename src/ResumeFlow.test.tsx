@@ -109,7 +109,7 @@ describe("approved resume flow", () => {
     expect(energyRule).toMatch(
       /background:\s*linear-gradient\([\s\S]*?rgb\(219 255 255 \/ 24%\)[\s\S]*?repeating-linear-gradient\([\s\S]*?rgb\(110 238 247 \/ 12%\)[\s\S]*?conic-gradient\([\s\S]*?from 207deg/s,
     );
-    expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 78\.5%,\s*#000 80\.5%,\s*#000 85\.5%,\s*transparent 87\.5%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
+    expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 80\.5%,\s*#000 81\.5%,\s*#000 85%,\s*transparent 86%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
     expect(energyRule).toMatch(/mask-composite:\s*intersect/);
     expect(energyRule).toMatch(/--resume-orb-max-fill:\s*306deg/);
     expect(energyRule).toMatch(/filter:\s*none/);
