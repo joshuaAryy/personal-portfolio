@@ -313,6 +313,17 @@ describe("Profile Overview", () => {
     expect(signalRule).toMatch(/top:\s*calc\(100vh\s*-\s*\d+px\)/);
   });
 
+  it("fits the compact 1100–1399px signal row to the available viewport height", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const compactRules = cssBlock(
+      profileCss,
+      "@media (min-width: 1100px) and (max-width: 1399px) and (max-height: 820px)",
+    );
+    const signalRule = cssBlock(compactRules, ".profile-signal-grid");
+
+    expect(signalRule).toContain("top: clamp(250px, calc(100vh - 406px), 353px)");
+  });
+
   it("moves the signal row into view on 1500–1599px desktop screens below 1080px tall", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const mediumWideRules = cssBlock(

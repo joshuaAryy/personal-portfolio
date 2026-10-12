@@ -1891,7 +1891,7 @@
   }
 
   .profile-signal-grid {
-    top: 353px;
+    top: clamp(250px, calc(100vh - 406px), 353px);
     height: 200px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: 1fr;

@@ -75,7 +75,7 @@ describe("Profile signal previews", () => {
 
     expect(shortDesktop).toMatch(/\.main--profile\s+\.profile-overview\s*\{[^}]*margin-top:\s*\d+px/s);
     expect(shortDesktop).toMatch(/\.profile-project-panel\s*\{[^}]*height:\s*340px/s);
-    expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*353px;[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
+    expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(250px,\s*calc\(100vh\s*-\s*406px\),\s*353px\);[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
     expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*grid-template-rows:\s*1fr/s);
   });
 
