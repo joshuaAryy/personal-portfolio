@@ -1,0 +1,250 @@
+[
+  {
+    "viewport": "desktop-1440x900",
+    "panelHidden": false,
+    "panelTitle": "PROJECTS",
+    "signalName": "PROJECTS, 4. Focus to preview projects details.",
+    "signal": {
+      "x": 428,
+      "y": 702,
+      "width": 187.25,
+      "height": 179.20001220703125,
+      "top": 702,
+      "right": 615.25,
+      "bottom": 881.2000122070312,
+      "left": 428
+    },
+    "panel": {
+      "x": 421.99530029296875,
+      "y": 458.9906005859375,
+      "width": 754.9937133789062,
+      "height": 231,
+      "top": 458.9906005859375,
+      "right": 1176.989013671875,
+      "bottom": 689.9906005859375,
+      "left": 421.99530029296875
+    },
+    "triggerPanelGap": 12,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "desktop-1440x900-projects.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "desktop-1440x900",
+    "panelHidden": false,
+    "panelTitle": "EXPERIENCE",
+    "signalName": "EXPERIENCE, 2. Focus to preview experience details.",
+    "signal": {
+      "x": 615.25,
+      "y": 702,
+      "width": 187.25,
+      "height": 179.20001220703125,
+      "top": 702,
+      "right": 802.5,
+      "bottom": 881.2000122070312,
+      "left": 615.25
+    },
+    "panel": {
+      "x": 421.99530029296875,
+      "y": 458.9906005859375,
+      "width": 754.9937133789062,
+      "height": 231,
+      "top": 458.9906005859375,
+      "right": 1176.989013671875,
+      "bottom": 689.9906005859375,
+      "left": 421.99530029296875
+    },
+    "triggerPanelGap": 12,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "desktop-1440x900-experience.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "desktop-1440x900",
+    "panelHidden": false,
+    "panelTitle": "HACKATHON",
+    "signalName": "HACKATHON, 1. Focus to preview hackathon details.",
+    "signal": {
+      "x": 802.5,
+      "y": 702,
+      "width": 187.25,
+      "height": 179.20001220703125,
+      "top": 702,
+      "right": 989.75,
+      "bottom": 881.2000122070312,
+      "left": 802.5
+    },
+    "panel": {
+      "x": 421.99530029296875,
+      "y": 458.9906005859375,
+      "width": 754.9937133789062,
+      "height": 231,
+      "top": 458.9906005859375,
+      "right": 1176.989013671875,
+      "bottom": 689.9906005859375,
+      "left": 421.99530029296875
+    },
+    "triggerPanelGap": 12,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "desktop-1440x900-hackathon.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "desktop-1440x900",
+    "panelHidden": false,
+    "panelTitle": "ACADEMICS",
+    "signalName": "ACADEMICS, 2028. Focus to preview academics details.",
+    "signal": {
+      "x": 989.75,
+      "y": 702,
+      "width": 187.25,
+      "height": 179.20001220703125,
+      "top": 702,
+      "right": 1177,
+      "bottom": 881.2000122070312,
+      "left": 989.75
+    },
+    "panel": {
+      "x": 421.99530029296875,
+      "y": 458.9906005859375,
+      "width": 754.9937133789062,
+      "height": 231,
+      "top": 458.9906005859375,
+      "right": 1176.989013671875,
+      "bottom": 689.9906005859375,
+      "left": 421.99530029296875
+    },
+    "triggerPanelGap": 12,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "desktop-1440x900-academics.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "narrow-390x844",
+    "panelHidden": false,
+    "panelTitle": "PROJECTS",
+    "signalName": "PROJECTS, 4. Focus to preview projects details.",
+    "signal": {
+      "x": 18,
+      "y": 106.7217025756836,
+      "width": 177,
+      "height": 235,
+      "top": 106.7217025756836,
+      "right": 195,
+      "bottom": 341.7217025756836,
+      "left": 18
+    },
+    "panel": {
+      "x": 22,
+      "y": 331.7217102050781,
+      "width": 350,
+      "height": 499.9999694824219,
+      "top": 331.7217102050781,
+      "right": 372,
+      "bottom": 831.7216796875,
+      "left": 22
+    },
+    "triggerPanelGap": 0,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "narrow-390x844-projects.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "narrow-390x844",
+    "panelHidden": false,
+    "panelTitle": "EXPERIENCE",
+    "signalName": "EXPERIENCE, 2. Focus to preview experience details.",
+    "signal": {
+      "x": 195,
+      "y": 107,
+      "width": 177,
+      "height": 235,
+      "top": 107,
+      "right": 372,
+      "bottom": 342,
+      "left": 195
+    },
+    "panel": {
+      "x": 22,
+      "y": 332,
+      "width": 350,
+      "height": 500,
+      "top": 332,
+      "right": 372,
+      "bottom": 832,
+      "left": 22
+    },
+    "triggerPanelGap": 0,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "narrow-390x844-experience.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "narrow-390x844",
+    "panelHidden": false,
+    "panelTitle": "HACKATHON",
+    "signalName": "HACKATHON, 1. Focus to preview hackathon details.",
+    "signal": {
+      "x": 18,
+      "y": 107,
+      "width": 177,
+      "height": 235,
+      "top": 107,
+      "right": 195,
+      "bottom": 342,
+      "left": 18
+    },
+    "panel": {
+      "x": 22,
+      "y": 332,
+      "width": 350,
+      "height": 500,
+      "top": 332,
+      "right": 372,
+      "bottom": 832,
+      "left": 22
+    },
+    "triggerPanelGap": 0,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "narrow-390x844-hackathon.jpg",
+    "pageErrors": []
+  },
+  {
+    "viewport": "narrow-390x844",
+    "panelHidden": false,
+    "panelTitle": "ACADEMICS",
+    "signalName": "ACADEMICS, 2028. Focus to preview academics details.",
+    "signal": {
+      "x": 195,
+      "y": 107,
+      "width": 177,
+      "height": 235,
+      "top": 107,
+      "right": 372,
+      "bottom": 342,
+      "left": 195
+    },
+    "panel": {
+      "x": 22,
+      "y": 332,
+      "width": 350,
+      "height": 500,
+      "top": 332,
+      "right": 372,
+      "bottom": 832,
+      "left": 22
+    },
+    "triggerPanelGap": 0,
+    "panelWithinViewport": true,
+    "staysOpenWhenEntered": true,
+    "screenshot": "narrow-390x844-academics.jpg",
+    "pageErrors": []
+  }
+]

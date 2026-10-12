@@ -36,6 +36,8 @@ The complete route/viewport measurements are in [the integrated Chrome report](q
 - 1280×720: [before](qa-958b4cd/profile-fit-final/before-profile-1280x720.png) · [after](qa-integrated-final-20261012/profile-1280x720.png)
 - Narrow-height desktop, 1280×720: [before](qa-958b4cd/profile-fit-final/before-profile-1280x720.png) · [deployed after](qa-deployed-95fca4c1/profile-1280x720.png)
 
+The older signal-overlay proximity concern was also rechecked on the deployed Preview at 1440×900 and 390×844. All four panels show the matching signal title and remain within the viewport. At desktop, each panel ends 12px above its corresponding signal group, stays clear of the top navigation and Activity rail, and remains open when the pointer enters it. At 390px, each keyboard-focused signal keeps its panel attached to the signal row and visible after the page's natural focus scroll. The eight installed-Chrome captures are [Projects](qa-current-profile-overlays-95fca4c1/desktop-1440x900-projects.jpg) · [Experience](qa-current-profile-overlays-95fca4c1/desktop-1440x900-experience.jpg) · [Hackathon](qa-current-profile-overlays-95fca4c1/desktop-1440x900-hackathon.jpg) · [Academics](qa-current-profile-overlays-95fca4c1/desktop-1440x900-academics.jpg) and [Projects narrow](qa-current-profile-overlays-95fca4c1/narrow-390x844-projects.jpg) · [Experience narrow](qa-current-profile-overlays-95fca4c1/narrow-390x844-experience.jpg) · [Hackathon narrow](qa-current-profile-overlays-95fca4c1/narrow-390x844-hackathon.jpg) · [Academics narrow](qa-current-profile-overlays-95fca4c1/narrow-390x844-academics.jpg). Measurements and interaction results are in [metrics.json](qa-current-profile-overlays-95fca4c1/metrics.json).
+
 ### Resume Found
 
 - Close clearance, 1440×900: [before](qa-958b4cd/resume-close-clearance-followup-20261012/before-1440x900.png) · [after](qa-958b4cd/resume-close-clearance-followup-20261012/after-1440x900.png)
@@ -65,7 +67,7 @@ No live screen-reader interaction has been performed; Chrome keyboard and access
 1. On Home, navigate the main mode controls, LinkedIn, GitHub, Email, Resume, Activity links, and Help. Confirm names and roles are announced clearly.
 2. Open contextual Help, listen to its instructions, press Escape, and confirm focus returns to Help.
 3. Open Resume Found. Confirm the dialog is announced, focus stays within it, Escape closes it and restores the originating control, View Resume opens the viewer, and Close returns to the originating page.
-4. On Profile Overview, keyboard-focus Projects, Experience, Hackathon, and Academics. Confirm each signal's name/count and associated preview are announced; move focus away and confirm the neutral state returns.
+4. On `/profile` (Profile Overview), keyboard-focus Projects, Experience, Hackathon, and Academics. Confirm each signal's name/count and associated preview are announced; move focus away and confirm the neutral state returns.
 5. On a representative case study and Demos, navigate headings and landmarks, then inspect the video player's accessible name and keyboard controls for play/pause/seek.
 6. Repeat the Help, Resume, Profile, and media checks at a narrow viewport (390×844). Record any missing, duplicate, clipped, or out-of-order announcements.
 
