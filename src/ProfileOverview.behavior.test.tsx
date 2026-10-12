@@ -40,12 +40,12 @@ afterEach(() => {
 describe("Profile signal previews", () => {
   it("keeps the tall owner-reference signal group inside its marked lower band", () => {
     const css = readFileSync("src/profile-overview.css", "utf8");
-    expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?\.profile-signal-grid\s*\{[^}]*top:\s*calc\(100vh\s*-\s*544px\)/s);
+    expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(568px,\s*calc\(100vh\s*-\s*792px\),\s*610px\)/s);
   });
 
   it("keeps the tall Profile scenic fade just beneath the repositioned signal band", () => {
     const css = readFileSync("src/profile-overview.css", "utf8");
-    expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?--profile-environment-height:\s*calc\(100vh\s*-\s*var\(--client-header-height\)\s*-\s*140px\)/s);
+    expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?--profile-environment-height:\s*min\(calc\(100vh\s*-\s*var\(--client-header-height\)\s*-\s*140px\),\s*1036px\)/s);
   });
 
   it("repositions an open signal panel when the viewport is scrolled", () => {

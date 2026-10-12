@@ -1847,13 +1847,14 @@
 }
 
 @media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1280px) {
-  /* Move the complete signal group into the owner's lower-band target. */
+  /* Keep the signal group in the owner-marked lower band instead of letting
+     the tall viewport push it toward the scenic bottom edge. */
   .profile-signal-grid {
-    top: calc(100vh - 544px);
+    top: clamp(568px, calc(100vh - 792px), 610px);
   }
 
   .main.main--profile::before {
-    --profile-environment-height: calc(100vh - var(--client-header-height) - 140px);
+    --profile-environment-height: min(calc(100vh - var(--client-header-height) - 140px), 1036px);
     background-image:
       linear-gradient(180deg, rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)),
       linear-gradient(180deg, transparent calc(100% - 88px), #05070a 100%),
