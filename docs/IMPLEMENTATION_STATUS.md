@@ -1,6 +1,18 @@
 # Implementation Status
 
-## Latest owner-review checkpoint — short-desktop Resume Found fit (2026-10-11)
+## Latest owner-review checkpoint — bounded Resume Found correction (2026-10-12)
+
+**Feature branch:** `feat/portfolio-integration`; **application source:** `c89d7090342d8c84976c95333c87e68f364055ac`. **Immutable feature Preview:** https://87e99fc5.joshuaik2.pages.dev/ (Cloudflare environment `Preview`; branch `feat/portfolio-integration`). The deploy was built from a clean detached worktree at the exact application source commit. Production was not targeted. The persistent portfolio goal remains active and owner review is open.
+
+This bounded pass moved the Resume Found energy core inward to the radius shown in the owner's beginning/completed screenshots and scaled the full desktop mechanism plus J/title/action/Close together by about 6–7%. The middle cyan channel remains textured, bounded by both gold rails, clear of the lower View Resume plate, and fully filled at completion. The existing 600px short-desktop fit and 358px narrow composition remain. No Opening, banner, Activity, Resume Viewer header, portrait, or case-study code changed.
+
+Owner-scoped comparison evidence is in [Resume Found scale/channel review](site-render-review/2026-10-12-resume-scale-channel-followup/README.md) and [integrated Chrome interaction evidence](site-render-review/2026-10-12-owner-resume-lobby-reconcile/qa/resume-final-after-css/interactions.json). Chrome captures show the 36° beginning, 153° partial, and 306° completed ring, plus reduced motion, at 1440×900, 1280×720, and 390×844. Modal Escape and Close return to Home and restore focus; View Resume opens `/resume/viewer`; direct `/resume` Close and View Resume work. The current-source lobby matrix remains centered and symmetric across 3-card and 5-card compositions; the shared Viewer header, Activity identities/J, and Projects owner portrait showed no concrete mismatch.
+
+**Verification:** full suite **307 tests across 31 files passed**; `npm run build` and scoped `git diff --check` passed. Build retains the existing ~519 kB JavaScript chunk advisory. A clean worktree build produced `index-BTvi-urW.js` and `index-Bbiayosf.css`; deployed SHA-256 values are JS `E5C576FEC09126EDA6C80C6C9F906D0591F08CF8D1AA10A80BADD366F91F8506` and CSS `4E63A2F3AFCE6A829C65CE3B13EA586D6810D4F6E712AF6DD5646B63D4A8BF17`, matching local build bytes. Deployed Home and Resume were visually inspected in the browser; all 11 checked routes returned HTTP 200, visible image assets loaded, browser error logs were empty, and the PDF endpoint returned 200 with `application/pdf` and a `%PDF-` signature. The in-app browser did not display the PDF plugin's inner page, though the endpoint and existing installed-Chrome captures are valid. The owner-supplied original Cho'Veigo video and previously approved work remain unchanged. Live screen-reader interaction remains a manual follow-up; the exact Narrator steps are in the prior checkpoint below. Food Tracker still lacks an authentic demo video. This is a review checkpoint, not portfolio completion.
+
+The original owner correction state and unrelated modified/untracked J/Opening review material remain preserved in the main worktree. Those uncommitted study changes were excluded from the clean Preview build; the accepted committed Opening is unchanged.
+
+## Previous owner-review checkpoint — short-desktop Resume Found fit (2026-10-11)
 
 **Feature branch:** `feat/portfolio-integration`; **application source:** `39ad7ddd28a8b0d240c8f39386354cdfa731635c`. Documentation-only commits follow that app source and do not change its bundle. **Immutable Preview:** https://9b8a4661.joshuaik2.pages.dev/ (Cloudflare deployment `9b8a4661-9d8c-4d12-bf7d-4a4874eedd46`; Environment `Preview`; branch `feat/portfolio-integration`; deployed app source `39ad7dd`). Production was not targeted. The persistent portfolio goal remains active and owner review remains open.
 
