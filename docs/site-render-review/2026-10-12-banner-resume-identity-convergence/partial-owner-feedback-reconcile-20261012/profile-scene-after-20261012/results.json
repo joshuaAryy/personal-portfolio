@@ -1,0 +1,216 @@
+{
+  "results": [
+    {
+      "viewport": [
+        1536,
+        1360
+      ],
+      "status": 200,
+      "documentWidth": 1536,
+      "main": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1272,
+        "bottom": 1360
+      },
+      "signals": {
+        "x": 414,
+        "y": 763,
+        "width": 852,
+        "height": 195,
+        "bottom": 958
+      },
+      "environmentHeight": "1271.98px",
+      "environmentBackground": "linear-gradient(rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)), url(\"http://127.0.0.1:5185/media/lobby/party-background-original.jpg\")",
+      "signalImages": [
+        {
+          "src": "http://127.0.0.1:5185/media/profile/project-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/experience-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/hackathon-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/academics-signal.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "status": 200,
+      "documentWidth": 1920,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "width": 1600,
+        "height": 970,
+        "bottom": 1080
+      },
+      "signals": {
+        "x": 444,
+        "y": 778,
+        "width": 1090,
+        "height": 280,
+        "bottom": 1058
+      },
+      "environmentHeight": "970px",
+      "environmentBackground": "linear-gradient(rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)), url(\"http://127.0.0.1:5185/media/lobby/party-background-original.jpg\")",
+      "signalImages": [
+        {
+          "src": "http://127.0.0.1:5185/media/profile/project-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/experience-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/hackathon-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/academics-signal.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        720
+      ],
+      "status": 200,
+      "documentWidth": 1440,
+      "main": {
+        "x": 0,
+        "y": 83,
+        "width": 1200,
+        "height": 637,
+        "bottom": 720
+      },
+      "signals": {
+        "x": 414,
+        "y": 496,
+        "width": 763,
+        "height": 175,
+        "bottom": 671
+      },
+      "environmentHeight": "637.484px",
+      "environmentBackground": "linear-gradient(rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)), url(\"http://127.0.0.1:5185/media/lobby/party-background-original.jpg\")",
+      "signalImages": [
+        {
+          "src": "http://127.0.0.1:5185/media/profile/project-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/experience-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/hackathon-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/academics-signal.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "status": 200,
+      "documentWidth": 1280,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "width": 1060,
+        "height": 638,
+        "bottom": 720
+      },
+      "signals": {
+        "x": 414,
+        "y": 506,
+        "width": 626,
+        "height": 200,
+        "bottom": 706
+      },
+      "environmentHeight": "638px",
+      "environmentBackground": "linear-gradient(rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)), url(\"http://127.0.0.1:5185/media/lobby/party-background-original.jpg\")",
+      "signalImages": [
+        {
+          "src": "http://127.0.0.1:5185/media/profile/project-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/experience-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/hackathon-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/academics-signal.svg",
+          "loaded": true
+        }
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "documentWidth": 390,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "width": 390,
+        "height": 1508,
+        "bottom": 1578
+      },
+      "signals": {
+        "x": 18,
+        "y": 914,
+        "width": 354,
+        "height": 471,
+        "bottom": 1385
+      },
+      "environmentHeight": "774px",
+      "environmentBackground": "linear-gradient(rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)), url(\"http://127.0.0.1:5185/media/lobby/party-background-original.jpg\")",
+      "signalImages": [
+        {
+          "src": "http://127.0.0.1:5185/media/profile/project-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/experience-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/hackathon-signal.svg",
+          "loaded": true
+        },
+        {
+          "src": "http://127.0.0.1:5185/media/profile/academics-signal.svg",
+          "loaded": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failed": []
+}

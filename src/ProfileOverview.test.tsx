@@ -435,7 +435,7 @@ describe("Profile Overview", () => {
     expect(signalGrid).toContain("row-gap: var(--profile-mobile-panel-gap, 0px)");
   });
 
-  it("ends the tall desktop environment with a short fade just below the signal band", () => {
+  it("continues the tall desktop environment through the client panel", () => {
     const profileCss = readFileSync("src/profile-overview.css", "utf8");
     const tallEnvironment = cssBlock(
       profileCss,
@@ -443,8 +443,8 @@ describe("Profile Overview", () => {
     );
     const environmentRule = cssBlock(tallEnvironment, ".main.main--profile::before");
 
-    expect(environmentRule).toContain("calc(100vh - var(--client-header-height) - 140px)");
-    expect(environmentRule).toContain("calc(100% - 88px)");
-    expect(environmentRule).toContain("#05070a 100%");
+    expect(environmentRule).toContain("calc(100vh - var(--client-header-height))");
+    expect(environmentRule).not.toContain("calc(100% - 88px)");
+    expect(environmentRule).not.toContain("#05070a 100%");
   });
 });

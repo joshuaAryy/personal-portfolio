@@ -43,9 +43,14 @@ describe("Profile signal previews", () => {
     expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(568px,\s*calc\(100vh\s*-\s*792px\),\s*610px\)/s);
   });
 
-  it("keeps the tall Profile scenic fade just beneath the repositioned signal band", () => {
+  it("keeps the tall Profile scenery continuous through the lower client panel", () => {
     const css = readFileSync("src/profile-overview.css", "utf8");
-    expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?--profile-environment-height:\s*min\(calc\(100vh\s*-\s*var\(--client-header-height\)\s*-\s*140px\),\s*1036px\)/s);
+    const tallProfileRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const environmentRule = tallProfileRule.match(/\.main\.main--profile::before\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(environmentRule).toContain("--profile-environment-height: calc(100vh - var(--client-header-height))");
+    expect(environmentRule).not.toContain("1036px");
+    expect(environmentRule).not.toContain("transparent calc(100% - 88px)");
   });
 
   it("repositions an open signal panel when the viewport is scrolled", () => {

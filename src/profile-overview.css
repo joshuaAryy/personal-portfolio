@@ -1854,14 +1854,13 @@
   }
 
   .main.main--profile::before {
-    --profile-environment-height: min(calc(100vh - var(--client-header-height) - 140px), 1036px);
+    --profile-environment-height: calc(100vh - var(--client-header-height));
     background-image:
       linear-gradient(180deg, rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)),
-      linear-gradient(180deg, transparent calc(100% - 88px), #05070a 100%),
       url("/media/lobby/party-background-original.jpg");
-    background-position: center, center, center 58%;
-    background-size: cover, cover, cover;
-    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center, center 58%;
+    background-size: cover, cover;
+    background-repeat: no-repeat, no-repeat;
   }
 }
 
