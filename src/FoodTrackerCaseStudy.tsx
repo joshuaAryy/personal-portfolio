@@ -609,21 +609,29 @@ function FoodInsightPath() {
         <section className="food-insight-path__capture food-insight-path__capture--lead" data-evidence-type="app-capture" aria-labelledby="food-insight-capture-macro-title">
           <div className="food-insight-path__capture-screen food-insight-path__capture-screen--macro">
             <img
-              src="/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-gallery-crop.png"
-              alt="Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes."
+              className="food-insight-path__macro-balance-focus"
+              src="/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png"
+              alt="Authentic Food Tracker app capture crop showing the 30-day nutrient balance graphic with protein, carbohydrate, and fat labels. Values are sample data, not user outcomes."
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              className="food-insight-path__macro-mix-focus"
+              src="/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png"
+              alt="Authentic Food Tracker app capture crop showing daily macro comparison bars by weekday, with the gram scale and labels. Values are sample data, not user outcomes."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
             <strong id="food-insight-capture-macro-title">Macro Composition</strong>
-            <p>A nutrient balance graphic sits beside the daily comparison chart.</p>
+            <p>30-day nutrient balance and weekday macro comparisons.</p>
           </div>
         </section>
           <section className="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--forecast" data-evidence-type="owner-authored-design-reference" aria-labelledby="food-insight-capture-calorie-title">
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--forecast">
               <img
-                src="/media/case-studies/food-tracker/insights/calorie-forecast-owner-gallery-crop.png"
+                src="/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png"
                 alt="Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."
                 loading="lazy"
                 decoding="async"
@@ -637,8 +645,8 @@ function FoodInsightPath() {
           <section className="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--fiber" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-fiber-title">
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--fiber">
               <img
-                src="/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png"
-                alt="Figma analytics design showing a fiber trend chart with daily totals and a target band."
+                src="/media/case-studies/food-tracker/insights/fiber-trend-chart-focus.png"
+                alt="Figma analytics design study, not a verified runtime capture, showing a fiber trend chart with daily totals and a target band."
                 loading="lazy"
                 decoding="async"
               />

@@ -6317,6 +6317,7 @@
 /* Give the chart-bearing captures enough scale to read at normal page size. */
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast {
+  display: block;
   width: min(100%, 460px);
   height: auto;
   min-height: 0;
@@ -6327,6 +6328,7 @@
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img,
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img {
+  display: block;
   width: calc(100% + 12px);
   height: auto;
   max-width: none;
@@ -6336,6 +6338,10 @@
   object-fit: contain;
   object-position: top center;
   transform: none;
+}
+
+.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img + img {
+  margin-top: 8px;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {

@@ -118,9 +118,9 @@ describe("Food Tracker product story", () => {
     const loggingCaptures = [...logging.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\/phase-24\//g)];
     const insightCaptures = [...insights.matchAll(/<img\b[^>]*\/media\/case-studies\/food-tracker\//g)];
 
-    expect(captures).toHaveLength(5);
+    expect(captures).toHaveLength(6);
     expect(loggingCaptures).toHaveLength(1);
-    expect(insightCaptures).toHaveLength(4);
+    expect(insightCaptures).toHaveLength(5);
     expect(logging).toContain("search-banana-results.png");
     expect(logging).not.toContain("food-log-complex-clean.png");
     expect(logging).not.toContain("food-serving-preview-banana.png");
@@ -130,8 +130,8 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("Interface captures show interaction states, not saved user outcomes.");
     expect(logging).not.toContain("Phase 24");
     expect(logging).not.toContain("pre-redesign");
-    expect(insights).toContain("insights/calorie-forecast-owner-gallery-crop.png");
-    expect(insights).toContain("insights/fiber-trend-gallery-crop.png");
+    expect(insights).toContain("insights/calorie-forecast-chart-focus.png");
+    expect(insights).toContain("insights/fiber-trend-chart-focus.png");
     expect(insights).toContain("insights/daily-completeness-design-study.png");
     expect(insights).not.toContain("insights-month-populated-sep08-oct07.png");
     expect(insights).not.toContain("trend-detail-calories-populated.png");
@@ -147,7 +147,8 @@ describe("Food Tracker product story", () => {
     }
     expect(visibleGalleryCopy).not.toContain("Three Figma studies use illustrative data");
     expect(gallery).toContain('aria-label="Macro composition app screen and three analytics design references"');
-    expect(gallery).toContain('alt="Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes."');
+    expect(gallery).toContain('alt="Authentic Food Tracker app capture crop showing the 30-day nutrient balance graphic with protein, carbohydrate, and fat labels. Values are sample data, not user outcomes."');
+    expect(gallery).toContain('alt="Authentic Food Tracker app capture crop showing daily macro comparison bars by weekday, with the gram scale and labels. Values are sample data, not user outcomes."');
     expect(gallery).toContain('data-evidence-type="owner-authored-design-reference"');
     expect(gallery).toContain('alt="Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."');
     expect(gallery).toContain('class="food-insight-path__capture-screen food-insight-path__capture-screen--macro"');
@@ -163,7 +164,8 @@ describe("Food Tracker product story", () => {
     expect(insights).not.toContain("Oct 7");
     expect(insights).not.toContain("five logged days");
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
-    expect(insights).toContain("trend-detail-macro-composition-gallery-crop.png");
+    expect(insights).toContain("macro-composition-balance-focus.png");
+    expect(insights).toContain("daily-macro-mix-focus.png");
     expect(insights).not.toContain("goal-plan.png");
     expect(insights).toContain("Solid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.");
     expect(insights).not.toContain("canonical trend-configuration capture");
@@ -210,7 +212,7 @@ describe("Food Tracker product story", () => {
     expect(publicCopy).not.toContain("app capture · sample data");
     expect(publicCopy).not.toContain("not user outcomes");
     expect(insights).toContain("Owner-provided Food Tracker calorie forecast design reference");
-    expect(insights).toContain("Food Tracker app screen showing macro composition");
+    expect(insights).toContain("Authentic Food Tracker app capture crop showing the 30-day nutrient balance graphic");
   });
 
   it("groups the five logging starts into three understandable paths with one reviewed destination", () => {
@@ -597,7 +599,7 @@ describe("Food Tracker product story", () => {
     expect(captures).toContain("Fiber trend");
     expect(captures).toContain("Daily completeness");
     expect(captures).toContain("recorded history through Today, a dotted seven-day forecast, and an uncertainty band");
-    expect(captures).toContain("captured app screen are sample data, not user outcomes");
+    expect(captures).toContain("Values are sample data, not user outcomes");
   });
 
   it("lets the chart-bearing Insights visuals use their available display width on desktop and mobile", () => {
@@ -627,14 +629,35 @@ describe("Food Tracker product story", () => {
   it("uses content-focused authentic gallery crops without changing their natural proportions", () => {
     const gallery = section(renderFoodTracker(), "food-insights", "food-search");
 
-    expect(gallery).toContain("trend-detail-macro-composition-gallery-crop.png");
-    expect(gallery).toContain("calorie-forecast-owner-gallery-crop.png");
-    expect(gallery).toContain("fiber-trend-gallery-crop.png");
+    expect(gallery).toContain("macro-composition-balance-focus.png");
+    expect(gallery).toContain("daily-macro-mix-focus.png");
+    expect(gallery).toContain("calorie-forecast-chart-focus.png");
+    expect(gallery).toContain("fiber-trend-chart-focus.png");
     expect(gallery).toContain("daily-completeness-design-study.png");
 
-    expect(pngDimensions("public/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-gallery-crop.png")).toEqual([348, 547]);
-    expect(pngDimensions("public/media/case-studies/food-tracker/insights/calorie-forecast-owner-gallery-crop.png")).toEqual([278, 520]);
-    expect(pngDimensions("public/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png")).toEqual([334, 355]);
+    expect(pngDimensions("public/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png")).toEqual([322, 176]);
+    expect(pngDimensions("public/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png")).toEqual([340, 226]);
+    expect(pngDimensions("public/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png")).toEqual([254, 330]);
+    expect(pngDimensions("public/media/case-studies/food-tracker/insights/fiber-trend-chart-focus.png")).toEqual([330, 316]);
+  });
+
+  it("keeps both macro charts and the forecast and fiber plots legible as focused source crops", () => {
+    const gallery = section(renderFoodTracker(), "food-insights", "food-search");
+    const captures = gallery.slice(gallery.indexOf('class="food-insight-path__captures"'));
+    const macro = captures.slice(
+      captures.indexOf('class="food-insight-path__capture food-insight-path__capture--lead"'),
+      captures.indexOf('class="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--forecast"'),
+    );
+
+    expect(macro).toContain("macro-composition-balance-focus.png");
+    expect(macro).toContain("daily-macro-mix-focus.png");
+    expect(macro).toContain("30-day nutrient balance");
+    expect(macro).toContain("with the gram scale and labels");
+    expect(macro).toContain("sample data, not user outcomes");
+    expect(captures).toContain("calorie-forecast-chart-focus.png");
+    expect(captures).toContain("fiber-trend-chart-focus.png");
+    expect(captures).toContain("Owner-provided Food Tracker calorie forecast design reference, not a runtime capture");
+    expect(captures).toContain("Figma analytics design study, not a verified runtime capture");
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {
