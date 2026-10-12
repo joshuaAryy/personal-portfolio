@@ -41,7 +41,7 @@ Lobby and identity captures: [Projects](evidence/projects-lobby-1920x1080.png), 
 
 - Full clean-source test suite: **305 tests across 31 files passed**. Happy DOM prints iframe/PDF fetch-abort teardown traces while exiting successfully.
 - `npm run build`: passed; existing advisory remains for the 519.12 kB JavaScript chunk.
-- `git diff --check`: passed before documentation packaging; run again after this doc-only update.
+- `git show --check`: passed for both the application correction commit `dc65663` and the documentation/evidence commit `43d0709`.
 - Clean Preview bundle verification: deployed JavaScript SHA-256 `e5c576fec09126eda6c80c6c9f906d0591f08cf8d1aa10a80badd366f91f8506`; deployed CSS SHA-256 `6e2220a7eb02e0785d7286f6ad6aa254491a757b56479193a6714860531104a2`. Both match the clean build from `dc65663` byte-for-byte.
 - Preview routes `/`, `/home`, `/projects`, `/experience`, `/hackathons`, `/education`, `/resume`, `/resume/viewer`, `/profile`, `/journey`, and `/demos` returned HTTP 200. The PDF endpoint returned HTTP 200 with `application/pdf`.
 - The deployed Preview was visually checked in the Codex browser at Home, Projects, Resume Found, and Resume Viewer. Runtime QA also inspected the local clean-equivalent UI in Chrome 154 across desktop and narrow dimensions; modal actions, focus restoration, Escape, and responsive fit passed.
