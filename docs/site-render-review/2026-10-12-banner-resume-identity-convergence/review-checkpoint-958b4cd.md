@@ -34,3 +34,9 @@ Focused regression assertions cover both changes. The four lobby compositions, b
 Local Chrome measurements and captures are in docs/site-render-review/2026-10-12-banner-resume-identity-convergence/qa-958b4cd/ in the clean verification worktree. They were kept local rather than committed as a large image set. The QA report is qa-report.md in that directory.
 
 The owner should review the immutable Preview, especially the Resume ring thickness and the short-desktop lobby scroll behavior. This checkpoint does not declare the portfolio complete.
+
+## Full Cho’Veigo demo recheck
+
+On the same immutable Preview, both /profile/demos and /projects/choveigo presented the full original video. The media endpoint returned HTTP 206 with Content-Range bytes 0–1023/32915943 and the owner-authorized SHA-256 ETag. Browser metadata reported 112.638333 seconds, 1920×1080, unmuted, readyState 4, and no media error. Demos playback advanced; in the case-study player, Space paused playback, End sought to the end, and Home plus ArrowRight sought into the full recording. No media edits were made.
+
+Remaining goal gates are owner review of this Preview, genuine live screen-reader interaction, and any future authentic Food Tracker demo supplied by the owner.

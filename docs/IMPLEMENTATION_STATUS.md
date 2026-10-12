@@ -17,6 +17,9 @@ After source `c89d709` / Preview https://87e99fc5.joshuaik2.pages.dev/, the only
 
 The existing Vite large-chunk advisory and Happy DOM PDF iframe teardown abort traces remain non-blocking. Food Tracker still has no authentic demo video; live screen-reader interaction remains a manual follow-up. This is a review checkpoint, not portfolio completion.
 
+
+**Full-video verification:** the same immutable Preview video was rechecked in both Demos and the case-study hero: the media endpoint returns HTTP 206 for byte ranges and an ETag matching the owner-authorized SHA-256; browser metadata reports 112.638333 seconds at 1920×1080 with audio unmuted. Playback advanced without error, Space paused it, and Home plus ArrowRight sought within the full duration. This closes the current full-demo verification item without changing the app source.
+
 ## Previous owner-review checkpoint — bounded Resume Found correction (2026-10-12)
 
 **Feature branch:** `feat/portfolio-integration`; **application source:** `c89d7090342d8c84976c95333c87e68f364055ac`. **Immutable feature Preview:** https://87e99fc5.joshuaik2.pages.dev/ (Cloudflare environment `Preview`; branch `feat/portfolio-integration`). The deploy was built from a clean detached worktree at the exact application source commit. Production was not targeted. The persistent portfolio goal remains active and owner review is open.
