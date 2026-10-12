@@ -72,3 +72,9 @@ No live screen-reader interaction has been performed; Chrome keyboard and access
 6. Repeat the Help, Resume, Profile, and media checks at a narrow viewport (390×844). Record any missing, duplicate, clipped, or out-of-order announcements.
 
 The authentic Food Tracker demo remains unavailable; use the current truthful still-image evidence until the owner supplies a real recording. The immutable Preview remains open for owner review; this checklist and checkpoint do not mark the portfolio goal complete.
+
+## Automated accessibility preflight
+
+Installed Chrome checked the initial DOM on `/home`, `/profile`, `/profile/demos`, `/projects/food-tracker`, `/projects/choveigo`, `/resume`, and `/resume/viewer`. The scan found no visible interactive controls without a name, unresolved `aria-controls`/`aria-labelledby`/`aria-describedby` references, duplicate IDs, or page exceptions. All four Profile signals expose their name and count and point to the existing details panel.
+
+The Home Help overlay is announced as a modal dialog named “Home controls”; Escape closes it and restores focus to Help. The Resume Found takeover is announced as a modal dialog named by “RESUME FOUND”; eight successive Tab presses kept focus inside, and Escape returned to `/home` and restored focus to the invoking Resume link. This is browser/DOM and keyboard evidence only. It does not replace the live Windows Narrator interaction listed above.
