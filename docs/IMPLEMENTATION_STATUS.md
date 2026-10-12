@@ -1,6 +1,16 @@
 # Implementation Status
 
-## Current immutable review Preview — Owner Correction Pass 06 (2026-10-12)
+## Current immutable review Preview — Owner Correction Pass 07 (2026-10-12)
+
+**Preview:** https://26019162.joshuaik2.pages.dev/ (Cloudflare Pages Preview `26019162-6afc-49c5-988a-64355f943de1`, branch `feat/portfolio-integration`, source `5c7b0bc`). **Application source:** `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd`. Deployed JavaScript, CSS, and new gallery assets are byte-identical to the local build. Production was not targeted; the persistent portfolio goal remains active.
+
+Pass 07 makes content-focused, proportional crops for Macro Composition, Calorie Forecast, and Fiber Trend in the approved four-image Food Tracker Insights gallery. Daily Completeness and the surrounding case-study content are unchanged. The Forecast remains clearly labeled as an owner design reference; Fiber remains a Figma design study; Macro remains an app capture with sample data identified.
+
+**Verification:** 314 tests across 31 files passed; `npm run build` passed with the existing Vite chunk-size advisory; `git diff --check` passed for the staged change. Installed Chrome verified the deployed gallery at 1440×900 and 390×844 with no horizontal overflow, browser errors, or failed requests. `/`, `/home`, and `/projects/food-tracker` returned HTTP 200. See [Owner Correction Pass 07 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-07-food-insights.md) and deployed screenshots in its capture directory. This is a review checkpoint, not portfolio completion.
+
+**Open items:** owner review of Preview `26019162`; live screen-reader interaction remains a manual follow-up; no authentic Food Tracker demo video is available. Do not fabricate demo media.
+
+## Previous immutable review Preview — Owner Correction Pass 06 (2026-10-12)
 
 **Preview:** https://d60277a8.joshuaik2.pages.dev/ (Cloudflare Pages Preview, branch `feat/portfolio-integration`). **Application source:** `f1fe1d49961d493a659ca53253cd6095b627334b`. The deployed JS/CSS hashes match the build from that source. Production was not targeted; the persistent portfolio goal remains active.
 

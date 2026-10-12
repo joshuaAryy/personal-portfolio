@@ -1,6 +1,15 @@
 # Persistent Agent Registry
 
-## Current live state — Owner Correction Pass 06 review checkpoint (2026-10-12)
+## Current live state — Owner Correction Pass 07 review checkpoint (2026-10-12)
+
+The latest feature application source is `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd` on `feat/portfolio-integration`. **Current immutable Preview:** https://26019162.joshuaik2.pages.dev/ (Environment Preview, branch `feat/portfolio-integration`, application source `5c7b0bc`). Deployed JavaScript, CSS, and the three updated gallery derivatives match the local build byte-for-byte. Production was not targeted; the persistent goal remains active.
+
+- **Pass 07:** Reframed Macro Composition, Calorie Forecast, and Fiber Trend to enlarge the useful chart content while preserving the approved four-image gallery and all evidence labels. Daily Completeness and surrounding Food Tracker content are unchanged.
+- **Verification:** 314 tests across 31 files passed; build and staged diff check passed. Installed Chrome checked the deployed gallery at 1440×900 and 390×844; no horizontal overflow, page errors, or failed requests. See [Pass 07 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-07-food-insights.md).
+- **Open items:** owner review of Preview `26019162`; live screen-reader interaction remains manual; authentic Food Tracker demo video remains unavailable and must not be fabricated. The overall portfolio goal remains active.
+- Unrelated modified/untracked worktree materials and historical candidates remain preserved.
+
+## Previous live state — Owner Correction Pass 06 review checkpoint (2026-10-12)
 
 The latest feature application source is `f1fe1d49961d493a659ca53253cd6095b627334b` on `feat/portfolio-integration`. **Current immutable Preview:** https://d60277a8.joshuaik2.pages.dev/ (Environment Preview, branch `feat/portfolio-integration`, application source `f1fe1d4`). The deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent goal remains active.
 
