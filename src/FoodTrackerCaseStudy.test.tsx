@@ -31,6 +31,11 @@ function storyText(markup: string) {
     .trim();
 }
 
+function pngDimensions(path: string): [number, number] {
+  const png = readFileSync(path);
+  return [png.readUInt32BE(16), png.readUInt32BE(20)];
+}
+
 const foodVisualStyles = readFileSync("src/food-visuals.css", "utf8");
 
 describe("Food Tracker product story", () => {
@@ -125,8 +130,8 @@ describe("Food Tracker product story", () => {
     expect(logging).toContain("Interface captures show interaction states, not saved user outcomes.");
     expect(logging).not.toContain("Phase 24");
     expect(logging).not.toContain("pre-redesign");
-    expect(insights).toContain("insights/calorie-forecast-owner-reference.png");
-    expect(insights).toContain("insights/fiber-trend-design-study.png");
+    expect(insights).toContain("insights/calorie-forecast-owner-gallery-crop.png");
+    expect(insights).toContain("insights/fiber-trend-gallery-crop.png");
     expect(insights).toContain("insights/daily-completeness-design-study.png");
     expect(insights).not.toContain("insights-month-populated-sep08-oct07.png");
     expect(insights).not.toContain("trend-detail-calories-populated.png");
@@ -158,7 +163,7 @@ describe("Food Tracker product story", () => {
     expect(insights).not.toContain("Oct 7");
     expect(insights).not.toContain("five logged days");
     expect(insights).not.toContain("trend-detail-calories-unknown.png");
-    expect(insights).toContain("trend-detail-macro-composition-populated.png");
+    expect(insights).toContain("trend-detail-macro-composition-gallery-crop.png");
     expect(insights).not.toContain("goal-plan.png");
     expect(insights).toContain("Solid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.");
     expect(insights).not.toContain("canonical trend-configuration capture");
@@ -617,6 +622,19 @@ describe("Food Tracker product story", () => {
     expect(narrowGallery).toContain(".food-insight-path__capture--consistency {");
     expect(narrowGallery).toContain("grid-template-columns: minmax(0, 1fr);");
     expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--consistency \.food-insight-path__capture-screen--consistency > img\s*\{[^}]*max-height: none;/);
+  });
+
+  it("uses content-focused authentic gallery crops without changing their natural proportions", () => {
+    const gallery = section(renderFoodTracker(), "food-insights", "food-search");
+
+    expect(gallery).toContain("trend-detail-macro-composition-gallery-crop.png");
+    expect(gallery).toContain("calorie-forecast-owner-gallery-crop.png");
+    expect(gallery).toContain("fiber-trend-gallery-crop.png");
+    expect(gallery).toContain("daily-completeness-design-study.png");
+
+    expect(pngDimensions("public/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-gallery-crop.png")).toEqual([348, 547]);
+    expect(pngDimensions("public/media/case-studies/food-tracker/insights/calorie-forecast-owner-gallery-crop.png")).toEqual([278, 520]);
+    expect(pngDimensions("public/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png")).toEqual([334, 355]);
   });
 
   it("combines the bounded hybrid retrieval design and offline development/holdout evidence", () => {
