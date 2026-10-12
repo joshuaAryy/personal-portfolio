@@ -183,7 +183,7 @@
   height: 87.55%;
   border-radius: 50%;
   translate: -50% -50%;
-  background: radial-gradient(
+  background: url("/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png") center / 125% 125% no-repeat, radial-gradient(
     ellipse 35% 18% at 27% 25%,
     rgb(229 255 255 / 52%) 0%,
     rgb(119 241 245 / 24%) 28%,
@@ -205,6 +205,7 @@
     #bafffb calc(var(--resume-orb-fill) - 2deg) var(--resume-orb-fill),
     transparent var(--resume-orb-fill) 360deg
   );
+  background-blend-mode: screen, normal, normal, normal, normal;
   filter: none;
   mask-image:
     radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),

@@ -112,6 +112,8 @@ describe("approved resume flow", () => {
     expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.62\) 0deg/);
     expect(energyRule).not.toMatch(/rgba\(28,\s*184,\s*214,\s*\.18\) var\(--resume-orb-fill\) var\(--resume-orb-max-fill\)/);
     expect(energyRule).not.toContain("repeating-linear-gradient");
+    expect(energyRule).toContain('url("/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png") center / 125% 125% no-repeat');
+    expect(energyRule).toMatch(/background-blend-mode:\s*screen/);
     expect(energyRule).toMatch(/radial-gradient\(\s*ellipse 35% 18% at 27% 25%/);
     expect(energyRule).toMatch(/rgb\(229 255 255 \/ 52%\)/);
     expect(energyRule).toMatch(/linear-gradient\(\s*108deg/);
