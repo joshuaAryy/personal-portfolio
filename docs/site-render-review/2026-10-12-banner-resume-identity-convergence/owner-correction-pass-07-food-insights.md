@@ -1,8 +1,10 @@
 # Owner Correction Pass 07 — Food Insights Gallery Readability
 
-**Feature branch:** `feat/portfolio-integration`  
-**Application source:** `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd`  
-**Immutable feature Preview:** https://26019162.joshuaik2.pages.dev/  
+**Feature branch:** `feat/portfolio-integration`
+
+**Application source:** `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd`
+
+**Immutable feature Preview:** https://26019162.joshuaik2.pages.dev/
 **Cloudflare deployment:** `26019162-6afc-49c5-988a-64355f943de1` (Preview, branch `feat/portfolio-integration`, source `5c7b0bc`). Production was not targeted.
 
 ## Change
