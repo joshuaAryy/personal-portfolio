@@ -1,0 +1,54 @@
+[
+  {
+    "name": "before-preview-926a2822",
+    "url": "https://926a2822.joshuaik2.pages.dev/resume",
+    "viewport": [
+      1280,
+      720
+    ],
+    "main": {
+      "height": 638,
+      "scrollHeight": 675
+    },
+    "composition": {
+      "x": 231.5,
+      "y": 136.1,
+      "w": 597,
+      "h": 597,
+      "bottom": 733.1
+    },
+    "close": {
+      "x": 464,
+      "y": 715.2,
+      "w": 132,
+      "h": 25.1,
+      "bottom": 740.2
+    }
+  },
+  {
+    "name": "after-local-5199",
+    "url": "http://127.0.0.1:5199/resume",
+    "viewport": [
+      1280,
+      720
+    ],
+    "main": {
+      "height": 638,
+      "scrollHeight": 638
+    },
+    "composition": {
+      "x": 243,
+      "y": 106,
+      "w": 574,
+      "h": 574,
+      "bottom": 680
+    },
+    "close": {
+      "x": 464,
+      "y": 662.8,
+      "w": 132,
+      "h": 24.1,
+      "bottom": 686.9
+    }
+  }
+]
