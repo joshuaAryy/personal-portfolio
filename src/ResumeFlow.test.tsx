@@ -195,18 +195,20 @@ describe("approved resume flow", () => {
     expect(compositionRule).toMatch(/width:\s*var\(--resume-found-composition-size\)/);
     expect(css).toMatch(/--resume-found-composition-size:\s*min\(640px,\s*max\(0px,\s*calc\(100vw - 32px\)\),\s*max\(0px,\s*calc\(100vh - 123px\)\)\)/);
     expect(titleRule).toMatch(/top:\s*73%/);
-    expect(titleRule).toMatch(/width:\s*min\(320px,\s*56\.6cqw\)/);
-    expect(titleRule).toMatch(/height:\s*min\(40px,\s*6\.2cqw\)/);
-    expect(titleRule).toMatch(/font-size:\s*clamp\(18px,\s*3\.6cqw,\s*23px\)/);
-    expect(titleRule).toMatch(/line-height:\s*min\(30px,\s*5\.2cqw\)/);
+    expect(titleRule).toMatch(/width:\s*min\(360px,\s*63cqw\)/);
+    expect(titleRule).toMatch(/height:\s*min\(48px,\s*7\.6cqw\)/);
+    expect(titleRule).toMatch(/font-size:\s*clamp\(20px,\s*4\.4cqw,\s*30px\)/);
+    expect(titleRule).toMatch(/line-height:\s*min\(36px,\s*5\.5cqw\)/);
     expect(titleRule).toMatch(/color:\s*#f0e6d2/i);
     expect(actionRule).toMatch(/top:\s*84\.5%/);
-    expect(actionRule).toMatch(/width:\s*min\(245px,\s*43\.4cqw\)/);
+    expect(actionRule).toMatch(/width:\s*min\(258px,\s*45cqw\)/);
+    expect(actionRule).toMatch(/font-size:\s*clamp\(14px,\s*2\.8cqw,\s*18px\)/);
     expect(actionRule).toMatch(/aspect-ratio:\s*212\s*\/\s*70/);
     expect(closeRule).toMatch(/top:\s*100%/);
-    expect(closeRule).toMatch(/width:\s*min\(112px,\s*max\(92px,\s*17\.5cqw\)\)/);
-    expect(closeRule).toMatch(/height:\s*clamp\(22px,\s*4\.2cqw,\s*30px\)/);
-    expect(closeRule).toMatch(/font-size:\s*clamp\(12px,\s*2\.4cqw,\s*16px\)/);
+    expect(closeRule).toMatch(/width:\s*min\(136px,\s*max\(104px,\s*21\.25cqw\)\)/);
+    expect(closeRule).toMatch(/height:\s*clamp\(28px,\s*5cqw,\s*36px\)/);
+    expect(closeRule).toMatch(/font-size:\s*clamp\(14px,\s*2\.8cqw,\s*18px\)/);
+    expect(closeRule).toMatch(/background:\s*#06111a/i);
   });
 
   it("keeps the complete mechanism visible on short desktop viewports", () => {
@@ -242,9 +244,9 @@ describe("approved resume flow", () => {
 
     expect(titleRule).toMatch(/top:\s*73%/);
     expect(actionRule).toMatch(/top:\s*84\.5%/);
-    expect(actionRule).toMatch(/width:\s*min\(245px,\s*43\.4cqw\)/);
+    expect(actionRule).toMatch(/width:\s*min\(258px,\s*45cqw\)/);
     expect(closeRule).toMatch(/top:\s*100%/);
-    expect(closeRule).toMatch(/width:\s*min\(112px,\s*max\(92px,\s*17\.5cqw\)\)/);
+    expect(closeRule).toMatch(/width:\s*min\(136px,\s*max\(104px,\s*21\.25cqw\)\)/);
   });
 
   it("centers Resume Found controls independently of the route-entry transform", () => {

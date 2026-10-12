@@ -267,18 +267,18 @@
   top: 73%;
   left: 50%;
   display: flex;
-  width: min(320px, 56.6cqw);
-  height: min(40px, 6.2cqw);
+  width: min(360px, 63cqw);
+  height: min(48px, 7.6cqw);
   align-items: center;
   justify-content: center;
   margin: 0;
   translate: -50% 0;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(18px, 3.6cqw, 23px);
+  font-size: clamp(20px, 4.4cqw, 30px);
   font-weight: 700;
   letter-spacing: 0.5px;
-  line-height: min(30px, 5.2cqw);
+  line-height: min(36px, 5.5cqw);
   text-transform: uppercase;
   text-shadow: 0 1px 6px rgb(0 0 0 / 48%);
 }
@@ -350,7 +350,7 @@
   position: absolute;
   top: 84.5%;
   left: 50%;
-  width: min(245px, 43.4cqw);
+  width: min(258px, 45cqw);
   aspect-ratio: 212 / 70;
   height: auto;
   display: flex;
@@ -364,7 +364,7 @@
   clip-path: none;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(12px, 2.4cqw, 15px);
+  font-size: clamp(14px, 2.8cqw, 18px);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -420,16 +420,16 @@
   top: 100%;
   left: 50%;
   z-index: 4;
-  width: min(112px, max(92px, 17.5cqw));
-  height: clamp(22px, 4.2cqw, 30px);
+  width: min(136px, max(104px, 21.25cqw));
+  height: clamp(28px, 5cqw, 36px);
   min-width: 0;
   min-height: 0;
   padding: 0;
   translate: -50% 0;
   border: 1px solid rgba(199, 155, 69, .68);
-  background: rgba(4, 13, 20, .72);
+  background: #06111a;
   color: #f0e6d2;
-  font-size: clamp(12px, 2.4cqw, 16px);
+  font-size: clamp(14px, 2.8cqw, 18px);
   line-height: 1;
   letter-spacing: .13em;
 }

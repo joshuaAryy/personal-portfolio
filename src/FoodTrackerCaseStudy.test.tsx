@@ -142,6 +142,11 @@ describe("Food Tracker product story", () => {
     expect(gallery).toContain('alt="Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes."');
     expect(gallery).toContain('data-evidence-type="owner-authored-design-reference"');
     expect(gallery).toContain('alt="Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."');
+    expect(gallery).toContain('class="food-insight-path__capture-screen food-insight-path__capture-screen--macro"');
+    expect(gallery).toContain('class="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--forecast"');
+    expect(gallery).toContain('class="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--fiber"');
+    expect(gallery).toContain('food-insight-path__capture--forecast');
+    expect(gallery).toContain('food-insight-path__capture--fiber');
     expect(insights).not.toContain("Phase 24");
     expect(insights).not.toContain("pre-redesign");
     expect(insights).not.toContain("QA-A");

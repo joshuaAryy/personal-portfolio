@@ -607,7 +607,7 @@ function FoodInsightPath() {
         aria-label="Macro composition app screen and three analytics design references"
       >
         <section className="food-insight-path__capture food-insight-path__capture--lead" data-evidence-type="app-capture" aria-labelledby="food-insight-capture-macro-title">
-          <div className="food-insight-path__capture-screen">
+          <div className="food-insight-path__capture-screen food-insight-path__capture-screen--macro">
             <img
               src="/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png"
               alt="Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes."
@@ -620,8 +620,8 @@ function FoodInsightPath() {
             <p>A nutrient balance graphic sits beside the daily comparison chart.</p>
           </div>
         </section>
-          <section className="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="owner-authored-design-reference" aria-labelledby="food-insight-capture-calorie-title">
-            <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
+          <section className="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--forecast" data-evidence-type="owner-authored-design-reference" aria-labelledby="food-insight-capture-calorie-title">
+            <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--forecast">
               <img
                 src="/media/case-studies/food-tracker/insights/calorie-forecast-owner-reference.png"
                 alt="Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."
@@ -634,8 +634,8 @@ function FoodInsightPath() {
               <p>Solid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.</p>
             </div>
           </section>
-          <section className="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-fiber-title">
-            <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
+          <section className="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--fiber" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-fiber-title">
+            <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--fiber">
               <img
                 src="/media/case-studies/food-tracker/insights/fiber-trend-design-study.png"
                 alt="Figma analytics design showing a fiber trend chart with daily totals and a target band."
