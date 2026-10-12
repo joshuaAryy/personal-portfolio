@@ -49,6 +49,8 @@ The older signal-overlay proximity concern was also rechecked on the deployed Pr
 - Desktop gallery: [before](../2026-10-12-food-insights-gallery/before-desktop-1440x900.png) · [after](../2026-10-12-food-insights-gallery/after-desktop-1440x900.png)
 - Narrow gallery: [before](../2026-10-12-food-insights-gallery/before-narrow-390x844.png) · [after](../2026-10-12-food-insights-gallery/after-narrow-390x844.png)
 
+The deployed `/projects/food-tracker` page was also checked for public-facing capture/provenance jargon. The visible text and image alt values contain none of the reviewed internal labels (`Phase 24`, `Phase 17.5`, `Phase 15.5`, QA fixture/staging, pre-redesign, fixture calorie values, or test-window notes). The six gallery captions remain feature-focused; “unlogged days” is retained as a product-state distinction.
+
 ## Verification
 
 - Full test suite: **312 tests across 31 files passed**. Happy DOM prints known iframe/PDF fetch-abort teardown diagnostics while the run exits successfully.
