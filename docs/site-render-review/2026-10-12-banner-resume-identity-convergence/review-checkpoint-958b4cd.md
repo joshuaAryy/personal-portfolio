@@ -2,6 +2,13 @@
 
 **Status:** Review checkpoint ready; the persistent portfolio goal remains active.
 
+## Refreshed immutable Preview — 2026-10-12
+
+- **Preview:** https://85f11ce1.joshuaik2.pages.dev/
+- **Cloudflare deployment:** `85f11ce1-2db2-46dd-915d-7237930a9bb7`, Environment Preview, branch `feat/portfolio-integration`, deployment source `7c4e8bd`
+- **Application source:** `958b4cd783ebbc7416668351a256f5c4bf298e7e`; the later commit contains documentation only, so no application code changed for this redeployment.
+- **Verification:** full tests/build passed, deployed JS/CSS match the local build by SHA-256, and 12 routes returned HTTP 200. Production was not targeted.
+
 - **Feature branch:** feat/portfolio-integration
 - **Application source:** 958b4cd783ebbc7416668351a256f5c4bf298e7e
 - **Immutable Preview:** https://0b13763e.joshuaik2.pages.dev/
