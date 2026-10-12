@@ -68,8 +68,8 @@ describe("lobby banner environment", () => {
     expect(css).toMatch(/\.league-lobby--experience,[\s\S]*?--lobby-balance-span:\s*1000px/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?\.league-lobby--experience,[\s\S]*?min-height:\s*880px/);
     expect(css).not.toMatch(/\.league-lobby--experience \.league-lobby__environment\s*\{/);
-    expect(css).toMatch(/\.league-lobby__environment\s*\{[^}]*background-position:\s*center 60%/s);
-    expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?background-position:\s*center 68%/);
+    expect(css).toMatch(/\.league-lobby__environment\s*\{[^}]*background-position:\s*center top/s);
+    expect(css).not.toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?\.league-lobby__environment\s*\{[^}]*background-position:/);
     expect(css).toMatch(/\.league-lobby__balance-slots\s*\{[^}]*top:[^}]*\}/s);
   });
 
@@ -83,7 +83,7 @@ describe("lobby banner environment", () => {
     const mobileEnvironment = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(environmentRule).toMatch(/background-position:\s*center 60%/);
+    expect(environmentRule).toMatch(/background-position:\s*center top/);
     expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
     expect(bannerGroup).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-projects-group-max\)\)/);
     expect(bannerGroup).toMatch(/left:\s*50%/);

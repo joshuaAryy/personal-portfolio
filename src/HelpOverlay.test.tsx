@@ -225,6 +225,11 @@ describe("contextual Help overlay", () => {
     expect(document.activeElement).toBe(target);
     expect(view.querySelector(".client-help-overlay")).not.toBeNull();
 
+    const targetTab = new KeyboardEvent("keydown", { key: "Tab", bubbles: true, cancelable: true });
+    act(() => target.dispatchEvent(targetTab));
+    expect(targetTab.defaultPrevented).toBe(true);
+    expect(document.activeElement).toBe(title);
+
     act(() => {
       document.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true, cancelable: true }));
     });

@@ -164,7 +164,7 @@
   translate: -50% -50%;
   background: rgb(2 18 28 / 42%);
   mask-image:
-    radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),
+    radial-gradient(circle closest-side, transparent 88.2%, #000 88.6%, #000 93.8%, transparent 94.2%),
     conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
@@ -178,7 +178,7 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  /* The 530px frame rails at r≈202–221 map to 87.1–95.4% of this 560px layer at 640px mechanism scale. */
+  /* Measured gold rails land near r=244–246px and r=265–267px at 640px scale. Keep the energy softly inset. */
   width: 87.55%;
   height: 87.55%;
   border-radius: 50%;
@@ -208,7 +208,7 @@
   background-blend-mode: screen, normal, normal, normal, normal;
   filter: none;
   mask-image:
-    radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),
+    radial-gradient(circle closest-side, transparent 88.2%, #000 88.6%, #000 93.8%, transparent 94.2%),
     conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg),
     conic-gradient(from 207deg, #000 0deg var(--resume-orb-fill), transparent var(--resume-orb-fill) 360deg);
   mask-composite: intersect;
@@ -232,7 +232,7 @@
   mix-blend-mode: screen;
   filter: brightness(1.35) saturate(1.25);
   mask-image:
-    radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),
+    radial-gradient(circle closest-side, transparent 88.2%, #000 88.6%, #000 93.8%, transparent 94.2%),
     conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg),
     conic-gradient(from 207deg, #000 0deg var(--resume-orb-fill), transparent var(--resume-orb-fill) 360deg);
   mask-composite: intersect;
@@ -267,18 +267,18 @@
   top: 73%;
   left: 50%;
   display: flex;
-  width: min(360px, 63cqw);
-  height: min(48px, 7.6cqw);
+  width: min(400px, 70cqw);
+  height: min(52px, 8.2cqw);
   align-items: center;
   justify-content: center;
   margin: 0;
   translate: -50% 0;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(20px, 4.4cqw, 30px);
+  font-size: clamp(24px, 5.6cqw, 36px);
   font-weight: 700;
   letter-spacing: 0.5px;
-  line-height: min(36px, 5.5cqw);
+  line-height: 1.12;
   text-transform: uppercase;
   text-shadow: 0 1px 6px rgb(0 0 0 / 48%);
 }
@@ -348,9 +348,9 @@
 .resume-found__action {
   z-index: 3;
   position: absolute;
-  top: 84.5%;
+  top: 84%;
   left: 50%;
-  width: min(258px, 45cqw);
+  width: min(272px, 47cqw);
   aspect-ratio: 212 / 70;
   height: auto;
   display: flex;
@@ -364,7 +364,7 @@
   clip-path: none;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(14px, 2.8cqw, 18px);
+  font-size: clamp(16px, 3.2cqw, 20px);
   font-weight: 700;
   letter-spacing: 0.5px;
   line-height: 1;
@@ -417,11 +417,11 @@
 
 .resume-found__close {
   position: absolute;
-  top: 100%;
+  top: calc(100% - 1cqw);
   left: 50%;
   z-index: 4;
-  width: min(136px, max(104px, 21.25cqw));
-  height: clamp(28px, 5cqw, 36px);
+  width: min(148px, max(122px, 23.125cqw));
+  height: clamp(30px, 5.5cqw, 38px);
   min-width: 0;
   min-height: 0;
   padding: 0;
@@ -429,7 +429,7 @@
   border: 1px solid rgba(199, 155, 69, .68);
   background: #06111a;
   color: #f0e6d2;
-  font-size: clamp(14px, 2.8cqw, 18px);
+  font-size: clamp(16px, 3.2cqw, 20px);
   line-height: 1;
   letter-spacing: .13em;
 }

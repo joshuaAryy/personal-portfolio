@@ -1,7 +1,8 @@
 # Deployed Home follow-up — immutable Preview `85f11ce1`
 
-Target: [85f11ce1 Preview](https://85f11ce1.joshuaik2.pages.dev/)  
-Application source reported for this Preview: `958b4cd783ebbc7416668351a256f5c4bf298e7e`.  
+Target: [85f11ce1 Preview](https://85f11ce1.joshuaik2.pages.dev/)
+
+Application source reported for this Preview: `958b4cd783ebbc7416668351a256f5c4bf298e7e`.
 Browser: installed Google Chrome via Playwright. Read-only; no source or deployment changes.
 
 ## Findings
@@ -13,7 +14,9 @@ Browser: installed Google Chrome via Playwright. Read-only; no source or deploym
 
 ## Evidence
 
-Desktop state captures: `preview-home-{projects,experience,hackathons,education}-1440x900.png`.  
-Narrow state captures: `preview-home-{projects,experience,hackathons,education}-390x844.png`.  
-Narrow scrolled-to-action captures: `preview-home-{projects,experience,hackathons,education}-390x844-bottom.png`.  
+Desktop state captures: `preview-home-{projects,experience,hackathons,education}-1440x900.png`.
+
+Narrow state captures: `preview-home-{projects,experience,hackathons,education}-390x844.png`.
+
+Narrow scrolled-to-action captures: `preview-home-{projects,experience,hackathons,education}-390x844-bottom.png`.
 `deployed-home-review.json` contains the active-mode, content, viewport, Activity asset, and runtime observations; `deployed-home-review.cjs` and `deployed-home-mobile-scroll.cjs` are the read-only capture scripts. The report and captures are in the workspace QA folder `C:\oc03\docs\site-render-review\2026-10-12-banner-resume-identity-convergence\qa-958b4cd`; the full PNG set and machine-readable capture log remain local to avoid adding a large screenshot bundle to the repository.

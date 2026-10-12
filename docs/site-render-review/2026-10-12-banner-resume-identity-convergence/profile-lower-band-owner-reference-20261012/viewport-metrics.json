@@ -1,0 +1,1376 @@
+[
+  {
+    "width": 1536,
+    "height": 1289,
+    "status": 200,
+    "file": "C:/Users/samue/AppData/Local/Temp/profile-lower-band-final-20261012/after-1536x1289.png",
+    "metrics": {
+      "viewport": [
+        1536,
+        1289
+      ],
+      "document": [
+        1536,
+        1289
+      ],
+      "main": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1201,
+        "right": 1280,
+        "bottom": 1289
+      },
+      "mainScroll": [
+        1201,
+        1201
+      ],
+      "layout": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1000,
+        "right": 1280,
+        "bottom": 1088
+      },
+      "overview": {
+        "x": 414,
+        "y": 319,
+        "width": 851.9,
+        "height": 714.4,
+        "right": 1265.9,
+        "bottom": 1033.4
+      },
+      "grid": {
+        "x": 414,
+        "y": 901.3,
+        "width": 851.9,
+        "height": 195.4,
+        "right": 1265.9,
+        "bottom": 1096.7
+      },
+      "gridStyle": {
+        "top": "745px",
+        "height": "250px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0.00545338)"
+      },
+      "signals": [
+        {
+          "bounds": {
+            "x": 429.6,
+            "y": 902.1,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 638.7,
+            "bottom": 1102.2
+          },
+          "emblem": {
+            "x": 482.6,
+            "y": 928.7,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 585.8,
+            "bottom": 1031.8
+          },
+          "label": {
+            "x": 482.6,
+            "y": 1037.3,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 585.8,
+            "bottom": 1067.8
+          },
+          "value": {
+            "x": 528.2,
+            "y": 1075.6,
+            "width": 11.9,
+            "height": 26.6,
+            "right": 540.1,
+            "bottom": 1102.2
+          }
+        },
+        {
+          "bounds": {
+            "x": 638.7,
+            "y": 902.1,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 847.8,
+            "bottom": 1102.2
+          },
+          "emblem": {
+            "x": 691.7,
+            "y": 928.7,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 794.8,
+            "bottom": 1031.8
+          },
+          "label": {
+            "x": 691.7,
+            "y": 1037.3,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 794.8,
+            "bottom": 1067.8
+          },
+          "value": {
+            "x": 737.4,
+            "y": 1075.6,
+            "width": 11.8,
+            "height": 26.6,
+            "right": 749.1,
+            "bottom": 1102.2
+          }
+        },
+        {
+          "bounds": {
+            "x": 847.8,
+            "y": 902.1,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 1056.9,
+            "bottom": 1102.2
+          },
+          "emblem": {
+            "x": 900.7,
+            "y": 928.7,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 1003.9,
+            "bottom": 1031.8
+          },
+          "label": {
+            "x": 900.7,
+            "y": 1037.3,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 1003.9,
+            "bottom": 1067.8
+          },
+          "value": {
+            "x": 947.8,
+            "y": 1075.6,
+            "width": 9.1,
+            "height": 26.6,
+            "right": 956.9,
+            "bottom": 1102.2
+          }
+        },
+        {
+          "bounds": {
+            "x": 1056.9,
+            "y": 902.1,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 1265.9,
+            "bottom": 1102.2
+          },
+          "emblem": {
+            "x": 1109.8,
+            "y": 928.7,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 1213,
+            "bottom": 1031.8
+          },
+          "label": {
+            "x": 1109.8,
+            "y": 1037.3,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 1213,
+            "bottom": 1067.8
+          },
+          "value": {
+            "x": 1136.8,
+            "y": 1075.6,
+            "width": 49.1,
+            "height": 26.6,
+            "right": 1186,
+            "bottom": 1102.2
+          }
+        }
+      ],
+      "identityPanel": {
+        "x": 20,
+        "y": 102,
+        "width": 370,
+        "height": 998,
+        "right": 390,
+        "bottom": 1100
+      },
+      "identityBanner": {
+        "x": -41.5,
+        "y": -101,
+        "width": 493,
+        "height": 1201,
+        "right": 451.5,
+        "bottom": 1100
+      },
+      "identityBannerStyle": {
+        "top": "-203px",
+        "height": "1201px",
+        "transform": "none"
+      },
+      "traits": {
+        "x": 42,
+        "y": 724,
+        "width": 326,
+        "height": 96,
+        "right": 368,
+        "bottom": 820
+      },
+      "environmentStyle": {
+        "height": "calc(100vh - clamp(82px, 5.73vw, 110px) - 140px)",
+        "backgroundSize": "cover, cover, cover"
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 1536,
+    "height": 1360,
+    "status": 200,
+    "file": "C:/Users/samue/AppData/Local/Temp/profile-lower-band-final-20261012/after-1536x1360.png",
+    "metrics": {
+      "viewport": [
+        1536,
+        1360
+      ],
+      "document": [
+        1536,
+        1360
+      ],
+      "main": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1272,
+        "right": 1280,
+        "bottom": 1360
+      },
+      "mainScroll": [
+        1272,
+        1272
+      ],
+      "layout": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1000,
+        "right": 1280,
+        "bottom": 1088
+      },
+      "overview": {
+        "x": 414,
+        "y": 319,
+        "width": 851.9,
+        "height": 714.4,
+        "right": 1265.9,
+        "bottom": 1033.4
+      },
+      "grid": {
+        "x": 414,
+        "y": 956.8,
+        "width": 851.9,
+        "height": 195.4,
+        "right": 1265.9,
+        "bottom": 1152.2
+      },
+      "gridStyle": {
+        "top": "816px",
+        "height": "250px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "signals": [
+        {
+          "bounds": {
+            "x": 429.6,
+            "y": 957.6,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 638.7,
+            "bottom": 1157.7
+          },
+          "emblem": {
+            "x": 482.6,
+            "y": 984.1,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 585.8,
+            "bottom": 1087.3
+          },
+          "label": {
+            "x": 482.6,
+            "y": 1092.8,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 585.8,
+            "bottom": 1123.3
+          },
+          "value": {
+            "x": 528.2,
+            "y": 1131.1,
+            "width": 11.9,
+            "height": 26.6,
+            "right": 540.1,
+            "bottom": 1157.7
+          }
+        },
+        {
+          "bounds": {
+            "x": 638.7,
+            "y": 957.6,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 847.8,
+            "bottom": 1157.7
+          },
+          "emblem": {
+            "x": 691.7,
+            "y": 984.1,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 794.8,
+            "bottom": 1087.3
+          },
+          "label": {
+            "x": 691.7,
+            "y": 1092.8,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 794.8,
+            "bottom": 1123.3
+          },
+          "value": {
+            "x": 737.4,
+            "y": 1131.1,
+            "width": 11.8,
+            "height": 26.6,
+            "right": 749.1,
+            "bottom": 1157.7
+          }
+        },
+        {
+          "bounds": {
+            "x": 847.8,
+            "y": 957.6,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 1056.9,
+            "bottom": 1157.7
+          },
+          "emblem": {
+            "x": 900.7,
+            "y": 984.1,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 1003.9,
+            "bottom": 1087.3
+          },
+          "label": {
+            "x": 900.7,
+            "y": 1092.8,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 1003.9,
+            "bottom": 1123.3
+          },
+          "value": {
+            "x": 947.8,
+            "y": 1131.1,
+            "width": 9.1,
+            "height": 26.6,
+            "right": 956.9,
+            "bottom": 1157.7
+          }
+        },
+        {
+          "bounds": {
+            "x": 1056.9,
+            "y": 957.6,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 1265.9,
+            "bottom": 1157.7
+          },
+          "emblem": {
+            "x": 1109.8,
+            "y": 984.1,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 1213,
+            "bottom": 1087.3
+          },
+          "label": {
+            "x": 1109.8,
+            "y": 1092.8,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 1213,
+            "bottom": 1123.3
+          },
+          "value": {
+            "x": 1136.8,
+            "y": 1131.1,
+            "width": 49.1,
+            "height": 26.6,
+            "right": 1186,
+            "bottom": 1157.7
+          }
+        }
+      ],
+      "identityPanel": {
+        "x": 20,
+        "y": 102,
+        "width": 370,
+        "height": 998,
+        "right": 390,
+        "bottom": 1100
+      },
+      "identityBanner": {
+        "x": -41.5,
+        "y": -101,
+        "width": 493,
+        "height": 1201,
+        "right": 451.5,
+        "bottom": 1100
+      },
+      "identityBannerStyle": {
+        "top": "-203px",
+        "height": "1201px",
+        "transform": "none"
+      },
+      "traits": {
+        "x": 42,
+        "y": 724,
+        "width": 326,
+        "height": 96,
+        "right": 368,
+        "bottom": 820
+      },
+      "environmentStyle": {
+        "height": "calc(100vh - clamp(82px, 5.73vw, 110px) - 140px)",
+        "backgroundSize": "cover, cover, cover"
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 1536,
+    "height": 1500,
+    "status": 200,
+    "file": "C:/Users/samue/AppData/Local/Temp/profile-lower-band-final-20261012/after-1536x1500.png",
+    "metrics": {
+      "viewport": [
+        1536,
+        1500
+      ],
+      "document": [
+        1536,
+        1500
+      ],
+      "main": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1412,
+        "right": 1280,
+        "bottom": 1500
+      },
+      "mainScroll": [
+        1412,
+        1412
+      ],
+      "layout": {
+        "x": 0,
+        "y": 88,
+        "width": 1280,
+        "height": 1000,
+        "right": 1280,
+        "bottom": 1088
+      },
+      "overview": {
+        "x": 414,
+        "y": 319,
+        "width": 851.9,
+        "height": 714.4,
+        "right": 1265.9,
+        "bottom": 1033.4
+      },
+      "grid": {
+        "x": 414,
+        "y": 1066.2,
+        "width": 851.9,
+        "height": 195.4,
+        "right": 1265.9,
+        "bottom": 1261.6
+      },
+      "gridStyle": {
+        "top": "956px",
+        "height": "250px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "signals": [
+        {
+          "bounds": {
+            "x": 429.6,
+            "y": 1067,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 638.7,
+            "bottom": 1267.1
+          },
+          "emblem": {
+            "x": 482.6,
+            "y": 1093.6,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 585.8,
+            "bottom": 1196.7
+          },
+          "label": {
+            "x": 482.6,
+            "y": 1202.2,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 585.8,
+            "bottom": 1232.7
+          },
+          "value": {
+            "x": 528.2,
+            "y": 1240.5,
+            "width": 11.9,
+            "height": 26.6,
+            "right": 540.1,
+            "bottom": 1267.1
+          }
+        },
+        {
+          "bounds": {
+            "x": 638.7,
+            "y": 1067,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 847.8,
+            "bottom": 1267.1
+          },
+          "emblem": {
+            "x": 691.7,
+            "y": 1093.6,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 794.8,
+            "bottom": 1196.7
+          },
+          "label": {
+            "x": 691.7,
+            "y": 1202.2,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 794.8,
+            "bottom": 1232.7
+          },
+          "value": {
+            "x": 737.4,
+            "y": 1240.5,
+            "width": 11.8,
+            "height": 26.6,
+            "right": 749.1,
+            "bottom": 1267.1
+          }
+        },
+        {
+          "bounds": {
+            "x": 847.8,
+            "y": 1067,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 1056.9,
+            "bottom": 1267.1
+          },
+          "emblem": {
+            "x": 900.7,
+            "y": 1093.6,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 1003.9,
+            "bottom": 1196.7
+          },
+          "label": {
+            "x": 900.7,
+            "y": 1202.2,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 1003.9,
+            "bottom": 1232.7
+          },
+          "value": {
+            "x": 947.8,
+            "y": 1240.5,
+            "width": 9.1,
+            "height": 26.6,
+            "right": 956.9,
+            "bottom": 1267.1
+          }
+        },
+        {
+          "bounds": {
+            "x": 1056.9,
+            "y": 1067,
+            "width": 209.1,
+            "height": 200.1,
+            "right": 1265.9,
+            "bottom": 1267.1
+          },
+          "emblem": {
+            "x": 1109.8,
+            "y": 1093.6,
+            "width": 103.2,
+            "height": 103.2,
+            "right": 1213,
+            "bottom": 1196.7
+          },
+          "label": {
+            "x": 1109.8,
+            "y": 1202.2,
+            "width": 103.2,
+            "height": 30.5,
+            "right": 1213,
+            "bottom": 1232.7
+          },
+          "value": {
+            "x": 1136.8,
+            "y": 1240.5,
+            "width": 49.1,
+            "height": 26.6,
+            "right": 1186,
+            "bottom": 1267.1
+          }
+        }
+      ],
+      "identityPanel": {
+        "x": 20,
+        "y": 102,
+        "width": 370,
+        "height": 998,
+        "right": 390,
+        "bottom": 1100
+      },
+      "identityBanner": {
+        "x": -41.5,
+        "y": -101,
+        "width": 493,
+        "height": 1201,
+        "right": 451.5,
+        "bottom": 1100
+      },
+      "identityBannerStyle": {
+        "top": "-203px",
+        "height": "1201px",
+        "transform": "none"
+      },
+      "traits": {
+        "x": 42,
+        "y": 724,
+        "width": 326,
+        "height": 96,
+        "right": 368,
+        "bottom": 820
+      },
+      "environmentStyle": {
+        "height": "calc(100vh - clamp(82px, 5.73vw, 110px) - 140px)",
+        "backgroundSize": "cover, cover, cover"
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "status": 200,
+    "file": "C:/Users/samue/AppData/Local/Temp/profile-lower-band-final-20261012/after-1440x900.png",
+    "metrics": {
+      "viewport": [
+        1440,
+        900
+      ],
+      "document": [
+        1440,
+        900
+      ],
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "width": 1200,
+        "height": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": [
+        817,
+        817
+      ],
+      "layout": {
+        "x": 0,
+        "y": 82.5,
+        "width": 1200,
+        "height": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "overview": {
+        "x": 414,
+        "y": 313.5,
+        "width": 763,
+        "height": 667.8,
+        "right": 1177,
+        "bottom": 981.3
+      },
+      "grid": {
+        "x": 414,
+        "y": 701.3,
+        "width": 763,
+        "height": 175,
+        "right": 1177,
+        "bottom": 876.3
+      },
+      "gridStyle": {
+        "top": "554px",
+        "height": "250px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "signals": [
+        {
+          "bounds": {
+            "x": 428,
+            "y": 702,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 615.3,
+            "bottom": 881.2
+          },
+          "emblem": {
+            "x": 475.4,
+            "y": 725.8,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 567.8,
+            "bottom": 818.2
+          },
+          "label": {
+            "x": 475.4,
+            "y": 823.1,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 567.8,
+            "bottom": 850.4
+          },
+          "value": {
+            "x": 516.3,
+            "y": 857.4,
+            "width": 10.7,
+            "height": 23.8,
+            "right": 527,
+            "bottom": 881.2
+          }
+        },
+        {
+          "bounds": {
+            "x": 615.3,
+            "y": 702,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 802.5,
+            "bottom": 881.2
+          },
+          "emblem": {
+            "x": 662.7,
+            "y": 725.8,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 755.1,
+            "bottom": 818.2
+          },
+          "label": {
+            "x": 662.7,
+            "y": 823.1,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 755.1,
+            "bottom": 850.4
+          },
+          "value": {
+            "x": 703.6,
+            "y": 857.4,
+            "width": 10.6,
+            "height": 23.8,
+            "right": 714.2,
+            "bottom": 881.2
+          }
+        },
+        {
+          "bounds": {
+            "x": 802.5,
+            "y": 702,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 989.8,
+            "bottom": 881.2
+          },
+          "emblem": {
+            "x": 849.9,
+            "y": 725.8,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 942.3,
+            "bottom": 818.2
+          },
+          "label": {
+            "x": 849.9,
+            "y": 823.1,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 942.3,
+            "bottom": 850.4
+          },
+          "value": {
+            "x": 892.1,
+            "y": 857.4,
+            "width": 8.1,
+            "height": 23.8,
+            "right": 900.2,
+            "bottom": 881.2
+          }
+        },
+        {
+          "bounds": {
+            "x": 989.8,
+            "y": 702,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 1177,
+            "bottom": 881.2
+          },
+          "emblem": {
+            "x": 1037.2,
+            "y": 725.8,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 1129.6,
+            "bottom": 818.2
+          },
+          "label": {
+            "x": 1037.2,
+            "y": 823.1,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 1129.6,
+            "bottom": 850.4
+          },
+          "value": {
+            "x": 1061.4,
+            "y": 857.4,
+            "width": 44,
+            "height": 23.8,
+            "right": 1105.4,
+            "bottom": 881.2
+          }
+        }
+      ],
+      "identityPanel": {
+        "x": 20,
+        "y": 96.5,
+        "width": 370,
+        "height": 803.5,
+        "right": 390,
+        "bottom": 900
+      },
+      "identityBanner": {
+        "x": -41.5,
+        "y": -106.5,
+        "width": 493,
+        "height": 1201,
+        "right": 451.5,
+        "bottom": 1094.5
+      },
+      "identityBannerStyle": {
+        "top": "-203px",
+        "height": "1201px",
+        "transform": "none"
+      },
+      "traits": {
+        "x": 42,
+        "y": 718.5,
+        "width": 326,
+        "height": 96,
+        "right": 368,
+        "bottom": 814.5
+      },
+      "environmentStyle": {
+        "height": "calc(100vh - clamp(82px, 5.73vw, 110px))",
+        "backgroundSize": "cover, cover"
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 1440,
+    "height": 720,
+    "status": 200,
+    "file": "C:/Users/samue/AppData/Local/Temp/profile-lower-band-final-20261012/after-1440x720.png",
+    "metrics": {
+      "viewport": [
+        1440,
+        720
+      ],
+      "document": [
+        1440,
+        720
+      ],
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "width": 1200,
+        "height": 637.5,
+        "right": 1200,
+        "bottom": 720
+      },
+      "mainScroll": [
+        637,
+        637
+      ],
+      "layout": {
+        "x": 0,
+        "y": 82.5,
+        "width": 1200,
+        "height": 637.5,
+        "right": 1200,
+        "bottom": 720
+      },
+      "overview": {
+        "x": 414,
+        "y": 313.5,
+        "width": 763,
+        "height": 392,
+        "right": 1177,
+        "bottom": 705.5
+      },
+      "grid": {
+        "x": 414,
+        "y": 495.5,
+        "width": 763,
+        "height": 175,
+        "right": 1177,
+        "bottom": 670.5
+      },
+      "gridStyle": {
+        "top": "260px",
+        "height": "250px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "signals": [
+        {
+          "bounds": {
+            "x": 428,
+            "y": 496.2,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 615.3,
+            "bottom": 675.4
+          },
+          "emblem": {
+            "x": 475.4,
+            "y": 520,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 567.8,
+            "bottom": 612.4
+          },
+          "label": {
+            "x": 475.4,
+            "y": 617.3,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 567.8,
+            "bottom": 644.6
+          },
+          "value": {
+            "x": 516.3,
+            "y": 651.6,
+            "width": 10.7,
+            "height": 23.8,
+            "right": 527,
+            "bottom": 675.4
+          }
+        },
+        {
+          "bounds": {
+            "x": 615.3,
+            "y": 496.2,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 802.5,
+            "bottom": 675.4
+          },
+          "emblem": {
+            "x": 662.7,
+            "y": 520,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 755.1,
+            "bottom": 612.4
+          },
+          "label": {
+            "x": 662.7,
+            "y": 617.3,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 755.1,
+            "bottom": 644.6
+          },
+          "value": {
+            "x": 703.6,
+            "y": 651.6,
+            "width": 10.6,
+            "height": 23.8,
+            "right": 714.2,
+            "bottom": 675.4
+          }
+        },
+        {
+          "bounds": {
+            "x": 802.5,
+            "y": 496.2,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 989.8,
+            "bottom": 675.4
+          },
+          "emblem": {
+            "x": 849.9,
+            "y": 520,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 942.3,
+            "bottom": 612.4
+          },
+          "label": {
+            "x": 849.9,
+            "y": 617.3,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 942.3,
+            "bottom": 644.6
+          },
+          "value": {
+            "x": 892.1,
+            "y": 651.6,
+            "width": 8.1,
+            "height": 23.8,
+            "right": 900.2,
+            "bottom": 675.4
+          }
+        },
+        {
+          "bounds": {
+            "x": 989.8,
+            "y": 496.2,
+            "width": 187.3,
+            "height": 179.2,
+            "right": 1177,
+            "bottom": 675.4
+          },
+          "emblem": {
+            "x": 1037.2,
+            "y": 520,
+            "width": 92.4,
+            "height": 92.4,
+            "right": 1129.6,
+            "bottom": 612.4
+          },
+          "label": {
+            "x": 1037.2,
+            "y": 617.3,
+            "width": 92.4,
+            "height": 27.3,
+            "right": 1129.6,
+            "bottom": 644.6
+          },
+          "value": {
+            "x": 1061.4,
+            "y": 651.6,
+            "width": 44,
+            "height": 23.8,
+            "right": 1105.4,
+            "bottom": 675.4
+          }
+        }
+      ],
+      "identityPanel": {
+        "x": 49.6,
+        "y": 96.5,
+        "width": 310.8,
+        "height": 523.7,
+        "right": 360.4,
+        "bottom": 620.2
+      },
+      "identityBanner": {
+        "x": 69.5,
+        "y": -63.9,
+        "width": 270.9,
+        "height": 660,
+        "right": 340.5,
+        "bottom": 596.1
+      },
+      "identityBannerStyle": {
+        "top": "-203px",
+        "height": "924.422px",
+        "transform": "matrix(0.85, 0, 0, 0.85, -189.727, 12)"
+      },
+      "traits": {
+        "x": 68.1,
+        "y": 619,
+        "width": 273.8,
+        "height": 80.6,
+        "right": 341.9,
+        "bottom": 699.6
+      },
+      "environmentStyle": {
+        "height": "calc(100vh - clamp(82px, 5.73vw, 110px))",
+        "backgroundSize": "cover, cover"
+      }
+    },
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "status": 200,
+    "file": "C:/Users/samue/AppData/Local/Temp/profile-lower-band-final-20261012/after-390x844.png",
+    "metrics": {
+      "viewport": [
+        390,
+        844
+      ],
+      "document": [
+        390,
+        1639
+      ],
+      "main": {
+        "x": 0,
+        "y": 70,
+        "width": 390,
+        "height": 1508,
+        "right": 390,
+        "bottom": 1578
+      },
+      "mainScroll": [
+        1508,
+        1508
+      ],
+      "layout": {
+        "x": 0,
+        "y": 70,
+        "width": 390,
+        "height": 1508,
+        "right": 390,
+        "bottom": 1578
+      },
+      "overview": {
+        "x": 18,
+        "y": 914,
+        "width": 354,
+        "height": 471,
+        "right": 372,
+        "bottom": 1385
+      },
+      "grid": {
+        "x": 18,
+        "y": 914,
+        "width": 354,
+        "height": 471,
+        "right": 372,
+        "bottom": 1385
+      },
+      "gridStyle": {
+        "top": "0px",
+        "height": "471px",
+        "transform": "matrix(1, 0, 0, 1, 0, 0)"
+      },
+      "signals": [
+        {
+          "bounds": {
+            "x": 18,
+            "y": 915,
+            "width": 177,
+            "height": 235,
+            "right": 195,
+            "bottom": 1150
+          },
+          "emblem": {
+            "x": 50.5,
+            "y": 935,
+            "width": 112,
+            "height": 112,
+            "right": 162.5,
+            "bottom": 1047
+          },
+          "label": {
+            "x": 50.5,
+            "y": 1050,
+            "width": 112,
+            "height": 39,
+            "right": 162.5,
+            "bottom": 1089
+          },
+          "value": {
+            "x": 100,
+            "y": 1094,
+            "width": 13,
+            "height": 34,
+            "right": 113,
+            "bottom": 1128
+          }
+        },
+        {
+          "bounds": {
+            "x": 195,
+            "y": 915,
+            "width": 177,
+            "height": 235,
+            "right": 372,
+            "bottom": 1150
+          },
+          "emblem": {
+            "x": 227.5,
+            "y": 935,
+            "width": 112,
+            "height": 112,
+            "right": 339.5,
+            "bottom": 1047
+          },
+          "label": {
+            "x": 227.5,
+            "y": 1050,
+            "width": 112,
+            "height": 39,
+            "right": 339.5,
+            "bottom": 1089
+          },
+          "value": {
+            "x": 277.1,
+            "y": 1094,
+            "width": 12.9,
+            "height": 34,
+            "right": 289.9,
+            "bottom": 1128
+          }
+        },
+        {
+          "bounds": {
+            "x": 18,
+            "y": 1150,
+            "width": 177,
+            "height": 235,
+            "right": 195,
+            "bottom": 1385
+          },
+          "emblem": {
+            "x": 50.5,
+            "y": 1170,
+            "width": 112,
+            "height": 112,
+            "right": 162.5,
+            "bottom": 1282
+          },
+          "label": {
+            "x": 50.5,
+            "y": 1285,
+            "width": 112,
+            "height": 39,
+            "right": 162.5,
+            "bottom": 1324
+          },
+          "value": {
+            "x": 101.5,
+            "y": 1329,
+            "width": 9.9,
+            "height": 34,
+            "right": 111.4,
+            "bottom": 1363
+          }
+        },
+        {
+          "bounds": {
+            "x": 195,
+            "y": 1150,
+            "width": 177,
+            "height": 235,
+            "right": 372,
+            "bottom": 1385
+          },
+          "emblem": {
+            "x": 227.5,
+            "y": 1170,
+            "width": 112,
+            "height": 112,
+            "right": 339.5,
+            "bottom": 1282
+          },
+          "label": {
+            "x": 227.5,
+            "y": 1285,
+            "width": 112,
+            "height": 39,
+            "right": 339.5,
+            "bottom": 1324
+          },
+          "value": {
+            "x": 256.7,
+            "y": 1329,
+            "width": 53.5,
+            "height": 34,
+            "right": 310.3,
+            "bottom": 1363
+          }
+        }
+      ],
+      "identityPanel": {
+        "x": 14,
+        "y": 70,
+        "width": 362,
+        "height": 744,
+        "right": 376,
+        "bottom": 814
+      },
+      "identityBanner": {
+        "x": 0,
+        "y": -114,
+        "width": 390,
+        "height": 1201,
+        "right": 390,
+        "bottom": 1087
+      },
+      "identityBannerStyle": {
+        "top": "-184px",
+        "height": "1201px",
+        "transform": "matrix(1, 0, 0, 1, -195, 0)"
+      },
+      "traits": {
+        "x": 54.8,
+        "y": 588,
+        "width": 280.4,
+        "height": 82.6,
+        "right": 335.2,
+        "bottom": 670.6
+      },
+      "environmentStyle": {
+        "height": "calc(100vh - 70px)",
+        "backgroundSize": "cover, cover"
+      }
+    },
+    "errors": []
+  }
+]

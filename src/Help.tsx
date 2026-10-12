@@ -673,7 +673,14 @@ function HelpOverlay({ onClose }: { onClose: (restoreFocus?: boolean) => void })
     }
 
     const returnToGuide = (event: KeyboardEvent) => {
-      if (event.key !== "Escape" || document.activeElement !== target) return;
+      if (document.activeElement !== target) return;
+      if (event.key === "Tab") {
+        event.preventDefault();
+        event.stopPropagation();
+        coachmarkTitleRef.current?.focus({ preventScroll: true });
+        return;
+      }
+      if (event.key !== "Escape") return;
       event.preventDefault();
       event.stopPropagation();
       coachmarkTitleRef.current?.focus({ preventScroll: true });
@@ -741,7 +748,7 @@ function HelpOverlay({ onClose }: { onClose: (restoreFocus?: boolean) => void })
             event.preventDefault();
             onClose();
           }
-          if (!isNarrowHomeCoachmark && event.key === "Tab") {
+          if (event.key === "Tab") {
             const focusable = dialogRef.current?.querySelectorAll<HTMLElement>(
               'button:not([disabled]), a[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])',
             );

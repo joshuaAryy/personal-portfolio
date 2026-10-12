@@ -39,7 +39,7 @@ Close crops make the banner-to-trait clearance visible: [before](qa-958b4cd/prof
 
 The current fill is clipped by the gold-bounded middle annulus and the open lower plate gap; full cyan persists at completion. The CSS animation fills through 306° over 1.15 seconds after a 260 ms delay. The owner’s screenshot named “Beginning” corresponds visually to the advanced partial phase (about 140–150°); the true early 36° state is separately captured at `qa-958b4cd/final-visual-verification/resume-1440x900-beginning-36.png`. The phase comparison is documented in `qa-958b4cd/final-visual-verification/resume-phase-mapping.md`.
 
-One visual limitation remains: the approved source contains no dedicated plasma texture layer. The fill uses subdued gradients/highlight without a repeating hatch; its completed state is more uniform than the owner’s textured reference. The channel geometry, progress persistence, and plate clearance are verified.
+The follow-up adds the existing Sonnet V8 `portal-plasma-2x.png` as a clipped, screen-blended material layer beneath the cyan fill. It contributes restrained flecks and curved energy streaks while preserving the established gold rails, lower opening, endpoints, fill progression, and completed state. Matched before/after closeups are available at [before](qa-958b4cd/energy-material-followup-20261012/before/resume-1440x900-completed-306-closeup.png) and [after](qa-958b4cd/energy-material-followup-20261012/after/resume-1440x900-completed-306-closeup.png); the [partial state](qa-958b4cd/energy-material-followup-20261012/after/resume-1440x900-partial-153-closeup.png) shows the same bounded channel, and the [narrow completed state](qa-958b4cd/energy-material-followup-20261012/after/resume-390x844-completed-306-closeup.png) preserves the treatment at 390px. The texture is intentionally restrained; final aesthetic acceptance remains with the owner.
 
 Chrome verified modal underlay inertness, focus restoration, Escape, Close, View Resume, direct `/resume` actions, reduced motion, and narrow layout. Full route/state/error metrics are in the local QA report `qa-integrated-current-20261012/qa-report.md`.
 
@@ -51,6 +51,8 @@ Chrome verified modal underlay inertness, focus restoration, Escape, Close, View
 | 390 × 844 | [before](../2026-10-12-food-insights-gallery/before-narrow-390x844.png) | [after](../2026-10-12-food-insights-gallery/after-narrow-390x844.png) |
 
 The former Calorie Trend is replaced by the owner-approved Calorie Forecast phone crop. Its source is `C:\Users\samue\Downloads\Food_Tracker_Calorie_Forecast_Owner_Reference_2026-10-12.jpeg` (SHA-256 `CEAE86F63A092F8E9641CF667E4A99809FDB8A8BEF1046C5F0DEE782CCAB9F61`); the 286 × 520 crop removes the surrounding desktop canvas without redrawing the chart. The owner image remains identified as a design reference in accessible text, not a runtime capture. The four image frames are balanced in a desktop 2 × 2 grid and a narrow stacked layout. Visible provenance labels and the repeated source-description sentence are removed; evidence provenance remains in `docs/ASSET_MANIFEST.md` and accessible descriptions.
+
+The 2026-10-12 Product Coverage audit also checked the local Food media tree, portfolio video assets, owner-supplied materials/archives, relevant Downloads, and complete GitHub trees for `main` and `phase-24-frontend-redesign`; no authentic Food Tracker video or GIF was found. The demo remains a separate future item whose exact dependency is an owner-supplied authentic recording or source location with publication clearance.
 
 ## Verification
 
@@ -73,8 +75,8 @@ The former Calorie Trend is replaced by the owner-approved Calorie Forecast phon
 
 ## Status
 
-Implemented and visually verified: lobby sizing/centering/controls, short-height Profile banner fit, Resume ring geometry/progress/actions, Food Forecast gallery replacement and presentation.
+Implemented and visually verified: lobby sizing/centering/controls, short-height Profile banner fit, Resume ring geometry/progress/actions and bounded V8 energy texture, Food Forecast gallery replacement and presentation.
 
-Owner review open: visual acceptance of this correction candidate. The annular fill material remains a documented reference mismatch because there is no approved authored plasma texture asset.
+Owner review open: visual acceptance of this correction candidate, including whether the restrained V8 texture is strong enough for the Resume channel.
 
 Preserved: Opening/J, Home, approved case studies, owner portrait/identity sources, Resume Viewer architecture, original Cho’Veigo media, and unrelated worktree files. Production was not targeted.

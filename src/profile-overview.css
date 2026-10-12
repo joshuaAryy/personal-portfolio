@@ -1847,8 +1847,13 @@
 }
 
 @media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1280px) {
+  /* Move the complete signal group into the owner's lower-band target. */
+  .profile-signal-grid {
+    top: calc(100vh - 544px);
+  }
+
   .main.main--profile::before {
-    --profile-environment-height: calc(100vh - var(--client-header-height) - 100px);
+    --profile-environment-height: calc(100vh - var(--client-header-height) - 140px);
     background-image:
       linear-gradient(180deg, rgba(3, 8, 14, 0.28), rgba(3, 8, 14, 0.14) 54%, rgba(3, 8, 14, 0.48)),
       linear-gradient(180deg, transparent calc(100% - 88px), #05070a 100%),

@@ -443,7 +443,7 @@ describe("Profile Overview", () => {
     );
     const environmentRule = cssBlock(tallEnvironment, ".main.main--profile::before");
 
-    expect(environmentRule).toContain("calc(100vh - var(--client-header-height) - 100px)");
+    expect(environmentRule).toContain("calc(100vh - var(--client-header-height) - 140px)");
     expect(environmentRule).toContain("calc(100% - 88px)");
     expect(environmentRule).toContain("#05070a 100%");
   });
