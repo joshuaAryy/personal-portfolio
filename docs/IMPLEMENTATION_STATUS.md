@@ -1,6 +1,15 @@
 # Implementation Status
+## Latest owner-correction checkpoint — Profile short-height fit (2026-10-12)
 
-## Latest owner-review checkpoint — bounded Resume Found correction (2026-10-12)
+**Feature branch:** `feat/portfolio-integration`; **application source:** `0a4ff044bcb78ad20b2b409c579427b512b6baae`. **Immutable feature Preview:** https://dec22313.joshuaik2.pages.dev/ (Cloudflare environment `Preview`, branch `feat/portfolio-integration`, source `0a4ff04`). Production was not targeted. The persistent portfolio goal remains active and owner review is open.
+
+After source `c89d709` / Preview https://87e99fc5.joshuaik2.pages.dev/, the only application change was the compact desktop Profile signal-row height rule and two regression assertions. Deployed Chrome confirms the four values and signal group fit at 1280×720; 390×844 remains naturally scrollable. Other current-source corrections were preserved: centered bounded category banners, Resume Found composition/channel, shared Resume Viewer header, canonical Activity identities, and the Projects owner portrait. The original Cho’Veigo 112.638-second video still matches its owner-authorized SHA-256 and streams with byte ranges.
+
+**Verification:** clean exact-source checkout: **308 tests across 31 files passed**; `npm run build` passed. Cloudflare metadata maps the immutable deployment to `0a4ff04` on Preview. Deployed JS/CSS hashes match the clean build. Installed Google Chrome loaded all eight primary routes at 1280×720 and 390×844 with no broken images, failed requests, browser errors, HTTP errors, or horizontal overflow. Resume Escape/Close restore focus and origin; View Resume opens the viewer. The complete note and committed Profile before/after captures are in the [final owner-correction checkpoint](site-render-review/2026-10-12-final-owner-correction-checkpoint/REVIEW-CHECKPOINT.md).
+
+The existing Vite large-chunk advisory and Happy DOM PDF iframe teardown abort traces remain non-blocking. Food Tracker still has no authentic demo video; live screen-reader interaction remains a manual follow-up. This is a review checkpoint, not portfolio completion.
+
+## Previous owner-review checkpoint — bounded Resume Found correction (2026-10-12)
 
 **Feature branch:** `feat/portfolio-integration`; **application source:** `c89d7090342d8c84976c95333c87e68f364055ac`. **Immutable feature Preview:** https://87e99fc5.joshuaik2.pages.dev/ (Cloudflare environment `Preview`; branch `feat/portfolio-integration`). The deploy was built from a clean detached worktree at the exact application source commit. Production was not targeted. The persistent portfolio goal remains active and owner review is open.
 
