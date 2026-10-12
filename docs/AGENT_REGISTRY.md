@@ -1,6 +1,15 @@
 # Persistent Agent Registry
 
-## Current live state — Owner Correction Pass 03 review checkpoint (2026-10-12)
+## Current live state — Owner Correction Pass 05 review checkpoint (2026-10-12)
+
+The latest feature application source is `42069c0261434c8ba4fab3d0a6ece7208d6d4512` on `feat/portfolio-integration`. **Current immutable Preview:** https://95fca4c1.joshuaik2.pages.dev/ (Cloudflare deployment `95fca4c1-b0dc-446f-ad39-6159700a9bb7`, Environment Preview, branch `feat/portfolio-integration`, source `42069c0`). Deployed JS/CSS match the local build. Production was not targeted; the persistent goal remains active.
+
+- **Pass 05:** lobby proportions and midpoint controls, short-desktop Profile fit, Resume Found channel texture/Close clearance, and Food Insights gallery were integrated and visually checked in installed Chrome. Owner-provided Calorie Forecast imagery replaced the previous Trend image; the crop is labeled truthfully as design evidence.
+- **Verification:** 312 tests across 31 files passed; build and diff check passed. Deployed Chrome checked ten routes at desktop/narrow sizes, plus lobby viewports, Resume states/actions/reduced motion, and the Food gallery. No browser/request errors, broken images, or horizontal overflow were recorded. See [Pass 05 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-05-review.md) and [deployed QA](site-render-review/2026-10-12-banner-resume-identity-convergence/qa-deployed-95fca4c1/qa-report.md).
+- **Open items:** owner review of immutable Preview `95fca4c1`; live screen-reader interaction remains a manual follow-up; an authentic Food Tracker demo video is not available and must not be fabricated. No active strategic Sol decision is needed for this bounded pass.
+- Prior approved work, unrelated modified/untracked files, and historical review artifacts remain preserved. A Preview is a review checkpoint, not overall completion.
+
+## Historical live state — Owner Correction Pass 03 review checkpoint (2026-10-12)
 
 The latest feature application source is `958b4cd783ebbc7416668351a256f5c4bf298e7e`; later feature-branch commits are documentation-only. **Current immutable Preview:** https://85f11ce1.joshuaik2.pages.dev/ (Cloudflare deployment `85f11ce1-2db2-46dd-915d-7237930a9bb7`, Environment Preview, branch `feat/portfolio-integration`, deployment source `7c4e8bd`). Deployed JS/CSS match the clean build. Production was not targeted.
 

@@ -1,0 +1,546 @@
+{
+  "source": {
+    "head": "f22c68cf84d57fb00a899ded45a74f0fca43f9db",
+    "target": "http://127.0.0.1:5182",
+    "browser": "Installed Google Chrome via Playwright"
+  },
+  "states": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "36deg",
+      "file": "resume-1440x900-36deg.png",
+      "status": 200,
+      "fill": "36deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 1440,
+        "h": 900
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "right": 920,
+        "bottom": 810.1,
+        "w": 640,
+        "h": 640
+      },
+      "outerFrame": {
+        "x": 280,
+        "y": 170.1,
+        "right": 920,
+        "bottom": 810.1,
+        "w": 640,
+        "h": 640
+      },
+      "close": {
+        "x": 544,
+        "y": 810.4,
+        "right": 656,
+        "bottom": 837.3,
+        "w": 112,
+        "h": 26.9
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "right": 722.5,
+        "bottom": 791.8,
+        "w": 245,
+        "h": 80.9
+      },
+      "closeGapFromCompositionBottom": 0.34,
+      "closeBottomViewportGap": 62.71,
+      "closeFullyVisible": true,
+      "frameBottom": 810.1
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "153deg",
+      "file": "resume-1440x900-153deg.png",
+      "status": 200,
+      "fill": "153deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 1440,
+        "h": 900
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "right": 920,
+        "bottom": 810.1,
+        "w": 640,
+        "h": 640
+      },
+      "outerFrame": {
+        "x": 280,
+        "y": 170.1,
+        "right": 920,
+        "bottom": 810.1,
+        "w": 640,
+        "h": 640
+      },
+      "close": {
+        "x": 544,
+        "y": 810.1,
+        "right": 656,
+        "bottom": 837,
+        "w": 112,
+        "h": 26.9
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "right": 722.5,
+        "bottom": 791.8,
+        "w": 245,
+        "h": 80.9
+      },
+      "closeGapFromCompositionBottom": 0,
+      "closeBottomViewportGap": 63.05,
+      "closeFullyVisible": true,
+      "frameBottom": 810.1
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "306deg",
+      "file": "resume-1440x900-306deg.png",
+      "status": 200,
+      "fill": "306deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 1440,
+        "h": 900
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "right": 920,
+        "bottom": 810.1,
+        "w": 640,
+        "h": 640
+      },
+      "outerFrame": {
+        "x": 280,
+        "y": 170.1,
+        "right": 920,
+        "bottom": 810.1,
+        "w": 640,
+        "h": 640
+      },
+      "close": {
+        "x": 544,
+        "y": 810.1,
+        "right": 656,
+        "bottom": 837,
+        "w": 112,
+        "h": 26.9
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "right": 722.5,
+        "bottom": 791.8,
+        "w": 245,
+        "h": 80.9
+      },
+      "closeGapFromCompositionBottom": 0,
+      "closeBottomViewportGap": 63.05,
+      "closeFullyVisible": true,
+      "frameBottom": 810.1
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "reduced-motion",
+      "file": "resume-1440x900-reduced.png",
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animationName": "none",
+      "overflow": 0,
+      "closeFullyVisible": true,
+      "textureLoaded": true
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "36deg",
+      "file": "resume-390x844-36deg.png",
+      "status": 200,
+      "fill": "36deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 390,
+        "h": 905
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "right": 374,
+        "bottom": 636,
+        "w": 358,
+        "h": 358
+      },
+      "outerFrame": {
+        "x": 16,
+        "y": 278,
+        "right": 374,
+        "bottom": 636,
+        "w": 358,
+        "h": 358
+      },
+      "close": {
+        "x": 149,
+        "y": 637.1,
+        "right": 241,
+        "bottom": 659.1,
+        "w": 92,
+        "h": 22
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.9,
+        "right": 272.7,
+        "bottom": 632.2,
+        "w": 155.4,
+        "h": 51.3
+      },
+      "closeGapFromCompositionBottom": 1.1,
+      "closeBottomViewportGap": 184.9,
+      "closeFullyVisible": true,
+      "frameBottom": 636
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "153deg",
+      "file": "resume-390x844-153deg.png",
+      "status": 200,
+      "fill": "153deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 390,
+        "h": 905
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "right": 374,
+        "bottom": 636,
+        "w": 358,
+        "h": 358
+      },
+      "outerFrame": {
+        "x": 16,
+        "y": 278,
+        "right": 374,
+        "bottom": 636,
+        "w": 358,
+        "h": 358
+      },
+      "close": {
+        "x": 149,
+        "y": 636.3,
+        "right": 241,
+        "bottom": 658.3,
+        "w": 92,
+        "h": 22
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "right": 272.7,
+        "bottom": 631.8,
+        "w": 155.4,
+        "h": 51.3
+      },
+      "closeGapFromCompositionBottom": 0.34,
+      "closeBottomViewportGap": 185.66,
+      "closeFullyVisible": true,
+      "frameBottom": 636
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "306deg",
+      "file": "resume-390x844-306deg.png",
+      "status": 200,
+      "fill": "306deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 390,
+        "h": 905
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "right": 374,
+        "bottom": 636,
+        "w": 358,
+        "h": 358
+      },
+      "outerFrame": {
+        "x": 16,
+        "y": 278,
+        "right": 374,
+        "bottom": 636,
+        "w": 358,
+        "h": 358
+      },
+      "close": {
+        "x": 149,
+        "y": 636,
+        "right": 241,
+        "bottom": 658,
+        "w": 92,
+        "h": 22
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "right": 272.7,
+        "bottom": 631.8,
+        "w": 155.4,
+        "h": 51.3
+      },
+      "closeGapFromCompositionBottom": 0,
+      "closeBottomViewportGap": 186,
+      "closeFullyVisible": true,
+      "frameBottom": 636
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "reduced-motion",
+      "file": "resume-390x844-reduced.png",
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animationName": "none",
+      "overflow": 0,
+      "closeFullyVisible": true,
+      "textureLoaded": true
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "36deg",
+      "file": "resume-1280x720-36deg.png",
+      "status": 200,
+      "fill": "36deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 1280,
+        "h": 720
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "right": 817,
+        "bottom": 680,
+        "w": 574,
+        "h": 574
+      },
+      "outerFrame": {
+        "x": 243,
+        "y": 106,
+        "right": 817,
+        "bottom": 680,
+        "w": 574,
+        "h": 574
+      },
+      "close": {
+        "x": 479.8,
+        "y": 681.9,
+        "right": 580.2,
+        "bottom": 706,
+        "w": 100.4,
+        "h": 24.1
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 592,
+        "right": 652.5,
+        "bottom": 672.9,
+        "w": 245,
+        "h": 80.9
+      },
+      "closeGapFromCompositionBottom": 1.89,
+      "closeBottomViewportGap": 14.01,
+      "closeFullyVisible": true,
+      "frameBottom": 680
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "153deg",
+      "file": "resume-1280x720-153deg.png",
+      "status": 200,
+      "fill": "153deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 1280,
+        "h": 720
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "right": 817,
+        "bottom": 680,
+        "w": 574,
+        "h": 574
+      },
+      "outerFrame": {
+        "x": 243,
+        "y": 106,
+        "right": 817,
+        "bottom": 680,
+        "w": 574,
+        "h": 574
+      },
+      "close": {
+        "x": 479.8,
+        "y": 680,
+        "right": 580.2,
+        "bottom": 704.1,
+        "w": 100.4,
+        "h": 24.1
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 591,
+        "right": 652.5,
+        "bottom": 671.9,
+        "w": 245,
+        "h": 80.9
+      },
+      "closeGapFromCompositionBottom": 0,
+      "closeBottomViewportGap": 15.91,
+      "closeFullyVisible": true,
+      "frameBottom": 680
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "306deg",
+      "file": "resume-1280x720-306deg.png",
+      "status": 200,
+      "fill": "306deg",
+      "textureLoaded": true,
+      "overflow": 0,
+      "doc": {
+        "w": 1280,
+        "h": 720
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "right": 817,
+        "bottom": 680,
+        "w": 574,
+        "h": 574
+      },
+      "outerFrame": {
+        "x": 243,
+        "y": 106,
+        "right": 817,
+        "bottom": 680,
+        "w": 574,
+        "h": 574
+      },
+      "close": {
+        "x": 479.8,
+        "y": 680,
+        "right": 580.2,
+        "bottom": 704.1,
+        "w": 100.4,
+        "h": 24.1
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 591,
+        "right": 652.5,
+        "bottom": 671.9,
+        "w": 245,
+        "h": 80.9
+      },
+      "closeGapFromCompositionBottom": 0,
+      "closeBottomViewportGap": 15.91,
+      "closeFullyVisible": true,
+      "frameBottom": 680
+    },
+    {
+      "viewport": [
+        1280,
+        720
+      ],
+      "state": "reduced-motion",
+      "file": "resume-1280x720-reduced.png",
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animationName": "none",
+      "overflow": 0,
+      "closeFullyVisible": true,
+      "textureLoaded": true
+    }
+  ],
+  "actions": {
+    "modalOpen": {
+      "path": "/resume",
+      "dialog": 1,
+      "underlayInert": "",
+      "underlayAriaHidden": "true"
+    },
+    "escape": {
+      "path": "/home",
+      "focusRestored": true
+    },
+    "modalClose": {
+      "path": "/home",
+      "focusRestored": true
+    },
+    "directClose": {
+      "path": "/home"
+    },
+    "directView": {
+      "path": "/resume/viewer"
+    }
+  },
+  "runtime": {
+    "consoleErrors": [],
+    "failedRequests": [],
+    "httpErrors": []
+  }
+}

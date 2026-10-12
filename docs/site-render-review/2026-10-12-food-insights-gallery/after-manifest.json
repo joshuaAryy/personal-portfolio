@@ -1,0 +1,84 @@
+[
+  {
+    "name": "after",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "chrome": "154.0.8037.98",
+    "url": "http://127.0.0.1:5183/projects/food-tracker",
+    "gallery": {
+      "rect": {
+        "x": 75.875,
+        "y": 19.765625,
+        "width": 1018.25,
+        "height": 687.65625
+      },
+      "mainScrollTop": 6379,
+      "images": [
+        {
+          "alt": "Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes.",
+          "naturalWidth": 368,
+          "naturalHeight": 800
+        },
+        {
+          "alt": "Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band.",
+          "naturalWidth": 286,
+          "naturalHeight": 520
+        },
+        {
+          "alt": "Figma analytics design showing a fiber trend chart with daily totals and a target band.",
+          "naturalWidth": 350,
+          "naturalHeight": 372
+        },
+        {
+          "alt": "Figma analytics design showing a daily completeness grid distinguishing complete, partial, and unlogged days.",
+          "naturalWidth": 350,
+          "naturalHeight": 258
+        }
+      ]
+    }
+  },
+  {
+    "name": "after",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "chrome": "154.0.8037.98",
+    "url": "http://127.0.0.1:5183/projects/food-tracker",
+    "gallery": {
+      "rect": {
+        "x": 17,
+        "y": 28.796875,
+        "width": 356,
+        "height": 787
+      },
+      "mainScrollTop": 0,
+      "images": [
+        {
+          "alt": "Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes.",
+          "naturalWidth": 368,
+          "naturalHeight": 800
+        },
+        {
+          "alt": "Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band.",
+          "naturalWidth": 286,
+          "naturalHeight": 520
+        },
+        {
+          "alt": "Figma analytics design showing a fiber trend chart with daily totals and a target band.",
+          "naturalWidth": 350,
+          "naturalHeight": 372
+        },
+        {
+          "alt": "Figma analytics design showing a daily completeness grid distinguishing complete, partial, and unlogged days.",
+          "naturalWidth": 350,
+          "naturalHeight": 258
+        }
+      ]
+    }
+  }
+]

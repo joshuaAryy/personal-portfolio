@@ -1,0 +1,84 @@
+[
+  {
+    "name": "before",
+    "viewport": {
+      "width": 1440,
+      "height": 900,
+      "deviceScaleFactor": 1
+    },
+    "chrome": "154.0.8037.98",
+    "url": "http://127.0.0.1:5183/projects/food-tracker",
+    "gallery": {
+      "rect": {
+        "x": 75.875,
+        "y": 2.765625,
+        "width": 1018.25,
+        "height": 815.0625
+      },
+      "mainScrollTop": 6396,
+      "images": [
+        {
+          "alt": "Macro composition view with a nutrient balance graphic and daily comparison chart.",
+          "naturalWidth": 368,
+          "naturalHeight": 800
+        },
+        {
+          "alt": "Figma design study of a calorie trend chart with daily totals, a trend line, and a target band.",
+          "naturalWidth": 350,
+          "naturalHeight": 380
+        },
+        {
+          "alt": "Figma design study of a fiber trend chart with daily totals and a target band.",
+          "naturalWidth": 350,
+          "naturalHeight": 372
+        },
+        {
+          "alt": "Figma design study of a daily completeness grid distinguishing complete, partial, and unlogged days.",
+          "naturalWidth": 350,
+          "naturalHeight": 258
+        }
+      ]
+    }
+  },
+  {
+    "name": "before",
+    "viewport": {
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 1
+    },
+    "chrome": "154.0.8037.98",
+    "url": "http://127.0.0.1:5183/projects/food-tracker",
+    "gallery": {
+      "rect": {
+        "x": 17,
+        "y": 59.796875,
+        "width": 356,
+        "height": 784.5
+      },
+      "mainScrollTop": 0,
+      "images": [
+        {
+          "alt": "Macro composition view with a nutrient balance graphic and daily comparison chart.",
+          "naturalWidth": 368,
+          "naturalHeight": 800
+        },
+        {
+          "alt": "Figma design study of a calorie trend chart with daily totals, a trend line, and a target band.",
+          "naturalWidth": 350,
+          "naturalHeight": 380
+        },
+        {
+          "alt": "Figma design study of a fiber trend chart with daily totals and a target band.",
+          "naturalWidth": 350,
+          "naturalHeight": 372
+        },
+        {
+          "alt": "Figma design study of a daily completeness grid distinguishing complete, partial, and unlogged days.",
+          "naturalWidth": 350,
+          "naturalHeight": 258
+        }
+      ]
+    }
+  }
+]
