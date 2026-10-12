@@ -1,5 +1,15 @@
 # Persistent Agent Registry
 
+## Latest live state — Owner Correction Pass 03 Preview (2026-10-12)
+
+Feature application source 958b4cd783ebbc7416668351a256f5c4bf298e7e is deployed as immutable Cloudflare Pages Preview https://0b13763e.joshuaik2.pages.dev/ (deployment 0b13763e-0f75-4ade-b6b5-d19739dd8388, Environment Preview, branch feat/portfolio-integration, source 958b4cd). The feature branch contains this application source commit. Deployed HTML/JS/CSS match the clean build; production was not targeted.
+
+- The bounded app changes narrow Resume Found’s textured cyan annulus to its gold-bounded channel and restore vertical scrolling for short desktop lobbies. Resume actions and modal behavior remain intact.
+- Installed Chrome verified the 20 lobby route/viewport combinations, Resume Found beginning/partial/completed/reduced-motion states at desktop/narrow sizes, shared Activity/Header J brightness, Projects portrait, Viewer header/controls, and runtime health. Existing centered banner layouts and background framing were already correct and were preserved.
+- Full suite: 308 tests across 31 files passed; build and diff check passed. Existing Vite >500 kB advisory remains. The in-app browser’s embedded PDF panel appeared blank in its screenshot while the PDF endpoint returned HTTP 200 as application/pdf.
+- Detailed checkpoint and evidence index: [Owner Correction Pass 03](site-render-review/2026-10-12-banner-resume-identity-convergence/review-checkpoint-958b4cd.md); local image captures remain untracked in the clean verification worktree.
+- Frontend Owner and Runtime QA completed their bounded lanes. The persistent portfolio goal remains active for owner review and remaining known requirements. Production and unrelated modified/untracked worktree material remain untouched.
+
 ## Latest live state — short-desktop Resume Found Preview checkpoint (2026-10-11)
 
 The remote feature branch `feat/portfolio-integration` contains documentation-only commits after runtime application source `39ad7ddd28a8b0d240c8f39386354cdfa731635c`; the prior review-index commit `04b9f846a9edba6874959a2b77490ab9637542b7` did not change the app. Source `39ad7dd` is deployed as immutable Cloudflare Pages Preview https://9b8a4661.joshuaik2.pages.dev/ (deployment `9b8a4661-9d8c-4d12-bf7d-4a4874eedd46`, Environment `Preview`, branch `feat/portfolio-integration`). Deployed JS SHA-256 `E5C576FEC09126EDA6C80C6C9F906D0591F08CF8D1AA10A80BADD366F91F8506` and CSS SHA-256 `E3C3B09B32EAF9C265F60C7596391E4C8F7B66A5364CE19F364812C5587459C6` match the clean app build. The current local worktree branch is `codex/owner-correction-pass-03`. Production was not targeted.

@@ -1,4 +1,12 @@
 # Implementation Status
+
+## Latest owner-correction checkpoint — Pass 03 (2026-10-12)
+
+**Feature branch:** feat/portfolio-integration; **application source:** 958b4cd783ebbc7416668351a256f5c4bf298e7e. **Immutable Preview:** https://0b13763e.joshuaik2.pages.dev/ (Cloudflare Environment Preview, branch feat/portfolio-integration, source 958b4cd, deployment 0b13763e-0f75-4ade-b6b5-d19739dd8388). Production was not targeted; the persistent goal remains active.
+
+This bounded pass changes only the Resume Found middle-channel mask and restores short-desktop lobby scrolling. Current-source Chrome review confirmed the centered three-/five-banner groups, proportion, spacing, background framing, shared Resume Viewer header, canonical Activity identities, and Projects portrait already match the accepted direction; those implementations were preserved. The Opening, case studies, Profile, Journey, and Highlights were not reopened.
+
+**Verification:** 308 tests across 31 files passed; npm run build and git diff --check HEAD^ HEAD passed. The immutable Preview’s HTML and JS/CSS asset bytes match the clean build from 958b4cd. Ten deployed routes returned HTTP 200. Installed Chrome checked 20 lobby route/viewports, Resume ring states/reduced motion at desktop and narrow sizes, action/focus behavior, and identity consistency. The PDF endpoint returns HTTP 200 as application/pdf; the embedded native PDF surface did not render inside the Codex in-app screenshot. Existing Vite chunk-size advisory remains. Evidence index: [Pass 03 review checkpoint](site-render-review/2026-10-12-banner-resume-identity-convergence/review-checkpoint-958b4cd.md). This is a review checkpoint, not portfolio completion.
 ## Latest owner-correction checkpoint — Profile short-height fit (2026-10-12)
 
 **Feature branch:** `feat/portfolio-integration`; **application source:** `0a4ff044bcb78ad20b2b409c579427b512b6baae`. **Immutable feature Preview:** https://dec22313.joshuaik2.pages.dev/ (Cloudflare environment `Preview`, branch `feat/portfolio-integration`, source `0a4ff04`). Production was not targeted. The persistent portfolio goal remains active and owner review is open.
