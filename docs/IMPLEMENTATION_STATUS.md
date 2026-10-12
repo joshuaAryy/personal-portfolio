@@ -1,5 +1,15 @@
 # Implementation Status
 
+## Latest owner correction checkpoint — clean Resume/lobby review build (2026-10-11)
+
+**Application source:** `dc65663a64934f8fb2c8b26c9df0fef232f8fe8d` on `feat/portfolio-integration`. **Immutable feature Preview:** https://d17a1370.joshuaik2.pages.dev/ (Cloudflare deployment `d17a1370-69ef-4c00-a981-d5cc010699e3`; Environment `Preview`; branch `feat/portfolio-integration`; Source `dc65663`). Production was not targeted. The persistent goal remains active.
+
+This pass removed one extra CSS gold border from Resume Found’s scenic aperture; the editable Figma mechanism does not include that stroke. The canonical standalone Sonnet J, bounded cyan channel, attached View Resume plate, Close at the outer-ring base, and dark scenic field remain. Resume positioning/sizing was otherwise preserved after inspection of the latest owner screenshots and Figma. Current-source visual checks confirm the previously implemented centered/capped lobby banners, symmetric controls, shared Resume Viewer header, Activity identity consistency, and the Projects owner portrait. A top-origin lobby experiment was rejected because it lost the lower scenery and is not in this build.
+
+The Preview was built from a clean detached worktree at the exact application source commit. A first upload from the dirty worktree (`0d3de5a3`) included an unrelated uncommitted Opening timing edit; it is superseded and is not the owner-review URL. Dirty/untracked J/Opening source and study artifacts remain preserved in the main worktree and were excluded from the clean build.
+
+**Verification:** 305 tests across 31 files pass; `npm run build` passes with the existing 519.12 kB chunk advisory. Deployed JS/CSS hashes match the clean build exactly. Direct Preview checks returned 200 for the main routes and the PDF endpoint (`application/pdf`). Installed Chrome 154 local QA covered desktop/narrow layouts, all four lobbies, Resume states and actions, focus/Escape restoration, and the shared Viewer header. The deployed Preview was also visually checked in the Codex browser. Live screen-reader interaction remains manual. Detailed status and curated images are in [the correction checkpoint](site-render-review/2026-10-12-owner-correction-checkpoint/REVIEW-CHECKPOINT.md). This is an owner-review checkpoint, not portfolio completion.
+
 ## Latest review checkpoint — bounded Resume channel correction (2026-10-11)
 
 **Feature branch:** `feat/portfolio-integration`. **Application source:** `a757ade8dd306c893976f35f71e6e96d247f792a`. **Immutable feature Preview:** https://7e03e139.joshuaik2.pages.dev/ (Cloudflare deployment `7e03e139-f5e5-49e4-a44a-781aaff576f2`, Environment `Preview`, Branch `feat/portfolio-integration`). Cloudflare's CLI deployment record has an empty Source field; the app source is verified by building a clean export from the exact commit and matching the deployed JS and CSS bytes to that build. Production was not targeted; the persistent goal remains active.

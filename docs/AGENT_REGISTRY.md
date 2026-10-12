@@ -1,5 +1,15 @@
 # Persistent Agent Registry
 
+## Latest live state — bounded owner correction checkpoint (2026-10-11)
+
+The `feat/portfolio-integration` application source is `dc65663a64934f8fb2c8b26c9df0fef232f8fe8d`, deployed to immutable feature Preview https://d17a1370.joshuaik2.pages.dev/ (Cloudflare deployment `d17a1370-69ef-4c00-a981-d5cc010699e3`, Environment `Preview`, Branch `feat/portfolio-integration`, Source `dc65663`). The clean build was produced from that exact commit. An earlier dirty-worktree deployment `0d3de5a3` included an unrelated uncommitted Opening timing edit and is superseded; preserve it as deployment history and direct the owner to `d17a1370` only. Production was not targeted.
+
+- **Frontend Owner:** completed current-source reconciliation. The centered lobby groups, shared headers, canonical Activity identities, Projects portrait, Resume mechanism geometry, and Viewer controls were already correct; only the extra scenic-aperture CSS stroke was removed. Reusable.
+- **Runtime QA:** completed focused local Chrome matrix plus deployed Preview routes/assets/modal checks. 305 tests across 31 files and the clean build pass. Live screen-reader interaction remains manual.
+- **Product Coverage:** completed a read-only audit; current approved story content was preserved. No case-study edits were warranted for this bounded pass.
+- Preserve all pre-existing dirty/untracked Opening/J files and captures in the main worktree; they were not included in the clean Preview build. No strategic Sol decision was needed.
+- The visible Resume composition and the broader Profile lower-scene spacing remain owner-review open. The persistent goal stays active; this Preview is a review checkpoint, not completion.
+
 ## Latest live state — Resume progress channel follow-up (2026-10-11)
 
 The feature branch `feat/portfolio-integration` points to application source `a757ade8dd306c893976f35f71e6e96d247f792a`, deployed as immutable Preview https://7e03e139.joshuaik2.pages.dev/ (Cloudflare deployment `7e03e139-f5e5-49e4-a44a-781aaff576f2`, Preview environment, feature branch). Wrangler leaves the deployment Source field blank for this direct CLI upload; the exact deployed JS/CSS hashes match the clean build exported from the application commit. This follow-up only widens/clarifies the bounded persistent cyan channel in Resume Found; earlier lobby/header/identity corrections remain in the Preview. Owner Beginning/Completed references were compared with 36°/153°/306° captures; the “Beginning” still is a later partial phase, not reversed motion. Chrome and full test/build verification are recorded in [the deployed QA report](site-render-review/2026-10-11-resume-progress-channel-followup/deployed-qa-7e03e139/qa-report.md). No production deployment occurred. Goal remains active and owner review is open.
