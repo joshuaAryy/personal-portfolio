@@ -57,3 +57,16 @@ The complete route/viewport measurements are in [the integrated Chrome report](q
 - Installed-Chrome Preview verification is recorded at [the deployed QA report](qa-deployed-95fca4c1/qa-report.md).
 
 The deployed JavaScript and CSS match the build from application source `42069c0`. The Preview is an owner-review checkpoint, not overall portfolio completion. Live screen-reader interaction remains a manual follow-up; Food Tracker demo footage remains a separate authentic-media dependency. Preserve the immutable Preview for review; later work should use a new source revision and Preview.
+
+## Remaining manual screen-reader review
+
+No live screen-reader interaction has been performed; Chrome keyboard and accessibility-tree checks do not substitute for this pass. On the Preview, use Windows Narrator with Chrome and:
+
+1. On Home, navigate the main mode controls, LinkedIn, GitHub, Email, Resume, Activity links, and Help. Confirm names and roles are announced clearly.
+2. Open contextual Help, listen to its instructions, press Escape, and confirm focus returns to Help.
+3. Open Resume Found. Confirm the dialog is announced, focus stays within it, Escape closes it and restores the originating control, View Resume opens the viewer, and Close returns to the originating page.
+4. On Profile Overview, keyboard-focus Projects, Experience, Hackathon, and Academics. Confirm each signal's name/count and associated preview are announced; move focus away and confirm the neutral state returns.
+5. On a representative case study and Demos, navigate headings and landmarks, then inspect the video player's accessible name and keyboard controls for play/pause/seek.
+6. Repeat the Help, Resume, Profile, and media checks at a narrow viewport (390×844). Record any missing, duplicate, clipped, or out-of-order announcements.
+
+The authentic Food Tracker demo remains unavailable; use the current truthful still-image evidence until the owner supplies a real recording. The immutable Preview remains open for owner review; this checklist and checkpoint do not mark the portfolio goal complete.
