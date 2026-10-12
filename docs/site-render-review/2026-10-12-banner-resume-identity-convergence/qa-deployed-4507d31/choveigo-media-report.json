@@ -1,0 +1,75 @@
+{
+  "preview": "https://57334288.joshuaik2.pages.dev",
+  "originalSource": {
+    "sha256": "1c637a4ad7a197d7073da88534cf8d54b660c85df16b75fa25f955d16e94c801",
+    "parts": [
+      {
+        "path": "C:/oc03/public/media/demos/choveigo-original/part-1.bin",
+        "bytes": 16000000
+      },
+      {
+        "path": "C:/oc03/public/media/demos/choveigo-original/part-2.bin",
+        "bytes": 16915943
+      }
+    ]
+  },
+  "selectedDemo": {
+    "title": "CHO’VEIGO",
+    "playButton": 1
+  },
+  "playback": {
+    "src": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+    "duration": 112.638333,
+    "readyState": 4,
+    "paused": false,
+    "muted": false,
+    "controls": true,
+    "currentTime": 0.174842,
+    "videoWidth": 1920,
+    "videoHeight": 1080,
+    "bufferedEnd": 14.904
+  },
+  "seek": {
+    "currentTime": 90,
+    "paused": true,
+    "duration": 112.638333,
+    "readyState": 4
+  },
+  "caseStudy": {
+    "src": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+    "duration": 112.638333,
+    "readyState": 4,
+    "paused": true,
+    "muted": false,
+    "controls": true,
+    "videoWidth": 1920,
+    "videoHeight": 1080
+  },
+  "mediaResponses": [
+    {
+      "url": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+      "status": 206,
+      "contentType": "video/mp4",
+      "contentLength": "32915943",
+      "contentRange": "bytes 0-32915942/32915943",
+      "acceptRanges": "bytes"
+    },
+    {
+      "url": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+      "status": 206,
+      "contentType": "video/mp4",
+      "contentLength": "7520743",
+      "contentRange": "bytes 25395200-32915942/32915943",
+      "acceptRanges": "bytes"
+    },
+    {
+      "url": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+      "status": 206,
+      "contentType": "video/mp4",
+      "contentLength": "32915943",
+      "contentRange": "bytes 0-32915942/32915943",
+      "acceptRanges": "bytes"
+    }
+  ],
+  "errors": []
+}

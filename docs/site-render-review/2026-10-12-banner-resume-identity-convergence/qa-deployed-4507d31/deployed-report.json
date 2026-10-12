@@ -1,0 +1,261 @@
+{
+  "preview": "https://57334288.joshuaik2.pages.dev",
+  "assetChecks": [
+    {
+      "path": "/assets/index-BE7g5I2h.js",
+      "status": 200,
+      "remoteBytes": 518530,
+      "localBytes": 518530,
+      "remoteSha256": "a25ee68da91d387c5c76017b529ad930da97f5e3492892b48b139aed4a254ebb",
+      "localSha256": "a25ee68da91d387c5c76017b529ad930da97f5e3492892b48b139aed4a254ebb",
+      "match": true
+    },
+    {
+      "path": "/assets/index-BQEqwo86.css",
+      "status": 200,
+      "remoteBytes": 501723,
+      "localBytes": 501723,
+      "remoteSha256": "52bc2ff8490db2702c3e574cba4fd93a62cb37a10ea631473fe127e663a3756e",
+      "localSha256": "52bc2ff8490db2702c3e574cba4fd93a62cb37a10ea631473fe127e663a3756e",
+      "match": true
+    }
+  ],
+  "routes": [
+    {
+      "route": "/projects",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/projects",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "PROJECTS · FEATURED",
+        "FOOD TRACKER",
+        "ACTIVITY"
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/experience",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/experience",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "EXPERIENCE",
+        "LIVING IN SILICO",
+        "ACTIVITY"
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/hackathons",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/hackathons",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "HACKATHONS",
+        "CREST · MPC HACKS",
+        "ACTIVITY"
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/education",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/education",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "EDUCATION",
+        "SELECTED COURSEWORK",
+        "ACTIVITY"
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/profile",
+      "viewport": 1366,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/profile",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "JOSHUA ARYEETEY",
+        "ACTIVITY"
+      ],
+      "width": 1366,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/profile",
+      "viewport": 390,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/profile",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "JOSHUA ARYEETEY",
+        "ACTIVITY"
+      ],
+      "width": 390,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/resume",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/resume",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "Resume Found",
+        "ACTIVITY"
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/resume",
+      "viewport": 390,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/resume",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "Resume Found",
+        "ACTIVITY"
+      ],
+      "width": 390,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/projects/food-tracker",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/projects/food-tracker",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "Simple tracking.Serious insight.",
+        "Many ways to begin. One reviewed record.",
+        "The chosen amount is part of the nutrition.",
+        "Show useful patterns without inventing completeness."
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/projects/food-tracker",
+      "viewport": 390,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/projects/food-tracker",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "Simple tracking.Serious insight.",
+        "Many ways to begin. One reviewed record.",
+        "The chosen amount is part of the nutrition.",
+        "Show useful patterns without inventing completeness."
+      ],
+      "width": 390,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/profile/demos",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/profile/demos",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "FOOD TRACKER",
+        "ACTIVITY"
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": []
+    },
+    {
+      "route": "/projects/choveigo",
+      "viewport": 1440,
+      "httpStatus": 200,
+      "overflow": 0,
+      "path": "/projects/choveigo",
+      "title": "Joshua Aryeetey · Portfolio",
+      "mainCount": 1,
+      "heading": [
+        "Cho’Veigo",
+        "A role has to outlast its feed.",
+        "Compare the work with what a person can show.",
+        "Fit, Eligibility, and Recommendation have different jobs."
+      ],
+      "width": 1440,
+      "brokenImages": [],
+      "videos": [
+        {
+          "src": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+          "readyState": 0,
+          "duration": null,
+          "paused": true,
+          "muted": false,
+          "controls": true
+        }
+      ]
+    }
+  ],
+  "videoInfo": [
+    {
+      "route": "/profile/demos",
+      "videos": []
+    },
+    {
+      "route": "/projects/choveigo",
+      "videos": [
+        {
+          "src": "https://57334288.joshuaik2.pages.dev/media/demos/choveigo-full-demo.mp4",
+          "readyState": 0,
+          "duration": null,
+          "networkState": 1,
+          "paused": true,
+          "muted": false,
+          "controls": true
+        }
+      ]
+    }
+  ],
+  "runtime": {
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": []
+  }
+}

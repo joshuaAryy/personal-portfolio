@@ -61,6 +61,16 @@ The former Calorie Trend is replaced by the owner-approved Calorie Forecast phon
 - Integrated installed-Chrome matrix: four lobbies at 1440 × 720, 1920 × 1080, 2560 × 1080, 390 × 844; Profile at 1280 × 720, 1366 × 768, 1920 × 1080; Resume at desktop/narrow including beginning/partial/complete/reduced and route/keyboard actions; Food gallery at 1440 × 900 and 390 × 844. QA found zero page/console/network/HTTP errors, failed images, or horizontal overflow.
 - Playwright's `animations: disabled` fast-forwards finite CSS animation and was rejected as timing evidence. The valid desktop 153° partial is the animation-paused `partial-seek` image; the natural elapsed 303.648° sample is labeled near-complete, not partial, in `qa-integrated-current-20261012/qa-report.md` and its JSON.
 
+## Immutable Preview verification
+
+- **Preview:** https://57334288.joshuaik2.pages.dev
+- **Application source:** `4507d3179c41348ea38d74ab6c1ef0ebb7212cb0` on `feat/portfolio-integration`.
+- Wrangler lists this as a **Preview** deployment, deployment ID `57334288-5b27-4847-9d87-dd8d78c016cb`, source `4507d31`. Production was not targeted.
+- Installed Chrome opened Home, all four lobbies, Profile, Resume Found, Resume Viewer, Food Tracker, Demos, and Cho’Veigo. All returned HTTP 200; there were no browser/console/network errors, failed images, or horizontal overflow at the tested desktop/narrow entry points.
+- The deployed JavaScript and CSS returned the same SHA-256 and byte lengths as the local build (`index-BE7g5I2h.js`: 518,530 bytes; `index-BQEqwo86.css`: 501,723 bytes).
+- Cho’Veigo’s original two-part media source hashes to the owner-provided SHA-256 `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801`. The Preview player reports 112.638333 seconds at 1920×1080, retains audio and controls, accepts a seek to 90 seconds, and serves byte ranges. The owner authorized publication of this unchanged original.
+- Deployed route and asset evidence, including representative screenshots, is in [`qa-deployed-4507d31`](qa-deployed-4507d31); the full media check is `choveigo-media-report.json`.
+
 ## Status
 
 Implemented and visually verified: lobby sizing/centering/controls, short-height Profile banner fit, Resume ring geometry/progress/actions, Food Forecast gallery replacement and presentation.
