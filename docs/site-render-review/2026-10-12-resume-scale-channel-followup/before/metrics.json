@@ -1,0 +1,572 @@
+{
+  "browser": "154.0.8037.98",
+  "captures": [
+    {
+      "file": "desktop-1440x900-beginning-36deg.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600,
+        "right": 900,
+        "bottom": 770.1
+      },
+      "j": {
+        "x": 460,
+        "y": 330.1,
+        "width": 280,
+        "height": 280,
+        "right": 740,
+        "bottom": 610.1
+      },
+      "title": {
+        "x": 450,
+        "y": 608.1,
+        "width": 300,
+        "height": 34,
+        "right": 750,
+        "bottom": 642.1
+      },
+      "action": {
+        "x": 485,
+        "y": 677.1,
+        "width": 230,
+        "height": 75.9,
+        "right": 715,
+        "bottom": 753
+      },
+      "close": {
+        "x": 534,
+        "y": 752.1,
+        "width": 132,
+        "height": 25.2,
+        "right": 666,
+        "bottom": 777.3
+      },
+      "channel": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3,
+        "right": 862.6,
+        "bottom": 732.7
+      },
+      "fill": "36deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "file": "desktop-1440x900-partial-153deg.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600,
+        "right": 900,
+        "bottom": 770.1
+      },
+      "j": {
+        "x": 460,
+        "y": 330.1,
+        "width": 280,
+        "height": 280,
+        "right": 740,
+        "bottom": 610.1
+      },
+      "title": {
+        "x": 450,
+        "y": 608.1,
+        "width": 300,
+        "height": 34,
+        "right": 750,
+        "bottom": 642.1
+      },
+      "action": {
+        "x": 485,
+        "y": 677.1,
+        "width": 230,
+        "height": 75.9,
+        "right": 715,
+        "bottom": 753
+      },
+      "close": {
+        "x": 534,
+        "y": 752.1,
+        "width": 132,
+        "height": 25.2,
+        "right": 666,
+        "bottom": 777.3
+      },
+      "channel": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3,
+        "right": 862.6,
+        "bottom": 732.7
+      },
+      "fill": "153deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "file": "desktop-1440x900-full-306deg.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "mechanism": {
+        "x": 300,
+        "y": 170.1,
+        "width": 600,
+        "height": 600,
+        "right": 900,
+        "bottom": 770.1
+      },
+      "j": {
+        "x": 460,
+        "y": 330.1,
+        "width": 280,
+        "height": 280,
+        "right": 740,
+        "bottom": 610.1
+      },
+      "title": {
+        "x": 450,
+        "y": 608.1,
+        "width": 300,
+        "height": 34,
+        "right": 750,
+        "bottom": 642.1
+      },
+      "action": {
+        "x": 485,
+        "y": 677.1,
+        "width": 230,
+        "height": 75.9,
+        "right": 715,
+        "bottom": 753
+      },
+      "close": {
+        "x": 534,
+        "y": 752.1,
+        "width": 132,
+        "height": 25.2,
+        "right": 666,
+        "bottom": 777.3
+      },
+      "channel": {
+        "x": 337.3,
+        "y": 207.4,
+        "width": 525.3,
+        "height": 525.3,
+        "right": 862.6,
+        "bottom": 732.7
+      },
+      "fill": "306deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "file": "short-desktop-1280x720-beginning-36deg.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "width": 574,
+        "height": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "j": {
+        "x": 390,
+        "y": 253,
+        "width": 280,
+        "height": 280,
+        "right": 670,
+        "bottom": 533
+      },
+      "title": {
+        "x": 380,
+        "y": 525,
+        "width": 300,
+        "height": 32.7,
+        "right": 680,
+        "bottom": 557.7
+      },
+      "action": {
+        "x": 415,
+        "y": 591,
+        "width": 230,
+        "height": 75.9,
+        "right": 645,
+        "bottom": 667
+      },
+      "close": {
+        "x": 464,
+        "y": 662.8,
+        "width": 132,
+        "height": 24.1,
+        "right": 596,
+        "bottom": 686.9
+      },
+      "channel": {
+        "x": 278.7,
+        "y": 141.7,
+        "width": 502.5,
+        "height": 502.5,
+        "right": 781.3,
+        "bottom": 644.3
+      },
+      "fill": "36deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "short-desktop-1280x720-partial-153deg.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "width": 574,
+        "height": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "j": {
+        "x": 390,
+        "y": 253,
+        "width": 280,
+        "height": 280,
+        "right": 670,
+        "bottom": 533
+      },
+      "title": {
+        "x": 380,
+        "y": 525,
+        "width": 300,
+        "height": 32.7,
+        "right": 680,
+        "bottom": 557.7
+      },
+      "action": {
+        "x": 415,
+        "y": 591,
+        "width": 230,
+        "height": 75.9,
+        "right": 645,
+        "bottom": 667
+      },
+      "close": {
+        "x": 464,
+        "y": 662.8,
+        "width": 132,
+        "height": 24.1,
+        "right": 596,
+        "bottom": 686.9
+      },
+      "channel": {
+        "x": 278.7,
+        "y": 141.7,
+        "width": 502.5,
+        "height": 502.5,
+        "right": 781.3,
+        "bottom": 644.3
+      },
+      "fill": "153deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "short-desktop-1280x720-full-306deg.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "width": 574,
+        "height": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "j": {
+        "x": 390,
+        "y": 253,
+        "width": 280,
+        "height": 280,
+        "right": 670,
+        "bottom": 533
+      },
+      "title": {
+        "x": 380,
+        "y": 525,
+        "width": 300,
+        "height": 32.7,
+        "right": 680,
+        "bottom": 557.7
+      },
+      "action": {
+        "x": 415,
+        "y": 591,
+        "width": 230,
+        "height": 75.9,
+        "right": 645,
+        "bottom": 667
+      },
+      "close": {
+        "x": 464,
+        "y": 662.8,
+        "width": 132,
+        "height": 24.1,
+        "right": 596,
+        "bottom": 686.9
+      },
+      "channel": {
+        "x": 278.7,
+        "y": 141.7,
+        "width": 502.5,
+        "height": 502.5,
+        "right": 781.3,
+        "bottom": 644.3
+      },
+      "fill": "306deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "narrow-390x844-beginning-36deg.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "width": 193.3,
+        "height": 193.3,
+        "right": 291.7,
+        "bottom": 553.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "width": 202.6,
+        "height": 20.4,
+        "right": 296.3,
+        "bottom": 559.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "width": 155.4,
+        "height": 51.3,
+        "right": 272.7,
+        "bottom": 631.8
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "width": 89.1,
+        "height": 22,
+        "right": 239.6,
+        "bottom": 647.3
+      },
+      "channel": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4,
+        "right": 351.7,
+        "bottom": 613.7
+      },
+      "fill": "36deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "narrow-390x844-partial-153deg.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "width": 193.3,
+        "height": 193.3,
+        "right": 291.7,
+        "bottom": 553.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "width": 202.6,
+        "height": 20.4,
+        "right": 296.3,
+        "bottom": 559.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "width": 155.4,
+        "height": 51.3,
+        "right": 272.7,
+        "bottom": 631.8
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "width": 89.1,
+        "height": 22,
+        "right": 239.6,
+        "bottom": 647.3
+      },
+      "channel": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4,
+        "right": 351.7,
+        "bottom": 613.7
+      },
+      "fill": "153deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "narrow-390x844-full-306deg.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "width": 193.3,
+        "height": 193.3,
+        "right": 291.7,
+        "bottom": 553.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "width": 202.6,
+        "height": 20.4,
+        "right": 296.3,
+        "bottom": 559.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "width": 155.4,
+        "height": 51.3,
+        "right": 272.7,
+        "bottom": 631.8
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "width": 89.1,
+        "height": 22,
+        "right": 239.6,
+        "bottom": 647.3
+      },
+      "channel": {
+        "x": 38.3,
+        "y": 300.3,
+        "width": 313.4,
+        "height": 313.4,
+        "right": 351.7,
+        "bottom": 613.7
+      },
+      "fill": "306deg",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 85.5%, rgb(0, 0, 0) 87.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "documentWidth": 390,
+      "errors": []
+    },
+    {
+      "file": "desktop-1440x900-reduced-motion-settled.png",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "documentWidth": 1440,
+      "errors": []
+    },
+    {
+      "file": "short-desktop-1280x720-reduced-motion-settled.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "documentWidth": 1280,
+      "errors": []
+    },
+    {
+      "file": "narrow-390x844-reduced-motion-settled.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "documentWidth": 390,
+      "errors": []
+    }
+  ]
+}
