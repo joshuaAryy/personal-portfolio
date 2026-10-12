@@ -22,6 +22,7 @@ export default function ResumeMechanism() {
       />
       <span className="resume-mechanism__orb-track" aria-hidden="true" />
       <span className="resume-mechanism__orb-energy" aria-hidden="true" />
+      <span className="resume-mechanism__orb-plasma" aria-hidden="true" />
     </div>
   );
 }

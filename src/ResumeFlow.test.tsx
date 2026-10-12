@@ -112,7 +112,6 @@ describe("approved resume flow", () => {
     expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.62\) 0deg/);
     expect(energyRule).not.toMatch(/rgba\(28,\s*184,\s*214,\s*\.18\) var\(--resume-orb-fill\) var\(--resume-orb-max-fill\)/);
     expect(energyRule).not.toContain("repeating-linear-gradient");
-    expect(energyRule).toContain('url("/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png") center / 125% 125% no-repeat');
     expect(energyRule).toMatch(/background-blend-mode:\s*screen/);
     expect(energyRule).toMatch(/radial-gradient\(\s*ellipse 35% 18% at 27% 25%/);
     expect(energyRule).toMatch(/rgb\(229 255 255 \/ 52%\)/);
@@ -132,6 +131,23 @@ describe("approved resume flow", () => {
     expect(css).toMatch(/@keyframes\s+resume-orb-energy-fill[\s\S]*?100%\s*\{[^}]*--resume-orb-fill:\s*306deg;[^}]*opacity:\s*\.86/s);
     expect(css.match(/@keyframes\s+resume-orb-energy-fill\s*\{([\s\S]*?)\n\}/)?.[1] ?? "").not.toContain("background:");
     expect(reducedMotion).toMatch(/\.resume-mechanism__orb-energy\s*\{[^}]*--resume-orb-fill:\s*306deg;[^}]*opacity:\s*\.86;[^}]*animation:\s*none/s);
+  });
+
+  it("layers the authored plasma texture over the fill inside the same bounded channel", () => {
+    const markup = renderRoute("/resume");
+    const css = readFileSync("src/resume.css", "utf8");
+    const plasmaRule = css.match(/\.resume-mechanism__orb-plasma\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(markup).toContain('class="resume-mechanism__orb-plasma" aria-hidden="true"');
+    expect(plasmaRule).toContain('url("/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png")');
+    expect(plasmaRule).toMatch(/mask-image:[\s\S]*?87\.8%[^}]*94\.6%[^}]*153deg[^}]*207deg/s);
+    expect(plasmaRule).toMatch(/mix-blend-mode:\s*screen/);
+    expect(plasmaRule).toMatch(/pointer-events:\s*none/);
+    expect(plasmaRule).toMatch(/animation:\s*resume-orb-plasma-fill\s+1150ms\s+linear\s+260ms\s+1\s+both/);
+    expect(css).toMatch(/@keyframes\s+resume-orb-plasma-fill\s*\{[^}]*0%\s*\{[^}]*--resume-orb-fill:\s*0deg;[^}]*opacity:\s*0/s);
+    expect(css).toMatch(/@keyframes\s+resume-orb-plasma-fill[\s\S]*?100%\s*\{[^}]*--resume-orb-fill:\s*306deg;[^}]*opacity:\s*\.58/s);
+    expect(css).toMatch(/\.resume-mechanism__orb-plasma\s*\{[^}]*mix-blend-mode:\s*screen/s);
+    expect(css).toMatch(/@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*?\.resume-mechanism__orb-plasma\s*\{[^}]*--resume-orb-fill:\s*306deg;[^}]*opacity:\s*\.58;[^}]*animation:\s*none/s);
   });
 
   it("assembles only the contextual takeover with a short reduced-motion-safe entrance", () => {
@@ -187,7 +203,7 @@ describe("approved resume flow", () => {
     expect(actionRule).toMatch(/top:\s*84\.5%/);
     expect(actionRule).toMatch(/width:\s*min\(245px,\s*43\.4cqw\)/);
     expect(actionRule).toMatch(/aspect-ratio:\s*212\s*\/\s*70/);
-    expect(closeRule).toMatch(/top:\s*97\.8%/);
+    expect(closeRule).toMatch(/top:\s*100%/);
     expect(closeRule).toMatch(/width:\s*min\(112px,\s*max\(92px,\s*17\.5cqw\)\)/);
     expect(closeRule).toMatch(/height:\s*clamp\(22px,\s*4\.2cqw,\s*30px\)/);
     expect(closeRule).toMatch(/font-size:\s*clamp\(12px,\s*2\.4cqw,\s*16px\)/);
@@ -227,7 +243,7 @@ describe("approved resume flow", () => {
     expect(titleRule).toMatch(/top:\s*73%/);
     expect(actionRule).toMatch(/top:\s*84\.5%/);
     expect(actionRule).toMatch(/width:\s*min\(245px,\s*43\.4cqw\)/);
-    expect(closeRule).toMatch(/top:\s*97\.8%/);
+    expect(closeRule).toMatch(/top:\s*100%/);
     expect(closeRule).toMatch(/width:\s*min\(112px,\s*max\(92px,\s*17\.5cqw\)\)/);
   });
 

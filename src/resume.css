@@ -183,7 +183,7 @@
   height: 87.55%;
   border-radius: 50%;
   translate: -50% -50%;
-  background: url("/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png") center / 125% 125% no-repeat, radial-gradient(
+  background: radial-gradient(
     ellipse 35% 18% at 27% 25%,
     rgb(229 255 255 / 52%) 0%,
     rgb(119 241 245 / 24%) 28%,
@@ -216,6 +216,30 @@
   opacity: 0;
   pointer-events: none;
   animation: resume-orb-energy-fill 1150ms linear 260ms 1 both;
+}
+
+.resume-mechanism__orb-plasma {
+  --resume-orb-fill: 0deg;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 87.55%;
+  height: 87.55%;
+  border-radius: 50%;
+  translate: -50% -50%;
+  background: url("/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png") center / 145% 145% no-repeat;
+  mix-blend-mode: screen;
+  filter: brightness(1.35) saturate(1.25);
+  mask-image:
+    radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),
+    conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg),
+    conic-gradient(from 207deg, #000 0deg var(--resume-orb-fill), transparent var(--resume-orb-fill) 360deg);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+  opacity: 0;
+  pointer-events: none;
+  animation: resume-orb-plasma-fill 1150ms linear 260ms 1 both;
 }
 
 .resume-mechanism__j img {
@@ -393,7 +417,7 @@
 
 .resume-found__close {
   position: absolute;
-  top: 97.8%;
+  top: 100%;
   left: 50%;
   z-index: 4;
   width: min(112px, max(92px, 17.5cqw));
@@ -627,6 +651,12 @@
     animation: none;
   }
 
+  .resume-mechanism__orb-plasma {
+    --resume-orb-fill: 306deg;
+    opacity: .58;
+    animation: none;
+  }
+
   .resume-found__action-plate--hover {
     transition: none;
   }
@@ -671,6 +701,17 @@
   100% {
     --resume-orb-fill: 306deg;
     opacity: .86;
+  }
+}
+
+@keyframes resume-orb-plasma-fill {
+  0% {
+    --resume-orb-fill: 0deg;
+    opacity: 0;
+  }
+  100% {
+    --resume-orb-fill: 306deg;
+    opacity: .58;
   }
 }
 

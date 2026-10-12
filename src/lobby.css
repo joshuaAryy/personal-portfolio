@@ -6,9 +6,11 @@
 }
 
 .league-lobby {
-  --lobby-projects-group-max: clamp(1240px, calc((100vh - 300px) * 1.9), 1500px);
+  --lobby-projects-group-max: clamp(1240px, calc((100vh - 300px) * 1.8), 1400px);
+  --lobby-project-banner-ratio: 2.2;
   --lobby-category-group-max: min(780px, calc((100vh - 180px) * 1.34));
   --lobby-category-banner-ratio: 1.34;
+  --lobby-category-banner-top: 6%;
   --lobby-category-banner-height: calc(min(100cqw - 180px, var(--lobby-category-group-max)) / var(--lobby-category-banner-ratio));
   --lobby-banner-gap-max: 32px;
   --lobby-balance-span: 1400px;
@@ -65,7 +67,9 @@
 
 @media (min-height: 1000px) {
   .league-lobby {
+    --lobby-category-group-max: min(860px, calc(((100vh - var(--client-header-height)) * 0.81 - 70px) * 1.2));
     --lobby-category-banner-ratio: 1.2;
+    --lobby-category-banner-top: 4%;
   }
 }
 
@@ -146,6 +150,7 @@
 .league-lobby__banners:not(.league-lobby__banners--projects) {
   --lobby-banner-ratio: var(--lobby-category-banner-ratio);
   --lobby-banner-gap-max: 60px;
+  top: var(--lobby-category-banner-top);
   width: min(calc(100% - 180px), var(--lobby-category-group-max));
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: clamp(24px, 3vw, var(--lobby-banner-gap-max));
@@ -167,7 +172,7 @@
 .league-lobby--experience .league-lobby__balance-slots,
 .league-lobby--hackathons .league-lobby__balance-slots,
 .league-lobby--education .league-lobby__balance-slots {
-  top: calc(9% + var(--lobby-category-banner-height) / 2);
+  top: calc(var(--lobby-category-banner-top) + var(--lobby-category-banner-height) / 2);
 }
 
 .league-lobby__balance-slot {
@@ -839,7 +844,7 @@
 }
 
 .league-lobby__banners--projects {
-  --lobby-banner-ratio: 2.65;
+  --lobby-banner-ratio: var(--lobby-project-banner-ratio);
 }
 
 .league-role-legend--projects {

@@ -1967,7 +1967,7 @@
     width: auto;
     height: var(--profile-short-banner-height);
     aspect-ratio: 493 / 1201;
-    transform: translateX(-50%) scale(.85);
+    transform: translateX(-50%) translateY(12px) scale(.85);
     transform-origin: top center;
   }
 }

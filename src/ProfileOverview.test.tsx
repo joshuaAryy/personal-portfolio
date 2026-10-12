@@ -86,7 +86,7 @@ describe("Profile Overview", () => {
     expect(bannerRule).toContain("aspect-ratio: 493 / 1201");
     expect(bannerRule).toMatch(/--profile-short-banner-height:\s*calc\(\(100vh - 114px\) \/ \.84 \+ 203px\)/);
     expect(bannerRule).toMatch(/bottom:\s*calc\(100% - \(\(100vh - 114px\) \/ \.84\)\)/);
-    expect(bannerRule).toMatch(/transform:\s*translateX\(-50%\) scale\(\.85\)/);
+    expect(bannerRule).toMatch(/transform:\s*translateX\(-50%\) translateY\(12px\) scale\(\.85\)/);
     expect(bannerRule).toMatch(/transform-origin:\s*top center/);
   });
 
