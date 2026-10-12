@@ -6,9 +6,10 @@
 }
 
 .league-lobby {
-  --lobby-projects-group-max: 1240px;
-  --lobby-category-group-max: 780px;
-  --lobby-category-banner-height: calc(min(100cqw - 180px, var(--lobby-category-group-max)) / 1.34);
+  --lobby-projects-group-max: clamp(1240px, calc((100vh - 300px) * 1.9), 1500px);
+  --lobby-category-group-max: min(780px, calc((100vh - 180px) * 1.34));
+  --lobby-category-banner-ratio: 1.34;
+  --lobby-category-banner-height: calc(min(100cqw - 180px, var(--lobby-category-group-max)) / var(--lobby-category-banner-ratio));
   --lobby-banner-gap-max: 32px;
   --lobby-balance-span: 1400px;
   container-type: inline-size;
@@ -28,6 +29,10 @@
   --lobby-balance-span: 1000px;
 }
 
+.league-lobby--projects .league-lobby__balance-slots {
+  display: none;
+}
+
 .league-lobby__environment {
   position: absolute;
   z-index: -1;
@@ -43,6 +48,7 @@
 
 @media (max-height: 760px) {
   .league-lobby {
+    --lobby-category-group-max: min(780px, calc((100vh - 180px) * 1.34));
     min-height: max(760px, calc(100vh - var(--client-header-height)));
   }
 
@@ -54,6 +60,12 @@
 
   .league-lobby__environment {
     background-position: center 68%;
+  }
+}
+
+@media (min-height: 1000px) {
+  .league-lobby {
+    --lobby-category-banner-ratio: 1.2;
   }
 }
 
@@ -132,7 +144,7 @@
 }
 
 .league-lobby__banners:not(.league-lobby__banners--projects) {
-  --lobby-banner-ratio: 1.34;
+  --lobby-banner-ratio: var(--lobby-category-banner-ratio);
   --lobby-banner-gap-max: 60px;
   width: min(calc(100% - 180px), var(--lobby-category-group-max));
   grid-template-columns: repeat(3, minmax(0, 1fr));

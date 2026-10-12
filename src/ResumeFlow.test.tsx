@@ -86,8 +86,13 @@ describe("approved resume flow", () => {
     const reducedMotion = css.match(
       /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*?\.resume-mechanism__orb-energy\s*\{[^}]*\}/,
     )?.[0] ?? "";
+    const trackRule = css.match(/\.resume-mechanism__orb-track\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(markup).toContain('class="resume-mechanism__orb-energy" aria-hidden="true"');
+    expect(markup).toContain('class="resume-mechanism__orb-track" aria-hidden="true"');
+    expect(markup.indexOf('class="resume-mechanism__orb-track"')).toBeLessThan(
+      markup.indexOf('class="resume-mechanism__orb-energy"'),
+    );
     expect(markup.indexOf('class="resume-mechanism__frame"')).toBeLessThan(
       markup.indexOf('class="resume-mechanism__orb-energy"'),
     );
@@ -104,12 +109,18 @@ describe("approved resume flow", () => {
     expect(energyRule).toMatch(/#bafffb\s+calc\(var\(--resume-orb-fill\)\s*-\s*2deg\)\s+var\(--resume-orb-fill\)/i);
     expect(css).toMatch(/@property\s+--resume-orb-fill\s*\{[^}]*syntax:\s*"<angle>";[^}]*inherits:\s*false;[^}]*initial-value:\s*0deg/s);
     // Keep a ~12px opaque core and ~21px feathered band at the 530px Figma scale.
-    expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.72\) 0deg/);
-    expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.18\) var\(--resume-orb-fill\) var\(--resume-orb-max-fill\)/);
-    expect(energyRule).toMatch(
-      /background:\s*linear-gradient\([\s\S]*?rgb\(219 255 255 \/ 24%\)[\s\S]*?repeating-linear-gradient\([\s\S]*?rgb\(110 238 247 \/ 12%\)[\s\S]*?conic-gradient\([\s\S]*?from 207deg/s,
-    );
-    expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 80\.5%,\s*#000 81\.5%,\s*#000 85%,\s*transparent 86%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
+    expect(energyRule).toMatch(/rgba\(28,\s*184,\s*214,\s*\.62\) 0deg/);
+    expect(energyRule).not.toMatch(/rgba\(28,\s*184,\s*214,\s*\.18\) var\(--resume-orb-fill\) var\(--resume-orb-max-fill\)/);
+    expect(energyRule).not.toContain("repeating-linear-gradient");
+    expect(energyRule).toMatch(/radial-gradient\(\s*ellipse 35% 18% at 27% 25%/);
+    expect(energyRule).toMatch(/rgb\(229 255 255 \/ 52%\)/);
+    expect(energyRule).toMatch(/linear-gradient\(\s*108deg/);
+    expect(energyRule).toMatch(/mask-image:[\s\S]*?conic-gradient\(from 207deg,\s*#000 0deg var\(--resume-orb-fill\),\s*transparent var\(--resume-orb-fill\) 360deg\)/);
+    expect(energyRule).toMatch(/background:[\s\S]*?conic-gradient\([\s\S]*?transparent var\(--resume-orb-fill\) 360deg/s);
+    expect(energyRule).toMatch(/mask-image:[\s\S]*?conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\),\s*conic-gradient\(from 207deg,\s*#000 0deg var\(--resume-orb-fill\),\s*transparent var\(--resume-orb-fill\) 360deg\)/);
+    expect(trackRule).toMatch(/background:\s*rgb\(2 18 28 \/ 42%\)/);
+    expect(trackRule).toMatch(/mask-image:[\s\S]*?87\.8%[^}]*94\.6%[^}]*153deg[^}]*207deg/s);
+    expect(energyRule).toMatch(/mask-image:\s*radial-gradient\(circle closest-side,\s*transparent 87\.8%,\s*#000 88\.4%,\s*#000 94%,\s*transparent 94\.6%\),\s*conic-gradient\(from 0deg,\s*#000 0deg 153deg,\s*transparent 153deg 207deg,\s*#000 207deg 360deg\)/);
     expect(energyRule).toMatch(/mask-composite:\s*intersect/);
     expect(energyRule).toMatch(/--resume-orb-max-fill:\s*306deg/);
     expect(energyRule).toMatch(/filter:\s*none/);
@@ -167,15 +178,15 @@ describe("approved resume flow", () => {
     expect(css).toMatch(/--resume-found-composition-size:\s*min\(640px,\s*max\(0px,\s*calc\(100vw - 32px\)\),\s*max\(0px,\s*calc\(100vh - 123px\)\)\)/);
     expect(titleRule).toMatch(/top:\s*73%/);
     expect(titleRule).toMatch(/width:\s*min\(320px,\s*56\.6cqw\)/);
-    expect(titleRule).toMatch(/height:\s*min\(36px,\s*5\.7cqw\)/);
-    expect(titleRule).toMatch(/font-size:\s*clamp\(16px,\s*3\.3cqw,\s*21px\)/);
-    expect(titleRule).toMatch(/line-height:\s*min\(26px,\s*4\.4cqw\)/);
+    expect(titleRule).toMatch(/height:\s*min\(40px,\s*6\.2cqw\)/);
+    expect(titleRule).toMatch(/font-size:\s*clamp\(18px,\s*3\.6cqw,\s*23px\)/);
+    expect(titleRule).toMatch(/line-height:\s*min\(30px,\s*5\.2cqw\)/);
     expect(titleRule).toMatch(/color:\s*#f0e6d2/i);
     expect(actionRule).toMatch(/top:\s*84\.5%/);
     expect(actionRule).toMatch(/width:\s*min\(245px,\s*43\.4cqw\)/);
     expect(actionRule).toMatch(/aspect-ratio:\s*212\s*\/\s*70/);
-    expect(closeRule).toMatch(/top:\s*97%/);
-    expect(closeRule).toMatch(/width:\s*min\(141px,\s*24\.9cqw\)/);
+    expect(closeRule).toMatch(/top:\s*97\.8%/);
+    expect(closeRule).toMatch(/width:\s*min\(112px,\s*max\(92px,\s*17\.5cqw\)\)/);
     expect(closeRule).toMatch(/height:\s*clamp\(22px,\s*4\.2cqw,\s*30px\)/);
     expect(closeRule).toMatch(/font-size:\s*clamp\(12px,\s*2\.4cqw,\s*16px\)/);
   });
@@ -214,8 +225,8 @@ describe("approved resume flow", () => {
     expect(titleRule).toMatch(/top:\s*73%/);
     expect(actionRule).toMatch(/top:\s*84\.5%/);
     expect(actionRule).toMatch(/width:\s*min\(245px,\s*43\.4cqw\)/);
-    expect(closeRule).toMatch(/top:\s*97%/);
-    expect(closeRule).toMatch(/width:\s*min\(141px,\s*24\.9cqw\)/);
+    expect(closeRule).toMatch(/top:\s*97\.8%/);
+    expect(closeRule).toMatch(/width:\s*min\(112px,\s*max\(92px,\s*17\.5cqw\)\)/);
   });
 
   it("centers Resume Found controls independently of the route-entry transform", () => {

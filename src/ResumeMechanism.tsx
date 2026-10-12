@@ -20,6 +20,7 @@ export default function ResumeMechanism() {
         width="530"
         height="530"
       />
+      <span className="resume-mechanism__orb-track" aria-hidden="true" />
       <span className="resume-mechanism__orb-energy" aria-hidden="true" />
     </div>
   );

@@ -74,6 +74,22 @@ describe("Profile Overview", () => {
     expect(identityRule).toContain("transform-origin: top center");
   });
 
+  it("fits the decorative identity banner tip inside the short desktop viewport without changing its aspect ratio", () => {
+    const profileCss = readFileSync("src/profile-overview.css", "utf8");
+    const shortRule = cssBlock(
+      profileCss,
+      "@media (min-width: 901px) and (max-width: 1920px) and (max-height: 820px)",
+    );
+    const bannerRule = cssBlock(shortRule, ".identity-panel__banner");
+
+    expect(bannerRule).toContain("--profile-short-banner-height:");
+    expect(bannerRule).toContain("aspect-ratio: 493 / 1201");
+    expect(bannerRule).toMatch(/--profile-short-banner-height:\s*calc\(\(100vh - 114px\) \/ \.84 \+ 203px\)/);
+    expect(bannerRule).toMatch(/bottom:\s*calc\(100% - \(\(100vh - 114px\) \/ \.84\)\)/);
+    expect(bannerRule).toMatch(/transform:\s*translateX\(-50%\) scale\(\.85\)/);
+    expect(bannerRule).toMatch(/transform-origin:\s*top center/);
+  });
+
   it("keeps project details out of the initial neutral panel", () => {
     const markup = renderProfile();
 

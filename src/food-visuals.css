@@ -6126,9 +6126,9 @@
   }
 }
 
-/* Distinguish the runtime capture from the three grouped Figma design studies. */
+/* Keep the four analytics views in balanced image frames. */
 .food-insight-path__captures[data-gallery="insights-evidence"] {
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
   gap: 12px;
   padding: clamp(14px, 2vw, 22px);
@@ -6136,11 +6136,6 @@
   background:
     linear-gradient(125deg, rgba(87, 198, 203, .045), transparent 55%),
     rgba(0, 0, 0, .12);
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-context {
-  grid-column: 1 / -1;
-  padding: 0 2px 2px;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture {
@@ -6151,40 +6146,10 @@
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead {
-  grid-column: span 4;
+  grid-column: auto;
   grid-template-columns: minmax(0, 1fr);
   align-content: start;
   border-top: 2px solid rgba(87, 198, 203, .72);
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies {
-  display: grid;
-  min-width: 0;
-  grid-column: span 8;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  align-content: start;
-  align-items: stretch;
-  gap: 10px;
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies-heading {
-  display: flex;
-  grid-column: 1 / -1;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 10px;
-  margin: 0;
-  padding: 3px 2px 9px;
-  border-bottom: 1px solid rgba(227, 197, 126, .3);
-  color: var(--food-muted);
-  font-size: 11px;
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies-heading > .food-figure__index {
-  color: var(--food-gold);
-  font-size: 10px;
-  font-weight: 760;
-  letter-spacing: .08em;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--study {
@@ -6195,15 +6160,14 @@
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
-  align-items: center;
+  grid-column: auto;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen {
   display: flex;
   min-height: 238px;
-  height: auto;
+  height: 238px;
   align-items: center;
   justify-content: center;
   padding: 12px 10px;
@@ -6219,31 +6183,9 @@
   object-position: center;
 }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
-  max-height: 350px;
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen {
-  min-height: 366px;
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen {
-  min-height: 204px;
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen > img {
-  max-height: 224px;
-}
-
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
   gap: 7px;
   padding: 14px;
-}
-
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy > .food-figure__index {
-  color: var(--food-gold);
-  font-size: 10px;
-  line-height: 1.35;
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy > strong {
@@ -6262,21 +6204,9 @@
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead {
-    grid-column: 1 / -1;
-    grid-template-columns: minmax(150px, .55fr) minmax(0, 1.45fr);
-    align-items: center;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies {
-    grid-column: 1 / -1;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen {
-    min-height: 292px;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img {
-    max-height: 276px;
+    grid-column: auto;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: stretch;
   }
 }
 
@@ -6294,26 +6224,13 @@
     align-items: center;
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies {
-    grid-column: 1;
-    grid-template-columns: minmax(0, 1fr);
-    gap: 9px;
-  }
-
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__design-studies-heading {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 3px;
-    padding-bottom: 7px;
-  }
-
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
     grid-column: 1;
     grid-template-columns: minmax(132px, .9fr) minmax(0, 1.1fr);
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen {
-    min-height: 0;
+    height: 180px;
     padding: 8px;
   }
 
@@ -6326,7 +6243,7 @@
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen > img,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen > img,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen > img {
-    max-height: 184px;
+    max-height: 164px;
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {

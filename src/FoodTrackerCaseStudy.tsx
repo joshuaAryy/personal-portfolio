@@ -604,55 +604,46 @@ function FoodInsightPath() {
         className="food-insight-path__captures"
         data-gallery="insights-evidence"
         role="group"
-        aria-label="Three Figma analytics design studies and one authentic app capture"
+        aria-label="Macro composition app screen and three analytics design references"
       >
-        <p className="food-insight-path__capture-context">Three Figma studies use illustrative data. Macro composition is an app capture with sample data.</p>
         <section className="food-insight-path__capture food-insight-path__capture--lead" data-evidence-type="app-capture" aria-labelledby="food-insight-capture-macro-title">
           <div className="food-insight-path__capture-screen">
             <img
               src="/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png"
-              alt="Macro composition view with a nutrient balance graphic and daily comparison chart."
+              alt="Food Tracker app screen showing macro composition with a nutrient balance graphic and daily comparison chart. Values shown in this captured app screen are sample data, not user outcomes."
               loading="lazy"
               decoding="async"
             />
           </div>
           <div className="food-insight-path__capture-copy">
-            <span className="food-figure__index">APP CAPTURE · SAMPLE DATA</span>
-            <strong id="food-insight-capture-macro-title">Macro composition</strong>
-            <p>Authentic app-interface evidence; the displayed sample values are not user outcomes.</p>
+            <strong id="food-insight-capture-macro-title">Macro Composition</strong>
+            <p>A nutrient balance graphic sits beside the daily comparison chart.</p>
           </div>
         </section>
-        <div className="food-insight-path__design-studies" role="group" aria-label="Three Figma design studies">
-          <p className="food-insight-path__design-studies-heading">
-            <span className="food-figure__index">FIGMA DESIGN STUDIES</span>
-            <span>Illustrative analytics views</span>
-          </p>
-          <section className="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-calorie-title">
+          <section className="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="owner-authored-design-reference" aria-labelledby="food-insight-capture-calorie-title">
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
               <img
-                src="/media/case-studies/food-tracker/insights/calorie-trend-design-study.png"
-                alt="Figma design study of a calorie trend chart with daily totals, a trend line, and a target band."
+                src="/media/case-studies/food-tracker/insights/calorie-forecast-owner-reference.png"
+                alt="Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."
                 loading="lazy"
                 decoding="async"
               />
             </div>
             <div className="food-insight-path__capture-copy">
-              <span className="food-figure__index">FIGMA DESIGN STUDY · ILLUSTRATIVE DATA</span>
-              <strong id="food-insight-capture-calorie-title">Calorie trend</strong>
-              <p>Daily totals sit alongside a target band, a smoothed trend, and selected-day detail.</p>
+              <strong id="food-insight-capture-calorie-title">Calorie forecast</strong>
+              <p>Solid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.</p>
             </div>
           </section>
           <section className="food-insight-path__capture food-insight-path__capture--study" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-fiber-title">
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend">
               <img
                 src="/media/case-studies/food-tracker/insights/fiber-trend-design-study.png"
-                alt="Figma design study of a fiber trend chart with daily totals and a target band."
+                alt="Figma analytics design showing a fiber trend chart with daily totals and a target band."
                 loading="lazy"
                 decoding="async"
               />
             </div>
             <div className="food-insight-path__capture-copy">
-              <span className="food-figure__index">FIGMA DESIGN STUDY · ILLUSTRATIVE DATA</span>
               <strong id="food-insight-capture-fiber-title">Fiber trend</strong>
               <p>A nutrient view pairs daily totals with progress toward a goal.</p>
             </div>
@@ -661,18 +652,16 @@ function FoodInsightPath() {
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--consistency">
               <img
                 src="/media/case-studies/food-tracker/insights/daily-completeness-design-study.png"
-                alt="Figma design study of a daily completeness grid distinguishing complete, partial, and unlogged days."
+                alt="Figma analytics design showing a daily completeness grid distinguishing complete, partial, and unlogged days."
                 loading="lazy"
                 decoding="async"
               />
             </div>
             <div className="food-insight-path__capture-copy">
-              <span className="food-figure__index">FIGMA DESIGN STUDY · ILLUSTRATIVE DATA</span>
               <strong id="food-insight-capture-consistency-title">Daily completeness</strong>
               <p>A grid distinguishes complete, partial, and unlogged days.</p>
             </div>
           </section>
-        </div>
       </div>
 
       <figcaption id="food-insight-path-title">

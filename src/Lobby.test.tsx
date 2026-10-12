@@ -54,11 +54,15 @@ describe("lobby banner environment", () => {
     const lobbyRule = css.match(/\.league-lobby\s*\{([^}]*)\}/)?.[1] ?? "";
     const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*780px/);
+    expect(lobbyRule).toMatch(/--lobby-projects-group-max:\s*clamp\(1240px,\s*calc\(\(100vh - 300px\) \* 1\.9\),\s*1500px\)/);
+    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(780px,\s*calc\(\(100vh - 180px\) \* 1\.34\)\)/);
+    expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.34/);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.2/);
+    expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?--lobby-category-group-max:\s*min\(780px, calc\(\(100vh - 180px\) \* 1\.34\)\)/);
     expect(categoryBanners).not.toMatch(/top:\s*0/);
-    expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*1\.34/);
+    expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*var\(--lobby-category-banner-ratio\)/);
     expect(categoryBanners).toMatch(/gap:\s*clamp\(24px,\s*3vw,\s*var\(--lobby-banner-gap-max\)\)/);
-    expect(css).toMatch(/--lobby-category-banner-height:\s*calc\(min\(100cqw - 180px,\s*var\(--lobby-category-group-max\)\) \/ 1\.34\)/);
+    expect(css).toMatch(/--lobby-category-banner-height:\s*calc\(min\(100cqw - 180px,\s*var\(--lobby-category-group-max\)\) \/ var\(--lobby-category-banner-ratio\)\)/);
     expect(css).toMatch(/\.league-lobby--experience,[\s\S]*?--lobby-balance-span:\s*1000px/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?\.league-lobby--experience,[\s\S]*?min-height:\s*880px/);
     expect(css).not.toMatch(/\.league-lobby--experience \.league-lobby__environment\s*\{/);
@@ -141,6 +145,15 @@ describe("lobby banner environment", () => {
     expect(desktopBalanceSlots).toMatch(/display:\s*flex/);
     expect(mobileBannerGrid).toMatch(/aspect-ratio:\s*auto/);
     expect(mobileBannerGrid).toMatch(/height:\s*auto/);
+  });
+
+  it("fits category banners to short desktop height and removes Projects balance marks", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const lobbyRule = css.match(/\.league-lobby\s*\{([^}]*)\}/)?.[1] ?? "";
+    const projectsSlots = css.match(/\.league-lobby--projects \.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(780px,\s*calc\(\(100vh - 180px\) \* 1\.34\)\)/);
+    expect(projectsSlots).toMatch(/display:\s*none/);
   });
 
   it("uses real project marks and keeps selection separate from opening a story", () => {

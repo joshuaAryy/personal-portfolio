@@ -153,6 +153,24 @@
   animation: resume-found-entry 620ms cubic-bezier(.2,.8,.2,1) 80ms both;
 }
 
+.resume-mechanism__orb-track {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 87.55%;
+  height: 87.55%;
+  border-radius: 50%;
+  translate: -50% -50%;
+  background: rgb(2 18 28 / 42%);
+  mask-image:
+    radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),
+    conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg);
+  mask-composite: intersect;
+  -webkit-mask-composite: source-in;
+  pointer-events: none;
+}
+
 .resume-mechanism__orb-energy {
   --resume-orb-fill: 0deg;
   --resume-orb-max-fill: 306deg;
@@ -160,35 +178,42 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  /* The 464px channel stops at the two open ends where the lower plate begins. */
+  /* The 530px frame rails at r≈202–221 map to 87.1–95.4% of this 560px layer at 640px mechanism scale. */
   width: 87.55%;
   height: 87.55%;
   border-radius: 50%;
-  background: linear-gradient(
+  translate: -50% -50%;
+  background: radial-gradient(
+    ellipse 35% 18% at 27% 25%,
+    rgb(229 255 255 / 52%) 0%,
+    rgb(119 241 245 / 24%) 28%,
+    rgb(31 147 169 / 4%) 65%,
+    transparent 100%
+  ), linear-gradient(
+    180deg,
+    rgb(220 255 255 / 16%) 0%,
+    rgb(37 145 169 / 6%) 48%,
+    rgb(171 255 255 / 12%) 100%
+  ), linear-gradient(
     108deg,
     transparent 16%,
-    rgb(219 255 255 / 24%) 47%,
+    rgb(219 255 255 / 26%) 47%,
     transparent 80%
-  ), repeating-linear-gradient(
-    105deg,
-    rgb(110 238 247 / 12%) 0 1px,
-    transparent 1px 8px
   ), conic-gradient(
     from 207deg,
-    rgba(28, 184, 214, .72) 0deg calc(var(--resume-orb-fill) - 8deg),
+    rgba(28, 184, 214, .62) 0deg calc(var(--resume-orb-fill) - 8deg),
     #bafffb calc(var(--resume-orb-fill) - 2deg) var(--resume-orb-fill),
-    rgba(28, 184, 214, .18) var(--resume-orb-fill) var(--resume-orb-max-fill),
-    transparent var(--resume-orb-max-fill) 360deg
+    transparent var(--resume-orb-fill) 360deg
   );
   filter: none;
   mask-image:
-    radial-gradient(circle closest-side, transparent 80.5%, #000 81.5%, #000 85%, transparent 86%),
-    conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg);
+    radial-gradient(circle closest-side, transparent 87.8%, #000 88.4%, #000 94%, transparent 94.6%),
+    conic-gradient(from 0deg, #000 0deg 153deg, transparent 153deg 207deg, #000 207deg 360deg),
+    conic-gradient(from 207deg, #000 0deg var(--resume-orb-fill), transparent var(--resume-orb-fill) 360deg);
   mask-composite: intersect;
   -webkit-mask-composite: source-in;
   opacity: 0;
   pointer-events: none;
-  translate: -50% -50%;
   animation: resume-orb-energy-fill 1150ms linear 260ms 1 both;
 }
 
@@ -218,17 +243,17 @@
   left: 50%;
   display: flex;
   width: min(320px, 56.6cqw);
-  height: min(36px, 5.7cqw);
+  height: min(40px, 6.2cqw);
   align-items: center;
   justify-content: center;
   margin: 0;
   translate: -50% 0;
   color: #f0e6d2;
   font-family: Cinzel, Georgia, serif;
-  font-size: clamp(16px, 3.3cqw, 21px);
+  font-size: clamp(18px, 3.6cqw, 23px);
   font-weight: 700;
   letter-spacing: 0.5px;
-  line-height: min(26px, 4.4cqw);
+  line-height: min(30px, 5.2cqw);
   text-transform: uppercase;
   text-shadow: 0 1px 6px rgb(0 0 0 / 48%);
 }
@@ -367,10 +392,10 @@
 
 .resume-found__close {
   position: absolute;
-  top: 97%;
+  top: 97.8%;
   left: 50%;
   z-index: 4;
-  width: min(141px, 24.9cqw);
+  width: min(112px, max(92px, 17.5cqw));
   height: clamp(22px, 4.2cqw, 30px);
   min-width: 0;
   min-height: 0;
