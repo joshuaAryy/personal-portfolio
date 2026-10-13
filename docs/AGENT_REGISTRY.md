@@ -1,13 +1,15 @@
 # Persistent Agent Registry
 
-## Current control-plane state — owner visual correction checkpoint (2026-10-13)
+## Control-plane state - production release complete (2026-10-13)
 
-The feature application commit is `8726f420fcc13fce0c296f526100f391e41aeaa9` on `feat/portfolio-integration`. **Immutable Preview:** https://f382c1e4.joshuaik2.pages.dev/ (Cloudflare Pages feature branch deployment; production was not targeted). The local implementation checkout is `codex/final-owner-corrections`. The application source commit contains only the scoped Resume, Profile, lobby, and Food Insights changes plus their tests; the three status documents were preserved and updated separately. Do not reset, clean, or bulk-stage the preserved render/review artifacts.
+The persistent League Portfolio goal is **COMPLETE** after owner-approved production launch and verification of both independently accessible sites. Visual development is **COMPLETE - OWNER APPROVED**.
 
-- **Bounded changes:** Resume Found Close now overlaps the outer ring at its bottom tangent with an opaque fill. The tall desktop Profile signal row follows viewport height without compacting the scenic shell; Activity remains full-height and bottom-anchored. Three-category lobby banners move slightly lower, and Projects banners gain height on taller screens without increasing width. Food Insights Macro Composition, Calorie Forecast, and Fiber Trend are reduced from 320px to 288px desktop maximum width; gallery order and Daily Completeness remain.
-- **Visual evidence:** before/after captures and metrics are preserved under `docs/site-render-review/2026-10-13-final-owner-fidelity-pass-04/`, including the deployed capture subfolder `deployed-f382c1e4/` and [checkpoint evidence ledger](site-render-review/2026-10-13-final-owner-fidelity-pass-04/REVIEW_CHECKPOINT_8726f420.md).
-- **Verification:** all 323 tests across 31 files passed. The deployed JavaScript and CSS SHA-256 values match the local build. Ten sampled routes returned HTTP 200; deployed Chrome rendered Profile, lobbies, Resume, and Food at desktop and narrow sizes with no page, console, or request errors. Resume keyboard actions passed. The existing Vite large-chunk advisory and Happy DOM PDF-fetch teardown messages are non-blocking.
-- **Review state:** this is a review checkpoint, not portfolio completion. Owner review remains open. Live Narrator/screen-reader speech interaction remains manual. No approved case-study narrative or original Cho'Veigo video was changed by this pass; Food Tracker still has no authentic demo video.
+- **League primary:** `https://joshuaaryeetey.pages.dev/`, Cloudflare Pages project `joshuaaryeetey`, deployment `5033a386-136d-407c-bac1-2358b75f9e37`; approved source `joshuaAryy/personal-portfolio` / `feat/portfolio-integration` / `9a8838a947f73a0e0745d9d000111edeb592c8cb`.
+- **Minimalist secondary:** `https://joshuaaryy.pages.dev/`, project `joshuaaryy`, deployment `79db293f-6f43-448f-b5f1-d0a3c75ee551`; source `joshuaAryy/temporary-portfolio` / `main` / `68db4b664a62ecce6576faf194d1b4ae1e9c7734`. Original source commit `9c0a836827eb907bebfb8c9da325a6291cfbf192` remains in history.
+- **Staging:** project `joshuaik2` remains separate; approved Preview `https://fbff19d8.joshuaik2.pages.dev/` serves the same League application SHA.
+- Both sites were deployed independently with Pages Direct Upload. The minimal portfolio was deployed and checked before the League project took over the full-name hostname. The old production deployment remains available for rollback; no project or historical deployment was deleted.
+- Release tests, build, live desktop/narrow Chrome route and interaction checks, bundle hashes, original video playback, and recovery steps are recorded in [Implementation Status](IMPLEMENTATION_STATUS.md). `npm run lint` still reports existing repository-wide findings; see that ledger.
+- **Future follow-ups only:** live Narrator speech verification and an authentic Food Tracker demo if supplied. These do not reopen or block the completed goal.
 
 > Entries below preserve checkpoint history. Older “current/live” labels are historical relative to the snapshot above.
 
