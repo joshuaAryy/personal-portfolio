@@ -1,6 +1,16 @@
 # Implementation Status
 
-## Latest immutable review Preview — Profile + Food gallery verification (2026-10-12)
+## Latest immutable review Preview — Owner Correction Pass 08 Food Insights gallery (2026-10-12)
+
+**Preview:** https://4f83a72e.joshuaik2.pages.dev/ (Cloudflare Pages Preview `4f83a72e-619e-48f9-8eb9-11cdfcce3e3e`, branch `feat/portfolio-integration`, source `6759dd0`). **Application source:** `6759dd0d1afde5a18dd7db246c0cb0373912217f`. Deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent portfolio goal remains active.
+
+The approved four-image Food Insights gallery remains intact. Macro Composition, Calorie Forecast, and Fiber Trend are displayed at larger apparent scale. Deployed Chrome exposed clipped Fiber axis labels in the initial zoom; the final source uses the authentic Figma gallery crop with a bounded 3% left-margin trim, preserving the full right-axis scale and selected-day `36 g · Complete day` detail. Daily Completeness and surrounding content are unchanged. Source types remain explicit: Macro is a Phase 24 app capture with sample data; Forecast is the owner design reference; Fiber and Daily Completeness are Figma design studies, not verified runtime captures.
+
+**Verification:** full suite **317 tests across 31 files passed**; `npm run build` passed with the existing Vite chunk-size advisory; `git diff --check` passed. Installed Chrome verified the deployed Food Insights gallery at 1440×900 and 390×844 with all images loaded and no page errors, failed requests, or horizontal overflow. `/`, `/home`, and `/projects/food-tracker` returned HTTP 200. Deployed JS/CSS hashes match the local build. See [Pass 08 visual record](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-08-food-gallery-readability.md).
+
+**Open items:** owner review of Preview `4f83a72e`; live screen-reader interaction remains a manual follow-up; no authentic Food Tracker demo video is available. The tall Profile scene still leaves dark page-background space below the scenic fade; keep that distinct from the corrected signal-row placement. This is a review checkpoint, not portfolio completion.
+
+## Previous immutable review Preview — Profile + Food gallery verification (2026-10-12)
 
 **Preview:** https://1b614940.joshuaik2.pages.dev/ (Cloudflare Pages Preview `1b614940-8f82-4266-aa71-82b80532e450`, branch `feat/portfolio-integration`, source `98290a7`). **Application source:** `98290a7cd8be461d6e6d029331f229ecc1cb0308`. Deployed JavaScript and CSS SHA-256 hashes match the local build. Production was not targeted; the persistent portfolio goal remains active.
 
@@ -10,7 +20,7 @@ This checkpoint preserves the already-approved four-image Food Tracker Insights 
 
 **Open items:** the tall Profile row matches the yellow target, but a dark page-background band remains below the scenic fade; disclose this during owner review rather than calling all lower whitespace resolved. No authentic Food Tracker demo video is available. Live screen-reader interaction remains a manual follow-up. This is a review checkpoint, not portfolio completion.
 
-## Current immutable review Preview — Owner Correction Pass 07 (2026-10-12)
+## Earlier immutable review Preview — Owner Correction Pass 07 (2026-10-12)
 
 **Preview:** https://26019162.joshuaik2.pages.dev/ (Cloudflare Pages Preview `26019162-6afc-49c5-988a-64355f943de1`, branch `feat/portfolio-integration`, source `5c7b0bc`). **Application source:** `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd`. Deployed JavaScript, CSS, and new gallery assets are byte-identical to the local build. Production was not targeted; the persistent portfolio goal remains active.
 

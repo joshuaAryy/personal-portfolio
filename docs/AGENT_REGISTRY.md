@@ -1,13 +1,21 @@
 # Persistent Agent Registry
 
-## Current live state — Owner Correction Pass 07 review checkpoint (2026-10-12)
+## Current live state — Owner Correction Pass 08 review checkpoint (2026-10-12)
 
-The latest feature application source is `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd` on `feat/portfolio-integration`. **Current immutable Preview:** https://26019162.joshuaik2.pages.dev/ (Environment Preview, branch `feat/portfolio-integration`, application source `5c7b0bc`). Deployed JavaScript, CSS, and the three updated gallery derivatives match the local build byte-for-byte. Production was not targeted; the persistent goal remains active.
+The latest feature application source is `6759dd0d1afde5a18dd7db246c0cb0373912217f` on `feat/portfolio-integration`. **Current immutable Preview:** https://4f83a72e.joshuaik2.pages.dev/ (deployment `4f83a72e-619e-48f9-8eb9-11cdfcce3e3e`, Environment Preview, branch `feat/portfolio-integration`, application source `6759dd0`). Deployed JavaScript and CSS SHA-256 values match the build from this source. Production was not targeted; the persistent goal remains active.
 
-- **Pass 07:** Reframed Macro Composition, Calorie Forecast, and Fiber Trend to enlarge the useful chart content while preserving the approved four-image gallery and all evidence labels. Daily Completeness and surrounding Food Tracker content are unchanged.
-- **Verification:** 314 tests across 31 files passed; build and staged diff check passed. Installed Chrome checked the deployed gallery at 1440×900 and 390×844; no horizontal overflow, page errors, or failed requests. See [Pass 07 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-07-food-insights.md).
-- **Open items:** owner review of Preview `26019162`; live screen-reader interaction remains manual; authentic Food Tracker demo video remains unavailable and must not be fabricated. The overall portfolio goal remains active.
+- **Pass 08:** Preserved the approved four-image Food Insights gallery and increased the useful scale of Macro Composition, Calorie Forecast, and Fiber Trend. Replaced Fiber's clipped focus crop with the authentic gallery crop so axis labels and the selected-day value remain visible. Daily Completeness and surrounding case-study content are unchanged.
+- **Verification:** 317 tests across 31 files passed; build and diff check passed. Installed Chrome checked the deployed gallery at 1440×900 and 390×844; all images loaded with no horizontal overflow, page errors, or failed requests. Routes `/`, `/home`, and `/projects/food-tracker` returned HTTP 200. See [Pass 08 visual record](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-08-food-gallery-readability.md).
+- **Open items:** owner review of Preview `4f83a72e`; the tall Profile scene retains dark page-background space below its scenic fade; live screen-reader interaction remains a manual follow-up; authentic Food Tracker demo video remains unavailable and must not be fabricated. The overall portfolio goal remains active.
 - Unrelated modified/untracked worktree materials and historical candidates remain preserved.
+
+## Previous live state — Owner Correction Pass 07 review checkpoint (2026-10-12)
+
+The feature application source was `5c7b0bc1a7f57f5893f583ca21eed0a6aab0c5bd` on `feat/portfolio-integration`. Immutable Preview: https://26019162.joshuaik2.pages.dev/ (Environment Preview, branch `feat/portfolio-integration`, application source `5c7b0bc`). Production was not targeted; the persistent goal remains active.
+
+- **Pass 07:** Reframed Macro Composition, Calorie Forecast, and Fiber Trend to enlarge useful chart content while preserving the approved four-image gallery and evidence labels. Daily Completeness and surrounding Food Tracker content were unchanged.
+- **Verification:** 314 tests across 31 files passed; build and diff check passed. See [Pass 07 review](site-render-review/2026-10-12-banner-resume-identity-convergence/owner-correction-pass-07-food-insights.md).
+- This checkpoint was superseded by Pass 08.
 
 ## Previous live state — Owner Correction Pass 06 review checkpoint (2026-10-12)
 
