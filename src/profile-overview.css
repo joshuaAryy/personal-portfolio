@@ -1842,7 +1842,7 @@
 /* Keep the signal row inside a height-responsive lower band on tall desktops. */
 @media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1080px) {
   .profile-signal-grid {
-    top: clamp(610px, calc(100vh - 470px), 800px);
+    top: clamp(610px, calc(134vh - 837px), 985px);
   }
 }
 

@@ -618,7 +618,7 @@ describe("Food Tracker product story", () => {
       0,
       desktopEvidence.indexOf(".food-insight-path__captures[data-gallery=\"insights-evidence\"] .food-insight-path__capture--lead"),
     );
-    expect(chartFrameRule).toContain("width: min(100%, 420px);");
+    expect(chartFrameRule).toContain("width: min(100%, 380px);");
     expect(chartFrameRule).not.toContain("width: min(100%, 500px);");
     expect(gallerySizing).toContain(".food-insight-path__capture-copy");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,");
@@ -642,7 +642,7 @@ describe("Food Tracker product story", () => {
     expect(narrowGallery).toContain("width: calc(100% + 16px);");
     expect(narrowGallery).toContain("margin-left: -8px;");
     expect(narrowGallery).toContain("margin-right: -8px;");
-    expect(narrowGallery).toContain("width: min(100%, 320px);");
+    expect(narrowGallery).toContain("width: min(100%, 300px);");
     expect(narrowGallery).toContain("margin-inline: auto;");
   });
 
