@@ -6374,9 +6374,9 @@
 }
 
 .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
-  width: 105%;
+  width: 103%;
   max-width: none;
-  margin-left: -2.5%;
+  margin-left: -3%;
 }
 
 @media (max-width: 600px) {

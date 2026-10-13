@@ -645,8 +645,8 @@ function FoodInsightPath() {
           <section className="food-insight-path__capture food-insight-path__capture--study food-insight-path__capture--fiber" data-evidence-type="figma-design-study" aria-labelledby="food-insight-capture-fiber-title">
             <div className="food-insight-path__capture-screen food-insight-path__capture-screen--trend food-insight-path__capture-screen--fiber">
               <img
-                src="/media/case-studies/food-tracker/insights/fiber-trend-chart-focus.png"
-                alt="Figma analytics design study, not a verified runtime capture, showing a fiber trend chart with daily totals and a target band."
+                src="/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png"
+                alt="Figma analytics design study, not a verified runtime capture, showing daily fiber totals against a target band and a selected day marked complete at 36 grams."
                 loading="lazy"
                 decoding="async"
               />
