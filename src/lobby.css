@@ -10,7 +10,7 @@
   --lobby-project-banner-ratio: 2.2;
   --lobby-category-group-max: min(810px, calc((100vh - var(--client-header-height)) * 0.812));
   --lobby-category-banner-ratio: 1.14;
-  --lobby-category-banner-top: 6%;
+  --lobby-category-banner-top: 7.5%;
   --lobby-category-gap: 2.3cqw;
   --lobby-category-gap-max: 36px;
   --lobby-category-banner-height: calc(min(100cqw - 180px, var(--lobby-category-group-max)) / var(--lobby-category-banner-ratio));
@@ -110,7 +110,7 @@
   .league-lobby {
     --lobby-category-group-max: min(810px, calc((100vh - var(--client-header-height)) * 0.812));
     --lobby-category-banner-ratio: 1.14;
-    --lobby-category-banner-top: 6%;
+    --lobby-category-banner-top: 7.5%;
   }
 }
 
@@ -198,13 +198,11 @@
 }
 
 @media (min-height: 1120px) {
-  .league-lobby--projects {
-    --lobby-project-banner-ratio: 2.0;
-  }
-
   .league-lobby__banners--projects {
+    top: 8%;
     width: min(calc(100% - 80px), 1400px);
-    aspect-ratio: var(--lobby-project-banner-ratio);
+    height: clamp(600px, min(62vh, 40vw), 760px);
+    aspect-ratio: auto;
   }
 }
 
