@@ -6314,69 +6314,104 @@
   }
 }
 
-/* Let the focused chart captures use the gallery's full available width. */
-@media (min-width: 960px) {
+/* Give the chart captures enough desktop width for their labels and plotted detail. */
+@media (min-width: 601px) {
   .food-insight-path__captures[data-gallery="insights-evidence"] {
-    width: min(calc(100% + clamp(72px, 8vw, 112px)), 1160px, calc(100vw - 144px));
-    margin-left: 0;
-    margin-right: 0;
+    width: min(calc(100% + clamp(32px, 6vw, 72px)), 820px, calc(100vw - 40px));
+    margin-inline: auto;
+    grid-template-columns: minmax(0, 1fr);
+    align-items: start;
   }
-}
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
-  display: block;
-  width: 100%;
-  height: auto;
-  min-height: 0;
-  justify-self: stretch;
-  padding: 0;
-  overflow: hidden;
-}
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--study,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
+    grid-column: 1;
+    grid-template-columns: minmax(0, 1fr);
+  }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img,
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img,
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  margin-left: 0;
-  flex: none;
-  max-height: none;
-  object-fit: contain;
-  object-position: top center;
-  transform: none;
-}
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
+    display: block;
+    width: min(100%, 680px);
+    height: auto;
+    min-height: 0;
+    margin-inline: auto;
+    padding: 0;
+    overflow: hidden;
+  }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img + img {
-  margin-top: 8px;
-}
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast .food-insight-path__capture-screen--forecast,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber .food-insight-path__capture-screen--fiber {
+    height: auto;
+    min-height: 0;
+    padding: 0;
+  }
 
-/* Crop a little of the quiet screenshot margin so the charts read at page scale. */
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus {
-  width: 107%;
-  max-width: none;
-  margin-left: -1.5%;
-}
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0 auto;
+    flex: none;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {
-  width: 108%;
-  max-width: none;
-  margin-left: 0;
-}
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast .food-insight-path__capture-screen--forecast > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber .food-insight-path__capture-screen--fiber > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen--consistency > img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+  }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img {
-  width: 106%;
-  max-width: none;
-  margin-left: -3%;
-}
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img + img {
+    margin-top: 10px;
+  }
 
-.food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
-  width: 103%;
-  max-width: none;
-  margin-left: -3%;
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--consistency {
+    width: min(100%, 420px);
+    height: auto;
+    min-height: 0;
+    margin-inline: auto;
+    padding: 0;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--consistency > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin-inline: auto;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
+    width: min(100%, 680px);
+    margin-inline: auto;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-copy {
+    width: min(100%, 420px);
+  }
 }
 
 @media (max-width: 600px) {
@@ -6384,26 +6419,63 @@
     width: calc(100% + 16px);
     margin-left: -8px;
     margin-right: -8px;
+    grid-template-columns: minmax(0, 1fr);
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
-    width: 100%;
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--study,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
+    grid-column: 1;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast .food-insight-path__capture-screen--forecast,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber .food-insight-path__capture-screen--fiber {
     height: auto;
     min-height: 0;
     padding: 0;
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro > img {
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber > img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: none;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+  }
+
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead .food-insight-path__capture-screen--macro > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast .food-insight-path__capture-screen--forecast > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber .food-insight-path__capture-screen--fiber > img,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen--consistency > img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     max-height: none;
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--lead,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--forecast,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--fiber,
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency {
-    grid-template-columns: minmax(0, 1fr);
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {
+    width: 100%;
+    max-width: 100%;
+    margin-inline: auto;
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--consistency {
@@ -6413,10 +6485,11 @@
     padding: 0;
   }
 
-  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture--consistency .food-insight-path__capture-screen--consistency > img {
+  .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--consistency > img {
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: none;
+    margin: 0 auto;
   }
 }

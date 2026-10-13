@@ -8,9 +8,11 @@
 .league-lobby {
   --lobby-projects-group-max: max(1240px, calc((100vh - 300px) * 1.8));
   --lobby-project-banner-ratio: 2.2;
-  --lobby-category-group-max: min(780px, calc((100vh - 180px) * 1.34));
-  --lobby-category-banner-ratio: 1.34;
+  --lobby-category-group-max: min(810px, calc((100vh - var(--client-header-height)) * 0.812));
+  --lobby-category-banner-ratio: 1.14;
   --lobby-category-banner-top: 6%;
+  --lobby-category-gap: 2.3cqw;
+  --lobby-category-gap-max: 36px;
   --lobby-category-banner-height: calc(min(100cqw - 180px, var(--lobby-category-group-max)) / var(--lobby-category-banner-ratio));
   --lobby-banner-gap-max: 32px;
   --lobby-balance-span: 1400px;
@@ -39,18 +41,60 @@
   position: absolute;
   z-index: -1;
   inset: 0;
-  background-image:
-    linear-gradient(180deg, rgba(1, 8, 13, 0.68) 0%, rgba(1, 8, 13, 0.18) 36%, rgba(1, 7, 11, 0.38) 100%),
-    url("/media/lobby/party-background-original.jpg");
+}
+
+.league-lobby__environment::before,
+.league-lobby__environment::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.league-lobby__environment::before {
+  inset: -2px;
+  background-image: url("/media/lobby/party-background-original.jpg");
   background-position: center top;
   background-size: cover;
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / 70%) 78%, transparent 100%);
-  mask-image: linear-gradient(180deg, #000 0%, #000 46%, rgb(0 0 0 / 70%) 78%, transparent 100%);
+  background-repeat: no-repeat;
+  filter: blur(1.1px);
+}
+
+.league-lobby__environment::after {
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(1, 5, 8, 0.99) 0%,
+      rgba(1, 5, 8, 0.82) 28%,
+      rgba(1, 5, 8, 0.36) 62%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      transparent 0%,
+      transparent 82%,
+      rgba(1, 4, 6, 0.36) 82%,
+      rgba(1, 4, 6, 0.36) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 5, 7, 0.34) 0%,
+      rgba(0, 5, 7, 0.34) 100%
+    );
+  background-size:
+    min(96.15%, 1500px) min(13.46cqw, 210px),
+    100% 100%,
+    100% 100%;
+  background-position: left top, center, center;
+  background-repeat: no-repeat;
 }
 
 @media (max-height: 760px) {
   .league-lobby {
     --lobby-category-group-max: min(780px, calc((100vh - 180px) * 1.34));
+    --lobby-category-banner-ratio: 1.34;
+    --lobby-category-gap: 3vw;
+    --lobby-category-gap-max: 60px;
     min-height: max(760px, calc(100vh - var(--client-header-height)));
   }
 
@@ -64,15 +108,15 @@
 
 @media (min-height: 1000px) {
   .league-lobby {
-    --lobby-category-group-max: min(860px, calc(((100vh - var(--client-header-height)) * 0.81 - 70px) * 1.2));
-    --lobby-category-banner-ratio: 1.2;
+    --lobby-category-group-max: min(810px, calc((100vh - var(--client-header-height)) * 0.812));
+    --lobby-category-banner-ratio: 1.14;
     --lobby-category-banner-top: 4%;
   }
 }
 
 .league-lobby__heading {
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 18px;
   left: 30px;
   display: flex;
@@ -146,11 +190,11 @@
 
 .league-lobby__banners:not(.league-lobby__banners--projects) {
   --lobby-banner-ratio: var(--lobby-category-banner-ratio);
-  --lobby-banner-gap-max: 60px;
+  --lobby-banner-gap-max: var(--lobby-category-gap-max);
   top: var(--lobby-category-banner-top);
   width: min(calc(100% - 180px), var(--lobby-category-group-max));
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(24px, 3vw, var(--lobby-banner-gap-max));
+  gap: clamp(24px, var(--lobby-category-gap), var(--lobby-banner-gap-max));
 }
 
 @media (min-height: 1120px) {

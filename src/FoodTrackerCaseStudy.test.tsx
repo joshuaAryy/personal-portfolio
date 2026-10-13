@@ -602,42 +602,36 @@ describe("Food Tracker product story", () => {
     expect(captures).toContain("Values are sample data, not user outcomes");
   });
 
-  it("lets chart-bearing Insights visuals use the full card width without clipping on desktop and mobile", () => {
+  it("gives the Insights charts a readable desktop column and preserves natural mobile sizing", () => {
     const gallerySizing = foodVisualStyles.slice(
-      foodVisualStyles.indexOf("/* Let the focused chart captures use the gallery's full available width. */"),
+      foodVisualStyles.indexOf("/* Give the chart captures enough desktop width for their labels and plotted detail. */"),
     );
 
-    expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus {");
-    expect(gallerySizing).toContain("width: 107%;");
+    expect(gallerySizing).toContain("@media (min-width: 601px)");
+    expect(gallerySizing).toContain("width: min(calc(100% + clamp(32px, 6vw, 72px)), 820px, calc(100vw - 40px));");
+    expect(gallerySizing).toContain("grid-template-columns: minmax(0, 1fr);");
+    expect(gallerySizing).toContain("width: min(100%, 680px);");
+    expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {");
-    expect(gallerySizing).toContain("width: 108%;");
-    expect(gallerySizing).toContain(".food-insight-path__capture-screen--forecast > img {");
-    expect(gallerySizing).toContain("margin-left: -3%;");
-    expect(gallerySizing).toContain(".food-insight-path__capture-screen--fiber > img {");
-    expect(gallerySizing).toContain("width: 103%;");
-    expect(gallerySizing).toContain("margin-left: -3%;");
     expect(gallerySizing).toContain("overflow: hidden;");
     expect(gallerySizing).toContain("max-height: none;");
     expect(gallerySizing).toContain("object-fit: contain;");
-    expect(gallerySizing).toContain("@media (min-width: 960px)");
-    expect(gallerySizing).toContain("width: min(calc(100% + clamp(72px, 8vw, 112px)), 1160px, calc(100vw - 144px));");
-    expect(gallerySizing).not.toContain("width: min(100%, 460px);");
-    expect(gallerySizing).not.toContain("width: calc(100% + 12px);");
-    expect(gallerySizing).not.toContain("margin-left: -6px;");
+    expect(gallerySizing).not.toContain("width: 107%;");
+    expect(gallerySizing).not.toContain("width: 108%;");
+    expect(gallerySizing).not.toContain("width: 106%;");
+    expect(gallerySizing).not.toContain("width: 103%;");
     expect(gallerySizing).toContain("flex: none;");
-    expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--lead \.food-insight-path__capture-screen--macro > img\s*\{\s*max-height: none;/);
 
     const narrowGallery = gallerySizing.slice(gallerySizing.indexOf("@media (max-width: 600px)"));
     expect(narrowGallery).toContain(".food-insight-path__capture--lead,");
-    expect(narrowGallery).toContain(".food-insight-path__capture--forecast,");
-    expect(narrowGallery).toContain(".food-insight-path__capture--fiber,");
+    expect(narrowGallery).toContain(".food-insight-path__capture--study,");
     expect(narrowGallery).toContain(".food-insight-path__capture--consistency {");
     expect(narrowGallery).toContain("grid-template-columns: minmax(0, 1fr);");
-    expect(narrowGallery).toContain(".food-insight-path__capture--consistency .food-insight-path__capture-screen--consistency > img {");
+    expect(narrowGallery).toContain(".food-insight-path__capture-screen--consistency > img {");
+    expect(narrowGallery).toContain("max-height: none;");
     expect(narrowGallery).toContain("width: calc(100% + 16px);");
     expect(narrowGallery).toContain("margin-left: -8px;");
     expect(narrowGallery).toContain("margin-right: -8px;");
-    expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--consistency \.food-insight-path__capture-screen--consistency > img\s*\{[^}]*max-height: none;/);
   });
 
   it("uses content-focused authentic gallery crops without changing their natural proportions", () => {

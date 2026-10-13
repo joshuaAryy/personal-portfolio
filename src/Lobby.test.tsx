@@ -48,27 +48,79 @@ afterEach(() => {
 });
 
 describe("lobby banner environment", () => {
+  it("uses the Figma top-origin image, separate veil, and lower bar shade layers", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const environment = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+    const imageLayer = css.match(/\.league-lobby__environment::before\s*\{([^}]*)\}/)?.[1] ?? "";
+    const veilLayer = [...css.matchAll(/\.league-lobby__environment::after\s*\{([^}]*)\}/g)]
+      .map((match) => match[1])
+      .find((rule) => rule.includes("background-image")) ?? "";
+
+    expect(environment).not.toMatch(/-webkit-mask-image|\bmask-image\s*:/);
+    expect(imageLayer).toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(imageLayer).toMatch(/background-position:\s*center top/);
+    expect(imageLayer).toMatch(/filter:\s*blur\(1\.1px\)/);
+    expect(veilLayer.match(/linear-gradient/g)?.length).toBe(3);
+    expect(veilLayer).toMatch(/rgba\(0,\s*5,\s*7,\s*0\.34\)/);
+    expect(veilLayer).toMatch(/rgba\(1,\s*4,\s*6,\s*0\.36\)/);
+    expect(veilLayer).toMatch(/82%/);
+  });
+
+  it("keeps the Pass06 fade on the environment behind foreground banners", () => {
+    const rendered = renderProjectsLobby("experience");
+    const environment = rendered.querySelector(".league-lobby__environment");
+    const css = readFileSync("src/lobby.css", "utf8");
+    const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+    const environmentLayers = [...css.matchAll(/\.league-lobby__environment::after\s*\{([^}]*)\}/g)]
+      .map((match) => match[1])
+      .find((rule) => rule.includes("background-image")) ?? "";
+
+    expect(environment).not.toBeNull();
+    expect(rendered.querySelector(".league-lobby__top-fade")).toBeNull();
+    expect(environmentRule).toMatch(/z-index:\s*-1/);
+    expect(environmentLayers.match(/linear-gradient/g)?.length).toBe(3);
+    expect(environmentLayers).toMatch(/background-size:\s*min\(96\.15%,\s*1500px\) min\(13\.46cqw,\s*210px\),\s*100% 100%,\s*100% 100%/);
+    expect(environmentLayers).toMatch(/background-position:\s*left top,\s*center,\s*center/);
+    expect(environmentLayers).toMatch(/rgba\(1,\s*5,\s*8,\s*0\.99\) 0%[\s\S]*?rgba\(1,\s*5,\s*8,\s*0\.82\) 28%[\s\S]*?rgba\(1,\s*5,\s*8,\s*0\.36\) 62%[\s\S]*?transparent 100%/);
+  });
+
+  it("scales non-Projects cards with the Figma-proportional group at 1440 and 1920 widths", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    const lobbyRule = css.match(/\.league-lobby\s*\{([^}]*)\}/)?.[1] ?? "";
+    const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
+    const tallDesktop = css.match(/@media\s*\(min-height:\s*1000px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    // Figma 704:2 uses 246×710px cards, 36px gaps, and an 810px group.
+    // Scale that proportion against available content height (not viewport width).
+    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
+    expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.14/);
+    expect(tallDesktop).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
+    expect(tallDesktop).toMatch(/--lobby-category-banner-ratio:\s*1\.14/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(24px,\s*var\(--lobby-category-gap\),\s*var\(--lobby-banner-gap-max\)\)/);
+  });
+
   it("keeps non-Projects banners slender, centered, and tied to the historical scene framing", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+    const imageLayer = css.match(/\.league-lobby__environment::before\s*\{([^}]*)\}/)?.[1] ?? "";
     const lobbyRule = css.match(/\.league-lobby\s*\{([^}]*)\}/)?.[1] ?? "";
     const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
 
     expect(lobbyRule).toMatch(/--lobby-projects-group-max:\s*max\(1240px,\s*calc\(\(100vh - 300px\) \* 1\.8\)\)/);
     expect(lobbyRule).toMatch(/--lobby-project-banner-ratio:\s*2\.2/);
-    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(780px,\s*calc\(\(100vh - 180px\) \* 1\.34\)\)/);
+    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
     expect(lobbyRule).toMatch(/--lobby-category-banner-top:\s*6%/);
-    expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.34/);
-    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(860px,[\s\S]*?--lobby-category-banner-ratio:\s*1\.2[\s\S]*?--lobby-category-banner-top:\s*4%/);
+    expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.14/);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*4%/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?--lobby-category-group-max:\s*min\(780px, calc\(\(100vh - 180px\) \* 1\.34\)\)/);
     expect(categoryBanners).not.toMatch(/top:\s*0/);
     expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*var\(--lobby-category-banner-ratio\)/);
-    expect(categoryBanners).toMatch(/gap:\s*clamp\(24px,\s*3vw,\s*var\(--lobby-banner-gap-max\)\)/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(24px,\s*var\(--lobby-category-gap\),\s*var\(--lobby-banner-gap-max\)\)/);
     expect(css).toMatch(/--lobby-category-banner-height:\s*calc\(min\(100cqw - 180px,\s*var\(--lobby-category-group-max\)\) \/ var\(--lobby-category-banner-ratio\)\)/);
     expect(css).toMatch(/\.league-lobby--experience,[\s\S]*?--lobby-balance-span:\s*1000px/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?\.league-lobby--experience,[\s\S]*?min-height:\s*880px/);
     expect(css).not.toMatch(/\.league-lobby--experience \.league-lobby__environment\s*\{/);
-    expect(css).toMatch(/\.league-lobby__environment\s*\{[^}]*background-position:\s*center top/s);
+    expect(imageLayer).toMatch(/background-position:\s*center top/);
     expect(css).not.toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?\.league-lobby__environment\s*\{[^}]*background-position:/);
     expect(css).toMatch(/\.league-lobby__balance-slots\s*\{[^}]*top:[^}]*\}/s);
   });
@@ -76,21 +128,22 @@ describe("lobby banner environment", () => {
   it("bounds and centers both lobby banner groups with coordinated spacing", () => {
     const css = readFileSync("src/lobby.css", "utf8");
     const environmentRule = css.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
+    const imageLayer = css.match(/\.league-lobby__environment::before\s*\{([^}]*)\}/)?.[1] ?? "";
     const bannerGroup = css.match(/\.league-lobby__banners\s*\{([^}]*)\}/)?.[1] ?? "";
     const categoryBanners = css.match(/\.league-lobby__banners:not\(\.league-lobby__banners--projects\)\s*\{([^}]*)\}/)?.[1] ?? "";
     const mobileRules = css.slice(css.indexOf("@media (max-width: 900px)"));
     const mobileRulesForGroup = mobileRules.match(/\.league-lobby__heading,\s*\.league-lobby__banners,\s*\.league-role-legend,\s*\.league-selected,\s*\.league-lobby__primary-action,\s*\.league-lobby__hint\s*\{([^}]*)\}/)?.[1] ?? "";
     const mobileEnvironment = mobileRules.match(/\.league-lobby__environment\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(environmentRule).toContain('url("/media/lobby/party-background-original.jpg")');
-    expect(environmentRule).toMatch(/background-position:\s*center top/);
-    expect(environmentRule).toMatch(/mask-image:\s*linear-gradient\(180deg,\s*#000 0%,\s*#000 46%,\s*rgb\(0 0 0 \/ 70%\) 78%,\s*transparent 100%\)/);
+    expect(imageLayer).toContain('url("/media/lobby/party-background-original.jpg")');
+    expect(imageLayer).toMatch(/background-position:\s*center top/);
+    expect(environmentRule).not.toMatch(/-webkit-mask-image|\bmask-image\s*:/);
     expect(bannerGroup).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-projects-group-max\)\)/);
     expect(bannerGroup).toMatch(/left:\s*50%/);
     expect(bannerGroup).toMatch(/transform:\s*translateX\(-50%\)/);
     expect(categoryBanners).toMatch(/width:\s*min\(calc\(100% - [^)]*\),\s*var\(--lobby-category-group-max\)\)/);
     expect(categoryBanners).toMatch(/grid-template-columns:\s*repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
-    expect(categoryBanners).toMatch(/gap:\s*clamp\([^)]*,\s*var\(--lobby-banner-gap-max\)\)/);
+    expect(categoryBanners).toMatch(/gap:\s*clamp\(24px,\s*var\(--lobby-category-gap\),\s*var\(--lobby-banner-gap-max\)\)/);
     expect(css).not.toMatch(/@media\s*\(min-width:\s*1800px\)\s*and\s*\(min-height:\s*1000px\)\s*\{[^}]*\.league-lobby__banners--projects/);
     const balanceSlots = [...css.matchAll(/\.league-lobby__balance-slots\s*\{([^}]*)\}/g)]
       .map((match) => match[1])
@@ -154,7 +207,8 @@ describe("lobby banner environment", () => {
     const lobbyRule = css.match(/\.league-lobby\s*\{([^}]*)\}/)?.[1] ?? "";
     const projectsSlots = css.match(/\.league-lobby--projects \.league-lobby__balance-slots\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(780px,\s*calc\(\(100vh - 180px\) \* 1\.34\)\)/);
+    expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
+    expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?--lobby-category-group-max:\s*min\(780px,\s*calc\(\(100vh - 180px\) \* 1\.34\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.34/);
     expect(projectsSlots).toMatch(/display:\s*none/);
   });
 
