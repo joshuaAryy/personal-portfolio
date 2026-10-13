@@ -166,6 +166,42 @@ describe("Profile signal previews", () => {
     expect(panel.style.top).not.toBe("0px");
   });
 
+  it("anchors the desktop preview panel to the visible signal group", () => {
+    renderProfile();
+    const overview = host.querySelector<HTMLElement>(".profile-overview")!;
+    const content = host.querySelector<HTMLElement>(".profile-content")!;
+    const panel = host.querySelector<HTMLElement>(".profile-project-panel")!;
+    const signal = host.querySelector<HTMLElement>('[data-profile-signal="projects"]')!;
+    const nav = host.querySelector<HTMLElement>(".profile-nav")!;
+    const rect = (left: number, top: number, width: number, height: number) => ({
+      left, top, right: left + width, bottom: top + height, width, height,
+      x: left, y: top, toJSON: () => ({}),
+    }) as DOMRect;
+
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 1440 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 900 });
+    Object.defineProperty(overview, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetHeight", { configurable: true, value: 330 });
+    overview.getBoundingClientRect = () => rect(100, 0, 700, 1000);
+    content.getBoundingClientRect = () => rect(100, 30, 700, 900);
+    nav.getBoundingClientRect = () => rect(100, 30, 700, 50);
+    signal.getBoundingClientRect = () => rect(250, 600, 150, 180);
+    const parts = signal.querySelectorAll<HTMLElement>(
+      ".profile-signal__emblem, .profile-signal__label, .profile-signal__value",
+    );
+    [rect(270, 680, 40, 40), rect(260, 725, 120, 16), rect(280, 750, 80, 22)]
+      .forEach((partRect, index) => {
+        parts[index].getBoundingClientRect = () => partRect;
+      });
+
+    act(() => signal.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+
+    const panelTop = Number.parseFloat(panel.style.top) * 0.7;
+    const panelBottom = panelTop + 231;
+    expect(panelBottom).toBeCloseTo(668, 1);
+  });
+
   it("keeps a narrow overlay below its signal and within the collapsed-rail viewport", () => {
     renderProfile();
     const overview = host.querySelector<HTMLElement>(".profile-overview")!;

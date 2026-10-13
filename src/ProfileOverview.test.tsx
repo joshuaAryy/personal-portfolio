@@ -428,7 +428,7 @@ describe("Profile Overview", () => {
     const narrowRules = cssBlock(profileCss, "@media (max-width: 900px)");
     const signalGrid = cssBlock(narrowRules, ".profile-signal-grid");
 
-    expect(narrowPlacement).toContain(".profile-signal__value");
+    expect(narrowPlacement).toContain("visibleContentBottom + 12");
     expect(narrowPlacement).toContain("lowerRowTop");
     expect(narrowPlacement).toContain("--profile-mobile-panel-gap");
     expect(signalGrid).toContain("grid-auto-rows: 235px");

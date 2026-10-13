@@ -437,6 +437,15 @@ export default function ProfileOverview({
       const overviewRect = overview.getBoundingClientRect();
       const contentRect = content.getBoundingClientRect();
       const signalRect = signal.getBoundingClientRect();
+      const visibleParts = Array.from(signal.querySelectorAll<HTMLElement>(
+        ".profile-signal__emblem, .profile-signal__label, .profile-signal__value",
+      )).map((part) => part.getBoundingClientRect()).filter((rect) => rect.width > 0 && rect.height > 0);
+      const visibleContentTop = visibleParts.length
+        ? Math.min(...visibleParts.map((rect) => rect.top))
+        : signalRect.top;
+      const visibleContentBottom = visibleParts.length
+        ? Math.max(...visibleParts.map((rect) => rect.bottom))
+        : signalRect.bottom;
       const overviewWidth = overview.offsetWidth;
       const scale = overviewWidth > 0 ? overviewRect.width / overviewWidth : 0;
       if (!scale) return;
@@ -472,12 +481,6 @@ export default function ProfileOverview({
         // Keep the panel close to the visible icon/label/count. The signal
         // cell is taller than its actual content, so anchoring to the cell
         // leaves an unhelpful visual gap on narrow screens.
-        const contentParts = Array.from(signal.querySelectorAll<HTMLElement>(
-          ".profile-signal__emblem, .profile-signal__label, .profile-signal__value",
-        )).map((part) => part.getBoundingClientRect()).filter((rect) => rect.width > 0 && rect.height > 0);
-        const visibleContentBottom = contentParts.length
-          ? Math.max(...contentParts.map((rect) => rect.bottom))
-          : signalRect.bottom;
         const below = visibleContentBottom + 12;
         const panelTop = (below - overviewRect.top) / scale;
         panel.style.top = `${panelTop}px`;
@@ -506,8 +509,8 @@ export default function ProfileOverview({
       }
       const minTop = Math.max(contentRect.top, navBottom + 12, 112);
       const maxTop = Math.max(minTop, window.innerHeight - panelHeight - 12);
-      const above = signalRect.top - panelHeight - 12;
-      const below = signalRect.bottom + 12;
+      const above = visibleContentTop - panelHeight - 12;
+      const below = visibleContentBottom + 12;
       const top = above >= minTop && above <= maxTop
         ? above
         : below + panelHeight <= window.innerHeight - 12
