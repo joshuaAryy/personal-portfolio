@@ -109,9 +109,9 @@ describe("lobby banner environment", () => {
     expect(lobbyRule).toMatch(/--lobby-projects-group-max:\s*max\(1240px,\s*calc\(\(100vh - 300px\) \* 1\.8\)\)/);
     expect(lobbyRule).toMatch(/--lobby-project-banner-ratio:\s*2\.2/);
     expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
-    expect(lobbyRule).toMatch(/--lobby-category-banner-top:\s*7\.5%/);
+    expect(lobbyRule).toMatch(/--lobby-category-banner-top:\s*8\.25%/);
     expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.14/);
-    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*7\.5%/);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*8\.25%/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?--lobby-category-group-max:\s*min\(780px, calc\(\(100vh - 180px\) \* 1\.34\)\)/);
     expect(categoryBanners).not.toMatch(/top:\s*0/);
     expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*var\(--lobby-category-banner-ratio\)/);
