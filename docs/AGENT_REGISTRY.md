@@ -1,6 +1,17 @@
 # Persistent Agent Registry
 
-## Current live state — Profile signal attachment review checkpoint (2026-10-12)
+## Current control-plane state — owner visual correction checkpoint (2026-10-13)
+
+The feature application commit is `8726f420fcc13fce0c296f526100f391e41aeaa9` on `feat/portfolio-integration`. **Immutable Preview:** https://f382c1e4.joshuaik2.pages.dev/ (Cloudflare Pages feature branch deployment; production was not targeted). The local implementation checkout is `codex/final-owner-corrections`. The application source commit contains only the scoped Resume, Profile, lobby, and Food Insights changes plus their tests; the three status documents were preserved and updated separately. Do not reset, clean, or bulk-stage the preserved render/review artifacts.
+
+- **Bounded changes:** Resume Found Close now overlaps the outer ring at its bottom tangent with an opaque fill. The tall desktop Profile signal row follows viewport height without compacting the scenic shell; Activity remains full-height and bottom-anchored. Three-category lobby banners move slightly lower, and Projects banners gain height on taller screens without increasing width. Food Insights Macro Composition, Calorie Forecast, and Fiber Trend are reduced from 320px to 288px desktop maximum width; gallery order and Daily Completeness remain.
+- **Visual evidence:** before/after captures and metrics are preserved under `docs/site-render-review/2026-10-13-final-owner-fidelity-pass-04/`, including the deployed capture subfolder `deployed-f382c1e4/` and [checkpoint evidence ledger](site-render-review/2026-10-13-final-owner-fidelity-pass-04/REVIEW_CHECKPOINT_8726f420.md).
+- **Verification:** all 323 tests across 31 files passed. The deployed JavaScript and CSS SHA-256 values match the local build. Ten sampled routes returned HTTP 200; deployed Chrome rendered Profile, lobbies, Resume, and Food at desktop and narrow sizes with no page, console, or request errors. Resume keyboard actions passed. The existing Vite large-chunk advisory and Happy DOM PDF-fetch teardown messages are non-blocking.
+- **Review state:** this is a review checkpoint, not portfolio completion. Owner review remains open. Live Narrator/screen-reader speech interaction remains manual. No approved case-study narrative or original Cho'Veigo video was changed by this pass; Food Tracker still has no authentic demo video.
+
+> Entries below preserve checkpoint history. Older “current/live” labels are historical relative to the snapshot above.
+
+## Historical checkpoint — Profile signal attachment review (2026-10-12)
 
 The latest feature application source is `d49f264bf2faa0737836b29008db8e296d027ff6` on `feat/portfolio-integration`. **Current immutable Preview:** https://8eaf3097.joshuaik2.pages.dev/ (deployment `8eaf3097-0b06-469e-8b9e-f05572767721`, Environment Preview, branch `feat/portfolio-integration`, source `d49f264`). Deployed JavaScript and CSS SHA-256 values match the built artifacts. Production was not targeted; the persistent portfolio goal remains active.
 
@@ -10,7 +21,7 @@ The latest feature application source is `d49f264bf2faa0737836b29008db8e296d027f
 - **Verification:** 321 tests across 31 files passed; build passed with the existing chunk-size advisory; diff check passed. `/home` and `/profile` return HTTP 200; deployed JS/CSS SHA-256 values match local artifacts; no broken images, page errors, failed requests, or horizontal overflow were found.
 - **Open:** owner review of Preview `8eaf3097`; additional owner feedback is pending. Food Tracker still has no authentic demo video, and live screen-reader interaction remains a manual follow-up. The persistent goal remains active.
 
-## Current live state — Owner Correction Pass 08 review checkpoint (2026-10-12)
+## Historical checkpoint — Owner Correction Pass 08 review (2026-10-12)
 
 The latest feature application source is `6759dd0d1afde5a18dd7db246c0cb0373912217f` on `feat/portfolio-integration`. **Current immutable Preview:** https://4f83a72e.joshuaik2.pages.dev/ (deployment `4f83a72e-619e-48f9-8eb9-11cdfcce3e3e`, Environment Preview, branch `feat/portfolio-integration`, application source `6759dd0`). Deployed JavaScript and CSS SHA-256 values match the build from this source. Production was not targeted; the persistent goal remains active.
 

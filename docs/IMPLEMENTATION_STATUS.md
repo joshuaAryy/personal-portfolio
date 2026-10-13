@@ -1,6 +1,18 @@
 # Implementation Status
 
-## Latest immutable feature Preview — Final Visual Fidelity Pass (2026-10-12)
+## Current immutable feature Preview — owner visual correction pass (2026-10-13)
+
+**Preview:** https://f382c1e4.joshuaik2.pages.dev/ (Cloudflare Pages feature Preview on `feat/portfolio-integration`). **Application source SHA:** `8726f420fcc13fce0c296f526100f391e41aeaa9`. The Preview is immutable; production was not targeted. The branch's later documentation commit does not change the deployed application assets. Owner review remains open and the persistent portfolio goal remains active.
+
+This bounded pass adjusts Resume Found's Close attachment to the outer ring, removes the tall-screen cap on the Profile signal row while retaining the full-height scenic shell and bottom Activity rail, gives Projects banners additional height on taller screens, moves the three-category lobby group slightly lower, and reduces the three Food Insights chart captures to 288px desktop maximum width. It preserves the four-image gallery, Calorie Forecast, and Daily Completeness sizing. Home, Journey, Crest, Personal Highlights, case-study narratives, Opening/J, Cho'Veigo media, and Education structure were not changed.
+
+**Verification:** `npm test -- --run` passed all 323 tests in 31 files. The deploy build succeeded with the existing Vite large-chunk advisory. `git diff --check` passed. Deployed bundle SHA-256 matches local assets: JS `66fd32ce4ae10168bb6afb7b02c25c0301fde2b98d912841f80a473d7834370d`; CSS `cb0842d5882425615a5ced14f385ef2350b52dd0ae0657982d35d55de766cf26`. Ten sampled routes returned HTTP 200. Chrome checks covered the affected compositions at tall/short/wide/narrow sizes, Profile signal focus states, and Resume focus wrap/Escape/Close/View Resume. No browser page, console, or request errors occurred. Happy DOM emitted its existing PDF-fetch teardown AbortError/NetworkError messages during the passing test run.
+
+**Remaining:** owner review of this Preview; manual live screen-reader interaction; authentic Food Tracker demo media. The original owner-authorized Cho'Veigo full demo and all other owner-positive surfaces were preserved. The visual evidence ledger is [here](site-render-review/2026-10-13-final-owner-fidelity-pass-04/REVIEW_CHECKPOINT_8726f420.md). This is a review checkpoint, not portfolio completion.
+
+> The checkpoint entries below are retained historical records. Their “latest/current” labels describe the state when each entry was written and do not override this current snapshot.
+
+## Historical immutable feature Preview — Final Visual Fidelity Pass (2026-10-12)
 
 **Preview:** https://9b4b445b.joshuaik2.pages.dev/ (Cloudflare Pages deployment `9b4b445b-ef0a-4ea1-819a-2218a7be78d2`, Environment `Preview`, branch `feat/portfolio-integration`, source `3acb23b`). **Application source:** `3acb23bd8eff2fee20bc8813437eeed6bdae808b`. Deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent portfolio goal remains active.
 
@@ -8,7 +20,7 @@ This bounded pass carries forward the Resume Found, Food Insights gallery, and c
 
 **Verification:** all 322 tests across 31 files passed; `npm run build` and `git diff --check` passed. Happy DOM logged AbortError/NetworkError messages during PDF-fetch teardown despite the passing test exit; the build retains the existing large-JavaScript-chunk advisory. Owner review remains open. Live screen-reader interaction remains a manual follow-up, and the authentic Food Tracker demo remains future media work. This is a review checkpoint, not portfolio completion.
 
-## Latest immutable feature Preview — Profile signal attachment follow-up (2026-10-12)
+## Historical immutable feature Preview — Profile signal attachment follow-up (2026-10-12)
 
 **Preview:** https://8eaf3097.joshuaik2.pages.dev/ (Cloudflare Pages Preview `8eaf3097-0b06-469e-8b9e-f05572767721`, branch `feat/portfolio-integration`). **Application source:** `d49f264bf2faa0737836b29008db8e296d027ff6`. Wrangler identifies the deployment source as `d49f264`; deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent portfolio goal remains active.
 
@@ -18,7 +30,7 @@ This bounded correction anchors the Profile detail panel to the visible icon/lab
 
 **Open:** owner review of Preview `8eaf3097`; more owner feedback is pending. Home spacing/Activity identities and the centered, narrowed category banner treatment already exist in the current source and were not changed here. The Food Tracker demo video is still unavailable; live screen-reader interaction remains a manual follow-up. This is a review checkpoint, not portfolio completion.
 
-## Latest immutable review Preview — Owner Correction Pass 08 Food Insights gallery (2026-10-12)
+## Historical immutable review Preview — Owner Correction Pass 08 Food Insights gallery (2026-10-12)
 
 **Preview:** https://4f83a72e.joshuaik2.pages.dev/ (Cloudflare Pages Preview `4f83a72e-619e-48f9-8eb9-11cdfcce3e3e`, branch `feat/portfolio-integration`, source `6759dd0`). **Application source:** `6759dd0d1afde5a18dd7db246c0cb0373912217f`. Deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent portfolio goal remains active.
 
