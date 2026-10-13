@@ -6335,7 +6335,7 @@
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
     display: block;
-    width: min(100%, 320px);
+    width: min(100%, 288px);
     height: auto;
     min-height: 0;
     margin-inline: auto;

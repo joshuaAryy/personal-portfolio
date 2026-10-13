@@ -618,7 +618,7 @@ describe("Food Tracker product story", () => {
       0,
       desktopEvidence.indexOf(".food-insight-path__captures[data-gallery=\"insights-evidence\"] .food-insight-path__capture--lead"),
     );
-    expect(chartFrameRule).toContain("width: min(100%, 320px);");
+    expect(chartFrameRule).toContain("width: min(100%, 288px);");
     expect(chartFrameRule).not.toContain("width: min(100%, 500px);");
     expect(gallerySizing).toContain(".food-insight-path__capture-copy");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,");

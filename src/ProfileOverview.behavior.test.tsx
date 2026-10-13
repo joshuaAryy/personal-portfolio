@@ -50,7 +50,7 @@ describe("Profile signal previews", () => {
     const tallSignalRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1080px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
     const extraTallRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
 
-    expect(tallSignalRule).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(610px,\s*calc\(134vh\s*-\s*837px\),\s*985px\)/s);
+    expect(tallSignalRule).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*max\(610px,\s*calc\(134vh\s*-\s*837px\)\)/s);
     expect(extraTallRule).not.toContain(".profile-signal-grid");
     expect(extraTallRule).toMatch(/\.main\.main--profile::before/);
   });

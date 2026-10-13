@@ -277,7 +277,7 @@ describe("Profile Overview", () => {
     );
     const signalRule = cssBlock(tallDesktopRules, ".profile-signal-grid");
 
-    expect(signalRule).toMatch(/top:\s*clamp\(610px, calc\(134vh - 837px\), 985px\)/);
+    expect(signalRule).toMatch(/top:\s*max\(610px, calc\(134vh - 837px\)\)/);
   });
 
   it("keeps the tall desktop signal row in the shared lower band", () => {
@@ -288,7 +288,7 @@ describe("Profile Overview", () => {
     );
     const signalRule = cssBlock(tallDesktopRules, ".profile-signal-grid");
 
-    expect(signalRule).toMatch(/top:\s*clamp\(610px, calc\(134vh - 837px\), 985px\)/);
+    expect(signalRule).toMatch(/top:\s*max\(610px, calc\(134vh - 837px\)\)/);
     expect(profileCss).not.toContain("@media (min-width: 1500px) and (max-width: 1599px) and (min-height: 1280px)");
   });
 

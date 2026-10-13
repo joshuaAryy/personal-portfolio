@@ -109,9 +109,9 @@ describe("lobby banner environment", () => {
     expect(lobbyRule).toMatch(/--lobby-projects-group-max:\s*max\(1240px,\s*calc\(\(100vh - 300px\) \* 1\.8\)\)/);
     expect(lobbyRule).toMatch(/--lobby-project-banner-ratio:\s*2\.2/);
     expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
-    expect(lobbyRule).toMatch(/--lobby-category-banner-top:\s*8\.25%/);
+    expect(lobbyRule).toMatch(/--lobby-category-banner-top:\s*9\.25%/);
     expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.14/);
-    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*8\.25%/);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*9\.25%/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?--lobby-category-group-max:\s*min\(780px, calc\(\(100vh - 180px\) \* 1\.34\)\)/);
     expect(categoryBanners).not.toMatch(/top:\s*0/);
     expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*var\(--lobby-category-banner-ratio\)/);
@@ -219,8 +219,14 @@ describe("lobby banner environment", () => {
     expect(projectRatio).toBe("2.2");
     expect(css).toMatch(/--lobby-projects-group-max:\s*max\(1240px,\s*calc\(\(100vh - 300px\) \* 1\.8\)\)/);
     expect(css).not.toMatch(/--lobby-projects-group-max:\s*clamp/);
-    expect(css).toMatch(/@media\s*\(min-height:\s*1120px\)[\s\S]*?\.league-lobby__banners--projects\s*\{[^}]*top:\s*8%[^}]*width:\s*min\(calc\(100% - 80px\),\s*1400px\)[^}]*height:\s*clamp\(600px,\s*min\(62vh,\s*40vw\),\s*760px\)[^}]*aspect-ratio:\s*auto/s);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1120px\)[\s\S]*?\.league-lobby__banners--projects\s*\{[^}]*top:\s*8%[^}]*width:\s*min\(calc\(100% - 80px\),\s*1400px\)[^}]*height:\s*clamp\(600px,\s*min\(62vh,\s*calc\(100vh - 360px\)\),\s*900px\)[^}]*aspect-ratio:\s*auto/s);
     expect(css).toMatch(/\.league-lobby--projects \.league-lobby__balance-slots\s*\{[^}]*display:\s*none/s);
+  });
+
+  it("moves the three category banner groups slightly below the heading clearance", () => {
+    const css = readFileSync("src/lobby.css", "utf8");
+    expect(css).toMatch(/--lobby-category-banner-top:\s*9\.25%/);
+    expect(css).toMatch(/\.league-lobby--experience \.league-lobby__balance-slots,[\s\S]*?top:\s*calc\(var\(--lobby-category-banner-top\) \+ var\(--lobby-category-banner-height\) \/ 2\)/);
   });
 
   it("uses real project marks and keeps selection separate from opening a story", () => {
