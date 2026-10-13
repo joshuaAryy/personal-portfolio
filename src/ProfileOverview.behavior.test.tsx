@@ -45,9 +45,14 @@ describe("Profile signal previews", () => {
     expect(ultrawide).toMatch(/\.main--profile\s+\.profile-overview\s*\{[^}]*left:\s*50%;[^}]*transform:\s*translateX\(-50%\)/s);
   });
 
-  it("keeps the tall owner-reference signal group inside its marked lower band", () => {
+  it("keeps the tall owner-reference signal group on the shared height-responsive lower band", () => {
     const css = readFileSync("src/profile-overview.css", "utf8");
-    expect(css).toMatch(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{[\s\S]*?\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(580px,\s*calc\(100vh\s*-\s*700px\),\s*680px\)/s);
+    const tallSignalRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1080px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const extraTallRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(tallSignalRule).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(610px,\s*calc\(100vh\s*-\s*470px\),\s*800px\)/s);
+    expect(extraTallRule).not.toContain(".profile-signal-grid");
+    expect(extraTallRule).toMatch(/\.main\.main--profile::before/);
   });
 
   it("keeps the tall Profile scenery continuous through the lower client panel", () => {

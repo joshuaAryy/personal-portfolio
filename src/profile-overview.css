@@ -1847,12 +1847,6 @@
 }
 
 @media (min-width: 1500px) and (max-width: 1858px) and (min-height: 1280px) {
-  /* Keep the signal group in the owner-marked lower band instead of letting
-     the tall viewport push it toward the scenic bottom edge. */
-  .profile-signal-grid {
-    top: clamp(580px, calc(100vh - 700px), 680px);
-  }
-
   .main.main--profile::before {
     --profile-environment-height: calc(100vh - var(--client-header-height));
     background-image:
