@@ -602,27 +602,41 @@ describe("Food Tracker product story", () => {
     expect(captures).toContain("Values are sample data, not user outcomes");
   });
 
-  it("lets the chart-bearing Insights visuals use their available display width on desktop and mobile", () => {
+  it("lets chart-bearing Insights visuals use the full card width without clipping on desktop and mobile", () => {
     const gallerySizing = foodVisualStyles.slice(
-      foodVisualStyles.indexOf("/* Give the chart-bearing captures enough scale to read at normal page size. */"),
+      foodVisualStyles.indexOf("/* Let the focused chart captures use the gallery's full available width. */"),
     );
 
-    const macroAndForecastRules = gallerySizing.slice(gallerySizing.indexOf("--macro > img,"));
-    expect(macroAndForecastRules).toContain("width: calc(100% + 12px);");
-    expect(macroAndForecastRules).toContain("max-width: none;");
-    expect(macroAndForecastRules).toContain("margin-left: -6px;");
-    expect(gallerySizing).toContain("width: min(100%, 460px);");
-    expect(gallerySizing).toContain("max-width: none;");
+    expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus {");
+    expect(gallerySizing).toContain("width: 107%;");
+    expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {");
+    expect(gallerySizing).toContain("width: 108%;");
+    expect(gallerySizing).toContain(".food-insight-path__capture-screen--forecast > img {");
+    expect(gallerySizing).toContain("margin-left: -3%;");
+    expect(gallerySizing).toContain(".food-insight-path__capture-screen--fiber > img {");
+    expect(gallerySizing).toContain("width: 105%;");
+    expect(gallerySizing).toContain("margin-left: -2.5%;");
+    expect(gallerySizing).toContain("overflow: hidden;");
     expect(gallerySizing).toContain("max-height: none;");
     expect(gallerySizing).toContain("object-fit: contain;");
-    expect(gallerySizing).toContain("width: calc(100% + 12px);");
-    expect(gallerySizing).toContain("margin-left: -6px;");
+    expect(gallerySizing).toContain("@media (min-width: 960px)");
+    expect(gallerySizing).toContain("width: min(calc(100% + clamp(72px, 8vw, 112px)), 1160px, calc(100vw - 144px));");
+    expect(gallerySizing).not.toContain("width: min(100%, 460px);");
+    expect(gallerySizing).not.toContain("width: calc(100% + 12px);");
+    expect(gallerySizing).not.toContain("margin-left: -6px;");
     expect(gallerySizing).toContain("flex: none;");
     expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--lead \.food-insight-path__capture-screen--macro > img\s*\{\s*max-height: none;/);
 
     const narrowGallery = gallerySizing.slice(gallerySizing.indexOf("@media (max-width: 600px)"));
+    expect(narrowGallery).toContain(".food-insight-path__capture--lead,");
+    expect(narrowGallery).toContain(".food-insight-path__capture--forecast,");
+    expect(narrowGallery).toContain(".food-insight-path__capture--fiber,");
     expect(narrowGallery).toContain(".food-insight-path__capture--consistency {");
     expect(narrowGallery).toContain("grid-template-columns: minmax(0, 1fr);");
+    expect(narrowGallery).toContain(".food-insight-path__capture--consistency .food-insight-path__capture-screen--consistency > img {");
+    expect(narrowGallery).toContain("width: calc(100% + 16px);");
+    expect(narrowGallery).toContain("margin-left: -8px;");
+    expect(narrowGallery).toContain("margin-right: -8px;");
     expect(foodVisualStyles).toMatch(/\.food-insight-path__capture--consistency \.food-insight-path__capture-screen--consistency > img\s*\{[^}]*max-height: none;/);
   });
 
