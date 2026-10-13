@@ -610,7 +610,17 @@ describe("Food Tracker product story", () => {
     expect(gallerySizing).toContain("@media (min-width: 601px)");
     expect(gallerySizing).toContain("width: min(calc(100% + clamp(32px, 6vw, 72px)), 820px, calc(100vw - 40px));");
     expect(gallerySizing).toContain("grid-template-columns: minmax(0, 1fr);");
-    expect(gallerySizing).toContain("width: min(100%, 680px);");
+    const desktopEvidence = gallerySizing.slice(
+      gallerySizing.indexOf(".food-insight-path__capture-screen--macro,"),
+      gallerySizing.indexOf("@media (max-width: 600px)"),
+    );
+    const chartFrameRule = desktopEvidence.slice(
+      0,
+      desktopEvidence.indexOf(".food-insight-path__captures[data-gallery=\"insights-evidence\"] .food-insight-path__capture--lead"),
+    );
+    expect(chartFrameRule).toContain("width: min(100%, 420px);");
+    expect(chartFrameRule).not.toContain("width: min(100%, 500px);");
+    expect(gallerySizing).toContain(".food-insight-path__capture-copy");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {");
     expect(gallerySizing).toContain("overflow: hidden;");
@@ -632,6 +642,8 @@ describe("Food Tracker product story", () => {
     expect(narrowGallery).toContain("width: calc(100% + 16px);");
     expect(narrowGallery).toContain("margin-left: -8px;");
     expect(narrowGallery).toContain("margin-right: -8px;");
+    expect(narrowGallery).toContain("width: min(100%, 320px);");
+    expect(narrowGallery).toContain("margin-inline: auto;");
   });
 
   it("uses content-focused authentic gallery crops without changing their natural proportions", () => {

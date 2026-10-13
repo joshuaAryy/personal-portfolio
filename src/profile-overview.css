@@ -1850,7 +1850,7 @@
   /* Keep the signal group in the owner-marked lower band instead of letting
      the tall viewport push it toward the scenic bottom edge. */
   .profile-signal-grid {
-    top: clamp(568px, calc(100vh - 792px), 610px);
+    top: clamp(580px, calc(100vh - 700px), 680px);
   }
 
   .main.main--profile::before {
@@ -2072,5 +2072,14 @@
 
   .main--profile .profile-overview {
     height: calc(100vh - var(--client-header-height) - 145px);
+  }
+}
+
+/* Keep the Overview/signal cluster centered in the scenic column on ultrawide screens. */
+@media (min-width: 1921px) {
+  .main--profile .profile-overview {
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: top center;
   }
 }

@@ -120,10 +120,10 @@
 .resume-mechanism__scene {
   position: absolute;
   z-index: 0;
-  top: 15%;
-  left: 15%;
+  top: 11.8%;
+  left: 11.8%;
   display: block;
-  width: 70%;
+  width: 76.4%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 50%;
@@ -142,11 +142,11 @@
 .resume-mechanism__j {
   position: absolute;
   z-index: 1;
-  top: 50%;
+  top: 33%;
   left: 50%;
   display: block;
-  width: min(54%, 300px);
-  height: min(54%, 300px);
+  width: min(34%, 220px);
+  height: min(34%, 220px);
   aspect-ratio: 1 / 1;
   overflow: hidden;
   transform: translate(-50%, -50%);
@@ -264,7 +264,7 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 73%;
+  top: 53%;
   left: 50%;
   display: flex;
   width: min(400px, 70cqw);
@@ -417,7 +417,7 @@
 
 .resume-found__close {
   position: absolute;
-  top: calc(100% - 1cqw);
+  top: calc(97% - 1cqw);
   left: 50%;
   z-index: 4;
   width: min(148px, max(122px, 23.125cqw));

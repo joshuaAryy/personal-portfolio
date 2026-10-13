@@ -111,7 +111,7 @@ describe("lobby banner environment", () => {
     expect(lobbyRule).toMatch(/--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)/);
     expect(lobbyRule).toMatch(/--lobby-category-banner-top:\s*6%/);
     expect(lobbyRule).toMatch(/--lobby-category-banner-ratio:\s*1\.14/);
-    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*4%/);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1000px\)[\s\S]*?--lobby-category-group-max:\s*min\(810px,\s*calc\(\(100vh - var\(--client-header-height\)\) \* 0\.812\)\)[\s\S]*?--lobby-category-banner-ratio:\s*1\.14[\s\S]*?--lobby-category-banner-top:\s*6%/);
     expect(css).toMatch(/@media\s*\(max-height:\s*760px\)[\s\S]*?--lobby-category-group-max:\s*min\(780px, calc\(\(100vh - 180px\) \* 1\.34\)\)/);
     expect(categoryBanners).not.toMatch(/top:\s*0/);
     expect(categoryBanners).toMatch(/--lobby-banner-ratio:\s*var\(--lobby-category-banner-ratio\)/);
@@ -219,7 +219,8 @@ describe("lobby banner environment", () => {
     expect(projectRatio).toBe("2.2");
     expect(css).toMatch(/--lobby-projects-group-max:\s*max\(1240px,\s*calc\(\(100vh - 300px\) \* 1\.8\)\)/);
     expect(css).not.toMatch(/--lobby-projects-group-max:\s*clamp/);
-    expect(css).toMatch(/@media\s*\(min-height:\s*1120px\)[\s\S]*?\.league-lobby__banners--projects\s*\{[^}]*width:\s*min\(calc\(100% - 80px\),\s*var\(--lobby-projects-group-max\)\)/);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1120px\)[\s\S]*?\.league-lobby--projects\s*\{[^}]*--lobby-project-banner-ratio:\s*2\.0(?:\D|$)/s);
+    expect(css).toMatch(/@media\s*\(min-height:\s*1120px\)[\s\S]*?\.league-lobby__banners--projects\s*\{[^}]*width:\s*min\(calc\(100% - 80px\),\s*1400px\)[^}]*aspect-ratio:\s*var\(--lobby-project-banner-ratio\)/s);
     expect(css).toMatch(/\.league-lobby--projects \.league-lobby__balance-slots\s*\{[^}]*display:\s*none/s);
   });
 

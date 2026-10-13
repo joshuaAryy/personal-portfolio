@@ -6335,7 +6335,7 @@
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
     display: block;
-    width: min(100%, 680px);
+    width: min(100%, 420px);
     height: auto;
     min-height: 0;
     margin-inline: auto;
@@ -6405,7 +6405,7 @@
   }
 
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-copy {
-    width: min(100%, 680px);
+    width: min(100%, 500px);
     margin-inline: auto;
   }
 
@@ -6441,9 +6441,10 @@
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--forecast,
   .food-insight-path__captures[data-gallery="insights-evidence"] .food-insight-path__capture-screen--fiber {
     display: block;
-    width: 100%;
+    width: min(100%, 320px);
     height: auto;
     min-height: 0;
+    margin-inline: auto;
     padding: 0;
     overflow: hidden;
   }
