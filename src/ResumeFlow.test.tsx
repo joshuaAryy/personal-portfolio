@@ -75,8 +75,8 @@ describe("approved resume flow", () => {
     expect(sceneRule).not.toMatch(/border:\s*1px\s+solid/);
     const exteriorGlow = css.match(/\.resume-found__system::before\s*\{([^}]*)\}/)?.[1] ?? "";
     expect(exteriorGlow).not.toContain("gameflow-background.jpg");
-    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*top:\s*28%;[^}]*width:\s*min\(26%,\s*166px\)/s);
-    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*height:\s*min\(26%,\s*166px\)/s);
+    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*top:\s*31%;[^}]*width:\s*min\(28%,\s*180px\)/s);
+    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*height:\s*min\(28%,\s*180px\)/s);
     expect(css).toMatch(/animation:\s*resume-found-entry\s+/);
     expect(css).toMatch(
       /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*\.resume-mechanism__scene[\s\S]*animation:\s*none/s,
@@ -100,7 +100,7 @@ describe("approved resume flow", () => {
     expect(markup.indexOf('class="resume-mechanism__frame"')).toBeLessThan(
       markup.indexOf('class="resume-mechanism__orb-energy"'),
     );
-    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-fill\s+1150ms\s+linear\s+260ms\s+1\s+both/);
+    expect(energyRule).toMatch(/animation:\s*resume-orb-energy-fill\s+2200ms\s+linear\s+260ms\s+1\s+both/);
     expect(energyRule).toMatch(/z-index:\s*1/);
     // Figma node 2407:343 is a 464px cyan measuring circuit inside the 530px mechanism.
     // Node 2407:344 defines the 424px inner gold race, so fill only that bounded annular channel.
@@ -147,7 +147,7 @@ describe("approved resume flow", () => {
     expect(plasmaRule).toMatch(/mask-image:[\s\S]*?88\.2%[^}]*94\.2%[^}]*153deg[^}]*207deg/s);
     expect(plasmaRule).toMatch(/mix-blend-mode:\s*screen/);
     expect(plasmaRule).toMatch(/pointer-events:\s*none/);
-    expect(plasmaRule).toMatch(/animation:\s*resume-orb-plasma-fill\s+1150ms\s+linear\s+260ms\s+1\s+both/);
+    expect(plasmaRule).toMatch(/animation:\s*resume-orb-plasma-fill\s+2200ms\s+linear\s+260ms\s+1\s+both/);
     expect(css).toMatch(/@keyframes\s+resume-orb-plasma-fill\s*\{[^}]*0%\s*\{[^}]*--resume-orb-fill:\s*0deg;[^}]*opacity:\s*0/s);
     expect(css).toMatch(/@keyframes\s+resume-orb-plasma-fill[\s\S]*?100%\s*\{[^}]*--resume-orb-fill:\s*306deg;[^}]*opacity:\s*\.58/s);
     expect(css).toMatch(/\.resume-mechanism__orb-plasma\s*\{[^}]*mix-blend-mode:\s*screen/s);
@@ -198,7 +198,7 @@ describe("approved resume flow", () => {
     expect(compositionRule).toMatch(/position:\s*relative/);
     expect(compositionRule).toMatch(/width:\s*var\(--resume-found-composition-size\)/);
     expect(css).toMatch(/--resume-found-composition-size:\s*min\(640px,\s*max\(0px,\s*calc\(100vw - 32px\)\),\s*max\(0px,\s*calc\(100vh - 123px\)\)\)/);
-    expect(titleRule).toMatch(/top:\s*47%/);
+    expect(titleRule).toMatch(/top:\s*49%/);
     expect(titleRule).toMatch(/width:\s*min\(400px,\s*70cqw\)/);
     expect(titleRule).toMatch(/height:\s*min\(52px,\s*8\.2cqw\)/);
     expect(titleRule).toMatch(/font-size:\s*clamp\(24px,\s*5\.6cqw,\s*36px\)/);
@@ -247,7 +247,7 @@ describe("approved resume flow", () => {
     const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
     const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(titleRule).toMatch(/top:\s*47%/);
+    expect(titleRule).toMatch(/top:\s*49%/);
     expect(actionRule).toMatch(/top:\s*81\.5%/);
     expect(actionRule).toMatch(/width:\s*min\(256px,\s*40cqw\)/);
     expect(closeRule).toMatch(/top:\s*98\.7%/);

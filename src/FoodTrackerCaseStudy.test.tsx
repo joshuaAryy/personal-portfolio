@@ -602,34 +602,49 @@ describe("Food Tracker product story", () => {
     expect(captures).toContain("Values are sample data, not user outcomes");
   });
 
-  it("gives the Insights charts a readable desktop column and preserves natural mobile sizing", () => {
+  it("uses balanced desktop rows and a single-column Insights gallery at intermediate and narrow widths", () => {
     const gallerySizing = foodVisualStyles.slice(
       foodVisualStyles.indexOf("/* Give the chart captures enough desktop width for their labels and plotted detail. */"),
     );
 
     expect(gallerySizing).toContain("@media (min-width: 601px)");
-    expect(gallerySizing).toContain("width: min(calc(100% + clamp(32px, 6vw, 72px)), 820px, calc(100vw - 40px));");
-    expect(gallerySizing).toContain("grid-template-columns: minmax(0, 1fr);");
+    expect(gallerySizing).toContain("@media (min-width: 1101px)");
+    const sharedChartSizing = gallerySizing.slice(
+      gallerySizing.indexOf("@media (min-width: 601px)"),
+      gallerySizing.indexOf("@media (min-width: 1101px)"),
+    );
+    expect(sharedChartSizing).toContain("grid-template-columns: minmax(0, 1fr);");
+    expect(sharedChartSizing).toContain("width: min(calc(100% + clamp(32px, 6vw, 72px)), 600px, calc(100vw - 40px));");
+    expect(sharedChartSizing).not.toContain(", 820px,");
+    const chartFrameRule = sharedChartSizing.slice(
+      sharedChartSizing.indexOf(".food-insight-path__capture-screen--macro,"),
+    );
+    expect(chartFrameRule).toContain("width: min(100%, 360px);");
+    expect(chartFrameRule).not.toContain("width: min(100%, 288px);");
+    expect(chartFrameRule).not.toContain("overflow: hidden;");
+    const completenessFrame = sharedChartSizing.slice(
+      sharedChartSizing.indexOf(".food-insight-path__capture-screen--consistency {"),
+    );
+    expect(completenessFrame).toContain("width: min(100%, 360px);");
+
     const desktopEvidence = gallerySizing.slice(
-      gallerySizing.indexOf(".food-insight-path__capture-screen--macro,"),
+      gallerySizing.indexOf("@media (min-width: 1101px)"),
       gallerySizing.indexOf("@media (max-width: 600px)"),
     );
-    const chartFrameRule = desktopEvidence.slice(
-      0,
-      desktopEvidence.indexOf(".food-insight-path__captures[data-gallery=\"insights-evidence\"] .food-insight-path__capture--lead"),
-    );
-    expect(chartFrameRule).toContain("width: min(100%, 288px);");
-    expect(chartFrameRule).not.toContain("width: min(100%, 500px);");
+    expect(desktopEvidence).toContain("width: min(calc(100% + clamp(32px, 6vw, 72px)), 1040px, calc(100vw - 40px));");
+    expect(desktopEvidence).toContain("grid-template-columns: repeat(2, minmax(0, 1fr));");
+    expect(desktopEvidence).toContain("grid-column: auto;");
+    expect(sharedChartSizing).toContain("height: auto;");
+    expect(sharedChartSizing).toContain("max-height: none;");
+    expect(sharedChartSizing).toContain("object-fit: contain;");
+    expect(sharedChartSizing).toContain("transform: none;");
+    expect(sharedChartSizing).not.toContain("filter:");
+
     expect(gallerySizing).toContain(".food-insight-path__capture-copy");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-balance-focus,");
     expect(gallerySizing).toContain(".food-insight-path__capture-screen--macro > img.food-insight-path__macro-mix-focus {");
-    expect(gallerySizing).toContain("overflow: hidden;");
     expect(gallerySizing).toContain("max-height: none;");
     expect(gallerySizing).toContain("object-fit: contain;");
-    expect(gallerySizing).not.toContain("width: 107%;");
-    expect(gallerySizing).not.toContain("width: 108%;");
-    expect(gallerySizing).not.toContain("width: 106%;");
-    expect(gallerySizing).not.toContain("width: 103%;");
     expect(gallerySizing).toContain("flex: none;");
 
     const narrowGallery = gallerySizing.slice(gallerySizing.indexOf("@media (max-width: 600px)"));
@@ -642,8 +657,9 @@ describe("Food Tracker product story", () => {
     expect(narrowGallery).toContain("width: calc(100% + 16px);");
     expect(narrowGallery).toContain("margin-left: -8px;");
     expect(narrowGallery).toContain("margin-right: -8px;");
-    expect(narrowGallery).toContain("width: min(100%, 260px);");
+    expect(narrowGallery).toContain("width: min(100%, 320px);");
     expect(narrowGallery).toContain("margin-inline: auto;");
+    expect(narrowGallery).not.toContain("overflow: hidden;");
   });
 
   it("uses content-focused authentic gallery crops without changing their natural proportions", () => {
