@@ -1,5 +1,15 @@
 # Implementation Status
 
+## Latest immutable feature Preview — Lobby fade and Food Insights scale (2026-10-12)
+
+**Preview:** https://b86817aa.joshuaik2.pages.dev/ (Cloudflare Pages Preview, branch `feat/portfolio-integration`). **Application source:** `5ca289320c88bed5fe5d3065702ce7de236fe62c`. The deployed JavaScript and CSS SHA-256 values match the local build. Production was not targeted; the persistent portfolio goal remains active.
+
+This checkpoint keeps the four category banner groups centered and slender, and moves the Figma Pass06 fade/veil behind foreground cards so their marks and faces stay bright. The Food Tracker Insights gallery keeps Macro Composition, Calorie Forecast, Fiber Trend, and Daily Completeness; the first three now use larger aspect-preserving image presentation. The full original Cho’Veigo demo remains unchanged and is served at 112.638 seconds.
+
+**Verification:** all 320 tests across 31 files passed; `npm run build` passed with the existing Vite chunk-size advisory; `git diff --check` passed. Installed Chrome checked all four lobbies, Food Tracker, Cho’Veigo, Demos, Resume Found, and Resume Viewer at desktop and narrow widths: all routes returned HTTP 200, all images loaded, no browser errors or unexpected failed requests, and no horizontal overflow. During the Demos seek test, the browser cancelled the prior media range request as expected; playback and seeking to 110.638 seconds succeeded. The public full-demo body was fetched and its 32,915,943 bytes hash to the owner's exact SHA-256 `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801`; byte-range support is enabled. Preview JS/CSS hashes match the local build. Visual captures and audit data are preserved in the local review folder `docs/site-render-review/2026-10-12-banner-resume-identity-convergence/preview-5ca2893/`.
+
+**Open:** Profile lower-scene geometry remains unchanged because the “Compact Profile + Activity” selection was a misclick; the choice between preserving the full-height shell and compacting Profile together with Activity is still unresolved. Food Tracker still has no authentic demo video. Live screen-reader interaction remains a manual follow-up. This is a review checkpoint, not portfolio completion.
+
 ## Latest immutable review Preview — Owner Correction Pass 08 Food Insights gallery (2026-10-12)
 
 **Preview:** https://4f83a72e.joshuaik2.pages.dev/ (Cloudflare Pages Preview `4f83a72e-619e-48f9-8eb9-11cdfcce3e3e`, branch `feat/portfolio-integration`, source `6759dd0`). **Application source:** `6759dd0d1afde5a18dd7db246c0cb0373912217f`. Deployed JS/CSS SHA-256 values match the local build. Production was not targeted; the persistent portfolio goal remains active.

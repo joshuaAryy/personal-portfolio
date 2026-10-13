@@ -1,5 +1,15 @@
 # Persistent Agent Registry
 
+## Current live state — Lobby + Food Tracker review checkpoint (2026-10-12)
+
+The latest feature application source is `5ca289320c88bed5fe5d3065702ce7de236fe62c` on `feat/portfolio-integration`. **Current immutable Preview:** https://b86817aa.joshuaik2.pages.dev/ (Environment Preview, branch `feat/portfolio-integration`, application source `5ca2893`). Deployed JavaScript and CSS SHA-256 values match the built artifacts. Production was not targeted; the persistent goal remains active.
+
+- **Lobby:** kept the centered Figma-proportional banner groups; the Pass06 fade sits behind the card content. All four categories were visually captured at desktop and narrow widths.
+- **Food Tracker:** enlarged the existing four-image Insights gallery without changing source assets or surrounding story; authentic screenshot/design-study distinctions remain explicit.
+- **Cho’Veigo media:** original unchanged 112.638-second source is served with byte-range support. The deployed body hash matched the owner-provided SHA-256 `1C637A4AD7A197D7073DA88534CF8D54B660C85DF16B75FA25F955D16E94C801`; Chrome verified playback and seeking near the end.
+- **Verification:** 320 tests across 31 files passed; build passed with the existing chunk-size advisory; diff check passed. Desktop/narrow route and image audit passed for Home, four lobbies, Food Tracker, Cho’Veigo, Demos, Resume Found, and Resume Viewer.
+- **Open:** Profile height choice remains unresolved after the owner reported “Compact Profile + Activity” as a misclick; no Profile geometry change was made. Food Tracker demo video remains pending, and live screen-reader interaction remains manual. Unrelated historical and untracked worktree materials remain preserved.
+
 ## Current live state — Owner Correction Pass 08 review checkpoint (2026-10-12)
 
 The latest feature application source is `6759dd0d1afde5a18dd7db246c0cb0373912217f` on `feat/portfolio-integration`. **Current immutable Preview:** https://4f83a72e.joshuaik2.pages.dev/ (deployment `4f83a72e-619e-48f9-8eb9-11cdfcce3e3e`, Environment Preview, branch `feat/portfolio-integration`, application source `6759dd0`). Deployed JavaScript and CSS SHA-256 values match the build from this source. Production was not targeted; the persistent goal remains active.
