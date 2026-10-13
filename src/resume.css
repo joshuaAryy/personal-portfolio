@@ -142,11 +142,11 @@
 .resume-mechanism__j {
   position: absolute;
   z-index: 1;
-  top: 31%;
+  top: 49%;
   left: 50%;
   display: block;
-  width: min(28%, 180px);
-  height: min(28%, 180px);
+  width: min(45%, 290px);
+  height: min(45%, 290px);
   aspect-ratio: 1 / 1;
   overflow: hidden;
   transform: translate(-50%, -50%);
@@ -264,7 +264,7 @@
 .resume-found__title {
   position: absolute;
   z-index: 2;
-  top: 49%;
+  top: 71%;
   left: 50%;
   display: flex;
   width: min(400px, 70cqw);

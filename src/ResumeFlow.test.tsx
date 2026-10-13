@@ -75,8 +75,8 @@ describe("approved resume flow", () => {
     expect(sceneRule).not.toMatch(/border:\s*1px\s+solid/);
     const exteriorGlow = css.match(/\.resume-found__system::before\s*\{([^}]*)\}/)?.[1] ?? "";
     expect(exteriorGlow).not.toContain("gameflow-background.jpg");
-    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*top:\s*31%;[^}]*width:\s*min\(28%,\s*180px\)/s);
-    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*height:\s*min\(28%,\s*180px\)/s);
+    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*top:\s*49%;[^}]*width:\s*min\(45%,\s*290px\)/s);
+    expect(css).toMatch(/\.resume-mechanism__j\s*\{[^}]*height:\s*min\(45%,\s*290px\)/s);
     expect(css).toMatch(/animation:\s*resume-found-entry\s+/);
     expect(css).toMatch(
       /@media\s*\(prefers-reduced-motion:\s*reduce\)[\s\S]*\.resume-mechanism__scene[\s\S]*animation:\s*none/s,
@@ -198,7 +198,7 @@ describe("approved resume flow", () => {
     expect(compositionRule).toMatch(/position:\s*relative/);
     expect(compositionRule).toMatch(/width:\s*var\(--resume-found-composition-size\)/);
     expect(css).toMatch(/--resume-found-composition-size:\s*min\(640px,\s*max\(0px,\s*calc\(100vw - 32px\)\),\s*max\(0px,\s*calc\(100vh - 123px\)\)\)/);
-    expect(titleRule).toMatch(/top:\s*49%/);
+    expect(titleRule).toMatch(/top:\s*71%/);
     expect(titleRule).toMatch(/width:\s*min\(400px,\s*70cqw\)/);
     expect(titleRule).toMatch(/height:\s*min\(52px,\s*8\.2cqw\)/);
     expect(titleRule).toMatch(/font-size:\s*clamp\(24px,\s*5\.6cqw,\s*36px\)/);
@@ -247,7 +247,7 @@ describe("approved resume flow", () => {
     const actionRule = css.match(/\.resume-found__action\s*\{([^}]*)\}/)?.[1] ?? "";
     const closeRule = css.match(/\.resume-found__close\s*\{([^}]*)\}/)?.[1] ?? "";
 
-    expect(titleRule).toMatch(/top:\s*49%/);
+    expect(titleRule).toMatch(/top:\s*71%/);
     expect(actionRule).toMatch(/top:\s*81\.5%/);
     expect(actionRule).toMatch(/width:\s*min\(256px,\s*40cqw\)/);
     expect(closeRule).toMatch(/top:\s*98\.7%/);
