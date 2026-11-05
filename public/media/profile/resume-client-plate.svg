@@ -1,0 +1,21 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="228" height="63" viewBox="0 0 228 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="HD2 / Client Plate" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M1.9 1.90909H194.75L225.15 31.5L194.75 61.0909H1.9V1.90909Z" fill="#03090E" stroke="#4D3818" stroke-width="4"/>
+<path id="Vector_2" d="M8.55 7.63636H190.95L214.7 31.5L190.95 55.3636H8.55V7.63636Z" fill="url(#paint0_linear_0_4)" stroke="#B58A3B" stroke-width="1.6"/>
+<path id="Vector_3" d="M11.4 10.5H188.1L209 31.5L188.1 52.5H11.4V10.5Z" stroke="#0BC2DF" stroke-opacity="0.72" stroke-width="2"/>
+<g id="Vector_4" opacity="0.48">
+<path d="M16.15 49.6364H184.3Z" fill="black"/>
+<path d="M16.15 49.6364H184.3" stroke="#0BC2DF" stroke-width="2"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_4" x1="8.55" y1="7.63636" x2="29.5251" y2="98.2348" gradientUnits="userSpaceOnUse">
+<stop stop-color="#111820"/>
+<stop offset="0.6" stop-color="#08131D"/>
+<stop offset="1" stop-color="#03090E"/>
+</linearGradient>
+<clipPath id="clip0_0_4">
+<rect width="228" height="63" fill="white"/>
+</clipPath>
+</defs>
+</svg>

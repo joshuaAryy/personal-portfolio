@@ -1,0 +1,208 @@
+[
+  {
+    "viewport": [
+      1536,
+      1360
+    ],
+    "id": "projects",
+    "response": 200,
+    "gap": 12,
+    "iconGap": 38.5,
+    "visible": true,
+    "staysOpen": true,
+    "measured": {
+      "panel": {
+        "x": 422,
+        "y": 687.6,
+        "right": 1259.9,
+        "bottom": 945.6,
+        "width": 837.9,
+        "height": 257.9
+      },
+      "signal": {
+        "x": 429.6,
+        "y": 957.6,
+        "right": 638.7,
+        "bottom": 1157.7,
+        "width": 209.1,
+        "height": 200.1
+      },
+      "icon": {
+        "x": 482.6,
+        "y": 984.1,
+        "right": 585.8,
+        "bottom": 1087.3,
+        "width": 103.2,
+        "height": 103.2
+      },
+      "header": null,
+      "title": "PROJECTS",
+      "hidden": false,
+      "document": [
+        1536,
+        1360
+      ]
+    },
+    "errors": [],
+    "failedRequests": [],
+    "screenshot": "overlay-projects-1536x1360.jpg"
+  },
+  {
+    "viewport": [
+      1536,
+      1360
+    ],
+    "id": "experience",
+    "response": 200,
+    "gap": 12,
+    "iconGap": 38.5,
+    "visible": true,
+    "staysOpen": true,
+    "measured": {
+      "panel": {
+        "x": 422,
+        "y": 687.6,
+        "right": 1259.9,
+        "bottom": 945.6,
+        "width": 837.9,
+        "height": 257.9
+      },
+      "signal": {
+        "x": 638.7,
+        "y": 957.6,
+        "right": 847.8,
+        "bottom": 1157.7,
+        "width": 209.1,
+        "height": 200.1
+      },
+      "icon": {
+        "x": 691.7,
+        "y": 984.1,
+        "right": 794.8,
+        "bottom": 1087.3,
+        "width": 103.2,
+        "height": 103.2
+      },
+      "header": null,
+      "title": "EXPERIENCE",
+      "hidden": false,
+      "document": [
+        1536,
+        1360
+      ]
+    },
+    "errors": [],
+    "failedRequests": [],
+    "screenshot": "overlay-experience-1536x1360.jpg"
+  },
+  {
+    "viewport": [
+      1536,
+      1360
+    ],
+    "id": "hackathon",
+    "response": 200,
+    "gap": 12,
+    "iconGap": 38.5,
+    "visible": true,
+    "staysOpen": true,
+    "measured": {
+      "panel": {
+        "x": 422,
+        "y": 687.6,
+        "right": 1259.9,
+        "bottom": 945.6,
+        "width": 837.9,
+        "height": 257.9
+      },
+      "signal": {
+        "x": 847.8,
+        "y": 957.6,
+        "right": 1056.9,
+        "bottom": 1157.7,
+        "width": 209.1,
+        "height": 200.1
+      },
+      "icon": {
+        "x": 900.7,
+        "y": 984.1,
+        "right": 1003.9,
+        "bottom": 1087.3,
+        "width": 103.2,
+        "height": 103.2
+      },
+      "header": null,
+      "title": "HACKATHON",
+      "hidden": false,
+      "document": [
+        1536,
+        1360
+      ]
+    },
+    "errors": [],
+    "failedRequests": [],
+    "screenshot": "overlay-hackathon-1536x1360.jpg"
+  },
+  {
+    "viewport": [
+      1536,
+      1360
+    ],
+    "id": "academics",
+    "response": 200,
+    "gap": 12,
+    "iconGap": 38.5,
+    "visible": true,
+    "staysOpen": true,
+    "measured": {
+      "panel": {
+        "x": 422,
+        "y": 687.6,
+        "right": 1259.9,
+        "bottom": 945.6,
+        "width": 837.9,
+        "height": 257.9
+      },
+      "signal": {
+        "x": 1056.9,
+        "y": 957.6,
+        "right": 1265.9,
+        "bottom": 1157.7,
+        "width": 209.1,
+        "height": 200.1
+      },
+      "icon": {
+        "x": 1109.8,
+        "y": 984.1,
+        "right": 1213,
+        "bottom": 1087.3,
+        "width": 103.2,
+        "height": 103.2
+      },
+      "header": null,
+      "title": "ACADEMICS",
+      "hidden": false,
+      "document": [
+        1536,
+        1360
+      ]
+    },
+    "errors": [],
+    "failedRequests": [],
+    "screenshot": "overlay-academics-1536x1360.jpg"
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "response": 200,
+    "keyboardFocused": true,
+    "document": [
+      390,
+      1976
+    ],
+    "errors": [],
+    "failedRequests": []
+  }
+]

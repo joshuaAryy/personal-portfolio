@@ -1,0 +1,256 @@
+.education-projects.education-projects--capability-briefs {
+  width: min(100%, 1160px);
+  margin: 0 auto;
+  color: #e9e5dc;
+}
+
+.education-projects--capability-briefs .education-projects__back {
+  display: inline-block;
+  color: #c7b782;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.education-projects--capability-briefs .education-projects__back:hover {
+  color: #f1dfac;
+}
+
+.education-projects--capability-briefs .education-projects__back:focus-visible {
+  outline: 2px solid #e6cf82;
+  outline-offset: 4px;
+}
+
+.education-projects--capability-briefs .education-projects__heading {
+  margin: clamp(28px, 3vw, 42px) 0 34px;
+}
+
+.education-projects__eyebrow,
+.education-projects__kind {
+  margin: 0;
+  color: #c7b782;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.education-projects--capability-briefs .education-projects__heading h1 {
+  margin: 9px 0 5px;
+  color: #f0e8da;
+  font-size: clamp(34px, 4.1vw, 48px);
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.education-projects--capability-briefs .education-projects__program {
+  margin: 6px 0 0;
+  color: #bcc3c7;
+  font-size: 14px;
+}
+
+.education-projects--capability-briefs .education-projects__expected {
+  margin: 5px 0 0;
+  color: #8f9ba1;
+  font-size: 12px;
+}
+
+.education-projects--capability-briefs .education-projects__list {
+  display: block;
+  padding: 0 0 44px;
+}
+
+.education-projects__section-title {
+  margin: 0 0 12px;
+  color: #e5dfd2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.education-projects__briefs {
+  display: grid;
+  align-items: stretch;
+}
+
+.education-projects__briefs--cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.education-projects__brief {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 100%;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid #7890994a;
+  background: linear-gradient(150deg, rgba(14, 31, 39, .82), rgba(7, 19, 26, .72));
+}
+
+.education-projects__brief-meta {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.education-projects__number {
+  display: grid;
+  flex: 0 0 34px;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid #7890996e;
+  border-radius: 50%;
+  color: #e1ce91;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.education-projects__brief-heading h3 {
+  margin: 8px 0 0;
+  color: #f0e8da;
+  font-size: clamp(21px, 2vw, 25px);
+  font-weight: 550;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.education-projects__status {
+  margin: 9px 0 0;
+  color: #e1c97f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  line-height: 1.45;
+}
+
+.education-projects__brief-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  gap: 9px;
+}
+
+.education-projects__summary {
+  margin: 0;
+  color: #e5e5d9;
+  font-size: 16px;
+  font-weight: 550;
+  line-height: 1.45;
+}
+
+.education-projects__focus {
+  margin: 0;
+  color: #c7ced0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.education-projects__learning {
+  margin: auto 0 0;
+  padding-top: 11px;
+  border-top: 1px solid #7890994a;
+  color: #9eacb2;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.education-projects__learning span {
+  display: block;
+  margin-bottom: 4px;
+  color: #c7b782;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+
+.education-projects__tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.education-projects__tools li {
+  padding: 5px 7px;
+  border: 1px solid #7890994a;
+  color: #aeb9bc;
+  font-size: 10px;
+  line-height: 1.3;
+}
+
+@media (max-width: 760px) {
+  .main--education-projects {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 16px;
+    padding-left: 16px;
+    overflow-x: hidden;
+  }
+
+  .education-projects.education-projects--capability-briefs,
+  .education-projects__list,
+  .education-projects__briefs,
+  .education-projects__brief {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .education-projects.education-projects--capability-briefs {
+    width: min(100%, calc(100vw - 32px));
+  }
+
+  .education-projects--capability-briefs .education-projects__heading {
+    margin: 24px 0 28px;
+  }
+
+  .education-projects--capability-briefs .education-projects__heading h1 {
+    max-width: 100%;
+    font-size: clamp(28px, 8vw, 34px);
+    overflow-wrap: anywhere;
+  }
+
+  .education-projects__brief-meta,
+  .education-projects__brief-heading,
+  .education-projects__brief-copy {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .education-projects__kind,
+  .education-projects__brief-heading h3,
+  .education-projects__summary,
+  .education-projects__focus,
+  .education-projects__learning {
+    overflow-wrap: anywhere;
+  }
+
+  .education-projects__brief {
+    min-height: 0;
+    gap: 13px;
+    padding: 19px;
+  }
+
+  .education-projects__briefs--cards {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .education-projects__summary {
+    font-size: 15px;
+  }
+
+  .education-projects__focus {
+    font-size: 14px;
+  }
+}

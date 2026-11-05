@@ -1,0 +1,12 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="200" viewBox="0 0 24 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Demos selector &#194;&#183; Recording Rail &#194;&#183; Food Tracker active">
+<rect id="Recording rail &#194;&#183; spine" x="10" y="10" width="2" height="180" fill="#544529" fill-opacity="0.8"/>
+<rect id="Recording rail &#194;&#183; row connector &#194;&#183; Food Tracker" y="9" width="8" height="2" fill="#C79E47" fill-opacity="0.95"/>
+<circle id="Selected recording marker &#194;&#183; Food Tracker" cx="11" cy="10" r="5.25" fill="#040A13" stroke="#C79E47" stroke-width="1.5"/>
+<circle id="Selected recording marker &#194;&#183; gold center" cx="11" cy="10" r="1.5" fill="#C79E47"/>
+<rect id="Recording rail &#194;&#183; row connector &#194;&#183; Crest" y="99" width="8" height="2" fill="#544529" fill-opacity="0.75"/>
+<circle id="Unselected recording marker &#194;&#183; Crest" cx="11" cy="100" r="3" fill="#4D5E70"/>
+<rect id="Recording rail &#194;&#183; row connector &#194;&#183; Cho&#39;Veigo" y="189" width="8" height="2" fill="#544529" fill-opacity="0.75"/>
+<circle id="Unselected recording marker &#194;&#183; Cho&#39;Veigo" cx="11" cy="190" r="3" fill="#4D5E70"/>
+</g>
+</svg>

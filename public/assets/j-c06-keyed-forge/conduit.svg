@@ -1,0 +1,38 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="98.379" height="237.888" viewBox="0 0 98.379 237.888" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="conduit">
+<g id="conduit-stem" opacity="0.4" filter="url(#filter0_f_0_4)">
+<path d="M96.2002 1.00656C96.8002 65.0066 96.8002 125.007 96.4002 167.007" stroke-width="1.4" stroke="#4FD0F0"/>
+</g>
+<g id="conduit-hook-glow" opacity="0.4" filter="url(#filter1_f_0_4)">
+<path d="M15.6002 218.007C30.6002 234.007 59.6002 234.007 80.6002 224.007" stroke-width="6" stroke-linecap="round" stroke="#27B6E8"/>
+</g>
+<g id="conduit-hook" opacity="0.8" filter="url(#filter2_f_0_4)">
+<path d="M2.60018 191.007C3.60018 205.007 8.60018 213.007 15.6002 218.007C30.6002 234.007 59.6002 234.007 80.6002 224.007" stroke-width="1.8" stroke-linecap="round" stroke="#7FE6FF"/>
+</g>
+<g id="tip-glint" opacity="0.85" filter="url(#filter3_f_0_4)">
+<path d="M1.60018 167.007C7.60018 164.007 11.6002 163.007 16.6002 162.007" stroke-width="1.6" stroke-linecap="round" stroke="white"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_f_0_4" x="94.5002" y="2.14204e-08" width="3.87874" height="168.013" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.5" result="effect1_foregroundBlur_0_4"/>
+</filter>
+<filter id="filter1_f_0_4" x="8.60017" y="211.007" width="79.0007" height="26.881" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2" result="effect1_foregroundBlur_0_4"/>
+</filter>
+<filter id="filter2_f_0_4" x="0.900137" y="189.307" width="81.4002" height="43.281" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.4" result="effect1_foregroundBlur_0_4"/>
+</filter>
+<filter id="filter3_f_0_4" x="0" y="160.406" width="18.2003" height="8.20033" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="0.4" result="effect1_foregroundBlur_0_4"/>
+</filter>
+</defs>
+</svg>

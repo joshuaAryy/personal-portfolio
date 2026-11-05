@@ -1,0 +1,1032 @@
+{
+  "capturedAt": "2026-10-04T03:58:35.168Z",
+  "browser": "153.0.8010.53",
+  "route": "http://127.0.0.1:5174/projects/food-tracker",
+  "sourceHead": "45efb52 (Food scrollspy fix uncommitted at task start)",
+  "viewportSizes": [
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "figmaReferences": {
+    "body": "1813:42",
+    "review": "3286:2",
+    "insightsCopy": [
+      "3502:33",
+      "3502:87"
+    ],
+    "files": [
+      "food-figma-review-current-3286-2.png",
+      "food-figma-insights-after-copy-sync.png"
+    ]
+  },
+  "previewBaseline": "docs/case-study-review/render-sync/2026-10-03-preview-followup-377d640/food-desktop-expanded-full-page.png",
+  "runs": [
+    {
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "width": 1560,
+          "height": 998,
+          "clientWidth": 1560,
+          "scrollWidth": 1560,
+          "clientHeight": 998,
+          "scrollHeight": 4757,
+          "scrollTop": 0,
+          "overflowY": "auto"
+        },
+        "sections": [
+          {
+            "id": "food-overview",
+            "heading": "Simple food logs. Trusted nutrition.",
+            "top": 124,
+            "height": 335
+          },
+          {
+            "id": "food-logging",
+            "heading": "A meal can start in five ways.",
+            "top": 513,
+            "height": 329
+          },
+          {
+            "id": "food-insights",
+            "heading": "Turn saved logs into a view of patterns over time.",
+            "top": 895,
+            "height": 362
+          },
+          {
+            "id": "food-search",
+            "heading": "",
+            "top": 1312,
+            "height": 354
+          },
+          {
+            "id": "food-interface",
+            "heading": "One query can surface several plausible foods.",
+            "top": 1720,
+            "height": 860
+          },
+          {
+            "id": "food-system",
+            "heading": "",
+            "top": 2634,
+            "height": 778
+          },
+          {
+            "id": "food-evaluation",
+            "heading": "Hybrid search put the intended food first more often.",
+            "top": 3466,
+            "height": 281
+          },
+          {
+            "id": "food-iteration",
+            "heading": "Passing tests did not guarantee useful search.",
+            "top": 3801,
+            "height": 208
+          },
+          {
+            "id": "food-boundaries",
+            "heading": "Keep intent, nutrition, and recorded history distinct.",
+            "top": 4063,
+            "height": 146
+          },
+          {
+            "id": "food-workflow",
+            "heading": "Useful search means the right food appears first.",
+            "top": 4263,
+            "height": 175
+          },
+          {
+            "id": "food-reflection",
+            "heading": "A useful match must resolve into trusted nutrition.",
+            "top": 4492,
+            "height": 205
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:5174/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "naturalWidth": 884,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+            "width": 884,
+            "height": 222
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "naturalWidth": 368,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+            "width": 368,
+            "height": 798
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "naturalWidth": 1432,
+            "alt": "Illustrative composite system figure, not a product screenshot: above, in-app search gathers exact, fuzzy, and semantic food candidates, deterministic ranking orders them, trusted food data and serving rules resolve nutrition, and an editable food log records the result; below, React Native and Expo connect through Express and Prisma to a normalized catalog and backend serving resolution, then PostgreSQL stores the log and serving snapshot for editable History and Insights.",
+            "width": 1432,
+            "height": 710
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 40,
+            "height": 40
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": "",
+            "width": 13,
+            "height": 13
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": "",
+            "width": 8,
+            "height": 7
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": "",
+            "width": 7,
+            "height": 6
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          }
+        ],
+        "text": "FOOD TRACKER PRODUCT INITIATOR · SYSTEM DIRECTION · EVALUATION Simple food logs. Trusted nutrition. A mobile-first nutrition tracker for quick logging, reliable food search, serving conversion, recommendations, and long-term insight. Quick logging stays simple; trusted food and serving details resolve underneath. MOTIVATED BY MY OWN GYM + NUTRITION ROUTINE. THE PRODUCT CHALLENGE A quick log still needs the right food and serving. Search surfaces candidates; trusted food data and backend serving conversion determine nutrition. LOGGING PATHS A meal can start in five ways. Each path brings a food and serving choice to the same review before it is saved. MANUAL Enter a food directly SAVED / RECENT Saved or recent food BARCODE Use a barcode lookup TEXT Text description of the meal PHOTO Suggest visible foods and portions REVIEW FOOD + PORTION You can review the food and portion before saving. Photo suggestions: AI estimates are low-trust and editable. A trusted catalog match and backend serving rules supply nutrition; the person can review or change the suggestion before saving. INSIGHTS FROM LOGGED FOOD Turn saved logs into a view of patterns over time. Nutrient aggregation turns logged values into totals, with coverage showing where food data is incomplete. Logged Items Saved food entries Nutrient Aggregation Totals from logged values Coverage Missing nutrient data stays visible FOCUSED OVERVIEW Simple A focused daily view of logged foods and nutrition. MORE DETAIL Complex Nutrient detail and comparisons across selected ranges. RETURN TO ANALYSIS Saved views Reopen an analysis you have saved. Unknown nutrition stays unknown. Simple and Complex use the same product and backend; they change the level of detail in view. WHY FOOD SEARCH IS HARD RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically. USER QUERY → DETERMINISTIC Direct matches FUZZY Near-text matches SEMANTIC · PINECONE Candidate supply only → CANDIDATE UNION → DETERMINISTIC EVALUATION Rules decide rank → FINAL RANK 1 2 3 SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery. AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition. IN THE PRODUCT · MOBILE SEARCH One query can surface several plausible foods. The intended food needs to rank near the top before its serving and nutrition can be trusted. This earlier simulator capture shows that decision in the product. EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH ARCHITECTURE + DATA FOUNDATION Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights. React Native / Expo sends the chosen food and serving to Express / Prisma. Food records are normalized into one trusted catalog; backend serving resolution writes a PostgreSQL food log with a serving snapshot that supports later portion edits in History and Insights. OFFLINE EVALUATION · DEVELOPMENT + HOLDOUT Hybrid search put the intended food first more often. Development improved sharply, the separate holdout moved up modestly. I broadened candidate search while keeping the final order deterministic. OFFLINE SEARCH EVALUATION · FIRST RESULT DEVELOPMENT · 80 QUERIES Top-1 means the correct food ranked first. Bars show share. LEGACY BASELINE 40/80 FULL HYBRID 71/80 (+31) Top-3 40/80 → 72/80·Top-5 40/80 → 72/80 HOLDOUT · 40 QUERIES Top-1 means the correct food ranked first. Bars show share. LEGACY BASELINE 25/40 FULL HYBRID 27/40 (+2) Top-3 25/40 → 28/40·Top-5 25/40 → 28/40 OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES VALIDATION PRACTICE Passing tests did not guarantee useful search. 01 RELEVANCE My tests passed while search still missed foods. I added offline query evaluation to measure relevance beside code correctness. 02 INDEX COMPLETENESS A pagination bug left the search index partial or stale. I checked index completeness separately from whether the right food was returned. DATA + SYSTEM AUTHORITIES Keep intent, nutrition, and recorded history distinct. INTENT INTERPRETATION AI can interpret the food request; it does not decide nutrition values. NUTRITION AUTHORITY Trusted normalized food data and backend serving conversion set the numbers. HISTORICAL INTEGRITY The serving basis is retained so a later portion edit can be recalculated. Unknown nutrition stays unknown. WHAT SEARCH EVALUATION TAUGHT ME Useful search means the right food appears first. I measured whether the intended food ranked first, then weighed relevance gains against latency and the need to keep nutrition authoritative. PRODUCT INITIATION · SEARCH EVALUATION · SYSTEM DESIGN 01 SET RELEVANCE TARGET 02 WIDEN CANDIDATE SEARCH 03 COMPARE QUALITY + LATENCY 04 KEEP NUTRITION TRUSTED WHAT I LEARNED A useful match must resolve into trusted nutrition. Search finds a candidate; trusted reference data and backend serving conversion define what gets logged. The saved serving snapshot supports later portion edits. Separating those jobs made the product easier to reason about and trust. Simple and Complex are presentation levels over one product and backend.",
+        "chapterLinks": [
+          {
+            "text": "PRODUCT",
+            "href": "#food-overview",
+            "ariaCurrent": "location"
+          },
+          {
+            "text": "LOGGING",
+            "href": "#food-logging",
+            "ariaCurrent": null
+          },
+          {
+            "text": "INSIGHTS",
+            "href": "#food-insights",
+            "ariaCurrent": null
+          },
+          {
+            "text": "RETRIEVAL",
+            "href": "#food-search",
+            "ariaCurrent": null
+          },
+          {
+            "text": "IN PRODUCT",
+            "href": "#food-interface",
+            "ariaCurrent": null
+          },
+          {
+            "text": "ARCHITECTURE",
+            "href": "#food-system",
+            "ariaCurrent": null
+          },
+          {
+            "text": "RESULTS",
+            "href": "#food-evaluation",
+            "ariaCurrent": null
+          },
+          {
+            "text": "LEARNING",
+            "href": "#food-workflow",
+            "ariaCurrent": null
+          },
+          {
+            "text": "CLOSE",
+            "href": "#food-reflection",
+            "ariaCurrent": null
+          }
+        ],
+        "resources": [
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react-dom_client.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react-router-dom.js?v=ef031a35",
+          "http://127.0.0.1:5174/src/styles.css",
+          "http://127.0.0.1:5174/src/optical-marks.css",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/chunk-5XA2ULL3.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/chunk-DO3LVBXO.js?v=ef031a35",
+          "http://127.0.0.1:5174/src/stush-case-study.css",
+          "http://127.0.0.1:5174/src/lis-research-record.css",
+          "http://127.0.0.1:5174/src/fraymakers-case.css",
+          "http://127.0.0.1:5174/src/cho-evidence-worksheet.css",
+          "http://127.0.0.1:5174/src/utility.css",
+          "http://127.0.0.1:5174/src/resume.css",
+          "http://127.0.0.1:5174/src/opening.css",
+          "http://127.0.0.1:5174/src/profile-overview.css",
+          "http://127.0.0.1:5174/src/lobby.css",
+          "http://127.0.0.1:5174/src/demos-page.css",
+          "http://127.0.0.1:5174/src/home-explore.css",
+          "http://127.0.0.1:5174/src/food-visuals.css",
+          "http://127.0.0.1:5174/src/crest-case-study.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "fullCapture": {
+        "mainHeight": 4757,
+        "documentHeight": 4839,
+        "original": {
+          "height": "",
+          "maxHeight": "",
+          "overflow": "",
+          "flex": ""
+        }
+      },
+      "learningAnchor": {
+        "afterSettledClick": {
+          "hash": "#food-workflow",
+          "activeText": "CLOSE",
+          "activeHref": "#food-reflection",
+          "scrollContainer": "#main",
+          "mainScrollTop": 3759,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 586,
+          "targetBottom": 761,
+          "docWidth": 1920,
+          "docClientWidth": 1920,
+          "docHeight": 1080
+        },
+        "atActualMaximum": {
+          "hash": "#food-workflow",
+          "activeText": "CLOSE",
+          "activeHref": "#food-reflection",
+          "scrollContainer": "#main",
+          "mainScrollTop": 3759,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 815,
+          "targetBottom": 1020,
+          "docWidth": 1920,
+          "docClientWidth": 1920,
+          "docHeight": 1080
+        },
+        "nearMaximumProbe": {
+          "requestedOffsetPx": 3,
+          "state": {
+            "hash": "#food-workflow",
+            "activeText": "RESULTS",
+            "activeHref": "#food-evaluation",
+            "scrollContainer": "#main",
+            "mainScrollTop": 3756,
+            "windowScrollY": 0,
+            "maxScroll": 3759,
+            "targetTop": 818,
+            "targetBottom": 1023,
+            "docWidth": 1920,
+            "docClientWidth": 1920,
+            "docHeight": 1080
+          }
+        },
+        "maximumReachedByWheel": true
+      },
+      "chapterChecks": [
+        {
+          "id": "food-overview",
+          "label": "PRODUCT",
+          "hash": "#food-overview",
+          "active": "PRODUCT",
+          "activeHref": "#food-overview",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 48,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-logging",
+          "label": "LOGGING",
+          "hash": "#food-logging",
+          "active": "LOGGING",
+          "activeHref": "#food-logging",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 437,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-insights",
+          "label": "INSIGHTS",
+          "hash": "#food-insights",
+          "active": "INSIGHTS",
+          "activeHref": "#food-insights",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 819,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-search",
+          "label": "RETRIEVAL",
+          "hash": "#food-search",
+          "active": "RETRIEVAL",
+          "activeHref": "#food-search",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 1236,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-interface",
+          "label": "IN PRODUCT",
+          "hash": "#food-interface",
+          "active": "IN PRODUCT",
+          "activeHref": "#food-interface",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 1644,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-system",
+          "label": "ARCHITECTURE",
+          "hash": "#food-system",
+          "active": "ARCHITECTURE",
+          "activeHref": "#food-system",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 2558,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-evaluation",
+          "label": "RESULTS",
+          "hash": "#food-evaluation",
+          "active": "RESULTS",
+          "activeHref": "#food-evaluation",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 3390,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 158
+        },
+        {
+          "id": "food-workflow",
+          "label": "LEARNING",
+          "hash": "#food-workflow",
+          "active": "CLOSE",
+          "activeHref": "#food-reflection",
+          "matches": false,
+          "scrollContainer": "#main",
+          "mainScrollTop": 3759,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 586
+        },
+        {
+          "id": "food-reflection",
+          "label": "CLOSE",
+          "hash": "#food-reflection",
+          "active": "CLOSE",
+          "activeHref": "#food-reflection",
+          "matches": true,
+          "scrollContainer": "#main",
+          "mainScrollTop": 3759,
+          "windowScrollY": 0,
+          "maxScroll": 3759,
+          "targetTop": 815
+        }
+      ],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "noBrowserErrors": true,
+        "documentNoHorizontalOverflow": true,
+        "learningClosesAtMax": true,
+        "resultsActiveJustBeforeMax": true,
+        "otherChapterLinksActive": true,
+        "learningClickHashCorrect": true
+      }
+    },
+    {
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 6842,
+          "scrollY": 70
+        },
+        "main": {
+          "width": 390,
+          "height": 6772,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "clientHeight": 6772,
+          "scrollHeight": 6772,
+          "scrollTop": 0,
+          "overflowY": "visible"
+        },
+        "sections": [
+          {
+            "id": "food-overview",
+            "heading": "Simple food logs. Trusted nutrition.",
+            "top": 96,
+            "height": 607
+          },
+          {
+            "id": "food-logging",
+            "heading": "A meal can start in five ways.",
+            "top": 739,
+            "height": 647
+          },
+          {
+            "id": "food-insights",
+            "heading": "Turn saved logs into a view of patterns over time.",
+            "top": 1422,
+            "height": 801
+          },
+          {
+            "id": "food-search",
+            "heading": "",
+            "top": 2259,
+            "height": 1130
+          },
+          {
+            "id": "food-interface",
+            "heading": "One query can surface several plausible foods.",
+            "top": 3424,
+            "height": 1044
+          },
+          {
+            "id": "food-system",
+            "heading": "",
+            "top": 4504,
+            "height": 432
+          },
+          {
+            "id": "food-evaluation",
+            "heading": "Hybrid search put the intended food first more often.",
+            "top": 4972,
+            "height": 470
+          },
+          {
+            "id": "food-iteration",
+            "heading": "Passing tests did not guarantee useful search.",
+            "top": 5478,
+            "height": 255
+          },
+          {
+            "id": "food-boundaries",
+            "heading": "Keep intent, nutrition, and recorded history distinct.",
+            "top": 5769,
+            "height": 321
+          },
+          {
+            "id": "food-workflow",
+            "heading": "Useful search means the right food appears first.",
+            "top": 6126,
+            "height": 323
+          },
+          {
+            "id": "food-reflection",
+            "heading": "A useful match must resolve into trusted nutrition.",
+            "top": 6485,
+            "height": 252
+          }
+        ],
+        "images": [
+          {
+            "src": "http://127.0.0.1:5174/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": "",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "naturalWidth": 884,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "naturalWidth": 368,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+            "width": 304,
+            "height": 659
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "naturalWidth": 1432,
+            "alt": "Illustrative composite system figure, not a product screenshot: above, in-app search gathers exact, fuzzy, and semantic food candidates, deterministic ranking orders them, trusted food data and serving rules resolve nutrition, and an editable food log records the result; below, React Native and Expo connect through Express and Prisma to a normalized catalog and backend serving resolution, then PostgreSQL stores the log and serving snapshot for editable History and Insights.",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5174/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          }
+        ],
+        "text": "FOOD TRACKER PRODUCT INITIATOR · SYSTEM DIRECTION · EVALUATION Simple food logs. Trusted nutrition. A mobile-first nutrition tracker for quick logging, reliable food search, serving conversion, recommendations, and long-term insight. Quick logging stays simple; trusted food and serving details resolve underneath. MOTIVATED BY MY OWN GYM + NUTRITION ROUTINE. THE PRODUCT CHALLENGE A quick log still needs the right food and serving. Search surfaces candidates; trusted food data and backend serving conversion determine nutrition. 01 · Log a meal Quick entry. 02 · Match the food Search proposes candidates. 03 · Resolve a serving Trusted food data and serving rules set nutrition. 04 · Keep history Record a canonical log entry. LOGGING PATHS A meal can start in five ways. Each path brings a food and serving choice to the same review before it is saved. MANUAL Enter a food directly SAVED / RECENT Saved or recent food BARCODE Use a barcode lookup TEXT Text description of the meal PHOTO Suggest visible foods and portions REVIEW FOOD + PORTION You can review the food and portion before saving. Photo suggestions: AI estimates are low-trust and editable. A trusted catalog match and backend serving rules supply nutrition; the person can review or change the suggestion before saving. INSIGHTS FROM LOGGED FOOD Turn saved logs into a view of patterns over time. Nutrient aggregation turns logged values into totals, with coverage showing where food data is incomplete. Logged Items Saved food entries Nutrient Aggregation Totals from logged values Coverage Missing nutrient data stays visible FOCUSED OVERVIEW Simple A focused daily view of logged foods and nutrition. MORE DETAIL Complex Nutrient detail and comparisons across selected ranges. RETURN TO ANALYSIS Saved views Reopen an analysis you have saved. Unknown nutrition stays unknown. Simple and Complex use the same product and backend; they change the level of detail in view. WHY FOOD SEARCH IS HARD RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically. USER QUERY → DETERMINISTIC Direct matches FUZZY Near-text matches SEMANTIC · PINECONE Candidate supply only → CANDIDATE UNION → DETERMINISTIC EVALUATION Rules decide rank → FINAL RANK 1 2 3 SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery. AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition. IN THE PRODUCT · MOBILE SEARCH One query can surface several plausible foods. The intended food needs to rank near the top before its serving and nutrition can be trusted. This earlier simulator capture shows that decision in the product. EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH ARCHITECTURE + DATA FOUNDATION Search in the app Start with a meal or ingredient. Find and rank candidates Exact, fuzzy, and semantic paths feed one deterministic ranking. Resolve nutrition Trusted food data and serving rules independently resolve nutrition. Record the result A serving snapshot supports later portion edits in History. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights. React Native / Expo sends the chosen food and serving to Express / Prisma. Food records are normalized into one trusted catalog; backend serving resolution writes a PostgreSQL food log with a serving snapshot that supports later portion edits in History and Insights. OFFLINE EVALUATION · DEVELOPMENT + HOLDOUT Hybrid search put the intended food first more often. Development improved sharply, the separate holdout moved up modestly. I broadened candidate search while keeping the final order deterministic. OFFLINE SEARCH EVALUATION · FIRST RESULT DEVELOPMENT · 80 QUERIES Top-1 means the correct food ranked first. Bars show share. LEGACY BASELINE 40/80 FULL HYBRID 71/80 (+31) Top-3 40/80 → 72/80·Top-5 40/80 → 72/80 HOLDOUT · 40 QUERIES Top-1 means the correct food ranked first. Bars show share. LEGACY BASELINE 25/40 FULL HYBRID 27/40 (+2) Top-3 25/40 → 28/40·Top-5 25/40 → 28/40 OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES VALIDATION PRACTICE Passing tests did not guarantee useful search. 01 RELEVANCE My tests passed while search still missed foods. I added offline query evaluation to measure relevance beside code correctness. 02 INDEX COMPLETENESS A pagination bug left the search index partial or stale. I checked index completeness separately from whether the right food was returned. DATA + SYSTEM AUTHORITIES Keep intent, nutrition, and recorded history distinct. INTENT INTERPRETATION AI can interpret the food request; it does not decide nutrition values. NUTRITION AUTHORITY Trusted normalized food data and backend serving conversion set the numbers. HISTORICAL INTEGRITY The serving basis is retained so a later portion edit can be recalculated. Unknown nutrition stays unknown. WHAT SEARCH EVALUATION TAUGHT ME Useful search means the right food appears first. I measured whether the intended food ranked first, then weighed relevance gains against latency and the need to keep nutrition authoritative. PRODUCT INITIATION · SEARCH EVALUATION · SYSTEM DESIGN 01 SET RELEVANCE TARGET 02 WIDEN CANDIDATE SEARCH 03 COMPARE QUALITY + LATENCY 04 KEEP NUTRITION TRUSTED WHAT I LEARNED A useful match must resolve into trusted nutrition. Search finds a candidate; trusted reference data and backend serving conversion define what gets logged. The saved serving snapshot supports later portion edits. Separating those jobs made the product easier to reason about and trust. Simple and Complex are presentation levels over one product and backend.",
+        "chapterLinks": [
+          {
+            "text": "PRODUCT",
+            "href": "#food-overview",
+            "ariaCurrent": "location"
+          },
+          {
+            "text": "LOGGING",
+            "href": "#food-logging",
+            "ariaCurrent": null
+          },
+          {
+            "text": "INSIGHTS",
+            "href": "#food-insights",
+            "ariaCurrent": null
+          },
+          {
+            "text": "RETRIEVAL",
+            "href": "#food-search",
+            "ariaCurrent": null
+          },
+          {
+            "text": "IN PRODUCT",
+            "href": "#food-interface",
+            "ariaCurrent": null
+          },
+          {
+            "text": "ARCHITECTURE",
+            "href": "#food-system",
+            "ariaCurrent": null
+          },
+          {
+            "text": "RESULTS",
+            "href": "#food-evaluation",
+            "ariaCurrent": null
+          },
+          {
+            "text": "LEARNING",
+            "href": "#food-workflow",
+            "ariaCurrent": null
+          },
+          {
+            "text": "CLOSE",
+            "href": "#food-reflection",
+            "ariaCurrent": null
+          }
+        ],
+        "resources": [
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react-dom_client.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/react-router-dom.js?v=ef031a35",
+          "http://127.0.0.1:5174/src/styles.css",
+          "http://127.0.0.1:5174/src/optical-marks.css",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/chunk-5XA2ULL3.js?v=ef031a35",
+          "http://127.0.0.1:5174/node_modules/.vite/deps/chunk-DO3LVBXO.js?v=ef031a35",
+          "http://127.0.0.1:5174/src/fraymakers-case.css",
+          "http://127.0.0.1:5174/src/cho-evidence-worksheet.css",
+          "http://127.0.0.1:5174/src/stush-case-study.css",
+          "http://127.0.0.1:5174/src/lis-research-record.css",
+          "http://127.0.0.1:5174/src/utility.css",
+          "http://127.0.0.1:5174/src/resume.css",
+          "http://127.0.0.1:5174/src/opening.css",
+          "http://127.0.0.1:5174/src/profile-overview.css",
+          "http://127.0.0.1:5174/src/lobby.css",
+          "http://127.0.0.1:5174/src/demos-page.css",
+          "http://127.0.0.1:5174/src/home-explore.css",
+          "http://127.0.0.1:5174/src/food-visuals.css",
+          "http://127.0.0.1:5174/src/crest-case-study.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "fullCapture": null,
+      "learningAnchor": {
+        "afterSettledClick": {
+          "hash": "#food-workflow",
+          "activeText": "CLOSE",
+          "activeHref": "#food-reflection",
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 5998,
+          "maxScroll": 5998,
+          "targetTop": 198,
+          "targetBottom": 521,
+          "docWidth": 390,
+          "docClientWidth": 390,
+          "docHeight": 6842
+        },
+        "atActualMaximum": {
+          "hash": "#food-workflow",
+          "activeText": "CLOSE",
+          "activeHref": "#food-reflection",
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 5998,
+          "maxScroll": 5998,
+          "targetTop": 557,
+          "targetBottom": 808,
+          "docWidth": 390,
+          "docClientWidth": 390,
+          "docHeight": 6842
+        },
+        "nearMaximumProbe": {
+          "requestedOffsetPx": 3,
+          "state": {
+            "hash": "#food-workflow",
+            "activeText": "RESULTS",
+            "activeHref": "#food-evaluation",
+            "scrollContainer": "window",
+            "mainScrollTop": 0,
+            "windowScrollY": 5995,
+            "maxScroll": 5998,
+            "targetTop": 560,
+            "targetBottom": 811,
+            "docWidth": 390,
+            "docClientWidth": 390,
+            "docHeight": 6842
+          }
+        },
+        "maximumReachedByWheel": true
+      },
+      "chapterChecks": [
+        {
+          "id": "food-overview",
+          "label": "PRODUCT",
+          "hash": "#food-overview",
+          "active": "PRODUCT",
+          "activeHref": "#food-overview",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 90,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-logging",
+          "label": "LOGGING",
+          "hash": "#food-logging",
+          "active": "LOGGING",
+          "activeHref": "#food-logging",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 733,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-insights",
+          "label": "INSIGHTS",
+          "hash": "#food-insights",
+          "active": "INSIGHTS",
+          "activeHref": "#food-insights",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 1416,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-search",
+          "label": "RETRIEVAL",
+          "hash": "#food-search",
+          "active": "RETRIEVAL",
+          "activeHref": "#food-search",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 2253,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-interface",
+          "label": "IN PRODUCT",
+          "hash": "#food-interface",
+          "active": "IN PRODUCT",
+          "activeHref": "#food-interface",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 3418,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-system",
+          "label": "ARCHITECTURE",
+          "hash": "#food-system",
+          "active": "ARCHITECTURE",
+          "activeHref": "#food-system",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 4498,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-evaluation",
+          "label": "RESULTS",
+          "hash": "#food-evaluation",
+          "active": "RESULTS",
+          "activeHref": "#food-evaluation",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 4966,
+          "maxScroll": 5998,
+          "targetTop": 76
+        },
+        {
+          "id": "food-workflow",
+          "label": "LEARNING",
+          "hash": "#food-workflow",
+          "active": "CLOSE",
+          "activeHref": "#food-reflection",
+          "matches": false,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 5998,
+          "maxScroll": 5998,
+          "targetTop": 198
+        },
+        {
+          "id": "food-reflection",
+          "label": "CLOSE",
+          "hash": "#food-reflection",
+          "active": "CLOSE",
+          "activeHref": "#food-reflection",
+          "matches": true,
+          "scrollContainer": "window",
+          "mainScrollTop": 0,
+          "windowScrollY": 5998,
+          "maxScroll": 5998,
+          "targetTop": 557
+        }
+      ],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "noBrowserErrors": true,
+        "documentNoHorizontalOverflow": true,
+        "learningClosesAtMax": true,
+        "resultsActiveJustBeforeMax": true,
+        "otherChapterLinksActive": true,
+        "learningClickHashCorrect": true
+      }
+    }
+  ]
+}

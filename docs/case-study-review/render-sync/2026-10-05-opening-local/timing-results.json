@@ -1,0 +1,89 @@
+﻿{
+  "normal": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "pre": {
+        "start": 383.9110000990331,
+        "duration": 2000,
+        "now": 405.90000009536743,
+        "path": "/",
+        "mark": 700,
+        "docWidth": 1440
+      },
+      "wallElapsed": 1934,
+      "after": {
+        "path": "/home",
+        "perfElapsed": 2224.1889998055995,
+        "focusedTag": "MAIN",
+        "focusedId": "main",
+        "mainFocused": true,
+        "docWidth": 1440
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pre": {
+        "start": 258.5209999233484,
+        "duration": 2000,
+        "now": 352.09999990463257,
+        "path": "/",
+        "mark": 700,
+        "docWidth": 390
+      },
+      "wallElapsed": 1962,
+      "after": {
+        "path": "/home",
+        "perfElapsed": 2314.879000172019,
+        "focusedTag": "MAIN",
+        "focusedId": "main",
+        "mainFocused": true,
+        "docWidth": 390
+      }
+    }
+  ],
+  "reduced": {
+    "pre": {
+      "now": 351.69999980926514,
+      "path": "/",
+      "reduced": true,
+      "routeClass": "opening-route opening-route--reduced opening-route--leaving",
+      "mainClass": "opening opening--reduced",
+      "animations": [
+        {
+          "duration": 120,
+          "state": "running"
+        }
+      ],
+      "skipTabIndex": 0,
+      "docWidth": 1440
+    },
+    "wallElapsedFromSeenOpening": 92,
+    "after": {
+      "path": "/home",
+      "focusedTag": "MAIN",
+      "focusedId": "main",
+      "mainFocused": true,
+      "docWidth": 1440
+    }
+  },
+  "skip": {
+    "focus": {
+      "active": true,
+      "ariaLabel": "Skip to Home",
+      "outlineStyle": "solid",
+      "outlineWidth": "2px"
+    },
+    "after": {
+      "path": "/home",
+      "focusedTag": "MAIN",
+      "focusedId": "main",
+      "mainFocused": true
+    }
+  }
+}

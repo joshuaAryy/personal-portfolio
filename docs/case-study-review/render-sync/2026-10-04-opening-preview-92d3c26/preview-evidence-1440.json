@@ -1,0 +1,687 @@
+{
+  "url": "https://965f0e82.joshuaik2.pages.dev/home",
+  "status": 200,
+  "browser": "153.0.8010.53",
+  "viewport": [
+    1440,
+    900
+  ],
+  "states": [
+    {
+      "target": 500,
+      "state": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "time": 630.0999999776482,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "opening": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "transform": "none"
+        },
+        "mechanism": null,
+        "j": {
+          "x": 529.9921875,
+          "y": 259.9921875,
+          "w": 379.984375,
+          "h": 379.984375,
+          "transform": "none"
+        },
+        "segmented": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "ticks": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "skip": [
+          {
+            "x": 14,
+            "y": -100,
+            "w": 130.09375,
+            "h": 35
+          },
+          {
+            "x": 1294.015625,
+            "y": 28,
+            "w": 96,
+            "h": 48
+          }
+        ],
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "target": 900,
+      "state": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "time": 900.2999999776482,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "opening": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "transform": "none"
+        },
+        "mechanism": null,
+        "j": {
+          "x": 529.9921875,
+          "y": 259.9921875,
+          "w": 379.984375,
+          "h": 379.984375,
+          "transform": "none"
+        },
+        "segmented": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "ticks": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "skip": [
+          {
+            "x": 14,
+            "y": -100,
+            "w": 130.09375,
+            "h": 35
+          },
+          {
+            "x": 1294.015625,
+            "y": 28,
+            "w": 96,
+            "h": 48
+          }
+        ],
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "target": 1200,
+      "state": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "time": 1205.3999999776483,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "opening": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "transform": "none"
+        },
+        "mechanism": null,
+        "j": {
+          "x": 529.9921875,
+          "y": 259.9921875,
+          "w": 379.984375,
+          "h": 379.984375,
+          "transform": "none"
+        },
+        "segmented": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "ticks": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "skip": [
+          {
+            "x": 14,
+            "y": -100,
+            "w": 130.09375,
+            "h": 35
+          },
+          {
+            "x": 1294.015625,
+            "y": 28,
+            "w": 96,
+            "h": 48
+          }
+        ],
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "target": 1500,
+      "state": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "time": 1511.2999999776484,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "opening": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "transform": "none"
+        },
+        "mechanism": null,
+        "j": {
+          "x": 529.9921875,
+          "y": 259.9921875,
+          "w": 379.984375,
+          "h": 379.984375,
+          "transform": "none"
+        },
+        "segmented": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "ticks": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "skip": [
+          {
+            "x": 14,
+            "y": -100,
+            "w": 130.09375,
+            "h": 35
+          },
+          {
+            "x": 1294.015625,
+            "y": 28,
+            "w": 96,
+            "h": 48
+          }
+        ],
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.953682, -0.300817, 0.300817, 0.953682, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.953682, -0.300817, 0.300817, 0.953682, 0, 0)"
+          }
+        ]
+      }
+    },
+    {
+      "target": 1900,
+      "state": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "time": 1907.4999999776483,
+        "scrollWidth": 1440,
+        "clientWidth": 1440,
+        "opening": {
+          "x": 0,
+          "y": 0,
+          "w": 1440,
+          "h": 900,
+          "transform": "none"
+        },
+        "mechanism": null,
+        "j": {
+          "x": 529.9921875,
+          "y": 259.9921875,
+          "w": 379.984375,
+          "h": 379.984375,
+          "transform": "none"
+        },
+        "segmented": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "ticks": {
+          "x": 439.9921875,
+          "y": 169.9921875,
+          "w": 559.984375,
+          "h": 559.984375,
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        "skip": [
+          {
+            "x": 14,
+            "y": -100,
+            "w": 130.09375,
+            "h": 35
+          },
+          {
+            "x": 1294.015625,
+            "y": 28,
+            "w": 96,
+            "h": 48
+          }
+        ],
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.848048, -0.529919, 0.529919, 0.848048, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.848048, -0.529919, 0.529919, 0.848048, 0, 0)"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [],
+    "response": []
+  }
+}

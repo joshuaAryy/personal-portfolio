@@ -1,0 +1,260 @@
+{
+  "route": "https://4f83a72e.joshuaik2.pages.dev/projects/food-tracker",
+  "chrome": "Installed Google Chrome",
+  "results": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1440,
+      "errors": [],
+      "failedRequests": [],
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "card": [
+            537,
+            814
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "displayed": [
+                573,
+                313
+              ],
+              "frame": [
+                535,
+                705
+              ],
+              "objectFit": "contain"
+            },
+            {
+              "source": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "displayed": [
+                578,
+                384
+              ],
+              "frame": [
+                535,
+                705
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "card": [
+            537,
+            814
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "displayed": [
+                567,
+                737
+              ],
+              "frame": [
+                535,
+                737
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "card": [
+            537,
+            663
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png",
+              "natural": [
+                334,
+                355
+              ],
+              "displayed": [
+                551,
+                586
+              ],
+              "frame": [
+                535,
+                586
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "card": [
+            537,
+            663
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "displayed": [
+                296,
+                218
+              ],
+              "frame": [
+                535,
+                238
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        }
+      ]
+    },
+    "narrow": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "errors": [],
+      "failedRequests": [],
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "card": [
+            348,
+            528
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "displayed": [
+                370,
+                202
+              ],
+              "frame": [
+                346,
+                459
+              ],
+              "objectFit": "contain"
+            },
+            {
+              "source": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "displayed": [
+                374,
+                248
+              ],
+              "frame": [
+                346,
+                459
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "card": [
+            348,
+            562
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "displayed": [
+                367,
+                476
+              ],
+              "frame": [
+                346,
+                476
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "card": [
+            348,
+            448
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png",
+              "natural": [
+                334,
+                355
+              ],
+              "displayed": [
+                356,
+                379
+              ],
+              "frame": [
+                346,
+                379
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "card": [
+            348,
+            324
+          ],
+          "images": [
+            {
+              "source": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "displayed": [
+                346,
+                255
+              ],
+              "frame": [
+                346,
+                255
+              ],
+              "objectFit": "contain"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

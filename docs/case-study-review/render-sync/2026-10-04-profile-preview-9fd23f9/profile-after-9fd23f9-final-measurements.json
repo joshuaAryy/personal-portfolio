@@ -1,0 +1,76 @@
+{
+  "sourceCommit": "9fd23f9d45314f2319cffa97722cd7925ef2be52",
+  "url": "https://a7047ffc.joshuaik2.pages.dev/profile",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "state": "hover Experience summary signal",
+  "heading": "EXPERIENCE",
+  "panel": {
+    "x": 444,
+    "y": 434,
+    "width": 1090,
+    "height": 330
+  },
+  "logos": [
+    {
+      "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-enclosure.svg",
+      "alt": "",
+      "rect": {
+        "x": 435,
+        "y": 429,
+        "width": 1106,
+        "height": 364
+      },
+      "borderRadius": "0px",
+      "objectFit": "fill",
+      "loaded": true
+    },
+    {
+      "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-title-divider.png",
+      "alt": "",
+      "rect": {
+        "x": 468,
+        "y": 507,
+        "width": 1042,
+        "height": 5
+      },
+      "borderRadius": "0px",
+      "objectFit": "fill",
+      "loaded": true
+    },
+    {
+      "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+      "alt": "",
+      "rect": {
+        "x": 526,
+        "y": 587,
+        "width": 92,
+        "height": 92
+      },
+      "borderRadius": "50%",
+      "objectFit": "contain",
+      "loaded": true
+    },
+    {
+      "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+      "alt": "",
+      "rect": {
+        "x": 1048,
+        "y": 587,
+        "width": 92,
+        "height": 92
+      },
+      "borderRadius": "50%",
+      "objectFit": "contain",
+      "loaded": true
+    }
+  ],
+  "experienceSignal": {
+    "x": 731.5,
+    "y": 742,
+    "width": 267.5,
+    "height": 329
+  }
+}

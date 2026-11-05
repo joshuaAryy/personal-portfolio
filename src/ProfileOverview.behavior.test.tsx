@@ -1,0 +1,248 @@
+// @vitest-environment happy-dom
+import { act } from "react";
+import { readFileSync } from "node:fs";
+import { createRoot, type Root } from "react-dom/client";
+import { MemoryRouter } from "react-router-dom";
+import { afterEach, beforeEach, describe, expect, it } from "vitest";
+import { projects } from "./data";
+import ProfileOverview from "./ProfileOverview";
+import { projectCasePaths } from "./project-route-paths";
+
+let host: HTMLDivElement;
+let root: Root;
+
+function renderProfile() {
+  act(() => {
+    root.render(
+      <MemoryRouter initialEntries={["/profile"]}>
+        <ProfileOverview projects={projects} projectCasePaths={projectCasePaths} />
+      </MemoryRouter>,
+    );
+  });
+}
+
+function heading() {
+  return host.querySelector("#profile-panel-heading");
+}
+
+beforeEach(() => {
+  (globalThis as { IS_REACT_ACT_ENVIRONMENT?: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
+  host = document.createElement("div");
+  document.body.append(host);
+  root = createRoot(host);
+});
+
+afterEach(() => {
+  act(() => root.unmount());
+  host.remove();
+});
+
+describe("Profile signal previews", () => {
+  it("centers the overview and its signal group in the wide scenic column", () => {
+    const css = readFileSync("src/profile-overview.css", "utf8");
+    const ultrawide = css.match(/@media\s*\(min-width:\s*1921px\)[\s\S]*?\n\}/)?.[0] ?? "";
+
+    expect(ultrawide).toMatch(/\.main--profile\s+\.profile-overview\s*\{[^}]*left:\s*50%;[^}]*transform:\s*translateX\(-50%\)/s);
+  });
+
+  it("keeps the tall owner-reference signal group on the shared height-responsive lower band", () => {
+    const css = readFileSync("src/profile-overview.css", "utf8");
+    const tallSignalRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1080px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const extraTallRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+
+    expect(tallSignalRule).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*max\(610px,\s*calc\(134vh\s*-\s*837px\)\)/s);
+    expect(extraTallRule).not.toContain(".profile-signal-grid");
+    expect(extraTallRule).toMatch(/\.main\.main--profile::before/);
+  });
+
+  it("keeps the tall Profile scenery continuous through the lower client panel", () => {
+    const css = readFileSync("src/profile-overview.css", "utf8");
+    const tallProfileRule = css.match(/@media\s*\(min-width:\s*1500px\)\s*and\s*\(max-width:\s*1858px\)\s*and\s*\(min-height:\s*1280px\)\s*\{([\s\S]*?)\n\}/)?.[1] ?? "";
+    const environmentRule = tallProfileRule.match(/\.main\.main--profile::before\s*\{([^}]*)\}/)?.[1] ?? "";
+
+    expect(environmentRule).toContain("--profile-environment-height: calc(100vh - var(--client-header-height))");
+    expect(environmentRule).not.toContain("1036px");
+    expect(environmentRule).not.toContain("transparent calc(100% - 88px)");
+  });
+
+  it("repositions an open signal panel when the viewport is scrolled", () => {
+    renderProfile();
+    const overview = host.querySelector<HTMLElement>(".profile-overview")!;
+    const content = host.querySelector<HTMLElement>(".profile-content")!;
+    const panel = host.querySelector<HTMLElement>(".profile-project-panel")!;
+    const signal = host.querySelector<HTMLElement>('[data-profile-signal="projects"]')!;
+    const nav = host.querySelector<HTMLElement>(".profile-nav")!;
+    let scrolled = false;
+
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 1440 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 768 });
+    Object.defineProperty(overview, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetHeight", { configurable: true, value: 330 });
+    overview.getBoundingClientRect = () => ({ left: 100, top: scrolled ? -350 : 0, right: 800, bottom: scrolled ? 650 : 1000, width: 700, height: 1000, x: 100, y: scrolled ? -350 : 0, toJSON: () => ({}) } as DOMRect);
+    content.getBoundingClientRect = () => ({ left: 100, top: scrolled ? -320 : 30, right: 800, bottom: 800, width: 700, height: 770, x: 100, y: scrolled ? -320 : 30, toJSON: () => ({}) } as DOMRect);
+    nav.getBoundingClientRect = () => ({ left: 100, top: scrolled ? -320 : 30, right: 800, bottom: scrolled ? -270 : 80, width: 700, height: 50, x: 100, y: scrolled ? -320 : 30, toJSON: () => ({}) } as DOMRect);
+    signal.getBoundingClientRect = () => ({ left: 250, top: scrolled ? 250 : 640, right: 400, bottom: scrolled ? 310 : 700, width: 150, height: 60, x: 250, y: scrolled ? 250 : 640, toJSON: () => ({}) } as DOMRect);
+
+    act(() => signal.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+    const initialTop = panel.style.top;
+
+    scrolled = true;
+    act(() => window.dispatchEvent(new Event("scroll")));
+
+    expect(panel.style.top).not.toBe(initialTop);
+    expect(Number.parseFloat(panel.style.top)).toBeGreaterThan(800);
+  });
+
+  it("uses a compact four-column signal band for short desktop viewports", () => {
+    const css = readFileSync("src/profile-overview.css", "utf8");
+    const shortDesktop = css.match(
+      /@media\s*\(min-width:\s*1100px\)\s*and\s*\(max-width:\s*1399px\)\s*and\s*\(max-height:\s*820px\)\s*\{([\s\S]*?)\n\}/,
+    )?.[1] ?? "";
+
+    expect(shortDesktop).toMatch(/\.main--profile\s+\.profile-overview\s*\{[^}]*margin-top:\s*\d+px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-panel\s*\{[^}]*height:\s*303px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-panel__enclosure\s*\{[^}]*height:\s*299px/s);
+    expect(shortDesktop).toMatch(/\.profile-project-grid\s*\{[^}]*top:\s*75px;[^}]*height:\s*203px/s);
+    expect(shortDesktop).toMatch(/\.profile-project:nth-child\(n\s*\+\s*3\)\s+\.profile-project__identity\s*\{[^}]*margin-top:\s*8px/s);
+    expect(shortDesktop).toMatch(/\.profile-project:nth-child\(n\s*\+\s*3\)\s+\.profile-project__detail\s*\{[^}]*margin-top:\s*6px;[^}]*line-height:\s*14px/s);
+    expect(shortDesktop).toMatch(/\.profile-experience-grid,\s*\.profile-hackathon-feature,\s*\.profile-academics-feature\s*\{[^}]*top:\s*75px;[^}]*height:\s*180px/s);
+    expect(shortDesktop).toMatch(/\.profile-experience\s*\{[^}]*gap:\s*12px;[^}]*padding:\s*0\s+12px/s);
+    expect(shortDesktop).toMatch(/\.profile-academics-feature\s*>\s*div\s*\{[^}]*padding-left:\s*16px/s);
+    expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*top:\s*clamp\(250px,\s*calc\(100vh\s*-\s*406px\),\s*353px\);[^}]*grid-template-columns:\s*repeat\(4,\s*minmax\(0,\s*1fr\)\)/s);
+    expect(shortDesktop).toMatch(/\.profile-signal-grid\s*\{[^}]*grid-template-rows:\s*1fr/s);
+  });
+
+  it("shows details only while a signal is hovered and clears to a neutral panel", () => {
+    renderProfile();
+    const projectsSignal = host.querySelector<HTMLElement>(".profile-signal");
+    const overview = host.querySelector<HTMLElement>(".profile-overview");
+
+    expect(heading()).toBeNull();
+    expect(host.querySelector(".profile-project-grid")).toBeNull();
+    expect(projectsSignal?.getAttribute("aria-label")).toContain("4");
+    expect(projectsSignal?.getAttribute("href")).toBeNull();
+
+    act(() => projectsSignal?.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+    expect(heading()?.textContent).toBe("PROJECTS");
+    expect(host.querySelectorAll(".profile-project")).toHaveLength(4);
+    expect(host.querySelector('a[href="/projects/food-tracker"]')).not.toBeNull();
+    expect(host.querySelector('a[href="https://github.com/joshuaAryy/food-tracker"]')).not.toBeNull();
+
+    act(() => overview?.dispatchEvent(new MouseEvent("mouseout", { bubbles: true, relatedTarget: document.body })));
+    expect(heading()).toBeNull();
+    expect(host.querySelector(".profile-project-grid")).toBeNull();
+  });
+
+  it("keeps details open while focus moves from a signal into its preview links", () => {
+    renderProfile();
+    const projectsSignal = host.querySelectorAll<HTMLElement>(".profile-signal")[0];
+
+    act(() => projectsSignal?.focus());
+    expect(heading()?.textContent).toBe("PROJECTS");
+    expect(host.querySelectorAll(".profile-project")).toHaveLength(4);
+
+    const projectLink = host.querySelector<HTMLAnchorElement>('.profile-project a[href="/projects/food-tracker"]');
+    act(() => projectLink?.focus());
+    expect(document.activeElement).toBe(projectLink);
+    expect(heading()?.textContent).toBe("PROJECTS");
+    expect(host.querySelectorAll(".profile-project")).toHaveLength(4);
+
+    const outside = document.createElement("button");
+    outside.textContent = "Outside Profile";
+    host.append(outside);
+    act(() => outside.focus());
+    expect(heading()).toBeNull();
+    expect(host.querySelector(".profile-project-grid")).toBeNull();
+  });
+
+  it("positions the active details panel beside the signal that opened it", () => {
+    renderProfile();
+    const overview = host.querySelector<HTMLElement>(".profile-overview")!;
+    const content = host.querySelector<HTMLElement>(".profile-content")!;
+    const panel = host.querySelector<HTMLElement>(".profile-project-panel")!;
+    const signal = host.querySelector<HTMLElement>('[data-profile-signal="projects"]')!;
+
+    Object.defineProperty(overview, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetHeight", { configurable: true, value: 330 });
+    overview.getBoundingClientRect = () => ({ left: 100, top: 150, right: 800, bottom: 780, width: 700, height: 630, x: 100, y: 150, toJSON: () => ({}) } as DOMRect);
+    content.getBoundingClientRect = () => ({ left: 100, top: 180, right: 800, bottom: 780, width: 700, height: 600, x: 100, y: 180, toJSON: () => ({}) } as DOMRect);
+    signal.getBoundingClientRect = () => ({ left: 250, top: 720, right: 400, bottom: 780, width: 150, height: 60, x: 250, y: 720, toJSON: () => ({}) } as DOMRect);
+
+    act(() => signal.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+
+    expect(heading()?.textContent).toBe("PROJECTS");
+    expect(Number.parseFloat(panel.style.top)).toBeGreaterThan(0);
+    expect(panel.style.position).toBe("absolute");
+    expect(panel.style.top).not.toBe("0px");
+  });
+
+  it("anchors the desktop preview panel to the visible signal group", () => {
+    renderProfile();
+    const overview = host.querySelector<HTMLElement>(".profile-overview")!;
+    const content = host.querySelector<HTMLElement>(".profile-content")!;
+    const panel = host.querySelector<HTMLElement>(".profile-project-panel")!;
+    const signal = host.querySelector<HTMLElement>('[data-profile-signal="projects"]')!;
+    const nav = host.querySelector<HTMLElement>(".profile-nav")!;
+    const rect = (left: number, top: number, width: number, height: number) => ({
+      left, top, right: left + width, bottom: top + height, width, height,
+      x: left, y: top, toJSON: () => ({}),
+    }) as DOMRect;
+
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 1440 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 900 });
+    Object.defineProperty(overview, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetWidth", { configurable: true, value: 1000 });
+    Object.defineProperty(panel, "offsetHeight", { configurable: true, value: 330 });
+    overview.getBoundingClientRect = () => rect(100, 0, 700, 1000);
+    content.getBoundingClientRect = () => rect(100, 30, 700, 900);
+    nav.getBoundingClientRect = () => rect(100, 30, 700, 50);
+    signal.getBoundingClientRect = () => rect(250, 600, 150, 180);
+    const parts = signal.querySelectorAll<HTMLElement>(
+      ".profile-signal__emblem, .profile-signal__label, .profile-signal__value",
+    );
+    [rect(270, 680, 40, 40), rect(260, 725, 120, 16), rect(280, 750, 80, 22)]
+      .forEach((partRect, index) => {
+        parts[index].getBoundingClientRect = () => partRect;
+      });
+
+    act(() => signal.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+
+    const panelTop = Number.parseFloat(panel.style.top) * 0.7;
+    const panelBottom = panelTop + 231;
+    expect(panelBottom).toBeCloseTo(668, 1);
+  });
+
+  it("keeps a narrow overlay below its signal and within the collapsed-rail viewport", () => {
+    renderProfile();
+    const overview = host.querySelector<HTMLElement>(".profile-overview")!;
+    const content = host.querySelector<HTMLElement>(".profile-content")!;
+    const panel = host.querySelector<HTMLElement>(".profile-project-panel")!;
+    const signal = host.querySelector<HTMLElement>('[data-profile-signal="projects"]')!;
+    const collapsedRail = document.createElement("aside");
+    collapsedRail.className = "rail";
+    collapsedRail.getBoundingClientRect = () => ({ left: 0, top: 0, right: 0, bottom: 0, width: 0, height: 0, x: 0, y: 0, toJSON: () => ({}) } as DOMRect);
+    host.append(collapsedRail);
+
+    const originalInnerWidth = window.innerWidth;
+    const originalInnerHeight = window.innerHeight;
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: 390 });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: 844 });
+    Object.defineProperty(overview, "offsetWidth", { configurable: true, value: 354 });
+    Object.defineProperty(panel, "offsetWidth", { configurable: true, value: 354 });
+    Object.defineProperty(panel, "offsetHeight", { configurable: true, value: 500 });
+    overview.getBoundingClientRect = () => ({ left: 18, top: 303, right: 372, bottom: 774, width: 354, height: 471, x: 18, y: 303, toJSON: () => ({}) } as DOMRect);
+    content.getBoundingClientRect = () => ({ left: 14, top: 227, right: 376, bottom: 967, width: 362, height: 740, x: 14, y: 227, toJSON: () => ({}) } as DOMRect);
+    signal.getBoundingClientRect = () => ({ left: 18, top: 304, right: 195, bottom: 539, width: 177, height: 235, x: 18, y: 304, toJSON: () => ({}) } as DOMRect);
+
+    act(() => signal.dispatchEvent(new MouseEvent("mouseover", { bubbles: true })));
+
+    expect(panel.style.position).toBe("absolute");
+    expect(panel.style.top).toBe("248px");
+    expect(panel.style.width).toBe("350px");
+    expect(overview.style.height).toBe("760px");
+    Object.defineProperty(window, "innerWidth", { configurable: true, value: originalInnerWidth });
+    Object.defineProperty(window, "innerHeight", { configurable: true, value: originalInnerHeight });
+  });
+});

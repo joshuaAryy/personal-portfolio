@@ -1,0 +1,1460 @@
+{
+  "route": "/education/projects",
+  "localUrl": "http://127.0.0.1:5173/education/projects",
+  "headCommit": "02ea2f7042dd16f61173d0350b20e729538f2fb6",
+  "browserVersion": "153.0.8010.53",
+  "capturedAt": "2026-10-04T11:52:47.252Z",
+  "viewports": {
+    "1920x1080": {
+      "status": 200,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "metrics": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "http://127.0.0.1:5173/education/projects",
+        "scrollY": 0,
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "clientHeight": 1080
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": 110,
+            "width": 1600,
+            "height": 970
+          },
+          "scrollWidth": 1600,
+          "clientWidth": 1600,
+          "scrollHeight": 1264,
+          "clientHeight": 970,
+          "scrollTop": 0,
+          "overflowY": "auto"
+        },
+        "scrollables": [
+          {
+            "tag": "MAIN",
+            "cls": "main main--detail main--education-projects",
+            "rect": {
+              "x": 0,
+              "y": 110,
+              "width": 1600,
+              "height": 970
+            },
+            "scrollTop": 0,
+            "scrollHeight": 1264,
+            "clientHeight": 970,
+            "overflowY": "auto"
+          }
+        ],
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Computer Engineering",
+            "rect": {
+              "x": 260,
+              "y": 277,
+              "width": 1080,
+              "height": 65
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Dental Clinic DBMS",
+            "rect": {
+              "x": 260,
+              "y": 455,
+              "width": 519.5,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Bookstore Management System",
+            "rect": {
+              "x": 800.5,
+              "y": 455,
+              "width": 519.5,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+            "rect": {
+              "x": 260,
+              "y": 576,
+              "width": 519.5,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Four-stage CMOS amplifier",
+            "rect": {
+              "x": 800.5,
+              "y": 576,
+              "width": 519.5,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "An opcode-driven ALU and controller",
+            "rect": {
+              "x": 285,
+              "y": 762,
+              "width": 1030,
+              "height": 26
+            }
+          },
+          {
+            "level": "H3",
+            "text": "NINE OPCODE BRANCHES",
+            "rect": {
+              "x": 285,
+              "y": 1053.2,
+              "width": 499,
+              "height": 10
+            }
+          },
+          {
+            "level": "H3",
+            "text": "STATE PROGRESSION",
+            "rect": {
+              "x": 816,
+              "y": 1053.2,
+              "width": 499,
+              "height": 10
+            }
+          }
+        ],
+        "figures": [
+          {
+            "tag": "FIGURE",
+            "role": null,
+            "ariaLabel": "Lab 6 part 2 system map",
+            "labelledby": null,
+            "describedby": null,
+            "text": "DATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted.",
+            "rect": {
+              "x": 285,
+              "y": 810,
+              "width": 1030,
+              "height": 217.2
+            },
+            "tabIndex": -1
+          }
+        ],
+        "cards": [
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects",
+            "text": "Education\n\nTORONTO METROPOLITAN UNIVERSITY\n\nComputer Engineering\n\nSoftware Specialization · B.Eng.\n\nExpected 2028\n\nDental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING\n\nBookstore Management System\n\nEVIDENCE PENDING\n\nQuartus/VHDL 8-bit ALU and nine-state FSM lab project\nFour-stage CMOS amplifier\n\nEVIDENCE PENDING\n\nQUARTUS II · CYCLONE II · LAB 6 · PART 2\n\nAn opcode-driven ALU and controller\nDATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted.\nNINE OPCODE BRANCHES\nShift A right by two with 1-fill\n(A - B) + 4\nMaximum of A and B\nConcatenate B's low nibble with A's high nibble\nIncrement A\nBitwise AND\nInvert A's high nibble\nRotate B left by three\nZero result\nSTATE PROGRESSION\n\nWhen data_in is high on a rising clock edge, the FSM advances; when low, it holds. The sequence wraps from state s9 to s1, and the component's reset input returns it to s1. Its four-bit state feeds a decoder that generates the ALU's one-hot operation input.\n\nThis page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared Neg output low on each rising edge and no opcode branch raises it, so no signed-result behavior is claimed.",
+            "rect": {
+              "x": 260,
+              "y": 182,
+              "width": 1080,
+              "height": 1120.3
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Dental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING",
+            "rect": {
+              "x": 260,
+              "y": 431,
+              "width": 539.5,
+              "height": 120
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Bookstore Management System\n\nEVIDENCE PENDING",
+            "rect": {
+              "x": 800.5,
+              "y": 431,
+              "width": 539.5,
+              "height": 120
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+            "rect": {
+              "x": 260,
+              "y": 552,
+              "width": 539.5,
+              "height": 120
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Four-stage CMOS amplifier\n\nEVIDENCE PENDING",
+            "rect": {
+              "x": 800.5,
+              "y": 552,
+              "width": 539.5,
+              "height": 120
+            },
+            "role": null,
+            "label": null
+          }
+        ],
+        "arrows": [
+          {
+            "tag": "SPAN",
+            "cls": "education-system-map__arrow",
+            "aria": null,
+            "text": "→",
+            "rect": {
+              "x": 656.8,
+              "y": 891.3,
+              "width": 22,
+              "height": 26
+            },
+            "transform": "none",
+            "visibility": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "education-system-map__arrow",
+            "aria": null,
+            "text": "→",
+            "rect": {
+              "x": 959.8,
+              "y": 891.3,
+              "width": 22,
+              "height": 26
+            },
+            "transform": "none",
+            "visibility": "visible"
+          }
+        ],
+        "projectText": "Education\n\nTORONTO METROPOLITAN UNIVERSITY\n\nComputer Engineering\n\nSoftware Specialization · B.Eng.\n\nExpected 2028\n\nDental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING\n\nBookstore Management System\n\nEVIDENCE PENDING\n\nQuartus/VHDL 8-bit ALU and nine-state FSM lab project\nFour-stage CMOS amplifier\n\nEVIDENCE PENDING\n\nQUARTUS II · CYCLONE II · LAB 6 · PART 2\n\nAn opcode-driven ALU and controller\nDATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted.\nNINE OPCODE BRANCHES\nShift A right by two with 1-fill\n(A - B) + 4\nMaximum of A and B\nConcatenate B's low nibble with A's high nibble\nIncrement A\nBitwise AND\nInvert A's high nibble\nRotate B left by three\nZero result\nSTATE PROGRESSION\n\nWhen data_in is high on a rising clock edge, the FSM advances; when low, it holds. The sequence wraps from state s9 to s1, and the component's reset input returns it to s1. Its four-bit state feeds a decoder that generates the ALU's one-hot operation input.\n\nThis page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared Neg output low on each rising edge and no opcode branch raises it, so no signed-result behavior is claimed.",
+        "identifierHits": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-54.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 54,
+            "naturalHeight": 54,
+            "rect": {
+              "x": 6,
+              "y": 27.5,
+              "width": 54,
+              "height": 54
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-flag.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 917,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-trophy.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 970,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-briefcase.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 1023,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-clash.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 1076,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-clock.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 1129,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 160,
+            "naturalHeight": 160,
+            "rect": {
+              "x": 1620,
+              "y": 23.5,
+              "width": 76,
+              "height": 76
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-account-avatar.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 128,
+            "naturalHeight": 128,
+            "rect": {
+              "x": 1626,
+              "y": 29.5,
+              "width": 64,
+              "height": 64
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-48.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 29,
+            "naturalHeight": 47,
+            "rect": {
+              "x": 1628.7,
+              "y": 153.5,
+              "width": 28.6,
+              "height": 46.9
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 13,
+            "naturalHeight": 13,
+            "rect": {
+              "x": 1846,
+              "y": 262.5,
+              "width": 13,
+              "height": 13
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 8,
+            "naturalHeight": 7,
+            "rect": {
+              "x": 1871,
+              "y": 265.5,
+              "width": 8,
+              "height": 7
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 7,
+            "naturalHeight": 6,
+            "rect": {
+              "x": 1891,
+              "y": 266,
+              "width": 7,
+              "height": 6
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/education-coursework.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 50,
+            "naturalHeight": 50,
+            "rect": {
+              "x": 1641,
+              "y": 371.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 40,
+            "naturalHeight": 40,
+            "rect": {
+              "x": 1641,
+              "y": 467.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 150,
+            "naturalHeight": 150,
+            "rect": {
+              "x": 1641,
+              "y": 516.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 310,
+            "naturalHeight": 230,
+            "rect": {
+              "x": 1641,
+              "y": 565.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 82,
+            "naturalHeight": 82,
+            "rect": {
+              "x": 1641,
+              "y": 614.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "rect": {
+              "x": 1641,
+              "y": 700.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "rect": {
+              "x": 1641,
+              "y": 749.5,
+              "width": 26,
+              "height": 26
+            },
+            "objectFit": "contain"
+          }
+        ]
+      },
+      "axNodes": [
+        {
+          "role": "main",
+          "name": "",
+          "ignored": false,
+          "parentId": "139"
+        },
+        {
+          "role": "article",
+          "name": "Computer Engineering",
+          "ignored": false,
+          "parentId": "140"
+        },
+        {
+          "role": "heading",
+          "name": "ACTIVITY",
+          "ignored": false,
+          "parentId": "194"
+        },
+        {
+          "role": "heading",
+          "name": "CURRENT FOCUS",
+          "ignored": false,
+          "parentId": "202"
+        },
+        {
+          "role": "heading",
+          "name": "PROJECTS (4)",
+          "ignored": false,
+          "parentId": "208"
+        },
+        {
+          "role": "heading",
+          "name": "EXPERIENCE (2)",
+          "ignored": false,
+          "parentId": "226"
+        },
+        {
+          "role": "region",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "141"
+        },
+        {
+          "role": "heading",
+          "name": "Computer Engineering",
+          "ignored": false,
+          "parentId": "143"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "18"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "18"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "18"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "18"
+        },
+        {
+          "role": "heading",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "23"
+        },
+        {
+          "role": "figure",
+          "name": "Lab 6 part 2 system map",
+          "ignored": false,
+          "parentId": "23"
+        },
+        {
+          "role": "heading",
+          "name": "Dental Clinic DBMS",
+          "ignored": false,
+          "parentId": "145"
+        },
+        {
+          "role": "heading",
+          "name": "Bookstore Management System",
+          "ignored": false,
+          "parentId": "64"
+        },
+        {
+          "role": "heading",
+          "name": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "ignored": false,
+          "parentId": "148"
+        },
+        {
+          "role": "heading",
+          "name": "Four-stage CMOS amplifier",
+          "ignored": false,
+          "parentId": "150"
+        },
+        {
+          "role": "StaticText",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "24"
+        },
+        {
+          "role": "heading",
+          "name": "NINE OPCODE BRANCHES",
+          "ignored": false,
+          "parentId": "161"
+        },
+        {
+          "role": "heading",
+          "name": "STATE PROGRESSION",
+          "ignored": false,
+          "parentId": "172"
+        },
+        {
+          "role": "StaticText",
+          "name": "This page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared ",
+          "ignored": false,
+          "parentId": "175"
+        },
+        {
+          "role": "StaticText",
+          "name": "Dental Clinic DBMS",
+          "ignored": false,
+          "parentId": "146"
+        },
+        {
+          "role": "StaticText",
+          "name": "Bookstore Management System",
+          "ignored": false,
+          "parentId": "147"
+        },
+        {
+          "role": "StaticText",
+          "name": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "ignored": false,
+          "parentId": "149"
+        },
+        {
+          "role": "StaticText",
+          "name": "Four-stage CMOS amplifier",
+          "ignored": false,
+          "parentId": "151"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "269"
+        },
+        {
+          "role": "StaticText",
+          "name": "Clocked 8-bit ALU",
+          "ignored": false,
+          "parentId": "38"
+        },
+        {
+          "role": "StaticText",
+          "name": " is high on a rising clock edge, the FSM advances; when low, it holds. The sequence wraps from state s9 to s1, and the component's reset input returns it to s1. Its four-bit state feeds a decoder that generates the ALU's one-hot operation input.",
+          "ignored": false,
+          "parentId": "56"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "This page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared ",
+          "ignored": false,
+          "parentId": "282"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Dental Clinic DBMS",
+          "ignored": false,
+          "parentId": "260"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Bookstore Management System",
+          "ignored": false,
+          "parentId": "263"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "ignored": false,
+          "parentId": "265"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Four-stage CMOS amplifier",
+          "ignored": false,
+          "parentId": "266"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Clocked 8-bit ALU",
+          "ignored": false,
+          "parentId": "39"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "bit state feeds a decoder that generates the ALU's one-hot operation input.",
+          "ignored": false,
+          "parentId": "59"
+        }
+      ],
+      "figureSnapshots": [
+        "- figure \"Lab 6 part 2 system map\":\n  - text: DATA PATH\n  - strong: A and B · 8-bit inputs\n  - paragraph: Two latch1 input registers\n  - text: CONTROL PATH\n  - strong: Nine-state Moore FSM\n  - paragraph: Current state passes through a one-hot opcode decoder\n  - text: PROCESS\n  - strong: Clocked 8-bit ALU\n  - paragraph: Latched operands + 16-bit opcode\n  - text: DISPLAY PATH\n  - strong: R1 and R2 · 4-bit nibbles\n  - paragraph: Sent to seven-segment decoders\n  - text: Source-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted."
+      ],
+      "screenshots": {
+        "viewport": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-education-alu-local/education-alu-1920x1080-viewport.png",
+        "fullPage": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-education-alu-local/education-alu-1920x1080-fullpage.png"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    "390x844": {
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "metrics": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "http://127.0.0.1:5173/education/projects",
+        "scrollY": 71,
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 1935,
+          "clientHeight": 844
+        },
+        "main": {
+          "rect": {
+            "x": 0,
+            "y": -1,
+            "width": 390,
+            "height": 1865.3
+          },
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 1865,
+          "clientHeight": 1865,
+          "scrollTop": 0,
+          "overflowY": "visible"
+        },
+        "scrollables": [],
+        "headings": [
+          {
+            "level": "H1",
+            "text": "Computer Engineering",
+            "rect": {
+              "x": 23.4,
+              "y": 102,
+              "width": 343.2,
+              "height": 80
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Dental Clinic DBMS",
+            "rect": {
+              "x": 23.4,
+              "y": 279,
+              "width": 323.2,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Bookstore Management System",
+            "rect": {
+              "x": 23.4,
+              "y": 387,
+              "width": 323.2,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+            "rect": {
+              "x": 23.4,
+              "y": 474,
+              "width": 323.2,
+              "height": 32
+            }
+          },
+          {
+            "level": "H2",
+            "text": "Four-stage CMOS amplifier",
+            "rect": {
+              "x": 23.4,
+              "y": 561,
+              "width": 323.2,
+              "height": 16
+            }
+          },
+          {
+            "level": "H2",
+            "text": "An opcode-driven ALU and controller",
+            "rect": {
+              "x": 42.4,
+              "y": 707,
+              "width": 305.2,
+              "height": 52
+            }
+          },
+          {
+            "level": "H3",
+            "text": "NINE OPCODE BRANCHES",
+            "rect": {
+              "x": 42.4,
+              "y": 1291.4,
+              "width": 305.2,
+              "height": 10
+            }
+          },
+          {
+            "level": "H3",
+            "text": "STATE PROGRESSION",
+            "rect": {
+              "x": 42.4,
+              "y": 1555.1,
+              "width": 305.2,
+              "height": 10
+            }
+          }
+        ],
+        "figures": [
+          {
+            "tag": "FIGURE",
+            "role": null,
+            "ariaLabel": "Lab 6 part 2 system map",
+            "labelledby": null,
+            "describedby": null,
+            "text": "DATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted.",
+            "rect": {
+              "x": 42.4,
+              "y": 781,
+              "width": 305.2,
+              "height": 484.4
+            },
+            "tabIndex": -1
+          }
+        ],
+        "cards": [
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects",
+            "text": "Education\n\nTORONTO METROPOLITAN UNIVERSITY\n\nComputer Engineering\n\nSoftware Specialization · B.Eng.\n\nExpected 2028\n\nDental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING\n\nBookstore Management System\n\nEVIDENCE PENDING\n\nQuartus/VHDL 8-bit ALU and nine-state FSM lab project\nFour-stage CMOS amplifier\n\nEVIDENCE PENDING\n\nQUARTUS II · CYCLONE II · LAB 6 · PART 2\n\nAn opcode-driven ALU and controller\nDATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted.\nNINE OPCODE BRANCHES\nShift A right by two with 1-fill\n(A - B) + 4\nMaximum of A and B\nConcatenate B's low nibble with A's high nibble\nIncrement A\nBitwise AND\nInvert A's high nibble\nRotate B left by three\nZero result\nSTATE PROGRESSION\n\nWhen data_in is high on a rising clock edge, the FSM advances; when low, it holds. The sequence wraps from state s9 to s1, and the component's reset input returns it to s1. Its four-bit state feeds a decoder that generates the ALU's one-hot operation input.\n\nThis page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared Neg output low on each rising edge and no opcode branch raises it, so no signed-result behavior is claimed.",
+            "rect": {
+              "x": 23.4,
+              "y": 27,
+              "width": 343.2,
+              "height": 1809.3
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Dental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING",
+            "rect": {
+              "x": 23.4,
+              "y": 255,
+              "width": 343.2,
+              "height": 107
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Bookstore Management System\n\nEVIDENCE PENDING",
+            "rect": {
+              "x": 23.4,
+              "y": 363,
+              "width": 343.2,
+              "height": 86
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+            "rect": {
+              "x": 23.4,
+              "y": 450,
+              "width": 343.2,
+              "height": 86
+            },
+            "role": null,
+            "label": null
+          },
+          {
+            "tag": "ARTICLE",
+            "cls": "education-projects__item",
+            "text": "Four-stage CMOS amplifier\n\nEVIDENCE PENDING",
+            "rect": {
+              "x": 23.4,
+              "y": 537,
+              "width": 343.2,
+              "height": 86
+            },
+            "role": null,
+            "label": null
+          }
+        ],
+        "arrows": [
+          {
+            "tag": "SPAN",
+            "cls": "education-system-map__arrow",
+            "aria": null,
+            "text": "→",
+            "rect": {
+              "x": 184,
+              "y": 836.1,
+              "width": 22,
+              "height": 305.2
+            },
+            "transform": "matrix(0, 1, -1, 0, 0, 0)",
+            "visibility": "visible"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "education-system-map__arrow",
+            "aria": null,
+            "text": "→",
+            "rect": {
+              "x": 184,
+              "y": 963.4,
+              "width": 22,
+              "height": 305.2
+            },
+            "transform": "matrix(0, 1, -1, 0, 0, 0)",
+            "visibility": "visible"
+          }
+        ],
+        "projectText": "Education\n\nTORONTO METROPOLITAN UNIVERSITY\n\nComputer Engineering\n\nSoftware Specialization · B.Eng.\n\nExpected 2028\n\nDental Clinic DBMS\n\nCURRENT · IN PROGRESS\n\nEVIDENCE PENDING\n\nBookstore Management System\n\nEVIDENCE PENDING\n\nQuartus/VHDL 8-bit ALU and nine-state FSM lab project\nFour-stage CMOS amplifier\n\nEVIDENCE PENDING\n\nQUARTUS II · CYCLONE II · LAB 6 · PART 2\n\nAn opcode-driven ALU and controller\nDATA PATH\nA and B · 8-bit inputs\n\nTwo latch1 input registers\n\nCONTROL PATH\nNine-state Moore FSM\n\nCurrent state passes through a one-hot opcode decoder\n\n→\nPROCESS\nClocked 8-bit ALU\n\nLatched operands + 16-bit opcode\n\n→\nDISPLAY PATH\nR1 and R2 · 4-bit nibbles\n\nSent to seven-segment decoders\n\nSource-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted.\nNINE OPCODE BRANCHES\nShift A right by two with 1-fill\n(A - B) + 4\nMaximum of A and B\nConcatenate B's low nibble with A's high nibble\nIncrement A\nBitwise AND\nInvert A's high nibble\nRotate B left by three\nZero result\nSTATE PROGRESSION\n\nWhen data_in is high on a rising clock edge, the FSM advances; when low, it holds. The sequence wraps from state s9 to s1, and the component's reset input returns it to s1. Its four-bit state feeds a decoder that generates the ALU's one-hot operation input.\n\nThis page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared Neg output low on each rising edge and no opcode branch raises it, so no signed-result behavior is claimed.",
+        "identifierHits": [],
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-32.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 32,
+            "naturalHeight": 32,
+            "rect": {
+              "x": 10,
+              "y": -52.5,
+              "width": 32,
+              "height": 32
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-flag.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-trophy.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-briefcase.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-clash.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/shell-utility-clock.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 38,
+            "naturalHeight": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 160,
+            "naturalHeight": 160,
+            "rect": {
+              "x": 340,
+              "y": -57.5,
+              "width": 42,
+              "height": 42
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-account-avatar.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 128,
+            "naturalHeight": 128,
+            "rect": {
+              "x": 346,
+              "y": -51.5,
+              "width": 30,
+              "height": 30
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-48.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 29,
+            "naturalHeight": 47,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 13,
+            "naturalHeight": 13,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 8,
+            "naturalHeight": 7,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 7,
+            "naturalHeight": 6,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "fill"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/education-coursework.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 50,
+            "naturalHeight": 50,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 40,
+            "naturalHeight": 40,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 150,
+            "naturalHeight": 150,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 310,
+            "naturalHeight": 230,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 82,
+            "naturalHeight": 82,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "alt": "",
+            "loaded": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "objectFit": "contain"
+          }
+        ]
+      },
+      "axNodes": [
+        {
+          "role": "main",
+          "name": "",
+          "ignored": false,
+          "parentId": "100"
+        },
+        {
+          "role": "article",
+          "name": "Computer Engineering",
+          "ignored": false,
+          "parentId": "101"
+        },
+        {
+          "role": "region",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "102"
+        },
+        {
+          "role": "heading",
+          "name": "Computer Engineering",
+          "ignored": false,
+          "parentId": "104"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "7"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "7"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "7"
+        },
+        {
+          "role": "article",
+          "name": "",
+          "ignored": false,
+          "parentId": "7"
+        },
+        {
+          "role": "heading",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "15"
+        },
+        {
+          "role": "figure",
+          "name": "Lab 6 part 2 system map",
+          "ignored": false,
+          "parentId": "15"
+        },
+        {
+          "role": "heading",
+          "name": "Dental Clinic DBMS",
+          "ignored": false,
+          "parentId": "106"
+        },
+        {
+          "role": "heading",
+          "name": "Bookstore Management System",
+          "ignored": false,
+          "parentId": "10"
+        },
+        {
+          "role": "heading",
+          "name": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "ignored": false,
+          "parentId": "12"
+        },
+        {
+          "role": "heading",
+          "name": "Four-stage CMOS amplifier",
+          "ignored": false,
+          "parentId": "13"
+        },
+        {
+          "role": "StaticText",
+          "name": "An opcode-driven ALU and controller",
+          "ignored": false,
+          "parentId": "16"
+        },
+        {
+          "role": "heading",
+          "name": "NINE OPCODE BRANCHES",
+          "ignored": false,
+          "parentId": "131"
+        },
+        {
+          "role": "heading",
+          "name": "STATE PROGRESSION",
+          "ignored": false,
+          "parentId": "143"
+        },
+        {
+          "role": "StaticText",
+          "name": "This page describes the selected Quartus source snapshot; it does not claim a hardware demonstration. In this version, the ALU assigns its declared ",
+          "ignored": false,
+          "parentId": "147"
+        },
+        {
+          "role": "StaticText",
+          "name": "Dental Clinic DBMS",
+          "ignored": false,
+          "parentId": "107"
+        },
+        {
+          "role": "StaticText",
+          "name": "Bookstore Management System",
+          "ignored": false,
+          "parentId": "108"
+        },
+        {
+          "role": "StaticText",
+          "name": "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "ignored": false,
+          "parentId": "109"
+        },
+        {
+          "role": "StaticText",
+          "name": "Four-stage CMOS amplifier",
+          "ignored": false,
+          "parentId": "110"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "An opcode-driven ALU and ",
+          "ignored": false,
+          "parentId": "242"
+        },
+        {
+          "role": "StaticText",
+          "name": "Clocked 8-bit ALU",
+          "ignored": false,
+          "parentId": "121"
+        },
+        {
+          "role": "StaticText",
+          "name": " is high on a rising clock edge, the FSM advances; when low, it holds. The sequence wraps from state s9 to s1, and the component's reset input returns it to s1. Its four-bit state feeds a decoder that generates the ALU's one-hot operation input.",
+          "ignored": false,
+          "parentId": "145"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "ALU assigns its declared ",
+          "ignored": false,
+          "parentId": "269"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Dental Clinic DBMS",
+          "ignored": false,
+          "parentId": "233"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Bookstore Management System",
+          "ignored": false,
+          "parentId": "236"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Quartus/VHDL 8-bit ALU and nine-state FSM ",
+          "ignored": false,
+          "parentId": "238"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Four-stage CMOS amplifier",
+          "ignored": false,
+          "parentId": "239"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "Clocked 8-bit ALU",
+          "ignored": false,
+          "parentId": "248"
+        },
+        {
+          "role": "InlineTextBox",
+          "name": "the ALU's one-hot operation input.",
+          "ignored": false,
+          "parentId": "268"
+        }
+      ],
+      "figureSnapshots": [
+        "- figure \"Lab 6 part 2 system map\":\n  - text: DATA PATH\n  - strong: A and B · 8-bit inputs\n  - paragraph: Two latch1 input registers\n  - text: CONTROL PATH\n  - strong: Nine-state Moore FSM\n  - paragraph: Current state passes through a one-hot opcode decoder\n  - text: PROCESS\n  - strong: Clocked 8-bit ALU\n  - paragraph: Latched operands + 16-bit opcode\n  - text: DISPLAY PATH\n  - strong: R1 and R2 · 4-bit nibbles\n  - paragraph: Sent to seven-segment decoders\n  - text: Source-derived from the configured Lab 6 part 2 block diagram; the separate identifier-display branch is omitted."
+      ],
+      "screenshots": {
+        "viewport": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-education-alu-local/education-alu-390x844-viewport.png",
+        "fullPage": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-education-alu-local/education-alu-390x844-fullpage.png"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    }
+  }
+}

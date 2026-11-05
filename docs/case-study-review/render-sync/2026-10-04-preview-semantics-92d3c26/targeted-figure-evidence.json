@@ -1,0 +1,121 @@
+{
+  "preview": "https://965f0e82.joshuaik2.pages.dev",
+  "source": "92d3c26",
+  "browser": "Chrome 153.0.8010.53",
+  "runs": [
+    {
+      "name": "food",
+      "viewport": "desktop",
+      "status": 200,
+      "selector": ".food-system-map",
+      "snapshot": "- figure \"Food Tracker system map.\": \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\"",
+      "detail": {
+        "figureTabIndex": -1,
+        "figureTabindex": null,
+        "images": [
+          {
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "dimension": null
+      },
+      "screenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\preview-semantics-92d3c26\\food-desktop-targeted-figure.png"
+    },
+    {
+      "name": "food",
+      "viewport": "narrow",
+      "status": 200,
+      "selector": ".food-system-map",
+      "snapshot": "- figure \"Food Tracker system map.\":\n  - list \"Food Tracker system path\":\n    - listitem:\n      - strong: Search in the app\n      - text: Start with a meal or ingredient.\n    - listitem:\n      - strong: Find and rank candidates\n      - text: Exact, fuzzy, and semantic paths feed one deterministic ranking.\n    - listitem:\n      - strong: Resolve nutrition\n      - text: Trusted food data and serving rules independently resolve nutrition.\n    - listitem:\n      - strong: Record the result\n      - text: A serving snapshot supports later portion edits in History.\n  - text: \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\"",
+      "detail": {
+        "figureTabIndex": -1,
+        "figureTabindex": null,
+        "images": [
+          {
+            "alt": "",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "dimension": null
+      },
+      "screenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\preview-semantics-92d3c26\\food-narrow-targeted-figure.png"
+    },
+    {
+      "name": "crest",
+      "viewport": "desktop",
+      "status": 200,
+      "selector": ".crest-demo-figure",
+      "snapshot": "- figure \"Expense review / policy context / preapproval\":\n  - img \"Crest expense-review sample screen with policy context and preapproval controls\"\n  - text: SAMPLE DATA Expense review / policy context / preapproval\n  - link \"WATCH DEMO ↗\":\n    - /url: https://www.youtube.com/watch?v=kiq6XjNi9J8",
+      "detail": {
+        "figureTabIndex": -1,
+        "figureTabindex": null,
+        "images": [
+          {
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "dimension": null
+      },
+      "screenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\preview-semantics-92d3c26\\crest-desktop-targeted-figure.png"
+    },
+    {
+      "name": "crest",
+      "viewport": "narrow",
+      "status": 200,
+      "selector": ".crest-demo-figure",
+      "snapshot": "- figure \"Expense review / policy context / preapproval\":\n  - img \"Crest expense-review sample screen with policy context and preapproval controls\"\n  - text: SAMPLE DATA Expense review / policy context / preapproval\n  - link \"WATCH DEMO ↗\":\n    - /url: https://www.youtube.com/watch?v=kiq6XjNi9J8",
+      "detail": {
+        "figureTabIndex": -1,
+        "figureTabindex": null,
+        "images": [
+          {
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls",
+            "ariaHidden": null,
+            "role": null
+          }
+        ],
+        "dimension": null
+      },
+      "screenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\preview-semantics-92d3c26\\crest-narrow-targeted-figure.png"
+    },
+    {
+      "name": "stush",
+      "viewport": "desktop",
+      "status": 200,
+      "selector": ".stush-system-flow",
+      "snapshot": "- figure \"Different file shapes. One reporting path.\":\n  - paragraph: THE DATA PIPELINE\n  - heading \"Different file shapes. One reporting path.\" [level=3]\n  - paragraph: From incoming sales files to a Power BI handoff\n  - list \"Pipeline stages\":\n    - listitem: 01 Files\n    - listitem: 02 Parse\n    - listitem: 03 Shared schema\n    - listitem: 04 Normalize\n    - listitem: 05 Handoff\n  - heading \"Sales files\" [level=4]\n  - paragraph: Different layouts\n  - paragraph:\n    - strong: CSV · XLSX · XLSB\n    - text: Formats across inputs\n  - paragraph: PARSE\n  - heading \"Read each structure\" [level=4]\n  - paragraph: Field positions vary\n  - paragraph: Fields found in each layout\n  - paragraph: SHARED FIELD CONTRACT\n  - heading \"Four stable meanings\" [level=4]\n  - list:\n    - listitem: Sales\n    - listitem: Units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: NORMALIZE\n  - heading \"Apply shared rules\" [level=4]\n  - list:\n    - listitem: Sales + units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: STANDARDIZED OUTPUT\n  - list:\n    - listitem: Unified CSV\n    - listitem: Data dictionary\n    - listitem: Quality report\n  - strong: Power BI\n  - text: Reporting handoff Conceptual pipeline · no source values shown.",
+      "detail": {
+        "figureTabIndex": -1,
+        "figureTabindex": null,
+        "images": [],
+        "dimension": {
+          "visible": true,
+          "region": null
+        }
+      },
+      "screenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\preview-semantics-92d3c26\\stush-desktop-targeted-figure.png"
+    },
+    {
+      "name": "stush",
+      "viewport": "narrow",
+      "status": 200,
+      "selector": ".stush-system-flow",
+      "snapshot": "- figure \"Different file shapes. One reporting path.\":\n  - paragraph: THE DATA PIPELINE\n  - heading \"Different file shapes. One reporting path.\" [level=3]\n  - paragraph: From incoming sales files to a Power BI handoff\n  - list \"Pipeline stages\":\n    - listitem: 01 Files\n    - listitem: 02 Parse\n    - listitem: 03 Shared schema\n    - listitem: 04 Normalize\n    - listitem: 05 Handoff\n  - heading \"Sales files\" [level=4]\n  - paragraph: Different layouts\n  - paragraph:\n    - strong: CSV · XLSX · XLSB\n    - text: Formats across inputs\n  - paragraph: PARSE\n  - heading \"Read each structure\" [level=4]\n  - paragraph: Field positions vary\n  - paragraph: Fields found in each layout\n  - paragraph: SHARED FIELD CONTRACT\n  - heading \"Four stable meanings\" [level=4]\n  - list:\n    - listitem: Sales\n    - listitem: Units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: NORMALIZE\n  - heading \"Apply shared rules\" [level=4]\n  - list:\n    - listitem: Sales + units\n    - listitem: Case pack\n    - listitem: Reporting month\n  - paragraph: STANDARDIZED OUTPUT\n  - list:\n    - listitem: Unified CSV\n    - listitem: Data dictionary\n    - listitem: Quality report\n  - strong: Power BI\n  - text: Reporting handoff Conceptual pipeline · no source values shown.",
+      "detail": {
+        "figureTabIndex": -1,
+        "figureTabindex": null,
+        "images": [],
+        "dimension": {
+          "visible": true,
+          "region": null
+        }
+      },
+      "screenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\preview-semantics-92d3c26\\stush-narrow-targeted-figure.png"
+    }
+  ]
+}

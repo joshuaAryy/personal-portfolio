@@ -1,0 +1,544 @@
+{
+  "preview": "https://f8189697.joshuaik2.pages.dev",
+  "sourceCommit": "1904549bca547e31582486ada19bf28aa224ad23",
+  "capturedAt": "2026-10-04T01:07:47.472Z",
+  "browser": "153.0.8010.53",
+  "runs": [
+    {
+      "url": "https://f8189697.joshuaik2.pages.dev/experience/living-in-silico",
+      "status": 200,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "title": "Joshua Aryeetey · Portfolio",
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "scrollHeight": 1080
+      },
+      "body": {
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      "main": {
+        "scrollWidth": 1560,
+        "clientWidth": 1560,
+        "scrollHeight": 2243,
+        "clientHeight": 998,
+        "overflowY": "auto"
+      },
+      "images": [
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+          "complete": true,
+          "naturalWidth": 82,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        }
+      ],
+      "sections": [
+        {
+          "id": "",
+          "heading": "Represent the molecule first."
+        },
+        {
+          "id": "",
+          "heading": "Three approaches. Different outcomes."
+        },
+        {
+          "id": "",
+          "heading": "A project output in SMILES."
+        },
+        {
+          "id": "",
+          "heading": "Research engineering across the workflow."
+        }
+      ],
+      "visibleText": "Skip to content\nPORTFOLIO\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\nJoshua Aryeetey\nOPEN TO SUMMER 2027\n‹ EXPERIENCE\nGENERATIVE MOLECULAR MODELING\n\nGENERATIVE MOLECULAR MODELING  /  EXPERIENCE · 2025\n\nMolecules need representation before generation.\n\nDuring an AI/ML research internship in generative molecular modeling, I learned how molecular structures become SMILES and model-ready features before exploring generation.\n\nRESEARCH ROLE\n\nAI / ML Research Intern\nGenerative Molecular Modeling\n\nPERIOD\n\nMarch – June 2025\nComputational chemistry · Biomedical research\n\n01 / MODEL REPRESENTATION\n\nRepresent the molecule first.\n\nI moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.\nApril 12 snapshot: 15,696 rows · 14,487 unique SMILES.\nCurated experimental subsets: ~400–600 entries.\n\nSCHEMATIC · NOT A PROJECT SAMPLE\nRepresentation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits.\n\nSTRUCTURE\n\n→\nSMILES\nstring format\n→\n\nMORGAN FINGERPRINT\n\nradius 2 · 128 bits\nIllustrative bit marks\n\n02 / EXPERIMENT ROUTES\n\nThree approaches. Different outcomes.\n\nI explored sequence generation, fragment-based design, and another generative workflow.\n\n01 / SEQUENCE GENERATION\n\nDeepMol\nCSVLoader\n→\nSMILES sequences\n→\nRNN MolecularGenerator\n\nSMILES sequence generation\n\nMETHOD\n\nRecorded run · 10 epochs · batch size 64\n\n02 / FRAGMENT-BASED DESIGN\n\nRDKit + Fragmenstein\nStructure\n→\nFragment selection\n→\nRecombination\n\nSelect structurally compatible fragments with RDKit / Fragmenstein.\n\nOUTCOME\n\nSome fragment workflows succeeded\nI explored fragment linking and spatial workflows with RDKit / Fragmenstein.\n\n03 / ATTEMPTED GENERATION\n\nREINVENT4\nREINVENT4 researched\n→\nGeneration attempted\n\nGeneration",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    },
+    {
+      "url": "https://f8189697.joshuaik2.pages.dev/experience/living-in-silico",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Joshua Aryeetey · Portfolio",
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 3983
+      },
+      "body": {
+        "scrollWidth": 390,
+        "scrollHeight": 3983
+      },
+      "main": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 3913,
+        "clientHeight": 3913,
+        "overflowY": "visible"
+      },
+      "images": [
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+          "complete": true,
+          "naturalWidth": 32,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+          "complete": true,
+          "naturalWidth": 82,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        }
+      ],
+      "sections": [
+        {
+          "id": "",
+          "heading": "Represent the molecule first."
+        },
+        {
+          "id": "",
+          "heading": "Three approaches. Different outcomes."
+        },
+        {
+          "id": "",
+          "heading": "A project output in SMILES."
+        },
+        {
+          "id": "",
+          "heading": "Research engineering across the workflow."
+        }
+      ],
+      "visibleText": "Skip to content\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\nHELP\n‹ EXPERIENCE\nGENERATIVE MOLECULAR MODELING\n\nGENERATIVE MOLECULAR MODELING  /  EXPERIENCE · 2025\n\nMolecules need representation before generation.\n\nDuring an AI/ML research internship in generative molecular modeling, I learned how molecular structures become SMILES and model-ready features before exploring generation.\n\nRESEARCH ROLE\n\nAI / ML Research Intern\nGenerative Molecular Modeling\n\nPERIOD\n\nMarch – June 2025\nComputational chemistry · Biomedical research\n\n01 / MODEL REPRESENTATION\n\nRepresent the molecule first.\n\nI moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.\nApril 12 snapshot: 15,696 rows · 14,487 unique SMILES.\nCurated experimental subsets: ~400–600 entries.\n\nSCHEMATIC · NOT A PROJECT SAMPLE\nRepresentation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits.\n\nSTRUCTURE\n\n→\nSMILES\nstring format\n→\n\nMORGAN FINGERPRINT\n\nradius 2 · 128 bits\nIllustrative bit marks\n\n02 / EXPERIMENT ROUTES\n\nThree approaches. Different outcomes.\n\nI explored sequence generation, fragment-based design, and another generative workflow.\n\n01 / SEQUENCE GENERATION\n\nDeepMol\nCSVLoader\n→\nSMILES sequences\n→\nRNN MolecularGenerator\n\nSMILES sequence generation\n\nMETHOD\n\nRecorded run · 10 epochs · batch size 64\n\n02 / FRAGMENT-BASED DESIGN\n\nRDKit + Fragmenstein\nStructure\n→\nFragment selection\n→\nRecombination\n\nSelect structurally compatible fragments with RDKit / Fragmenstein.\n\nOUTCOME\n\nSome fragment workflows succeeded\nI explored fragment linking and spatial workflows with RDKit / Fragmenstein.\n\n03 / ATTEMPTED GENERATION\n\nREINVENT4\nREINVENT4 researched\n→\nGeneration attempted\n\nGeneration attempt did not succeed.\n\nOUTCOME\n\nNo su",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    },
+    {
+      "url": "https://f8189697.joshuaik2.pages.dev/experience/stush-patties",
+      "status": 200,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "title": "Joshua Aryeetey · Portfolio",
+      "document": {
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "scrollHeight": 1080
+      },
+      "body": {
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      },
+      "main": {
+        "scrollWidth": 1560,
+        "clientWidth": 1560,
+        "scrollHeight": 2399,
+        "clientHeight": 998,
+        "overflowY": "auto"
+      },
+      "images": [
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+          "complete": true,
+          "naturalWidth": 82,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        }
+      ],
+      "sections": [
+        {
+          "id": "stush-inputs",
+          "heading": "The same fields had to line up before reporting."
+        },
+        {
+          "id": "",
+          "heading": "Four business dimensions needed the same meaning across file layouts."
+        },
+        {
+          "id": "stush-role",
+          "heading": "I built the parsing and normalization steps."
+        },
+        {
+          "id": "",
+          "heading": "A repeatable path from raw files to Power BI reporting."
+        }
+      ],
+      "visibleText": "Skip to content\nPORTFOLIO\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\nJoshua Aryeetey\nOPEN TO SUMMER 2027\n‹ EXPERIENCE\nEXPERIENCE / STUSH PATTIES\nStush Patties\nSOFTWARE ENGINEERING INTERN · DATA PIPELINES & AUTOMATION\nSep–Nov 2025\n\nINCONSISTENT SALES FILES → REPEATABLE REPORTING\n\nSales files arrived in inconsistent layouts, making repeatable reporting difficult. I built Python parsing and normalization steps to map them into one shared schema for Power BI reporting.\n\nFILES\n\nSALES FILES · LAYOUTS VARY\n\nKoyo · UNFI · Dovre\n\nCSV / XLSX / XLSB · ACROSS INPUTS\n\nTHE INPUTS\n\nThe same fields had to line up before reporting.\n\nSource layouts varied across CSV, XLSX, and XLSB. Sales, units, case packs, and reporting months needed to share a consistent meaning.\n\nTHE DATA PIPELINE\n\nDifferent file shapes. One reporting path.\n\nFrom incoming sales files to a Power BI handoff\n\n01\nFILES\n02\nPARSE\n03\nSHARED SCHEMA\n04\nNORMALIZE\n05\nHANDOFF\nSales files\n\nDifferent layouts\n\nFILE 01\nFILE 02\nFILE 03\n\nCSV · XLSX · XLSB\nFormats across inputs\n\n→\n\nPARSE\n\nRead each structure\n\nField positions vary\n\n01\n02\n03\n\nFields found in each layout\n\n→\n\nSHARED FIELD CONTRACT\n\nFour stable meanings\nSales\nUnits\nCase pack\nReporting month\n→\n\nNORMALIZE\n\nApply shared rules\nSales + units\n→\nCase pack\n→\nReporting month\n→\n\nSTANDARDIZED OUTPUT\n\nUnified CSV\nData dictionary\nQuality report\n→\nPower BI\nREPORTING HANDOFF\nConceptual pipeline · no source values shown.\n\nWHY A SHARED FIELD CONTRACT\n\nFour business dimensions needed the same meaning across file layouts.\n\nCONCEPTUAL FIELD CONTRACT · NO SOURCE VALUES SHOWN\n\nSales\nUnits\nCase pack\nReporting month\n\nEDGE CASE\n\nONE OUTLIER\nTemporary Koyo position-and-cell parsing exception.\n\nI mapped the position-and-cell data into the shared schema, then returned it to the common normalizati",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    },
+    {
+      "url": "https://f8189697.joshuaik2.pages.dev/experience/stush-patties",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "title": "Joshua Aryeetey · Portfolio",
+      "document": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 3352
+      },
+      "body": {
+        "scrollWidth": 390,
+        "scrollHeight": 3352
+      },
+      "main": {
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 3282,
+        "clientHeight": 3282,
+        "overflowY": "visible"
+      },
+      "images": [
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+          "complete": true,
+          "naturalWidth": 32,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+          "complete": true,
+          "naturalWidth": 82,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        },
+        {
+          "src": "https://f8189697.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "alt": ""
+        }
+      ],
+      "sections": [
+        {
+          "id": "stush-inputs",
+          "heading": "The same fields had to line up before reporting."
+        },
+        {
+          "id": "",
+          "heading": "Four business dimensions needed the same meaning across file layouts."
+        },
+        {
+          "id": "stush-role",
+          "heading": "I built the parsing and normalization steps."
+        },
+        {
+          "id": "",
+          "heading": "A repeatable path from raw files to Power BI reporting."
+        }
+      ],
+      "visibleText": "Skip to content\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\nHELP\n‹ EXPERIENCE\nEXPERIENCE / STUSH PATTIES\nStush Patties\nSOFTWARE ENGINEERING INTERN · DATA PIPELINES & AUTOMATION\nSep–Nov 2025\n\nINCONSISTENT SALES FILES → REPEATABLE REPORTING\n\nSales files arrived in inconsistent layouts, making repeatable reporting difficult. I built Python parsing and normalization steps to map them into one shared schema for Power BI reporting.\n\nFILES\n\nSALES FILES · LAYOUTS VARY\n\nKoyo · UNFI · Dovre\n\nCSV / XLSX / XLSB · ACROSS INPUTS\n\nTHE INPUTS\n\nThe same fields had to line up before reporting.\n\nSource layouts varied across CSV, XLSX, and XLSB. Sales, units, case packs, and reporting months needed to share a consistent meaning.\n\nTHE DATA PIPELINE\n\nDifferent file shapes. One reporting path.\n\nFrom incoming sales files to a Power BI handoff\n\n01\nFILES\n02\nPARSE\n03\nSHARED SCHEMA\n04\nNORMALIZE\n05\nHANDOFF\nSales files\n\nDifferent layouts\n\nFILE 01\nFILE 02\nFILE 03\n\nCSV · XLSX · XLSB\nFormats across inputs\n\n→\n\nPARSE\n\nRead each structure\n\nField positions vary\n\n01\n02\n03\n\nFields found in each layout\n\n→\n\nSHARED FIELD CONTRACT\n\nFour stable meanings\nSales\nUnits\nCase pack\nReporting month\n→\n\nNORMALIZE\n\nApply shared rules\nSales + units\n→\nCase pack\n→\nReporting month\n→\n\nSTANDARDIZED OUTPUT\n\nUnified CSV\nData dictionary\nQuality report\n→\nPower BI\nREPORTING HANDOFF\nConceptual pipeline · no source values shown.\n\nWHY A SHARED FIELD CONTRACT\n\nFour business dimensions needed the same meaning across file layouts.\n\nCONCEPTUAL FIELD CONTRACT · NO SOURCE VALUES SHOWN\n\nSales\nUnits\nCase pack\nReporting month\n\nEDGE CASE\n\nONE OUTLIER\nTemporary Koyo position-and-cell parsing exception.\n\nI mapped the position-and-cell data into the shared schema, then returned it to the common normalization path.\n\nIMPLEMENTATION + COLLABORATION\n",
+      "consoleErrors": [],
+      "pageErrors": [],
+      "requestFailures": [],
+      "badResponses": []
+    }
+  ]
+}

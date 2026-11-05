@@ -1,0 +1,232 @@
+- link "Skip to content":
+  - /url: "#main"
+- banner:
+  - link "Portfolio home":
+    - /url: /home
+    - strong: PORTFOLIO
+  - navigation "Main navigation":
+    - link "Projects":
+      - /url: /projects
+    - link "Experience":
+      - /url: /experience
+    - link "Hackathons":
+      - /url: /hackathons
+    - link "Education":
+      - /url: /education
+    - link "Resume":
+      - /url: /resume
+  - link "Open profile":
+    - /url: /profile
+    - text: Joshua Aryeetey OPEN TO SUMMER 2027
+- main:
+  - navigation "Food Tracker case study":
+    - link "PRODUCT":
+      - /url: "#food-overview"
+    - link "LOGGING":
+      - /url: "#food-logging"
+    - link "INSIGHTS":
+      - /url: "#food-insights"
+    - link "RETRIEVAL":
+      - /url: "#food-search"
+    - link "IN PRODUCT":
+      - /url: "#food-interface"
+    - link "ARCHITECTURE":
+      - /url: "#food-system"
+    - link "RESULTS":
+      - /url: "#food-evaluation"
+    - link "LEARNING":
+      - /url: "#food-workflow"
+    - link "CLOSE":
+      - /url: "#food-reflection"
+    - link "‹ PROJECTS":
+      - /url: /projects
+    - text: CASE STUDY / FOOD TRACKER
+  - article:
+    - paragraph:
+      - strong: FOOD TRACKER
+      - text: PRODUCT INITIATOR · SYSTEM DIRECTION · EVALUATION
+    - heading "Simple food logs. Trusted nutrition." [level=1]
+    - paragraph: A mobile-first nutrition tracker for quick logging, reliable food search, serving conversion, recommendations, and long-term insight.
+    - paragraph: Quick logging stays simple; trusted food and serving details resolve underneath.
+    - paragraph: MOTIVATED BY MY OWN GYM + NUTRITION ROUTINE.
+    - paragraph: THE PRODUCT CHALLENGE
+    - heading "A quick log still needs the right food and serving." [level=2]
+    - paragraph: Search surfaces candidates; trusted food data and backend serving conversion determine nutrition.
+    - figure "Food Tracker product path schematic":
+      - 'img "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record."'
+    - region "One meal, several ways to get started.":
+      - paragraph: LOGGING PATHS
+      - heading "One meal, several ways to get started." [level=2]
+      - paragraph: "Each route moves toward the same useful check: confirm the food and portion before the entry is saved."
+      - list:
+        - listitem:
+          - strong: MANUAL
+          - text: Find a food and choose the serving that matches the meal.
+        - listitem:
+          - strong: SAVED / RECENT
+          - text: Reuse a food and serving already in the log.
+        - listitem:
+          - strong: BARCODE
+          - text: Scan packaged food to find a catalog match.
+        - listitem:
+          - strong: TEXT
+          - text: Describe an item, then review the returned suggestion.
+        - listitem:
+          - strong: PHOTO
+          - text: Review visible-food suggestions; any estimate stays low-trust and editable.
+      - text: REVIEW BEFORE SAVE
+      - strong: Check the food and portion. A supplied catalog match uses backend food and serving rules; a photo estimate is an editable, low-trust starting point that can be changed or excluded.
+    - region "Turn saved logs into a view of patterns over time.":
+      - paragraph: INSIGHTS
+      - heading "Turn saved logs into a view of patterns over time." [level=2]
+      - paragraph: The product aggregates logged nutrients and keeps data coverage visible before people choose how much detail to explore.
+      - list "Insights data flow":
+        - listitem:
+          - strong: Logged Items
+          - text: Foods and serving choices →
+        - listitem:
+          - strong: Nutrient Aggregation
+          - text: Totals from saved logs →
+        - listitem:
+          - strong: Coverage
+          - text: Missing data stays visible
+      - article:
+        - heading "Simple / Focused Overview" [level=3]
+        - paragraph: A clear daily view over the same logged foods and nutrition.
+      - article:
+        - heading "Complex / Range Comparison" [level=3]
+        - paragraph: Open nutrient detail and compare selected time ranges.
+      - article:
+        - heading "Saved Views" [level=3]
+        - paragraph: Return to a chosen analysis without changing the underlying log.
+      - paragraph:
+        - strong: Unknown nutrition stays unknown.
+      - paragraph: ONE PRODUCT · ONE BACKEND · DIFFERENT LEVELS OF DETAIL
+    - paragraph: WHY FOOD SEARCH IS HARD
+    - figure "RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.":
+      - text: RETRIEVAL FLOW · CANDIDATE SOURCES ONLY
+      - strong: Search broadly. Rank deterministically.
+      - 'img "Food retrieval flow: a query branches into deterministic, fuzzy, and semantic candidates. The candidates are combined, deterministically evaluated, then ranked. Pinecone supplies candidates only."':
+        - text: USER QUERY
+        - strong: DETERMINISTIC
+        - text: Direct matches
+        - strong: FUZZY
+        - text: Near-text matches
+        - strong: SEMANTIC · PINECONE
+        - text: Candidate supply only CANDIDATE UNION
+        - strong: DETERMINISTIC EVALUATION
+        - text: Rules decide rank
+        - strong: FINAL RANK
+        - text: 1 2 3
+      - paragraph: SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery.
+      - paragraph: AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition.
+    - region "One query can surface several plausible foods.":
+      - paragraph: IN THE PRODUCT · MOBILE SEARCH
+      - heading "One query can surface several plausible foods." [level=2]
+      - paragraph: The intended food needs to rank near the top before its serving and nutrition can be trusted. This earlier simulator capture shows that decision in the product.
+      - figure "EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH":
+        - img "Earlier Food Tracker mobile interface showing a banana query and candidate food results."
+        - text: EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH
+    - paragraph: ARCHITECTURE + DATA FOUNDATION
+    - figure "Food Tracker system map.": "Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights."
+    - paragraph:
+      - strong: React Native / Expo
+      - text: sends the chosen food and serving to
+      - strong: Express / Prisma
+      - text: . Food records are normalized into one trusted catalog; backend serving resolution writes a
+      - strong: PostgreSQL
+      - text: food log with a serving snapshot that supports later portion edits in History and Insights.
+    - paragraph: OFFLINE EVALUATION · DEVELOPMENT + HOLDOUT
+    - heading "Hybrid search put the intended food first more often." [level=2]
+    - paragraph: Development improved sharply, the separate holdout moved up modestly. I broadened candidate search while keeping the final order deterministic.
+    - figure "OFFLINE SEARCH EVALUATION · FIRST RESULT":
+      - text: OFFLINE SEARCH EVALUATION · FIRST RESULT
+      - heading "DEVELOPMENT · 80 QUERIES" [level=3]
+      - paragraph: Top-1 means the correct food ranked first. Bars show share.
+      - text: LEGACY BASELINE
+      - strong: 40/80
+      - text: FULL HYBRID
+      - strong: 71/80 (+31)
+      - paragraph: Top-3 40/80 → 72/80·Top-5 40/80 → 72/80
+      - heading "HOLDOUT · 40 QUERIES" [level=3]
+      - paragraph: Top-1 means the correct food ranked first. Bars show share.
+      - text: LEGACY BASELINE
+      - strong: 25/40
+      - text: FULL HYBRID
+      - strong: 27/40 (+2)
+      - paragraph: Top-3 25/40 → 28/40·Top-5 25/40 → 28/40
+      - paragraph: OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES
+    - paragraph: VALIDATION PRACTICE
+    - heading "Passing tests did not guarantee useful search." [level=2]
+    - article:
+      - text: "01"
+      - heading "RELEVANCE" [level=3]
+      - paragraph: My tests passed while search still missed foods. I added offline query evaluation to measure relevance beside code correctness.
+    - article:
+      - text: "02"
+      - heading "INDEX COMPLETENESS" [level=3]
+      - paragraph: A pagination bug left the search index partial or stale. I checked index completeness separately from whether the right food was returned.
+    - paragraph: DATA + SYSTEM AUTHORITIES
+    - heading "Keep intent, nutrition, and recorded history distinct." [level=2]
+    - article:
+      - heading "INTENT INTERPRETATION" [level=3]
+      - paragraph: AI can interpret the food request; it does not decide nutrition values.
+    - article:
+      - heading "NUTRITION AUTHORITY" [level=3]
+      - paragraph: Trusted normalized food data and backend serving conversion set the numbers.
+    - article:
+      - heading "HISTORICAL INTEGRITY" [level=3]
+      - paragraph: The serving basis is retained so a later portion edit can be recalculated. Unknown nutrition stays unknown.
+    - paragraph: WHAT SEARCH EVALUATION TAUGHT ME
+    - heading "Useful search means the right food appears first." [level=2]
+    - paragraph: I measured whether the intended food ranked first, then weighed relevance gains against latency and the need to keep nutrition authoritative.
+    - paragraph: PRODUCT INITIATION · SEARCH EVALUATION · SYSTEM DESIGN
+    - list:
+      - listitem:
+        - text: "01"
+        - strong: SET RELEVANCE TARGET
+      - listitem:
+        - text: "02"
+        - strong: WIDEN CANDIDATE SEARCH
+      - listitem:
+        - text: "03"
+        - strong: COMPARE QUALITY + LATENCY
+      - listitem:
+        - text: "04"
+        - strong: KEEP NUTRITION TRUSTED
+    - paragraph: WHAT I LEARNED
+    - heading "A useful match must resolve into trusted nutrition." [level=2]
+    - paragraph: Search finds a candidate; trusted reference data and backend serving conversion define what gets logged. The saved serving snapshot supports later portion edits. Separating those jobs made the product easier to reason about and trust.
+    - text: Simple and Complex are presentation levels over one product and backend.
+- complementary "Portfolio index":
+  - strong: OPEN TO OPPORTUNITIES
+  - text: Summer 2027 · Toronto / Remote
+  - heading "ACTIVITY" [level=2]
+  - paragraph: GENERAL · PORTFOLIO
+  - heading "CURRENT FOCUS" [level=3]
+  - link "Food Tracker":
+    - /url: /projects/food-tracker
+  - heading "PROJECTS (4)" [level=3]
+  - link "Food Tracker":
+    - /url: /projects/food-tracker
+  - link "Cho’Veigo":
+    - /url: /projects/choveigo
+  - link "Crest":
+    - /url: /projects/crest
+  - link "Fraymakers":
+    - /url: /projects/fraymakers
+  - heading "EXPERIENCE (2)" [level=3]
+  - link "Living in Silico":
+    - /url: /experience/living-in-silico
+  - link "Stush Patties":
+    - /url: /experience/stush-patties
+  - link "GitHub (opens in a new tab)":
+    - /url: https://github.com/joshuaAryy
+    - text: GitHub
+  - link "LinkedIn (opens in a new tab)":
+    - /url: https://ca.linkedin.com/in/joshua-ary
+    - text: LinkedIn
+  - link "Email Joshua":
+    - /url: mailto:joshuaaryy@gmail.com
+    - text: ✉
+  - button "Help"

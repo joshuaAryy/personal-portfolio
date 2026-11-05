@@ -1,0 +1,748 @@
+{
+  "viewports": [],
+  "resume": {
+    "desktop": {
+      "viewport": [
+        1440,
+        900
+      ],
+      "documentWidth": 1440,
+      "j": {
+        "x": 510.375,
+        "y": 278.875,
+        "width": 179.1875,
+        "height": 179.1875
+      },
+      "title": {
+        "x": 399.96875,
+        "y": 483.671875,
+        "width": 400,
+        "height": 52
+      },
+      "action": {
+        "x": 471.96875,
+        "y": 691.671875,
+        "width": 256,
+        "height": 84.515625
+      },
+      "animations": [
+        {
+          "name": "resume-mechanism__orb-energy",
+          "computedDuration": "2.2s",
+          "fill": "306deg"
+        },
+        {
+          "name": "resume-mechanism__orb-plasma",
+          "computedDuration": "2.2s",
+          "fill": "306deg"
+        }
+      ]
+    },
+    "shortAndNarrow": {
+      "viewport": [
+        390,
+        844
+      ],
+      "documentWidth": 390,
+      "documentHeight": 905,
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "width": 358,
+        "height": 358
+      },
+      "j": {
+        "x": 144.8828125,
+        "y": 338.8515625,
+        "width": 100.234375,
+        "height": 100.234375
+      },
+      "title": {
+        "x": 69.703125,
+        "y": 453.40625,
+        "width": 250.59375,
+        "height": 29.34375
+      }
+    },
+    "reducedMotion": {
+      "duration": "1e-05s",
+      "fill": "306deg"
+    }
+  },
+  "food": [
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "documentWidth": 1920,
+      "documentHeight": 1080,
+      "grid": "492px 492px",
+      "gallery": {
+        "x": 260,
+        "y": 469.9,
+        "width": 1040,
+        "height": 1062,
+        "right": 1300,
+        "bottom": 1531.8
+      },
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "box": {
+            "x": 282,
+            "y": 492.9,
+            "width": 492,
+            "height": 545,
+            "right": 774,
+            "bottom": 1037.9
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "box": {
+                "x": 348,
+                "y": 494.9,
+                "width": 360,
+                "height": 196.8,
+                "right": 708,
+                "bottom": 691.6
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "box": {
+                "x": 348,
+                "y": 701.6,
+                "width": 360,
+                "height": 239.3,
+                "right": 708,
+                "bottom": 940.9
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "box": {
+            "x": 786,
+            "y": 492.9,
+            "width": 492,
+            "height": 545,
+            "right": 1278,
+            "bottom": 1037.9
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "box": {
+                "x": 852,
+                "y": 494.9,
+                "width": 360,
+                "height": 467.7,
+                "right": 1212,
+                "bottom": 962.6
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "box": {
+            "x": 282,
+            "y": 1049.9,
+            "width": 492,
+            "height": 460,
+            "right": 774,
+            "bottom": 1509.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png",
+              "natural": [
+                334,
+                355
+              ],
+              "box": {
+                "x": 348,
+                "y": 1051.9,
+                "width": 360,
+                "height": 382.6,
+                "right": 708,
+                "bottom": 1434.5
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "box": {
+            "x": 786,
+            "y": 1049.9,
+            "width": 492,
+            "height": 460,
+            "right": 1278,
+            "bottom": 1509.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "box": {
+                "x": 852,
+                "y": 1051.9,
+                "width": 360,
+                "height": 265.4,
+                "right": 1212,
+                "bottom": 1317.3
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "documentWidth": 1440,
+      "documentHeight": 900,
+      "grid": "492px 492px",
+      "gallery": {
+        "x": 75.9,
+        "y": -40.2,
+        "width": 1040,
+        "height": 1062,
+        "right": 1115.9,
+        "bottom": 1021.8
+      },
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "box": {
+            "x": 97.9,
+            "y": -17.2,
+            "width": 492,
+            "height": 545,
+            "right": 589.9,
+            "bottom": 527.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "box": {
+                "x": 163.9,
+                "y": -15.2,
+                "width": 360,
+                "height": 196.8,
+                "right": 523.9,
+                "bottom": 181.5
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "box": {
+                "x": 163.9,
+                "y": 191.5,
+                "width": 360,
+                "height": 239.3,
+                "right": 523.9,
+                "bottom": 430.8
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "box": {
+            "x": 601.9,
+            "y": -17.2,
+            "width": 492,
+            "height": 545,
+            "right": 1093.9,
+            "bottom": 527.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "box": {
+                "x": 667.9,
+                "y": -15.2,
+                "width": 360,
+                "height": 467.7,
+                "right": 1027.9,
+                "bottom": 452.5
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "box": {
+            "x": 97.9,
+            "y": 539.8,
+            "width": 492,
+            "height": 460,
+            "right": 589.9,
+            "bottom": 999.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png",
+              "natural": [
+                334,
+                355
+              ],
+              "box": {
+                "x": 163.9,
+                "y": 541.8,
+                "width": 360,
+                "height": 382.6,
+                "right": 523.9,
+                "bottom": 924.4
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "box": {
+            "x": 601.9,
+            "y": 539.8,
+            "width": 492,
+            "height": 460,
+            "right": 1093.9,
+            "bottom": 999.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "box": {
+                "x": 667.9,
+                "y": 541.8,
+                "width": 360,
+                "height": 265.4,
+                "right": 1027.9,
+                "bottom": 807.2
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        900,
+        900
+      ],
+      "documentWidth": 900,
+      "documentHeight": 12319,
+      "grid": "564px",
+      "gallery": {
+        "x": 150,
+        "y": -513.8,
+        "width": 600,
+        "height": 1928.5,
+        "right": 750,
+        "bottom": 1414.6
+      },
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "box": {
+            "x": 168,
+            "y": -494.8,
+            "width": 564,
+            "height": 519.5,
+            "right": 732,
+            "bottom": 24.6
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "box": {
+                "x": 270,
+                "y": -492.8,
+                "width": 360,
+                "height": 196.8,
+                "right": 630,
+                "bottom": -296.1
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "box": {
+                "x": 270,
+                "y": -286.1,
+                "width": 360,
+                "height": 239.3,
+                "right": 630,
+                "bottom": -46.8
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "box": {
+            "x": 168,
+            "y": 36.6,
+            "width": 564,
+            "height": 541.1,
+            "right": 732,
+            "bottom": 577.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "box": {
+                "x": 270,
+                "y": 38.6,
+                "width": 360,
+                "height": 467.7,
+                "right": 630,
+                "bottom": 506.3
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "box": {
+            "x": 168,
+            "y": 589.8,
+            "width": 564,
+            "height": 456.1,
+            "right": 732,
+            "bottom": 1045.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png",
+              "natural": [
+                334,
+                355
+              ],
+              "box": {
+                "x": 270,
+                "y": 591.8,
+                "width": 360,
+                "height": 382.6,
+                "right": 630,
+                "bottom": 974.4
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "box": {
+            "x": 168,
+            "y": 1057.8,
+            "width": 564,
+            "height": 338.8,
+            "right": 732,
+            "bottom": 1396.6
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "box": {
+                "x": 270,
+                "y": 1059.8,
+                "width": 360,
+                "height": 265.4,
+                "right": 630,
+                "bottom": 1325.2
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "documentWidth": 390,
+      "documentHeight": 15358,
+      "grid": "348px",
+      "gallery": {
+        "x": 9,
+        "y": -451.2,
+        "width": 372,
+        "height": 1747.2,
+        "right": 381,
+        "bottom": 1296
+      },
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "box": {
+            "x": 21,
+            "y": -438.2,
+            "width": 348,
+            "height": 457,
+            "right": 369,
+            "bottom": 18.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "box": {
+                "x": 35,
+                "y": -436.2,
+                "width": 320,
+                "height": 174.9,
+                "right": 355,
+                "bottom": -261.3
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            },
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "box": {
+                "x": 35,
+                "y": -261.3,
+                "width": 320,
+                "height": 212.7,
+                "right": 355,
+                "bottom": -48.6
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "box": {
+            "x": 21,
+            "y": 28.8,
+            "width": 348,
+            "height": 501.1,
+            "right": 369,
+            "bottom": 530
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "box": {
+                "x": 35,
+                "y": 30.8,
+                "width": 320,
+                "height": 415.7,
+                "right": 355,
+                "bottom": 446.6
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "box": {
+            "x": 21,
+            "y": 540,
+            "width": 348,
+            "height": 409.5,
+            "right": 369,
+            "bottom": 949.5
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-gallery-crop.png",
+              "natural": [
+                334,
+                355
+              ],
+              "box": {
+                "x": 35,
+                "y": 542,
+                "width": 320,
+                "height": 340.1,
+                "right": 355,
+                "bottom": 882.1
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "box": {
+            "x": 21,
+            "y": 959.5,
+            "width": 348,
+            "height": 324.5,
+            "right": 369,
+            "bottom": 1284
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "box": {
+                "x": 22,
+                "y": 961.5,
+                "width": 346,
+                "height": 255,
+                "right": 368,
+                "bottom": 1216.5
+              },
+              "objectFit": "contain",
+              "filter": "none",
+              "opacity": "1",
+              "transform": "none"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interaction": {
+    "modal": "true",
+    "focusFirst": true,
+    "focusSecond": true,
+    "focusWrap": true,
+    "escapeRestoresOrigin": true,
+    "viewResumeOpensViewer": true,
+    "directCloseRestoresOrigin": true
+  },
+  "errors": []
+}

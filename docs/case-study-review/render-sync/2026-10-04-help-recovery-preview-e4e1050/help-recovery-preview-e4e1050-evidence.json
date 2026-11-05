@@ -1,0 +1,842 @@
+{
+  "preview": "https://38b1abfa.joshuaik2.pages.dev",
+  "sourceCommit": "e4e1050",
+  "browserVersion": "153.0.8010.53",
+  "routes": {
+    "home-390x844": {
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "headerHelp": {
+          "rect": {
+            "x": 302.1,
+            "y": 6.5,
+            "width": 84,
+            "height": 56
+          },
+          "class": "header-help",
+          "tabIndex": 0,
+          "visible": true
+        },
+        "nav": {
+          "rect": {
+            "x": 73,
+            "y": 0.5,
+            "width": 263,
+            "height": 68
+          },
+          "scrollLeft": 0,
+          "scrollWidth": 321,
+          "clientWidth": 263
+        },
+        "dialog": null,
+        "active": {
+          "tag": "MAIN",
+          "class": "main main--home-explore",
+          "text": "EXPLORE\nCURATED\nRECENT\nABOUT\nSelect a portfolio mode\nPROJECTS\nBUILT SYSTEMS\nEXPE"
+        }
+      },
+      "tabTrace": [
+        {
+          "tab": 1,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "home-explore__mode",
+            "text": "PROJECTS\nBUILT SYSTEMS"
+          }
+        },
+        {
+          "tab": 2,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "home-explore__mode",
+            "text": "EXPERIENCE\nPROFESSIONAL WORK"
+          }
+        },
+        {
+          "tab": 3,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "home-explore__mode",
+            "text": "HACKATHONS\nBUILD UNDER PRESSURE"
+          }
+        },
+        {
+          "tab": 4,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "home-explore__mode",
+            "text": "EDUCATION\nACADEMIC PATH"
+          }
+        },
+        {
+          "tab": 5,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 126,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": -119.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": false
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": -125.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "home-explore__back",
+            "text": ""
+          }
+        },
+        {
+          "tab": 6,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 126,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": -119.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": false
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": -125.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "home-explore__confirm",
+            "text": "CONFIRM"
+          }
+        },
+        {
+          "tab": 7,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 126,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": -119.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": false
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": -125.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BODY",
+            "class": "",
+            "text": "Skip to content\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nHELP\nEXPLORE\nCURATED\nRE"
+          }
+        },
+        {
+          "tab": 8,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "A",
+            "class": "skip-link",
+            "text": "Skip to content"
+          }
+        },
+        {
+          "tab": 9,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "A",
+            "class": "brand brand--current",
+            "text": ""
+          }
+        },
+        {
+          "tab": 10,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "A",
+            "class": "",
+            "text": "PROJECTS"
+          }
+        },
+        {
+          "tab": 11,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "A",
+            "class": "",
+            "text": "EXPERIENCE"
+          }
+        },
+        {
+          "tab": 12,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "A",
+            "class": "",
+            "text": "HACKATHONS"
+          }
+        },
+        {
+          "tab": 13,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "A",
+            "class": "",
+            "text": "EDUCATION"
+          }
+        },
+        {
+          "tab": 14,
+          "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+          "scrollY": 0,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "headerHelp": {
+            "rect": {
+              "x": 302.1,
+              "y": 6.5,
+              "width": 84,
+              "height": 56
+            },
+            "class": "header-help",
+            "tabIndex": 0,
+            "visible": true
+          },
+          "nav": {
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "width": 263,
+              "height": 68
+            },
+            "scrollLeft": 0,
+            "scrollWidth": 321,
+            "clientWidth": 263
+          },
+          "dialog": null,
+          "active": {
+            "tag": "BUTTON",
+            "class": "header-help",
+            "text": "HELP"
+          }
+        }
+      ],
+      "opened": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "headerHelp": {
+          "rect": {
+            "x": 302.1,
+            "y": 6.5,
+            "width": 84,
+            "height": 56
+          },
+          "class": "header-help",
+          "tabIndex": 0,
+          "visible": true
+        },
+        "nav": {
+          "rect": {
+            "x": 73,
+            "y": 0.5,
+            "width": 263,
+            "height": 68
+          },
+          "scrollLeft": 0,
+          "scrollWidth": 321,
+          "clientWidth": 263
+        },
+        "dialog": {
+          "rect": {
+            "x": 12,
+            "y": 649.6,
+            "width": 366,
+            "height": 182.4
+          },
+          "ariaModal": "true",
+          "labelledby": "_r_0_",
+          "title": "Home controls"
+        },
+        "active": {
+          "tag": "BUTTON",
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        }
+      },
+      "focusContainment": true,
+      "insideTrace": [
+        {
+          "inside": true,
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        },
+        {
+          "inside": true,
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        },
+        {
+          "inside": true,
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        }
+      ],
+      "afterEscape": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "headerHelp": {
+          "rect": {
+            "x": 302.1,
+            "y": 6.5,
+            "width": 84,
+            "height": 56
+          },
+          "class": "header-help",
+          "tabIndex": 0,
+          "visible": true
+        },
+        "nav": {
+          "rect": {
+            "x": 73,
+            "y": 0.5,
+            "width": 263,
+            "height": 68
+          },
+          "scrollLeft": 0,
+          "scrollWidth": 321,
+          "clientWidth": 263
+        },
+        "dialog": null,
+        "active": {
+          "tag": "BUTTON",
+          "class": "header-help",
+          "text": "HELP"
+        }
+      },
+      "escapeRestoresFocus": true,
+      "screenshots": {
+        "closed": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/help-390x844-closed.png",
+        "open": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/help-390x844-open.png",
+        "escapeClosed": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/help-390x844-escape-closed.png"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    "home-1920x1080": {
+      "status": 200,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "initial": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "headerHelp": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "class": "header-help",
+          "tabIndex": 0,
+          "visible": false
+        },
+        "nav": {
+          "rect": {
+            "x": 276.5,
+            "y": -0.5,
+            "width": 552.5,
+            "height": 110
+          },
+          "scrollLeft": 0,
+          "scrollWidth": 553,
+          "clientWidth": 553
+        },
+        "dialog": null,
+        "active": {
+          "tag": "MAIN",
+          "class": "main main--home-explore",
+          "text": "EXPLORE\nCURATED\nRECENT\nABOUT\nSelect a portfolio mode\nPROJECTS\nBUILT SYSTEMS\nEXPE"
+        }
+      },
+      "tabTrace": [],
+      "opened": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "headerHelp": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "class": "header-help",
+          "tabIndex": 0,
+          "visible": false
+        },
+        "nav": {
+          "rect": {
+            "x": 276.5,
+            "y": -0.5,
+            "width": 552.5,
+            "height": 110
+          },
+          "scrollLeft": 0,
+          "scrollWidth": 553,
+          "clientWidth": 553
+        },
+        "dialog": {
+          "rect": {
+            "x": 1119.9,
+            "y": 478.4,
+            "width": 410,
+            "height": 423
+          },
+          "ariaModal": "true",
+          "labelledby": "_r_0_",
+          "title": "Home controls"
+        },
+        "active": {
+          "tag": "BUTTON",
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        }
+      },
+      "focusContainment": true,
+      "insideTrace": [
+        {
+          "inside": true,
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        },
+        {
+          "inside": true,
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        },
+        {
+          "inside": true,
+          "class": "client-help-overlay__close client-help-overlay__close--floating",
+          "text": "CLOSE\nESC"
+        }
+      ],
+      "afterEscape": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "headerHelp": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "class": "header-help",
+          "tabIndex": 0,
+          "visible": false
+        },
+        "nav": {
+          "rect": {
+            "x": 276.5,
+            "y": -0.5,
+            "width": 552.5,
+            "height": 110
+          },
+          "scrollLeft": 0,
+          "scrollWidth": 553,
+          "clientWidth": 553
+        },
+        "dialog": null,
+        "active": {
+          "tag": "BUTTON",
+          "class": "rail-social-footer__help",
+          "text": "HELP"
+        }
+      },
+      "escapeRestoresFocus": true,
+      "screenshots": {
+        "closed": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/help-1920x1080-closed.png",
+        "open": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/help-1920x1080-open.png",
+        "escapeClosed": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/help-1920x1080-escape-closed.png"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    "404-390x844": {
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "initial": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/route-recovery-check-404",
+        "scrollY": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "heading": "This page isn’t here.",
+        "action": {
+          "text": "Go to Projects",
+          "href": "https://38b1abfa.joshuaik2.pages.dev/projects",
+          "rect": {
+            "x": 18,
+            "y": 379.78125,
+            "width": 202,
+            "height": 48
+          },
+          "tabIndex": 0
+        }
+      },
+      "actionAfterEnter": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/projects",
+        "title": "Joshua Aryeetey · Portfolio",
+        "headings": [
+          "PROJECTS · FEATURED",
+          "FOOD TRACKER",
+          "ACTIVITY"
+        ]
+      },
+      "screenshots": {
+        "initial": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/recovery-404-390x844.png",
+        "afterAction": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-e4e1050/recovery-404-390x844-after-action.png"
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    }
+  }
+}

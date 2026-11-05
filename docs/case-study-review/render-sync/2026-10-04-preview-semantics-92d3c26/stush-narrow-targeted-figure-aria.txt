@@ -1,0 +1,39 @@
+- figure "Different file shapes. One reporting path.":
+  - paragraph: THE DATA PIPELINE
+  - heading "Different file shapes. One reporting path." [level=3]
+  - paragraph: From incoming sales files to a Power BI handoff
+  - list "Pipeline stages":
+    - listitem: 01 Files
+    - listitem: 02 Parse
+    - listitem: 03 Shared schema
+    - listitem: 04 Normalize
+    - listitem: 05 Handoff
+  - heading "Sales files" [level=4]
+  - paragraph: Different layouts
+  - paragraph:
+    - strong: CSV · XLSX · XLSB
+    - text: Formats across inputs
+  - paragraph: PARSE
+  - heading "Read each structure" [level=4]
+  - paragraph: Field positions vary
+  - paragraph: Fields found in each layout
+  - paragraph: SHARED FIELD CONTRACT
+  - heading "Four stable meanings" [level=4]
+  - list:
+    - listitem: Sales
+    - listitem: Units
+    - listitem: Case pack
+    - listitem: Reporting month
+  - paragraph: NORMALIZE
+  - heading "Apply shared rules" [level=4]
+  - list:
+    - listitem: Sales + units
+    - listitem: Case pack
+    - listitem: Reporting month
+  - paragraph: STANDARDIZED OUTPUT
+  - list:
+    - listitem: Unified CSV
+    - listitem: Data dictionary
+    - listitem: Quality report
+  - strong: Power BI
+  - text: Reporting handoff Conceptual pipeline · no source values shown.

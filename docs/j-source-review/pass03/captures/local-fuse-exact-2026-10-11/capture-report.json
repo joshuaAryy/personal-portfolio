@@ -1,0 +1,2745 @@
+{
+  "baseUrl": "http://127.0.0.1:5177/",
+  "browser": "Installed Google Chrome via Playwright",
+  "recording": {
+    "file": "C:\\Users\\samue\\OneDrive\\Desktop\\personal portfolio\\production-portfolio\\.worktrees\\owner-correction-pass-03\\docs\\j-source-review\\pass03\\captures\\local-fuse-exact-2026-10-11\\opening-full-chrome-1920x1080-through-home.webm",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "millisecondsToHome": 6049
+  },
+  "animationInventory": [
+    {
+      "name": "route-entry-descend",
+      "currentTime": 0,
+      "duration": 500,
+      "delay": 60
+    },
+    {
+      "name": "route-entry-rise",
+      "currentTime": 0,
+      "duration": 540,
+      "delay": 160
+    },
+    {
+      "name": "route-entry-detail-rise",
+      "currentTime": 0,
+      "duration": 560,
+      "delay": 280
+    },
+    {
+      "name": "opening-radial-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-peripheral-sweep",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 200
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 260
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 300
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 360
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 420
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 480
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 160
+    },
+    {
+      "name": "opening-mark-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 540
+    },
+    {
+      "name": "opening-ring-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 160
+    },
+    {
+      "name": "opening-ring-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 290
+    },
+    {
+      "name": "opening-tick-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-tick-spin",
+      "currentTime": 0,
+      "duration": 3200,
+      "delay": 600
+    },
+    {
+      "name": "opening-mark-sequence",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-v8-composite-handoff",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-v8-portal-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-v8-activation-bloom",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-v8-ring-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-v8-contact-arrive",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-fused-reveal",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-crown-approach",
+      "currentTime": 0,
+      "duration": 1930,
+      "delay": 650
+    },
+    {
+      "name": "opening-j-fragment-opacity",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-shaft-approach",
+      "currentTime": 0,
+      "duration": 1880,
+      "delay": 700
+    },
+    {
+      "name": "opening-j-fragment-opacity",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-hook-approach",
+      "currentTime": 0,
+      "duration": 1860,
+      "delay": 720
+    },
+    {
+      "name": "opening-j-fragment-opacity",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-v8-final-lockup",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-initial-lockup-clear",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-seam-art",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-conduit-art",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-conduit-stem-flow",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-conduit-hook-flow",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-seam-crown-flow",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-seam-hook-flow",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-light-exits",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    },
+    {
+      "name": "opening-j-single-sheen",
+      "currentTime": 0,
+      "duration": 5000,
+      "delay": 0
+    }
+  ],
+  "keyposes": [
+    {
+      "name": "01-broken-dormant",
+      "ms": 650,
+      "file": "frames/01-broken-dormant-650ms-720x720.png",
+      "route": "/",
+      "tickAngle": 5.6249961654137905,
+      "pieces": [
+        0.72,
+        0.72,
+        0.72
+      ],
+      "fused": 0,
+      "portal": 0.378214,
+      "ring": 0.378214,
+      "contactShadow": 0.0669643,
+      "seam": 0,
+      "conduit": 0,
+      "lightExits": 0,
+      "sheen": 0,
+      "sparkSvgTime": 0.6499990224838257,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    {
+      "name": "02-approach",
+      "ms": 960,
+      "file": "frames/02-approach-960ms-720x720.png",
+      "route": "/",
+      "tickAngle": 40.49999661430343,
+      "pieces": [
+        0.86,
+        0.86,
+        0.86
+      ],
+      "fused": 0,
+      "portal": 0.5,
+      "ring": 0.5,
+      "contactShadow": 0.15,
+      "seam": 0,
+      "conduit": 0,
+      "lightExits": 0,
+      "sheen": 0,
+      "sparkSvgTime": 0.9599990248680115,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    {
+      "name": "03-alignment",
+      "ms": 1370,
+      "file": "frames/03-alignment-1370ms-720x720.png",
+      "route": "/",
+      "tickAngle": 86.62500152370018,
+      "pieces": [
+        0.96,
+        0.96,
+        0.96
+      ],
+      "fused": 0,
+      "portal": 0.7,
+      "ring": 0.7,
+      "contactShadow": 0.6,
+      "seam": 4.62593e-16,
+      "conduit": 0,
+      "lightExits": 0,
+      "sheen": 0,
+      "sparkSvgTime": 1.3700000047683716,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    {
+      "name": "04-mechanical-lock",
+      "ms": 2580,
+      "file": "frames/04-mechanical-lock-2580ms-720x720.png",
+      "route": "/",
+      "tickAngle": 222.74999162711242,
+      "pieces": [
+        1,
+        1,
+        1
+      ],
+      "fused": 0,
+      "portal": 0.85,
+      "ring": 0.85,
+      "contactShadow": 1,
+      "seam": 1,
+      "conduit": 0.15,
+      "lightExits": 1,
+      "sheen": 0,
+      "sparkSvgTime": 2.5799989700317383,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    {
+      "name": "05-cyan-activation",
+      "ms": 3100,
+      "file": "frames/05-cyan-activation-3100ms-720x720.png",
+      "route": "/",
+      "tickAngle": 281.24998503865044,
+      "pieces": [
+        1,
+        1,
+        1
+      ],
+      "fused": 0,
+      "portal": 1,
+      "ring": 1,
+      "contactShadow": 1,
+      "seam": 0.363394,
+      "conduit": 0.940909,
+      "lightExits": 0.484144,
+      "sheen": 0,
+      "sparkSvgTime": 3.099998950958252,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    {
+      "name": "06-material-sheen",
+      "ms": 3720,
+      "file": "frames/06-material-sheen-3720ms-720x720.png",
+      "route": "/",
+      "tickAngle": 351.0000232640438,
+      "pieces": [
+        0,
+        0,
+        0
+      ],
+      "fused": 1,
+      "portal": 1,
+      "ring": 1,
+      "contactShadow": 1,
+      "seam": 0.0121554,
+      "conduit": 0.21,
+      "lightExits": 0,
+      "sheen": 0.84,
+      "sparkSvgTime": 3.7200000286102295,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    {
+      "name": "07-settled",
+      "ms": 4100,
+      "file": "frames/07-settled-4100ms-720x720.png",
+      "route": "/",
+      "tickAngle": 0,
+      "pieces": [
+        0,
+        0,
+        0
+      ],
+      "fused": 1,
+      "portal": 1,
+      "ring": 1,
+      "contactShadow": 1,
+      "seam": 0,
+      "conduit": 0,
+      "lightExits": 0,
+      "sheen": 0,
+      "sparkSvgTime": 4.099998950958252,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    }
+  ],
+  "responsive": [
+    {
+      "name": "desktop-short",
+      "route": "/",
+      "tickAngle": 281.24998503865044,
+      "pieces": [
+        1,
+        1,
+        1
+      ],
+      "fused": 0,
+      "portal": 1,
+      "ring": 1,
+      "contactShadow": 1,
+      "seam": 0.363394,
+      "conduit": 0.940909,
+      "lightExits": 0.484144,
+      "sheen": 0,
+      "sparkSvgTime": 3.099998950958252,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 1440,
+        "height": 720,
+        "scrollWidth": 1440,
+        "scrollHeight": 720
+      }
+    },
+    {
+      "name": "narrow",
+      "route": "/",
+      "tickAngle": 281.24998503865044,
+      "pieces": [
+        1,
+        1,
+        1
+      ],
+      "fused": 0,
+      "portal": 1,
+      "ring": 1,
+      "contactShadow": 1,
+      "seam": 0.363394,
+      "conduit": 0.940909,
+      "lightExits": 0.484144,
+      "sheen": 0,
+      "sparkSvgTime": 3.099998950958252,
+      "loadedImages": [
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160,
+          "naturalHeight": 160
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "complete": true,
+          "naturalWidth": 64,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-mode-selected-ring.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-disc.svg",
+          "complete": true,
+          "naturalWidth": 58,
+          "naturalHeight": 58
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-chevron.svg",
+          "complete": true,
+          "naturalWidth": 9,
+          "naturalHeight": 16
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/home-confirm-button.svg",
+          "complete": true,
+          "naturalWidth": 300,
+          "naturalHeight": 64
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13,
+          "naturalHeight": 13
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8,
+          "naturalHeight": 7
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7,
+          "naturalHeight": 6
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40,
+          "naturalHeight": 40
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150,
+          "naturalHeight": 150
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310,
+          "naturalHeight": 230
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241,
+          "naturalHeight": 1650
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96,
+          "naturalHeight": 96
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624,
+          "naturalHeight": 624
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057,
+          "naturalHeight": 1057
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792,
+          "naturalHeight": 1180
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468,
+          "naturalHeight": 468
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534,
+          "naturalHeight": 279
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111,
+          "naturalHeight": 247
+        },
+        {
+          "src": "http://127.0.0.1:5177/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101,
+          "naturalHeight": 231
+        }
+      ],
+      "viewport": {
+        "width": 390,
+        "height": 844,
+        "scrollWidth": 390,
+        "scrollHeight": 844
+      }
+    }
+  ],
+  "reducedMotion": {
+    "path": "/",
+    "opening": true,
+    "finalJOpacity": "1",
+    "orbOpacity": "1",
+    "overflow": false
+  },
+  "skip": {
+    "path": "/home"
+  },
+  "errors": {
+    "console": [],
+    "page": [],
+    "requests": [],
+    "badResponses": []
+  }
+}

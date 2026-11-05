@@ -1,0 +1,929 @@
+{
+  "sourceBefore": "https://f382c1e4.joshuaik2.pages.dev (source 8726f420)",
+  "sourceAfter": "local C:/oc03 HEAD f753834b with scoped Resume CSS/test diff",
+  "rows": [
+    {
+      "version": "before",
+      "w": 1440,
+      "h": 900,
+      "state": "beginning",
+      "file": "before-1440x900-beginning.png",
+      "j": {
+        "x": 533.6,
+        "y": 291.9,
+        "w": 149.4,
+        "h": 149.4,
+        "right": 683,
+        "bottom": 441.3
+      },
+      "title": {
+        "x": 400,
+        "y": 479.9,
+        "w": 400,
+        "h": 52,
+        "right": 800,
+        "bottom": 531.9
+      },
+      "action": {
+        "x": 472,
+        "y": 700.7,
+        "w": 256,
+        "h": 84.5,
+        "right": 728,
+        "bottom": 785.2
+      },
+      "close": {
+        "x": 526,
+        "y": 793.2,
+        "w": 148,
+        "h": 35.2,
+        "right": 674,
+        "bottom": 828.3
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "fill": "0deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 1440,
+      "h": 900,
+      "state": "partial",
+      "file": "before-1440x900-partial.png",
+      "j": {
+        "x": 517,
+        "y": 266.3,
+        "w": 166,
+        "h": 166,
+        "right": 683,
+        "bottom": 432.3
+      },
+      "title": {
+        "x": 400,
+        "y": 470.9,
+        "w": 400,
+        "h": 52,
+        "right": 800,
+        "bottom": 522.9
+      },
+      "action": {
+        "x": 472,
+        "y": 691.7,
+        "w": 256,
+        "h": 84.5,
+        "right": 728,
+        "bottom": 776.2
+      },
+      "close": {
+        "x": 526,
+        "y": 784.2,
+        "w": 148,
+        "h": 35.2,
+        "right": 674,
+        "bottom": 819.3
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "fill": "139.441deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 1440,
+      "h": 900,
+      "state": "completed",
+      "file": "before-1440x900-completed.png",
+      "j": {
+        "x": 517,
+        "y": 266.3,
+        "w": 166,
+        "h": 166,
+        "right": 683,
+        "bottom": 432.3
+      },
+      "title": {
+        "x": 400,
+        "y": 470.9,
+        "w": 400,
+        "h": 52,
+        "right": 800,
+        "bottom": 522.9
+      },
+      "action": {
+        "x": 472,
+        "y": 691.7,
+        "w": 256,
+        "h": 84.5,
+        "right": 728,
+        "bottom": 776.2
+      },
+      "close": {
+        "x": 526,
+        "y": 784.2,
+        "w": 148,
+        "h": 35.2,
+        "right": 674,
+        "bottom": 819.3
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "fill": "306deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 1280,
+      "h": 720,
+      "state": "beginning",
+      "file": "before-1280x720-beginning.png",
+      "j": {
+        "x": 470.3,
+        "y": 216,
+        "w": 134.3,
+        "h": 134.3,
+        "right": 604.6,
+        "bottom": 350.3
+      },
+      "title": {
+        "x": 330,
+        "y": 384.8,
+        "w": 400,
+        "h": 47.1,
+        "right": 730,
+        "bottom": 431.8
+      },
+      "action": {
+        "x": 415.2,
+        "y": 582.8,
+        "w": 229.6,
+        "h": 75.8,
+        "right": 644.8,
+        "bottom": 658.6
+      },
+      "close": {
+        "x": 463.6,
+        "y": 665.8,
+        "w": 132.7,
+        "h": 31.6,
+        "right": 596.4,
+        "bottom": 697.3
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "fill": "0deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 1280,
+      "h": 720,
+      "state": "partial",
+      "file": "before-1280x720-partial.png",
+      "j": {
+        "x": 455.4,
+        "y": 192.1,
+        "w": 149.2,
+        "h": 149.2,
+        "right": 604.6,
+        "bottom": 341.3
+      },
+      "title": {
+        "x": 330,
+        "y": 375.8,
+        "w": 400,
+        "h": 47.1,
+        "right": 730,
+        "bottom": 422.8
+      },
+      "action": {
+        "x": 415.2,
+        "y": 573.8,
+        "w": 229.6,
+        "h": 75.8,
+        "right": 644.8,
+        "bottom": 649.6
+      },
+      "close": {
+        "x": 463.6,
+        "y": 656.8,
+        "w": 132.7,
+        "h": 31.6,
+        "right": 596.4,
+        "bottom": 688.3
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "fill": "143.86deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 1280,
+      "h": 720,
+      "state": "completed",
+      "file": "before-1280x720-completed.png",
+      "j": {
+        "x": 455.4,
+        "y": 192.1,
+        "w": 149.2,
+        "h": 149.2,
+        "right": 604.6,
+        "bottom": 341.3
+      },
+      "title": {
+        "x": 330,
+        "y": 375.8,
+        "w": 400,
+        "h": 47.1,
+        "right": 730,
+        "bottom": 422.8
+      },
+      "action": {
+        "x": 415.2,
+        "y": 573.8,
+        "w": 229.6,
+        "h": 75.8,
+        "right": 644.8,
+        "bottom": 649.6
+      },
+      "close": {
+        "x": 463.6,
+        "y": 656.8,
+        "w": 132.7,
+        "h": 31.6,
+        "right": 596.4,
+        "bottom": 688.3
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "fill": "306deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 390,
+      "h": 844,
+      "state": "beginning",
+      "file": "before-390x844-beginning.png",
+      "j": {
+        "x": 157.8,
+        "y": 348.5,
+        "w": 83.8,
+        "h": 83.8,
+        "right": 241.5,
+        "bottom": 432.3
+      },
+      "title": {
+        "x": 69.7,
+        "y": 455.3,
+        "w": 250.6,
+        "h": 29.3,
+        "right": 320.3,
+        "bottom": 484.6
+      },
+      "action": {
+        "x": 123.4,
+        "y": 578.8,
+        "w": 143.2,
+        "h": 47.3,
+        "right": 266.6,
+        "bottom": 626
+      },
+      "close": {
+        "x": 134,
+        "y": 625.3,
+        "w": 122,
+        "h": 30,
+        "right": 256,
+        "bottom": 655.3
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "fill": "0deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 390,
+      "h": 844,
+      "state": "partial",
+      "file": "before-390x844-partial.png",
+      "j": {
+        "x": 148.5,
+        "y": 331.7,
+        "w": 93.1,
+        "h": 93.1,
+        "right": 241.5,
+        "bottom": 424.8
+      },
+      "title": {
+        "x": 69.7,
+        "y": 446.3,
+        "w": 250.6,
+        "h": 29.3,
+        "right": 320.3,
+        "bottom": 475.6
+      },
+      "action": {
+        "x": 123.4,
+        "y": 569.8,
+        "w": 143.2,
+        "h": 47.3,
+        "right": 266.6,
+        "bottom": 617
+      },
+      "close": {
+        "x": 134,
+        "y": 616.3,
+        "w": 122,
+        "h": 30,
+        "right": 256,
+        "bottom": 646.3
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "fill": "152.759deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "before",
+      "w": 390,
+      "h": 844,
+      "state": "completed",
+      "file": "before-390x844-completed.png",
+      "j": {
+        "x": 148.5,
+        "y": 331.7,
+        "w": 93.1,
+        "h": 93.1,
+        "right": 241.5,
+        "bottom": 424.8
+      },
+      "title": {
+        "x": 69.7,
+        "y": 446.3,
+        "w": 250.6,
+        "h": 29.3,
+        "right": 320.3,
+        "bottom": 475.6
+      },
+      "action": {
+        "x": 123.4,
+        "y": 569.8,
+        "w": 143.2,
+        "h": 47.3,
+        "right": 266.6,
+        "bottom": 617
+      },
+      "close": {
+        "x": 134,
+        "y": 616.3,
+        "w": 122,
+        "h": 30,
+        "right": 256,
+        "bottom": 646.3
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "fill": "306deg",
+      "energyDuration": "1.15s",
+      "plasmaDuration": "1.15s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 1440,
+      "h": 900,
+      "state": "beginning",
+      "file": "after-1440x900-beginning.png",
+      "j": {
+        "x": 528.3,
+        "y": 305.8,
+        "w": 161.3,
+        "h": 161.3,
+        "right": 689.6,
+        "bottom": 467.1
+      },
+      "title": {
+        "x": 400,
+        "y": 492.7,
+        "w": 400,
+        "h": 52,
+        "right": 800,
+        "bottom": 544.7
+      },
+      "action": {
+        "x": 472,
+        "y": 700.7,
+        "w": 256,
+        "h": 84.5,
+        "right": 728,
+        "bottom": 785.2
+      },
+      "close": {
+        "x": 526,
+        "y": 793.2,
+        "w": 148,
+        "h": 35.2,
+        "right": 674,
+        "bottom": 828.3
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "fill": "0deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 1440,
+      "h": 900,
+      "state": "partial",
+      "file": "after-1440x900-partial.png",
+      "j": {
+        "x": 510.4,
+        "y": 278.9,
+        "w": 179.2,
+        "h": 179.2,
+        "right": 689.6,
+        "bottom": 458.1
+      },
+      "title": {
+        "x": 400,
+        "y": 483.7,
+        "w": 400,
+        "h": 52,
+        "right": 800,
+        "bottom": 535.7
+      },
+      "action": {
+        "x": 472,
+        "y": 691.7,
+        "w": 256,
+        "h": 84.5,
+        "right": 728,
+        "bottom": 776.2
+      },
+      "close": {
+        "x": 526,
+        "y": 784.2,
+        "w": 148,
+        "h": 35.2,
+        "right": 674,
+        "bottom": 819.3
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "fill": "137.851deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 1440,
+      "h": 900,
+      "state": "completed",
+      "file": "after-1440x900-completed.png",
+      "j": {
+        "x": 510.4,
+        "y": 278.9,
+        "w": 179.2,
+        "h": 179.2,
+        "right": 689.6,
+        "bottom": 458.1
+      },
+      "title": {
+        "x": 400,
+        "y": 483.7,
+        "w": 400,
+        "h": 52,
+        "right": 800,
+        "bottom": 535.7
+      },
+      "action": {
+        "x": 472,
+        "y": 691.7,
+        "w": 256,
+        "h": 84.5,
+        "right": 728,
+        "bottom": 776.2
+      },
+      "close": {
+        "x": 526,
+        "y": 784.2,
+        "w": 148,
+        "h": 35.2,
+        "right": 674,
+        "bottom": 819.3
+      },
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "fill": "306deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 1280,
+      "h": 720,
+      "state": "beginning",
+      "file": "after-1280x720-beginning.png",
+      "j": {
+        "x": 465.7,
+        "y": 228.7,
+        "w": 144.6,
+        "h": 144.6,
+        "right": 610.4,
+        "bottom": 373.3
+      },
+      "title": {
+        "x": 330,
+        "y": 396.3,
+        "w": 400,
+        "h": 47.1,
+        "right": 730,
+        "bottom": 443.3
+      },
+      "action": {
+        "x": 415.2,
+        "y": 582.8,
+        "w": 229.6,
+        "h": 75.8,
+        "right": 644.8,
+        "bottom": 658.6
+      },
+      "close": {
+        "x": 463.6,
+        "y": 665.8,
+        "w": 132.7,
+        "h": 31.6,
+        "right": 596.4,
+        "bottom": 697.3
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "fill": "0deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 1280,
+      "h": 720,
+      "state": "partial",
+      "file": "after-1280x720-partial.png",
+      "j": {
+        "x": 449.6,
+        "y": 203.6,
+        "w": 160.7,
+        "h": 160.7,
+        "right": 610.4,
+        "bottom": 364.3
+      },
+      "title": {
+        "x": 330,
+        "y": 387.3,
+        "w": 400,
+        "h": 47.1,
+        "right": 730,
+        "bottom": 434.3
+      },
+      "action": {
+        "x": 415.2,
+        "y": 573.8,
+        "w": 229.6,
+        "h": 75.8,
+        "right": 644.8,
+        "bottom": 649.6
+      },
+      "close": {
+        "x": 463.6,
+        "y": 656.8,
+        "w": 132.7,
+        "h": 31.6,
+        "right": 596.4,
+        "bottom": 688.3
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "fill": "137.861deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 1280,
+      "h": 720,
+      "state": "completed",
+      "file": "after-1280x720-completed.png",
+      "j": {
+        "x": 449.6,
+        "y": 203.6,
+        "w": 160.7,
+        "h": 160.7,
+        "right": 610.4,
+        "bottom": 364.3
+      },
+      "title": {
+        "x": 330,
+        "y": 387.3,
+        "w": 400,
+        "h": 47.1,
+        "right": 730,
+        "bottom": 434.3
+      },
+      "action": {
+        "x": 415.2,
+        "y": 573.8,
+        "w": 229.6,
+        "h": 75.8,
+        "right": 644.8,
+        "bottom": 649.6
+      },
+      "close": {
+        "x": 463.6,
+        "y": 656.8,
+        "w": 132.7,
+        "h": 31.6,
+        "right": 596.4,
+        "bottom": 688.3
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "right": 817,
+        "bottom": 680
+      },
+      "fill": "306deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 390,
+      "h": 844,
+      "state": "beginning",
+      "file": "after-390x844-beginning.png",
+      "j": {
+        "x": 154.9,
+        "y": 357.4,
+        "w": 90.2,
+        "h": 90.2,
+        "right": 245.1,
+        "bottom": 447.6
+      },
+      "title": {
+        "x": 69.7,
+        "y": 462.4,
+        "w": 250.6,
+        "h": 29.3,
+        "right": 320.3,
+        "bottom": 491.8
+      },
+      "action": {
+        "x": 123.4,
+        "y": 578.8,
+        "w": 143.2,
+        "h": 47.3,
+        "right": 266.6,
+        "bottom": 626
+      },
+      "close": {
+        "x": 134,
+        "y": 625.3,
+        "w": 122,
+        "h": 30,
+        "right": 256,
+        "bottom": 655.3
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "fill": "0deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 390,
+      "h": 844,
+      "state": "partial",
+      "file": "after-390x844-partial.png",
+      "j": {
+        "x": 144.9,
+        "y": 338.9,
+        "w": 100.2,
+        "h": 100.2,
+        "right": 245.1,
+        "bottom": 439.1
+      },
+      "title": {
+        "x": 69.7,
+        "y": 453.4,
+        "w": 250.6,
+        "h": 29.3,
+        "right": 320.3,
+        "bottom": 482.8
+      },
+      "action": {
+        "x": 123.4,
+        "y": 569.8,
+        "w": 143.2,
+        "h": 47.3,
+        "right": 266.6,
+        "bottom": 617
+      },
+      "close": {
+        "x": 134,
+        "y": 616.3,
+        "w": 122,
+        "h": 30,
+        "right": 256,
+        "bottom": 646.3
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "fill": "147.138deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    },
+    {
+      "version": "after",
+      "w": 390,
+      "h": 844,
+      "state": "completed",
+      "file": "after-390x844-completed.png",
+      "j": {
+        "x": 144.9,
+        "y": 338.9,
+        "w": 100.2,
+        "h": 100.2,
+        "right": 245.1,
+        "bottom": 439.1
+      },
+      "title": {
+        "x": 69.7,
+        "y": 453.4,
+        "w": 250.6,
+        "h": 29.3,
+        "right": 320.3,
+        "bottom": 482.8
+      },
+      "action": {
+        "x": 123.4,
+        "y": 569.8,
+        "w": 143.2,
+        "h": 47.3,
+        "right": 266.6,
+        "bottom": 617
+      },
+      "close": {
+        "x": 134,
+        "y": 616.3,
+        "w": 122,
+        "h": 30,
+        "right": 256,
+        "bottom": 646.3
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "fill": "306deg",
+      "energyDuration": "2.2s",
+      "plasmaDuration": "2.2s",
+      "overflow": 0
+    }
+  ],
+  "reduced": {
+    "fill": "306deg",
+    "energyAnimation": "none",
+    "plasmaAnimation": "none"
+  }
+}

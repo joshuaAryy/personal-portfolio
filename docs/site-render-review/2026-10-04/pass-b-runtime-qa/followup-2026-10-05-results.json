@@ -1,0 +1,1362 @@
+{
+  "runtime": "Playwright 1.63.0 / installed Chrome 153",
+  "generatedAt": "2026-10-05T04:04:20.983Z",
+  "topNav": {
+    "viewport": {
+      "w": 390,
+      "h": 844
+    },
+    "docWidth": 390,
+    "bodyWidth": 390,
+    "header": {
+      "x": 0,
+      "y": 0,
+      "right": 390,
+      "bottom": 70,
+      "w": 390,
+      "h": 70,
+      "display": "flex",
+      "visibility": "visible"
+    },
+    "topNav": {
+      "x": 73,
+      "y": 0.5,
+      "right": 336,
+      "bottom": 68.5,
+      "w": 263,
+      "h": 68,
+      "display": "flex",
+      "visibility": "visible"
+    },
+    "education": {
+      "text": "EDUCATION",
+      "box": {
+        "x": 248.109375,
+        "y": 6.5,
+        "right": 302.078125,
+        "bottom": 62.5,
+        "w": 53.96875,
+        "h": 56,
+        "display": "grid",
+        "visibility": "visible"
+      },
+      "visibleText": "EDUCATION"
+    },
+    "help": {
+      "text": "HELP",
+      "box": {
+        "x": 302.078125,
+        "y": 6.5,
+        "right": 386.078125,
+        "bottom": 62.5,
+        "w": 84,
+        "h": 56,
+        "display": "grid",
+        "visibility": "visible"
+      },
+      "tag": "BUTTON",
+      "href": null,
+      "disabled": false,
+      "tabIndex": 0
+    },
+    "avatar": {
+      "x": 340,
+      "y": 13.5,
+      "right": 382,
+      "bottom": 55.5,
+      "w": 42,
+      "h": 42,
+      "display": "block",
+      "visibility": "visible"
+    },
+    "headerElements": [
+      {
+        "tag": "A",
+        "text": "",
+        "label": "Portfolio home",
+        "cls": "brand",
+        "href": "/home",
+        "box": {
+          "x": 0,
+          "y": 0,
+          "right": 68,
+          "bottom": 69,
+          "w": 68,
+          "h": 69,
+          "display": "flex",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "NAV",
+        "text": "PROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nHELP",
+        "label": "Main navigation",
+        "cls": "top-nav",
+        "href": null,
+        "box": {
+          "x": 73,
+          "y": 0.5,
+          "right": 336,
+          "bottom": 68.5,
+          "w": 263,
+          "h": 68,
+          "display": "flex",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "A",
+        "text": "PROJECTS",
+        "label": null,
+        "cls": "current",
+        "href": "/projects",
+        "box": {
+          "x": 81,
+          "y": 6.5,
+          "right": 128.859375,
+          "bottom": 62.5,
+          "w": 47.859375,
+          "h": 56,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "A",
+        "text": "EXPERIENCE",
+        "label": null,
+        "cls": "",
+        "href": "/experience",
+        "box": {
+          "x": 128.859375,
+          "y": 6.5,
+          "right": 185.8125,
+          "bottom": 62.5,
+          "w": 56.953125,
+          "h": 56,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "A",
+        "text": "HACKATHONS",
+        "label": null,
+        "cls": "",
+        "href": "/hackathons",
+        "box": {
+          "x": 185.8125,
+          "y": 6.5,
+          "right": 248.109375,
+          "bottom": 62.5,
+          "w": 62.296875,
+          "h": 56,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "A",
+        "text": "EDUCATION",
+        "label": null,
+        "cls": "",
+        "href": "/education",
+        "box": {
+          "x": 248.109375,
+          "y": 6.5,
+          "right": 302.078125,
+          "bottom": 62.5,
+          "w": 53.96875,
+          "h": 56,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "BUTTON",
+        "text": "HELP",
+        "label": null,
+        "cls": "header-help",
+        "href": null,
+        "box": {
+          "x": 302.078125,
+          "y": 6.5,
+          "right": 386.078125,
+          "bottom": 62.5,
+          "w": 84,
+          "h": 56,
+          "display": "grid",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "DIV",
+        "text": "",
+        "label": null,
+        "cls": "header-account-area",
+        "href": null,
+        "box": {
+          "x": 340,
+          "y": 13.5,
+          "right": 382,
+          "bottom": 55.5,
+          "w": 42,
+          "h": 42,
+          "display": "flex",
+          "visibility": "visible"
+        }
+      },
+      {
+        "tag": "A",
+        "text": "",
+        "label": "Open profile",
+        "cls": "header-account",
+        "href": "/profile",
+        "box": {
+          "x": 340,
+          "y": 13.5,
+          "right": 382,
+          "bottom": 55.5,
+          "w": 42,
+          "h": 42,
+          "display": "flex",
+          "visibility": "visible"
+        }
+      }
+    ],
+    "focus": {
+      "active": {
+        "tag": "BUTTON",
+        "text": "HELP",
+        "cls": "header-help"
+      },
+      "visible": true,
+      "enabled": true,
+      "outline": "solid",
+      "afterClick": "http://127.0.0.1:4174/profile/highlights"
+    }
+  },
+  "journey": {
+    "desktop1920": {
+      "initial": {
+        "viewport": {
+          "w": 1920,
+          "h": 1080
+        },
+        "docWidth": 1920,
+        "windowScrollY": 0,
+        "main": {
+          "box": {
+            "x": 0,
+            "y": 82,
+            "right": 1560,
+            "bottom": 1080,
+            "w": 1560,
+            "h": 998
+          },
+          "overflowY": "auto",
+          "scrollTop": 0,
+          "scrollHeight": 1939,
+          "clientHeight": 998,
+          "tabIndex": -1,
+          "focusable": false
+        },
+        "story": {
+          "box": {
+            "x": 390,
+            "y": 181,
+            "right": 1560,
+            "bottom": 2021,
+            "w": 1170,
+            "h": 1840
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 1840,
+          "clientHeight": 1840
+        },
+        "path": {
+          "x": 426,
+          "y": 278.484375,
+          "right": 1524,
+          "bottom": 1870,
+          "w": 1098,
+          "h": 1591.515625
+        },
+        "svg": {
+          "x": 426,
+          "y": 278.484375,
+          "right": 1524,
+          "bottom": 1870,
+          "w": 1098,
+          "h": 1591.515625
+        },
+        "connectors": [
+          {
+            "class": "journey-path__connector journey-path__connector--origin",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "8.8",
+            "y": "57",
+            "box": {
+              "x": 502.8599853515625,
+              "y": 335.467041015625,
+              "right": 522.6240234375,
+              "w": 19.7640380859375,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--apple",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "10",
+            "x2": "34",
+            "y": "179",
+            "box": {
+              "x": 535.7999877929688,
+              "y": 457.429931640625,
+              "right": 799.3200073242188,
+              "w": 263.52001953125,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--tmu",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "12",
+            "y": "309",
+            "box": {
+              "x": 502.8599853515625,
+              "y": 587.390380859375,
+              "right": 557.760009765625,
+              "w": 54.9000244140625,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--naruto",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "39",
+            "y": "450",
+            "box": {
+              "x": 502.8599853515625,
+              "y": 728.3474731445312,
+              "right": 854.219970703125,
+              "w": 351.3599853515625,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--lis-spark",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "18",
+            "y": "569",
+            "box": {
+              "x": 513.8399658203125,
+              "y": 847.311279296875,
+              "right": 623.6400146484375,
+              "w": 109.800048828125,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--lis",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "9",
+            "x2": "12.8",
+            "y": "710",
+            "box": {
+              "x": 524.8200073242188,
+              "y": 988.2683715820312,
+              "right": 566.5440063476562,
+              "w": 41.7239990234375,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--spotify",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "45.7",
+            "y": "878",
+            "box": {
+              "x": 513.8399658203125,
+              "y": 1156.21728515625,
+              "right": 927.7860107421875,
+              "w": 413.946044921875,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--stush",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "12",
+            "y": "1033",
+            "box": {
+              "x": 513.8399658203125,
+              "y": 1311.1700439453125,
+              "right": 557.760009765625,
+              "w": 43.9200439453125,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--summer",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "13.5",
+            "y": "1194",
+            "box": {
+              "x": 513.8399658203125,
+              "y": 1472.12109375,
+              "right": 574.22998046875,
+              "w": 60.3900146484375,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--continuing",
+            "display": "inline",
+            "visibility": "visible",
+            "x1": "5",
+            "x2": "10.7",
+            "y": "1565",
+            "box": {
+              "x": 480.8999938964844,
+              "y": 1843.0081787109375,
+              "right": 543.4860229492188,
+              "w": 62.586029052734375,
+              "h": 0
+            }
+          }
+        ],
+        "cards": [
+          {
+            "cls": "journey-card journey-card--origin",
+            "title": "Roblox Studio",
+            "box": {
+              "x": 522.609375,
+              "y": 283.484375,
+              "right": 1104.546875,
+              "bottom": 396.359375,
+              "w": 581.9375,
+              "h": 112.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--apple",
+            "title": "Curiosity about the hardware",
+            "box": {
+              "x": 799.3125,
+              "y": 405.484375,
+              "right": 1362.578125,
+              "bottom": 518.359375,
+              "w": 563.265625,
+              "h": 112.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--tmu",
+            "title": "Computer Engineering",
+            "box": {
+              "x": 557.75,
+              "y": 526.484375,
+              "right": 1374.65625,
+              "bottom": 649.484375,
+              "w": 816.90625,
+              "h": 123
+            }
+          },
+          {
+            "cls": "journey-card journey-card--idea journey-card--naruto",
+            "title": "Naruto semantic search",
+            "box": {
+              "x": 854.21875,
+              "y": 675.484375,
+              "right": 1267.0625,
+              "bottom": 805.75,
+              "w": 412.84375,
+              "h": 130.265625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--lis-spark",
+            "title": "Machine learning became tangible",
+            "box": {
+              "x": 623.625,
+              "y": 785.484375,
+              "right": 1317.546875,
+              "bottom": 909.484375,
+              "w": 693.921875,
+              "h": 124
+            }
+          },
+          {
+            "cls": "journey-card journey-card--lis",
+            "title": "Connecting algorithms to research",
+            "box": {
+              "x": 566.53125,
+              "y": 926.484375,
+              "right": 1368.0625,
+              "bottom": 1050.484375,
+              "w": 801.53125,
+              "h": 124
+            }
+          },
+          {
+            "cls": "journey-card journey-card--idea journey-card--spotify",
+            "title": "Spotify recommender idea",
+            "box": {
+              "x": 927.78125,
+              "y": 1104.484375,
+              "right": 1257.171875,
+              "bottom": 1234.75,
+              "w": 329.390625,
+              "h": 130.265625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--stush",
+            "title": "Software Engineering Intern",
+            "box": {
+              "x": 557.75,
+              "y": 1257.484375,
+              "right": 1327.4375,
+              "bottom": 1365.484375,
+              "w": 769.6875,
+              "h": 108
+            }
+          },
+          {
+            "cls": "journey-card journey-card--summer",
+            "title": "Learning to finish things",
+            "box": {
+              "x": 574.21875,
+              "y": 1406.484375,
+              "right": 1447.125,
+              "bottom": 1538.484375,
+              "w": 872.90625,
+              "h": 132
+            }
+          },
+          {
+            "cls": "journey-card journey-card--continuing",
+            "title": "More to learn. More to build.",
+            "box": {
+              "x": 543.484375,
+              "y": 1804,
+              "right": 1147.375,
+              "bottom": 1884.484375,
+              "w": 603.890625,
+              "h": 80.484375
+            }
+          }
+        ],
+        "rail": {
+          "x": 1508,
+          "y": 181,
+          "right": 1552,
+          "bottom": 941,
+          "w": 44,
+          "h": 760
+        },
+        "nestedScrollAreas": [],
+        "scrollbarSelectors": 0
+      },
+      "scrolling": {
+        "before": {
+          "main": 0,
+          "win": 0
+        },
+        "afterWheel": {
+          "main": 650,
+          "win": 0
+        },
+        "activeAfterFocus": {
+          "isMain": true,
+          "tag": "MAIN",
+          "tabIndex": -1
+        },
+        "afterPageDown": {
+          "main": 941,
+          "win": 0
+        },
+        "afterSpace": {
+          "main": 282,
+          "win": 0
+        }
+      },
+      "pathTest": {
+        "count": 5,
+        "text": "",
+        "after": {
+          "hash": "#journey-stush",
+          "active": [
+            ""
+          ],
+          "main": 859,
+          "win": 0,
+          "stushTop": 431.484375
+        }
+      }
+    },
+    "desktop1440": {
+      "initial": {
+        "viewport": {
+          "w": 1440,
+          "h": 1000
+        },
+        "docWidth": 1440,
+        "windowScrollY": 0,
+        "main": {
+          "box": {
+            "x": 0,
+            "y": 82,
+            "right": 1170,
+            "bottom": 1000,
+            "w": 1170,
+            "h": 918
+          },
+          "overflowY": "auto",
+          "scrollTop": 0,
+          "scrollHeight": 1922,
+          "clientHeight": 918,
+          "tabIndex": -1,
+          "focusable": false
+        },
+        "story": {
+          "box": {
+            "x": 390,
+            "y": 181,
+            "right": 1170,
+            "bottom": 1612.671875,
+            "w": 780,
+            "h": 1431.671875
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 1432,
+          "clientHeight": 1432
+        },
+        "path": {
+          "x": 417,
+          "y": 266.484375,
+          "right": 435,
+          "bottom": 1512.671875,
+          "w": 18,
+          "h": 1246.1875
+        },
+        "svg": {
+          "x": 417,
+          "y": 266.484375,
+          "right": 435,
+          "bottom": 1512.671875,
+          "w": 18,
+          "h": 1246.1875
+        },
+        "connectors": [
+          {
+            "class": "journey-path__connector journey-path__connector--origin",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "8.8",
+            "y": "57",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--apple",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "10",
+            "x2": "34",
+            "y": "179",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--tmu",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "12",
+            "y": "309",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--naruto",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "39",
+            "y": "450",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--lis-spark",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "18",
+            "y": "569",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--lis",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "9",
+            "x2": "12.8",
+            "y": "710",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--spotify",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "45.7",
+            "y": "878",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--stush",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "12",
+            "y": "1033",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--summer",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "13.5",
+            "y": "1194",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--continuing",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "5",
+            "x2": "10.7",
+            "y": "1565",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          }
+        ],
+        "cards": [
+          {
+            "cls": "journey-card journey-card--origin",
+            "title": "Roblox Studio",
+            "box": {
+              "x": 436,
+              "y": 278.484375,
+              "right": 1106,
+              "bottom": 394.359375,
+              "w": 670,
+              "h": 115.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--apple",
+            "title": "Curiosity about the hardware",
+            "box": {
+              "x": 529.8125,
+              "y": 414.359375,
+              "right": 1106,
+              "bottom": 530.234375,
+              "w": 576.1875,
+              "h": 115.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--tmu",
+            "title": "Computer Engineering",
+            "box": {
+              "x": 436,
+              "y": 550.234375,
+              "right": 1079.1875,
+              "bottom": 666.109375,
+              "w": 643.1875,
+              "h": 115.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--idea journey-card--naruto",
+            "title": "Naruto semantic search",
+            "box": {
+              "x": 529.8125,
+              "y": 686.109375,
+              "right": 1106,
+              "bottom": 801.984375,
+              "w": 576.1875,
+              "h": 115.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--lis-spark",
+            "title": "Machine learning became tangible",
+            "box": {
+              "x": 436,
+              "y": 821.984375,
+              "right": 1079.1875,
+              "bottom": 920.46875,
+              "w": 643.1875,
+              "h": 98.484375
+            }
+          },
+          {
+            "cls": "journey-card journey-card--lis",
+            "title": "Connecting algorithms to research",
+            "box": {
+              "x": 436,
+              "y": 940.46875,
+              "right": 1079.1875,
+              "bottom": 1040.953125,
+              "w": 643.1875,
+              "h": 100.484375
+            }
+          },
+          {
+            "cls": "journey-card journey-card--idea journey-card--spotify",
+            "title": "Spotify recommender idea",
+            "box": {
+              "x": 529.8125,
+              "y": 1060.953125,
+              "right": 1106,
+              "bottom": 1176.828125,
+              "w": 576.1875,
+              "h": 115.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--stush",
+            "title": "Software Engineering Intern",
+            "box": {
+              "x": 436,
+              "y": 1196.828125,
+              "right": 1106,
+              "bottom": 1295.3125,
+              "w": 670,
+              "h": 98.484375
+            }
+          },
+          {
+            "cls": "journey-card journey-card--summer",
+            "title": "Learning to finish things",
+            "box": {
+              "x": 436,
+              "y": 1315.3125,
+              "right": 1079.1875,
+              "bottom": 1433.1875,
+              "w": 643.1875,
+              "h": 117.875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--continuing",
+            "title": "More to learn. More to build.",
+            "box": {
+              "x": 436,
+              "y": 1453.1875,
+              "right": 945.1875,
+              "bottom": 1536.671875,
+              "w": 509.1875,
+              "h": 83.484375
+            }
+          }
+        ],
+        "rail": {
+          "x": 1100,
+          "y": 181,
+          "right": 1144,
+          "bottom": 879,
+          "w": 44,
+          "h": 698
+        },
+        "nestedScrollAreas": [],
+        "scrollbarSelectors": 0
+      },
+      "scrolling": {
+        "before": {
+          "main": 0,
+          "win": 0
+        },
+        "afterWheel": {
+          "main": 650,
+          "win": 0
+        },
+        "activeAfterFocus": {
+          "isMain": true,
+          "tag": "MAIN",
+          "tabIndex": -1
+        },
+        "afterPageDown": {
+          "main": 1004,
+          "win": 0
+        },
+        "afterSpace": {
+          "main": 269,
+          "win": 0
+        }
+      },
+      "pathTest": {
+        "count": 5,
+        "text": "",
+        "after": {
+          "hash": "#journey-stush",
+          "active": [
+            ""
+          ],
+          "main": 829,
+          "win": 0,
+          "stushTop": 402.828125
+        }
+      }
+    },
+    "narrow390": {
+      "initial": {
+        "viewport": {
+          "w": 390,
+          "h": 844
+        },
+        "docWidth": 390,
+        "windowScrollY": 0,
+        "main": {
+          "box": {
+            "x": 0,
+            "y": 70,
+            "right": 390,
+            "bottom": 2273.375,
+            "w": 390,
+            "h": 2203.375
+          },
+          "overflowY": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 2203,
+          "clientHeight": 2203,
+          "tabIndex": -1,
+          "focusable": false
+        },
+        "story": {
+          "box": {
+            "x": 0,
+            "y": 348,
+            "right": 390,
+            "bottom": 2273.375,
+            "w": 390,
+            "h": 1925.375
+          },
+          "overflowX": "visible",
+          "overflowY": "visible",
+          "scrollTop": 0,
+          "scrollHeight": 1925,
+          "clientHeight": 1925
+        },
+        "path": {
+          "x": 21,
+          "y": 475.09375,
+          "right": 39,
+          "bottom": 2101.375,
+          "w": 18,
+          "h": 1626.28125
+        },
+        "svg": {
+          "x": 21,
+          "y": 475.09375,
+          "right": 39,
+          "bottom": 2101.375,
+          "w": 18,
+          "h": 1626.28125
+        },
+        "connectors": [
+          {
+            "class": "journey-path__connector journey-path__connector--origin",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "8.8",
+            "y": "57",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--apple",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "10",
+            "x2": "34",
+            "y": "179",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--tmu",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "12",
+            "y": "309",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--naruto",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "7",
+            "x2": "39",
+            "y": "450",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--lis-spark",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "18",
+            "y": "569",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--lis",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "9",
+            "x2": "12.8",
+            "y": "710",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--spotify",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "45.7",
+            "y": "878",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--stush",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "12",
+            "y": "1033",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--summer",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "8",
+            "x2": "13.5",
+            "y": "1194",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          },
+          {
+            "class": "journey-path__connector journey-path__connector--continuing",
+            "display": "none",
+            "visibility": "visible",
+            "x1": "5",
+            "x2": "10.7",
+            "y": "1565",
+            "box": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "w": 0,
+              "h": 0
+            }
+          }
+        ],
+        "cards": [
+          {
+            "cls": "journey-card journey-card--origin",
+            "title": "Roblox Studio",
+            "box": {
+              "x": 36,
+              "y": 487.09375,
+              "right": 346,
+              "bottom": 619.0625,
+              "w": 310,
+              "h": 131.96875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--apple",
+            "title": "Curiosity about the hardware",
+            "box": {
+              "x": 54.609375,
+              "y": 639.0625,
+              "right": 346,
+              "bottom": 791.828125,
+              "w": 291.390625,
+              "h": 152.765625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--tmu",
+            "title": "Computer Engineering",
+            "box": {
+              "x": 36,
+              "y": 811.828125,
+              "right": 346,
+              "bottom": 943.796875,
+              "w": 310,
+              "h": 131.96875
+            }
+          },
+          {
+            "cls": "journey-card journey-card--idea journey-card--naruto",
+            "title": "Naruto semantic search",
+            "box": {
+              "x": 54.609375,
+              "y": 963.796875,
+              "right": 346,
+              "bottom": 1133.953125,
+              "w": 291.390625,
+              "h": 170.15625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--lis-spark",
+            "title": "Machine learning became tangible",
+            "box": {
+              "x": 36,
+              "y": 1153.953125,
+              "right": 346,
+              "bottom": 1298.328125,
+              "w": 310,
+              "h": 144.375
+            }
+          },
+          {
+            "cls": "journey-card journey-card--lis",
+            "title": "Connecting algorithms to research",
+            "box": {
+              "x": 36,
+              "y": 1318.328125,
+              "right": 346,
+              "bottom": 1482.09375,
+              "w": 310,
+              "h": 163.765625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--idea journey-card--spotify",
+            "title": "Spotify recommender idea",
+            "box": {
+              "x": 54.609375,
+              "y": 1502.09375,
+              "right": 346,
+              "bottom": 1654.859375,
+              "w": 291.390625,
+              "h": 152.765625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--stush",
+            "title": "Software Engineering Intern",
+            "box": {
+              "x": 36,
+              "y": 1674.859375,
+              "right": 346,
+              "bottom": 1827.625,
+              "w": 310,
+              "h": 152.765625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--summer",
+            "title": "Learning to finish things",
+            "box": {
+              "x": 36,
+              "y": 1847.625,
+              "right": 346,
+              "bottom": 2002.390625,
+              "w": 310,
+              "h": 154.765625
+            }
+          },
+          {
+            "cls": "journey-card journey-card--continuing",
+            "title": "More to learn. More to build.",
+            "box": {
+              "x": 36,
+              "y": 2022.390625,
+              "right": 327.390625,
+              "bottom": 2125.375,
+              "w": 291.390625,
+              "h": 102.984375
+            }
+          }
+        ],
+        "rail": {
+          "x": 341,
+          "y": 348,
+          "right": 378,
+          "bottom": 848,
+          "w": 37,
+          "h": 500
+        },
+        "nestedScrollAreas": [],
+        "scrollbarSelectors": 0
+      },
+      "scrolling": {
+        "before": {
+          "main": 0,
+          "win": 0,
+          "doc": 0
+        },
+        "afterTouch": {
+          "main": 0,
+          "win": 1490,
+          "doc": 1490
+        }
+      },
+      "pathTest": {
+        "count": 5,
+        "text": "",
+        "after": {
+          "hash": "#journey-stush",
+          "active": [
+            ""
+          ],
+          "main": 0,
+          "win": 1414,
+          "stushTop": 295.859375
+        }
+      }
+    }
+  },
+  "errors": []
+}

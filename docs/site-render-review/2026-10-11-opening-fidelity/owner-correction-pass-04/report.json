@@ -1,0 +1,2894 @@
+{
+  "source": {
+    "head": "9fa09b0a104ff66de949840f0a893c53f251700c",
+    "dirtySources": [
+      "src/Opening.tsx",
+      "src/opening.css"
+    ]
+  },
+  "baseUrl": "http://127.0.0.1:5176/",
+  "normal": {
+    "video": "C:\\Users\\samue\\OneDrive\\Desktop\\personal portfolio\\production-portfolio\\.worktrees\\owner-correction-pass-03\\docs\\site-render-review\\2026-10-11-opening-fidelity\\owner-correction-pass-04\\opening-full-1920x1080-through-home.webm",
+    "wallToHomeMs": 5883,
+    "runData": {
+      "path": "/home",
+      "opening": false,
+      "telemetry": {
+        "openingFirst": 506.40000000596046,
+        "homeAt": 5599.20000000298,
+        "samples": [
+          {
+            "elapsedMs": 0.1,
+            "angle": 0,
+            "unwrappedDegrees": 0,
+            "tickCurrentMs": 0,
+            "tickProgress": 0,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 42.7,
+            "angle": 0,
+            "unwrappedDegrees": 0,
+            "tickCurrentMs": 0,
+            "tickProgress": 0,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 45.1,
+            "angle": 0,
+            "unwrappedDegrees": 0,
+            "tickCurrentMs": 0,
+            "tickProgress": 0,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 114.4,
+            "angle": 0,
+            "unwrappedDegrees": 0,
+            "tickCurrentMs": 16.64399999219457,
+            "tickProgress": 0,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1483.4,
+            "angle": 88.26120233933915,
+            "unwrappedDegrees": 88.3,
+            "tickCurrentMs": 1384.5439999921946,
+            "tickProgress": 0.24516999999756084,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1540.3,
+            "angle": 93.88619908379258,
+            "unwrappedDegrees": 93.9,
+            "tickCurrentMs": 1434.5439999921946,
+            "tickProgress": 0.2607949999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1566.4,
+            "angle": 97.64368240906128,
+            "unwrappedDegrees": 97.6,
+            "tickCurrentMs": 1467.9439999921944,
+            "tickProgress": 0.2712324999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1641.8,
+            "angle": 105.13617279285074,
+            "unwrappedDegrees": 105.1,
+            "tickCurrentMs": 1534.5439999921946,
+            "tickProgress": 0.2920449999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1659.6,
+            "angle": 107.02620101661506,
+            "unwrappedDegrees": 107,
+            "tickCurrentMs": 1551.3439999921945,
+            "tickProgress": 0.29729499999756076,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1665.3,
+            "angle": 108.90494859643633,
+            "unwrappedDegrees": 108.9,
+            "tickCurrentMs": 1568.0439999921946,
+            "tickProgress": 0.3025137499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1681.6,
+            "angle": 110.78369309864644,
+            "unwrappedDegrees": 110.8,
+            "tickCurrentMs": 1584.7439999921944,
+            "tickProgress": 0.30773249999756075,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1698.5,
+            "angle": 112.65120134822587,
+            "unwrappedDegrees": 112.7,
+            "tickCurrentMs": 1601.3439999921948,
+            "tickProgress": 0.3129199999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1715.1,
+            "angle": 114.5299669354713,
+            "unwrappedDegrees": 114.5,
+            "tickCurrentMs": 1618.0439999921946,
+            "tickProgress": 0.31813874999756075,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1731.9,
+            "angle": 116.40869663601751,
+            "unwrappedDegrees": 116.4,
+            "tickCurrentMs": 1634.7439999921946,
+            "tickProgress": 0.3233574999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1748.4,
+            "angle": 118.29869130774085,
+            "unwrappedDegrees": 118.3,
+            "tickCurrentMs": 1651.5439999921946,
+            "tickProgress": 0.3286074999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1765.1,
+            "angle": 120.16621108687445,
+            "unwrappedDegrees": 120.2,
+            "tickCurrentMs": 1668.1439999921945,
+            "tickProgress": 0.33379499999756074,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1781.7,
+            "angle": 122.04493281653384,
+            "unwrappedDegrees": 122,
+            "tickCurrentMs": 1684.8439999921948,
+            "tickProgress": 0.3390137499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1798.6,
+            "angle": 123.9124307774336,
+            "unwrappedDegrees": 123.9,
+            "tickCurrentMs": 1701.4439999921947,
+            "tickProgress": 0.3442012499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1816.3,
+            "angle": 125.82495961304772,
+            "unwrappedDegrees": 125.8,
+            "tickCurrentMs": 1718.4439999921944,
+            "tickProgress": 0.34951374999756074,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1831.8,
+            "angle": 127.66995616162342,
+            "unwrappedDegrees": 127.7,
+            "tickCurrentMs": 1734.8439999921945,
+            "tickProgress": 0.35463874999756073,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1848.6,
+            "angle": 129.5486938993746,
+            "unwrappedDegrees": 129.5,
+            "tickCurrentMs": 1751.5439999921946,
+            "tickProgress": 0.3598574999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1865.1,
+            "angle": 131.4274488569663,
+            "unwrappedDegrees": 131.4,
+            "tickCurrentMs": 1768.2439999921944,
+            "tickProgress": 0.3650762499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1881.8,
+            "angle": 133.29494939782217,
+            "unwrappedDegrees": 133.3,
+            "tickCurrentMs": 1784.8439999921948,
+            "tickProgress": 0.37026374999756084,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1898.5,
+            "angle": 135.16246228284342,
+            "unwrappedDegrees": 135.2,
+            "tickCurrentMs": 1801.4439999921947,
+            "tickProgress": 0.3754512499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1915.1,
+            "angle": 137.0524433484988,
+            "unwrappedDegrees": 137.1,
+            "tickCurrentMs": 1818.2439999921946,
+            "tickProgress": 0.3807012499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1931.9,
+            "angle": 138.919933196023,
+            "unwrappedDegrees": 138.9,
+            "tickCurrentMs": 1834.8439999921945,
+            "tickProgress": 0.3858887499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1948.6,
+            "angle": 140.80992886924173,
+            "unwrappedDegrees": 140.8,
+            "tickCurrentMs": 1851.6439999921945,
+            "tickProgress": 0.39113874999756076,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1965.1,
+            "angle": 142.68871416531363,
+            "unwrappedDegrees": 142.7,
+            "tickCurrentMs": 1868.3439999921948,
+            "tickProgress": 0.3963574999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1982,
+            "angle": 144.5674715388741,
+            "unwrappedDegrees": 144.6,
+            "tickCurrentMs": 1885.0439999921944,
+            "tickProgress": 0.4015762499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 1998.6,
+            "angle": 146.43497876334368,
+            "unwrappedDegrees": 146.4,
+            "tickCurrentMs": 1901.6439999921947,
+            "tickProgress": 0.4067637499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2015.2,
+            "angle": 148.3137177839448,
+            "unwrappedDegrees": 148.3,
+            "tickCurrentMs": 1918.3439999921945,
+            "tickProgress": 0.41198249999756076,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2032,
+            "angle": 150.2037090907919,
+            "unwrappedDegrees": 150.2,
+            "tickCurrentMs": 1935.1439999921945,
+            "tickProgress": 0.41723249999756074,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2048.7,
+            "angle": 152.0711908461576,
+            "unwrappedDegrees": 152.1,
+            "tickCurrentMs": 1951.7439999921944,
+            "tickProgress": 0.4224199999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2065.4,
+            "angle": 153.93868642171833,
+            "unwrappedDegrees": 153.9,
+            "tickCurrentMs": 1968.3439999921948,
+            "tickProgress": 0.4276074999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2081.9,
+            "angle": 155.82869696671185,
+            "unwrappedDegrees": 155.8,
+            "tickCurrentMs": 1985.1439999921947,
+            "tickProgress": 0.4328574999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2098.7,
+            "angle": 157.69618439279452,
+            "unwrappedDegrees": 157.7,
+            "tickCurrentMs": 2001.7439999921946,
+            "tickProgress": 0.4380449999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2115.4,
+            "angle": 159.57494912040352,
+            "unwrappedDegrees": 159.6,
+            "tickCurrentMs": 2018.4439999921944,
+            "tickProgress": 0.4432637499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2132.2,
+            "angle": 161.4536947164371,
+            "unwrappedDegrees": 161.5,
+            "tickCurrentMs": 2035.1439999921945,
+            "tickProgress": 0.44848249999756074,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2149,
+            "angle": 163.33244862599793,
+            "unwrappedDegrees": 163.3,
+            "tickCurrentMs": 2051.8439999921948,
+            "tickProgress": 0.4537012499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2165.9,
+            "angle": 165.21118234018684,
+            "unwrappedDegrees": 165.2,
+            "tickCurrentMs": 2068.5439999921946,
+            "tickProgress": 0.4589199999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2182.2,
+            "angle": 167.0787247204221,
+            "unwrappedDegrees": 167.1,
+            "tickCurrentMs": 2085.143999992195,
+            "tickProgress": 0.46410749999756085,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2198.8,
+            "angle": 168.9574440840845,
+            "unwrappedDegrees": 169,
+            "tickCurrentMs": 2101.8439999921943,
+            "tickProgress": 0.46932624999756073,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2215.4,
+            "angle": 170.8362260626294,
+            "unwrappedDegrees": 170.8,
+            "tickCurrentMs": 2118.5439999921946,
+            "tickProgress": 0.4745449999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2232.2,
+            "angle": 172.7149413800579,
+            "unwrappedDegrees": 172.7,
+            "tickCurrentMs": 2135.2439999921944,
+            "tickProgress": 0.4797637499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2249,
+            "angle": 174.59370098879594,
+            "unwrappedDegrees": 174.6,
+            "tickCurrentMs": 2151.9439999921947,
+            "tickProgress": 0.48498249999756077,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2266.7,
+            "angle": 176.4611963416976,
+            "unwrappedDegrees": 176.5,
+            "tickCurrentMs": 2168.5439999921946,
+            "tickProgress": 0.4901699999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2282.3,
+            "angle": 178.32869789135088,
+            "unwrappedDegrees": 178.3,
+            "tickCurrentMs": 2185.1439999921945,
+            "tickProgress": 0.49535749999756074,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2298.8,
+            "angle": 180.21870017803946,
+            "unwrappedDegrees": 180.2,
+            "tickCurrentMs": 2201.943999992194,
+            "tickProgress": 0.5006074999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2315.5,
+            "angle": 182.08619959775382,
+            "unwrappedDegrees": 182.1,
+            "tickCurrentMs": 2218.5439999921946,
+            "tickProgress": 0.5057949999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2332.2,
+            "angle": 183.9649474203577,
+            "unwrappedDegrees": 184,
+            "tickCurrentMs": 2235.2439999921944,
+            "tickProgress": 0.5110137499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2349,
+            "angle": 185.84369789263317,
+            "unwrappedDegrees": 185.8,
+            "tickCurrentMs": 2251.9439999921947,
+            "tickProgress": 0.5162324999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2365.6,
+            "angle": 187.72242050686125,
+            "unwrappedDegrees": 187.7,
+            "tickCurrentMs": 2268.643999992195,
+            "tickProgress": 0.5214512499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2382.3,
+            "angle": 189.6011731963028,
+            "unwrappedDegrees": 189.6,
+            "tickCurrentMs": 2285.3439999921943,
+            "tickProgress": 0.5266699999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2399,
+            "angle": 191.4687287478924,
+            "unwrappedDegrees": 191.5,
+            "tickCurrentMs": 2301.9439999921947,
+            "tickProgress": 0.5318574999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2415.5,
+            "angle": 193.34747231515985,
+            "unwrappedDegrees": 193.3,
+            "tickCurrentMs": 2318.6439999921945,
+            "tickProgress": 0.5370762499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2432.3,
+            "angle": 195.23745522418034,
+            "unwrappedDegrees": 195.2,
+            "tickCurrentMs": 2335.4439999921947,
+            "tickProgress": 0.5423262499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2449.1,
+            "angle": 197.11622150511045,
+            "unwrappedDegrees": 197.1,
+            "tickCurrentMs": 2352.1439999921945,
+            "tickProgress": 0.5475449999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2467,
+            "angle": 198.99496495113965,
+            "unwrappedDegrees": 199,
+            "tickCurrentMs": 2368.8439999921943,
+            "tickProgress": 0.5527637499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2482.4,
+            "angle": 200.86246897264192,
+            "unwrappedDegrees": 200.9,
+            "tickCurrentMs": 2385.443999992194,
+            "tickProgress": 0.5579512499975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2499,
+            "angle": 202.74119111014937,
+            "unwrappedDegrees": 202.7,
+            "tickCurrentMs": 2402.1439999921945,
+            "tickProgress": 0.5631699999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2515.6,
+            "angle": 204.61993398645654,
+            "unwrappedDegrees": 204.6,
+            "tickCurrentMs": 2418.8439999921948,
+            "tickProgress": 0.5683887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2532.5,
+            "angle": 206.49873765539763,
+            "unwrappedDegrees": 206.5,
+            "tickCurrentMs": 2435.5439999921946,
+            "tickProgress": 0.5736074999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2549,
+            "angle": 208.3661897867123,
+            "unwrappedDegrees": 208.4,
+            "tickCurrentMs": 2452.143999992195,
+            "tickProgress": 0.5787949999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2565.7,
+            "angle": 210.2449552799193,
+            "unwrappedDegrees": 210.2,
+            "tickCurrentMs": 2468.8439999921943,
+            "tickProgress": 0.5840137499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2582.4,
+            "angle": 212.12370411164756,
+            "unwrappedDegrees": 212.1,
+            "tickCurrentMs": 2485.5439999921946,
+            "tickProgress": 0.5892324999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2599.3,
+            "angle": 214.0136892381103,
+            "unwrappedDegrees": 214,
+            "tickCurrentMs": 2502.3439999921948,
+            "tickProgress": 0.5944824999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2615.6,
+            "angle": 215.869932091718,
+            "unwrappedDegrees": 215.9,
+            "tickCurrentMs": 2518.8439999921948,
+            "tickProgress": 0.5996387499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2634.3,
+            "angle": 217.74870089659657,
+            "unwrappedDegrees": 217.7,
+            "tickCurrentMs": 2535.5439999921946,
+            "tickProgress": 0.6048574999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2649.4,
+            "angle": 219.62743873715874,
+            "unwrappedDegrees": 219.6,
+            "tickCurrentMs": 2552.243999992195,
+            "tickProgress": 0.6100762499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2670.2,
+            "angle": 221.5174402642126,
+            "unwrappedDegrees": 221.5,
+            "tickCurrentMs": 2569.0439999921946,
+            "tickProgress": 0.6153262499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2716.1,
+            "angle": 227.13117603212362,
+            "unwrappedDegrees": 227.1,
+            "tickCurrentMs": 2618.9439999921947,
+            "tickProgress": 0.6309199999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2732.9,
+            "angle": 229.02117809901787,
+            "unwrappedDegrees": 229,
+            "tickCurrentMs": 2635.7439999921944,
+            "tickProgress": 0.6361699999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2777.2,
+            "angle": 232.77870506767607,
+            "unwrappedDegrees": 232.8,
+            "tickCurrentMs": 2669.1439999921945,
+            "tickProgress": 0.6466074999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2795.2,
+            "angle": 234.6461988355329,
+            "unwrappedDegrees": 234.6,
+            "tickCurrentMs": 2685.7439999921944,
+            "tickProgress": 0.6517949999975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2800.2,
+            "angle": 236.51368709206992,
+            "unwrappedDegrees": 236.5,
+            "tickCurrentMs": 2702.3439999921948,
+            "tickProgress": 0.6569824999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2850.3,
+            "angle": 242.14995275462348,
+            "unwrappedDegrees": 242.1,
+            "tickCurrentMs": 2752.4439999921947,
+            "tickProgress": 0.6726387499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2873.2,
+            "angle": 244.0287057806625,
+            "unwrappedDegrees": 244,
+            "tickCurrentMs": 2769.1439999921945,
+            "tickProgress": 0.6778574999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2891.2,
+            "angle": 245.89619785603753,
+            "unwrappedDegrees": 245.9,
+            "tickCurrentMs": 2785.7439999921944,
+            "tickProgress": 0.6830449999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2907.8,
+            "angle": 247.79745466476072,
+            "unwrappedDegrees": 247.8,
+            "tickCurrentMs": 2802.6439999921945,
+            "tickProgress": 0.6883262499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2926.8,
+            "angle": 249.65371788112486,
+            "unwrappedDegrees": 249.7,
+            "tickCurrentMs": 2819.143999992195,
+            "tickProgress": 0.6934824999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2954.9,
+            "angle": 253.39995586228878,
+            "unwrappedDegrees": 253.4,
+            "tickCurrentMs": 2852.443999992194,
+            "tickProgress": 0.7038887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2972.2,
+            "angle": 255.30118162680253,
+            "unwrappedDegrees": 255.3,
+            "tickCurrentMs": 2869.3439999921948,
+            "tickProgress": 0.7091699999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 2985.7,
+            "angle": 257.17993768443756,
+            "unwrappedDegrees": 257.2,
+            "tickCurrentMs": 2886.0439999921946,
+            "tickProgress": 0.7143887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3000.4,
+            "angle": 259.0361912761406,
+            "unwrappedDegrees": 259,
+            "tickCurrentMs": 2902.5439999921946,
+            "tickProgress": 0.7195449999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3018.2,
+            "angle": 260.9149733493157,
+            "unwrappedDegrees": 260.9,
+            "tickCurrentMs": 2919.243999992195,
+            "tickProgress": 0.7247637499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3033.8,
+            "angle": 262.79371889257595,
+            "unwrappedDegrees": 262.8,
+            "tickCurrentMs": 2935.9439999921947,
+            "tickProgress": 0.7299824999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3054.7,
+            "angle": 264.6724467816417,
+            "unwrappedDegrees": 264.7,
+            "tickCurrentMs": 2952.6439999921945,
+            "tickProgress": 0.7352012499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3079.9,
+            "angle": 266.53994764606887,
+            "unwrappedDegrees": 266.5,
+            "tickCurrentMs": 2969.2439999921944,
+            "tickProgress": 0.7403887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3087.3,
+            "angle": 268.42995139207954,
+            "unwrappedDegrees": 268.4,
+            "tickCurrentMs": 2986.0439999921946,
+            "tickProgress": 0.7456387499975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3101.1,
+            "angle": 270.3087004172666,
+            "unwrappedDegrees": 270.3,
+            "tickCurrentMs": 3002.7439999921944,
+            "tickProgress": 0.7508574999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3127.3,
+            "angle": 272.1649496049023,
+            "unwrappedDegrees": 272.2,
+            "tickCurrentMs": 3019.243999992195,
+            "tickProgress": 0.7560137499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3147.8,
+            "angle": 274.043697958772,
+            "unwrappedDegrees": 274,
+            "tickCurrentMs": 3035.943999992194,
+            "tickProgress": 0.7612324999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3153.2,
+            "angle": 275.9224368010491,
+            "unwrappedDegrees": 275.9,
+            "tickCurrentMs": 3052.6439999921945,
+            "tickProgress": 0.7664512499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3173.6,
+            "angle": 277.80118167180456,
+            "unwrappedDegrees": 277.8,
+            "tickCurrentMs": 3069.3439999921948,
+            "tickProgress": 0.7716699999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3183.9,
+            "angle": 279.67992906884274,
+            "unwrappedDegrees": 279.7,
+            "tickCurrentMs": 3086.0439999921946,
+            "tickProgress": 0.7768887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3200.9,
+            "angle": 281.558712146958,
+            "unwrappedDegrees": 281.6,
+            "tickCurrentMs": 3102.743999992195,
+            "tickProgress": 0.7821074999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3217.4,
+            "angle": 283.43747011718096,
+            "unwrappedDegrees": 283.4,
+            "tickCurrentMs": 3119.4439999921947,
+            "tickProgress": 0.7873262499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3233.8,
+            "angle": 285.30492317853884,
+            "unwrappedDegrees": 285.3,
+            "tickCurrentMs": 3136.0439999921946,
+            "tickProgress": 0.7925137499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3250.6,
+            "angle": 287.1949652739281,
+            "unwrappedDegrees": 287.2,
+            "tickCurrentMs": 3152.8439999921948,
+            "tickProgress": 0.7977637499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3267.4,
+            "angle": 289.05120782871586,
+            "unwrappedDegrees": 289.1,
+            "tickCurrentMs": 3169.3439999921943,
+            "tickProgress": 0.8029199999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3283.9,
+            "angle": 290.94121170610435,
+            "unwrappedDegrees": 290.9,
+            "tickCurrentMs": 3186.143999992195,
+            "tickProgress": 0.8081699999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3300.5,
+            "angle": 292.8199774714258,
+            "unwrappedDegrees": 292.8,
+            "tickCurrentMs": 3202.8439999921943,
+            "tickProgress": 0.8133887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3317.3,
+            "angle": 294.6874390629087,
+            "unwrappedDegrees": 294.7,
+            "tickCurrentMs": 3219.443999992194,
+            "tickProgress": 0.8185762499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3334,
+            "angle": 296.56622985583783,
+            "unwrappedDegrees": 296.6,
+            "tickCurrentMs": 3236.1439999921945,
+            "tickProgress": 0.8237949999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3350.6,
+            "angle": 298.44494591271604,
+            "unwrappedDegrees": 298.4,
+            "tickCurrentMs": 3252.8439999921948,
+            "tickProgress": 0.8290137499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3367.4,
+            "angle": 300.323707642832,
+            "unwrappedDegrees": 300.3,
+            "tickCurrentMs": 3269.5439999921946,
+            "tickProgress": 0.8342324999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3383.7,
+            "angle": 302.20243931330725,
+            "unwrappedDegrees": 302.2,
+            "tickCurrentMs": 3286.2439999921944,
+            "tickProgress": 0.8394512499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3400.7,
+            "angle": 304.08119563960145,
+            "unwrappedDegrees": 304.1,
+            "tickCurrentMs": 3302.9439999921947,
+            "tickProgress": 0.8446699999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3417.4,
+            "angle": 305.94871393677755,
+            "unwrappedDegrees": 305.9,
+            "tickCurrentMs": 3319.5439999921946,
+            "tickProgress": 0.8498574999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3433.9,
+            "angle": 307.8161690230356,
+            "unwrappedDegrees": 307.8,
+            "tickCurrentMs": 3336.1439999921945,
+            "tickProgress": 0.8550449999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3452.8,
+            "angle": 309.7062125889879,
+            "unwrappedDegrees": 309.7,
+            "tickCurrentMs": 3352.9439999921947,
+            "tickProgress": 0.8602949999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3474.9,
+            "angle": 311.5736960187812,
+            "unwrappedDegrees": 311.6,
+            "tickCurrentMs": 3369.5439999921946,
+            "tickProgress": 0.8654824999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3493.6,
+            "angle": 313.45245088759884,
+            "unwrappedDegrees": 313.5,
+            "tickCurrentMs": 3386.243999992195,
+            "tickProgress": 0.8707012499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3505.1,
+            "angle": 315.342428420188,
+            "unwrappedDegrees": 315.3,
+            "tickCurrentMs": 3403.043999992194,
+            "tickProgress": 0.8759512499975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3517.9,
+            "angle": 317.2099507322723,
+            "unwrappedDegrees": 317.2,
+            "tickCurrentMs": 3419.6439999921945,
+            "tickProgress": 0.8811387499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3538.2,
+            "angle": 319.08868226436334,
+            "unwrappedDegrees": 319.1,
+            "tickCurrentMs": 3436.3439999921948,
+            "tickProgress": 0.8863574999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3551,
+            "angle": 320.9674292314436,
+            "unwrappedDegrees": 321,
+            "tickCurrentMs": 3453.043999992195,
+            "tickProgress": 0.8915762499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3567.3,
+            "angle": 322.83497056741066,
+            "unwrappedDegrees": 322.8,
+            "tickCurrentMs": 3469.6439999921945,
+            "tickProgress": 0.8967637499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3597.6,
+            "angle": 324.7137302262627,
+            "unwrappedDegrees": 324.7,
+            "tickCurrentMs": 3486.3439999921948,
+            "tickProgress": 0.9019824999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3617.5,
+            "angle": 328.4824333519081,
+            "unwrappedDegrees": 328.5,
+            "tickCurrentMs": 3519.8439999921948,
+            "tickProgress": 0.9124512499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3633.2,
+            "angle": 330.33869312573177,
+            "unwrappedDegrees": 330.3,
+            "tickCurrentMs": 3536.3439999921943,
+            "tickProgress": 0.9176074999975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3649.9,
+            "angle": 332.22871182034714,
+            "unwrappedDegrees": 332.2,
+            "tickCurrentMs": 3553.1439999921945,
+            "tickProgress": 0.9228574999975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3666.7,
+            "angle": 334.0962279332122,
+            "unwrappedDegrees": 334.1,
+            "tickCurrentMs": 3569.743999992195,
+            "tickProgress": 0.9280449999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3683.2,
+            "angle": 335.9749612250603,
+            "unwrappedDegrees": 336,
+            "tickCurrentMs": 3586.4439999921947,
+            "tickProgress": 0.9332637499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3700,
+            "angle": 337.8424289267887,
+            "unwrappedDegrees": 337.8,
+            "tickCurrentMs": 3603.0439999921946,
+            "tickProgress": 0.9384512499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3716.6,
+            "angle": 339.72117372200717,
+            "unwrappedDegrees": 339.7,
+            "tickCurrentMs": 3619.7439999921944,
+            "tickProgress": 0.9436699999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3733.4,
+            "angle": 341.59994743151776,
+            "unwrappedDegrees": 341.6,
+            "tickCurrentMs": 3636.4439999921947,
+            "tickProgress": 0.9488887499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3750.1,
+            "angle": 343.4786860573422,
+            "unwrappedDegrees": 343.5,
+            "tickCurrentMs": 3653.143999992195,
+            "tickProgress": 0.9541074999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3766.7,
+            "angle": 345.35745123685024,
+            "unwrappedDegrees": 345.4,
+            "tickCurrentMs": 3669.843999992195,
+            "tickProgress": 0.9593262499975609,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3783.3,
+            "angle": 347.23621756312144,
+            "unwrappedDegrees": 347.2,
+            "tickCurrentMs": 3686.543999992194,
+            "tickProgress": 0.9645449999975606,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3800,
+            "angle": 349.1037025601433,
+            "unwrappedDegrees": 349.1,
+            "tickCurrentMs": 3703.1439999921945,
+            "tickProgress": 0.9697324999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3816.8,
+            "angle": 350.9824461484375,
+            "unwrappedDegrees": 351,
+            "tickCurrentMs": 3719.8439999921948,
+            "tickProgress": 0.9749512499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3833.6,
+            "angle": 352.87242525017797,
+            "unwrappedDegrees": 352.9,
+            "tickCurrentMs": 3736.643999992195,
+            "tickProgress": 0.9802012499975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3850.1,
+            "angle": 354.73994998158366,
+            "unwrappedDegrees": 354.7,
+            "tickCurrentMs": 3753.2439999921944,
+            "tickProgress": 0.9853887499975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3866.9,
+            "angle": 356.61869774612444,
+            "unwrappedDegrees": 356.6,
+            "tickCurrentMs": 3769.943999992194,
+            "tickProgress": 0.9906074999975607,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3883.3,
+            "angle": 358.486201184611,
+            "unwrappedDegrees": 358.5,
+            "tickCurrentMs": 3786.543999992195,
+            "tickProgress": 0.9957949999975608,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3900.4,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3916.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3933.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3950.1,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3966.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 3983.4,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4000.4,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4016.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4033.4,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4050.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4067,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4083.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4100.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4116.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4133.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4150.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4167,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4183.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4200.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4216.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4233.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4250.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4267,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4283.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4300.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4316.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4333.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4350.2,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4366.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4383.4,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4400.2,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4417.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4433.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4450.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4467,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4483.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4500.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4516.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4533.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4550.4,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4567.1,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4583.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4600.5,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4617.2,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4633.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4650.5,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4667.1,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4683.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4700.5,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4717.1,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4733.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4750.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4767.2,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4783.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4800.5,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4817.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4833.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4850.6,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4867.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4891.7,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4901,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4917.2,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4934.3,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4950.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 4971.9,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 5008.8,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          },
+          {
+            "elapsedMs": 5072.5,
+            "angle": 0,
+            "unwrappedDegrees": 360,
+            "tickCurrentMs": 3800.0000000000005,
+            "tickProgress": 1,
+            "openingVisible": true
+          }
+        ],
+        "lastAngle": 0,
+        "unwrapped": 360,
+        "assetErrors": []
+      },
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollWidth": 1920,
+        "scrollHeight": 1080
+      }
+    },
+    "openingAssets": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ],
+    "consoleAndRequestAudit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    "visibleTickRotationDegrees": 360,
+    "timeFirstOpeningToHomeMs": 5092.8,
+    "tickCompleteSample": {
+      "elapsedMs": 3900.4,
+      "angle": 0,
+      "unwrappedDegrees": 360,
+      "tickCurrentMs": 3800.0000000000005,
+      "tickProgress": 1,
+      "openingVisible": true
+    },
+    "lastOpeningSample": {
+      "elapsedMs": 5072.5,
+      "angle": 0,
+      "unwrappedDegrees": 360,
+      "tickCurrentMs": 3800.0000000000005,
+      "tickProgress": 1,
+      "openingVisible": true
+    }
+  },
+  "keyposes": [
+    {
+      "requestedMs": 650,
+      "route": "/",
+      "actualMarkTimelineMs": 650.6,
+      "tickCurrentMs": 650.585999994655,
+      "tickProgress": 0.01580812499832971,
+      "tickAngle": 5.7,
+      "mark": {
+        "x": 752.2,
+        "y": 332.2,
+        "w": 415.5,
+        "h": 415.5
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-0p65s-1920x1080.png"
+    },
+    {
+      "requestedMs": 960,
+      "route": "/",
+      "actualMarkTimelineMs": 1051,
+      "tickCurrentMs": 1050.9859999946552,
+      "tickProgress": 0.14093312499832972,
+      "tickAngle": 50.7,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-0p96s-1920x1080.png"
+    },
+    {
+      "requestedMs": 1370,
+      "route": "/",
+      "actualMarkTimelineMs": 1451.3,
+      "tickCurrentMs": 1451.2859999946552,
+      "tickProgress": 0.2660268749983298,
+      "tickAngle": 95.8,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-1p37s-1920x1080.png"
+    },
+    {
+      "requestedMs": 2580,
+      "route": "/",
+      "actualMarkTimelineMs": 2585.5,
+      "tickCurrentMs": 2585.4859999946552,
+      "tickProgress": 0.6204643749983297,
+      "tickAngle": 223.4,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-2p58s-1920x1080.png"
+    },
+    {
+      "requestedMs": 3100,
+      "route": "/",
+      "actualMarkTimelineMs": 3102.7,
+      "tickCurrentMs": 3102.685999994655,
+      "tickProgress": 0.7820893749983296,
+      "tickAngle": 281.6,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-3p10s-1920x1080.png"
+    },
+    {
+      "requestedMs": 3800,
+      "route": "/",
+      "actualMarkTimelineMs": 3803.2,
+      "tickCurrentMs": 3800.0000000000005,
+      "tickProgress": 1,
+      "tickAngle": 0,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-3p80s-1920x1080.png"
+    },
+    {
+      "requestedMs": 4100,
+      "route": "/",
+      "actualMarkTimelineMs": 4153.6,
+      "tickCurrentMs": 3800.0000000000005,
+      "tickProgress": 1,
+      "tickAngle": 0,
+      "mark": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "openingBox": {
+        "x": 0,
+        "y": 0,
+        "w": 1920,
+        "h": 1080
+      },
+      "openingAssets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "overflow": false,
+      "file": "keypose-4p10s-1920x1080.png"
+    }
+  ],
+  "keyposeAudit": {
+    "consoleErrors": [],
+    "pageErrors": [],
+    "failedRequests": [],
+    "badResponses": []
+  },
+  "activation": {
+    "file": "activation-checkpoint-3p1s-1920x1080.png",
+    "timelineMs": 3102.6,
+    "mark": {
+      "x": 771.9,
+      "y": 351.9,
+      "w": 376.2,
+      "h": 376.2
+    },
+    "bloom": {
+      "opacity": "0.414977",
+      "shape": "50%",
+      "blend": "screen",
+      "box": {
+        "x": 809.7,
+        "y": 379.2,
+        "w": 315.1,
+        "h": 315.1
+      }
+    },
+    "spark": {
+      "opacity": "1",
+      "blend": "screen",
+      "box": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      }
+    },
+    "images": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ],
+    "audit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "responsive": {
+    "wide": {
+      "captures": [
+        {
+          "file": "viewport-1440x720-settled.png",
+          "path": "/",
+          "timelineMs": 4103.3,
+          "viewport": {
+            "w": 1440,
+            "h": 720,
+            "scrollWidth": 1440,
+            "scrollHeight": 720
+          },
+          "mark": {
+            "x": 557.5,
+            "y": 197.5,
+            "w": 325,
+            "h": 325
+          },
+          "skip": {
+            "x": 1287.9,
+            "y": 657,
+            "w": 106,
+            "h": 40
+          },
+          "images": [
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+              "complete": true,
+              "naturalWidth": 624
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 1057
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 792
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+              "complete": true,
+              "naturalWidth": 534
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+              "complete": true,
+              "naturalWidth": 111
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+              "complete": true,
+              "naturalWidth": 101
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+              "complete": true,
+              "naturalWidth": 160
+            }
+          ]
+        }
+      ],
+      "audit": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    },
+    "narrow": {
+      "captures": [
+        {
+          "file": "viewport-390x844-dormant.png",
+          "path": "/",
+          "timelineMs": 650.6,
+          "viewport": {
+            "w": 390,
+            "h": 844,
+            "scrollWidth": 390,
+            "scrollHeight": 844
+          },
+          "mark": {
+            "x": 68.3,
+            "y": 295.3,
+            "w": 253.4,
+            "h": 253.4
+          },
+          "skip": {
+            "x": 266,
+            "y": 777,
+            "w": 106,
+            "h": 40
+          },
+          "images": [
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+              "complete": true,
+              "naturalWidth": 624
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 1057
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 792
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+              "complete": true,
+              "naturalWidth": 534
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+              "complete": true,
+              "naturalWidth": 111
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+              "complete": true,
+              "naturalWidth": 101
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+              "complete": true,
+              "naturalWidth": 160
+            }
+          ]
+        },
+        {
+          "file": "viewport-390x844-approach.png",
+          "path": "/",
+          "timelineMs": 1384.5,
+          "viewport": {
+            "w": 390,
+            "h": 844,
+            "scrollWidth": 390,
+            "scrollHeight": 844
+          },
+          "mark": {
+            "x": 80.3,
+            "y": 307.3,
+            "w": 229.4,
+            "h": 229.4
+          },
+          "skip": {
+            "x": 266,
+            "y": 777,
+            "w": 106,
+            "h": 40
+          },
+          "images": [
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+              "complete": true,
+              "naturalWidth": 624
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 1057
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 792
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+              "complete": true,
+              "naturalWidth": 534
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+              "complete": true,
+              "naturalWidth": 111
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+              "complete": true,
+              "naturalWidth": 101
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+              "complete": true,
+              "naturalWidth": 160
+            }
+          ]
+        },
+        {
+          "file": "viewport-390x844-settled.png",
+          "path": "/",
+          "timelineMs": 4103.5,
+          "viewport": {
+            "w": 390,
+            "h": 844,
+            "scrollWidth": 390,
+            "scrollHeight": 844
+          },
+          "mark": {
+            "x": 80.3,
+            "y": 307.3,
+            "w": 229.4,
+            "h": 229.4
+          },
+          "skip": {
+            "x": 266,
+            "y": 777,
+            "w": 106,
+            "h": 40
+          },
+          "images": [
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+              "complete": true,
+              "naturalWidth": 624
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 1057
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+              "complete": true,
+              "naturalWidth": 792
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+              "complete": true,
+              "naturalWidth": 468
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+              "complete": true,
+              "naturalWidth": 534
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+              "complete": true,
+              "naturalWidth": 111
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+              "complete": true,
+              "naturalWidth": 101
+            },
+            {
+              "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+              "complete": true,
+              "naturalWidth": 160
+            }
+          ]
+        }
+      ],
+      "audit": {
+        "consoleErrors": [],
+        "pageErrors": [],
+        "failedRequests": [],
+        "badResponses": []
+      }
+    }
+  },
+  "skip": {
+    "path": "/home",
+    "opening": 0,
+    "audit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  },
+  "reducedMotion": {
+    "path": "/",
+    "className": "opening opening--reduced",
+    "routeClass": "opening-route opening-route--reduced",
+    "settledJOpacity": "1",
+    "portalOpacity": "1",
+    "ringOpacity": "1",
+    "bloomOpacity": "0",
+    "tickAnimation": "none",
+    "viewport": {
+      "w": 1920,
+      "h": 1080,
+      "scrollWidth": 1920,
+      "scrollHeight": 1080
+    },
+    "images": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ],
+    "audit": {
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  }
+}

@@ -1,0 +1,21 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="face" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(75 73.5) scale(62 63.5)">
+      <stop stop-color="#0E6173"/><stop offset="1" stop-color="#030B13"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="13" y1="10" x2="140" y2="134" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0D890"/><stop offset=".28" stop-color="#B17D2F"/><stop offset=".68" stop-color="#604113"/><stop offset="1" stop-color="#D4AE59"/>
+    </linearGradient>
+    <linearGradient id="cube-side" x1="47" y1="59" x2="103" y2="99" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#173C46"/><stop offset="1" stop-color="#07151E"/>
+    </linearGradient>
+  </defs>
+  <g id="Emblem / Projects / Systems cube">
+    <path d="M31 7H119L143 31V119L119 143H31L7 119V31L31 7Z" fill="#02070C" stroke="#39270D" stroke-width="7"/>
+    <path d="M33 10H117L137 33V117L117 137H33L13 117V33L33 10Z" fill="url(#face)" stroke="url(#rim)" stroke-width="3"/>
+    <path d="M40 18H110L129 38V110L110 129H40L21 110V38L40 18Z" stroke="#B78A39" stroke-width="1.6"/>
+    <path d="M47 25H103L121 43V101L103 119H47L29 101V43L47 25Z" stroke="#48646E" stroke-opacity=".32" stroke-width="2.5"/>
+    <path d="M56 12H94" stroke="#F3DC96" stroke-width="2"/>
+    <path d="M12 57V93M138 57V93" stroke="#7D5A21" stroke-width="1.5"/>
+  </g>
+</svg>

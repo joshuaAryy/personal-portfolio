@@ -1,0 +1,66 @@
+{
+  "route": "https://b2e00552.joshuaik2.pages.dev/projects/choveigo#choveigo-review",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "browser": "Chrome 153.0.8010.53",
+  "humanReviewClick": {
+    "label": "human click",
+    "hash": "#choveigo-review",
+    "scrollY": 4422,
+    "docMax": 4629,
+    "active": [
+      "HUMAN REVIEW"
+    ],
+    "changeTop": 577.359375,
+    "reviewTop": 75.546875
+  },
+  "passiveWheelAway": {
+    "label": "wheel away",
+    "hash": "#choveigo-review",
+    "scrollY": 3922,
+    "docMax": 4629,
+    "active": [
+      "FIT MODEL"
+    ],
+    "changeTop": 1077.359375,
+    "reviewTop": 575.546875
+  },
+  "passiveWheelDownSteps": [
+    {
+      "label": "down-1",
+      "hash": "#choveigo-review",
+      "scrollY": 4422,
+      "docMax": 4629,
+      "active": [
+        "HUMAN REVIEW"
+      ],
+      "changeTop": 577.359375,
+      "reviewTop": 75.546875
+    },
+    {
+      "label": "down-2",
+      "hash": "#choveigo-review",
+      "scrollY": 4629,
+      "docMax": 4629,
+      "active": [
+        "WHAT CHANGED"
+      ],
+      "changeTop": 370.359375,
+      "reviewTop": -131.453125
+    }
+  ],
+  "settledBottom": {
+    "label": "settled bottom",
+    "hash": "#choveigo-review",
+    "scrollY": 4629,
+    "docMax": 4629,
+    "active": [
+      "WHAT CHANGED"
+    ],
+    "changeTop": 370.359375,
+    "reviewTop": -131.453125
+  },
+  "errors": []
+}

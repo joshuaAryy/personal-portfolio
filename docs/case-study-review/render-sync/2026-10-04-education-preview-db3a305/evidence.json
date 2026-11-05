@@ -1,0 +1,377 @@
+{
+  "capturedAt": "2026-10-04T06:30:37.370Z",
+  "browser": "Google Chrome",
+  "browserVersion": "153.0.8010.53",
+  "preview": {
+    "immutable": "https://82b1c0f8.joshuaik2.pages.dev",
+    "alias": "https://feat-portfolio-integration.joshuaik2.pages.dev",
+    "sourceCommit": "db3a305f331f367693641b59ada5f689b9074b98",
+    "deployment": "Cloudflare Pages feature Preview; production not targeted"
+  },
+  "figma": {
+    "node": "738:3316",
+    "screenshot": "education-current-738-3316.png",
+    "note": "Education lobby only; there is no dedicated academic-project detail body."
+  },
+  "pageRecords": [
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      "lobbyStatus": 200,
+      "ctaCount": 1,
+      "ctaReachedRoute": true,
+      "state": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "route": "/education/projects",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "clientWidth": 1920,
+          "scrollWidth": 1920,
+          "scrollHeight": 1080
+        },
+        "main": {
+          "width": 1600,
+          "scrollWidth": 1600,
+          "scrollHeight": 970
+        },
+        "headings": [
+          "Computer Engineering",
+          "Dental Clinic DBMS",
+          "Bookstore Management System",
+          "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "Four-stage CMOS amplifier",
+          "ALU and FSM source notes",
+          "ALU",
+          "FSM",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "images": {
+          "total": 19,
+          "loaded": 19,
+          "missing": []
+        },
+        "required": {
+          "exactRoute": true,
+          "projectCount": 4,
+          "pendingCount": 3,
+          "dentalInProgress": true,
+          "verifiedAlu": true,
+          "verifiedFsm": true,
+          "noDeanOrScholarship": true,
+          "noUnsupportedJavaFramework": true
+        },
+        "projectLabels": [
+          "Dental Clinic DBMS",
+          "Bookstore Management System",
+          "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "Four-stage CMOS amplifier"
+        ]
+      },
+      "keyboard": null,
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "badResponses": []
+      }
+    },
+    {
+      "viewport": {
+        "name": "narrow",
+        "width": 390,
+        "height": 844
+      },
+      "lobbyStatus": 200,
+      "ctaCount": 1,
+      "ctaReachedRoute": true,
+      "state": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "route": "/education/projects",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1149
+        },
+        "main": {
+          "width": 390,
+          "scrollWidth": 390,
+          "scrollHeight": 1079
+        },
+        "headings": [
+          "Computer Engineering",
+          "Dental Clinic DBMS",
+          "Bookstore Management System",
+          "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "Four-stage CMOS amplifier",
+          "ALU and FSM source notes",
+          "ALU",
+          "FSM",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "images": {
+          "total": 19,
+          "loaded": 19,
+          "missing": []
+        },
+        "required": {
+          "exactRoute": true,
+          "projectCount": 4,
+          "pendingCount": 3,
+          "dentalInProgress": true,
+          "verifiedAlu": true,
+          "verifiedFsm": true,
+          "noDeanOrScholarship": true,
+          "noUnsupportedJavaFramework": true
+        },
+        "projectLabels": [
+          "Dental Clinic DBMS",
+          "Bookstore Management System",
+          "Quartus/VHDL 8-bit ALU and nine-state FSM lab project",
+          "Four-stage CMOS amplifier"
+        ]
+      },
+      "keyboard": {
+        "tabSequence": [
+          {
+            "tag": "A",
+            "text": "Education",
+            "className": "education-projects__back"
+          },
+          {
+            "tag": "BODY",
+            "text": "Skip to contentPORTFOLIOProjectsExperienceHackathonsEducationResumeHelp20283RDJo",
+            "className": ""
+          },
+          {
+            "tag": "A",
+            "text": "Skip to content",
+            "className": "skip-link"
+          },
+          {
+            "tag": "A",
+            "text": "PORTFOLIO",
+            "className": "brand"
+          },
+          {
+            "tag": "A",
+            "text": "Projects",
+            "className": ""
+          },
+          {
+            "tag": "A",
+            "text": "Experience",
+            "className": ""
+          },
+          {
+            "tag": "A",
+            "text": "Hackathons",
+            "className": ""
+          },
+          {
+            "tag": "A",
+            "text": "Education",
+            "className": "current active"
+          },
+          {
+            "tag": "A",
+            "text": "Resume",
+            "className": "header-resume"
+          },
+          {
+            "tag": "BUTTON",
+            "text": "Help",
+            "className": "header-help"
+          }
+        ],
+        "helpReachedByTab": true,
+        "dialogCountAfterEnter": 1,
+        "routeUnchangedAfterHelp": true,
+        "dialogClosedByEscape": true
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "badResponses": []
+      }
+    }
+  ],
+  "responsiveLobbyOverflow": {
+    "widths": [
+      390,
+      520,
+      760,
+      900,
+      901
+    ],
+    "routes": [
+      "/projects",
+      "/experience",
+      "/hackathons",
+      "/education"
+    ],
+    "results": [
+      {
+        "route": "/projects",
+        "viewport": 390,
+        "documentWidth": 390,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      {
+        "route": "/projects",
+        "viewport": 520,
+        "documentWidth": 520,
+        "mainWidth": 520,
+        "mainScrollWidth": 520
+      },
+      {
+        "route": "/projects",
+        "viewport": 760,
+        "documentWidth": 760,
+        "mainWidth": 760,
+        "mainScrollWidth": 760
+      },
+      {
+        "route": "/projects",
+        "viewport": 900,
+        "documentWidth": 900,
+        "mainWidth": 900,
+        "mainScrollWidth": 900
+      },
+      {
+        "route": "/projects",
+        "viewport": 901,
+        "documentWidth": 901,
+        "mainWidth": 681,
+        "mainScrollWidth": 681
+      },
+      {
+        "route": "/experience",
+        "viewport": 390,
+        "documentWidth": 390,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      {
+        "route": "/experience",
+        "viewport": 520,
+        "documentWidth": 520,
+        "mainWidth": 520,
+        "mainScrollWidth": 520
+      },
+      {
+        "route": "/experience",
+        "viewport": 760,
+        "documentWidth": 760,
+        "mainWidth": 760,
+        "mainScrollWidth": 760
+      },
+      {
+        "route": "/experience",
+        "viewport": 900,
+        "documentWidth": 900,
+        "mainWidth": 900,
+        "mainScrollWidth": 900
+      },
+      {
+        "route": "/experience",
+        "viewport": 901,
+        "documentWidth": 901,
+        "mainWidth": 681,
+        "mainScrollWidth": 681
+      },
+      {
+        "route": "/hackathons",
+        "viewport": 390,
+        "documentWidth": 390,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      {
+        "route": "/hackathons",
+        "viewport": 520,
+        "documentWidth": 520,
+        "mainWidth": 520,
+        "mainScrollWidth": 520
+      },
+      {
+        "route": "/hackathons",
+        "viewport": 760,
+        "documentWidth": 760,
+        "mainWidth": 760,
+        "mainScrollWidth": 760
+      },
+      {
+        "route": "/hackathons",
+        "viewport": 900,
+        "documentWidth": 900,
+        "mainWidth": 900,
+        "mainScrollWidth": 900
+      },
+      {
+        "route": "/hackathons",
+        "viewport": 901,
+        "documentWidth": 901,
+        "mainWidth": 681,
+        "mainScrollWidth": 681
+      },
+      {
+        "route": "/education",
+        "viewport": 390,
+        "documentWidth": 390,
+        "mainWidth": 390,
+        "mainScrollWidth": 390
+      },
+      {
+        "route": "/education",
+        "viewport": 520,
+        "documentWidth": 520,
+        "mainWidth": 520,
+        "mainScrollWidth": 520
+      },
+      {
+        "route": "/education",
+        "viewport": 760,
+        "documentWidth": 760,
+        "mainWidth": 760,
+        "mainScrollWidth": 760
+      },
+      {
+        "route": "/education",
+        "viewport": 900,
+        "documentWidth": 900,
+        "mainWidth": 900,
+        "mainScrollWidth": 900
+      },
+      {
+        "route": "/education",
+        "viewport": 901,
+        "documentWidth": 901,
+        "mainWidth": 681,
+        "mainScrollWidth": 681
+      }
+    ],
+    "failures": []
+  },
+  "failures": {
+    "educationPages": [],
+    "responsiveLobbies": []
+  }
+}

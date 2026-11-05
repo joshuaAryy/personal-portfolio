@@ -1,0 +1,821 @@
+{
+  "preview": "https://38b1abfa.joshuaik2.pages.dev",
+  "sourceCommit": "e4e1050",
+  "browserVersion": "153.0.8010.53",
+  "viewports": {
+    "1920x1080": {
+      "status": 200,
+      "data": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "main": {
+          "x": 0,
+          "y": 110,
+          "width": 1600,
+          "height": 970
+        },
+        "footer": {
+          "rect": {
+            "x": 1601,
+            "y": 1018,
+            "width": 319,
+            "height": 62
+          },
+          "class": "rail-social-footer",
+          "display": "flex",
+          "links": [
+            {
+              "text": "GitHub",
+              "aria": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "target": "_blank",
+              "rel": "noopener noreferrer",
+              "tabIndex": 0,
+              "rect": {
+                "x": 1621,
+                "y": 1045,
+                "width": 30.4,
+                "height": 9
+              },
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px"
+            },
+            {
+              "text": "LinkedIn",
+              "aria": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "target": "_blank",
+              "rel": "noopener noreferrer",
+              "tabIndex": 0,
+              "rect": {
+                "x": 1682,
+                "y": 1045,
+                "width": 35.5,
+                "height": 9
+              },
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px"
+            },
+            {
+              "text": "✉",
+              "aria": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "target": "",
+              "rel": "",
+              "tabIndex": 0,
+              "rect": {
+                "x": 1785.5,
+                "y": 1040,
+                "width": 13.9,
+                "height": 19
+              },
+              "display": "flex",
+              "visibility": "visible",
+              "outline": "rgb(240, 230, 210) none 3px",
+              "outlineOffset": "0px"
+            }
+          ]
+        },
+        "x": [
+          {
+            "tag": "FOOTER",
+            "cls": "rail-social-footer",
+            "text": "GitHub\nLinkedIn\nX\n✉\nHELP",
+            "ariaHidden": null,
+            "role": null,
+            "rect": {
+              "x": 1601,
+              "y": 1018,
+              "width": 319,
+              "height": 62
+            },
+            "html": "<footer class=\"rail-social-footer\" aria-label=\"Social and support links\"><a href=\"https://github.com/joshuaAryy\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub (opens in a new tab)\">GitHub</a><a href=\"https://ca.linkedin.com/in/joshua-ary\" target=\"_blank\" rel=\"noopener noreferrer\" aria"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "X",
+            "ariaHidden": "true",
+            "role": null,
+            "rect": {
+              "x": 1748.1,
+              "y": 1045,
+              "width": 6.7,
+              "height": 9
+            },
+            "html": "<span aria-hidden=\"true\">X</span>"
+          },
+          {
+            "tag": "A",
+            "cls": "rail-social-footer__email",
+            "text": "✉",
+            "ariaHidden": null,
+            "role": null,
+            "rect": {
+              "x": 1785.5,
+              "y": 1040,
+              "width": 13.9,
+              "height": 19
+            },
+            "html": "<a class=\"rail-social-footer__email\" href=\"mailto:joshuaaryy@gmail.com\" aria-label=\"Email Joshua\">✉</a>"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "rail-social-footer__help",
+            "text": "HELP",
+            "ariaHidden": null,
+            "role": null,
+            "rect": {
+              "x": 1830,
+              "y": 1034.5,
+              "width": 70,
+              "height": 30
+            },
+            "html": "<button class=\"rail-social-footer__help\" type=\"button\">Help</button>"
+          }
+        ],
+        "allLinks": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "title": "",
+            "href": "https://github.com/joshuaAryy",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "tabIndex": 0,
+            "rect": {
+              "x": 1621,
+              "y": 1045,
+              "width": 30.4,
+              "height": 9
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "LinkedIn",
+            "aria": "LinkedIn (opens in a new tab)",
+            "title": "",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "tabIndex": 0,
+            "rect": {
+              "x": 1682,
+              "y": 1045,
+              "width": 35.5,
+              "height": 9
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          },
+          {
+            "tag": "A",
+            "cls": "rail-social-footer__email",
+            "text": "✉",
+            "aria": "Email Joshua",
+            "title": "",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "target": null,
+            "rel": null,
+            "tabIndex": 0,
+            "rect": {
+              "x": 1785.5,
+              "y": 1040,
+              "width": 13.9,
+              "height": 19
+            },
+            "style": {
+              "display": "flex",
+              "visibility": "visible",
+              "outline": "rgb(240, 230, 210) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "rail-social-footer__help",
+            "text": "HELP",
+            "aria": null,
+            "title": "",
+            "href": null,
+            "target": null,
+            "rel": null,
+            "tabIndex": 0,
+            "rect": {
+              "x": 1830,
+              "y": 1034.5,
+              "width": 70,
+              "height": 30
+            },
+            "style": {
+              "display": "grid",
+              "visibility": "visible",
+              "outline": "rgb(240, 230, 210) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          }
+        ],
+        "allAnchorCount": 24,
+        "images": [
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "loaded": true,
+            "alt": ""
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-1920x1080.png",
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    },
+    "390x844": {
+      "status": 200,
+      "data": {
+        "url": "https://38b1abfa.joshuaik2.pages.dev/home",
+        "scrollY": 0,
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "main": {
+          "x": 0,
+          "y": 70,
+          "width": 390,
+          "height": 900.2
+        },
+        "footer": {
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0
+          },
+          "class": "rail-social-footer",
+          "display": "flex",
+          "links": [
+            {
+              "text": "GitHub",
+              "aria": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "target": "_blank",
+              "rel": "noopener noreferrer",
+              "tabIndex": 0,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px"
+            },
+            {
+              "text": "LinkedIn",
+              "aria": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "target": "_blank",
+              "rel": "noopener noreferrer",
+              "tabIndex": 0,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px"
+            },
+            {
+              "text": "✉",
+              "aria": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "target": "",
+              "rel": "",
+              "tabIndex": 0,
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 0,
+                "height": 0
+              },
+              "display": "flex",
+              "visibility": "visible",
+              "outline": "rgb(240, 230, 210) none 3px",
+              "outlineOffset": "0px"
+            }
+          ]
+        },
+        "x": [
+          {
+            "tag": "FOOTER",
+            "cls": "rail-social-footer",
+            "text": "GitHubLinkedInX✉Help",
+            "ariaHidden": null,
+            "role": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "html": "<footer class=\"rail-social-footer\" aria-label=\"Social and support links\"><a href=\"https://github.com/joshuaAryy\" target=\"_blank\" rel=\"noopener noreferrer\" aria-label=\"GitHub (opens in a new tab)\">GitHub</a><a href=\"https://ca.linkedin.com/in/joshua-ary\" target=\"_blank\" rel=\"noopener noreferrer\" aria"
+          },
+          {
+            "tag": "SPAN",
+            "cls": "",
+            "text": "X",
+            "ariaHidden": "true",
+            "role": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "html": "<span aria-hidden=\"true\">X</span>"
+          },
+          {
+            "tag": "A",
+            "cls": "rail-social-footer__email",
+            "text": "✉",
+            "ariaHidden": null,
+            "role": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "html": "<a class=\"rail-social-footer__email\" href=\"mailto:joshuaaryy@gmail.com\" aria-label=\"Email Joshua\">✉</a>"
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "rail-social-footer__help",
+            "text": "Help",
+            "ariaHidden": null,
+            "role": null,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "html": "<button class=\"rail-social-footer__help\" type=\"button\">Help</button>"
+          }
+        ],
+        "allLinks": [
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "title": "",
+            "href": "https://github.com/joshuaAryy",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "tabIndex": 0,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          },
+          {
+            "tag": "A",
+            "cls": "",
+            "text": "LinkedIn",
+            "aria": "LinkedIn (opens in a new tab)",
+            "title": "",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "tabIndex": 0,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "style": {
+              "display": "block",
+              "visibility": "visible",
+              "outline": "rgb(160, 155, 140) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          },
+          {
+            "tag": "A",
+            "cls": "rail-social-footer__email",
+            "text": "✉",
+            "aria": "Email Joshua",
+            "title": "",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "target": null,
+            "rel": null,
+            "tabIndex": 0,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "style": {
+              "display": "flex",
+              "visibility": "visible",
+              "outline": "rgb(240, 230, 210) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "cls": "rail-social-footer__help",
+            "text": "Help",
+            "aria": null,
+            "title": "",
+            "href": null,
+            "target": null,
+            "rel": null,
+            "tabIndex": 0,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "style": {
+              "display": "grid",
+              "visibility": "visible",
+              "outline": "rgb(240, 230, 210) none 3px",
+              "outlineOffset": "0px",
+              "borderRadius": "0px"
+            }
+          }
+        ],
+        "allAnchorCount": 24,
+        "images": [
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+            "loaded": true,
+            "alt": ""
+          },
+          {
+            "src": "https://38b1abfa.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+            "loaded": true,
+            "alt": ""
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-rail-footer-preview-e4e1050/rail-footer-390x844.png",
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    }
+  }
+}

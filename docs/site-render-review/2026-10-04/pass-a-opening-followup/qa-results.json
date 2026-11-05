@@ -1,0 +1,63 @@
+{
+  "browser": "Installed Google Chrome via Playwright channel=chrome",
+  "sourceCommit": "59140c48bb8bd0d002409c7282b42e10be261268",
+  "normal": {
+    "initial": {
+      "path": "/",
+      "routeClass": "opening-route",
+      "mark": "opening-mark-form",
+      "arc": "opening-loading-turn",
+      "arcDuration": "2s",
+      "ringTransforms": [
+        "matrix(1, 0, 0, 1, -214.594, -214.594)",
+        "matrix(1, 0, 0, 1, -194.289, -194.289)"
+      ],
+      "arcInitialTransform": "matrix(1, 0, 0, 1, -214.594, -214.594)"
+    },
+    "mid": {
+      "path": "/",
+      "arcAnimation": {
+        "playState": "running",
+        "currentTime": 583.7829998068214,
+        "progress": 0.2918914999034107
+      },
+      "markOpacity": "1",
+      "progressComputed": "matrix(0.238738, 0, 0, 1, 0, 0)"
+    },
+    "natural": {
+      "path": "/home",
+      "times": {
+        "mounted": 393,
+        "home": 2502.2000002861023
+      },
+      "measuredMs": 2109.2
+    }
+  },
+  "skip": {
+    "initial": {
+      "path": "/",
+      "button": "Skip to Home"
+    },
+    "finalPath": "/home"
+  },
+  "reducedMotion": {
+    "initial": {
+      "path": "/",
+      "routeClass": "opening-route opening-route--reduced opening-route--leaving",
+      "markOpacity": "1",
+      "markAnimation": "none",
+      "arcAnimation": "none",
+      "arcTransform": "matrix(1, 0, 0, 1, -214.594, -214.594)",
+      "progressAnimation": "none"
+    },
+    "automaticHandoff": {
+      "path": "/home",
+      "times": {
+        "mounted": 285.2000002861023,
+        "home": 557.0999999046326
+      },
+      "measuredMs": 271.9
+    }
+  },
+  "errors": []
+}

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opening J fidelity review · 894f6c9</title>
+    <style>
+      :root { color-scheme: dark; font: 16px/1.5 system-ui, sans-serif; background: #080b10; color: #e9e5d8; }
+      * { box-sizing: border-box; }
+      body { max-width: 1440px; margin: auto; padding: 32px clamp(16px, 4vw, 56px) 64px; }
+      h1, h2, p { margin-top: 0; }
+      h1 { font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.1; }
+      .intro { max-width: 76ch; color: #c1c3c6; }
+      .meta { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 28px; }
+      .meta span { border: 1px solid #59513c; border-radius: 99px; padding: 5px 11px; color: #e3c77b; font-size: .82rem; }
+      video { display: block; width: min(100%, 1100px); max-height: 640px; margin: 16px auto 44px; background: #000; }
+      .stage { padding: 24px 0; border-top: 1px solid #2a303a; }
+      .stage h2 { margin-bottom: 12px; font-size: 1.15rem; color: #e3c77b; }
+      .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+      figure { margin: 0; min-width: 0; }
+      figcaption { margin-bottom: 8px; color: #aeb4bd; font-size: .86rem; }
+      img { display: block; width: 100%; height: auto; background: #010305; border: 1px solid #303844; }
+      details { margin-top: 16px; color: #aeb4bd; }
+      details img { max-width: 720px; margin-top: 10px; }
+      .notes { margin-top: 36px; padding: 18px 20px; border-left: 3px solid #34c9df; background: #111820; color: #c1c3c6; }
+      a { color: #80dce9; }
+      @media (max-width: 760px) { body { padding-top: 20px; } .pair { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <h1>Opening J: continuous assembly review</h1>
+    <p class="intro">The seven Figma frames are compared with matching key-pose captures from the installed-Chrome run of the deployed application source. The frames below show one continuous piece animation; they are not sequential still-image swaps.</p>
+    <div class="meta">
+      <span>Feature Preview source: 894f6c9</span>
+      <span>5.0s Opening</span>
+      <span>360° clockwise tick turn · 0.6–3.8s</span>
+      <span>Local Chrome capture · 1920×1080</span>
+    </div>
+
+    <h2>Uninterrupted Opening through Home</h2>
+    <video controls preload="metadata" src="opening-full-chrome-1920x1080-through-home.webm" aria-label="Uninterrupted five-second portfolio Opening and transition to Home"></video>
+
+    <section class="stage">
+      <h2>01 · Broken / Dormant · 650ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-2.png" alt="Figma: separated gold J crown, shaft, and hook around the V8 orb" /></figure><figure><figcaption>Chrome runtime</figcaption><img src="frames/01-broken-dormant-650ms-720x720.png" alt="Runtime: separated J fragments at 650 milliseconds" /></figure></div>
+    </section>
+    <section class="stage">
+      <h2>02 · Approach · 960ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-530.png" alt="Figma: three J pieces moving toward their joints" /></figure><figure><figcaption>Chrome runtime</figcaption><img src="frames/02-approach-960ms-720x720.png" alt="Runtime: crown, shaft, and hook approaching alignment at 960 milliseconds" /></figure></div>
+    </section>
+    <section class="stage">
+      <h2>03 · Alignment · 1,370ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-1058.png" alt="Figma: keyed J joints near alignment" /></figure><figure><figcaption>Chrome runtime</figcaption><img src="frames/03-alignment-1370ms-720x720.png" alt="Runtime: J fragments aligned at 1,370 milliseconds" /></figure></div>
+    </section>
+    <section class="stage">
+      <h2>04 · Mechanical lock · 2,580ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-1575.png" alt="Figma: J fragments seated at their mechanical joints" /></figure><figure><figcaption>Chrome runtime</figcaption><img src="frames/04-mechanical-lock-2580ms-720x720.png" alt="Runtime: J pieces seated at 2,580 milliseconds" /></figure></div>
+    </section>
+    <section class="stage">
+      <h2>05 · Cyan activation · 3,100ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-2092.png" alt="Figma: cyan energy follows the segmented J joints and activates the orb" /></figure><figure><figcaption>Chrome runtime — fragments remain through activation</figcaption><img src="frames/05-cyan-activation-3100ms-720x720.png" alt="Runtime: segmented J, cyan joint energy, and V8 orb at 3,100 milliseconds" /></figure></div>
+      <details><summary>Previous Preview State 05 capture for timing comparison</summary><img src="../preview-b1c4e67-2026-10-11/frames/05-cyan-activation-3100ms-720x640.png" alt="Earlier Preview activation frame before the continuity correction" /></details>
+    </section>
+    <section class="stage">
+      <h2>06 · Material sheen · 3,720ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-2609.png" alt="Figma: material sheen travels over the assembled J" /></figure><figure><figcaption>Chrome runtime</figcaption><img src="frames/06-material-sheen-3720ms-720x720.png" alt="Runtime: unified J and V8 orb during material sheen at 3,720 milliseconds" /></figure></div>
+    </section>
+    <section class="stage">
+      <h2>07 · Settled · 4,100ms</h2>
+      <div class="pair"><figure><figcaption>Authored Figma pose</figcaption><img src="../figma-storyboard-2026-10-11/state-3714-3126.png" alt="Figma: final seamless gold J with dark blue portal, plasma, and gold ring" /></figure><figure><figcaption>Chrome runtime</figcaption><img src="frames/07-settled-4100ms-720x720.png" alt="Runtime: final seamless gold J with persistent portal, plasma, and orb ring" /></figure></div>
+    </section>
+
+    <aside class="notes">
+      <strong>Verification note.</strong> The source commit is <code>894f6c9</code>. Cloudflare identifies that commit on the immutable Feature Preview. Its deployed JS and CSS SHA-256 values exactly match the local build used for the Chrome capture. The corrected handoff keeps all J fragments visible through the State 05 pulse (3.20s), reveals the fused canonical artwork beneath them by 3.36s, and clears fragments by 3.60s, before the 3.72s sheen. Static mark comparison: <a href="../../logo-comparison.html">review the accepted J placements and comparison treatments</a>.
+    </aside>
+  </body>
+</html>

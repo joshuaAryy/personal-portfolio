@@ -1,0 +1,947 @@
+{
+  "testedAt": "2026-10-04T08:34:35.529Z",
+  "url": "https://965f0e82.joshuaik2.pages.dev/home",
+  "httpStatus": 200,
+  "browser": "153.0.8010.53",
+  "viewports": [
+    [
+      1920,
+      1080
+    ]
+  ],
+  "sourceIdentity": {
+    "claimedCommit": "92d3c26 per immutable Preview record",
+    "assetsMatchWorktreeDist": true,
+    "js": "index-ut2N3GmH.js sha256 8bbb53b306e2bc56cbae22fe17c42aae489a471d420d3b6b17a245230fb9f790",
+    "css": "index-DSv4XJ47.css sha256 02de14673b955094e341f9c85e1d92f3bba196df6bfcf10fb6d133a64e0ae266",
+    "worktreeSrcPublicDiffSinceCommit92d3": false
+  },
+  "playback": {
+    "phaseStates": [
+      {
+        "targetMs": 100,
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "performanceNow": 710.2000000476837,
+        "intro": true,
+        "animationTime": 252.05699998289344,
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(0.999917, 0.0128483, -0.0128483, 0.999917, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(0.999917, 0.0128483, -0.0128483, 0.999917, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(0.999946, -0.0104011, 0.0104011, 0.999946, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(0.999946, -0.0104011, 0.0104011, 0.999946, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/gameflow-background.jpg",
+            "natural": [
+              1280,
+              720
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/outer-dark-alloy-bezel.svg",
+            "natural": [
+              606,
+              606
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/bevel-catch.svg",
+            "natural": [
+              590,
+              590
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/black-enamel-bed.svg",
+            "natural": [
+              570,
+              570
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/recessed-inner-rail.svg",
+            "natural": [
+              518,
+              518
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/segmented-outer-bezel.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/circle-lines-gold.svg",
+            "natural": [
+              490,
+              490
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/cyan-energy-insets.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/indexed-jewel-marks.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/restrained-rail-glint.svg",
+            "natural": [
+              32,
+              32
+            ],
+            "complete": true
+          }
+        ]
+      },
+      {
+        "targetMs": 300,
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "performanceNow": 1352.2000000476837,
+        "intro": true,
+        "animationTime": 884.1489999828935,
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/gameflow-background.jpg",
+            "natural": [
+              1280,
+              720
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/outer-dark-alloy-bezel.svg",
+            "natural": [
+              606,
+              606
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/bevel-catch.svg",
+            "natural": [
+              590,
+              590
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/black-enamel-bed.svg",
+            "natural": [
+              570,
+              570
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/recessed-inner-rail.svg",
+            "natural": [
+              518,
+              518
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/segmented-outer-bezel.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/circle-lines-gold.svg",
+            "natural": [
+              490,
+              490
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/cyan-energy-insets.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/indexed-jewel-marks.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/restrained-rail-glint.svg",
+            "natural": [
+              32,
+              32
+            ],
+            "complete": true
+          }
+        ]
+      },
+      {
+        "targetMs": 600,
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "performanceNow": 1698.9000000953674,
+        "intro": true,
+        "animationTime": 1242.9149999828935,
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          }
+        ],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/gameflow-background.jpg",
+            "natural": [
+              1280,
+              720
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/outer-dark-alloy-bezel.svg",
+            "natural": [
+              606,
+              606
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/bevel-catch.svg",
+            "natural": [
+              590,
+              590
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/black-enamel-bed.svg",
+            "natural": [
+              570,
+              570
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/recessed-inner-rail.svg",
+            "natural": [
+              518,
+              518
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/segmented-outer-bezel.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/circle-lines-gold.svg",
+            "natural": [
+              490,
+              490
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/cyan-energy-insets.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/indexed-jewel-marks.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/restrained-rail-glint.svg",
+            "natural": [
+              32,
+              32
+            ],
+            "complete": true
+          }
+        ]
+      },
+      {
+        "targetMs": 900,
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "performanceNow": 2043,
+        "intro": true,
+        "animationTime": 1578.2449999828937,
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.895458, -0.445146, 0.445146, 0.895458, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.895458, -0.445146, 0.445146, 0.895458, 0, 0)"
+          }
+        ],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/gameflow-background.jpg",
+            "natural": [
+              1280,
+              720
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/outer-dark-alloy-bezel.svg",
+            "natural": [
+              606,
+              606
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/bevel-catch.svg",
+            "natural": [
+              590,
+              590
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/black-enamel-bed.svg",
+            "natural": [
+              570,
+              570
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/recessed-inner-rail.svg",
+            "natural": [
+              518,
+              518
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/segmented-outer-bezel.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/circle-lines-gold.svg",
+            "natural": [
+              490,
+              490
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/cyan-energy-insets.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/indexed-jewel-marks.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/restrained-rail-glint.svg",
+            "natural": [
+              32,
+              32
+            ],
+            "complete": true
+          }
+        ]
+      },
+      {
+        "targetMs": 1200,
+        "url": "https://965f0e82.joshuaik2.pages.dev/",
+        "performanceNow": 2364.7999999523163,
+        "intro": true,
+        "animationTime": 1910.3489999828932,
+        "animations": [
+          {
+            "name": "opening-client-reveal",
+            "target": "opening__underlay",
+            "transform": "none"
+          },
+          {
+            "name": "opening-treatment-out",
+            "target": "opening__treatment",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bezel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__bevel opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__enamel-bed opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__inner-rail opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-segmented-opacity",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-segmented-rotation",
+            "target": "opening__layer opening__segmented-bezel opening__motion--segmented",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-opacity",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-ticks-rotation",
+            "target": "opening__layer opening__tick-track opening__motion--ticks",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)"
+          },
+          {
+            "name": "opening-cyan",
+            "target": "opening__layer opening__cyan opening__motion--cyan",
+            "transform": "none"
+          },
+          {
+            "name": "opening-layer-cycle",
+            "target": "opening__layer opening__jewels opening__motion--outer",
+            "transform": "none"
+          },
+          {
+            "name": "opening-construction",
+            "target": "opening__layer opening__construction opening__motion--construction",
+            "transform": "none"
+          },
+          {
+            "name": "opening-j-body",
+            "target": "opening__layer opening__j-body opening__motion--j-body",
+            "transform": "none"
+          },
+          {
+            "name": "opening-glint-opacity",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.848048, -0.529919, 0.529919, 0.848048, 0, 0)"
+          },
+          {
+            "name": "opening-glint-rotation",
+            "target": "opening__layer opening__glint opening__motion--glint",
+            "transform": "matrix(0.848048, -0.529919, 0.529919, 0.848048, 0, 0)"
+          }
+        ],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": [
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/gameflow-background.jpg",
+            "natural": [
+              1280,
+              720
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/outer-dark-alloy-bezel.svg",
+            "natural": [
+              606,
+              606
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/bevel-catch.svg",
+            "natural": [
+              590,
+              590
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/black-enamel-bed.svg",
+            "natural": [
+              570,
+              570
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/recessed-inner-rail.svg",
+            "natural": [
+              518,
+              518
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/segmented-outer-bezel.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/circle-lines-gold.svg",
+            "natural": [
+              490,
+              490
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/cyan-energy-insets.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/indexed-jewel-marks.svg",
+            "natural": [
+              560,
+              560
+            ],
+            "complete": true
+          },
+          {
+            "src": "https://965f0e82.joshuaik2.pages.dev/media/opening/restrained-rail-glint.svg",
+            "natural": [
+              32,
+              32
+            ],
+            "complete": true
+          }
+        ]
+      },
+      {
+        "targetMs": 1600,
+        "url": "https://965f0e82.joshuaik2.pages.dev/home",
+        "performanceNow": 2770.5999999046326,
+        "intro": false,
+        "animations": [],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": []
+      },
+      {
+        "targetMs": 1950,
+        "url": "https://965f0e82.joshuaik2.pages.dev/home",
+        "performanceNow": 3204.2000000476837,
+        "intro": false,
+        "animations": [],
+        "bodyWidth": 1920,
+        "clientWidth": 1920,
+        "skipVisible": true,
+        "img": []
+      }
+    ],
+    "expectedDurationMs": 2000,
+    "observedFirstAnimationTimes": [
+      252.05699998289344,
+      884.1489999828935,
+      1242.9149999828935,
+      1578.2449999828937,
+      1910.3489999828932,
+      null,
+      null
+    ],
+    "finishedAtLast": true
+  },
+  "skip": {
+    "buttonCount": 1,
+    "linkCount": 0,
+    "before": {
+      "url": "https://965f0e82.joshuaik2.pages.dev/",
+      "progress": 215.35800003260374,
+      "button": "<a class=\"skip-link\" href=\"#main\">Skip to content</a>"
+    },
+    "after": {
+      "url": "https://965f0e82.joshuaik2.pages.dev/home",
+      "title": "Joshua Aryeetey · Portfolio",
+      "hasIntro": false,
+      "body": "Skip to content\nPORTFOLIO\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\n2028\n3RD\nJoshua Aryeetey\nOPEN TO SUMMER 2027\nEXPLORE\nCURATED\nRECENT\nABOUT\nSelect a portfolio mode\nPROJECTS\nBUILT SYSTEMS\nEXPERIENCE\nPROFESSIONAL WORK\nHACKATHONS\nBUILD UNDER PRESSURE\nEDUCATION\nACADEMIC PATH\nPROJECTS\n\nExplore products and systems I build outside the classroom. Select a focus, then confirm to enter the project lobby.\n\nFEATURED\nStrongest work\nAI / ML\nMachine intelligence\nSOFTWARE\nSystems + applications\nFULL STACK\nEnd"
+    }
+  },
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [],
+    "response": []
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "source": "local Vite feature worktree in installed Chrome",
+  "reducedMotion": {
+    "route": "/",
+    "reducedClass": true,
+    "finalLockupOpacity": "1",
+    "assembledOpacity": "0",
+    "tickAnimation": "none",
+    "loadedImages": 12,
+    "scrollWidth": 1440,
+    "clientWidth": 1440,
+    "navigationTimerHeldOnlyForCapture": true
+  },
+  "skip": {
+    "route": "/home"
+  },
+  "responsive": [
+    {
+      "route": "/",
+      "width": 1440,
+      "height": 720,
+      "scrollWidth": 1440,
+      "clientWidth": 1440,
+      "openingVisible": true,
+      "skipVisible": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "openingVisible": true,
+      "skipVisible": true
+    }
+  ],
+  "errors": [],
+  "failedRequests": []
+}

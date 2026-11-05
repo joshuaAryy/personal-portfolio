@@ -1,0 +1,560 @@
+{
+  "status": 200,
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "base": {
+    "url": "https://a7047ffc.joshuaik2.pages.dev/home",
+    "width": 1920,
+    "clientWidth": 1920,
+    "scrollHeight": 1080,
+    "main": {
+      "class": "main main--home-explore",
+      "rect": {
+        "x": 0,
+        "y": 110,
+        "width": 1600,
+        "height": 970
+      }
+    },
+    "buttons": [
+      {
+        "text": "PROJECTS\nBUILT SYSTEMS",
+        "aria": "Projects",
+        "class": "home-explore__mode",
+        "tabIndex": 0,
+        "rect": {
+          "x": 0,
+          "y": 205,
+          "width": 390,
+          "height": 258
+        }
+      },
+      {
+        "text": "EXPERIENCE\nPROFESSIONAL WORK",
+        "aria": "Experience",
+        "class": "home-explore__mode",
+        "tabIndex": 0,
+        "rect": {
+          "x": 390,
+          "y": 205,
+          "width": 390,
+          "height": 258
+        }
+      },
+      {
+        "text": "HACKATHONS\nBUILD UNDER PRESSURE",
+        "aria": "Hackathons",
+        "class": "home-explore__mode",
+        "tabIndex": 0,
+        "rect": {
+          "x": 780,
+          "y": 205,
+          "width": 390,
+          "height": 258
+        }
+      },
+      {
+        "text": "EDUCATION\nACADEMIC PATH",
+        "aria": "Education",
+        "class": "home-explore__mode",
+        "tabIndex": 0,
+        "rect": {
+          "x": 1170,
+          "y": 205,
+          "width": 390,
+          "height": 258
+        }
+      },
+      {
+        "text": "",
+        "aria": "Back to the previous screen",
+        "class": "home-explore__back",
+        "tabIndex": 0,
+        "rect": {
+          "x": 640,
+          "y": 920,
+          "width": 58,
+          "height": 58
+        }
+      },
+      {
+        "text": "CONFIRM",
+        "aria": "Confirm Projects destination",
+        "class": "home-explore__confirm",
+        "tabIndex": 0,
+        "rect": {
+          "x": 676,
+          "y": 917,
+          "width": 300,
+          "height": 64
+        }
+      },
+      {
+        "text": "HELP",
+        "aria": null,
+        "class": "rail-social-footer__help",
+        "tabIndex": 0,
+        "rect": {
+          "x": 1830,
+          "y": 1034.5,
+          "width": 70,
+          "height": 30
+        }
+      }
+    ],
+    "headings": [
+      "Select a portfolio mode",
+      "PROJECTS",
+      "ACTIVITY",
+      "IN DEVELOPMENT (2)",
+      "COMPLETED (3)"
+    ],
+    "images": [
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 6,
+          "y": 27.5,
+          "width": 54,
+          "height": 54
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 963.5,
+          "y": 30.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1031.5,
+          "y": 30.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1099.5,
+          "y": 30.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1167.5,
+          "y": 30.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1235,
+          "y": 30.5,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1620,
+          "y": 23.5,
+          "width": 76,
+          "height": 76
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1626,
+          "y": 29.5,
+          "width": 64,
+          "height": 64
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-projects.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 120.1,
+          "y": 216,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 163.1,
+          "y": 258.9,
+          "width": 63.9,
+          "height": 63.9
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 120.1,
+          "y": 216,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 510.1,
+          "y": 218,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 553.1,
+          "y": 260.9,
+          "width": 63.9,
+          "height": 63.9
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 510.1,
+          "y": 218,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-hackathons.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 900.1,
+          "y": 218,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 943.1,
+          "y": 260.9,
+          "width": 63.9,
+          "height": 63.9
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 900.1,
+          "y": 218,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-experience.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1290.1,
+          "y": 218,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-education-glyph-review-candidate.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1333.1,
+          "y": 260.9,
+          "width": 63.9,
+          "height": 63.9
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-mode-selected-ring.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1290.1,
+          "y": 218,
+          "width": 149.8,
+          "height": 149.8
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-confirm-disc.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 640,
+          "y": 920,
+          "width": 58,
+          "height": 58
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-confirm-chevron.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 664.5,
+          "y": 941,
+          "width": 9,
+          "height": 16
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/home-confirm-button.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 676,
+          "y": 917,
+          "width": 300,
+          "height": 64
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-art/activity-food-tracker.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1613,
+          "y": 160.5,
+          "width": 50,
+          "height": 50
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1846,
+          "y": 262.5,
+          "width": 13,
+          "height": 13
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1871,
+          "y": 265.5,
+          "width": 8,
+          "height": 7
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1891,
+          "y": 266,
+          "width": 7,
+          "height": 6
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-art/activity-choveigo.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1625,
+          "y": 320,
+          "width": 54,
+          "height": 54
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-art/activity-portfolio-ring.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1614,
+          "y": 363,
+          "width": 38,
+          "height": 38
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-art/activity-living-in-silico.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1625,
+          "y": 452,
+          "width": 54,
+          "height": 54
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-art/activity-stush-patties.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1625,
+          "y": 506,
+          "width": 54,
+          "height": 54
+        }
+      },
+      {
+        "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-art/activity-crest.svg",
+        "alt": "",
+        "loaded": true,
+        "rect": {
+          "x": 1625,
+          "y": 560,
+          "width": 54,
+          "height": 54
+        }
+      }
+    ]
+  },
+  "baseScreenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-9fd23f9/help-1920x1080-home-closed.png",
+  "triggerBefore": {
+    "class": "rail-social-footer__help",
+    "rect": {
+      "x": 1830,
+      "y": 1034.5,
+      "width": 70,
+      "height": 30
+    },
+    "tabIndex": 0,
+    "visible": true
+  },
+  "dialog": {
+    "open": true,
+    "ariaModal": "true",
+    "ariaLabel": null,
+    "labelledby": "_r_0_",
+    "description": null,
+    "text": "Home controls\nCLOSE\nESC\n01\nNAVIGATION\n\nChoose a mode to move between Projects, Experience, Hackathons, or Education.\n\n02\nPARTY / ACTIVITY RAIL\n\nYour current focus sits above the active and completed party list.\n\n03\nPREVIEW A MODE\n\nSelecting a mode previews its description and focus areas. Use the arrows to compare destinations.\n\n04\nOPEN THE SELECTION\n\nConfirm or press Enter to open the selected item in its lobby. Close or press Esc to dismiss Help.",
+    "rect": {
+      "x": 1119.9,
+      "y": 478.4,
+      "width": 410,
+      "height": 423
+    },
+    "focusables": [
+      {
+        "tag": "BUTTON",
+        "text": "CLOSE\nESC",
+        "aria": null,
+        "class": "client-help-overlay__close client-help-overlay__close--floating",
+        "tabIndex": 0
+      }
+    ],
+    "active": {
+      "tag": "BUTTON",
+      "class": "client-help-overlay__close client-help-overlay__close--floating",
+      "text": "CLOSE\nESC"
+    },
+    "bodyWidth": 1920,
+    "clientWidth": 1920,
+    "mainInert": false,
+    "mainAriaHidden": null
+  },
+  "dialogScreenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-help-recovery-preview-9fd23f9/help-1920x1080-home-open.png",
+  "tabTrace": [
+    {
+      "tag": "BUTTON",
+      "class": "client-help-overlay__close client-help-overlay__close--floating",
+      "text": "CLOSE\nESC",
+      "insideDialog": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "client-help-overlay__close client-help-overlay__close--floating",
+      "text": "CLOSE\nESC",
+      "insideDialog": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "client-help-overlay__close client-help-overlay__close--floating",
+      "text": "CLOSE\nESC",
+      "insideDialog": true
+    }
+  ],
+  "shiftTrace": [
+    {
+      "tag": "BUTTON",
+      "class": "client-help-overlay__close client-help-overlay__close--floating",
+      "text": "CLOSE\nESC",
+      "insideDialog": true
+    },
+    {
+      "tag": "BUTTON",
+      "class": "client-help-overlay__close client-help-overlay__close--floating",
+      "text": "CLOSE\nESC",
+      "insideDialog": true
+    }
+  ],
+  "afterEscape": {
+    "dialogOpen": false,
+    "activeTag": "BUTTON",
+    "activeClass": "rail-social-footer__help",
+    "activeText": "HELP"
+  },
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [],
+    "response": []
+  }
+}

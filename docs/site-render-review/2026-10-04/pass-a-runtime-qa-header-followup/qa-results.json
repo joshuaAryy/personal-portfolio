@@ -1,0 +1,276 @@
+{
+  "browser": "Installed Google Chrome via Playwright channel=chrome",
+  "narrowViewport": "390x844",
+  "desktopViewport": "1920x1080",
+  "narrow": {
+    "viewport": 390,
+    "documentWidth": 390,
+    "overflow": false,
+    "help": {
+      "x": 302.078125,
+      "y": 6.5,
+      "right": 338.078125,
+      "bottom": 62.5,
+      "width": 36,
+      "height": 56
+    },
+    "avatar": {
+      "x": 340,
+      "y": 13.5,
+      "right": 382,
+      "bottom": 55.5,
+      "width": 42,
+      "height": 42
+    },
+    "intersection": false,
+    "helpText": "HELP",
+    "helpVisible": true,
+    "helpDisabled": false,
+    "helpTabIndex": 0,
+    "modes": [
+      "Projects",
+      "Experience",
+      "Hackathons",
+      "Education"
+    ]
+  },
+  "focus": {
+    "active": "header-help",
+    "visible": true
+  },
+  "helpClick": {
+    "expanded": null,
+    "dialog": [
+      {
+        "role": "dialog",
+        "label": null,
+        "text": "Home controls\nCLOSE\nESC\n01\nNAVIGATION\n\nChoose a mode to move between Projects, Experience, Hackathons, or Education.\n\n02\nPREVIEW A MODE\n\nSelecting a m"
+      }
+    ]
+  },
+  "narrowDestinations": [
+    {
+      "label": "Projects",
+      "route": "/projects",
+      "expected": "/projects",
+      "pass": true
+    },
+    {
+      "label": "Experience",
+      "route": "/experience",
+      "expected": "/experience",
+      "pass": true
+    },
+    {
+      "label": "Hackathons",
+      "route": "/hackathons",
+      "expected": "/hackathons",
+      "pass": true
+    },
+    {
+      "label": "Education",
+      "route": "/education",
+      "expected": "/education",
+      "pass": true
+    }
+  ],
+  "desktop": [
+    {
+      "label": "Home",
+      "route": "/home",
+      "nav": [
+        "PROJECTS",
+        "EXPERIENCE",
+        "HACKATHONS",
+        "EDUCATION"
+      ],
+      "utilities": [
+        {
+          "text": "LINKEDIN",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "x": 948
+        },
+        {
+          "text": "RESUME",
+          "href": "/resume",
+          "x": 1016
+        },
+        {
+          "text": "GITHUB",
+          "href": "https://github.com/joshuaAryy",
+          "x": 1084
+        },
+        {
+          "text": "EMAIL",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "x": 1152
+        }
+      ],
+      "resumeUtilityCount": 1,
+      "allLinks": [
+        {
+          "text": "RESUME",
+          "class": "header-client-tool"
+        }
+      ]
+    },
+    {
+      "label": "Projects",
+      "route": "/projects",
+      "nav": [
+        "PROJECTS",
+        "EXPERIENCE",
+        "HACKATHONS",
+        "EDUCATION"
+      ],
+      "utilities": [
+        {
+          "text": "LINKEDIN",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "x": 793
+        },
+        {
+          "text": "RESUME",
+          "href": "/resume",
+          "x": 858
+        },
+        {
+          "text": "GITHUB",
+          "href": "https://github.com/joshuaAryy",
+          "x": 915
+        },
+        {
+          "text": "EMAIL",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "x": 970
+        }
+      ],
+      "resumeUtilityCount": 1,
+      "allLinks": [
+        {
+          "text": "RESUME",
+          "class": "header-client-tool"
+        }
+      ]
+    },
+    {
+      "label": "Experience",
+      "route": "/experience",
+      "nav": [
+        "PROJECTS",
+        "EXPERIENCE",
+        "HACKATHONS",
+        "EDUCATION"
+      ],
+      "utilities": [
+        {
+          "text": "LINKEDIN",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "x": 837
+        },
+        {
+          "text": "RESUME",
+          "href": "/resume",
+          "x": 901
+        },
+        {
+          "text": "GITHUB",
+          "href": "https://github.com/joshuaAryy",
+          "x": 959
+        },
+        {
+          "text": "EMAIL",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "x": 1014
+        }
+      ],
+      "resumeUtilityCount": 1,
+      "allLinks": [
+        {
+          "text": "RESUME",
+          "class": "header-client-tool"
+        }
+      ]
+    },
+    {
+      "label": "Hackathons",
+      "route": "/hackathons",
+      "nav": [
+        "PROJECTS",
+        "EXPERIENCE",
+        "HACKATHONS",
+        "EDUCATION"
+      ],
+      "utilities": [
+        {
+          "text": "LINKEDIN",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "x": 837
+        },
+        {
+          "text": "RESUME",
+          "href": "/resume",
+          "x": 901
+        },
+        {
+          "text": "GITHUB",
+          "href": "https://github.com/joshuaAryy",
+          "x": 959
+        },
+        {
+          "text": "EMAIL",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "x": 1014
+        }
+      ],
+      "resumeUtilityCount": 1,
+      "allLinks": [
+        {
+          "text": "RESUME",
+          "class": "header-client-tool"
+        }
+      ]
+    },
+    {
+      "label": "Education",
+      "route": "/education",
+      "nav": [
+        "PROJECTS",
+        "EXPERIENCE",
+        "HACKATHONS",
+        "EDUCATION"
+      ],
+      "utilities": [
+        {
+          "text": "LINKEDIN",
+          "href": "https://ca.linkedin.com/in/joshua-ary",
+          "x": 837
+        },
+        {
+          "text": "RESUME",
+          "href": "/resume",
+          "x": 901
+        },
+        {
+          "text": "GITHUB",
+          "href": "https://github.com/joshuaAryy",
+          "x": 959
+        },
+        {
+          "text": "EMAIL",
+          "href": "mailto:joshuaaryy@gmail.com",
+          "x": 1014
+        }
+      ],
+      "resumeUtilityCount": 1,
+      "allLinks": [
+        {
+          "text": "RESUME",
+          "class": "header-client-tool"
+        }
+      ]
+    }
+  ],
+  "resumeUtilityRoute": "/resume",
+  "errors": []
+}

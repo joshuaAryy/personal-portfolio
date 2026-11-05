@@ -1,0 +1,34 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Rail &#194;&#183; Open Portfolio J Mark">
+<path id="Vector" d="M22.9334 41.6C32.9482 41.6 41.0668 33.4814 41.0668 23.4667C41.0668 13.4519 32.9482 5.33333 22.9334 5.33333C12.9187 5.33333 4.80011 13.4519 4.80011 23.4667C4.80011 33.4814 12.9187 41.6 22.9334 41.6Z" fill="#02070B" stroke="#2F210D" stroke-width="5.46"/>
+<path id="Vector_2" d="M22.9332 40C32.0643 40 39.4665 32.5978 39.4665 23.4667C39.4665 14.3356 32.0643 6.93333 22.9332 6.93333C13.8021 6.93333 6.39987 14.3356 6.39987 23.4667C6.39987 32.5978 13.8021 40 22.9332 40Z" fill="url(#paint0_radial_0_4)" stroke="#D2AA55" stroke-width="2.73"/>
+<path id="Vector_3" d="M22.9333 37.8667C30.8862 37.8667 37.3333 31.4196 37.3333 23.4667C37.3333 15.5138 30.8862 9.06667 22.9333 9.06667C14.9804 9.06667 8.53325 15.5138 8.53325 23.4667C8.53325 31.4196 14.9804 37.8667 22.9333 37.8667Z" stroke="#10BDD5" stroke-width="0.936"/>
+<path id="Vector_4" d="M9.0666 20.2667C13.8666 13.8667 18.6666 13.8667 22.3999 18.1333C25.5999 21.8667 28.7999 21.8667 33.0666 17.0667M11.7333 30.4C16.5333 26.1333 20.2666 26.1333 23.4666 29.3333C26.1333 32 28.7999 32 32.5333 29.8667" stroke="#55E8F8" stroke-width="1.17"/>
+<path id="Vector_5" d="M32.5334 7.46667V26.6667C32.5334 35.7333 28.8 40 21.8667 40C16.5334 40 13.3334 37.3333 13.3334 33.6C13.3334 30.9333 14.9334 28.8 17.6 27.2" stroke="#201407" stroke-width="13.26" stroke-linecap="round"/>
+<path id="Vector_6" d="M31.4667 6.4V26.1333C31.4667 34.1333 28.2667 37.8667 21.8667 37.8667C17.6001 37.8667 14.9334 35.7333 14.9334 33.0667C14.9334 30.9333 16.0001 29.3333 18.6667 27.7333" stroke="url(#paint1_linear_0_4)" stroke-width="10.92" stroke-linecap="round"/>
+<path id="Vector_7" d="M20.7999 3.73333H37.3333L35.1999 6.93333H23.4666L20.7999 3.73333Z" fill="url(#paint2_linear_0_4)" stroke="#674116" stroke-width="0.78"/>
+<g id="Vector_8">
+<path d="M22.9333 4.8H34.6666Z" fill="black"/>
+<path d="M22.9333 4.8H34.6666" stroke="#FFF0B5" stroke-width="0.78"/>
+</g>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_4" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(22.9332 23.4667) scale(16.5333)">
+<stop stop-color="#0E5676"/>
+<stop offset="0.6" stop-color="#08334F"/>
+<stop offset="1" stop-color="#031723"/>
+</radialGradient>
+<linearGradient id="paint1_linear_0_4" x1="14.9334" y1="6.4" x2="40.8463" y2="20.0152" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F4DF9E"/>
+<stop offset="0.35" stop-color="#C18A32"/>
+<stop offset="0.72" stop-color="#80501A"/>
+<stop offset="1" stop-color="#DDB85F"/>
+</linearGradient>
+<linearGradient id="paint2_linear_0_4" x1="20.7999" y1="3.73333" x2="21.9939" y2="9.90224" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F4DF9E"/>
+<stop offset="0.35" stop-color="#C18A32"/>
+<stop offset="0.72" stop-color="#80501A"/>
+<stop offset="1" stop-color="#DDB85F"/>
+</linearGradient>
+</defs>
+</svg>

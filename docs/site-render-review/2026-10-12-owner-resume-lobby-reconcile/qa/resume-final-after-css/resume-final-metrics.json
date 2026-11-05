@@ -1,0 +1,1751 @@
+{
+  "results": [
+    {
+      "file": "desktop-1440x900-beginning-36deg.png",
+      "state": "beginning-36deg",
+      "route": "/resume",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "mechanism": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "bottom": 810.1,
+        "right": 920
+      },
+      "scene": {
+        "x": 376,
+        "y": 266.1,
+        "w": 448,
+        "h": 448,
+        "bottom": 714.1,
+        "right": 824
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "bottom": 770.2,
+        "right": 880.1
+      },
+      "j": {
+        "x": 450,
+        "y": 340.1,
+        "w": 300,
+        "h": 300,
+        "bottom": 640.1,
+        "right": 750
+      },
+      "title": {
+        "x": 440,
+        "y": 637.3,
+        "w": 320,
+        "h": 36,
+        "bottom": 673.3,
+        "right": 760
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "action": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "close": {
+        "x": 529.5,
+        "y": 790.9,
+        "w": 141,
+        "h": 26.9,
+        "bottom": 817.8,
+        "right": 670.5
+      },
+      "fill": "36deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.18) 36deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "desktop-1440x900-partial-153deg.png",
+      "state": "partial-153deg",
+      "route": "/resume",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "mechanism": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "bottom": 810.1,
+        "right": 920
+      },
+      "scene": {
+        "x": 376,
+        "y": 266.1,
+        "w": 448,
+        "h": 448,
+        "bottom": 714.1,
+        "right": 824
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "bottom": 770.2,
+        "right": 880.1
+      },
+      "j": {
+        "x": 450,
+        "y": 340.1,
+        "w": 300,
+        "h": 300,
+        "bottom": 640.1,
+        "right": 750
+      },
+      "title": {
+        "x": 440,
+        "y": 637.3,
+        "w": 320,
+        "h": 36,
+        "bottom": 673.3,
+        "right": 760
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "action": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "close": {
+        "x": 529.5,
+        "y": 790.9,
+        "w": 141,
+        "h": 26.9,
+        "bottom": 817.8,
+        "right": 670.5
+      },
+      "fill": "153deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.18) 153deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "desktop-1440x900-full-306deg.png",
+      "state": "full-306deg",
+      "route": "/resume",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "mechanism": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "bottom": 810.1,
+        "right": 920
+      },
+      "scene": {
+        "x": 376,
+        "y": 266.1,
+        "w": 448,
+        "h": 448,
+        "bottom": 714.1,
+        "right": 824
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "bottom": 770.2,
+        "right": 880.1
+      },
+      "j": {
+        "x": 450,
+        "y": 340.1,
+        "w": 300,
+        "h": 300,
+        "bottom": 640.1,
+        "right": 750
+      },
+      "title": {
+        "x": 440,
+        "y": 637.3,
+        "w": 320,
+        "h": 36,
+        "bottom": 673.3,
+        "right": 760
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "action": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "close": {
+        "x": 529.5,
+        "y": 790.9,
+        "w": 141,
+        "h": 26.9,
+        "bottom": 817.8,
+        "right": 670.5
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "desktop-1440x900-reduced-motion-full.png",
+      "state": "reduced-motion-full",
+      "route": "/resume",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "mechanism": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "bottom": 810.1,
+        "right": 920
+      },
+      "scene": {
+        "x": 376,
+        "y": 266.1,
+        "w": 448,
+        "h": 448,
+        "bottom": 714.1,
+        "right": 824
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "bottom": 770.2,
+        "right": 880.1
+      },
+      "j": {
+        "x": 450,
+        "y": 340.1,
+        "w": 300,
+        "h": 300,
+        "bottom": 640.1,
+        "right": 750
+      },
+      "title": {
+        "x": 440,
+        "y": 637.3,
+        "w": 320,
+        "h": 36,
+        "bottom": 673.3,
+        "right": 760
+      },
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "action": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 791.8,
+        "right": 722.5
+      },
+      "close": {
+        "x": 529.5,
+        "y": 790.9,
+        "w": 141,
+        "h": 26.9,
+        "bottom": 817.8,
+        "right": 670.5
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "short-1280x720-beginning-36deg.png",
+      "state": "beginning-36deg",
+      "route": "/resume",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": [
+        1280,
+        720
+      ],
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "bottom": 680,
+        "right": 817
+      },
+      "scene": {
+        "x": 329.1,
+        "y": 192.1,
+        "w": 401.8,
+        "h": 401.8,
+        "bottom": 593.9,
+        "right": 730.9
+      },
+      "energy": {
+        "x": 278.7,
+        "y": 141.7,
+        "w": 502.5,
+        "h": 502.5,
+        "bottom": 644.3,
+        "right": 781.3
+      },
+      "j": {
+        "x": 380,
+        "y": 243,
+        "w": 300,
+        "h": 300,
+        "bottom": 543,
+        "right": 680
+      },
+      "title": {
+        "x": 370,
+        "y": 525,
+        "w": 320,
+        "h": 32.7,
+        "bottom": 557.7,
+        "right": 690
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "action": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "close": {
+        "x": 459.5,
+        "y": 662.8,
+        "w": 141,
+        "h": 24.1,
+        "bottom": 686.9,
+        "right": 600.5
+      },
+      "fill": "36deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.18) 36deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "short-1280x720-partial-153deg.png",
+      "state": "partial-153deg",
+      "route": "/resume",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": [
+        1280,
+        720
+      ],
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "bottom": 680,
+        "right": 817
+      },
+      "scene": {
+        "x": 329.1,
+        "y": 192.1,
+        "w": 401.8,
+        "h": 401.8,
+        "bottom": 593.9,
+        "right": 730.9
+      },
+      "energy": {
+        "x": 278.7,
+        "y": 141.7,
+        "w": 502.5,
+        "h": 502.5,
+        "bottom": 644.3,
+        "right": 781.3
+      },
+      "j": {
+        "x": 380,
+        "y": 243,
+        "w": 300,
+        "h": 300,
+        "bottom": 543,
+        "right": 680
+      },
+      "title": {
+        "x": 370,
+        "y": 525,
+        "w": 320,
+        "h": 32.7,
+        "bottom": 557.7,
+        "right": 690
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "action": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "close": {
+        "x": 459.5,
+        "y": 662.8,
+        "w": 141,
+        "h": 24.1,
+        "bottom": 686.9,
+        "right": 600.5
+      },
+      "fill": "153deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.18) 153deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "short-1280x720-full-306deg.png",
+      "state": "full-306deg",
+      "route": "/resume",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": [
+        1280,
+        720
+      ],
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "bottom": 680,
+        "right": 817
+      },
+      "scene": {
+        "x": 329.1,
+        "y": 192.1,
+        "w": 401.8,
+        "h": 401.8,
+        "bottom": 593.9,
+        "right": 730.9
+      },
+      "energy": {
+        "x": 278.7,
+        "y": 141.7,
+        "w": 502.5,
+        "h": 502.5,
+        "bottom": 644.3,
+        "right": 781.3
+      },
+      "j": {
+        "x": 380,
+        "y": 243,
+        "w": 300,
+        "h": 300,
+        "bottom": 543,
+        "right": 680
+      },
+      "title": {
+        "x": 370,
+        "y": 525,
+        "w": 320,
+        "h": 32.7,
+        "bottom": 557.7,
+        "right": 690
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "action": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "close": {
+        "x": 459.5,
+        "y": 662.8,
+        "w": 141,
+        "h": 24.1,
+        "bottom": 686.9,
+        "right": 600.5
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "short-1280x720-reduced-motion-full.png",
+      "state": "reduced-motion-full",
+      "route": "/resume",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": [
+        1280,
+        720
+      ],
+      "mechanism": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "bottom": 680,
+        "right": 817
+      },
+      "scene": {
+        "x": 329.1,
+        "y": 192.1,
+        "w": 401.8,
+        "h": 401.8,
+        "bottom": 593.9,
+        "right": 730.9
+      },
+      "energy": {
+        "x": 278.7,
+        "y": 141.7,
+        "w": 502.5,
+        "h": 502.5,
+        "bottom": 644.3,
+        "right": 781.3
+      },
+      "j": {
+        "x": 380,
+        "y": 243,
+        "w": 300,
+        "h": 300,
+        "bottom": 543,
+        "right": 680
+      },
+      "title": {
+        "x": 370,
+        "y": 525,
+        "w": 320,
+        "h": 32.7,
+        "bottom": 557.7,
+        "right": 690
+      },
+      "plate": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "action": {
+        "x": 407.5,
+        "y": 591,
+        "w": 245,
+        "h": 80.9,
+        "bottom": 671.9,
+        "right": 652.5
+      },
+      "close": {
+        "x": 459.5,
+        "y": 662.8,
+        "w": 141,
+        "h": 24.1,
+        "bottom": 686.9,
+        "right": 600.5
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "narrow-390x844-beginning-36deg.png",
+      "state": "beginning-36deg",
+      "route": "/resume",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "bottom": 636,
+        "right": 374
+      },
+      "scene": {
+        "x": 69.7,
+        "y": 331.7,
+        "w": 250.6,
+        "h": 250.6,
+        "bottom": 582.3,
+        "right": 320.3
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "bottom": 613.7,
+        "right": 351.7
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "w": 193.3,
+        "h": 193.3,
+        "bottom": 553.7,
+        "right": 291.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "w": 202.6,
+        "h": 20.4,
+        "bottom": 559.7,
+        "right": 296.3
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "w": 89.1,
+        "h": 22,
+        "bottom": 647.3,
+        "right": 239.6
+      },
+      "fill": "36deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(28, 184, 214, 0.18) 36deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "narrow-390x844-partial-153deg.png",
+      "state": "partial-153deg",
+      "route": "/resume",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "bottom": 636,
+        "right": 374
+      },
+      "scene": {
+        "x": 69.7,
+        "y": 331.7,
+        "w": 250.6,
+        "h": 250.6,
+        "bottom": 582.3,
+        "right": 320.3
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "bottom": 613.7,
+        "right": 351.7
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "w": 193.3,
+        "h": 193.3,
+        "bottom": 553.7,
+        "right": 291.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "w": 202.6,
+        "h": 20.4,
+        "bottom": 559.7,
+        "right": 296.3
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "w": 89.1,
+        "h": 22,
+        "bottom": 647.3,
+        "right": 239.6
+      },
+      "fill": "153deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(28, 184, 214, 0.18) 153deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "narrow-390x844-full-306deg.png",
+      "state": "full-306deg",
+      "route": "/resume",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "bottom": 636,
+        "right": 374
+      },
+      "scene": {
+        "x": 69.7,
+        "y": 331.7,
+        "w": 250.6,
+        "h": 250.6,
+        "bottom": 582.3,
+        "right": 320.3
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "bottom": 613.7,
+        "right": 351.7
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "w": 193.3,
+        "h": 193.3,
+        "bottom": 553.7,
+        "right": 291.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "w": 202.6,
+        "h": 20.4,
+        "bottom": 559.7,
+        "right": 296.3
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "w": 89.1,
+        "h": 22,
+        "bottom": 647.3,
+        "right": 239.6
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        }
+      ]
+    },
+    {
+      "file": "narrow-390x844-reduced-motion-full.png",
+      "state": "reduced-motion-full",
+      "route": "/resume",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "mechanism": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "bottom": 636,
+        "right": 374
+      },
+      "scene": {
+        "x": 69.7,
+        "y": 331.7,
+        "w": 250.6,
+        "h": 250.6,
+        "bottom": 582.3,
+        "right": 320.3
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "bottom": 613.7,
+        "right": 351.7
+      },
+      "j": {
+        "x": 98.3,
+        "y": 360.3,
+        "w": 193.3,
+        "h": 193.3,
+        "bottom": 553.7,
+        "right": 291.7
+      },
+      "title": {
+        "x": 93.7,
+        "y": 539.3,
+        "w": 202.6,
+        "h": 20.4,
+        "bottom": 559.7,
+        "right": 296.3
+      },
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "right": 272.7
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "w": 89.1,
+        "h": 22,
+        "bottom": 647.3,
+        "right": 239.6
+      },
+      "fill": "306deg",
+      "opacity": "0.86",
+      "animation": "none",
+      "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 78.5%, rgb(0, 0, 0) 80.5%, rgb(0, 0, 0) 85.5%, rgba(0, 0, 0, 0) 87.5%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg)",
+      "bg": "linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.24) 47%, rgba(0, 0, 0, 0) 80%), repeating-linear-gradient(105deg, rgba(110, 238, 247, 0.12) 0px, rgba(110, 238, 247, 0.12) 1px, rgba(0, 0, 0, 0) 1px, rgba(0, 0, 0, 0) 8px), conic-gradient(from 207deg, rgba(28, 184, 214, 0.72) 0deg, rgba(28, 184, 214, 0.72) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(28, 184, 214, 0.18) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "visibleImages": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "ok": true
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "ok": true
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "ok": true
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "ok": true
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "ok": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "bad": []
+}

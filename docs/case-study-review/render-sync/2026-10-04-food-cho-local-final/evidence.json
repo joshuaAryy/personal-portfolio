@@ -1,0 +1,891 @@
+{
+  "capturedAt": "2026-10-04T05:29:27.829Z",
+  "browser": "153.0.8010.53",
+  "base": "http://127.0.0.1:5173",
+  "viewports": [
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "runs": [
+    {
+      "page": "food",
+      "route": "/projects/food-tracker",
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "http://127.0.0.1:5173/projects/food-tracker",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "viewportWidth": 1920,
+          "viewportHeight": 1080
+        },
+        "main": {
+          "width": 1560,
+          "clientWidth": 1560,
+          "scrollWidth": 1560,
+          "height": 998,
+          "scrollHeight": 4727,
+          "overflowY": "auto"
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "naturalWidth": 884,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+            "width": 884,
+            "height": 222
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "naturalWidth": 368,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+            "width": 366,
+            "height": 796
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "naturalWidth": 1432,
+            "alt": "Illustrative composite system figure, not a product screenshot: above, in-app search gathers exact, fuzzy, and semantic food candidates, deterministic ranking orders them, trusted food data and serving rules resolve nutrition, and an editable food log records the result; below, React Native and Expo connect through Express and Prisma to a normalized catalog and backend serving resolution, then PostgreSQL stores the log and serving snapshot for editable History and Insights.",
+            "width": 1432,
+            "height": 710
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 40,
+            "height": 40
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": "",
+            "width": 13,
+            "height": 13
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": "",
+            "width": 8,
+            "height": 7
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": "",
+            "width": 7,
+            "height": 6
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          }
+        ]
+      },
+      "interactions": {
+        "loggingHeading": "One meal, several ways to get started.",
+        "insightsEyebrow": "INSIGHTS",
+        "scrollInfo": {
+          "internal": true,
+          "overflowY": "auto"
+        },
+        "connectorState": {
+          "pathBranchDisplay": "block",
+          "pathTrunkDisplay": "block",
+          "groupConnector": {
+            "width": 1107.1875,
+            "height": 20,
+            "top": 814.921875,
+            "bottom": 834.921875
+          },
+          "review": {
+            "top": 834.921875,
+            "bottom": 872.921875,
+            "width": 1374
+          }
+        },
+        "chapterLinks": [
+          {
+            "link": "PRODUCT",
+            "active": "PRODUCT"
+          },
+          {
+            "link": "LOGGING",
+            "active": "LOGGING"
+          },
+          {
+            "link": "INSIGHTS",
+            "active": "INSIGHTS"
+          },
+          {
+            "link": "RETRIEVAL",
+            "active": "RETRIEVAL"
+          },
+          {
+            "link": "IN PRODUCT",
+            "active": "IN PRODUCT"
+          },
+          {
+            "link": "ARCHITECTURE",
+            "active": "ARCHITECTURE"
+          },
+          {
+            "link": "RESULTS",
+            "active": "RESULTS"
+          },
+          {
+            "link": "LEARNING",
+            "active": "CLOSE"
+          },
+          {
+            "link": "CLOSE",
+            "active": "CLOSE"
+          }
+        ],
+        "atEnd": {
+          "isInternal": true,
+          "top": 3729,
+          "max": 3729
+        },
+        "endActive": "CLOSE",
+        "beforeEnd": {
+          "isInternal": true,
+          "top": 3726,
+          "max": 3729
+        },
+        "justBeforeEndActive": "RESULTS"
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 18,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true
+      }
+    },
+    {
+      "page": "cho",
+      "route": "/projects/choveigo",
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "http://127.0.0.1:5173/projects/choveigo",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "viewportWidth": 1920,
+          "viewportHeight": 1080
+        },
+        "main": {
+          "width": 1560,
+          "clientWidth": 1560,
+          "scrollWidth": 1560,
+          "height": 998,
+          "scrollHeight": 3355,
+          "overflowY": "auto"
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/choveigo-recommendations.png",
+            "loaded": true,
+            "naturalWidth": 864,
+            "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence",
+            "width": 818,
+            "height": 459
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 40,
+            "height": 40
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": "",
+            "width": 13,
+            "height": 13
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": "",
+            "width": 8,
+            "height": 7
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": "",
+            "width": 7,
+            "height": 6
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 26,
+            "height": 26
+          }
+        ]
+      },
+      "interactions": {
+        "distinctInputsText": "INPUTS THAT STAY DISTINCT\n\nROLE RECORD\n\nJob feeds and persisted role data lead to a structured role record. Responsibilities and core requirements give matching something concrete to evaluate.\n\nPROFILE + RESUME EVIDENCE\n\nDemonstrated and transferable evidence stays distinct from visible gaps. Structured Gemini interpretation remains tied to the supplied role and candidate material.",
+        "cards": [
+          {
+            "left": 64,
+            "right": 768,
+            "top": 1400.515625,
+            "bottom": 1487.515625,
+            "width": 704,
+            "height": 87
+          },
+          {
+            "left": 792,
+            "right": 1496,
+            "top": 1400.515625,
+            "bottom": 1487.515625,
+            "width": 704,
+            "height": 87
+          }
+        ],
+        "architecture": {
+          "bottom": 1353.328125
+        },
+        "boundaries": {
+          "top": 1519.515625
+        },
+        "rowBetweenArchitectureAndBoundaries": true
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 15,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true
+      }
+    },
+    {
+      "page": "food",
+      "route": "/projects/food-tracker",
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "http://127.0.0.1:5173/projects/food-tracker",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 6803,
+          "viewportWidth": 390,
+          "viewportHeight": 844
+        },
+        "main": {
+          "width": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "height": 6733,
+          "scrollHeight": 6733,
+          "overflowY": "visible"
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": "",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 44,
+            "height": 44
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "naturalWidth": 884,
+            "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "naturalWidth": 368,
+            "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+            "width": 302,
+            "height": 657
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "naturalWidth": 1432,
+            "alt": "Illustrative composite system figure, not a product screenshot: above, in-app search gathers exact, fuzzy, and semantic food candidates, deterministic ranking orders them, trusted food data and serving rules resolve nutrition, and an editable food log records the result; below, React Native and Expo connect through Express and Prisma to a normalized catalog and backend serving resolution, then PostgreSQL stores the log and serving snapshot for editable History and Insights.",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          }
+        ]
+      },
+      "interactions": {
+        "loggingHeading": "One meal, several ways to get started.",
+        "insightsEyebrow": "INSIGHTS",
+        "scrollInfo": {
+          "internal": false,
+          "overflowY": "visible"
+        },
+        "connectorState": {
+          "pathBranchDisplay": "none",
+          "pathTrunkDisplay": "none",
+          "groupConnector": {
+            "width": 1,
+            "height": 20,
+            "top": 1255.25,
+            "bottom": 1275.25
+          },
+          "review": {
+            "top": 1275.25,
+            "bottom": 1363.25,
+            "width": 312
+          }
+        },
+        "chapterLinks": [
+          {
+            "link": "PRODUCT",
+            "active": "PRODUCT"
+          },
+          {
+            "link": "LOGGING",
+            "active": "LOGGING"
+          },
+          {
+            "link": "INSIGHTS",
+            "active": "INSIGHTS"
+          },
+          {
+            "link": "RETRIEVAL",
+            "active": "RETRIEVAL"
+          },
+          {
+            "link": "IN PRODUCT",
+            "active": "IN PRODUCT"
+          },
+          {
+            "link": "ARCHITECTURE",
+            "active": "ARCHITECTURE"
+          },
+          {
+            "link": "RESULTS",
+            "active": "RESULTS"
+          },
+          {
+            "link": "LEARNING",
+            "active": "CLOSE"
+          },
+          {
+            "link": "CLOSE",
+            "active": "CLOSE"
+          }
+        ],
+        "atEnd": {
+          "isInternal": false,
+          "top": 5959,
+          "max": 5959
+        },
+        "endActive": "CLOSE",
+        "beforeEnd": {
+          "isInternal": false,
+          "top": 5956,
+          "max": 5959
+        },
+        "justBeforeEndActive": "RESULTS"
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 18,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true
+      }
+    },
+    {
+      "page": "cho",
+      "route": "/projects/choveigo",
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "http://127.0.0.1:5173/projects/choveigo",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 5473,
+          "viewportWidth": 390,
+          "viewportHeight": 844
+        },
+        "main": {
+          "width": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "height": 5403,
+          "scrollHeight": 5403,
+          "overflowY": "visible"
+        },
+        "images": [
+          {
+            "src": "http://127.0.0.1:5173/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "alt": "",
+            "width": 32,
+            "height": 32
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 54,
+            "height": 54
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/choveigo-recommendations.png",
+            "loaded": true,
+            "naturalWidth": 864,
+            "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence",
+            "width": 348,
+            "height": 195
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          },
+          {
+            "src": "http://127.0.0.1:5173/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "alt": "",
+            "width": 0,
+            "height": 0
+          }
+        ]
+      },
+      "interactions": {
+        "distinctInputsText": "INPUTS THAT STAY DISTINCT\n\nROLE RECORD\n\nJob feeds and persisted role data lead to a structured role record. Responsibilities and core requirements give matching something concrete to evaluate.\n\nPROFILE + RESUME EVIDENCE\n\nDemonstrated and transferable evidence stays distinct from visible gaps. Structured Gemini interpretation remains tied to the supplied role and candidate material.",
+        "cards": [
+          {
+            "left": 20,
+            "right": 370,
+            "top": 1954.8125,
+            "bottom": 2059.8125,
+            "width": 350,
+            "height": 105
+          },
+          {
+            "left": 20,
+            "right": 370,
+            "top": 2068.8125,
+            "bottom": 2173.8125,
+            "width": 350,
+            "height": 105
+          }
+        ],
+        "architecture": {
+          "bottom": 1907.625
+        },
+        "boundaries": {
+          "top": 2199.8125
+        },
+        "rowBetweenArchitectureAndBoundaries": true
+      },
+      "errors": [],
+      "checks": {
+        "http200": true,
+        "allImagesLoaded": true,
+        "imageCount": 15,
+        "noHorizontalDocumentOverflow": true,
+        "noMainHorizontalOverflow": true,
+        "noErrors": true
+      }
+    }
+  ]
+}

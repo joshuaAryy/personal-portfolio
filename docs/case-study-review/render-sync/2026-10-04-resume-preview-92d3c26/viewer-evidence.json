@@ -1,0 +1,394 @@
+{
+  "capturedAt": "2026-10-04T08:19:27.054Z",
+  "url": "https://965f0e82.joshuaik2.pages.dev/resume/viewer",
+  "source": "92d3c26",
+  "browser": "153.0.8010.53",
+  "viewports": [
+    [
+      1920,
+      1080
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "runs": [
+    {
+      "viewport": "desktop",
+      "status": 200,
+      "initial": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/resume/viewer",
+        "title": "RESUME",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "scrollTop": 0,
+          "scrollHeight": 970,
+          "clientHeight": 970,
+          "overflowY": "auto"
+        },
+        "iframe": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "title": "Joshua Aryeetey’s approved general resume, version 13",
+          "rect": {
+            "x": 141,
+            "y": 246,
+            "width": 1318,
+            "height": 734.390625
+          }
+        },
+        "actions": [
+          {
+            "text": "DOWNLOAD PDF",
+            "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": "",
+            "download": "Joshua_Aryeetey_General_Resume_v13.pdf"
+          },
+          {
+            "text": "OPEN FULLSCREEN ↗ (OPENS IN A NEW TAB)",
+            "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": "_blank",
+            "download": ""
+          }
+        ]
+      },
+      "scroll": {
+        "before": {
+          "scrollTop": 0,
+          "scrollHeight": 970,
+          "clientHeight": 970,
+          "overflowY": "auto"
+        },
+        "after": {
+          "scrollTop": 0,
+          "scrollHeight": 970,
+          "clientHeight": 970,
+          "overflowY": "auto"
+        },
+        "iframe": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "title": "Joshua Aryeetey’s approved general resume, version 13",
+          "rect": {
+            "x": 141,
+            "y": 246,
+            "width": 1318,
+            "height": 734.390625
+          }
+        },
+        "beforeScreenshot": "viewer-desktop-initial.png",
+        "afterScreenshot": "viewer-desktop-pdf-after-scroll.png"
+      },
+      "download": {
+        "focus": {
+          "index": 2,
+          "text": "DOWNLOAD PDF",
+          "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "target": null,
+          "download": "Joshua_Aryeetey_General_Resume_v13.pdf",
+          "cls": "resume-action resume-action--primary",
+          "tag": "A"
+        },
+        "filename": "Joshua_Aryeetey_General_Resume_v13.pdf",
+        "saved": "C:\\Users\\samue\\AppData\\Local\\Temp\\resume-pdf-viewer-preview-92d3c26\\resume-v13-desktop.pdf",
+        "size": 164726,
+        "pdfSignature": "%PDF-",
+        "isPdf": true
+      },
+      "fullscreen": {
+        "focus": {
+          "index": 3,
+          "text": "OPEN FULLSCREEN ↗ (OPENS IN A NEW TAB)",
+          "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "target": "_blank",
+          "download": null,
+          "cls": "resume-action resume-action--secondary",
+          "tag": "A"
+        },
+        "newTab": {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "title": "",
+          "isPdf": true,
+          "pdfResponse": [
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "type": "application/pdf",
+              "length": "164726"
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "length": null
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "type": "application/pdf",
+              "length": "164726"
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "length": null
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "type": "application/pdf",
+              "length": "164726"
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "length": null
+            }
+          ]
+        }
+      },
+      "pdfResponses": [
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "type": "application/pdf",
+          "length": "164726"
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "length": null
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "type": "application/pdf",
+          "length": "164726"
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "length": null
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "type": "application/pdf",
+          "length": "164726"
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "length": null
+        }
+      ],
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "noHorizontalOverflow": true,
+        "pdfIframePresent": true,
+        "downloadKeyboardFocus": true,
+        "downloadPdf": true,
+        "fullscreenKeyboardFocus": true,
+        "fullscreenNewTab": true,
+        "noBrowserErrors": true
+      }
+    },
+    {
+      "viewport": "narrow",
+      "status": 200,
+      "initial": {
+        "url": "https://965f0e82.joshuaik2.pages.dev/resume/viewer",
+        "title": "RESUME",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 947,
+          "scrollY": 70
+        },
+        "main": {
+          "scrollTop": 0,
+          "scrollHeight": 877,
+          "clientHeight": 877,
+          "overflowY": "visible"
+        },
+        "iframe": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "title": "Joshua Aryeetey’s approved general resume, version 13",
+          "rect": {
+            "x": 15,
+            "y": 173,
+            "width": 360,
+            "height": 640
+          }
+        },
+        "actions": [
+          {
+            "text": "DOWNLOAD PDF",
+            "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": "",
+            "download": "Joshua_Aryeetey_General_Resume_v13.pdf"
+          },
+          {
+            "text": "OPEN FULLSCREEN ↗ (OPENS IN A NEW TAB)",
+            "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "target": "_blank",
+            "download": ""
+          }
+        ]
+      },
+      "scroll": {
+        "before": {
+          "scrollTop": 0,
+          "scrollHeight": 877,
+          "clientHeight": 877,
+          "overflowY": "visible"
+        },
+        "after": {
+          "scrollTop": 0,
+          "scrollHeight": 877,
+          "clientHeight": 877,
+          "overflowY": "visible"
+        },
+        "iframe": {
+          "src": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "title": "Joshua Aryeetey’s approved general resume, version 13",
+          "rect": {
+            "x": 15,
+            "y": 140,
+            "width": 360,
+            "height": 640
+          }
+        },
+        "beforeScreenshot": "viewer-narrow-initial.png",
+        "afterScreenshot": "viewer-narrow-pdf-after-scroll.png"
+      },
+      "download": {
+        "focus": {
+          "index": 2,
+          "text": "DOWNLOAD PDF",
+          "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "target": null,
+          "download": "Joshua_Aryeetey_General_Resume_v13.pdf",
+          "cls": "resume-action resume-action--primary",
+          "tag": "A"
+        },
+        "filename": "Joshua_Aryeetey_General_Resume_v13.pdf",
+        "saved": "C:\\Users\\samue\\AppData\\Local\\Temp\\resume-pdf-viewer-preview-92d3c26\\resume-v13-narrow.pdf",
+        "size": 164726,
+        "pdfSignature": "%PDF-",
+        "isPdf": true
+      },
+      "fullscreen": {
+        "focus": {
+          "index": 3,
+          "text": "OPEN FULLSCREEN ↗ (OPENS IN A NEW TAB)",
+          "href": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "target": "_blank",
+          "download": null,
+          "cls": "resume-action resume-action--secondary",
+          "tag": "A"
+        },
+        "newTab": {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "title": "",
+          "isPdf": true,
+          "pdfResponse": [
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "type": "application/pdf",
+              "length": "164726"
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "length": null
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "type": "application/pdf",
+              "length": "164726"
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "length": null
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "type": "application/pdf",
+              "length": "164726"
+            },
+            {
+              "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+              "status": 200,
+              "length": null
+            }
+          ]
+        }
+      },
+      "pdfResponses": [
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "type": "application/pdf",
+          "length": "164726"
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "length": null
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "type": "application/pdf",
+          "length": "164726"
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "length": null
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "type": "application/pdf",
+          "length": "164726"
+        },
+        {
+          "url": "https://965f0e82.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+          "status": 200,
+          "length": null
+        }
+      ],
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "http200": true,
+        "noHorizontalOverflow": true,
+        "pdfIframePresent": true,
+        "downloadKeyboardFocus": true,
+        "downloadPdf": true,
+        "fullscreenKeyboardFocus": true,
+        "fullscreenNewTab": true,
+        "noBrowserErrors": true
+      }
+    }
+  ]
+}

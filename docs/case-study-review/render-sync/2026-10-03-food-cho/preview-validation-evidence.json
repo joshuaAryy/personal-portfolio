@@ -1,0 +1,1176 @@
+{
+  "capturedAt": "2026-10-03T21:56:27.187Z",
+  "browser": "153.0.8010.53",
+  "preview": {
+    "base": "https://b79f647d.joshuaik2.pages.dev",
+    "deployment": "b79f647d-a93b-4a41-b3c2-98f70686e362",
+    "branch": "feat/portfolio-integration",
+    "source": "86d5d89"
+  },
+  "routes": [
+    {
+      "case": "food-tracker",
+      "url": "https://b79f647d.joshuaik2.pages.dev/projects/food-tracker",
+      "status": 200,
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      "figmaReviewFrameHeight": 4760,
+      "fullPageHeightDelta": 79,
+      "fullPageHeightDeltaPercent": 1.66,
+      "viewportScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/food-tracker-desktop-viewport.png",
+      "fullPageScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/food-tracker-desktop-full.png",
+      "fullPageMethod": "capture-only expansion of internal main scroller",
+      "screenshotSize": {
+        "width": 1920,
+        "height": 4839
+      },
+      "initial": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 1560,
+          "height": 998,
+          "scrollWidth": 1560,
+          "clientWidth": 1560,
+          "scrollHeight": 4757,
+          "clientHeight": 998
+        },
+        "article": {
+          "x": 0,
+          "y": 142,
+          "width": 1560,
+          "height": 4697,
+          "scrollWidth": 1560,
+          "clientWidth": 1560,
+          "scrollHeight": 4697,
+          "clientHeight": 4697
+        },
+        "requiredSections": [
+          {
+            "id": "food-overview",
+            "present": true
+          },
+          {
+            "id": "food-logging",
+            "present": true
+          },
+          {
+            "id": "food-insights",
+            "present": true
+          },
+          {
+            "id": "food-search",
+            "present": true
+          },
+          {
+            "id": "food-interface",
+            "present": true
+          },
+          {
+            "id": "food-system",
+            "present": true
+          },
+          {
+            "id": "food-evaluation",
+            "present": true
+          },
+          {
+            "id": "food-iteration",
+            "present": true
+          },
+          {
+            "id": "food-boundaries",
+            "present": true
+          },
+          {
+            "id": "food-workflow",
+            "present": true
+          },
+          {
+            "id": "food-reflection",
+            "present": true
+          }
+        ],
+        "sectionHeadings": [
+          {
+            "id": "food-overview",
+            "heading": "Simple food logs. Trusted nutrition."
+          },
+          {
+            "id": "food-logging",
+            "heading": "A meal can start in five ways."
+          },
+          {
+            "id": "food-insights",
+            "heading": "Turn saved logs into a view of patterns over time."
+          },
+          {
+            "id": "food-search",
+            "heading": ""
+          },
+          {
+            "id": "food-interface",
+            "heading": "One query can surface several plausible foods."
+          },
+          {
+            "id": "food-system",
+            "heading": ""
+          },
+          {
+            "id": "food-evaluation",
+            "heading": "Hybrid search put the intended food first more often."
+          },
+          {
+            "id": "food-iteration",
+            "heading": "Passing tests did not guarantee useful search."
+          },
+          {
+            "id": "food-boundaries",
+            "heading": "Keep intent, nutrition, and recorded history distinct."
+          },
+          {
+            "id": "food-workflow",
+            "heading": "Useful search means the right food appears first."
+          },
+          {
+            "id": "food-reflection",
+            "heading": "A useful match must resolve into trusted nutrition."
+          }
+        ],
+        "images": [
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "naturalWidth": 884,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "naturalWidth": 368,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "naturalWidth": 1432,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          }
+        ],
+        "navLabels": [
+          "Food Tracker case study"
+        ]
+      },
+      "anchorChecks": [
+        {
+          "label": "PRODUCT",
+          "expectedHash": "#food-overview",
+          "actualHash": "#food-overview",
+          "activeText": "PRODUCT",
+          "activeHref": "#food-overview",
+          "ariaCurrent": "location",
+          "mainScrollTop": 48,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 76
+        },
+        {
+          "label": "INSIGHTS",
+          "expectedHash": "#food-insights",
+          "actualHash": "#food-insights",
+          "activeText": "INSIGHTS",
+          "activeHref": "#food-insights",
+          "ariaCurrent": "location",
+          "mainScrollTop": 819,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 76
+        },
+        {
+          "label": "ARCHITECTURE",
+          "expectedHash": "#food-system",
+          "actualHash": "#food-system",
+          "activeText": "ARCHITECTURE",
+          "activeHref": "#food-system",
+          "ariaCurrent": "location",
+          "mainScrollTop": 2558,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 76
+        }
+      ],
+      "scrollspyWheel": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "case": "food-tracker",
+      "url": "https://b79f647d.joshuaik2.pages.dev/projects/food-tracker",
+      "status": 200,
+      "viewport": {
+        "name": "narrow",
+        "width": 390,
+        "height": 844
+      },
+      "figmaReviewFrameHeight": 4760,
+      "fullPageHeightDelta": 2082,
+      "fullPageHeightDeltaPercent": 43.74,
+      "viewportScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/food-tracker-narrow-viewport.png",
+      "fullPageScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/food-tracker-narrow-full.png",
+      "fullPageMethod": "native page fullPage",
+      "screenshotSize": {
+        "width": 390,
+        "height": 6842
+      },
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 6842
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 6772,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 6772,
+          "clientHeight": 6772
+        },
+        "article": {
+          "x": 0,
+          "y": 60,
+          "width": 390,
+          "height": 6712,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 6712,
+          "clientHeight": 6712
+        },
+        "requiredSections": [
+          {
+            "id": "food-overview",
+            "present": true
+          },
+          {
+            "id": "food-logging",
+            "present": true
+          },
+          {
+            "id": "food-insights",
+            "present": true
+          },
+          {
+            "id": "food-search",
+            "present": true
+          },
+          {
+            "id": "food-interface",
+            "present": true
+          },
+          {
+            "id": "food-system",
+            "present": true
+          },
+          {
+            "id": "food-evaluation",
+            "present": true
+          },
+          {
+            "id": "food-iteration",
+            "present": true
+          },
+          {
+            "id": "food-boundaries",
+            "present": true
+          },
+          {
+            "id": "food-workflow",
+            "present": true
+          },
+          {
+            "id": "food-reflection",
+            "present": true
+          }
+        ],
+        "sectionHeadings": [
+          {
+            "id": "food-overview",
+            "heading": "Simple food logs. Trusted nutrition."
+          },
+          {
+            "id": "food-logging",
+            "heading": "A meal can start in five ways."
+          },
+          {
+            "id": "food-insights",
+            "heading": "Turn saved logs into a view of patterns over time."
+          },
+          {
+            "id": "food-search",
+            "heading": ""
+          },
+          {
+            "id": "food-interface",
+            "heading": "One query can surface several plausible foods."
+          },
+          {
+            "id": "food-system",
+            "heading": ""
+          },
+          {
+            "id": "food-evaluation",
+            "heading": "Hybrid search put the intended food first more often."
+          },
+          {
+            "id": "food-iteration",
+            "heading": "Passing tests did not guarantee useful search."
+          },
+          {
+            "id": "food-boundaries",
+            "heading": "Keep intent, nutrition, and recorded history distinct."
+          },
+          {
+            "id": "food-workflow",
+            "heading": "Useful search means the right food appears first."
+          },
+          {
+            "id": "food-reflection",
+            "heading": "A useful match must resolve into trusted nutrition."
+          }
+        ],
+        "images": [
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/case-studies/food-product-flow-pass-09-inset.png",
+            "loaded": true,
+            "naturalWidth": 884,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+            "loaded": true,
+            "naturalWidth": 368,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/case-studies/food-system-pass-10.png",
+            "loaded": true,
+            "naturalWidth": 1432,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          }
+        ],
+        "navLabels": [
+          "Food Tracker case study"
+        ]
+      },
+      "anchorChecks": [
+        {
+          "label": "PRODUCT",
+          "expectedHash": "#food-overview",
+          "actualHash": "#food-overview",
+          "activeText": "PRODUCT",
+          "activeHref": "#food-overview",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 90,
+          "targetTopRelativeMain": 96
+        },
+        {
+          "label": "INSIGHTS",
+          "expectedHash": "#food-insights",
+          "actualHash": "#food-insights",
+          "activeText": "INSIGHTS",
+          "activeHref": "#food-insights",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 1416,
+          "targetTopRelativeMain": 1422
+        },
+        {
+          "label": "ARCHITECTURE",
+          "expectedHash": "#food-system",
+          "actualHash": "#food-system",
+          "activeText": "ARCHITECTURE",
+          "activeHref": "#food-system",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 4498,
+          "targetTopRelativeMain": 4504
+        }
+      ],
+      "scrollspyWheel": null,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "case": "choveigo",
+      "url": "https://b79f647d.joshuaik2.pages.dev/projects/choveigo",
+      "status": 200,
+      "viewport": {
+        "name": "desktop",
+        "width": 1920,
+        "height": 1080
+      },
+      "figmaReviewFrameHeight": 3535,
+      "fullPageHeightDelta": -232,
+      "fullPageHeightDeltaPercent": -6.56,
+      "viewportScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/choveigo-desktop-viewport.png",
+      "fullPageScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/choveigo-desktop-full.png",
+      "fullPageMethod": "capture-only expansion of internal main scroller",
+      "screenshotSize": {
+        "width": 1920,
+        "height": 3303
+      },
+      "initial": {
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 1560,
+          "height": 998,
+          "scrollWidth": 1560,
+          "clientWidth": 1560,
+          "scrollHeight": 3221,
+          "clientHeight": 998
+        },
+        "article": {
+          "x": 0,
+          "y": 142,
+          "width": 1560,
+          "height": 3161,
+          "scrollWidth": 1560,
+          "clientWidth": 1560,
+          "scrollHeight": 3161,
+          "clientHeight": 3161
+        },
+        "requiredSections": [
+          {
+            "id": "choveigo-overview",
+            "present": true
+          },
+          {
+            "id": "choveigo-system",
+            "present": true
+          },
+          {
+            "id": "choveigo-fit",
+            "present": true
+          },
+          {
+            "id": "choveigo-review",
+            "present": true
+          },
+          {
+            "id": "choveigo-change",
+            "present": true
+          }
+        ],
+        "sectionHeadings": [
+          {
+            "id": "choveigo-overview",
+            "heading": "Cho’Veigo"
+          },
+          {
+            "id": "choveigo-system",
+            "heading": "How a role becomes a recommendation."
+          },
+          {
+            "id": "choveigo-fit",
+            "heading": "A title or stack is only a clue."
+          },
+          {
+            "id": "choveigo-review",
+            "heading": "A mismatch became a better test."
+          },
+          {
+            "id": "choveigo-change",
+            "heading": "I learned to evaluate recommendations through the evidence that supports them."
+          }
+        ],
+        "images": [
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/choveigo-recommendations.png",
+            "loaded": true,
+            "naturalWidth": 864,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          }
+        ],
+        "navLabels": [
+          "Cho’Veigo case study"
+        ]
+      },
+      "anchorChecks": [
+        {
+          "label": "OVERVIEW",
+          "expectedHash": "#choveigo-overview",
+          "actualHash": "#choveigo-overview",
+          "activeText": "OVERVIEW",
+          "activeHref": "#choveigo-overview",
+          "ariaCurrent": "location",
+          "mainScrollTop": 18,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 76
+        },
+        {
+          "label": "SYSTEM PATH",
+          "expectedHash": "#choveigo-system",
+          "actualHash": "#choveigo-system",
+          "activeText": "SYSTEM PATH",
+          "activeHref": "#choveigo-system",
+          "ariaCurrent": "location",
+          "mainScrollTop": 682,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 76
+        },
+        {
+          "label": "FIT MODEL",
+          "expectedHash": "#choveigo-fit",
+          "actualHash": "#choveigo-fit",
+          "activeText": "FIT MODEL",
+          "activeHref": "#choveigo-fit",
+          "ariaCurrent": "location",
+          "mainScrollTop": 1653,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 76
+        },
+        {
+          "label": "HUMAN REVIEW",
+          "expectedHash": "#choveigo-review",
+          "actualHash": "#choveigo-review",
+          "activeText": "HUMAN REVIEW",
+          "activeHref": "#choveigo-review",
+          "ariaCurrent": "location",
+          "mainScrollTop": 2223,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 337
+        },
+        {
+          "label": "WHAT CHANGED",
+          "expectedHash": "#choveigo-change",
+          "actualHash": "#choveigo-change",
+          "activeText": "WHAT CHANGED",
+          "activeHref": "#choveigo-change",
+          "ariaCurrent": "location",
+          "mainScrollTop": 2223,
+          "windowScrollY": 0,
+          "targetTopRelativeMain": 654
+        }
+      ],
+      "scrollspyWheel": {
+        "afterReviewClick": {
+          "hash": "#choveigo-review",
+          "activeText": "HUMAN REVIEW",
+          "ariaCurrent": "location",
+          "mainScrollTop": 2223,
+          "mainClientHeight": 998,
+          "mainScrollHeight": 3221,
+          "windowScrollY": 0,
+          "docWidth": 1920,
+          "clientWidth": 1920
+        },
+        "afterWheelAway": {
+          "hash": "#choveigo-review",
+          "activeText": "OVERVIEW",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "mainClientHeight": 998,
+          "mainScrollHeight": 3221,
+          "windowScrollY": 0,
+          "docWidth": 1920,
+          "clientWidth": 1920
+        },
+        "afterWheelToBottom": {
+          "hash": "#choveigo-review",
+          "activeText": "WHAT CHANGED",
+          "ariaCurrent": "location",
+          "mainScrollTop": 2223,
+          "mainClientHeight": 998,
+          "mainScrollHeight": 3221,
+          "windowScrollY": 0,
+          "docWidth": 1920,
+          "clientWidth": 1920
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    },
+    {
+      "case": "choveigo",
+      "url": "https://b79f647d.joshuaik2.pages.dev/projects/choveigo",
+      "status": 200,
+      "viewport": {
+        "name": "narrow",
+        "width": 390,
+        "height": 844
+      },
+      "figmaReviewFrameHeight": 3535,
+      "fullPageHeightDelta": 1672,
+      "fullPageHeightDeltaPercent": 47.3,
+      "viewportScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/choveigo-narrow-viewport.png",
+      "fullPageScreenshot": "C:\\Users\\samue\\AppData\\Local\\Temp\\final-clean-preview-nav-qa-20261003-175620/choveigo-narrow-full.png",
+      "fullPageMethod": "native page fullPage",
+      "screenshotSize": {
+        "width": 390,
+        "height": 5207
+      },
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 5207
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 5137,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 5137,
+          "clientHeight": 5137
+        },
+        "article": {
+          "x": 0,
+          "y": 60,
+          "width": 390,
+          "height": 5077,
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 5077,
+          "clientHeight": 5077
+        },
+        "requiredSections": [
+          {
+            "id": "choveigo-overview",
+            "present": true
+          },
+          {
+            "id": "choveigo-system",
+            "present": true
+          },
+          {
+            "id": "choveigo-fit",
+            "present": true
+          },
+          {
+            "id": "choveigo-review",
+            "present": true
+          },
+          {
+            "id": "choveigo-change",
+            "present": true
+          }
+        ],
+        "sectionHeadings": [
+          {
+            "id": "choveigo-overview",
+            "heading": "Cho’Veigo"
+          },
+          {
+            "id": "choveigo-system",
+            "heading": "How a role becomes a recommendation."
+          },
+          {
+            "id": "choveigo-fit",
+            "heading": "A title or stack is only a clue."
+          },
+          {
+            "id": "choveigo-review",
+            "heading": "A mismatch became a better test."
+          },
+          {
+            "id": "choveigo-change",
+            "heading": "I learned to evaluate recommendations through the evidence that supports them."
+          }
+        ],
+        "images": [
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/choveigo-recommendations.png",
+            "loaded": true,
+            "naturalWidth": 864,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          },
+          {
+            "src": "https://b79f647d.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "altPresent": true
+          }
+        ],
+        "navLabels": [
+          "Cho’Veigo case study"
+        ]
+      },
+      "anchorChecks": [
+        {
+          "label": "OVERVIEW",
+          "expectedHash": "#choveigo-overview",
+          "actualHash": "#choveigo-overview",
+          "activeText": "OVERVIEW",
+          "activeHref": "#choveigo-overview",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 90,
+          "targetTopRelativeMain": 96
+        },
+        {
+          "label": "SYSTEM PATH",
+          "expectedHash": "#choveigo-system",
+          "actualHash": "#choveigo-system",
+          "activeText": "SYSTEM PATH",
+          "activeHref": "#choveigo-system",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 715,
+          "targetTopRelativeMain": 721
+        },
+        {
+          "label": "FIT MODEL",
+          "expectedHash": "#choveigo-fit",
+          "actualHash": "#choveigo-fit",
+          "activeText": "FIT MODEL",
+          "activeHref": "#choveigo-fit",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 2778,
+          "targetTopRelativeMain": 2784
+        },
+        {
+          "label": "HUMAN REVIEW",
+          "expectedHash": "#choveigo-review",
+          "actualHash": "#choveigo-review",
+          "activeText": "HUMAN REVIEW",
+          "activeHref": "#choveigo-review",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 4155,
+          "targetTopRelativeMain": 4161
+        },
+        {
+          "label": "WHAT CHANGED",
+          "expectedHash": "#choveigo-change",
+          "actualHash": "#choveigo-change",
+          "activeText": "WHAT CHANGED",
+          "activeHref": "#choveigo-change",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "windowScrollY": 4363,
+          "targetTopRelativeMain": 4663
+        }
+      ],
+      "scrollspyWheel": {
+        "afterReviewClick": {
+          "hash": "#choveigo-review",
+          "activeText": "HUMAN REVIEW",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "mainClientHeight": 5137,
+          "mainScrollHeight": 5137,
+          "windowScrollY": 4155,
+          "docWidth": 390,
+          "clientWidth": 390
+        },
+        "afterWheelAway": {
+          "hash": "#choveigo-review",
+          "activeText": "OVERVIEW",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "mainClientHeight": 5137,
+          "mainScrollHeight": 5137,
+          "windowScrollY": 0,
+          "docWidth": 390,
+          "clientWidth": 390
+        },
+        "afterWheelToBottom": {
+          "hash": "#choveigo-review",
+          "activeText": "WHAT CHANGED",
+          "ariaCurrent": "location",
+          "mainScrollTop": 0,
+          "mainClientHeight": 5137,
+          "mainScrollHeight": 5137,
+          "windowScrollY": 4363,
+          "docWidth": 390,
+          "clientWidth": 390
+        }
+      },
+      "consoleErrors": [],
+      "pageErrors": [],
+      "failedRequests": [],
+      "badResponses": []
+    }
+  ]
+}

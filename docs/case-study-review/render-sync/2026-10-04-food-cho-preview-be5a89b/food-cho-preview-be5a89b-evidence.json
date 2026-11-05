@@ -1,0 +1,2378 @@
+{
+  "sourceExpected": "be5a89b",
+  "deployment": "https://b2e00552.joshuaik2.pages.dev",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T12:14:09.907Z",
+  "routes": {
+    "food": {
+      "path": "/projects/food-tracker",
+      "viewports": {
+        "1920x1080": {
+          "status": 200,
+          "viewport": {
+            "width": 1920,
+            "height": 1080,
+            "deviceScaleFactor": 1
+          },
+          "initial": {
+            "url": "https://b2e00552.joshuaik2.pages.dev/projects/food-tracker",
+            "title": "Joshua Aryeetey · Portfolio",
+            "document": {
+              "scrollWidth": 1920,
+              "clientWidth": 1920,
+              "scrollHeight": 1080,
+              "clientHeight": 1080,
+              "scrollY": 0
+            },
+            "main": {
+              "id": "main",
+              "className": "main main--detail main--food-case",
+              "rect": {
+                "x": 0,
+                "y": 82,
+                "width": 1560,
+                "height": 998
+              },
+              "scrollWidth": 1560,
+              "clientWidth": 1560,
+              "scrollHeight": 4727,
+              "clientHeight": 998,
+              "scrollTop": 0,
+              "overflowY": "auto"
+            },
+            "chapterLinks": [
+              {
+                "text": "PRODUCT",
+                "href": "#food-overview",
+                "ariaCurrent": "location"
+              },
+              {
+                "text": "LOGGING",
+                "href": "#food-logging",
+                "ariaCurrent": null
+              },
+              {
+                "text": "INSIGHTS",
+                "href": "#food-insights",
+                "ariaCurrent": null
+              },
+              {
+                "text": "RETRIEVAL",
+                "href": "#food-search",
+                "ariaCurrent": null
+              },
+              {
+                "text": "IN PRODUCT",
+                "href": "#food-interface",
+                "ariaCurrent": null
+              },
+              {
+                "text": "ARCHITECTURE",
+                "href": "#food-system",
+                "ariaCurrent": null
+              },
+              {
+                "text": "RESULTS",
+                "href": "#food-evaluation",
+                "ariaCurrent": null
+              },
+              {
+                "text": "LEARNING",
+                "href": "#food-workflow",
+                "ariaCurrent": null
+              },
+              {
+                "text": "CLOSE",
+                "href": "#food-reflection",
+                "ariaCurrent": null
+              }
+            ],
+            "sections": [
+              {
+                "id": "food-overview",
+                "tag": "SECTION",
+                "heading": "Simple food logs.\nTrusted nutrition."
+              },
+              {
+                "id": "food-logging",
+                "tag": "SECTION",
+                "heading": "One meal, several ways to get started."
+              },
+              {
+                "id": "food-logging-title",
+                "tag": "H2",
+                "heading": null
+              },
+              {
+                "id": "food-insights",
+                "tag": "SECTION",
+                "heading": "Turn saved logs into a view of patterns over time."
+              },
+              {
+                "id": "food-insights-title",
+                "tag": "H2",
+                "heading": null
+              },
+              {
+                "id": "food-search",
+                "tag": "SECTION",
+                "heading": null
+              },
+              {
+                "id": "food-retrieval-flow-title",
+                "tag": "FIGCAPTION",
+                "heading": null
+              },
+              {
+                "id": "food-interface",
+                "tag": "SECTION",
+                "heading": "One query can surface\nseveral plausible foods."
+              },
+              {
+                "id": "food-interface-title",
+                "tag": "H2",
+                "heading": null
+              },
+              {
+                "id": "food-system",
+                "tag": "SECTION",
+                "heading": null
+              },
+              {
+                "id": "food-system-map-title",
+                "tag": "SPAN",
+                "heading": null
+              },
+              {
+                "id": "food-evaluation",
+                "tag": "SECTION",
+                "heading": "Hybrid search put the intended food first more often."
+              },
+              {
+                "id": "food-benchmark-title",
+                "tag": "FIGCAPTION",
+                "heading": null
+              },
+              {
+                "id": "food-iteration",
+                "tag": "SECTION",
+                "heading": "Passing tests did not guarantee useful search."
+              },
+              {
+                "id": "food-boundaries",
+                "tag": "SECTION",
+                "heading": "Keep intent, nutrition, and recorded history distinct."
+              },
+              {
+                "id": "food-workflow",
+                "tag": "SECTION",
+                "heading": "Useful search means the right food appears first."
+              },
+              {
+                "id": "food-reflection",
+                "tag": "SECTION",
+                "heading": "A useful match must resolve into trusted nutrition."
+              }
+            ],
+            "figures": [
+              {
+                "ariaLabel": "Food Tracker product path schematic",
+                "labelledby": null,
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Food Tracker product path schematic\":\n  - 'img \"Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.\"'",
+                "text": ""
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "food-retrieval-flow-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.\":\n  - text: RETRIEVAL FLOW · CANDIDATE SOURCES ONLY\n  - strong: Search broadly. Rank deterministically.\n  - 'img \"Food retrieval flow: a query branches into deterministic, fuzzy, and semantic candidates. The candidates are combined, deterministically evaluated, then ranked. Pinecone supplies candidates only.\"':\n    - text: USER QUERY\n    - strong: DETERMINISTIC\n    - text: Direct matches\n    - strong: FUZZY\n    - text: Near-text matches\n    - strong: SEMANTIC · PINECONE\n    - text: Candidate supply only CANDIDATE UNION\n    - strong: DETERMINISTIC EVALUATION\n    - text: Rules decide rank\n    - strong: FINAL RANK\n    - text: 1 2 3\n  - paragraph: SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery.\n  - paragraph: AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition.",
+                "text": "RETRIEVAL FLOW · CANDIDATE SOURCES ONLY\nSearch broadly. Rank deterministically.\nUSER QUERY\n→\nDETERMINISTIC\nDirect matches\nFUZZY\nNear-text matches\nSEMANTIC · PINECONE\nCandidate supply only\n→\nCANDIDATE UNION\n→\nDETERMINISTIC EVALUATION\nRules decide rank\n→\nFINAL RANK\n1\n2\n3\n\nSEARCH TRADE-OFF\nI found semantic retrieval added substantial latency for little benchmark recovery.\n\nAUTHORITY BOUNDARY\nPinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": null,
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH\":\n  - img \"Earlier Food Tracker mobile interface showing a banana query and candidate food results.\"\n  - text: EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH",
+                "text": "EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH"
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "food-system-map-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Food Tracker system map.\": \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\"",
+                "text": "Food Tracker system map.\nIllustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "food-benchmark-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"OFFLINE SEARCH EVALUATION · FIRST RESULT\":\n  - text: OFFLINE SEARCH EVALUATION · FIRST RESULT\n  - heading \"DEVELOPMENT · 80 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 40/80\n  - text: FULL HYBRID\n  - strong: 71/80 (+31)\n  - paragraph: Top-3 40/80 → 72/80·Top-5 40/80 → 72/80\n  - heading \"HOLDOUT · 40 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 25/40\n  - text: FULL HYBRID\n  - strong: 27/40 (+2)\n  - paragraph: Top-3 25/40 → 28/40·Top-5 25/40 → 28/40\n  - paragraph: OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES",
+                "text": "OFFLINE SEARCH EVALUATION · FIRST RESULT\nDEVELOPMENT · 80 QUERIES\n\nTop-1 means the correct food ranked first. Bars show share.\n\nLEGACY BASELINE\n40/80\nFULL HYBRID\n71/80 (+31)\n\nTop-3  40/80 → 72/80·Top-5  40/80 → 72/80\n\nHOLDOUT · 40 QUERIES\n\nTop-1 means the correct food ranked first. Bars show share.\n\nLEGACY BASELINE\n25/40\nFULL HYBRID\n27/40 (+2)\n\nTop-3  25/40 → 28/40·Top-5  25/40 → 28/40\n\nOFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES"
+              }
+            ],
+            "figureCount": 5,
+            "images": [
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 14,
+                  "y": 13.5,
+                  "width": 54,
+                  "height": 54
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 160,
+                "naturalHeight": 160,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 1628,
+                  "y": 20.5,
+                  "width": 54,
+                  "height": 54
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 64,
+                  "y": 228.8,
+                  "width": 44,
+                  "height": 44
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/case-studies/food-product-flow-pass-09-inset.png",
+                "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+                "loaded": true,
+                "naturalWidth": 884,
+                "naturalHeight": 222,
+                "rect": {
+                  "x": 612,
+                  "y": 318.8,
+                  "width": 884,
+                  "height": 222
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+                "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+                "loaded": true,
+                "naturalWidth": 368,
+                "naturalHeight": 800,
+                "rect": {
+                  "x": 1064,
+                  "y": 1792.1,
+                  "width": 368,
+                  "height": 797.6
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/case-studies/food-system-pass-10.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 1432,
+                "naturalHeight": 710,
+                "rect": {
+                  "x": 64,
+                  "y": 2698.6,
+                  "width": 1432,
+                  "height": 710
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 1577,
+                  "y": 102,
+                  "width": 40,
+                  "height": 40
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 13,
+                "naturalHeight": 13,
+                "rect": {
+                  "x": 1846,
+                  "y": 180.5,
+                  "width": 13,
+                  "height": 13
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 8,
+                "naturalHeight": 7,
+                "rect": {
+                  "x": 1871,
+                  "y": 183.5,
+                  "width": 8,
+                  "height": 7
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 7,
+                "naturalHeight": 6,
+                "rect": {
+                  "x": 1891,
+                  "y": 184,
+                  "width": 7,
+                  "height": 6
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 1601,
+                  "y": 289.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 1601,
+                  "y": 385.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 150,
+                "naturalHeight": 150,
+                "rect": {
+                  "x": 1601,
+                  "y": 434.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 310,
+                "naturalHeight": 230,
+                "rect": {
+                  "x": 1601,
+                  "y": 483.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 82,
+                "naturalHeight": 82,
+                "rect": {
+                  "x": 1601,
+                  "y": 532.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 1601,
+                  "y": 618.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 1601,
+                  "y": 667.5,
+                  "width": 26,
+                  "height": 26
+                }
+              }
+            ],
+            "imageCount": 18,
+            "loadedImages": 18,
+            "arrows": [
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 240.5,
+                  "y": 1534.1,
+                  "width": 22,
+                  "height": 20
+                },
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 681.2,
+                  "y": 1534.1,
+                  "width": 22,
+                  "height": 20
+                },
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 870.7,
+                  "y": 1534.1,
+                  "width": 22,
+                  "height": 20
+                },
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 1171.9,
+                  "y": 1534.1,
+                  "width": 22,
+                  "height": 20
+                },
+                "display": "block",
+                "visibility": "visible"
+              }
+            ],
+            "assets": [
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-CwgDGfHo.js",
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-Bv7ivfCn.css"
+            ]
+          },
+          "accessibility": {
+            "figures": [
+              {
+                "index": 0,
+                "snapshot": "- figure \"Food Tracker product path schematic\":\n  - 'img \"Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.\"'"
+              },
+              {
+                "index": 1,
+                "snapshot": "- figure \"RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.\":\n  - text: RETRIEVAL FLOW · CANDIDATE SOURCES ONLY\n  - strong: Search broadly. Rank deterministically.\n  - 'img \"Food retrieval flow: a query branches into deterministic, fuzzy, and semantic candidates. The candidates are combined, deterministically evaluated, then ranked. Pinecone supplies candidates only.\"':\n    - text: USER QUERY\n    - strong: DETERMINISTIC\n    - text: Direct matches\n    - strong: FUZZY\n    - text: Near-text matches\n    - strong: SEMANTIC · PINECONE\n    - text: Candidate supply only CANDIDATE UNION\n    - strong: DETERMINISTIC EVALUATION\n    - text: Rules decide rank\n    - strong: FINAL RANK\n    - text: 1 2 3\n  - paragraph: SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery.\n  - paragraph: AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition."
+              },
+              {
+                "index": 2,
+                "snapshot": "- figure \"EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH\":\n  - img \"Earlier Food Tracker mobile interface showing a banana query and candidate food results.\"\n  - text: EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH"
+              },
+              {
+                "index": 3,
+                "snapshot": "- figure \"Food Tracker system map.\": \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\""
+              },
+              {
+                "index": 4,
+                "snapshot": "- figure \"OFFLINE SEARCH EVALUATION · FIRST RESULT\":\n  - text: OFFLINE SEARCH EVALUATION · FIRST RESULT\n  - heading \"DEVELOPMENT · 80 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 40/80\n  - text: FULL HYBRID\n  - strong: 71/80 (+31)\n  - paragraph: Top-3 40/80 → 72/80·Top-5 40/80 → 72/80\n  - heading \"HOLDOUT · 40 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 25/40\n  - text: FULL HYBRID\n  - strong: 27/40 (+2)\n  - paragraph: Top-3 25/40 → 28/40·Top-5 25/40 → 28/40\n  - paragraph: OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES"
+              }
+            ]
+          },
+          "navigation": {
+            "perChapter": [
+              {
+                "link": "food-overview",
+                "hash": "#food-overview",
+                "mainScrollTop": 48,
+                "scrollY": 0,
+                "targetTop": 158,
+                "heading": "Simple food logs.\nTrusted nutrition.",
+                "active": [
+                  {
+                    "text": "PRODUCT",
+                    "href": "#food-overview",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-logging",
+                "hash": "#food-logging",
+                "mainScrollTop": 437,
+                "scrollY": 0,
+                "targetTop": 157.8,
+                "heading": "One meal, several ways to get started.",
+                "active": [
+                  {
+                    "text": "LOGGING",
+                    "href": "#food-logging",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-insights",
+                "hash": "#food-insights",
+                "mainScrollTop": 794,
+                "scrollY": 0,
+                "targetTop": 157.9,
+                "heading": "Turn saved logs into a view of patterns over time.",
+                "active": [
+                  {
+                    "text": "INSIGHTS",
+                    "href": "#food-insights",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-search",
+                "hash": "#food-search",
+                "mainScrollTop": 1205,
+                "scrollY": 0,
+                "targetTop": 158.3,
+                "heading": "WHY FOOD SEARCH IS HARD\n\nRETRIEVAL FLOW · CANDIDATE SOURCES ONLY\nSearch broadly.",
+                "active": [
+                  {
+                    "text": "RETRIEVAL",
+                    "href": "#food-search",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-interface",
+                "hash": "#food-interface",
+                "mainScrollTop": 1613,
+                "scrollY": 0,
+                "targetTop": 158.4,
+                "heading": "One query can surface\nseveral plausible foods.",
+                "active": [
+                  {
+                    "text": "IN PRODUCT",
+                    "href": "#food-interface",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-system",
+                "hash": "#food-system",
+                "mainScrollTop": 2527,
+                "scrollY": 0,
+                "targetTop": 158.4,
+                "heading": "ARCHITECTURE + DATA FOUNDATION\n\nFood Tracker system map.\nIllustrative composite ",
+                "active": [
+                  {
+                    "text": "ARCHITECTURE",
+                    "href": "#food-system",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-evaluation",
+                "hash": "#food-evaluation",
+                "mainScrollTop": 3360,
+                "scrollY": 0,
+                "targetTop": 157.6,
+                "heading": "Hybrid search put the intended food first more often.",
+                "active": [
+                  {
+                    "text": "RESULTS",
+                    "href": "#food-evaluation",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-workflow",
+                "hash": "#food-workflow",
+                "mainScrollTop": 3729,
+                "scrollY": 0,
+                "targetTop": 585.6,
+                "heading": "Useful search means the right food appears first.",
+                "active": [
+                  {
+                    "text": "CLOSE",
+                    "href": "#food-reflection",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-reflection",
+                "hash": "#food-reflection",
+                "mainScrollTop": 3729,
+                "scrollY": 0,
+                "targetTop": 814.6,
+                "heading": "A useful match must resolve into trusted nutrition.",
+                "active": [
+                  {
+                    "text": "CLOSE",
+                    "href": "#food-reflection",
+                    "current": "location"
+                  }
+                ]
+              }
+            ],
+            "endBehavior": {
+              "hash": "#food-reflection",
+              "mainScrollTop": 3729,
+              "scrollY": 0,
+              "max": 3729,
+              "active": [
+                "CLOSE"
+              ],
+              "beforeMax": {
+                "mainScrollTop": 3726,
+                "scrollY": 0,
+                "active": [
+                  "RESULTS"
+                ]
+              },
+              "atMax": {
+                "mainScrollTop": 3729,
+                "scrollY": 0,
+                "active": [
+                  "CLOSE"
+                ]
+              }
+            },
+            "choInteraction": null
+          },
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshots": {
+            "viewport": "food-1920x1080-viewport.png",
+            "fullStory": "food-1920x1080-full-story.png"
+          }
+        },
+        "390x844": {
+          "status": 200,
+          "viewport": {
+            "width": 390,
+            "height": 844,
+            "deviceScaleFactor": 1
+          },
+          "initial": {
+            "url": "https://b2e00552.joshuaik2.pages.dev/projects/food-tracker",
+            "title": "Joshua Aryeetey · Portfolio",
+            "document": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 6803,
+              "clientHeight": 844,
+              "scrollY": 70
+            },
+            "main": {
+              "id": "main",
+              "className": "main main--detail main--food-case",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 6733.5
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 6733,
+              "clientHeight": 6733,
+              "scrollTop": 0,
+              "overflowY": "visible"
+            },
+            "chapterLinks": [
+              {
+                "text": "PRODUCT",
+                "href": "#food-overview",
+                "ariaCurrent": "location"
+              },
+              {
+                "text": "LOGGING",
+                "href": "#food-logging",
+                "ariaCurrent": null
+              },
+              {
+                "text": "INSIGHTS",
+                "href": "#food-insights",
+                "ariaCurrent": null
+              },
+              {
+                "text": "RETRIEVAL",
+                "href": "#food-search",
+                "ariaCurrent": null
+              },
+              {
+                "text": "IN PRODUCT",
+                "href": "#food-interface",
+                "ariaCurrent": null
+              },
+              {
+                "text": "ARCHITECTURE",
+                "href": "#food-system",
+                "ariaCurrent": null
+              },
+              {
+                "text": "RESULTS",
+                "href": "#food-evaluation",
+                "ariaCurrent": null
+              },
+              {
+                "text": "LEARNING",
+                "href": "#food-workflow",
+                "ariaCurrent": null
+              },
+              {
+                "text": "CLOSE",
+                "href": "#food-reflection",
+                "ariaCurrent": null
+              }
+            ],
+            "sections": [
+              {
+                "id": "food-overview",
+                "tag": "SECTION",
+                "heading": "Simple food logs.\nTrusted nutrition."
+              },
+              {
+                "id": "food-logging",
+                "tag": "SECTION",
+                "heading": "One meal, several ways to get started."
+              },
+              {
+                "id": "food-logging-title",
+                "tag": "H2",
+                "heading": null
+              },
+              {
+                "id": "food-insights",
+                "tag": "SECTION",
+                "heading": "Turn saved logs into a view of patterns over time."
+              },
+              {
+                "id": "food-insights-title",
+                "tag": "H2",
+                "heading": null
+              },
+              {
+                "id": "food-search",
+                "tag": "SECTION",
+                "heading": null
+              },
+              {
+                "id": "food-retrieval-flow-title",
+                "tag": "FIGCAPTION",
+                "heading": null
+              },
+              {
+                "id": "food-interface",
+                "tag": "SECTION",
+                "heading": "One query can surface\nseveral plausible foods."
+              },
+              {
+                "id": "food-interface-title",
+                "tag": "H2",
+                "heading": null
+              },
+              {
+                "id": "food-system",
+                "tag": "SECTION",
+                "heading": null
+              },
+              {
+                "id": "food-system-map-title",
+                "tag": "SPAN",
+                "heading": null
+              },
+              {
+                "id": "food-evaluation",
+                "tag": "SECTION",
+                "heading": "Hybrid search put the intended food first more often."
+              },
+              {
+                "id": "food-benchmark-title",
+                "tag": "FIGCAPTION",
+                "heading": null
+              },
+              {
+                "id": "food-iteration",
+                "tag": "SECTION",
+                "heading": "Passing tests did not guarantee useful search."
+              },
+              {
+                "id": "food-boundaries",
+                "tag": "SECTION",
+                "heading": "Keep intent, nutrition, and recorded history distinct."
+              },
+              {
+                "id": "food-workflow",
+                "tag": "SECTION",
+                "heading": "Useful search means the right food appears first."
+              },
+              {
+                "id": "food-reflection",
+                "tag": "SECTION",
+                "heading": "A useful match must resolve into trusted nutrition."
+              }
+            ],
+            "figures": [
+              {
+                "ariaLabel": "Food Tracker product path schematic",
+                "labelledby": null,
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Food Tracker product path schematic\":\n  - list \"Product path stages\":\n    - listitem:\n      - strong: 01 · Log a meal\n      - text: Quick entry.\n    - listitem:\n      - strong: 02 · Match the food\n      - text: Search proposes candidates.\n    - listitem:\n      - strong: 03 · Resolve a serving\n      - text: Trusted food data and serving rules set nutrition.\n    - listitem:\n      - strong: 04 · Keep history\n      - text: Record a canonical log entry.",
+                "text": "01 · Log a meal\nQuick entry.\n02 · Match the food\nSearch proposes candidates.\n03 · Resolve a serving\nTrusted food data and serving rules set nutrition.\n04 · Keep history\nRecord a canonical log entry."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "food-retrieval-flow-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.\":\n  - text: RETRIEVAL FLOW · CANDIDATE SOURCES ONLY\n  - strong: Search broadly. Rank deterministically.\n  - 'img \"Food retrieval flow: a query branches into deterministic, fuzzy, and semantic candidates. The candidates are combined, deterministically evaluated, then ranked. Pinecone supplies candidates only.\"':\n    - text: USER QUERY\n    - strong: DETERMINISTIC\n    - text: Direct matches\n    - strong: FUZZY\n    - text: Near-text matches\n    - strong: SEMANTIC · PINECONE\n    - text: Candidate supply only CANDIDATE UNION\n    - strong: DETERMINISTIC EVALUATION\n    - text: Rules decide rank\n    - strong: FINAL RANK\n    - text: 1 2 3\n  - paragraph: SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery.\n  - paragraph: AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition.",
+                "text": "RETRIEVAL FLOW · CANDIDATE SOURCES ONLY\nSearch broadly. Rank deterministically.\nUSER QUERY\n→\nDETERMINISTIC\nDirect matches\nFUZZY\nNear-text matches\nSEMANTIC · PINECONE\nCandidate supply only\n→\nCANDIDATE UNION\n→\nDETERMINISTIC EVALUATION\nRules decide rank\n→\nFINAL RANK\n1\n2\n3\n\nSEARCH TRADE-OFF\nI found semantic retrieval added substantial latency for little benchmark recovery.\n\nAUTHORITY BOUNDARY\nPinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": null,
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH\":\n  - img \"Earlier Food Tracker mobile interface showing a banana query and candidate food results.\"\n  - text: EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH",
+                "text": "EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH"
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "food-system-map-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Food Tracker system map.\":\n  - list \"Food Tracker system path\":\n    - listitem:\n      - strong: Search in the app\n      - text: Start with a meal or ingredient.\n    - listitem:\n      - strong: Find and rank candidates\n      - text: Exact, fuzzy, and semantic paths feed one deterministic ranking.\n    - listitem:\n      - strong: Resolve nutrition\n      - text: Trusted food data and serving rules independently resolve nutrition.\n    - listitem:\n      - strong: Record the result\n      - text: A serving snapshot supports later portion edits in History.\n  - text: \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\"",
+                "text": "Search in the app\nStart with a meal or ingredient.\nFind and rank candidates\nExact, fuzzy, and semantic paths feed one deterministic ranking.\nResolve nutrition\nTrusted food data and serving rules independently resolve nutrition.\nRecord the result\nA serving snapshot supports later portion edits in History.\nFood Tracker system map.\nIllustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "food-benchmark-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"OFFLINE SEARCH EVALUATION · FIRST RESULT\":\n  - text: OFFLINE SEARCH EVALUATION · FIRST RESULT\n  - heading \"DEVELOPMENT · 80 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 40/80\n  - text: FULL HYBRID\n  - strong: 71/80 (+31)\n  - paragraph: Top-3 40/80 → 72/80·Top-5 40/80 → 72/80\n  - heading \"HOLDOUT · 40 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 25/40\n  - text: FULL HYBRID\n  - strong: 27/40 (+2)\n  - paragraph: Top-3 25/40 → 28/40·Top-5 25/40 → 28/40\n  - paragraph: OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES",
+                "text": "OFFLINE SEARCH EVALUATION · FIRST RESULT\nDEVELOPMENT · 80 QUERIES\n\nTop-1 means the correct food ranked first. Bars show share.\n\nLEGACY BASELINE\n40/80\nFULL HYBRID\n71/80 (+31)\n\nTop-3  40/80 → 72/80·Top-5  40/80 → 72/80\n\nHOLDOUT · 40 QUERIES\n\nTop-1 means the correct food ranked first. Bars show share.\n\nLEGACY BASELINE\n25/40\nFULL HYBRID\n27/40 (+2)\n\nTop-3  25/40 → 28/40·Top-5  25/40 → 28/40\n\nOFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES"
+              }
+            ],
+            "figureCount": 5,
+            "images": [
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 32,
+                "naturalHeight": 32,
+                "rect": {
+                  "x": 18,
+                  "y": -51.5,
+                  "width": 32,
+                  "height": 32
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 160,
+                "naturalHeight": 160,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 328,
+                  "y": -62.5,
+                  "width": 54,
+                  "height": 54
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 20,
+                  "y": 96,
+                  "width": 44,
+                  "height": 44
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/case-studies/food-product-flow-pass-09-inset.png",
+                "alt": "Schematic, not an app screen: log a meal, search food candidates, resolve nutrition through trusted food data and serving rules, then keep a canonical record.",
+                "loaded": true,
+                "naturalWidth": 884,
+                "naturalHeight": 222,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/case-studies/food-tracker-search-banana-earlier-ui.png",
+                "alt": "Earlier Food Tracker mobile interface showing a banana query and candidate food results.",
+                "loaded": true,
+                "naturalWidth": 368,
+                "naturalHeight": 800,
+                "rect": {
+                  "x": 43,
+                  "y": 3726.5,
+                  "width": 304,
+                  "height": 658.5
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/case-studies/food-system-pass-10.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 1432,
+                "naturalHeight": 710,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 13,
+                "naturalHeight": 13,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 8,
+                "naturalHeight": 7,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 7,
+                "naturalHeight": 6,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 150,
+                "naturalHeight": 150,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 310,
+                "naturalHeight": 230,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 82,
+                "naturalHeight": 82,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              }
+            ],
+            "imageCount": 18,
+            "loadedImages": 18,
+            "arrows": [
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 185,
+                  "y": 2352.8,
+                  "width": 20,
+                  "height": 304
+                },
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 185,
+                  "y": 2534.8,
+                  "width": 20,
+                  "height": 304
+                },
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 185,
+                  "y": 2710.8,
+                  "width": 20,
+                  "height": 304
+                },
+                "display": "block",
+                "visibility": "visible"
+              },
+              {
+                "text": "→",
+                "className": "food-retrieval-flow__arrow",
+                "rect": {
+                  "x": 185,
+                  "y": 2886.8,
+                  "width": 20,
+                  "height": 304
+                },
+                "display": "block",
+                "visibility": "visible"
+              }
+            ],
+            "assets": [
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-CwgDGfHo.js",
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-Bv7ivfCn.css"
+            ]
+          },
+          "accessibility": {
+            "figures": [
+              {
+                "index": 0,
+                "snapshot": "- figure \"Food Tracker product path schematic\":\n  - list \"Product path stages\":\n    - listitem:\n      - strong: 01 · Log a meal\n      - text: Quick entry.\n    - listitem:\n      - strong: 02 · Match the food\n      - text: Search proposes candidates.\n    - listitem:\n      - strong: 03 · Resolve a serving\n      - text: Trusted food data and serving rules set nutrition.\n    - listitem:\n      - strong: 04 · Keep history\n      - text: Record a canonical log entry."
+              },
+              {
+                "index": 1,
+                "snapshot": "- figure \"RETRIEVAL FLOW · CANDIDATE SOURCES ONLY Search broadly. Rank deterministically.\":\n  - text: RETRIEVAL FLOW · CANDIDATE SOURCES ONLY\n  - strong: Search broadly. Rank deterministically.\n  - 'img \"Food retrieval flow: a query branches into deterministic, fuzzy, and semantic candidates. The candidates are combined, deterministically evaluated, then ranked. Pinecone supplies candidates only.\"':\n    - text: USER QUERY\n    - strong: DETERMINISTIC\n    - text: Direct matches\n    - strong: FUZZY\n    - text: Near-text matches\n    - strong: SEMANTIC · PINECONE\n    - text: Candidate supply only CANDIDATE UNION\n    - strong: DETERMINISTIC EVALUATION\n    - text: Rules decide rank\n    - strong: FINAL RANK\n    - text: 1 2 3\n  - paragraph: SEARCH TRADE-OFF I found semantic retrieval added substantial latency for little benchmark recovery.\n  - paragraph: AUTHORITY BOUNDARY Pinecone supplies candidates only. Deterministic evaluation sets final rank; trusted food data supplies nutrition."
+              },
+              {
+                "index": 2,
+                "snapshot": "- figure \"EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH\":\n  - img \"Earlier Food Tracker mobile interface showing a banana query and candidate food results.\"\n  - text: EARLIER QA SIMULATOR CAPTURE · BANANA SEARCH"
+              },
+              {
+                "index": 3,
+                "snapshot": "- figure \"Food Tracker system map.\":\n  - list \"Food Tracker system path\":\n    - listitem:\n      - strong: Search in the app\n      - text: Start with a meal or ingredient.\n    - listitem:\n      - strong: Find and rank candidates\n      - text: Exact, fuzzy, and semantic paths feed one deterministic ranking.\n    - listitem:\n      - strong: Resolve nutrition\n      - text: Trusted food data and serving rules independently resolve nutrition.\n    - listitem:\n      - strong: Record the result\n      - text: A serving snapshot supports later portion edits in History.\n  - text: \"Food Tracker system map. Illustrative composite system figure, not a product screenshot. Its upper half shows food search and retrieval gathering candidates, ranking them deterministically, resolving trusted nutrition, and recording an editable log. Its lower half shows the data foundation: React Native and Expo connect through Express and Prisma to a normalized food catalog and backend serving resolution; PostgreSQL stores the food log and serving snapshot for editable History and Insights.\""
+              },
+              {
+                "index": 4,
+                "snapshot": "- figure \"OFFLINE SEARCH EVALUATION · FIRST RESULT\":\n  - text: OFFLINE SEARCH EVALUATION · FIRST RESULT\n  - heading \"DEVELOPMENT · 80 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 40/80\n  - text: FULL HYBRID\n  - strong: 71/80 (+31)\n  - paragraph: Top-3 40/80 → 72/80·Top-5 40/80 → 72/80\n  - heading \"HOLDOUT · 40 QUERIES\" [level=3]\n  - paragraph: Top-1 means the correct food ranked first. Bars show share.\n  - text: LEGACY BASELINE\n  - strong: 25/40\n  - text: FULL HYBRID\n  - strong: 27/40 (+2)\n  - paragraph: Top-3 25/40 → 28/40·Top-5 25/40 → 28/40\n  - paragraph: OFFLINE QUERY SETS · TOP-1/3/5 MEASURE SEARCH RELEVANCE, NOT LIVE-USER OUTCOMES"
+              }
+            ]
+          },
+          "navigation": {
+            "perChapter": [
+              {
+                "link": "food-overview",
+                "hash": "#food-overview",
+                "mainScrollTop": 0,
+                "scrollY": 90,
+                "targetTop": 76,
+                "heading": "Simple food logs.\nTrusted nutrition.",
+                "active": [
+                  {
+                    "text": "PRODUCT",
+                    "href": "#food-overview",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-logging",
+                "hash": "#food-logging",
+                "mainScrollTop": 0,
+                "scrollY": 733,
+                "targetTop": 76.3,
+                "heading": "One meal, several ways to get started.",
+                "active": [
+                  {
+                    "text": "LOGGING",
+                    "href": "#food-logging",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-insights",
+                "hash": "#food-insights",
+                "mainScrollTop": 0,
+                "scrollY": 1412,
+                "targetTop": 76.3,
+                "heading": "Turn saved logs into a view of patterns over time.",
+                "active": [
+                  {
+                    "text": "INSIGHTS",
+                    "href": "#food-insights",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-search",
+                "hash": "#food-search",
+                "mainScrollTop": 0,
+                "scrollY": 2214,
+                "targetTop": 75.6,
+                "heading": "WHY FOOD SEARCH IS HARD\n\nRETRIEVAL FLOW · CANDIDATE SOURCES ONLY\nSearch broadly.",
+                "active": [
+                  {
+                    "text": "RETRIEVAL",
+                    "href": "#food-search",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-interface",
+                "hash": "#food-interface",
+                "mainScrollTop": 0,
+                "scrollY": 3379,
+                "targetTop": 76.4,
+                "heading": "One query can surface\nseveral plausible foods.",
+                "active": [
+                  {
+                    "text": "IN PRODUCT",
+                    "href": "#food-interface",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-system",
+                "hash": "#food-system",
+                "mainScrollTop": 0,
+                "scrollY": 4459,
+                "targetTop": 76.1,
+                "heading": "ARCHITECTURE + DATA FOUNDATION\n\nSearch in the app\nStart with a meal or ingredien",
+                "active": [
+                  {
+                    "text": "ARCHITECTURE",
+                    "href": "#food-system",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-evaluation",
+                "hash": "#food-evaluation",
+                "mainScrollTop": 0,
+                "scrollY": 4927,
+                "targetTop": 76.3,
+                "heading": "Hybrid search put the intended food first more often.",
+                "active": [
+                  {
+                    "text": "RESULTS",
+                    "href": "#food-evaluation",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-workflow",
+                "hash": "#food-workflow",
+                "mainScrollTop": 0,
+                "scrollY": 5959,
+                "targetTop": 197.9,
+                "heading": "Useful search means the right food appears first.",
+                "active": [
+                  {
+                    "text": "CLOSE",
+                    "href": "#food-reflection",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "food-reflection",
+                "hash": "#food-reflection",
+                "mainScrollTop": 0,
+                "scrollY": 5959,
+                "targetTop": 556.5,
+                "heading": "A useful match must resolve into trusted nutrition.",
+                "active": [
+                  {
+                    "text": "CLOSE",
+                    "href": "#food-reflection",
+                    "current": "location"
+                  }
+                ]
+              }
+            ],
+            "endBehavior": {
+              "hash": "#food-reflection",
+              "mainScrollTop": 0,
+              "scrollY": 5959,
+              "max": 5959,
+              "active": [
+                "CLOSE"
+              ],
+              "beforeMax": {
+                "mainScrollTop": 0,
+                "scrollY": 5956,
+                "active": [
+                  "RESULTS"
+                ]
+              },
+              "atMax": {
+                "mainScrollTop": 0,
+                "scrollY": 5959,
+                "active": [
+                  "CLOSE"
+                ]
+              }
+            },
+            "choInteraction": null
+          },
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshots": {
+            "viewport": "food-390x844-viewport.png",
+            "fullStory": "food-390x844-full-page.png"
+          }
+        }
+      }
+    },
+    "cho": {
+      "path": "/projects/choveigo",
+      "viewports": {
+        "1920x1080": {
+          "status": 200,
+          "viewport": {
+            "width": 1920,
+            "height": 1080,
+            "deviceScaleFactor": 1
+          },
+          "initial": {
+            "url": "https://b2e00552.joshuaik2.pages.dev/projects/choveigo",
+            "title": "Joshua Aryeetey · Portfolio",
+            "document": {
+              "scrollWidth": 1920,
+              "clientWidth": 1920,
+              "scrollHeight": 1080,
+              "clientHeight": 1080,
+              "scrollY": 0
+            },
+            "main": {
+              "id": "main",
+              "className": "main main--detail main--choveigo-case",
+              "rect": {
+                "x": 0,
+                "y": 82,
+                "width": 1560,
+                "height": 998
+              },
+              "scrollWidth": 1560,
+              "clientWidth": 1560,
+              "scrollHeight": 3355,
+              "clientHeight": 998,
+              "scrollTop": 0,
+              "overflowY": "auto"
+            },
+            "chapterLinks": [
+              {
+                "text": "OVERVIEW",
+                "href": "#choveigo-overview",
+                "ariaCurrent": "location"
+              },
+              {
+                "text": "SYSTEM PATH",
+                "href": "#choveigo-system",
+                "ariaCurrent": null
+              },
+              {
+                "text": "FIT MODEL",
+                "href": "#choveigo-fit",
+                "ariaCurrent": null
+              },
+              {
+                "text": "HUMAN REVIEW",
+                "href": "#choveigo-review",
+                "ariaCurrent": null
+              },
+              {
+                "text": "WHAT CHANGED",
+                "href": "#choveigo-change",
+                "ariaCurrent": null
+              }
+            ],
+            "sections": [
+              {
+                "id": "choveigo-overview",
+                "tag": "SECTION",
+                "heading": "Cho’Veigo"
+              },
+              {
+                "id": "choveigo-system",
+                "tag": "SECTION",
+                "heading": "How a role becomes a recommendation."
+              },
+              {
+                "id": "choveigo-system-map-title",
+                "tag": "FIGCAPTION",
+                "heading": null
+              },
+              {
+                "id": "choveigo-distinct-inputs-title",
+                "tag": "P",
+                "heading": null
+              },
+              {
+                "id": "choveigo-tailoring-title",
+                "tag": "H3",
+                "heading": null
+              },
+              {
+                "id": "choveigo-fit",
+                "tag": "SECTION",
+                "heading": "A title or stack is only a clue."
+              },
+              {
+                "id": "choveigo-review",
+                "tag": "SECTION",
+                "heading": "A mismatch became a better test."
+              },
+              {
+                "id": "choveigo-change",
+                "tag": "SECTION",
+                "heading": "I learned to evaluate recommendations through the evidence that supports them."
+              }
+            ],
+            "figures": [
+              {
+                "ariaLabel": null,
+                "labelledby": null,
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Role recommendations with fit evidence visible in context.\":\n  - img \"Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence\"\n  - text: Role recommendations with fit evidence visible in context.",
+                "text": "Role recommendations with fit evidence visible in context."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "choveigo-system-map-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\":\n  - text: Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\n  - group \"System inputs\":\n    - heading \"Role discovery\" [level=3]\n    - paragraph: Job feeds + persisted role data\n    - paragraph: A structured role record\n    - paragraph: Responsibilities + core requirements\n    - heading \"Candidate evidence\" [level=3]\n    - paragraph: Resume + selected profile\n    - paragraph: Demonstrated and transferable evidence stays distinct from visible gaps.\n  - heading \"Decision layers\" [level=3]\n  - paragraph: Structured Gemini interpretation remains tied to the supplied role and candidate material.\n  - article:\n    - heading \"Fit\" [level=4]\n    - paragraph: Deterministic responsibilities vs. evidence\n  - article:\n    - heading \"Eligibility\" [level=4]\n    - paragraph: Deterministic essential requirements\n  - article:\n    - heading \"GEMINI · STRUCTURED\" [level=4]\n    - paragraph: Interprets supplied text; rules decide Fit and Eligibility.\n  - heading \"Product actions\" [level=3]\n  - article:\n    - heading \"Recommendation\" [level=4]\n    - paragraph: \"A distinct judgment: bring the role forward.\"\n  - article:\n    - heading \"NEXT · RESUME TAILORING\" [level=4]\n    - paragraph: A separate action after recommendation.",
+                "text": "Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\nROLE DISCOVERY\n\nJob feeds + persisted role data\n\nA structured role record\n\nResponsibilities + core requirements\n\nCANDIDATE EVIDENCE\n\nResume + selected profile\n\nDemonstrated and transferable evidence stays distinct from visible gaps.\n\nDECISION LAYERS\n\nStructured Gemini interpretation remains tied to the supplied role and candidate material.\n\nFIT\n\nDeterministic\nresponsibilities vs. evidence\n\nELIGIBILITY\n\nDeterministic\nessential requirements\n\nGEMINI · STRUCTURED\n\nInterprets supplied text; rules decide Fit and Eligibility.\n\nPRODUCT ACTIONS\nRECOMMENDATION\n\nA distinct judgment: bring the role forward.\n\nNEXT · RESUME TAILORING\n\nA separate action after recommendation."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "cho-evidence-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\":\n  - text: MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\n  - list \"Evidence path\":\n    - listitem:\n      - text: ROLE REQUIREMENTS\n      - paragraph: Responsibilities and essential criteria\n    - listitem:\n      - text: CANDIDATE EVIDENCE\n      - paragraph: Demonstrated and transferable experience\n    - listitem:\n      - text: EVIDENCE GAPS\n      - paragraph: Missing requirements stay visible\n  - term: FIT\n  - definition: How closely does the evidence line up with the work?\n  - term: ELIGIBILITY\n  - definition: Are essential conditions and core requirements met?\n  - term: RECOMMENDATION\n  - definition: Is this role worth bringing forward?\n  - text: MODEL BOUNDARY\n  - paragraph: Structured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment.",
+                "text": "MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\nROLE REQUIREMENTS\n\nResponsibilities and essential criteria\n\nCANDIDATE EVIDENCE\n\nDemonstrated and transferable experience\n\nEVIDENCE GAPS\n\nMissing requirements stay visible\n\nFIT\nHow closely does the evidence line up with the work?\nELIGIBILITY\nAre essential conditions and core requirements met?\nRECOMMENDATION\nIs this role worth bringing forward?\nMODEL BOUNDARY\n\nStructured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment."
+              }
+            ],
+            "figureCount": 3,
+            "images": [
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 14,
+                  "y": 13.5,
+                  "width": 54,
+                  "height": 54
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 160,
+                "naturalHeight": 160,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 1628,
+                  "y": 20.5,
+                  "width": 54,
+                  "height": 54
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/choveigo-recommendations.png",
+                "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence",
+                "loaded": true,
+                "naturalWidth": 864,
+                "naturalHeight": 486,
+                "rect": {
+                  "x": 676,
+                  "y": 231.2,
+                  "width": 820,
+                  "height": 461.3
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 1577,
+                  "y": 102,
+                  "width": 40,
+                  "height": 40
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 13,
+                "naturalHeight": 13,
+                "rect": {
+                  "x": 1846,
+                  "y": 180.5,
+                  "width": 13,
+                  "height": 13
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 8,
+                "naturalHeight": 7,
+                "rect": {
+                  "x": 1871,
+                  "y": 183.5,
+                  "width": 8,
+                  "height": 7
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 7,
+                "naturalHeight": 6,
+                "rect": {
+                  "x": 1891,
+                  "y": 184,
+                  "width": 7,
+                  "height": 6
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 1601,
+                  "y": 289.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 1601,
+                  "y": 385.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 150,
+                "naturalHeight": 150,
+                "rect": {
+                  "x": 1601,
+                  "y": 434.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 310,
+                "naturalHeight": 230,
+                "rect": {
+                  "x": 1601,
+                  "y": 483.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 82,
+                "naturalHeight": 82,
+                "rect": {
+                  "x": 1601,
+                  "y": 532.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 1601,
+                  "y": 618.5,
+                  "width": 26,
+                  "height": 26
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 1601,
+                  "y": 667.5,
+                  "width": 26,
+                  "height": 26
+                }
+              }
+            ],
+            "imageCount": 15,
+            "loadedImages": 15,
+            "arrows": [],
+            "assets": [
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-CwgDGfHo.js",
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-Bv7ivfCn.css"
+            ]
+          },
+          "accessibility": {
+            "figures": [
+              {
+                "index": 0,
+                "snapshot": "- figure \"Role recommendations with fit evidence visible in context.\":\n  - img \"Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence\"\n  - text: Role recommendations with fit evidence visible in context."
+              },
+              {
+                "index": 1,
+                "snapshot": "- figure \"Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\":\n  - text: Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\n  - group \"System inputs\":\n    - heading \"Role discovery\" [level=3]\n    - paragraph: Job feeds + persisted role data\n    - paragraph: A structured role record\n    - paragraph: Responsibilities + core requirements\n    - heading \"Candidate evidence\" [level=3]\n    - paragraph: Resume + selected profile\n    - paragraph: Demonstrated and transferable evidence stays distinct from visible gaps.\n  - heading \"Decision layers\" [level=3]\n  - paragraph: Structured Gemini interpretation remains tied to the supplied role and candidate material.\n  - article:\n    - heading \"Fit\" [level=4]\n    - paragraph: Deterministic responsibilities vs. evidence\n  - article:\n    - heading \"Eligibility\" [level=4]\n    - paragraph: Deterministic essential requirements\n  - article:\n    - heading \"GEMINI · STRUCTURED\" [level=4]\n    - paragraph: Interprets supplied text; rules decide Fit and Eligibility.\n  - heading \"Product actions\" [level=3]\n  - article:\n    - heading \"Recommendation\" [level=4]\n    - paragraph: \"A distinct judgment: bring the role forward.\"\n  - article:\n    - heading \"NEXT · RESUME TAILORING\" [level=4]\n    - paragraph: A separate action after recommendation."
+              },
+              {
+                "index": 2,
+                "snapshot": "- figure \"MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\":\n  - text: MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\n  - list \"Evidence path\":\n    - listitem:\n      - text: ROLE REQUIREMENTS\n      - paragraph: Responsibilities and essential criteria\n    - listitem:\n      - text: CANDIDATE EVIDENCE\n      - paragraph: Demonstrated and transferable experience\n    - listitem:\n      - text: EVIDENCE GAPS\n      - paragraph: Missing requirements stay visible\n  - term: FIT\n  - definition: How closely does the evidence line up with the work?\n  - term: ELIGIBILITY\n  - definition: Are essential conditions and core requirements met?\n  - term: RECOMMENDATION\n  - definition: Is this role worth bringing forward?\n  - text: MODEL BOUNDARY\n  - paragraph: Structured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment."
+              }
+            ]
+          },
+          "navigation": {
+            "perChapter": [
+              {
+                "link": "choveigo-overview",
+                "hash": "#choveigo-overview",
+                "mainScrollTop": 18,
+                "scrollY": 0,
+                "targetTop": 158,
+                "heading": "Cho’Veigo",
+                "active": [
+                  {
+                    "text": "OVERVIEW",
+                    "href": "#choveigo-overview",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-system",
+                "hash": "#choveigo-system",
+                "mainScrollTop": 682,
+                "scrollY": 0,
+                "targetTop": 157.5,
+                "heading": "How a role becomes a recommendation.",
+                "active": [
+                  {
+                    "text": "SYSTEM PATH",
+                    "href": "#choveigo-system",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-fit",
+                "hash": "#choveigo-fit",
+                "mainScrollTop": 1787,
+                "scrollY": 0,
+                "targetTop": 157.9,
+                "heading": "A title or stack is only a clue.",
+                "active": [
+                  {
+                    "text": "FIT MODEL",
+                    "href": "#choveigo-fit",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-review",
+                "hash": "#choveigo-review",
+                "mainScrollTop": 2357,
+                "scrollY": 0,
+                "targetTop": 419.2,
+                "heading": "A mismatch became a better test.",
+                "active": [
+                  {
+                    "text": "HUMAN REVIEW",
+                    "href": "#choveigo-review",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-change",
+                "hash": "#choveigo-change",
+                "mainScrollTop": 2357,
+                "scrollY": 0,
+                "targetTop": 735.9,
+                "heading": "I learned to evaluate recommendations through the evidence that supports them.",
+                "active": [
+                  {
+                    "text": "WHAT CHANGED",
+                    "href": "#choveigo-change",
+                    "current": "location"
+                  }
+                ]
+              }
+            ],
+            "endBehavior": {
+              "hash": "#choveigo-change",
+              "mainScrollTop": 2357,
+              "scrollY": 0,
+              "max": 2357,
+              "active": [
+                "WHAT CHANGED"
+              ]
+            },
+            "choInteraction": {
+              "humanReviewClick": {
+                "hash": "#choveigo-review",
+                "mainScrollTop": 2357,
+                "scrollY": 0,
+                "active": [
+                  "HUMAN REVIEW"
+                ],
+                "heading": 419.203125
+              },
+              "passiveWheelAway": {
+                "hash": "#choveigo-review",
+                "mainScrollTop": 1857,
+                "scrollY": 0,
+                "active": [
+                  "FIT MODEL"
+                ]
+              },
+              "passiveWheelBottom": {
+                "hash": "#choveigo-review",
+                "mainScrollTop": 2357,
+                "mainMax": 2357,
+                "scrollY": 0,
+                "active": [
+                  "WHAT CHANGED"
+                ]
+              }
+            }
+          },
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshots": {
+            "viewport": "cho-1920x1080-viewport.png",
+            "fullStory": "cho-1920x1080-full-story.png"
+          }
+        },
+        "390x844": {
+          "status": 200,
+          "viewport": {
+            "width": 390,
+            "height": 844,
+            "deviceScaleFactor": 1
+          },
+          "initial": {
+            "url": "https://b2e00552.joshuaik2.pages.dev/projects/choveigo",
+            "title": "Joshua Aryeetey · Portfolio",
+            "document": {
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 5473,
+              "clientHeight": 844,
+              "scrollY": 70
+            },
+            "main": {
+              "id": "main",
+              "className": "main main--detail main--choveigo-case",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "width": 390,
+                "height": 5403.1
+              },
+              "scrollWidth": 390,
+              "clientWidth": 390,
+              "scrollHeight": 5403,
+              "clientHeight": 5403,
+              "scrollTop": 0,
+              "overflowY": "visible"
+            },
+            "chapterLinks": [
+              {
+                "text": "OVERVIEW",
+                "href": "#choveigo-overview",
+                "ariaCurrent": "location"
+              },
+              {
+                "text": "SYSTEM PATH",
+                "href": "#choveigo-system",
+                "ariaCurrent": null
+              },
+              {
+                "text": "FIT MODEL",
+                "href": "#choveigo-fit",
+                "ariaCurrent": null
+              },
+              {
+                "text": "HUMAN REVIEW",
+                "href": "#choveigo-review",
+                "ariaCurrent": null
+              },
+              {
+                "text": "WHAT CHANGED",
+                "href": "#choveigo-change",
+                "ariaCurrent": null
+              }
+            ],
+            "sections": [
+              {
+                "id": "choveigo-overview",
+                "tag": "SECTION",
+                "heading": "Cho’Veigo"
+              },
+              {
+                "id": "choveigo-system",
+                "tag": "SECTION",
+                "heading": "How a role becomes a recommendation."
+              },
+              {
+                "id": "choveigo-system-map-title",
+                "tag": "FIGCAPTION",
+                "heading": null
+              },
+              {
+                "id": "choveigo-distinct-inputs-title",
+                "tag": "P",
+                "heading": null
+              },
+              {
+                "id": "choveigo-tailoring-title",
+                "tag": "H3",
+                "heading": null
+              },
+              {
+                "id": "choveigo-fit",
+                "tag": "SECTION",
+                "heading": "A title or stack is only a clue."
+              },
+              {
+                "id": "choveigo-review",
+                "tag": "SECTION",
+                "heading": "A mismatch became a better test."
+              },
+              {
+                "id": "choveigo-change",
+                "tag": "SECTION",
+                "heading": "I learned to evaluate recommendations through the evidence that supports them."
+              }
+            ],
+            "figures": [
+              {
+                "ariaLabel": null,
+                "labelledby": null,
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Role recommendations with fit evidence visible in context.\":\n  - img \"Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence\"\n  - text: Role recommendations with fit evidence visible in context.",
+                "text": "Role recommendations with fit evidence visible in context."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "choveigo-system-map-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\":\n  - text: Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\n  - group \"System inputs\":\n    - heading \"Role discovery\" [level=3]\n    - paragraph: Job feeds + persisted role data\n    - paragraph: A structured role record\n    - paragraph: Responsibilities + core requirements\n    - heading \"Candidate evidence\" [level=3]\n    - paragraph: Resume + selected profile\n    - paragraph: Demonstrated and transferable evidence stays distinct from visible gaps.\n  - heading \"Decision layers\" [level=3]\n  - paragraph: Structured Gemini interpretation remains tied to the supplied role and candidate material.\n  - article:\n    - heading \"Fit\" [level=4]\n    - paragraph: Deterministic responsibilities vs. evidence\n  - article:\n    - heading \"Eligibility\" [level=4]\n    - paragraph: Deterministic essential requirements\n  - article:\n    - heading \"GEMINI · STRUCTURED\" [level=4]\n    - paragraph: Interprets supplied text; rules decide Fit and Eligibility.\n  - heading \"Product actions\" [level=3]\n  - article:\n    - heading \"Recommendation\" [level=4]\n    - paragraph: \"A distinct judgment: bring the role forward.\"\n  - article:\n    - heading \"NEXT · RESUME TAILORING\" [level=4]\n    - paragraph: A separate action after recommendation.",
+                "text": "Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\nROLE DISCOVERY\n\nJob feeds + persisted role data\n\nA structured role record\n\nResponsibilities + core requirements\n\nCANDIDATE EVIDENCE\n\nResume + selected profile\n\nDemonstrated and transferable evidence stays distinct from visible gaps.\n\nDECISION LAYERS\n\nStructured Gemini interpretation remains tied to the supplied role and candidate material.\n\nFIT\n\nDeterministic\nresponsibilities vs. evidence\n\nELIGIBILITY\n\nDeterministic\nessential requirements\n\nGEMINI · STRUCTURED\n\nInterprets supplied text; rules decide Fit and Eligibility.\n\nPRODUCT ACTIONS\nRECOMMENDATION\n\nA distinct judgment: bring the role forward.\n\nNEXT · RESUME TAILORING\n\nA separate action after recommendation."
+              },
+              {
+                "ariaLabel": null,
+                "labelledby": "cho-evidence-title",
+                "tabIndex": -1,
+                "role": null,
+                "ariaSnapshot": "- figure \"MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\":\n  - text: MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\n  - list \"Evidence path\":\n    - listitem:\n      - text: ROLE REQUIREMENTS\n      - paragraph: Responsibilities and essential criteria\n    - listitem:\n      - text: CANDIDATE EVIDENCE\n      - paragraph: Demonstrated and transferable experience\n    - listitem:\n      - text: EVIDENCE GAPS\n      - paragraph: Missing requirements stay visible\n  - term: FIT\n  - definition: How closely does the evidence line up with the work?\n  - term: ELIGIBILITY\n  - definition: Are essential conditions and core requirements met?\n  - term: RECOMMENDATION\n  - definition: Is this role worth bringing forward?\n  - text: MODEL BOUNDARY\n  - paragraph: Structured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment.",
+                "text": "MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\nROLE REQUIREMENTS\n\nResponsibilities and essential criteria\n\nCANDIDATE EVIDENCE\n\nDemonstrated and transferable experience\n\nEVIDENCE GAPS\n\nMissing requirements stay visible\n\nFIT\nHow closely does the evidence line up with the work?\nELIGIBILITY\nAre essential conditions and core requirements met?\nRECOMMENDATION\nIs this role worth bringing forward?\nMODEL BOUNDARY\n\nStructured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment."
+              }
+            ],
+            "figureCount": 3,
+            "images": [
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 32,
+                "naturalHeight": 32,
+                "rect": {
+                  "x": 18,
+                  "y": -51.5,
+                  "width": 32,
+                  "height": 32
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 160,
+                "naturalHeight": 160,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 328,
+                  "y": -62.5,
+                  "width": 54,
+                  "height": 54
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/choveigo-recommendations.png",
+                "alt": "Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence",
+                "loaded": true,
+                "naturalWidth": 864,
+                "naturalHeight": 486,
+                "rect": {
+                  "x": 20,
+                  "y": 359.4,
+                  "width": 350,
+                  "height": 196.9
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 54,
+                "naturalHeight": 54,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 13,
+                "naturalHeight": 13,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 8,
+                "naturalHeight": 7,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 7,
+                "naturalHeight": 6,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 40,
+                "naturalHeight": 40,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 150,
+                "naturalHeight": 150,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 310,
+                "naturalHeight": 230,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 82,
+                "naturalHeight": 82,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              },
+              {
+                "src": "https://b2e00552.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+                "alt": "",
+                "loaded": true,
+                "naturalWidth": 96,
+                "naturalHeight": 96,
+                "rect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 0,
+                  "height": 0
+                }
+              }
+            ],
+            "imageCount": 15,
+            "loadedImages": 15,
+            "arrows": [],
+            "assets": [
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-CwgDGfHo.js",
+              "https://b2e00552.joshuaik2.pages.dev/assets/index-Bv7ivfCn.css"
+            ]
+          },
+          "accessibility": {
+            "figures": [
+              {
+                "index": 0,
+                "snapshot": "- figure \"Role recommendations with fit evidence visible in context.\":\n  - img \"Cho’Veigo Recommendations interface showing job roles, fit details, and missing skills evidence\"\n  - text: Role recommendations with fit evidence visible in context."
+              },
+              {
+                "index": 1,
+                "snapshot": "- figure \"Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\":\n  - text: Cho’Veigo system architecture from role and candidate evidence through bounded evaluation to recommendation and resume tailoring.\n  - group \"System inputs\":\n    - heading \"Role discovery\" [level=3]\n    - paragraph: Job feeds + persisted role data\n    - paragraph: A structured role record\n    - paragraph: Responsibilities + core requirements\n    - heading \"Candidate evidence\" [level=3]\n    - paragraph: Resume + selected profile\n    - paragraph: Demonstrated and transferable evidence stays distinct from visible gaps.\n  - heading \"Decision layers\" [level=3]\n  - paragraph: Structured Gemini interpretation remains tied to the supplied role and candidate material.\n  - article:\n    - heading \"Fit\" [level=4]\n    - paragraph: Deterministic responsibilities vs. evidence\n  - article:\n    - heading \"Eligibility\" [level=4]\n    - paragraph: Deterministic essential requirements\n  - article:\n    - heading \"GEMINI · STRUCTURED\" [level=4]\n    - paragraph: Interprets supplied text; rules decide Fit and Eligibility.\n  - heading \"Product actions\" [level=3]\n  - article:\n    - heading \"Recommendation\" [level=4]\n    - paragraph: \"A distinct judgment: bring the role forward.\"\n  - article:\n    - heading \"NEXT · RESUME TAILORING\" [level=4]\n    - paragraph: A separate action after recommendation."
+              },
+              {
+                "index": 2,
+                "snapshot": "- figure \"MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\":\n  - text: MATCH TRACE / EVIDENCE IN, THREE DISTINCT JUDGMENTS OUT\n  - list \"Evidence path\":\n    - listitem:\n      - text: ROLE REQUIREMENTS\n      - paragraph: Responsibilities and essential criteria\n    - listitem:\n      - text: CANDIDATE EVIDENCE\n      - paragraph: Demonstrated and transferable experience\n    - listitem:\n      - text: EVIDENCE GAPS\n      - paragraph: Missing requirements stay visible\n  - term: FIT\n  - definition: How closely does the evidence line up with the work?\n  - term: ELIGIBILITY\n  - definition: Are essential conditions and core requirements met?\n  - term: RECOMMENDATION\n  - definition: Is this role worth bringing forward?\n  - text: MODEL BOUNDARY\n  - paragraph: Structured Gemini interprets role and candidate evidence within its boundary; deterministic rules determine Fit and Eligibility. Recommendation is a separate judgment."
+              }
+            ]
+          },
+          "navigation": {
+            "perChapter": [
+              {
+                "link": "choveigo-overview",
+                "hash": "#choveigo-overview",
+                "mainScrollTop": 0,
+                "scrollY": 90,
+                "targetTop": 76,
+                "heading": "Cho’Veigo",
+                "active": [
+                  {
+                    "text": "OVERVIEW",
+                    "href": "#choveigo-overview",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-system",
+                "hash": "#choveigo-system",
+                "mainScrollTop": 0,
+                "scrollY": 715,
+                "targetTop": 75.8,
+                "heading": "How a role becomes a recommendation.",
+                "active": [
+                  {
+                    "text": "SYSTEM PATH",
+                    "href": "#choveigo-system",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-fit",
+                "hash": "#choveigo-fit",
+                "mainScrollTop": 0,
+                "scrollY": 3044,
+                "targetTop": 75.7,
+                "heading": "A title or stack is only a clue.",
+                "active": [
+                  {
+                    "text": "FIT MODEL",
+                    "href": "#choveigo-fit",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-review",
+                "hash": "#choveigo-review",
+                "mainScrollTop": 0,
+                "scrollY": 4422,
+                "targetTop": 75.5,
+                "heading": "A mismatch became a better test.",
+                "active": [
+                  {
+                    "text": "HUMAN REVIEW",
+                    "href": "#choveigo-review",
+                    "current": "location"
+                  }
+                ]
+              },
+              {
+                "link": "choveigo-change",
+                "hash": "#choveigo-change",
+                "mainScrollTop": 0,
+                "scrollY": 4629,
+                "targetTop": 370.4,
+                "heading": "I learned to evaluate recommendations through the evidence that supports them.",
+                "active": [
+                  {
+                    "text": "WHAT CHANGED",
+                    "href": "#choveigo-change",
+                    "current": "location"
+                  }
+                ]
+              }
+            ],
+            "endBehavior": {
+              "hash": "#choveigo-change",
+              "mainScrollTop": 0,
+              "scrollY": 4629,
+              "max": 4629,
+              "active": [
+                "WHAT CHANGED"
+              ]
+            },
+            "choInteraction": {
+              "humanReviewClick": {
+                "hash": "#choveigo-review",
+                "mainScrollTop": 0,
+                "scrollY": 4422,
+                "active": [
+                  "HUMAN REVIEW"
+                ],
+                "heading": 75.546875
+              },
+              "passiveWheelAway": {
+                "hash": "#choveigo-review",
+                "mainScrollTop": 0,
+                "scrollY": 3922,
+                "active": [
+                  "FIT MODEL"
+                ]
+              },
+              "passiveWheelBottom": {
+                "hash": "#choveigo-review",
+                "mainScrollTop": 0,
+                "mainMax": 0,
+                "scrollY": 4629,
+                "active": [
+                  "HUMAN REVIEW"
+                ]
+              }
+            }
+          },
+          "errors": {
+            "console": [],
+            "page": [],
+            "request": [],
+            "response": []
+          },
+          "screenshots": {
+            "viewport": "cho-390x844-viewport.png",
+            "fullStory": "cho-390x844-full-page.png"
+          }
+        }
+      }
+    }
+  }
+}

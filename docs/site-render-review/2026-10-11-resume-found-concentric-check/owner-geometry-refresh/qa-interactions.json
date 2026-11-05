@@ -1,0 +1,1703 @@
+{
+  "records": [
+    {
+      "label": "1440x900",
+      "tag": "beginning",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": false,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 334.97,
+        "y": 176.19,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 706.19,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 367.97,
+        "y": 209.19,
+        "w": 464,
+        "h": 464,
+        "right": 831.97,
+        "bottom": 673.19,
+        "opacity": "0",
+        "display": "block",
+        "fill": "0deg",
+        "animationName": "resume-orb-energy-fill",
+        "animationDuration": "1.15s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 499.26,
+        "y": 340.48,
+        "w": 222.61,
+        "h": 222.61,
+        "right": 721.87,
+        "bottom": 563.09,
+        "opacity": "0.13092",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 428.72,
+        "y": 269.95,
+        "w": 342.5,
+        "h": 342.5,
+        "right": 771.22,
+        "bottom": 612.44,
+        "opacity": "0.231724",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 479.97,
+        "y": 565.35,
+        "w": 240,
+        "h": 24,
+        "right": 719.97,
+        "bottom": 589.35,
+        "opacity": "0.0691717",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 514.97,
+        "y": 632.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 688.34,
+        "opacity": "0",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 514.97,
+        "y": 632.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 688.34,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 552.97,
+        "y": 697.41,
+        "w": 94,
+        "h": 14.83,
+        "right": 646.97,
+        "bottom": 712.23,
+        "opacity": "0",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "1440x900",
+      "tag": "partial",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": false,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 367.97,
+        "y": 203.08,
+        "w": 464,
+        "h": 464,
+        "right": 831.97,
+        "bottom": 667.08,
+        "opacity": "0.86",
+        "display": "block",
+        "fill": "360deg",
+        "animationName": "resume-orb-energy-fill",
+        "animationDuration": "1.15s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 478.07,
+        "y": 313.18,
+        "w": 243.8,
+        "h": 243.8,
+        "right": 721.87,
+        "bottom": 556.98,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 414.47,
+        "y": 249.58,
+        "w": 371,
+        "h": 371,
+        "right": 785.47,
+        "bottom": 620.58,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 479.97,
+        "y": 556.97,
+        "w": 240,
+        "h": 24,
+        "right": 719.97,
+        "bottom": 580.97,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 552.97,
+        "y": 688.41,
+        "w": 94,
+        "h": 14.83,
+        "right": 646.97,
+        "bottom": 703.23,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "1440x900",
+      "tag": "full",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": false,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 367.97,
+        "y": 203.08,
+        "w": 464,
+        "h": 464,
+        "right": 831.97,
+        "bottom": 667.08,
+        "opacity": "0.86",
+        "display": "block",
+        "fill": "360deg",
+        "animationName": "resume-orb-energy-fill",
+        "animationDuration": "1.15s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 478.07,
+        "y": 313.18,
+        "w": 243.8,
+        "h": 243.8,
+        "right": 721.87,
+        "bottom": 556.98,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 414.47,
+        "y": 249.58,
+        "w": 371,
+        "h": 371,
+        "right": 785.47,
+        "bottom": 620.58,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 479.97,
+        "y": 556.97,
+        "w": 240,
+        "h": 24,
+        "right": 719.97,
+        "bottom": 580.97,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 552.97,
+        "y": 688.41,
+        "w": 94,
+        "h": 14.83,
+        "right": 646.97,
+        "bottom": 703.23,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "390x844",
+      "tag": "beginning",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": false,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 16,
+        "y": 159.52,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 517.52,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 16,
+        "y": 165.63,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 523.63,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 38.29,
+        "y": 187.92,
+        "w": 313.42,
+        "h": 313.42,
+        "right": 351.71,
+        "bottom": 501.34,
+        "opacity": "0",
+        "display": "block",
+        "fill": "0deg",
+        "animationName": "resume-orb-energy-fill",
+        "animationDuration": "1.15s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 126.98,
+        "y": 276.61,
+        "w": 150.36,
+        "h": 150.36,
+        "right": 277.34,
+        "bottom": 426.97,
+        "opacity": "0.130808",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 79.31,
+        "y": 228.95,
+        "w": 231.34,
+        "h": 231.34,
+        "right": 310.65,
+        "bottom": 460.29,
+        "opacity": "0.231687",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 113.91,
+        "y": 429.22,
+        "w": 162.17,
+        "h": 16.2,
+        "right": 276.09,
+        "bottom": 445.42,
+        "opacity": "0.0691146",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 137.55,
+        "y": 474.59,
+        "w": 114.91,
+        "h": 37.94,
+        "right": 252.45,
+        "bottom": 512.53,
+        "opacity": "0",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 137.55,
+        "y": 474.59,
+        "w": 114.91,
+        "h": 37.94,
+        "right": 252.45,
+        "bottom": 512.53,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 162.78,
+        "y": 518.63,
+        "w": 64.44,
+        "h": 12,
+        "right": 227.22,
+        "bottom": 530.63,
+        "opacity": "0",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "390x844",
+      "tag": "partial",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": false,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 16,
+        "y": 159.52,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 517.52,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 16,
+        "y": 159.52,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 517.52,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 38.29,
+        "y": 181.8,
+        "w": 313.42,
+        "h": 313.42,
+        "right": 351.71,
+        "bottom": 495.23,
+        "opacity": "0.516683",
+        "display": "block",
+        "fill": "216.286deg",
+        "animationName": "resume-orb-energy-fill",
+        "animationDuration": "1.15s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 112.66,
+        "y": 256.18,
+        "w": 164.67,
+        "h": 164.67,
+        "right": 277.34,
+        "bottom": 420.85,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 69.69,
+        "y": 213.2,
+        "w": 250.59,
+        "h": 250.59,
+        "right": 320.28,
+        "bottom": 463.8,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 113.91,
+        "y": 420.84,
+        "w": 162.17,
+        "h": 16.2,
+        "right": 276.09,
+        "bottom": 437.05,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 137.55,
+        "y": 465.59,
+        "w": 114.91,
+        "h": 37.94,
+        "right": 252.45,
+        "bottom": 503.53,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 137.55,
+        "y": 465.59,
+        "w": 114.91,
+        "h": 37.94,
+        "right": 252.45,
+        "bottom": 503.53,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 162.78,
+        "y": 509.63,
+        "w": 64.44,
+        "h": 12,
+        "right": 227.22,
+        "bottom": 521.63,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "390x844",
+      "tag": "full",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": [
+        390,
+        905
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": false,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 16,
+        "y": 159.52,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 517.52,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 16,
+        "y": 159.52,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 517.52,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 38.29,
+        "y": 181.8,
+        "w": 313.42,
+        "h": 313.42,
+        "right": 351.71,
+        "bottom": 495.23,
+        "opacity": "0.86",
+        "display": "block",
+        "fill": "360deg",
+        "animationName": "resume-orb-energy-fill",
+        "animationDuration": "1.15s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 112.66,
+        "y": 256.18,
+        "w": 164.67,
+        "h": 164.67,
+        "right": 277.34,
+        "bottom": 420.85,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 69.69,
+        "y": 213.2,
+        "w": 250.59,
+        "h": 250.59,
+        "right": 320.28,
+        "bottom": 463.8,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 113.91,
+        "y": 420.84,
+        "w": 162.17,
+        "h": 16.2,
+        "right": 276.09,
+        "bottom": 437.05,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 137.55,
+        "y": 465.59,
+        "w": 114.91,
+        "h": 37.94,
+        "right": 252.45,
+        "bottom": 503.53,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 137.55,
+        "y": 465.59,
+        "w": 114.91,
+        "h": 37.94,
+        "right": 252.45,
+        "bottom": 503.53,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 162.78,
+        "y": 509.63,
+        "w": 64.44,
+        "h": 12,
+        "right": 227.22,
+        "bottom": 521.63,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "reduced-1440x900",
+      "tag": "beginning",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": true,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 367.97,
+        "y": 203.08,
+        "w": 464,
+        "h": 464,
+        "right": 831.97,
+        "bottom": 667.08,
+        "opacity": "0.86",
+        "display": "block",
+        "fill": "360deg",
+        "animationName": "none",
+        "animationDuration": "1e-05s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 478.07,
+        "y": 313.18,
+        "w": 243.8,
+        "h": 243.8,
+        "right": 721.87,
+        "bottom": 556.98,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 414.47,
+        "y": 249.58,
+        "w": 371,
+        "h": 371,
+        "right": 785.47,
+        "bottom": 620.58,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 479.97,
+        "y": 556.97,
+        "w": 240,
+        "h": 24,
+        "right": 719.97,
+        "bottom": 580.97,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 552.97,
+        "y": 688.41,
+        "w": 94,
+        "h": 14.83,
+        "right": 646.97,
+        "bottom": 703.23,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "reduced-1440x900",
+      "tag": "partial",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": true,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 367.97,
+        "y": 203.08,
+        "w": 464,
+        "h": 464,
+        "right": 831.97,
+        "bottom": 667.08,
+        "opacity": "0.86",
+        "display": "block",
+        "fill": "360deg",
+        "animationName": "none",
+        "animationDuration": "1e-05s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 478.07,
+        "y": 313.18,
+        "w": 243.8,
+        "h": 243.8,
+        "right": 721.87,
+        "bottom": 556.98,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 414.47,
+        "y": 249.58,
+        "w": 371,
+        "h": 371,
+        "right": 785.47,
+        "bottom": 620.58,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 479.97,
+        "y": 556.97,
+        "w": 240,
+        "h": 24,
+        "right": 719.97,
+        "bottom": 580.97,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 552.97,
+        "y": 688.41,
+        "w": 94,
+        "h": 14.83,
+        "right": 646.97,
+        "bottom": 703.23,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "label": "reduced-1440x900",
+      "tag": "full",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": [
+        1440,
+        900
+      ],
+      "scrollY": 0,
+      "animationStarts": [],
+      "reduced": true,
+      "composition": {
+        "cls": "resume-found__composition",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "mechanism": {
+        "cls": "resume-mechanism",
+        "x": 334.97,
+        "y": 170.08,
+        "w": 530,
+        "h": 530,
+        "right": 864.97,
+        "bottom": 700.08,
+        "opacity": "1",
+        "display": "block"
+      },
+      "energy": {
+        "cls": "resume-mechanism__orb-energy",
+        "x": 367.97,
+        "y": 203.08,
+        "w": 464,
+        "h": 464,
+        "right": 831.97,
+        "bottom": 667.08,
+        "opacity": "0.86",
+        "display": "block",
+        "fill": "360deg",
+        "animationName": "none",
+        "animationDuration": "1e-05s",
+        "mask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 90.5%, rgb(0, 0, 0) 91.5%, rgb(0, 0, 0) 96%, rgba(0, 0, 0, 0) 98%)"
+      },
+      "j": {
+        "cls": "resume-mechanism__j-medallion",
+        "x": 478.07,
+        "y": 313.18,
+        "w": 243.8,
+        "h": 243.8,
+        "right": 721.87,
+        "bottom": 556.98,
+        "opacity": "1",
+        "display": "grid"
+      },
+      "scene": {
+        "cls": "resume-mechanism__scene",
+        "x": 414.47,
+        "y": 249.58,
+        "w": 371,
+        "h": 371,
+        "right": 785.47,
+        "bottom": 620.58,
+        "opacity": "1",
+        "display": "block"
+      },
+      "title": {
+        "cls": "resume-found__title",
+        "x": 479.97,
+        "y": 556.97,
+        "w": 240,
+        "h": 24,
+        "right": 719.97,
+        "bottom": 580.97,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "action": {
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "flex"
+      },
+      "plate": {
+        "cls": "resume-found__action-plate resume-found__action-plate--default",
+        "x": 514.97,
+        "y": 623.22,
+        "w": 170,
+        "h": 56.13,
+        "right": 684.97,
+        "bottom": 679.34,
+        "opacity": "1",
+        "display": "block"
+      },
+      "close": {
+        "cls": "resume-found__close",
+        "x": 552.97,
+        "y": 688.41,
+        "w": 94,
+        "h": 14.83,
+        "right": 646.97,
+        "bottom": 703.23,
+        "opacity": "1",
+        "display": "block"
+      },
+      "images": [
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "loaded": true,
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-deep.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-extrusion-mid.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-face.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-detail.svg",
+          "loaded": true,
+          "w": 234,
+          "h": 370
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-bevel.svg",
+          "loaded": true,
+          "w": 228,
+          "h": 357
+        },
+        {
+          "src": "/media/opening/j-sonnet-v8/j-edge-light.svg",
+          "loaded": true,
+          "w": 230,
+          "h": 359
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "loaded": true,
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "loaded": true,
+          "w": 212,
+          "h": 70
+        }
+      ]
+    },
+    {
+      "kind": "escape",
+      "initialFocus": {
+        "tag": "DIV",
+        "cls": "resume-takeover__dialog",
+        "text": "Resume FoundView ResumeCLOSE",
+        "label": null
+      },
+      "tabFocus": {
+        "tag": "A",
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "text": "View Resume",
+        "label": null
+      },
+      "ret": {
+        "url": "/home",
+        "activeTag": "A",
+        "activeText": "Resume",
+        "activeClass": "header-client-tool header-client-tool--resume"
+      }
+    },
+    {
+      "kind": "close",
+      "initialFocus": {
+        "tag": "DIV",
+        "cls": "resume-takeover__dialog",
+        "text": "Resume FoundView ResumeCLOSE",
+        "label": null
+      },
+      "tabFocus": {
+        "tag": "A",
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "text": "View Resume",
+        "label": null
+      },
+      "ret": {
+        "url": "/home",
+        "activeTag": "BUTTON",
+        "activeText": "CLOSE",
+        "activeClass": "resume-found__close"
+      }
+    },
+    {
+      "kind": "view",
+      "initialFocus": {
+        "tag": "DIV",
+        "cls": "resume-takeover__dialog",
+        "text": "Resume FoundView ResumeCLOSE",
+        "label": null
+      },
+      "tabFocus": {
+        "tag": "A",
+        "cls": "resume-action resume-action--primary resume-found__action",
+        "text": "View Resume",
+        "label": null
+      },
+      "ret": {
+        "url": "/resume/viewer",
+        "heading": "Select a portfolio mode"
+      }
+    }
+  ],
+  "errors": [],
+  "failed": [],
+  "figma": {
+    "frame": "2407:340",
+    "outerFrame": 530,
+    "measuringCircuit": {
+      "node": "2407:343",
+      "size": 464
+    },
+    "innerGoldRace": {
+      "node": "2407:344",
+      "size": 424
+    },
+    "expectedRadii": [
+      232,
+      212
+    ]
+  }
+}

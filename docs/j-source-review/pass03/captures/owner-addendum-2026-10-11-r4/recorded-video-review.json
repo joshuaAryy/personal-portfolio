@@ -1,0 +1,74 @@
+{
+  "browser": "Installed Google Chrome via Playwright",
+  "board": {
+    "title": "Sonnet V8 opening · owner addendum review",
+    "poseCards": 7,
+    "brokenImages": [],
+    "scrollWidth": 1440
+  },
+  "recordedVideo": {
+    "url": "http://127.0.0.1:5176/docs/j-source-review/pass03/captures/owner-addendum-2026-10-11-r4/opening-chrome-full-1920x1080-through-home.webm",
+    "duration": 7.04,
+    "width": 1920,
+    "height": 1080,
+    "readyState": 4,
+    "paused": true,
+    "hasAudio": null,
+    "transitionFrames": [
+      {
+        "ms": 2450,
+        "file": "frames/recorded-video-2450ms.png"
+      },
+      {
+        "ms": 2580,
+        "file": "frames/recorded-video-2580ms.png"
+      },
+      {
+        "ms": 2660,
+        "file": "frames/recorded-video-2660ms.png"
+      },
+      {
+        "ms": 2740,
+        "file": "frames/recorded-video-2740ms.png"
+      },
+      {
+        "ms": 3100,
+        "file": "frames/recorded-video-3100ms.png"
+      },
+      {
+        "ms": 3380,
+        "file": "frames/recorded-video-3380ms.png"
+      },
+      {
+        "ms": 3500,
+        "file": "frames/recorded-video-3500ms.png"
+      },
+      {
+        "ms": 3720,
+        "file": "frames/recorded-video-3720ms.png"
+      },
+      {
+        "ms": 4090,
+        "file": "frames/recorded-video-4090ms.png"
+      },
+      {
+        "ms": 4100,
+        "file": "frames/recorded-video-4100ms.png"
+      },
+      {
+        "ms": 4840,
+        "file": "frames/recorded-video-4840ms.png"
+      },
+      {
+        "ms": 5000,
+        "file": "frames/recorded-video-5000ms.png"
+      },
+      {
+        "ms": 5500,
+        "file": "frames/recorded-video-5500ms.png"
+      }
+    ]
+  },
+  "errors": [],
+  "badResponses": []
+}

@@ -1,0 +1,293 @@
+{
+  "method": "Installed Chrome rendered the real DOM/CSS/SVG animation. CSS Web Animations were paused and set to exact currentTime; each inline SVG SMIL timeline was also paused and set to the same elapsed time. Two paint frames were awaited before capture. No storyboard frame was substituted into the application.",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "captureSize": {
+    "width": 720,
+    "height": 640,
+    "crop": "center crop"
+  },
+  "tickRevolution": {
+    "startMs": 600,
+    "durationMs": 3200,
+    "endMs": 3800,
+    "direction": "clockwise",
+    "unwrappedRotationDegrees": 360,
+    "completedWhileOpeningVisible": true
+  },
+  "poses": [
+    {
+      "name": "state-01-broken-dormant",
+      "timeMs": 650,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 650,
+        "progress": 0.015625000000000014,
+        "transform": "matrix(0.995185, 0.0980171, -0.0980171, 0.995185, 0, 0)",
+        "transformDegrees": 5.6,
+        "unwrappedDegrees": 5.6
+      },
+      "smilTimelineSeconds": [
+        0.6499990224838257,
+        0.6499990224838257,
+        0.6499990224838257
+      ],
+      "effects": {
+        "portalOpacity": 0.378214,
+        "ringOpacity": 0.378214,
+        "seamOpacity": 0,
+        "conduitOpacity": 0,
+        "sparkOpacity": 0,
+        "finalLockupOpacity": 0
+      },
+      "markRect": {
+        "x": 729,
+        "y": 309,
+        "width": 462,
+        "height": 462,
+        "top": 309,
+        "right": 1191,
+        "bottom": 771,
+        "left": 729
+      },
+      "assetErrors": [],
+      "capture": "state-01-broken-dormant-720x640.png"
+    },
+    {
+      "name": "state-02-approach",
+      "timeMs": 960,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 960,
+        "progress": 0.11249999999999999,
+        "transform": "matrix(0.760406, 0.649448, -0.649448, 0.760406, 0, 0)",
+        "transformDegrees": 40.5,
+        "unwrappedDegrees": 40.5
+      },
+      "smilTimelineSeconds": [
+        0.9599990248680115,
+        0.9599990248680115,
+        0.9599990248680115
+      ],
+      "effects": {
+        "portalOpacity": 0.5,
+        "ringOpacity": 0.5,
+        "seamOpacity": 0,
+        "conduitOpacity": 0,
+        "sparkOpacity": 0,
+        "finalLockupOpacity": 0
+      },
+      "markRect": {
+        "x": 751,
+        "y": 331,
+        "width": 418,
+        "height": 418,
+        "top": 331,
+        "right": 1169,
+        "bottom": 749,
+        "left": 751
+      },
+      "assetErrors": [],
+      "capture": "state-02-approach-720x640.png"
+    },
+    {
+      "name": "state-03-alignment",
+      "timeMs": 1370,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 1370,
+        "progress": 0.24062500000000003,
+        "transform": "matrix(0.0588708, 0.998266, -0.998266, 0.0588708, 0, 0)",
+        "transformDegrees": 86.6,
+        "unwrappedDegrees": 86.6
+      },
+      "smilTimelineSeconds": [
+        1.3700000047683716,
+        1.3700000047683716,
+        1.3700000047683716
+      ],
+      "effects": {
+        "portalOpacity": 0.7,
+        "ringOpacity": 0.7,
+        "seamOpacity": 4.62593e-16,
+        "conduitOpacity": 0,
+        "sparkOpacity": 0,
+        "finalLockupOpacity": 0
+      },
+      "markRect": {
+        "x": 751,
+        "y": 331,
+        "width": 418,
+        "height": 418,
+        "top": 331,
+        "right": 1169,
+        "bottom": 749,
+        "left": 751
+      },
+      "assetErrors": [],
+      "capture": "state-03-alignment-720x640.png"
+    },
+    {
+      "name": "state-04-mechanical-lock",
+      "timeMs": 2580,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 2580,
+        "progress": 0.6187499999999999,
+        "transform": "matrix(-0.734323, -0.678801, 0.678801, -0.734323, 0, 0)",
+        "transformDegrees": 222.7,
+        "unwrappedDegrees": 222.7
+      },
+      "smilTimelineSeconds": [
+        2.5799989700317383,
+        2.5799989700317383,
+        2.5799989700317383
+      ],
+      "effects": {
+        "portalOpacity": 0.85,
+        "ringOpacity": 0.85,
+        "seamOpacity": 1,
+        "conduitOpacity": 0.92,
+        "sparkOpacity": 0,
+        "finalLockupOpacity": 0
+      },
+      "markRect": {
+        "x": 751,
+        "y": 331,
+        "width": 418,
+        "height": 418,
+        "top": 331,
+        "right": 1169,
+        "bottom": 749,
+        "left": 751
+      },
+      "assetErrors": [],
+      "capture": "state-04-mechanical-lock-720x640.png"
+    },
+    {
+      "name": "state-05-cyan-activation",
+      "timeMs": 3100,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 3100,
+        "progress": 0.78125,
+        "transform": "matrix(0.19509, -0.980785, 0.980785, 0.19509, 0, 0)",
+        "transformDegrees": 281.2,
+        "unwrappedDegrees": 281.3
+      },
+      "smilTimelineSeconds": [
+        3.099998950958252,
+        3.099998950958252,
+        3.099998950958252
+      ],
+      "effects": {
+        "portalOpacity": 1,
+        "ringOpacity": 1,
+        "seamOpacity": 1,
+        "conduitOpacity": 0.92,
+        "sparkOpacity": 0.5176,
+        "finalLockupOpacity": 0
+      },
+      "markRect": {
+        "x": 751,
+        "y": 331,
+        "width": 418,
+        "height": 418,
+        "top": 331,
+        "right": 1169,
+        "bottom": 749,
+        "left": 751
+      },
+      "assetErrors": [],
+      "capture": "state-05-cyan-activation-720x640.png"
+    },
+    {
+      "name": "state-06-material-sheen",
+      "timeMs": 3720,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 3720,
+        "progress": 0.975,
+        "transform": "matrix(0.987688, -0.156434, 0.156434, 0.987688, 0, 0)",
+        "transformDegrees": 351,
+        "unwrappedDegrees": 351
+      },
+      "smilTimelineSeconds": [
+        3.7200000286102295,
+        3.7200000286102295,
+        3.7200000286102295
+      ],
+      "effects": {
+        "portalOpacity": 1,
+        "ringOpacity": 1,
+        "seamOpacity": 0.28,
+        "conduitOpacity": 0,
+        "sparkOpacity": 0,
+        "finalLockupOpacity": 0
+      },
+      "markRect": {
+        "x": 751,
+        "y": 331,
+        "width": 418,
+        "height": 418,
+        "top": 331,
+        "right": 1169,
+        "bottom": 749,
+        "left": 751
+      },
+      "assetErrors": [],
+      "capture": "state-06-material-sheen-720x640.png"
+    },
+    {
+      "name": "state-07-settled",
+      "timeMs": 4100,
+      "pausedCssAnimationCount": 40,
+      "tick": {
+        "currentTimeMs": 4100,
+        "progress": 1,
+        "transform": "matrix(1, 0, 0, 1, 0, 0)",
+        "transformDegrees": 0,
+        "unwrappedDegrees": 360
+      },
+      "smilTimelineSeconds": [
+        4.099998950958252,
+        4.099998950958252,
+        4.099998950958252
+      ],
+      "effects": {
+        "portalOpacity": 1,
+        "ringOpacity": 1,
+        "seamOpacity": 0,
+        "conduitOpacity": 0,
+        "sparkOpacity": 0,
+        "finalLockupOpacity": 1
+      },
+      "markRect": {
+        "x": 751,
+        "y": 331,
+        "width": 418,
+        "height": 418,
+        "top": 331,
+        "right": 1169,
+        "bottom": 749,
+        "left": 751
+      },
+      "assetErrors": [],
+      "capture": "state-07-settled-720x640.png"
+    }
+  ],
+  "canonicalHandoff": [
+    {
+      "timeMs": 4090,
+      "file": "handoff-4090ms-720x640.png"
+    },
+    {
+      "timeMs": 4100,
+      "file": "handoff-4100ms-720x640.png"
+    }
+  ],
+  "consoleOrPageErrors": [],
+  "failedRequests": []
+}

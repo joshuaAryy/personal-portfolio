@@ -1,0 +1,16 @@
+{
+  "390": {
+    "before": "http://127.0.0.1:4182/home",
+    "href": "/resume",
+    "visible": true,
+    "after": "http://127.0.0.1:4182/resume",
+    "title": "Select a portfolio mode\nPROJECTS\nBUILT SYSTEMS\nEXPERIENCE\nPROFESSIONAL WORK\nHACKATHONS\nBUILD UNDER PRESSURE\nEDUCATION\nAC"
+  },
+  "1920": {
+    "before": "http://127.0.0.1:4182/home",
+    "href": "/resume",
+    "visible": true,
+    "after": "http://127.0.0.1:4182/resume",
+    "title": "PORTFOLIO UTILITY\n\nRESUME FOUND\nVIEW RESUME\nCLOSE"
+  }
+}

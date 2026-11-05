@@ -1,0 +1,155 @@
+import { readFileSync } from "node:fs";
+import { renderToStaticMarkup } from "react-dom/server";
+import { MemoryRouter } from "react-router-dom";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import App from "./App";
+
+afterEach(() => {
+  vi.unstubAllGlobals();
+});
+
+function renderRoute(path: string) {
+  vi.stubGlobal("window", {
+    matchMedia: () => ({ matches: false }),
+  });
+  return renderToStaticMarkup(
+    <MemoryRouter initialEntries={[path]}>
+      <App />
+    </MemoryRouter>,
+  );
+}
+
+const primaryRoutes = [
+  ["opening", "/", 'aria-label="Skip to Home"'],
+  ["Home / Explore", "/home", "Select a portfolio mode"],
+  ["projects", "/projects", "PROJECTS \u00b7 FEATURED"],
+  ["experience", "/experience", "PROFESSIONAL WORK \u00b7 RESEARCH \u00b7 DATA SYSTEMS"],
+  ["hackathons", "/hackathons", "HACKATHONS"],
+  ["education", "/education", "EDUCATION"],
+  ["education projects", "/education/projects", "Dental Clinic DBMS"],
+  ["profile overview", "/profile", "<h1>JOSHUA ARYEETEY</h1>"],
+  ["profile journey", "/profile/journey", "<h1>Curiosity became building.</h1>"],
+  ["profile demos", "/profile/demos", "data-node-id=\"1316:131\">FOOD TRACKER</h1>"],
+  ["personal highlights", "/profile/highlights", '<h1 id="personal-highlights-title">The rest of the story.</h1>'],
+  ["resume found", "/resume", 'id="resume-found-title" class="resume-found__title"'],
+  ["resume viewer", "/resume/viewer", "Download PDF"],
+] as const;
+
+describe("primary App route mapping", () => {
+  it.each(primaryRoutes)("renders the %s surface at %s", (_surface, path, marker) => {
+    expect(renderRoute(path)).toContain(marker);
+  });
+
+  it("links the Education selected tray to its projects page", () => {
+    expect(renderRoute("/education")).toContain('href="/education/projects"');
+  });
+
+  it("makes Personal Highlights a reachable Profile navigation destination", () => {
+    const page = renderRoute("/profile/highlights");
+    expect(page).toContain('href="/profile/highlights"');
+    expect(page).toContain('aria-current="page"');
+  });
+
+  it("renders the current Highlights review candidate with accessible captions and masked media", () => {
+    const page = renderRoute("/profile/highlights");
+    expect(page.match(/class="personal-highlights__photo"[^>]*alt="[^"]+"/g)).toHaveLength(8);
+    for (const source of [
+      "IMG_0098.jpeg",
+      "IMG_0208.jpeg",
+      "IMG_0305.jpeg",
+      "IMG_0308.jpeg",
+      "IMG_0422.jpeg",
+      "IMG_0334-privacy-safe.jpeg",
+      "IMG_0618-rank-up-safe.jpeg",
+      "IMG_0755-table-safe.jpeg",
+    ]) {
+      expect(page).toContain(`/media/profile/highlights/${source}`);
+    }
+    expect(page).not.toContain("/media/profile/highlights/IMG_0334.jpeg");
+    expect(page).not.toContain("/media/profile/highlights/IMG_0618.jpeg");
+    expect(page).not.toContain("/media/profile/highlights/IMG_0755.jpeg");
+    expect(page).toContain('class="personal-highlights__caption"');
+    expect(page).not.toMatch(/IMG_0320|shih-tzu/i);
+  });
+
+  it("places the continuous Figma Void field at the Journey layout root", () => {
+    const page = renderRoute("/profile/journey");
+    expect(page).toContain('<div class="journey-void-field" aria-hidden="true">');
+    expect(page.indexOf('class="journey-void-field"')).toBeLessThan(
+      page.indexOf('class="journey-identity"'),
+    );
+    expect(page).toContain('data-node-id="1287:8"');
+    expect(page).toContain('data-node-id="3492:2"');
+    expect(page).toContain('data-node-id="1976:45"');
+    expect(page).toContain('class="journey-identity__photo" src="/media/profile/owner-portrait.png"');
+    expect(page).toContain('class="journey-identity__frame" src="/media/profile/portrait-medallion.png"');
+  });
+
+  it("presents four concise Education capability briefs as responsive cards", () => {
+    const page = renderRoute("/education/projects");
+    const css = readFileSync("src/education-projects.css", "utf8");
+    expect(page).toContain('class="education-projects__briefs education-projects__briefs--cards"');
+    expect(page.match(/class="education-projects__learning"/g)).toHaveLength(4);
+    expect(page.match(/class="education-projects__tools"/g)).toHaveLength(4);
+    expect(css).toMatch(/\.education-projects__briefs--cards\s*\{[^}]*grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/s);
+    expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.education-projects__briefs--cards\s*\{[^}]*grid-template-columns:\s*minmax\(0,\s*1fr\)/s);
+    expect(css).toMatch(/@media \(max-width: 760px\)[\s\S]*?\.main--education-projects\s*\{[^}]*width:\s*100%/s);
+    expect(css).toMatch(/\.education-projects\.education-projects--capability-briefs\s*\{[^}]*width:\s*min\(100%,\s*calc\(100vw - 32px\)\)/s);
+    expect(css).toMatch(/\.education-projects--capability-briefs \.education-projects__heading h1\s*\{[^}]*overflow-wrap:\s*anywhere/s);
+    expect(page.match(/class="education-projects__brief education-projects__brief--[^"]+"/g)).toHaveLength(4);
+    expect(page).toContain("Dental Clinic DBMS");
+    expect(page).toContain("Bookstore Management System");
+    expect(page).toContain("8-bit ALU + FSM");
+    expect(page).toContain("Four-stage CMOS amplifier");
+    expect(page).toContain("IN PROGRESS");
+    expect(page).not.toContain("OWNER-REPORTED · EVIDENCE PENDING");
+    expect(page).not.toContain("SOURCE VERIFIED · LAB 6 PART 2");
+    expect(page).toContain("A desktop bookstore with distinct owner and customer workflows.");
+    expect(page).toContain("A four-stage MOSFET amplifier design study.");
+    expect(page).toContain("CURRENT · IN PROGRESS");
+    expect(page).not.toContain("Capability focus:");
+    expect(page).not.toContain("No source or authentic interface was reviewed");
+    expect(page).not.toMatch(/Dean|scholarship/i);
+    expect(page).toContain('class="top-nav top-nav--education-projects"');
+    expect(page).toContain('aria-current="page"');
+    expect(page).toContain('class="header-help"');
+    expect(page).not.toContain("Four engineering domains");
+    expect(page).not.toContain('class="education-projects__overview"');
+    expect(page).not.toContain('class="education-projects__alu-map"');
+    expect(page).toContain("QUARTUS / VHDL");
+    expect(page).toContain("Selected work");
+    expect(page).toContain("Software Specialization");
+    expect(page).toContain("Expected 2028");
+  });
+
+  it("keeps the ALU as a concise capability brief without source-map minutiae", () => {
+    const page = renderRoute("/education/projects");
+    expect(page).toContain("8-bit ALU + FSM");
+    expect(page).toContain("QUARTUS / VHDL");
+    expect(page).toContain("finite-state control");
+    expect(page).toContain("Waveform simulation in Quartus");
+    expect(page).not.toContain("OP[15..0]");
+    expect(page).not.toContain("Nine-state FSM");
+    expect(page).not.toContain("Input latches");
+  });
+  it("keeps owner context natural and excludes unsupported project claims", () => {
+    const page = renderRoute("/education/projects");
+    expect(page).toContain("CURRENT · IN PROGRESS");
+    expect(page).toContain("Broader clinic workflows are planned as the course project continues.");
+    expect(page).toContain("A desktop bookstore with distinct owner and customer workflows.");
+    expect(page).toContain("A four-stage MOSFET amplifier design study.");
+    expect(page).not.toContain("OWNER-REPORTED · EVIDENCE PENDING");
+    expect(page).not.toContain("SOURCE VERIFIED · LAB 6 PART 2");
+    expect(page).not.toContain("No source or authentic interface was reviewed");
+    expect(page).not.toContain("No schematic, netlist, or result plot was found");
+    expect(page).not.toContain("BDF pin is named Resetn");
+    expect(page).not.toContain("FSM module resets high");
+    expect(page).not.toContain("Waveform files show setup, not a verified passing trace");
+    expect(page).not.toContain("active-low reset");
+    expect(page).not.toContain("9 opcode branches");
+    expect(page).not.toContain("simulation passed");
+    expect(page).not.toContain("signed result");
+    expect(page).not.toContain("status output");
+    expect(page).not.toMatch(/Dean|scholarship/i);
+  });
+});

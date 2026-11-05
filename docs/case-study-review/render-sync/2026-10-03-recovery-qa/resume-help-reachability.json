@@ -1,0 +1,65 @@
+{
+  "route": "http://127.0.0.1:4173/resume",
+  "status": 200,
+  "viewport": "390x844",
+  "initial": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "document": {
+      "scrollWidth": 390,
+      "clientWidth": 390,
+      "scrollHeight": 844,
+      "scrollX": 0,
+      "scrollY": 0
+    },
+    "help": {
+      "text": "HELP",
+      "x": 252,
+      "y": 0.5,
+      "right": 336,
+      "bottom": 68.5,
+      "width": 84,
+      "height": 68,
+      "intersectsViewport": true,
+      "fullyInsideViewport": true
+    },
+    "nav": {
+      "x": 73,
+      "y": 0.5,
+      "right": 336,
+      "bottom": 68.5,
+      "scrollLeft": 0,
+      "scrollWidth": 263,
+      "clientWidth": 263,
+      "overflowX": "auto"
+    }
+  },
+  "keyboardFocusWithoutManualNavScroll": {
+    "tabIndex": 6,
+    "tag": "BUTTON",
+    "className": "header-help",
+    "text": "HELP",
+    "aria": null,
+    "isHelp": true,
+    "focusVisible": true,
+    "outline": "solid",
+    "helpBounds": {
+      "x": 252,
+      "y": 0.5,
+      "right": 336,
+      "bottom": 68.5,
+      "inside": true
+    },
+    "navScrollLeft": 0
+  },
+  "activation": {
+    "dialogCount": 1,
+    "route": "http://127.0.0.1:4173/resume",
+    "text": "Skip to content\nHELP\n\nPORTFOLIO UTILITY\n\nRESUME FOUND\nVIEW RESUME\nESC · CLOSE\n\nPORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nUSE THE TOP NAVIGATION\n\nProjects, Experience, Hackathons, and Education remain available from the client shell.\n\n02\nOPEN PROFILE\n\nThe account portrait at the top right is the canonical Profile entry.\n\nThe current screen stays open underneath this guide."
+  },
+  "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-03-recovery-qa/local-resume-390-help-open.png",
+  "browser": "153.0.8010.53",
+  "pageErrors": []
+}

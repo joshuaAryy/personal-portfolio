@@ -1,0 +1,158 @@
+{
+  "sourceCommit": "9fd23f9d45314f2319cffa97722cd7925ef2be52",
+  "browserVersion": "153.0.8010.53",
+  "viewports": {
+    "1920x1080": {
+      "selectors": [
+        {
+          "text": "FOOD TRACKER",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "true",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": true,
+          "accessibleName": "FOOD TRACKER"
+        },
+        {
+          "text": "CREST",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CREST"
+        },
+        {
+          "text": "CHO’VEIGO",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CHO’VEIGO"
+        }
+      ],
+      "media": {
+        "playerRect": {
+          "x": 401.4375,
+          "y": 222,
+          "width": 1198.5625,
+          "height": 674.1875
+        },
+        "images": [
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+            "alt": "Food Tracker selected mark",
+            "loaded": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "rect": {
+              "x": 760.71875,
+              "y": 319.09375,
+              "width": 480,
+              "height": 480
+            },
+            "objectFit": "contain"
+          }
+        ]
+      },
+      "help": {
+        "open": true,
+        "ariaLabel": null,
+        "labelledby": "_r_0_",
+        "title": "A quick orientation",
+        "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation, Profile tabs, or activity rail to continue.\n\nThe current screen stays open underneath this guide.",
+        "rect": {
+          "x": 1162,
+          "y": 507.59375,
+          "width": 410,
+          "height": 342.515625
+        },
+        "activeClass": "client-help-overlay__close"
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-1920x1080-help-description.png"
+    },
+    "390x844": {
+      "selectors": [
+        {
+          "text": "FOOD TRACKER",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "true",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": true,
+          "accessibleName": "FOOD TRACKER"
+        },
+        {
+          "text": "CREST",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CREST"
+        },
+        {
+          "text": "CHO’VEIGO",
+          "role": null,
+          "ariaLabel": null,
+          "ariaPressed": "false",
+          "ariaSelected": null,
+          "ariaCurrent": null,
+          "tabIndex": 0,
+          "selectedClass": false,
+          "accessibleName": "CHO’VEIGO"
+        }
+      ],
+      "media": {
+        "playerRect": {
+          "x": 26,
+          "y": 269,
+          "width": 352,
+          "height": 198
+        },
+        "images": [
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/demos-food.png",
+            "alt": "Food Tracker selected mark",
+            "loaded": true,
+            "naturalWidth": 1254,
+            "naturalHeight": 1254,
+            "rect": {
+              "x": 123.25,
+              "y": 289.25,
+              "width": 157.5,
+              "height": 157.5
+            },
+            "objectFit": "contain"
+          }
+        ]
+      },
+      "help": {
+        "open": true,
+        "ariaLabel": null,
+        "labelledby": "_r_0_",
+        "title": "A quick orientation",
+        "text": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nCHOOSE A DEMO\n\nView Food Tracker’s identity mark, Crest’s sample workspace, or Cho’Veigo’s Recommendations still.\n\n02\nPLAY CREST\n\nCrest is the only playable entry. Use Play to start its in-client video.\n\n03\nCHANGE SECTIONS\n\nUse the upper navigation or Profile tabs to continue.\n\nThe current screen stays open underneath this guide.",
+        "rect": {
+          "x": 12,
+          "y": 555.671875,
+          "width": 366,
+          "height": 276.328125
+        },
+        "activeClass": "client-help-overlay__close"
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-demos-preview-9fd23f9/demos-390x844-help-description.png"
+    }
+  }
+}

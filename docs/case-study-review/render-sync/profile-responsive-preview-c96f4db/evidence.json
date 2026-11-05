@@ -1,0 +1,767 @@
+{
+  "url": "https://9b8da4be.joshuaik2.pages.dev/profile",
+  "pageStatus": 200,
+  "finalUrl": "https://9b8da4be.joshuaik2.pages.dev/profile",
+  "title": "Joshua Aryeetey · Portfolio",
+  "rows": [
+    {
+      "w": 390,
+      "h": 1080,
+      "docWidth": 390,
+      "docHeight": 1998,
+      "main": {
+        "x": 0,
+        "y": 0,
+        "right": 390,
+        "bottom": 1867,
+        "width": 390,
+        "height": 1867
+      },
+      "rail": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0
+      },
+      "panel": {
+        "x": 18,
+        "y": 844,
+        "right": 372,
+        "bottom": 1344,
+        "width": 354,
+        "height": 500
+      },
+      "enclosure": {
+        "x": 8,
+        "y": 839,
+        "right": 382,
+        "bottom": 1203,
+        "width": 374,
+        "height": 364
+      },
+      "grid": {
+        "x": 32.2,
+        "y": 935,
+        "right": 357.8,
+        "bottom": 1320,
+        "width": 325.7,
+        "height": 385
+      },
+      "flex": "column",
+      "mainScroll": {
+        "client": 1867,
+        "scroll": 1867,
+        "top": 0,
+        "max": 0,
+        "overflow": "visible"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": false,
+        "enclosureWithinPanel": true
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": []
+    },
+    {
+      "w": 900,
+      "h": 1080,
+      "docWidth": 900,
+      "docHeight": 2010,
+      "main": {
+        "x": 0,
+        "y": 12,
+        "right": 900,
+        "bottom": 1879,
+        "width": 900,
+        "height": 1867
+      },
+      "rail": {
+        "x": 0,
+        "y": 0,
+        "right": 0,
+        "bottom": 0,
+        "width": 0,
+        "height": 0
+      },
+      "panel": {
+        "x": 18,
+        "y": 856,
+        "right": 882,
+        "bottom": 1356,
+        "width": 864,
+        "height": 500
+      },
+      "enclosure": {
+        "x": 8,
+        "y": 851,
+        "right": 892,
+        "bottom": 1215,
+        "width": 884,
+        "height": 364
+      },
+      "grid": {
+        "x": 52.5,
+        "y": 947,
+        "right": 847.4,
+        "bottom": 1332,
+        "width": 794.9,
+        "height": 385
+      },
+      "flex": "column",
+      "mainScroll": {
+        "client": 1867,
+        "scroll": 1867,
+        "top": 0,
+        "max": 0,
+        "overflow": "visible"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": false,
+        "enclosureWithinPanel": true
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": []
+    },
+    {
+      "w": 901,
+      "h": 1080,
+      "docWidth": 901,
+      "docHeight": 1080,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "right": 681,
+        "bottom": 1080,
+        "width": 681,
+        "height": 998
+      },
+      "rail": {
+        "x": 681,
+        "y": 82,
+        "right": 901,
+        "bottom": 1080,
+        "width": 220,
+        "height": 998
+      },
+      "panel": {
+        "x": 20,
+        "y": 1204,
+        "right": 661,
+        "bottom": 1704,
+        "width": 641,
+        "height": 500
+      },
+      "enclosure": {
+        "x": 20,
+        "y": 1199,
+        "right": 661,
+        "bottom": 1689,
+        "width": 641,
+        "height": 490
+      },
+      "grid": {
+        "x": 45.6,
+        "y": 1295,
+        "right": 635.3,
+        "bottom": 1680,
+        "width": 589.7,
+        "height": 385
+      },
+      "flex": "column",
+      "mainScroll": {
+        "client": 998,
+        "scroll": 2014,
+        "top": 0,
+        "max": 1016,
+        "overflow": "auto"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": true,
+        "enclosureWithinPanel": true
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": [],
+      "reach": {
+        "scrollTop": 1016,
+        "maxScrollTop": 1016,
+        "links": [
+          {
+            "label": "Open Food Tracker case study",
+            "top": 279,
+            "bottom": 470.5,
+            "visible": true
+          },
+          {
+            "label": "Open Cho’Veigo case study",
+            "top": 279,
+            "bottom": 470.5,
+            "visible": true
+          },
+          {
+            "label": "Open Crest case study",
+            "top": 471.5,
+            "bottom": 664,
+            "visible": true
+          },
+          {
+            "label": "Open Fraymakers case study",
+            "top": 471.5,
+            "bottom": 664,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "w": 1099,
+      "h": 1080,
+      "docWidth": 1099,
+      "docHeight": 1080,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "right": 879,
+        "bottom": 1080,
+        "width": 879,
+        "height": 998
+      },
+      "rail": {
+        "x": 879,
+        "y": 82,
+        "right": 1099,
+        "bottom": 1080,
+        "width": 220,
+        "height": 998
+      },
+      "panel": {
+        "x": 20,
+        "y": 1204,
+        "right": 859,
+        "bottom": 1704,
+        "width": 839,
+        "height": 500
+      },
+      "enclosure": {
+        "x": 20,
+        "y": 1199,
+        "right": 859,
+        "bottom": 1689,
+        "width": 839,
+        "height": 490
+      },
+      "grid": {
+        "x": 53.5,
+        "y": 1295,
+        "right": 825.4,
+        "bottom": 1680,
+        "width": 771.9,
+        "height": 385
+      },
+      "flex": "column",
+      "mainScroll": {
+        "client": 998,
+        "scroll": 2014,
+        "top": 0,
+        "max": 1016,
+        "overflow": "auto"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": true,
+        "enclosureWithinPanel": true
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": [],
+      "reach": {
+        "scrollTop": 1016,
+        "maxScrollTop": 1016,
+        "links": [
+          {
+            "label": "Open Food Tracker case study",
+            "top": 279,
+            "bottom": 470.5,
+            "visible": true
+          },
+          {
+            "label": "Open Cho’Veigo case study",
+            "top": 279,
+            "bottom": 470.5,
+            "visible": true
+          },
+          {
+            "label": "Open Crest case study",
+            "top": 471.5,
+            "bottom": 664,
+            "visible": true
+          },
+          {
+            "label": "Open Fraymakers case study",
+            "top": 471.5,
+            "bottom": 664,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "w": 1100,
+      "h": 1080,
+      "docWidth": 1100,
+      "docHeight": 1080,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "right": 880,
+        "bottom": 1080,
+        "width": 880,
+        "height": 998
+      },
+      "rail": {
+        "x": 880,
+        "y": 82,
+        "right": 1100,
+        "bottom": 1080,
+        "width": 220,
+        "height": 998
+      },
+      "panel": {
+        "x": 20,
+        "y": 1204,
+        "right": 860,
+        "bottom": 1534,
+        "width": 840,
+        "height": 330
+      },
+      "enclosure": {
+        "x": 20,
+        "y": 1199,
+        "right": 860,
+        "bottom": 1563,
+        "width": 840,
+        "height": 364
+      },
+      "grid": {
+        "x": 44,
+        "y": 1304,
+        "right": 836,
+        "bottom": 1502,
+        "width": 792,
+        "height": 198
+      },
+      "flex": "column",
+      "mainScroll": {
+        "client": 998,
+        "scroll": 1844,
+        "top": 0,
+        "max": 846,
+        "overflow": "auto"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": true,
+        "enclosureWithinPanel": false
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": []
+    },
+    {
+      "w": 1858,
+      "h": 1080,
+      "docWidth": 1858,
+      "docHeight": 1080,
+      "main": {
+        "x": 0,
+        "y": 106.5,
+        "right": 1548.3,
+        "bottom": 1080,
+        "width": 1548.3,
+        "height": 973.5
+      },
+      "rail": {
+        "x": 1548.3,
+        "y": 106.5,
+        "right": 1858,
+        "bottom": 1080,
+        "width": 309.7,
+        "height": 973.5
+      },
+      "panel": {
+        "x": 229.1,
+        "y": 1228.5,
+        "right": 1319.1,
+        "bottom": 1558.5,
+        "width": 1090,
+        "height": 330
+      },
+      "enclosure": {
+        "x": 229.1,
+        "y": 1223.5,
+        "right": 1319.1,
+        "bottom": 1587.5,
+        "width": 1090,
+        "height": 364
+      },
+      "grid": {
+        "x": 253.1,
+        "y": 1328.5,
+        "right": 1295.1,
+        "bottom": 1526.5,
+        "width": 1042,
+        "height": 198
+      },
+      "flex": "column",
+      "mainScroll": {
+        "client": 974,
+        "scroll": 1844,
+        "top": 0,
+        "max": 870,
+        "overflow": "auto"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": true,
+        "enclosureWithinPanel": false
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": []
+    },
+    {
+      "w": 1859,
+      "h": 1080,
+      "docWidth": 1859,
+      "docHeight": 1080,
+      "main": {
+        "x": 0,
+        "y": 106.5,
+        "right": 1549.1,
+        "bottom": 1080,
+        "width": 1549.1,
+        "height": 973.5
+      },
+      "rail": {
+        "x": 1549.1,
+        "y": 106.5,
+        "right": 1859,
+        "bottom": 1080,
+        "width": 309.9,
+        "height": 973.5
+      },
+      "panel": {
+        "x": 444,
+        "y": 430.5,
+        "right": 1534,
+        "bottom": 760.5,
+        "width": 1090,
+        "height": 330
+      },
+      "enclosure": {
+        "x": 435,
+        "y": 425.5,
+        "right": 1541,
+        "bottom": 789.5,
+        "width": 1106,
+        "height": 364
+      },
+      "grid": {
+        "x": 468,
+        "y": 530.5,
+        "right": 1510,
+        "bottom": 728.5,
+        "width": 1042,
+        "height": 198
+      },
+      "flex": "row",
+      "mainScroll": {
+        "client": 973,
+        "scroll": 998,
+        "top": 0,
+        "max": 25,
+        "overflow": "auto"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": true,
+        "enclosureWithinPanel": false
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": []
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "docWidth": 1920,
+      "docHeight": 1080,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "right": 1600,
+        "bottom": 1080,
+        "width": 1600,
+        "height": 970
+      },
+      "rail": {
+        "x": 1600,
+        "y": 110,
+        "right": 1920,
+        "bottom": 1080,
+        "width": 320,
+        "height": 970
+      },
+      "panel": {
+        "x": 444,
+        "y": 434,
+        "right": 1534,
+        "bottom": 764,
+        "width": 1090,
+        "height": 330
+      },
+      "enclosure": {
+        "x": 435,
+        "y": 429,
+        "right": 1541,
+        "bottom": 793,
+        "width": 1106,
+        "height": 364
+      },
+      "grid": {
+        "x": 468,
+        "y": 534,
+        "right": 1510,
+        "bottom": 732,
+        "width": 1042,
+        "height": 198
+      },
+      "flex": "row",
+      "mainScroll": {
+        "client": 970,
+        "scroll": 998,
+        "top": 0,
+        "max": 28,
+        "overflow": "auto"
+      },
+      "fit": {
+        "panelInMainX": true,
+        "enclosureInMainX": true,
+        "enclosureClearRail": true,
+        "enclosureClearsGridBottom": true,
+        "enclosureWithinPanel": false
+      },
+      "links": [
+        {
+          "label": "Open Food Tracker case study",
+          "href": "/projects/food-tracker"
+        },
+        {
+          "label": "Open Cho’Veigo case study",
+          "href": "/projects/choveigo"
+        },
+        {
+          "label": "Open Crest case study",
+          "href": "/projects/crest"
+        },
+        {
+          "label": "Open Fraymakers case study",
+          "href": "/projects/fraymakers"
+        }
+      ],
+      "signals": [
+        "PROJECTS 4",
+        "EXPERIENCE 2",
+        "HACKATHON 1",
+        "ACADEMICS 2028"
+      ],
+      "brokenImages": []
+    }
+  ],
+  "interaction": {
+    "hoverHeading": "HACKATHON",
+    "hoverReset": "PROJECTS",
+    "focusHeading": "ACADEMICS",
+    "focusOutline": "rgb(226, 189, 103) solid 2px",
+    "focusReset": "PROJECTS"
+  },
+  "consoleErrors": [],
+  "pageErrors": [],
+  "failedRequests": [],
+  "badResponses": []
+}

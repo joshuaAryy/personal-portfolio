@@ -1,0 +1,881 @@
+{
+  "requestedSource": "a474032",
+  "preview": "https://16e18a8a.joshuaik2.pages.dev",
+  "route": "/resume",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T17:08:56.841Z",
+  "viewports": {
+    "390x844": {
+      "status": 200,
+      "initial": {
+        "url": "https://16e18a8a.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 905,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "nav": {
+          "rect": {
+            "left": 73,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5,
+            "width": 263,
+            "height": 68
+          },
+          "scrollWidth": 263,
+          "clientWidth": 263,
+          "scrollLeft": 0,
+          "overflowX": "auto",
+          "overflowY": "auto"
+        },
+        "help": {
+          "rect": {
+            "left": 252,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5,
+            "width": 84,
+            "height": 68
+          },
+          "display": "grid",
+          "visibility": "visible"
+        },
+        "main": {
+          "left": 0,
+          "right": 390,
+          "top": 70,
+          "bottom": 844,
+          "width": 390,
+          "height": 774
+        },
+        "rail": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "desktopFooter": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "system": {
+          "rect": {
+            "left": 16,
+            "right": 374,
+            "top": 153.0625,
+            "bottom": 511.0625,
+            "width": 358,
+            "height": 358
+          },
+          "scrollWidth": 358,
+          "clientWidth": 358,
+          "before": {
+            "position": "absolute",
+            "left": "179px",
+            "right": "-179px",
+            "width": "358px",
+            "height": "358px"
+          }
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "jMark": {
+            "naturalWidth": 700,
+            "naturalHeight": 700,
+            "rendered": {
+              "left": 39.640625,
+              "right": 350.34375,
+              "top": 176.703125,
+              "bottom": 487.40625,
+              "width": 310.703125,
+              "height": 310.703125
+            }
+          }
+        },
+        "assets": [
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-e-5PQWQF.js",
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-D5kAe7XZ.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-a474032-390x844-initial.png",
+        "resume-a474032-390x844-help-focus.png",
+        "resume-a474032-390x844-help-open.png"
+      ],
+      "helpKeyboard": {
+        "focus": {
+          "tabPresses": 9,
+          "class": "header-help",
+          "focusVisible": true,
+          "outline": "rgb(244, 203, 105) solid 2px",
+          "outlineOffset": "-3px",
+          "buttonRect": {
+            "left": 252,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5
+          },
+          "outlineRect": {
+            "left": 253,
+            "right": 335,
+            "top": 1.5,
+            "bottom": 67.5
+          },
+          "navRect": {
+            "left": 73,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5
+          },
+          "navClip": {
+            "left": 73,
+            "right": 336,
+            "top": 0.5,
+            "bottom": 68.5
+          },
+          "nav": {
+            "scrollLeft": 0,
+            "scrollWidth": 263,
+            "clientWidth": 263,
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          "outlineInsideNav": true,
+          "outlineInsideViewport": true,
+          "document": {
+            "width": 390,
+            "clientWidth": 390,
+            "scrollX": 0,
+            "scrollY": 0
+          }
+        },
+        "open": {
+          "route": "/resume",
+          "dialogs": 1,
+          "activeClass": "client-help-overlay__close",
+          "activeText": "CLOSE\nESC"
+        },
+        "close": {
+          "route": "/resume",
+          "activeClass": "header-help",
+          "activeText": "HELP",
+          "focusVisible": true,
+          "scrollX": 0,
+          "scrollY": 0
+        }
+      }
+    },
+    "650x844": {
+      "status": 200,
+      "initial": {
+        "url": "https://16e18a8a.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 650,
+          "clientWidth": 650,
+          "height": 905,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "nav": {
+          "rect": {
+            "left": 73,
+            "right": 596,
+            "top": 0.5,
+            "bottom": 68.5,
+            "width": 523,
+            "height": 68
+          },
+          "scrollWidth": 523,
+          "clientWidth": 523,
+          "scrollLeft": 0,
+          "overflowX": "auto",
+          "overflowY": "auto"
+        },
+        "help": {
+          "rect": {
+            "left": 512,
+            "right": 596,
+            "top": 0.5,
+            "bottom": 68.5,
+            "width": 84,
+            "height": 68
+          },
+          "display": "grid",
+          "visibility": "visible"
+        },
+        "main": {
+          "left": 0,
+          "right": 650,
+          "top": 70,
+          "bottom": 844,
+          "width": 650,
+          "height": 774
+        },
+        "rail": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "desktopFooter": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "system": {
+          "rect": {
+            "left": 117.921875,
+            "right": 532.0625,
+            "top": 153.0625,
+            "bottom": 567.203125,
+            "width": 414.140625,
+            "height": 414.140625
+          },
+          "scrollWidth": 516,
+          "clientWidth": 414,
+          "before": {
+            "position": "absolute",
+            "left": "207.062px",
+            "right": "-410.922px",
+            "width": "618px",
+            "height": "618px"
+          }
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "jMark": {
+            "naturalWidth": 700,
+            "naturalHeight": 700,
+            "rendered": {
+              "left": 145.265625,
+              "right": 504.703125,
+              "top": 180.40625,
+              "bottom": 539.84375,
+              "width": 359.4375,
+              "height": 359.4375
+            }
+          }
+        },
+        "assets": [
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-e-5PQWQF.js",
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-D5kAe7XZ.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-a474032-650x844-initial.png",
+        "resume-a474032-650x844-help-focus.png",
+        "resume-a474032-650x844-help-open.png"
+      ],
+      "helpKeyboard": {
+        "focus": {
+          "tabPresses": 9,
+          "class": "header-help",
+          "focusVisible": true,
+          "outline": "rgb(244, 203, 105) solid 2px",
+          "outlineOffset": "-3px",
+          "buttonRect": {
+            "left": 512,
+            "right": 596,
+            "top": 0.5,
+            "bottom": 68.5
+          },
+          "outlineRect": {
+            "left": 513,
+            "right": 595,
+            "top": 1.5,
+            "bottom": 67.5
+          },
+          "navRect": {
+            "left": 73,
+            "right": 596,
+            "top": 0.5,
+            "bottom": 68.5
+          },
+          "navClip": {
+            "left": 73,
+            "right": 596,
+            "top": 0.5,
+            "bottom": 68.5
+          },
+          "nav": {
+            "scrollLeft": 0,
+            "scrollWidth": 523,
+            "clientWidth": 523,
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          "outlineInsideNav": true,
+          "outlineInsideViewport": true,
+          "document": {
+            "width": 650,
+            "clientWidth": 650,
+            "scrollX": 0,
+            "scrollY": 0
+          }
+        },
+        "open": {
+          "route": "/resume",
+          "dialogs": 1,
+          "activeClass": "client-help-overlay__close",
+          "activeText": "CLOSE\nESC"
+        },
+        "close": {
+          "route": "/resume",
+          "activeClass": "header-help",
+          "activeText": "HELP",
+          "focusVisible": true,
+          "scrollX": 0,
+          "scrollY": 0
+        }
+      }
+    },
+    "651x844": {
+      "status": 200,
+      "initial": {
+        "url": "https://16e18a8a.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 651,
+          "clientWidth": 651,
+          "height": 905,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "nav": {
+          "rect": {
+            "left": 84,
+            "right": 597,
+            "top": -0.5,
+            "bottom": 67.5,
+            "width": 513,
+            "height": 68
+          },
+          "scrollWidth": 513,
+          "clientWidth": 513,
+          "scrollLeft": 0,
+          "overflowX": "auto",
+          "overflowY": "auto"
+        },
+        "help": {
+          "rect": {
+            "left": 400.359375,
+            "right": 484.359375,
+            "top": -0.5,
+            "bottom": 67.5,
+            "width": 84,
+            "height": 68
+          },
+          "display": "grid",
+          "visibility": "visible"
+        },
+        "main": {
+          "left": 0,
+          "right": 651,
+          "top": 68,
+          "bottom": 844,
+          "width": 651,
+          "height": 776
+        },
+        "rail": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "desktopFooter": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "system": {
+          "rect": {
+            "left": 118.421875,
+            "right": 532.5625,
+            "top": 151.0625,
+            "bottom": 565.203125,
+            "width": 414.140625,
+            "height": 414.140625
+          },
+          "scrollWidth": 517,
+          "clientWidth": 414,
+          "before": {
+            "position": "absolute",
+            "left": "207.062px",
+            "right": "-411.922px",
+            "width": "619px",
+            "height": "619px"
+          }
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "jMark": {
+            "naturalWidth": 700,
+            "naturalHeight": 700,
+            "rendered": {
+              "left": 145.765625,
+              "right": 505.203125,
+              "top": 178.40625,
+              "bottom": 537.84375,
+              "width": 359.4375,
+              "height": 359.4375
+            }
+          }
+        },
+        "assets": [
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-e-5PQWQF.js",
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-D5kAe7XZ.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-a474032-651x844-initial.png",
+        "resume-a474032-651x844-help-focus.png",
+        "resume-a474032-651x844-help-open.png"
+      ],
+      "helpKeyboard": {
+        "focus": {
+          "tabPresses": 13,
+          "class": "header-help",
+          "focusVisible": true,
+          "outline": "rgb(244, 203, 105) solid 2px",
+          "outlineOffset": "3px",
+          "buttonRect": {
+            "left": 400.359375,
+            "right": 484.359375,
+            "top": -0.5,
+            "bottom": 67.5
+          },
+          "outlineRect": {
+            "left": 395.359375,
+            "right": 489.359375,
+            "top": -5.5,
+            "bottom": 72.5
+          },
+          "navRect": {
+            "left": 84,
+            "right": 597,
+            "top": -0.5,
+            "bottom": 67.5
+          },
+          "navClip": {
+            "left": 84,
+            "right": 597,
+            "top": -0.5,
+            "bottom": 67.5
+          },
+          "nav": {
+            "scrollLeft": 0,
+            "scrollWidth": 513,
+            "clientWidth": 513,
+            "overflowX": "auto",
+            "overflowY": "auto"
+          },
+          "outlineInsideNav": false,
+          "outlineInsideViewport": false,
+          "document": {
+            "width": 651,
+            "clientWidth": 651,
+            "scrollX": 0,
+            "scrollY": 0
+          }
+        },
+        "open": {
+          "route": "/resume",
+          "dialogs": 1,
+          "activeClass": "client-help-overlay__close",
+          "activeText": "CLOSE\nESC"
+        },
+        "close": {
+          "route": "/resume",
+          "activeClass": "header-help",
+          "activeText": "HELP",
+          "focusVisible": true,
+          "scrollX": 0,
+          "scrollY": 0
+        }
+      }
+    },
+    "760x844": {
+      "status": 200,
+      "initial": {
+        "url": "https://16e18a8a.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 760,
+          "clientWidth": 760,
+          "height": 905,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "nav": {
+          "rect": {
+            "left": 84,
+            "right": 706,
+            "top": -0.5,
+            "bottom": 67.5,
+            "width": 622,
+            "height": 68
+          },
+          "scrollWidth": 622,
+          "clientWidth": 622,
+          "scrollLeft": 0,
+          "overflowX": "auto",
+          "overflowY": "auto"
+        },
+        "help": {
+          "rect": {
+            "left": 400.359375,
+            "right": 484.359375,
+            "top": -0.5,
+            "bottom": 67.5,
+            "width": 84,
+            "height": 68
+          },
+          "display": "grid",
+          "visibility": "visible"
+        },
+        "main": {
+          "left": 0,
+          "right": 760,
+          "top": 68,
+          "bottom": 844,
+          "width": 760,
+          "height": 776
+        },
+        "rail": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "desktopFooter": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "system": {
+          "rect": {
+            "left": 172.921875,
+            "right": 587.0625,
+            "top": 151.0625,
+            "bottom": 565.203125,
+            "width": 414.140625,
+            "height": 414.140625
+          },
+          "scrollWidth": 571,
+          "clientWidth": 414,
+          "before": {
+            "position": "absolute",
+            "left": "207.062px",
+            "right": "-520.922px",
+            "width": "728px",
+            "height": "728px"
+          }
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "jMark": {
+            "naturalWidth": 700,
+            "naturalHeight": 700,
+            "rendered": {
+              "left": 200.265625,
+              "right": 559.703125,
+              "top": 178.40625,
+              "bottom": 537.84375,
+              "width": 359.4375,
+              "height": 359.4375
+            }
+          }
+        },
+        "assets": [
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-e-5PQWQF.js",
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-D5kAe7XZ.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-a474032-760x844-initial.png"
+      ]
+    },
+    "900x844": {
+      "status": 200,
+      "initial": {
+        "url": "https://16e18a8a.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 900,
+          "clientWidth": 900,
+          "height": 905,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "nav": {
+          "rect": {
+            "left": 284,
+            "right": 684.359375,
+            "top": -0.5,
+            "bottom": 81.5,
+            "width": 400.359375,
+            "height": 82
+          },
+          "scrollWidth": 400,
+          "clientWidth": 400,
+          "scrollLeft": 0,
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        "help": {
+          "rect": {
+            "left": 600.359375,
+            "right": 684.359375,
+            "top": -0.5,
+            "bottom": 81.5,
+            "width": 84,
+            "height": 82
+          },
+          "display": "grid",
+          "visibility": "visible"
+        },
+        "main": {
+          "left": 0,
+          "right": 900,
+          "top": 82,
+          "bottom": 844,
+          "width": 900,
+          "height": 762
+        },
+        "rail": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "desktopFooter": {
+          "left": 0,
+          "right": 0,
+          "top": 0,
+          "bottom": 0,
+          "width": 0,
+          "height": 0
+        },
+        "system": {
+          "rect": {
+            "left": 242.921875,
+            "right": 657.0625,
+            "top": 165.0625,
+            "bottom": 579.203125,
+            "width": 414.140625,
+            "height": 414.140625
+          },
+          "scrollWidth": 641,
+          "clientWidth": 414,
+          "before": {
+            "position": "absolute",
+            "left": "207.062px",
+            "right": "-660.922px",
+            "width": "868px",
+            "height": "868px"
+          }
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "jMark": {
+            "naturalWidth": 700,
+            "naturalHeight": 700,
+            "rendered": {
+              "left": 270.265625,
+              "right": 629.703125,
+              "top": 192.40625,
+              "bottom": 551.84375,
+              "width": 359.4375,
+              "height": 359.4375
+            }
+          }
+        },
+        "assets": [
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-e-5PQWQF.js",
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-D5kAe7XZ.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-a474032-900x844-initial.png"
+      ]
+    },
+    "1920x1080": {
+      "status": 200,
+      "initial": {
+        "url": "https://16e18a8a.joshuaik2.pages.dev/resume",
+        "document": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "scrollX": 0,
+          "scrollY": 0
+        },
+        "nav": {
+          "rect": {
+            "left": 273,
+            "right": 825.53125,
+            "top": -0.5,
+            "bottom": 109.5,
+            "width": 552.53125,
+            "height": 110
+          },
+          "scrollWidth": 553,
+          "clientWidth": 553,
+          "scrollLeft": 0,
+          "overflowX": "visible",
+          "overflowY": "visible"
+        },
+        "help": {
+          "rect": {
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "display": "none",
+          "visibility": "visible"
+        },
+        "main": {
+          "left": 0,
+          "right": 1600,
+          "top": 110,
+          "bottom": 1080,
+          "width": 1600,
+          "height": 970
+        },
+        "rail": {
+          "left": 1600,
+          "right": 1920,
+          "top": 110,
+          "bottom": 1080,
+          "width": 320,
+          "height": 970
+        },
+        "desktopFooter": {
+          "left": 1601,
+          "right": 1920,
+          "top": 1018,
+          "bottom": 1080,
+          "width": 319,
+          "height": 62
+        },
+        "system": {
+          "rect": {
+            "left": 535.015625,
+            "right": 1064.96875,
+            "top": 204,
+            "bottom": 733.953125,
+            "width": 529.953125,
+            "height": 529.953125
+          },
+          "scrollWidth": 845,
+          "clientWidth": 530,
+          "before": {
+            "position": "absolute",
+            "left": "264.969px",
+            "right": "-894.922px",
+            "width": "1159.91px",
+            "height": "1159.91px"
+          }
+        },
+        "images": {
+          "total": 21,
+          "loaded": 21,
+          "jMark": {
+            "naturalWidth": 700,
+            "naturalHeight": 700,
+            "rendered": {
+              "left": 570,
+              "right": 1029.953125,
+              "top": 238.984375,
+              "bottom": 698.9375,
+              "width": 459.953125,
+              "height": 459.953125
+            }
+          }
+        },
+        "assets": [
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-e-5PQWQF.js",
+          "https://16e18a8a.joshuaik2.pages.dev/assets/index-D5kAe7XZ.css"
+        ]
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": [
+        "resume-a474032-1920x1080-initial.png"
+      ]
+    }
+  },
+  "baselineRefs": {
+    "previousHelpClipped": "../2026-10-04-resume-preview-8680eeb/resume-preview-8680eeb-narrow-help-focus-clip.png",
+    "previous651Overflow": "../2026-10-04-resume-preview-74442c5/resume-after-74442c5-651x844-help-focus.png"
+  }
+}

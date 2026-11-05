@@ -1,0 +1,619 @@
+{
+  "capturedAt": "2026-10-04T08:51:27.573Z",
+  "preview": "https://965f0e82.joshuaik2.pages.dev/",
+  "source": "92d3c26",
+  "browser": "153.0.8010.53",
+  "viewport": [
+    1920,
+    1080
+  ],
+  "httpStatus": 200,
+  "scenario": "no-preference -> reduce during opening -> no-preference before 120ms handoff",
+  "before": {
+    "at": 1008.6000001430511,
+    "path": "/",
+    "url": "https://965f0e82.joshuaik2.pages.dev/",
+    "reduced": false,
+    "animations": [
+      {
+        "name": "opening-client-reveal",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-treatment-out",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-segmented-opacity",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-segmented-rotation",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-ticks-opacity",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-ticks-rotation",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-cyan",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-construction",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-j-body",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-glint-opacity",
+        "time": 558.1280000470579,
+        "state": "running"
+      },
+      {
+        "name": "opening-glint-rotation",
+        "time": 558.1280000470579,
+        "state": "running"
+      }
+    ],
+    "openingClasses": [
+      "opening-route",
+      "opening__underlay",
+      "opening",
+      "opening__treatment",
+      "opening__environment",
+      "opening__mechanism",
+      "opening__layer opening__bezel opening__motion--outer",
+      "opening__asset-frame opening__overscan--outer",
+      "opening__layer opening__bevel opening__motion--outer",
+      "opening__asset-frame opening__overscan--bevel",
+      "opening__layer opening__enamel-bed opening__motion--outer",
+      "opening__asset-frame opening__overscan--enamel",
+      "opening__layer opening__inner-rail opening__motion--outer",
+      "opening__asset-frame opening__overscan--rail",
+      "opening__layer opening__segmented-bezel opening__motion--segmented",
+      "opening__asset-frame ",
+      "opening__layer opening__tick-track opening__motion--ticks",
+      "opening__ticks-frame",
+      "opening__ticks-content",
+      "opening__tick-art",
+      "opening__layer opening__cyan opening__motion--cyan",
+      "opening__asset-frame ",
+      "opening__layer opening__jewels opening__motion--outer",
+      "opening__asset-frame ",
+      "opening__layer opening__construction opening__motion--construction",
+      "opening__archive-mark",
+      "opening__layer opening__j-body opening__motion--j-body",
+      "opening__archive-mark",
+      "opening__layer opening__glint opening__motion--glint",
+      "opening__asset-frame "
+    ],
+    "bodyWidth": 1920,
+    "clientWidth": 1920
+  },
+  "reduceCall": {
+    "startWallMs": 1791103885032,
+    "endWallMs": 1791103885033,
+    "immediate": {
+      "at": 1337.2000000476837,
+      "path": "/",
+      "url": "https://965f0e82.joshuaik2.pages.dev/",
+      "reduced": true,
+      "animations": [
+        {
+          "name": "opening-client-reveal",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-treatment-out",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-layer-cycle",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-layer-cycle",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-layer-cycle",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-layer-cycle",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-segmented-opacity",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-segmented-rotation",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-ticks-opacity",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-ticks-rotation",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-cyan",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-layer-cycle",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-construction",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-j-body",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-glint-opacity",
+          "time": 594.1280000470579,
+          "state": "finished"
+        },
+        {
+          "name": "opening-glint-rotation",
+          "time": 594.1280000470579,
+          "state": "finished"
+        }
+      ],
+      "openingClasses": [
+        "opening-route",
+        "opening__underlay",
+        "opening",
+        "opening__treatment",
+        "opening__environment",
+        "opening__mechanism",
+        "opening__layer opening__bezel opening__motion--outer",
+        "opening__asset-frame opening__overscan--outer",
+        "opening__layer opening__bevel opening__motion--outer",
+        "opening__asset-frame opening__overscan--bevel",
+        "opening__layer opening__enamel-bed opening__motion--outer",
+        "opening__asset-frame opening__overscan--enamel",
+        "opening__layer opening__inner-rail opening__motion--outer",
+        "opening__asset-frame opening__overscan--rail",
+        "opening__layer opening__segmented-bezel opening__motion--segmented",
+        "opening__asset-frame ",
+        "opening__layer opening__tick-track opening__motion--ticks",
+        "opening__ticks-frame",
+        "opening__ticks-content",
+        "opening__tick-art",
+        "opening__layer opening__cyan opening__motion--cyan",
+        "opening__asset-frame ",
+        "opening__layer opening__jewels opening__motion--outer",
+        "opening__asset-frame ",
+        "opening__layer opening__construction opening__motion--construction",
+        "opening__archive-mark",
+        "opening__layer opening__j-body opening__motion--j-body",
+        "opening__archive-mark",
+        "opening__layer opening__glint opening__motion--glint",
+        "opening__asset-frame "
+      ],
+      "bodyWidth": 1920,
+      "clientWidth": 1920
+    }
+  },
+  "returnCall": {
+    "startWallMs": 1791103885083,
+    "endWallMs": 1791103885084,
+    "elapsedSinceReduceEndMs": 50,
+    "immediate": {
+      "at": 1388,
+      "path": "/",
+      "url": "https://965f0e82.joshuaik2.pages.dev/",
+      "reduced": false,
+      "animations": [],
+      "openingClasses": [
+        "opening-route opening-route--reduced opening-route--leaving",
+        "opening__underlay",
+        "opening opening--reduced",
+        "opening__treatment",
+        "opening__environment",
+        "opening__mechanism",
+        "opening__layer opening__bezel opening__motion--outer",
+        "opening__asset-frame opening__overscan--outer",
+        "opening__layer opening__bevel opening__motion--outer",
+        "opening__asset-frame opening__overscan--bevel",
+        "opening__layer opening__enamel-bed opening__motion--outer",
+        "opening__asset-frame opening__overscan--enamel",
+        "opening__layer opening__inner-rail opening__motion--outer",
+        "opening__asset-frame opening__overscan--rail",
+        "opening__layer opening__segmented-bezel opening__motion--segmented",
+        "opening__asset-frame ",
+        "opening__layer opening__tick-track opening__motion--ticks",
+        "opening__ticks-frame",
+        "opening__ticks-content",
+        "opening__tick-art",
+        "opening__layer opening__cyan opening__motion--cyan",
+        "opening__asset-frame ",
+        "opening__layer opening__jewels opening__motion--outer",
+        "opening__asset-frame ",
+        "opening__layer opening__construction opening__motion--construction",
+        "opening__archive-mark",
+        "opening__layer opening__j-body opening__motion--j-body",
+        "opening__archive-mark",
+        "opening__layer opening__glint opening__motion--glint",
+        "opening__asset-frame "
+      ],
+      "bodyWidth": 1920,
+      "clientWidth": 1920
+    }
+  },
+  "afterReturn75ms": {
+    "at": 1831.5,
+    "path": "/",
+    "url": "https://965f0e82.joshuaik2.pages.dev/",
+    "reduced": false,
+    "animations": [
+      {
+        "name": "opening-client-reveal",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-treatment-out",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-segmented-opacity",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-segmented-rotation",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-ticks-opacity",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-ticks-rotation",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-cyan",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-construction",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-j-body",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-glint-opacity",
+        "time": 412.76000006085644,
+        "state": "running"
+      },
+      {
+        "name": "opening-glint-rotation",
+        "time": 412.76000006085644,
+        "state": "running"
+      }
+    ],
+    "openingClasses": [
+      "opening-route",
+      "opening__underlay",
+      "opening",
+      "opening__treatment",
+      "opening__environment",
+      "opening__mechanism",
+      "opening__layer opening__bezel opening__motion--outer",
+      "opening__asset-frame opening__overscan--outer",
+      "opening__layer opening__bevel opening__motion--outer",
+      "opening__asset-frame opening__overscan--bevel",
+      "opening__layer opening__enamel-bed opening__motion--outer",
+      "opening__asset-frame opening__overscan--enamel",
+      "opening__layer opening__inner-rail opening__motion--outer",
+      "opening__asset-frame opening__overscan--rail",
+      "opening__layer opening__segmented-bezel opening__motion--segmented",
+      "opening__asset-frame ",
+      "opening__layer opening__tick-track opening__motion--ticks",
+      "opening__ticks-frame",
+      "opening__ticks-content",
+      "opening__tick-art",
+      "opening__layer opening__cyan opening__motion--cyan",
+      "opening__asset-frame ",
+      "opening__layer opening__jewels opening__motion--outer",
+      "opening__asset-frame ",
+      "opening__layer opening__construction opening__motion--construction",
+      "opening__archive-mark",
+      "opening__layer opening__j-body opening__motion--j-body",
+      "opening__archive-mark",
+      "opening__layer opening__glint opening__motion--glint",
+      "opening__asset-frame "
+    ],
+    "bodyWidth": 1920,
+    "clientWidth": 1920
+  },
+  "afterReturn225ms": {
+    "at": 2292.9000000953674,
+    "path": "/",
+    "url": "https://965f0e82.joshuaik2.pages.dev/",
+    "reduced": false,
+    "animations": [
+      {
+        "name": "opening-client-reveal",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-treatment-out",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-segmented-opacity",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-segmented-rotation",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-ticks-opacity",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-ticks-rotation",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-cyan",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-layer-cycle",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-construction",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-j-body",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-glint-opacity",
+        "time": 861.2940000608562,
+        "state": "running"
+      },
+      {
+        "name": "opening-glint-rotation",
+        "time": 861.2940000608562,
+        "state": "running"
+      }
+    ],
+    "openingClasses": [
+      "opening-route",
+      "opening__underlay",
+      "opening",
+      "opening__treatment",
+      "opening__environment",
+      "opening__mechanism",
+      "opening__layer opening__bezel opening__motion--outer",
+      "opening__asset-frame opening__overscan--outer",
+      "opening__layer opening__bevel opening__motion--outer",
+      "opening__asset-frame opening__overscan--bevel",
+      "opening__layer opening__enamel-bed opening__motion--outer",
+      "opening__asset-frame opening__overscan--enamel",
+      "opening__layer opening__inner-rail opening__motion--outer",
+      "opening__asset-frame opening__overscan--rail",
+      "opening__layer opening__segmented-bezel opening__motion--segmented",
+      "opening__asset-frame ",
+      "opening__layer opening__tick-track opening__motion--ticks",
+      "opening__ticks-frame",
+      "opening__ticks-content",
+      "opening__tick-art",
+      "opening__layer opening__cyan opening__motion--cyan",
+      "opening__asset-frame ",
+      "opening__layer opening__jewels opening__motion--outer",
+      "opening__asset-frame ",
+      "opening__layer opening__construction opening__motion--construction",
+      "opening__archive-mark",
+      "opening__layer opening__j-body opening__motion--j-body",
+      "opening__archive-mark",
+      "opening__layer opening__glint opening__motion--glint",
+      "opening__asset-frame "
+    ],
+    "bodyWidth": 1920,
+    "clientWidth": 1920
+  },
+  "naturalComplete": {
+    "at": 3450.7000000476837,
+    "path": "/home",
+    "url": "https://965f0e82.joshuaik2.pages.dev/home",
+    "reduced": false,
+    "animations": [],
+    "openingClasses": [],
+    "bodyWidth": 1920,
+    "clientWidth": 1920
+  },
+  "events": {
+    "prefEvents": [
+      {
+        "at": 1350.1000001430511,
+        "reduce": true,
+        "path": "/"
+      },
+      {
+        "at": 1428.3000001907349,
+        "reduce": false,
+        "path": "/"
+      }
+    ],
+    "openingMutations": [
+      {
+        "at": 1350.1000001430511,
+        "cls": "opening opening--reduced",
+        "path": "/"
+      },
+      {
+        "at": 1350.1000001430511,
+        "cls": "opening-route opening-route--reduced",
+        "path": "/"
+      },
+      {
+        "at": 1354.5,
+        "cls": "opening-route opening-route--reduced opening-route--leaving",
+        "path": "/"
+      },
+      {
+        "at": 1428.3000001907349,
+        "cls": "opening",
+        "path": "/"
+      },
+      {
+        "at": 1428.3000001907349,
+        "cls": "opening-route opening-route--leaving",
+        "path": "/"
+      },
+      {
+        "at": 1432.7000000476837,
+        "cls": "opening-route",
+        "path": "/"
+      }
+    ]
+  },
+  "errors": {
+    "console": [],
+    "page": [],
+    "request": [],
+    "response": []
+  },
+  "checks": {
+    "reduceToNoPreferenceWithin120ms": true,
+    "canceledLeavingTransition": true,
+    "routeDidNotPrematurelyHandoff": true,
+    "normalOpeningCompleted": true,
+    "noBrowserErrors": true
+  }
+}

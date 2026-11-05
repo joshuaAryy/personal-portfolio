@@ -1,0 +1,4460 @@
+{
+  "preview": "https://95fca4c1.joshuaik2.pages.dev",
+  "expectedAppSource": "42069c0261434c8ba4fab3d0a6ece7208d6d4512",
+  "browser": "Installed Google Chrome via Playwright",
+  "routes": [
+    {
+      "file": "home-1440x900.png",
+      "route": "/home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/home",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-projects.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-experience.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-hackathons.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-education.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-confirm-disc.svg",
+          "w": 58,
+          "h": 58
+        },
+        {
+          "src": "/media/lobby/home-confirm-chevron.svg",
+          "w": 9,
+          "h": 16
+        },
+        {
+          "src": "/media/lobby/home-confirm-button.svg",
+          "w": 300,
+          "h": 64
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "home-390x844.png",
+      "route": "/home",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/home",
+      "document": {
+        "w": 390,
+        "h": 955
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 823.7,
+        "right": 390,
+        "bottom": 893.7
+      },
+      "mainScroll": {
+        "scrollHeight": 824,
+        "clientHeight": 824
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-projects.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-projects-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-experience.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-experience-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-hackathons.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-hackathons-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-education.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-mode-education-glyph-review-candidate.svg",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/home-mode-selected-ring.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/home-confirm-disc.svg",
+          "w": 58,
+          "h": 58
+        },
+        {
+          "src": "/media/lobby/home-confirm-chevron.svg",
+          "w": 9,
+          "h": 16
+        },
+        {
+          "src": "/media/lobby/home-confirm-button.svg",
+          "w": 300,
+          "h": 64
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "projects-1440x900.png",
+      "route": "/projects",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/projects",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1170,
+        "h": 818,
+        "right": 1170,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 818,
+        "clientHeight": 818
+      },
+      "lobby": {
+        "count": 5,
+        "group": {
+          "x": 80,
+          "y": 155.6,
+          "w": 1010,
+          "h": 459.1,
+          "right": 1090,
+          "bottom": 614.7
+        },
+        "centerDelta": 0,
+        "plusDisplay": "none",
+        "plusRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "plusCenterDelta": null,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW PROJECT",
+            "rect": {
+              "x": 464,
+              "y": 811.6,
+              "w": 242,
+              "h": 77,
+              "right": 706,
+              "bottom": 888.6
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/project-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "projects-390x844.png",
+      "route": "/projects",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/projects",
+      "document": {
+        "w": 390,
+        "h": 3526
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 3395,
+        "right": 390,
+        "bottom": 3465
+      },
+      "mainScroll": {
+        "scrollHeight": 3395,
+        "clientHeight": 3395
+      },
+      "lobby": {
+        "count": 5,
+        "group": {
+          "x": 13,
+          "y": 154,
+          "w": 364,
+          "h": 2798,
+          "right": 377,
+          "bottom": 2952
+        },
+        "centerDelta": 0,
+        "plusDisplay": "none",
+        "plusRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "plusCenterDelta": null,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW PROJECT",
+            "rect": {
+              "x": 74,
+              "y": 3304,
+              "w": 242,
+              "h": 77,
+              "right": 316,
+              "bottom": 3381
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/project-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "experience-1440x900.png",
+      "route": "/experience",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/experience",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817
+      },
+      "lobby": {
+        "count": 3,
+        "group": {
+          "x": 210,
+          "y": 131.5,
+          "w": 780,
+          "h": 582.1,
+          "right": 990,
+          "bottom": 713.6
+        },
+        "centerDelta": 0,
+        "plusDisplay": "flex",
+        "plusRects": [
+          {
+            "x": 100,
+            "y": 390.9,
+            "w": 63.4,
+            "h": 63.4,
+            "right": 163.3,
+            "bottom": 454.3
+          },
+          {
+            "x": 1036.6,
+            "y": 390.9,
+            "w": 63.4,
+            "h": 63.4,
+            "right": 1100,
+            "bottom": 454.3
+          }
+        ],
+        "plusCenterDelta": 0,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW EXPERIENCE",
+            "rect": {
+              "x": 479,
+              "y": 811.5,
+              "w": 242,
+              "h": 77,
+              "right": 721,
+              "bottom": 888.5
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "experience-390x844.png",
+      "route": "/experience",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/experience",
+      "document": {
+        "w": 390,
+        "h": 2362
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 2231,
+        "right": 390,
+        "bottom": 2301
+      },
+      "mainScroll": {
+        "scrollHeight": 2231,
+        "clientHeight": 2231
+      },
+      "lobby": {
+        "count": 3,
+        "group": {
+          "x": 13,
+          "y": 154,
+          "w": 364,
+          "h": 1674,
+          "right": 377,
+          "bottom": 1828
+        },
+        "centerDelta": 0,
+        "plusDisplay": "none",
+        "plusRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "plusCenterDelta": null,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW EXPERIENCE",
+            "rect": {
+              "x": 74,
+              "y": 2140,
+              "w": 242,
+              "h": 77,
+              "right": 316,
+              "bottom": 2217
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "hackathons-1440x900.png",
+      "route": "/hackathons",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/hackathons",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817
+      },
+      "lobby": {
+        "count": 3,
+        "group": {
+          "x": 210,
+          "y": 131.5,
+          "w": 780,
+          "h": 582.1,
+          "right": 990,
+          "bottom": 713.6
+        },
+        "centerDelta": 0,
+        "plusDisplay": "flex",
+        "plusRects": [
+          {
+            "x": 100,
+            "y": 390.9,
+            "w": 63.4,
+            "h": 63.4,
+            "right": 163.3,
+            "bottom": 454.3
+          },
+          {
+            "x": 1036.6,
+            "y": 390.9,
+            "w": 63.4,
+            "h": 63.4,
+            "right": 1100,
+            "bottom": 454.3
+          }
+        ],
+        "plusCenterDelta": 0,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW HACKATHON",
+            "rect": {
+              "x": 479,
+              "y": 811.5,
+              "w": 242,
+              "h": 77,
+              "right": 721,
+              "bottom": 888.5
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/hackathon-trophy.svg",
+          "w": 31,
+          "h": 31
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "hackathons-390x844.png",
+      "route": "/hackathons",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/hackathons",
+      "document": {
+        "w": 390,
+        "h": 2362
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 2231,
+        "right": 390,
+        "bottom": 2301
+      },
+      "mainScroll": {
+        "scrollHeight": 2231,
+        "clientHeight": 2231
+      },
+      "lobby": {
+        "count": 3,
+        "group": {
+          "x": 13,
+          "y": 154,
+          "w": 364,
+          "h": 1674,
+          "right": 377,
+          "bottom": 1828
+        },
+        "centerDelta": 0,
+        "plusDisplay": "none",
+        "plusRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "plusCenterDelta": null,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW HACKATHON",
+            "rect": {
+              "x": 74,
+              "y": 2140,
+              "w": 242,
+              "h": 77,
+              "right": 316,
+              "bottom": 2217
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/hackathon-trophy.svg",
+          "w": 31,
+          "h": 31
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "w": 34,
+          "h": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "education-1440x900.png",
+      "route": "/education",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/education",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817
+      },
+      "lobby": {
+        "count": 3,
+        "group": {
+          "x": 210,
+          "y": 131.5,
+          "w": 780,
+          "h": 582.1,
+          "right": 990,
+          "bottom": 713.6
+        },
+        "centerDelta": 0,
+        "plusDisplay": "flex",
+        "plusRects": [
+          {
+            "x": 100,
+            "y": 390.9,
+            "w": 63.4,
+            "h": 63.4,
+            "right": 163.3,
+            "bottom": 454.3
+          },
+          {
+            "x": 1036.6,
+            "y": 390.9,
+            "w": 63.4,
+            "h": 63.4,
+            "right": 1100,
+            "bottom": 454.3
+          }
+        ],
+        "plusCenterDelta": 0,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW EDUCATION",
+            "rect": {
+              "x": 479,
+              "y": 811.5,
+              "w": 242,
+              "h": 77,
+              "right": 721,
+              "bottom": 888.5
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "w": 22,
+          "h": 22
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/lobby/academic-expected-2028.svg",
+          "w": 22,
+          "h": 22
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "w": 22,
+          "h": 22
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "education-390x844.png",
+      "route": "/education",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/education",
+      "document": {
+        "w": 390,
+        "h": 2362
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 2231,
+        "right": 390,
+        "bottom": 2301
+      },
+      "mainScroll": {
+        "scrollHeight": 2231,
+        "clientHeight": 2231
+      },
+      "lobby": {
+        "count": 3,
+        "group": {
+          "x": 13,
+          "y": 154,
+          "w": 364,
+          "h": 1674,
+          "right": 377,
+          "bottom": 1828
+        },
+        "centerDelta": 0,
+        "plusDisplay": "none",
+        "plusRects": [
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          },
+          {
+            "x": 0,
+            "y": 0,
+            "w": 0,
+            "h": 0,
+            "right": 0,
+            "bottom": 0
+          }
+        ],
+        "plusCenterDelta": null,
+        "backgroundPosition": "50% 60%, 50% 60%",
+        "action": [
+          {
+            "text": "VIEW EDUCATION",
+            "rect": {
+              "x": 74,
+              "y": 2140,
+              "w": 242,
+              "h": 77,
+              "right": 316,
+              "bottom": 2217
+            }
+          }
+        ]
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "w": 160,
+          "h": 200
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "w": 22,
+          "h": 22
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "w": 246,
+          "h": 716
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/lobby/academic-expected-2028.svg",
+          "w": 22,
+          "h": 22
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "w": 22,
+          "h": 22
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "w": 412,
+          "h": 190
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "w": 50,
+          "h": 50
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "profile-1280x720.png",
+      "route": "/profile",
+      "viewport": [
+        1280,
+        720
+      ],
+      "status": 200,
+      "path": "/profile",
+      "document": {
+        "w": 1280,
+        "h": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1060,
+        "h": 638,
+        "right": 1060,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 638,
+        "clientHeight": 638
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": {
+          "x": 49.6,
+          "y": 96,
+          "w": 310.8,
+          "h": 524.2,
+          "right": 360.4,
+          "bottom": 620.2
+        },
+        "banner": {
+          "x": 69.5,
+          "y": -64.4,
+          "w": 270.9,
+          "h": 660,
+          "right": 340.5,
+          "bottom": 595.6
+        },
+        "portrait": {
+          "x": 117.6,
+          "y": 265.7,
+          "w": 174.7,
+          "h": 174.7,
+          "right": 292.4,
+          "bottom": 440.4
+        },
+        "traits": [
+          {
+            "x": 69.5,
+            "y": 618.5,
+            "w": 87.4,
+            "h": 80.6,
+            "right": 156.8,
+            "bottom": 699.1
+          },
+          {
+            "x": 161.3,
+            "y": 618.5,
+            "w": 87.4,
+            "h": 80.6,
+            "right": 248.7,
+            "bottom": 699.1
+          },
+          {
+            "x": 253.2,
+            "y": 618.5,
+            "w": 87.4,
+            "h": 80.6,
+            "right": 340.5,
+            "bottom": 699.1
+          }
+        ],
+        "signalGrid": {
+          "x": 414,
+          "y": 504,
+          "w": 626,
+          "h": 200,
+          "right": 1040,
+          "bottom": 704
+        }
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/trials-of-twilight-banner.png",
+          "w": 580,
+          "h": 1480
+        },
+        {
+          "src": "/media/profile/owner-portrait.png",
+          "w": 312,
+          "h": 312
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "w": 66,
+          "h": 66
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "w": 54,
+          "h": 54
+        },
+        {
+          "src": "/media/profile/trait-creative-c.svg",
+          "w": 23,
+          "h": 29
+        },
+        {
+          "src": "/media/profile/trait-creative-d.svg",
+          "w": 11,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/trait-proactive-a.svg",
+          "w": 44,
+          "h": 25
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "w": 66,
+          "h": 66
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "w": 54,
+          "h": 54
+        },
+        {
+          "src": "/media/profile/trait-proactive-b.svg",
+          "w": 29,
+          "h": 31
+        },
+        {
+          "src": "/media/profile/trait-proactive-c.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/profile/trait-proactive-d.svg",
+          "w": 8,
+          "h": 8
+        },
+        {
+          "src": "/media/profile/trait-execution-a.svg",
+          "w": 52,
+          "h": 52
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "w": 66,
+          "h": 66
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "w": 54,
+          "h": 54
+        },
+        {
+          "src": "/media/profile/trait-execution-b.svg",
+          "w": 41,
+          "h": 41
+        },
+        {
+          "src": "/media/profile/trait-execution-c.svg",
+          "w": 21,
+          "h": 15
+        },
+        {
+          "src": "/media/profile/profile-enclosure.svg",
+          "w": 1106,
+          "h": 364
+        },
+        {
+          "src": "/media/profile/profile-enclosure-mobile.svg",
+          "w": 1106,
+          "h": 364
+        },
+        {
+          "src": "/media/profile/profile-title-divider.png",
+          "w": 204,
+          "h": 12
+        },
+        {
+          "src": "/media/profile/project-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/profile/hackathon-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/profile/academics-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "profile-390x844.png",
+      "route": "/profile",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/profile",
+      "document": {
+        "w": 390,
+        "h": 1639
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 1508,
+        "right": 390,
+        "bottom": 1578
+      },
+      "mainScroll": {
+        "scrollHeight": 1508,
+        "clientHeight": 1508
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": {
+          "x": 14,
+          "y": 70,
+          "w": 362,
+          "h": 744,
+          "right": 376,
+          "bottom": 814
+        },
+        "banner": {
+          "x": 0,
+          "y": -114,
+          "w": 390,
+          "h": 1201,
+          "right": 390,
+          "bottom": 1087
+        },
+        "portrait": {
+          "x": 103.5,
+          "y": 160,
+          "w": 183,
+          "h": 183,
+          "right": 286.5,
+          "bottom": 343
+        },
+        "traits": [
+          {
+            "x": 56.2,
+            "y": 588,
+            "w": 89.4,
+            "h": 82.6,
+            "right": 145.7,
+            "bottom": 670.6
+          },
+          {
+            "x": 150.3,
+            "y": 588,
+            "w": 89.4,
+            "h": 82.6,
+            "right": 239.7,
+            "bottom": 670.6
+          },
+          {
+            "x": 244.3,
+            "y": 588,
+            "w": 89.4,
+            "h": 82.6,
+            "right": 333.7,
+            "bottom": 670.6
+          }
+        ],
+        "signalGrid": {
+          "x": 18,
+          "y": 914,
+          "w": 354,
+          "h": 471,
+          "right": 372,
+          "bottom": 1385
+        }
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/trials-of-twilight-banner.png",
+          "w": 580,
+          "h": 1480
+        },
+        {
+          "src": "/media/profile/owner-portrait.png",
+          "w": 312,
+          "h": 312
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "w": 66,
+          "h": 66
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "w": 54,
+          "h": 54
+        },
+        {
+          "src": "/media/profile/trait-creative-c.svg",
+          "w": 23,
+          "h": 29
+        },
+        {
+          "src": "/media/profile/trait-creative-d.svg",
+          "w": 11,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/trait-proactive-a.svg",
+          "w": 44,
+          "h": 25
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "w": 66,
+          "h": 66
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "w": 54,
+          "h": 54
+        },
+        {
+          "src": "/media/profile/trait-proactive-b.svg",
+          "w": 29,
+          "h": 31
+        },
+        {
+          "src": "/media/profile/trait-proactive-c.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/profile/trait-proactive-d.svg",
+          "w": 8,
+          "h": 8
+        },
+        {
+          "src": "/media/profile/trait-execution-a.svg",
+          "w": 52,
+          "h": 52
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "w": 66,
+          "h": 66
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "w": 54,
+          "h": 54
+        },
+        {
+          "src": "/media/profile/trait-execution-b.svg",
+          "w": 41,
+          "h": 41
+        },
+        {
+          "src": "/media/profile/trait-execution-c.svg",
+          "w": 21,
+          "h": 15
+        },
+        {
+          "src": "/media/profile/profile-enclosure.svg",
+          "w": 1106,
+          "h": 364
+        },
+        {
+          "src": "/media/profile/profile-enclosure-mobile.svg",
+          "w": 1106,
+          "h": 364
+        },
+        {
+          "src": "/media/profile/profile-title-divider.png",
+          "w": 204,
+          "h": 12
+        },
+        {
+          "src": "/media/profile/project-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/profile/hackathon-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/profile/academics-signal.svg",
+          "w": 120,
+          "h": 120
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "resume-1440x900.png",
+      "route": "/resume",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/resume",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "composition": {
+          "x": 280,
+          "y": 170.1,
+          "w": 640,
+          "h": 640,
+          "right": 920,
+          "bottom": 810.1
+        },
+        "outerFrame": {
+          "x": 280,
+          "y": 170.1,
+          "w": 640,
+          "h": 640,
+          "right": 920,
+          "bottom": 810.1
+        },
+        "close": {
+          "x": 544,
+          "y": 810.1,
+          "w": 112,
+          "h": 26.9,
+          "right": 656,
+          "bottom": 837
+        },
+        "closeGap": 0,
+        "closeVisible": true,
+        "textureResource": [
+          "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png"
+        ]
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "resume-390x844.png",
+      "route": "/resume",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/resume",
+      "document": {
+        "w": 390,
+        "h": 905
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 774,
+        "right": 390,
+        "bottom": 844
+      },
+      "mainScroll": {
+        "scrollHeight": 774,
+        "clientHeight": 774
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "composition": {
+          "x": 16,
+          "y": 278,
+          "w": 358,
+          "h": 358,
+          "right": 374,
+          "bottom": 636
+        },
+        "outerFrame": {
+          "x": 16,
+          "y": 278,
+          "w": 358,
+          "h": 358,
+          "right": 374,
+          "bottom": 636
+        },
+        "close": {
+          "x": 149,
+          "y": 636,
+          "w": 92,
+          "h": 22,
+          "right": 241,
+          "bottom": 658
+        },
+        "closeGap": 0,
+        "closeVisible": true,
+        "textureResource": [
+          "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png"
+        ]
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/opening/gameflow-background.jpg",
+          "w": 1280,
+          "h": 720
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/ready-check-main-frame.png",
+          "w": 530,
+          "h": 530
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-default.png",
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/resume/communitydragon/9.22-ready-check/button-accept-hover.png",
+          "w": 212,
+          "h": 70
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "resume_viewer-1440x900.png",
+      "route": "/resume/viewer",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/resume/viewer",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 821,
+        "clientHeight": 817
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [
+          {
+            "tag": "IFRAME",
+            "src": "https://95fca4c1.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "title": "Joshua Aryeetey’s resume"
+          }
+        ],
+        "buttons": [
+          "DOWNLOAD PDF",
+          "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)"
+        ]
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "resume_viewer-390x844.png",
+      "route": "/resume/viewer",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/resume/viewer",
+      "document": {
+        "w": 390,
+        "h": 995
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 864,
+        "right": 390,
+        "bottom": 934
+      },
+      "mainScroll": {
+        "scrollHeight": 864,
+        "clientHeight": 864
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": null,
+        "items": [],
+        "galleryText": ""
+      },
+      "viewer": {
+        "embeds": [
+          {
+            "tag": "IFRAME",
+            "src": "https://95fca4c1.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+            "title": "Joshua Aryeetey’s resume"
+          }
+        ],
+        "buttons": [
+          "DOWNLOAD PDF",
+          "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)"
+        ]
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "projects_food-tracker-1440x900.png",
+      "route": "/projects/food-tracker",
+      "viewport": [
+        1440,
+        900
+      ],
+      "status": 200,
+      "path": "/projects/food-tracker",
+      "document": {
+        "w": 1440,
+        "h": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1170,
+        "h": 818,
+        "right": 1170,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 9993,
+        "clientHeight": 818
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": {
+          "x": 75.9,
+          "y": 6480.8,
+          "w": 1018.3,
+          "h": 687.7,
+          "right": 1094.1,
+          "bottom": 7168.4
+        },
+        "items": [
+          {
+            "caption": "Macro Composition",
+            "type": "app-capture",
+            "body": "Macro Composition\n\nA nutrient balance graphic sits beside the daily comparison chart.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png",
+                "ok": false
+              }
+            ]
+          },
+          {
+            "caption": "Calorie forecast",
+            "type": "owner-authored-design-reference",
+            "body": "Calorie forecast\n\nSolid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/insights/calorie-forecast-owner-reference.png",
+                "ok": false
+              }
+            ]
+          },
+          {
+            "caption": "Fiber trend",
+            "type": "figma-design-study",
+            "body": "Fiber trend\n\nA nutrient view pairs daily totals with progress toward a goal.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/insights/fiber-trend-design-study.png",
+                "ok": false
+              }
+            ]
+          },
+          {
+            "caption": "Daily completeness",
+            "type": "figma-design-study",
+            "body": "Daily completeness\n\nA grid distinguishes complete, partial, and unlogged days.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+                "ok": false
+              }
+            ]
+          }
+        ],
+        "galleryText": "Macro Composition\n\nA nutrient balance graphic sits beside the daily comparison chart.\n\nCalorie forecast\n\nSolid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.\n\nFiber trend\n\nA nutrient view pairs daily totals with progress toward a goal.\n\nDaily completeness\n\nA grid distinguishes complete, partial, and unlogged days."
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+          "w": 368,
+          "h": 800
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    },
+    {
+      "file": "projects_food-tracker-390x844.png",
+      "route": "/projects/food-tracker",
+      "viewport": [
+        390,
+        844
+      ],
+      "status": 200,
+      "path": "/projects/food-tracker",
+      "document": {
+        "w": 390,
+        "h": 14398
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 14267.2,
+        "right": 390,
+        "bottom": 14337.2
+      },
+      "mainScroll": {
+        "scrollHeight": 14267,
+        "clientHeight": 14267
+      },
+      "lobby": {
+        "count": 0,
+        "group": null,
+        "centerDelta": null,
+        "plusDisplay": null,
+        "plusRects": [],
+        "plusCenterDelta": null,
+        "backgroundPosition": null,
+        "action": []
+      },
+      "profile": {
+        "identity": null,
+        "banner": null,
+        "portrait": null,
+        "traits": [],
+        "signalGrid": null
+      },
+      "resume": {
+        "fill": null,
+        "opacity": null,
+        "composition": null,
+        "outerFrame": null,
+        "close": null,
+        "closeGap": null,
+        "closeVisible": null,
+        "textureResource": []
+      },
+      "food": {
+        "gallery": {
+          "x": 17,
+          "y": 9647.8,
+          "w": 356,
+          "h": 787,
+          "right": 373,
+          "bottom": 10434.8
+        },
+        "items": [
+          {
+            "caption": "Macro Composition",
+            "type": "app-capture",
+            "body": "Macro Composition\n\nA nutrient balance graphic sits beside the daily comparison chart.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png",
+                "ok": false
+              }
+            ]
+          },
+          {
+            "caption": "Calorie forecast",
+            "type": "owner-authored-design-reference",
+            "body": "Calorie forecast\n\nSolid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/insights/calorie-forecast-owner-reference.png",
+                "ok": false
+              }
+            ]
+          },
+          {
+            "caption": "Fiber trend",
+            "type": "figma-design-study",
+            "body": "Fiber trend\n\nA nutrient view pairs daily totals with progress toward a goal.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/insights/fiber-trend-design-study.png",
+                "ok": false
+              }
+            ]
+          },
+          {
+            "caption": "Daily completeness",
+            "type": "figma-design-study",
+            "body": "Daily completeness\n\nA grid distinguishes complete, partial, and unlogged days.",
+            "images": [
+              {
+                "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+                "ok": false
+              }
+            ]
+          }
+        ],
+        "galleryText": "Macro Composition\n\nA nutrient balance graphic sits beside the daily comparison chart.\n\nCalorie forecast\n\nSolid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.\n\nFiber trend\n\nA nutrient view pairs daily totals with progress toward a goal.\n\nDaily completeness\n\nA grid distinguishes complete, partial, and unlogged days."
+      },
+      "viewer": {
+        "embeds": [],
+        "buttons": []
+      },
+      "scripts": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js"
+      ],
+      "styles": [
+        "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css"
+      ],
+      "images": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/optical-32.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "w": 160,
+          "h": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "w": 64,
+          "h": 64
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/case-studies/food-tracker/phase-24/search-banana-results.png",
+          "w": 368,
+          "h": 800
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "w": 468,
+          "h": 468
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "w": 13,
+          "h": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "w": 8,
+          "h": 7
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "w": 7,
+          "h": 6
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "w": 40,
+          "h": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "w": 150,
+          "h": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "w": 310,
+          "h": 230
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "w": 4241,
+          "h": 1650
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "w": 96,
+          "h": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "w": 96,
+          "h": 96
+        }
+      ],
+      "imageFailures": []
+    }
+  ],
+  "assets": {
+    "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png": {
+      "loaded": true,
+      "type": "CSS background resource"
+    }
+  },
+  "bundles": [
+    {
+      "kind": "javascript",
+      "url": "https://95fca4c1.joshuaik2.pages.dev/assets/index-Bkybm2RZ.js",
+      "status": 200,
+      "bytes": 518608,
+      "sha256": "5efeee941c32e0de3a5d340e44dae6956f3de1f83a140d75768e7d1517ebf6a9"
+    },
+    {
+      "kind": "css",
+      "url": "https://95fca4c1.joshuaik2.pages.dev/assets/index-9oGfhB5h.css",
+      "status": 200,
+      "bytes": 503365,
+      "sha256": "0ad693be35cab1c7d003fe6aeb900153d891e521ba08dd7ad555fcc83c71db32"
+    }
+  ],
+  "runtime": {
+    "consoleErrors": [],
+    "failedRequests": [],
+    "httpErrors": []
+  },
+  "reducedMotion": {
+    "fill": "306deg",
+    "opacity": "0.86",
+    "animationName": "none",
+    "overflow": 0
+  },
+  "interactions": {
+    "modalOpen": {
+      "path": "/resume",
+      "dialogs": 1
+    },
+    "escape": {
+      "path": "/home",
+      "focusRestored": true
+    },
+    "directClose": "/home",
+    "directView": "/resume/viewer"
+  }
+}

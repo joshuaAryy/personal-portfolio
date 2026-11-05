@@ -1,0 +1,360 @@
+{
+    "capturedAt":  "2026-10-04T09:44:06.767Z",
+    "preview":  "https://fc9f3ef5.joshuaik2.pages.dev",
+    "sourceCommit":  "3f34cd0d5ed6ba532cac75f7a12cef1400108812 (provided clean deployment identity)",
+    "browser":  "153.0.8010.53",
+    "mobile":  {
+                   "status":  200,
+                   "initial":  {
+                                   "url":  "https://fc9f3ef5.joshuaik2.pages.dev/home",
+                                   "viewport":  {
+                                                    "width":  390,
+                                                    "height":  844
+                                                },
+                                   "document":  {
+                                                    "width":  390,
+                                                    "clientWidth":  390,
+                                                    "height":  970,
+                                                    "clientHeight":  844,
+                                                    "scrollY":  70
+                                                },
+                                   "nav":  {
+                                               "rect":  {
+                                                            "left":  73,
+                                                            "right":  336,
+                                                            "top":  -69.5,
+                                                            "bottom":  -1.5,
+                                                            "width":  263,
+                                                            "height":  68
+                                                        },
+                                               "clientWidth":  263,
+                                               "scrollWidth":  321,
+                                               "scrollLeft":  0,
+                                               "overflowX":  "auto",
+                                               "overflowY":  "auto"
+                                           }
+                               },
+                   "focused":  [
+                                   {
+                                       "text":  "PROJECTS",
+                                       "href":  "/projects",
+                                       "tag":  "A",
+                                       "rect":  {
+                                                    "left":  81,
+                                                    "right":  128.86,
+                                                    "top":  6.5,
+                                                    "bottom":  62.5,
+                                                    "width":  47.86,
+                                                    "height":  56
+                                                },
+                                       "nav":  {
+                                                   "left":  73,
+                                                   "right":  336,
+                                                   "top":  0.5,
+                                                   "bottom":  68.5,
+                                                   "scrollLeft":  0,
+                                                   "clientWidth":  263,
+                                                   "scrollWidth":  321
+                                               },
+                                       "outline":  {
+                                                       "style":  "solid",
+                                                       "width":  "2px",
+                                                       "offset":  "3px",
+                                                       "color":  "rgb(244, 203, 105)"
+                                                   },
+                                       "expandedOutline":  {
+                                                               "left":  76,
+                                                               "right":  133.86,
+                                                               "top":  1.5,
+                                                               "bottom":  67.5
+                                                           },
+                                       "hitBoxInsideNav":  true,
+                                       "outlineInsideNav":  true,
+                                       "outlineInsideViewport":  true
+                                   },
+                                   {
+                                       "text":  "EXPERIENCE",
+                                       "href":  "/experience",
+                                       "tag":  "A",
+                                       "rect":  {
+                                                    "left":  128.86,
+                                                    "right":  185.81,
+                                                    "top":  6.5,
+                                                    "bottom":  62.5,
+                                                    "width":  56.95,
+                                                    "height":  56
+                                                },
+                                       "nav":  {
+                                                   "left":  73,
+                                                   "right":  336,
+                                                   "top":  0.5,
+                                                   "bottom":  68.5,
+                                                   "scrollLeft":  0,
+                                                   "clientWidth":  263,
+                                                   "scrollWidth":  321
+                                               },
+                                       "outline":  {
+                                                       "style":  "solid",
+                                                       "width":  "2px",
+                                                       "offset":  "3px",
+                                                       "color":  "rgb(244, 203, 105)"
+                                                   },
+                                       "expandedOutline":  {
+                                                               "left":  123.86,
+                                                               "right":  190.81,
+                                                               "top":  1.5,
+                                                               "bottom":  67.5
+                                                           },
+                                       "hitBoxInsideNav":  true,
+                                       "outlineInsideNav":  true,
+                                       "outlineInsideViewport":  true
+                                   },
+                                   {
+                                       "text":  "HACKATHONS",
+                                       "href":  "/hackathons",
+                                       "tag":  "A",
+                                       "rect":  {
+                                                    "left":  185.81,
+                                                    "right":  248.11,
+                                                    "top":  6.5,
+                                                    "bottom":  62.5,
+                                                    "width":  62.3,
+                                                    "height":  56
+                                                },
+                                       "nav":  {
+                                                   "left":  73,
+                                                   "right":  336,
+                                                   "top":  0.5,
+                                                   "bottom":  68.5,
+                                                   "scrollLeft":  0,
+                                                   "clientWidth":  263,
+                                                   "scrollWidth":  321
+                                               },
+                                       "outline":  {
+                                                       "style":  "solid",
+                                                       "width":  "2px",
+                                                       "offset":  "3px",
+                                                       "color":  "rgb(244, 203, 105)"
+                                                   },
+                                       "expandedOutline":  {
+                                                               "left":  180.81,
+                                                               "right":  253.11,
+                                                               "top":  1.5,
+                                                               "bottom":  67.5
+                                                           },
+                                       "hitBoxInsideNav":  true,
+                                       "outlineInsideNav":  true,
+                                       "outlineInsideViewport":  true
+                                   },
+                                   {
+                                       "text":  "EDUCATION",
+                                       "href":  "/education",
+                                       "tag":  "A",
+                                       "rect":  {
+                                                    "left":  248.11,
+                                                    "right":  302.08,
+                                                    "top":  6.5,
+                                                    "bottom":  62.5,
+                                                    "width":  53.97,
+                                                    "height":  56
+                                                },
+                                       "nav":  {
+                                                   "left":  73,
+                                                   "right":  336,
+                                                   "top":  0.5,
+                                                   "bottom":  68.5,
+                                                   "scrollLeft":  0,
+                                                   "clientWidth":  263,
+                                                   "scrollWidth":  321
+                                               },
+                                       "outline":  {
+                                                       "style":  "solid",
+                                                       "width":  "2px",
+                                                       "offset":  "3px",
+                                                       "color":  "rgb(244, 203, 105)"
+                                                   },
+                                       "expandedOutline":  {
+                                                               "left":  243.11,
+                                                               "right":  307.08,
+                                                               "top":  1.5,
+                                                               "bottom":  67.5
+                                                           },
+                                       "hitBoxInsideNav":  true,
+                                       "outlineInsideNav":  true,
+                                       "outlineInsideViewport":  true
+                                   },
+                                   {
+                                       "text":  "HELP",
+                                       "href":  null,
+                                       "tag":  "BUTTON",
+                                       "rect":  {
+                                                    "left":  302.08,
+                                                    "right":  386.08,
+                                                    "top":  6.5,
+                                                    "bottom":  62.5,
+                                                    "width":  84,
+                                                    "height":  56
+                                                },
+                                       "nav":  {
+                                                   "left":  73,
+                                                   "right":  336,
+                                                   "top":  0.5,
+                                                   "bottom":  68.5,
+                                                   "scrollLeft":  0,
+                                                   "clientWidth":  263,
+                                                   "scrollWidth":  321
+                                               },
+                                       "outline":  {
+                                                       "style":  "solid",
+                                                       "width":  "2px",
+                                                       "offset":  "3px",
+                                                       "color":  "rgb(244, 203, 105)"
+                                                   },
+                                       "expandedOutline":  {
+                                                               "left":  297.08,
+                                                               "right":  391.08,
+                                                               "top":  1.5,
+                                                               "bottom":  67.5
+                                                           },
+                                       "hitBoxInsideNav":  false,
+                                       "outlineInsideNav":  false,
+                                       "outlineInsideViewport":  false
+                                   }
+                               ],
+                   "helpAfter":  {
+                                     "rect":  {
+                                                  "left":  244.08,
+                                                  "right":  328.08,
+                                                  "top":  6.5,
+                                                  "bottom":  62.5
+                                              },
+                                     "nav":  {
+                                                 "left":  73,
+                                                 "right":  336,
+                                                 "top":  0.5,
+                                                 "bottom":  68.5,
+                                                 "scrollLeft":  58,
+                                                 "scrollWidth":  321,
+                                                 "clientWidth":  263
+                                             },
+                                     "outline":  {
+                                                     "style":  "solid",
+                                                     "width":  "2px",
+                                                     "offset":  "3px"
+                                                 },
+                                     "expandedOutline":  {
+                                                             "left":  239.08,
+                                                             "right":  333.08,
+                                                             "top":  1.5,
+                                                             "bottom":  67.5
+                                                         },
+                                     "hitBoxInsideNav":  true,
+                                     "outlineInsideNav":  true,
+                                     "outlineInsideViewport":  true
+                                 },
+                   "helpDialog":  {
+                                      "text":  "Home controls\nCLOSE\nESC\n01\nNAVIGATION\n\nChoose a mode to move between Projects, Experience, Hackathons, or Education.\n\n02\nPREVIEW A MODE\n\nSelecting a mode previews its description and focus areas. Use the arrows to compare destinations.\n\n03\nOPEN THE SELECTION\n\nConfirm or press Enter to open the selected item in its lobby. Close or press Esc to dismiss Help.",
+                                      "rect":  {
+                                                   "x":  12,
+                                                   "y":  649.625,
+                                                   "width":  366,
+                                                   "height":  182.375
+                                               }
+                                  },
+                   "education":  {
+                                     "status":  200,
+                                     "tabFocused":  true,
+                                     "tabData":  {
+                                                     "text":  "EDUCATION",
+                                                     "href":  "/education"
+                                                 },
+                                     "url":  "https://fc9f3ef5.joshuaik2.pages.dev/education",
+                                     "routeStatus":  200
+                                 },
+                   "errors":  [
+
+                              ],
+                   "images":  {
+                                  "count":  32,
+                                  "failed":  [
+
+                                             ]
+                              }
+               },
+    "desktop":  {
+                    "status":  200,
+                    "url":  "https://fc9f3ef5.joshuaik2.pages.dev/home",
+                    "document":  {
+                                     "width":  1920,
+                                     "clientWidth":  1920,
+                                     "height":  1080,
+                                     "clientHeight":  1080
+                                 },
+                    "logo":  {
+                                 "src":  "https://fc9f3ef5.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+                                 "rect":  {
+                                              "x":  6,
+                                              "y":  27.5,
+                                              "width":  54,
+                                              "height":  54
+                                          }
+                             },
+                    "confirm":  {
+                                    "x":  676,
+                                    "y":  917,
+                                    "width":  300,
+                                    "height":  64
+                                },
+                    "back":  {
+                                 "x":  640,
+                                 "y":  920,
+                                 "width":  58,
+                                 "height":  58
+                             },
+                    "main":  {
+                                 "x":  0,
+                                 "y":  110,
+                                 "width":  1600,
+                                 "height":  970
+                             },
+                    "nav":  {
+                                "x":  276.47,
+                                "y":  -0.5,
+                                "width":  552.53,
+                                "height":  110
+                            },
+                    "selected":  "Projects",
+                    "images":  {
+                                   "count":  32,
+                                   "failed":  [
+
+                                              ]
+                               },
+                    "assets":  [
+                                   {
+                                       "url":  "https://fc9f3ef5.joshuaik2.pages.dev/assets/index-D-IsHzm8.js",
+                                       "status":  200,
+                                       "bytes":  415137,
+                                       "sha256":  "8bbb53b306e2bc56cbae22fe17c42aae489a471d420d3b6b17a245230fb9f790"
+                                   },
+                                   {
+                                       "url":  "https://fc9f3ef5.joshuaik2.pages.dev/assets/index-Bq0vpVyO.css",
+                                       "status":  200,
+                                       "bytes":  346085,
+                                       "sha256":  "cde23fd72c389177f05d7a895cbd693eb864f4ad9bab27a8c0d1761f0ad1d332"
+                                   }
+                               ],
+                    "errors":  [
+
+                               ]
+                },
+    "checks":  {
+                   "primaryFourHitboxesAndFocusInsideNavAtZero":  true,
+                   "helpHitboxAndOutlineInsideNavAtMax":  true,
+                   "helpOpened":  true,
+                   "educationActivated":  true,
+                   "noOverflow":  true,
+                   "noErrors":  true,
+                   "allImagesLoaded":  true
+               }
+}

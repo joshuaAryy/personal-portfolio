@@ -1,0 +1,220 @@
+{
+  "highlights": {
+    "desktop": {
+      "viewport": 1440,
+      "docWidth": 1440,
+      "overflow": false,
+      "images": [
+        {
+          "src": "/media/profile/highlights/IMG_0422.jpeg",
+          "alt": "A spontaneous group selfie.",
+          "complete": true,
+          "naturalWidth": 1152,
+          "naturalHeight": 1536,
+          "fit": "cover",
+          "box": {
+            "x": 33,
+            "y": -154.703125,
+            "w": 558.96875,
+            "h": 357.59375
+          }
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0098.jpeg",
+          "alt": "A pause beneath a sunset sky.",
+          "complete": true,
+          "naturalWidth": 1536,
+          "naturalHeight": 1152,
+          "fit": "cover",
+          "box": {
+            "x": 607.96875,
+            "y": -154.703125,
+            "w": 271.484375,
+            "h": 357.59375
+          }
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0208.jpeg",
+          "alt": "A playful museum moment beneath a rounded exhibit.",
+          "complete": true,
+          "naturalWidth": 1152,
+          "naturalHeight": 1536,
+          "fit": "cover",
+          "box": {
+            "x": 895.453125,
+            "y": -154.703125,
+            "w": 271.5,
+            "h": 357.59375
+          }
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0305.jpeg",
+          "alt": "A selfie at a construction site.",
+          "complete": true,
+          "naturalWidth": 1152,
+          "naturalHeight": 1536,
+          "fit": "cover",
+          "box": {
+            "x": 33,
+            "y": 218.890625,
+            "w": 271.484375,
+            "h": 357.59375
+          }
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0308.jpeg",
+          "alt": "A playful moment in a gallery.",
+          "complete": true,
+          "naturalWidth": 1536,
+          "naturalHeight": 1152,
+          "fit": "cover",
+          "box": {
+            "x": 320.484375,
+            "y": 218.890625,
+            "w": 558.96875,
+            "h": 357.59375
+          }
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0320.jpeg",
+          "alt": "A quiet view across a city skyline.",
+          "complete": true,
+          "naturalWidth": 1536,
+          "naturalHeight": 1152,
+          "fit": "cover",
+          "box": {
+            "x": 895.453125,
+            "y": 218.890625,
+            "w": 271.5,
+            "h": 357.59375
+          }
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0394.jpeg",
+          "alt": "A small group shares a moment at an event.",
+          "complete": true,
+          "naturalWidth": 1152,
+          "naturalHeight": 1536,
+          "fit": "cover",
+          "box": {
+            "x": 33,
+            "y": 592.484375,
+            "w": 558.96875,
+            "h": 357.59375
+          }
+        }
+      ]
+    },
+    "narrow": {
+      "viewport": 390,
+      "docWidth": 390,
+      "overflow": false,
+      "galleryWidth": 358,
+      "images": [
+        {
+          "src": "/media/profile/highlights/IMG_0422.jpeg",
+          "loaded": true,
+          "width": 1152,
+          "boxWidth": 356,
+          "alt": "A spontaneous group selfie."
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0098.jpeg",
+          "loaded": true,
+          "width": 1536,
+          "boxWidth": 172.5,
+          "alt": "A pause beneath a sunset sky."
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0208.jpeg",
+          "loaded": true,
+          "width": 1152,
+          "boxWidth": 172.5,
+          "alt": "A playful museum moment beneath a rounded exhibit."
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0305.jpeg",
+          "loaded": true,
+          "width": 1152,
+          "boxWidth": 172.5,
+          "alt": "A selfie at a construction site."
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0308.jpeg",
+          "loaded": true,
+          "width": 1536,
+          "boxWidth": 356,
+          "alt": "A playful moment in a gallery."
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0320.jpeg",
+          "loaded": true,
+          "width": 1536,
+          "boxWidth": 172.5,
+          "alt": "A quiet view across a city skyline."
+        },
+        {
+          "src": "/media/profile/highlights/IMG_0394.jpeg",
+          "loaded": true,
+          "width": 1152,
+          "boxWidth": 356,
+          "alt": "A small group shares a moment at an event."
+        }
+      ]
+    }
+  },
+  "demos": {
+    "food": {
+      "label": "FOOD TRACKER",
+      "status": "DEMO PENDING",
+      "videos": 0,
+      "play": 0,
+      "still": "/media/demos-food.png"
+    },
+    "crestBefore": {
+      "player": "CREST",
+      "iframe": 0,
+      "play": true
+    },
+    "crestPlaying": {
+      "iframes": [
+        {
+          "src": "https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1",
+          "title": "Crest expense intelligence demo video",
+          "visible": true,
+          "rect": {
+            "w": 890.890625,
+            "h": 500.25
+          }
+        }
+      ],
+      "play": false
+    },
+    "choveigo": {
+      "title": "CHO’VEIGO",
+      "videos": 0,
+      "play": 0,
+      "still": "/media/choveigo-recommendations.png"
+    },
+    "narrow": {
+      "viewport": 390,
+      "docWidth": 390,
+      "overflow": false,
+      "stage": {
+        "x": 26,
+        "y": 254,
+        "w": 352,
+        "h": 269
+      },
+      "status": "DEMO PENDING"
+    }
+  },
+  "errors": [
+    "requestfailed https://yt3.ggpht.com/ytc/AIdro_m7s2_vr9a-URZ8SU5IImXm-Mf0-NqqRhWQpDEgf9vCn-B03oaMDnxNs4fPH8K8N5WflA=s68-c-k-c0x00ffffff-no-rj",
+    "requestfailed https://www.youtube-nocookie.com/api/timedtext?v=kiq6XjNi9J8&ei=bRnDavflN-mgir4Py8a9qQE&caps=asr&opi=112496729&xoaf=5&xowf=1&xospf=1&hl=en&ip=0.0.0.0&ipbits=0&expire=1791196125&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cxoaf&signature=2BA19747E534B3121D54B35183E3BF0DCB08261F.197AC674567AB87AE06C4C208CD9B664594FE958&key=yt8&kind=asr&lang=en&variant=gemini&fmt=json3&xorb=2&xobt=3&xovt=3&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP",
+    "requestfailed https://www.youtube-nocookie.com/api/stats/qoe?fmt=134&afmt=251&cpn=kyOGxSbZexZr2zAi&el=embedded&ns=yt&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2C100702%2C15105%2C25059%2C4174%2C30447%2C18705%2C26008%2C9671%2C19432%2C6620%2C2784%2C23826%2C9500%2C1840%2C115426%2C4199%2C30114%2C9181%2C52983%2C6032%2C1168%2C372%2C7758%2C19626%2C14695%2C11462%2C46288%2C13330%2C26539%2C17084%2C3919%2C12244%2C20584%2C9037%2C1538%2C1809%2C4014%2C22552%2C15896%2C15389%2C9177%2C6388%2C17181%2C3637%2C11%2C5316%2C1326%2C939%2C4784%2C2743%2C2726%2C3423%2C12240%2C3749%2C10132%2C1308%2C8661&cl=990399410&seq=1&docid=kiq6XjNi9J8&ei=bRnDavflN-mgir4Py8a9qQE&event=streamingstats&plid=AAZdD3rFtyIz7ZP6&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&vps=0.000:N,0.050:B,0.401:B,0.401:B&cat=streaming,sabr&cmt=0.050:0.000,0.401:0.000&afs=0.394:251::i:fl.-12.59;tl.-14;vg.-1.4100000000000001;nm.1;sms.2:CAEoAQ&vfs=0.401:134:134::a:sms.2:CAEoAQ&view=0.401:891:500&bwm=0.401:43346:0.228&bwe=0.401:95027&bat=0.401:1:1&vis=0.401:0&bh=0.401:0.000&qclc=ChBreU9HeFNiWmV4WnIyekFpEAE",
+    "requestfailed https://www.youtube-nocookie.com/api/stats/qoe?fmt=298&afmt=251&cpn=kyOGxSbZexZr2zAi&el=embedded&ns=yt&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2C100702%2C15105%2C25059%2C4174%2C30447%2C18705%2C26008%2C9671%2C19432%2C6620%2C2784%2C23826%2C9500%2C1840%2C115426%2C4199%2C30114%2C9181%2C52983%2C6032%2C1168%2C372%2C7758%2C19626%2C14695%2C11462%2C46288%2C13330%2C26539%2C17084%2C3919%2C12244%2C20584%2C9037%2C1538%2C1809%2C4014%2C22552%2C15896%2C15389%2C9177%2C6388%2C17181%2C3637%2C11%2C5316%2C1326%2C939%2C4784%2C2743%2C2726%2C3423%2C12240%2C3749%2C10132%2C1308%2C8661&cl=990399410&seq=2&docid=kiq6XjNi9J8&ei=bRnDavflN-mgir4Py8a9qQE&event=streamingstats&plid=AAZdD3rFtyIz7ZP6&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&ctmp=agc:t.441;stnorm.0;env.-14;fml.-12.59;tmin.-31;tmax.-14;ng.-1.4100000000000001&cfs=0.492:a.en:::s&vfs=0.585:298:134:134:a:CAIoAQ&view=0.585:891:500&vps=0.585:B,0.585:B&bwm=0.585:964267:0.181&bwe=0.585:1159751&bat=0.585:1:1&cmt=0.585:0.000&bh=0.585:17.200&qclc=ChBreU9HeFNiWmV4WnIyekFpEAI",
+    "requestfailed https://www.youtube-nocookie.com/ptracking?html5=1&video_id=kiq6XjNi9J8&cpn=kyOGxSbZexZr2zAi&ei=bRnDavflN-mgir4Py8a9qQE&ptk=youtube_none&pltype=contentugc",
+    "requestfailed https://www.youtube-nocookie.com/api/stats/playback?ns=yt&el=embedded&cpn=kyOGxSbZexZr2zAi&ver=2&cmt=0.023&fmt=298&fs=0&rt=0.958&euri=http%3A%2F%2F127.0.0.1%3A4174%2F&lact=978&cl=990399410&mos=0&volume=100&cbr=HeadlessChrome&cbrver=153.0.0.0&c=WEB_EMBEDDED_PLAYER&cver=2.20261002.01.00&cplayer=UNIPLAYER&cos=Windows&cosver=10.0&cplatform=DESKTOP&autoplay=1&epm=1&hl=en_US&cr=CA&len=105&fexp=v1%2C100673025%2C-76668381%2C27058999%2C34656%2C124674%2C117689%2C9252%2C16509%2C23206%2C100702%2C15105%2C25059%2C4174%2C30447%2C18705%2C26008%2C9671%2C19432%2C6620%2C2784%2C23826%2C9500%2C1840%2C115426%2C4199%2C30114%2C9181%2C52983%2C6032%2C1168%2C372%2C7758%2C19626%2C14695%2C11462%2C46288%2C13330%2C26539%2C17084%2C3919%2C12244%2C20584%2C9037%2C1538%2C1809%2C4014%2C22552%2C15896%2C15389%2C9177%2C6388%2C17181%2C3637%2C11%2C5316%2C1326%2C939%2C4784%2C2743%2C2726%2C3423%2C12240%2C3749%2C10132%2C1308%2C8661&rtn=9&afmt=251&size=891%3A500&inview=1&muted=0&cc=a.en&docid=kiq6XjNi9J8&ei=bRnDavflN-mgir4Py8a9qQE&plid=AAZdD3rFtyIz7ZP6&referrer=https%3A%2F%2Fwww.youtube-nocookie.com%2Fembed%2Fkiq6XjNi9J8%3Fautoplay%3D1&of=2dVkz7e1rF9t_XNU6wGWIw&vm=CAEQABgEOjJBSHFpSlRMb0xMNHZ3Q2V2T01pdVlCUjA2VXdwY0t5UjJBWWJZaUtsdmozbktMVDdXZ2JjQUNPdTRMVFdReE5sWWdEWV90YUxfV2NLNUpsTmFxb0V2ZVZRd19HVXkxSVNZQ01DR2lRNU5xV0hTM1lOeGE2ci10TDhsMnJ0WlpXOEFZYi00dElKSVFnYWVEZlFYelVVVGVz"
+  ]
+}

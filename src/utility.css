@@ -1,0 +1,974 @@
+.utility-page {
+  box-sizing: border-box;
+  width: min(100%, 1560px);
+  min-width: 0;
+  margin: 0 auto;
+  padding: 40px clamp(24px, 4.1vw, 64px) 32px;
+  color: #e8e8e5;
+  font-family: "League Spartan", Arial, sans-serif;
+}
+
+.utility-page *,
+.utility-page *::before,
+.utility-page *::after,
+.utility-state *,
+.utility-state *::before,
+.utility-state *::after {
+  box-sizing: border-box;
+}
+
+.utility-page a,
+.utility-state a {
+  color: inherit;
+}
+
+.utility-page a:focus-visible,
+.utility-state a:focus-visible {
+  border-radius: 3px;
+  outline: 2px solid #25d4df;
+  outline-offset: 4px;
+}
+
+.utility-eyebrow {
+  margin: 0 0 8px;
+  color: #d7aa45;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.1px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.utility-eyebrow--cyan {
+  color: #20d0da;
+}
+
+.utility-page__header {
+  padding: 0 0 28px;
+  border-bottom: 1px solid #27404a;
+}
+
+.utility-page__header h1,
+.utility-not-found h1 {
+  margin: 0;
+  color: #f0e8da;
+  font-size: clamp(32px, 3.2vw, 40px);
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  line-height: 1.12;
+}
+
+.utility-page__deck {
+  margin: 12px 0 0;
+  color: #b9c3c8;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.utility-help__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 24px;
+  margin-top: 24px;
+  min-height: 692px;
+}
+
+.client-help-overlay {
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  color: #eee7d8;
+  font-family: "League Spartan", Arial, sans-serif;
+}
+
+.client-help-overlay,
+.client-help-overlay *,
+.client-help-overlay *::before,
+.client-help-overlay *::after {
+  box-sizing: border-box;
+}
+
+.client-help-overlay__scrim {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 18, 32, 0.72);
+  backdrop-filter: saturate(0.62) brightness(0.7);
+}
+
+.client-help-overlay__spotlight {
+  position: absolute;
+  z-index: 1;
+  border: 1px solid rgba(36, 207, 222, 0.92);
+  box-shadow: 0 0 0 1px rgba(4, 12, 22, 0.5), inset 0 0 24px rgba(19, 184, 210, 0.055);
+  pointer-events: none;
+}
+.client-help-overlay__spotlight::before {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  padding: 2px 5px;
+  border: 1px solid rgba(36, 207, 222, 0.92);
+  background: rgba(3, 16, 25, 0.96);
+  color: #9af4f4;
+  content: attr(data-help-number);
+  font: 700 9px/1.2 "League Spartan", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-shadow: 0 0 8px rgba(36, 207, 222, 0.55);
+}
+.client-help-overlay__spotlight[hidden] { display: none; }
+
+.client-help-overlay--coachmark {
+  pointer-events: none;
+}
+
+.client-help-overlay--coachmark .client-help-overlay__scrim {
+  pointer-events: none;
+}
+
+@media (max-width: 620px) {
+  /* Keep the last utility target fully inside the viewport while its coachmark is open. */
+  body.client-help-coachmark-open .mobile-contact-row {
+    margin-bottom: 16px;
+  }
+}
+
+.client-help-coachmark {
+  position: fixed;
+  z-index: 2;
+  display: grid;
+  width: min(340px, calc(100vw - 24px));
+  max-height: min(252px, calc(100vh - 24px));
+  gap: 9px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 13px 14px 12px;
+  border: 1px solid rgba(205, 163, 73, 0.92);
+  background: rgba(7, 20, 30, 0.98);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(210, 173, 87, 0.11);
+  color: #eee7d8;
+  pointer-events: auto;
+}
+
+.client-help-coachmark__header,
+.client-help-coachmark__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.client-help-coachmark__count {
+  margin: 0;
+  color: #48ced9;
+  font: 700 10px/1.2 "League Spartan", Arial, sans-serif;
+  letter-spacing: 0.12em;
+}
+
+.client-help-coachmark__title {
+  margin: 0;
+  color: #ebdbb6;
+  font: 600 18px/1.2 "Cinzel", Georgia, serif;
+}
+
+.client-help-coachmark__title:focus { outline: none; }
+
+.client-help-coachmark__detail {
+  margin: 0;
+  color: #d8dfdc;
+  font: 400 13px/1.45 "League Spartan", Arial, sans-serif;
+}
+
+.client-help-coachmark__actions button {
+  min-height: 36px;
+  padding: 0 12px;
+  border: 1px solid rgba(54, 196, 211, 0.7);
+  background: rgba(4, 19, 28, 0.94);
+  color: #d9eded;
+  cursor: pointer;
+  font: 700 10px/1 "League Spartan", Arial, sans-serif;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.client-help-coachmark__actions button:disabled {
+  border-color: rgba(153, 169, 167, 0.25);
+  color: #81908e;
+  cursor: default;
+}
+
+.client-help-coachmark__focus-target span {
+  font-size: 8px;
+  letter-spacing: 0;
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.client-help-coachmark__actions button:focus-visible,
+.client-help-coachmark .client-help-overlay__close:focus-visible {
+  outline: 2px solid #f4cb69;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-help-overlay--coachmark,
+  .client-help-overlay--coachmark * {
+    scroll-behavior: auto !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.client-help-overlay__dialog {
+  position: absolute;
+  z-index: 2;
+  top: 47vh;
+  right: clamp(248px, calc(16.67vw + 28px), 348px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  width: min(460px, calc(83.33vw - 52px));
+  min-width: 0;
+  gap: 14px;
+  max-height: min(calc(100vh - 32px), 720px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 18px 20px 16px;
+  border: 1px solid rgba(205, 163, 73, 0.92);
+  background: rgba(7, 20, 30, 0.98);
+  box-shadow: 0 18px 54px rgba(0, 0, 0, 0.46), inset 0 0 0 1px rgba(210, 173, 87, 0.11);
+}
+
+.client-help-overlay__dialog:not(.client-help-overlay__dialog--home) {
+  top: auto;
+  bottom: 16px;
+  max-height: min(calc(100vh - 32px), 720px);
+  overflow-y: auto;
+}
+
+.client-help-overlay__dialog--home {
+  top: clamp(142px, calc(100vh - 630px), 44.3vh);
+  right: clamp(280px, calc(16.67vw + 70px), 430px);
+  width: min(410px, calc(83.33vw - 96px));
+  gap: 9px;
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.client-help-overlay__dialog.client-help-coachmark {
+  position: fixed;
+  right: auto;
+  bottom: auto;
+  display: grid;
+  gap: 9px;
+  width: min(340px, calc(100vw - 24px));
+  max-height: min(252px, calc(100vh - 24px));
+  overflow-y: auto;
+  padding: 13px 14px 12px;
+  border: 1px solid rgba(205, 163, 73, 0.92);
+  background: rgba(7, 20, 30, 0.98);
+  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.42), inset 0 0 0 1px rgba(210, 173, 87, 0.11);
+}
+
+/* Reduce the reserved rail gap only as the desktop Help dialog would leave the viewport. */
+@media (min-width: 621px) and (max-width: 900px) {
+  .client-help-overlay__dialog {
+    right: clamp(24px, calc(100vw - 434px), 248px);
+  }
+
+  .client-help-overlay__dialog--home {
+    right: clamp(24px, calc(100vw - 434px), 280px);
+  }
+}
+
+.client-help-overlay__sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.client-help-overlay__header {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid rgba(192, 156, 73, 0.35);
+}
+
+.client-help-overlay__eyebrow {
+  margin: 0 0 5px;
+  color: #37c4d5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.client-help-overlay__header h2 {
+  margin: 0;
+  color: #ebdbb6;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.client-help-overlay__close {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 7px;
+  min-height: 30px;
+  padding: 4px 8px;
+  border: 1px solid rgba(54, 196, 211, 0.78);
+  background: #07131d;
+  color: #c9e6e9;
+  cursor: pointer;
+  font: 700 9px/1 "League Spartan", Arial, sans-serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.client-help-overlay__close--floating {
+  position: fixed;
+  z-index: 3;
+  top: 10.7vh;
+  right: calc(16.67vw + 28px);
+  min-width: 112px;
+  justify-content: center;
+}
+
+.client-help-overlay__close kbd {
+  padding: 3px 4px;
+  border: 1px solid rgba(194, 203, 197, 0.28);
+  color: #c4b98f;
+  font: 600 8px/1 "League Spartan", Arial, sans-serif;
+}
+
+.client-help-overlay__close:hover,
+.client-help-overlay__close:focus-visible {
+  border-color: #42d7e3;
+  color: #fff2c5;
+}
+
+.client-help-overlay__close:focus-visible {
+  outline: 2px solid #42d7e3;
+  outline-offset: 3px;
+}
+
+.client-help-overlay__steps {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.client-help-overlay__steps li {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 8px;
+  min-height: 78px;
+  padding: 12px;
+  border: 1px solid rgba(198, 156, 62, 0.72);
+  background: linear-gradient(115deg, rgba(17, 43, 57, 0.75), rgba(6, 16, 24, 0.95));
+}
+
+.client-help-overlay__steps li > div {
+  min-width: 0;
+}
+
+.client-help-overlay__step-number {
+  color: #e0bd70;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.client-help-overlay__steps h3 {
+  margin: 0 0 5px;
+  color: #f0dbac;
+  font-family: "Cinzel", Georgia, serif;
+  font-size: 14px;
+  line-height: 1.25;
+  text-transform: uppercase;
+}
+
+.client-help-overlay__steps p {
+  margin: 0;
+  color: #d6d9d4;
+  font-size: 13px;
+  line-height: 1.42;
+  overflow-wrap: anywhere;
+}
+
+.client-help-overlay__steps--home {
+  gap: 9px;
+}
+
+.client-help-overlay__steps--home li {
+  min-height: 96px;
+  padding: 14px 16px;
+  border-color: rgba(198, 156, 62, 0.8);
+  background: linear-gradient(115deg, rgba(9, 27, 38, 0.98), rgba(6, 18, 28, 0.98));
+  box-shadow: inset 0 0 0 1px rgba(28, 166, 188, 0.06);
+}
+
+.client-help-overlay__steps--home .client-help-overlay__step-number {
+  padding-top: 1px;
+  color: #dfbd77;
+  font-size: 10px;
+}
+
+.client-help-overlay__steps--home h3 {
+  margin-bottom: 6px;
+  color: #e7ca81;
+  font-size: 14px;
+}
+
+.client-help-overlay__steps--home p {
+  font-size: 13px;
+  line-height: 1.42;
+}
+
+.client-help-overlay__footnote {
+  margin: 0;
+  color: #89a2a9;
+  font-size: 9px;
+  line-height: 1.35;
+}
+
+.utility-help__column {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 24px;
+}
+
+.utility-help__column--index > .utility-card:first-child {
+  flex: 1.78 1 auto;
+}
+
+.utility-help__column--index > .utility-card:last-child {
+  flex: 1 1 auto;
+}
+
+.utility-help__column--guide > * {
+  flex: 1 1 auto;
+}
+
+.utility-card,
+.utility-state {
+  min-width: 0;
+  border: 1px solid #29434e;
+  border-radius: 5px;
+  background: #0b1c27;
+}
+
+.utility-card {
+  padding: 20px 22px;
+  color: #e6e7e4;
+}
+
+.utility-card h2,
+.utility-state h2 {
+  margin: 0 0 6px;
+  color: #eee9df;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.utility-card p,
+.utility-state__message {
+  margin: 0;
+  color: #b8c3c8;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.utility-card__intro {
+  margin-bottom: 6px !important;
+}
+
+.utility-route-list,
+.utility-source-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.utility-route-list li {
+  padding: 7px 0 8px;
+  border-bottom: 1px solid #243d47;
+}
+
+.utility-route-list li:last-child {
+  border-bottom: 0;
+}
+
+.utility-route-list a {
+  color: #eee9df;
+  font-size: 14px;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.utility-route-list a:hover,
+.utility-source-list a:hover,
+.utility-indexes a:hover {
+  color: #25d4df;
+}
+
+.utility-route-list p {
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.utility-route-list code,
+.utility-indexes code {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.utility-note {
+  margin-top: 10px !important;
+  color: #aebbc1 !important;
+  font-size: 12px !important;
+}
+
+.utility-source-list li {
+  margin-top: 4px;
+  color: #e1e4e3;
+  font-size: 12px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.utility-source-list a {
+  color: #d8e0e1;
+  text-decoration-color: #627b82;
+  text-underline-offset: 2px;
+}
+
+.utility-card kbd {
+  padding: 1px 5px;
+  border: 1px solid #65767a;
+  border-radius: 3px;
+  background: #101f27;
+  color: #f0e8da;
+  font: inherit;
+  font-size: 12px;
+}
+
+.utility-focus-sample {
+  display: flex;
+  width: min(100%, 252px);
+  min-height: 36px;
+  align-items: center;
+  margin-top: 10px;
+  padding: 0 12px;
+  border: 1px solid #21d0de;
+  border-radius: 4px;
+  color: #e0e7e6;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+
+.utility-button {
+  display: inline-flex;
+  min-height: 38px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+  padding: 0 18px;
+  border: 1px solid #304b55;
+  border-radius: 4px;
+  color: #e8e8e5 !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.utility-button:hover {
+  border-color: #26c9d4;
+}
+
+.utility-help__closing {
+  margin: 12px 0 0;
+  color: #aebbc1;
+  font-size: 11px;
+}
+
+.utility-help__return-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.utility-help__return-actions .utility-button {
+  min-width: 144px;
+  margin: 0;
+}
+
+.utility-help__closing a {
+  text-decoration-color: #789099;
+  text-underline-offset: 2px;
+}
+
+.utility-state {
+  display: grid;
+  min-height: 226px;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  padding: 24px;
+  color: #e6e7e4;
+}
+
+.utility-state__icon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  place-items: center;
+  border: 1px solid #ad8941;
+  border-radius: 50%;
+  color: #20d0da;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.utility-state__body {
+  min-width: 0;
+}
+
+.utility-state__body .utility-eyebrow {
+  margin-bottom: 4px;
+  font-size: 9px;
+}
+
+.utility-state h2 {
+  font-size: 22px;
+}
+
+.utility-state__action {
+  display: inline-flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 7px;
+  color: #20d0da !important;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.utility-state__action:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.utility-not-found {
+  padding-top: 72px;
+}
+
+.utility-not-found > .utility-eyebrow {
+  margin-bottom: 8px;
+  color: #2ab9c5;
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+.utility-not-found__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  padding: 38px 0 44px;
+}
+
+.utility-not-found__message {
+  min-width: 0;
+}
+
+.utility-not-found__code {
+  margin: 0 0 9px;
+  color: #c79b45;
+  font-size: clamp(112px, 8vw, 152px);
+  font-weight: 700;
+  letter-spacing: -1px;
+  line-height: 1.1;
+}
+
+.utility-not-found h1 {
+  color: #efe7d8;
+  font-size: 32px;
+}
+
+.utility-not-found__message > p:last-of-type {
+  max-width: 650px;
+  margin: 20px 0 0;
+  color: #aab7bf;
+  font-size: 17px;
+  line-height: 23px;
+}
+
+.utility-recovery-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 66px;
+}
+
+.utility-recovery-actions .utility-button {
+  min-width: 144px;
+  margin: 0;
+}
+
+.utility-not-found .utility-recovery-actions .utility-button {
+  width: 202px;
+  min-width: 202px;
+  min-height: 48px;
+  font-size: 14px;
+}
+
+.utility-button--primary {
+  border-color: #c79b45;
+  background: #c79b45;
+  color: #06111a !important;
+}
+
+.utility-button--primary:hover {
+  border-color: #edc76d;
+  background: #edc76d;
+}
+
+.utility-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
+@media (max-width: 1000px) {
+  .utility-page {
+    padding-right: 28px;
+    padding-left: 28px;
+  }
+
+  .utility-help__grid {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+  }
+
+  .utility-not-found__hero {
+    padding-top: 20px;
+  }
+
+  .utility-not-found__code {
+    margin-bottom: 25px;
+  }
+
+  .utility-recovery-actions {
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 620px) {
+  .client-help-overlay__dialog {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+    max-height: min(calc(100vh - 24px), 640px);
+    overflow-x: hidden;
+    gap: 10px;
+    padding: 13px 13px 10px;
+  }
+
+  .client-help-overlay__dialog:not(.client-help-overlay__dialog--home) {
+    bottom: 12px;
+    max-height: min(calc(100vh - 24px), 640px);
+  }
+
+  .client-help-overlay__dialog--home {
+    top: auto;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    width: auto;
+    max-width: calc(100vw - 24px);
+    max-height: min(calc(100vh - 24px), 640px);
+    overflow-y: auto;
+    padding: 0;
+    border: 0;
+  }
+
+  .client-help-overlay__close--floating {
+    top: 12px;
+    right: 12px;
+  }
+
+  .client-help-overlay__steps--home li {
+    min-height: 62px;
+    padding: 9px 10px;
+  }
+
+  .client-help-overlay__steps--home h3 {
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  .client-help-overlay__steps--home p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .client-help-overlay__header {
+    padding-bottom: 9px;
+  }
+
+  .client-help-overlay__header h2 {
+    font-size: 16px;
+  }
+
+  .client-help-overlay__steps {
+    width: 100%;
+    min-width: 0;
+    gap: 6px;
+  }
+
+  .client-help-overlay__steps li {
+    width: 100%;
+    min-width: 0;
+    min-height: 62px;
+    padding: 9px;
+  }
+
+  .client-help-overlay__steps h3 {
+    font-size: 13px;
+  }
+
+  .client-help-overlay__steps p {
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .utility-page {
+    padding: 24px 18px 30px;
+  }
+
+  .utility-page__header {
+    padding-bottom: 21px;
+  }
+
+  .utility-page__header h1 {
+    font-size: 32px;
+  }
+
+  .utility-page__deck {
+    font-size: 14px;
+  }
+
+  .utility-help__grid,
+  .utility-help__column {
+    gap: 14px;
+  }
+
+  .utility-card {
+    padding: 17px 16px;
+  }
+
+  .utility-state {
+    min-height: 0;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+    padding: 19px 16px;
+  }
+
+  .utility-state__icon {
+    width: 42px;
+    height: 42px;
+    font-size: 21px;
+  }
+
+  .utility-state h2,
+  .utility-card h2 {
+    font-size: 19px;
+  }
+
+  .utility-card p,
+  .utility-state__message {
+    font-size: 13px;
+  }
+
+  .utility-not-found {
+    padding-top: 26px;
+  }
+
+  .utility-not-found__hero {
+    padding-bottom: 30px;
+  }
+
+  .utility-not-found__code {
+    margin-bottom: 20px;
+    font-size: clamp(96px, 29vw, 140px);
+    letter-spacing: -5px;
+  }
+
+  .utility-not-found h1 {
+    font-size: 30px;
+  }
+
+  .utility-not-found__message > p:last-of-type {
+    margin-top: 14px;
+    font-size: 14px;
+  }
+
+  .utility-recovery-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+    margin-top: 24px;
+  }
+
+  .utility-recovery-actions .utility-button {
+    justify-content: flex-start;
+    padding: 0 14px;
+  }
+
+  .utility-not-found .utility-recovery-actions .utility-button {
+    justify-content: center;
+    padding: 0 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .utility-page *,
+  .utility-page *::before,
+  .utility-page *::after,
+  .utility-state *,
+  .utility-state *::before,
+  .utility-state *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

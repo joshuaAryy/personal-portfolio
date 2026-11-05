@@ -1,0 +1,620 @@
+import { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { projectIdentities } from "./data";
+import "./crest-case-study.css";
+
+const crestChapters = [
+  { id: "overview", label: "OVERVIEW" },
+  { id: "system", label: "TRANSACTION FLOW" },
+  { id: "architecture", label: "SYSTEM MAP" },
+  { id: "policy", label: "POLICY RETRIEVAL" },
+  { id: "preapproval", label: "PREAPPROVAL" },
+  { id: "team", label: "OWNERSHIP" },
+  { id: "takeaway", label: "LESSON" },
+] as const;
+type CrestChapterId = (typeof crestChapters)[number]["id"];
+
+const crestArchitectureTracks = [
+  {
+    id: "workspace",
+    label: "CHALLENGE WORKSPACE · SAMPLE DATA",
+    title: "Request review",
+    stages: [
+      ["Transaction set", "Bundled challenge data"],
+      ["Configured rules", "Budgets · category caps · thresholds"],
+      ["Rule checks + cues", "Policy checks and anomaly heuristics"],
+      ["Review workspace", "Context for a human reviewer"],
+    ],
+  },
+  {
+    id: "finance",
+    label: "FINANCE Q&A · PARALLEL IMPLEMENTATION",
+    title: "Transaction-backed answers",
+    stages: [
+      ["MongoDB Atlas", "transactions_clean"],
+      ["FastAPI /api/ask", "Compact transaction summary"],
+      ["Gemini", "Answer text + chart data"],
+    ],
+  },
+  {
+    id: "policy",
+    label: "POLICY PDF · STANDALONE NODE.JS SCRIPTS",
+    title: "Grounded policy retrieval",
+    stages: [
+      ["Separate prototype", "Brim PDF → passages → Gemini interpretation"],
+    ],
+  },
+] as const;
+
+function CrestArchitectureMap() {
+  return (
+    <section className="crest-section crest-architecture" id="crest-architecture">
+      <header className="crest-architecture__story">
+        <p className="food-section-label">SYSTEM MAP · DIFFERENT PATHS, CLEAR BOUNDARIES</p>
+        <h2>One workspace. More than one technical path.</h2>
+        <p>
+          The challenge review workspace, Finance Q&amp;A, and policy-PDF
+          retrieval solve related problems through separate implementations.
+          The repository shows one Mongo-backed Q&amp;A path and a separate
+          browser path over bundled data.
+        </p>
+      </header>
+      <figure className="crest-architecture__figure" aria-label="Crest system architecture">
+        <div className="crest-architecture__tracks">
+          {crestArchitectureTracks.map((track) => (
+            <article className={`crest-architecture__track crest-architecture__track--${track.id}`} key={track.id}>
+              <div className="crest-architecture__track-heading">
+                <span>{track.label}</span>
+                <h3>{track.title}</h3>
+              </div>
+              <ol className="crest-architecture__stages">
+                {track.stages.map(([title, detail], index) => (
+                  <li className="crest-architecture__stage" key={title}>
+                    <span className="crest-architecture__stage-index">{String(index + 1).padStart(2, "0")}</span>
+                    <strong>{title}</strong>
+                    <small>{detail}</small>
+                    {index < track.stages.length - 1 && (
+                      <span className="crest-architecture__arrow" aria-hidden="true">→</span>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </article>
+          ))}
+        </div>
+        <figcaption className="crest-architecture__stack">
+          <span>REPORTED STACK CONTEXT</span>
+          <ul aria-label="Reported Crest stack technologies">
+            <li>Python · FastAPI · Uvicorn</li>
+            <li>MongoDB · MongoDB Atlas</li>
+            <li>Gemini · Google Generative AI</li>
+            <li>Vercel frontend</li>
+            <li>Vultr backend</li>
+          </ul>
+        </figcaption>
+      </figure>
+      <p className="crest-architecture__source-note">
+        Finance Q&amp;A answers and reporting views are workspace capabilities
+        distinct from policy-PDF search. Ownership and the path behind the
+        demonstrated Q&amp;A capture are not established. The policy-PDF lane is
+        a standalone script prototype, not a verified live endpoint or
+        connected review workflow.
+        Repository evidence does not establish one production topology;
+        Vercel and Vultr are owner-reported hosting context.
+      </p>
+    </section>
+  );
+}
+
+export default function CrestCaseStudy() {
+  const [crestDemoIsPlaying, setCrestDemoIsPlaying] = useState(false);
+  const crestDemoFrame = useRef<HTMLIFrameElement>(null);
+  const [activeChapter, setActiveChapter] = useState<CrestChapterId>("overview");
+  const navigationSelection = useRef<{
+    chapter: CrestChapterId;
+    expiresAt: number;
+  } | null>(null);
+  const pinnedChapter = useRef<CrestChapterId | null>(null);
+  const reconcileChapter = useRef<(() => void) | null>(null);
+
+  useEffect(() => {
+    if (crestDemoIsPlaying) {
+      crestDemoFrame.current?.focus({ preventScroll: true });
+    }
+  }, [crestDemoIsPlaying]);
+
+  useEffect(() => {
+    const main = document.getElementById("main");
+    if (!main) return;
+
+    let frame = 0;
+    const updateChapter = () => {
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const selection = navigationSelection.current;
+        if (selection && Date.now() < selection.expiresAt) {
+          setActiveChapter(selection.chapter);
+          return;
+        }
+        navigationSelection.current = null;
+        if (pinnedChapter.current) {
+          setActiveChapter(pinnedChapter.current);
+          return;
+        }
+        const overflowY = window.getComputedStyle(main).overflowY;
+        const mainIsScroller = overflowY === "auto" || overflowY === "scroll";
+        const rootTop = mainIsScroller ? main.getBoundingClientRect().top : 0;
+        const viewportHeight = mainIsScroller ? main.clientHeight : window.innerHeight;
+        const activationLine = rootTop + Math.min(400, viewportHeight * 0.4);
+        let nextChapter: CrestChapterId = "overview";
+        const atStoryEnd = mainIsScroller
+          ? main.scrollTop + main.clientHeight >= main.scrollHeight - 2
+          : window.scrollY + window.innerHeight >=
+            document.documentElement.scrollHeight - 2;
+
+        if (atStoryEnd) {
+          nextChapter = crestChapters[crestChapters.length - 1].id;
+        } else {
+          for (const chapter of crestChapters) {
+            const section = document.getElementById(`crest-${chapter.id}`);
+            if (section && section.getBoundingClientRect().top <= activationLine) {
+              nextChapter = chapter.id;
+            }
+          }
+        }
+        setActiveChapter(nextChapter);
+      });
+    };
+
+    reconcileChapter.current = updateChapter;
+    const clearNavigationSelection = () => {
+      if (!navigationSelection.current && !pinnedChapter.current) return;
+      navigationSelection.current = null;
+      pinnedChapter.current = null;
+      updateChapter();
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (["ArrowDown", "ArrowUp", "PageDown", "PageUp", "Home", "End", " "].includes(event.key)) {
+        clearNavigationSelection();
+      }
+    };
+    const onPointerDown = (event: PointerEvent) => {
+      const overflowY = window.getComputedStyle(main).overflowY;
+      const mainIsScroller = overflowY === "auto" || overflowY === "scroll";
+      const mainScrollbarWidth = main.offsetWidth - main.clientWidth;
+      const mainRightEdge = main.getBoundingClientRect().right;
+      const onMainScrollbar =
+        mainIsScroller &&
+        event.clientX >= mainRightEdge - Math.max(mainScrollbarWidth, 18) &&
+        event.clientX <= mainRightEdge &&
+        event.target instanceof Node &&
+        main.contains(event.target);
+      const targetIsPage =
+        event.target === document ||
+        event.target === document.documentElement ||
+        event.target === document.body;
+      const onPageScrollbar =
+        !mainIsScroller &&
+        event.clientX >= document.documentElement.clientWidth - 18 &&
+        event.clientX <= window.innerWidth &&
+        targetIsPage;
+      if (onMainScrollbar || onPageScrollbar) clearNavigationSelection();
+    };
+
+    main.addEventListener("scroll", updateChapter, { passive: true });
+    main.addEventListener("wheel", clearNavigationSelection, { passive: true });
+    main.addEventListener("touchstart", clearNavigationSelection, { passive: true });
+    window.addEventListener("scroll", updateChapter, { passive: true });
+    window.addEventListener("resize", updateChapter);
+    window.addEventListener("keydown", onKeyDown);
+    window.addEventListener("pointerdown", onPointerDown);
+    updateChapter();
+
+    return () => {
+      main.removeEventListener("scroll", updateChapter);
+      main.removeEventListener("wheel", clearNavigationSelection);
+      main.removeEventListener("touchstart", clearNavigationSelection);
+      window.removeEventListener("scroll", updateChapter);
+      window.removeEventListener("resize", updateChapter);
+      window.removeEventListener("keydown", onKeyDown);
+      window.removeEventListener("pointerdown", onPointerDown);
+      reconcileChapter.current = null;
+      if (frame) window.cancelAnimationFrame(frame);
+    };
+  }, []);
+
+  const policyStages = [
+    ["01", "BRIM POLICY PDF", "Brim source material"],
+    ["02", "EXTRACT + CHUNK", "Prepare searchable passages"],
+    ["03", "gemini-embedding-001", "3,072 dimensions"],
+    ["04", "ATLAS VECTOR SEARCH", "MongoDB Atlas · policy_chunks"],
+    ["05", "GROUNDED PROMPT", "Top retrieved passages"],
+  ];
+
+  return (
+    <>
+      <nav className="crest-case-nav" data-route-entry="frame" aria-label="Crest case study">
+        <div className="crest-case-nav__chapters">
+          {crestChapters.map((chapter) => (
+            <a
+              href={`#crest-${chapter.id}`}
+              aria-current={activeChapter === chapter.id ? "location" : undefined}
+              key={chapter.id}
+              onClick={() => {
+                const selection = {
+                  chapter: chapter.id,
+                  expiresAt: Date.now() + 900,
+                };
+                navigationSelection.current = selection;
+                pinnedChapter.current = null;
+                setActiveChapter(chapter.id);
+                window.setTimeout(() => {
+                  if (navigationSelection.current !== selection) return;
+                  navigationSelection.current = null;
+                  pinnedChapter.current = selection.chapter;
+                  reconcileChapter.current?.();
+                }, 900);
+              }}
+            >
+              {chapter.label}
+            </a>
+          ))}
+        </div>
+        <Link className="crest-case-nav__back" to="/projects">
+          ‹ PROJECTS
+        </Link>
+        <span className="crest-case-nav__breadcrumb">CASE STUDY / CREST</span>
+      </nav>
+
+      <article className="crest-story-content">
+        <section className="crest-section crest-hero" id="crest-overview">
+          <div className="crest-hero__opening">
+            <div className="crest-hero__identity" data-route-entry="identity">
+              <div className="crest-hero__emblem" role="img" aria-label="Crest">
+                <img src={projectIdentities.crest.mark} alt="" aria-hidden="true" />
+                <span>CREST</span>
+              </div>
+              <div>
+              <p className="crest-project-label">EXPENSE INTELLIGENCE / REVIEW WORKFLOW</p>
+              <h1 data-route-entry="headline">Crest</h1>
+              </div>
+            </div>
+            <p className="crest-hero__intro" data-route-entry="summary">
+              Crest is an expense intelligence workspace for reviewing requests
+              with budget, spend history and policy context.
+            </p>
+            <div className="crest-hero__rule" aria-hidden="true" />
+            <p className="crest-hero__purpose" data-route-entry="summary">
+              It helps finance teams spot unusual patterns and prepare requests
+              for preapproval; a person reviews the context and decides what
+              happens next.
+            </p>
+            <p className="crest-hero__purpose" data-route-entry="summary">
+              My backend/data work covered Policy Compliance Engine workflows,
+              deterministic anomaly signals, policy retrieval, and part of
+              preapproval.
+            </p>
+            <p className="crest-hero__tech-context" data-route-entry="summary">
+              <strong>TECH CONTEXT · </strong>
+              Python/FastAPI transaction Q&amp;A over Mongo-backed data with Gemini responses;
+              separate Node.js policy-PDF retrieval scripts.
+            </p>
+            <p className="crest-hero__context" data-route-entry="summary">
+              FOUR-PERSON TEAM · MPC HACKS 2026 · BRIM FINANCIAL CHALLENGE
+            </p>
+          </div>
+
+          <div className="crest-demo-media" data-route-entry="evidence">
+            <figure className="crest-demo-figure" aria-labelledby="crest-demo-caption">
+              {crestDemoIsPlaying ? (
+                <iframe
+                  ref={crestDemoFrame}
+                  className="crest-demo-frame"
+                  src="https://www.youtube-nocookie.com/embed/kiq6XjNi9J8?autoplay=1"
+                  title="Crest expense intelligence demo video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  tabIndex={0}
+                />
+              ) : (
+                <button
+                  className="crest-demo-launch"
+                  type="button"
+                  aria-label="Play Crest demo in page"
+                  onClick={() => setCrestDemoIsPlaying(true)}
+                >
+                  <img
+                    src="/media/crest-sample.png"
+                    alt="Crest expense-review sample screen with policy context and preapproval controls"
+                    width="684"
+                    height="385"
+                  />
+                  <span className="crest-demo-launch__cue" aria-hidden="true">
+                    <span className="crest-demo-launch__icon">▶</span>
+                    PLAY DEMO
+                  </span>
+                </button>
+              )}
+              <figcaption>
+                <span className="crest-sample-cue">SAMPLE DATA</span>
+                <span id="crest-demo-caption">Expense review / policy context / preapproval</span>
+                <span className="crest-demo-caption__action">
+                  {crestDemoIsPlaying ? "DEMO PLAYING IN PAGE" : "AUTHENTIC PROJECT DEMO"}
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section className="crest-section crest-system" id="crest-system">
+          <div className="crest-system__story">
+            <h2>One transaction. Two sources. Human review.</h2>
+            <p>
+              A transaction can be checked against configured rules while
+              policy text supplies a second kind of context. The PDF retrieval
+              work was a separate script prototype; a live connection to this
+              review flow was not verified.
+            </p>
+          </div>
+          <figure className="crest-evidence-map" aria-labelledby="crest-evidence-map-caption">
+            <figcaption className="crest-evidence-map__sr-only" id="crest-evidence-map-caption">
+              Conceptual review boundary: a sample transaction branches to deterministic configured rules and to a separate policy-PDF retrieval prototype, whose retrieved passages Gemini interprets. A human reviewer decides.
+            </figcaption>
+            <svg className="crest-evidence-map__connectors" viewBox="0 0 1432 230" preserveAspectRatio="none" aria-hidden="true">
+              <defs>
+                <marker id="crest-flow-gold-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0 0L7 3.5L0 7Z" fill="#c79b45" />
+                </marker>
+                <marker id="crest-flow-teal-arrow" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0 0L7 3.5L0 7Z" fill="#56bdbc" />
+                </marker>
+              </defs>
+              <path className="crest-evidence-map__route--gold" d="M255 116H275V74H320" markerEnd="url(#crest-flow-gold-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M275 116V174H320" markerEnd="url(#crest-flow-teal-arrow)" />
+              <path className="crest-evidence-map__route--gold" d="M652 74H1082V120H1128" markerEnd="url(#crest-flow-gold-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M570 174H692" markerEnd="url(#crest-flow-teal-arrow)" />
+              <path className="crest-evidence-map__route--teal" d="M975 174H1082V120H1128" markerEnd="url(#crest-flow-teal-arrow)" />
+              <circle className="crest-evidence-map__junction--gold" cx="275" cy="74" r="4" />
+              <circle className="crest-evidence-map__junction--teal" cx="275" cy="174" r="4" />
+              <circle className="crest-evidence-map__junction--gold" cx="1082" cy="74" r="4" />
+              <circle className="crest-evidence-map__junction--teal" cx="1082" cy="174" r="4" />
+            </svg>
+            <div className="crest-evidence-map__stage-labels" aria-hidden="true">
+              <span>01 REQUEST</span>
+              <span>02 TWO EVIDENCE PATHS</span>
+              <span>03 HUMAN DECISION</span>
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__request">
+              <div className="crest-evidence-map__node-head">
+                <span className="crest-evidence-map__eyebrow">SAMPLE TRANSACTION</span>
+                <svg viewBox="0 0 20 22" aria-hidden="true">
+                  <path d="M4 2.5h12v17l-6-4-6 4z" />
+                  <path d="M7 7h6M7 10h6" />
+                </svg>
+              </div>
+              <h3>Transaction context</h3>
+              <span className="crest-evidence-map__category">CHALLENGE DATA</span>
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__signals">
+              <span className="crest-evidence-map__eyebrow">DETERMINISTIC SIGNALS</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 24 22" aria-hidden="true">
+                  <path d="M3 19V12M9 19V7M15 19V3M21 19V9" />
+                </svg>
+                <h3>Budget + spend rules</h3>
+              </div>
+              <p>Budget · prior spend · thresholds</p>
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__policy">
+              <span className="crest-evidence-map__eyebrow">RETRIEVED POLICY</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 20 22" aria-hidden="true">
+                  <path d="M4 2.5h8l4 4v13H4z" />
+                  <path d="M12 2.5v4h4M7 11h6M7 14h6" />
+                </svg>
+                <h3>Relevant passages</h3>
+              </div>
+              <p>Retrieved by the standalone script prototype</p>
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__interpretation">
+              <span className="crest-evidence-map__eyebrow">POLICY INTERPRETATION</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 24 22" aria-hidden="true">
+                  <path d="M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8zM20 16v4M18 18h4" />
+                </svg>
+                <h3>Gemini</h3>
+              </div>
+              <p>Reads retrieved policy context</p>
+            </div>
+            <div className="crest-evidence-map__node crest-evidence-map__decision">
+              <span className="crest-evidence-map__eyebrow">DECISION AUTHORITY</span>
+              <div className="crest-evidence-map__node-head">
+                <svg viewBox="0 0 22 24" aria-hidden="true">
+                  <circle cx="11" cy="6" r="3.2" />
+                  <path d="M4 21v-3.2a7 7 0 0 1 14 0V21M7 21h8" />
+                </svg>
+                <h3>HUMAN REVIEW</h3>
+              </div>
+              <p>A reviewer weighs the context and chooses the next action.</p>
+              <div className="crest-evidence-map__actions" aria-hidden="true">
+                <span>APPROVE</span><span>DENY</span>
+              </div>
+            </div>
+          </figure>
+          <figure className="crest-split-cue" aria-labelledby="crest-split-cue-title">
+            <figcaption className="crest-split-cue__intro" id="crest-split-cue-title">
+              <p className="crest-split-cue__eyebrow">RULE-BASED REVIEW CUE</p>
+              <strong>A group can reveal what one charge does not.</strong>
+              <p>Same employee + merchant + day. Each charge stays below the configured threshold; the grouped total reaches it.</p>
+            </figcaption>
+            <div className="crest-split-cue__visual" aria-label="Illustrative threshold comparison without transaction values">
+              <div className="crest-split-cue__grouping">
+                <span>EMPLOYEE</span><b>+</b><span>MERCHANT</span><b>+</b><span>DAY</span>
+              </div>
+              <div className="crest-split-cue__charges">
+                <div className="crest-split-cue__charge">
+                  <span>CHARGE A</span><i aria-hidden="true" /><strong>Below threshold</strong>
+                </div>
+                <div className="crest-split-cue__charge">
+                  <span>CHARGE B</span><i aria-hidden="true" /><strong>Below threshold</strong>
+                </div>
+                <div className="crest-split-cue__sum">
+                  <span>GROUPED TOTAL</span><i aria-hidden="true" /><strong>Reaches threshold</strong>
+                </div>
+              </div>
+              <p className="crest-split-cue__legend">Dashed marker = configured threshold · bars are illustrative, not transaction amounts</p>
+            </div>
+            <p className="crest-split-cue__boundary">Illustrative rule only: the result is a review cue, not proof of intent or misconduct. No sample transaction amounts are shown.</p>
+          </figure>
+        </section>
+
+        <CrestArchitectureMap />
+
+        <section className="crest-section crest-policy" id="crest-policy">
+          <figure className="crest-policy-figure" aria-labelledby="crest-policy-title">
+            <figcaption className="crest-policy-figure__eyebrow">
+              DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY
+            </figcaption>
+            <h2 id="crest-policy-title">Policy context. Deterministic decisions.</h2>
+            <p className="crest-policy-figure__intro">
+              A standalone prototype indexed a Brim policy PDF and retrieved
+              passages for Gemini; a live endpoint or deployed workflow was not
+              verified. Finance and policy rules remained authoritative; anomaly
+              heuristics surfaced review cues.
+            </p>
+            <ol className="crest-policy-pipeline">
+              {policyStages.map(([number, title, detail], index) => (
+                <li key={number}>
+                  <span className="crest-step-number">{number}</span>
+                  <strong>{title}</strong>
+                  <small>{detail}</small>
+                  {index < policyStages.length - 1 && (
+                    <span className="crest-policy-pipeline__arrow" aria-hidden="true">
+                      →
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ol>
+            <div className="crest-policy-divider" aria-hidden="true" />
+            <div className="crest-policy-evidence" role="list" aria-label="Policy and human-review boundaries">
+              <article className="crest-policy-evidence__card" role="listitem">
+                <span className="crest-policy-evidence__label">RETRIEVED POLICY CONTEXT</span>
+                <h3>Gemini interprets retrieved passages.</h3>
+                <p>The scripts return source context and ask the model not to invent policy rules.</p>
+              </article>
+              <span className="crest-policy-evidence__connector" aria-hidden="true">+</span>
+              <article className="crest-policy-evidence__card crest-policy-evidence__card--rules" role="listitem">
+                <span className="crest-policy-evidence__label">DECISION AUTHORITY</span>
+                <h3>Deterministic finance and policy rules remain authoritative.</h3>
+                <p>PDF retrieval supplies context only; no live integration or automated policy decision was verified.</p>
+              </article>
+            </div>
+          </figure>
+        </section>
+
+        <section className="crest-section crest-preapproval" id="crest-preapproval">
+          <header className="crest-preapproval__story">
+            <p className="food-section-label">MOCK PREAPPROVAL · HUMAN DECISION</p>
+            <h2>Context can recommend. A person decides.</h2>
+            <p>
+              The sample queue combines a request template with budget and
+              employee-history context. It can show a Gemini recommendation or
+              a template fallback for the reviewer.
+            </p>
+          </header>
+          <figure className="crest-preapproval__figure" aria-labelledby="crest-preapproval-caption">
+            <figcaption id="crest-preapproval-caption">
+              Prototype sequence · sample requests, local decisions
+            </figcaption>
+            <ol className="crest-preapproval__flow">
+              <li>
+                <span>01 · QUEUE</span>
+                <strong>Sample request templates</strong>
+                <small>Mock entries, not live employee requests</small>
+              </li>
+              <li>
+                <span>02 · CONTEXT</span>
+                <strong>Budget + employee history</strong>
+                <small>Department, remaining budget, prior spend</small>
+              </li>
+              <li>
+                <span>03 · SUPPORT</span>
+                <strong>Gemini recommendation or template fallback</strong>
+                <small>Recommendation supports the reviewer</small>
+              </li>
+              <li className="crest-preapproval__human-step">
+                <span>04 · DECISION</span>
+                <strong>A person chooses Approve or Deny</strong>
+                <small>Recorded locally in the prototype</small>
+              </li>
+            </ol>
+            <p className="crest-preapproval__boundary">
+              This is a mock queue and local decision history, not a live request
+              feed or external approval service.
+            </p>
+          </figure>
+        </section>
+
+        <section className="crest-section crest-team" id="crest-team">
+          <div className="crest-team__story">
+            <p className="food-section-label">TECHNICAL OWNERSHIP</p>
+            <h2>I built backend workflows for human review.</h2>
+            <p className="crest-team__collaboration">A four-person team built Crest for the Brim Financial Challenge at MPC Hacks 2026.</p>
+            <p>
+              I built Policy Compliance Engine workflows, deterministic anomaly
+              signals, policy retrieval, and part of preapproval.
+            </p>
+            <p className="crest-team__boundary">
+              I did not own the initial MongoDB setup, primary frontend, or main
+              Gemini integration.
+            </p>
+          </div>
+          <div className="crest-team__ownership">
+            <p className="crest-team__ownership-label">WORK I BUILT</p>
+            <ul className="crest-team__ownership-grid" aria-label="Backend work Joshua built">
+              <li>
+                <span>POLICY ENGINE</span>
+                <strong>Compliance workflows</strong>
+              </li>
+              <li>
+                <span>ANOMALY SIGNALS</span>
+                <strong>Deterministic rules</strong>
+              </li>
+              <li>
+                <span>POLICY RETRIEVAL</span>
+                <strong>Relevant passages</strong>
+              </li>
+              <li>
+                <span>PREAPPROVAL</span>
+                <strong>Part of the workflow</strong>
+              </li>
+            </ul>
+            <div className="crest-team__result">
+              <strong>3RD PLACE</strong>
+              <span>BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</span>
+              <a
+                href="https://devpost.com/software/crest-kglqay"
+                target="_blank"
+                rel="noreferrer"
+              >
+                PROJECT RECORD ↗
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section className="crest-section crest-takeaway" id="crest-takeaway">
+          <p className="food-section-label">ENGINEERING PRINCIPLE</p>
+          <h2>Signals organize review. People own the decision.</h2>
+          <p>
+            The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review.
+          </p>
+          <small>CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026</small>
+        </section>
+      </article>
+    </>
+  );
+}

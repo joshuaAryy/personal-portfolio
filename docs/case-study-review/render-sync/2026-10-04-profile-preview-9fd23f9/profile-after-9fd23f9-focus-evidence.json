@@ -1,0 +1,848 @@
+{
+  "before": {
+    "profileClasses": [
+      {
+        "cls": "main main--profile",
+        "txt": "JOSHUA ARYEETEY COMPUTER ENGINEERING SOFTWARE · AI / ML CE CREATIVE PROACTIVE EXECUTION OVERVIEW JOURNEY PERSONAL HIGHLIGHTS DEMOS",
+        "r": [
+          0,
+          110,
+          1600,
+          970
+        ]
+      },
+      {
+        "cls": "profile-layout",
+        "txt": "JOSHUA ARYEETEY COMPUTER ENGINEERING SOFTWARE · AI / ML CE CREATIVE PROACTIVE EXECUTION OVERVIEW JOURNEY PERSONAL HIGHLIGHTS DEMOS",
+        "r": [
+          0,
+          110,
+          1600,
+          998
+        ]
+      },
+      {
+        "cls": "profile-trait",
+        "txt": "CREATIVE",
+        "r": [
+          58,
+          723,
+          58,
+          58
+        ]
+      },
+      {
+        "cls": "profile-trait__medallion",
+        "txt": "",
+        "r": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cls": "profile-trait__frame",
+        "txt": "",
+        "r": [
+          59,
+          724,
+          56,
+          56
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__base-ring",
+        "txt": "",
+        "r": [
+          60.375,
+          725.375,
+          53.21875,
+          53.21875
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__base-detail",
+        "txt": "",
+        "r": [
+          65.265625,
+          730.265625,
+          43.453125,
+          43.453125
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__creative-c",
+        "txt": "",
+        "r": [
+          76,
+          737.453125,
+          21.984375,
+          25.546875
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__creative-d",
+        "txt": "",
+        "r": [
+          78.109375,
+          750.109375,
+          17.75,
+          25.125
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__creative-e",
+        "txt": "",
+        "r": [
+          69.359375,
+          732.28125,
+          35.25,
+          20.953125
+        ]
+      },
+      {
+        "cls": "profile-trait__label",
+        "txt": "CREATIVE",
+        "r": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cls": "profile-trait",
+        "txt": "PROACTIVE",
+        "r": [
+          158,
+          723,
+          58,
+          58
+        ]
+      },
+      {
+        "cls": "profile-trait__medallion",
+        "txt": "",
+        "r": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cls": "profile-trait__frame",
+        "txt": "",
+        "r": [
+          159,
+          724,
+          56,
+          56
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__base-ring",
+        "txt": "",
+        "r": [
+          160.375,
+          725.375,
+          53.21875,
+          53.21875
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__base-detail",
+        "txt": "",
+        "r": [
+          165.265625,
+          730.265625,
+          43.453125,
+          43.453125
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__proactive-c",
+        "txt": "",
+        "r": [
+          173.875,
+          736.34375,
+          27.984375,
+          28.921875
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__proactive-d",
+        "txt": "",
+        "r": [
+          179.953125,
+          738.9375,
+          19.03125,
+          19.03125
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__proactive-e",
+        "txt": "",
+        "r": [
+          183.875,
+          748.875,
+          6.21875,
+          6.21875
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__proactive-f",
+        "txt": "",
+        "r": [
+          166.25,
+          731.25,
+          41.484375,
+          41.484375
+        ]
+      },
+      {
+        "cls": "profile-trait__label",
+        "txt": "PROACTIVE",
+        "r": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cls": "profile-trait",
+        "txt": "EXECUTION",
+        "r": [
+          258,
+          723,
+          58,
+          58
+        ]
+      },
+      {
+        "cls": "profile-trait__medallion",
+        "txt": "",
+        "r": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cls": "profile-trait__frame",
+        "txt": "",
+        "r": [
+          259,
+          724,
+          56,
+          56
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__base-ring",
+        "txt": "",
+        "r": [
+          260.375,
+          725.375,
+          53.21875,
+          53.21875
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__base-detail",
+        "txt": "",
+        "r": [
+          265.265625,
+          730.265625,
+          43.453125,
+          43.453125
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__execution-c",
+        "txt": "",
+        "r": [
+          269.953125,
+          737.03125,
+          34.0625,
+          34.0625
+        ]
+      },
+      {
+        "cls": "profile-trait__vector profile-trait__execution-d",
+        "txt": "",
+        "r": [
+          276.546875,
+          741.671875,
+          21.921875,
+          20.734375
+        ]
+      },
+      {
+        "cls": "profile-trait__label",
+        "txt": "EXECUTION",
+        "r": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "cls": "profile-content",
+        "txt": "OVERVIEW JOURNEY PERSONAL HIGHLIGHTS DEMOS PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3",
+        "r": [
+          390,
+          140,
+          1210,
+          930
+        ]
+      },
+      {
+        "cls": "profile-nav",
+        "txt": "OVERVIEW JOURNEY PERSONAL HIGHLIGHTS DEMOS",
+        "r": [
+          430,
+          140,
+          700,
+          52
+        ]
+      },
+      {
+        "cls": "profile-overview",
+        "txt": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournamen",
+        "r": [
+          444,
+          434,
+          1090,
+          637
+        ]
+      },
+      {
+        "cls": "profile-project-panel profile-project-panel--projects",
+        "txt": "PROJECTS Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournamen",
+        "r": [
+          444,
+          434,
+          1090,
+          330
+        ]
+      },
+      {
+        "cls": "profile-project-panel__enclosure",
+        "txt": "",
+        "r": [
+          435,
+          429,
+          1106,
+          364
+        ]
+      },
+      {
+        "cls": "profile-project-panel__divider",
+        "txt": "",
+        "r": [
+          468,
+          507,
+          1042,
+          5
+        ]
+      },
+      {
+        "cls": "profile-project-grid",
+        "txt": "Food Tracker Food tracking Cho’Veigo Resume tailoring Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge Tournament automat",
+        "r": [
+          468,
+          534,
+          1042,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project profile-project--food-tracker",
+        "txt": "Food Tracker Food tracking",
+        "r": [
+          468,
+          534,
+          260.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__open",
+        "txt": "Food Tracker Food tracking",
+        "r": [
+          468,
+          534,
+          259.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__identity",
+        "txt": "Food Tracker",
+        "r": [
+          498.390625,
+          577,
+          198.703125,
+          42
+        ]
+      },
+      {
+        "cls": "profile-project__mark",
+        "txt": "",
+        "r": [
+          498.390625,
+          578,
+          40,
+          40
+        ]
+      },
+      {
+        "cls": "profile-project__detail",
+        "txt": "Food tracking",
+        "r": [
+          554.90625,
+          646,
+          85.6875,
+          18
+        ]
+      },
+      {
+        "cls": "profile-project__source",
+        "txt": "",
+        "r": [
+          695.5,
+          701,
+          19,
+          19
+        ]
+      },
+      {
+        "cls": "[object SVGAnimatedString]",
+        "r": [
+          699.5,
+          705,
+          11,
+          11
+        ]
+      },
+      {
+        "cls": "profile-project profile-project--choveigo",
+        "txt": "Cho’Veigo Resume tailoring",
+        "r": [
+          728.5,
+          534,
+          260.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__open",
+        "txt": "Cho’Veigo Resume tailoring",
+        "r": [
+          728.5,
+          534,
+          259.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__identity",
+        "txt": "Cho’Veigo",
+        "r": [
+          776.734375,
+          584,
+          163.03125,
+          42
+        ]
+      },
+      {
+        "cls": "profile-project__mark",
+        "txt": "",
+        "r": [
+          776.734375,
+          585,
+          40,
+          40
+        ]
+      },
+      {
+        "cls": "profile-project__detail",
+        "txt": "Resume tailoring",
+        "r": [
+          805.390625,
+          653,
+          105.71875,
+          18
+        ]
+      },
+      {
+        "cls": "profile-project__source",
+        "txt": "",
+        "r": [
+          956,
+          701,
+          19,
+          19
+        ]
+      },
+      {
+        "cls": "[object SVGAnimatedString]",
+        "r": [
+          960,
+          705,
+          11,
+          11
+        ]
+      },
+      {
+        "cls": "profile-project profile-project--crest",
+        "txt": "Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge",
+        "r": [
+          989,
+          534,
+          260.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__open",
+        "txt": "Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge",
+        "r": [
+          989,
+          534,
+          259.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__identity",
+        "txt": "Crest",
+        "r": [
+          1070.84375,
+          577,
+          95.8125,
+          42
+        ]
+      },
+      {
+        "cls": "profile-project__mark",
+        "txt": "",
+        "r": [
+          1070.84375,
+          587,
+          27,
+          22
+        ]
+      },
+      {
+        "cls": "profile-project__detail",
+        "txt": "MPC Hacks 2026 · 3rd Place Brim Financial Challenge",
+        "r": [
+          1037.328125,
+          640,
+          162.828125,
+          32
+        ]
+      },
+      {
+        "cls": "profile-project__source",
+        "txt": "",
+        "r": [
+          1216.5,
+          701,
+          19,
+          19
+        ]
+      },
+      {
+        "cls": "[object SVGAnimatedString]",
+        "r": [
+          1220.5,
+          705,
+          11,
+          11
+        ]
+      },
+      {
+        "cls": "profile-project profile-project--fraymakers",
+        "txt": "Tournament automation",
+        "r": [
+          1249.5,
+          534,
+          260.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__open",
+        "txt": "Tournament automation",
+        "r": [
+          1249.5,
+          534,
+          260.5,
+          198
+        ]
+      },
+      {
+        "cls": "profile-project__identity",
+        "txt": "",
+        "r": [
+          1323.75,
+          577,
+          112,
+          44
+        ]
+      },
+      {
+        "cls": "profile-project__mark",
+        "txt": "",
+        "r": [
+          1323.75,
+          577,
+          112,
+          44
+        ]
+      },
+      {
+        "cls": "profile-project__detail",
+        "txt": "Tournament automation",
+        "r": [
+          1303.703125,
+          648,
+          152.09375,
+          18
+        ]
+      },
+      {
+        "cls": "profile-signal-grid",
+        "txt": "PROJECTS 4 EXPERIENCE 2 HACKATHON 1 ACADEMICS 2028",
+        "r": [
+          444,
+          741,
+          1090,
+          330
+        ]
+      },
+      {
+        "cls": "profile-signal profile-signal--selected",
+        "txt": "PROJECTS 4",
+        "r": [
+          464,
+          742,
+          267.5,
+          329
+        ]
+      },
+      {
+        "cls": "profile-signal__emblem",
+        "txt": "",
+        "r": [
+          531.75,
+          776,
+          132,
+          132
+        ]
+      },
+      {
+        "cls": "profile-signal__label",
+        "txt": "PROJECTS",
+        "r": [
+          531.75,
+          915,
+          132,
+          39
+        ]
+      },
+      {
+        "cls": "profile-signal__value",
+        "txt": "4",
+        "r": [
+          590.109375,
+          964,
+          15.265625,
+          34
+        ]
+      },
+      {
+        "cls": "profile-signal",
+        "txt": "EXPERIENCE 2",
+        "r": [
+          731.5,
+          742,
+          267.5,
+          329
+        ]
+      },
+      {
+        "cls": "profile-signal__emblem",
+        "txt": "",
+        "r": [
+          799.25,
+          776,
+          132,
+          132
+        ]
+      },
+      {
+        "cls": "profile-signal__label",
+        "txt": "EXPERIENCE",
+        "r": [
+          799.25,
+          915,
+          132,
+          39
+        ]
+      },
+      {
+        "cls": "profile-signal__value",
+        "txt": "2",
+        "r": [
+          857.703125,
+          964,
+          15.09375,
+          34
+        ]
+      },
+      {
+        "cls": "profile-signal",
+        "txt": "HACKATHON 1",
+        "r": [
+          999,
+          742,
+          267.5,
+          329
+        ]
+      },
+      {
+        "cls": "profile-signal__emblem",
+        "txt": "",
+        "r": [
+          1066.75,
+          776,
+          132,
+          132
+        ]
+      },
+      {
+        "cls": "profile-signal__label",
+        "txt": "HACKATHON",
+        "r": [
+          1066.75,
+          915,
+          132,
+          39
+        ]
+      },
+      {
+        "cls": "profile-signal__value",
+        "txt": "1",
+        "r": [
+          1126.9375,
+          964,
+          11.609375,
+          34
+        ]
+      },
+      {
+        "cls": "profile-signal",
+        "txt": "ACADEMICS 2028",
+        "r": [
+          1266.5,
+          742,
+          267.5,
+          329
+        ]
+      },
+      {
+        "cls": "profile-signal__emblem",
+        "txt": "",
+        "r": [
+          1334.25,
+          776,
+          132,
+          132
+        ]
+      },
+      {
+        "cls": "profile-signal__label",
+        "txt": "ACADEMICS",
+        "r": [
+          1334.25,
+          915,
+          132,
+          39
+        ]
+      },
+      {
+        "cls": "profile-signal__value",
+        "txt": "2028",
+        "r": [
+          1368.828125,
+          964,
+          62.84375,
+          34
+        ]
+      }
+    ],
+    "groups": [
+      {
+        "label": "Profile summary details",
+        "tab": -1
+      },
+      {
+        "label": "PROJECTS, 4. Focus to preview projects details.",
+        "tab": 0
+      },
+      {
+        "label": "EXPERIENCE, 2. Focus to preview experience details.",
+        "tab": 0
+      },
+      {
+        "label": "HACKATHON, 1. Focus to preview hackathon details.",
+        "tab": 0
+      },
+      {
+        "label": "ACADEMICS, 2028. Focus to preview academics details.",
+        "tab": 0
+      }
+    ]
+  },
+  "after": {
+    "body": "Skip to content\nPORTFOLIO\nPROJECTS\nEXPERIENCE\nHACKATHONS\nEDUCATION\nRESUME\n2028\n3RD\nJoshua Aryeetey\nOPEN TO SUMMER 2027\nJOSHUA ARYEETEY\n\nCOMPUTER ENGINEERING\n\nSOFTWARE · AI / ML\n\nCE\nCREATIVE\nPROACTIVE\nEXECUTION\nOVERVIEW\nJOURNEY\nPERSONAL HIGHLIGHTS\nDEMOS\nEXPERIENCE\nLiving in Silico\nAI/ML Research Intern\nGenerative Molecular Modeling\nStush Patties\nSoftware Engineering Intern\nData Pipelines & Automation\nPROJECTS\n4\nEXPERIENCE\n2\nHACKATHON\n1\nACADEMICS\n2028\nACTIVITY\n\nGENERAL · PORTFOLIO\n\nCURRENT FOCUS\nFood Tracker\nPROJECTS (4)\nFood Tracker\nCho’Veigo\nCrest\nFraymakers\nEXPERIENCE (2)\nLiving in Silico\nStush Patties\nGitHub\nLinkedIn\nX\n✉\nHELP",
+    "selected": [
+      {
+        "label": "PROJECTS, 4. Focus to preview projects details.",
+        "cls": "profile-signal",
+        "attr": null
+      },
+      {
+        "label": "EXPERIENCE, 2. Focus to preview experience details.",
+        "cls": "profile-signal profile-signal--preview",
+        "attr": null
+      },
+      {
+        "label": "HACKATHON, 1. Focus to preview hackathon details.",
+        "cls": "profile-signal",
+        "attr": null
+      },
+      {
+        "label": "ACADEMICS, 2028. Focus to preview academics details.",
+        "cls": "profile-signal",
+        "attr": null
+      }
+    ],
+    "headings": [
+      "JOSHUA ARYEETEY",
+      "EXPERIENCE",
+      "ACTIVITY",
+      "CURRENT FOCUS",
+      "PROJECTS (4)",
+      "EXPERIENCE (2)"
+    ]
+  }
+}

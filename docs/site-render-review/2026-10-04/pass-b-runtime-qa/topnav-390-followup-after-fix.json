@@ -1,0 +1,63 @@
+{
+  "generatedAt": "2026-10-05T04:10:08.214Z",
+  "runtime": "Playwright 1.63.0 / installed Chrome 153",
+  "geometry": {
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "docWidth": 390,
+    "bodyWidth": 390,
+    "education": {
+      "text": "EDUCATION",
+      "rect": {
+        "x": 248.109375,
+        "y": 6.5,
+        "right": 302.078125,
+        "bottom": 62.5,
+        "w": 53.96875,
+        "h": 56
+      },
+      "visible": true
+    },
+    "help": {
+      "text": "HELP",
+      "rect": {
+        "x": 302.078125,
+        "y": 6.5,
+        "right": 338.078125,
+        "bottom": 62.5,
+        "w": 36,
+        "h": 56
+      },
+      "tag": "BUTTON",
+      "tabIndex": 0,
+      "disabled": false,
+      "visible": true
+    },
+    "avatar": {
+      "aria": "Open profile",
+      "rect": {
+        "x": 340,
+        "y": 13.5,
+        "right": 382,
+        "bottom": 55.5,
+        "w": 42,
+        "h": 42
+      }
+    },
+    "educationAvatarOverlap": false,
+    "helpAvatarOverlap": false,
+    "educationHelpOverlap": false,
+    "helpFocusable": true
+  },
+  "focus": {
+    "active": true,
+    "outline": "solid"
+  },
+  "action": {
+    "dialog": true,
+    "title": "PORTFOLIO CLIENT / HELP\n\nA quick orientation\nCLOSE\nESC\n01\nUSE THE TOP NAVIGATION"
+  },
+  "errors": []
+}

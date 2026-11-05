@@ -1,0 +1,1116 @@
+{
+  "chrome": "154.0.8037.98",
+  "source": "current Vite source at 127.0.0.1:5176",
+  "captureMethod": "Playwright clock installed before navigation, CSS/SVG animation timelines paused and explicitly sampled at authored pose times; natural full sequence recorded separately.",
+  "keyposes": [
+    {
+      "pose": "s1-dormant",
+      "timelineMs": 650,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 650,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 752.0999755859375,
+          "y": 332.1000061035156,
+          "w": 415.800048828125,
+          "h": 415.8000183105469
+        }
+      },
+      "portal": {
+        "opacity": "0",
+        "rect": {
+          "x": 829.3931274414062,
+          "y": 397.8299865722656,
+          "w": 277.21307373046875,
+          "h": 277.2131042480469
+        }
+      },
+      "ring": {
+        "opacity": "0.378214",
+        "rect": {
+          "x": 813.6356201171875,
+          "y": 382.11187744140625,
+          "w": 308.688720703125,
+          "h": 308.688720703125
+        }
+      },
+      "seams": {
+        "opacity": "0",
+        "rect": {
+          "x": 752.0999755859375,
+          "y": 332.1000061035156,
+          "w": 415.800048828125,
+          "h": 415.8000183105469
+        }
+      },
+      "conduit": {
+        "opacity": "0",
+        "rect": {
+          "x": 892.4718627929688,
+          "y": 444.0299987792969,
+          "w": 84.48565673828125,
+          "h": 204.23812866210938
+        }
+      },
+      "settled": {
+        "opacity": "0",
+        "rect": {
+          "x": 752.0999755859375,
+          "y": 332.1000061035156,
+          "w": 415.800048828125,
+          "h": 415.8000183105469
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "0.72",
+          "transform": "matrix(0.978148, -0.207912, 0.207912, 0.978148, -65.5771, -54.9999)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "0.72",
+          "transform": "matrix(0.996195, 0.0871557, -0.0871557, 0.996195, 31.731, 40.1925)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "0.72",
+          "transform": "matrix(0.965926, 0.258819, -0.258819, 0.965926, -74.0386, 69.8079)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s1-dormant-1920x1080.png"
+    },
+    {
+      "pose": "s2-approach",
+      "timelineMs": 960,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 960,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "portal": {
+        "opacity": "0.05",
+        "rect": {
+          "x": 841.8319091796875,
+          "y": 411.3699951171875,
+          "w": 250.8118896484375,
+          "h": 250.8118896484375
+        }
+      },
+      "ring": {
+        "opacity": "0.5",
+        "rect": {
+          "x": 828.4893798828125,
+          "y": 398.0631103515625,
+          "w": 277.4613037109375,
+          "h": 277.4613037109375
+        }
+      },
+      "seams": {
+        "opacity": "0",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "conduit": {
+        "opacity": "0",
+        "rect": {
+          "x": 898.9031372070312,
+          "y": 453.16998291015625,
+          "w": 76.43939208984375,
+          "h": 184.78692626953125
+        }
+      },
+      "settled": {
+        "opacity": "0",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "0.86",
+          "transform": "matrix(0.994541, -0.104351, 0.104351, 0.994541, -35.9027, -28.5108)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "0.86",
+          "transform": "matrix(0.999391, 0.0348995, -0.0348995, 0.999391, 14.8079, 19.0387)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "0.86",
+          "transform": "matrix(0.990275, 0.139126, -0.139126, 0.990275, -40.1797, 40.1792)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s2-approach-1920x1080.png"
+    },
+    {
+      "pose": "s3-alignment",
+      "timelineMs": 1370,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 1370,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "portal": {
+        "opacity": "0.18",
+        "rect": {
+          "x": 841.8319091796875,
+          "y": 411.3699951171875,
+          "w": 250.8118896484375,
+          "h": 250.8118896484375
+        }
+      },
+      "ring": {
+        "opacity": "0.7",
+        "rect": {
+          "x": 825.6581420898438,
+          "y": 395.23187255859375,
+          "w": 283.12371826171875,
+          "h": 283.12371826171875
+        }
+      },
+      "seams": {
+        "opacity": "4.62593e-16",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "conduit": {
+        "opacity": "0",
+        "rect": {
+          "x": 898.9031372070312,
+          "y": 453.16998291015625,
+          "w": 76.43939208984375,
+          "h": 184.78692626953125
+        }
+      },
+      "settled": {
+        "opacity": "0",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "0.96",
+          "transform": "matrix(0.99961, -0.0279216, 0.0279216, 0.99961, -10.5772, -8.46153)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "0.96",
+          "transform": "matrix(0.999945, 0.0104648, -0.0104648, 0.999945, 4.22796, 5.28507)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "0.96",
+          "transform": "matrix(0.999266, 0.0383011, -0.0383011, 0.999266, -12.6636, 11.6082)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s3-alignment-1920x1080.png"
+    },
+    {
+      "pose": "s4-lock",
+      "timelineMs": 2580,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 2580,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "portal": {
+        "opacity": "0.35",
+        "rect": {
+          "x": 841.8319091796875,
+          "y": 411.3699951171875,
+          "w": 250.8118896484375,
+          "h": 250.8118896484375
+        }
+      },
+      "ring": {
+        "opacity": "0.85",
+        "rect": {
+          "x": 825.6581420898438,
+          "y": 395.23187255859375,
+          "w": 283.12371826171875,
+          "h": 283.12371826171875
+        }
+      },
+      "seams": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "conduit": {
+        "opacity": "0.92",
+        "rect": {
+          "x": 898.9031372070312,
+          "y": 453.16998291015625,
+          "w": 76.43939208984375,
+          "h": 184.78692626953125
+        }
+      },
+      "settled": {
+        "opacity": "0",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "1",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s4-lock-1920x1080.png"
+    },
+    {
+      "pose": "s5-activation",
+      "timelineMs": 3100,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 3100,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "portal": {
+        "opacity": "0.788961",
+        "rect": {
+          "x": 841.8319091796875,
+          "y": 411.3699951171875,
+          "w": 250.8118896484375,
+          "h": 250.8118896484375
+        }
+      },
+      "ring": {
+        "opacity": "1",
+        "rect": {
+          "x": 825.6581420898438,
+          "y": 395.23187255859375,
+          "w": 283.12371826171875,
+          "h": 283.12371826171875
+        }
+      },
+      "seams": {
+        "opacity": "0.6",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "conduit": {
+        "opacity": "0.466667",
+        "rect": {
+          "x": 898.9031372070312,
+          "y": 453.16998291015625,
+          "w": 76.43939208984375,
+          "h": 184.78692626953125
+        }
+      },
+      "settled": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s5-activation-1920x1080.png"
+    },
+    {
+      "pose": "s6-sheen",
+      "timelineMs": 3800,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 3800,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "portal": {
+        "opacity": "1",
+        "rect": {
+          "x": 841.8319091796875,
+          "y": 411.3699951171875,
+          "w": 250.8118896484375,
+          "h": 250.8118896484375
+        }
+      },
+      "ring": {
+        "opacity": "1",
+        "rect": {
+          "x": 825.6581420898438,
+          "y": 395.23187255859375,
+          "w": 283.12371826171875,
+          "h": 283.12371826171875
+        }
+      },
+      "seams": {
+        "opacity": "0.0333333",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "conduit": {
+        "opacity": "0",
+        "rect": {
+          "x": 898.9031372070312,
+          "y": 453.16998291015625,
+          "w": 76.43939208984375,
+          "h": 184.78692626953125
+        }
+      },
+      "settled": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s6-sheen-1920x1080.png"
+    },
+    {
+      "pose": "s7-settled",
+      "timelineMs": 4100,
+      "markClock": [
+        {
+          "name": "opening-mark-sequence",
+          "time": 4100,
+          "playState": "paused"
+        }
+      ],
+      "route": "/",
+      "viewport": {
+        "w": 1920,
+        "h": 1080,
+        "scrollW": 1920
+      },
+      "mark": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "portal": {
+        "opacity": "1",
+        "rect": {
+          "x": 841.8319091796875,
+          "y": 411.3699951171875,
+          "w": 250.8118896484375,
+          "h": 250.8118896484375
+        }
+      },
+      "ring": {
+        "opacity": "1",
+        "rect": {
+          "x": 825.6581420898438,
+          "y": 395.23187255859375,
+          "w": 283.12371826171875,
+          "h": 283.12371826171875
+        }
+      },
+      "seams": {
+        "opacity": "0",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "conduit": {
+        "opacity": "0",
+        "rect": {
+          "x": 898.9031372070312,
+          "y": 453.16998291015625,
+          "w": 76.43939208984375,
+          "h": 184.78692626953125
+        }
+      },
+      "settled": {
+        "opacity": "1",
+        "rect": {
+          "x": 771.9000244140625,
+          "y": 351.8999938964844,
+          "w": 376.199951171875,
+          "h": 376.1999816894531
+        }
+      },
+      "fragments": [
+        {
+          "piece": "crown",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "shaft",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        },
+        {
+          "piece": "hook",
+          "opacity": "0",
+          "transform": "matrix(1, 0, 0, 1, 0, 0)"
+        }
+      ],
+      "assets": [
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+          "complete": true,
+          "naturalWidth": 624
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+          "complete": true,
+          "naturalWidth": 784
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 1057
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+          "complete": true,
+          "naturalWidth": 792
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+          "complete": true,
+          "naturalWidth": 468
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+          "complete": true,
+          "naturalWidth": 534
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+          "complete": true,
+          "naturalWidth": 111
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+          "complete": true,
+          "naturalWidth": 101
+        },
+        {
+          "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+          "complete": true,
+          "naturalWidth": 160
+        }
+      ],
+      "file": "s7-settled-1920x1080.png"
+    }
+  ],
+  "additionalViewports": [
+    "settled-1440x720.png",
+    "alignment-390x844.png",
+    "settled-390x844.png"
+  ],
+  "final": {
+    "path": "/home",
+    "opening": false,
+    "overflow": false,
+    "broken": []
+  },
+  "errors": {
+    "page": [],
+    "console": [],
+    "failed": [],
+    "bad": []
+  }
+}

@@ -1,0 +1,2584 @@
+{
+  "sourceCommit": "9fd23f9d45314f2319cffa97722cd7925ef2be52",
+  "url": "https://a7047ffc.joshuaik2.pages.dev/profile",
+  "browserVersion": "153.0.8010.53",
+  "viewports": {
+    "1920x1080": {
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "scrollWidth": 1920,
+        "clientWidth": 1920,
+        "scrollHeight": 1080,
+        "main": {
+          "x": 0,
+          "y": 110,
+          "width": 1600,
+          "height": 970
+        },
+        "mainClass": "main main--profile",
+        "images": [
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 6,
+              "y": 27.5,
+              "width": 54,
+              "height": 54
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 917,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 970,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 1023,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 1076,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 1129,
+              "y": 35.5,
+              "width": 38,
+              "height": 38
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 1620,
+              "y": 23.5,
+              "width": 76,
+              "height": 76
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "alt": "",
+            "loaded": true,
+            "width": 128,
+            "height": 128,
+            "rect": {
+              "x": 1626,
+              "y": 29.5,
+              "width": 64,
+              "height": 64
+            },
+            "radius": "50%"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trials-of-twilight-banner.png",
+            "alt": "",
+            "loaded": true,
+            "width": 580,
+            "height": 1480,
+            "rect": {
+              "x": -53.5,
+              "y": -93,
+              "width": 493,
+              "height": 1201
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/owner-portrait.png",
+            "alt": "Joshua Aryeetey",
+            "loaded": true,
+            "width": 312,
+            "height": 312,
+            "rect": {
+              "x": 115,
+              "y": 338,
+              "width": 156,
+              "height": 156
+            },
+            "radius": "50%"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 89,
+              "y": 312,
+              "width": 208,
+              "height": 208
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 217,
+              "y": 568,
+              "width": 108,
+              "height": 108
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 59,
+              "y": 724,
+              "width": 56,
+              "height": 56
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 66,
+            "height": 66,
+            "rect": {
+              "x": 60.4,
+              "y": 725.4,
+              "width": 53.2,
+              "height": 53.2
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 65.3,
+              "y": 730.3,
+              "width": 43.5,
+              "height": 43.5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-c.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 23,
+            "height": 29,
+            "rect": {
+              "x": 76,
+              "y": 737.5,
+              "width": 22,
+              "height": 25.5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-d.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 11,
+            "height": 6,
+            "rect": {
+              "x": 78.1,
+              "y": 750.1,
+              "width": 17.8,
+              "height": 25.1
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 44,
+            "height": 25,
+            "rect": {
+              "x": 69.4,
+              "y": 732.3,
+              "width": 35.3,
+              "height": 21
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 159,
+              "y": 724,
+              "width": 56,
+              "height": 56
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 66,
+            "height": 66,
+            "rect": {
+              "x": 160.4,
+              "y": 725.4,
+              "width": 53.2,
+              "height": 53.2
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 165.3,
+              "y": 730.3,
+              "width": 43.5,
+              "height": 43.5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 29,
+            "height": 31,
+            "rect": {
+              "x": 173.9,
+              "y": 736.3,
+              "width": 28,
+              "height": 28.9
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-c.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 13,
+            "height": 13,
+            "rect": {
+              "x": 180,
+              "y": 738.9,
+              "width": 19,
+              "height": 19
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-d.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 8,
+            "height": 8,
+            "rect": {
+              "x": 183.9,
+              "y": 748.9,
+              "width": 6.2,
+              "height": 6.2
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-execution-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 52,
+            "height": 52,
+            "rect": {
+              "x": 166.3,
+              "y": 731.3,
+              "width": 41.5,
+              "height": 41.5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 259,
+              "y": 724,
+              "width": 56,
+              "height": 56
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 66,
+            "height": 66,
+            "rect": {
+              "x": 260.4,
+              "y": 725.4,
+              "width": 53.2,
+              "height": 53.2
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 265.3,
+              "y": 730.3,
+              "width": 43.5,
+              "height": 43.5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-execution-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 41,
+            "height": 41,
+            "rect": {
+              "x": 270,
+              "y": 737,
+              "width": 34.1,
+              "height": 34.1
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-execution-c.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 21,
+            "height": 15,
+            "rect": {
+              "x": 276.5,
+              "y": 741.7,
+              "width": 21.9,
+              "height": 20.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-enclosure.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 1106,
+            "height": 364,
+            "rect": {
+              "x": 435,
+              "y": 429,
+              "width": 1106,
+              "height": 364
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-title-divider.png",
+            "alt": "",
+            "loaded": true,
+            "width": 204,
+            "height": 12,
+            "rect": {
+              "x": 468,
+              "y": 507,
+              "width": 1042,
+              "height": 5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "Food Tracker project mark",
+            "loaded": true,
+            "width": 40,
+            "height": 40,
+            "rect": {
+              "x": 498.4,
+              "y": 578,
+              "width": 40,
+              "height": 40
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "alt": "Cho’Veigo match-path project mark",
+            "loaded": true,
+            "width": 150,
+            "height": 150,
+            "rect": {
+              "x": 776.7,
+              "y": 585,
+              "width": 40,
+              "height": 40
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "alt": "Crest project mark",
+            "loaded": true,
+            "width": 310,
+            "height": 230,
+            "rect": {
+              "x": 1070.8,
+              "y": 587,
+              "width": 27,
+              "height": 22
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/fraymakers-logo.png",
+            "alt": "Fraymakers official wordmark",
+            "loaded": true,
+            "width": 4241,
+            "height": 1650,
+            "rect": {
+              "x": 1323.8,
+              "y": 577,
+              "width": 112,
+              "height": 44
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/project-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 531.8,
+              "y": 776,
+              "width": 132,
+              "height": 132
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/experience-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 799.3,
+              "y": 776,
+              "width": 132,
+              "height": 132
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/hackathon-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 1066.8,
+              "y": 776,
+              "width": 132,
+              "height": 132
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/academics-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 1334.3,
+              "y": 776,
+              "width": 132,
+              "height": 132
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 29,
+            "height": 47,
+            "rect": {
+              "x": 1628.7,
+              "y": 153.5,
+              "width": 28.6,
+              "height": 46.9
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 13,
+            "height": 13,
+            "rect": {
+              "x": 1846,
+              "y": 262.5,
+              "width": 13,
+              "height": 13
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 8,
+            "height": 7,
+            "rect": {
+              "x": 1871,
+              "y": 265.5,
+              "width": 8,
+              "height": 7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 7,
+            "height": 6,
+            "rect": {
+              "x": 1891,
+              "y": 266,
+              "width": 7,
+              "height": 6
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 40,
+            "height": 40,
+            "rect": {
+              "x": 1641,
+              "y": 371.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 40,
+            "height": 40,
+            "rect": {
+              "x": 1641,
+              "y": 467.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 150,
+            "height": 150,
+            "rect": {
+              "x": 1641,
+              "y": 516.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "alt": "",
+            "loaded": true,
+            "width": 310,
+            "height": 230,
+            "rect": {
+              "x": 1641,
+              "y": 565.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "alt": "",
+            "loaded": true,
+            "width": 82,
+            "height": 82,
+            "rect": {
+              "x": 1641,
+              "y": 614.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "alt": "",
+            "loaded": true,
+            "width": 96,
+            "height": 96,
+            "rect": {
+              "x": 1641,
+              "y": 700.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "alt": "",
+            "loaded": true,
+            "width": 96,
+            "height": 96,
+            "rect": {
+              "x": 1641,
+              "y": 749.5,
+              "width": 26,
+              "height": 26
+            },
+            "radius": "0px"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Profile summary details",
+            "rect": {
+              "x": 444,
+              "y": 741,
+              "width": 1090,
+              "height": 330
+            },
+            "tabIndex": -1
+          },
+          {
+            "name": "PROJECTS, 4. Focus to preview projects details.",
+            "rect": {
+              "x": 464,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            },
+            "tabIndex": 0
+          },
+          {
+            "name": "EXPERIENCE, 2. Focus to preview experience details.",
+            "rect": {
+              "x": 731.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            },
+            "tabIndex": 0
+          },
+          {
+            "name": "HACKATHON, 1. Focus to preview hackathon details.",
+            "rect": {
+              "x": 999,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            },
+            "tabIndex": 0
+          },
+          {
+            "name": "ACADEMICS, 2028. Focus to preview academics details.",
+            "rect": {
+              "x": 1266.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            },
+            "tabIndex": 0
+          }
+        ],
+        "headings": [
+          "JOSHUA ARYEETEY",
+          "PROJECTS",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "candidates": [
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Skip to content",
+            "aria": null,
+            "cls": "skip-link",
+            "rect": {
+              "x": 14,
+              "y": -100,
+              "width": 130.1,
+              "height": 35
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "PORTFOLIO",
+            "aria": "Portfolio home",
+            "cls": "brand",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 249.6,
+              "height": 109
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "PROJECTS",
+            "aria": null,
+            "cls": "current",
+            "rect": {
+              "x": 276.5,
+              "y": -0.5,
+              "width": 122.9,
+              "height": 110
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "EXPERIENCE",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 399.3,
+              "y": -0.5,
+              "width": 147.8,
+              "height": 110
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "HACKATHONS",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 547.2,
+              "y": -0.5,
+              "width": 158,
+              "height": 110
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "EDUCATION",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 705.2,
+              "y": -0.5,
+              "width": 123.8,
+              "height": 110
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "RESUME",
+            "aria": null,
+            "cls": "header-resume",
+            "rect": {
+              "x": 829,
+              "y": -0.5,
+              "width": 80,
+              "height": 110
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "role": null,
+            "text": "Help",
+            "aria": null,
+            "cls": "header-help",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Joshua Aryeetey OPEN TO SUMMER 2027",
+            "aria": "Open profile",
+            "cls": "header-account",
+            "rect": {
+              "x": 1620,
+              "y": 9.5,
+              "width": 234.1,
+              "height": 90
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "OVERVIEW",
+            "aria": null,
+            "cls": "active",
+            "rect": {
+              "x": 430,
+              "y": 140,
+              "width": 82.4,
+              "height": 52
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "JOURNEY",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 512.4,
+              "y": 140,
+              "width": 88.3,
+              "height": 52
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "DEMOS",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 776.4,
+              "y": 140,
+              "width": 74.7,
+              "height": 52
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Food Tracker Food tracking",
+            "aria": "Open Food Tracker case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 468,
+              "y": 534,
+              "width": 259.5,
+              "height": 198
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open Food Tracker source repository",
+            "cls": "profile-project__source",
+            "rect": {
+              "x": 695.5,
+              "y": 701,
+              "width": 19,
+              "height": 19
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Cho’Veigo Resume tailoring",
+            "aria": "Open Cho’Veigo case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 728.5,
+              "y": 534,
+              "width": 259.5,
+              "height": 198
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open Cho’Veigo source repository",
+            "cls": "profile-project__source",
+            "rect": {
+              "x": 956,
+              "y": 701,
+              "width": 19,
+              "height": 19
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge",
+            "aria": "Open Crest case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 989,
+              "y": 534,
+              "width": 259.5,
+              "height": 198
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open Crest source repository",
+            "cls": "profile-project__source",
+            "rect": {
+              "x": 1216.5,
+              "y": 701,
+              "width": 19,
+              "height": 19
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Tournament automation",
+            "aria": "Open Fraymakers case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 1249.5,
+              "y": 534,
+              "width": 260.5,
+              "height": 198
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "PROJECTS 4 EXPERIENCE 2 HACKATHON 1 ACADEMICS 2028",
+            "aria": "Profile summary details",
+            "cls": "profile-signal-grid",
+            "rect": {
+              "x": 444,
+              "y": 741,
+              "width": 1090,
+              "height": 330
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "PROJECTS 4",
+            "aria": "PROJECTS, 4. Focus to preview projects details.",
+            "cls": "profile-signal profile-signal--selected",
+            "rect": {
+              "x": 464,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "EXPERIENCE 2",
+            "aria": "EXPERIENCE, 2. Focus to preview experience details.",
+            "cls": "profile-signal",
+            "rect": {
+              "x": 731.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "HACKATHON 1",
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "cls": "profile-signal",
+            "rect": {
+              "x": 999,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "ACADEMICS 2028",
+            "aria": "ACADEMICS, 2028. Focus to preview academics details.",
+            "cls": "profile-signal",
+            "rect": {
+              "x": 1266.5,
+              "y": 742,
+              "width": 267.5,
+              "height": 329
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Food Tracker",
+            "aria": null,
+            "cls": "rail-link rail-link--focus",
+            "rect": {
+              "x": 1637,
+              "y": 360,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Food Tracker",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 1637,
+              "y": 456,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Cho’Veigo",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 1637,
+              "y": 505,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Crest",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 1637,
+              "y": 554,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Fraymakers",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 1637,
+              "y": 603,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Living in Silico",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 1637,
+              "y": 689,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Stush Patties",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 1637,
+              "y": 738,
+              "width": 247,
+              "height": 49
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "cls": "",
+            "rect": {
+              "x": 1621,
+              "y": 1045,
+              "width": 30.4,
+              "height": 9
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "LinkedIn",
+            "aria": "LinkedIn (opens in a new tab)",
+            "cls": "",
+            "rect": {
+              "x": 1682,
+              "y": 1045,
+              "width": 35.5,
+              "height": 9
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "✉",
+            "aria": "Email Joshua",
+            "cls": "rail-social-footer__email",
+            "rect": {
+              "x": 1785.5,
+              "y": 1040,
+              "width": 13.9,
+              "height": 19
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "role": null,
+            "text": "HELP",
+            "aria": null,
+            "cls": "rail-social-footer__help",
+            "rect": {
+              "x": 1830,
+              "y": 1034.5,
+              "width": 70,
+              "height": 30
+            }
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-profile-preview-9fd23f9/profile-after-9fd23f9-1920x1080.png",
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "experienceHover": {
+        "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-profile-preview-9fd23f9/profile-after-9fd23f9-1920x1080-experience-hover.png",
+        "state": {
+          "heading": "EXPERIENCE",
+          "panel": {
+            "x": 444,
+            "y": 434,
+            "width": 1090,
+            "height": 330
+          },
+          "logos": [
+            {
+              "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+              "rect": {
+                "x": 526,
+                "y": 587,
+                "width": 92,
+                "height": 92
+              },
+              "borderRadius": "50%",
+              "objectFit": "contain",
+              "loaded": true
+            },
+            {
+              "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+              "rect": {
+                "x": 1048,
+                "y": 587,
+                "width": 92,
+                "height": 92
+              },
+              "borderRadius": "50%",
+              "objectFit": "contain",
+              "loaded": true
+            }
+          ],
+          "panelGeometryMatchesBaseline": true
+        }
+      }
+    },
+    "390x844": {
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "scrollWidth": 390,
+        "clientWidth": 390,
+        "scrollHeight": 1937,
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 1867
+        },
+        "mainClass": "main main--profile",
+        "images": [
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 32,
+            "height": 32,
+            "rect": {
+              "x": 10,
+              "y": -51.5,
+              "width": 32,
+              "height": 32
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 38,
+            "height": 38,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 340,
+              "y": -56.5,
+              "width": 42,
+              "height": 42
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "alt": "",
+            "loaded": true,
+            "width": 128,
+            "height": 128,
+            "rect": {
+              "x": 346,
+              "y": -50.5,
+              "width": 30,
+              "height": 30
+            },
+            "radius": "50%"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trials-of-twilight-banner.png",
+            "alt": "",
+            "loaded": true,
+            "width": 580,
+            "height": 1480,
+            "rect": {
+              "x": 0,
+              "y": -184,
+              "width": 390,
+              "height": 1201
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/owner-portrait.png",
+            "alt": "Joshua Aryeetey",
+            "loaded": true,
+            "width": 312,
+            "height": 312,
+            "rect": {
+              "x": 126.4,
+              "y": 112.9,
+              "width": 137.3,
+              "height": 137.3
+            },
+            "radius": "50%"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 103.5,
+              "y": 90,
+              "width": 183,
+              "height": 183
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 265,
+              "y": 340,
+              "width": 88.6,
+              "height": 88.6
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 79.8,
+              "y": 518.9,
+              "width": 34.4,
+              "height": 34.4
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 66,
+            "height": 66,
+            "rect": {
+              "x": 80.6,
+              "y": 519.7,
+              "width": 32.7,
+              "height": 32.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 83.6,
+              "y": 522.7,
+              "width": 26.7,
+              "height": 26.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-c.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 23,
+            "height": 29,
+            "rect": {
+              "x": 90.2,
+              "y": 527.1,
+              "width": 13.5,
+              "height": 15.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-d.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 11,
+            "height": 6,
+            "rect": {
+              "x": 91.5,
+              "y": 534.9,
+              "width": 10.9,
+              "height": 15.4
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 44,
+            "height": 25,
+            "rect": {
+              "x": 86.1,
+              "y": 524,
+              "width": 21.6,
+              "height": 12.9
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 165.8,
+              "y": 518.9,
+              "width": 34.4,
+              "height": 34.4
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 66,
+            "height": 66,
+            "rect": {
+              "x": 166.6,
+              "y": 519.7,
+              "width": 32.7,
+              "height": 32.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 169.6,
+              "y": 522.7,
+              "width": 26.7,
+              "height": 26.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 29,
+            "height": 31,
+            "rect": {
+              "x": 174.9,
+              "y": 526.4,
+              "width": 17.2,
+              "height": 17.8
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-c.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 13,
+            "height": 13,
+            "rect": {
+              "x": 178.6,
+              "y": 528,
+              "width": 11.7,
+              "height": 11.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-proactive-d.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 8,
+            "height": 8,
+            "rect": {
+              "x": 181,
+              "y": 534.1,
+              "width": 3.8,
+              "height": 3.8
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-execution-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 52,
+            "height": 52,
+            "rect": {
+              "x": 170.2,
+              "y": 523.3,
+              "width": 25.5,
+              "height": 25.5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/portrait-medallion.png",
+            "alt": "",
+            "loaded": true,
+            "width": 160,
+            "height": 160,
+            "rect": {
+              "x": 251.8,
+              "y": 518.9,
+              "width": 34.4,
+              "height": 34.4
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-a.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 66,
+            "height": 66,
+            "rect": {
+              "x": 252.6,
+              "y": 519.7,
+              "width": 32.7,
+              "height": 32.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 54,
+            "height": 54,
+            "rect": {
+              "x": 255.6,
+              "y": 522.7,
+              "width": 26.7,
+              "height": 26.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-execution-b.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 41,
+            "height": 41,
+            "rect": {
+              "x": 258.5,
+              "y": 526.9,
+              "width": 20.9,
+              "height": 20.9
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/trait-execution-c.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 21,
+            "height": 15,
+            "rect": {
+              "x": 262.5,
+              "y": 529.7,
+              "width": 13.5,
+              "height": 12.7
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-enclosure.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 1106,
+            "height": 364,
+            "rect": {
+              "x": 7.4,
+              "y": 839,
+              "width": 375.2,
+              "height": 364
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-title-divider.png",
+            "alt": "",
+            "loaded": true,
+            "width": 204,
+            "height": 12,
+            "rect": {
+              "x": 35.7,
+              "y": 912,
+              "width": 318.6,
+              "height": 5
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "Food Tracker project mark",
+            "loaded": true,
+            "width": 40,
+            "height": 40,
+            "rect": {
+              "x": 31.5,
+              "y": 970,
+              "width": 40,
+              "height": 40
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "alt": "Cho’Veigo match-path project mark",
+            "loaded": true,
+            "width": 150,
+            "height": 150,
+            "rect": {
+              "x": 208.3,
+              "y": 970,
+              "width": 40,
+              "height": 40
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "alt": "Crest project mark",
+            "loaded": true,
+            "width": 310,
+            "height": 230,
+            "rect": {
+              "x": 72.1,
+              "y": 1171.5,
+              "width": 27,
+              "height": 22
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/fraymakers-logo.png",
+            "alt": "Fraymakers official wordmark",
+            "loaded": true,
+            "width": 4241,
+            "height": 1650,
+            "rect": {
+              "x": 220.4,
+              "y": 1161.5,
+              "width": 112,
+              "height": 44
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/project-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 50.5,
+              "y": 1389,
+              "width": 112,
+              "height": 112
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/experience-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 227.5,
+              "y": 1389,
+              "width": 112,
+              "height": 112
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/hackathon-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 50.5,
+              "y": 1624,
+              "width": 112,
+              "height": 112
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/academics-signal.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 120,
+            "height": 120,
+            "rect": {
+              "x": 227.5,
+              "y": 1624,
+              "width": 112,
+              "height": 112
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 29,
+            "height": 47,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 13,
+            "height": 13,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 8,
+            "height": 7,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 7,
+            "height": 6,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 40,
+            "height": 40,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 40,
+            "height": 40,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "alt": "",
+            "loaded": true,
+            "width": 150,
+            "height": 150,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "alt": "",
+            "loaded": true,
+            "width": 310,
+            "height": 230,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "alt": "",
+            "loaded": true,
+            "width": 82,
+            "height": 82,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "alt": "",
+            "loaded": true,
+            "width": 96,
+            "height": 96,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          },
+          {
+            "src": "https://a7047ffc.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "alt": "",
+            "loaded": true,
+            "width": 96,
+            "height": 96,
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            },
+            "radius": "0px"
+          }
+        ],
+        "groups": [
+          {
+            "name": "Profile summary details",
+            "rect": {
+              "x": 18,
+              "y": 1368,
+              "width": 354,
+              "height": 471
+            },
+            "tabIndex": -1
+          },
+          {
+            "name": "PROJECTS, 4. Focus to preview projects details.",
+            "rect": {
+              "x": 18,
+              "y": 1369,
+              "width": 177,
+              "height": 235
+            },
+            "tabIndex": 0
+          },
+          {
+            "name": "EXPERIENCE, 2. Focus to preview experience details.",
+            "rect": {
+              "x": 195,
+              "y": 1369,
+              "width": 177,
+              "height": 235
+            },
+            "tabIndex": 0
+          },
+          {
+            "name": "HACKATHON, 1. Focus to preview hackathon details.",
+            "rect": {
+              "x": 18,
+              "y": 1604,
+              "width": 177,
+              "height": 235
+            },
+            "tabIndex": 0
+          },
+          {
+            "name": "ACADEMICS, 2028. Focus to preview academics details.",
+            "rect": {
+              "x": 195,
+              "y": 1604,
+              "width": 177,
+              "height": 235
+            },
+            "tabIndex": 0
+          }
+        ],
+        "headings": [
+          "JOSHUA ARYEETEY",
+          "PROJECTS",
+          "ACTIVITY",
+          "CURRENT FOCUS",
+          "PROJECTS (4)",
+          "EXPERIENCE (2)"
+        ],
+        "candidates": [
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Skip to content",
+            "aria": null,
+            "cls": "skip-link",
+            "rect": {
+              "x": 14,
+              "y": -170,
+              "width": 130.1,
+              "height": 35
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Portfolio home",
+            "cls": "brand",
+            "rect": {
+              "x": 0,
+              "y": -70,
+              "width": 68,
+              "height": 69
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "PROJECTS",
+            "aria": null,
+            "cls": "current",
+            "rect": {
+              "x": 73,
+              "y": -69.5,
+              "width": 72,
+              "height": 68
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "EXPERIENCE",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 145,
+              "y": -69.5,
+              "width": 78,
+              "height": 68
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "HACKATHONS",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 223,
+              "y": -69.5,
+              "width": 82,
+              "height": 68
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "EDUCATION",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 305,
+              "y": -69.5,
+              "width": 76,
+              "height": 68
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "RESUME",
+            "aria": null,
+            "cls": "header-resume",
+            "rect": {
+              "x": 381,
+              "y": -69.5,
+              "width": 56,
+              "height": 68
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "role": null,
+            "text": "HELP",
+            "aria": null,
+            "cls": "header-help",
+            "rect": {
+              "x": 437,
+              "y": -69.5,
+              "width": 84,
+              "height": 68
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open profile",
+            "cls": "header-account",
+            "rect": {
+              "x": 340,
+              "y": -56.5,
+              "width": 42,
+              "height": 42
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "OVERVIEW",
+            "aria": null,
+            "cls": "active",
+            "rect": {
+              "x": 18,
+              "y": 768,
+              "width": 82.4,
+              "height": 52
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "JOURNEY",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 100.4,
+              "y": 768,
+              "width": 88.3,
+              "height": 52
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "DEMOS",
+            "aria": null,
+            "cls": "",
+            "rect": {
+              "x": 364.4,
+              "y": 768,
+              "width": 74.7,
+              "height": 52
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Food Tracker Food tracking",
+            "aria": "Open Food Tracker case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 32.2,
+              "y": 935,
+              "width": 161.8,
+              "height": 191.5
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open Food Tracker source repository",
+            "cls": "profile-project__source",
+            "rect": {
+              "x": 162,
+              "y": 1095.5,
+              "width": 19,
+              "height": 19
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Cho’Veigo Resume tailoring",
+            "aria": "Open Cho’Veigo case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 195,
+              "y": 935,
+              "width": 162.8,
+              "height": 191.5
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open Cho’Veigo source repository",
+            "cls": "profile-project__source",
+            "rect": {
+              "x": 325.8,
+              "y": 1095.5,
+              "width": 19,
+              "height": 19
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Crest MPC Hacks 2026 · 3rd Place Brim Financial Challenge",
+            "aria": "Open Crest case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 32.2,
+              "y": 1127.5,
+              "width": 161.8,
+              "height": 192.5
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "",
+            "aria": "Open Crest source repository",
+            "cls": "profile-project__source",
+            "rect": {
+              "x": 162,
+              "y": 1289,
+              "width": 19,
+              "height": 19
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Tournament automation",
+            "aria": "Open Fraymakers case study",
+            "cls": "profile-project__open",
+            "rect": {
+              "x": 195,
+              "y": 1127.5,
+              "width": 162.8,
+              "height": 192.5
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "PROJECTS 4 EXPERIENCE 2 HACKATHON 1 ACADEMICS 2028",
+            "aria": "Profile summary details",
+            "cls": "profile-signal-grid",
+            "rect": {
+              "x": 18,
+              "y": 1368,
+              "width": 354,
+              "height": 471
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "PROJECTS 4",
+            "aria": "PROJECTS, 4. Focus to preview projects details.",
+            "cls": "profile-signal profile-signal--selected",
+            "rect": {
+              "x": 18,
+              "y": 1369,
+              "width": 177,
+              "height": 235
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "EXPERIENCE 2",
+            "aria": "EXPERIENCE, 2. Focus to preview experience details.",
+            "cls": "profile-signal",
+            "rect": {
+              "x": 195,
+              "y": 1369,
+              "width": 177,
+              "height": 235
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "HACKATHON 1",
+            "aria": "HACKATHON, 1. Focus to preview hackathon details.",
+            "cls": "profile-signal",
+            "rect": {
+              "x": 18,
+              "y": 1604,
+              "width": 177,
+              "height": 235
+            }
+          },
+          {
+            "tag": "DIV",
+            "role": "group",
+            "text": "ACADEMICS 2028",
+            "aria": "ACADEMICS, 2028. Focus to preview academics details.",
+            "cls": "profile-signal",
+            "rect": {
+              "x": 195,
+              "y": 1604,
+              "width": 177,
+              "height": 235
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Food Tracker",
+            "aria": null,
+            "cls": "rail-link rail-link--focus",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Food Tracker",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Cho’Veigo",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Crest",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Fraymakers",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Living in Silico",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "Stush Patties",
+            "aria": null,
+            "cls": "rail-link",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "LinkedIn",
+            "aria": "LinkedIn (opens in a new tab)",
+            "cls": "",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "A",
+            "role": null,
+            "text": "✉",
+            "aria": "Email Joshua",
+            "cls": "rail-social-footer__email",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "tag": "BUTTON",
+            "role": null,
+            "text": "Help",
+            "aria": null,
+            "cls": "rail-social-footer__help",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ]
+      },
+      "screenshot": "C:/Users/samue/OneDrive/Desktop/personal portfolio/production-portfolio/.worktrees/public-integration/docs/case-study-review/render-sync/2026-10-04-profile-preview-9fd23f9/profile-after-9fd23f9-390x844.png",
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      }
+    }
+  },
+  "startedAt": "2026-10-04T10:11:14.403Z",
+  "finishedAt": "2026-10-04T10:11:19.967Z",
+  "figmaReferences": {
+    "base": "Figma node 960:2 (1920x1080)",
+    "reviewStrip": "Figma node 3285:45 (captured 2026-10-04)"
+  },
+  "baselineGeometry": {
+    "sourceCommit": "3f34cd0",
+    "desktopPanel": {
+      "x": 444,
+      "y": 434,
+      "width": 1090,
+      "height": 330
+    },
+    "narrowPanel": {
+      "x": 18,
+      "y": 844,
+      "width": 354,
+      "height": 500
+    }
+  },
+  "visualComparison": {
+    "smokyCenterField": "Matches current Figma base/review references; smoky purple-gray field is present.",
+    "experienceMarks": "Both 92x92 story marks are circular in the focused Experience panel; Figma review strip also shows circular marks.",
+    "panelGeometry": "Unchanged from 3f34cd0 baseline: x444/y434/1090x330."
+  }
+}

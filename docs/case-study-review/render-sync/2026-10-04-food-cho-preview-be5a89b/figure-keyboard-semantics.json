@@ -1,0 +1,126 @@
+{
+  "food": {
+    "1920x1080": [
+      {
+        "index": 0,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "Food Tracker product path schematic"
+      },
+      {
+        "index": 1,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "food-retrieval-flow-title"
+      },
+      {
+        "index": 2,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": null
+      },
+      {
+        "index": 3,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "food-system-map-title"
+      },
+      {
+        "index": 4,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "food-benchmark-title"
+      }
+    ],
+    "390x844": [
+      {
+        "index": 0,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "Food Tracker product path schematic"
+      },
+      {
+        "index": 1,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "food-retrieval-flow-title"
+      },
+      {
+        "index": 2,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": null
+      },
+      {
+        "index": 3,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "food-system-map-title"
+      },
+      {
+        "index": 4,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "food-benchmark-title"
+      }
+    ]
+  },
+  "cho": {
+    "1920x1080": [
+      {
+        "index": 0,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": null
+      },
+      {
+        "index": 1,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "choveigo-system-map-title"
+      },
+      {
+        "index": 2,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "cho-evidence-title"
+      }
+    ],
+    "390x844": [
+      {
+        "index": 0,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": null
+      },
+      {
+        "index": 1,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "choveigo-system-map-title"
+      },
+      {
+        "index": 2,
+        "tabIndex": -1,
+        "focusableDescendants": 0,
+        "role": null,
+        "nameSource": "cho-evidence-title"
+      }
+    ]
+  }
+}

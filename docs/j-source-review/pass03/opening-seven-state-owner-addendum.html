@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Sonnet V8 opening · owner addendum review</title>
+    <style>
+      :root { color-scheme: dark; font: 14px/1.55 Inter, "Segoe UI", sans-serif; background: #0b1015; color: #e7e2d6; }
+      * { box-sizing: border-box; }
+      body { margin: 0 auto; padding: 26px clamp(12px, 2.5vw, 36px) 44px; max-width: 1560px; }
+      h1, h2, p { margin: 0; }
+      h1 { font: 600 clamp(24px, 3vw, 36px)/1.15 Georgia, serif; }
+      h2 { color: #f0d383; font: 600 16px/1.3 Georgia, serif; }
+      .intro { display: flex; justify-content: space-between; align-items: start; gap: 20px; margin-bottom: 18px; }
+      .intro p { max-width: 980px; margin-top: 8px; color: #b9c5cb; }
+      .badge { padding: 7px 10px; border: 1px solid #bd9145; color: #e8c879; font: 700 10px/1 Arial, sans-serif; letter-spacing: .12em; white-space: nowrap; }
+      .note { padding: 12px 14px; margin-bottom: 20px; border-left: 3px solid #65c6dc; background: #14232c; color: #c5d1d6; font-size: 12px; }
+      .note a, .full-video { color: #83daf0; }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+      .pose { overflow: hidden; border: 1px solid #34424b; background: #111a22; }
+      .pose header { padding: 12px 13px; }
+      .pose header p { margin-top: 4px; color: #aab8c0; font-size: 11px; }
+      .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #36434c; }
+      .cell { min-width: 0; background: #080d12; }
+      .cell h3 { margin: 0; padding: 6px 9px; color: #9baab2; font: 700 9px/1.2 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+      .cell img { display: block; width: 100%; aspect-ratio: 700 / 620; object-fit: cover; background: #020509; }
+      .full { margin-top: 20px; padding: 14px 16px; border: 1px solid #34424b; background: #101820; color: #bfccd1; font-size: 12px; }
+      .full strong { color: white; }
+      .full p + p { margin-top: 6px; }
+      @media (max-width: 750px) {
+        .intro { flex-direction: column; }
+        .grid { grid-template-columns: 1fr; }
+      }
+      @media (max-width: 460px) {
+        body { padding-inline: 8px; }
+        .pair { grid-template-columns: 1fr; }
+        .cell img { aspect-ratio: 700 / 420; object-fit: contain; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="intro">
+      <div>
+        <h1>Sonnet V8 J assembly · owner addendum comparison</h1>
+        <p>Each row pairs one authored Figma key pose with a centered Chrome capture from the current owner-addendum implementation. The live CSS/SVG animation was paused at the exact key-pose timeline value; the runtime never swaps in storyboard images. The uninterrupted browser recording is linked below.</p>
+      </div>
+      <span class="badge">FEATURE REVIEW · OWNER ACCEPTANCE OPEN</span>
+    </header>
+    <aside class="note"><strong>Comparison method:</strong> each runtime panel is a 720×640 center crop from installed Chrome at 1920×1080. The browser's live CSS/Web Animations and SVG SMIL timelines were synchronized at 650, 960, 1,370, 2,580, 3,100, 3,720, and 4,100ms. No storyboard frames are substituted into the application. The authored Figma frames are unmodified. Exact capture method, sampled transforms, loaded assets, and error results are recorded in the <a href="captures/owner-addendum-2026-10-11-r4/capture-report.json">current key-pose report</a>. <a href="captures/owner-addendum-2026-10-11-r4/opening-chrome-full-1920x1080-through-home.webm">Open the real-time Chrome recording through the Home handoff</a>.</aside>
+    <main class="grid">
+      <article class="pose">
+        <header><h2>01 · Broken / Dormant</h2><p>Figma `3714:2` · controlled runtime timeline at 0.650s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2.png" alt="Figma State 01 broken J parts around the dormant orb" /></div><div class="cell"><h3>Chrome · 0.650s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/01-broken-dormant-runtime-crop-720x640.png" alt="Chrome Opening at the 650 millisecond dormant key pose" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>02 · Approach</h2><p>Figma `3714:530` · runtime timeline 0.960s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-530.png" alt="Figma State 02, crown and hook approaching the shaft" /></div><div class="cell"><h3>Chrome · 0.960s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/02-approach-runtime-crop-720x640.png" alt="Chrome Opening at the controlled 960 millisecond approach key pose" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>03 · Alignment</h2><p>Figma `3714:1058` · runtime timeline 1.370s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1058.png" alt="Figma State 03, keyed joint alignment" /></div><div class="cell"><h3>Chrome · 1.370s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/03-alignment-runtime-crop-720x640.png" alt="Chrome Opening at the 1370 millisecond alignment key pose" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>04 · Mechanical lock</h2><p>Figma `3714:1575` · runtime timeline 2.580s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-1575.png" alt="Figma State 04, physical joint lock" /></div><div class="cell"><h3>Chrome · 2.580s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/04-mechanical-lock-runtime-crop-720x640.png" alt="Chrome Opening at the 2580 millisecond mechanical lock key pose" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>05 · Cyan activation / pulse</h2><p>Figma `3714:2092` · runtime timeline 3.100s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2092.png" alt="Figma State 05, cyan seam and conduit activation" /></div><div class="cell"><h3>Chrome · 3.100s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/05-cyan-activation-runtime-crop-720x640.png" alt="Chrome Opening at the 3100 millisecond cyan activation key pose" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>06 · Material sheen</h2><p>Figma `3714:2609` · controlled runtime timeline at 3.720s after the sheen correction</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-2609.png" alt="Figma State 06, material sheen moving across the fused J" /></div><div class="cell"><h3>Chrome · 3.720s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/06-material-sheen-runtime-crop-720x640.png" alt="Chrome Opening at 3720 milliseconds with the corrected transparent sheen band" /></div></div>
+      </article>
+      <article class="pose">
+        <header><h2>07 · Settled identity</h2><p>Figma `3714:3126` · controlled runtime timeline at 4.100s</p></header>
+        <div class="pair"><div class="cell"><h3>Figma key pose</h3><img src="captures/figma-storyboard-2026-10-11/state-3714-3126.png" alt="Figma State 07, complete settled J and V8 orb" /></div><div class="cell"><h3>Chrome · 4.100s controlled</h3><img src="captures/owner-addendum-2026-10-11-r4/frames/07-settled-runtime-crop-720x640.png" alt="Chrome Opening at the 4100 millisecond settled key pose" /></div></div>
+      </article>
+    </main>
+    <section class="full">
+      <p><strong>Chrome review findings:</strong> the same-material crown, shaft, and hook move continuously through approach, alignment, and lock; the fused J crossfades only after the pieces seat. The revised activation keeps the authored cyan seam and conduit legible through State 05, carries the spark along its joint route, and clears those transient effects before the sheen/settled hold. The V8 portal, plasma, ring, and contact shadow remain part of the final lockup. Static identity placements remain Variant 01 for prominent uses and Variant 03 optical artwork for compact uses; the subtle-joint permanent-mark treatment is isolated on the separate logo comparison page for owner review.</p>
+      <p>Source evidence: Figma storyboard `3713:4`, editable rig `3712:2`, canonical exports `3735:2` and `3735:516`, and implementation notes `3737:2` / `3737:37`. The activation timing follows the authored Figma layer notes: joint light peaks at lock and decays through 3.9s; the conduit rises through the 3.0s activation pose; the traveling spark moves for 0.80s from 2.58s and fades only after it reaches the end of its path. The transparent native sheen band retains its authored clip geometry.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,282 @@
+{
+  "desktop": {
+    "initial": {
+      "panelHidden": true,
+      "panelHeading": null,
+      "overview": {
+        "x": 54.96875,
+        "y": 1204.5,
+        "w": 1090,
+        "h": 330,
+        "bottom": 1534.5
+      },
+      "signals": [
+        {
+          "text": "PROJECTS\n4",
+          "box": {
+            "x": 54.96875,
+            "y": 1205.5,
+            "w": 272.5,
+            "h": 329,
+            "bottom": 1534.5
+          }
+        },
+        {
+          "text": "EXPERIENCE\n2",
+          "box": {
+            "x": 327.46875,
+            "y": 1205.5,
+            "w": 272.5,
+            "h": 329,
+            "bottom": 1534.5
+          }
+        },
+        {
+          "text": "HACKATHON\n1",
+          "box": {
+            "x": 599.96875,
+            "y": 1205.5,
+            "w": 272.5,
+            "h": 329,
+            "bottom": 1534.5
+          }
+        },
+        {
+          "text": "ACADEMICS\n2028",
+          "box": {
+            "x": 872.46875,
+            "y": 1205.5,
+            "w": 272.5,
+            "h": 329,
+            "bottom": 1534.5
+          }
+        }
+      ],
+      "ceLabel": {
+        "x": 454.96875,
+        "y": 597.5,
+        "w": 158,
+        "h": 18,
+        "bottom": 615.5
+      },
+      "ceBadge": null,
+      "traits": [
+        {
+          "name": "CREATIVE",
+          "icon": {
+            "x": 575.46875,
+            "y": 706.5,
+            "w": 49,
+            "h": 49,
+            "bottom": 755.5
+          },
+          "label": {
+            "x": 571.609375,
+            "y": 762.5,
+            "w": 56.71875,
+            "h": 16,
+            "bottom": 778.5
+          }
+        },
+        {
+          "name": "PROACTIVE",
+          "icon": {
+            "x": 575.46875,
+            "y": 787.5,
+            "w": 49,
+            "h": 49,
+            "bottom": 836.5
+          },
+          "label": {
+            "x": 566.5,
+            "y": 843.5,
+            "w": 66.921875,
+            "h": 16,
+            "bottom": 859.5
+          }
+        },
+        {
+          "name": "EXECUTION",
+          "icon": {
+            "x": 575.46875,
+            "y": 868.5,
+            "w": 49,
+            "h": 49,
+            "bottom": 917.5
+          },
+          "label": {
+            "x": 565.84375,
+            "y": 924.5,
+            "w": 68.25,
+            "h": 16,
+            "bottom": 940.5
+          }
+        }
+      ],
+      "counts": [
+        "4",
+        "2",
+        "1",
+        "2028"
+      ],
+      "docWidth": 1440,
+      "viewport": 1440
+    },
+    "hoverHeading": "PROJECTS",
+    "hoverHidden": false,
+    "focusExpanded": null,
+    "keyboardLinkTransfer": {
+      "activeClass": "profile-project__open",
+      "href": "/projects/food-tracker",
+      "panelHidden": false,
+      "insideOverview": true
+    },
+    "tabOutside": true,
+    "afterKeyboardLeave": {
+      "focus": "A.rail-link rail-link--focus",
+      "panelHidden": true,
+      "inside": false
+    },
+    "errors": []
+  },
+  "narrow": {
+    "initial": {
+      "panelHidden": true,
+      "panelHeading": null,
+      "overview": {
+        "x": 18,
+        "y": 914,
+        "w": 354,
+        "h": 471,
+        "bottom": 1385
+      },
+      "signals": [
+        {
+          "text": "PROJECTS\n4",
+          "box": {
+            "x": 18,
+            "y": 915,
+            "w": 177,
+            "h": 235,
+            "bottom": 1150
+          }
+        },
+        {
+          "text": "EXPERIENCE\n2",
+          "box": {
+            "x": 195,
+            "y": 915,
+            "w": 177,
+            "h": 235,
+            "bottom": 1150
+          }
+        },
+        {
+          "text": "HACKATHON\n1",
+          "box": {
+            "x": 18,
+            "y": 1150,
+            "w": 177,
+            "h": 235,
+            "bottom": 1385
+          }
+        },
+        {
+          "text": "ACADEMICS\n2028",
+          "box": {
+            "x": 195,
+            "y": 1150,
+            "w": 177,
+            "h": 235,
+            "bottom": 1385
+          }
+        }
+      ],
+      "ceLabel": {
+        "x": 116,
+        "y": 408,
+        "w": 158,
+        "h": 18,
+        "bottom": 426
+      },
+      "ceBadge": null,
+      "traits": [
+        {
+          "name": "CREATIVE",
+          "icon": {
+            "x": 173.92999267578125,
+            "y": 588,
+            "w": 42.13999938964844,
+            "h": 42.1400146484375,
+            "bottom": 630.1400146484375
+          },
+          "label": {
+            "x": 170.61093139648438,
+            "y": 636.1599731445312,
+            "w": 48.77813720703125,
+            "h": 13.760009765625,
+            "bottom": 649.9199829101562
+          }
+        },
+        {
+          "name": "PROACTIVE",
+          "icon": {
+            "x": 173.92999267578125,
+            "y": 657.6600341796875,
+            "w": 42.13999938964844,
+            "h": 42.13995361328125,
+            "bottom": 699.7999877929688
+          },
+          "label": {
+            "x": 166.2168731689453,
+            "y": 705.8200073242188,
+            "w": 57.55281066894531,
+            "h": 13.760009765625,
+            "bottom": 719.5800170898438
+          }
+        },
+        {
+          "name": "EXECUTION",
+          "icon": {
+            "x": 173.92999267578125,
+            "y": 727.3200073242188,
+            "w": 42.13999938964844,
+            "h": 42.1400146484375,
+            "bottom": 769.4600219726562
+          },
+          "label": {
+            "x": 165.65249633789062,
+            "y": 775.47998046875,
+            "w": 58.69500732421875,
+            "h": 13.760009765625,
+            "bottom": 789.239990234375
+          }
+        }
+      ],
+      "counts": [
+        "4",
+        "2",
+        "1",
+        "2028"
+      ],
+      "docWidth": 390,
+      "viewport": 390
+    },
+    "hoverHeading": "PROJECTS",
+    "hoverHidden": false,
+    "focusExpanded": null,
+    "keyboardLinkTransfer": {
+      "activeClass": "profile-project__open",
+      "href": "/projects/food-tracker",
+      "panelHidden": false,
+      "insideOverview": true
+    },
+    "tabOutside": true,
+    "afterKeyboardLeave": {
+      "focus": "A.",
+      "panelHidden": false,
+      "inside": false
+    },
+    "errors": []
+  }
+}

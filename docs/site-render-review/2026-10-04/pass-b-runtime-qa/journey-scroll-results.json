@@ -1,0 +1,81 @@
+{
+  "desktop1920": {
+    "viewport": 1920,
+    "contentWidth": 1170,
+    "containerPathWidth": 1098,
+    "svg": {
+      "width": 1098,
+      "height": 1591.515625
+    },
+    "connectorDisplay": "inline",
+    "connectorBounds": {
+      "x": 535.7999877929688,
+      "y": 457.429931640625,
+      "w": 263.52001953125,
+      "h": 0
+    },
+    "appleCard": {
+      "x": 799.3125,
+      "y": 405.484375,
+      "w": 563.265625,
+      "h": 112.875
+    },
+    "node": {
+      "rx": "0.27",
+      "ry": "3.2",
+      "width": 5.92919921875,
+      "height": 6.3980712890625
+    },
+    "scrollport": {
+      "height": 878,
+      "scrollHeight": 1857,
+      "overflowY": "auto"
+    },
+    "locatorCount": 5,
+    "scrollables": [
+      "journey-scrollport"
+    ]
+  },
+  "desktopWheelScrollTop": 430,
+  "locatorSelection": {
+    "hash": "#journey-stush",
+    "current": "Stush Patties",
+    "aria": "location",
+    "scrollTop": 819,
+    "targetTop": 471.484375
+  },
+  "narrow": {
+    "before": {
+      "win": 0,
+      "doc": 0,
+      "body": 0,
+      "main": 0,
+      "docHeight": 2334,
+      "mainH": 2203,
+      "mainSH": 2203,
+      "htmlOverflow": "visible",
+      "bodyOverflow": "visible",
+      "mainOverflow": "visible",
+      "spOverflow": "visible",
+      "docWidth": 390,
+      "locators": 5
+    },
+    "afterKey": {
+      "win": 738,
+      "doc": 738,
+      "body": 0,
+      "main": 0,
+      "sp": 0
+    },
+    "afterWheel": {
+      "win": 1278,
+      "doc": 1278,
+      "body": 0,
+      "main": 0,
+      "sp": 0
+    },
+    "changed": true,
+    "nativeScrollables": []
+  },
+  "errors": []
+}

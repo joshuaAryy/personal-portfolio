@@ -1,0 +1,3332 @@
+{
+  "source": {
+    "head": "f22c68cf84d57fb00a899ded45a74f0fca43f9db",
+    "target": "http://127.0.0.1:5182",
+    "browser": "Installed Google Chrome via Playwright"
+  },
+  "lobbies": [
+    {
+      "file": "lobby-projects-1920x1080.png",
+      "status": 200,
+      "path": "/projects",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "doc": {
+        "width": 1920,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1560,
+        "h": 998,
+        "right": 1560,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 998,
+        "clientHeight": 998,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 80,
+        "y": 171.8,
+        "w": 1400,
+        "h": 636.4,
+        "right": 1480,
+        "bottom": 808.2
+      },
+      "bannerCount": 5,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -490,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW PROJECT",
+          "rect": {
+            "x": 659,
+            "y": 989,
+            "w": 242,
+            "h": 77,
+            "right": 901,
+            "bottom": 1066
+          }
+        }
+      ],
+      "loadedImages": 47,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-projects-1440x900.png",
+      "status": 200,
+      "path": "/projects",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1170,
+        "h": 818,
+        "right": 1170,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 818,
+        "clientHeight": 818,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 80,
+        "y": 155.6,
+        "w": 1010,
+        "h": 459.1,
+        "right": 1090,
+        "bottom": 614.7
+      },
+      "bannerCount": 5,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -385.1,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW PROJECT",
+          "rect": {
+            "x": 464,
+            "y": 811.6,
+            "w": 242,
+            "h": 77,
+            "right": 706,
+            "bottom": 888.6
+          }
+        }
+      ],
+      "loadedImages": 47,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-projects-1440x720.png",
+      "status": 200,
+      "path": "/projects",
+      "viewport": [
+        1440,
+        720
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1170,
+        "h": 638,
+        "right": 1170,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 760,
+        "clientHeight": 638,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 80,
+        "y": 150.4,
+        "w": 1010,
+        "h": 459.1,
+        "right": 1090,
+        "bottom": 609.5
+      },
+      "bannerCount": 5,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -379.9,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW PROJECT",
+          "rect": {
+            "x": 464,
+            "y": 754.4,
+            "w": 242,
+            "h": 77,
+            "right": 706,
+            "bottom": 831.4
+          }
+        }
+      ],
+      "loadedImages": 47,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 122,
+        "scrollHeight": 760,
+        "clientHeight": 638,
+        "actions": [
+          {
+            "label": "VIEW PROJECT",
+            "top": 632.4,
+            "bottom": 709.4,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-projects-1280x720.png",
+      "status": 200,
+      "path": "/projects",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": {
+        "width": 1280,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1040,
+        "h": 638,
+        "right": 1040,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 760,
+        "clientHeight": 638,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 80,
+        "y": 150.4,
+        "w": 880,
+        "h": 400,
+        "right": 960,
+        "bottom": 550.4
+      },
+      "bannerCount": 5,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -350.4,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW PROJECT",
+          "rect": {
+            "x": 399,
+            "y": 754.4,
+            "w": 242,
+            "h": 77,
+            "right": 641,
+            "bottom": 831.4
+          }
+        }
+      ],
+      "loadedImages": 47,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 122,
+        "scrollHeight": 760,
+        "clientHeight": 638,
+        "actions": [
+          {
+            "label": "VIEW PROJECT",
+            "top": 632.4,
+            "bottom": 709.4,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-projects-2560x1080.png",
+      "status": 200,
+      "path": "/projects",
+      "viewport": [
+        2560,
+        1080
+      ],
+      "doc": {
+        "width": 2560,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 2200,
+        "h": 998,
+        "right": 2200,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 998,
+        "clientHeight": 998,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 400,
+        "y": 171.8,
+        "w": 1400,
+        "h": 636.4,
+        "right": 1800,
+        "bottom": 808.2
+      },
+      "bannerCount": 5,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -490,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW PROJECT",
+          "rect": {
+            "x": 979,
+            "y": 989,
+            "w": 242,
+            "h": 77,
+            "right": 1221,
+            "bottom": 1066
+          }
+        }
+      ],
+      "loadedImages": 47,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-projects-390x844.png",
+      "status": 200,
+      "path": "/projects",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": {
+        "width": 390,
+        "height": 3526
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 3395,
+        "right": 390,
+        "bottom": 3465
+      },
+      "mainScroll": {
+        "scrollHeight": 3395,
+        "clientHeight": 3395,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 2798,
+        "right": 377,
+        "bottom": 2952
+      },
+      "bannerCount": 5,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -1553,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW PROJECT",
+          "rect": {
+            "x": 74,
+            "y": 3304,
+            "w": 242,
+            "h": 77,
+            "right": 316,
+            "bottom": 3381
+          }
+        }
+      ],
+      "loadedImages": 47,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-experience-1920x1080.png",
+      "status": 200,
+      "path": "/experience",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "doc": {
+        "width": 1920,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "w": 1600,
+        "h": 970,
+        "right": 1600,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 370.6,
+        "y": 148.8,
+        "w": 858.8,
+        "h": 715.7,
+        "right": 1229.4,
+        "bottom": 864.5
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EXPERIENCE",
+          "rect": {
+            "x": 679,
+            "y": 989.4,
+            "w": 242,
+            "h": 77,
+            "right": 921,
+            "bottom": 1066.4
+          }
+        }
+      ],
+      "loadedImages": 31,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-experience-1440x900.png",
+      "status": 200,
+      "path": "/experience",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 210,
+        "y": 131.5,
+        "w": 780,
+        "h": 582.1,
+        "right": 990,
+        "bottom": 713.6
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EXPERIENCE",
+          "rect": {
+            "x": 479,
+            "y": 811.5,
+            "w": 242,
+            "h": 77,
+            "right": 721,
+            "bottom": 888.5
+          }
+        }
+      ],
+      "loadedImages": 31,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-experience-1440x720.png",
+      "status": 200,
+      "path": "/experience",
+      "viewport": [
+        1440,
+        720
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 637.5,
+        "right": 1200,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 880,
+        "clientHeight": 637,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 238.2,
+        "y": 135.3,
+        "w": 723.6,
+        "h": 540,
+        "right": 961.8,
+        "bottom": 675.3
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EXPERIENCE",
+          "rect": {
+            "x": 479,
+            "y": 873.2,
+            "w": 242,
+            "h": 77,
+            "right": 721,
+            "bottom": 950.2
+          }
+        }
+      ],
+      "loadedImages": 31,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 243,
+        "scrollHeight": 880,
+        "clientHeight": 637,
+        "actions": [
+          {
+            "label": "VIEW EXPERIENCE",
+            "top": 630.2,
+            "bottom": 707.2,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-experience-1280x720.png",
+      "status": 200,
+      "path": "/experience",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": {
+        "width": 1280,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1060,
+        "h": 638,
+        "right": 1060,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 880,
+        "clientHeight": 638,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 168.2,
+        "y": 134.8,
+        "w": 723.6,
+        "h": 540,
+        "right": 891.8,
+        "bottom": 674.8
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EXPERIENCE",
+          "rect": {
+            "x": 409,
+            "y": 872.7,
+            "w": 242,
+            "h": 77,
+            "right": 651,
+            "bottom": 949.7
+          }
+        }
+      ],
+      "loadedImages": 31,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 242,
+        "scrollHeight": 880,
+        "clientHeight": 638,
+        "actions": [
+          {
+            "label": "VIEW EXPERIENCE",
+            "top": 630.7,
+            "bottom": 707.7,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-experience-2560x1080.png",
+      "status": 200,
+      "path": "/experience",
+      "viewport": [
+        2560,
+        1080
+      ],
+      "doc": {
+        "width": 2560,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "w": 2240,
+        "h": 970,
+        "right": 2240,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 690.6,
+        "y": 148.8,
+        "w": 858.8,
+        "h": 715.7,
+        "right": 1549.4,
+        "bottom": 864.5
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EXPERIENCE",
+          "rect": {
+            "x": 999,
+            "y": 989.4,
+            "w": 242,
+            "h": 77,
+            "right": 1241,
+            "bottom": 1066.4
+          }
+        }
+      ],
+      "loadedImages": 31,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-experience-390x844.png",
+      "status": 200,
+      "path": "/experience",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": {
+        "width": 390,
+        "height": 2362
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 2231,
+        "right": 390,
+        "bottom": 2301
+      },
+      "mainScroll": {
+        "scrollHeight": 2231,
+        "clientHeight": 2231,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 1674,
+        "right": 377,
+        "bottom": 1828
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -991,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EXPERIENCE",
+          "rect": {
+            "x": 74,
+            "y": 2140,
+            "w": 242,
+            "h": 77,
+            "right": 316,
+            "bottom": 2217
+          }
+        }
+      ],
+      "loadedImages": 31,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-hackathons-1920x1080.png",
+      "status": 200,
+      "path": "/hackathons",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "doc": {
+        "width": 1920,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "w": 1600,
+        "h": 970,
+        "right": 1600,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 370.6,
+        "y": 148.8,
+        "w": 858.8,
+        "h": 715.7,
+        "right": 1229.4,
+        "bottom": 864.5
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW HACKATHON",
+          "rect": {
+            "x": 679,
+            "y": 989.4,
+            "w": 242,
+            "h": 77,
+            "right": 921,
+            "bottom": 1066.4
+          }
+        }
+      ],
+      "loadedImages": 30,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-hackathons-1440x900.png",
+      "status": 200,
+      "path": "/hackathons",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 210,
+        "y": 131.5,
+        "w": 780,
+        "h": 582.1,
+        "right": 990,
+        "bottom": 713.6
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW HACKATHON",
+          "rect": {
+            "x": 479,
+            "y": 811.5,
+            "w": 242,
+            "h": 77,
+            "right": 721,
+            "bottom": 888.5
+          }
+        }
+      ],
+      "loadedImages": 30,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-hackathons-1440x720.png",
+      "status": 200,
+      "path": "/hackathons",
+      "viewport": [
+        1440,
+        720
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 637.5,
+        "right": 1200,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 880,
+        "clientHeight": 637,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 238.2,
+        "y": 135.3,
+        "w": 723.6,
+        "h": 540,
+        "right": 961.8,
+        "bottom": 675.3
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW HACKATHON",
+          "rect": {
+            "x": 479,
+            "y": 873.2,
+            "w": 242,
+            "h": 77,
+            "right": 721,
+            "bottom": 950.2
+          }
+        }
+      ],
+      "loadedImages": 30,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 243,
+        "scrollHeight": 880,
+        "clientHeight": 637,
+        "actions": [
+          {
+            "label": "VIEW HACKATHON",
+            "top": 630.2,
+            "bottom": 707.2,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-hackathons-1280x720.png",
+      "status": 200,
+      "path": "/hackathons",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": {
+        "width": 1280,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1060,
+        "h": 638,
+        "right": 1060,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 880,
+        "clientHeight": 638,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 168.2,
+        "y": 134.8,
+        "w": 723.6,
+        "h": 540,
+        "right": 891.8,
+        "bottom": 674.8
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW HACKATHON",
+          "rect": {
+            "x": 409,
+            "y": 872.7,
+            "w": 242,
+            "h": 77,
+            "right": 651,
+            "bottom": 949.7
+          }
+        }
+      ],
+      "loadedImages": 30,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 242,
+        "scrollHeight": 880,
+        "clientHeight": 638,
+        "actions": [
+          {
+            "label": "VIEW HACKATHON",
+            "top": 630.7,
+            "bottom": 707.7,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-hackathons-2560x1080.png",
+      "status": 200,
+      "path": "/hackathons",
+      "viewport": [
+        2560,
+        1080
+      ],
+      "doc": {
+        "width": 2560,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "w": 2240,
+        "h": 970,
+        "right": 2240,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 690.6,
+        "y": 148.8,
+        "w": 858.8,
+        "h": 715.7,
+        "right": 1549.4,
+        "bottom": 864.5
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW HACKATHON",
+          "rect": {
+            "x": 999,
+            "y": 989.4,
+            "w": 242,
+            "h": 77,
+            "right": 1241,
+            "bottom": 1066.4
+          }
+        }
+      ],
+      "loadedImages": 30,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-hackathons-390x844.png",
+      "status": 200,
+      "path": "/hackathons",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": {
+        "width": 390,
+        "height": 2362
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 2231,
+        "right": 390,
+        "bottom": 2301
+      },
+      "mainScroll": {
+        "scrollHeight": 2231,
+        "clientHeight": 2231,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 1674,
+        "right": 377,
+        "bottom": 1828
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -991,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW HACKATHON",
+          "rect": {
+            "x": 74,
+            "y": 2140,
+            "w": 242,
+            "h": 77,
+            "right": 316,
+            "bottom": 2217
+          }
+        }
+      ],
+      "loadedImages": 30,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-education-1920x1080.png",
+      "status": 200,
+      "path": "/education",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "doc": {
+        "width": 1920,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "w": 1600,
+        "h": 970,
+        "right": 1600,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 370.6,
+        "y": 148.8,
+        "w": 858.8,
+        "h": 715.7,
+        "right": 1229.4,
+        "bottom": 864.5
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EDUCATION",
+          "rect": {
+            "x": 679,
+            "y": 989.4,
+            "w": 242,
+            "h": 77,
+            "right": 921,
+            "bottom": 1066.4
+          }
+        }
+      ],
+      "loadedImages": 26,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-education-1440x900.png",
+      "status": 200,
+      "path": "/education",
+      "viewport": [
+        1440,
+        900
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 817.5,
+        "right": 1200,
+        "bottom": 900
+      },
+      "mainScroll": {
+        "scrollHeight": 817,
+        "clientHeight": 817,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 210,
+        "y": 131.5,
+        "w": 780,
+        "h": 582.1,
+        "right": 990,
+        "bottom": 713.6
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EDUCATION",
+          "rect": {
+            "x": 479,
+            "y": 811.5,
+            "w": 242,
+            "h": 77,
+            "right": 721,
+            "bottom": 888.5
+          }
+        }
+      ],
+      "loadedImages": 26,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-education-1440x720.png",
+      "status": 200,
+      "path": "/education",
+      "viewport": [
+        1440,
+        720
+      ],
+      "doc": {
+        "width": 1440,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82.5,
+        "w": 1200,
+        "h": 637.5,
+        "right": 1200,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 880,
+        "clientHeight": 637,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 238.2,
+        "y": 135.3,
+        "w": 723.6,
+        "h": 540,
+        "right": 961.8,
+        "bottom": 675.3
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EDUCATION",
+          "rect": {
+            "x": 479,
+            "y": 873.2,
+            "w": 242,
+            "h": 77,
+            "right": 721,
+            "bottom": 950.2
+          }
+        }
+      ],
+      "loadedImages": 26,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 243,
+        "scrollHeight": 880,
+        "clientHeight": 637,
+        "actions": [
+          {
+            "label": "VIEW EDUCATION",
+            "top": 630.2,
+            "bottom": 707.2,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-education-1280x720.png",
+      "status": 200,
+      "path": "/education",
+      "viewport": [
+        1280,
+        720
+      ],
+      "doc": {
+        "width": 1280,
+        "height": 720
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 82,
+        "w": 1060,
+        "h": 638,
+        "right": 1060,
+        "bottom": 720
+      },
+      "mainScroll": {
+        "scrollHeight": 880,
+        "clientHeight": 638,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 168.2,
+        "y": 134.8,
+        "w": 723.6,
+        "h": 540,
+        "right": 891.8,
+        "bottom": 674.8
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 68%, 50% 68%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EDUCATION",
+          "rect": {
+            "x": 409,
+            "y": 872.7,
+            "w": 242,
+            "h": 77,
+            "right": 651,
+            "bottom": 949.7
+          }
+        }
+      ],
+      "loadedImages": 26,
+      "brokenImages": [],
+      "bottom": {
+        "scrollTop": 242,
+        "scrollHeight": 880,
+        "clientHeight": 638,
+        "actions": [
+          {
+            "label": "VIEW EDUCATION",
+            "top": 630.7,
+            "bottom": 707.7,
+            "visible": true
+          }
+        ]
+      }
+    },
+    {
+      "file": "lobby-education-2560x1080.png",
+      "status": 200,
+      "path": "/education",
+      "viewport": [
+        2560,
+        1080
+      ],
+      "doc": {
+        "width": 2560,
+        "height": 1080
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 110,
+        "w": 2240,
+        "h": 970,
+        "right": 2240,
+        "bottom": 1080
+      },
+      "mainScroll": {
+        "scrollHeight": 970,
+        "clientHeight": 970,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 690.6,
+        "y": 148.8,
+        "w": 858.8,
+        "h": 715.7,
+        "right": 1549.4,
+        "bottom": 864.5
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": 0,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EDUCATION",
+          "rect": {
+            "x": 999,
+            "y": 989.4,
+            "w": 242,
+            "h": 77,
+            "right": 1241,
+            "bottom": 1066.4
+          }
+        }
+      ],
+      "loadedImages": 26,
+      "brokenImages": [],
+      "bottom": null
+    },
+    {
+      "file": "lobby-education-390x844.png",
+      "status": 200,
+      "path": "/education",
+      "viewport": [
+        390,
+        844
+      ],
+      "doc": {
+        "width": 390,
+        "height": 2362
+      },
+      "overflow": 0,
+      "main": {
+        "x": 0,
+        "y": 70,
+        "w": 390,
+        "h": 2231,
+        "right": 390,
+        "bottom": 2301
+      },
+      "mainScroll": {
+        "scrollHeight": 2231,
+        "clientHeight": 2231,
+        "scrollTop": 0
+      },
+      "group": {
+        "x": 13,
+        "y": 154,
+        "w": 364,
+        "h": 1674,
+        "right": 377,
+        "bottom": 1828
+      },
+      "bannerCount": 3,
+      "groupCenterDelta": 0,
+      "plusCount": 2,
+      "plusCenterDelta": -991,
+      "backgroundPosition": "50% 60%, 50% 60%",
+      "backgroundSize": "cover, cover",
+      "actions": [
+        {
+          "label": "VIEW EDUCATION",
+          "rect": {
+            "x": 74,
+            "y": 2140,
+            "w": 242,
+            "h": 77,
+            "right": 316,
+            "bottom": 2217
+          }
+        }
+      ],
+      "loadedImages": 26,
+      "brokenImages": [],
+      "bottom": null
+    }
+  ],
+  "profile": [
+    {
+      "file": "profile-1280x720.png",
+      "status": 200,
+      "path": "/profile",
+      "viewport": [
+        1280,
+        720
+      ],
+      "overflow": 0,
+      "docHeight": 720,
+      "mainHeight": 638,
+      "geometry": {
+        ".identity-panel": {
+          "x": 49.6,
+          "y": 96,
+          "w": 310.8,
+          "h": 524.2,
+          "right": 360.4,
+          "bottom": 620.2
+        },
+        ".identity-panel__banner": {
+          "x": 69.5,
+          "y": -64.4,
+          "w": 270.9,
+          "h": 660,
+          "right": 340.5,
+          "bottom": 595.6
+        },
+        ".identity-panel__portrait": {
+          "x": 117.6,
+          "y": 265.7,
+          "w": 174.7,
+          "h": 174.7,
+          "right": 292.4,
+          "bottom": 440.4
+        },
+        ".identity-panel__portrait-frame": {
+          "x": 117.6,
+          "y": 265.7,
+          "w": 174.7,
+          "h": 174.7,
+          "right": 292.4,
+          "bottom": 440.4
+        },
+        ".identity-traits": {
+          "x": 68.1,
+          "y": 618.5,
+          "w": 273.8,
+          "h": 80.6,
+          "right": 341.9,
+          "bottom": 699.1
+        },
+        ".profile-signal-grid": {
+          "x": 414,
+          "y": 504,
+          "w": 626,
+          "h": 200,
+          "right": 1040,
+          "bottom": 704
+        }
+      },
+      "traits": [
+        {
+          "label": "CREATIVE",
+          "rect": {
+            "x": 69.5,
+            "y": 618.5,
+            "w": 87.4,
+            "h": 80.6,
+            "right": 156.8,
+            "bottom": 699.1
+          }
+        },
+        {
+          "label": "PROACTIVE",
+          "rect": {
+            "x": 161.3,
+            "y": 618.5,
+            "w": 87.4,
+            "h": 80.6,
+            "right": 248.7,
+            "bottom": 699.1
+          }
+        },
+        {
+          "label": "EXECUTION",
+          "rect": {
+            "x": 253.2,
+            "y": 618.5,
+            "w": 87.4,
+            "h": 80.6,
+            "right": 340.5,
+            "bottom": 699.1
+          }
+        }
+      ],
+      "signalGrid": {
+        "x": 414,
+        "y": 504,
+        "w": 626,
+        "h": 200,
+        "right": 1040,
+        "bottom": 704
+      },
+      "images": [
+        {
+          "src": "/media/profile/trials-of-twilight-banner.png",
+          "ok": true,
+          "rect": {
+            "x": 69.5,
+            "y": -64.4,
+            "w": 270.9,
+            "h": 660,
+            "right": 340.5,
+            "bottom": 595.6
+          }
+        },
+        {
+          "src": "/media/profile/owner-portrait.png",
+          "ok": true,
+          "rect": {
+            "x": 139.5,
+            "y": 287.5,
+            "w": 131,
+            "h": 131,
+            "right": 270.5,
+            "bottom": 418.6
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 117.6,
+            "y": 265.7,
+            "w": 174.7,
+            "h": 174.7,
+            "right": 292.4,
+            "bottom": 440.4
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 236.1,
+            "y": 487.4,
+            "w": 77.3,
+            "h": 77.3,
+            "right": 313.4,
+            "bottom": 564.7
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 86.3,
+            "y": 618.5,
+            "w": 53.8,
+            "h": 53.8,
+            "right": 140,
+            "bottom": 672.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 87.6,
+            "y": 619.8,
+            "w": 51.1,
+            "h": 51.1,
+            "right": 138.7,
+            "bottom": 670.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 92.3,
+            "y": 624.5,
+            "w": 41.7,
+            "h": 41.7,
+            "right": 134,
+            "bottom": 666.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 102.6,
+            "y": 631.4,
+            "w": 21.1,
+            "h": 24.5,
+            "right": 123.7,
+            "bottom": 655.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-d.svg",
+          "ok": true,
+          "rect": {
+            "x": 104.6,
+            "y": 643.5,
+            "w": 17,
+            "h": 24.1,
+            "right": 121.7,
+            "bottom": 667.7
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 96.2,
+            "y": 626.4,
+            "w": 33.8,
+            "h": 20.1,
+            "right": 130.1,
+            "bottom": 646.5
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 178.1,
+            "y": 618.5,
+            "w": 53.8,
+            "h": 53.8,
+            "right": 231.9,
+            "bottom": 672.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 179.4,
+            "y": 619.8,
+            "w": 51.1,
+            "h": 51.1,
+            "right": 230.5,
+            "bottom": 670.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 184.1,
+            "y": 624.5,
+            "w": 41.7,
+            "h": 41.7,
+            "right": 225.8,
+            "bottom": 666.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 192.4,
+            "y": 630.3,
+            "w": 26.9,
+            "h": 27.8,
+            "right": 219.3,
+            "bottom": 658.1
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 198.2,
+            "y": 632.8,
+            "w": 18.3,
+            "h": 18.3,
+            "right": 216.5,
+            "bottom": 651.1
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-d.svg",
+          "ok": true,
+          "rect": {
+            "x": 202,
+            "y": 642.4,
+            "w": 6,
+            "h": 6,
+            "right": 208,
+            "bottom": 648.3
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 185.1,
+            "y": 625.4,
+            "w": 39.8,
+            "h": 39.8,
+            "right": 224.9,
+            "bottom": 665.3
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 270,
+            "y": 618.5,
+            "w": 53.8,
+            "h": 53.8,
+            "right": 323.7,
+            "bottom": 672.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 271.3,
+            "y": 619.8,
+            "w": 51.1,
+            "h": 51.1,
+            "right": 322.4,
+            "bottom": 670.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 276,
+            "y": 624.5,
+            "w": 41.7,
+            "h": 41.7,
+            "right": 317.7,
+            "bottom": 666.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 280.5,
+            "y": 631,
+            "w": 32.7,
+            "h": 32.7,
+            "right": 313.2,
+            "bottom": 663.7
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 286.8,
+            "y": 635.5,
+            "w": 21,
+            "h": 19.9,
+            "right": 307.8,
+            "bottom": 655.4
+          }
+        }
+      ],
+      "failedImages": []
+    },
+    {
+      "file": "profile-1920x1080.png",
+      "status": 200,
+      "path": "/profile",
+      "viewport": [
+        1920,
+        1080
+      ],
+      "overflow": 0,
+      "docHeight": 1080,
+      "mainHeight": 970,
+      "geometry": {
+        ".identity-panel": {
+          "x": 8,
+          "y": 110,
+          "w": 370,
+          "h": 970,
+          "right": 378,
+          "bottom": 1080
+        },
+        ".identity-panel__banner": {
+          "x": -53.5,
+          "y": -93,
+          "w": 493,
+          "h": 1201,
+          "right": 439.5,
+          "bottom": 1108
+        },
+        ".identity-panel__portrait": {
+          "x": 89,
+          "y": 312,
+          "w": 208,
+          "h": 208,
+          "right": 297,
+          "bottom": 520
+        },
+        ".identity-panel__portrait-frame": {
+          "x": 89,
+          "y": 312,
+          "w": 208,
+          "h": 208,
+          "right": 297,
+          "bottom": 520
+        },
+        ".identity-traits": {
+          "x": 30,
+          "y": 732,
+          "w": 326,
+          "h": 96,
+          "right": 356,
+          "bottom": 828
+        },
+        ".profile-signal-grid": {
+          "x": 444,
+          "y": 778,
+          "w": 1090,
+          "h": 280,
+          "right": 1534,
+          "bottom": 1058
+        }
+      },
+      "traits": [
+        {
+          "label": "CREATIVE",
+          "rect": {
+            "x": 31.7,
+            "y": 732,
+            "w": 104,
+            "h": 96,
+            "right": 135.7,
+            "bottom": 828
+          }
+        },
+        {
+          "label": "PROACTIVE",
+          "rect": {
+            "x": 141,
+            "y": 732,
+            "w": 104,
+            "h": 96,
+            "right": 245,
+            "bottom": 828
+          }
+        },
+        {
+          "label": "EXECUTION",
+          "rect": {
+            "x": 250.3,
+            "y": 732,
+            "w": 104,
+            "h": 96,
+            "right": 354.3,
+            "bottom": 828
+          }
+        }
+      ],
+      "signalGrid": {
+        "x": 444,
+        "y": 778,
+        "w": 1090,
+        "h": 280,
+        "right": 1534,
+        "bottom": 1058
+      },
+      "images": [
+        {
+          "src": "/media/profile/trials-of-twilight-banner.png",
+          "ok": true,
+          "rect": {
+            "x": -53.5,
+            "y": -93,
+            "w": 493,
+            "h": 1201,
+            "right": 439.5,
+            "bottom": 1108
+          }
+        },
+        {
+          "src": "/media/profile/owner-portrait.png",
+          "ok": true,
+          "rect": {
+            "x": 115,
+            "y": 338,
+            "w": 156,
+            "h": 156,
+            "right": 271,
+            "bottom": 494
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 89,
+            "y": 312,
+            "w": 208,
+            "h": 208,
+            "right": 297,
+            "bottom": 520
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 230,
+            "y": 576,
+            "w": 92,
+            "h": 92,
+            "right": 322,
+            "bottom": 668
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 51.7,
+            "y": 732,
+            "w": 64,
+            "h": 64,
+            "right": 115.7,
+            "bottom": 796
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 53.2,
+            "y": 733.6,
+            "w": 60.8,
+            "h": 60.8,
+            "right": 114.1,
+            "bottom": 794.4
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 58.8,
+            "y": 739.2,
+            "w": 49.7,
+            "h": 49.7,
+            "right": 108.5,
+            "bottom": 788.8
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 71.1,
+            "y": 747.4,
+            "w": 25.1,
+            "h": 29.2,
+            "right": 96.2,
+            "bottom": 776.6
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-d.svg",
+          "ok": true,
+          "rect": {
+            "x": 73.5,
+            "y": 761.8,
+            "w": 20.3,
+            "h": 28.7,
+            "right": 93.8,
+            "bottom": 790.5
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 63.5,
+            "y": 741.5,
+            "w": 40.3,
+            "h": 23.9,
+            "right": 103.8,
+            "bottom": 765.4
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 161,
+            "y": 732,
+            "w": 64,
+            "h": 64,
+            "right": 225,
+            "bottom": 796
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 162.6,
+            "y": 733.6,
+            "w": 60.8,
+            "h": 60.8,
+            "right": 223.4,
+            "bottom": 794.4
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 168.1,
+            "y": 739.2,
+            "w": 49.7,
+            "h": 49.7,
+            "right": 217.8,
+            "bottom": 788.8
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 178,
+            "y": 746.1,
+            "w": 32,
+            "h": 33,
+            "right": 210,
+            "bottom": 779.2
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 184.9,
+            "y": 749.1,
+            "w": 21.8,
+            "h": 21.8,
+            "right": 206.7,
+            "bottom": 770.8
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-d.svg",
+          "ok": true,
+          "rect": {
+            "x": 189.4,
+            "y": 760.4,
+            "w": 7.1,
+            "h": 7.1,
+            "right": 196.5,
+            "bottom": 767.5
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 169.3,
+            "y": 740.3,
+            "w": 47.4,
+            "h": 47.4,
+            "right": 216.7,
+            "bottom": 787.7
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 270.3,
+            "y": 732,
+            "w": 64,
+            "h": 64,
+            "right": 334.3,
+            "bottom": 796
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 271.9,
+            "y": 733.6,
+            "w": 60.8,
+            "h": 60.8,
+            "right": 332.7,
+            "bottom": 794.4
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 277.5,
+            "y": 739.2,
+            "w": 49.7,
+            "h": 49.7,
+            "right": 327.2,
+            "bottom": 788.8
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 282.8,
+            "y": 746.9,
+            "w": 38.9,
+            "h": 38.9,
+            "right": 321.8,
+            "bottom": 785.8
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 290.4,
+            "y": 752.2,
+            "w": 25,
+            "h": 23.7,
+            "right": 315.4,
+            "bottom": 775.9
+          }
+        }
+      ],
+      "failedImages": []
+    },
+    {
+      "file": "profile-390x844.png",
+      "status": 200,
+      "path": "/profile",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "docHeight": 1639,
+      "mainHeight": 1508,
+      "geometry": {
+        ".identity-panel": {
+          "x": 14,
+          "y": 70,
+          "w": 362,
+          "h": 744,
+          "right": 376,
+          "bottom": 814
+        },
+        ".identity-panel__banner": {
+          "x": 0,
+          "y": -114,
+          "w": 390,
+          "h": 1201,
+          "right": 390,
+          "bottom": 1087
+        },
+        ".identity-panel__portrait": {
+          "x": 103.5,
+          "y": 160,
+          "w": 183,
+          "h": 183,
+          "right": 286.5,
+          "bottom": 343
+        },
+        ".identity-panel__portrait-frame": {
+          "x": 103.5,
+          "y": 160,
+          "w": 183,
+          "h": 183,
+          "right": 286.5,
+          "bottom": 343
+        },
+        ".identity-traits": {
+          "x": 54.8,
+          "y": 588,
+          "w": 280.4,
+          "h": 82.6,
+          "right": 335.2,
+          "bottom": 670.6
+        },
+        ".profile-signal-grid": {
+          "x": 18,
+          "y": 914,
+          "w": 354,
+          "h": 471,
+          "right": 372,
+          "bottom": 1385
+        }
+      },
+      "traits": [
+        {
+          "label": "CREATIVE",
+          "rect": {
+            "x": 56.2,
+            "y": 588,
+            "w": 89.4,
+            "h": 82.6,
+            "right": 145.7,
+            "bottom": 670.6
+          }
+        },
+        {
+          "label": "PROACTIVE",
+          "rect": {
+            "x": 150.3,
+            "y": 588,
+            "w": 89.4,
+            "h": 82.6,
+            "right": 239.7,
+            "bottom": 670.6
+          }
+        },
+        {
+          "label": "EXECUTION",
+          "rect": {
+            "x": 244.3,
+            "y": 588,
+            "w": 89.4,
+            "h": 82.6,
+            "right": 333.7,
+            "bottom": 670.6
+          }
+        }
+      ],
+      "signalGrid": {
+        "x": 18,
+        "y": 914,
+        "w": 354,
+        "h": 471,
+        "right": 372,
+        "bottom": 1385
+      },
+      "images": [
+        {
+          "src": "/media/profile/trials-of-twilight-banner.png",
+          "ok": true,
+          "rect": {
+            "x": 0,
+            "y": -114,
+            "w": 390,
+            "h": 1201,
+            "right": 390,
+            "bottom": 1087
+          }
+        },
+        {
+          "src": "/media/profile/owner-portrait.png",
+          "ok": true,
+          "rect": {
+            "x": 126.4,
+            "y": 182.9,
+            "w": 137.3,
+            "h": 137.3,
+            "right": 263.6,
+            "bottom": 320.2
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 103.5,
+            "y": 160,
+            "w": 183,
+            "h": 183,
+            "right": 286.5,
+            "bottom": 343
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 265,
+            "y": 458,
+            "w": 75.4,
+            "h": 75.4,
+            "right": 340.4,
+            "bottom": 533.4
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 73.4,
+            "y": 588,
+            "w": 55,
+            "h": 55,
+            "right": 128.5,
+            "bottom": 643
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 74.8,
+            "y": 589.4,
+            "w": 52.3,
+            "h": 52.3,
+            "right": 127.1,
+            "bottom": 641.7
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 79.6,
+            "y": 594.2,
+            "w": 42.7,
+            "h": 42.7,
+            "right": 122.3,
+            "bottom": 636.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 90.1,
+            "y": 601.2,
+            "w": 21.6,
+            "h": 25.1,
+            "right": 111.8,
+            "bottom": 626.3
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-d.svg",
+          "ok": true,
+          "rect": {
+            "x": 92.2,
+            "y": 613.7,
+            "w": 17.4,
+            "h": 24.7,
+            "right": 109.7,
+            "bottom": 638.4
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 83.6,
+            "y": 596.1,
+            "w": 34.6,
+            "h": 20.6,
+            "right": 118.3,
+            "bottom": 616.7
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 167.5,
+            "y": 588,
+            "w": 55,
+            "h": 55,
+            "right": 222.5,
+            "bottom": 643
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 168.8,
+            "y": 589.4,
+            "w": 52.3,
+            "h": 52.3,
+            "right": 221.1,
+            "bottom": 641.7
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 173.6,
+            "y": 594.2,
+            "w": 42.7,
+            "h": 42.7,
+            "right": 216.3,
+            "bottom": 636.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 182.1,
+            "y": 600.1,
+            "w": 27.5,
+            "h": 28.4,
+            "right": 209.6,
+            "bottom": 628.6
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 188.1,
+            "y": 602.7,
+            "w": 18.7,
+            "h": 18.7,
+            "right": 206.8,
+            "bottom": 621.4
+          }
+        },
+        {
+          "src": "/media/profile/trait-proactive-d.svg",
+          "ok": true,
+          "rect": {
+            "x": 191.9,
+            "y": 612.5,
+            "w": 6.1,
+            "h": 6.1,
+            "right": 198,
+            "bottom": 618.6
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 174.6,
+            "y": 595.1,
+            "w": 40.8,
+            "h": 40.8,
+            "right": 215.4,
+            "bottom": 635.9
+          }
+        },
+        {
+          "src": "/media/profile/portrait-medallion.png",
+          "ok": true,
+          "rect": {
+            "x": 261.5,
+            "y": 588,
+            "w": 55,
+            "h": 55,
+            "right": 316.5,
+            "bottom": 643
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-a.svg",
+          "ok": true,
+          "rect": {
+            "x": 262.9,
+            "y": 589.4,
+            "w": 52.3,
+            "h": 52.3,
+            "right": 315.2,
+            "bottom": 641.7
+          }
+        },
+        {
+          "src": "/media/profile/trait-creative-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 267.7,
+            "y": 594.2,
+            "w": 42.7,
+            "h": 42.7,
+            "right": 310.4,
+            "bottom": 636.9
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-b.svg",
+          "ok": true,
+          "rect": {
+            "x": 272.3,
+            "y": 600.8,
+            "w": 33.5,
+            "h": 33.5,
+            "right": 305.8,
+            "bottom": 634.3
+          }
+        },
+        {
+          "src": "/media/profile/trait-execution-c.svg",
+          "ok": true,
+          "rect": {
+            "x": 278.8,
+            "y": 605.4,
+            "w": 21.5,
+            "h": 20.4,
+            "right": 300.3,
+            "bottom": 625.8
+          }
+        }
+      ],
+      "failedImages": []
+    }
+  ],
+  "resume": [
+    {
+      "file": "resume-1440x900-animation-start-0.png",
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "animation-start-0deg",
+      "status": 200,
+      "overflow": 0,
+      "docHeight": 900,
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "right": 880.1,
+        "bottom": 770.2
+      },
+      "fill": "0deg",
+      "energyBackground": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) -8deg, rgb(186, 255, 251) -2deg, rgb(186, 255, 251) 0deg, rgba(0, 0, 0, 0) 0deg, rgba(0, 0, 0, 0) 360deg)",
+      "energyMask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 0deg, rgba(0, 0, 0, 0) 0deg, rgba(0, 0, 0, 0) 360deg)",
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "right": 722.5,
+        "bottom": 791.8
+      },
+      "close": {
+        "x": 544,
+        "y": 796,
+        "w": 112,
+        "h": 26.9,
+        "right": 656,
+        "bottom": 822.9
+      },
+      "assetLoaded": true,
+      "imageFailures": []
+    },
+    {
+      "file": "resume-1440x900-partial-153.png",
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "partial-153",
+      "status": 200,
+      "overflow": 0,
+      "docHeight": 900,
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "right": 880.1,
+        "bottom": 770.2
+      },
+      "fill": "153deg",
+      "energyBackground": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)",
+      "energyMask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)",
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "right": 722.5,
+        "bottom": 791.8
+      },
+      "close": {
+        "x": 544,
+        "y": 796,
+        "w": 112,
+        "h": 26.9,
+        "right": 656,
+        "bottom": 822.9
+      },
+      "assetLoaded": true,
+      "imageFailures": []
+    },
+    {
+      "file": "resume-1440x900-completed-306.png",
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "completed-306",
+      "status": 200,
+      "overflow": 0,
+      "docHeight": 900,
+      "composition": {
+        "x": 280,
+        "y": 170.1,
+        "w": 640,
+        "h": 640,
+        "right": 920,
+        "bottom": 810.1
+      },
+      "energy": {
+        "x": 319.8,
+        "y": 209.9,
+        "w": 560.3,
+        "h": 560.3,
+        "right": 880.1,
+        "bottom": 770.2
+      },
+      "fill": "306deg",
+      "energyBackground": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "energyMask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "plate": {
+        "x": 477.5,
+        "y": 710.9,
+        "w": 245,
+        "h": 80.9,
+        "right": 722.5,
+        "bottom": 791.8
+      },
+      "close": {
+        "x": 544,
+        "y": 796,
+        "w": 112,
+        "h": 26.9,
+        "right": 656,
+        "bottom": 822.9
+      },
+      "assetLoaded": true,
+      "imageFailures": []
+    },
+    {
+      "file": "resume-1440x900-reduced.png",
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "reduced-motion",
+      "measurement": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "overflow": 0
+      }
+    },
+    {
+      "file": "resume-390x844-animation-start-0.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "animation-start-0deg",
+      "status": 200,
+      "overflow": 0,
+      "docHeight": 905,
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "right": 351.7,
+        "bottom": 613.7
+      },
+      "fill": "0deg",
+      "energyBackground": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) -8deg, rgb(186, 255, 251) -2deg, rgb(186, 255, 251) 0deg, rgba(0, 0, 0, 0) 0deg, rgba(0, 0, 0, 0) 360deg)",
+      "energyMask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 0deg, rgba(0, 0, 0, 0) 0deg, rgba(0, 0, 0, 0) 360deg)",
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "right": 272.7,
+        "bottom": 631.8
+      },
+      "close": {
+        "x": 149,
+        "y": 628.1,
+        "w": 92,
+        "h": 22,
+        "right": 241,
+        "bottom": 650.1
+      },
+      "assetLoaded": true,
+      "imageFailures": []
+    },
+    {
+      "file": "resume-390x844-partial-153.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "partial-153",
+      "status": 200,
+      "overflow": 0,
+      "docHeight": 905,
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "right": 351.7,
+        "bottom": 613.7
+      },
+      "fill": "153deg",
+      "energyBackground": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)",
+      "energyMask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)",
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "right": 272.7,
+        "bottom": 631.8
+      },
+      "close": {
+        "x": 149,
+        "y": 628.1,
+        "w": 92,
+        "h": 22,
+        "right": 241,
+        "bottom": 650.1
+      },
+      "assetLoaded": true,
+      "imageFailures": []
+    },
+    {
+      "file": "resume-390x844-completed-306.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "completed-306",
+      "status": 200,
+      "overflow": 0,
+      "docHeight": 905,
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "right": 374,
+        "bottom": 636
+      },
+      "energy": {
+        "x": 38.3,
+        "y": 300.3,
+        "w": 313.4,
+        "h": 313.4,
+        "right": 351.7,
+        "bottom": 613.7
+      },
+      "fill": "306deg",
+      "energyBackground": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "energyMask": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+      "plate": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "right": 272.7,
+        "bottom": 631.8
+      },
+      "close": {
+        "x": 149,
+        "y": 628.1,
+        "w": 92,
+        "h": 22,
+        "right": 241,
+        "bottom": 650.1
+      },
+      "assetLoaded": true,
+      "imageFailures": []
+    },
+    {
+      "file": "resume-390x844-reduced.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "reduced-motion",
+      "measurement": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "overflow": 0
+      }
+    }
+  ],
+  "interactions": {
+    "open": {
+      "url": "/resume",
+      "dialogs": 1,
+      "underlayInert": "",
+      "underlayHidden": "true",
+      "activeElement": {
+        "tag": "DIV",
+        "label": null,
+        "text": "Resume FoundView ResumeCLOSE"
+      }
+    },
+    "escape": {
+      "url": "/home",
+      "focusRestored": true
+    },
+    "close": {
+      "url": "/home",
+      "focusRestored": true
+    },
+    "view": {
+      "url": "/resume/viewer"
+    },
+    "direct": {
+      "start": "/resume",
+      "close": "/home",
+      "view": "/resume/viewer"
+    }
+  },
+  "food": [
+    {
+      "file": "food-gallery-1440x900.png",
+      "status": 200,
+      "path": "/projects/food-tracker",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": 0,
+      "gallery": {
+        "x": 75.9,
+        "y": 146.8,
+        "w": 1018.3,
+        "h": 687.7,
+        "right": 1094.1,
+        "bottom": 834.4
+      },
+      "items": [
+        {
+          "caption": "Macro Composition",
+          "type": "app-capture",
+          "body": "Macro Composition\n\nA nutrient balance graphic sits beside the daily comparison chart.",
+          "rect": {
+            "x": 97.9,
+            "y": 169.8,
+            "w": 481.1,
+            "h": 315.3,
+            "right": 579,
+            "bottom": 485.1
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png",
+              "ok": true,
+              "w": 368,
+              "h": 800
+            }
+          ]
+        },
+        {
+          "caption": "Calorie forecast",
+          "type": "owner-authored-design-reference",
+          "body": "Calorie forecast\n\nSolid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.",
+          "rect": {
+            "x": 591,
+            "y": 169.8,
+            "w": 481.1,
+            "h": 315.3,
+            "right": 1072.1,
+            "bottom": 485.1
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-owner-reference.png",
+              "ok": true,
+              "w": 286,
+              "h": 520
+            }
+          ]
+        },
+        {
+          "caption": "Fiber trend",
+          "type": "figma-design-study",
+          "body": "Fiber trend\n\nA nutrient view pairs daily totals with progress toward a goal.",
+          "rect": {
+            "x": 97.9,
+            "y": 497.1,
+            "w": 481.1,
+            "h": 315.3,
+            "right": 579,
+            "bottom": 812.4
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-design-study.png",
+              "ok": true,
+              "w": 350,
+              "h": 372
+            }
+          ]
+        },
+        {
+          "caption": "Daily completeness",
+          "type": "figma-design-study",
+          "body": "Daily completeness\n\nA grid distinguishes complete, partial, and unlogged days.",
+          "rect": {
+            "x": 591,
+            "y": 497.1,
+            "w": 481.1,
+            "h": 315.3,
+            "right": 1072.1,
+            "bottom": 812.4
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "ok": true,
+              "w": 350,
+              "h": 258
+            }
+          ]
+        }
+      ],
+      "pageText": "out; the comparison does not identify which retrieval route caused the change.\n\nProject notes report that semantic retrieval added latency for little benchmark recovery. The benchmark compares complete paths; it does not isolate a fuzzy-only gain.\n\nHybrid retrieval · candidate breadth feeds a deterministic ranker. Offline ranking evidence, not live-user outcomes.\n\n05 / VALIDATION + RELEASE BOUNDARY\n\nA passing test, a complete index, and a useful product are different claims.\n\nSearch correctness, index completeness, account isolation, and real runtime behavior needed separate evidence. A green check in one layer could not stand in for the rest.\n\n01 / RELEVANCE\nCorrect code can still rank the wrong food.\n\nSearch tests passed while retrieval quality was poor; offline query evidence became a separate gate.\n\n02 / COMPLETENESS\nA relevant rank can still come from a partial index.\n\nA pagination bug once left the derived search index partial or stale. Index completeness needed its own check.\n\n03 / RUNTIME + OWNERSHIP\nValidate the running product and its data boundary.\n\nFirebase identifies the caller; the API derives the app-owned UUID and scopes data server-side.\n\nPINNED PROJECT RECORD\nRailway staging and a standalone iOS installation were validated.\n\nThis is not evidence of a public launch. Paid Apple distribution and Android standalone validation remain incomplete.\n\nEVIDENCE LIMIT\nSome photo checks remain open.\n\nPhoto candidate adjudication and some manual checks remain untested; no claim of exhaustive image-path validation.\n\nWHAT CHANGED IN MY PRACTICE\n\nI learned to ask what the evidence proves, then validate the ranking, index, and actual runtime separately.\n\nA passing test, a complete index, and a useful product are three different claims.\nOPEN TO OPPORTUNITIES\nSummer 2027 · Toronto / Remote\nACTIVITY\n\nGENERAL · PORTFOLIO\n\nCURRENT FOCUS\nFood Tracker\nPROJECTS (4)\nFood Tracker\nCho’Veigo\nCrest\nFraymakers\nEXPERIENCE (2)\nLiving in Silico\nStush Patties\nLinkedIn\nGitHub\nX\n✉\nHELP",
+      "brokenImages": []
+    },
+    {
+      "file": "food-gallery-390x844.png",
+      "status": 200,
+      "path": "/projects/food-tracker",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": 0,
+      "gallery": {
+        "x": 17,
+        "y": 28.8,
+        "w": 356,
+        "h": 787,
+        "right": 373,
+        "bottom": 815.8
+      },
+      "items": [
+        {
+          "caption": "Macro Composition",
+          "type": "app-capture",
+          "body": "Macro Composition\n\nA nutrient balance graphic sits beside the daily comparison chart.",
+          "rect": {
+            "x": 29,
+            "y": 41.8,
+            "w": 332,
+            "h": 183,
+            "right": 361,
+            "bottom": 224.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/trend-detail-macro-composition-populated.png",
+              "ok": true,
+              "w": 368,
+              "h": 800
+            }
+          ]
+        },
+        {
+          "caption": "Calorie forecast",
+          "type": "owner-authored-design-reference",
+          "body": "Calorie forecast\n\nSolid history ends at Today; a dotted seven-day forecast extends it within an uncertainty band.",
+          "rect": {
+            "x": 29,
+            "y": 234.8,
+            "w": 332,
+            "h": 183,
+            "right": 361,
+            "bottom": 417.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-owner-reference.png",
+              "ok": true,
+              "w": 286,
+              "h": 520
+            }
+          ]
+        },
+        {
+          "caption": "Fiber trend",
+          "type": "figma-design-study",
+          "body": "Fiber trend\n\nA nutrient view pairs daily totals with progress toward a goal.",
+          "rect": {
+            "x": 29,
+            "y": 427.8,
+            "w": 332,
+            "h": 183,
+            "right": 361,
+            "bottom": 610.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-design-study.png",
+              "ok": true,
+              "w": 350,
+              "h": 372
+            }
+          ]
+        },
+        {
+          "caption": "Daily completeness",
+          "type": "figma-design-study",
+          "body": "Daily completeness\n\nA grid distinguishes complete, partial, and unlogged days.",
+          "rect": {
+            "x": 29,
+            "y": 620.8,
+            "w": 332,
+            "h": 183,
+            "right": 361,
+            "bottom": 803.8
+          },
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "ok": true,
+              "w": 350,
+              "h": 258
+            }
+          ]
+        }
+      ],
+      "pageText": "0\nFull hybrid\n28/40\nEvaluation changed the design.\n\nTop-1 moved from 40/80 to 71/80 in development and from 25/40 to 27/40 in holdout. The stronger gain on the development set was smaller on the separate holdout; the comparison does not identify which retrieval route caused the change.\n\nProject notes report that semantic retrieval added latency for little benchmark recovery. The benchmark compares complete paths; it does not isolate a fuzzy-only gain.\n\nHybrid retrieval · candidate breadth feeds a deterministic ranker. Offline ranking evidence, not live-user outcomes.\n\n05 / VALIDATION + RELEASE BOUNDARY\n\nA passing test, a complete index, and a useful product are different claims.\n\nSearch correctness, index completeness, account isolation, and real runtime behavior needed separate evidence. A green check in one layer could not stand in for the rest.\n\n01 / RELEVANCE\nCorrect code can still rank the wrong food.\n\nSearch tests passed while retrieval quality was poor; offline query evidence became a separate gate.\n\n02 / COMPLETENESS\nA relevant rank can still come from a partial index.\n\nA pagination bug once left the derived search index partial or stale. Index completeness needed its own check.\n\n03 / RUNTIME + OWNERSHIP\nValidate the running product and its data boundary.\n\nFirebase identifies the caller; the API derives the app-owned UUID and scopes data server-side.\n\nPINNED PROJECT RECORD\nRailway staging and a standalone iOS installation were validated.\n\nThis is not evidence of a public launch. Paid Apple distribution and Android standalone validation remain incomplete.\n\nEVIDENCE LIMIT\nSome photo checks remain open.\n\nPhoto candidate adjudication and some manual checks remain untested; no claim of exhaustive image-path validation.\n\nWHAT CHANGED IN MY PRACTICE\n\nI learned to ask what the evidence proves, then validate the ranking, index, and actual runtime separately.\n\nA passing test, a complete index, and a useful product are three different claims.\nLinkedIn\nGitHub\nX\n✉\nRESUME",
+      "brokenImages": []
+    }
+  ],
+  "runtime": {
+    "consoleErrors": [],
+    "failedRequests": [],
+    "httpErrors": []
+  },
+  "resumeStaticStateEvidence": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "36deg",
+      "file": "resume-static-1440x900-36.png",
+      "measurement": {
+        "fill": "36deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "rect": {
+          "x": 319.8125,
+          "y": 209.921875,
+          "width": 560.3125,
+          "height": 560.3125
+        },
+        "backgroundImage": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(0, 0, 0, 0) 36deg, rgba(0, 0, 0, 0) 360deg)",
+        "maskImage": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 36deg, rgba(0, 0, 0, 0) 36deg, rgba(0, 0, 0, 0) 360deg)"
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "153deg",
+      "file": "resume-static-1440x900-153.png",
+      "measurement": {
+        "fill": "153deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "rect": {
+          "x": 319.8125,
+          "y": 209.921875,
+          "width": 560.3125,
+          "height": 560.3125
+        },
+        "backgroundImage": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)",
+        "maskImage": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)"
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "306deg",
+      "file": "resume-static-1440x900-306.png",
+      "measurement": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "rect": {
+          "x": 319.8125,
+          "y": 209.921875,
+          "width": 560.3125,
+          "height": 560.3125
+        },
+        "backgroundImage": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+        "maskImage": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)"
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "reduced-motion",
+      "file": "resume-static-1440x900-reduced.png",
+      "measurement": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "overflow": 0,
+        "rect": {
+          "x": 319.8125,
+          "y": 209.921875,
+          "width": 560.3125,
+          "height": 560.3125
+        },
+        "textureLoaded": true
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "36deg",
+      "file": "resume-static-390x844-36.png",
+      "measurement": {
+        "fill": "36deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "rect": {
+          "x": 38.2890625,
+          "y": 300.2890625,
+          "width": 313.421875,
+          "height": 313.421875
+        },
+        "backgroundImage": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 28deg, rgb(186, 255, 251) 34deg, rgb(186, 255, 251) 36deg, rgba(0, 0, 0, 0) 36deg, rgba(0, 0, 0, 0) 360deg)",
+        "maskImage": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 36deg, rgba(0, 0, 0, 0) 36deg, rgba(0, 0, 0, 0) 360deg)"
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "153deg",
+      "file": "resume-static-390x844-153.png",
+      "measurement": {
+        "fill": "153deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "rect": {
+          "x": 38.2890625,
+          "y": 300.2890625,
+          "width": 313.421875,
+          "height": 313.421875
+        },
+        "backgroundImage": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 145deg, rgb(186, 255, 251) 151deg, rgb(186, 255, 251) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)",
+        "maskImage": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 360deg)"
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "306deg",
+      "file": "resume-static-390x844-306.png",
+      "measurement": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "rect": {
+          "x": 38.2890625,
+          "y": 300.2890625,
+          "width": 313.421875,
+          "height": 313.421875
+        },
+        "backgroundImage": "radial-gradient(35% 18% at 27% 25%, rgba(229, 255, 255, 0.52) 0%, rgba(119, 241, 245, 0.24) 28%, rgba(31, 147, 169, 0.04) 65%, rgba(0, 0, 0, 0) 100%), linear-gradient(rgba(220, 255, 255, 0.16) 0%, rgba(37, 145, 169, 0.06) 48%, rgba(171, 255, 255, 0.12) 100%), linear-gradient(108deg, rgba(0, 0, 0, 0) 16%, rgba(219, 255, 255, 0.26) 47%, rgba(0, 0, 0, 0) 80%), conic-gradient(from 207deg, rgba(28, 184, 214, 0.62) 0deg, rgba(28, 184, 214, 0.62) 298deg, rgb(186, 255, 251) 304deg, rgb(186, 255, 251) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)",
+        "maskImage": "radial-gradient(circle closest-side, rgba(0, 0, 0, 0) 87.8%, rgb(0, 0, 0) 88.4%, rgb(0, 0, 0) 94%, rgba(0, 0, 0, 0) 94.6%), conic-gradient(rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 153deg, rgba(0, 0, 0, 0) 153deg, rgba(0, 0, 0, 0) 207deg, rgb(0, 0, 0) 207deg, rgb(0, 0, 0) 360deg), conic-gradient(from 207deg, rgb(0, 0, 0) 0deg, rgb(0, 0, 0) 306deg, rgba(0, 0, 0, 0) 306deg, rgba(0, 0, 0, 0) 360deg)"
+      }
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "state": "reduced-motion",
+      "file": "resume-static-390x844-reduced.png",
+      "measurement": {
+        "fill": "306deg",
+        "opacity": "0.86",
+        "animationName": "none",
+        "overflow": 0,
+        "rect": {
+          "x": 38.2890625,
+          "y": 300.2890625,
+          "width": 313.421875,
+          "height": 313.421875
+        },
+        "textureLoaded": true
+      }
+    }
+  ],
+  "visualSummary": {
+    "lobbies": "24 routes/viewports; desktop group center delta 0 for all; Projects plus decorations hidden; category pluses midpoint-centered on desktop and hidden on narrow; desktop background image positions 50% 60%, short desktop 50% 68%; no horizontal overflow or broken images.",
+    "profile": "All four traits and signals visually visible; portrait and banner assets loaded. Signal row y=504–704 at 1280x720, y=778–1058 at 1920x1080, and responsive scroll at 390x844. No trait collision or horizontal overflow observed.",
+    "resume": "Normal direct route with plasma texture resource loaded, states verified at 36/153/306 deg and reduced-motion completed state; energy mask clips to annulus and leaves lower plate gap. Escape/Close restore Home focus, View Resume routes to viewer; direct Close/View actions work.",
+    "food": "Four images load at desktop and narrow. Captions are concise feature descriptions; no visible internal provenance sentence or horizontal overflow.",
+    "runtime": "Zero console/page errors, failed requests, HTTP errors, or broken images."
+  }
+}

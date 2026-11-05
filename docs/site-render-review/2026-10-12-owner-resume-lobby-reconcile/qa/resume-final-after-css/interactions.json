@@ -1,0 +1,43 @@
+{
+  "resumeLinkCount": 1,
+  "modal": {
+    "url": "/resume",
+    "dialog": true,
+    "active": "RESUME FOUND\nVIEW RESUME\nCLOSE",
+    "underlay": [
+      {
+        "cls": "app-route-underlay",
+        "aria": "true"
+      }
+    ]
+  },
+  "escape": {
+    "url": "/home",
+    "focusRestored": true
+  },
+  "close": {
+    "url": "/home",
+    "focusRestored": true
+  },
+  "viewModal": {
+    "url": "/resume/viewer"
+  },
+  "directRoute": {
+    "url": "/resume",
+    "close": 1,
+    "view": 1
+  },
+  "directClose": {
+    "url": "/home"
+  },
+  "directView": {
+    "url": "/resume/viewer"
+  },
+  "reduced": {
+    "animation": "1e-05s",
+    "fill": "",
+    "width": 560.3125
+  },
+  "errors": [],
+  "failed": []
+}

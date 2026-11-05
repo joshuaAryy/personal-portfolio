@@ -1,0 +1,228 @@
+{
+  "url": "http://127.0.0.1:5176/",
+  "video": "C:\\Users\\samue\\OneDrive\\Desktop\\personal portfolio\\production-portfolio\\.worktrees\\owner-correction-pass-03\\docs\\site-render-review\\2026-10-11-opening-fidelity\\qa-orb-joint-fixed\\rerun-final\\opening-final-uninterrupted-1920x1080.webm",
+  "runElapsedMs": 5941,
+  "final": {
+    "path": "/home",
+    "opening": false,
+    "doc": {
+      "w": 1920,
+      "h": 1080,
+      "cw": 1920,
+      "ch": 1080
+    },
+    "images": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      }
+    ]
+  },
+  "activationPose": {
+    "path": "/",
+    "timelineMs": 3102.6189999965254,
+    "activation": {
+      "rect": {
+        "x": 809.7,
+        "y": 379.2,
+        "w": 315.1,
+        "h": 315.1
+      },
+      "opacity": "0.414977",
+      "blend": "screen",
+      "radius": "50%",
+      "complete": true,
+      "naturalWidth": 784
+    },
+    "spark": {
+      "rect": {
+        "x": 771.9,
+        "y": 351.9,
+        "w": 376.2,
+        "h": 376.2
+      },
+      "opacity": "1",
+      "blend": "screen",
+      "radius": "0px"
+    },
+    "mark": {
+      "x": 771.9,
+      "y": 351.9,
+      "w": 376.2,
+      "h": 376.2
+    },
+    "imgs": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+        "complete": true,
+        "naturalWidth": 784
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ]
+  },
+  "activationCaptureElapsedMs": 3995,
+  "activationErrors": {
+    "errors": [],
+    "pageErrors": [],
+    "failed": [],
+    "bad": []
+  },
+  "reducedMotion": {
+    "path": "/",
+    "classes": "opening opening--reduced",
+    "routeClass": "opening-route opening-route--reduced",
+    "settled": "1",
+    "orb": null,
+    "ring": "1",
+    "bloom": "0",
+    "tickAnimation": "none",
+    "markRect": {
+      "x": 712.5,
+      "y": 292.5,
+      "w": 495,
+      "h": 495
+    },
+    "images": [
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/portal-plasma-2x.png",
+        "complete": true,
+        "naturalWidth": 624
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/orb-activation-bloom-2x.png",
+        "complete": true,
+        "naturalWidth": 784
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/orb-ring-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 1057
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/j-contact-shadow-alpha-3x.png",
+        "complete": true,
+        "naturalWidth": 792
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma/canonical-j.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/identity/sonnet-v8/figma-export/canonical-lockup.png",
+        "complete": true,
+        "naturalWidth": 468
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/seam-light.svg",
+        "complete": true,
+        "naturalWidth": 534
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/conduit.svg",
+        "complete": true,
+        "naturalWidth": 111
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/light-exits.svg",
+        "complete": true,
+        "naturalWidth": 101
+      },
+      {
+        "src": "/media/opening/j-sonnet-motion-v8/figma-motion/sheen-band-2x.png",
+        "complete": true,
+        "naturalWidth": 160
+      }
+    ],
+    "errors": [],
+    "pageErrors": [],
+    "failed": [],
+    "bad": []
+  },
+  "normalRunErrors": {
+    "errors": [],
+    "pageErrors": [],
+    "failed": [],
+    "bad": []
+  }
+}

@@ -1,0 +1,2399 @@
+{
+  "browser": "Installed Google Chrome via Playwright 1.63.0",
+  "base": "http://127.0.0.1:4182",
+  "checks": {
+    "homeDesktop": {
+      "initial": {
+        "title": "Select a portfolio mode",
+        "docWidth": 1920,
+        "bodyWidth": 1920,
+        "viewport": 1920,
+        "modes": [
+          {
+            "name": "Projects",
+            "selected": "true",
+            "visible": true,
+            "rect": {
+              "x": 0,
+              "y": 145,
+              "right": 390,
+              "bottom": 403,
+              "width": 390,
+              "height": 258
+            }
+          },
+          {
+            "name": "Experience",
+            "selected": "false",
+            "visible": true,
+            "rect": {
+              "x": 390,
+              "y": 145,
+              "right": 780,
+              "bottom": 403,
+              "width": 390,
+              "height": 258
+            }
+          },
+          {
+            "name": "Hackathons",
+            "selected": "false",
+            "visible": true,
+            "rect": {
+              "x": 780,
+              "y": 145,
+              "right": 1170,
+              "bottom": 403,
+              "width": 390,
+              "height": 258
+            }
+          },
+          {
+            "name": "Education",
+            "selected": "false",
+            "visible": true,
+            "rect": {
+              "x": 1170,
+              "y": 145,
+              "right": 1560,
+              "bottom": 403,
+              "width": 390,
+              "height": 258
+            }
+          }
+        ],
+        "utilities": [
+          {
+            "label": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "rect": {
+              "x": 948,
+              "y": 16.5,
+              "right": 1016,
+              "bottom": 82.5,
+              "width": 68,
+              "height": 66
+            }
+          },
+          {
+            "label": "Resume",
+            "href": "/resume",
+            "rect": {
+              "x": 1016,
+              "y": 16.5,
+              "right": 1084,
+              "bottom": 82.5,
+              "width": 68,
+              "height": 66
+            }
+          },
+          {
+            "label": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "rect": {
+              "x": 1084,
+              "y": 16.5,
+              "right": 1152,
+              "bottom": 82.5,
+              "width": 68,
+              "height": 66
+            }
+          },
+          {
+            "label": "Email",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "rect": {
+              "x": 1152,
+              "y": 16.5,
+              "right": 1220,
+              "bottom": 82.5,
+              "width": 68,
+              "height": 66
+            }
+          }
+        ],
+        "primary": [],
+        "avatar": {
+          "x": 1619.953125,
+          "y": 9.5,
+          "right": 1854.015625,
+          "bottom": 99.5,
+          "width": 234.0625,
+          "height": 90
+        },
+        "topNav": [
+          {
+            "label": "Main navigation",
+            "rect": {
+              "x": 276.46875,
+              "y": -0.5,
+              "right": 829,
+              "bottom": 109.5,
+              "width": 552.53125,
+              "height": 110
+            }
+          },
+          {
+            "label": "Contact and resume",
+            "rect": {
+              "x": 948,
+              "y": 16.5,
+              "right": 1220,
+              "bottom": 82.5,
+              "width": 272,
+              "height": 66
+            }
+          }
+        ],
+        "deadModes": []
+      },
+      "previewChecks": [
+        {
+          "selected": "Projects",
+          "previewHeading": "PROJECT AREAS",
+          "previewText": "PROJECT AREAS\nAI / ML\nMACHINE INTELLIGENCE\nSOFTWARE\nSYSTEMS + APPLICATIONS\nFULL STACK\nEND-TO-END PRODUCTS\nDATA / AUTOMATION\nPIPELINES + TOOLING",
+          "description": "Projects"
+        },
+        {
+          "selected": "Experience",
+          "previewHeading": "EXPERIENCE SNAPSHOT",
+          "previewText": "EXPERIENCE SNAPSHOT\nLIVING IN SILICO\nAI/ML RESEARCH INTERN · MAR–JUN 2025\nSTUSH PATTIES\nSOFTWARE ENGINEERING INTERN · SEP–NOV 2025",
+          "description": "Experience"
+        },
+        {
+          "selected": "Hackathons",
+          "previewHeading": "HACKATHON SNAPSHOT",
+          "previewText": "HACKATHON SNAPSHOT\nCREST\nMPC HACKS 2026 · 3RD PLACE, BRIM FINANCIAL CHALLENGE",
+          "description": "Hackathons"
+        },
+        {
+          "selected": "Education",
+          "previewHeading": "ACADEMIC SNAPSHOT",
+          "previewText": "ACADEMIC SNAPSHOT\nCOMPUTER ENGINEERING\nB.ENG. · SOFTWARE SPECIALIZATION · EXPECTED 2028\nSELECTED COURSEWORK\nALGORITHMS & DATA STRUCTURES · SOFTWARE SYSTEMS · DATABASE SYSTEMS I · MICROPROCESSOR SYSTEMS",
+          "description": "Education"
+        }
+      ],
+      "controls": {
+        "pair": {
+          "back": {
+            "x": 623,
+            "y": 920,
+            "right": 681,
+            "bottom": 978
+          },
+          "confirm": {
+            "x": 693,
+            "y": 917,
+            "right": 993,
+            "bottom": 981
+          }
+        },
+        "overlap": false
+      },
+      "educationConfirmRoute": "/education",
+      "educationLobby": {
+        "heading": "EDUCATION",
+        "docWidth": 1920,
+        "viewport": 1920,
+        "back": {
+          "x": 30,
+          "y": 129.484375,
+          "right": 60,
+          "bottom": 159.484375,
+          "width": 30,
+          "height": 30
+        },
+        "headingRect": {
+          "x": 112,
+          "y": 128,
+          "right": 289.65625,
+          "bottom": 142.390625,
+          "width": 177.65625,
+          "height": 14.390625
+        },
+        "backHeadingOverlap": false,
+        "cards": [
+          {
+            "name": "Computer Engineering",
+            "selected": "false",
+            "img": {
+              "src": "/media/lobby/education-degree.svg",
+              "alt": "Computer Engineering degree emblem",
+              "complete": true,
+              "naturalWidth": 50,
+              "naturalHeight": 50,
+              "objectFit": "contain",
+              "rect": {
+                "x": 347.515625,
+                "y": 266.21875,
+                "right": 411.140625,
+                "bottom": 329.84375,
+                "width": 63.625,
+                "height": 63.625
+              },
+              "radius": "0px"
+            },
+            "medallion": {
+              "rect": {
+                "x": 335.328125,
+                "y": 254.03125,
+                "right": 423.328125,
+                "bottom": 342.03125,
+                "width": 88,
+                "height": 88
+              },
+              "radius": "50%",
+              "overflow": "visible"
+            }
+          },
+          {
+            "name": "Joshua Aryeetey",
+            "selected": "false",
+            "img": {
+              "src": "/media/lobby/profile-portrait-source.jpg",
+              "alt": "Joshua Aryeetey portrait",
+              "complete": true,
+              "naturalWidth": 160,
+              "naturalHeight": 200,
+              "objectFit": "cover",
+              "rect": {
+                "x": 756.984375,
+                "y": 255.03125,
+                "right": 842.984375,
+                "bottom": 362.53125,
+                "width": 86,
+                "height": 107.5
+              },
+              "radius": "50%"
+            },
+            "medallion": {
+              "rect": {
+                "x": 755.984375,
+                "y": 254.03125,
+                "right": 843.984375,
+                "bottom": 342.03125,
+                "width": 88,
+                "height": 88
+              },
+              "radius": "50%",
+              "overflow": "hidden"
+            }
+          },
+          {
+            "name": "Selected Coursework",
+            "selected": "true",
+            "img": {
+              "src": "/media/lobby/education-coursework.svg",
+              "alt": "Current coursework emblem",
+              "complete": true,
+              "naturalWidth": 50,
+              "naturalHeight": 50,
+              "objectFit": "contain",
+              "rect": {
+                "x": 1188.84375,
+                "y": 264.21875,
+                "right": 1252.46875,
+                "bottom": 327.84375,
+                "width": 63.625,
+                "height": 63.625
+              },
+              "radius": "0px"
+            },
+            "medallion": {
+              "rect": {
+                "x": 1176.65625,
+                "y": 252.03125,
+                "right": 1264.65625,
+                "bottom": 340.03125,
+                "width": 88,
+                "height": 88
+              },
+              "radius": "50%",
+              "overflow": "visible"
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 54
+          },
+          {
+            "src": "/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "/media/profile/topbar-avatar.png",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "/media/lobby/education-degree.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/lobby/banner-art.svg",
+            "complete": true,
+            "naturalWidth": 246
+          },
+          {
+            "src": "/media/lobby/education-degree.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/lobby/banner-art.svg",
+            "complete": true,
+            "naturalWidth": 246
+          },
+          {
+            "src": "/media/lobby/profile-portrait-source.jpg",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "/media/lobby/academic-software-specialization.svg",
+            "complete": true,
+            "naturalWidth": 22
+          },
+          {
+            "src": "/media/lobby/banner-art.svg",
+            "complete": true,
+            "naturalWidth": 246
+          },
+          {
+            "src": "/media/lobby/education-coursework.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/lobby/academic-expected-2028.svg",
+            "complete": true,
+            "naturalWidth": 22
+          },
+          {
+            "src": "/media/lobby/academic-software-specialization.svg",
+            "complete": true,
+            "naturalWidth": 22
+          },
+          {
+            "src": "/media/lobby/collapsible-tray.png",
+            "complete": true,
+            "naturalWidth": 412
+          },
+          {
+            "src": "/media/lobby/education-coursework.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/profile/open-portfolio-j-small-48.svg",
+            "complete": true,
+            "naturalWidth": 29
+          },
+          {
+            "src": "/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "/media/lobby/education-coursework.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/profile/food-tracker-mark.svg",
+            "complete": true,
+            "naturalWidth": 40
+          },
+          {
+            "src": "/media/profile/choveigo-mark.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "/media/profile/profile-crest-emblem.png",
+            "complete": true,
+            "naturalWidth": 310
+          },
+          {
+            "src": "/media/profile/fraymakers-logo.png",
+            "complete": true,
+            "naturalWidth": 4241
+          },
+          {
+            "src": "/media/profile/living-in-silico-logo.png",
+            "complete": true,
+            "naturalWidth": 96
+          },
+          {
+            "src": "/media/profile/stush-patties-logo.png",
+            "complete": true,
+            "naturalWidth": 96
+          }
+        ]
+      },
+      "backNavigation": "http://127.0.0.1:4182/home"
+    },
+    "homeNarrow": {
+      "initial": {
+        "title": "Select a portfolio mode",
+        "docWidth": 390,
+        "bodyWidth": 390,
+        "viewport": 390,
+        "modes": [
+          {
+            "name": "Projects",
+            "selected": "true",
+            "visible": true,
+            "rect": {
+              "x": 15,
+              "y": 122,
+              "right": 191,
+              "bottom": 301.234375,
+              "width": 176,
+              "height": 179.234375
+            }
+          },
+          {
+            "name": "Experience",
+            "selected": "false",
+            "visible": true,
+            "rect": {
+              "x": 199,
+              "y": 122,
+              "right": 375,
+              "bottom": 301.234375,
+              "width": 176,
+              "height": 179.234375
+            }
+          },
+          {
+            "name": "Hackathons",
+            "selected": "false",
+            "visible": true,
+            "rect": {
+              "x": 15,
+              "y": 309.234375,
+              "right": 191,
+              "bottom": 488.46875,
+              "width": 176,
+              "height": 179.234375
+            }
+          },
+          {
+            "name": "Education",
+            "selected": "false",
+            "visible": true,
+            "rect": {
+              "x": 199,
+              "y": 309.234375,
+              "right": 375,
+              "bottom": 488.46875,
+              "width": 176,
+              "height": 179.234375
+            }
+          }
+        ],
+        "utilities": [
+          {
+            "label": "LinkedIn",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "label": "Resume",
+            "href": "/resume",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "label": "GitHub",
+            "href": "https://github.com/joshuaAryy",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            }
+          },
+          {
+            "label": "Email",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ],
+        "primary": [],
+        "avatar": {
+          "x": 340,
+          "y": 13.5,
+          "right": 382,
+          "bottom": 55.5,
+          "width": 42,
+          "height": 42
+        },
+        "topNav": [
+          {
+            "label": "Main navigation",
+            "rect": {
+              "x": 73,
+              "y": 0.5,
+              "right": 336,
+              "bottom": 68.5,
+              "width": 263,
+              "height": 68
+            }
+          },
+          {
+            "label": "Contact and resume",
+            "rect": {
+              "x": 0,
+              "y": 0,
+              "right": 0,
+              "bottom": 0,
+              "width": 0,
+              "height": 0
+            }
+          }
+        ],
+        "deadModes": []
+      },
+      "previewChecks": [
+        {
+          "selected": "Projects",
+          "previewHeading": "PROJECT AREAS",
+          "previewText": "PROJECT AREAS\nAI / ML\nSOFTWARE\nFULL STACK\nDATA / AUTOMATION",
+          "description": "Projects"
+        },
+        {
+          "selected": "Experience",
+          "previewHeading": "EXPERIENCE SNAPSHOT",
+          "previewText": "EXPERIENCE SNAPSHOT\nLIVING IN SILICO\nSTUSH PATTIES",
+          "description": "Experience"
+        },
+        {
+          "selected": "Hackathons",
+          "previewHeading": "HACKATHON SNAPSHOT",
+          "previewText": "HACKATHON SNAPSHOT\nCREST",
+          "description": "Hackathons"
+        },
+        {
+          "selected": "Education",
+          "previewHeading": "ACADEMIC SNAPSHOT",
+          "previewText": "ACADEMIC SNAPSHOT\nCOMPUTER ENGINEERING\nSELECTED COURSEWORK",
+          "description": "Education"
+        }
+      ],
+      "controls": {
+        "pair": {
+          "back": {
+            "x": 45,
+            "y": 750.875,
+            "right": 93,
+            "bottom": 798.875
+          },
+          "confirm": {
+            "x": 105,
+            "y": 749.28125,
+            "right": 345,
+            "bottom": 800.46875
+          }
+        },
+        "overlap": false
+      },
+      "educationConfirmRoute": "/education",
+      "educationLobby": {
+        "heading": "EDUCATION",
+        "docWidth": 390,
+        "viewport": 390,
+        "back": {
+          "x": 13,
+          "y": 29,
+          "right": 43,
+          "bottom": 59,
+          "width": 30,
+          "height": 30
+        },
+        "headingRect": {
+          "x": 95,
+          "y": 27.5,
+          "right": 272.65625,
+          "bottom": 41.890625,
+          "width": 177.65625,
+          "height": 14.390625
+        },
+        "backHeadingOverlap": false,
+        "cards": [
+          {
+            "name": "Computer Engineering",
+            "selected": "false",
+            "img": {
+              "src": "/media/lobby/education-degree.svg",
+              "alt": "Computer Engineering degree emblem",
+              "complete": true,
+              "naturalWidth": 50,
+              "naturalHeight": 50,
+              "objectFit": "contain",
+              "rect": {
+                "x": 164.65625,
+                "y": 131.8125,
+                "right": 225.328125,
+                "bottom": 192.484375,
+                "width": 60.671875,
+                "height": 60.671875
+              },
+              "radius": "0px"
+            },
+            "medallion": {
+              "rect": {
+                "x": 153,
+                "y": 120.15625,
+                "right": 237,
+                "bottom": 204.15625,
+                "width": 84,
+                "height": 84
+              },
+              "radius": "50%",
+              "overflow": "visible"
+            }
+          },
+          {
+            "name": "Joshua Aryeetey",
+            "selected": "false",
+            "img": {
+              "src": "/media/lobby/profile-portrait-source.jpg",
+              "alt": "Joshua Aryeetey portrait",
+              "complete": true,
+              "naturalWidth": 160,
+              "naturalHeight": 200,
+              "objectFit": "cover",
+              "rect": {
+                "x": 154,
+                "y": 681.15625,
+                "right": 236,
+                "bottom": 783.65625,
+                "width": 82,
+                "height": 102.5
+              },
+              "radius": "50%"
+            },
+            "medallion": {
+              "rect": {
+                "x": 153,
+                "y": 680.15625,
+                "right": 237,
+                "bottom": 764.15625,
+                "width": 84,
+                "height": 84
+              },
+              "radius": "50%",
+              "overflow": "hidden"
+            }
+          },
+          {
+            "name": "Selected Coursework",
+            "selected": "true",
+            "img": {
+              "src": "/media/lobby/education-coursework.svg",
+              "alt": "Current coursework emblem",
+              "complete": true,
+              "naturalWidth": 50,
+              "naturalHeight": 50,
+              "objectFit": "contain",
+              "rect": {
+                "x": 164.65625,
+                "y": 1253.8125,
+                "right": 225.328125,
+                "bottom": 1314.484375,
+                "width": 60.671875,
+                "height": 60.671875
+              },
+              "radius": "0px"
+            },
+            "medallion": {
+              "rect": {
+                "x": 153,
+                "y": 1242.15625,
+                "right": 237,
+                "bottom": 1326.15625,
+                "width": 84,
+                "height": 84
+              },
+              "radius": "50%",
+              "overflow": "visible"
+            }
+          }
+        ],
+        "images": [
+          {
+            "src": "/media/profile/open-portfolio-j-small-54.svg",
+            "complete": true,
+            "naturalWidth": 32
+          },
+          {
+            "src": "/media/profile/topbar-account-ring.png",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "/media/profile/topbar-avatar.png",
+            "complete": true,
+            "naturalWidth": 64
+          },
+          {
+            "src": "/media/lobby/education-degree.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/lobby/banner-art.svg",
+            "complete": true,
+            "naturalWidth": 246
+          },
+          {
+            "src": "/media/lobby/education-degree.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/lobby/banner-art.svg",
+            "complete": true,
+            "naturalWidth": 246
+          },
+          {
+            "src": "/media/lobby/profile-portrait-source.jpg",
+            "complete": true,
+            "naturalWidth": 160
+          },
+          {
+            "src": "/media/lobby/academic-software-specialization.svg",
+            "complete": true,
+            "naturalWidth": 22
+          },
+          {
+            "src": "/media/lobby/banner-art.svg",
+            "complete": true,
+            "naturalWidth": 246
+          },
+          {
+            "src": "/media/lobby/education-coursework.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/lobby/academic-expected-2028.svg",
+            "complete": true,
+            "naturalWidth": 22
+          },
+          {
+            "src": "/media/lobby/academic-software-specialization.svg",
+            "complete": true,
+            "naturalWidth": 22
+          },
+          {
+            "src": "/media/lobby/collapsible-tray.png",
+            "complete": true,
+            "naturalWidth": 412
+          },
+          {
+            "src": "/media/lobby/education-coursework.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/profile/open-portfolio-j-small-48.svg",
+            "complete": true,
+            "naturalWidth": 29
+          },
+          {
+            "src": "/media/lobby/activity-add.svg",
+            "complete": true,
+            "naturalWidth": 13
+          },
+          {
+            "src": "/media/lobby/activity-list.svg",
+            "complete": true,
+            "naturalWidth": 8
+          },
+          {
+            "src": "/media/lobby/activity-collapse.svg",
+            "complete": true,
+            "naturalWidth": 7
+          },
+          {
+            "src": "/media/lobby/education-coursework.svg",
+            "complete": true,
+            "naturalWidth": 50
+          },
+          {
+            "src": "/media/profile/food-tracker-mark.svg",
+            "complete": true,
+            "naturalWidth": 40
+          },
+          {
+            "src": "/media/profile/choveigo-mark.svg",
+            "complete": true,
+            "naturalWidth": 150
+          },
+          {
+            "src": "/media/profile/profile-crest-emblem.png",
+            "complete": true,
+            "naturalWidth": 310
+          },
+          {
+            "src": "/media/profile/fraymakers-logo.png",
+            "complete": true,
+            "naturalWidth": 4241
+          },
+          {
+            "src": "/media/profile/living-in-silico-logo.png",
+            "complete": true,
+            "naturalWidth": 96
+          },
+          {
+            "src": "/media/profile/stush-patties-logo.png",
+            "complete": true,
+            "naturalWidth": 96
+          }
+        ]
+      },
+      "backNavigation": "http://127.0.0.1:4182/home"
+    },
+    "lobby_projects_desktop": {
+      "heading": "PROJECTS · FEATURED",
+      "docWidth": 1920,
+      "viewport": 1920,
+      "back": {
+        "x": 30,
+        "y": 101.484375,
+        "right": 60,
+        "bottom": 131.484375,
+        "width": 30,
+        "height": 30
+      },
+      "headingRect": {
+        "x": 112,
+        "y": 100,
+        "right": 301.265625,
+        "bottom": 114.390625,
+        "width": 189.265625,
+        "height": 14.390625
+      },
+      "backHeadingOverlap": false,
+      "cards": [
+        {
+          "name": "Fraymakers",
+          "selected": "false",
+          "img": {
+            "src": "/media/profile/fraymakers-logo.png",
+            "alt": "Fraymakers official wordmark",
+            "complete": true,
+            "naturalWidth": 4241,
+            "naturalHeight": 1650,
+            "objectFit": "contain",
+            "rect": {
+              "x": 189,
+              "y": 229,
+              "right": 271,
+              "bottom": 311,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 189,
+              "y": 229,
+              "right": 271,
+              "bottom": 311,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        },
+        {
+          "name": "Crest",
+          "selected": "false",
+          "img": {
+            "src": "/media/profile/profile-crest-emblem.png",
+            "alt": "Crest project mark",
+            "complete": true,
+            "naturalWidth": 310,
+            "naturalHeight": 230,
+            "objectFit": "contain",
+            "rect": {
+              "x": 461,
+              "y": 229,
+              "right": 543,
+              "bottom": 311,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 461,
+              "y": 229,
+              "right": 543,
+              "bottom": 311,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        },
+        {
+          "name": "Joshua Aryeetey",
+          "selected": "false",
+          "img": {
+            "src": "/media/lobby/project-owner-j.svg",
+            "alt": "Portfolio J medallion",
+            "complete": true,
+            "naturalWidth": 90,
+            "naturalHeight": 90,
+            "objectFit": "contain",
+            "rect": {
+              "x": 733,
+              "y": 215,
+              "right": 823,
+              "bottom": 305,
+              "width": 90,
+              "height": 90
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 733,
+              "y": 215,
+              "right": 815,
+              "bottom": 297,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        },
+        {
+          "name": "Food Tracker",
+          "selected": "true",
+          "img": {
+            "src": "/media/profile/food-tracker-mark.svg",
+            "alt": "Food Tracker approved project mark",
+            "complete": true,
+            "naturalWidth": 40,
+            "naturalHeight": 40,
+            "objectFit": "contain",
+            "rect": {
+              "x": 1017,
+              "y": 227,
+              "right": 1099,
+              "bottom": 309,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 1017,
+              "y": 227,
+              "right": 1099,
+              "bottom": 309,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        },
+        {
+          "name": "Cho’Veigo",
+          "selected": "false",
+          "img": {
+            "src": "/media/profile/choveigo-mark.svg",
+            "alt": "Cho’Veigo match-path mark",
+            "complete": true,
+            "naturalWidth": 150,
+            "naturalHeight": 150,
+            "objectFit": "contain",
+            "rect": {
+              "x": 1289,
+              "y": 229,
+              "right": 1371,
+              "bottom": 311,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 1289,
+              "y": 229,
+              "right": 1371,
+              "bottom": 311,
+              "width": 82,
+              "height": 82
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 54
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64
+        },
+        {
+          "src": "/media/profile/project-signal.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/lobby/project-owner-j.svg",
+          "complete": true,
+          "naturalWidth": 90
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/project-medallion-frame.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-mobile.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "complete": true,
+          "naturalWidth": 412
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/lobby/client-j-mark.svg",
+          "complete": true,
+          "naturalWidth": 54
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        }
+      ]
+    },
+    "lobby_experience_desktop": {
+      "heading": "EXPERIENCE",
+      "docWidth": 1920,
+      "viewport": 1920,
+      "back": {
+        "x": 30,
+        "y": 129.484375,
+        "right": 60,
+        "bottom": 159.484375,
+        "width": 30,
+        "height": 30
+      },
+      "headingRect": {
+        "x": 112,
+        "y": 128,
+        "right": 323.90625,
+        "bottom": 142.390625,
+        "width": 211.90625,
+        "height": 14.390625
+      },
+      "backHeadingOverlap": false,
+      "cards": [
+        {
+          "name": "Living in Silico",
+          "selected": "true",
+          "img": {
+            "src": "/media/profile/living-in-silico-logo.png",
+            "alt": "Living in Silico logo",
+            "complete": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "objectFit": "contain",
+            "rect": {
+              "x": 342.34375,
+              "y": 259.046875,
+              "right": 416.296875,
+              "bottom": 333,
+              "width": 73.953125,
+              "height": 73.953125
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 335.328125,
+              "y": 252.03125,
+              "right": 423.328125,
+              "bottom": 340.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        },
+        {
+          "name": "Joshua Aryeetey",
+          "selected": "false",
+          "img": {
+            "src": "/media/lobby/profile-portrait-source.jpg",
+            "alt": "Joshua Aryeetey portrait",
+            "complete": true,
+            "naturalWidth": 160,
+            "naturalHeight": 200,
+            "objectFit": "cover",
+            "rect": {
+              "x": 756.984375,
+              "y": 255.03125,
+              "right": 842.984375,
+              "bottom": 362.53125,
+              "width": 86,
+              "height": 107.5
+            },
+            "radius": "50%"
+          },
+          "medallion": {
+            "rect": {
+              "x": 755.984375,
+              "y": 254.03125,
+              "right": 843.984375,
+              "bottom": 342.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        },
+        {
+          "name": "Stush Patties",
+          "selected": "false",
+          "img": {
+            "src": "/media/profile/stush-patties-logo.png",
+            "alt": "Stush Patties logo",
+            "complete": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "objectFit": "contain",
+            "rect": {
+              "x": 1183.671875,
+              "y": 261.046875,
+              "right": 1257.625,
+              "bottom": 335,
+              "width": 73.953125,
+              "height": 73.953125
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 1176.65625,
+              "y": 254.03125,
+              "right": 1264.65625,
+              "bottom": 342.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 54
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64
+        },
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "complete": true,
+          "naturalWidth": 412
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/open-portfolio-j-small-48.svg",
+          "complete": true,
+          "naturalWidth": 29
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        }
+      ]
+    },
+    "lobby_hackathons_desktop": {
+      "heading": "HACKATHONS",
+      "docWidth": 1920,
+      "viewport": 1920,
+      "back": {
+        "x": 30,
+        "y": 129.484375,
+        "right": 60,
+        "bottom": 159.484375,
+        "width": 30,
+        "height": 30
+      },
+      "headingRect": {
+        "x": 112,
+        "y": 128,
+        "right": 319.078125,
+        "bottom": 142.390625,
+        "width": 207.078125,
+        "height": 14.390625
+      },
+      "backHeadingOverlap": false,
+      "cards": [
+        {
+          "name": "Coming Soon",
+          "selected": "false",
+          "img": null,
+          "medallion": {
+            "rect": {
+              "x": 335.328125,
+              "y": 254.03125,
+              "right": 423.328125,
+              "bottom": 342.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        },
+        {
+          "name": "Joshua Aryeetey",
+          "selected": "false",
+          "img": {
+            "src": "/media/lobby/profile-portrait-source.jpg",
+            "alt": "Joshua Aryeetey portrait",
+            "complete": true,
+            "naturalWidth": 160,
+            "naturalHeight": 200,
+            "objectFit": "cover",
+            "rect": {
+              "x": 756.984375,
+              "y": 255.03125,
+              "right": 842.984375,
+              "bottom": 362.53125,
+              "width": 86,
+              "height": 107.5
+            },
+            "radius": "50%"
+          },
+          "medallion": {
+            "rect": {
+              "x": 755.984375,
+              "y": 254.03125,
+              "right": 843.984375,
+              "bottom": 342.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        },
+        {
+          "name": "Crest",
+          "selected": "true",
+          "img": {
+            "src": "/media/profile/profile-crest-emblem.png",
+            "alt": "Crest project mark",
+            "complete": true,
+            "naturalWidth": 310,
+            "naturalHeight": 230,
+            "objectFit": "contain",
+            "rect": {
+              "x": 1188.84375,
+              "y": 264.21875,
+              "right": 1252.46875,
+              "bottom": 327.84375,
+              "width": 63.625,
+              "height": 63.625
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 1176.65625,
+              "y": 252.03125,
+              "right": 1264.65625,
+              "bottom": 340.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 54
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64
+        },
+        {
+          "src": "/media/lobby/hackathon-trophy.svg",
+          "complete": true,
+          "naturalWidth": 31
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "complete": true,
+          "naturalWidth": 412
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/open-portfolio-j-small-48.svg",
+          "complete": true,
+          "naturalWidth": 29
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        }
+      ]
+    },
+    "lobby_education_desktop": {
+      "heading": "EDUCATION",
+      "docWidth": 1920,
+      "viewport": 1920,
+      "back": {
+        "x": 30,
+        "y": 129.484375,
+        "right": 60,
+        "bottom": 159.484375,
+        "width": 30,
+        "height": 30
+      },
+      "headingRect": {
+        "x": 112,
+        "y": 128,
+        "right": 289.65625,
+        "bottom": 142.390625,
+        "width": 177.65625,
+        "height": 14.390625
+      },
+      "backHeadingOverlap": false,
+      "cards": [
+        {
+          "name": "Computer Engineering",
+          "selected": "false",
+          "img": {
+            "src": "/media/lobby/education-degree.svg",
+            "alt": "Computer Engineering degree emblem",
+            "complete": true,
+            "naturalWidth": 50,
+            "naturalHeight": 50,
+            "objectFit": "contain",
+            "rect": {
+              "x": 347.515625,
+              "y": 266.21875,
+              "right": 411.140625,
+              "bottom": 329.84375,
+              "width": 63.625,
+              "height": 63.625
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 335.328125,
+              "y": 254.03125,
+              "right": 423.328125,
+              "bottom": 342.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        },
+        {
+          "name": "Joshua Aryeetey",
+          "selected": "false",
+          "img": {
+            "src": "/media/lobby/profile-portrait-source.jpg",
+            "alt": "Joshua Aryeetey portrait",
+            "complete": true,
+            "naturalWidth": 160,
+            "naturalHeight": 200,
+            "objectFit": "cover",
+            "rect": {
+              "x": 756.984375,
+              "y": 255.03125,
+              "right": 842.984375,
+              "bottom": 362.53125,
+              "width": 86,
+              "height": 107.5
+            },
+            "radius": "50%"
+          },
+          "medallion": {
+            "rect": {
+              "x": 755.984375,
+              "y": 254.03125,
+              "right": 843.984375,
+              "bottom": 342.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        },
+        {
+          "name": "Selected Coursework",
+          "selected": "true",
+          "img": {
+            "src": "/media/lobby/education-coursework.svg",
+            "alt": "Current coursework emblem",
+            "complete": true,
+            "naturalWidth": 50,
+            "naturalHeight": 50,
+            "objectFit": "contain",
+            "rect": {
+              "x": 1188.84375,
+              "y": 264.21875,
+              "right": 1252.46875,
+              "bottom": 327.84375,
+              "width": 63.625,
+              "height": 63.625
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 1176.65625,
+              "y": 252.03125,
+              "right": 1264.65625,
+              "bottom": 340.03125,
+              "width": 88,
+              "height": 88
+            },
+            "radius": "50%",
+            "overflow": "visible"
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 54
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "complete": true,
+          "naturalWidth": 50
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/education-degree.svg",
+          "complete": true,
+          "naturalWidth": 50
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "complete": true,
+          "naturalWidth": 22
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "complete": true,
+          "naturalWidth": 50
+        },
+        {
+          "src": "/media/lobby/academic-expected-2028.svg",
+          "complete": true,
+          "naturalWidth": 22
+        },
+        {
+          "src": "/media/lobby/academic-software-specialization.svg",
+          "complete": true,
+          "naturalWidth": 22
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "complete": true,
+          "naturalWidth": 412
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "complete": true,
+          "naturalWidth": 50
+        },
+        {
+          "src": "/media/profile/open-portfolio-j-small-48.svg",
+          "complete": true,
+          "naturalWidth": 29
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7
+        },
+        {
+          "src": "/media/lobby/education-coursework.svg",
+          "complete": true,
+          "naturalWidth": 50
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        }
+      ]
+    },
+    "lobby_experience_narrow": {
+      "heading": "EXPERIENCE",
+      "docWidth": 390,
+      "viewport": 390,
+      "back": {
+        "x": 13,
+        "y": 29,
+        "right": 43,
+        "bottom": 59,
+        "width": 30,
+        "height": 30
+      },
+      "headingRect": {
+        "x": 95,
+        "y": 27.5,
+        "right": 306.90625,
+        "bottom": 41.890625,
+        "width": 211.90625,
+        "height": 14.390625
+      },
+      "backHeadingOverlap": false,
+      "cards": [
+        {
+          "name": "Living in Silico",
+          "selected": "true",
+          "img": {
+            "src": "/media/profile/living-in-silico-logo.png",
+            "alt": "Living in Silico logo",
+            "complete": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "objectFit": "contain",
+            "rect": {
+              "x": 159.734375,
+              "y": 124.890625,
+              "right": 230.25,
+              "bottom": 195.40625,
+              "width": 70.515625,
+              "height": 70.515625
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 153,
+              "y": 118.15625,
+              "right": 237,
+              "bottom": 202.15625,
+              "width": 84,
+              "height": 84
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        },
+        {
+          "name": "Joshua Aryeetey",
+          "selected": "false",
+          "img": {
+            "src": "/media/lobby/profile-portrait-source.jpg",
+            "alt": "Joshua Aryeetey portrait",
+            "complete": true,
+            "naturalWidth": 160,
+            "naturalHeight": 200,
+            "objectFit": "cover",
+            "rect": {
+              "x": 154,
+              "y": 683.15625,
+              "right": 236,
+              "bottom": 785.65625,
+              "width": 82,
+              "height": 102.5
+            },
+            "radius": "50%"
+          },
+          "medallion": {
+            "rect": {
+              "x": 153,
+              "y": 682.15625,
+              "right": 237,
+              "bottom": 766.15625,
+              "width": 84,
+              "height": 84
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        },
+        {
+          "name": "Stush Patties",
+          "selected": "false",
+          "img": {
+            "src": "/media/profile/stush-patties-logo.png",
+            "alt": "Stush Patties logo",
+            "complete": true,
+            "naturalWidth": 96,
+            "naturalHeight": 96,
+            "objectFit": "contain",
+            "rect": {
+              "x": 159.734375,
+              "y": 1250.890625,
+              "right": 230.25,
+              "bottom": 1321.40625,
+              "width": 70.515625,
+              "height": 70.515625
+            },
+            "radius": "0px"
+          },
+          "medallion": {
+            "rect": {
+              "x": 153,
+              "y": 1244.15625,
+              "right": 237,
+              "bottom": 1328.15625,
+              "width": 84,
+              "height": 84
+            },
+            "radius": "50%",
+            "overflow": "hidden"
+          }
+        }
+      ],
+      "images": [
+        {
+          "src": "/media/profile/open-portfolio-j-small-54.svg",
+          "complete": true,
+          "naturalWidth": 32
+        },
+        {
+          "src": "/media/profile/topbar-account-ring.png",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/profile/topbar-avatar.png",
+          "complete": true,
+          "naturalWidth": 64
+        },
+        {
+          "src": "/media/profile/experience-signal.svg",
+          "complete": true,
+          "naturalWidth": 120
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/lobby/profile-portrait-source.jpg",
+          "complete": true,
+          "naturalWidth": 160
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/banner-art.svg",
+          "complete": true,
+          "naturalWidth": 246
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/lobby/role-software.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-data.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-ai.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/role-research.svg",
+          "complete": true,
+          "naturalWidth": 34
+        },
+        {
+          "src": "/media/lobby/collapsible-tray.png",
+          "complete": true,
+          "naturalWidth": 412
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/open-portfolio-j-small-48.svg",
+          "complete": true,
+          "naturalWidth": 29
+        },
+        {
+          "src": "/media/lobby/activity-add.svg",
+          "complete": true,
+          "naturalWidth": 13
+        },
+        {
+          "src": "/media/lobby/activity-list.svg",
+          "complete": true,
+          "naturalWidth": 8
+        },
+        {
+          "src": "/media/lobby/activity-collapse.svg",
+          "complete": true,
+          "naturalWidth": 7
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/food-tracker-mark.svg",
+          "complete": true,
+          "naturalWidth": 40
+        },
+        {
+          "src": "/media/profile/choveigo-mark.svg",
+          "complete": true,
+          "naturalWidth": 150
+        },
+        {
+          "src": "/media/profile/profile-crest-emblem.png",
+          "complete": true,
+          "naturalWidth": 310
+        },
+        {
+          "src": "/media/profile/fraymakers-logo.png",
+          "complete": true,
+          "naturalWidth": 4241
+        },
+        {
+          "src": "/media/profile/living-in-silico-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        },
+        {
+          "src": "/media/profile/stush-patties-logo.png",
+          "complete": true,
+          "naturalWidth": 96
+        }
+      ]
+    }
+  },
+  "errors": []
+}

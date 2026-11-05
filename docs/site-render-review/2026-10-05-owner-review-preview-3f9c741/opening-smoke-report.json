@@ -1,0 +1,9 @@
+{
+  "preview": "https://c531bea7.joshuaik2.pages.dev",
+  "browser": "Chrome via Playwright",
+  "motionPreference": "no-preference",
+  "checks": [
+    { "viewport": "1920x1080", "status": 200, "openingVisible": true, "archiveMarkLoaded": true, "skipVisible": true, "action": "natural handoff to /home", "elapsedMsIncludingNavigation": 2501, "horizontalOverflow": false, "runtimeErrors": 0 },
+    { "viewport": "390x844", "status": 200, "openingVisible": true, "archiveMarkLoaded": true, "skipVisible": true, "action": "Skip to /home", "elapsedMsIncludingNavigation": 888, "horizontalOverflow": false, "runtimeErrors": 0 }
+  ]
+}

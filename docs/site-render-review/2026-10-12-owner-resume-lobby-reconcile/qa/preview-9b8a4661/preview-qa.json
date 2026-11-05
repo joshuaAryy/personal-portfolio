@@ -1,0 +1,284 @@
+{
+  "preview": "https://9b8a4661.joshuaik2.pages.dev",
+  "browser": "installed Chrome",
+  "pages": [
+    {
+      "route": "/home",
+      "size": "1280x720",
+      "file": "home-1280x720.png",
+      "viewport": [
+        1280,
+        720
+      ],
+      "document": {
+        "width": 1280,
+        "height": 720
+      },
+      "main": {
+        "width": 1060,
+        "scrollWidth": 1060,
+        "height": 638,
+        "scrollHeight": 638
+      },
+      "images": []
+    },
+    {
+      "route": "/experience",
+      "size": "1280x720",
+      "file": "experience-1280x720.png",
+      "viewport": [
+        1280,
+        720
+      ],
+      "document": {
+        "width": 1280,
+        "height": 720
+      },
+      "main": {
+        "width": 1060,
+        "scrollWidth": 1060,
+        "height": 638,
+        "scrollHeight": 880
+      },
+      "images": []
+    },
+    {
+      "route": "/home",
+      "size": "390x844",
+      "file": "home-390x844.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "document": {
+        "width": 390,
+        "height": 955
+      },
+      "main": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 824,
+        "scrollHeight": 824
+      },
+      "images": []
+    },
+    {
+      "route": "/experience",
+      "size": "390x844",
+      "file": "experience-390x844.png",
+      "viewport": [
+        390,
+        844
+      ],
+      "document": {
+        "width": 390,
+        "height": 2362
+      },
+      "main": {
+        "width": 390,
+        "scrollWidth": 390,
+        "height": 2231,
+        "scrollHeight": 2231
+      },
+      "images": []
+    },
+    {
+      "label": "direct-short-1280x720",
+      "file": "resume-direct-short-1280x720.png",
+      "url": "/resume",
+      "viewport": [
+        1280,
+        720
+      ],
+      "main": {
+        "height": 638,
+        "scrollHeight": 638
+      },
+      "composition": {
+        "x": 243,
+        "y": 106,
+        "w": 574,
+        "h": 574,
+        "bottom": 680,
+        "scrollHeight": 581,
+        "clientHeight": 574
+      },
+      "close": {
+        "x": 464,
+        "y": 662.8,
+        "w": 132,
+        "h": 24.1,
+        "bottom": 686.9,
+        "scrollHeight": 22,
+        "clientHeight": 22
+      },
+      "action": {
+        "x": 415,
+        "y": 591,
+        "w": 230,
+        "h": 75.9,
+        "bottom": 667,
+        "scrollHeight": 76,
+        "clientHeight": 76
+      },
+      "fits": true,
+      "images": [],
+      "viewResume": "/resume/viewer"
+    },
+    {
+      "label": "direct-wide-1440x900",
+      "file": "resume-direct-wide-1440x900.png",
+      "url": "/resume",
+      "viewport": [
+        1440,
+        900
+      ],
+      "main": {
+        "height": 817,
+        "scrollHeight": 817
+      },
+      "composition": {
+        "x": 300,
+        "y": 170.1,
+        "w": 600,
+        "h": 600,
+        "bottom": 770.1,
+        "scrollHeight": 607,
+        "clientHeight": 600
+      },
+      "close": {
+        "x": 534,
+        "y": 752.1,
+        "w": 132,
+        "h": 25.2,
+        "bottom": 777.3,
+        "scrollHeight": 23,
+        "clientHeight": 23
+      },
+      "action": {
+        "x": 485,
+        "y": 677.1,
+        "w": 230,
+        "h": 75.9,
+        "bottom": 753,
+        "scrollHeight": 76,
+        "clientHeight": 76
+      },
+      "fits": true,
+      "images": []
+    },
+    {
+      "label": "direct-narrow-390x844",
+      "file": "resume-direct-narrow-390x844.png",
+      "url": "/resume",
+      "viewport": [
+        390,
+        844
+      ],
+      "main": {
+        "height": 774,
+        "scrollHeight": 774
+      },
+      "composition": {
+        "x": 16,
+        "y": 278,
+        "w": 358,
+        "h": 358,
+        "bottom": 636,
+        "scrollHeight": 369,
+        "clientHeight": 358
+      },
+      "close": {
+        "x": 150.4,
+        "y": 625.3,
+        "w": 89.1,
+        "h": 22,
+        "bottom": 647.3,
+        "scrollHeight": 20,
+        "clientHeight": 20
+      },
+      "action": {
+        "x": 117.3,
+        "y": 580.5,
+        "w": 155.4,
+        "h": 51.3,
+        "bottom": 631.8,
+        "scrollHeight": 51,
+        "clientHeight": 51
+      },
+      "fits": true,
+      "images": []
+    },
+    {
+      "label": "reduced-motion-1280x720",
+      "fill": "306deg",
+      "animation": "none",
+      "opacity": "0.86"
+    },
+    {
+      "label": "modal-short-1280x720",
+      "overlay": {
+        "path": "/resume",
+        "dialog": {
+          "x": 0,
+          "y": 0,
+          "w": 1280,
+          "h": 720,
+          "bottom": 720
+        },
+        "composition": {
+          "x": 243,
+          "y": 46,
+          "w": 574,
+          "h": 574,
+          "bottom": 620
+        },
+        "close": {
+          "x": 464,
+          "y": 602.8,
+          "w": 132,
+          "h": 24.1,
+          "bottom": 626.9
+        },
+        "title": {
+          "x": 380,
+          "y": 465,
+          "w": 300,
+          "h": 32.7,
+          "bottom": 497.7
+        },
+        "action": {
+          "x": 415,
+          "y": 531,
+          "w": 230,
+          "h": 75.9,
+          "bottom": 607
+        },
+        "fill": "306deg"
+      },
+      "escape": {
+        "path": "/home",
+        "visibleDialogs": 0,
+        "focusRestored": true
+      },
+      "viewer": {
+        "path": "/resume/viewer",
+        "scrollWidth": 1280,
+        "viewport": 1280,
+        "actions": [
+          "DOWNLOAD PDF",
+          "OPEN FULLSCREEN\n↗\n(OPENS IN A NEW TAB)"
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "failed": [
+    {
+      "label": "direct-short-1280x720",
+      "url": "https://9b8a4661.joshuaik2.pages.dev/resume/Joshua_Aryeetey_General_Resume_v13.pdf",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "bad": []
+}

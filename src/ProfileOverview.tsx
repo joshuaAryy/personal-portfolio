@@ -1,0 +1,622 @@
+import { useLayoutEffect, useRef, useState, type ReactNode, type RefObject } from "react";
+import { Link } from "react-router-dom";
+import { experienceIdentities, projectIdentities, type Project } from "./data";
+import ProfileNav from "./ProfileNav";
+import "./profile-overview.css";
+
+type ProfileOverviewProps = {
+  projects: Project[];
+  projectCasePaths: Record<string, string>;
+};
+
+const projectOrder = ["food-tracker", "choveigo", "crest", "fraymakers"];
+
+const projectDetails: Record<string, ReactNode> = {
+  "food-tracker": <>Food tracking</>,
+  choveigo: <>Resume tailoring</>,
+  crest: (
+    <>
+      MPC Hacks 2026 · 3rd Place
+      <br />
+      Brim Financial Challenge
+    </>
+  ),
+  fraymakers: <>Tournament automation</>,
+};
+
+const projectMarks: Record<string, { src: string; alt: string; wordmark?: boolean } | undefined> = {
+  "food-tracker": {
+    src: projectIdentities["food-tracker"].mark,
+    alt: "Food Tracker project mark",
+  },
+  choveigo: {
+    src: projectIdentities.choveigo.mark,
+    alt: "Cho’Veigo match-path project mark",
+  },
+  crest: {
+    src: projectIdentities.crest.mark,
+    alt: "Crest project mark",
+  },
+  fraymakers: {
+    src: projectIdentities.fraymakers.mark,
+    alt: "Fraymakers official wordmark",
+    wordmark: true,
+  },
+};
+
+const signals = [
+  { id: "projects", label: "PROJECTS", value: "4", src: "/media/profile/project-signal.svg" },
+  { id: "experience", label: "EXPERIENCE", value: "2", src: "/media/profile/experience-signal.svg" },
+  { id: "hackathon", label: "HACKATHON", value: "1", src: "/media/profile/hackathon-signal.svg" },
+  { id: "academics", label: "ACADEMICS", value: "2028", src: "/media/profile/academics-signal.svg" },
+] as const;
+
+type ProfileSignalId = (typeof signals)[number]["id"];
+
+const experienceSignals = [
+  {
+    name: "Living in Silico",
+    role: "AI/ML Research Intern",
+    focus: "Generative Molecular Modeling",
+    mark: experienceIdentities["living-in-silico"].mark,
+    path: "/experience/living-in-silico",
+  },
+  {
+    name: "Stush Patties",
+    role: "Software Engineering Intern",
+    focus: "Data Pipelines & Automation",
+    mark: experienceIdentities["stush-patties"].mark,
+    path: "/experience/stush-patties",
+  },
+] as const;
+
+const selectedCoursework = [
+  "Algorithms & Data Structures",
+  "Software Systems",
+  "Database Systems I",
+  "Microprocessor Systems",
+] as const;
+
+function SourceMark() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      aria-hidden="true"
+      focusable="false"
+      className="profile-project__source-mark"
+    >
+      <path
+        fill="currentColor"
+        d="M8 .7a7.3 7.3 0 0 0-2.31 14.23c.37.07.5-.16.5-.36v-1.4c-2.04.44-2.47-.86-2.47-.86-.33-.85-.81-1.08-.81-1.08-.67-.46.05-.45.05-.45.74.05 1.13.76 1.13.76.66 1.13 1.73.8 2.15.61.07-.48.26-.81.47-1-1.63-.19-3.34-.82-3.34-3.63 0-.8.29-1.46.76-1.97-.08-.19-.33-.93.07-1.95 0 0 .62-.2 2.01.75A7 7 0 0 1 8 4.1c.63 0 1.26.09 1.85.25 1.39-.95 2.01-.75 2.01-.75.4 1.02.15 1.76.08 1.95.47.51.75 1.17.75 1.97 0 2.82-1.71 3.44-3.35 3.62.27.23.5.67.5 1.35v2.05c0 .2.13.43.5.36A7.3 7.3 0 0 0 8 .7Z"
+      />
+    </svg>
+  );
+}
+
+function TraitMedallion({
+  label,
+  parts,
+  frameSrc = "/media/profile/portrait-medallion.png",
+}: {
+  label: string;
+  parts: { src: string; className: string }[];
+  frameSrc?: string;
+}) {
+  return (
+    <li className="profile-trait">
+      <span className="profile-trait__medallion" aria-hidden="true">
+        <img
+          className="profile-trait__frame"
+          src={frameSrc}
+          alt=""
+        />
+        {parts.map((part) => (
+          <img
+            className={`profile-trait__vector ${part.className}`}
+            src={part.src}
+            alt=""
+            key={part.src}
+          />
+        ))}
+      </span>
+      <span className="profile-trait__label">{label}</span>
+    </li>
+  );
+}
+
+const baseTraitParts = [
+  {
+    src: "/media/profile/trait-creative-a.svg",
+    className: "profile-trait__base-ring",
+  },
+  {
+    src: "/media/profile/trait-creative-b.svg",
+    className: "profile-trait__base-detail",
+  },
+];
+
+const traitParts = {
+  creative: [
+    ...baseTraitParts,
+    {
+      src: "/media/profile/trait-creative-c.svg",
+      className: "profile-trait__creative-c",
+    },
+    {
+      src: "/media/profile/trait-creative-d.svg",
+      className: "profile-trait__creative-d",
+    },
+    {
+      src: "/media/profile/trait-proactive-a.svg",
+      className: "profile-trait__creative-e",
+    },
+  ],
+  proactive: [
+    ...baseTraitParts,
+    {
+      src: "/media/profile/trait-proactive-b.svg",
+      className: "profile-trait__proactive-c",
+    },
+    {
+      src: "/media/profile/trait-proactive-c.svg",
+      className: "profile-trait__proactive-d",
+    },
+    {
+      src: "/media/profile/trait-proactive-d.svg",
+      className: "profile-trait__proactive-e",
+    },
+    {
+      src: "/media/profile/trait-execution-a.svg",
+      className: "profile-trait__proactive-f",
+    },
+  ],
+  execution: [
+    ...baseTraitParts,
+    {
+      src: "/media/profile/trait-execution-b.svg",
+      className: "profile-trait__execution-c",
+    },
+    {
+      src: "/media/profile/trait-execution-c.svg",
+      className: "profile-trait__execution-d",
+    },
+  ],
+};
+
+const journeyBaseTraitParts = [
+  {
+    src: "/media/profile/journey-trait-shared-shell.svg",
+    className: "journey-trait__outer",
+  },
+  {
+    src: "/media/profile/trait-creative-b.svg",
+    className: "journey-trait__inner",
+  },
+];
+
+const journeyTraitParts = {
+  creative: [
+    {
+      src: "/media/profile/journey-trait-creative-shell.svg",
+      className: "journey-trait__outer",
+    },
+    journeyBaseTraitParts[1],
+    {
+      src: "/media/profile/trait-creative-c.svg",
+      className: "journey-trait__creative-bulb",
+    },
+    {
+      src: "/media/profile/trait-creative-d.svg",
+      className: "journey-trait__creative-base",
+    },
+    {
+      src: "/media/profile/trait-proactive-a.svg",
+      className: "journey-trait__creative-rays",
+    },
+  ],
+  proactive: [
+    ...journeyBaseTraitParts,
+    {
+      src: "/media/profile/trait-proactive-b.svg",
+      className: "journey-trait__proactive-compass",
+    },
+    {
+      src: "/media/profile/trait-proactive-d.svg",
+      className: "journey-trait__proactive-needle",
+    },
+    {
+      src: "/media/profile/trait-proactive-c.svg",
+      className: "journey-trait__proactive-center",
+    },
+    {
+      src: "/media/profile/trait-execution-a.svg",
+      className: "journey-trait__proactive-orbit",
+    },
+  ],
+  execution: [
+    ...journeyBaseTraitParts,
+    {
+      src: "/media/profile/trait-execution-b.svg",
+      className: "journey-trait__execution-mark",
+    },
+    {
+      src: "/media/profile/trait-execution-c.svg",
+      className: "journey-trait__execution-check",
+    },
+  ],
+};
+
+export function JourneyTraitMedallions() {
+  const frameSrc = "/media/profile/portrait-medallion.png";
+  return (
+    <ul className="journey-identity__traits" aria-label="Profile traits">
+      <TraitMedallion label="CREATIVE" parts={journeyTraitParts.creative} frameSrc={frameSrc} />
+      <TraitMedallion label="PROACTIVE" parts={journeyTraitParts.proactive} frameSrc={frameSrc} />
+      <TraitMedallion label="EXECUTION" parts={journeyTraitParts.execution} frameSrc={frameSrc} />
+    </ul>
+  );
+}
+
+function ProjectSignalPanel({
+  projects,
+  projectCasePaths,
+}: {
+  projects: Project[];
+  projectCasePaths: Record<string, string>;
+}) {
+  const featuredProjects = projectOrder
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter((project): project is Project => Boolean(project));
+
+  return (
+    <div className="profile-project-grid" role="list">
+      {featuredProjects.map((project) => {
+        const mark = projectMarks[project.slug];
+        const path = projectCasePaths[project.slug];
+        const content = (
+          <>
+            <span className="profile-project__identity">
+              {mark && <img className="profile-project__mark" src={mark.src} alt={mark.alt} />}
+              {!mark?.wordmark && <span>{project.name}</span>}
+            </span>
+            <span className="profile-project__detail">
+              {projectDetails[project.slug] ?? project.detail}
+            </span>
+          </>
+        );
+
+        return (
+          <article className={`profile-project profile-project--${project.slug}`} key={project.slug} role="listitem">
+            {path ? (
+              <Link className="profile-project__open" to={path} aria-label={`Open ${project.name} case study`}>
+                {content}
+              </Link>
+            ) : (
+              <div className="profile-project__open">{content}</div>
+            )}
+            {project.source && (
+              <a
+                className="profile-project__source"
+                href={project.source}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Open ${project.name} source repository`}
+                title={`${project.name} source repository`}
+              >
+                <SourceMark />
+              </a>
+            )}
+          </article>
+        );
+      })}
+    </div>
+  );
+}
+
+function ProfileSignalPanel({
+  signal,
+  projects,
+  projectCasePaths,
+  panelRef,
+}: {
+  signal: ProfileSignalId | null;
+  projects: Project[];
+  projectCasePaths: Record<string, string>;
+  panelRef: RefObject<HTMLElement | null>;
+}) {
+  const title = signal?.toUpperCase();
+  return (
+    <section ref={panelRef} id="profile-signal-preview-panel" className={`profile-project-panel${signal ? ` profile-project-panel--${signal}` : " profile-project-panel--neutral"}`} aria-label={title ? `${title} details` : "Profile signal details"} hidden={!signal}>
+      <img className="profile-project-panel__enclosure" src="/media/profile/profile-enclosure.svg" alt="" aria-hidden="true" />
+      <img className="profile-project-panel__enclosure profile-project-panel__enclosure--mobile" src="/media/profile/profile-enclosure-mobile.svg" alt="" aria-hidden="true" />
+      {title && <h2 id="profile-panel-heading">{title}</h2>}
+      <img className="profile-project-panel__divider" src="/media/profile/profile-title-divider.png" alt="" aria-hidden="true" />
+
+      {signal === "projects" && (
+        <ProjectSignalPanel projects={projects} projectCasePaths={projectCasePaths} />
+      )}
+
+      {signal === "experience" && (
+        <div className="profile-experience-grid" role="group" aria-label="Two professional experiences">
+          {experienceSignals.map((item) => (
+            <Link className="profile-experience" to={item.path} key={item.name}>
+              <img className="profile-experience__mark" src={item.mark} alt="" />
+              <span className="profile-experience__copy">
+                <strong className="profile-experience__name">{item.name}</strong>
+                <span className="profile-experience__role">{item.role}</span>
+                <span className="profile-experience__focus">{item.focus}</span>
+              </span>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {signal === "hackathon" && (
+        <div className="profile-hackathon-feature">
+          <div className="profile-hackathon-feature__result">
+            <strong className="profile-hackathon-feature__placement">3RD PLACE</strong>
+            <span className="profile-hackathon-feature__event">MPC HACKS 2026</span>
+            <span className="profile-hackathon-feature__challenge">BRIM FINANCIAL CHALLENGE</span>
+          </div>
+          <div className="profile-hackathon-feature__project">
+            <img src="/media/profile/profile-crest-emblem.png" alt="" />
+            <Link to={projectCasePaths.crest ?? "/projects/crest"}>Crest</Link>
+            <span className="profile-hackathon-feature__year">MPC HACKS 2026</span>
+          </div>
+        </div>
+      )}
+
+      {signal === "academics" && (
+        <div className="profile-academics-feature">
+          <div>
+            <span className="profile-academics-feature__eyebrow">EDUCATION</span>
+            <strong className="profile-academics-feature__program">Computer Engineering</strong>
+            <span className="profile-academics-feature__specialization">Software Specialization</span>
+            <span className="profile-academics-feature__school">Toronto Metropolitan University</span>
+            <div className="profile-academics-feature__graduation">
+              <strong className="profile-academics-feature__year">2028</strong>
+              <span className="profile-academics-feature__graduation-label">EXPECTED GRADUATION</span>
+            </div>
+          </div>
+          <div>
+            <span className="profile-academics-feature__eyebrow">SELECTED COURSEWORK</span>
+            <ul className="profile-academics-feature__course-list">
+              {selectedCoursework.map((course) => <li key={course}>{course}</li>)}
+            </ul>
+          </div>
+        </div>
+      )}
+    </section>
+  );
+}
+
+export default function ProfileOverview({
+  projects,
+  projectCasePaths,
+}: ProfileOverviewProps) {
+  const [hoveredSignal, setHoveredSignal] = useState<ProfileSignalId | null>(null);
+  const [focusedSignal, setFocusedSignal] = useState<ProfileSignalId | null>(null);
+  const displayedSignal = hoveredSignal ?? focusedSignal;
+  const overviewRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLElement>(null);
+
+  useLayoutEffect(() => {
+    const overview = overviewRef.current;
+    const content = contentRef.current;
+    const panel = panelRef.current;
+    if (!overview || !content || !panel) return;
+    const signalGrid = overview.querySelector<HTMLElement>(".profile-signal-grid");
+
+    const clearPosition = () => {
+      panel.style.removeProperty("top");
+      panel.style.removeProperty("left");
+      panel.style.removeProperty("width");
+      panel.style.removeProperty("position");
+      panel.style.removeProperty("--profile-panel-attachment-x");
+      overview.style.removeProperty("height");
+      signalGrid?.style.removeProperty("--profile-mobile-panel-gap");
+    };
+
+    if (!displayedSignal) {
+      clearPosition();
+      return;
+    }
+
+    // On narrow screens the panel is normally part of the stacked document
+    // flow. Pull it out before measuring so it can sit beside the signal that
+    // opened it instead of pushing the trigger hundreds of pixels away.
+    panel.style.position = "absolute";
+    panel.style.top = "0px";
+    panel.style.left = "0px";
+
+    const positionPanel = () => {
+      const signal = overview.querySelector<HTMLElement>(`[data-profile-signal="${displayedSignal}"]`);
+      if (!signal) return;
+
+      const overviewRect = overview.getBoundingClientRect();
+      const contentRect = content.getBoundingClientRect();
+      const signalRect = signal.getBoundingClientRect();
+      const visibleParts = Array.from(signal.querySelectorAll<HTMLElement>(
+        ".profile-signal__emblem, .profile-signal__label, .profile-signal__value",
+      )).map((part) => part.getBoundingClientRect()).filter((rect) => rect.width > 0 && rect.height > 0);
+      const visibleContentTop = visibleParts.length
+        ? Math.min(...visibleParts.map((rect) => rect.top))
+        : signalRect.top;
+      const visibleContentBottom = visibleParts.length
+        ? Math.max(...visibleParts.map((rect) => rect.bottom))
+        : signalRect.bottom;
+      const overviewWidth = overview.offsetWidth;
+      const scale = overviewWidth > 0 ? overviewRect.width / overviewWidth : 0;
+      if (!scale) return;
+
+      const railRect = document.querySelector<HTMLElement>(".rail")?.getBoundingClientRect();
+      const hasVisibleRail = Boolean(railRect && railRect.width > 0 && railRect.height > 0);
+      const leftEdge = Math.max(overviewRect.left, contentRect.left + 8);
+      const rightEdge = Math.min(
+        overviewRect.right,
+        contentRect.right,
+        hasVisibleRail ? railRect!.left - 12 : window.innerWidth - 12,
+        window.innerWidth - 12,
+      );
+      const availableWidth = Math.max(0, (rightEdge - leftEdge) / scale);
+      const panelWidth = Math.min(panel.offsetWidth || overviewWidth, availableWidth);
+      if (!panelWidth) return;
+
+      panel.style.position = "absolute";
+      panel.style.width = `${panelWidth}px`;
+      const leftMin = (leftEdge - overviewRect.left) / scale;
+      const leftMax = Math.max(leftMin, (rightEdge - overviewRect.left) / scale - panelWidth);
+      const signalCenter = (signalRect.left + signalRect.width / 2 - overviewRect.left) / scale;
+      const left = Math.max(leftMin, Math.min(leftMax, signalCenter - panelWidth / 2));
+      panel.style.left = `${left}px`;
+      panel.style.setProperty(
+        "--profile-panel-attachment-x",
+        `${Math.max(4, Math.min(96, ((signalCenter - left) / panelWidth) * 100))}%`,
+      );
+
+      const navBottom = content.querySelector<HTMLElement>(".profile-nav")?.getBoundingClientRect().bottom ?? contentRect.top;
+      const panelHeight = (panel.offsetHeight || 330) * scale;
+      if (window.innerWidth <= 900) {
+        // Keep the panel close to the visible icon/label/count. The signal
+        // cell is taller than its actual content, so anchoring to the cell
+        // leaves an unhelpful visual gap on narrow screens.
+        const below = visibleContentBottom + 12;
+        const panelTop = (below - overviewRect.top) / scale;
+        panel.style.top = `${panelTop}px`;
+
+        const signalCells = signalGrid
+          ? Array.from(signalGrid.querySelectorAll<HTMLElement>("[data-profile-signal]"))
+          : [];
+        const selectedIndex = signalCells.indexOf(signal);
+        let mobilePanelGap = 0;
+        if (selectedIndex >= 0 && selectedIndex < 2 && signalGrid && signalCells[2]) {
+          const lowerRowTop = signalCells[2].getBoundingClientRect().top;
+          mobilePanelGap = Math.max(0, below + panelHeight + 12 - lowerRowTop) / scale;
+        }
+        signalGrid?.style.setProperty("--profile-mobile-panel-gap", `${mobilePanelGap}px`);
+
+        const panelBottom = below + panelHeight;
+        const gridBottom = signalGrid?.getBoundingClientRect().bottom ?? overviewRect.bottom;
+        const contentBottom = Math.max(panelBottom + 12, gridBottom);
+        overview.style.height = `${Math.max(overview.offsetHeight, (contentBottom - overviewRect.top) / scale)}px`;
+        window.requestAnimationFrame(() => window.requestAnimationFrame(() => {
+          const panelRect = panel.getBoundingClientRect();
+          if (panelRect.bottom > window.innerHeight - 12) window.scrollBy(0, panelRect.bottom - (window.innerHeight - 12));
+          else if (panelRect.top < 12) window.scrollBy(0, panelRect.top - 12);
+        }));
+        return;
+      }
+      const minTop = Math.max(contentRect.top, navBottom + 12, 112);
+      const maxTop = Math.max(minTop, window.innerHeight - panelHeight - 12);
+      const above = visibleContentTop - panelHeight - 12;
+      const below = visibleContentBottom + 12;
+      const top = above >= minTop && above <= maxTop
+        ? above
+        : below + panelHeight <= window.innerHeight - 12
+          ? below
+          : Math.max(minTop, Math.min(maxTop, above));
+      panel.style.top = `${(top - overviewRect.top) / scale}px`;
+    };
+
+    positionPanel();
+    window.addEventListener("resize", positionPanel);
+    window.addEventListener("scroll", positionPanel, true);
+    return () => {
+      window.removeEventListener("resize", positionPanel);
+      window.removeEventListener("scroll", positionPanel, true);
+      clearPosition();
+    };
+  }, [displayedSignal]);
+
+  return (
+    <div className="profile-layout">
+      <aside className="identity-panel" aria-label="Joshua Aryeetey profile">
+        <div className="identity-panel__readability" aria-hidden="true" />
+        <img
+          className="identity-panel__banner"
+          src="/media/profile/trials-of-twilight-banner.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <div className="identity-panel__portrait">
+          <img
+            className="identity-portrait"
+            src="/media/profile/owner-portrait.png"
+            alt="Joshua Aryeetey"
+            width={156}
+            height={156}
+          />
+          <img
+            className="identity-panel__portrait-frame"
+            src="/media/profile/portrait-medallion.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+        <h1>JOSHUA ARYEETEY</h1>
+        <div className="identity-panel__discipline">
+          <p>COMPUTER ENGINEERING</p>
+          <p>SOFTWARE · AI / ML</p>
+        </div>
+        <div className="identity-panel__degree" role="img" aria-label="Computer Engineering degree">
+          <img src="/media/profile/portrait-medallion.png" alt="" aria-hidden="true" />
+          <span aria-hidden="true">CE</span>
+        </div>
+        <div className="identity-panel__divider" aria-hidden="true" />
+        <ul className="identity-traits" aria-label="Profile traits">
+          <TraitMedallion label="CREATIVE" parts={traitParts.creative} />
+          <TraitMedallion label="PROACTIVE" parts={traitParts.proactive} />
+          <TraitMedallion label="EXECUTION" parts={traitParts.execution} />
+        </ul>
+      </aside>
+
+      <div className="profile-content" ref={contentRef}>
+        <ProfileNav />
+        <div
+          ref={overviewRef}
+          className="profile-overview"
+          onMouseLeave={() => setHoveredSignal(null)}
+          onBlurCapture={(event) => {
+            const next = event.relatedTarget;
+            if (!(next instanceof Node) || !event.currentTarget.contains(next)) setFocusedSignal(null);
+          }}
+        >
+          <ProfileSignalPanel
+            panelRef={panelRef}
+            signal={displayedSignal}
+            projects={projects}
+            projectCasePaths={projectCasePaths}
+          />
+
+          <div className="profile-signal-grid" role="group" aria-label="Profile summary details">
+            {signals.map((signal) => (
+              <div
+                className={`profile-signal${
+                  hoveredSignal === signal.id || focusedSignal === signal.id
+                    ? " profile-signal--preview"
+                    : ""
+                }`}
+                role="group"
+                tabIndex={0}
+                key={signal.id}
+                data-profile-signal={signal.id}
+                aria-controls="profile-signal-preview-panel"
+                aria-label={`${signal.label}, ${signal.value}. Focus to preview ${signal.label.toLowerCase()} details.`}
+                onMouseEnter={() => setHoveredSignal(signal.id)}
+                onFocus={() => {
+                  setFocusedSignal(signal.id);
+                  setHoveredSignal(null);
+                }}
+              >
+                <img className="profile-signal__emblem" src={signal.src} alt="" />
+                <span className="profile-signal__label">{signal.label}</span>
+                <span className="profile-signal__value">{signal.value}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

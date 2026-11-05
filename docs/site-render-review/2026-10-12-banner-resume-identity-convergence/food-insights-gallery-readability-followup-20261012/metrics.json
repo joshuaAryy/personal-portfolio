@@ -1,0 +1,230 @@
+{
+  "route": "http://127.0.0.1:5185/projects/food-tracker",
+  "chrome": "Installed Google Chrome",
+  "results": {
+    "desktop": {
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "documentWidth": 1440,
+      "errors": [],
+      "failed": [],
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "card": [
+            481,
+            691
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "displayed": [
+                472,
+                258
+              ],
+              "objectFit": "contain",
+              "alt": "Authentic Food Tracker app capture crop showing the 30-day nutrient balance graphic with protein, carbohydrate, and fat labels. Values are sample data, not user outcomes."
+            },
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "displayed": [
+                472,
+                314
+              ],
+              "objectFit": "contain",
+              "alt": "Authentic Food Tracker app capture crop showing daily macro comparison bars by weekday, with the gram scale and labels. Values are sample data, not user outcomes."
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "card": [
+            481,
+            691
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "displayed": [
+                472,
+                613
+              ],
+              "objectFit": "contain",
+              "alt": "Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "card": [
+            481,
+            529
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-chart-focus.png",
+              "natural": [
+                330,
+                316
+              ],
+              "displayed": [
+                472,
+                452
+              ],
+              "objectFit": "contain",
+              "alt": "Figma analytics design study, not a verified runtime capture, showing a fiber trend chart with daily totals and a target band."
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "card": [
+            481,
+            529
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "displayed": [
+                296,
+                218
+              ],
+              "objectFit": "contain",
+              "alt": "Figma analytics design showing a daily completeness grid distinguishing complete, partial, and unlogged days."
+            }
+          ]
+        }
+      ]
+    },
+    "narrow": {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "documentWidth": 390,
+      "errors": [],
+      "failed": [],
+      "cards": [
+        {
+          "title": "Macro Composition",
+          "card": [
+            332,
+            492
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/macro-composition-balance-focus.png",
+              "natural": [
+                322,
+                176
+              ],
+              "displayed": [
+                342,
+                187
+              ],
+              "objectFit": "contain",
+              "alt": "Authentic Food Tracker app capture crop showing the 30-day nutrient balance graphic with protein, carbohydrate, and fat labels. Values are sample data, not user outcomes."
+            },
+            {
+              "src": "/media/case-studies/food-tracker/phase-24/daily-macro-mix-focus.png",
+              "natural": [
+                340,
+                226
+              ],
+              "displayed": [
+                342,
+                227
+              ],
+              "objectFit": "contain",
+              "alt": "Authentic Food Tracker app capture crop showing daily macro comparison bars by weekday, with the gram scale and labels. Values are sample data, not user outcomes."
+            }
+          ]
+        },
+        {
+          "title": "Calorie forecast",
+          "card": [
+            332,
+            530
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/calorie-forecast-chart-focus.png",
+              "natural": [
+                254,
+                330
+              ],
+              "displayed": [
+                342,
+                444
+              ],
+              "objectFit": "contain",
+              "alt": "Owner-provided Food Tracker calorie forecast design reference, not a runtime capture, showing recorded history through Today, a dotted seven-day forecast, and an uncertainty band."
+            }
+          ]
+        },
+        {
+          "title": "Fiber trend",
+          "card": [
+            332,
+            397
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/fiber-trend-chart-focus.png",
+              "natural": [
+                330,
+                316
+              ],
+              "displayed": [
+                342,
+                327
+              ],
+              "objectFit": "contain",
+              "alt": "Figma analytics design study, not a verified runtime capture, showing a fiber trend chart with daily totals and a target band."
+            }
+          ]
+        },
+        {
+          "title": "Daily completeness",
+          "card": [
+            332,
+            313
+          ],
+          "images": [
+            {
+              "src": "/media/case-studies/food-tracker/insights/daily-completeness-design-study.png",
+              "natural": [
+                350,
+                258
+              ],
+              "displayed": [
+                330,
+                243
+              ],
+              "objectFit": "contain",
+              "alt": "Figma analytics design showing a daily completeness grid distinguishing complete, partial, and unlogged days."
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

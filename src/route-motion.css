@@ -1,0 +1,249 @@
+/* Shared route-entry clock. Each semantic group is scheduled from the keyed main mount. */
+.main {
+  --route-entry-distance: 16px;
+  --route-entry-distance-up: -16px;
+  --route-entry-detail-distance: 8px;
+  --route-entry-detail-distance-up: -8px;
+  --route-entry-identity-delay: 100ms;
+  --route-entry-headline-delay: 200ms;
+  --route-entry-summary-delay: 280ms;
+  --route-entry-evidence-delay: 380ms;
+  --route-entry-ease: cubic-bezier(.2, .72, .24, 1);
+}
+
+@keyframes route-entry-frame {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes route-entry-descend {
+  from { opacity: 0; translate: 0 var(--route-entry-distance-up); }
+  to { opacity: 1; translate: none; }
+}
+
+@keyframes route-entry-rise {
+  from { opacity: 0; translate: 0 var(--route-entry-distance); }
+  to { opacity: 1; translate: none; }
+}
+
+@keyframes route-entry-detail-rise {
+  from { opacity: 0; translate: 0 var(--route-entry-detail-distance); }
+  to { opacity: 1; translate: none; }
+}
+
+@keyframes route-entry-environment {
+  from { opacity: .48; }
+  to { opacity: 1; }
+}
+
+.main [data-route-entry="frame"] {
+  animation: route-entry-frame 420ms ease-out both;
+}
+
+.main [data-route-entry="identity"] {
+  animation: route-entry-rise 520ms var(--route-entry-ease) var(--route-entry-identity-delay) both;
+}
+
+.main [data-route-entry="headline"] {
+  animation: route-entry-descend 520ms var(--route-entry-ease) var(--route-entry-headline-delay) both;
+}
+
+.main [data-route-entry="summary"] {
+  animation: route-entry-detail-rise 540ms ease-out var(--route-entry-summary-delay) both;
+}
+
+.main [data-route-entry="evidence"] {
+  animation: route-entry-rise 580ms var(--route-entry-ease) var(--route-entry-evidence-delay) both;
+}
+
+.main--home-explore {
+  --route-entry-identity-delay: 160ms;
+  --route-entry-details-delay: 280ms;
+}
+
+.main--home-explore [data-route-entry="banner"] {
+  animation: route-entry-descend 500ms var(--route-entry-ease) 60ms both;
+}
+
+.main--home-explore [data-route-entry="identity"] {
+  animation: route-entry-rise 540ms var(--route-entry-ease) var(--route-entry-identity-delay) both;
+}
+
+.main--home-explore [data-route-entry="details"] {
+  animation: route-entry-detail-rise 560ms ease-out var(--route-entry-details-delay) both;
+}
+
+.main--lobby {
+  --route-entry-details-delay: 250ms;
+}
+
+.main--lobby .league-lobby__environment {
+  animation: route-entry-environment 560ms ease-out both;
+}
+
+.main--lobby .league-banner:nth-child(1) { --route-card-stagger: 0ms; }
+.main--lobby .league-banner:nth-child(2) { --route-card-stagger: 45ms; }
+.main--lobby .league-banner:nth-child(3) { --route-card-stagger: 90ms; }
+.main--lobby .league-banner:nth-child(4) { --route-card-stagger: 135ms; }
+.main--lobby .league-banner:nth-child(5) { --route-card-stagger: 180ms; }
+
+.main--lobby [data-route-entry="banner"] {
+  animation: route-entry-descend 520ms var(--route-entry-ease) 60ms both;
+}
+
+.main--lobby .league-banner[data-route-entry="banner"] {
+  animation-delay: calc(60ms + var(--route-card-stagger, 0ms));
+}
+
+.main--lobby .league-banner [data-route-entry="identity"] {
+  animation-delay: calc(160ms + var(--route-card-stagger, 0ms));
+}
+
+.main--lobby [data-route-entry="details"] {
+  animation: route-entry-detail-rise 520ms ease-out var(--route-entry-details-delay) both;
+}
+
+.main--lobby .league-banner [data-route-entry="details"] {
+  animation-delay: calc(250ms + var(--route-card-stagger, 0ms));
+}
+
+/* Existing non-target route treatments stay on the shared entry keyframes. */
+@keyframes client-banner-descend {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes client-mark-settle {
+  from { opacity: 0; transform: translateY(16px); filter: brightness(.76); }
+  72% { opacity: 1; filter: brightness(1.12); }
+  to { opacity: 1; transform: translateY(0); filter: brightness(1); }
+}
+
+@keyframes client-detail-resolve {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes profile-overview-resolve {
+  from { opacity: 0; translate: 0 9px; }
+  to { opacity: 1; translate: none; }
+}
+
+@keyframes client-card-appear {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.main--profile .profile-nav {
+  animation: client-banner-descend 560ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--profile .profile-overview {
+  animation: profile-overview-resolve 640ms ease-out 80ms both;
+}
+
+.main--profile .identity-panel {
+  animation: client-detail-resolve 640ms ease-out 80ms both;
+}
+
+.main--profile .profile-signal-grid {
+  animation: client-detail-resolve 520ms ease-out 190ms both;
+}
+
+.main--journey .journey-identity {
+  animation: client-detail-resolve 620ms ease-out both;
+}
+
+.main--journey .profile-nav {
+  animation: client-detail-resolve 520ms ease-out 130ms both;
+}
+
+.main--detail .resume-found__system,
+.main--detail .resume-found__title,
+.main--detail .resume-found__action,
+.main--detail .resume-found__close {
+  animation: client-detail-resolve 480ms ease-out both;
+}
+
+.main--detail .resume-found__title { animation-delay: 80ms; }
+.main--detail .resume-found__action { animation-delay: 150ms; }
+.main--detail .resume-found__close { animation-delay: 210ms; }
+
+.main--detail .resume-viewer__header,
+.main--education-projects .education-projects__heading,
+.main--personal-highlights .personal-highlights__intro {
+  animation: client-banner-descend 560ms cubic-bezier(.2, .78, .25, 1) both;
+}
+
+.main--demos .demo-stage {
+  animation: client-mark-settle 600ms cubic-bezier(.2, .72, .24, 1) 90ms both;
+}
+
+@media (max-width: 760px) {
+  .main {
+    --route-entry-distance: 8px;
+    --route-entry-distance-up: -8px;
+    --route-entry-detail-distance: 6px;
+    --route-entry-detail-distance-up: -6px;
+  }
+
+  @keyframes client-banner-descend {
+    from { opacity: 0; transform: translateY(-9px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes client-mark-settle {
+    from { opacity: 0; transform: translateY(9px); filter: brightness(.82); }
+    to { opacity: 1; transform: translateY(0); filter: brightness(1); }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .main [data-route-entry] {
+    animation-name: route-entry-reduced !important;
+    animation-duration: 100ms !important;
+    animation-delay: 0ms !important;
+    animation-timing-function: ease-out !important;
+    translate: none !important;
+    filter: none !important;
+  }
+
+  .main--profile .profile-nav,
+  .main--profile .identity-panel,
+  .main--profile .profile-signal-grid,
+  .main--journey .journey-identity,
+  .main--journey .profile-nav,
+  .main--detail .resume-found__system,
+  .main--detail .resume-found__title,
+  .main--detail .resume-found__action,
+  .main--detail .resume-found__close,
+  .main--detail .resume-viewer__header,
+  .main--education-projects .education-projects__heading,
+  .main--personal-highlights .personal-highlights__intro,
+  .main--demos .demo-stage {
+    animation-name: client-reduced-entry;
+    animation-duration: 100ms !important;
+    animation-delay: 0ms !important;
+    animation-timing-function: ease-out;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .main--profile .profile-overview {
+    animation-name: client-reduced-entry;
+    animation-duration: 100ms !important;
+    animation-delay: 0ms !important;
+    animation-timing-function: ease-out;
+    filter: none !important;
+  }
+
+  @keyframes route-entry-reduced {
+    from { opacity: .9; }
+    to { opacity: 1; }
+  }
+
+  @keyframes client-reduced-entry {
+    from { opacity: .9; }
+    to { opacity: 1; }
+  }
+}

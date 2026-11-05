@@ -1,0 +1,1253 @@
+{
+  "capturedAt": "2026-10-04T03:11:23.554Z",
+  "browser": "153.0.8010.53",
+  "deployment": {
+    "immutable": "https://13b8b49c.joshuaik2.pages.dev",
+    "alias": "https://feat-portfolio-integration.joshuaik2.pages.dev",
+    "sourceCommit": "377d64077e0fb61fb3e7db0d04d5b13abf1f6fdf",
+    "expectedJs": "index-DsJifWXj.js",
+    "deploymentId": "13b8b49c-d441-420c-bc2e-0bf03339379f",
+    "buildSource": "Clean git archive of pushed source; 151 files",
+    "environment": "Cloudflare Pages Preview; branch feat/portfolio-integration; production not targeted",
+    "validationStatus": "Final clean-archive Preview smoke; production not targeted."
+  },
+  "pages": [
+    {
+      "host": "immutable",
+      "url": "https://13b8b49c.joshuaik2.pages.dev/experience/living-in-silico",
+      "status": 200,
+      "viewport": "1920x1080",
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "https://13b8b49c.joshuaik2.pages.dev/experience/living-in-silico",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 1560,
+          "clientWidth": 1560,
+          "scrollWidth": 1560,
+          "clientHeight": 998,
+          "scrollHeight": 2335,
+          "scrollTop": 0,
+          "overflowY": "auto"
+        },
+        "article": {
+          "width": 1560,
+          "height": 2335,
+          "scrollWidth": 1560,
+          "clientWidth": 1560
+        },
+        "text": "‹ EXPERIENCE\nGENERATIVE MOLECULAR MODELING\n\nGENERATIVE MOLECULAR MODELING  /  EXPERIENCE · 2025\n\nMolecules need representation before generation.\n\nDuring an AI/ML research internship in generative molecular modeling, I learned how molecular structures become SMILES and model-ready features before exploring generation.\n\nRESEARCH ROLE\n\nAI / ML Research Intern\nGenerative Molecular Modeling\n\nPERIOD\n\nMarch – June 2025\nComputational chemistry · Biomedical research\n\n01 / MODEL REPRESENTATION\n\nRepresent the molecule first.\n\nI moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.\nApril 12 snapshot: 15,696 rows · 14,487 unique SMILES.\nCurated experimental subsets: ~400–600 entries.\n\nSCHEMATIC · NOT A PROJECT SAMPLE\nRepresentation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits.\n\nSTRUCTURE\n\n→\nSMILES\nstring format\n→\n\nMORGAN FINGERPRINT\n\nradius 2 · 128 bits\nIllustrative bit marks\n\n02 / EXPERIMENT ROUTES\n\nThree approaches. Different outcomes.\n\nI explored sequence generation, fragment-based design, and another generative workflow.\n\n01 / SEQUENCE GENERATION\n\nDeepMol\nCSVLoader\n→\nSMILES sequences\n→\nRNN MolecularGenerator\n\nWhy: generate from molecules represented as SMILES sequences. Input: curated experimental SMILES loaded through DeepMol CSVLoader. Method: RNN MolecularGenerator.\n\nMETHOD\n\nRecorded RNN run settings: 10 epochs; batch size 64.\nMy work covered data loading, SMILES processing, and sequence-generation work. Learning: molecular representation shaped this route.\n\n02 / FRAGMENT-BASED DESIGN\n\nRDKit + Fragmenstein\nStructure\n→\nFragment selection\n→\nRecombination\n\nWhy: explore structure-based design alongside sequence generation. Input: molecular structures and compatible fragments. Method: select, link, and recombine with RDKit / Fragmenstein.\n\nOUTCOME\n\nSome fragment workflows succeeded\nMy work covered fragment selection, linking, and spatial workflows with RDKit / Fragmenstein. Learning: this route depends on structural fit and spatial context.\n\n03 / ATTEMPTED GENERATION\n\nREINVENT4\nREINVENT4 researched\n→\nGeneration attempted\n\nGeneration attempt did not succeed.\n\nOUTCOME\n\nNo successful generation\nWhy: test another generative approach alongside sequence and fragment work. I researched REINVENT4 and attempted generation. The available notes do not record its input, configuration, or why generation did not succeed. Learning: this remained an exploratory attempt, not a demonstrated generation workflow.\n\n03 / PROJECT OUTPUT\n\nA project output in SMILES.\n\nPROJECT OUTPUT · DEEPMOL\n\n500\ngenerated SMILES samples\n\n04 / MY CONTRIBUTION\n\nResearch engineering across the workflow.\n\nMy DeepMol contribution covered data loading, SMILES processing, molecular features and sequence generation; I also worked on fragment workflows.\n\nTECHNICAL LEARNING\n\nSequence vs. fragments\n\nDeepMol's SMILES sequence path differed from fragment selection and recombination; comparing the two made molecular representation a core modeling choice.\n\nWHAT I CARRIED FORWARD\n\nI left with a habit of making each workflow clear and stating what each experiment actually showed.\n\nLIVING IN SILICO  /  GENERATIVE MOLECULAR MODELING",
+        "headings": [
+          "Molecules need representation before generation.",
+          "AI / ML Research Intern",
+          "Represent the molecule first.",
+          "Three approaches. Different outcomes.",
+          "DeepMol",
+          "RDKit + Fragmenstein",
+          "REINVENT4",
+          "A project output in SMILES.",
+          "generated SMILES samples",
+          "Research engineering across the workflow.",
+          "Sequence vs. fragments",
+          "I left with a habit of making each workflow clear and stating what each experiment actually showed."
+        ],
+        "sections": [
+          {
+            "id": null,
+            "className": "lis-public-section lis-public-representation-section",
+            "heading": "Represent the molecule first.",
+            "text": "01 / MODEL REPRESENTATION Represent the molecule first. I moved from molecular structures to SMILES, then used RDKit to parse and validate the representation. April 12 snapshot: 15,696 rows · 14,487 unique SMILES. Curated experimental subsets: ~400–600 entries. SCHEMATIC · NOT A PROJECT SAMPLE Representation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits. STRUCTURE → SMILES string format → MORGAN FINGERPRINT radius 2 · 128 bits Illustrative bit marks"
+          },
+          {
+            "id": null,
+            "className": "lis-public-section lis-public-experiments",
+            "heading": "Three approaches. Different outcomes.",
+            "text": "02 / EXPERIMENT ROUTES Three approaches. Different outcomes. I explored sequence generation, fragment-based design, and another generative workflow. 01 / SEQUENCE GENERATION DeepMol CSVLoader → SMILES sequences → RNN MolecularGenerator Why: generate from molecules represented as SMILES sequences. Input: curated experimental SMILES loaded through DeepMol CSVLoader. Method: RNN MolecularGenerator. METHOD Recorded RNN run settings: 10 epochs; batch size 64. My work covered data loading, SMILES processing, and sequence-generation work. Learning: molecular representation shaped this route. 02 / FRAGMENT-BASED DESIGN RDKit + Fragmenstein Structure → Fragment selection → Recombination Why: explore structure-based design alongside sequence generation. Input: molecular structures and compatible fragments. Method: select, link, and recombine with RDKit / Fragmenstein. OUTCOME Some fragment workflows succeeded My work covered fragment selection, linking, and spatial workflows with RDKit / Fragmenstein. Learning: this route depends on structural fit and spatial context. 03 / ATTEMPTED GENERATION REINVENT4 REINVENT4 researched → Generation attempted Generation attempt did not succeed. OUTCOME No successful generation Why: test another generative approach alongside sequence and fragment work. I researched REINVENT4 and attempted generation. The available notes do not record its input, configuration, or why generation did not succeed. Learning: this remained an exploratory attempt, not a demonstrated generation workflow."
+          },
+          {
+            "id": null,
+            "className": "lis-public-output",
+            "heading": "A project output in SMILES.",
+            "text": "03 / PROJECT OUTPUT A project output in SMILES. PROJECT OUTPUT · DEEPMOL 500 generated SMILES samples"
+          },
+          {
+            "id": null,
+            "className": "lis-public-section lis-public-contribution",
+            "heading": "Research engineering across the workflow.",
+            "text": "04 / MY CONTRIBUTION Research engineering across the workflow. My DeepMol contribution covered data loading, SMILES processing, molecular features and sequence generation; I also worked on fragment workflows. TECHNICAL LEARNING Sequence vs. fragments DeepMol's SMILES sequence path differed from fragment selection and recombination; comparing the two made molecular representation a core modeling choice."
+          }
+        ],
+        "images": [
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 54,
+            "renderedHeight": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 54,
+            "renderedHeight": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "renderedWidth": 13,
+            "renderedHeight": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "renderedWidth": 8,
+            "renderedHeight": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "renderedWidth": 7,
+            "renderedHeight": 6,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          }
+        ],
+        "resources": [
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-DsJifWXj.js",
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-Baco1p4Y.css"
+        ],
+        "crestNav": [],
+        "crestPolicyCards": [],
+        "crestBoundary": "",
+        "crestTakeaway": "",
+        "livingFingerprint": "MORGAN FINGERPRINT radius 2 · 128 bits Illustrative bit marks",
+        "livingOutput": "PROJECTOUTPUT·DEEPMOL500generatedSMILESsamples",
+        "livingRoutes": [
+          "DeepMol",
+          "RDKit + Fragmenstein",
+          "REINVENT4"
+        ]
+      },
+      "anchorChecks": [],
+      "fullCapture": {
+        "mainScrollHeight": 2335,
+        "documentHeight": 2417,
+        "before": {
+          "height": "",
+          "maxHeight": "",
+          "overflow": "",
+          "flex": ""
+        }
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "aprilAndSubsets": true,
+        "routeOrder": true,
+        "separate500Samples": true,
+        "morganFingerprint": true,
+        "noDocumentOverflow": true,
+        "allImagesLoaded": true,
+        "noBrowserErrors": true
+      }
+    },
+    {
+      "host": "immutable",
+      "url": "https://13b8b49c.joshuaik2.pages.dev/experience/living-in-silico",
+      "status": 200,
+      "viewport": "390x844",
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "https://13b8b49c.joshuaik2.pages.dev/experience/living-in-silico",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 4223,
+          "scrollY": 70
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "clientHeight": 4153,
+          "scrollHeight": 4153,
+          "scrollTop": 0,
+          "overflowY": "visible"
+        },
+        "article": {
+          "width": 390,
+          "height": 4153,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        "text": "‹ EXPERIENCE\nGENERATIVE MOLECULAR MODELING\n\nGENERATIVE MOLECULAR MODELING  /  EXPERIENCE · 2025\n\nMolecules need representation before generation.\n\nDuring an AI/ML research internship in generative molecular modeling, I learned how molecular structures become SMILES and model-ready features before exploring generation.\n\nRESEARCH ROLE\n\nAI / ML Research Intern\nGenerative Molecular Modeling\n\nPERIOD\n\nMarch – June 2025\nComputational chemistry · Biomedical research\n\n01 / MODEL REPRESENTATION\n\nRepresent the molecule first.\n\nI moved from molecular structures to SMILES, then used RDKit to parse and validate the representation.\nApril 12 snapshot: 15,696 rows · 14,487 unique SMILES.\nCurated experimental subsets: ~400–600 entries.\n\nSCHEMATIC · NOT A PROJECT SAMPLE\nRepresentation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits.\n\nSTRUCTURE\n\n→\nSMILES\nstring format\n→\n\nMORGAN FINGERPRINT\n\nradius 2 · 128 bits\nIllustrative bit marks\n\n02 / EXPERIMENT ROUTES\n\nThree approaches. Different outcomes.\n\nI explored sequence generation, fragment-based design, and another generative workflow.\n\n01 / SEQUENCE GENERATION\n\nDeepMol\nCSVLoader\n→\nSMILES sequences\n→\nRNN MolecularGenerator\n\nWhy: generate from molecules represented as SMILES sequences. Input: curated experimental SMILES loaded through DeepMol CSVLoader. Method: RNN MolecularGenerator.\n\nMETHOD\n\nRecorded RNN run settings: 10 epochs; batch size 64.\nMy work covered data loading, SMILES processing, and sequence-generation work. Learning: molecular representation shaped this route.\n\n02 / FRAGMENT-BASED DESIGN\n\nRDKit + Fragmenstein\nStructure\n→\nFragment selection\n→\nRecombination\n\nWhy: explore structure-based design alongside sequence generation. Input: molecular structures and compatible fragments. Method: select, link, and recombine with RDKit / Fragmenstein.\n\nOUTCOME\n\nSome fragment workflows succeeded\nMy work covered fragment selection, linking, and spatial workflows with RDKit / Fragmenstein. Learning: this route depends on structural fit and spatial context.\n\n03 / ATTEMPTED GENERATION\n\nREINVENT4\nREINVENT4 researched\n→\nGeneration attempted\n\nGeneration attempt did not succeed.\n\nOUTCOME\n\nNo successful generation\nWhy: test another generative approach alongside sequence and fragment work. I researched REINVENT4 and attempted generation. The available notes do not record its input, configuration, or why generation did not succeed. Learning: this remained an exploratory attempt, not a demonstrated generation workflow.\n\n03 / PROJECT OUTPUT\n\nA project output in SMILES.\n\nPROJECT OUTPUT · DEEPMOL\n\n500\ngenerated SMILES samples\n\n04 / MY CONTRIBUTION\n\nResearch engineering across the workflow.\n\nMy DeepMol contribution covered data loading, SMILES processing, molecular features and sequence generation; I also worked on fragment workflows.\n\nTECHNICAL LEARNING\n\nSequence vs. fragments\n\nDeepMol's SMILES sequence path differed from fragment selection and recombination; comparing the two made molecular representation a core modeling choice.\n\nWHAT I CARRIED FORWARD\n\nI left with a habit of making each workflow clear and stating what each experiment actually showed.\n\nLIVING IN SILICO  /  GENERATIVE MOLECULAR MODELING",
+        "headings": [
+          "Molecules need representation before generation.",
+          "AI / ML Research Intern",
+          "Represent the molecule first.",
+          "Three approaches. Different outcomes.",
+          "DeepMol",
+          "RDKit + Fragmenstein",
+          "REINVENT4",
+          "A project output in SMILES.",
+          "generated SMILES samples",
+          "Research engineering across the workflow.",
+          "Sequence vs. fragments",
+          "I left with a habit of making each workflow clear and stating what each experiment actually showed."
+        ],
+        "sections": [
+          {
+            "id": null,
+            "className": "lis-public-section lis-public-representation-section",
+            "heading": "Represent the molecule first.",
+            "text": "01 / MODEL REPRESENTATION Represent the molecule first. I moved from molecular structures to SMILES, then used RDKit to parse and validate the representation. April 12 snapshot: 15,696 rows · 14,487 unique SMILES. Curated experimental subsets: ~400–600 entries. SCHEMATIC · NOT A PROJECT SAMPLE Representation path: a molecular structure is encoded as a SMILES string, then a Morgan fingerprint with radius 2 and 128 bits. STRUCTURE → SMILES string format → MORGAN FINGERPRINT radius 2 · 128 bits Illustrative bit marks"
+          },
+          {
+            "id": null,
+            "className": "lis-public-section lis-public-experiments",
+            "heading": "Three approaches. Different outcomes.",
+            "text": "02 / EXPERIMENT ROUTES Three approaches. Different outcomes. I explored sequence generation, fragment-based design, and another generative workflow. 01 / SEQUENCE GENERATION DeepMol CSVLoader → SMILES sequences → RNN MolecularGenerator Why: generate from molecules represented as SMILES sequences. Input: curated experimental SMILES loaded through DeepMol CSVLoader. Method: RNN MolecularGenerator. METHOD Recorded RNN run settings: 10 epochs; batch size 64. My work covered data loading, SMILES processing, and sequence-generation work. Learning: molecular representation shaped this route. 02 / FRAGMENT-BASED DESIGN RDKit + Fragmenstein Structure → Fragment selection → Recombination Why: explore structure-based design alongside sequence generation. Input: molecular structures and compatible fragments. Method: select, link, and recombine with RDKit / Fragmenstein. OUTCOME Some fragment workflows succeeded My work covered fragment selection, linking, and spatial workflows with RDKit / Fragmenstein. Learning: this route depends on structural fit and spatial context. 03 / ATTEMPTED GENERATION REINVENT4 REINVENT4 researched → Generation attempted Generation attempt did not succeed. OUTCOME No successful generation Why: test another generative approach alongside sequence and fragment work. I researched REINVENT4 and attempted generation. The available notes do not record its input, configuration, or why generation did not succeed. Learning: this remained an exploratory attempt, not a demonstrated generation workflow."
+          },
+          {
+            "id": null,
+            "className": "lis-public-output",
+            "heading": "A project output in SMILES.",
+            "text": "03 / PROJECT OUTPUT A project output in SMILES. PROJECT OUTPUT · DEEPMOL 500 generated SMILES samples"
+          },
+          {
+            "id": null,
+            "className": "lis-public-section lis-public-contribution",
+            "heading": "Research engineering across the workflow.",
+            "text": "04 / MY CONTRIBUTION Research engineering across the workflow. My DeepMol contribution covered data loading, SMILES processing, molecular features and sequence generation; I also worked on fragment workflows. TECHNICAL LEARNING Sequence vs. fragments DeepMol's SMILES sequence path differed from fragment selection and recombination; comparing the two made molecular representation a core modeling choice."
+          }
+        ],
+        "images": [
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "renderedWidth": 32,
+            "renderedHeight": 32,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 54,
+            "renderedHeight": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          }
+        ],
+        "resources": [
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-DsJifWXj.js",
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-Baco1p4Y.css"
+        ],
+        "crestNav": [],
+        "crestPolicyCards": [],
+        "crestBoundary": "",
+        "crestTakeaway": "",
+        "livingFingerprint": "MORGAN FINGERPRINT radius 2 · 128 bits Illustrative bit marks",
+        "livingOutput": "PROJECTOUTPUT·DEEPMOL500generatedSMILESsamples",
+        "livingRoutes": [
+          "DeepMol",
+          "RDKit + Fragmenstein",
+          "REINVENT4"
+        ]
+      },
+      "anchorChecks": [],
+      "fullCapture": null,
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "aprilAndSubsets": true,
+        "routeOrder": true,
+        "separate500Samples": true,
+        "morganFingerprint": true,
+        "noDocumentOverflow": true,
+        "allImagesLoaded": true,
+        "noBrowserErrors": true
+      }
+    },
+    {
+      "host": "immutable",
+      "url": "https://13b8b49c.joshuaik2.pages.dev/projects/crest",
+      "status": 200,
+      "viewport": "1920x1080",
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "https://13b8b49c.joshuaik2.pages.dev/projects/crest",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "scrollWidth": 1920,
+          "clientWidth": 1920,
+          "scrollHeight": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "width": 1560,
+          "clientWidth": 1560,
+          "scrollWidth": 1560,
+          "clientHeight": 998,
+          "scrollHeight": 2175,
+          "scrollTop": 0,
+          "overflowY": "auto"
+        },
+        "article": {
+          "width": 1560,
+          "height": 2115,
+          "scrollWidth": 1560,
+          "clientWidth": 1560
+        },
+        "text": "CREST\n\nEXPENSE INTELLIGENCE / REVIEW WORKFLOW\n\nCrest\n\nCrest is an expense intelligence workspace for reviewing requests with budget, spend history and policy context.\n\nIt helps finance teams spot unusual patterns and prepare requests for preapproval; a person reviews the context and decides what happens next.\n\nSAMPLE DATA\nExpense review / policy context / preapproval\nWATCH DEMO ↗\nOne transaction. Two sources. Human review.\n\nTransactions move through deterministic finance and policy checks. Rule-based signals and retrieved policy context support review; people retain decision authority.\n\nA sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\n01 REQUEST\n02 TWO EVIDENCE PATHS\n03 HUMAN DECISION\nSAMPLE REQUEST\nConference registration\n$1,200\nTRAVEL & EVENTS\nDETERMINISTIC SIGNALS\nBudget + spend rules\n\nBudget · prior spend · thresholds\n\nRETRIEVED POLICY\nRelevant passages\n\nMatched to the request\n\nPOLICY INTERPRETATION\nGemini\n\nReads retrieved policy context\n\nDECISION AUTHORITY\nHUMAN REVIEW\n\nA reviewer weighs the context and chooses the next action.\n\nAPPROVE\nDENY\nFINANCE Q&A + REPORTING\nFINANCE QUESTION\n→\nFINANCE Q&A ANSWER\nREPORTING NEED\n→\nREPORT VIEW\n\nFinance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.\n\nDECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY\nPolicy context. Deterministic decisions.\n\nA standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.\n\n01\nBRIM POLICY PDF\nBrim source material\n→\n02\nEXTRACT + CHUNK\nPrepare searchable passages\n→\n03\ngemini-embedding-001\n3,072 dimensions\n→\n04\nATLAS VECTOR SEARCH\nMongoDB Atlas · policy_chunks\n→\n05\nGROUNDED PROMPT\nTop retrieved passages\nRETRIEVED POLICY CONTEXT\nGemini interpreted the top retrieved passages.\n\nGrounded context supported review; it did not detect or decide.\n\n+\nDETERMINISTIC RULES + SIGNALS\nFinance and policy rules remained authoritative.\n\nHeuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.\n\n→\nHUMAN REVIEW\nSample queue uses budget + employee history.\n\nGemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.\n\nTECHNICAL OWNERSHIP\n\nI built backend workflows for human review.\n\nI built Policy Compliance Engine workflows, deterministic anomaly signals, policy retrieval, and part of preapproval.\n\nWORK I BUILT\n\nPOLICY ENGINE\nCompliance workflows\nANOMALY SIGNALS\nDeterministic rules\nPOLICY RETRIEVAL\nRelevant passages\nPREAPPROVAL\nPart of the workflow\n3RD PLACE\nBRIM FINANCIAL CHALLENGE · MPC HACKS 2026\nPROJECT RECORD ↗\n\nENGINEERING PRINCIPLE\n\nSignals organize review. People own the decision.\n\nThe challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review.\n\nCREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026",
+        "headings": [
+          "Crest",
+          "One transaction. Two sources. Human review.",
+          "Conference registration",
+          "Budget + spend rules",
+          "Relevant passages",
+          "Gemini",
+          "HUMAN REVIEW",
+          "Policy context. Deterministic decisions.",
+          "Gemini interpreted the top retrieved passages.",
+          "Finance and policy rules remained authoritative.",
+          "Sample queue uses budget + employee history.",
+          "I built backend workflows for human review.",
+          "Signals organize review. People own the decision."
+        ],
+        "sections": [
+          {
+            "id": "crest-overview",
+            "className": "crest-section crest-hero",
+            "heading": "Crest",
+            "text": "CREST EXPENSE INTELLIGENCE / REVIEW WORKFLOW Crest Crest is an expense intelligence workspace for reviewing requests with budget, spend history and policy context. It helps finance teams spot unusual patterns and prepare requests for preapproval; a person reviews the context and decides what happens next. SAMPLE DATA Expense review / policy context / preapproval WATCH DEMO ↗"
+          },
+          {
+            "id": "crest-system",
+            "className": "crest-section crest-system",
+            "heading": "One transaction. Two sources. Human review.",
+            "text": "One transaction. Two sources. Human review. Transactions move through deterministic finance and policy checks. Rule-based signals and retrieved policy context support review; people retain decision authority. A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review. 01 REQUEST 02 TWO EVIDENCE PATHS 03 HUMAN DECISION SAMPLE REQUEST Conference registration $1,200 TRAVEL & EVENTS DETERMINISTIC SIGNALS Budget + spend rules Budget · prior spend · thresholds RETRIEVED POLICY Relevant passages Matched to the request POLICY INTERPRETATION Gemini Reads retrieved policy context DECISION AUTHORITY HUMAN REVIEW A reviewer weighs the context and chooses the next action. APPROVE DENY FINANCE Q&A + REPORTING FINANCE QUESTION → FINANCE Q&A ANSWER REPORTING NEED → REPORT VIEW Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype."
+          },
+          {
+            "id": "crest-policy",
+            "className": "crest-section crest-policy",
+            "heading": "Policy context. Deterministic decisions.",
+            "text": "DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY Policy context. Deterministic decisions. A standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues. 01 BRIM POLICY PDF Brim source material → 02 EXTRACT + CHUNK Prepare searchable passages → 03 gemini-embedding-001 3,072 dimensions → 04 ATLAS VECTOR SEARCH MongoDB Atlas · policy_chunks → 05 GROUNDED PROMPT Top retrieved passages RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide. + DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only. → HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype."
+          },
+          {
+            "id": "crest-team",
+            "className": "crest-section crest-team",
+            "heading": "I built backend workflows for human review.",
+            "text": "TECHNICAL OWNERSHIP I built backend workflows for human review. I built Policy Compliance Engine workflows, deterministic anomaly signals, policy retrieval, and part of preapproval. WORK I BUILT POLICY ENGINE Compliance workflows ANOMALY SIGNALS Deterministic rules POLICY RETRIEVAL Relevant passages PREAPPROVAL Part of the workflow 3RD PLACE BRIM FINANCIAL CHALLENGE · MPC HACKS 2026 PROJECT RECORD ↗"
+          },
+          {
+            "id": "crest-takeaway",
+            "className": "crest-section crest-takeaway",
+            "heading": "Signals organize review. People own the decision.",
+            "text": "ENGINEERING PRINCIPLE Signals organize review. People own the decision. The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review. CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 54,
+            "renderedHeight": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 54,
+            "renderedHeight": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "renderedWidth": 38,
+            "renderedHeight": 29,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/crest-sample.png",
+            "loaded": true,
+            "naturalWidth": 1152,
+            "renderedWidth": 684,
+            "renderedHeight": 385,
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls"
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 40,
+            "renderedHeight": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "renderedWidth": 13,
+            "renderedHeight": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "renderedWidth": 8,
+            "renderedHeight": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "renderedWidth": 7,
+            "renderedHeight": 6,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 26,
+            "renderedHeight": 26,
+            "alt": ""
+          }
+        ],
+        "resources": [
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-DsJifWXj.js",
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-Baco1p4Y.css"
+        ],
+        "crestNav": [
+          {
+            "text": "OVERVIEW",
+            "href": "#crest-overview",
+            "current": "location"
+          },
+          {
+            "text": "TRANSACTION FLOW",
+            "href": "#crest-system",
+            "current": null
+          },
+          {
+            "text": "POLICY RETRIEVAL",
+            "href": "#crest-policy",
+            "current": null
+          },
+          {
+            "text": "OWNERSHIP",
+            "href": "#crest-team",
+            "current": null
+          },
+          {
+            "text": "LESSON",
+            "href": "#crest-takeaway",
+            "current": null
+          }
+        ],
+        "crestPolicyCards": [
+          {
+            "label": "RETRIEVED POLICY CONTEXT",
+            "text": "RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide.",
+            "rect": {
+              "x": 104,
+              "y": 1562,
+              "width": 425,
+              "height": 108
+            }
+          },
+          {
+            "label": "DETERMINISTIC RULES + SIGNALS",
+            "text": "DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.",
+            "rect": {
+              "x": 563,
+              "y": 1562,
+              "width": 425,
+              "height": 108
+            }
+          },
+          {
+            "label": "HUMAN REVIEW",
+            "text": "HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+            "rect": {
+              "x": 1032,
+              "y": 1562,
+              "width": 425,
+              "height": 108
+            }
+          }
+        ],
+        "crestBoundary": "Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.",
+        "crestTakeaway": "ENGINEERING PRINCIPLE Signals organize review. People own the decision. The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review. CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026",
+        "livingFingerprint": "",
+        "livingOutput": "",
+        "livingRoutes": []
+      },
+      "anchorChecks": [
+        {
+          "id": "crest-overview",
+          "found": true,
+          "hash": "#crest-overview",
+          "scrollY": 130,
+          "mainScrollTop": 0,
+          "targetTop": 76,
+          "targetTopWithinMain": 124,
+          "active": "OVERVIEW",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-system",
+          "found": true,
+          "hash": "#crest-system",
+          "scrollY": 648,
+          "mainScrollTop": 0,
+          "targetTop": 76,
+          "targetTopWithinMain": 642,
+          "active": "TRANSACTION FLOW",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-policy",
+          "found": true,
+          "hash": "#crest-policy",
+          "scrollY": 1177,
+          "mainScrollTop": 0,
+          "targetTop": 129,
+          "targetTopWithinMain": 1224,
+          "active": "POLICY RETRIEVAL",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-team",
+          "found": true,
+          "hash": "#crest-team",
+          "scrollY": 1177,
+          "mainScrollTop": 0,
+          "targetTop": 604,
+          "targetTopWithinMain": 1699,
+          "active": "OWNERSHIP",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-takeaway",
+          "found": true,
+          "hash": "#crest-takeaway",
+          "scrollY": 1177,
+          "mainScrollTop": 0,
+          "targetTop": 875,
+          "targetTopWithinMain": 1970,
+          "active": "LESSON",
+          "activeMatches": true
+        }
+      ],
+      "fullCapture": {
+        "mainScrollHeight": 2175,
+        "documentHeight": 2257,
+        "before": {
+          "height": "",
+          "maxHeight": "",
+          "overflow": "",
+          "flex": ""
+        }
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "systemSectionPresent": true,
+        "policySectionPresent": true,
+        "exactFinanceBoundary": true,
+        "fullClosingLesson": true,
+        "fiveChapterLinks": true,
+        "allChapterClicksAndActiveState": true,
+        "noDocumentOverflow": true,
+        "allImagesLoaded": true,
+        "noBrowserErrors": true
+      }
+    },
+    {
+      "host": "immutable",
+      "url": "https://13b8b49c.joshuaik2.pages.dev/projects/crest",
+      "status": 200,
+      "viewport": "390x844",
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "https://13b8b49c.joshuaik2.pages.dev/projects/crest",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "scrollHeight": 3612,
+          "scrollY": 70
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "clientWidth": 390,
+          "scrollWidth": 390,
+          "clientHeight": 3542,
+          "scrollHeight": 3542,
+          "scrollTop": 0,
+          "overflowY": "visible"
+        },
+        "article": {
+          "width": 390,
+          "height": 3482,
+          "scrollWidth": 390,
+          "clientWidth": 390
+        },
+        "text": "CREST\n\nEXPENSE INTELLIGENCE / REVIEW WORKFLOW\n\nCrest\n\nCrest is an expense intelligence workspace for reviewing requests with budget, spend history and policy context.\n\nIt helps finance teams spot unusual patterns and prepare requests for preapproval; a person reviews the context and decides what happens next.\n\nSAMPLE DATA\nExpense review / policy context / preapproval\nWATCH DEMO ↗\nOne transaction. Two sources. Human review.\n\nTransactions move through deterministic finance and policy checks. Rule-based signals and retrieved policy context support review; people retain decision authority.\n\nA sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review.\nSAMPLE REQUEST\nConference registration\n$1,200\nTRAVEL & EVENTS\nDETERMINISTIC SIGNALS\nBudget + spend rules\n\nBudget · prior spend · thresholds\n\nRETRIEVED POLICY\nRelevant passages\n\nMatched to the request\n\nPOLICY INTERPRETATION\nGemini\n\nReads retrieved policy context\n\nDECISION AUTHORITY\nHUMAN REVIEW\n\nA reviewer weighs the context and chooses the next action.\n\nAPPROVE\nDENY\nFINANCE Q&A + REPORTING\nFINANCE QUESTION\n→\nFINANCE Q&A ANSWER\nREPORTING NEED\n→\nREPORT VIEW\n\nFinance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.\n\nDECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY\nPolicy context. Deterministic decisions.\n\nA standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues.\n\n01\nBRIM POLICY PDF\nBrim source material\n→\n02\nEXTRACT + CHUNK\nPrepare searchable passages\n→\n03\ngemini-embedding-001\n3,072 dimensions\n→\n04\nATLAS VECTOR SEARCH\nMongoDB Atlas · policy_chunks\n→\n05\nGROUNDED PROMPT\nTop retrieved passages\nRETRIEVED POLICY CONTEXT\nGemini interpreted the top retrieved passages.\n\nGrounded context supported review; it did not detect or decide.\n\n+\nDETERMINISTIC RULES + SIGNALS\nFinance and policy rules remained authoritative.\n\nHeuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.\n\n→\nHUMAN REVIEW\nSample queue uses budget + employee history.\n\nGemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.\n\nTECHNICAL OWNERSHIP\n\nI built backend workflows for human review.\n\nI built Policy Compliance Engine workflows, deterministic anomaly signals, policy retrieval, and part of preapproval.\n\nWORK I BUILT\n\nPOLICY ENGINE\nCompliance workflows\nANOMALY SIGNALS\nDeterministic rules\nPOLICY RETRIEVAL\nRelevant passages\nPREAPPROVAL\nPart of the workflow\n3RD PLACE\nBRIM FINANCIAL CHALLENGE · MPC HACKS 2026\nPROJECT RECORD ↗\n\nENGINEERING PRINCIPLE\n\nSignals organize review. People own the decision.\n\nThe challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review.\n\nCREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026",
+        "headings": [
+          "Crest",
+          "One transaction. Two sources. Human review.",
+          "Conference registration",
+          "Budget + spend rules",
+          "Relevant passages",
+          "Gemini",
+          "HUMAN REVIEW",
+          "Policy context. Deterministic decisions.",
+          "Gemini interpreted the top retrieved passages.",
+          "Finance and policy rules remained authoritative.",
+          "Sample queue uses budget + employee history.",
+          "I built backend workflows for human review.",
+          "Signals organize review. People own the decision."
+        ],
+        "sections": [
+          {
+            "id": "crest-overview",
+            "className": "crest-section crest-hero",
+            "heading": "Crest",
+            "text": "CREST EXPENSE INTELLIGENCE / REVIEW WORKFLOW Crest Crest is an expense intelligence workspace for reviewing requests with budget, spend history and policy context. It helps finance teams spot unusual patterns and prepare requests for preapproval; a person reviews the context and decides what happens next. SAMPLE DATA Expense review / policy context / preapproval WATCH DEMO ↗"
+          },
+          {
+            "id": "crest-system",
+            "className": "crest-section crest-system",
+            "heading": "One transaction. Two sources. Human review.",
+            "text": "One transaction. Two sources. Human review. Transactions move through deterministic finance and policy checks. Rule-based signals and retrieved policy context support review; people retain decision authority. A sample expense branches into deterministic budget and spend checks and retrieved policy context interpreted by Gemini; both inform human review. SAMPLE REQUEST Conference registration $1,200 TRAVEL & EVENTS DETERMINISTIC SIGNALS Budget + spend rules Budget · prior spend · thresholds RETRIEVED POLICY Relevant passages Matched to the request POLICY INTERPRETATION Gemini Reads retrieved policy context DECISION AUTHORITY HUMAN REVIEW A reviewer weighs the context and chooses the next action. APPROVE DENY FINANCE Q&A + REPORTING FINANCE QUESTION → FINANCE Q&A ANSWER REPORTING NEED → REPORT VIEW Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype."
+          },
+          {
+            "id": "crest-policy",
+            "className": "crest-section crest-policy",
+            "heading": "Policy context. Deterministic decisions.",
+            "text": "DECISION SYSTEM / GROUNDED POLICY, DETERMINISTIC AUTHORITY Policy context. Deterministic decisions. A standalone prototype indexed a Brim policy PDF and retrieved passages for Gemini; a live endpoint or deployed workflow was not verified. Finance and policy rules remained authoritative; anomaly heuristics surfaced review cues. 01 BRIM POLICY PDF Brim source material → 02 EXTRACT + CHUNK Prepare searchable passages → 03 gemini-embedding-001 3,072 dimensions → 04 ATLAS VECTOR SEARCH MongoDB Atlas · policy_chunks → 05 GROUNDED PROMPT Top retrieved passages RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide. + DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only. → HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype."
+          },
+          {
+            "id": "crest-team",
+            "className": "crest-section crest-team",
+            "heading": "I built backend workflows for human review.",
+            "text": "TECHNICAL OWNERSHIP I built backend workflows for human review. I built Policy Compliance Engine workflows, deterministic anomaly signals, policy retrieval, and part of preapproval. WORK I BUILT POLICY ENGINE Compliance workflows ANOMALY SIGNALS Deterministic rules POLICY RETRIEVAL Relevant passages PREAPPROVAL Part of the workflow 3RD PLACE BRIM FINANCIAL CHALLENGE · MPC HACKS 2026 PROJECT RECORD ↗"
+          },
+          {
+            "id": "crest-takeaway",
+            "className": "crest-section crest-takeaway",
+            "heading": "Signals organize review. People own the decision.",
+            "text": "ENGINEERING PRINCIPLE Signals organize review. People own the decision. The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review. CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026"
+          }
+        ],
+        "images": [
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "naturalWidth": 32,
+            "renderedWidth": 32,
+            "renderedHeight": 32,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "naturalWidth": 160,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 54,
+            "renderedHeight": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "renderedWidth": 31,
+            "renderedHeight": 24,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/crest-sample.png",
+            "loaded": true,
+            "naturalWidth": 1152,
+            "renderedWidth": 350,
+            "renderedHeight": 197,
+            "alt": "Crest expense-review sample screen with policy context and preapproval controls"
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/client-j-mark.svg",
+            "loaded": true,
+            "naturalWidth": 54,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "naturalWidth": 13,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "naturalWidth": 8,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "naturalWidth": 7,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "naturalWidth": 40,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "naturalWidth": 150,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "naturalWidth": 310,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "naturalWidth": 82,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          },
+          {
+            "src": "https://13b8b49c.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "naturalWidth": 96,
+            "renderedWidth": 0,
+            "renderedHeight": 0,
+            "alt": ""
+          }
+        ],
+        "resources": [
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-DsJifWXj.js",
+          "https://13b8b49c.joshuaik2.pages.dev/assets/index-Baco1p4Y.css"
+        ],
+        "crestNav": [
+          {
+            "text": "OVERVIEW",
+            "href": "#crest-overview",
+            "current": "location"
+          },
+          {
+            "text": "TRANSACTION FLOW",
+            "href": "#crest-system",
+            "current": null
+          },
+          {
+            "text": "POLICY RETRIEVAL",
+            "href": "#crest-policy",
+            "current": null
+          },
+          {
+            "text": "OWNERSHIP",
+            "href": "#crest-team",
+            "current": null
+          },
+          {
+            "text": "LESSON",
+            "href": "#crest-takeaway",
+            "current": null
+          }
+        ],
+        "crestPolicyCards": [
+          {
+            "label": "RETRIEVED POLICY CONTEXT",
+            "text": "RETRIEVED POLICY CONTEXT Gemini interpreted the top retrieved passages. Grounded context supported review; it did not detect or decide.",
+            "rect": {
+              "x": 36,
+              "y": 2174,
+              "width": 319,
+              "height": 127
+            }
+          },
+          {
+            "label": "DETERMINISTIC RULES + SIGNALS",
+            "text": "DETERMINISTIC RULES + SIGNALS Finance and policy rules remained authoritative. Heuristic split cue: group by employee, merchant, day. Each charge is below threshold; combined total reaches it. Review only.",
+            "rect": {
+              "x": 36,
+              "y": 2329,
+              "width": 319,
+              "height": 143
+            }
+          },
+          {
+            "label": "HUMAN REVIEW",
+            "text": "HUMAN REVIEW Sample queue uses budget + employee history. Gemini recommendation or template fallback; human approve/deny is recorded locally in the prototype.",
+            "rect": {
+              "x": 36,
+              "y": 2500,
+              "width": 319,
+              "height": 127
+            }
+          }
+        ],
+        "crestBoundary": "Finance questions → transaction-backed answers; reporting needs → report views. Separate from the standalone policy-PDF retrieval prototype.",
+        "crestTakeaway": "ENGINEERING PRINCIPLE Signals organize review. People own the decision. The challenge presentation ran over its allotted time. I learned to explain the decision path concisely: rules, policy context, then human review. CREST · BRIM FINANCIAL CHALLENGE · MPC HACKS 2026",
+        "livingFingerprint": "",
+        "livingOutput": "",
+        "livingRoutes": []
+      },
+      "anchorChecks": [
+        {
+          "id": "crest-overview",
+          "found": true,
+          "hash": "#crest-overview",
+          "scrollY": 94,
+          "mainScrollTop": 0,
+          "targetTop": 76,
+          "targetTopWithinMain": 100,
+          "active": "OVERVIEW",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-system",
+          "found": true,
+          "hash": "#crest-system",
+          "scrollY": 680,
+          "mainScrollTop": 0,
+          "targetTop": 76,
+          "targetTopWithinMain": 686,
+          "active": "TRANSACTION FLOW",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-policy",
+          "found": true,
+          "hash": "#crest-policy",
+          "scrollY": 1622,
+          "mainScrollTop": 0,
+          "targetTop": 76,
+          "targetTopWithinMain": 1628,
+          "active": "POLICY RETRIEVAL",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-team",
+          "found": true,
+          "hash": "#crest-team",
+          "scrollY": 2697,
+          "mainScrollTop": 0,
+          "targetTop": 76,
+          "targetTopWithinMain": 2703,
+          "active": "OWNERSHIP",
+          "activeMatches": true
+        },
+        {
+          "id": "crest-takeaway",
+          "found": true,
+          "hash": "#crest-takeaway",
+          "scrollY": 2768,
+          "mainScrollTop": 0,
+          "targetTop": 597,
+          "targetTopWithinMain": 3295,
+          "active": "LESSON",
+          "activeMatches": true
+        }
+      ],
+      "fullCapture": null,
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "checks": {
+        "systemSectionPresent": true,
+        "policySectionPresent": true,
+        "exactFinanceBoundary": true,
+        "fullClosingLesson": true,
+        "fiveChapterLinks": true,
+        "allChapterClicksAndActiveState": true,
+        "noDocumentOverflow": true,
+        "allImagesLoaded": true,
+        "noBrowserErrors": true
+      }
+    }
+  ],
+  "aliasAssets": {
+    "status": 200,
+    "resources": [
+      "https://feat-portfolio-integration.joshuaik2.pages.dev/assets/index-DsJifWXj.js",
+      "https://feat-portfolio-integration.joshuaik2.pages.dev/assets/index-Baco1p4Y.css"
+    ],
+    "expectedJsPresent": true,
+    "responses": [],
+    "consoleErrors": [],
+    "pageErrors": [],
+    "requestErrors": [],
+    "assetFetches": [
+      {
+        "host": "immutable",
+        "url": "https://13b8b49c.joshuaik2.pages.dev",
+        "assets": [
+          {
+            "path": "/assets/index-DsJifWXj.js",
+            "status": 200,
+            "contentType": "application/javascript",
+            "bytes": 414455
+          },
+          {
+            "path": "/assets/index-Baco1p4Y.css",
+            "status": 200,
+            "contentType": "text/css; charset=utf-8",
+            "bytes": 344104
+          }
+        ]
+      },
+      {
+        "host": "alias",
+        "url": "https://feat-portfolio-integration.joshuaik2.pages.dev",
+        "assets": [
+          {
+            "path": "/assets/index-DsJifWXj.js",
+            "status": 200,
+            "contentType": "application/javascript",
+            "bytes": 414455
+          },
+          {
+            "path": "/assets/index-Baco1p4Y.css",
+            "status": 200,
+            "contentType": "text/css; charset=utf-8",
+            "bytes": 344104
+          }
+        ]
+      }
+    ],
+    "expectedCss": "index-Baco1p4Y.css",
+    "expectedCssPresent": true,
+    "immutableAndAliasAssetsMatch": true,
+    "allAssetsHttp200": true,
+    "assetsContentTypesCorrect": true
+  }
+}

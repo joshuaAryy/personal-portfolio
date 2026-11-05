@@ -1,0 +1,1114 @@
+{
+  "requestedSource": "8680eeb",
+  "preview": "https://723c7b0d.joshuaik2.pages.dev",
+  "browser": {
+    "name": "Chrome",
+    "version": "153.0.8010.53",
+    "playwright": "1.63.0"
+  },
+  "capturedAt": "2026-10-04T15:52:37.528Z",
+  "home": {
+    "390x844": {
+      "route": "/home",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "assets": [
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+      ],
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "doc": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 1031,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 70,
+          "left": 0,
+          "right": 390,
+          "top": 70,
+          "bottom": 970.171875,
+          "width": 390,
+          "height": 900.171875
+        },
+        "mainTag": "MAIN",
+        "row": {
+          "exists": true,
+          "display": "flex",
+          "position": "static",
+          "rect": {
+            "x": 0,
+            "y": 970.171875,
+            "left": 0,
+            "right": 390,
+            "top": 970.171875,
+            "bottom": 1031.171875,
+            "width": 390,
+            "height": 61
+          },
+          "links": [
+            {
+              "text": "GitHub",
+              "ariaLabel": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "rect": {
+                "x": 117.296875,
+                "y": 979.171875,
+                "left": 117.296875,
+                "right": 166.75,
+                "top": 979.171875,
+                "bottom": 1023.171875,
+                "width": 49.453125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "LinkedIn",
+              "ariaLabel": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "rect": {
+                "x": 178.75,
+                "y": 979.171875,
+                "left": 178.75,
+                "right": 233.78125,
+                "top": 979.171875,
+                "bottom": 1023.171875,
+                "width": 55.03125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "✉",
+              "ariaLabel": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "rect": {
+                "x": 245.78125,
+                "y": 979.171875,
+                "left": 245.78125,
+                "right": 272.703125,
+                "top": 979.171875,
+                "bottom": 1023.171875,
+                "width": 26.921875,
+                "height": 44
+              },
+              "tabIndex": 0
+            }
+          ]
+        },
+        "rail": {
+          "exists": true,
+          "display": "flex",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "images": {
+          "total": 32,
+          "loaded": 32
+        },
+        "linksDOM": 19
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {
+        "end": "home-390x844-end.png",
+        "full": "home-390x844-full.png"
+      },
+      "end": {
+        "scrollY": 187,
+        "docHeight": 1031,
+        "viewportHeight": 844,
+        "maxScroll": 187,
+        "mainRect": {
+          "x": 0,
+          "y": -117,
+          "left": 0,
+          "right": 390,
+          "top": -117,
+          "bottom": 783.171875,
+          "width": 390,
+          "height": 900.171875
+        },
+        "mainBottomDocument": 970.171875,
+        "rowRect": {
+          "x": 0,
+          "y": 783.171875,
+          "left": 0,
+          "right": 390,
+          "top": 783.171875,
+          "bottom": 844.171875,
+          "width": 390,
+          "height": 61
+        },
+        "rowTopDocument": 970.171875,
+        "rowFollowsMain": true,
+        "links": [
+          {
+            "text": "GitHub",
+            "ariaLabel": "GitHub (opens in a new tab)",
+            "href": "https://github.com/joshuaAryy",
+            "rect": {
+              "x": 117.296875,
+              "y": 792.171875,
+              "left": 117.296875,
+              "right": 166.75,
+              "top": 792.171875,
+              "bottom": 836.171875,
+              "width": 49.453125,
+              "height": 44
+            }
+          },
+          {
+            "text": "LinkedIn",
+            "ariaLabel": "LinkedIn (opens in a new tab)",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "rect": {
+              "x": 178.75,
+              "y": 792.171875,
+              "left": 178.75,
+              "right": 233.78125,
+              "top": 792.171875,
+              "bottom": 836.171875,
+              "width": 55.03125,
+              "height": 44
+            }
+          },
+          {
+            "text": "✉",
+            "ariaLabel": "Email Joshua",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "rect": {
+              "x": 245.78125,
+              "y": 792.171875,
+              "left": 245.78125,
+              "right": 272.703125,
+              "top": 792.171875,
+              "bottom": 836.171875,
+              "width": 26.921875,
+              "height": 44
+            }
+          }
+        ],
+        "docWidth": 390,
+        "clientWidth": 390
+      },
+      "keyboard": {
+        "tabPresses": 7,
+        "focused": {
+          "tag": "A",
+          "text": "GitHub",
+          "aria": "GitHub (opens in a new tab)",
+          "href": "https://github.com/joshuaAryy",
+          "class": "",
+          "focusVisible": true,
+          "outline": "rgb(199, 155, 69) solid 1px",
+          "outlineOffset": "2px",
+          "rect": {
+            "left": 117.296875,
+            "right": 166.75,
+            "top": 792.171875,
+            "bottom": 836.171875,
+            "width": 49.453125,
+            "height": 44
+          },
+          "scrollY": 187
+        },
+        "traversal": [
+          {
+            "tag": "BUTTON",
+            "text": "EDUCATION\nACADEMIC PATH",
+            "aria": "Education",
+            "href": null,
+            "class": "home-explore__mode",
+            "focusVisible": true,
+            "outline": "rgb(84, 216, 232) solid 2px",
+            "outlineOffset": "4px",
+            "rect": {
+              "left": 199,
+              "right": 375,
+              "top": 353.234375,
+              "bottom": 532.46875,
+              "width": 176,
+              "height": 179.234375
+            },
+            "scrollY": 0
+          },
+          {
+            "tag": "BUTTON",
+            "text": "",
+            "aria": "Back to the previous screen",
+            "href": null,
+            "class": "home-explore__back",
+            "focusVisible": true,
+            "outline": "rgb(84, 216, 232) solid 2px",
+            "outlineOffset": "4px",
+            "rect": {
+              "left": 60,
+              "right": 108,
+              "top": 711.578125,
+              "bottom": 759.578125,
+              "width": 48,
+              "height": 48
+            },
+            "scrollY": 187
+          },
+          {
+            "tag": "BUTTON",
+            "text": "CONFIRM",
+            "aria": "Confirm Projects destination",
+            "href": null,
+            "class": "home-explore__confirm",
+            "focusVisible": true,
+            "outline": "rgb(84, 216, 232) solid 2px",
+            "outlineOffset": "4px",
+            "rect": {
+              "left": 90,
+              "right": 330,
+              "top": 709.984375,
+              "bottom": 761.171875,
+              "width": 240,
+              "height": 51.1875
+            },
+            "scrollY": 187
+          },
+          {
+            "tag": "A",
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "href": "https://github.com/joshuaAryy",
+            "class": "",
+            "focusVisible": true,
+            "outline": "rgb(199, 155, 69) solid 1px",
+            "outlineOffset": "2px",
+            "rect": {
+              "left": 117.296875,
+              "right": 166.75,
+              "top": 792.171875,
+              "bottom": 836.171875,
+              "width": 49.453125,
+              "height": 44
+            },
+            "scrollY": 187
+          }
+        ]
+      }
+    },
+    "650x844": {
+      "route": "/home",
+      "status": 200,
+      "viewport": {
+        "width": 650,
+        "height": 844
+      },
+      "assets": [
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+      ],
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "doc": {
+          "width": 650,
+          "clientWidth": 650,
+          "height": 1071,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 70,
+          "left": 0,
+          "right": 650,
+          "top": 70,
+          "bottom": 1010.171875,
+          "width": 650,
+          "height": 940.171875
+        },
+        "mainTag": "MAIN",
+        "row": {
+          "exists": true,
+          "display": "flex",
+          "position": "static",
+          "rect": {
+            "x": 0,
+            "y": 1010.171875,
+            "left": 0,
+            "right": 650,
+            "top": 1010.171875,
+            "bottom": 1071.171875,
+            "width": 650,
+            "height": 61
+          },
+          "links": [
+            {
+              "text": "GitHub",
+              "ariaLabel": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "rect": {
+                "x": 247.296875,
+                "y": 1019.171875,
+                "left": 247.296875,
+                "right": 296.75,
+                "top": 1019.171875,
+                "bottom": 1063.171875,
+                "width": 49.453125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "LinkedIn",
+              "ariaLabel": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "rect": {
+                "x": 308.75,
+                "y": 1019.171875,
+                "left": 308.75,
+                "right": 363.78125,
+                "top": 1019.171875,
+                "bottom": 1063.171875,
+                "width": 55.03125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "✉",
+              "ariaLabel": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "rect": {
+                "x": 375.78125,
+                "y": 1019.171875,
+                "left": 375.78125,
+                "right": 402.703125,
+                "top": 1019.171875,
+                "bottom": 1063.171875,
+                "width": 26.921875,
+                "height": 44
+              },
+              "tabIndex": 0
+            }
+          ]
+        },
+        "rail": {
+          "exists": true,
+          "display": "flex",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "images": {
+          "total": 32,
+          "loaded": 32
+        },
+        "linksDOM": 19
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {}
+    },
+    "900x844": {
+      "route": "/home",
+      "status": 200,
+      "viewport": {
+        "width": 900,
+        "height": 844
+      },
+      "assets": [
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+      ],
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "doc": {
+          "width": 900,
+          "clientWidth": 900,
+          "height": 1013,
+          "scrollY": 82
+        },
+        "main": {
+          "x": 0,
+          "y": 0,
+          "left": 0,
+          "right": 900,
+          "top": 0,
+          "bottom": 870,
+          "width": 900,
+          "height": 870
+        },
+        "mainTag": "MAIN",
+        "row": {
+          "exists": true,
+          "display": "flex",
+          "position": "static",
+          "rect": {
+            "x": 0,
+            "y": 870,
+            "left": 0,
+            "right": 900,
+            "top": 870,
+            "bottom": 931,
+            "width": 900,
+            "height": 61
+          },
+          "links": [
+            {
+              "text": "GitHub",
+              "ariaLabel": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "rect": {
+                "x": 372.296875,
+                "y": 879,
+                "left": 372.296875,
+                "right": 421.75,
+                "top": 879,
+                "bottom": 923,
+                "width": 49.453125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "LinkedIn",
+              "ariaLabel": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "rect": {
+                "x": 433.75,
+                "y": 879,
+                "left": 433.75,
+                "right": 488.78125,
+                "top": 879,
+                "bottom": 923,
+                "width": 55.03125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "✉",
+              "ariaLabel": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "rect": {
+                "x": 500.78125,
+                "y": 879,
+                "left": 500.78125,
+                "right": 527.703125,
+                "top": 879,
+                "bottom": 923,
+                "width": 26.921875,
+                "height": 44
+              },
+              "tabIndex": 0
+            }
+          ]
+        },
+        "rail": {
+          "exists": true,
+          "display": "flex",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "images": {
+          "total": 32,
+          "loaded": 32
+        },
+        "linksDOM": 19
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {}
+    },
+    "901x844": {
+      "route": "/home",
+      "status": 200,
+      "viewport": {
+        "width": 901,
+        "height": 844
+      },
+      "assets": [
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+      ],
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "doc": {
+          "width": 901,
+          "clientWidth": 901,
+          "height": 844,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 82,
+          "left": 0,
+          "right": 681,
+          "top": 82,
+          "bottom": 844,
+          "width": 681,
+          "height": 762
+        },
+        "mainTag": "MAIN",
+        "row": {
+          "exists": true,
+          "display": "none",
+          "position": "static",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "links": [
+            {
+              "text": "GitHub",
+              "ariaLabel": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "LinkedIn",
+              "ariaLabel": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "✉",
+              "ariaLabel": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              },
+              "tabIndex": 0
+            }
+          ]
+        },
+        "rail": {
+          "exists": true,
+          "display": "flex",
+          "rect": {
+            "x": 682,
+            "y": 782,
+            "left": 682,
+            "right": 901,
+            "top": 782,
+            "bottom": 844,
+            "width": 219,
+            "height": 62
+          }
+        },
+        "images": {
+          "total": 32,
+          "loaded": 32
+        },
+        "linksDOM": 19
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {}
+    },
+    "1920x1080": {
+      "route": "/home",
+      "status": 200,
+      "viewport": {
+        "width": 1920,
+        "height": 1080
+      },
+      "assets": [
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+      ],
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/home",
+        "doc": {
+          "width": 1920,
+          "clientWidth": 1920,
+          "height": 1080,
+          "scrollY": 0
+        },
+        "main": {
+          "x": 0,
+          "y": 110,
+          "left": 0,
+          "right": 1600,
+          "top": 110,
+          "bottom": 1080,
+          "width": 1600,
+          "height": 970
+        },
+        "mainTag": "MAIN",
+        "row": {
+          "exists": true,
+          "display": "none",
+          "position": "static",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          },
+          "links": [
+            {
+              "text": "GitHub",
+              "ariaLabel": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "LinkedIn",
+              "ariaLabel": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "✉",
+              "ariaLabel": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "rect": {
+                "x": 0,
+                "y": 0,
+                "left": 0,
+                "right": 0,
+                "top": 0,
+                "bottom": 0,
+                "width": 0,
+                "height": 0
+              },
+              "tabIndex": 0
+            }
+          ]
+        },
+        "rail": {
+          "exists": true,
+          "display": "flex",
+          "rect": {
+            "x": 1601,
+            "y": 1018,
+            "left": 1601,
+            "right": 1920,
+            "top": 1018,
+            "bottom": 1080,
+            "width": 319,
+            "height": 62
+          }
+        },
+        "images": {
+          "total": 32,
+          "loaded": 32
+        },
+        "linksDOM": 19
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {}
+    }
+  },
+  "fraymakers": {
+    "390x844": {
+      "route": "/projects/fraymakers",
+      "status": 200,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "assets": [
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CL_tN48k.js",
+        "https://723c7b0d.joshuaik2.pages.dev/assets/index-CXfw7BD7.css"
+      ],
+      "initial": {
+        "url": "https://723c7b0d.joshuaik2.pages.dev/projects/fraymakers",
+        "doc": {
+          "width": 390,
+          "clientWidth": 390,
+          "height": 3417,
+          "scrollY": 68
+        },
+        "main": {
+          "x": 0,
+          "y": 2,
+          "left": 0,
+          "right": 390,
+          "top": 2,
+          "bottom": 3288.078125,
+          "width": 390,
+          "height": 3286.078125
+        },
+        "mainTag": "MAIN",
+        "row": {
+          "exists": true,
+          "display": "flex",
+          "position": "static",
+          "rect": {
+            "x": 0,
+            "y": 3288.078125,
+            "left": 0,
+            "right": 390,
+            "top": 3288.078125,
+            "bottom": 3349.078125,
+            "width": 390,
+            "height": 61
+          },
+          "links": [
+            {
+              "text": "GitHub",
+              "ariaLabel": "GitHub (opens in a new tab)",
+              "href": "https://github.com/joshuaAryy",
+              "rect": {
+                "x": 117.296875,
+                "y": 3297.078125,
+                "left": 117.296875,
+                "right": 166.75,
+                "top": 3297.078125,
+                "bottom": 3341.078125,
+                "width": 49.453125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "LinkedIn",
+              "ariaLabel": "LinkedIn (opens in a new tab)",
+              "href": "https://ca.linkedin.com/in/joshua-ary",
+              "rect": {
+                "x": 178.75,
+                "y": 3297.078125,
+                "left": 178.75,
+                "right": 233.78125,
+                "top": 3297.078125,
+                "bottom": 3341.078125,
+                "width": 55.03125,
+                "height": 44
+              },
+              "tabIndex": 0
+            },
+            {
+              "text": "✉",
+              "ariaLabel": "Email Joshua",
+              "href": "mailto:joshuaaryy@gmail.com",
+              "rect": {
+                "x": 245.78125,
+                "y": 3297.078125,
+                "left": 245.78125,
+                "right": 272.703125,
+                "top": 3297.078125,
+                "bottom": 3341.078125,
+                "width": 26.921875,
+                "height": 44
+              },
+              "tabIndex": 0
+            }
+          ]
+        },
+        "rail": {
+          "exists": true,
+          "display": "flex",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "left": 0,
+            "right": 0,
+            "top": 0,
+            "bottom": 0,
+            "width": 0,
+            "height": 0
+          }
+        },
+        "images": {
+          "total": 14,
+          "loaded": 14
+        },
+        "linksDOM": 27
+      },
+      "errors": {
+        "console": [],
+        "page": [],
+        "request": [],
+        "response": []
+      },
+      "screenshots": {
+        "end": "fraymakers-390x844-end.png",
+        "full": "fraymakers-390x844-full.png"
+      },
+      "end": {
+        "scrollY": 2573,
+        "docHeight": 3417,
+        "viewportHeight": 844,
+        "maxScroll": 2573,
+        "mainRect": {
+          "x": 0,
+          "y": -2503,
+          "left": 0,
+          "right": 390,
+          "top": -2503,
+          "bottom": 783.078125,
+          "width": 390,
+          "height": 3286.078125
+        },
+        "mainBottomDocument": 3356.078125,
+        "rowRect": {
+          "x": 0,
+          "y": 783.078125,
+          "left": 0,
+          "right": 390,
+          "top": 783.078125,
+          "bottom": 844.078125,
+          "width": 390,
+          "height": 61
+        },
+        "rowTopDocument": 3356.078125,
+        "rowFollowsMain": true,
+        "links": [
+          {
+            "text": "GitHub",
+            "ariaLabel": "GitHub (opens in a new tab)",
+            "href": "https://github.com/joshuaAryy",
+            "rect": {
+              "x": 117.296875,
+              "y": 792.078125,
+              "left": 117.296875,
+              "right": 166.75,
+              "top": 792.078125,
+              "bottom": 836.078125,
+              "width": 49.453125,
+              "height": 44
+            }
+          },
+          {
+            "text": "LinkedIn",
+            "ariaLabel": "LinkedIn (opens in a new tab)",
+            "href": "https://ca.linkedin.com/in/joshua-ary",
+            "rect": {
+              "x": 178.75,
+              "y": 792.078125,
+              "left": 178.75,
+              "right": 233.78125,
+              "top": 792.078125,
+              "bottom": 836.078125,
+              "width": 55.03125,
+              "height": 44
+            }
+          },
+          {
+            "text": "✉",
+            "ariaLabel": "Email Joshua",
+            "href": "mailto:joshuaaryy@gmail.com",
+            "rect": {
+              "x": 245.78125,
+              "y": 792.078125,
+              "left": 245.78125,
+              "right": 272.703125,
+              "top": 792.078125,
+              "bottom": 836.078125,
+              "width": 26.921875,
+              "height": 44
+            }
+          }
+        ],
+        "docWidth": 390,
+        "clientWidth": 390
+      },
+      "keyboard": {
+        "tabPresses": 7,
+        "focused": {
+          "tag": "A",
+          "text": "GitHub",
+          "aria": "GitHub (opens in a new tab)",
+          "href": "https://github.com/joshuaAryy",
+          "class": "",
+          "focusVisible": true,
+          "outline": "rgb(199, 155, 69) solid 1px",
+          "outlineOffset": "2px",
+          "rect": {
+            "left": 117.296875,
+            "right": 166.75,
+            "top": 792.078125,
+            "bottom": 836.078125,
+            "width": 49.453125,
+            "height": 44
+          },
+          "scrollY": 2573
+        },
+        "traversal": [
+          {
+            "tag": "A",
+            "text": "OWNERSHIP",
+            "aria": null,
+            "href": "#fraymakers-ownership",
+            "class": "",
+            "focusVisible": true,
+            "outline": "rgb(42, 185, 197) solid 2px",
+            "outlineOffset": "4px",
+            "rect": {
+              "left": 286.859375,
+              "right": 351.5,
+              "top": 115,
+              "bottom": 145,
+              "width": 64.640625,
+              "height": 30
+            },
+            "scrollY": 0
+          },
+          {
+            "tag": "A",
+            "text": "OUTCOME",
+            "aria": null,
+            "href": "#fraymakers-outcome",
+            "class": "",
+            "focusVisible": true,
+            "outline": "rgb(42, 185, 197) solid 2px",
+            "outlineOffset": "4px",
+            "rect": {
+              "left": 314.5,
+              "right": 368.25,
+              "top": 115,
+              "bottom": 145,
+              "width": 53.75,
+              "height": 30
+            },
+            "scrollY": 0
+          },
+          {
+            "tag": "A",
+            "text": "‹ PROJECTS",
+            "aria": null,
+            "href": "/projects",
+            "class": "fraymakers-nav__back",
+            "focusVisible": true,
+            "outline": "rgb(42, 185, 197) solid 2px",
+            "outlineOffset": "4px",
+            "rect": {
+              "left": 288.890625,
+              "right": 368,
+              "top": 80,
+              "bottom": 108,
+              "width": 79.109375,
+              "height": 28
+            },
+            "scrollY": 0
+          },
+          {
+            "tag": "A",
+            "text": "GitHub",
+            "aria": "GitHub (opens in a new tab)",
+            "href": "https://github.com/joshuaAryy",
+            "class": "",
+            "focusVisible": true,
+            "outline": "rgb(199, 155, 69) solid 1px",
+            "outlineOffset": "2px",
+            "rect": {
+              "left": 117.296875,
+              "right": 166.75,
+              "top": 792.078125,
+              "bottom": 836.078125,
+              "width": 49.453125,
+              "height": 44
+            },
+            "scrollY": 2573
+          }
+        ]
+      }
+    }
+  }
+}

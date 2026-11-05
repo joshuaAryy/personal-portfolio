@@ -1,0 +1,930 @@
+{
+  "capturedAt": "2026-10-04T06:53:52.269Z",
+  "browser": "Google Chrome",
+  "browserVersion": "153.0.8010.53",
+  "preview": {
+    "url": "https://82b1c0f8.joshuaik2.pages.dev",
+    "sourceCommit": "db3a305f331f367693641b59ada5f689b9074b98",
+    "productionTargeted": false
+  },
+  "route": "/profile/journey",
+  "viewports": [
+    {
+      "viewport": "desktop",
+      "width": 1920,
+      "height": 1080,
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "https://82b1c0f8.joshuaik2.pages.dev/profile/journey",
+        "viewport": {
+          "width": 1920,
+          "height": 1080
+        },
+        "document": {
+          "width": 1920,
+          "height": 1080
+        },
+        "main": {
+          "width": 1560,
+          "scrollWidth": 1560,
+          "height": 998,
+          "scrollHeight": 1922,
+          "overflowY": "hidden"
+        },
+        "scroller": {
+          "width": 1170,
+          "scrollWidth": 1170,
+          "height": 878,
+          "scrollHeight": 1857,
+          "overflowY": "auto",
+          "scrollTop": 0
+        },
+        "layout": {
+          "top": 82,
+          "height": 998,
+          "width": 1560,
+          "backgroundScroll": "0px"
+        },
+        "background": {
+          "top": 82,
+          "height": 1922,
+          "nodes": [
+            {
+              "node": "1287:8",
+              "top": 82,
+              "height": 998,
+              "opacity": "1",
+              "background": "url(\"https://82b1c0f8.joshuaik2.pages.dev/media/profile/the-void-background.jpg\")"
+            },
+            {
+              "node": "3492:2",
+              "top": 1080,
+              "height": 924,
+              "opacity": "0.78",
+              "background": "url(\"https://82b1c0f8.joshuaik2.pages.dev/media/profile/the-void-background.jpg\")"
+            },
+            {
+              "node": "1976:45",
+              "top": 82,
+              "height": 1922,
+              "opacity": "1",
+              "background": "linear-gradient(rgba(23, 14, 43, 0), rgba(31, 19, 51, 0.02) 34%, rgba(28, 19, 51, 0.1), rgba(19, 17, 41, 0.22) 62%, rgba(14, 11, 33, 0.34) 78%, rgba(9, 9, 23, 0.46) 92%, rgba(5, 6, 15, 0.56))"
+            }
+          ]
+        },
+        "locator": {
+          "count": 5,
+          "labels": [
+            "Origin",
+            "TMU",
+            "Living in Silico",
+            "Stush Patties",
+            "Summer 2026"
+          ]
+        },
+        "cards": [
+          {
+            "id": "journey-origin",
+            "title": "Roblox Studio",
+            "top": 283,
+            "height": 113
+          },
+          {
+            "id": "journey-apple-title",
+            "title": "Curiosity about the hardware",
+            "top": 405,
+            "height": 113
+          },
+          {
+            "id": "journey-tmu",
+            "title": "Computer Engineering",
+            "top": 526,
+            "height": 123
+          },
+          {
+            "id": "journey-naruto-title",
+            "title": "Naruto semantic search",
+            "top": 675,
+            "height": 130
+          },
+          {
+            "id": "journey-living-in-silico",
+            "title": "Machine learning became tangible",
+            "top": 785,
+            "height": 124
+          },
+          {
+            "id": "journey-stanford-lecture",
+            "title": "Connecting algorithms to research",
+            "top": 926,
+            "height": 124
+          },
+          {
+            "id": "journey-spotify-title",
+            "title": "Spotify recommender idea",
+            "top": 1104,
+            "height": 130
+          },
+          {
+            "id": "journey-stush",
+            "title": "Software Engineering Intern",
+            "top": 1257,
+            "height": 108
+          },
+          {
+            "id": "journey-summer-2026",
+            "title": "Learning to finish things",
+            "top": 1406,
+            "height": 132
+          },
+          {
+            "id": "journey-continuing-title",
+            "title": "More to learn. More to build.",
+            "top": 1804,
+            "height": 80
+          }
+        ],
+        "images": [
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-54.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "width": 128,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/profile-portrait-source.jpg",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/journey-trait-creative-shell.svg",
+            "loaded": true,
+            "width": 66,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-c.svg",
+            "loaded": true,
+            "width": 23,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-d.svg",
+            "loaded": true,
+            "width": 11,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-a.svg",
+            "loaded": true,
+            "width": 44,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/journey-trait-shared-shell.svg",
+            "loaded": true,
+            "width": 66,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-b.svg",
+            "loaded": true,
+            "width": 29,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-d.svg",
+            "loaded": true,
+            "width": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-c.svg",
+            "loaded": true,
+            "width": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-execution-a.svg",
+            "loaded": true,
+            "width": 52,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/journey-trait-shared-shell.svg",
+            "loaded": true,
+            "width": 66,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-execution-b.svg",
+            "loaded": true,
+            "width": 41,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-execution-c.svg",
+            "loaded": true,
+            "width": 21,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+            "loaded": true,
+            "width": 29,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "width": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "width": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "width": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "width": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "width": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "width": 150,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "width": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "width": 82,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "width": 96,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "width": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "locatorClicks": [
+        {
+          "active": "Origin",
+          "current": "Origin",
+          "hash": "#journey-origin",
+          "targetCount": 1,
+          "targetTop": 316,
+          "activationLine": 471,
+          "scrollTop": 0,
+          "mainScrollTop": 0,
+          "label": "Origin",
+          "pass": true
+        },
+        {
+          "active": "Origin",
+          "current": "Origin",
+          "hash": "#journey-tmu",
+          "targetCount": 1,
+          "targetTop": 472,
+          "activationLine": 471,
+          "scrollTop": 87,
+          "mainScrollTop": 0,
+          "label": "TMU",
+          "pass": false
+        },
+        {
+          "active": "TMU",
+          "current": "TMU",
+          "hash": "#journey-living-in-silico",
+          "targetCount": 1,
+          "targetTop": 513,
+          "activationLine": 471,
+          "scrollTop": 305,
+          "mainScrollTop": 0,
+          "label": "Living in Silico",
+          "pass": false
+        },
+        {
+          "active": "Living in Silico",
+          "current": "Living in Silico",
+          "hash": "#journey-stush",
+          "targetCount": 1,
+          "targetTop": 631,
+          "activationLine": 471,
+          "scrollTop": 659,
+          "mainScrollTop": 0,
+          "label": "Stush Patties",
+          "pass": false
+        },
+        {
+          "active": "Stush Patties",
+          "current": "Stush Patties",
+          "hash": "#journey-summer-2026",
+          "targetCount": 1,
+          "targetTop": 501,
+          "activationLine": 471,
+          "scrollTop": 939,
+          "mainScrollTop": 0,
+          "label": "Summer 2026",
+          "pass": false
+        }
+      ],
+      "errors": [],
+      "bottom": {
+        "windowScrollY": 0,
+        "documentHeight": 1080,
+        "mainScrollTop": 0,
+        "mainScrollHeight": 998,
+        "storyScrollTop": 939,
+        "storyScrollHeight": 1857,
+        "storyClientHeight": 878,
+        "active": "Stush Patties",
+        "backgroundScroll": "939px",
+        "backgroundBottom": 1065,
+        "finalCard": 945
+      },
+      "allImagesLoaded": true,
+      "noHorizontalOverflow": true
+    },
+    {
+      "viewport": "narrow",
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "initial": {
+        "title": "Joshua Aryeetey · Portfolio",
+        "url": "https://82b1c0f8.joshuaik2.pages.dev/profile/journey",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 2201
+        },
+        "main": {
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 2131,
+          "scrollHeight": 2131,
+          "overflowY": "visible"
+        },
+        "scroller": {
+          "width": 390,
+          "scrollWidth": 390,
+          "height": 1853,
+          "scrollHeight": 1853,
+          "overflowY": "visible",
+          "scrollTop": 0
+        },
+        "layout": {
+          "top": 0,
+          "height": 2131.375,
+          "width": 390,
+          "backgroundScroll": "0px"
+        },
+        "background": {
+          "top": 0,
+          "height": 1922,
+          "nodes": [
+            {
+              "node": "1287:8",
+              "top": 0,
+              "height": 998,
+              "opacity": "1",
+              "background": "url(\"https://82b1c0f8.joshuaik2.pages.dev/media/profile/the-void-background.jpg\")"
+            },
+            {
+              "node": "3492:2",
+              "top": 998,
+              "height": 924,
+              "opacity": "0.78",
+              "background": "url(\"https://82b1c0f8.joshuaik2.pages.dev/media/profile/the-void-background.jpg\")"
+            },
+            {
+              "node": "1976:45",
+              "top": 0,
+              "height": 1922,
+              "opacity": "1",
+              "background": "linear-gradient(rgba(23, 14, 43, 0), rgba(31, 19, 51, 0.02) 34%, rgba(28, 19, 51, 0.1), rgba(19, 17, 41, 0.22) 62%, rgba(14, 11, 33, 0.34) 78%, rgba(9, 9, 23, 0.46) 92%, rgba(5, 6, 15, 0.56))"
+            }
+          ]
+        },
+        "locator": {
+          "count": 5,
+          "labels": [
+            "Origin",
+            "TMU",
+            "Living in Silico",
+            "Stush Patties",
+            "Summer 2026"
+          ]
+        },
+        "cards": [
+          {
+            "id": "journey-origin",
+            "title": "Roblox Studio",
+            "top": 417,
+            "height": 132
+          },
+          {
+            "id": "journey-apple-title",
+            "title": "Curiosity about the hardware",
+            "top": 569,
+            "height": 153
+          },
+          {
+            "id": "journey-tmu",
+            "title": "Computer Engineering",
+            "top": 742,
+            "height": 132
+          },
+          {
+            "id": "journey-naruto-title",
+            "title": "Naruto semantic search",
+            "top": 894,
+            "height": 170
+          },
+          {
+            "id": "journey-living-in-silico",
+            "title": "Machine learning became tangible",
+            "top": 1084,
+            "height": 144
+          },
+          {
+            "id": "journey-stanford-lecture",
+            "title": "Connecting algorithms to research",
+            "top": 1248,
+            "height": 164
+          },
+          {
+            "id": "journey-spotify-title",
+            "title": "Spotify recommender idea",
+            "top": 1432,
+            "height": 153
+          },
+          {
+            "id": "journey-stush",
+            "title": "Software Engineering Intern",
+            "top": 1605,
+            "height": 153
+          },
+          {
+            "id": "journey-summer-2026",
+            "title": "Learning to finish things",
+            "top": 1778,
+            "height": 155
+          },
+          {
+            "id": "journey-continuing-title",
+            "title": "More to learn. More to build.",
+            "top": 1952,
+            "height": 103
+          }
+        ],
+        "images": [
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-32.svg",
+            "loaded": true,
+            "width": 32,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-flag.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-trophy.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-briefcase.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-clash.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/shell-utility-clock.svg",
+            "loaded": true,
+            "width": 38,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/topbar-account-ring.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/client-account-avatar.png",
+            "loaded": true,
+            "width": 128,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/profile-portrait-source.jpg",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/journey-trait-creative-shell.svg",
+            "loaded": true,
+            "width": 66,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-c.svg",
+            "loaded": true,
+            "width": 23,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-d.svg",
+            "loaded": true,
+            "width": 11,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-a.svg",
+            "loaded": true,
+            "width": 44,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/journey-trait-shared-shell.svg",
+            "loaded": true,
+            "width": 66,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-b.svg",
+            "loaded": true,
+            "width": 29,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-d.svg",
+            "loaded": true,
+            "width": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-proactive-c.svg",
+            "loaded": true,
+            "width": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-execution-a.svg",
+            "loaded": true,
+            "width": 52,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-medallion-frame.png",
+            "loaded": true,
+            "width": 160,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/journey-trait-shared-shell.svg",
+            "loaded": true,
+            "width": 66,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-creative-b.svg",
+            "loaded": true,
+            "width": 54,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-execution-b.svg",
+            "loaded": true,
+            "width": 41,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/trait-execution-c.svg",
+            "loaded": true,
+            "width": 21,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/open-portfolio-j-small-48.svg",
+            "loaded": true,
+            "width": 29,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/activity-add.svg",
+            "loaded": true,
+            "width": 13,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/activity-list.svg",
+            "loaded": true,
+            "width": 8,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/activity-collapse.svg",
+            "loaded": true,
+            "width": 7,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "width": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/food-tracker-mark.svg",
+            "loaded": true,
+            "width": 40,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/choveigo-mark.svg",
+            "loaded": true,
+            "width": 150,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/profile-crest-emblem.png",
+            "loaded": true,
+            "width": 310,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/lobby/project-fraymakers-index.png",
+            "loaded": true,
+            "width": 82,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/living-in-silico-logo.png",
+            "loaded": true,
+            "width": 96,
+            "alt": ""
+          },
+          {
+            "src": "https://82b1c0f8.joshuaik2.pages.dev/media/profile/stush-patties-logo.png",
+            "loaded": true,
+            "width": 96,
+            "alt": ""
+          }
+        ]
+      },
+      "locatorClicks": [
+        {
+          "active": "Origin",
+          "current": "Origin",
+          "hash": "#journey-origin",
+          "targetCount": 1,
+          "targetTop": 298,
+          "activationLine": 295,
+          "scrollTop": 0,
+          "mainScrollTop": 0,
+          "label": "Origin",
+          "pass": true
+        },
+        {
+          "active": "Origin",
+          "current": "Origin",
+          "hash": "#journey-tmu",
+          "targetCount": 1,
+          "targetTop": 346,
+          "activationLine": 295,
+          "scrollTop": 0,
+          "mainScrollTop": 0,
+          "label": "TMU",
+          "pass": false
+        },
+        {
+          "active": "Living in Silico",
+          "current": "Living in Silico",
+          "hash": "#journey-living-in-silico",
+          "targetCount": 1,
+          "targetTop": 295,
+          "activationLine": 295,
+          "scrollTop": 0,
+          "mainScrollTop": 0,
+          "label": "Living in Silico",
+          "pass": true
+        },
+        {
+          "active": "Living in Silico",
+          "current": "Living in Silico",
+          "hash": "#journey-stush",
+          "targetCount": 1,
+          "targetTop": 458,
+          "activationLine": 295,
+          "scrollTop": 0,
+          "mainScrollTop": 0,
+          "label": "Stush Patties",
+          "pass": false
+        },
+        {
+          "active": "Summer 2026",
+          "current": "Summer 2026",
+          "hash": "#journey-summer-2026",
+          "targetCount": 1,
+          "targetTop": 527,
+          "activationLine": 295,
+          "scrollTop": 0,
+          "mainScrollTop": 0,
+          "label": "Summer 2026",
+          "pass": true
+        }
+      ],
+      "errors": [],
+      "bottom": {
+        "windowScrollY": 1357,
+        "documentHeight": 2201,
+        "mainScrollTop": 0,
+        "mainScrollHeight": 2131,
+        "storyScrollTop": 0,
+        "storyScrollHeight": 1853,
+        "storyClientHeight": 1853,
+        "active": "Summer 2026",
+        "backgroundScroll": "0px",
+        "backgroundBottom": 635,
+        "finalCard": 768
+      },
+      "allImagesLoaded": true,
+      "noHorizontalOverflow": true
+    }
+  ],
+  "failures": []
+}

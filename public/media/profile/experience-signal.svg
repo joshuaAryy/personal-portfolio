@@ -1,0 +1,31 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="RESTORED &#194;&#183; Pass 07 O3 Art &#194;&#183; Experience &#194;&#183; preferred gold/navy emblem">
+<path id="Vector" d="M24.8 5.6H95.2L114.4 24.8V95.2L95.2 114.4H24.8L5.6 95.2V24.8L24.8 5.6Z" fill="#02070C" stroke="#39270D" stroke-width="5.6"/>
+<path id="Vector_2" d="M26.4 8H93.6L109.6 26.4V93.6L93.6 109.6H26.4L10.4 93.6V26.4L26.4 8Z" fill="url(#paint0_radial_0_99)" stroke="url(#paint1_linear_0_99)" stroke-width="2.4"/>
+<path id="Vector_3" d="M32 14.4H88L103.2 30.4V88L88 103.2H32L16.8 88V30.4L32 14.4Z" stroke="#B78A39" stroke-width="1.28"/>
+<path id="Vector_4" d="M37.6 20H82.4L96.8 34.4V80.8L82.4 95.2H37.6L23.2 80.8V34.4L37.6 20Z" stroke="#48646E" stroke-opacity="0.32" stroke-width="2"/>
+<g id="Vector_5">
+<path d="M44.8 9.6H75.2Z" fill="black"/>
+<path d="M44.8 9.6H75.2" stroke="#F3DC96" stroke-width="1.6"/>
+</g>
+<g id="Vector_6">
+<path d="M9.6 45.6V74.4ZM110.4 45.6V74.4Z" fill="black"/>
+<path d="M9.6 45.6V74.4M110.4 45.6V74.4" stroke="#7D5A21" stroke-width="1.2"/>
+</g>
+<path id="Vector_7" d="M39.2 47.2H81.6V78.4H39.2V47.2Z" stroke="#D9B75F" stroke-width="3.2"/>
+<path id="Vector_8" d="M50.4 47.2V38.4H70.4V47.2M38.4 57.6H82.4" stroke="#D9B75F" stroke-width="3.2"/>
+<path id="Vector_9" d="M64.8 56H57.6V61.6H64.8V56Z" fill="#27D3E5"/>
+</g>
+<defs>
+<radialGradient id="paint0_radial_0_99" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 58.8) scale(49.6 50.8)">
+<stop stop-color="#0B2740"/>
+<stop offset="1" stop-color="#030B13"/>
+</radialGradient>
+<linearGradient id="paint1_linear_0_99" x1="10.4" y1="8" x2="111.971" y2="107.172" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F0D890"/>
+<stop offset="0.28" stop-color="#B17D2F"/>
+<stop offset="0.68" stop-color="#604113"/>
+<stop offset="1" stop-color="#D4AE59"/>
+</linearGradient>
+</defs>
+</svg>
